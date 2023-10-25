@@ -548,7 +548,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1011,7 +1011,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1627,7 +1627,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2165,7 +2165,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2734,7 +2734,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -3197,7 +3197,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -3743,7 +3743,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Type a value to search all fields for"
@@ -4233,7 +4233,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4992,7 +4992,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"

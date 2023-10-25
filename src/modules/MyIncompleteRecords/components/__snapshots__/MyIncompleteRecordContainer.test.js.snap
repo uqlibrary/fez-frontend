@@ -337,588 +337,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-author/creator-research-statement"
-              id="standard-card-author/creator-research-statement"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-author/creator-research-statement-header"
-                    id="standard-card-author/creator-research-statement-header"
-                  >
-                    Author/Creator research statement
-                  </h3>
-                </div>
-                <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
-                >
-                  <button
-                    aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="help-icon"
-                    data-mui-internal-clone-element="true"
-                    data-testid="help-icon"
-                    id="help-icon"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
-                      data-testid="HelpOutlineIcon"
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                      />
-                      <title>
-                        Click for more information
-                      </title>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-author/creator-research-statement-content"
-                data-testid="standard-card-author/creator-research-statement-content"
-                id="standard-card-author/creator-research-statement-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
-                    >
-                      <span>
-                        Select the option that best describes the significance of the work*
-                        <span
-                          style="font-weight: 700;"
-                        >
-                           (not for public view)
-                        </span>
-                      </span>
-                    </p>
-                    <div
-                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                      style="width: 100%;"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        id="rek-significance-label"
-                      >
-                        Scale/Significance of work
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        required=""
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-significance-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-significance-select"
-                          id="rek-significance-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="true"
-                          aria-labelledby="rek-significance-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-significance-input"
-                          data-testid="rek-significance-input"
-                          id="rek-significance-input"
-                          name="significance"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                      >
-                        This field is required
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                    style="margin-top: 24px;"
-                  >
-                    <span>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-                      >
-                        <span>
-                          Creator research statement*. Include Background, Contribution and Significance
-                          <span
-                            style="font-weight: 700;"
-                          >
-                             (not for public view)
-                          </span>
-                        </span>
-                        <span>
-                           *
-                        </span>
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      >
-                        Remember to include substantiation of your major or minor scale/significance claim above.
-                      </span>
-                    </span>
-                    <div
-                      class=""
-                      data-analyticsid="rek-creator-contribution-statement"
-                      data-testid="rek-creator-contribution-statement"
-                      id="rek-creator-contribution-statement"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      This field is required
-                      <span>
-                         - 
-                      </span>
-                    </span>
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      0 characters of 2000
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-ntro-data"
-              id="standard-card-ntro-data"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-ntro-data-header"
-                    id="standard-card-ntro-data-header"
-                  >
-                    NTRO data
-                  </h3>
-                </div>
-                <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
-                >
-                  <button
-                    aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="help-icon"
-                    data-mui-internal-clone-element="true"
-                    data-testid="help-icon"
-                    id="help-icon"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
-                      data-testid="HelpOutlineIcon"
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                      />
-                      <title>
-                        Click for more information
-                      </title>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-ntro-data-content"
-                data-testid="standard-card-ntro-data-content"
-                id="standard-card-ntro-data-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  />
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                      style="width: 100%;"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        id="rek-audience-size-label"
-                      >
-                        Audience size
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        required=""
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-audience-size-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-audience-size-select"
-                          id="rek-audience-size-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="true"
-                          aria-labelledby="rek-audience-size-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-audience-size-input"
-                          data-testid="rek-audience-size-input"
-                          id="rek-audience-size-input"
-                          name="fez_record_search_key_audience_size.rek_audience_size"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                      >
-                        This field is required
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek-quality-indicator-label"
-                        id="rek-quality-indicator-label"
-                      >
-                        Quality indicators
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-quality-indicator-select"
-                          id="rek-quality-indicator-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="false"
-                          aria-labelledby="rek-quality-indicator-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-quality-indicator-input"
-                          data-testid="rek-quality-indicator-input"
-                          id="rek-quality-indicator-input"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-grant-details"
-              id="standard-card-grant-details"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-grant-details-header"
-                    id="standard-card-grant-details-header"
-                  >
-                    Grant details
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-grant-details-content"
-                data-testid="standard-card-grant-details-content"
-                id="standard-card-grant-details-content"
-              >
-                <div>
-                  Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                    style="margin-top: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                        data-testid="rek-grant-agency"
-                      >
-                        <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                          data-shrink="false"
-                          data-testid="rek-grant-agency-label"
-                          for="rek-grant-agency-input"
-                          id="rek-grant-agency-label"
-                        >
-                          Funder/Sponsor name
-                        </label>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-                        >
-                          <input
-                            aria-invalid="false"
-                            aria-label="Funder/Sponsor name"
-                            autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                            data-analyticsid="rek-grant-agency-input"
-                            data-testid="rek-grant-agency-input"
-                            id="rek-grant-agency-input"
-                            label="Funder/Sponsor name"
-                            name="grantAgencyName"
-                            placeholder="Funder/sponsor name for this work"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                        data-testid="rek-grant-id"
-                      >
-                        <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                          data-shrink="false"
-                          data-testid="rek-grant-id-label"
-                          for="rek-grant-id-input"
-                          id="rek-grant-id-label"
-                        >
-                          Grant ID
-                        </label>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-                        >
-                          <input
-                            aria-invalid="false"
-                            aria-label="Grant ID"
-                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                            data-analyticsid="rek-grant-id-input"
-                            data-testid="rek-grant-id-input"
-                            disabled=""
-                            id="rek-grant-id-input"
-                            label="Grant ID"
-                            name="grantId"
-                            placeholder="Grant number for this work"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
-                          style="margin-bottom: -3px;"
-                        >
-                            
-                        </span>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        >
-                          <div
-                            aria-disabled="true"
-                            aria-expanded="false"
-                            aria-haspopup="listbox"
-                            aria-labelledby="rek-grant-type-select"
-                            class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            data-testid="rek-grant-type-select"
-                            id="rek-grant-type-select"
-                            role="button"
-                          >
-                            Funder/Sponsor type
-                          </div>
-                          <input
-                            aria-hidden="true"
-                            aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                            data-testid="rek-grant-type-input"
-                            disabled=""
-                            id="rek-grant-type-input"
-                            name="grantAgencyType"
-                            placeholder="Funder/Sponsor type"
-                            tabindex="-1"
-                            value=""
-                          />
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                            data-testid="ArrowDropDownIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                    >
-                      <button
-                        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-                        data-analyticsid="rek-grant-add"
-                        data-testid="rek-grant-add"
-                        disabled=""
-                        id="rek-grant-add"
-                        tabindex="-1"
-                        type="button"
-                      >
-                        Add grant
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
@@ -996,706 +414,6 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                   />
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                    >
-                      <ul
-                        class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-                        style="margin-bottom: 0px;"
-                      >
-                        <span
-                          class="MuiBox-root css-0"
-                          data-testid="confirmDialogBox"
-                        />
-                        <br />
-                        <div>
-                          <span
-                            class="authorSteps"
-                          >
-                            Step 1 of 2
-                          </span>
-                           - 
-                          <b>
-                            Select an author
-                          </b>
-                          .
-                        </div>
-                        <li
-                          class="MuiListItem-container css-oyakqy-MuiListItem-container"
-                        >
-                          <div
-                            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PeopleIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                                >
-                                  <span
-                                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                                  >
-                                    Author's name as published
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
-                              />
-                            </div>
-                            <div
-                              class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                            >
-                              <div
-                                class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
-                              >
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                                >
-                                  Reorder items
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                          >
-                            <span
-                              aria-label="Remove all items"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Remove all items"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                disabled=""
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteForeverIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <ul
-                        class="MuiList-root ContributorList MuiList-padding css-18zj4z3-MuiList-root"
-                        data-analyticsid="rek-author-list"
-                        data-testid="rek-author-list"
-                        id="rek-author-list"
-                      >
-                        <li
-                          aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
-                          data-testid="rek-author-list-row-0"
-                          id="rek-author-list-row-0"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PersonOutlinedIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-0-name-as-published"
-                              id="rek-author-list-row-0-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Topology
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  First  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-0-affiliation"
-                              id="rek-author-list-row-0-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-0-actions"
-                              id="rek-author-list-row-0-actions"
-                            >
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-0"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-edit"
-                                id="rek-author-list-row-edit-0"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-0"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1y7hsx6-MuiListItem-root"
-                          data-testid="rek-author-list-row-1"
-                          id="rek-author-list-row-1"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="HowToRegIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                  fill-rule="evenodd"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-1-name-as-published"
-                              id="rek-author-list-row-1-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Davidson, Robert
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Second  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-1-affiliation"
-                              id="rek-author-list-row-1-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-1-actions"
-                              id="rek-author-list-row-1-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-edit"
-                                disabled=""
-                                id="rek-author-list-row-edit-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1oz0d3v-MuiListItem-root"
-                          data-testid="rek-author-list-row-2"
-                          id="rek-author-list-row-2"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="HowToRegIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                  fill-rule="evenodd"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-2-name-as-published"
-                              id="rek-author-list-row-2-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Babbage, John
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Third  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-2-affiliation"
-                              id="rek-author-list-row-2-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-2-actions"
-                              id="rek-author-list-row-2-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-edit"
-                                id="rek-author-list-row-edit-2"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
-                          data-testid="rek-author-list-row-3"
-                          id="rek-author-list-row-3"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PersonOutlinedIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-3-name-as-published"
-                              id="rek-author-list-row-3-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  The Brodsky Quartet
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Fourth  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-3-affiliation"
-                              id="rek-author-list-row-3-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-3-actions"
-                              id="rek-author-list-row-3-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-3"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-edit"
-                                id="rek-author-list-row-edit-3"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-3"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                  >
-                    Rows marked with a red prefix must be updated
-                  </span>
                 </div>
               </div>
             </div>
@@ -1766,6 +484,157 @@ exports[`MyIncompleteRecordContainer should handle undefined fez_record_search_k
                       style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                       tabindex="-1"
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-upload-files"
+              id="standard-card-upload-files"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-upload-files-header"
+                    id="standard-card-upload-files-header"
+                  >
+                    Upload files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-upload-files-content"
+                data-testid="standard-card-upload-files-content"
+                id="standard-card-upload-files-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    />
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    />
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          id="FileUploadDropZone"
+                          tabindex="0"
+                        >
+                          <div
+                            aria-disabled="false"
+                            class=""
+                            style="position: relative; padding: 0px;"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                              >
+                                <p
+                                  class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                                >
+                                  File upload restrictions
+                                </p>
+                                <div>
+                                  Please ensure:
+                                  <ul>
+                                    <li>
+                                      files are under 5GB in size
+                                    </li>
+                                    <li>
+                                      file names begin with a letter and are less than 45 characters long
+                                    </li>
+                                    <li>
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    </li>
+                                    <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                                    </li>
+                                    <li>
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                    </li>
+                                    <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
+                                      files are uploaded individually and not inside a folder
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                              >
+                                <div
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                                >
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                                      data-testid="CloudUploadIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                                      />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                  >
+                                    <p>
+                                      Click here to select files,
+                                      <br />
+                                      or drag files into this area to upload
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <input
+                              aria-label="Upload files"
+                              autocomplete="off"
+                              data-analyticsid="fez-datastream-info-input"
+                              data-testid="fez-datastream-info-input"
+                              id="Uploader"
+                              multiple=""
+                              style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+                              type="file"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2147,588 +1016,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-author/creator-research-statement"
-              id="standard-card-author/creator-research-statement"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-author/creator-research-statement-header"
-                    id="standard-card-author/creator-research-statement-header"
-                  >
-                    Author/Creator research statement
-                  </h3>
-                </div>
-                <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
-                >
-                  <button
-                    aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="help-icon"
-                    data-mui-internal-clone-element="true"
-                    data-testid="help-icon"
-                    id="help-icon"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
-                      data-testid="HelpOutlineIcon"
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                      />
-                      <title>
-                        Click for more information
-                      </title>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-author/creator-research-statement-content"
-                data-testid="standard-card-author/creator-research-statement-content"
-                id="standard-card-author/creator-research-statement-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1hgiswi-MuiGrid2-root"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
-                    >
-                      <span>
-                        Select the option that best describes the significance of the work*
-                        <span
-                          style="font-weight: 700;"
-                        >
-                           (not for public view)
-                        </span>
-                      </span>
-                    </p>
-                    <div
-                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                      style="width: 100%;"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        id="rek-significance-label"
-                      >
-                        Scale/Significance of work
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        required=""
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-significance-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-significance-select"
-                          id="rek-significance-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="true"
-                          aria-labelledby="rek-significance-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-significance-input"
-                          data-testid="rek-significance-input"
-                          id="rek-significance-input"
-                          name="significance"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                      >
-                        This field is required
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                    style="margin-top: 24px;"
-                  >
-                    <span>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
-                      >
-                        <span>
-                          Creator research statement*. Include Background, Contribution and Significance
-                          <span
-                            style="font-weight: 700;"
-                          >
-                             (not for public view)
-                          </span>
-                        </span>
-                        <span>
-                           *
-                        </span>
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      >
-                        Remember to include substantiation of your major or minor scale/significance claim above.
-                      </span>
-                    </span>
-                    <div
-                      class=""
-                      data-analyticsid="rek-creator-contribution-statement"
-                      data-testid="rek-creator-contribution-statement"
-                      id="rek-creator-contribution-statement"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      This field is required
-                      <span>
-                         - 
-                      </span>
-                    </span>
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                      style="display: inline-block;"
-                    >
-                      0 characters of 2000
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-ntro-data"
-              id="standard-card-ntro-data"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-ntro-data-header"
-                    id="standard-card-ntro-data-header"
-                  >
-                    NTRO data
-                  </h3>
-                </div>
-                <div
-                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
-                >
-                  <button
-                    aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="help-icon"
-                    data-mui-internal-clone-element="true"
-                    data-testid="help-icon"
-                    id="help-icon"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
-                      data-testid="HelpOutlineIcon"
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                      />
-                      <title>
-                        Click for more information
-                      </title>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-ntro-data-content"
-                data-testid="standard-card-ntro-data-content"
-                id="standard-card-ntro-data-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  />
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                      style="width: 100%;"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        id="rek-audience-size-label"
-                      >
-                        Audience size
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        required=""
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-audience-size-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-audience-size-select"
-                          id="rek-audience-size-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="true"
-                          aria-labelledby="rek-audience-size-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-audience-size-input"
-                          data-testid="rek-audience-size-input"
-                          id="rek-audience-size-input"
-                          name="fez_record_search_key_audience_size.rek_audience_size"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                      <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-                      >
-                        This field is required
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek-quality-indicator-label"
-                        id="rek-quality-indicator-label"
-                      >
-                        Quality indicators
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                      >
-                        <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-quality-indicator-select"
-                          id="rek-quality-indicator-select"
-                          role="button"
-                          tabindex="0"
-                        >
-                          <span
-                            class="notranslate"
-                          >
-                            ​
-                          </span>
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="false"
-                          aria-labelledby="rek-quality-indicator-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-quality-indicator-input"
-                          data-testid="rek-quality-indicator-input"
-                          id="rek-quality-indicator-input"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-grant-details"
-              id="standard-card-grant-details"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-grant-details-header"
-                    id="standard-card-grant-details-header"
-                  >
-                    Grant details
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-grant-details-content"
-                data-testid="standard-card-grant-details-content"
-                id="standard-card-grant-details-content"
-              >
-                <div>
-                  Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                    style="margin-top: 8px;"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                        data-testid="rek-grant-agency"
-                      >
-                        <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                          data-shrink="false"
-                          data-testid="rek-grant-agency-label"
-                          for="rek-grant-agency-input"
-                          id="rek-grant-agency-label"
-                        >
-                          Funder/Sponsor name
-                        </label>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-                        >
-                          <input
-                            aria-invalid="false"
-                            aria-label="Funder/Sponsor name"
-                            autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                            data-analyticsid="rek-grant-agency-input"
-                            data-testid="rek-grant-agency-input"
-                            id="rek-grant-agency-input"
-                            label="Funder/Sponsor name"
-                            name="grantAgencyName"
-                            placeholder="Funder/sponsor name for this work"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                        data-testid="rek-grant-id"
-                      >
-                        <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                          data-shrink="false"
-                          data-testid="rek-grant-id-label"
-                          for="rek-grant-id-input"
-                          id="rek-grant-id-label"
-                        >
-                          Grant ID
-                        </label>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
-                        >
-                          <input
-                            aria-invalid="false"
-                            aria-label="Grant ID"
-                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                            data-analyticsid="rek-grant-id-input"
-                            data-testid="rek-grant-id-input"
-                            disabled=""
-                            id="rek-grant-id-input"
-                            label="Grant ID"
-                            name="grantId"
-                            placeholder="Grant number for this work"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-                    >
-                      <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                      >
-                        <span
-                          class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
-                          style="margin-bottom: -3px;"
-                        >
-                            
-                        </span>
-                        <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                        >
-                          <div
-                            aria-disabled="true"
-                            aria-expanded="false"
-                            aria-haspopup="listbox"
-                            aria-labelledby="rek-grant-type-select"
-                            class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            data-testid="rek-grant-type-select"
-                            id="rek-grant-type-select"
-                            role="button"
-                          >
-                            Funder/Sponsor type
-                          </div>
-                          <input
-                            aria-hidden="true"
-                            aria-invalid="false"
-                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                            data-testid="rek-grant-type-input"
-                            disabled=""
-                            id="rek-grant-type-input"
-                            name="grantAgencyType"
-                            placeholder="Funder/Sponsor type"
-                            tabindex="-1"
-                            value=""
-                          />
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                            data-testid="ArrowDropDownIcon"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M7 10l5 5 5-5z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                    >
-                      <button
-                        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-                        data-analyticsid="rek-grant-add"
-                        data-testid="rek-grant-add"
-                        disabled=""
-                        id="rek-grant-add"
-                        tabindex="-1"
-                        type="button"
-                      >
-                        Add grant
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
@@ -2806,706 +1093,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                   />
-                  <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-                    >
-                      <ul
-                        class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-                        style="margin-bottom: 0px;"
-                      >
-                        <span
-                          class="MuiBox-root css-0"
-                          data-testid="confirmDialogBox"
-                        />
-                        <br />
-                        <div>
-                          <span
-                            class="authorSteps"
-                          >
-                            Step 1 of 2
-                          </span>
-                           - 
-                          <b>
-                            Select an author
-                          </b>
-                          .
-                        </div>
-                        <li
-                          class="MuiListItem-container css-oyakqy-MuiListItem-container"
-                        >
-                          <div
-                            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PeopleIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-                            >
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
-                              >
-                                <div
-                                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                                >
-                                  <span
-                                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                                  >
-                                    Author's name as published
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
-                              />
-                            </div>
-                            <div
-                              class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                            >
-                              <div
-                                class="MuiListItemText-root css-3n6t5b-MuiListItemText-root"
-                              >
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
-                                >
-                                  Reorder items
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
-                          >
-                            <span
-                              aria-label="Remove all items"
-                              class=""
-                              data-mui-internal-clone-element="true"
-                            >
-                              <button
-                                aria-label="Remove all items"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                disabled=""
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteForeverIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                      <ul
-                        class="MuiList-root ContributorList MuiList-padding css-18zj4z3-MuiList-root"
-                        data-analyticsid="rek-author-list"
-                        data-testid="rek-author-list"
-                        id="rek-author-list"
-                      >
-                        <li
-                          aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
-                          data-testid="rek-author-list-row-0"
-                          id="rek-author-list-row-0"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PersonOutlinedIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-0-name-as-published"
-                              id="rek-author-list-row-0-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Topology
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  First  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-0-affiliation"
-                              id="rek-author-list-row-0-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-0-actions"
-                              id="rek-author-list-row-0-actions"
-                            >
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-0"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-edit"
-                                id="rek-author-list-row-edit-0"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-0-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-0-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-0"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1y7hsx6-MuiListItem-root"
-                          data-testid="rek-author-list-row-1"
-                          id="rek-author-list-row-1"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="HowToRegIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                  fill-rule="evenodd"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-1-name-as-published"
-                              id="rek-author-list-row-1-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Davidson, Robert
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Second  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-1-affiliation"
-                              id="rek-author-list-row-1-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-1-actions"
-                              id="rek-author-list-row-1-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-edit"
-                                disabled=""
-                                id="rek-author-list-row-edit-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-1-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-1-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-1"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1oz0d3v-MuiListItem-root"
-                          data-testid="rek-author-list-row-2"
-                          id="rek-author-list-row-2"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="HowToRegIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
-                                  fill-rule="evenodd"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-2-name-as-published"
-                              id="rek-author-list-row-2-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  Babbage, John
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Third  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-2-affiliation"
-                              id="rek-author-list-row-2-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-2-actions"
-                              id="rek-author-list-row-2-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Move item down the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-move-down"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-move-down"
-                                disabled=""
-                                id="rek-author-list-row-move-down-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowDownIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-edit"
-                                id="rek-author-list-row-edit-2"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-2-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-2-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-2"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1iaanil-MuiListItem-root"
-                          data-testid="rek-author-list-row-3"
-                          id="rek-author-list-row-3"
-                          tabindex="0"
-                        >
-                          <div
-                            class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
-                            id="contributor-row"
-                          >
-                            <div
-                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="PersonOutlinedIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                                />
-                              </svg>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
-                              data-testid="rek-author-list-row-3-name-as-published"
-                              id="rek-author-list-row-3-name-as-published"
-                            >
-                              <div
-                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
-                              >
-                                <p
-                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
-                                >
-                                  The Brodsky Quartet
-                                </p>
-                                <span
-                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
-                                >
-                                  Fourth  listed author
-                                </span>
-                              </div>
-                            </div>
-                            <div
-                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
-                              data-testid="rek-author-list-row-3-affiliation"
-                              id="rek-author-list-row-3-affiliation"
-                            >
-                              <div
-                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                              />
-                            </div>
-                            <div
-                              class="css-rxds9v"
-                              data-testid="rek-author-list-row-3-actions"
-                              id="rek-author-list-row-3-actions"
-                            >
-                              <button
-                                aria-label="Move item up the order"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-move-up"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-move-up"
-                                disabled=""
-                                id="rek-author-list-row-move-up-3"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="KeyboardArrowUpIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Edit this item"
-                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-edit"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-edit"
-                                id="rek-author-list-row-edit-3"
-                                tabindex="0"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="EditIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                  />
-                                </svg>
-                              </button>
-                              <button
-                                aria-label="Remove this item"
-                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                                data-analyticsid="rek-author-list-row-3-delete"
-                                data-mui-internal-clone-element="true"
-                                data-testid="rek-author-list-row-3-delete"
-                                disabled=""
-                                id="rek-author-list-row-delete-3"
-                                tabindex="-1"
-                                type="button"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="DeleteIcon"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
-                  >
-                    Rows marked with a red prefix must be updated
-                  </span>
                 </div>
               </div>
             </div>
@@ -3576,6 +1163,157 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                       tabindex="-1"
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card-upload-files"
+              id="standard-card-upload-files"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                    data-testid="standard-card-upload-files-header"
+                    id="standard-card-upload-files-header"
+                  >
+                    Upload files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-upload-files-content"
+                data-testid="standard-card-upload-files-content"
+                id="standard-card-upload-files-content"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    />
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-w0cgvk-MuiTypography-root"
+                    />
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          id="FileUploadDropZone"
+                          tabindex="0"
+                        >
+                          <div
+                            aria-disabled="false"
+                            class=""
+                            style="position: relative; padding: 0px;"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+                            >
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                              >
+                                <p
+                                  class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+                                >
+                                  File upload restrictions
+                                </p>
+                                <div>
+                                  Please ensure:
+                                  <ul>
+                                    <li>
+                                      files are under 5GB in size
+                                    </li>
+                                    <li>
+                                      file names begin with a letter and are less than 45 characters long
+                                    </li>
+                                    <li>
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    </li>
+                                    <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                                    </li>
+                                    <li>
+                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                    </li>
+                                    <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
+                                      files are uploaded individually and not inside a folder
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                              >
+                                <div
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                                >
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                                      data-testid="CloudUploadIcon"
+                                      focusable="false"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                                      />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                                  >
+                                    <p>
+                                      Click here to select files,
+                                      <br />
+                                      or drag files into this area to upload
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <input
+                              aria-label="Upload files"
+                              autocomplete="off"
+                              data-analyticsid="fez-datastream-info-input"
+                              data-testid="fez-datastream-info-input"
+                              id="Uploader"
+                              multiple=""
+                              style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
+                              type="file"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

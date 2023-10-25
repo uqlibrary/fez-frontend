@@ -130,7 +130,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await waitFor(() => getByText('No records to display'));
 
-        expect(queryByTestId('my-editorial-appointments-list-row-0')).not.toBeInTheDocument();
+        expect(queryByTestId('my-editorial-appointments-list-row-1')).not.toBeInTheDocument();
     });
 
     it('should validate inputs and render updated info after editing', async () => {
@@ -149,12 +149,12 @@ describe('MyEditorialAppointmentsList', () => {
         });
         const listItem = getByTestId('my-editorial-appointments-list-row-0');
 
-        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('test');
-        expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Guest Editor');
-        expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2006');
-        expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('2026');
+        expect(getByTestId('eap-journal-name-1', listItem)).toHaveTextContent('test');
+        expect(getByTestId('eap-role-name-1', listItem)).toHaveTextContent('Guest Editor');
+        expect(getByTestId('eap-start-year-1', listItem)).toHaveTextContent('2006');
+        expect(getByTestId('eap-end-year-1', listItem)).toHaveTextContent('2026');
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-1-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
@@ -185,11 +185,11 @@ describe('MyEditorialAppointmentsList', () => {
 
         await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
-        expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
-        expect(getByTestId('eap-role-name-0')).toHaveTextContent('Other (Testing other role)');
+        expect(getByTestId('eap-journal-name-1')).toHaveTextContent('testing');
+        expect(getByTestId('eap-start-year-1')).toHaveTextContent('2010');
+        expect(getByTestId('eap-role-name-1')).toHaveTextContent('Other (Testing other role)');
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-1-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
@@ -213,7 +213,7 @@ describe('MyEditorialAppointmentsList', () => {
             handleRowUpdate: jest.fn(() => Promise.reject()),
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-1-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
@@ -225,7 +225,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
+        expect(getByTestId('eap-journal-name-1')).toHaveTextContent('test');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
@@ -243,7 +243,7 @@ describe('MyEditorialAppointmentsList', () => {
             ],
         });
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-1-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '2010' } });
@@ -255,7 +255,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
+        expect(getByTestId('eap-journal-name-1')).toHaveTextContent('test');
     });
 
     it('should delete my editorial appointment item', async () => {
@@ -287,7 +287,7 @@ describe('MyEditorialAppointmentsList', () => {
         const listItem1 = getByTestId('my-editorial-appointments-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
+        fireEvent.click(getByTestId('my-editorial-appointments-list-row-1-delete-this-editorial-appointment'));
 
         await act(() => {
             fireEvent.click(getByTestId('my-editorial-appointments-delete-save'));
@@ -298,8 +298,8 @@ describe('MyEditorialAppointmentsList', () => {
         });
         const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
 
-        expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
-        expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
+        expect(getByTestId('eap-journal-name-2', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('eap-role-name-2', listItem)).toHaveTextContent('Editor');
     });
 
     it('should display "Current" for "eap_end_year" column if the year is same as current year', () => {
@@ -319,7 +319,7 @@ describe('MyEditorialAppointmentsList', () => {
         });
 
         expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('eap-end-year-0')).toHaveTextContent('Current');
+        expect(getByTestId('eap-end-year-1')).toHaveTextContent('Current');
     });
 
     it('should select "Current" year on clicking "Current" options from the year popup menu', async () => {

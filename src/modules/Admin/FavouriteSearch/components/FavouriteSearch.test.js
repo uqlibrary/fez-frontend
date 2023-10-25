@@ -78,16 +78,16 @@ describe('FavouriteSearch', () => {
 
         await waitFor(() => getByText('Favourite searches'));
 
-        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-1-edit'));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
         await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getByTestId('fvs-alias-0')).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-1')).toHaveTextContent('test');
         expect(getByText('Alias "testing" has been taken')).toBeInTheDocument();
     });
 
@@ -97,9 +97,9 @@ describe('FavouriteSearch', () => {
 
         await waitFor(() => getByText('Favourite searches'));
 
-        fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
+        fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
         expect(deleteFavouriteSearchListItemFn).toBeCalled();
     });
