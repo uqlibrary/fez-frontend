@@ -37,7 +37,7 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
+user = user || 'uqstaff';
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -52,6 +52,51 @@ mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
     }
     return [404, {}];
 });
+
+mock.onGet(new RegExp(escapeRegExp(routes.MANAGE_AUTHORS_LIST_API('.*').apiUrl)))
+            .reply(200, {
+                data: [
+                    {
+                        aut_created_date: '2021-03-18T04:47:06Z',
+                        aut_description: 'Added position. Updated name',
+                        aut_display_name: null,
+                        aut_email: null,
+                        aut_external_id: null,
+                        aut_fname: 'Vishal',
+                        aut_google_scholar_id: 'asdflakjssss',
+                        aut_homepage_link: null,
+                        aut_id: 2000003832,
+                        aut_is_orcid_sync_enabled: null,
+                        aut_is_scopus_id_authenticated: 0,
+                        aut_lname: 'Desai',
+                        aut_mname: null,
+                        aut_mypub_url: null,
+                        aut_orcid_bio: null,
+                        aut_orcid_id: '0000-0001-1111-2222',
+                        aut_orcid_works_last_modified: null,
+                        aut_orcid_works_last_sync: null,
+                        aut_org_staff_id: null,
+                        aut_org_student_id: null,
+                        aut_org_username: '',
+                        aut_people_australia_id: null,
+                        aut_position: 'Sr. Web Developer',
+                        aut_publons_id: null,
+                        aut_ref_num: null,
+                        aut_researcher_id: null,
+                        aut_review_orcid_scopus_id_integration: null,
+                        aut_rid_last_updated: null,
+                        aut_rid_password: null,
+                        aut_scopus_id: null,
+                        aut_student_username: null,
+                        aut_title: 'Mr.',
+                        aut_twitter_username: null,
+                        aut_update_date: '2021-03-18T22:53:34Z',
+                    },
+                ],
+                total: 1,
+            })
+            .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API('.*').apiUrl)))
+            .replyOnce(500);
 
 mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
     const headers = {

@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, preview } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -23,6 +23,7 @@ function setup(testProps = {}, renderMethod = render) {
 describe('ContributorsEditor', () => {
     it('renders full component with a defined className', () => {
         const { container } = setup({ className: 'requiredField' });
+        preview.debug();
         expect(container).toMatchSnapshot();
     });
 
