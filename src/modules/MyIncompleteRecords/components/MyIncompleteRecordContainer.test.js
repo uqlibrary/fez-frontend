@@ -4,7 +4,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
-import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent, preview } from 'test-utils';
+import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 import { useParams } from 'react-router';
@@ -49,7 +49,7 @@ describe('MyIncompleteRecordContainer', () => {
         );
 
         await waitForElementToBeRemoved(() => getByText('Loading'));
-        preview.debug();
+
         expect(asFragment()).toMatchSnapshot();
         fireEvent.mouseDown(getByTestId('rek-significance-select'));
         fireEvent.click(getByText('Major'));
