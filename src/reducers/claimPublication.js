@@ -13,7 +13,7 @@ export const initialState = {
     loadingPossibleCounts: true,
     publicationsClaimedInProgress: [],
     fullPublicationToClaim: null,
-    fullPublicationToClaimLoading: true,
+    fullPublicationToClaimLoading: false,
     fullPublicationToClaimLoadingFailed: false,
 };
 

@@ -5,6 +5,8 @@ import * as actions from 'actions';
 import { withRouter } from 'react-router-dom';
 import deparam from 'can-deparam';
 
+const defaultObj = {};
+
 export const mapStateToProps = (state, ownProps) => {
     let searchQuery;
     try {
@@ -23,7 +25,7 @@ export const mapStateToProps = (state, ownProps) => {
 
     return {
         ...state.get('accountReducer'),
-        searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || {},
+        searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || defaultObj,
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,
         isAdmin: ownProps.isAdmin || false,
