@@ -150,6 +150,9 @@ export default class CreativeWorkForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            maintainSelected
                             contributorEditorId="authors"
                             disabled={this.props.submitting}
                             isNtro={this.props.isNtro}
@@ -163,6 +166,7 @@ export default class CreativeWorkForm extends Component {
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
