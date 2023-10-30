@@ -46,12 +46,11 @@ export default class ClaimRecord extends PureComponent {
     constructor(props) {
         super(props);
 
-        this.state = { requiresFullPublication: false };
-
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         const publication = this.props.initialValues.get('publication')
             ? this.props.initialValues.get('publication').toJS()
             : null;
+
         if (!author || !publication) {
             this.props.history.go(-1);
         }
@@ -62,7 +61,6 @@ export default class ClaimRecord extends PureComponent {
             : null;
 
         if (publication && publication.rek_pid && this.props.actions) {
-            this.setState({ requiresFullPublication: true });
             this.props.actions.loadFullRecordToClaim(publication.rek_pid);
         }
     }
@@ -140,12 +138,13 @@ export default class ClaimRecord extends PureComponent {
         const txt = locale.forms.claimPublicationForm;
 
         const publication = this._publication();
-
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
+
         if (!author) {
             return <div />;
         }
-        if (!publication || (this.state.requiresFullPublication && this.props.fullPublicationToClaimLoading)) {
+
+        if (!publication || this.props.fullPublicationToClaimLoading) {
             return (
                 <StandardPage>
                     <Grid container>
