@@ -1198,7 +1198,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           </li>
           <li
             aria-label="Select this record (Test 2) to assign it to you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
@@ -1208,17 +1208,17 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="PersonOutlinedIcon"
+                  data-testid="PersonIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
                   />
                 </svg>
               </div>
@@ -1231,12 +1231,12 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
                   >
                     Test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -1259,13 +1259,38 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="KeyboardArrowUpIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+                <button
+                  aria-label="Move record down the order"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="test-list-row-1-move-down"
+                  data-mui-internal-clone-element="true"
+                  data-testid="test-list-row-1-move-down"
+                  id="test-list-row-move-down-1"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    data-testid="KeyboardArrowDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                     />
                   </svg>
                   <span
@@ -1284,7 +1309,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1309,7 +1334,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1594,7 +1619,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
         >
           <li
             aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
@@ -1604,17 +1629,17 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="PersonOutlinedIcon"
+                  data-testid="PersonIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
                   />
                 </svg>
               </div>
@@ -1627,12 +1652,12 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
                   >
                     test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -1655,7 +1680,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="KeyboardArrowDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1680,7 +1705,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="EditIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1705,7 +1730,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1989,8 +2014,8 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
           id="test-list"
         >
           <li
-            aria-label="Select this contributor (test 1) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+            aria-label="Select this contributor (test 2) to assign it as you"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
             tabindex="0"
@@ -2000,17 +2025,17 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="PersonIcon"
+                  data-testid="PersonOutlinedIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
                   />
                 </svg>
               </div>
@@ -2023,12 +2048,12 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
-                    test 1
+                    test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -2051,7 +2076,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="KeyboardArrowDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2076,7 +2101,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2093,7 +2118,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             </div>
           </li>
           <li
-            aria-label="Select this contributor (test 2) to assign it as you"
+            aria-label="Select this contributor (test 1) to assign it as you"
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
@@ -2129,7 +2154,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
-                    test 2
+                    test 1
                   </p>
                   <span
                     class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
@@ -2335,7 +2360,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
           id="test-list"
         >
           <li
-            aria-label="Select this contributor (test 1) to assign it as you"
+            aria-label="Select this contributor (test 2) to assign it as you"
             class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-0"
             id="test-list-row-0"
@@ -2371,7 +2396,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
-                    test 1
+                    test 2
                   </p>
                   <span
                     class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
@@ -2439,8 +2464,8 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             </div>
           </li>
           <li
-            aria-label="Select this contributor (test 2) to assign it as you"
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1w1rm6r-MuiListItem-root"
+            aria-label="Select this contributor (test 1) to assign it as you"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
             data-testid="test-list-row-1"
             id="test-list-row-1"
             tabindex="0"
@@ -2450,17 +2475,17 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-iz6dba-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="PersonIcon"
+                  data-testid="PersonOutlinedIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
                   />
                 </svg>
               </div>
@@ -2473,12 +2498,12 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-bdpopv-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tcar7n-MuiTypography-root"
                   >
-                    test 2
+                    test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1yycsdi-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -2501,7 +2526,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="KeyboardArrowUpIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2526,7 +2551,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-3gofcp-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
                     data-testid="DeleteIcon"
                     focusable="false"
                     viewBox="0 0 24 24"

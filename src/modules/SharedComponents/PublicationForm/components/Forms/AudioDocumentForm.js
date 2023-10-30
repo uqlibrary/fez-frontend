@@ -114,6 +114,10 @@ export default class AudioDocumentForm extends Component {
                     <StandardCard title={txt.creator.title} help={txt.creator.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            maintainSelected
+                            forceSelectable
+                            hideUqIDFields
                             contributorEditorId="creators"
                             showContributorAssignment={!editorSelected}
                             required
@@ -127,6 +131,10 @@ export default class AudioDocumentForm extends Component {
                     <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            maintainSelected
+                            forceSelectable
+                            hideUqIDFields
                             contributorEditorId="contributors"
                             showContributorAssignment={!authorSelected}
                             name="editors"
