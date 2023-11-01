@@ -1,10 +1,9 @@
 import React from 'react';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { sanitiseId } from 'helpers/general';
+import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
@@ -35,7 +34,7 @@ export const JournalFieldsMap = [
             sizeHeader: {
                 // width - can be anything.
                 xs: 12,
-                sm: 8,
+                sm: 7,
             },
         },
         size: {
@@ -56,7 +55,7 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'fez_journal_doaj',
+        key: 'open_access',
         label: 'Open access',
         subLabel: '',
         size: 75,
@@ -64,12 +63,12 @@ export const JournalFieldsMap = [
             sizeHeader: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 4,
             },
             sizeData: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 4,
             },
             hiddenHeader: { display: { xs: 'none', sm: 'block' } },
             hiddenData: { display: { xs: 'block', sm: 'none' } },
@@ -142,11 +141,50 @@ export const JournalFieldsMap = [
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access journal' : 'Use filters to find alternate pathways';
         },
-        translateFn: (data, classes) => {
-            return data.fez_journal_doaj ? (
-                <LockOpenIcon sx={{ ...(classes?.iconOpen ?? { color: 'orange', marginTop: '12px' }) }} />
-            ) : (
-                <LockOutlinedIcon sx={{ ...(classes?.iconClosed ?? { color: '#e5e5e5', marginTop: '12px' }) }} />
+        translateFn: data => {
+            console.log(data);
+            return (
+                <>
+                    {['accepted', 'published'].map(type => {
+                        if (
+                            (type === 'accepted' &&
+                                !!!data.fez_journal_issn &&
+                                !!!data.fez_journal_issn[0].srm_open_access &&
+                                !!!data.fez_journal_issn[0].fez_sherpa_romeo) ||
+                            (type === 'published' && !!!data.fez_journal_read_and_publish && !!!data.fez_journal_doaj)
+                        ) {
+                            return <></>;
+                        }
+                        const indicatorProps = {
+                            type,
+                            status: null,
+                        };
+
+                        if (type === 'accepted') {
+                            const entry = data.fez_journal_issn[0].fez_sherpa_romeo;
+                            if (entry.srm_max_embargo_amount !== null) indicatorProps.status = 'embargo';
+                            else indicatorProps.status = 'open';
+                        } else {
+                            if (data.fez_journal_read_and_publish) {
+                                const entry = data.fez_journal_read_and_publish;
+                                if (!!entry.jnl_read_and_publish_is_capped) indicatorProps.status = 'capped';
+                                else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = 'fee';
+                                else indicatorProps.status = 'open';
+                            } else {
+                                const entry = data.fez_journal_doaj;
+                                if (entry.jnl_doaj_apc_currency !== null) indicatorProps.status = 'fee';
+                                else indicatorProps.status = 'capped';
+                            }
+                        }
+                        return (
+                            <JournalsOpenAccessIndicator
+                                key={`journal-${data.jnl_jid}`}
+                                id={`journal-${data.jnl_jid}`}
+                                {...indicatorProps}
+                            />
+                        );
+                    })}
+                </>
             );
         },
     },
@@ -158,12 +196,12 @@ export const JournalFieldsMap = [
             sizeHeader: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 1,
             },
             sizeData: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 1,
             },
             hiddenHeader: { display: { xs: 'none', sm: 'block' } },
             hiddenData: { display: { xs: 'block', sm: 'none' } },
@@ -182,12 +220,16 @@ export const JournalFieldsMap = [
                                 {!!data.subLabel && (
                                     <Box component={'span'} sx={{ ...classes?.subLabel }}>
                                         {data.subLabel}
+                                        {!!data.titleHelp && (
+                                            <HelpIcon
+                                                {...data.titleHelp}
+                                                testId={`${data.key}-${index}`}
+                                                iconSize={'small'}
+                                            />
+                                        )}
                                     </Box>
                                 )}
                             </Typography>
-                            {!!data.titleHelp && (
-                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
-                            )}
                         </Box>
                     </Typography>
                 );

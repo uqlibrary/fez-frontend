@@ -98,12 +98,12 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                     data-testid="journal-list-header"
                 >
                     <Grid container sx={{ alignItems: 'flex-end' }}>
-                        {JournalFieldsMap.filter(item => item.compactView).map(header => {
+                        {JournalFieldsMap.filter(item => item.compactView).map((header, index) => {
                             const id = sanitiseId(`journal-list-header-${header.key}`);
 
                             return (
                                 <Grid
-                                    key={header.key}
+                                    key={`${header.key}_${index}`}
                                     item
                                     {...header.collapsibleComponent?.sizeHeader}
                                     id={id}
@@ -115,16 +115,23 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                         ...classes.inputLabel,
                                     }}
                                 >
-                                    <Box display="flex" alignItems="flex-end" key={header.key}>
+                                    <Box display="flex" alignItems="flex-end">
                                         <Typography variant="body1" sx={{ ...classes.inputLabel }}>
                                             {header.label}
                                             {!!header.subLabel && (
                                                 <Box component={'span'} sx={{ display: 'block', fontWeight: 400 }}>
                                                     {header.subLabel}
+                                                    {!!header.titleHelp && (
+                                                        <HelpIcon
+                                                            {...header.titleHelp}
+                                                            testId={header.key}
+                                                            iconSize={'small'}
+                                                        />
+                                                    )}
                                                 </Box>
                                             )}
                                         </Typography>
-                                        {!!header.titleHelp && (
+                                        {!!!header.subLabel && !!header.titleHelp && (
                                             <HelpIcon {...header.titleHelp} testId={header.key} iconSize={'small'} />
                                         )}
                                     </Box>
