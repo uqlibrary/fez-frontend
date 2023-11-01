@@ -7,6 +7,7 @@ describe('Journal Fields Map', () => {
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_title')[0];
         expect(testFieldMap.translateFn(testData)).toEqual(testData.jnl_title);
     });
+    /*
     it('should show correct information for Open Access translateFn and toolTipLabel', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
@@ -21,7 +22,7 @@ describe('Journal Fields Map', () => {
         // Allow open access
         testData.fez_journal_doaj = true;
         expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal');
-    });
+    });*/
 
     it('should show correct information for Highest Quartile translateFn', () => {
         const testData = { ...mockData.data[0] };

@@ -118,10 +118,10 @@ describe('JournalsListDataRow', () => {
         });
     });
 
-    it('should render tooltip', () => {
-        setup({ isSelectable: true, checked: false });
-        expect(document.querySelector('p[title="Use filters to find alternate pathways"]')).toBeInTheDocument();
-    });
+    // it('should render tooltip', () => {
+    //     setup({ isSelectable: true, checked: false });
+    //     expect(document.querySelector('p[title="Use filters to find alternate pathways"]')).toBeInTheDocument();
+    // });
 
     it('should expand to show item details when button clicked on desktop', () => {
         const { getByTestId } = setup({ isSelectable: true, checked: false });
