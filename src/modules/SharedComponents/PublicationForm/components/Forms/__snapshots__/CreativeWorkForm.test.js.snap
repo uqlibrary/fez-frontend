@@ -144,9 +144,6 @@ exports[`CreativeWorkForm renders  component 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -394,9 +391,6 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -469,9 +463,6 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -812,9 +803,6 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -887,9 +875,6 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

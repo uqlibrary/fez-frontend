@@ -5,12 +5,14 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 import TextField from '@mui/material/TextField';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { red } from '@mui/material/colors';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
         disabled: PropTypes.bool,
         minDate: PropTypes.instanceOf(Date),
         onChange: PropTypes.func,
+        onKeyUp: PropTypes.func,
         value: PropTypes.string,
         fileUploadEmbargoDateId: PropTypes.string,
     };
@@ -39,8 +41,15 @@ export class FileUploadEmbargoDate extends PureComponent {
                     renderInput={params => (
                         <TextField
                             {...params}
+                            onKeyUpCapture={this.props.onKeyUp}
                             variant="standard"
-                            sx={{ '& .MuiInput-input': { fontSize: 14, fontWeight: 400 } }}
+                            sx={{
+                                '& .MuiInput-input': {
+                                    fontSize: 14,
+                                    fontWeight: 400,
+                                    ...(params.error ? { color: red[700] } : {}),
+                                },
+                            }}
                         />
                     )}
                 />

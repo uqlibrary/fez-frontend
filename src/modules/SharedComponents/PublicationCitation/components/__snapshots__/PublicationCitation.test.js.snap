@@ -229,9 +229,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -264,9 +261,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -597,9 +591,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -632,9 +623,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1541,9 +1529,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             type="button"
           >
             Request Correction
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -5320,9 +5305,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
             type="button"
           >
             Claim now
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>

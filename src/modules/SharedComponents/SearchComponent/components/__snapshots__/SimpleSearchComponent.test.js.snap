@@ -55,9 +55,6 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           type="button"
         >
           Search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -73,9 +70,6 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           type="button"
         >
           Advanced search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -138,9 +132,6 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           type="button"
         >
           Search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -156,9 +147,6 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           type="button"
         >
           Advanced search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -222,9 +210,6 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
   </form>
@@ -286,9 +271,6 @@ exports[`SimpleSearchComponent should render with default onSearch callback 1`] 
           type="button"
         >
           Search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -304,9 +286,6 @@ exports[`SimpleSearchComponent should render with default onSearch callback 1`] 
           type="button"
         >
           Advanced search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -369,9 +348,6 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           type="button"
         >
           Search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <div
@@ -387,9 +363,6 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           type="button"
         >
           Advanced search
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
@@ -468,9 +441,6 @@ exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `
             d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
   </form>

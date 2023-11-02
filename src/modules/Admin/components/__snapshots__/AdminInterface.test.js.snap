@@ -57,9 +57,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -93,9 +90,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -123,9 +117,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -189,9 +180,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -327,9 +315,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -492,9 +477,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -528,9 +510,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -558,9 +537,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -575,9 +551,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -593,9 +566,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -628,9 +598,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -705,9 +672,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -722,9 +686,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -740,9 +701,6 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -813,9 +771,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -849,9 +804,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -879,9 +831,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -896,9 +845,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -914,9 +860,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -949,9 +892,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -1077,9 +1017,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1094,9 +1031,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1112,9 +1046,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1183,9 +1114,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -1219,9 +1147,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1249,9 +1174,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1266,9 +1188,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1284,9 +1203,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1319,9 +1235,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -1396,9 +1309,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1413,9 +1323,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1431,9 +1338,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1504,9 +1408,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -1540,9 +1441,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1570,9 +1468,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1587,9 +1482,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1605,9 +1497,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1640,9 +1529,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -1768,9 +1654,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1785,9 +1668,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -1803,9 +1683,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1881,9 +1758,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -1917,9 +1791,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1947,9 +1818,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1964,9 +1832,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -1982,9 +1847,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2057,9 +1919,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2074,9 +1933,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2092,9 +1948,6 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2162,9 +2015,6 @@ exports[`AdminInterface component should render default view as a full form view
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -2198,9 +2048,6 @@ exports[`AdminInterface component should render default view as a full form view
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2228,9 +2075,6 @@ exports[`AdminInterface component should render default view as a full form view
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -2245,9 +2089,6 @@ exports[`AdminInterface component should render default view as a full form view
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -2263,9 +2104,6 @@ exports[`AdminInterface component should render default view as a full form view
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2410,9 +2248,6 @@ exports[`AdminInterface component should render default view as a full form view
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2427,9 +2262,6 @@ exports[`AdminInterface component should render default view as a full form view
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2445,9 +2277,6 @@ exports[`AdminInterface component should render default view as a full form view
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2516,9 +2345,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -2552,9 +2378,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2582,9 +2405,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -2599,9 +2419,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -2617,9 +2434,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2652,9 +2466,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -2666,9 +2477,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       type="button"
                     >
                       Security
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -2743,9 +2551,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2760,9 +2565,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -2778,9 +2580,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2849,9 +2648,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -2885,9 +2681,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2915,9 +2708,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -2933,9 +2723,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2968,9 +2755,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -2982,9 +2766,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                       type="button"
                     >
                       Files
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -2996,9 +2777,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                       type="button"
                     >
                       Security
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -3073,9 +2851,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -3091,9 +2866,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3162,9 +2934,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -3198,9 +2967,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3266,9 +3032,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       type="button"
                     >
                       IGNORE LOCK
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3298,9 +3061,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -3364,9 +3124,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -3378,9 +3135,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       type="button"
                     >
                       Files
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -3392,9 +3146,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       type="button"
                     >
                       Security
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -3470,9 +3221,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -3572,9 +3320,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -3608,9 +3353,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3676,9 +3418,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       type="button"
                     >
                       IGNORE LOCK
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3708,9 +3447,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -3725,9 +3461,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     type="button"
                   >
                     Publish
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -3743,9 +3476,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     type="button"
                   >
                     Save
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -3778,9 +3508,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -3792,9 +3519,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       type="button"
                     >
                       Files
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -3806,9 +3530,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       type="button"
                     >
                       Security
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -3884,9 +3605,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -3901,9 +3619,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   type="button"
                 >
                   Publish
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -3919,9 +3634,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   type="button"
                 >
                   Save
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3990,9 +3702,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                     <span
                       class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                     />
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </span>
                   <span
                     class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -4026,9 +3735,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                       Learn about keyboard shortcuts
                     </title>
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4056,9 +3762,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                     type="button"
                   >
                     Cancel
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
                 <div
@@ -4074,9 +3777,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                     type="button"
                   >
                     Undelete
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -4109,9 +3809,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                       type="button"
                     >
                       Bibliographic
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -4186,9 +3883,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   type="button"
                 >
                   Cancel
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
               <div
@@ -4204,9 +3898,6 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   type="button"
                 >
                   Undelete
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
