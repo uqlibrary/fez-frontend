@@ -18,6 +18,7 @@ import Typography from '@mui/material/Typography';
 export default class ConferenceProceedingsForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
+        canEdit: PropTypes.bool,
     };
 
     constructor(props) {
@@ -137,6 +138,10 @@ export default class ConferenceProceedingsForm extends Component {
                         <Typography>{txt.editors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
                             contributorEditorId="editors"
                             name="editors"
                             locale={txt.editors.field}

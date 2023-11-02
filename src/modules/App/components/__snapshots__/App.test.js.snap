@@ -25,7 +25,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1hzybr3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1vccgkh-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
