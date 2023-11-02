@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { JournalFieldsMap } from './JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
 
 import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
@@ -43,11 +43,11 @@ const classesInternal = {
 };
 
 const StyledTableCell = styled(TableCell, {
-    shouldForwardProp: prop => prop !== 'isSelectable',
-})(({ theme, isSelectable }) => ({
+    shouldForwardProp: prop => !['isSelectable', 'journalFieldsMap'].includes(prop),
+})(({ theme, isSelectable, journalFieldsMap }) => ({
     ...(isSelectable
-        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+        ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+        : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
           /* istanbul ignore next */ {}),
     [theme.breakpoints.down('xs')]: { padding: 'none' },
     [theme.breakpoints.down('sm')]: {
@@ -58,41 +58,42 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
               /* istanbul ignore next */ {}),
     },
 }));
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
+    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
 
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
-    const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
+    const compactViewFields = journalFieldsMap.slice(1).filter(item => item.compactView || false);
 
     return (
         <>
             <TableRow>
-                <StyledTableCell size="small" isSelectable={isSelectable}>
+                <StyledTableCell size="small" isSelectable={isSelectable} journalFieldsMap={journalFieldsMap}>
                     <Grid container sx={{ alignItems: 'center' }}>
                         {isSelectable && (
                             <Grid xs={6} item>
@@ -155,10 +156,10 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         </Grid>
                         {compactViewFields.map((field, fieldIndex) => {
                             const itemData =
-                                (row && field.translateFn(row, classesInternal, fieldIndex)) ||
+                                (row && field.translateFn(row, classesInternal, index)) ||
                                 /* istanbul ignore next */ '';
                             return (
-                                <React.Fragment key={`${field.key}_${fieldIndex}`}>
+                                <React.Fragment key={`${field.key}_${index}`}>
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeHeader}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
 
 import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
@@ -12,8 +12,9 @@ import { useIsMobileView } from 'hooks';
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';
 
 const JournalsListCollapsibleDataPanel = ({ row, index, open }) => {
+    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
     const isXsDown = useIsMobileView();
-    const dataItems = JournalFieldsMap.filter(item => !item.compactView);
+    const dataItems = journalFieldsMap.filter(item => !item.compactView);
 
     return (
         <TableRow sx={{ backgroundColor: '#F5F5F5' }}>

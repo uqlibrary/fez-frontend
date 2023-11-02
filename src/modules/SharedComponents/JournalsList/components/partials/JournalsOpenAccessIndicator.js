@@ -4,56 +4,54 @@ import PropTypes from 'prop-types';
 import { green, orange, blue } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 
-import AcceptedIcon from '@mui/icons-material/BookmarkAddedOutlined';
-import PublishedIcon from '@mui/icons-material/BookOutlined';
+import AcceptedIcon from '@mui/icons-material/School';
+import PublishedIcon from '@mui/icons-material/AutoStoriesOutlined';
 
-const STATUS_OPEN = 'open';
-const STATUS_CAPPED = 'capped';
-const STATUS_EMBARGO = 'embargo';
-const STATUS_FEE = 'fee';
-const STATUSES = [STATUS_OPEN, STATUS_CAPPED, STATUS_EMBARGO, STATUS_FEE];
+import { status as oaStatus } from './hooks';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
-const classes = {
-    [STATUS_OPEN]: {
-        '& .iconColumn': {
-            backgroundColor: green[500],
-        },
-        '& .labelColumn': {
-            backgroundColor: 'rgba(76,175,80,0.05)',
-            color: green[500],
-        },
-    },
-    [STATUS_CAPPED]: {
-        '& .iconColumn': {
-            backgroundColor: blue[500],
-        },
-        '& .labelColumn': {
-            backgroundColor: 'rgba(33,150,243,0.05)',
-            color: blue[500],
-        },
-    },
-    [STATUS_EMBARGO]: {
-        '& .iconColumn': {
-            backgroundColor: 'rgba(0,0,0,0.8)',
-        },
-        '& .labelColumn': {
-            backgroundColor: 'rgba(0,0,0,0.05)',
-            color: 'rgba(0,0,0,0.8)',
-        },
-    },
-    [STATUS_FEE]: {
-        '& .iconColumn': {
-            backgroundColor: orange[500],
-        },
-        '& .labelColumn': {
-            backgroundColor: 'rgba(255,152,0,0.05)',
-            color: orange[500],
-        },
-    },
-};
+
 const JournalsOpenAccessIndicator = ({ type, status, label, ...rest }) => {
     const Icon = icons[type];
+
+    const classes = {
+        [oaStatus.open]: {
+            '& .iconColumn': {
+                backgroundColor: green[500],
+            },
+            '& .labelColumn': {
+                backgroundColor: 'rgba(76,175,80,0.05)',
+                color: green[500],
+            },
+        },
+        [oaStatus.capped]: {
+            '& .iconColumn': {
+                backgroundColor: blue[500],
+            },
+            '& .labelColumn': {
+                backgroundColor: 'rgba(33,150,243,0.05)',
+                color: blue[500],
+            },
+        },
+        [oaStatus.embargo]: {
+            '& .iconColumn': {
+                backgroundColor: 'rgba(0,0,0,0.8)',
+            },
+            '& .labelColumn': {
+                backgroundColor: 'rgba(0,0,0,0.05)',
+                color: 'rgba(0,0,0,0.8)',
+            },
+        },
+        [oaStatus.fee]: {
+            '& .iconColumn': {
+                backgroundColor: orange[500],
+            },
+            '& .labelColumn': {
+                backgroundColor: 'rgba(255,152,0,0.05)',
+                color: orange[500],
+            },
+        },
+    };
     return (
         <Box
             sx={{
@@ -111,7 +109,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, ...rest }) => {
 
 JournalsOpenAccessIndicator.propTypes = {
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
-    status: PropTypes.oneOf([...STATUSES]).isRequired,
+    status: PropTypes.oneOf(['open', 'capped', 'embargo', 'fee']).isRequired,
     label: PropTypes.string,
 };
 

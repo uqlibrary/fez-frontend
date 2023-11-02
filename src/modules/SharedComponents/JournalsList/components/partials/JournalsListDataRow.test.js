@@ -2,7 +2,7 @@ import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import JournalsListDataRow from './JournalsListDataRow';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, fireEvent, render, act } from 'test-utils';
 import Immutable from 'immutable';
@@ -26,6 +26,8 @@ const setup = ({ testData = { ...defaultTestData }, ...state }) => {
 };
 
 describe('JournalsListDataRow', () => {
+    const journalFieldsMap = fieldMappings();
+
     it('should render a row', () => {
         const { getByTestId } = setup({ isSelectable: true, checked: false });
         expect(getByTestId('journal-list-data-col-1-checkbox-0')).toBeInTheDocument();
@@ -55,7 +57,7 @@ describe('JournalsListDataRow', () => {
             };
             document.body.innerHTML = '';
             const { getByText } = setup({ journal: mockItem });
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         // data appended with Q
@@ -87,7 +89,8 @@ describe('JournalsListDataRow', () => {
             };
             document.body.innerHTML = '';
             const { getByText } = setup({ journal: mockItem });
-            JournalFieldsMap.filter(item => item.compactView)
+            journalFieldsMap
+                .filter(item => item.compactView)
                 .slice(1)
                 .map(fieldMap => {
                     expect(getByText(fieldMap.label)).toBeInTheDocument();
@@ -113,9 +116,11 @@ describe('JournalsListDataRow', () => {
             index: 0,
         };
         const { queryByText } = setup({ testData });
-        JournalFieldsMap.filter(item => item.compactView).map(item => {
-            expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
+        journalFieldsMap
+            .filter(item => item.compactView)
+            .map(item => {
+                expect(queryByText(item.label)).not.toBeInTheDocument();
+            });
     });
 
     // it('should render tooltip', () => {

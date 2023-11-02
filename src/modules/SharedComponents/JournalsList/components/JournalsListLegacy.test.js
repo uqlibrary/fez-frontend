@@ -6,7 +6,7 @@ import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsListLegacy } from './JournalsListLegacy';
 import Cookies from 'js-cookie';
 
-import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './partials/JournalFieldsMap';
 import { sanitiseId } from 'helpers/general';
 
 const testData = {
@@ -23,13 +23,14 @@ const setup = ({ state = {} }) => {
 };
 
 describe('Journal Search Results list', () => {
+    const journalFieldsMap = fieldMappings();
     it('should show less columns in the default view', () => {
         const { queryByText, getByText } = setup({
             ...testData,
         });
         // Should default to minimal view
         // First three columns should be in the document
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
@@ -41,7 +42,7 @@ describe('Journal Search Results list', () => {
             ...testData,
         });
         // All columns should be showing
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             expect(getByText(item.label)).toBeInTheDocument();
         });
 
@@ -49,7 +50,7 @@ describe('Journal Search Results list', () => {
         act(() => {
             fireEvent.click(getByRole('button', { name: 'Show less data' }));
         });
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
@@ -62,7 +63,7 @@ describe('Journal Search Results list', () => {
         });
 
         // Default at less data.
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
@@ -72,7 +73,7 @@ describe('Journal Search Results list', () => {
         });
 
         // Expanded for more data.
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             expect(getByText(item.label)).toBeInTheDocument();
         });
 
@@ -80,7 +81,7 @@ describe('Journal Search Results list', () => {
         act(() => {
             fireEvent.click(getByRole('button', { name: 'Show less data' }));
         });
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
@@ -106,7 +107,7 @@ describe('Journal Search Results list', () => {
             expect(titlesElement).toHaveTextContent(dataItem.jnl_title);
             const dataElement = getByTestId(`journal-list-data-col-2-min-${index}`);
             // Only using the first few items in the map for minified view.
-            JournalFieldsMap.slice(0, 3).map(fieldMap => {
+            journalFieldsMap.slice(0, 3).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         // data appended with Q
@@ -130,10 +131,10 @@ describe('Journal Search Results list', () => {
             // Make sure the title of the Journal is in the document as per the data.
             const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
             expect(titlesElement).toBeInTheDocument();
-            expect(titlesElement).toHaveTextContent(JournalFieldsMap[0].translateFn(dataItem));
+            expect(titlesElement).toHaveTextContent(journalFieldsMap[0].translateFn(dataItem));
 
             const dataElement = getByTestId(`journal-list-data-col-2-full-${index}`);
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         // data appended with Q
@@ -166,7 +167,7 @@ describe('Journal Search Results list', () => {
             dataItem.fez_journal_jcr_scie = null;
             dataItem.fez_journal_jcr_ssci = null;
 
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                     case 'Impact factor':
@@ -197,7 +198,7 @@ describe('Journal Search Results list', () => {
                     },
                 ],
             };
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Impact factor percentile':
                         expect(fieldMap.toolTipLabel(dataItem)).toEqual('10 - test');
