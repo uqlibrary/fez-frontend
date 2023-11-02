@@ -5,7 +5,7 @@ import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsList } from './JournalsList';
 
-import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './partials/JournalFieldsMap';
 
 const defaultTestData = {
     journals: mockData.data,
@@ -20,12 +20,13 @@ const setup = ({ testData = { ...defaultTestData }, state = {} }) => {
 };
 
 describe('Journal Search Results list', () => {
+    const journalFieldsMap = fieldMappings();
     // coverage
     it('should show compactView labels by default', () => {
         // This test just tests for elements in the page. See search.spec.js for breakpoint tests
         const { queryAllByText, getAllByText } = setup({});
         // Should default show items with compact view flags
-        JournalFieldsMap.map(item => {
+        journalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getAllByText(item.label).length).toBeGreaterThan(0)
                 : expect(queryAllByText(item.label).length).toBe(0);
@@ -39,7 +40,7 @@ describe('Journal Search Results list', () => {
             dataItem.fez_journal_jcr_scie = null;
             dataItem.fez_journal_jcr_ssci = null;
 
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         expect(fieldMap.translateFn(dataItem)).toEqual(null);

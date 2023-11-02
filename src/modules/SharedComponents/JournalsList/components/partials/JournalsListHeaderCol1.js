@@ -1,12 +1,13 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import PropTypes from 'prop-types';
 import Tooltip from '@mui/material/Tooltip';
 
 const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
+    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
     return (
         <Grid
             container
@@ -77,7 +78,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 })}
             >
                 <InputLabel shrink sx={{ fontWeight: 600 }}>
-                    {JournalFieldsMap[0].label}
+                    {journalFieldsMap[0].label}
                 </InputLabel>
             </Grid>
         </Grid>

@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from 'test-utils';
 import JournalsListDataCol2Full from './JournalsListDataCol2Full';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 const setup = (state = {}) => {
     return render(<JournalsListDataCol2Full {...{ index: 0, journal: mockData[0], ...state }} />);
 };
 describe('JournalsListDataCol2 Full', () => {
+    const journalFieldsMap = fieldMappings();
+
     it('should render baseline element', () => {
         const { getByTestId } = setup();
         expect(getByTestId('journal-list-data-col-2-full-0')).toBeInTheDocument();
@@ -27,7 +29,7 @@ describe('JournalsListDataCol2 Full', () => {
             };
             document.body.innerHTML = '';
             const { getByText } = setup({ journal: mockItem });
-            JournalFieldsMap.slice(1).map(fieldMap => {
+            journalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         expect(getByText(`Q${fieldMap.translateFn(mockItem)}`)).toBeInTheDocument();
