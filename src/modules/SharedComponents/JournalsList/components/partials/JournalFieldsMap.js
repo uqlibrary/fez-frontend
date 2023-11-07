@@ -2,8 +2,9 @@ import React from 'react';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { sanitiseId } from 'helpers/general';
+
 import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
+import { sanitiseId } from 'helpers/general';
 import { types, status, getIndicator } from './utils';
 
 // This prototype mutation allows us to return the smallest integer value in an array
@@ -59,7 +60,7 @@ const JournalFieldsMap = [
         key: 'open_access',
         label: 'Open access',
         subLabel: '',
-        size: 75,
+        size: 275,
         collapsibleComponent: {
             sizeHeader: {
                 // width - can be anything.
@@ -108,60 +109,82 @@ const JournalFieldsMap = [
             text: (
                 <>
                     <div>
-                        <strong>Published journals:</strong>
+                        <strong>Published version:</strong>
                     </div>
-                    <ul>
+                    <Box
+                        sx={{
+                            listStyle: 'none',
+                            padding: 0,
+                            '& li': { paddingTop: 3, '&:last-of-type': { marginBottom: 3 } },
+                        }}
+                    >
                         <li key="published-open">
-                            <JournalsOpenAccessIndicator type={types.published} status={status.open} /> A freely
-                            available, accessible, final version of a publication that is available for everyone to read
-                            immediately after publication.
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. No fees
+                            are payable by the author.
                         </li>
                         <li key="published-cap">
-                            <JournalsOpenAccessIndicator type={types.published} status={status.cap} /> A
-                            time-restricted, accessible, final version of a publication that is available for everyone
-                            to read immediately after publication until the capped threshold has passed.
+                            <JournalsOpenAccessIndicator type={types.published} status={status.cap} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. The
+                            publisher offers a number of fee-free open access articles each year. No fees are payable by
+                            the author while these fee-free articles are on offer. Once the fee-free cap has been
+                            exceeded authors must pay a set fee, often called an Article Processing Charge.
                         </li>
                         <li key="published-fee">
-                            <JournalsOpenAccessIndicator type={types.published} status={status.fee} /> An accessible,
-                            final version of a publication available for everyone to read immediately after publication
-                            for a set fee.
+                            <JournalsOpenAccessIndicator type={types.published} status={status.fee} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. The
+                            author must pay a set fee for this, often called an Article Processing Charge.
                         </li>
-                    </ul>
+                    </Box>
                     <div>
-                        <strong>Institutionally accepted journals:</strong>
+                        <strong>Accepted version:</strong>
                     </div>
-                    <ul>
+                    <Box
+                        sx={{
+                            listStyle: 'none',
+                            padding: 0,
+                            '& li': { paddingTop: 3, '&:last-of-type': { marginBottom: 4 } },
+                        }}
+                    >
                         <li key="accepted-open">
-                            <JournalsOpenAccessIndicator type={types.accepted} status={status.open} /> A freely
-                            available, non-final version of a publication that is available for everyone to read
-                            immediately on eSpace.
+                            <JournalsOpenAccessIndicator type={types.accepted} status={status.open} /> The accepted,
+                            peer-reviewed version of the article can be made available for everyone to read
+                            conditionally from UQ's repository, UQ eSpace. The article is available immediately after
+                            uploading the author accepted manuscript to UQ eSpace. No fees are payable by the author.
+                            The version deposited to UQ eSpace must be the author accepted manuscript.
                         </li>
                         <li key="accepted-embargo">
-                            <JournalsOpenAccessIndicator type={types.accepted} status={status.embargo} /> A
-                            time-restricted, non-final version of a publication that is available for everyone to read
-                            immediately on eSpace after the embargo date threshold has passed.
+                            <JournalsOpenAccessIndicator type={types.accepted} status={status.embargo} />
+                            The accepted, peer-reviewed version of the article can be made available for everyone to
+                            read conditionally from UQ's repository, UQ eSpace. The article will be available after a
+                            time-restricted embargo expires after uploading the author accepted manuscript to UQ eSpace.
+                            No fees are payable by the author. The version deposited to UQ eSpace must be the author
+                            accepted manuscript.
                         </li>
-                    </ul>
+                    </Box>
 
                     <p>
-                        Policies and agreements can change over time or be subject to limits. Click on the journal title
-                        for more information.
+                        Policies and agreements that inform these access conditions can change over time or be subject
+                        to limits. Click on the individual journal titles for more information specific to that title.
                     </p>
                 </>
             ),
         },
-        showTooltip: true,
-        toolTipLabel: data => {
-            return data.fez_journal_doaj ? 'Open access journal' : 'Use filters to find alternate pathways';
-        },
+        showTooltip: false,
+        toolTipLabel: null,
         translateFn: data => {
             const output = [];
 
-            const { element: published, status: publishedStatus } = getIndicator(types.published, data);
-            if (published) output.push(published);
-            if (publishedStatus !== status.open) {
-                const { element: accepted } = getIndicator(types.accepted, data);
-                if (accepted) output.push(accepted);
+            const { element: published, ...publishedProps } = getIndicator(types.published, data);
+            if (published) {
+                output.push(published);
+            }
+            if (publishedProps.status !== status.open) {
+                const { element: accepted, ...acceptedProps } = getIndicator(types.accepted, data);
+                if (acceptedProps.status) output.push(accepted);
             }
             return <>{output.map(item => item)}</>;
         },

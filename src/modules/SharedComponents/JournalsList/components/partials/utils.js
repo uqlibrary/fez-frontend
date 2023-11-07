@@ -5,6 +5,18 @@ import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
 
+const tooltips = {
+    published: {
+        open: 'No fees payable by author',
+        cap: 'Fees are prepaid (until cap)',
+        fee: 'Fees apply',
+    },
+    accepted: {
+        open: 'Immediate access via UQ eSpace',
+        embargo: 'Delayed access via UQ eSpace',
+    },
+};
+
 export const getIndicator = (type, data) => {
     if (
         (type === types.accepted &&
@@ -42,6 +54,7 @@ export const getIndicator = (type, data) => {
             <JournalsOpenAccessIndicator
                 id={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
+                tooltip={tooltips[indicatorProps.type][indicatorProps.status]}
                 {...indicatorProps}
             />
         ),
