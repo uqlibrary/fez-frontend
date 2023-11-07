@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 
 import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
@@ -43,11 +43,11 @@ const classesInternal = {
 };
 
 const StyledTableCell = styled(TableCell, {
-    shouldForwardProp: prop => !['isSelectable', 'journalFieldsMap'].includes(prop),
-})(({ theme, isSelectable, journalFieldsMap }) => ({
+    shouldForwardProp: prop => !['isSelectable'].includes(prop),
+})(({ theme, isSelectable }) => ({
     ...(isSelectable
-        ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
           /* istanbul ignore next */ {}),
     [theme.breakpoints.down('xs')]: { padding: 'none' },
     [theme.breakpoints.down('sm')]: {
@@ -58,42 +58,41 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
               /* istanbul ignore next */ {}),
     },
 }));
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
-    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
 
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
-    const compactViewFields = journalFieldsMap.slice(1).filter(item => item.compactView || false);
+    const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
 
     return (
         <>
             <TableRow>
-                <StyledTableCell size="small" isSelectable={isSelectable} journalFieldsMap={journalFieldsMap}>
+                <StyledTableCell size="small" isSelectable={isSelectable}>
                     <Grid container sx={{ alignItems: 'center' }}>
                         {isSelectable && (
                             <Grid xs={6} item>

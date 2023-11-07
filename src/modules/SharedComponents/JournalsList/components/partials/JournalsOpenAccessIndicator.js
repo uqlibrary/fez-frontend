@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import AcceptedIcon from '@mui/icons-material/School';
 import PublishedIcon from '@mui/icons-material/AutoStoriesOutlined';
 
-import { status as oaStatus } from './hooks';
+import { status as oaStatus } from './utils';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
 
@@ -24,7 +24,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, ...rest }) => {
                 color: green[500],
             },
         },
-        [oaStatus.capped]: {
+        [oaStatus.cap]: {
             '& .iconColumn': {
                 backgroundColor: blue[500],
             },
@@ -109,7 +109,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, ...rest }) => {
 
 JournalsOpenAccessIndicator.propTypes = {
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
-    status: PropTypes.oneOf(['open', 'capped', 'embargo', 'fee']).isRequired,
+    status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
     label: PropTypes.string,
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from '@mui/material/Table';
 import JournalsListHeaderRow from './JournalsListHeaderRow';
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import { act, WithReduxStore, fireEvent, render } from 'test-utils';
 import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
@@ -18,7 +18,6 @@ const setup = (state = {}) => {
 };
 
 describe('JournalsListHeaderRow', () => {
-    const journalFieldsMap = fieldMappings();
     it('should render ', () => {
         const { getByTestId } = setup({ checked: false });
         expect(getByTestId('journal-list-header-col-1-select-all')).toBeInTheDocument();
@@ -38,14 +37,12 @@ describe('JournalsListHeaderRow', () => {
         // this just checks the elements are in the page. See search.spec.js for breakpoint tests
         const { getByTestId } = setup({ isSelectable: true });
         expect(getByTestId('journal-list-header')).toBeInTheDocument();
-        journalFieldsMap
-            .filter(item => item.compactView)
-            .map((item, index) => {
-                expect(getByTestId(`journal-list-header-${sanitiseId(item.key)}`)).toHaveTextContent(item.label);
-                if (index !== 0) {
-                    expect(getByTestId(`help-icon-${sanitiseId(item.key)}`)).toBeInTheDocument();
-                }
-            });
+        JournalFieldsMap.filter(item => item.compactView).map((item, index) => {
+            expect(getByTestId(`journal-list-header-${sanitiseId(item.key)}`)).toHaveTextContent(item.label);
+            if (index !== 0) {
+                expect(getByTestId(`help-icon-${sanitiseId(item.key)}`)).toBeInTheDocument();
+            }
+        });
     });
 
     it('should fire onChange function when Select All is checked', () => {

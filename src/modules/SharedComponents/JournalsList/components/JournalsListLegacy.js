@@ -8,7 +8,7 @@ import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
 import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
-import { JournalFieldsMap as fieldMappings } from './partials/JournalFieldsMap';
+import JournalFieldsMap from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
@@ -27,20 +27,20 @@ const StyledGridWrapper = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledGridTitleColumn = styled(Grid, {
-    shouldForwardProp: prop => !['isSelectable', 'journalFieldsMap'].includes(prop),
-})(({ theme, journalFieldsMap }) => ({
-    width: journalFieldsMap[0].size.xs,
+    shouldForwardProp: prop => !['isSelectable'].includes(prop),
+})(({ theme }) => ({
+    width: JournalFieldsMap[0].size.xs,
     [theme.breakpoints.up('sm')]: {
-        width: journalFieldsMap[0].size.sm,
+        width: JournalFieldsMap[0].size.sm,
     },
     [theme.breakpoints.up('md')]: {
-        width: journalFieldsMap[0].size.md,
+        width: JournalFieldsMap[0].size.md,
     },
     [theme.breakpoints.up('lg')]: {
-        width: journalFieldsMap[0].size.lg,
+        width: JournalFieldsMap[0].size.lg,
     },
     [theme.breakpoints.up('xl')]: {
-        width: journalFieldsMap[0].size.xl,
+        width: JournalFieldsMap[0].size.xl,
     },
 }));
 
@@ -82,7 +82,6 @@ const JournalsListLegacy = ({
             Cookies.set('minimalView', true);
         }
     }, []);
-    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
 
     const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') !== 'false');
     const toggleView = () => {
@@ -91,12 +90,12 @@ const JournalsListLegacy = ({
     };
     let colWidth = 0;
     if (!minimalView) {
-        for (let i = 0; i < journalFieldsMap.length - 1; i++) {
-            colWidth += journalFieldsMap[i + 1].size;
+        for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
+            colWidth += JournalFieldsMap[i + 1].size;
         }
     } else {
-        for (let i = 0; i < journalFieldsMap.filter(item => item.compactView).length - 1; i++) {
-            colWidth += journalFieldsMap.filter(item => item.compactView)[i + 1].size;
+        for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
+            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
         }
     }
 
@@ -109,7 +108,7 @@ const JournalsListLegacy = ({
             data-testid="journal-list"
             alignItems="stretch"
         >
-            <StyledGridTitleColumn item journalFieldsMap={journalFieldsMap}>
+            <StyledGridTitleColumn item>
                 {/* Header */}
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
@@ -137,11 +136,10 @@ const JournalsListLegacy = ({
                     <StyledGridHeaderRow container spacing={0} padding={0} alignItems="flex-end">
                         {/* Header */}
                         {!minimalView
-                            ? journalFieldsMap.slice(1).map((item, index) => {
+                            ? JournalFieldsMap.slice(1).map((item, index) => {
                                   return <JournalsListHeaderCol2Full journal={item} index={index} key={index} />;
                               })
-                            : journalFieldsMap
-                                  .slice(1)
+                            : JournalFieldsMap.slice(1)
                                   .filter(item => !!item.compactView)
                                   .map((item, index) => {
                                       return <JournalsListHeaderCol2Min journal={item} index={index} key={index} />;

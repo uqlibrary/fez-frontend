@@ -1,13 +1,12 @@
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import { sanitiseId } from 'helpers/general';
 
 const JournalsListDataCol2Full = ({ journal, index }) => {
-    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
     return (
         <Grid
             container
@@ -18,7 +17,7 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
             alignItems="center"
             style={{ borderBottom: '1px dashed #e6e6e6' }}
         >
-            {journalFieldsMap.slice(1).map(item => {
+            {JournalFieldsMap.slice(1).map(item => {
                 const itemData = (journal && item.translateFn(journal)) || '';
                 const id = sanitiseId(`journal-list-data-col-2-full-${item.key}-${index}`);
                 return (

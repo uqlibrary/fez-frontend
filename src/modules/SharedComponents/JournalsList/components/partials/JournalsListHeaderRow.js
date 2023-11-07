@@ -12,15 +12,15 @@ import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { sanitiseId } from 'helpers/general';
 
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 
 const StyledTableCell = styled(TableCell, {
-    shouldForwardProp: prop => !['isSelectable', 'journalFieldsMap'].includes(prop),
-})(({ theme, isSelectable, journalFieldsMap }) => ({
+    shouldForwardProp: prop => !['isSelectable'].includes(prop),
+})(({ theme, isSelectable }) => ({
     borderBottomWidth: '2px',
     ...(isSelectable
-        ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
           /* istanbul ignore next */ {}),
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
@@ -30,26 +30,26 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
               /* istanbul ignore next */ {}),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? journalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ journalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
               /* istanbul ignore next */ {}),
     },
 }));
@@ -68,11 +68,10 @@ const classes = {
 };
 
 const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
-    const journalFieldsMap = React.useMemo(() => fieldMappings(), []);
     return (
         <TableHead>
             <TableRow>
-                <StyledTableCell size="small" isSelectable={isSelectable} journalFieldsMap={journalFieldsMap}>
+                <StyledTableCell size="small" isSelectable={isSelectable}>
                     <Grid container>
                         {isSelectable && (
                             <Grid item size="small" xs={6}>
@@ -99,52 +98,46 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                     data-testid="journal-list-header"
                 >
                     <Grid container sx={{ alignItems: 'flex-end' }}>
-                        {journalFieldsMap
-                            .filter(item => item.compactView)
-                            .map((header, index) => {
-                                const id = sanitiseId(`journal-list-header-${header.key}`);
+                        {JournalFieldsMap.filter(item => item.compactView).map((header, index) => {
+                            const id = sanitiseId(`journal-list-header-${header.key}`);
 
-                                return (
-                                    <Grid
-                                        key={`${header.key}_${index}`}
-                                        item
-                                        {...header.collapsibleComponent?.sizeHeader}
-                                        id={id}
-                                        data-testid={id}
-                                        sx={{
-                                            ...(!!header.collapsibleComponent?.hiddenHeader
-                                                ? header.collapsibleComponent?.hiddenHeader
-                                                : /* istanbul ignore next */ {}),
-                                            ...classes.inputLabel,
-                                        }}
-                                    >
-                                        <Box display="flex" alignItems="flex-end">
-                                            <Typography variant="body1" sx={{ ...classes.inputLabel }}>
-                                                {header.label}
-                                                {!!header.subLabel && (
-                                                    <Box component={'span'} sx={{ display: 'block', fontWeight: 400 }}>
-                                                        {header.subLabel}
-                                                        {!!header.titleHelp && (
-                                                            <HelpIcon
-                                                                {...header.titleHelp}
-                                                                testId={header.key}
-                                                                iconSize={'small'}
-                                                            />
-                                                        )}
-                                                    </Box>
-                                                )}
-                                            </Typography>
-                                            {!!!header.subLabel && !!header.titleHelp && (
-                                                <HelpIcon
-                                                    {...header.titleHelp}
-                                                    testId={header.key}
-                                                    iconSize={'small'}
-                                                />
+                            return (
+                                <Grid
+                                    key={`${header.key}_${index}`}
+                                    item
+                                    {...header.collapsibleComponent?.sizeHeader}
+                                    id={id}
+                                    data-testid={id}
+                                    sx={{
+                                        ...(!!header.collapsibleComponent?.hiddenHeader
+                                            ? header.collapsibleComponent?.hiddenHeader
+                                            : /* istanbul ignore next */ {}),
+                                        ...classes.inputLabel,
+                                    }}
+                                >
+                                    <Box display="flex" alignItems="flex-end">
+                                        <Typography variant="body1" sx={{ ...classes.inputLabel }}>
+                                            {header.label}
+                                            {!!header.subLabel && (
+                                                <Box component={'span'} sx={{ display: 'block', fontWeight: 400 }}>
+                                                    {header.subLabel}
+                                                    {!!header.titleHelp && (
+                                                        <HelpIcon
+                                                            {...header.titleHelp}
+                                                            testId={header.key}
+                                                            iconSize={'small'}
+                                                        />
+                                                    )}
+                                                </Box>
                                             )}
-                                        </Box>
-                                    </Grid>
-                                );
-                            })}
+                                        </Typography>
+                                        {!!!header.subLabel && !!header.titleHelp && (
+                                            <HelpIcon {...header.titleHelp} testId={header.key} iconSize={'small'} />
+                                        )}
+                                    </Box>
+                                </Grid>
+                            );
+                        })}
                     </Grid>
                 </TableCell>
             </TableRow>

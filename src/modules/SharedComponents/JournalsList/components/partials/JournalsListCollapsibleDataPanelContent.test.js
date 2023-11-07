@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, render, createMatchMedia } from 'test-utils';
 import Immutable from 'immutable';
@@ -27,8 +27,7 @@ const setup = ({ testData = { ...defaultTestData }, ...state } = {}) => {
 };
 
 describe('JournalsListCollapsibleDataPanelContent', () => {
-    const journalFieldsMap = fieldMappings();
-    const testItems = journalFieldsMap.filter(item => !item.compactView);
+    const testItems = JournalFieldsMap.filter(item => !item.compactView);
 
     it('should render panel content on desktop', () => {
         window.matchMedia = createMatchMedia(1024);

@@ -1,14 +1,12 @@
 import React from 'react';
 import { render } from 'test-utils';
 import JournalsListDataCol2Min from './JournalsListDataCol2Min';
-import { JournalFieldsMap as fieldMappings } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 const setup = (testProps = {}) => {
     return render(<JournalsListDataCol2Min {...{ index: 0, journal: mockData[0], ...testProps }} />);
 };
 describe('JournalsListDataCol2 Min', () => {
-    const journalFieldsMap = fieldMappings();
-
     it('should render baseline element', () => {
         const { getByTestId } = setup();
         expect(getByTestId('journal-list-data-col-2-min-0')).toBeInTheDocument();
@@ -28,7 +26,7 @@ describe('JournalsListDataCol2 Min', () => {
             };
             document.body.innerHTML = '';
             const { getByText } = setup({ journal: mockItem });
-            journalFieldsMap.slice(1).map(fieldMap => {
+            JournalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         // data appended with Q
