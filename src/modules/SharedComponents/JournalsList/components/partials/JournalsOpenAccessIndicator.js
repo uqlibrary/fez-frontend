@@ -56,7 +56,6 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
     return (
         <Tooltip
             title={tooltip}
-            describeChild
             placement="left"
             key={`tooltip-${type}-${status}`}
             disableFocusListener={!!!tooltip}

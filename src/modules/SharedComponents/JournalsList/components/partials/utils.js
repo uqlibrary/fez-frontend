@@ -5,19 +5,12 @@ import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
 
-const tooltips = {
-    published: {
-        open: 'No fees payable by author',
-        cap: 'Fees are prepaid (until cap)',
-        fee: 'Fees apply',
-    },
-    accepted: {
-        open: 'Immediate access via UQ eSpace',
-        embargo: 'Delayed access via UQ eSpace',
-    },
-};
+export const getIndicatorProps = ({ type, data }) => {
+    const indicatorProps = {
+        type,
+        status: null,
+    };
 
-export const getIndicator = (type, data) => {
     if (
         (type === types.accepted &&
             !!!data.fez_journal_issn &&
@@ -25,16 +18,12 @@ export const getIndicator = (type, data) => {
             !!!data.fez_journal_issn[0].fez_sherpa_romeo) ||
         (type === types.published && !!!data.fez_journal_read_and_publish && !!!data.fez_journal_doaj)
     ) {
-        return <></>;
+        return null;
     }
-    const indicatorProps = {
-        type,
-        status: null,
-    };
 
     if (type === types.accepted) {
         const entry = data.fez_journal_issn[0].fez_sherpa_romeo;
-        if (entry?.srm_max_embargo_amount !== null) indicatorProps.status = status.embargo;
+        if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
         else indicatorProps.status = status.open;
     } else {
         if (data.fez_journal_read_and_publish) {
@@ -44,17 +33,23 @@ export const getIndicator = (type, data) => {
             else indicatorProps.status = status.open;
         } else {
             const entry = data.fez_journal_doaj;
-            if (entry.jnl_doaj_apc_currency !== null) indicatorProps.status = status.fee;
+            if (entry?.jnl_doaj_apc_currency) indicatorProps.status = status.fee;
             else indicatorProps.status = status.cap;
         }
     }
+
+    return indicatorProps;
+};
+export const getIndicator = ({ type, data, tooltipLocale }) => {
+    const indicatorProps = getIndicatorProps({ type, data });
+    if (indicatorProps === null) return { element: null };
     return {
         ...indicatorProps,
         element: (
             <JournalsOpenAccessIndicator
                 id={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
-                tooltip={tooltips[indicatorProps.type][indicatorProps.status]}
+                tooltip={tooltipLocale[indicatorProps.type][indicatorProps.status]}
                 {...indicatorProps}
             />
         ),

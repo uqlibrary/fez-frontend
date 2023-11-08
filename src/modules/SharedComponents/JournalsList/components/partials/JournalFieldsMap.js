@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
 import { sanitiseId } from 'helpers/general';
 import { types, status, getIndicator } from './utils';
+import locale from 'locale/components';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
@@ -174,16 +175,24 @@ const JournalFieldsMap = [
             ),
         },
         showTooltip: false,
-        toolTipLabel: null,
         translateFn: data => {
             const output = [];
+            const tooltipLocale = locale.components.searchJournals.openAccessIndicators.tooltips;
 
-            const { element: published, ...publishedProps } = getIndicator(types.published, data);
+            const { element: published, ...publishedProps } = getIndicator({
+                type: types.published,
+                data,
+                tooltipLocale: tooltipLocale,
+            });
             if (published) {
                 output.push(published);
             }
             if (publishedProps.status !== status.open) {
-                const { element: accepted, ...acceptedProps } = getIndicator(types.accepted, data);
+                const { element: accepted, ...acceptedProps } = getIndicator({
+                    type: types.accepted,
+                    data,
+                    tooltipLocale: tooltipLocale,
+                });
                 if (acceptedProps.status) output.push(accepted);
             }
             return <>{output.map(item => item)}</>;
