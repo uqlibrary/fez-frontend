@@ -12,7 +12,7 @@ import { status as oaStatus } from './utils';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
 
-const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) => {
+const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest }) => {
     const Icon = icons[type];
 
     const classes = {
@@ -53,6 +53,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
             },
         },
     };
+
     return (
         <Tooltip
             title={tooltip}
@@ -61,6 +62,8 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
             disableFocusListener={!!!tooltip}
             disableHoverListener={!!!tooltip}
             disableTouchListener={!!!tooltip}
+            id={`open-access-${id}`}
+            data-testid={`open-access-${id}`}
         >
             <Box
                 sx={{
@@ -73,7 +76,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
                     },
                     ...classes[status],
                 }}
-                className={`openAccessIndicator ${rest.id ?? ''}-${type} ${status}`}
+                className={`openAccessIndicator ${type} ${status}`}
                 {...rest}
             >
                 <Box
@@ -106,6 +109,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
                             justifyContent: 'center',
                             alignItems: 'center',
                             textTransform: 'uppercase',
+                            lineHeight: 1.5,
                         }}
                         className="labelColumn"
                     >
@@ -118,6 +122,7 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, ...rest }) 
 };
 
 JournalsOpenAccessIndicator.propTypes = {
+    id: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['accepted', 'published']).isRequired,
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
     tooltip: PropTypes.string,

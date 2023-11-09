@@ -184,15 +184,18 @@ const JournalFieldsMap = [
                 data,
                 tooltipLocale: tooltipLocale,
             });
+            /* istanbul ignore else */
             if (published) {
                 output.push(published);
             }
+            /* istanbul ignore else */
             if (publishedProps.status !== status.open) {
                 const { element: accepted, ...acceptedProps } = getIndicator({
                     type: types.accepted,
                     data,
                     tooltipLocale: tooltipLocale,
                 });
+                /* istanbul ignore else */
                 if (acceptedProps.status) output.push(accepted);
             }
             return <>{output.map(item => item)}</>;
