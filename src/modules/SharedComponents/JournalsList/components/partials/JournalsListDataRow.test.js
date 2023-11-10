@@ -54,12 +54,22 @@ describe('JournalsListDataRow', () => {
                 },
             };
             document.body.innerHTML = '';
-            const { getByText } = setup({ journal: mockItem });
+            // for coverage, ensure sub labels render
+            JournalFieldsMap.find(field => field.key === 'highest_quartile').subLabel = 'Test sublabel';
+            JournalFieldsMap.find(field => field.key === 'highest_quartile').showTooltip = true;
+            JournalFieldsMap.find(field => field.key === 'highest_quartile').toolTipLabel = () => 'Test tooltip';
+            const { getByText, getByTestId } = setup({ journal: mockItem });
+
             JournalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
                         // data appended with Q
                         expect(getByText(`Q${fieldMap.translateFn(mockItem)}`)).toBeInTheDocument();
+                        expect(getByText('Test sublabel')).toBeInTheDocument();
+                        expect(getByTestId('journal-list-data-col-1-data-0-1')).toHaveAttribute(
+                            'title',
+                            'Test tooltip',
+                        );
                         break;
                     case 'Open Access':
                         // expect tooltip to match supplied data.
@@ -87,6 +97,7 @@ describe('JournalsListDataRow', () => {
             };
             document.body.innerHTML = '';
             const { getByText } = setup({ journal: mockItem });
+
             JournalFieldsMap.filter(item => item.compactView)
                 .slice(1)
                 .map(fieldMap => {
@@ -113,6 +124,7 @@ describe('JournalsListDataRow', () => {
             index: 0,
         };
         const { queryByText } = setup({ testData });
+
         JournalFieldsMap.filter(item => item.compactView).map(item => {
             expect(queryByText(item.label)).not.toBeInTheDocument();
         });
@@ -132,4 +144,40 @@ describe('JournalsListDataRow', () => {
         });
         expect(getByTestId('journal-list-collapse-panel-0')).toBeInTheDocument();
     });
+
+    // describe('coverage', () => {
+    //     it('should not render tooltip', () => {
+    //         // set default blank data for test coverage for one of the journal items.
+    //         mockData[1].fez_journal_cite_score = {
+    //             fez_journal_cite_score_asjc_code: [],
+    //         };
+    //         mockData.map(mockItem => {
+    //             // set default data in journal needed for test - not supplied.
+    //             mockItem.fez_journal_jcr_ssci = {
+    //                 jnl_jcr_ssci_impact_factor: 5,
+    //                 fez_journal_jcr_ssci_category: {
+    //                     fez_journal_jcr_ssci_category_quartile: 3,
+    //                 },
+    //             };
+    //             document.body.innerHTML = '';
+    //             // for coverage, ensure sub labels render
+    //             const oldFn = JournalFieldsMap.find(field => field.key === 'highest_quartile').translateFn;
+    //             JournalFieldsMap.find(field => field.key === 'highest_quartile').translateFn = () => null;
+    //             const { queryByText } = setup({ journal: mockItem });
+
+    //             JournalFieldsMap.slice(1).map(fieldMap => {
+    //                 switch (fieldMap.label) {
+    //                     case 'Highest quartile':
+    //                         // data appended with Q
+    //                         expect(queryByText('Q')).not.toBeInTheDocument();
+    //                         expect(document.querySelector('p')).not.toHaveAttribute('title');
+    //                         break;
+    //                     default:
+    //                         break;
+    //                 }
+    //             });
+    //             JournalFieldsMap.find(field => field.key === 'highest_quartile').translateFn = oldFn;
+    //         });
+    //     });
+    // });
 });

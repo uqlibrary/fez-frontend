@@ -18,20 +18,20 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
     const classes = {
         [oaStatus.open]: {
             '& .iconColumn': {
-                backgroundColor: green[500],
+                backgroundColor: green[800],
             },
             '& .labelColumn': {
-                backgroundColor: 'rgba(76,175,80,0.05)',
-                color: green[500],
+                backgroundColor: green[50],
+                color: green[800],
             },
         },
         [oaStatus.cap]: {
             '& .iconColumn': {
-                backgroundColor: blue[500],
+                backgroundColor: blue[800],
             },
             '& .labelColumn': {
-                backgroundColor: 'rgba(33,150,243,0.05)',
-                color: blue[500],
+                backgroundColor: blue[50],
+                color: blue[800],
             },
         },
         [oaStatus.embargo]: {
@@ -45,11 +45,11 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
         },
         [oaStatus.fee]: {
             '& .iconColumn': {
-                backgroundColor: orange[500],
+                backgroundColor: orange[800],
             },
             '& .labelColumn': {
-                backgroundColor: 'rgba(255,152,0,0.05)',
-                color: orange[500],
+                backgroundColor: orange[50],
+                color: orange[800],
             },
         },
     };
