@@ -488,11 +488,22 @@ describe('ViewJournal', () => {
                         },
                         jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental & Dental Health',
                     },
+                    {
+                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        jnl_wos_category: '',
+                        jnl_wos_category_index: 'AHCI',
+                        jnl_wos_category_issn: '0090-0036',
+                        jnl_wos_category_source_date: '2020-09-29',
+                        fez_journal_cwts: {
+                            jnl_cwts_source_year: 2020,
+                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        },
+                    },
                 ],
             },
         });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -511,6 +522,8 @@ describe('ViewJournal', () => {
             'Public, Environmental & Occupational Health (0090-0036)',
         );
         expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
+
+        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
     });
     // Test for title change
     it('Should correctly show required title change', async () => {
