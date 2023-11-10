@@ -61,7 +61,7 @@ const JournalFieldsMap = [
         key: 'open_access',
         label: 'Open access',
         subLabel: '',
-        size: 275,
+        size: 200,
         collapsibleComponent: {
             sizeHeader: {
                 // width - can be anything.
