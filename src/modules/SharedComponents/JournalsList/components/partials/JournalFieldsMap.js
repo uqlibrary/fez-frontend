@@ -1,17 +1,19 @@
 import React from 'react';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+
+import JournalsOpenAccessIndicator from './JournalsOpenAccessIndicator';
 import { sanitiseId } from 'helpers/general';
+import { types, status, getIndicator } from './utils';
+import locale from 'locale/components';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
     return Math.min.apply(Math, array);
 };
 
-export const JournalFieldsMap = [
+const JournalFieldsMap = [
     {
         key: 'jnl_title',
         label: 'Journal title',
@@ -28,14 +30,14 @@ export const JournalFieldsMap = [
                         padding: '6px',
                     },
                     sm: {
-                        width: '15%',
+                        width: '10%',
                     },
                 },
             },
             sizeHeader: {
                 // width - can be anything.
                 xs: 12,
-                sm: 8,
+                sm: 7,
             },
         },
         size: {
@@ -56,20 +58,20 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'fez_journal_doaj',
+        key: 'open_access',
         label: 'Open access',
         subLabel: '',
-        size: 75,
+        size: 275,
         collapsibleComponent: {
             sizeHeader: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 3,
             },
             sizeData: {
                 // width - can be anything.
                 xs: 12,
-                sm: 2,
+                sm: 3,
             },
             hiddenHeader: { display: { xs: 'none', sm: 'block' } },
             hiddenData: { display: { xs: 'block', sm: 'none' } },
@@ -107,53 +109,102 @@ export const JournalFieldsMap = [
             title: 'Open Access',
             text: (
                 <>
+                    <div>
+                        <strong>Published version:</strong>
+                    </div>
+                    <Box
+                        sx={{
+                            listStyle: 'none',
+                            padding: 0,
+                            '& li': { paddingTop: 3, '&:last-of-type': { marginBottom: 3 } },
+                        }}
+                    >
+                        <li key="published-open">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. No fees
+                            are payable by the author.
+                        </li>
+                        <li key="published-cap">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.cap} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. The
+                            publisher offers a number of fee-free open access articles each year. No fees are payable by
+                            the author while these fee-free articles are on offer. Once the fee-free cap has been
+                            exceeded authors must pay a set fee, often called an Article Processing Charge.
+                        </li>
+                        <li key="published-fee">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.fee} />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the publisher. The article is available immediately after publication. The
+                            author must pay a set fee for this, often called an Article Processing Charge.
+                        </li>
+                    </Box>
+                    <div>
+                        <strong>Accepted version:</strong>
+                    </div>
+                    <Box
+                        sx={{
+                            listStyle: 'none',
+                            padding: 0,
+                            '& li': { paddingTop: 3, '&:last-of-type': { marginBottom: 4 } },
+                        }}
+                    >
+                        <li key="accepted-open">
+                            <JournalsOpenAccessIndicator type={types.accepted} status={status.open} /> The accepted,
+                            peer-reviewed version of the article can be made available for everyone to read
+                            conditionally from UQ's repository, UQ eSpace. The article is available immediately after
+                            uploading the author accepted manuscript to UQ eSpace. No fees are payable by the author.
+                            The version deposited to UQ eSpace must be the author accepted manuscript.
+                        </li>
+                        <li key="accepted-embargo">
+                            <JournalsOpenAccessIndicator type={types.accepted} status={status.embargo} />
+                            The accepted, peer-reviewed version of the article can be made available for everyone to
+                            read conditionally from UQ's repository, UQ eSpace. The article will be available after a
+                            time-restricted embargo expires after uploading the author accepted manuscript to UQ eSpace.
+                            No fees are payable by the author. The version deposited to UQ eSpace must be the author
+                            accepted manuscript.
+                        </li>
+                    </Box>
+
                     <p>
-                        <b>Gold open access:</b> A freely accessible, final version of a publication is available for
-                        everyone to read immediately after publication.
-                    </p>
-                    <p>
-                        For other pathways:
-                        <ul>
-                            <li>
-                                Use the <b>open access: accepted version</b> filter to sort journals by length of
-                                embargo period after which a self-archived or author accepted manuscript can be made
-                                available via UQ eSpace. (Green open access).
-                            </li>
-                            <li>
-                                Use the <b>open access: published version</b> filter to include or exclude charges
-                                (APCs) which are paid to a publisher to make a publication immediately available and
-                                openly accessible. Some APCs may be pre-paid or discounted, if the Library has
-                                negotiated a{' '}
-                                <a href={'https://web.library.uq.edu.au/read-and-publish-agreements'} target={'_blank'}>
-                                    read and publish agreement
-                                </a>
-                                .
-                            </li>
-                        </ul>
-                    </p>
-                    <p>
-                        Policies and agreements can change over time or be subject to limits. Click on the journal title
-                        for more information.
+                        Policies and agreements that inform these access conditions can change over time or be subject
+                        to limits. Click on the individual journal titles for more information specific to that title.
                     </p>
                 </>
             ),
         },
-        showTooltip: true,
-        toolTipLabel: data => {
-            return data.fez_journal_doaj ? 'Open access journal' : 'Use filters to find alternate pathways';
-        },
-        translateFn: (data, classes) => {
-            return data.fez_journal_doaj ? (
-                <LockOpenIcon sx={{ ...(classes?.iconOpen ?? { color: 'orange', marginTop: '12px' }) }} />
-            ) : (
-                <LockOutlinedIcon sx={{ ...(classes?.iconClosed ?? { color: '#e5e5e5', marginTop: '12px' }) }} />
-            );
+        showTooltip: false,
+        translateFn: data => {
+            const output = [];
+            const tooltipLocale = locale.components.searchJournals.openAccessIndicators.tooltips;
+
+            const { element: published, ...publishedProps } = getIndicator({
+                type: types.published,
+                data,
+                tooltipLocale: tooltipLocale,
+            });
+            /* istanbul ignore else */
+            if (published) {
+                output.push(published);
+            }
+            /* istanbul ignore else */
+            if (publishedProps.status !== status.open) {
+                const { element: accepted, ...acceptedProps } = getIndicator({
+                    type: types.accepted,
+                    data,
+                    tooltipLocale: tooltipLocale,
+                });
+                /* istanbul ignore else */
+                if (acceptedProps.status) output.push(accepted);
+            }
+            return <>{output.map(item => item)}</>;
         },
     },
     {
         key: 'highest_quartile',
         label: 'Highest quartile',
-        subLabel: 'Q1 is best',
+        subLabel: '',
         collapsibleComponent: {
             sizeHeader: {
                 // width - can be anything.
@@ -182,12 +233,16 @@ export const JournalFieldsMap = [
                                 {!!data.subLabel && (
                                     <Box component={'span'} sx={{ ...classes?.subLabel }}>
                                         {data.subLabel}
+                                        {!!data.titleHelp && (
+                                            <HelpIcon
+                                                {...data.titleHelp}
+                                                testId={`${data.key}-${index}`}
+                                                iconSize={'small'}
+                                            />
+                                        )}
                                     </Box>
                                 )}
                             </Typography>
-                            {!!data.titleHelp && (
-                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
-                            )}
                         </Box>
                     </Typography>
                 );
@@ -470,3 +525,4 @@ export const JournalFieldsMap = [
         },
     },
 ];
+export default JournalFieldsMap;
