@@ -115,9 +115,6 @@ exports[`Search record should handle skip search 1`] = `
               type="button"
             >
               Skip search
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -242,9 +239,6 @@ exports[`Search record should render stepper and a publication search form 1`] =
               type="button"
             >
               Skip search
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

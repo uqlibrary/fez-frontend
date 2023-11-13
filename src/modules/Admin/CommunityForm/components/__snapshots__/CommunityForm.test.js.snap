@@ -484,9 +484,6 @@ exports[`Community form should display successfull submission screen 1`] = `
                 type="button"
               >
                 Cancel and return to the homepage
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
             <div
@@ -500,9 +497,6 @@ exports[`Community form should display successfull submission screen 1`] = `
                 type="button"
               >
                 Add community
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -974,9 +968,6 @@ exports[`Community form should render form 1`] = `
                 type="button"
               >
                 Cancel and return to the homepage
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
             <div
@@ -990,9 +981,6 @@ exports[`Community form should render form 1`] = `
                 type="button"
               >
                 Add community
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -1082,9 +1070,6 @@ exports[`Community form should render success panel 1`] = `
             type="button"
           >
             Return to the homepage
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -1096,9 +1081,6 @@ exports[`Community form should render success panel 1`] = `
             type="button"
           >
             Add another community
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>

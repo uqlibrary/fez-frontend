@@ -57,9 +57,6 @@ exports[`Component Masquerade Should render form as expected 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -120,9 +117,6 @@ exports[`Component Masquerade Should render form as expected 1`] = `
                 type="button"
               >
                 Masquerade
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -190,9 +184,6 @@ exports[`Component Masquerade Should render readonly description 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -253,9 +244,6 @@ exports[`Component Masquerade Should render readonly description 1`] = `
                 type="button"
               >
                 Masquerade
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>

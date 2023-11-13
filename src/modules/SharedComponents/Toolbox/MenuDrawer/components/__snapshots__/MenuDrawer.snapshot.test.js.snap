@@ -56,9 +56,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                   d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -86,9 +83,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                 secondary text 0
               </p>
             </div>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </div>
         </span>
       </nav>

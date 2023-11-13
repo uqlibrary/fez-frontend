@@ -468,9 +468,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               type="button"
             >
               Request Correction
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -661,9 +658,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               type="button"
             >
               Request Correction
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -828,9 +822,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               type="button"
             >
               Request Correction
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -998,9 +989,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               type="button"
             >
               Request Correction
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1410,9 +1398,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
               type="button"
             >
               Request Correction
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1437,9 +1422,6 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
         type="button"
       >
         View all (137)
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
   </div>

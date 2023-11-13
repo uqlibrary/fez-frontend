@@ -44,9 +44,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -147,9 +144,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div

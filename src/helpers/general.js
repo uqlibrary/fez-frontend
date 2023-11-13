@@ -2,6 +2,7 @@ import HTMLReactParser from 'html-react-parser';
 
 // note: dd usage by WebpackStrip for dist builds
 global.dd = (...args) => console.dir(args, { depth: null });
+global.dc = (...args) => console.log(...args);
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
