@@ -13,6 +13,7 @@ import * as actions from 'actions';
 import { JournalDetailsContext } from './JournalDataContext';
 import Section from './Section';
 
+import { userIsAdmin } from 'hooks';
 import { locale } from 'locale';
 import { viewJournalConfig } from 'config/viewJournal';
 
@@ -21,6 +22,7 @@ import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
 export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
+    const isAdmin = userIsAdmin();
     const txt = locale.pages.journal.view;
 
     const journalLoading = useSelector(state => state.get('journalReducer').journalLoading);
@@ -67,6 +69,8 @@ export const ViewJournal = () => {
                         favourite: txt.favouriteTooltip.isFavourite,
                         notFavourite: txt.favouriteTooltip.isNotFavourite,
                     }}
+                    showAdminActions={isAdmin}
+                    sx={{ display: 'flex' }}
                 />
             }
         >

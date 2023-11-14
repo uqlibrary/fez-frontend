@@ -1352,6 +1352,15 @@ export const RECORD_ACTION_URLS = [
         options: null,
     },
 ];
+export const JOURNAL_ACTION_URLS = [
+    {
+        label: 'Edit selected journal',
+        url: jid => `${APP_URL}${PATH_PREFIX}admin/journal/edit/${jid}`,
+        inApp: true,
+        options: null,
+        isRecordEdit: true,
+    },
+];
 
 export const MAXIMUM_SECURITY_PUBLIC = 5;
 export const TOP_LEVEL_SECURITY_POLICIES = [
