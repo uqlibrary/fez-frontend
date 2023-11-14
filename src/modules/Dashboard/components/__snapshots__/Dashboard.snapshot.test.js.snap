@@ -270,9 +270,6 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -526,9 +523,6 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                       type="button"
                     >
                       My works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -538,9 +532,6 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                       type="button"
                     >
                       My trending works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -954,9 +945,6 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1280,9 +1268,6 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                       type="button"
                     >
                       My works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="true"
@@ -1292,9 +1277,6 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                       type="button"
                     >
                       My trending works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -1670,9 +1652,6 @@ exports[`Dashboard test Should only render barChart 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -1989,9 +1968,6 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2245,9 +2221,6 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                       type="button"
                     >
                       My works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -2257,9 +2230,6 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                       type="button"
                     >
                       My trending works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -2472,9 +2442,6 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   type="button"
                 >
                   View and Complete
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2736,9 +2703,6 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -2819,9 +2783,6 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   type="button"
                 >
                   View and Complete
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3083,9 +3044,6 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3367,9 +3325,6 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3408,9 +3363,6 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                       type="button"
                     >
                       My works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                     <button
                       aria-selected="false"
@@ -3420,9 +3372,6 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                       type="button"
                     >
                       My trending works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -3836,9 +3785,6 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -3877,9 +3823,6 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                       type="button"
                     >
                       My works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -4230,9 +4173,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4584,9 +4524,6 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -4625,9 +4562,6 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                       type="button"
                     >
                       My trending works
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                   <span
@@ -5204,9 +5138,6 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -5709,9 +5640,6 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6034,9 +5962,6 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -6564,9 +6489,6 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -7024,9 +6946,6 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -7484,9 +7403,6 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8327,9 +8243,6 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8611,9 +8524,6 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -8975,9 +8885,6 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                   type="button"
                 >
                   Claim your works now
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -9159,9 +9066,6 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                                 Information about uploading your eSpace works to ORCID
                               </title>
                             </svg>
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
                           </button>
                         </span>
                       </div>
@@ -9252,9 +9156,6 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -9497,9 +9398,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>
@@ -9682,9 +9580,6 @@ exports[`Dashboard test should wait for ORCID sync to complete 1`] = `
                                 Information about uploading your eSpace works to ORCID
                               </title>
                             </svg>
-                            <span
-                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                            />
                           </button>
                         </span>
                       </div>
@@ -9775,9 +9670,6 @@ exports[`Dashboard test should wait for ORCID sync to complete 1`] = `
                   type="button"
                 >
                   Add a missing work
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>

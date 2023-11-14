@@ -11,6 +11,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import * as config from '../config';
 import locale from '../locale';
+import { isDateSameOrAfter, isValidDate } from '../../../../../config/validation';
 
 const moment = require('moment');
 
@@ -82,6 +83,7 @@ export class FileUploader extends PureComponent {
                 isValid: this.isFileUploadValid(this.state),
             });
     }
+
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
@@ -344,13 +346,32 @@ export class FileUploader extends PureComponent {
             !this.props.requireOpenAccessStatus ||
             (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
                 filesInQueue.length &&
-                ((this.isAnyOpenAccess(filesInQueue) && isTermsAndConditionsAccepted) ||
+                ((this.isAnyOpenAccess(filesInQueue) &&
+                    !this.isAnyEmbargoDateInvalid(filesInQueue) &&
+                    isTermsAndConditionsAccepted) ||
                     !this.isAnyOpenAccess(filesInQueue))) ||
             (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY)).length ===
                 filesInQueue.length &&
                 ((this.isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
                     !this.isAnySecurityPolicyPublic(filesInQueue)))
         );
+    };
+
+    /**
+     * @param filesInQueue
+     * @return {boolean}
+     */
+    isAnyEmbargoDateInvalid = filesInQueue => {
+        const today = moment();
+        const openAccess = filesInQueue.filter(
+            file => file[config.FILE_META_KEY_ACCESS_CONDITION] === config.FILE_ACCESS_CONDITION_OPEN,
+        );
+        const validEmbargoDates = openAccess.filter(
+            file =>
+                isValidDate(file[config.FILE_META_KEY_EMBARGO_DATE]) &&
+                isDateSameOrAfter(file[config.FILE_META_KEY_EMBARGO_DATE], today),
+        );
+        return openAccess.length !== validEmbargoDates.length;
     };
 
     render() {

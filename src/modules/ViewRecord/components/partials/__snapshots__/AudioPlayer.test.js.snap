@@ -31,9 +31,6 @@ exports[`Audio Player Component  should render component 1`] = `
           d="M8 5v14l11-7z"
         />
       </svg>
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </div>
 </div>

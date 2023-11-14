@@ -54,9 +54,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -226,9 +223,6 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -363,9 +357,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -535,9 +526,6 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   Click for more information
                 </title>
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

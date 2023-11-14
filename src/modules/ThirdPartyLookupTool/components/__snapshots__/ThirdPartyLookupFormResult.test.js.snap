@@ -81,9 +81,6 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
             type="button"
           >
             New Test Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -173,9 +170,6 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
             type="button"
           >
             New Test Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -283,9 +277,6 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
             type="button"
           >
             New Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -380,9 +371,6 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
             type="button"
           >
             New Test Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -472,9 +460,6 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
             type="button"
           >
             New Test Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -582,9 +567,6 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
             type="button"
           >
             New Test Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -674,9 +656,6 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
             type="button"
           >
             New Search
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>

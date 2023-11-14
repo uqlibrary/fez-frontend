@@ -518,9 +518,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
               Information about uploading your eSpace works to ORCID
             </title>
           </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </span>
     </div>

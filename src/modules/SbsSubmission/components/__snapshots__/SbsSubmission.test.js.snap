@@ -913,9 +913,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -930,9 +927,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
               type="button"
             >
               Deposit your thesis
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1022,9 +1016,6 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   type="button"
                 >
                   RESUBMIT YOUR THESIS
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </div>
             </div>

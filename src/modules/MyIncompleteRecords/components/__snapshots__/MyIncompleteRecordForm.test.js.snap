@@ -44,9 +44,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -389,9 +386,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -542,9 +536,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -867,9 +858,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -995,9 +983,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
               type="button"
             >
               Cancel and return to my incomplete works list
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1010,9 +995,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
               type="button"
             >
               Complete work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

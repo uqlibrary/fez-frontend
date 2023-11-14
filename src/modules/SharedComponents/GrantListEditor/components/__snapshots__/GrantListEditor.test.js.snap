@@ -295,9 +295,6 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -481,9 +478,6 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -794,9 +788,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -948,9 +939,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -980,9 +968,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -1097,9 +1082,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -1156,9 +1138,6 @@ exports[`GrantListEditor should delete all grants 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -1648,9 +1627,6 @@ exports[`GrantListEditor should delete grant 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -1802,9 +1778,6 @@ exports[`GrantListEditor should delete grant 1`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -1834,9 +1807,6 @@ exports[`GrantListEditor should delete grant 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -1951,9 +1921,6 @@ exports[`GrantListEditor should delete grant 1`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -2010,9 +1977,6 @@ exports[`GrantListEditor should delete grant 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -2325,9 +2289,6 @@ exports[`GrantListEditor should delete grant 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -2509,9 +2470,6 @@ exports[`GrantListEditor should delete grant 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -2822,9 +2780,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -2976,9 +2931,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3008,9 +2960,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3125,9 +3074,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -3184,9 +3130,6 @@ exports[`GrantListEditor should move the grant down 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3497,9 +3440,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3651,9 +3591,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3683,9 +3620,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -3800,9 +3734,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -3859,9 +3790,6 @@ exports[`GrantListEditor should move the grant down 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -4172,9 +4100,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -4326,9 +4251,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -4358,9 +4280,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -4475,9 +4394,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -4534,9 +4450,6 @@ exports[`GrantListEditor should move the grant up 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -4847,9 +4760,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -5001,9 +4911,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -5033,9 +4940,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -5150,9 +5054,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -5209,9 +5110,6 @@ exports[`GrantListEditor should move the grant up 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -5522,9 +5420,6 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -5706,9 +5601,6 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -6019,9 +5911,6 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -6203,9 +6092,6 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -6516,9 +6402,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -6815,9 +6698,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -6874,9 +6754,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -7187,9 +7064,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -7486,9 +7360,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -7545,9 +7416,6 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8410,9 +8278,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8564,9 +8429,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8596,9 +8458,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8713,9 +8572,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -8742,9 +8598,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8774,9 +8627,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8891,9 +8741,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -8920,9 +8767,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -8952,9 +8796,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -9069,9 +8910,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                       <div
@@ -9128,9 +8966,6 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -9625,9 +9460,6 @@ exports[`GrantListEditor should render with default given value 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -9809,9 +9641,6 @@ exports[`GrantListEditor should render with default given value 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -10122,9 +9951,6 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -10306,9 +10132,6 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -10619,9 +10442,6 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>
@@ -10803,9 +10623,6 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                               d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
                         </button>
                       </div>
                     </div>

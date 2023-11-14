@@ -24,9 +24,6 @@ exports[`FormViewToggler component should render default view 1`] = `
           <span
             class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
           />
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </span>
         <span
           class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -60,9 +57,6 @@ exports[`FormViewToggler component should render default view 1`] = `
             Learn about keyboard shortcuts
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
   </div>
@@ -94,9 +88,6 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
           <span
             class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
           />
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </span>
         <span
           class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
@@ -130,9 +121,6 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
             Learn about keyboard shortcuts
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
   </div>

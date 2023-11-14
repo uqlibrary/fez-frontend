@@ -27,9 +27,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -83,9 +80,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -176,9 +170,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                         d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -207,9 +198,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -241,9 +229,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -327,9 +312,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                         d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -358,9 +340,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -392,9 +371,6 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -432,9 +408,6 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -479,9 +452,6 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -643,11 +613,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -692,9 +658,6 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -783,9 +746,6 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -817,9 +777,6 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -971,11 +928,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -1020,9 +973,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -1111,9 +1061,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1145,9 +1092,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -1185,9 +1129,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -1391,9 +1332,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -1438,9 +1376,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -1529,9 +1464,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1563,9 +1495,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -1603,9 +1532,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -1659,9 +1585,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -1749,9 +1672,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                         d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -1780,9 +1700,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1814,9 +1731,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -1900,9 +1814,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                         d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -1931,9 +1842,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -1965,9 +1873,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -2005,9 +1910,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -2061,9 +1963,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -2151,9 +2050,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                         d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -2182,9 +2078,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2216,9 +2109,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -2302,9 +2192,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                         d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </span>
               </div>
@@ -2333,9 +2220,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2367,9 +2251,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>
@@ -2407,9 +2288,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -2454,9 +2332,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                   d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </span>
         </div>
@@ -2543,9 +2418,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                       d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
                     />
                   </svg>
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </span>
             </div>
@@ -2577,9 +2449,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                     d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </span>
           </div>

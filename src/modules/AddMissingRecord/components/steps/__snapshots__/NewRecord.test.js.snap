@@ -66,9 +66,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
                     Click for more information
                   </title>
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -170,9 +167,6 @@ exports[`Add new record should render stepper and a publication form 1`] = `
           type="button"
         >
           Abandon and search again
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>
