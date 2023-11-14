@@ -1306,6 +1306,9 @@ export default {
                     message: message => message,
                     alertId: 'alert-error',
                 },
+                advisoryStatement: {
+                    title: 'Advisory statement',
+                },
             },
         },
         authors: {

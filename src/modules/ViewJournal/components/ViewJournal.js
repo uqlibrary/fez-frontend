@@ -86,6 +86,15 @@ export const ViewJournal = () => {
                             />
                         </Grid>
                     )}
+                    {journalDetails && journalDetails.jnl_advisory_statement && (
+                        <Grid item xs={12}>
+                            <Alert
+                                type={'info'}
+                                title={txt.advisoryStatement.title}
+                                message={journalDetails.jnl_advisory_statement}
+                            />
+                        </Grid>
+                    )}
                     {Object.entries(viewJournalConfig)
                         // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
