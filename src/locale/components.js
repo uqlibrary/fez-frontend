@@ -4179,6 +4179,19 @@ export default {
                     text: <div>We were unable to find any results.</div>,
                 },
             },
+            openAccessIndicators: {
+                tooltips: {
+                    published: {
+                        open: 'No fees payable by author',
+                        cap: 'Fees are prepaid (until cap)',
+                        fee: 'Fees apply',
+                    },
+                    accepted: {
+                        open: 'Immediate access via UQ eSpace',
+                        embargo: 'Delayed access via UQ eSpace',
+                    },
+                },
+            },
             export: {
                 label: 'Export page results',
                 format: [{ value: 'excel', label: 'Excel File' }],

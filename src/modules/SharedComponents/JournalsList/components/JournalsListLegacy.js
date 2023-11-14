@@ -8,7 +8,7 @@ import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
 import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
-import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import JournalFieldsMap from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
@@ -26,7 +26,9 @@ const StyledGridWrapper = styled(Grid)(({ theme }) => ({
     },
 }));
 
-const StyledGridTitleColumn = styled(Grid)(({ theme }) => ({
+const StyledGridTitleColumn = styled(Grid, {
+    shouldForwardProp: prop => !['isSelectable'].includes(prop),
+})(({ theme }) => ({
     width: JournalFieldsMap[0].size.xs,
     [theme.breakpoints.up('sm')]: {
         width: JournalFieldsMap[0].size.sm,
