@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdentifiersSection component should render correct identifiers fields for Book - Creative Work - Musical Composition 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_doi",
+          ],
+          Array [
+            "fez_record_search_key_ismn",
+          ],
+          Array [
+            "fez_record_search_key_isi_loc",
+            "rek_wok_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_scopus_id",
+            "rek_scopus_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_pubmed_id",
+            "rek_pubmed_doc_type",
+          ],
+        ],
+        "title": "Manage identifiers",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "links",
+          ],
+        ],
+        "title": "Manage links",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;
+
+exports[`IdentifiersSection component should render correct identifiers fields for Creative Work - Creative Work - Musical Composition 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_doi",
+          ],
+          Array [
+            "fez_record_search_key_ismn",
+          ],
+        ],
+        "title": "Manage identifiers",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "links",
+          ],
+        ],
+        "title": "Manage links",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;
+
+exports[`IdentifiersSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_doi",
+          ],
+          Array [
+            "fez_record_search_key_isi_loc",
+            "rek_wok_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_scopus_id",
+            "rek_scopus_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_pubmed_id",
+            "rek_pubmed_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_pubmed_central_id",
+          ],
+        ],
+        "title": "Manage identifiers",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "links",
+          ],
+        ],
+        "title": "Manage links",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`IdentifiersSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_doi",
+          ],
+          Array [
+            "fez_record_search_key_isi_loc",
+            "rek_wok_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_scopus_id",
+            "rek_scopus_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_pubmed_id",
+            "rek_pubmed_doc_type",
+          ],
+          Array [
+            "fez_record_search_key_pubmed_central_id",
+          ],
+        ],
+        "title": "Manage identifiers",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "links",
+          ],
+        ],
+        "title": "Manage links",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

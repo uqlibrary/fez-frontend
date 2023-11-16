@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReasonSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "reason",
+          ],
+        ],
+        "title": "Reason for Edit",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`ReasonSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "reason",
+          ],
+        ],
+        "title": "Reason for Edit",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

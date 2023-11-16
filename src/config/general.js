@@ -1797,3 +1797,6 @@ export const COLLECTION_VIEW_TYPE = [
     { id: 456850, value: 'standard', label: 'Standard' },
     { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
 ];
+
+/** journalAdmin  */
+export const ADMIN_JOURNAL = 'adminjournal';

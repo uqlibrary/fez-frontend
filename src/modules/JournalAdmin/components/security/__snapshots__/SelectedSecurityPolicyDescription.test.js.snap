@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectedSecurityPolicyDescription component should render properly 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      style="margin-top: -8px;"
+    >
+      test
+    </h6>
+    <div
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      style="margin-top: 8px;"
+    >
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1oua83y-MuiGrid2-root"
+      >
+        <b>
+          Name (ID):
+        </b>
+      </div>
+      <div
+        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-bw3u2n-MuiGrid2-root"
+      >
+        Theses Assessors (2)
+      </div>
+    </div>
+  </div>
+</div>
+`;

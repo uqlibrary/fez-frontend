@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroupsWithinCard component should render default view 1`] = `
+<ForwardRef(Grid)
+  item={true}
+  xs={12}
+>
+  <AdminCard
+    accentHeader={true}
+    title="Title"
+  >
+    <ForwardRef(Grid)
+      container={true}
+      spacing={1}
+    >
+      <Memo
+        groups={
+          Array [
+            Array [
+              "test",
+            ],
+          ]
+        }
+      />
+    </ForwardRef(Grid)>
+  </AdminCard>
+</ForwardRef(Grid)>
+`;
+
+exports[`GroupsWithoutCard component should render default view 1`] = `
+Array [
+  Array [
+    <FieldGridItem
+      field="test"
+      group={
+        Array [
+          "test",
+        ]
+      }
+    />,
+  ],
+]
+`;
+
+exports[`Section component should render default view 1`] = `
+<ForwardRef(Grid)
+  container={true}
+  spacing={1}
+>
+  <Memo
+    disabled={false}
+    title="Title"
+  />
+</ForwardRef(Grid)>
+`;
+
+exports[`Section component should render default view 2`] = `
+<ForwardRef(Grid)
+  container={true}
+  spacing={1}
+>
+  <Memo
+    disabled={false}
+  />
+</ForwardRef(Grid)>
+`;

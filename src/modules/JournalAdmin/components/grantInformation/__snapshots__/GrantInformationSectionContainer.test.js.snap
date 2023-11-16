@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GrantInformationSectionContainer should render properly 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "formValues": Object {},
+    }
+  }
+>
+  <Memo(GrantInformationSection) />
+</Context.Provider>
+`;

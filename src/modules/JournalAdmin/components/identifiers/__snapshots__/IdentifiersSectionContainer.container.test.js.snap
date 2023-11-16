@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdentifiersSectionContainer component should render default view 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "formValues": Object {},
+    }
+  }
+>
+  <Memo(IdentifiersSection) />
+</Context.Provider>
+`;
+
+exports[`IdentifiersSectionContainer component should render disabled view 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "formValues": Object {},
+    }
+  }
+>
+  <Memo(IdentifiersSection)
+    disabled={true}
+  />
+</Context.Provider>
+`;

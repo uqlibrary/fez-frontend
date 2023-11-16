@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminCard component should render StyledCard with same props 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          >
+            <hr
+              class="MuiBox-root css-1a7sacs"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+            >
+               
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`Cards component renders with title and no help icon 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container testClass AdminCard css-1sthlmf-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          >
+            <hr
+              class="MuiBox-root css-1a7sacs"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+          >
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-p8dwjx-MuiTypography-root"
+            >
+               
+              card title
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+  </div>
+</div>
+`;

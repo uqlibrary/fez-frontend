@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilesSectionContainer component should render default view 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "formValues": Object {},
+      "onDeleteAttachedFile": [MockFunction],
+      "onRenameAttachedFile": undefined,
+      "openAccessStatusId": 0,
+    }
+  }
+>
+  <Memo(FilesSection) />
+</Context.Provider>
+`;

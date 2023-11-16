@@ -1,4 +1,4 @@
-import { destroy, get, post } from 'repositories/generic';
+import { destroy, get, post, patch } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -7,11 +7,26 @@ import {
     JOURNAL_LOOKUP_API,
     JOURNAL_SEARCH_API,
     MASTER_JOURNAL_LIST_INGEST_API,
+    EXISTING_JOURNAL_API,
 } from 'repositories/routes';
 import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { lastRequest, api } from '../config/axios';
+import * as transformers from './transformers';
+
+/**
+ * @param data
+ * @param replacer
+ * @return {any}
+ */
+export const sanitiseJnlData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+
+/**
+ * @param keys
+ * @return {function(*, *): undefined|*}
+ */
+const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 // The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
@@ -209,3 +224,55 @@ export const removeFromFavourites = ids => async dispatch => {
         },
     );
 };
+
+const getAdminRecordRequest = data => {
+    // delete extra form values from request object
+    const keys = ['jnl_jid', 'journal', 'adminSection', 'bibliographicSection'];
+
+    return [
+        {
+            ...data.journal,
+            ...sanitiseJnlData(data, makeReplacer(keys)),
+            ...transformers.getAdminSectionSearchKeys(data.adminSection),
+            ...transformers.getBibliographicSectionSearchKeys(
+                data.bibliographicSection,
+                // eslint-disable-next-line camelcase
+                data.adminSection?.rek_subtype,
+            ),
+        },
+    ];
+};
+
+/**
+ * Update work request for admins: patch record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminJournalUpdate(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
+        });
+        const [patchRecordRequest] = getAdminRecordRequest(data);
+
+        return Promise.resolve([])
+            .then(() => patch(EXISTING_JOURNAL_API({ id: data.journal.jnl_jid }), patchRecordRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,
+                    payload: {
+                        pid: response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NtroSection component should not render ismn field for Book - Creative Work - Musical Composition 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
+          ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
+          ],
+        ],
+        "title": "Quality indicators",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`NtroSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
+          ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
+          ],
+        ],
+        "title": "Quality indicators",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`NtroSection component should render design form fields 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
+          ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
+          ],
+        ],
+        "title": "Quality indicators",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`NtroSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
+          ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
+          ],
+        ],
+        "title": "Quality indicators",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

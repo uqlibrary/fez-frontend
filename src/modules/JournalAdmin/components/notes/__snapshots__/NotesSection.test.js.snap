@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotesSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "additionalNotes",
+          ],
+        ],
+        "title": "Additional notes",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "internalNotes",
+          ],
+        ],
+        "title": "Internal notes",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_ci_notice_attribution_incomplete",
+          ],
+        ],
+        "title": "Cultural Institute (CI) Notice",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`NotesSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "additionalNotes",
+          ],
+        ],
+        "title": "Additional notes",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "internalNotes",
+          ],
+        ],
+        "title": "Internal notes",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_ci_notice_attribution_incomplete",
+          ],
+        ],
+        "title": "Cultural Institute (CI) Notice",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

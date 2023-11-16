@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminSectionContainer component should render default view 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "formValues": Object {},
+    }
+  }
+>
+  <Memo(AdminSection) />
+</Context.Provider>
+`;

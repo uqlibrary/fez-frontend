@@ -592,3 +592,7 @@ export const ORGANISATIONAL_UNITS = () => ({
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
 });
+
+export const EXISTING_JOURNAL_API = ({ id }) => ({
+    apiUrl: `journals/${id}?from=admin-form`,
+});

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormViewToggler component should render default view 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+      >
+        <span
+          aria-label="Switch to tabbed mode"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+          data-mui-internal-clone-element="true"
+        >
+          <input
+            class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+            type="checkbox"
+            value="tabbed"
+          />
+          <span
+            class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Learn about keyboard shortcuts"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
+        data-mui-internal-clone-element="true"
+        data-testid="help-icon"
+        id="help-icon"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+          data-testid="KeyboardIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+          />
+          <title>
+            Learn about keyboard shortcuts
+          </title>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormViewToggler component should render tooltip for full form 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <span
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+      >
+        <span
+          aria-label="Switch to full form mode"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+          data-mui-internal-clone-element="true"
+        >
+          <input
+            checked=""
+            class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+            type="checkbox"
+            value="tabbed"
+          />
+          <span
+            class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+        />
+      </span>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    >
+      <button
+        aria-label="Learn about keyboard shortcuts"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="help-icon"
+        data-mui-internal-clone-element="true"
+        data-testid="help-icon"
+        id="help-icon"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+          data-testid="KeyboardIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+          />
+          <title>
+            Learn about keyboard shortcuts
+          </title>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

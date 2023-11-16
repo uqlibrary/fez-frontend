@@ -1223,6 +1223,10 @@ export default {
                     alertId: 'alert-error',
                 },
             },
+            journal: {
+                title: 'Edit journal',
+                loadingMessage: 'Loading journal',
+            },
         },
         deleteRecord: {
             loadingMessage: 'Loading work',

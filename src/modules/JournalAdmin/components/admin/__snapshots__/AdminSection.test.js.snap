@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminSection component should render default view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "collections",
+          ],
+        ],
+        "title": "Member of collections",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_subtype",
+          ],
+          Array [
+            "fez_record_search_key_herdc_code",
+            "fez_record_search_key_herdc_status",
+            "fez_record_search_key_institutional_status",
+          ],
+          Array [
+            "fez_record_search_key_refereed_source",
+            "contentIndicators",
+          ],
+          Array [
+            "fez_record_search_key_oa_status",
+            "fez_record_search_key_oa_status_type",
+          ],
+          Array [
+            "fez_record_search_key_license",
+          ],
+        ],
+        "title": "Additional information",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AdminSection component should render design form fields 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "collections",
+          ],
+        ],
+        "title": "Member of collections",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_subtype",
+          ],
+          Array [
+            "fez_record_search_key_herdc_code",
+            "fez_record_search_key_herdc_status",
+            "fez_record_search_key_institutional_status",
+          ],
+          Array [
+            "fez_record_search_key_refereed_source",
+            "contentIndicators",
+          ],
+          Array [
+            "fez_record_search_key_oa_status",
+            "fez_record_search_key_oa_status_type",
+          ],
+          Array [
+            "fez_record_search_key_license",
+          ],
+        ],
+        "title": "Additional information",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AdminSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "collections",
+          ],
+        ],
+        "title": "Member of collections",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_subtype",
+          ],
+          Array [
+            "fez_record_search_key_herdc_code",
+            "fez_record_search_key_herdc_status",
+            "fez_record_search_key_institutional_status",
+          ],
+          Array [
+            "fez_record_search_key_refereed_source",
+            "contentIndicators",
+          ],
+          Array [
+            "fez_record_search_key_oa_status",
+            "fez_record_search_key_oa_status_type",
+          ],
+          Array [
+            "fez_record_search_key_license",
+          ],
+        ],
+        "title": "Additional information",
+      },
+    ]
+  }
+  disabled={true}
+/>
+`;

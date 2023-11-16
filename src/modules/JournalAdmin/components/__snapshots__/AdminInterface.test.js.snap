@@ -1,0 +1,3918 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminInterface component should disabled button and render alert for form submitting 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    disabled=""
+                    id="admin-work-publish-top"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    disabled=""
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  disabled="true"
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              style="height: 16px;"
+            />
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+                data-analyticsid="alert-info"
+                data-testid="alert-info"
+                id="alert-info"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-u4ps4u-MuiCircularProgress-root"
+                        data-testid="spinner"
+                        id="spinner"
+                        role="progressbar"
+                        style="width: 38px; height: 38px;"
+                      >
+                        <svg
+                          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+                          viewBox="22 22 44 44"
+                        >
+                          <circle
+                            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+                            cx="44"
+                            cy="44"
+                            fill="none"
+                            r="20.5"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    >
+                      <b>
+                        Saving - 
+                      </b>
+                      Request is being processed.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  disabled=""
+                  id="admin-work-publish"
+                  tabindex="-1"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  disabled=""
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="-1"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should display an alert if editing of a pubtype is not supported 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        >
+          <div
+            data-testid="alert"
+            style="margin-top: 5px;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-nhty2z-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                      data-testid="InfoIcon"
+                      focusable="false"
+                      id="info-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                  >
+                    <b />
+                    Editing of record is not yet supported.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should display job created alert 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should display job created alert 2`] = `
+<div
+  aria-hidden="true"
+>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              style="height: 16px;"
+            />
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+                data-analyticsid="alert-done"
+                data-testid="alert-done"
+                id="alert-done"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        data-testid="DoneIcon"
+                        focusable="false"
+                        id="done-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    >
+                      <b>
+                        Success - 
+                      </b>
+                      Work has been saved successfully
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should display successful alert 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should display successful alert 2`] = `
+<div
+  aria-hidden="true"
+>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              style="height: 16px;"
+            />
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
+                data-analyticsid="alert-done"
+                data-testid="alert-done"
+                id="alert-done"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        data-testid="DoneIcon"
+                        focusable="false"
+                        id="done-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    >
+                      <b>
+                        Success - 
+                      </b>
+                      Work has been saved successfully
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render a title with html correctly 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
+              <sub>
+                e
+              </sub>
+               renal m
+              <sup>
+                a
+              </sup>
+              sses ™ ♦: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to tabbed mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render default view as a full form view 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to tabbed mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="files-section"
+              id="files-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="files-section-header"
+                    id="files-section-header"
+                  >
+                    Files
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="files-section-content"
+                data-testid="files-section-content"
+                id="files-section-content"
+              >
+                <field
+                  is="mock"
+                  name="filesSection"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="security-section"
+              id="security-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="security-section-header"
+                    id="security-section-header"
+                  >
+                    Security
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="security-section-content"
+                data-testid="security-section-content"
+                id="security-section-content"
+              >
+                <field
+                  is="mock"
+                  name="securitySection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit Journal Article - This is test record: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="security-tab"
+                      data-testid="security-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Security
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render in create mode 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Add a new Thesis
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="files-tab"
+                      data-testid="files-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Files
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="security-tab"
+                      data-testid="security-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Security
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render locked alert in edit mode 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit undefined - undefined: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            style="margin-top: 12px; margin-bottom: 12px;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                data-testid="alert"
+                style="margin-top: 5px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
+                  data-analyticsid="alert-error"
+                  data-testid="alert-error"
+                  id="alert-error"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item alert-icon css-eosocp-MuiGrid-root"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                          data-testid="LockIcon"
+                          focusable="false"
+                          id="locked-icon"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                      >
+                        <b>
+                          THIS WORK IS LOCKED - 
+                        </b>
+                        This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                      data-analyticsid="action-button"
+                      data-testid="action-button"
+                      id="action-button"
+                      tabindex="0"
+                      type="button"
+                    >
+                      IGNORE LOCK
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="unpublish-admin-top"
+                    data-testid="unpublish-admin-top"
+                    disabled=""
+                    id="admin-work-unpublish-top"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Unpublish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    disabled=""
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="files-tab"
+                      data-testid="files-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Files
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="security-tab"
+                      data-testid="security-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Security
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  disabled="true"
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="unpublish-admin"
+                  data-testid="unpublish-admin"
+                  disabled=""
+                  id="admin-work-unpublish"
+                  tabindex="-1"
+                  type="button"
+                >
+                  Unpublish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  disabled=""
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="-1"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render locked info alert 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Edit undefined - undefined: UQ:123456
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+            style="margin-top: 12px; margin-bottom: 12px;"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                data-testid="alert"
+                style="margin-top: 5px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container css-vxa7lt-MuiGrid-root"
+                  data-analyticsid="alert-error"
+                  data-testid="alert-error"
+                  id="alert-error"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item alert-icon css-eosocp-MuiGrid-root"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                          data-testid="LockIcon"
+                          focusable="false"
+                          id="locked-icon"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                      >
+                        <b>
+                          THIS WORK IS LOCKED - 
+                        </b>
+                        This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+                      data-analyticsid="action-button"
+                      data-testid="action-button"
+                      id="action-button"
+                      tabindex="0"
+                      type="button"
+                    >
+                      IGNORE LOCK
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="publish-admin-top"
+                    data-testid="publish-admin-top"
+                    id="admin-work-publish-top"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Publish
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="files-tab"
+                      data-testid="files-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Files
+                    </button>
+                    <button
+                      aria-selected="false"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="security-tab"
+                      data-testid="security-tab"
+                      role="tab"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      Security
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  disabled="false"
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="publish-admin"
+                  data-testid="publish-admin"
+                  id="admin-work-publish"
+                  tabindex="0"
+                  type="button"
+                >
+                  Publish
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render undelete title and button 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+    >
+      <form>
+        <div
+          class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+          style="margin-top: -24px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="margin-bottom: 12px;"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 css-ba1fpr-MuiTypography-root"
+              style="font-size: 18px; font-weight: 400;"
+            >
+              Undelete undefined - undefined: undefined
+            </h2>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-19f36ay-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <span
+                  class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                >
+                  <span
+                    aria-label="Switch to full form mode"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+                    data-mui-internal-clone-element="true"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                      type="checkbox"
+                      value="tabbed"
+                    />
+                    <span
+                      class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    />
+                  </span>
+                  <span
+                    class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  />
+                </span>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              >
+                <button
+                  aria-label="Learn about keyboard shortcuts"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                  data-analyticsid="help-icon"
+                  data-mui-internal-clone-element="true"
+                  data-testid="help-icon"
+                  id="help-icon"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+                    data-testid="KeyboardIcon"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"
+                    />
+                    <title>
+                      Learn about keyboard shortcuts
+                    </title>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                style="margin-bottom: 8px; margin-top: 4px;"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="admin-work-cancel-top"
+                    data-testid="admin-work-cancel-top"
+                    id="admin-work-cancel-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="submit-admin-top"
+                    data-testid="submit-admin-top"
+                    id="admin-work-submit-top"
+                    style="white-space: nowrap;"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Undelete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container css-q4lr8y-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiTabs-root css-1ujrioy-MuiTabs-root"
+              >
+                <div
+                  class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+                  style="overflow: hidden; margin-bottom: 0px;"
+                >
+                  <div
+                    class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+                    role="tablist"
+                  >
+                    <button
+                      aria-selected="true"
+                      class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-6udnkp-MuiButtonBase-root-MuiTab-root"
+                      data-analyticsid="bibliographic-tab"
+                      data-testid="bibliographic-tab"
+                      role="tab"
+                      tabindex="0"
+                      type="button"
+                    >
+                      Bibliographic
+                    </button>
+                  </div>
+                  <span
+                    class="MuiTabs-indicator css-14t6lgd-MuiTabs-indicator"
+                    style="left: 0px; width: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="bibliographic-section"
+              id="bibliographic-section"
+            >
+              <div
+                class="MuiCardHeader-root css-kwhtn-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-7n68d0-MuiTypography-root"
+                    data-testid="bibliographic-section-header"
+                    id="bibliographic-section-header"
+                  >
+                    Bibliographic
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="bibliographic-section-content"
+                data-testid="bibliographic-section-content"
+                id="bibliographic-section-content"
+              >
+                <field
+                  is="mock"
+                  name="bibliographicSection"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+              style="margin-top: 8px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="admin-work-cancel"
+                  data-testid="admin-work-cancel"
+                  id="admin-work-cancel"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                  data-analyticsid="submit-admin"
+                  data-testid="submit-admin"
+                  id="admin-work-submit"
+                  style="white-space: nowrap;"
+                  tabindex="0"
+                  type="button"
+                >
+                  Undelete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AdminInterface component should render when no record is available 1`] = `
+<div>
+  <div
+    class="empty"
+  />
+</div>
+`;

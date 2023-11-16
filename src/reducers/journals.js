@@ -18,6 +18,7 @@ export const initialState = {
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
     isInitialValues: true,
+    isJournalLocaked: false, // TODO
 };
 
 const handlers = {
