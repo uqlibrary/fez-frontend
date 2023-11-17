@@ -67,9 +67,9 @@ export const JournalAdminContainer = ({
 
     React.useEffect(() => {
         !!match.params.id && !!loadJournalToView && loadJournalToView(match.params.id, true);
-        return () => {
-            clearJournalToView();
-        };
+        // return () => {
+        //     clearJournalToView();
+        // };
     }, [loadJournalToView, clearJournalToView, match.params.id]);
 
     const txt = locale.pages.edit;
@@ -117,9 +117,14 @@ export const JournalAdminContainer = ({
                     <ThemeProvider theme={adminTheme}>
                         <JournalAdminInterface
                             authorDetails={authorDetails}
-                            handleSubmit={handleSubmit}
+                            handleSubmit={props => {
+                                handleSubmit(props).then(() => {
+                                    clearJournalToView();
+                                });
+                            }}
                             submitting={submitting}
                             submitSucceeded={submitSucceeded}
+                            clearJournalToView={clearJournalToView}
                             dirty={dirty}
                             disableSubmit={disableSubmit}
                             history={history}

@@ -15,8 +15,9 @@ export const onSubmit = (values, dispatch, { initialValues }) => {
         ...jnlValues,
         jnl_jid: data.journal.jnl_jid,
     };
-    return dispatch(adminJournalUpdate({ ...requestObject })).catch(error => {
-        console.error(error);
-        throw new SubmissionError({ _error: error });
-    });
+    return dispatch(adminJournalUpdate({ ...requestObject }))
+        .then(() => Promise.resolve())
+        .catch(error => {
+            throw new SubmissionError({ _error: error });
+        });
 };

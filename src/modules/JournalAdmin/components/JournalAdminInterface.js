@@ -48,17 +48,8 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (authorDetails, history, location) => {
-    const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
-    if (
-        authorDetails &&
-        (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
-        !!navigatedFrom
-    ) {
-        history.push(decodeURIComponent(navigatedFrom));
-    } else {
-        history.push(pathConfig.journals.search);
-    }
+export const navigateToSearchResult = (authorDetails, history) => {
+    history.push(pathConfig.journals.search);
 };
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
@@ -81,7 +72,7 @@ export const JournalAdminInterface = ({
     const dispatch = useDispatch();
     const { journalDetails: journal } = useJournalContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
-    const defaultTab = 'bibliographic';
+    const defaultTab = 'admin';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
     const activeTabNames = React.useRef(getActiveTabs(tabs));
@@ -165,8 +156,15 @@ export const JournalAdminInterface = ({
     }
 
     const navigateToViewJournal = id => {
-        if (!!id) {
-            history.push(pathConfig.journals.view(id));
+        const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+        if (
+            authorDetails &&
+            (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
+            !!navigatedFrom
+        ) {
+            history.push(decodeURIComponent(navigatedFrom));
+        } else {
+            history.push(pathConfig.journal.view(id));
         }
     };
 

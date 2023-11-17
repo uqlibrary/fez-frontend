@@ -800,6 +800,10 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
+
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_JOURNAL_API({ id: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.journalDoaj } })
+
     .onAny()
     .reply(config => {
         console.log('url not found...', config);
