@@ -28,7 +28,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_jcr_scie_abbrev_title',
-                name: 'adminSection.jnl_abbrev_title',
+                name: 'adminSection.abbreviatedTitle',
                 fullWidth: true,
                 label: 'ISO abbreviated title',
                 placeholder: '',
@@ -40,7 +40,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_publisher',
-                name: 'adminSection.jnl_publisher',
+                name: 'adminSection.publisher',
                 fullWidth: true,
                 label: 'Publisher',
                 placeholder: '',
@@ -52,7 +52,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_refereed',
-                name: 'adminSection.jnl_refereed',
+                name: 'adminSection.refereed',
                 fullWidth: true,
                 label: 'Refereed',
                 placeholder: '',
@@ -64,7 +64,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_publication_year',
-                name: 'adminSection.jnl_publication_year',
+                name: 'adminSection.publicationYear',
                 fullWidth: true,
                 label: 'First year of publication',
                 placeholder: '',
@@ -76,7 +76,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_publication_frequency',
-                name: 'adminSection.jnl_publication_frequency',
+                name: 'adminSection.publicationFrequency',
                 fullWidth: true,
                 label: 'Frequency of publication',
                 placeholder: '',
@@ -88,7 +88,7 @@ export default {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_formats',
-                name: 'adminSection.jnl_formats',
+                name: 'adminSection.publicationFormats',
                 fullWidth: true,
                 label: 'Journal formats available',
                 placeholder: '',
@@ -99,7 +99,7 @@ export default {
         description: {
             component: GenericTextField,
             componentProps: {
-                name: 'adminSection.jnl_description',
+                name: 'adminSection.description',
                 label: 'Description',
                 fullWidth: true,
                 multiline: true,
@@ -124,7 +124,6 @@ export default {
                 format: value => Immutable.Map(value),
                 richEditorId: 'jnl-advisory-statement',
                 canEdit: true,
-                disabled: true,
                 required: false,
             },
         },
