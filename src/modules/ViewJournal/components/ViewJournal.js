@@ -10,7 +10,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import * as actions from 'actions';
 
-import { JournalDetailsContext } from './JournalDataContext';
+import { JournalContext } from 'context';
 import Section from './Section';
 
 import { userIsAdmin } from 'hooks';
@@ -36,7 +36,7 @@ export const ViewJournal = () => {
     };
 
     React.useEffect(() => {
-        !!id && !journalDetails && dispatch(actions.loadJournal(id));
+        !!id && Object.keys(journalDetails).length === 0 && dispatch(actions.loadJournal(id));
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
@@ -53,7 +53,7 @@ export const ViewJournal = () => {
         );
     }
 
-    if (!journalDetails) {
+    if (Object.keys(journalDetails).length === 0) {
         return <StandardPage />;
     }
 
@@ -74,7 +74,7 @@ export const ViewJournal = () => {
                 />
             }
         >
-            <JournalDetailsContext.Provider
+            <JournalContext.Provider
                 value={{
                     journalDetails,
                 }}
@@ -90,7 +90,7 @@ export const ViewJournal = () => {
                             />
                         </Grid>
                     )}
-                    {journalDetails && journalDetails.jnl_advisory_statement && (
+                    {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
                         <Grid item xs={12}>
                             <Alert
                                 type={'info'}
@@ -115,7 +115,7 @@ export const ViewJournal = () => {
                             />
                         ))}
                 </Grid>
-            </JournalDetailsContext.Provider>
+            </JournalContext.Provider>
         </StandardPage>
     );
 };

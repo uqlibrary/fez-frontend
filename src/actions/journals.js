@@ -257,7 +257,7 @@ export function adminJournalUpdate(data) {
         const [patchRecordRequest] = getAdminRecordRequest(data);
 
         return Promise.resolve([])
-            .then(() => patch(EXISTING_JOURNAL_API({ id: data.journal.jnl_jid }), patchRecordRequest))
+            .then(() => patch(EXISTING_JOURNAL_API({ id: data.jnl_jid }), patchRecordRequest))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,
@@ -274,5 +274,23 @@ export function adminJournalUpdate(data) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminUnlockJournal() {
+    return {
+        type: actions.ADMIN_JOURNAL_UNLOCK,
+    };
+}
+
+/**
+ * Clear journal to be viewed
+ * @returns {action}
+ */
+export function adminJournalClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_CLEAR,
+        });
     };
 }

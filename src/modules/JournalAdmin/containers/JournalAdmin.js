@@ -31,9 +31,9 @@ const getInitialFormValues = journalToView => {
             journal: journalToView,
             adminSection: getInitialValues(journalToView, 'admin'),
             bibliographicSection: getInitialValues(journalToView, 'bibliographic'),
-            uqDataSection: getInitialValues(journalToView, 'uqData'),
-            doajSection: getInitialValues(journalToView, 'doaj'),
-            indexedSection: getInitialValues(journalToView, 'indexed'),
+            uqDataSection: getInitialValues(journalToView, 'uqData')?.uqData || {},
+            doajSection: getInitialValues(journalToView, 'doaj')?.doaj || {},
+            indexedSection: getInitialValues(journalToView, 'indexed')?.indexed || {},
         },
     };
 };
@@ -48,11 +48,13 @@ const PrototypeContainer = reduxForm({
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
+
     let initialFormValues = {};
     let journalToView = {};
     let locked = false;
 
     journalToView = state.get('journalReducer').journalDetails;
+
     locked = state.get('journalReducer').isJournalLocaked;
     initialFormValues = getInitialFormValues(journalToView) || {};
 
@@ -64,7 +66,7 @@ const mapStateToProps = state => {
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         journalToView,
-        journalToViewError: state.get('journalReducer').journalLoadingError,
+        journalToViewError: state.get('journalReducer').journalToViewError,
         ...initialFormValues,
         locked,
         error: state.get('journalReducer').error,
@@ -72,11 +74,11 @@ const mapStateToProps = state => {
 };
 
 function mapDispatchToProps(dispatch) {
-    const { loadJournalToView, clearJournalToView, unlockRecord } = bindActionCreators(actions, dispatch);
+    const { loadJournal, adminJournalClear, adminUnlockJournal } = bindActionCreators(actions, dispatch);
     return {
-        loadJournalToView,
-        clearJournalToView,
-        unlockRecord,
+        loadJournalToView: loadJournal,
+        clearJournalToView: adminJournalClear,
+        unlockJournal: adminUnlockJournal,
     };
 }
 

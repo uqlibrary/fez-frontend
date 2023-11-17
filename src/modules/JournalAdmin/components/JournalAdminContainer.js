@@ -5,15 +5,6 @@ import Cookies from 'js-cookie';
 import Immutable from 'immutable';
 
 import locale from 'locale/pages';
-import {
-    NTRO_SUBTYPES,
-    PUBLICATION_TYPE_MANUSCRIPT,
-    PUBLICATION_TYPE_THESIS,
-    RECORD_TYPE_COLLECTION,
-    RECORD_TYPE_COMMUNITY,
-    RECORD_TYPE_RECORD,
-    SUBTYPE_NON_NTRO,
-} from 'config/general';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
@@ -23,49 +14,42 @@ import JournalAdminInterface from './JournalAdminInterface';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import AddSection from './add/AddSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
-import AuthorsSection from './authors/AuthorsSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
-import FilesSection from './files/FilesSectionContainer';
-import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
-import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
-import NotesSection from './notes/NotesSection';
-import ReasonSection from './reason/ReasonSection';
-import NtroSection from './ntro/NtroSectionContainer';
-import SecuritySection from './security/SecuritySectionContainer';
-import { RecordContext, TabbedContext } from 'context';
-import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
-import { useIsMobileView } from '../../../hooks';
+import UqDataSection from './uqData/UqDataSection';
+import DoajSection from './doaj/DoajSection';
+import IndexedSection from './indexed/IndexedSection';
+
+import { JournalContext, TabbedContext } from 'context';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { useIsMobileView } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
 export const JournalAdminContainer = ({
     authorDetails,
-    clearRecordToView,
-    createMode,
+    clearJournalToView,
     destroy,
     dirty,
     disableSubmit,
     formErrors,
+    // eslint-disable-next-line no-unused-vars
     formValues,
     handleSubmit,
     history,
-    isDeleted,
-    isJobCreated,
-    loadingRecordToView,
-    loadRecordToView,
+    journalToViewLoading,
+    loadJournalToView,
     locked,
     match,
-    recordToView,
-    recordToViewError,
+    journalToView,
+    journalToViewError,
     submitSucceeded,
     submitting,
-    unlockRecord,
+    unlockJournal,
     error,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
-    const [showAddForm, setShowAddForm] = React.useState(!match.params.pid);
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
@@ -80,163 +64,104 @@ export const JournalAdminContainer = ({
     );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
-    const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     React.useEffect(() => {
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid, true);
+        !!match.params.id && !!loadJournalToView && loadJournalToView(match.params.id, true);
         return () => {
-            clearRecordToView();
+            clearJournalToView();
         };
-    }, [loadRecordToView, clearRecordToView, match.params.pid]);
+    }, [loadJournalToView, clearJournalToView, match.params.id]);
 
     const txt = locale.pages.edit;
-    if (!!match.params.pid && loadingRecordToView) {
+
+    if (!!match.params.id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!recordToView && isDeleted) {
+    } else if (!journalToView) {
         return (
-            <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
+            <StandardPage className="viewJournal" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
                         {locale.pages.viewRecord.notFound.message}
                     </Grid>
                 </Grid>
-                {recordToViewError && (
+                {journalToViewError && (
                     <Typography variant={'caption'} style={{ opacity: 0.5 }}>
-                        {`(${recordToViewError.status} - ${recordToViewError.message})`}
+                        {`(${journalToViewError.status} - ${journalToViewError.message})`}
                     </Typography>
                 )}
             </StandardPage>
         );
-    } else if (!!match.params.pid && !recordToView) {
+    } else if (!!match.params.id && !journalToView) {
         return <div className="empty" />;
     }
 
     const isActivated = () => {
-        if (recordToView && recordToView.rek_object_type_lookup) {
-            return recordToView && recordToView.rek_object_type_lookup?.toLowerCase() === RECORD_TYPE_RECORD;
-        }
-        return false;
+        // this is here for potential future use
+        return true;
     };
 
     return (
         <React.Fragment>
-            {createMode && showAddForm && (
-                <AddSection onCreate={handleAddFormDisplay} createMode={createMode} history={history} />
-            )}
-            {!showAddForm && (
-                <TabbedContext.Provider
+            <TabbedContext.Provider
+                value={{
+                    tabbed: isMobileView ? false : tabbed,
+                    toggleTabbed: handleToggle,
+                }}
+            >
+                <JournalContext.Provider
                     value={{
-                        tabbed: isMobileView ? false : tabbed,
-                        toggleTabbed: handleToggle,
+                        journalDetails: journalToView,
+                        jnlDisplayType: ADMIN_JOURNAL,
                     }}
                 >
-                    <RecordContext.Provider
-                        value={{
-                            record: recordToView,
-                        }}
-                    >
-                        <ThemeProvider theme={adminTheme}>
-                            <JournalAdminInterface
-                                authorDetails={authorDetails}
-                                handleSubmit={handleSubmit}
-                                submitting={submitting}
-                                submitSucceeded={submitSucceeded}
-                                dirty={dirty}
-                                disableSubmit={disableSubmit}
-                                history={history}
-                                location={location}
-                                createMode={createMode}
-                                isDeleted={isDeleted}
-                                isJobCreated={isJobCreated}
-                                formErrors={formErrors}
-                                destroy={destroy}
-                                locked={locked}
-                                disabled
-                                unlockRecord={unlockRecord}
-                                error={error}
-                                tabs={{
-                                    admin: {
-                                        component: AdminSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                        numberOfErrors: tabErrors.current.adminSection || null,
-                                    },
-                                    /* it would go here or something */
-                                    bibliographic: {
-                                        component: BibliographicSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                        numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                    },
-                                    authors: {
-                                        component: AuthorsSection,
-                                        activated: isActivated(),
-                                        numberOfErrors: tabErrors.current.authorsSection || null,
-                                    },
-                                    identifiers: {
-                                        component: IdentifiersSection,
-                                        activated: isActivated(),
-                                    },
-                                    ntro: {
-                                        component: NtroSection,
-                                        activated:
-                                            isActivated() &&
-                                            NTRO_SUBTYPES.includes(
-                                                !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
-                                            ),
-                                    },
-                                    grants: {
-                                        component: GrantInformationSection,
-                                        activated:
-                                            isActivated() &&
-                                            // Blacklist types without grant info
-                                            !(
-                                                [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                    recordToView && recordToView.rek_display_type,
-                                                ) ||
-                                                [SUBTYPE_NON_NTRO].includes(
-                                                    !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
-                                                )
-                                            ),
-                                    },
-                                    notes: {
-                                        component: NotesSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                    },
-                                    files: {
-                                        component: FilesSection,
-                                        activated: isActivated(),
-                                        numberOfErrors: tabErrors.current.filesSection || null,
-                                    },
-                                    security: {
-                                        component: SecuritySection,
-                                        activated: !createMode, // true,
-                                    },
-
-                                    reason: {
-                                        component: ReasonSection,
-                                        activated:
-                                            !createMode &&
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                    },
-                                }}
-                            />
-                        </ThemeProvider>
-                    </RecordContext.Provider>
-                </TabbedContext.Provider>
-            )}
+                    <ThemeProvider theme={adminTheme}>
+                        <JournalAdminInterface
+                            authorDetails={authorDetails}
+                            handleSubmit={handleSubmit}
+                            submitting={submitting}
+                            submitSucceeded={submitSucceeded}
+                            dirty={dirty}
+                            disableSubmit={disableSubmit}
+                            history={history}
+                            location={location}
+                            formErrors={formErrors}
+                            destroy={destroy}
+                            locked={locked}
+                            disabled
+                            unlockJournal={unlockJournal}
+                            error={error}
+                            tabs={{
+                                admin: {
+                                    component: AdminSection,
+                                    numberOfErrors: tabErrors.current.adminSection || null,
+                                    activated: isActivated(),
+                                },
+                                /* it would go here or something */
+                                bibliographic: {
+                                    component: BibliographicSection,
+                                    numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                    activated: isActivated(),
+                                },
+                                uqData: {
+                                    component: UqDataSection,
+                                    numberOfErrors: tabErrors.current.uqDataSection || null,
+                                    activated: isActivated(),
+                                },
+                                doaj: {
+                                    component: DoajSection,
+                                    numberOfErrors: tabErrors.current.doajSection || null,
+                                    activated: isActivated(),
+                                },
+                                indexed: {
+                                    component: IndexedSection,
+                                    numberOfErrors: tabErrors.current.indexedSection || null,
+                                    activated: isActivated(),
+                                },
+                            }}
+                        />
+                    </ThemeProvider>
+                </JournalContext.Provider>
+            </TabbedContext.Provider>
         </React.Fragment>
     );
 };
@@ -244,8 +169,7 @@ export const JournalAdminContainer = ({
 JournalAdminContainer.propTypes = {
     actions: PropTypes.object,
     authorDetails: PropTypes.object,
-    clearRecordToView: PropTypes.func,
-    createMode: PropTypes.bool,
+    clearJournalToView: PropTypes.func,
     destroy: PropTypes.func,
     dirty: PropTypes.bool,
     disableSubmit: PropTypes.any,
@@ -253,18 +177,15 @@ JournalAdminContainer.propTypes = {
     formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
-    loadingRecordToView: PropTypes.bool,
-    loadRecordToView: PropTypes.func,
-    recordToViewError: PropTypes.object,
+    journalToViewLoading: PropTypes.bool,
+    loadJournalToView: PropTypes.func,
+    journalToViewError: PropTypes.object,
     locked: PropTypes.bool,
     match: PropTypes.object,
-    recordToView: PropTypes.object,
-    isDeleted: PropTypes.bool,
-    isJobCreated: PropTypes.bool,
-    showAddForm: PropTypes.bool,
+    journalToView: PropTypes.object,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
-    unlockRecord: PropTypes.func,
+    unlockJournal: PropTypes.func,
     error: PropTypes.object,
 };
 
@@ -273,12 +194,10 @@ export function isSame(prevProps, nextProps) {
         prevProps.disableSubmit === nextProps.disableSubmit &&
         prevProps.submitting === nextProps.submitting &&
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
-        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-        (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
+        (prevProps.journalToView || {}).jnl_jid === (nextProps.journalToView || {}).jnl_jid &&
         ((prevProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype ===
             ((nextProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype &&
-        prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
-        prevProps.showAddForm === nextProps.showAddForm &&
+        prevProps.journalToViewLoading === nextProps.journalToViewLoading &&
         prevProps.formErrors === nextProps.formErrors &&
         prevProps.locked === nextProps.locked
     );

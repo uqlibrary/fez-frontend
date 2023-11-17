@@ -18,28 +18,16 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { onSubmit } from '../submitHandler';
 import { FORM_NAME } from '../constants';
 
-import { useRecordContext, useTabbedContext } from 'context';
+import { useJournalContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
-import { pathConfig, publicationTypes, validation } from 'config';
-import {
-    PUBLISHED,
-    RECORD_TYPE_RECORD,
-    RECORD_TYPE_COMMUNITY,
-    RECORD_TYPE_COLLECTION,
-    RETRACTED,
-    UNPUBLISHED,
-} from 'config/general';
-import { adminInterfaceConfig } from 'config/admin';
-import { useIsUserSuperAdmin } from 'hooks';
-import { translateFormErrorsToText } from '../../../config/validation';
+import { pathConfig, validation } from 'config';
+import { translateFormErrorsToText } from 'config/validation';
 import { useDispatch } from 'react-redux';
 
 const AdminTab = styled(Tab)({
@@ -60,10 +48,7 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
-    if (createMode) {
-        history.push(pathConfig.admin.add);
-    }
+export const navigateToSearchResult = (authorDetails, history, location) => {
     const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
     if (
         authorDetails &&
@@ -72,7 +57,7 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
     ) {
         history.push(decodeURIComponent(navigatedFrom));
     } else {
-        history.push(pathConfig.records.mine);
+        history.push(pathConfig.journals.search);
     }
 };
 
@@ -80,31 +65,27 @@ const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activate
 
 export const JournalAdminInterface = ({
     authorDetails,
-    createMode,
-    isDeleted,
-    isJobCreated,
+    handleSubmit,
+    submitting,
+    submitSucceeded,
     dirty,
     disableSubmit,
-    formErrors,
-    handleSubmit,
     history,
     location,
+    formErrors,
     locked,
-    submitSucceeded,
-    submitting,
-    tabs,
-    unlockRecord,
+    unlockJournal,
     error,
+    tabs,
 }) => {
     const dispatch = useDispatch();
-    const { record } = useRecordContext();
+    const { journalDetails: journal } = useJournalContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
-    const isSuperAdmin = useIsUserSuperAdmin();
-    const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
-    const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
+    const defaultTab = 'bibliographic';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
     const activeTabNames = React.useRef(getActiveTabs(tabs));
+    console.log(activeTabNames, tabs);
     const successConfirmationRef = React.useRef();
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
@@ -124,7 +105,7 @@ export const JournalAdminInterface = ({
     }, [tabs]);
 
     React.useEffect(() => {
-        Cookies.set('adminFormTabbed', tabbed ? 'tabbed' : 'fullform');
+        Cookies.set('adminJournalFormTabbed', tabbed ? 'tabbed' : 'fullform');
     }, [tabbed]);
 
     // clear form state on unmount, so the form state from admin edit form wont show up in the add form
@@ -165,15 +146,13 @@ export const JournalAdminInterface = ({
 
     const handleCancel = event => {
         event.preventDefault();
-        const pushToHistory = () => history.push(pathConfig.records.view(record.rek_pid));
-        if (!!record.rek_pid) {
+        const pushToHistory = () => history.push(pathConfig.journal.view(journal.jnl_jid));
+        /* istanbul ignore else */
+        if (!!journal.jnl_jid) {
             /* istanbul ignore next */
-            record.rek_editing_user === authorDetails.username
-                ? unlockRecord(record.rek_pid, pushToHistory)
+            journal.rek_editing_user === authorDetails.username
+                ? unlockJournal(journal.jnl_jid, pushToHistory)
                 : pushToHistory();
-        } else {
-            // Else this is a new record, so just go to the homepage
-            history.push(pathConfig.index);
         }
     };
 
@@ -181,32 +160,13 @@ export const JournalAdminInterface = ({
         successConfirmationRef.current = node; // TODO: Add check that this worked
     }, []);
 
-    if (!record) {
+    if (!journal) {
         return <div className="empty" />;
     }
 
-    const selectedPublicationType =
-        (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
-        'record';
-
-    if (objectType === RECORD_TYPE_RECORD && !adminInterfaceConfig[record.rek_display_type]) {
-        return (
-            <StandardPage>
-                <Grid container>
-                    <Grid item xs={12}>
-                        <Alert
-                            message={txt.current.notSupportedMessage.replace('[pubType]', selectedPublicationType)}
-                            type="info"
-                        />
-                    </Grid>
-                </Grid>
-            </StandardPage>
-        );
-    }
-
-    const navigateToViewRecord = pid => {
-        if (!!pid && validation.isValidPid(pid)) {
-            history.push(pathConfig.records.view(pid));
+    const navigateToViewJournal = id => {
+        if (!!id) {
+            history.push(pathConfig.journals.view(id));
         }
     };
 
@@ -219,27 +179,16 @@ export const JournalAdminInterface = ({
                 squareTop
                 smallTitle
             >
-                <Field
-                    component={tabs[tab].component}
-                    disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
-                    name={`${tab}Section`}
-                />
+                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
     );
 
-    const saveConfirmationLocale = createMode
-        ? txt.current.successAddWorkflowConfirmation
-        : (!isJobCreated && txt.current.successWorkflowConfirmation) || txt.current.successJobCreatedConfirmation;
+    const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
-    const pageTitlePrefix = !isDeleted ? 'Edit' : 'Undelete';
+    const pageTitlePrefix = 'Edit';
 
-    const submitButtonTxt = !isDeleted ? 'Save' : 'Undelete';
-
-    const setPublicationStatusAndSubmit = status =>
-        handleSubmit((values, dispatch, props) =>
-            onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
-        );
+    const submitButtonTxt = 'Save';
 
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
@@ -257,62 +206,6 @@ export const JournalAdminInterface = ({
                 />
             </Grid>
 
-            {!!isSuperAdmin &&
-                record.rek_status !== RETRACTED &&
-                objectType !== RECORD_TYPE_COMMUNITY &&
-                objectType !== RECORD_TYPE_COLLECTION && (
-                    <Grid item xs={12} sm={3}>
-                        <Button
-                            id={`admin-work-retract${placement}`}
-                            data-analyticsid={`retract-admin${placement}`}
-                            data-testid={`retract-admin${placement}`}
-                            disabled={!!submitting || !!disableSubmit}
-                            variant="contained"
-                            color="secondary"
-                            fullWidth
-                            children="Retract"
-                            onClick={setPublicationStatusAndSubmit(RETRACTED)}
-                        />
-                    </Grid>
-                )}
-            {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
-                <Grid item xs={12} sm={3}>
-                    <Button
-                        id={`admin-work-publish${placement}`}
-                        data-analyticsid={`publish-admin${placement}`}
-                        data-testid={`publish-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
-                        variant="contained"
-                        color="secondary"
-                        fullWidth
-                        children="Publish"
-                        onClick={setPublicationStatusAndSubmit(PUBLISHED)}
-                    />
-                </Grid>
-            )}
-            {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && !isDeleted && (
-                <Grid item xs={12} sm={3}>
-                    <Button
-                        id={`admin-work-unpublish${placement}`}
-                        data-analyticsid={`unpublish-admin${placement}`}
-                        data-testid={`unpublish-admin${placement}`}
-                        disabled={
-                            !!submitting ||
-                            !!disableSubmit ||
-                            (locked && record.rek_editing_user !== authorDetails.username)
-                        }
-                        variant="contained"
-                        color="secondary"
-                        fullWidth
-                        children="Unpublish"
-                        onClick={setPublicationStatusAndSubmit(UNPUBLISHED)}
-                    />
-                </Grid>
-            )}
             <Grid item xs={12} sm>
                 <Button
                     id={`admin-work-submit${placement}`}
@@ -322,13 +215,13 @@ export const JournalAdminInterface = ({
                     disabled={
                         !!submitting ||
                         !!disableSubmit ||
-                        (locked && record.rek_editing_user !== authorDetails.username)
+                        (locked && journal.rek_editing_user !== authorDetails.username)
                     }
                     variant="contained"
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
+                    onClick={handleSubmit}
                 />
             </Grid>
         </React.Fragment>
@@ -351,35 +244,18 @@ export const JournalAdminInterface = ({
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={() => navigateToSearchResult(createMode, authorDetails, history, location)}
+                        onAction={() => navigateToSearchResult(authorDetails, history, location)}
                         locale={saveConfirmationLocale}
-                        onCancelAction={() => navigateToViewRecord(record.rek_pid)}
+                        onCancelAction={() => navigateToViewJournal(journal.jnl_jid)}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
-                            {!createMode
-                                ? parseHtmlToJSX(
-                                      `${pageTitlePrefix} ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
-                                  )
-                                : `Add a new ${selectedPublicationType}`}
+                            {parseHtmlToJSX(`${pageTitlePrefix} journal - ${journal.jnl_title}`)}
                         </Typography>
                     </Grid>
                     <Grid item xs="auto" sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <FormViewToggler />
                     </Grid>
-                    {record.rek_status === RETRACTED && (
-                        <Grid
-                            container
-                            alignContent="center"
-                            justifyContent="center"
-                            alignItems="center"
-                            style={{ marginBottom: 12 }}
-                        >
-                            <Grid item xs={12}>
-                                <Alert message={txt.current.retractedMessage} type="warning" />
-                            </Grid>
-                        </Grid>
-                    )}
                     {/* Admin lock alert */}
                     {!!locked && <LockedAlert />}
                     <Grid container spacing={1}>
@@ -453,7 +329,7 @@ JournalAdminInterface.propTypes = {
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
     tabs: PropTypes.object,
-    unlockRecord: PropTypes.func,
+    unlockJournal: PropTypes.func,
     error: PropTypes.object,
 };
 

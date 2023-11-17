@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Grid';
-import { fieldConfig } from 'config/admin';
-import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
-import { useRecordContext, useFormValuesContext } from 'context';
+
+import { useJournalContext } from 'context';
+import { fieldConfig } from 'config/journalAdmin';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
-    const { record } = useRecordContext();
-    const { formValues } = useFormValuesContext();
-
+    const { jnlDisplayType } = useJournalContext();
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -18,14 +16,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
 
     const componentProps = {
         ...fieldConfig.default[field].componentProps,
-        ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
-            isNtro:
-                (NTRO_SUBTYPES.includes(record.rek_subtype) && record.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) ||
-                formValues.isNtro ||
-                false,
-            isNonNtro: record.rek_subtype === SUBTYPE_NON_NTRO,
-            isCreate: !record.rek_pid,
-        }) || {}),
+        ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({}) || {}),
     };
 
     if (fieldConfig.default[field]?.isComposed) {

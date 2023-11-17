@@ -6,7 +6,7 @@ export default {
                 ['abbreviatedTitle'],
                 ['publisher'],
                 ['refereed', 'publicationYear', 'publicationFrequency'],
-                ['formats'],
+                ['publicationFormats'],
                 ['description'],
             ],
         },
@@ -23,17 +23,17 @@ export default {
     ],
     uqData: () => [
         {
-            groups: [['eSpace']],
+            groups: [['uqData']],
         },
     ],
     doaj: () => [
         {
-            groups: [['openAccessDoaj']],
+            groups: [['doaj']],
         },
     ],
     indexed: () => [
         {
-            groups: [['indexedIn']],
+            groups: [['indexed']],
         },
     ],
 };

@@ -10,6 +10,7 @@ import GenericTemplate from './GenericTemplate';
 import FreeTextForm from './FreeTextForm';
 
 export const NewListEditor = ({
+    canAdd,
     canEdit,
     disabled,
     error,
@@ -125,19 +126,21 @@ export const NewListEditor = ({
 
     return (
         <div id={`${listEditorId}-list-editor`}>
-            <ListEditorForm
-                key={`${listEditorId}-form-${mode}`}
-                mode={mode}
-                onSubmit={mode === 'add' ? handleAdd : handleUpdate}
-                disabled={disabled || (maxCount > 0 && itemsList.length >= maxCount)}
-                required={required}
-                isValid={isValid}
-                itemSelectedToEdit={itemToUpdate}
-                normalize={inputNormalizer}
-                listEditorFormId={`${listEditorId}-form-${mode}`}
-                listEditorId={listEditorId}
-                {...((locale && locale.form) || {})}
-            />
+            {canAdd && (
+                <ListEditorForm
+                    key={`${listEditorId}-form-${mode}`}
+                    mode={mode}
+                    onSubmit={mode === 'add' ? handleAdd : handleUpdate}
+                    disabled={disabled || (maxCount > 0 && itemsList.length >= maxCount)}
+                    required={required}
+                    isValid={isValid}
+                    itemSelectedToEdit={itemToUpdate}
+                    normalize={inputNormalizer}
+                    listEditorFormId={`${listEditorId}-form-${mode}`}
+                    listEditorId={listEditorId}
+                    {...((locale && locale.form) || {})}
+                />
+            )}
             {itemsList.length > 0 && (
                 <ListRowHeader
                     onDeleteAll={handleDeleteAll}
@@ -174,6 +177,7 @@ export const NewListEditor = ({
 };
 
 NewListEditor.propTypes = {
+    canAdd: PropTypes.bool,
     canEdit: PropTypes.bool,
     disabled: PropTypes.bool,
     distinctOnly: PropTypes.bool,
@@ -197,6 +201,7 @@ NewListEditor.propTypes = {
 };
 
 NewListEditor.defaultProps = {
+    canAdd: true,
     inputNormalizer: value => value,
     ListEditorForm: FreeTextForm,
     ListEditorItemTemplate: GenericTemplate,

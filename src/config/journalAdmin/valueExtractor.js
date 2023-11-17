@@ -1,17 +1,17 @@
-export const deleteKey = (journal, searchKey) => {
-    const skipDeleteForKeys = ['jnl_jid', 'jnl_title'];
-    !skipDeleteForKeys.includes(searchKey) && delete (journal || {})[searchKey];
-};
+// export const deleteKey = (journal, searchKey) => {
+//     const skipDeleteForKeys = ['jnl_jid', 'jnl_title'];
+//     !skipDeleteForKeys.includes(searchKey) && delete (journal || {})[searchKey];
+// };
 
 export const getValueSearchKeyObject = (journal, searchKey) => {
     const returnValue = { ...((journal || {})[searchKey] || {}) };
-    deleteKey(journal, searchKey);
+    // deleteKey(journal, searchKey);
     return returnValue;
 };
 
 export const getValueSearchKeyArray = (journal, searchKey) => {
     const returnValue = [...((journal || {})[searchKey] || [])];
-    deleteKey(journal, searchKey);
+    // deleteKey(journal, searchKey);
     return returnValue;
 };
 
@@ -26,16 +26,16 @@ export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextS
             htmlText:
                 ((journal || {})[primaryHtmlKey] || {})[subHtmlKey] || ((journal || {})[primaryKey] || {})[subKey],
         };
-        deleteKey(journal, primaryKey);
-        deleteKey(journal, primaryHtmlKey);
+        // deleteKey(journal, primaryKey);
+        // deleteKey(journal, primaryHtmlKey);
     } else {
         returnValue = {
             plainText: (journal || {})[plainTextSearchKey],
             htmlText: (journal || {})[htmlTextSearchKey] || (journal || {})[plainTextSearchKey],
         };
 
-        deleteKey(journal, plainTextSearchKey);
-        deleteKey(journal, htmlTextSearchKey);
+        // deleteKey(journal, plainTextSearchKey);
+        // deleteKey(journal, htmlTextSearchKey);
     }
 
     if (!returnValue.plainText && !!returnValue.htmlText) {
@@ -52,18 +52,29 @@ export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextS
 
 export const getValueFromKey = (journal, key) => {
     const returnValue = journal[key];
-    deleteKey(journal, key);
+    // deleteKey(journal, key);
+    return returnValue;
+};
+
+export const getValueFromSubKey = (journal, key) => {
+    let returnValue;
+
+    if (key.indexOf('.') >= 0) {
+        const [primaryKey, subKey] = key.split('.');
+        returnValue = ((journal || {})[primaryKey] || {})[subKey];
+        // deleteKey(journal, primaryKey);
+    }
+
     return returnValue;
 };
 
 export const getValueSearchKeyValueList = (journal, searchKey) => {
     let returnValue = [];
-
     if (searchKey.indexOf('.') >= 0) {
         const [primaryKey, subKey] = searchKey.split('.');
 
         returnValue = (journal[primaryKey] || []).map(item => item[subKey]);
-        deleteKey(journal, primaryKey);
+        // deleteKey(journal, primaryKey);
     }
 
     return returnValue;
@@ -74,13 +85,16 @@ export default {
         getValue: journal => getValueFromKey(journal, 'jnl_title'),
     },
     abbreviatedTitle: {
-        getValue: journal => getValueSearchKeyValueList(journal, 'fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title'),
+        getValue: journal => getValueFromSubKey(journal, 'fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title'),
     },
     publisher: {
         getValue: journal =>
-            `${getValueFromKey(journal, 'jnl_publisher')}, ${
-                getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_country
-            }`,
+            (!!journal &&
+                !!journal.jnl_publisher &&
+                `${getValueFromKey(journal, 'jnl_publisher')}, ${
+                    getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_country
+                }`) ||
+            '',
     },
     refereed: {
         getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_refereed ?? '',
@@ -92,7 +106,7 @@ export default {
     publicationFrequency: {
         getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_frequency ?? '',
     },
-    formats: {
+    publicationFormats: {
         getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_formats ?? '',
     },
     description: {
@@ -115,8 +129,7 @@ export default {
                     hasPreload: true,
                 },
             }));
-
-            delete journal.fez_journal_issn;
+            // delete journal.fez_journal_issn;
             return returnValue;
         },
     },
@@ -140,7 +153,7 @@ export default {
     },
     indexed: {
         getValue: journal => ({
-            esi: getValueSearchKeyObject(journal, 'fez_journal_esi'),
+            esi: getValueSearchKeyArray(journal, 'fez_journal_esi'),
             ahci:
                 getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
                     item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
@@ -157,8 +170,8 @@ export default {
                 getValueSearchKeyArray(journal, 'fez_journal_wos_category').find(
                     item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
                 ) ?? {},
-            scopus: !!getValueSearchKeyObject(journal, 'fez_journal_cite_score'),
-            pubmed: !!getValueSearchKeyObject(journal, 'fez_journal_pubmed'),
+            scopus: !!getValueFromKey(journal, 'fez_journal_cite_score'),
+            pubmed: !!getValueFromKey(journal, 'fez_journal_pubmed'),
         }),
     },
 };

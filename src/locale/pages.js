@@ -1116,6 +1116,15 @@ export default {
                 culturalInstitutionNotice: {
                     title: 'Cultural Institution (CI) Notice',
                 },
+                uqData: {
+                    title: 'UQ eSpace',
+                },
+                doaj: {
+                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                },
+                indexed: {
+                    title: 'Indexed in',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',

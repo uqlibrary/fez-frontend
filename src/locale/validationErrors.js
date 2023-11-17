@@ -134,5 +134,6 @@ export default {
         rek_date_available: 'Invalid year',
         rek_project_start_date: 'Project start date is required',
         rek_security_policy: 'Security policy is required',
+        jnl_title: 'Journal title is required',
     },
 };

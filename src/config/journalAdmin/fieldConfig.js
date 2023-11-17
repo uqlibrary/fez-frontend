@@ -20,7 +20,8 @@ export default {
                 fullWidth: true,
                 label: 'Title',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         abbreviatedTitle: {
@@ -31,7 +32,8 @@ export default {
                 fullWidth: true,
                 label: 'ISO abbreviated title',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         publisher: {
@@ -39,21 +41,23 @@ export default {
             componentProps: {
                 textFieldId: 'jnl_publisher',
                 name: 'adminSection.jnl_publisher',
-                fullWidth: false,
+                fullWidth: true,
                 label: 'Publisher',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
-        ulr_refereed: {
+        refereed: {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_refereed',
                 name: 'adminSection.jnl_refereed',
-                fullWidth: false,
+                fullWidth: true,
                 label: 'Refereed',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         publicationYear: {
@@ -61,10 +65,11 @@ export default {
             componentProps: {
                 textFieldId: 'jnl_publication_year',
                 name: 'adminSection.jnl_publication_year',
-                fullWidth: false,
+                fullWidth: true,
                 label: 'First year of publication',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         publicationFrequency: {
@@ -72,10 +77,11 @@ export default {
             componentProps: {
                 textFieldId: 'jnl_publication_frequency',
                 name: 'adminSection.jnl_publication_frequency',
-                fullWidth: false,
+                fullWidth: true,
                 label: 'Frequency of publication',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         publicationFormats: {
@@ -86,24 +92,21 @@ export default {
                 fullWidth: true,
                 label: 'Journal formats available',
                 placeholder: '',
-                canEdit: false,
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         description: {
-            component: RichEditorField,
+            component: GenericTextField,
             componentProps: {
                 name: 'adminSection.jnl_description',
-                title: 'Description',
-                titleProps: {
-                    variant: 'caption',
-                    style: {
-                        opacity: 0.666,
-                    },
-                },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'jnl-description',
-                canEdit: false,
+                label: 'Description',
+                fullWidth: true,
+                multiline: true,
+                rows: 3,
+                textFieldId: 'jnl_description',
+                inputProps: { readOnly: true },
+                required: false,
             },
         },
         advisoryStatement: {
@@ -121,6 +124,8 @@ export default {
                 format: value => Immutable.Map(value),
                 richEditorId: 'jnl-advisory-statement',
                 canEdit: true,
+                disabled: true,
+                required: false,
             },
         },
         issns: {
@@ -135,20 +140,23 @@ export default {
                     const newValue = value.replace('-', '');
                     return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
+                canAdd: false,
                 canEdit: false,
+                disabled: true,
                 ListEditorForm: IssnForm,
                 rowItemTemplate: IssnRowItemTemplate,
                 ListEditorItemTemplate: IssnRowItemTemplate,
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
+                required: false,
             },
         },
         uqData: {
             component: InfoSection,
             componentProps: {
-                sectionKey: 'uqdata',
+                sectionKey: 'uqData',
                 sectionConfig: viewJournalConfig.uqData,
-                preRendered: true,
+                wrapped: false,
             },
         },
         doaj: {
@@ -156,16 +164,17 @@ export default {
             componentProps: {
                 sectionKey: 'doaj',
                 sectionConfig: viewJournalConfig.doaj,
-                preRendered: true,
+                wrapped: false,
             },
         },
         indexed: {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'indexed',
-                sectionConfig: viewJournalConfig.indexed,
-                preRendered: true,
+                sectionConfig: viewJournalConfig.index,
+                wrapped: false,
             },
         },
     },
+    override: {},
 };

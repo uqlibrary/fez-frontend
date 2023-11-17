@@ -13,7 +13,7 @@ export const onSubmit = (values, dispatch, { initialValues }) => {
 
     let requestObject = {
         ...jnlValues,
-        id: data.journal.rek_pid,
+        jnl_jid: data.journal.jnl_jid,
     };
 
     requestObject = data;
