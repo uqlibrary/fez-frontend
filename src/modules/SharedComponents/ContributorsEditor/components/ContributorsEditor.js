@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from 'actions';
 
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
@@ -38,6 +40,7 @@ export class ContributorsEditor extends PureComponent {
         showRoleInput: PropTypes.bool,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
+        actions: PropTypes.any,
     };
 
     static defaultProps = {
@@ -303,9 +306,11 @@ export class ContributorsEditor extends PureComponent {
     };
 
     handleAuthorsListChange = contributors => {
+        console.log('change');
         this.setState({
             contributors,
         });
+        this.props.actions.updateAdminAuthors(contributors);
     };
 
     render() {
@@ -437,4 +442,10 @@ export const mapStateToProps = state => ({
     record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
 });
 
-export default connect(mapStateToProps)(ContributorsEditor);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContributorsEditor);

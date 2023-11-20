@@ -9,9 +9,12 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import AddCircle from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
+import { connect } from 'react-redux';
 
-export default class ScaleOfSignificanceListEditor extends Component {
+export class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
+        contributors: PropTypes.object,
+        actions: PropTypes.any,
         className: PropTypes.string,
         searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,
@@ -68,7 +71,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-
+        console.log('contributors constructor', this.props.contributors);
         const valueAsJson =
             ((props.input || /* istanbul ignore next */ {}).name &&
                 typeof (props.input.value || {}).toJS === 'function' &&
@@ -96,6 +99,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
     componentDidUpdate() {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
+
+        console.log('contributors onupdate', this.props.contributors);
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
@@ -349,6 +354,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                             (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
                             'list-editor-form'
                         }
+                        contributors={this.props.contributors}
                         saveChangeToItem={this.saveChangeToItem}
                         remindToAdd={this.props.remindToAdd}
                         {...((this.props.locale && this.props.locale.form) || /* istanbul ignore next */ {})}
@@ -412,3 +418,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
         );
     }
 }
+export const mapStateToProps = state => ({
+    contributors: state && state.get('adminAuthorsReducer') ? state.get('adminAuthorsReducer') : null,
+});
+
+export default connect(mapStateToProps)(ScaleOfSignificanceListEditor);

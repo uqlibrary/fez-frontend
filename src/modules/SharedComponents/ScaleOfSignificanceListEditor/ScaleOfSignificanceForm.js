@@ -44,6 +44,7 @@ export const saveCallbackFactory = (disabled, significance, contributionStatemen
 };
 
 export const ScaleOfSignificanceForm = ({
+    contributors,
     disabled,
     locale,
     errorText,
@@ -59,6 +60,7 @@ export const ScaleOfSignificanceForm = ({
     const [contributionStatement, setContributionStatement] = useState(null);
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
+    console.log('sos form', contributors);
 
     React.useEffect(() => {
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
@@ -173,6 +175,7 @@ export const ScaleOfSignificanceForm = ({
 };
 
 ScaleOfSignificanceForm.propTypes = {
+    contributors: PropTypes.object,
     buttonLabel: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
