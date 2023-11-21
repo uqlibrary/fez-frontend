@@ -41,6 +41,7 @@ export class ContributorsEditor extends PureComponent {
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
+        useFormReducer: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -58,6 +59,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        useFormReducer: false,
     };
 
     constructor(props) {
@@ -306,11 +308,10 @@ export class ContributorsEditor extends PureComponent {
     };
 
     handleAuthorsListChange = contributors => {
-        console.log('change');
         this.setState({
             contributors,
         });
-        this.props.actions.updateAdminAuthors(contributors);
+        this.props.useFormReducer && this.props.actions.updateAdminAuthors(contributors);
     };
 
     render() {
@@ -326,6 +327,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            useFormReducer,
         } = this.props;
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
@@ -349,6 +351,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
+                    useFormReducer={useFormReducer}
                 />
             ) : (
                 <AuthorsList
@@ -359,6 +362,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
+                    useFormReducer={useFormReducer}
                 />
             );
         }

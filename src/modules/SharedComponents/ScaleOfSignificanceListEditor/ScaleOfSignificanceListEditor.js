@@ -71,7 +71,6 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-        console.log('contributors constructor', this.props.contributors);
         const valueAsJson =
             ((props.input || /* istanbul ignore next */ {}).name &&
                 typeof (props.input.value || {}).toJS === 'function' &&
@@ -96,10 +95,11 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
-
+        console.log('x', prevProps);
+        console.log('y', prevState);
         console.log('contributors onupdate', this.props.contributors);
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
@@ -307,6 +307,21 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     render() {
+        console.log('This is a test', this.props.contributors);
+        let renderContributors;
+        if (this.props.contributors && this.props.contributors.authors && this.props.contributors.authors.length > 0) {
+            renderContributors = this.props.contributors.authors.map((item, index) => {
+                return (
+                    <p>
+                        A CONTRIBUTOR {item.nameAsPublished}
+                        {index}
+                    </p>
+                );
+            });
+        }
+
+        console.log('authors', renderContributors);
+        // OLD Scale of Significance from here.
         const renderListsRows = this.state.itemList.map((item, index) => {
             const tempItem = {
                 id: index,
@@ -404,6 +419,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                 />
                 {this.state.itemList.length > 0 ? (
                     <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
+                        {renderContributors}
                         {renderListsRows}
                     </div>
                 ) : (

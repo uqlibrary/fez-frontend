@@ -864,6 +864,7 @@ export default {
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
                 shouldHandleAffiliations: false,
+                useFormReducer: true,
             },
         },
         authorsWithAffiliations: {
@@ -875,6 +876,7 @@ export default {
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
                 shouldHandleAffiliations: true,
+                useFormReducer: true,
             },
         },
         editors: {
