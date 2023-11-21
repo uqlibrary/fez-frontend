@@ -12,12 +12,17 @@ import * as actions from 'actions';
 
 import { JournalContext } from 'context';
 import Section from './Section';
+import { parseHtmlToJSX } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
 import { locale } from 'locale';
 import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
+
+const getAdvisoryStatement = html => {
+    return !!html ? parseHtmlToJSX(html) : '';
+};
 
 export const ViewJournal = () => {
     const dispatch = useDispatch();
@@ -95,7 +100,7 @@ export const ViewJournal = () => {
                             <Alert
                                 type={'info'}
                                 title={txt.advisoryStatement.title}
-                                message={journalDetails.jnl_advisory_statement}
+                                message={getAdvisoryStatement(journalDetails.jnl_advisory_statement)}
                             />
                         </Grid>
                     )}
