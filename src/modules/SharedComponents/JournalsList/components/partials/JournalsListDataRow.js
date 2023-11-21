@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 
 import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
@@ -43,7 +43,7 @@ const classesInternal = {
 };
 
 const StyledTableCell = styled(TableCell, {
-    shouldForwardProp: prop => prop !== 'isSelectable',
+    shouldForwardProp: prop => !['isSelectable'].includes(prop),
 })(({ theme, isSelectable }) => ({
     ...(isSelectable
         ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
@@ -132,7 +132,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         data-testid={`journal-list-data-col-1-${index}`}
                     >
                         <Grid
-                            sm={8}
+                            sm={7}
                             item
                             id={`journal-list-data-col-1-title-${index}`}
                             data-testid={`journal-list-data-col-1-title-${index}`}
@@ -155,9 +155,10 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         </Grid>
                         {compactViewFields.map((field, fieldIndex) => {
                             const itemData =
-                                (row && field.translateFn(row, classesInternal)) || /* istanbul ignore next */ '';
+                                (row && field.translateFn(row, classesInternal, index)) ||
+                                /* istanbul ignore next */ '';
                             return (
-                                <React.Fragment key={field.key}>
+                                <React.Fragment key={`${field.key}_${index}`}>
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeHeader}
@@ -200,6 +201,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                                 variant="body1"
                                                 id={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                                 data-testid={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
+                                                component={'div'}
                                             >
                                                 {(itemData && field.prefix) || ''}
                                                 {itemData || /* istanbul ignore next */ ''}

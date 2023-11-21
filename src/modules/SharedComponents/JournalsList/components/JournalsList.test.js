@@ -5,7 +5,7 @@ import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsList } from './JournalsList';
 
-import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import JournalFieldsMap from './partials/JournalFieldsMap';
 
 const defaultTestData = {
     journals: mockData.data,

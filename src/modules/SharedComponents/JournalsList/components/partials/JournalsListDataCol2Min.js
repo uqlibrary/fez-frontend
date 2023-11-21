@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import { sanitiseId } from 'helpers/general';
