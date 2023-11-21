@@ -1,4 +1,4 @@
-import { destroy, get, post, patch } from 'repositories/generic';
+import { destroy, get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -13,7 +13,7 @@ import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { lastRequest, api } from '../config/axios';
-import * as transformers from './transformers';
+import * as transformers from './journalTransformers';
 
 /**
  * @param data
@@ -225,20 +225,25 @@ export const removeFromFavourites = ids => async dispatch => {
     );
 };
 
-const getAdminRecordRequest = data => {
+const getAdminJournalRequest = data => {
     // delete extra form values from request object
-    const keys = ['jnl_jid', 'journal', 'adminSection', 'bibliographicSection'];
+    const keys = [
+        'id',
+        'jnl_jid',
+        'journal',
+        'adminSection',
+        'bibliographicSection',
+        'uqDataSection',
+        'doajSection',
+        'indexedSection',
+    ];
 
     return [
         {
             ...data.journal,
             ...sanitiseJnlData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
-            ...transformers.getBibliographicSectionSearchKeys(
-                data.bibliographicSection,
-                // eslint-disable-next-line camelcase
-                data.adminSection?.rek_subtype,
-            ),
+            ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
         },
     ];
 };
@@ -254,10 +259,9 @@ export function adminJournalUpdate(data) {
         dispatch({
             type: actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
         });
-        const [patchRecordRequest] = getAdminRecordRequest(data);
-
+        const [patchJournalRequest] = getAdminJournalRequest(data);
         return Promise.resolve([])
-            .then(() => patch(EXISTING_JOURNAL_API({ id: data.jnl_jid }), patchRecordRequest))
+            .then(() => put(EXISTING_JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,

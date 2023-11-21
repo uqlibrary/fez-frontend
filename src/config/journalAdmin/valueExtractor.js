@@ -22,9 +22,10 @@ export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextS
         const [primaryHtmlKey, subHtmlKey] = htmlTextSearchKey.split('.');
 
         returnValue = {
-            plainText: ((journal || {})[primaryKey] || {})[subKey],
+            plainText: ((journal || {})?.[primaryKey] || {})?.[subKey],
             htmlText:
-                ((journal || {})[primaryHtmlKey] || {})[subHtmlKey] || ((journal || {})[primaryKey] || {})[subKey],
+                ((journal || {})?.[primaryHtmlKey] || {})?.[subHtmlKey] ||
+                ((journal || {})?.[primaryKey] || {})?.[subKey],
         };
         // deleteKey(journal, primaryKey);
         // deleteKey(journal, primaryHtmlKey);

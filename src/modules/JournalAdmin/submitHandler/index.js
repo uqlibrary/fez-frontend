@@ -9,9 +9,10 @@ export const onSubmit = (values, dispatch, { initialValues }) => {
 
     const initialData = (initialValues && initialValues.toJS()) || null;
     const changes = detailedDiff(initialData, data);
-    jnlValues = { ...changes };
+    jnlValues = { ...changes.updated };
 
     const requestObject = {
+        ...data,
         ...jnlValues,
         jnl_jid: data.journal.jnl_jid,
     };
