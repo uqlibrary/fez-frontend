@@ -7,7 +7,6 @@ import { useJournalContext } from 'context';
 
 export const AdminSection = ({ disabled = false }) => {
     const { jnlDisplayType } = useJournalContext();
-    console.log(jnlDisplayType, adminInterfaceConfig[jnlDisplayType]);
     const cards = useRef(adminInterfaceConfig[jnlDisplayType].admin());
 
     return <Section cards={cards.current} disabled={disabled} />;

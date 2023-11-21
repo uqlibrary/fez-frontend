@@ -454,8 +454,8 @@ export const FAVOURITE_SEARCH_LIST_API = ({ id } = { id: undefined }) => ({
     apiUrl: `favourite_search${!!id ? `/${id}` : ''}`,
 });
 
-export const JOURNAL_API = ({ id }) => ({
-    apiUrl: `journals/${id}`,
+export const JOURNAL_API = ({ id, isEdit = false }) => ({
+    apiUrl: `journals/${id}${isEdit ? '?from=admin-form' : ''}`,
 });
 
 export const MY_EDITORIAL_APPOINTMENT_LIST_API = ({ id } = { id: undefined }) => ({
@@ -591,8 +591,4 @@ export const ORGANISATIONAL_UNITS = () => ({
 
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
-});
-
-export const EXISTING_JOURNAL_API = ({ id }) => ({
-    apiUrl: `journals/${id}?from=admin-form`,
 });

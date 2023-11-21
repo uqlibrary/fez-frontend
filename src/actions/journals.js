@@ -1,4 +1,4 @@
-import { destroy, get, post, put } from 'repositories/generic';
+import { destroy, get, post, patch } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -7,7 +7,6 @@ import {
     JOURNAL_LOOKUP_API,
     JOURNAL_SEARCH_API,
     MASTER_JOURNAL_LIST_INGEST_API,
-    EXISTING_JOURNAL_API,
 } from 'repositories/routes';
 import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
@@ -88,12 +87,12 @@ export const requestMJLIngest = directory => dispatch => {
     );
 };
 
-export const loadJournal = id => dispatch => {
+export const loadJournal = (id, isEdit = false) => dispatch => {
     dispatch({ type: actions.JOURNAL_LOADING });
     return (
         id &&
         !isNaN(id) &&
-        get(JOURNAL_API({ id })).then(
+        get(JOURNAL_API({ id, isEdit })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOADED,
@@ -261,7 +260,7 @@ export function adminJournalUpdate(data) {
         });
         const [patchJournalRequest] = getAdminJournalRequest(data);
         return Promise.resolve([])
-            .then(() => put(EXISTING_JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
+            .then(() => patch(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,

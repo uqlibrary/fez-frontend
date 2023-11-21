@@ -598,6 +598,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
     .reply(200, { ...mockData.journalDoaj })
+    .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
+    .reply(200, { data: { ...mockData.journalDoaj } })
+
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
@@ -801,8 +804,6 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
 
-    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_JOURNAL_API({ id: '.*' }).apiUrl)))
-    .reply(200, { data: { ...mockData.journalDoaj } })
 
     .onAny()
     .reply(config => {

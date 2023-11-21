@@ -52,6 +52,7 @@ const handlers = {
         journalDetails: action.payload,
         journalLoading: false,
         journalToViewError: null,
+        isJournalLocked: !!action.payload.jnl_editing_user,
     }),
     [actions.JOURNAL_LOAD_FAILED]: (state, action) => ({
         ...state,

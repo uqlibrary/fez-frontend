@@ -55,7 +55,7 @@ const mapStateToProps = state => {
 
     journalToView = state.get('journalReducer').journalDetails;
 
-    locked = state.get('journalReducer').isJournalLocaked;
+    locked = state.get('journalReducer').isJournalLocked;
     initialFormValues = getInitialFormValues(journalToView) || {};
 
     return {

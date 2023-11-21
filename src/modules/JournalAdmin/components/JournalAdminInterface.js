@@ -76,7 +76,6 @@ export const JournalAdminInterface = ({
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
     const activeTabNames = React.useRef(getActiveTabs(tabs));
-    console.log(activeTabNames, tabs);
     const successConfirmationRef = React.useRef();
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
@@ -141,7 +140,7 @@ export const JournalAdminInterface = ({
         /* istanbul ignore else */
         if (!!journal.jnl_jid) {
             /* istanbul ignore next */
-            journal.rek_editing_user === authorDetails.username
+            journal.jnl_editing_user === authorDetails.username
                 ? unlockJournal(journal.jnl_jid, pushToHistory)
                 : pushToHistory();
         }
@@ -177,7 +176,11 @@ export const JournalAdminInterface = ({
                 squareTop
                 smallTitle
             >
-                <Field component={tabs[tab].component} disabled={submitting || locked} name={`${tab}Section`} />
+                <Field
+                    component={tabs[tab].component}
+                    disabled={submitting || (locked && journal.jnl_editing_user !== authorDetails.username)}
+                    name={`${tab}Section`}
+                />
             </StandardCard>
         </TabContainer>
     );
@@ -213,7 +216,7 @@ export const JournalAdminInterface = ({
                     disabled={
                         !!submitting ||
                         !!disableSubmit ||
-                        (locked && journal.rek_editing_user !== authorDetails.username)
+                        (locked && journal.jnl_editing_user !== authorDetails.username)
                     }
                     variant="contained"
                     color="primary"
