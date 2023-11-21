@@ -83,9 +83,6 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                     type="button"
                   >
                     Link your existing ORCID iD
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -147,9 +144,6 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                     type="button"
                   >
                     Create a new ORCID iD
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>

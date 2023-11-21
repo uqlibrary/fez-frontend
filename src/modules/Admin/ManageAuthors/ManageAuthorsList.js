@@ -23,6 +23,7 @@ import { default as locale } from 'locale/components';
 import { loadAuthorList } from 'actions';
 import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
+import { clearAlerts } from './helpers';
 
 export const getColumns = () => {
     const {
@@ -67,6 +68,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     columns.current = getColumns();
 
     const [pageSize, setPageSize] = React.useState(20);
+
+    React.useEffect(() => {
+        return () => clearAlerts(dispatch);
+    }, [dispatch]);
 
     const {
         loadingText,

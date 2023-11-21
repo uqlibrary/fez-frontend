@@ -18,6 +18,7 @@ export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
         canEdit: PropTypes.bool,
+        forceSelectable: PropTypes.bool,
         classes: PropTypes.object,
         contributorEditorId: PropTypes.string.isRequired,
         disabled: PropTypes.bool,
@@ -36,10 +37,13 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         record: PropTypes.object,
+        maintainSelected: PropTypes.bool,
     };
 
     static defaultProps = {
+        maintainSelected: false,
         canEdit: false,
+        forceSelectable: false,
         editMode: false,
         hideDelete: false,
         hideReorder: false,
@@ -120,12 +124,14 @@ export class ContributorsEditor extends PureComponent {
         }
         const isContributorACurrentAuthor =
             this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
+
         /* istanbul ignore next */
         this.setState({
             contributors: [
                 ...this.state.contributors.slice(0, index).map(contrib => ({
                     ...contrib,
                     selected: isContributorACurrentAuthor ? false : contrib.selected,
+                    ...(!this.props.isNtro ? { selected: contrib.selected } : {}),
                     authorId:
                         isContributorACurrentAuthor && contrib.authorId === this.props.author.aut_id
                             ? null
@@ -136,12 +142,14 @@ export class ContributorsEditor extends PureComponent {
                     disabled:
                         this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
                     selected: !this.props.editMode && isContributorACurrentAuthor,
+                    ...(!this.props.isNtro ? { selected: contributor.selected } : {}),
                     authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
                     required: contributor.required || false,
                 },
                 ...this.state.contributors.slice(index + 1).map(contrib => ({
                     ...contrib,
                     selected: isContributorACurrentAuthor ? false : contrib.selected,
+                    ...(!this.props.isNtro ? { selected: contrib.selected } : {}),
                     authorId:
                         isContributorACurrentAuthor && contrib.authorId === this.props.author.aut_id
                             ? null
@@ -206,7 +214,7 @@ export class ContributorsEditor extends PureComponent {
                     ...item,
                     selected: !item.selected && index === itemIndex,
                     // eslint-disable-next-line camelcase
-                    authorId: (index === itemIndex && this.props.author?.aut_id) || null,
+                    authorId: (!item.selected && index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
             /* istanbul ignore next */ this.state.contributors;
 
@@ -219,7 +227,8 @@ export class ContributorsEditor extends PureComponent {
         this.setState(prevState => ({
             contributors: prevState.contributors.map((contributor, itemIndex) => ({
                 ...contributor,
-                selected: index === itemIndex,
+                ...(!this.props.maintainSelected ? { selected: index === itemIndex } : {}),
+                // selected: index === itemIndex,
             })),
             contributorIndexSelectedToEdit: index,
         }));
@@ -229,6 +238,7 @@ export class ContributorsEditor extends PureComponent {
         const {
             contributorEditorId,
             canEdit,
+            forceSelectable,
             disabled,
             hideDelete,
             hideReorder,
@@ -252,13 +262,13 @@ export class ContributorsEditor extends PureComponent {
                 index={index}
                 className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
-                onSelect={!canEdit ? this.assignContributor : null}
+                onSelect={!canEdit || forceSelectable ? this.assignContributor : null}
                 onEdit={this.selectContributor}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
                 required={contributor.required}
-                enableSelect={showContributorAssignment && !isCurrentAuthorSelected}
+                enableSelect={(showContributorAssignment && !isCurrentAuthorSelected) || forceSelectable}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
                 contributorRowId={`${contributorEditorId}-list-row`}
@@ -278,7 +288,6 @@ export class ContributorsEditor extends PureComponent {
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
         };
-
         return (
             <ContributorForm
                 key={

@@ -58,9 +58,6 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
             type="button"
           >
             Close
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -133,9 +130,6 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
             type="button"
           >
             Test OK
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -206,9 +200,6 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
             type="button"
           >
             Test OK
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>

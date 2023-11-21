@@ -53,9 +53,6 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
                     d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -119,9 +116,6 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
                     d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -162,9 +156,6 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               type="button"
             >
               Submit to Incites
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </form>
         </div>
@@ -227,9 +218,6 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
                     d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -292,9 +280,6 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               type="button"
             >
               Submit
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </form>
         </div>
@@ -357,9 +342,6 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
                     d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -423,9 +405,6 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
                     d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -488,9 +467,6 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               type="button"
             >
               Submit
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </form>
         </div>
@@ -553,9 +529,6 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
                     d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -619,9 +592,6 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
                     d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -686,9 +656,6 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               type="button"
             >
               Submit
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </form>
         </div>
@@ -751,9 +718,6 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
                     d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -820,9 +784,6 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               type="button"
             >
               Submit2
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </form>
         </div>

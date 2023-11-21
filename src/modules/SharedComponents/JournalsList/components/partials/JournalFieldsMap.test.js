@@ -1,5 +1,7 @@
+import React from 'react';
+import { render } from 'test-utils';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 
 describe('Journal Fields Map', () => {
     it('should show correct information for Journal Title translateFn', () => {
@@ -7,20 +9,20 @@ describe('Journal Fields Map', () => {
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_title')[0];
         expect(testFieldMap.translateFn(testData)).toEqual(testData.jnl_title);
     });
-    it('should show correct information for Open Access translateFn and toolTipLabel', () => {
-        const testData = { ...mockData.data[0] };
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
-        !!testData.fez_journal_doaj
-            ? expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal')
-            : expect(testFieldMap.toolTipLabel(testData)).toEqual('Use filters to find alternate pathways');
-    });
 
-    it('should show alternative style of icon for Open Access allowed', () => {
-        const testData = { ...mockData.data[0] };
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
-        // Allow open access
-        testData.fez_journal_doaj = true;
-        expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal');
+    describe('Open Access indicators', () => {
+        const setup = data => {
+            const testFieldMap = JournalFieldsMap.filter(map => map.key === 'open_access')[0];
+            const indicator = testFieldMap.translateFn(data);
+
+            return render(<>{indicator}</>);
+        };
+
+        it('should return expected component for Open Access translateFn', () => {
+            const data = { ...mockData.data[0] };
+            const { getByText } = setup(data);
+            expect(getByText('embargo')).toBeInTheDocument();
+        });
     });
 
     it('should show correct information for Highest Quartile translateFn', () => {

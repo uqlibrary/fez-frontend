@@ -18,7 +18,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       </h2>
     </div>
     <div
-      class="MuiBox-root css-m2cr7m"
+      class="MuiBox-root css-3hnp8m"
     >
       <button
         aria-label="Click for more information"
@@ -44,9 +44,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -121,7 +118,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
       </h2>
     </div>
     <div
-      class="MuiBox-root css-m2cr7m"
+      class="MuiBox-root css-3hnp8m"
     >
       <button
         aria-label="Click for more information"
@@ -147,9 +144,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
             Click for more information
           </title>
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div

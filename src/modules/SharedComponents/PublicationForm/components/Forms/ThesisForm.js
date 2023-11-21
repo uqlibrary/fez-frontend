@@ -33,6 +33,7 @@ export default class ThesisForm extends Component {
 
     render() {
         const txt = formLocale.thesis;
+        const authortxt = formLocale.journalArticle;
         return (
             <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -107,7 +108,7 @@ export default class ThesisForm extends Component {
                                     floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            {/* <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -120,6 +121,30 @@ export default class ThesisForm extends Component {
                                     required
                                     validate={[validation.required]}
                                 />
+                            </Grid> */}
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+                {/* New Authors field */}
+                <Grid item xs={12}>
+                    <StandardCard title={authortxt.authors.title} help={authortxt.authors.help}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <Typography>{authortxt.authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    canEdit
+                                    forceSelectable
+                                    maintainSelected
+                                    hideUqIDFields
+                                    contributorEditorId="authors"
+                                    showContributorAssignment
+                                    name="authors"
+                                    locale={authortxt.authors.field}
+                                    disabled={this.props.submitting}
+                                    validate={[validation.authorRequired]}
+                                    required
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>
@@ -128,6 +153,10 @@ export default class ThesisForm extends Component {
                     <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            // forceSelectable
+                            hideUqIDFields
+                            maintainSelected
                             contributorEditorId="supervisors"
                             required
                             name="supervisors"

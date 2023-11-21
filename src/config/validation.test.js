@@ -356,3 +356,48 @@ describe('checkDigit ', () => {
         });
     });
 });
+
+describe('isValidDate ', () => {
+    it('should return true for valid date', () => {
+        expect(validation.isValidDate('2000-01-01 00:00:00')).toBeTruthy();
+    });
+
+    it('should return false for invalid date', () => {
+        expect(validation.isValidDate('2000-13-01 00:00:00')).toBeFalsy();
+    });
+});
+
+describe('isDateSameOrAfter ', () => {
+    it('should return true when the first given date is same or after the second given date', () => {
+        expect(validation.isDateSameOrAfter('2000-01-01', '2000-01-01')).toBeTruthy();
+        expect(validation.isDateSameOrAfter('2000-01-02', '2000-01-01')).toBeTruthy();
+    });
+
+    it('should return false when the first given date is before the second given date', () => {
+        expect(validation.isDateSameOrAfter('1999-12-31', '2000-01-01')).toBeFalsy();
+    });
+});
+
+describe('isDateSameOrBefore ', () => {
+    it('should return true when the first given date is same or before the second given date', () => {
+        expect(validation.isDateSameOrBefore('2000-01-01', '2000-01-01')).toBeTruthy();
+        expect(validation.isDateSameOrBefore('1999-12-31', '2000-01-01')).toBeTruthy();
+    });
+
+    it('should return false when the first given date is after the second given date', () => {
+        expect(validation.isDateSameOrBefore('2000-01-01', '1999-12-31')).toBeFalsy();
+    });
+});
+
+describe('isDateInBetween ', () => {
+    it('should return true when the first given date is in between the  other given dates', () => {
+        expect(validation.isDateInBetween('2000-01-01', '2000-01-01', '2000-01-03')).toBeTruthy();
+        expect(validation.isDateInBetween('2000-01-02', '2000-01-01', '2000-01-03')).toBeTruthy();
+        expect(validation.isDateInBetween('2000-01-03', '2000-01-01', '2000-01-03')).toBeTruthy();
+    });
+
+    it('should return false when the first given date is not in between the other given dates', () => {
+        expect(validation.isDateInBetween('1999-12-31', '2000-01-01', '2000-01-03')).toBeFalsy();
+        expect(validation.isDateInBetween('2000-01-04', '2000-01-01', '2000-01-03')).toBeFalsy();
+    });
+});

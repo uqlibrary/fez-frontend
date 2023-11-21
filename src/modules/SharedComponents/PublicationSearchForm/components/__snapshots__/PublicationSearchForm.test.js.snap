@@ -61,9 +61,6 @@ exports[`PublicationSearchForm renders  component 1`] = `
               type="button"
             >
               Search
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -134,9 +131,6 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
               type="button"
             >
               Search
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -148,9 +142,6 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
               type="button"
             >
               Skip search
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

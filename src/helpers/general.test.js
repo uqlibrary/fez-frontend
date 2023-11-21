@@ -16,6 +16,14 @@ describe('general helpers', () => {
         consoleDirMock.mockRestore();
     });
 
+    it('dc should given args using console.log', () => {
+        const consoleDirMock = jest.spyOn(console, 'log').mockImplementation(() => {});
+        const args = [true, false, 1, 0, -1, [], {}];
+        dc(...args);
+        expect(consoleDirMock).toBeCalledWith(...args);
+        consoleDirMock.mockRestore();
+    });
+
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },

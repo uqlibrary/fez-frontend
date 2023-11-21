@@ -7,6 +7,7 @@ import * as repository from 'repositories';
 
 jest.mock('./helpers', () => ({
     checkForExisting: jest.fn(),
+    clearAlerts: jest.fn(),
 }));
 import { checkForExisting } from './helpers';
 

@@ -166,6 +166,10 @@ export default class ConferencePaperForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
                             contributorEditorId="authors"
                             name="authors"
                             locale={txt.authors.field}

@@ -404,9 +404,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -496,9 +493,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -513,9 +507,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
               type="button"
             >
               Submit
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -942,9 +933,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1338,9 +1326,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               type="button"
             >
               Cancel
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1355,9 +1340,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               type="button"
             >
               Submit
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

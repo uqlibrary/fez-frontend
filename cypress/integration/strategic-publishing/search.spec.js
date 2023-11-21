@@ -346,7 +346,7 @@ context('Strategic Publishing - Search', () => {
 
         // expect to see open access and highest quartile in less view
         cy.get('[data-testid="journal-list"]')
-            .find('[data-testid="journal-list-header-fez-journal-doaj"]')
+            .find('[data-testid="journal-list-header-open-access"]')
             .should('be.visible')
             .should('contain', 'Open access');
 
@@ -386,7 +386,7 @@ context('Strategic Publishing - Search', () => {
 
         // expect to see open access and highest quartile in less view for first item
         cy.get('[data-testid="journal-list"]')
-            .find('[data-testid="journal-list-header-fez-journal-doaj-0"]')
+            .find('[data-testid="journal-list-header-open-access-0"]')
             .should('be.visible')
             .should('contain', 'Open access');
 
@@ -397,7 +397,7 @@ context('Strategic Publishing - Search', () => {
 
         // expect to see open access and highest quartile in less view for last item (10 items per page)
         cy.get('[data-testid="journal-list"]')
-            .find('[data-testid="journal-list-header-fez-journal-doaj-9"]')
+            .find('[data-testid="journal-list-header-open-access-9"]')
             .should('be.visible')
             .should('contain', 'Open access');
 

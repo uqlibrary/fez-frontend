@@ -226,7 +226,7 @@ export default class MyRecords extends PureComponent {
                     !this.props.loadingPublicationsList &&
                         this.props.publicationsList &&
                         this.props.publicationsList.length === 0 && (
-                            <Grid item xs={12}>
+                            <Grid item xs={12} md={9}>
                                 <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
                             </Grid>
                         )}
@@ -329,7 +329,7 @@ export default class MyRecords extends PureComponent {
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0) ||
                         (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                        <Grid item md={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid item xs={12} md={3}>
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
                                     facetsData={this.props.publicationsListFacets}

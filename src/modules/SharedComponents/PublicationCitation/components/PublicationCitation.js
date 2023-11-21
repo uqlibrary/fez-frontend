@@ -61,19 +61,18 @@ const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
 const StyledPublicationImageWrapper = styled('div')(({ theme }) => ({
     display: 'inline-block',
     marginRight: '10px',
-    marginBottom: '15px',
+    marginBottom: '15px ',
     aspectRatio: 1,
     minWidth: 0,
     minHeight: 0,
 
     [theme.breakpoints.down('md')]: {
-        width: '50vw',
-        height: '50vw',
+        width: '100%',
+        height: '100%',
         float: 'none',
         display: 'block',
-        margin: 'auto auto 15px',
-        minWidth: '50vw',
-        minHeight: '50vw',
+        minWidth: '100%',
+        minHeight: '100%',
     },
     [theme.breakpoints.up('sm')]: {
         width: '100px !important',
@@ -129,12 +128,6 @@ const classes = {
         },
     }),
     imageListItemImage: theme => ({
-        [theme.breakpoints.down('md')]: {
-            width: '50vw !important',
-            height: '50vw !important',
-            minWidth: '50vw',
-            minHeight: '50vw',
-        },
         [theme.breakpoints.up('sm')]: {
             width: '100px !important',
             height: '100px !important',
@@ -148,7 +141,7 @@ const classes = {
             minWidth: '125px',
         },
         [theme.breakpoints.up('lg')]: {
-            width: '130px !important',
+            width: '130px !important ',
             height: '130px !important',
             minHeight: '130px',
             minWidth: '130px',
@@ -271,7 +264,7 @@ export class PublicationCitation extends PureComponent {
                     lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
-                    sx={{
+                    classes={{
                         imageListItem: { root: classes.imageListItemRoot(theme) },
                         imageListItemImage: classes.imageListItemImage(theme),
                     }}

@@ -26,9 +26,6 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
         There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.
       </title>
     </svg>
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -67,9 +64,6 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
         />
       </svg>
     </span>
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -100,9 +94,6 @@ exports[`DashboardOrcidSync should render properly 1`] = `
         Information about uploading your eSpace works to ORCID
       </title>
     </svg>
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -133,9 +124,6 @@ exports[`DashboardOrcidSyncContainer should render properly 1`] = `
         Information about uploading your eSpace works to ORCID
       </title>
     </svg>
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;

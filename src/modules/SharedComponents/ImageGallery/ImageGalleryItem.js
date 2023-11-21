@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
 
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -31,26 +30,26 @@ const internalClasses = {
         fontWeight: '500',
         lineHeight: '16px',
         display: '-webkit-box',
-        lineClamp: 3,
+        lineClamp: '3',
+        '-webkit-line-clamp': '3',
         boxOrient: 'vertical',
+        '-webkit-box-orient': 'vertical',
         overflow: 'hidden',
         whiteSpace: 'normal',
         wordBreak: 'break-word',
+        textOverflow: 'ellipsis',
     },
     imageListItemBarTitleWrap: {
         margin: 0,
+        padding: 0,
     },
-    imageGalleryItemImage: theme => ({
+    imageGalleryItemImage: {
         aspectRatio: 1,
         minWidth: '100px',
         minHeight: '100px',
         width: '100%',
         height: '100%',
-        [theme.breakpoints.up('md')]: {
-            minWidth: '150px',
-            minHeight: '150px',
-        },
-    }),
+    },
     imageListAlertBarRoot: {
         background: 'none',
         backgroundColor: '#4085c6',
@@ -94,7 +93,6 @@ const ImageGalleryItem = ({
     security,
     ...rest
 }) => {
-    const theme = useTheme();
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
     const [unavailable, setUnavailable] = React.useState(false);
@@ -148,7 +146,7 @@ const ImageGalleryItem = ({
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
                 classes={{
-                    ...internalClasses.imageGalleryItemImage(theme),
+                    ...internalClasses.imageGalleryItemImage,
                     ...(!!classes && classes?.imageListItemImage),
                 }}
                 setRestricted={setRestricted}

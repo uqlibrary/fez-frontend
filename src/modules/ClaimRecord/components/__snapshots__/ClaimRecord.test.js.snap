@@ -416,9 +416,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -505,9 +502,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -521,9 +515,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -931,9 +922,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -947,9 +935,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1409,9 +1394,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -1498,9 +1480,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1514,9 +1493,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -1876,9 +1852,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -1892,9 +1865,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -2431,9 +2401,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -2520,9 +2487,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -2536,9 +2500,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3075,9 +3036,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -3164,9 +3122,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -3180,9 +3135,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -3583,9 +3535,6 @@ exports[`Component ClaimRecord  should render publication citation, error messag
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -4119,9 +4068,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -4253,9 +4199,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -4269,9 +4212,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -4808,9 +4748,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -5497,9 +5434,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -5631,9 +5565,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -5647,9 +5578,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -6186,9 +6114,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -6329,9 +6254,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -6345,9 +6267,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -6884,9 +6803,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -7032,9 +6948,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -7048,9 +6961,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -7302,9 +7212,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                         Click for more information
                       </title>
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -7445,9 +7352,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
@@ -7461,9 +7365,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
               type="button"
             >
               Claim this work
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
@@ -7914,9 +7815,6 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
               type="button"
             >
               Cancel this claim
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>

@@ -229,9 +229,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -264,9 +261,6 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -597,9 +591,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -632,9 +623,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1541,9 +1529,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             type="button"
           >
             Request Correction
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -1818,13 +1803,13 @@ exports[`PublicationCitation  should render component with default item with ima
     class="publicationCitation"
   >
     <div
-      class="css-1ftfb2e"
+      class="css-19cn028"
       data-testid="publication-image-parent-UQ:676287"
       id="publication-image-parent-UQ:676287"
     >
       <div
         aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-        class="MuiImageListItem-root css-7zs93q-MuiImageListItem-root"
+        class="MuiImageListItem-root css-1dhkuy2-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
@@ -1832,7 +1817,7 @@ exports[`PublicationCitation  should render component with default item with ima
       >
         <img
           alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-          class="image-gallery-item-image css-11gwge"
+          class="image-gallery-item-image css-1celx69"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
@@ -2188,12 +2173,12 @@ exports[`PublicationCitation  should render component with default item with ima
     class="publicationCitation"
   >
     <div
-      class="css-1ftfb2e"
+      class="css-19cn028"
       data-testid="publication-image-parent-UQ:676287"
       id="publication-image-parent-UQ:676287"
     >
       <div
-        class="MuiImageListItem-root css-7zs93q-MuiImageListItem-root"
+        class="MuiImageListItem-root css-1dhkuy2-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
@@ -2201,7 +2186,7 @@ exports[`PublicationCitation  should render component with default item with ima
       >
         <img
           alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-          class="image-gallery-item-image css-11gwge"
+          class="image-gallery-item-image css-1celx69"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
@@ -4675,13 +4660,13 @@ exports[`PublicationCitation  should render component without image if whitelist
     class="publicationCitation"
   >
     <div
-      class="css-1ftfb2e"
+      class="css-19cn028"
       data-testid="publication-image-parent-UQ:676287"
       id="publication-image-parent-UQ:676287"
     >
       <div
         aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-        class="MuiImageListItem-root css-7zs93q-MuiImageListItem-root"
+        class="MuiImageListItem-root css-1dhkuy2-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
@@ -4689,7 +4674,7 @@ exports[`PublicationCitation  should render component without image if whitelist
       >
         <img
           alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
-          class="image-gallery-item-image css-11gwge"
+          class="image-gallery-item-image css-1celx69"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
@@ -5320,9 +5305,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
             type="button"
           >
             Claim now
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
       </div>
@@ -6077,10 +6059,10 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               >
                 <div
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
-                  style="flex-grow: 1;"
+                  style="flex-grow: 1; width: 100%;"
                 >
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+                  <div
+                    class="MuiTypography-root MuiTypography-caption css-em36z4-MuiTypography-root"
                   >
                     <i>
                       <span
@@ -6101,7 +6083,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       04/01/2017
                       .
                     </span>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

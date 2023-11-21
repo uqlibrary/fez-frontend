@@ -79,6 +79,7 @@ export default {
         filenameColumn: 'File name',
         fileAccessColumn: 'File access',
         embargoDateColumn: 'Embargo date',
+        invalidEmbargoDateWarning: filename => `Invalid embargo date for ${filename}. Date will be ignored.`,
         embargoDateClosedAccess: 'No date required',
         uploadInProgressText: 'Uploading...',
         defaultView: {

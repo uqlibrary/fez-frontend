@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
 import locale from 'locale/global';
@@ -36,12 +37,12 @@ const classes = {
     highlighted: {
         borderLeft: '5px solid red',
     },
-    rowSelected: {
-        backgroundColor: 'accent.main !important',
+    rowSelected: theme => ({
+        backgroundColor: `${theme.palette.accent.main} !important`,
         '& svg': {
             color: 'white !important',
         },
-    },
+    }),
     contributorLinked: {
         color: 'primary.main',
         backgroundColor: 'secondary.light',
@@ -114,32 +115,47 @@ export const ContributorRow = ({
     enableSelect,
     showRoleInput,
 }) => {
+    const theme = useTheme();
     const width = useWidth();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
-    const _onDelete = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onDelete) {
-            onDelete(contributor, index);
-        }
+    const _onDelete = React.useCallback(
+        () => {
+            /* istanbul ignore else */
+            if (!disabled && onDelete) {
+                onDelete(contributor, index);
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+        [contributor, index],
+    );
 
-    const _onMoveUp = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveUp) {
-            onMoveUp(contributor, index);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+    const _onMoveUp = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
 
-    const _onMoveDown = React.useCallback(() => {
-        /* istanbul ignore else */
-        if (!disabled && onMoveDown) {
-            onMoveDown(contributor, index);
-        }
+            /* istanbul ignore else */
+            if (!disabled && onMoveUp) {
+                onMoveUp(contributor, index);
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [contributor, index]);
+        [contributor, index],
+    );
+
+    const _onMoveDown = React.useCallback(
+        e => {
+            /* istanbul ignore else */
+            if (!disabled && onMoveDown) {
+                e.preventDefault();
+                e.stopPropagation();
+                onMoveDown(contributor, index);
+            }
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [contributor, index],
+    );
 
     const _select = React.useCallback(() => {
         if (!disabled && !!onSelect && enableSelect) {
@@ -163,10 +179,15 @@ export const ContributorRow = ({
         [index],
     );
 
-    const _handleEdit = React.useCallback(() => {
-        canEdit && !!onEdit && onEdit(index);
+    const _handleEdit = React.useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
+            canEdit && !!onEdit && onEdit(index);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index]);
+        [index],
+    );
 
     const getRowIcon = () => {
         if (parseInt(contributor.uqIdentifier, 10)) {
@@ -197,9 +218,9 @@ export const ContributorRow = ({
     const listClasses = {
         ...classes.listItem,
         ...(required && classes.highlighted),
-        ...(contributor.selected && classes.rowSelected),
         ...(contributor.disabled && classes.disabledListItem),
         ...(canEdit && parseInt(contributor.uqIdentifier, 10) && classes.contributorLinked),
+        ...(contributor.selected && classes.rowSelected(theme)),
     };
     return (
         <Fragment>
@@ -224,7 +245,6 @@ export const ContributorRow = ({
                     <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' }, ...selectedClass }}>
                         {getRowIcon()}
                     </ListItemIcon>
-
                     <ContributorRowText
                         index={index}
                         canEdit={canEdit}
@@ -309,7 +329,11 @@ export const ContributorRow = ({
                         >
                             <IconButton
                                 aria-label={deleteHint}
-                                onClick={showConfirmation}
+                                onClick={e => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    showConfirmation();
+                                }}
                                 disabled={disabled || hideDelete}
                                 id={`${contributorRowId}-delete-${index}`}
                                 data-analyticsid={`${contributorRowId}-${index}-delete`}
@@ -376,6 +400,8 @@ export default React.memo(ContributorRow, (pp, np) => {
         pp.index === np.index &&
         !np.contributor.selected &&
         !pp.contributor.selected &&
-        pp.contributor.nameAsPublished === np.contributor.nameAsPublished
+        pp.contributor.nameAsPublished === np.contributor.nameAsPublished &&
+        pp.canMoveUp === np.canMoveUp &&
+        pp.canMoveDown === np.canMoveDown
     );
 });

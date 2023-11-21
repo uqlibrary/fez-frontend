@@ -117,6 +117,10 @@ export default class VideoDocumentForm extends Component {
                         <Typography>{txt.creator.descriptionCreatorOrContributor}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
                             contributorEditorId="creators"
                             showContributorAssignment={!editorSelected}
                             required
@@ -131,6 +135,10 @@ export default class VideoDocumentForm extends Component {
                         <Typography>{txt.contributor.descriptionCreatorOrContributor}</Typography>
                         <Field
                             component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
                             contributorEditorId="contributors"
                             showContributorAssignment={!authorSelected}
                             name="editors"

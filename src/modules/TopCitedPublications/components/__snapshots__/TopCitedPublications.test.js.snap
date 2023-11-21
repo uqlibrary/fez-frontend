@@ -103,9 +103,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
               <span>
                 Trending on Altmetric
               </span>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
             <button
               aria-selected="false"
@@ -117,9 +114,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
               <span>
                 Trending on Scopus
               </span>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
             <button
               aria-selected="false"
@@ -131,9 +125,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
               <span>
                 Trending on Web of science
               </span>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <span
@@ -186,9 +177,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
@@ -575,9 +563,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
               type="button"
             >
               Trending
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
             <button
               aria-selected="false"
@@ -587,9 +572,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
               type="button"
             >
               Scopus
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
             <button
               aria-selected="false"
@@ -599,9 +581,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
               type="button"
             >
               WOS
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <span
@@ -654,9 +633,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                 Click for more information
               </title>
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </button>
         </div>
         <div
