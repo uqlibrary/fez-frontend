@@ -8,7 +8,7 @@ import Tooltip from '@mui/material/Tooltip';
 import AcceptedIcon from '@mui/icons-material/School';
 import PublishedIcon from '@mui/icons-material/AutoStoriesOutlined';
 
-import { status as oaStatus } from './utils';
+import { status as oaStatus, types } from './utils';
 
 const icons = { accepted: AcceptedIcon, published: PublishedIcon };
 
@@ -23,6 +23,15 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
             '& .labelColumn': {
                 backgroundColor: green[50],
                 color: green[800],
+            },
+        },
+        [`${types.published}${oaStatus.open}`]: {
+            '& .iconColumn': {
+                backgroundColor: '#51247A',
+            },
+            '& .labelColumn': {
+                backgroundColor: '#EDE4F7',
+                color: '#51247A',
             },
         },
         [oaStatus.cap]: {
@@ -74,7 +83,9 @@ const JournalsOpenAccessIndicator = ({ type, status, label, tooltip, id, ...rest
                     '&:first-of-type': {
                         marginRight: '4px',
                     },
-                    ...classes[status],
+                    ...(type === types.published && status === oaStatus.open
+                        ? classes[`${types.published}${oaStatus.open}`]
+                        : classes[status]),
                 }}
                 className={`openAccessIndicator ${type} ${status}`}
                 {...rest}
