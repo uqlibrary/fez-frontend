@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -33,18 +34,18 @@ export const ViewJournal = () => {
     const journalLoading = useSelector(state => state.get('journalReducer').journalLoading);
     const journalDetails = useSelector(state => state.get('journalReducer').journalDetails);
     const journalLoadingError = useSelector(state => state.get('journalReducer').journalLoadingError);
-
     const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
     const alertProps = favouriteUpdateError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
+    const journalDetailsLength = Object.keys(journalDetails)?.length || 0;
 
     React.useEffect(() => {
-        !!id && Object.keys(journalDetails).length === 0 && dispatch(actions.loadJournal(id));
+        !!id && journalDetailsLength === 0 && dispatch(actions.loadJournal(id));
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id]);
+    }, [id, journalDetailsLength]);
 
     if (journalLoading) {
         return <InlineLoader message={txt.loadingMessage} loaderId="journal-loading" />;
@@ -58,7 +59,7 @@ export const ViewJournal = () => {
         );
     }
 
-    if (Object.keys(journalDetails).length === 0) {
+    if (journalDetailsLength === 0) {
         return <StandardPage />;
     }
 
@@ -100,7 +101,11 @@ export const ViewJournal = () => {
                             <Alert
                                 type={'info'}
                                 title={txt.advisoryStatement.title}
-                                message={getAdvisoryStatement(journalDetails.jnl_advisory_statement)}
+                                message={
+                                    <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
+                                        {getAdvisoryStatement(journalDetails.jnl_advisory_statement)}
+                                    </Box>
+                                }
                             />
                         </Grid>
                     )}

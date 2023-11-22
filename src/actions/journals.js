@@ -1,4 +1,4 @@
-import { destroy, get, post, patch } from 'repositories/generic';
+import { destroy, get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -248,7 +248,7 @@ const getAdminJournalRequest = data => {
 };
 
 /**
- * Update work request for admins: patch record
+ * Update work request for admins: put record
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
@@ -260,7 +260,7 @@ export function adminJournalUpdate(data) {
         });
         const [patchJournalRequest] = getAdminJournalRequest(data);
         return Promise.resolve([])
-            .then(() => patch(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
+            .then(() => put(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,
