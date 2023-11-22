@@ -6,6 +6,149 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
     id="test-list-editor-list-editor"
   >
     <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Edit item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
       class="MuiBox-root css-1l4fxj8"
     >
       <button
@@ -108,6 +251,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -120,6 +264,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -130,6 +275,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 >
                   Missing
@@ -253,6 +399,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-1"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   Second
@@ -264,6 +411,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-1"
                   id="scale-item-1"
                 >
                   Minor
@@ -274,6 +422,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-1"
                   id="statement-item-1"
                 />
               </div>
@@ -386,6 +535,149 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
   <div
     id="test-list-editor-list-editor"
   >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
     <div
       class="MuiBox-root css-1l4fxj8"
     >
@@ -617,6 +909,33 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
       </div>
     </div>
     <div
+      class="MuiBox-root css-182uewa"
+    >
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
       style="flex-grow: 1; padding: 8px;"
     >
       <div
@@ -686,6 +1005,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -698,6 +1018,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -708,6 +1029,7 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 >
                   Missing
@@ -932,6 +1254,33 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
       </div>
     </div>
     <div
+      class="MuiBox-root css-182uewa"
+    >
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+        data-analyticsid="rek-significance-showhidebutton"
+        data-testid="rek-significance-showhidebutton"
+        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
       style="flex-grow: 1; padding: 8px;"
     >
       <div
@@ -1001,6 +1350,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -1013,6 +1363,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -1023,6 +1374,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 >
                   Missing
@@ -1107,6 +1459,147 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
   <div
     id="test-list-editor-list-editor"
   >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-disabled="true"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              disabled=""
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          disabled=""
+          id="clear-items"
+          tabindex="-1"
+          type="button"
+        />
+      </div>
+    </div>
     <div
       class="MuiBox-root css-1l4fxj8"
     >
@@ -1202,6 +1695,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -1214,6 +1708,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -1224,6 +1719,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 >
                   Missing
@@ -1310,6 +1806,149 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
   <div
     id="test-list-editor-list-editor"
   >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
     <div
       class="MuiBox-root css-1l4fxj8"
     >
@@ -1404,6 +2043,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -1416,6 +2056,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -1426,6 +2067,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 >
                   Missing
@@ -1510,6 +2152,149 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
   <div
     id="test-list-editor-list-editor"
   >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
     <div
       class="MuiBox-root css-1l4fxj8"
     >
@@ -1613,6 +2398,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -1624,6 +2410,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -1634,6 +2421,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 />
               </div>
@@ -1755,6 +2543,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-1"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   Second
@@ -1766,6 +2555,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-1"
                   id="scale-item-1"
                 >
                   Missing
@@ -1776,6 +2566,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-1"
                   id="statement-item-1"
                 />
               </div>
@@ -1889,6 +2680,149 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     id="test-list-editor-list-editor"
   >
     <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
       class="MuiBox-root css-1l4fxj8"
     >
       <button
@@ -1991,6 +2925,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -2002,6 +2937,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Missing
@@ -2012,6 +2948,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 />
               </div>
@@ -2133,6 +3070,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-1"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   Second
@@ -2144,6 +3082,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-1"
                   id="scale-item-1"
                 >
                   Missing
@@ -2154,6 +3093,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-1"
                   id="statement-item-1"
                 />
               </div>
@@ -2267,6 +3207,149 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
     id="test-list-editor-list-editor"
   >
     <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
+      data-testid="rek-significance-form"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+        style="flex-grow: 1;"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            data-testid="rek-significance-label"
+            id="rek-significance-label"
+          >
+            NoLabel
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="rek-significance-select"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              data-testid="rek-significance-select"
+              id="rek-significance-select"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="true"
+              aria-labelledby="rek-significance-label"
+              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              data-analyticsid="rek-significance-input"
+              data-testid="rek-significance-input"
+              id="rek-significance-input"
+              required=""
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-1d7hrfi-MuiFormHelperText-root"
+            data-testid="rek-significance-helper-text"
+            id="rek-significance-helper-text"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              aria-label="contribution-statement"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              data-testid="rek-creator-contribution-statement"
+              id="rek-creator-contribution-statement"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-add"
+          data-testid="rek-significance-add"
+          disabled=""
+          id="add-items"
+          tabindex="-1"
+          type="button"
+        >
+          Edit item
+        </button>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          data-analyticsid="rek-significance-clear"
+          data-testid="rek-significance-clear"
+          id="clear-items"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
       class="MuiBox-root css-1l4fxj8"
     >
       <button
@@ -2360,6 +3443,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scalesignif-author-0"
                   style="color: rgba(0, 0, 0, 0.5);"
                 >
                   First
@@ -2372,6 +3456,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="scale-item-0"
                   id="scale-item-0"
                 >
                   Major
@@ -2382,6 +3467,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               >
                 <span
                   class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  data-testid="statement-item-0"
                   id="statement-item-0"
                 />
               </div>

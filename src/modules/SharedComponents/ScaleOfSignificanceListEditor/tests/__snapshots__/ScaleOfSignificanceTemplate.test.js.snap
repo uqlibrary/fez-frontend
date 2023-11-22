@@ -10,6 +10,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="scalesignif-author-0"
         style="color: rgba(0, 0, 0, 0.5);"
       >
         First
@@ -21,6 +22,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="scale-item-0"
         id="scale-item-0"
       >
         Missing
@@ -31,6 +33,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
     >
       <span
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="statement-item-0"
         id="statement-item-0"
       />
     </div>
@@ -48,11 +51,12 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="scalesignif-author-0"
         style="color: rgba(0, 0, 0, 0.5);"
       >
         First
          listed author 
-        (author)
+        (Joe Smith)
       </p>
     </div>
     <div
@@ -60,9 +64,10 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="scale-item-0"
         id="scale-item-0"
       >
-        Missing
+        Minor
       </p>
     </div>
     <div
@@ -70,8 +75,13 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
     >
       <span
         class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        data-testid="statement-item-0"
         id="statement-item-0"
-      />
+      >
+        <p>
+          A creative statement
+        </p>
+      </span>
     </div>
   </div>
 </div>
