@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';

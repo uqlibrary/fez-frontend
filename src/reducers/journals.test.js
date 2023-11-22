@@ -17,13 +17,14 @@ const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
-    journalDetails: false,
+    journalDetails: {},
     journalLoading: false,
     journalLoadingError: false,
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
     isInitialValues: true,
+    journalToViewError: null,
 };
 
 describe('journalReducer reducer', () => {
@@ -97,6 +98,7 @@ describe('journalReducer reducer', () => {
         const previousState = {
             ...initialState,
             journalLoading: true,
+            isJournalLocked: false,
         };
         const expected = {
             ...previousState,
@@ -127,9 +129,11 @@ describe('journalReducer reducer', () => {
             ...previousState,
             journalLoading: false,
             journalLoadingError: true,
+            journalToViewError: 'Test error message',
         };
         const test = journalReducer(previousState, {
             type: JOURNAL_LOAD_FAILED,
+            payload: 'Test error message',
         });
         expect(test).toEqual(expected);
     });

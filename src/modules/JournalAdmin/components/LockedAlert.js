@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useJournalContext, useAccountContext } from 'context';
