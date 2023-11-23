@@ -61,6 +61,7 @@ export const ScaleOfSignificanceForm = ({
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
     console.log('sos form', contributors);
+    console.log('significance', significance);
 
     React.useEffect(() => {
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {

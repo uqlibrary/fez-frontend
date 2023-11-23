@@ -10,6 +10,10 @@ import Box from '@mui/material/Box';
 import AddCircle from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { connect } from 'react-redux';
+// Steve work here
+// import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+// import Grid from '@mui/material/Unstable_Grid2';
+// import { SIGNIFICANCE } from 'config/general';
 
 export class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
@@ -84,6 +88,15 @@ export class ScaleOfSignificanceListEditor extends Component {
             formMode: 'edit',
         };
 
+        console.log('STATE AT THIS TIME', this.state.itemList);
+        const testItemList = [];
+        this.state.itemList.map(item => {
+            item.author = { rek_author: item.author.rek_author, rek_author_id: item.author.rek_author_id };
+            testItemList.push(item);
+        });
+        console.log('TEST ITEM LIST', testItemList);
+
+        this.state.itemList = testItemList;
         this.transformOutput = this.transformOutput.bind(this);
         this.saveChangeToItem = this.saveChangeToItem.bind(this);
         this.moveUpList = this.moveUpList.bind(this);
@@ -94,18 +107,32 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.showFormInAddMode = this.showFormInAddMode.bind(this);
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
+    componentDidMount() {
+        console.log('THIS STATE', this.state);
+        console.log('THIS PROPS', this.props);
+        if (this.props?.contributors?.authors?.length > 0) {
+            this.state.originalAuthors = this.props.contributors.authors;
+        }
+    }
 
     componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
-        console.log('x', prevProps);
-        console.log('y', prevState);
+        console.log('The Item List', this.state.itemList);
+        console.log('xtest', prevProps);
+        console.log('ytest', prevState);
+        console.log('prev state test', prevState.originalAuthors);
+        console.log('this state', this.state);
         console.log('contributors onupdate', this.props.contributors);
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
+        // DETECT A CHANGE IN THE ORDER OF AUTHORS
+        if (prevProps.contributors !== this.props.contributors) {
+            console.log("There's been a change in author order or something");
+            console.log(prevProps.contributors, this.props.contributors);
+        }
     }
-
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
@@ -257,6 +284,11 @@ export class ScaleOfSignificanceListEditor extends Component {
         });
     };
 
+    // SL Adjustment
+    setSignificance = (c, d) => {
+        console.log('changed', c, d);
+    };
+
     /* istanbul ignore next */
     deleteItem = (item, index) => {
         this.setState({
@@ -305,22 +337,60 @@ export class ScaleOfSignificanceListEditor extends Component {
             buttonLabel: this.props.locale.form.locale.editButtonLabel,
         });
     };
-
     render() {
+        // const SIGNIFICANCE_VALUES = [...SIGNIFICANCE, { text: 'Missing', value: -1 }];
+        // console.log(SIGNIFICANCE_TESTING, SIGNIFICANCE);
         console.log('This is a test', this.props.contributors);
-        let renderContributors;
-        if (this.props.contributors && this.props.contributors.authors && this.props.contributors.authors.length > 0) {
-            renderContributors = this.props.contributors.authors.map((item, index) => {
-                return (
-                    <p>
-                        A CONTRIBUTOR {item.nameAsPublished}
-                        {index}
-                    </p>
-                );
-            });
-        }
+        // let renderContributors = [];
+        // if (this.props.contributors && this.props.contributors.authors
+        // && this.props.contributors.authors.length > 0) {
+        //     // renderContributors = this.props.contributors.authors.map(item => {
+        //     renderContributors = this.state.itemList.map((item, index) => {
+        //         console.log('ITEM', item);
+        //         return (
+        //             <Grid container spacing={2}>
+        //                 <Grid item sm={2}>
+        //                     {/* Might have to move this renderContributors to a function
+        //                         so I can capture changes to author order.
+        //                         Maybe do something like:
+        //                         Based on the scale of significance ordering:
+        //                         * Map the list of authors.
+        //                         * Set the value of the author to the correct one in the order in SoS.
+        //                     */}
 
-        console.log('authors', renderContributors);
+        //                     <NewGenericSelectField
+        //                         // error={!!fieldProps.meta && fieldProps.meta.error}
+        //                         // errorText={!!fieldProps.meta && fieldProps.meta.error}
+        //                         onChange={this.setSignificance}
+        //                         value={this.props.contributors.authors[index].nameAsPublished}
+        //                         itemsList={[
+        //                             ...this.props.contributors.authors.map(authoritem => ({
+        //                                 value: authoritem.nameAsPublished,
+        //                                 text: authoritem.nameAsPublished,
+        //                             })),
+        //                         ]}
+        //                         selectPrompt="Choose Author"
+        //                         genericSelectFieldId="rek-subtype"
+        //                     />
+        //                 </Grid>
+        //                 <Grid item sm={2}>
+        //                     <NewGenericSelectField
+        //                         // error={!!fieldProps.meta && fieldProps.meta.error}
+        //                         // errorText={!!fieldProps.meta && fieldProps.meta.error}
+        //                         // onChange={(!!fieldProps.input && fieldProps.input.onChange)
+        // || fieldProps.onChange}
+        //                         value={item.key > 0 ? item.key : -1}
+        //                         itemsList={SIGNIFICANCE_TESTING}
+        //                         selectPrompt="Choose Significance"
+        //                         genericSelectFieldId={`scale-item-${index}`}
+        //                     />
+        //                 </Grid>
+        //             </Grid>
+        //         );
+        //     });
+        // }
+
+        // console.log('authors', renderContributors);
         // OLD Scale of Significance from here.
         const renderListsRows = this.state.itemList.map((item, index) => {
             const tempItem = {
@@ -405,6 +475,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                             aria-label={this.props.locale.form.locale.addEntryButton}
                             size="small"
                             style={{ color: '#fff', backgroundColor: '#51247A' }}
+                            disabled={this.state.itemList?.length >= this.props?.contributors?.authors?.length}
                         >
                             <AddCircle />
                         </IconButton>
@@ -419,7 +490,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                 />
                 {this.state.itemList.length > 0 ? (
                     <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
-                        {renderContributors}
                         {renderListsRows}
                     </div>
                 ) : (

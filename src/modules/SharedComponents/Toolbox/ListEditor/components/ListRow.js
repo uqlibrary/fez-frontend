@@ -49,7 +49,7 @@ export const ListRow = ({
         !disabled && !!onMoveDown && onMoveDown(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index]);
-
+    console.log('ListRow item', item);
     return (
         <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}`} data-testid={`${listRowId}`}>
             <ConfirmationBox
