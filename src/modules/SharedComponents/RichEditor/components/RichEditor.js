@@ -6,29 +6,24 @@ import ClassicExtended from 'ckeditor5-build-classic-extended';
 import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
-    function getCkEditorConfig() {
-        const singleLineItems = ['rek-title']; // fields which don't have paragraphs entered so don't get multi-line controls
-        const extraButtons = singleLineItems.includes(fieldProps.richEditorId)
-            ? []
-            : ['|', 'link', 'numberedList', 'bulletedList'];
-        return {
-            toolbar: [
-                'bold',
-                'italic',
-                'underline',
-                'strikethrough',
-                'subscript',
-                'superscript',
-                ...extraButtons,
-                '|',
-                'removeFormat',
-                'specialCharacters',
-                '|',
-                'undo',
-                'redo',
-            ],
-        };
-    }
+    const editorConfig = {
+        toolbar: [
+            'bold',
+            'italic',
+            'underline',
+            'strikethrough',
+            'subscript',
+            'superscript',
+            ...(['rek-title'].includes(fieldProps.richEditorId) ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
+            '|',
+            'removeFormat',
+            'specialCharacters',
+            '|',
+            'undo',
+            'redo',
+        ],
+        removePlugins: ['MediaEmbedToolbar'],
+    };
 
     // A handler executed when the user types or modifies the editor content.
     // It updates the state of the application.
@@ -102,7 +97,7 @@ const RichEditor = fieldProps => {
             <CKEditor
                 className={fieldProps.className}
                 editor={ClassicExtended}
-                config={getCkEditorConfig()}
+                config={editorConfig}
                 data={getContent()}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
