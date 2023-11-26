@@ -1,82 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> 1`] = `
-<ScaleOfSignificanceListEditor
-  canEdit={false}
-  distinctOnly={false}
-  error={false}
+<Memo(Connect(ScaleOfSignificanceListEditor))
   errorText={null}
-  hideReorder={false}
   input={
     Object {
       "onChange": [MockFunction],
     }
   }
-  inputNormalizer={[Function]}
   listEditorId="rek-significance"
-  locale={
-    Object {
-      "form": Object {
-        "locale": Object {
-          "addButtonLabel": "Add item",
-          "editButtonLabel": "Edit item",
-          "significanceInputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
   onChange={[MockFunction]}
-  required={false}
-  searchKey={
-    Object {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
 />
 `;
 
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> with error attributes 1`] = `
-<ScaleOfSignificanceListEditor
-  canEdit={false}
-  distinctOnly={false}
-  error={false}
-  errorText=""
-  hideReorder={false}
+<Memo(Connect(ScaleOfSignificanceListEditor))
   input={
     Object {
       "onChange": [MockFunction],
     }
   }
-  inputNormalizer={[Function]}
   listEditorId="rek-significance"
-  locale={
-    Object {
-      "form": Object {
-        "locale": Object {
-          "addButtonLabel": "Add item",
-          "editButtonLabel": "Edit item",
-          "significanceInputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
   meta={
     Object {
       "errorText": "test",
     }
   }
   onChange={[MockFunction]}
-  required={false}
-  searchKey={
-    Object {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
 />
 `;

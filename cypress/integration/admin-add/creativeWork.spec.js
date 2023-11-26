@@ -25,6 +25,13 @@ context('As an admin,', () => {
             .click();
 
         cy.adminEditTabbedView();
+
+        // Assign an author before trying to assign NTRO content.
+        cy.get('[data-testid="authors-tab"]').click();
+        cy.get('[data-testid="rek-author-add"]').click();
+        cy.get('[data-testid="rek-author-input"]').type('Test Author');
+        cy.get('[data-testid="rek-author-add-save"]').click();
+        // Now we can drill into the NTRO tab
         cy.get('[data-testid="ntro-tab"]').click();
 
         cy.get('[data-testid=ntro-section-content]')

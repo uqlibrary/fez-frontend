@@ -88,15 +88,14 @@ export class ScaleOfSignificanceListEditor extends Component {
             formMode: 'edit',
         };
 
-        console.log('STATE AT THIS TIME', this.state.itemList);
-        const testItemList = [];
-        this.state.itemList.map(item => {
-            item.author = { rek_author: item.author.rek_author, rek_author_id: item.author.rek_author_id };
-            testItemList.push(item);
-        });
-        console.log('TEST ITEM LIST', testItemList);
+        // const testItemList = [];
+        // this.state.itemList.map(item => {
+        //     console.log('item', item);
+        //     item.author = { rek_author: item.author.rek_author, rek_author_id: item.author.rek_author_id };
+        //     testItemList.push(item);
+        // });
 
-        this.state.itemList = testItemList;
+        // this.state.itemList = testItemList;
         this.transformOutput = this.transformOutput.bind(this);
         this.saveChangeToItem = this.saveChangeToItem.bind(this);
         this.moveUpList = this.moveUpList.bind(this);
@@ -108,91 +107,84 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
     componentDidMount() {
-        console.log('THIS STATE', this.state);
-        console.log('THIS PROPS', this.props);
         if (this.props?.contributors?.authors?.length > 0) {
             this.state.originalAuthors = this.props.contributors.authors;
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
-        console.log('The Item List', this.state.itemList);
-        console.log('xtest', prevProps);
-        console.log('ytest', prevState);
-        console.log('prev state test', prevState.originalAuthors);
-        console.log('this state', this.state);
-        console.log('contributors onupdate', this.props.contributors);
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
         // DETECT A CHANGE IN THE ORDER OF AUTHORS
-
-        console.log('Length check', this.props.contributors.authors.length, prevProps.contributors.authors.length);
-        if (prevProps.contributors.authors !== this.props.contributors.authors) {
-            // if one is added....
-            if (
-                this.props.contributors.authors.length > prevProps.contributors.authors.length &&
-                this.props.contributors.authors.length > this.state.itemList.length
-            ) {
-                // Create a new Scale of Significance record.
-                // The new record will be the last record in the list in this case.
-                const newRecord = this.props.contributors.authors[this.props.contributors.authors.length - 1];
-                console.log('NEW RECORD', newRecord);
-                this.setState({
-                    itemList: [
-                        ...this.state.itemList,
-                        {
-                            author: {
-                                rek_author: newRecord.nameAsPublished,
+        if (!!prevProps?.contributors?.authors && Array.isArray(prevProps?.contributors?.authors)) {
+            if (prevProps.contributors.authors !== this.props.contributors.authors) {
+                // if one is added....
+                if (
+                    this.props.contributors.authors.length > prevProps.contributors.authors.length &&
+                    this.props.contributors.authors.length > this.state.itemList.length
+                ) {
+                    // Create a new Scale of Significance record.
+                    // The new record will be the last record in the list in this case.
+                    const newRecord = this.props.contributors.authors[this.props.contributors.authors.length - 1];
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList,
+                            {
+                                author: {
+                                    rek_author: newRecord.nameAsPublished,
+                                },
+                                id: 0,
+                                key: 0,
+                                value: {
+                                    plainText: 'Missing',
+                                    htmlText: 'Missing',
+                                },
                             },
-                            id: 0,
-                            key: 0,
-                            value: {
-                                plainText: 'Missing',
-                                htmlText: 'Missing',
-                            },
-                        },
-                    ],
-                });
-            } else if (
-                this.props.contributors.authors.length < prevProps.contributors.authors.length &&
-                this.props.contributors.authors.length < this.state.itemList.length
-            ) {
-                const newList = [...this.state.itemList];
-                let found = false;
-                prevProps.contributors.authors.forEach((previous, index) => {
-                    if (!found && JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])) {
-                        delete newList[index];
-                        found = true;
-                    }
-                });
-                if (!found) {
-                    newList.pop();
-                }
-                this.setState({
-                    itemList: [...newList],
-                });
-            } else {
-                // if the order has changed....
-                const newList = [...this.state.itemList];
-                let found = false;
-                prevProps.contributors.authors.forEach((previous, index) => {
-                    if (!found) {
-                        if (JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])) {
-                            newList[index] = this.state.itemList[index + 1];
-                            newList[index + 1] = this.state.itemList[index];
+                        ],
+                    });
+                } else if (
+                    this.props.contributors.authors.length < prevProps.contributors.authors.length &&
+                    this.props.contributors.authors.length < this.state.itemList.length
+                ) {
+                    const newList = [...this.state.itemList];
+                    let found = false;
+                    prevProps.contributors.authors.forEach((previous, index) => {
+                        if (
+                            !found &&
+                            JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])
+                        ) {
+                            delete newList[index];
                             found = true;
                         }
+                    });
+                    if (!found) {
+                        newList.pop();
                     }
-                });
-                this.setState({
-                    itemList: [...newList],
-                });
+                    this.setState({
+                        itemList: [...newList],
+                    });
+                } else {
+                    // if the order has changed....
+                    console.log('order changed', prevProps);
+                    const newList = [...this.state.itemList];
+                    let found = false;
+                    prevProps.contributors.authors.forEach((previous, index) => {
+                        if (!found) {
+                            if (JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])) {
+                                newList[index] = this.state.itemList[index + 1];
+                                newList[index + 1] = this.state.itemList[index];
+                                found = true;
+                            }
+                        }
+                    });
+                    this.setState({
+                        itemList: [...newList],
+                    });
+                }
             }
-        } else {
-            console.log('Apparently they are the same');
         }
     }
     transformOutput = items => {
@@ -249,7 +241,6 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     saveChangeToItem = item => {
-        console.log('Saving the change', item);
         /* istanbul ignore else */
         if (
             !!item &&
@@ -262,7 +253,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                 ...this.state.itemList[this.state.itemIndexSelectedToEdit],
                 ...item,
             };
-            console.log('The edited item?', item);
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
             if (
@@ -400,7 +390,6 @@ export class ScaleOfSignificanceListEditor extends Component {
     render() {
         // const SIGNIFICANCE_VALUES = [...SIGNIFICANCE, { text: 'Missing', value: -1 }];
         // console.log(SIGNIFICANCE_TESTING, SIGNIFICANCE);
-        console.log('This is a test', this.props.contributors);
         // let renderContributors = [];
         // if (this.props.contributors && this.props.contributors.authors
         // && this.props.contributors.authors.length > 0) {

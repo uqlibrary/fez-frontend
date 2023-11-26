@@ -39,11 +39,9 @@ export const saveCallbackFactory = (
     resetForm,
 ) => {
     const callback = event => {
-        console.log('checking if empty', significance, contributionStatement);
         if (emptySignificance) {
-            console.log('was it missing?');
             saveChangeToItem({ key: 0, value: { plainText: 'Missing', htmlText: 'Missing' } });
-            resetForm();
+            resetForm && resetForm();
             return;
         }
         // add item if user hits 'enter' key on input field
@@ -56,7 +54,6 @@ export const saveCallbackFactory = (
             return;
         }
         // pass on the selected item
-        console.log('The correct shape:', significance, contributionStatement);
         saveChangeToItem({ key: significance, value: contributionStatement });
         resetForm();
         // move focus to name as published text field after item was added
@@ -65,7 +62,6 @@ export const saveCallbackFactory = (
 };
 
 export const ScaleOfSignificanceForm = ({
-    contributors,
     disabled,
     locale,
     errorText,
@@ -82,8 +78,6 @@ export const ScaleOfSignificanceForm = ({
     const [contributionStatement, setContributionStatement] = useState(null);
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
-    console.log('sos form', contributors);
-    console.log('significance', emptySignificance);
 
     React.useEffect(() => {
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
@@ -242,7 +236,6 @@ export const ScaleOfSignificanceForm = ({
 };
 
 ScaleOfSignificanceForm.propTypes = {
-    contributors: PropTypes.object,
     buttonLabel: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
