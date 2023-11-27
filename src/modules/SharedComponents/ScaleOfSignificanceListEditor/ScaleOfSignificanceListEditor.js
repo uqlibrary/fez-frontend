@@ -121,6 +121,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         // DETECT A CHANGE IN THE ORDER OF AUTHORS
         if (!!prevProps?.contributors?.authors && Array.isArray(prevProps?.contributors?.authors)) {
             if (prevProps.contributors.authors !== this.props.contributors.authors) {
+                console.log('An Author was added');
                 // if one is added....
                 if (
                     this.props.contributors.authors.length > prevProps.contributors.authors.length &&

@@ -18,9 +18,9 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           checked={false}
           inputProps={
             Object {
-              "data-analyticsid": "attributionIncomplete-input",
-              "data-testid": "attributionIncomplete-input",
-              "id": "attributionIncomplete-input",
+              "data-analyticsid": "empty-significance-statement-input",
+              "data-testid": "empty-significance-statement-input",
+              "id": "empty-significance-statement-input",
             }
           }
           onChange={[Function]}
@@ -29,8 +29,8 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       label={
         <ForwardRef(Typography)
           component="div"
-          data-testid="attributionIncomplete-label"
-          id="attributionIncomplete-label"
+          data-testid="empty-significance-statement-label"
+          id="empty-significance-statement-label"
           sx={
             Object {
               "fontSize": 16,
@@ -166,9 +166,9 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
           checked={false}
           inputProps={
             Object {
-              "data-analyticsid": "attributionIncomplete-input",
-              "data-testid": "attributionIncomplete-input",
-              "id": "attributionIncomplete-input",
+              "data-analyticsid": "empty-significance-statement-input",
+              "data-testid": "empty-significance-statement-input",
+              "id": "empty-significance-statement-input",
             }
           }
           onChange={[Function]}
@@ -177,8 +177,8 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
       label={
         <ForwardRef(Typography)
           component="div"
-          data-testid="attributionIncomplete-label"
-          id="attributionIncomplete-label"
+          data-testid="empty-significance-statement-label"
+          id="empty-significance-statement-label"
           sx={
             Object {
               "fontSize": 16,

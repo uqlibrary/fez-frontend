@@ -492,10 +492,10 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
-              data-analyticsid="attributionIncomplete-input"
+              data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
-              data-testid="attributionIncomplete-input"
-              id="attributionIncomplete-input"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
               type="checkbox"
             />
             <svg
@@ -512,8 +512,8 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
           </span>
           <div
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
-            data-testid="attributionIncomplete-label"
-            id="attributionIncomplete-label"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
           >
             Create a Missing Statement
           </div>
@@ -845,10 +845,10 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
-              data-analyticsid="attributionIncomplete-input"
+              data-analyticsid="empty-significance-statement-input"
               data-indeterminate="false"
-              data-testid="attributionIncomplete-input"
-              id="attributionIncomplete-input"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
               type="checkbox"
             />
             <svg
@@ -865,8 +865,8 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           </span>
           <div
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
-            data-testid="attributionIncomplete-label"
-            id="attributionIncomplete-label"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
           >
             Create a Missing Statement
           </div>

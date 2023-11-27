@@ -92,6 +92,7 @@ export const ScaleOfSignificanceForm = ({
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
     React.useEffect(() => {
+        /* istanbul ignore else */
         if (showForm) {
             setEmptySignificance(false);
         }
@@ -146,9 +147,9 @@ export const ScaleOfSignificanceForm = ({
                     control={
                         <Checkbox
                             inputProps={{
-                                'data-analyticsid': 'attributionIncomplete-input',
-                                'data-testid': 'attributionIncomplete-input',
-                                id: 'attributionIncomplete-input',
+                                'data-analyticsid': 'empty-significance-statement-input',
+                                'data-testid': 'empty-significance-statement-input',
+                                id: 'empty-significance-statement-input',
                             }}
                             checked={emptySignificance}
                             onChange={handleEmptySignificance}
@@ -158,8 +159,8 @@ export const ScaleOfSignificanceForm = ({
                         <Typography
                             sx={{ textAlign: 'justify', fontSize: 16, fontWeight: 300, lineHeight: '24px' }}
                             component="div"
-                            id={'attributionIncomplete-label'}
-                            data-testid={'attributionIncomplete-label'}
+                            id={'empty-significance-statement-label'}
+                            data-testid={'empty-significance-statement-label'}
                         >
                             Create a Missing Statement
                         </Typography>
