@@ -6,11 +6,8 @@ import ClassicExtended from 'ckeditor5-build-classic-extended';
 import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
-    function getCkEditorConfig() {
-        const singleLineItems = ['rek-title']; // fields which don't have paragraphs entered so don't get multi-line controls
-        const extraButtons = singleLineItems.includes(fieldProps.richEditorId)
-            ? []
-            : ['|', 'link', 'numberedList', 'bulletedList'];
+    function editorConfig() {
+        const singleLineItems = ['rek-title']; // single line fields don't get multi-line controls
         return {
             toolbar: [
                 'bold',
@@ -19,7 +16,9 @@ const RichEditor = fieldProps => {
                 'strikethrough',
                 'subscript',
                 'superscript',
-                ...extraButtons,
+                ...(singleLineItems.includes(fieldProps.richEditorId)
+                    ? []
+                    : ['|', 'link', 'numberedList', 'bulletedList']),
                 '|',
                 'removeFormat',
                 'specialCharacters',
@@ -27,6 +26,7 @@ const RichEditor = fieldProps => {
                 'undo',
                 'redo',
             ],
+            removePlugins: ['MediaEmbedToolbar'],
         };
     }
 
@@ -47,8 +47,8 @@ const RichEditor = fieldProps => {
     function getContent() {
         let dataForEditor = '';
         /* istanbul ignore else */
-        if (fieldProps.input?.value?.get) {
-            dataForEditor = fieldProps.input.value.get('htmlText');
+        if (fieldProps?.input?.value?.size > 0) {
+            dataForEditor = fieldProps.input.value.get('htmlText') || fieldProps.input.value.get('plainText') || '';
         } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
             if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
                 dataForEditor = fieldProps.value.get('htmlText');
@@ -58,7 +58,7 @@ const RichEditor = fieldProps => {
                 dataForEditor = fieldProps.value;
             }
         }
-        return dataForEditor;
+        return typeof dataForEditor === 'string' ? dataForEditor : '';
     }
 
     let error = null;
@@ -102,7 +102,7 @@ const RichEditor = fieldProps => {
             <CKEditor
                 className={fieldProps.className}
                 editor={ClassicExtended}
-                config={getCkEditorConfig()}
+                config={editorConfig()}
                 data={getContent()}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
