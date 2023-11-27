@@ -7,23 +7,23 @@ import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
     const editorConfig = {
-        toolbar: [
-            'bold',
-            'italic',
-            'underline',
-            'strikethrough',
-            'subscript',
-            'superscript',
+            toolbar: [
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'subscript',
+                'superscript',
             ...(['rek-title'].includes(fieldProps.richEditorId) ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
-            '|',
-            'removeFormat',
-            'specialCharacters',
-            '|',
-            'undo',
-            'redo',
-        ],
+                '|',
+                'removeFormat',
+                'specialCharacters',
+                '|',
+                'undo',
+                'redo',
+            ],
         removePlugins: ['MediaEmbedToolbar'],
-    };
+        };
 
     // A handler executed when the user types or modifies the editor content.
     // It updates the state of the application.
@@ -42,8 +42,8 @@ const RichEditor = fieldProps => {
     function getContent() {
         let dataForEditor = '';
         /* istanbul ignore else */
-        if (fieldProps.input?.value?.get) {
-            dataForEditor = fieldProps.input.value.get('htmlText');
+        if (fieldProps?.input?.value?.size > 0) {
+            dataForEditor = fieldProps.input.value.get('htmlText') || fieldProps.input.value.get('plainText') || '';
         } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
             if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
                 dataForEditor = fieldProps.value.get('htmlText');
@@ -53,7 +53,7 @@ const RichEditor = fieldProps => {
                 dataForEditor = fieldProps.value;
             }
         }
-        return dataForEditor;
+        return typeof dataForEditor === 'string' ? dataForEditor : '';
     }
 
     let error = null;

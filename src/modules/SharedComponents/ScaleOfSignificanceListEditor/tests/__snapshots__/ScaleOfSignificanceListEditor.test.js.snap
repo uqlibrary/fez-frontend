@@ -141,11 +141,7 @@ exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -671,11 +667,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -930,9 +922,6 @@ exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -1275,9 +1264,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
           />
         </svg>
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
       </button>
     </div>
     <div
@@ -1942,11 +1928,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -2288,11 +2270,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -2815,11 +2793,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
@@ -3342,11 +3316,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
           id="clear-items"
           tabindex="0"
           type="button"
-        >
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+        />
       </div>
     </div>
     <div
