@@ -311,6 +311,8 @@ export class ContributorsEditor extends PureComponent {
         this.setState({
             contributors,
         });
+        console.log('This.props', this.props.useFormReducer);
+        console.log('Firing updateAdminAuthors');
         this.props.useFormReducer && this.props.actions.updateAdminAuthors(contributors);
     };
 

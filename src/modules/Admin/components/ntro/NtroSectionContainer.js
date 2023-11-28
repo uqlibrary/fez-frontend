@@ -9,6 +9,7 @@ import { FormValuesContext } from 'context';
 import NtroSection from './NtroSection';
 
 export const NtroSectionContainer = ({ disabled, formValues }) => {
+    console.log('NTRO SECTION CONTAINER');
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
             <NtroSection disabled={disabled} />

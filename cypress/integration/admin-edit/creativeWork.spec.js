@@ -680,4 +680,67 @@ context('in the NTRO section, the significance and statement works correctly', (
             .should('contain', 'Fourth')
             .and('contain', 'test user');
     });
+
+    it('in the NTRO section, adding and removing an author reflects changes in the SoS Editor', () => {
+        cy.adminEditTabbedView();
+        addTestUser('test user', true);
+        cy.get('[data-testid="ntro-tab"]').click();
+        // Check the initial length of the authors
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        // New empty item should appear
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
+                    });
+            });
+
+        // addTestUser('test user', true);
+        // cy.get('[data-testid="ntro-tab"]').click();
+        // cy.get('[data-testid=ntro-section-content]')
+        //     .as('NTRO')
+        //     .within(() => {
+        //         cy.get('.AdminCard')
+        //             .eq(0)
+        //             .within(() => {
+        //                 cy.get('[data-testid="rek-significance-list"]')
+        //                     .children()
+        //                     .should('have.length', 3);
+
+        //                 // the form is initially hidden
+        //                 cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+
+        //                 clickButtonShowForm();
+        //                 cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
+        //                 cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+        //                 // Confirmation button should be disabled.
+        //                 cy.get('[data-testid="rek-significance-add"]').should('have.attr', 'disabled');
+        //                 cy.get('[data-testid="empty-significance-statement-input"]').click();
+        //                 cy.get('[data-testid="rek-significance-add"]').should('not.have.attr', 'disabled');
+        //                 cy.get('[data-testid="rek-significance-add"]').click();
+        //             });
+        //     });
+
+        // cy.get('[data-testid=ntro-section-content]')
+        //     .as('NTRO')
+        //     .within(() => {
+        //         cy.get('.AdminCard')
+        //             .eq(0)
+        //             .within(() => {
+        //                 // New empty item should appear
+        //                 cy.get('[data-testid="rek-significance-list"]')
+        //                     .children()
+        //                     .should('have.length', 4);
+        //             });
+        //     });
+        // cy.get('[data-testid="rek-significance-list-row-3"]')
+        //     .find('p')
+        //     .eq(0)
+        //     .should('contain', 'Fourth')
+        //     .and('contain', 'test user');
+    });
 });
