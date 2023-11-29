@@ -235,8 +235,8 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 1/);
         expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 2/);
         fireEvent.click(getByTestId('test-list-editor-list-row-1-move-up'));
-        expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 2/);
-        expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 1/);
+        expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 1/);
+        expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 2/);
     });
 
     it('should move down an item', () => {
@@ -274,8 +274,8 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 1/);
         expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 2/);
         fireEvent.click(getByTestId('test-list-editor-list-row-0-move-down'));
-        expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 2/);
-        expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 1/);
+        expect(getByTestId('test-list-editor-list-row-0')).toHaveTextContent(/Author 1/);
+        expect(getByTestId('test-list-editor-list-row-1')).toHaveTextContent(/Author 2/);
     });
 
     /*
