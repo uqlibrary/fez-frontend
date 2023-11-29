@@ -71,9 +71,17 @@ describe('ScaleOfSignificanceForm callback factories', () => {
         const disabled = false;
         const significance = 'test 1';
         const contributionStatement = 'test 2';
+        const emptySignificance = false;
         const onAdd = jest.fn();
         const resetForm = jest.fn();
-        const callback = saveCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm)[0];
+        const callback = saveCallbackFactory(
+            disabled,
+            emptySignificance,
+            significance,
+            contributionStatement,
+            onAdd,
+            resetForm,
+        )[0];
         callback({ key: 'Enter' });
         expect(onAdd).toHaveBeenCalledWith({ key: 'test 1', value: 'test 2' });
         expect(resetForm).toHaveBeenCalledTimes(1);

@@ -1,7 +1,7 @@
 import React from 'react';
 import ScaleOfSignificanceListEditor from '../ScaleOfSignificanceListEditor';
 import { List } from 'immutable';
-import { rtlRender, fireEvent, within } from 'test-utils';
+import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 
 window.CKEDITOR = {
     replace: () => ({
@@ -81,7 +81,11 @@ function setup(testProps = {}) {
         ...defaultProps,
         ...testProps,
     };
-    return rtlRender(<ScaleOfSignificanceListEditor {...props} />);
+    return render(
+        <WithReduxStore>
+            <ScaleOfSignificanceListEditor {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('ScaleOfSignificanceListEditor tests', () => {

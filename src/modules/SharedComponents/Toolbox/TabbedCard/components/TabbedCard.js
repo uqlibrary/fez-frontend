@@ -57,6 +57,7 @@ const TabbedCard = ({ cardId, cardTitle, common, contentRenderer, tabs }) => {
                             tabbed
                             value={`${index}`}
                         >
+                            <p>Tabby Tabby Testing</p>
                             <StandardCard
                                 noHeader
                                 squareTop

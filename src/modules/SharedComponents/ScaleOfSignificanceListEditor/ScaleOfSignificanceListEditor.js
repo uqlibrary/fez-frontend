@@ -88,15 +88,8 @@ export class ScaleOfSignificanceListEditor extends Component {
             formMode: 'edit',
         };
 
-        console.log('STATE AT THIS TIME', this.state.itemList);
-        const testItemList = [];
-        this.state.itemList.map(item => {
-            item.author = { rek_author: item.author.rek_author, rek_author_id: item.author.rek_author_id };
-            testItemList.push(item);
-        });
-        console.log('TEST ITEM LIST', testItemList);
+        this.state.originalItemList = this.state.itemList;
 
-        this.state.itemList = testItemList;
         this.transformOutput = this.transformOutput.bind(this);
         this.saveChangeToItem = this.saveChangeToItem.bind(this);
         this.moveUpList = this.moveUpList.bind(this);
@@ -108,29 +101,106 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
     componentDidMount() {
-        console.log('THIS STATE', this.state);
-        console.log('THIS PROPS', this.props);
+        console.log('test', this.props.contributors.authors);
         if (this.props?.contributors?.authors?.length > 0) {
             this.state.originalAuthors = this.props.contributors.authors;
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         /* istanbul ignore else */
-        console.log('The Item List', this.state.itemList);
-        console.log('xtest', prevProps);
-        console.log('ytest', prevState);
-        console.log('prev state test', prevState.originalAuthors);
-        console.log('this state', this.state);
-        console.log('contributors onupdate', this.props.contributors);
+        console.log(
+            'Component did update',
+            !!prevProps?.contributors?.authors && Array.isArray(prevProps?.contributors?.authors),
+        );
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
         // DETECT A CHANGE IN THE ORDER OF AUTHORS
-        if (prevProps.contributors !== this.props.contributors) {
-            console.log("There's been a change in author order or something");
-            console.log(prevProps.contributors, this.props.contributors);
+        if (!!prevProps?.contributors?.authors && Array.isArray(prevProps?.contributors?.authors)) {
+            console.log('Entered section A');
+            if (JSON.stringify(prevProps.contributors.authors) !== JSON.stringify(this.props.contributors.authors)) {
+                console.log('They are not the same. Entered section B');
+                // if one is added....
+                if (
+                    this.props.contributors.authors.length > prevProps.contributors.authors.length &&
+                    this.props.contributors.authors.length > this.state.itemList.length
+                ) {
+                    // Create a new Scale of Significance record.
+                    // The new record will be the last record in the list in this case.
+                    const newRecord = this.props.contributors.authors[this.props.contributors.authors.length - 1];
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList,
+                            {
+                                author: {
+                                    rek_author: newRecord.nameAsPublished,
+                                },
+                                id: 0,
+                                key: 0,
+                                value: {
+                                    plainText: 'Missing',
+                                    htmlText: 'Missing',
+                                },
+                            },
+                        ],
+                    });
+                } else if (
+                    this.props.contributors.authors.length < prevProps.contributors.authors.length &&
+                    this.props.contributors.authors.length < this.state.itemList.length
+                ) {
+                    const newList = [...this.state.itemList];
+                    let found = false;
+                    prevProps.contributors.authors.forEach((previous, index) => {
+                        /* istanbul ignore else */
+                        if (
+                            !found &&
+                            JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])
+                        ) {
+                            newList.splice(index, 1);
+                            found = true;
+                        }
+                    });
+                    /* istanbul ignore else */
+                    if (!found && this.state.itemList.length > this.props.contributors.authors.length) {
+                        newList.pop();
+                    }
+                    this.setState({
+                        itemList: [...newList],
+                    });
+                } else if (
+                    this.props.contributors.authors.length < prevProps.contributors.authors.length &&
+                    this.props.contributors.authors.length === this.state.itemList.length
+                ) {
+                    this.setState({
+                        itemList: [...this.state.itemList],
+                    });
+                } else {
+                    /* istanbul ignore else */
+                    if (this.state.itemList.length > 1) {
+                        // if the order has changed....
+                        console.log('IT SHOULD NOT BE DOING THIS');
+                        const newList = [...this.state.itemList];
+                        let found = false;
+                        prevProps.contributors.authors.forEach((previous, index) => {
+                            if (!found) {
+                                /* istanbul ignore else */
+                                if (
+                                    JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])
+                                ) {
+                                    newList[index] = this.state.itemList[index + 1];
+                                    newList[index + 1] = this.state.itemList[index];
+                                    found = true;
+                                }
+                            }
+                        });
+                        this.setState({
+                            itemList: [...newList],
+                        });
+                    }
+                }
+            }
         }
     }
     transformOutput = items => {
@@ -203,7 +273,8 @@ export class ScaleOfSignificanceListEditor extends Component {
             // its not exceeding the maxCount, is distinct and isnt already in the list...
             if (
                 this.state.formMode === 'edit' &&
-                ((!!item.key && !!item.value) || /* istanbul ignore next */ (!!item.id && !!item.value))
+                (((!!item.key || item.key === 0) && !!item.value) ||
+                    /* istanbul ignore next */ (!!item.id && !!item.value))
             ) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
@@ -254,11 +325,27 @@ export class ScaleOfSignificanceListEditor extends Component {
         }
     };
 
+    calculateAuthors = (moved, swapped, index) => {
+        const movedAuthor =
+            !!this.props?.contributors?.authors && Array.isArray(this.props?.contributors?.authors)
+                ? this.props.contributors.authors[index].nameAsPublished
+                : moved.author.rek_author;
+        const swappedAuthor =
+            !!this.props?.contributors?.authors && Array.isArray(this.props?.contributors?.authors)
+                ? this.props.contributors.authors[index - 1].nameAsPublished
+                : swapped.author.rek_author;
+        return { movedAuthor, swappedAuthor };
+    };
+
     moveUpList = (item, index) => {
         /* istanbul ignore next */
+        // Handle the order changing part here?
         if (index === 0) return;
         const movedItem = this.state.itemList[index];
         const swappedItem = this.state.itemList[index - 1];
+        const { movedAuthor, swappedAuthor } = this.calculateAuthors(movedItem, swappedItem, index);
+        movedItem.author.rek_author = swappedAuthor;
+        swappedItem.author.rek_author = movedAuthor;
         this.setState({
             itemList: [
                 ...this.state.itemList.slice(0, index - 1),
@@ -274,6 +361,9 @@ export class ScaleOfSignificanceListEditor extends Component {
         if (index === this.state.itemList.length - 1) return;
         const movedItem = this.state.itemList[index];
         const swappedItem = this.state.itemList[index + 1];
+        const { movedAuthor, swappedAuthor } = this.calculateAuthors(movedItem, swappedItem, index);
+        movedItem.author.rek_author = swappedAuthor;
+        swappedItem.author.rek_author = movedAuthor;
         this.setState({
             itemList: [
                 ...this.state.itemList.slice(0, index),
@@ -282,11 +372,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                 ...this.state.itemList.slice(index + 2),
             ],
         });
-    };
-
-    // SL Adjustment
-    setSignificance = (c, d) => {
-        console.log('changed', c, d);
     };
 
     /* istanbul ignore next */
@@ -338,67 +423,18 @@ export class ScaleOfSignificanceListEditor extends Component {
         });
     };
     render() {
-        // const SIGNIFICANCE_VALUES = [...SIGNIFICANCE, { text: 'Missing', value: -1 }];
-        // console.log(SIGNIFICANCE_TESTING, SIGNIFICANCE);
-        console.log('This is a test', this.props.contributors);
-        // let renderContributors = [];
-        // if (this.props.contributors && this.props.contributors.authors
-        // && this.props.contributors.authors.length > 0) {
-        //     // renderContributors = this.props.contributors.authors.map(item => {
-        //     renderContributors = this.state.itemList.map((item, index) => {
-        //         console.log('ITEM', item);
-        //         return (
-        //             <Grid container spacing={2}>
-        //                 <Grid item sm={2}>
-        //                     {/* Might have to move this renderContributors to a function
-        //                         so I can capture changes to author order.
-        //                         Maybe do something like:
-        //                         Based on the scale of significance ordering:
-        //                         * Map the list of authors.
-        //                         * Set the value of the author to the correct one in the order in SoS.
-        //                     */}
-
-        //                     <NewGenericSelectField
-        //                         // error={!!fieldProps.meta && fieldProps.meta.error}
-        //                         // errorText={!!fieldProps.meta && fieldProps.meta.error}
-        //                         onChange={this.setSignificance}
-        //                         value={this.props.contributors.authors[index].nameAsPublished}
-        //                         itemsList={[
-        //                             ...this.props.contributors.authors.map(authoritem => ({
-        //                                 value: authoritem.nameAsPublished,
-        //                                 text: authoritem.nameAsPublished,
-        //                             })),
-        //                         ]}
-        //                         selectPrompt="Choose Author"
-        //                         genericSelectFieldId="rek-subtype"
-        //                     />
-        //                 </Grid>
-        //                 <Grid item sm={2}>
-        //                     <NewGenericSelectField
-        //                         // error={!!fieldProps.meta && fieldProps.meta.error}
-        //                         // errorText={!!fieldProps.meta && fieldProps.meta.error}
-        //                         // onChange={(!!fieldProps.input && fieldProps.input.onChange)
-        // || fieldProps.onChange}
-        //                         value={item.key > 0 ? item.key : -1}
-        //                         itemsList={SIGNIFICANCE_TESTING}
-        //                         selectPrompt="Choose Significance"
-        //                         genericSelectFieldId={`scale-item-${index}`}
-        //                     />
-        //                 </Grid>
-        //             </Grid>
-        //         );
-        //     });
-        // }
-
-        // console.log('authors', renderContributors);
-        // OLD Scale of Significance from here.
         const renderListsRows = this.state.itemList.map((item, index) => {
             const tempItem = {
                 id: index,
                 // authorName: item.authorName || item.author?.rek_author || null,
                 author: {
                     // eslint-disable-next-line camelcase
-                    rek_author: item.author?.rek_author || this.state.itemList[index].author?.rek_author || null,
+                    // rek_author: item.author?.rek_author || this.state.itemList[index].author?.rek_author || null,
+                    rek_author:
+                        this.props.contributors?.authors[index]?.nameAsPublished ||
+                        // item.author?.rek_author ||
+                        this.state.itemList[index].author?.rek_author ||
+                        null,
                 },
                 key: item.key,
                 value: {
@@ -474,7 +510,13 @@ export class ScaleOfSignificanceListEditor extends Component {
                             onClick={this.showFormInAddMode}
                             aria-label={this.props.locale.form.locale.addEntryButton}
                             size="small"
-                            style={{ color: '#fff', backgroundColor: '#51247A' }}
+                            style={{
+                                color: '#fff',
+                                backgroundColor:
+                                    this.state.itemList?.length >= this.props?.contributors?.authors?.length
+                                        ? '#ccc'
+                                        : '#51247A',
+                            }}
                             disabled={this.state.itemList?.length >= this.props?.contributors?.authors?.length}
                         >
                             <AddCircle />

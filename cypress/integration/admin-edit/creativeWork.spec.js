@@ -6,6 +6,11 @@ function rowHasAuthor(rowid, authorName) {
         .eq(0)
         .should('contain', authorName);
 }
+function rowHasStatement(rowid, authorName) {
+    cy.get(`[data-testid="rek-significance-list-row-${rowid}"]`)
+        .find(`#statement-item-${rowid}`)
+        .should('contain', authorName);
+}
 
 context('Creative Work admin edit, general', () => {
     const record = recordList.data[0];
@@ -127,7 +132,26 @@ context('in the NTRO section, the significance and statement works correctly', (
         cy.get(editButton(rowId)).click();
         // cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
     }
-
+    function addEntryIsDisabled(assert) {
+        const assertion = assert ? 'have.attr' : 'not.have.attr';
+        cy.get('[data-testid="rek-significance-showhidebutton"]')
+            .should('exist')
+            .should(assertion, 'disabled');
+    }
+    function addTestUser(userName, isTabbed) {
+        if (isTabbed) {
+            cy.wait(500);
+            cy.get('[data-testid="authors-tab"]')
+                .should('exist')
+                .click();
+        }
+        cy.get('[data-testid="rek-author-add"]')
+            .should('exist')
+            .click();
+        cy.get('[data-testid="rek-author-input"]').type(userName);
+        cy.get('[data-testid="rek-author-add-save"]').click();
+        cy.wait(100);
+    }
     function clickButtonShowForm() {
         cy.get('[data-testid="rek-significance-showhidebutton"]')
             .should('exist')
@@ -198,6 +222,7 @@ context('in the NTRO section, the significance and statement works correctly', (
 
     it('in the NTRO section, the user can add an entry to significance and statement ', () => {
         cy.adminEditTabbedView();
+        addTestUser('test user', true);
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -208,7 +233,6 @@ context('in the NTRO section, the significance and statement works correctly', (
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 3);
-
                         clickButtonShowForm();
                         cy.get('button[data-testid="rek-significance-add"]')
                             .should('exist')
@@ -253,6 +277,7 @@ context('in the NTRO section, the significance and statement works correctly', (
 
     it('in the NTRO section, the add form loads empty after using the edit form', () => {
         cy.adminEditTabbedView();
+        addTestUser('test user', true);
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -453,24 +478,35 @@ context('in the NTRO section, the significance and statement works correctly', (
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
                         rowHasAuthor(0, 'Ashkanasy');
+                        rowHasStatement(0, 'This is an online');
                         rowHasAuthor(1, 'Belanger');
+                        rowHasStatement(1, 'Missing');
                         rowHasAuthor(2, 'Bernal');
+                        rowHasStatement(2, 'Missing');
 
                         cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
                             .should('exist')
                             .click();
-
+                        // Authors SHOULD NOT MOVE!
+                        // STATEMENTS move, not authors.
                         rowHasAuthor(0, 'Ashkanasy');
-                        rowHasAuthor(1, 'Bernal');
-                        rowHasAuthor(2, 'Belanger');
+                        rowHasStatement(0, 'This is an online');
+                        rowHasAuthor(1, 'Belanger');
+                        rowHasStatement(1, 'Missing');
+                        rowHasAuthor(2, 'Bernal');
+                        rowHasStatement(2, 'Missing');
 
                         cy.get('[data-testid="rek-significance-list-row-1-move-up"]')
                             .should('exist')
                             .click();
-
-                        rowHasAuthor(0, 'Bernal');
-                        rowHasAuthor(1, 'Ashkanasy');
-                        rowHasAuthor(2, 'Belanger');
+                        // Authors SHOULD NOT MOVE!
+                        // STATEMENTS move, not authors.
+                        rowHasAuthor(0, 'Ashkanasy');
+                        rowHasStatement(0, 'Missing');
+                        rowHasAuthor(1, 'Belanger');
+                        rowHasStatement(1, 'This is an online');
+                        rowHasAuthor(2, 'Bernal');
+                        rowHasStatement(2, 'Missing');
                     });
             });
     });
@@ -524,8 +560,8 @@ context('in the NTRO section, the significance and statement works correctly', (
             .click();
 
         rowHasAuthor(0, 'Ashkanasy');
-        rowHasAuthor(1, 'Bernal');
-        rowHasAuthor(2, 'Belanger');
+        rowHasAuthor(2, 'Bernal');
+        rowHasAuthor(1, 'Belanger');
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -555,6 +591,7 @@ context('in the NTRO section, the significance and statement works correctly', (
 
     it('in the NTRO section, the clear button clears the significance and statement add form', () => {
         cy.adminEditTabbedView();
+        addTestUser('test user', true);
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -596,5 +633,114 @@ context('in the NTRO section, the significance and statement works correctly', (
                             .should('have.length', 3);
                     });
             });
+    });
+    it('in the NTRO section, I can add an empty significance record if required', () => {
+        cy.adminEditTabbedView();
+        addTestUser('test user', true);
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
+
+                        // the form is initially hidden
+                        cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+
+                        clickButtonShowForm();
+                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
+                        cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+                        // Confirmation button should be disabled.
+                        cy.get('[data-testid="rek-significance-add"]').should('have.attr', 'disabled');
+                        cy.get('[data-testid="empty-significance-statement-input"]').click();
+                        cy.get('[data-testid="rek-significance-add"]').should('not.have.attr', 'disabled');
+                        cy.get('[data-testid="rek-significance-add"]').click();
+                    });
+            });
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        // New empty item should appear
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 4);
+                    });
+            });
+        cy.get('[data-testid="rek-significance-list-row-3"]')
+            .find('p')
+            .eq(0)
+            .should('contain', 'Fourth')
+            .and('contain', 'test user');
+    });
+
+    it('in the NTRO section, adding and removing an author reflects changes in the SoS Editor', () => {
+        cy.adminEditTabbedView();
+        addTestUser('test user', true);
+        cy.get('[data-testid="ntro-tab"]').click();
+        // Check the initial length of the authors
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        // New empty item should appear
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
+                    });
+            });
+
+        // addTestUser('test user', true);
+        // cy.get('[data-testid="ntro-tab"]').click();
+        // cy.get('[data-testid=ntro-section-content]')
+        //     .as('NTRO')
+        //     .within(() => {
+        //         cy.get('.AdminCard')
+        //             .eq(0)
+        //             .within(() => {
+        //                 cy.get('[data-testid="rek-significance-list"]')
+        //                     .children()
+        //                     .should('have.length', 3);
+
+        //                 // the form is initially hidden
+        //                 cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+
+        //                 clickButtonShowForm();
+        //                 cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
+        //                 cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+        //                 // Confirmation button should be disabled.
+        //                 cy.get('[data-testid="rek-significance-add"]').should('have.attr', 'disabled');
+        //                 cy.get('[data-testid="empty-significance-statement-input"]').click();
+        //                 cy.get('[data-testid="rek-significance-add"]').should('not.have.attr', 'disabled');
+        //                 cy.get('[data-testid="rek-significance-add"]').click();
+        //             });
+        //     });
+
+        // cy.get('[data-testid=ntro-section-content]')
+        //     .as('NTRO')
+        //     .within(() => {
+        //         cy.get('.AdminCard')
+        //             .eq(0)
+        //             .within(() => {
+        //                 // New empty item should appear
+        //                 cy.get('[data-testid="rek-significance-list"]')
+        //                     .children()
+        //                     .should('have.length', 4);
+        //             });
+        //     });
+        // cy.get('[data-testid="rek-significance-list-row-3"]')
+        //     .find('p')
+        //     .eq(0)
+        //     .should('contain', 'Fourth')
+        //     .and('contain', 'test user');
     });
 });
