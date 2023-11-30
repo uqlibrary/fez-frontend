@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
@@ -72,6 +71,7 @@ export const JournalAdminInterface = ({
 }) => {
     const dispatch = useDispatch();
     const { journalDetails: journal } = useJournalContext();
+
     const { tabbed, toggleTabbed } = useTabbedContext();
     const defaultTab = 'admin';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
@@ -82,6 +82,7 @@ export const JournalAdminInterface = ({
     const txt = React.useRef(pageLocale.pages.edit);
 
     const errorMessage = error && typeof error === 'object' ? ' ' : null;
+
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,

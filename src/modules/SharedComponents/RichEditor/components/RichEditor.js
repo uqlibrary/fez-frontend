@@ -7,23 +7,23 @@ import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
     const editorConfig = {
-            toolbar: [
-                'bold',
-                'italic',
-                'underline',
-                'strikethrough',
-                'subscript',
-                'superscript',
+        toolbar: [
+            'bold',
+            'italic',
+            'underline',
+            'strikethrough',
+            'subscript',
+            'superscript',
             ...(['rek-title'].includes(fieldProps.richEditorId) ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
-                '|',
-                'removeFormat',
-                'specialCharacters',
-                '|',
-                'undo',
-                'redo',
-            ],
+            '|',
+            'removeFormat',
+            'specialCharacters',
+            '|',
+            'undo',
+            'redo',
+        ],
         removePlugins: ['MediaEmbedToolbar'],
-        };
+    };
 
     // A handler executed when the user types or modifies the editor content.
     // It updates the state of the application.

@@ -204,4 +204,5 @@ module.exports = {
     withDatastreams,
     createMatchMedia,
     preview,
+    userEvent,
 };

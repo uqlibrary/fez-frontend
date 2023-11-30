@@ -1,2 +1,2 @@
 /* eslint-disable no-unused-vars */
-export const bibliographicParams = (journal, formValues) => ({});
+export const bibliographicParams = (journal, formValues) => journal;

@@ -162,6 +162,7 @@ export default {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'uqData',
+                name: 'uqdataSection',
                 sectionConfig: viewJournalConfig.uqData,
                 wrapped: false,
             },
@@ -170,6 +171,7 @@ export default {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'doaj',
+                name: 'doajSection',
                 sectionConfig: viewJournalConfig.doaj,
                 wrapped: false,
             },
@@ -178,6 +180,7 @@ export default {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'indexed',
+                name: 'indexedSection',
                 sectionConfig: viewJournalConfig.index,
                 wrapped: false,
             },

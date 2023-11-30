@@ -1,20 +1,18 @@
 /* istanbul ignore file */
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { Section } from '../common/Section';
 
-import { useJournalContext, useFormValuesContext } from 'context';
+import { useJournalContext } from 'context';
 import { adminInterfaceConfig } from 'config/journalAdmin';
-import { bibliographicParams } from 'modules/JournalAdmin/helpers';
 
 export const BibliographicSection = ({ disabled = false }) => {
-    const { journal, jnlDisplayType } = useJournalContext();
-    const { formValues } = useFormValuesContext();
+    const { jnlDisplayType } = useJournalContext();
 
-    const cards = adminInterfaceConfig[jnlDisplayType].bibliographic(bibliographicParams(journal, formValues));
+    const cards = useRef(adminInterfaceConfig[jnlDisplayType].bibliographic());
 
-    return <Section cards={cards} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} />;
 };
 
 BibliographicSection.propTypes = {

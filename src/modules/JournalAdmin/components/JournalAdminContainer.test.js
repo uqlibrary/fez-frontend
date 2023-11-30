@@ -1,26 +1,25 @@
 import React from 'react';
-import { rtlRender, waitForElementToBeRemoved, WithReduxStore, WithRouter, preview } from 'test-utils';
+import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import JournalAdminContainer, { isSame } from './JournalAdminContainer';
 import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
-import * as redux from 'react-redux';
+import { reduxForm } from 'redux-form';
+import Cookies from 'js-cookie';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
-jest.mock('js-cookie', () => ({
-    get: jest.fn(() => 'tabbed'),
-    set: jest.fn(),
-}));
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
-    destroy: jest.fn(),
-}));
+jest.mock('js-cookie', () => jest.fn());
+
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: () => mockDispatch,
 }));
+
+const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
+    JournalAdminContainer,
+);
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -45,7 +44,7 @@ function setup(testProps = {}, renderer = rtlRender) {
     return renderer(
         <WithReduxStore>
             <WithRouter>
-                <JournalAdminContainer {...props} />
+                <WithReduxForm {...props} />
             </WithRouter>
             ,
         </WithReduxStore>,
@@ -53,192 +52,116 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('JournalAdminContainer component', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    let transformIssnFn;
-    let normalizeIssnFn;
-    ReduxFormMock.Field.mockImplementation(
-        ({ name, title, required, disabled, label, floatingLabelText, inputNormalizer, transformFunction }) => {
-            if (name === 'fez_record_search_key_issn') {
-                normalizeIssnFn = inputNormalizer;
-                transformIssnFn = transformFunction;
-            }
+    describe('Fullform view', () => {
+        beforeAll(() => {
+            Cookies.get = jest.fn().mockImplementation(() => 'fullform');
+            Cookies.set = jest.fn();
+        });
 
-            return (
-                <field
-                    is="mock"
-                    name={name}
-                    title={title}
-                    required={required}
-                    disabled={disabled}
-                    label={label || floatingLabelText}
-                />
-            );
-        },
-    );
+        it('should render default view', async () => {
+            const { getByText } = setup();
 
-    it('should render default view', async () => {
-        const { getByText } = setup();
-        preview.debug();
+            expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
 
-        expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
-    });
-    it('should render mobile view', () => {
-        useIsMobileView.mockImplementation(() => true);
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render loading record view', () => {
-        const wrapper = setup({
-            journalToView: true,
+            const switcher = document.querySelector('input.MuiSwitch-input');
+            expect(switcher).not.toHaveAttribute('checked');
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render record not found view', () => {
-        const wrapper = setup({
-            recordToView: null,
-            journalToView: false,
-            isDeleted: true,
-            recordToViewError: { message: 'test', status: 404 },
+
+        it('should render loading journal view', () => {
+            const { getByText } = setup({
+                journalToViewLoading: true,
+            });
+            expect(getByText('Loading work')).toBeInTheDocument();
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render component with tabbed interface', () => {
-        const wrapper = setup({
-            journalToView: false,
-            recordToView: null,
+
+        it('should render journal not found view', () => {
+            const { getByText } = setup({
+                journalToView: undefined,
+                journalToViewError: { message: 'test', status: 404 },
+            });
+            expect(getByText('Work not found')).toBeInTheDocument();
+            expect(getByText('(404 - test)')).toBeInTheDocument();
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render empty div if record is not loaded', () => {
-        const wrapper = setup({
-            journalToView: false,
-            recordToView: null,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render when form errors are present as immutable map', () => {
-        const wrapper = setup({
-            formErrors: Immutable.Map({
-                bibliographicSection: {
-                    rek_date: 'Publication date is required',
-                    rek_title: 'Title is required',
-                },
-            }),
-        });
-        expect(wrapper.find('Memo(AdminInterface)').props().tabs.bibliographic.numberOfErrors).toBe(2);
-    });
-    it('should render with an empty record', () => {
-        const wrapper = setup({
-            journalToView: false,
-            recordToView: {
-                ...journalDoaj,
-                rek_object_type_lookup: null,
-            },
-            match: {
-                params: {
-                    pid: 'UQ:123456',
-                },
-            },
-        });
-        expect(wrapper.find('Memo(AdminInterface)').props().tabs.identifiers.activated).toBe(false);
-    });
-    it('should show Add form', () => {
-        const wrapper = setup({
-            createMode: true,
-            match: {
-                params: {},
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render memoized component with styles', () => {
-        const wrapper = getElement(
-            MemoizedJournalAdminContainer,
-            {
-                authorDetails: {
-                    username: 'uqstaff',
-                },
+
+        it('should render empty div if journal is not loaded', () => {
+            setup({
+                journalToView: undefined,
                 match: {
                     params: {
-                        pid: 'UQ:111111',
+                        id: undefined,
                     },
                 },
-                actions: {
-                    loadJournalToView: jest.fn(),
-                },
-                journalToView: false,
-                recordToView: journalDoaj,
-                location: {
-                    search: '',
-                },
-                handleSubmit: jest.fn(),
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should not render non-security errors for community editing', () => {
-        const wrapper = setup({
-            recordToView: {
-                rek_pid: 'UQ:367646',
-                rek_title: 'View across Windsor Castle',
-                rek_description: 'Henry William Mobsby was born on 17 August 1860',
-                rek_display_type: 11,
-                rek_display_type_lookup: 'Community',
-            },
-            formErrors: Immutable.Map({
-                bibliographicSection: {
-                    rek_date: 'Publication date is required',
-                    rek_title: 'Title is required',
-                },
-                securitySection: {
-                    rek_security_policy: 'Policy is required',
-                },
-            }),
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    describe('isSame callback function', () => {
-        it('should return true if props are not changed', () => {
-            expect(
-                isSame(
-                    { disableSubmit: false, recordToView: { pid: 1 }, loadJournalToView: false },
-                    { disableSubmit: false, recordToView: { pid: 1 }, loadJournalToView: false },
-                ),
-            ).toBeTruthy();
-        });
-        it('should return true if props are not changed', () => {
-            expect(
-                isSame(
-                    { disableSubmit: false, loadJournalToView: false },
-                    { disableSubmit: false, loadJournalToView: false },
-                ),
-            ).toBeTruthy();
-        });
-    });
-    describe('React hooks', () => {
-        it('should call clearRecordToView() prop on unload', () => {
-            const mockUseEffect = jest.spyOn(React, 'useEffect');
-            const mockUseCallback = jest.spyOn(React, 'useCallback');
-            const cleanupFns = [];
-            mockUseEffect.mockImplementation(f => {
-                const hookReturn = f();
-                if (typeof hookReturn === 'function') {
-                    cleanupFns.push(hookReturn);
-                }
             });
-            // mock once each for each instance of useCallback
-            mockUseCallback.mockImplementationOnce(f => f()).mockImplementationOnce(f => f());
-            const clearRecordToView = jest.fn();
-            setup({
-                clearRecordToView,
+            const div = document.querySelector('.empty');
+            expect(div).not.toBeNull();
+        });
+
+        it('should render when form errors are present', () => {
+            const { getByTestId } = setup({
+                formErrors: {
+                    adminSection: {
+                        jnl_title: 'Title is required',
+                    },
+                },
             });
-            while (cleanupFns.length > 0) {
-                cleanupFns.pop()();
-            }
-            mockUseEffect.mockRestore();
-            mockUseCallback.mockRestore();
-            expect(clearRecordToView).toHaveBeenCalled();
+            expect(getByTestId('alert')).toBeInTheDocument();
+            expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
+        });
+
+        describe('isSame callback function', () => {
+            it('should return true if props are not changed', () => {
+                expect(
+                    isSame(
+                        { disableSubmit: false, journalToView: { id: 12 }, loadJournalToView: false },
+                        { disableSubmit: false, journalToView: { id: 12 }, loadJournalToView: false },
+                    ),
+                ).toBeTruthy();
+            });
+            it('should return true if props are changed', () => {
+                expect(
+                    isSame(
+                        { disableSubmit: false, loadJournalToView: false },
+                        { disableSubmit: false, loadJournalToView: true },
+                    ),
+                ).toBeTruthy();
+            });
+        });
+
+        describe('React hooks', () => {
+            it('should call clearJournalToView() prop on unload', () => {
+                const clearJournalToView = jest.fn();
+                const { unmount } = setup({
+                    clearJournalToView,
+                });
+
+                unmount();
+
+                expect(clearJournalToView).toHaveBeenCalled();
+            });
+        });
+    });
+    describe('Tabbed view', () => {
+        beforeAll(() => {
+            Cookies.get = jest.fn().mockImplementation(() => 'tabbed');
+            Cookies.set = jest.fn();
+        });
+        it('should render component with tabbed interface', () => {
+            const { getByTestId } = setup();
+            const switcher = document.querySelector('input.MuiSwitch-input');
+            expect(switcher).toHaveAttribute('checked');
+            expect(getByTestId('admin-tab')).toHaveClass('Mui-selected');
+        });
+        it('should render when form errors are present as immutable map', () => {
+            const { getByTestId } = setup({
+                formErrors: {
+                    adminSection: {
+                        jnl_title: 'Title is required',
+                    },
+                },
+            });
+            expect(getByTestId('alert')).toBeInTheDocument();
+            expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
+            expect(getByTestId('admin-tab')).toHaveTextContent('1');
         });
     });
 });

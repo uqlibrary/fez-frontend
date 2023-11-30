@@ -18,17 +18,18 @@ describe('FormViewToggler component', () => {
         useTabbedContext.mockImplementation(() => ({
             tabbed: false,
         }));
-        const { container } = setup();
-
-        expect(container).toMatchSnapshot();
+        setup();
+        const switcher = document.querySelector('input.MuiSwitch-input');
+        expect(switcher).not.toHaveAttribute('checked');
     });
 
     it('should render tooltip for full form', () => {
         useTabbedContext.mockImplementation(() => ({
             tabbed: true,
         }));
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+        setup();
+        const switcher = document.querySelector('input.MuiSwitch-input');
+        expect(switcher).toHaveAttribute('checked');
     });
 
     it('should toggle form', () => {
