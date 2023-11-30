@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { setupCache } from 'axios-cache-adapter';
+import { setupCache } from 'axios-cache-interceptor';
 import { API_URL, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, TOKEN_NAME } from './general';
 import { store } from 'config/store';
 import { logout } from 'actions/account';
@@ -10,29 +10,37 @@ import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
 
-export const cache = setupCache({
-    maxAge: 15 * 60 * 1000,
-    key: request => {
-        return `${request.url}${JSON.stringify(request.params)}`;
-    },
-    exclude: {
-        query: false,
-        paths: [
-            'external/records/search',
-            'records/search?rule=',
-            'records/search?title=',
-            'records/search?doi=',
-            'records/search?id=pmid:',
-            'orcid',
-        ],
-    },
-});
-
-export const api = axios.create({
+let apiClient = axios.create({
     baseURL: API_URL,
-    adapter: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc' ? undefined : cache.adapter,
     crossdomain: true,
 });
+
+if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc') {
+    apiClient = setupCache(apiClient, {
+        // unfortunately the below doesn't work for tests
+        // cache: process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc'
+        // debug: dc,
+        ttl: 15 * 60 * 1000,
+        generateKey: request => `${request.url}${JSON.stringify(request.params)}`,
+    });
+
+    // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
+    const nonCachedRoutes = ['records/search', 'orcid'];
+    apiClient.interceptors.request.use(request => {
+        if (
+            request.cache &&
+            // disabled it when querystring params are present or when it partially matches a non cached route
+            (Object.keys(request.params || {}).length || nonCachedRoutes.find(route => request.url.includes(route)))
+        ) {
+            // disabled cache
+            request.cache = false;
+            return request;
+        }
+        return request;
+    });
+}
+
+export const api = apiClient;
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
@@ -113,7 +121,8 @@ export const createSentryFriendlyError = (message, extras = {}) =>
 api.interceptors.response.use(
     response => {
         if (!isGet) {
-            return cache.store.clear().then(() => Promise.resolve(response.status === 201 ? response : response.data));
+            const promise = Promise.resolve(response.status === 201 ? response : response.data);
+            return api.store?.clear ? api.store?.clear().then(() => promise) : promise;
         }
         return Promise.resolve(response.data);
     },
