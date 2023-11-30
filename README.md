@@ -101,7 +101,7 @@ You should now be able to run one of the following commands from the CLI:
   - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - To use prod's api, change config.json -> deployment.development.api key value to <https://api.library.uq.edu.au/v1/> and re-run
+  - To use prod's api, change /config.js > deployment.development.api > to <https://api.library.uq.edu.au/v1/> and re-run
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock

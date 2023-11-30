@@ -17,7 +17,7 @@ let apiClient = axios.create({
 
 if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc') {
     apiClient = setupCache(apiClient, {
-        // unfortunately the below doesn't work for tests
+        // unfortunately, using the option below to disable cache for tests doesn't work. Some test fails regardless.
         // cache: process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc'
         // debug: dc,
         ttl: 15 * 60 * 1000,
