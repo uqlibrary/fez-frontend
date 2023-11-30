@@ -72,7 +72,9 @@ export class NtroDetails extends PureComponent {
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Significance */}
-                    {publication.fez_record_search_key_significance &&
+                    {publication.fez_record_search_key_author &&
+                        publication.fez_record_search_key_author.length > 0 &&
+                        publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
                             if (
@@ -110,7 +112,9 @@ export class NtroDetails extends PureComponent {
                             }
                         })}
                     {/* Contribution statement */}
-                    {publication.fez_record_search_key_creator_contribution_statement &&
+                    {publication.fez_record_search_key_author &&
+                        publication.fez_record_search_key_author.length > 0 &&
+                        publication.fez_record_search_key_creator_contribution_statement &&
                         publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if (

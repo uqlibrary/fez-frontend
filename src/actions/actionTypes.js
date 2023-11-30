@@ -1,7 +1,9 @@
 export const getActionSuffix = action => action.substring(action.indexOf('@') + 1, action.length);
 export const getAction = action => action.substring(0, action.indexOf('@') + 1);
 
+// Scale of Significance
 export const ADMIN_AUTHORS_UPDATED = 'ADMIN_AUTHORS_UPDATED';
+export const ADMIN_SCALE_SIGNIFICANCE_UPDATED = 'ADMIN_SCALE_SIGNIFICANCE_UPDATED';
 // Academic stats
 export const AUTHOR_PUBLICATIONS_STATS_LOADING = 'AUTHOR_PUBLICATIONS_STATS_LOADING';
 export const AUTHOR_PUBLICATIONS_STATS_LOADED = 'AUTHOR_PUBLICATIONS_STATS_LOADED';

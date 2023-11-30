@@ -16,6 +16,8 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
+import { diff } from 'deep-object-diff';
+
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
@@ -42,6 +44,7 @@ export class ContributorsEditor extends PureComponent {
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
         useFormReducer: PropTypes.bool,
+        scaleOfSignificance: PropTypes.array,
     };
 
     static defaultProps = {
@@ -64,19 +67,92 @@ export class ContributorsEditor extends PureComponent {
 
     constructor(props) {
         super(props);
+        // console.log('PROPS for ContribsEditor', props);
+        console.log('THIS BUILD INITIAL', this.buildInitialScaleOfSignificance(props));
         this.state = {
             contributors: this.getContributorsWithAffiliationsFromProps(props),
             errorMessage: '',
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
+            scaleOfSignificance: this.buildInitialScaleOfSignificance(props),
         };
+        console.log('THIS STATE AFTER BUILD, APPARENTLY', this.state);
         this.props.onChange?.(this.state.contributors);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
+
         this.props.onChange?.(this.state.contributors);
+        if (this.props.useFormReducer) {
+            console.log('This did update in contribs', this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
+            this.state.scaleOfSignificance = this.handleSoSChange(
+                prevState.contributors,
+                this.state.contributors,
+                this.state.scaleOfSignificance,
+            );
+            console.log('XXXSCALE OF SIGNIFICANCE IN CONTRIB NOW SET TO', this.state.scaleOfSignificance);
+        }
+        // console.log(
+        //     'TESTING',
+        //     this.handleSoSChange(prevState.contributors, this.state.contributors, this.state.scaleOfSignificance),
+        // );
+        // did the props for SoS Change? will need to likely set them.
+        // this.state.scaleOfSignificance = [...this.props.scaleOfSignificance];
     }
+
+    buildInitialScaleOfSignificance = (props = {}) => {
+        /* shape of the Scale of Significance:
+        {
+            "id": 1509071,
+            "key": 454027,
+            "value": {
+                "plainText": "<p>STEVE LANCASTER STATEMENT</p>",
+                "htmlText": "<p>STEVE LANCASTER STATEMENT</p>"
+            },
+            "author": {
+                "rek_author_id": 36157777,
+                "rek_author_pid": "UQ:0b078d3",
+                "rek_author": "THIRD AUTHOR",ff
+                "rek_author_order": 1
+            }
+        }
+        */
+        if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
+            console.log(
+                'Previous Scale of Significance Props Exist - If this is mounting, we should use the one from SoS',
+            );
+            return props.scaleOfSignificance;
+        }
+
+        const ScaleOfSignificance = [];
+        props.record?.fez_record_search_key_significance &&
+            props.record?.fez_record_search_key_significance.length > 0 &&
+            props.record?.fez_record_search_key_significance.map((item, index) => {
+                ScaleOfSignificance[index] = {};
+                ScaleOfSignificance[index].id = item.rek_significance_id;
+                ScaleOfSignificance[index].key = item.rek_significance;
+                ScaleOfSignificance[index].value = {
+                    plainText:
+                        props.record?.fez_record_search_key_creator_contribution_statement[index]
+                            ?.rek_creator_contribution_statement || 'Missing',
+                    htmlText:
+                        props.record?.fez_record_search_key_creator_contribution_statement[index]
+                            ?.rek_creator_contribution_statement || 'Missing',
+                };
+                ScaleOfSignificance[index].author = {
+                    rek_author_id: props.record?.fez_record_search_key_author[index]?.rek_author_id || 0,
+                    rek_author_pid: props.record?.fez_record_search_key_author[index]?.rek_author_pid || null,
+                    rek_author: props.record?.fez_record_search_key_author[index]?.rek_author || null,
+                    rek_author_order: index + 1,
+                };
+            });
+
+        console.log('SCALE OF SIGNIFICANCE BUILT:', ScaleOfSignificance);
+        return ScaleOfSignificance;
+    };
+
+    // updateScaleOfSignificance = list => {};
 
     getContributorsFromProps = props => {
         if (props.input && props.input.name && props.input.value) {
@@ -307,13 +383,85 @@ export class ContributorsEditor extends PureComponent {
         );
     };
 
+    handleSoSChange = (oldContribs, newContribs, prevSoS) => {
+        console.log('XXXOLD NEW', oldContribs, newContribs);
+        const updated = diff(oldContribs, newContribs);
+        console.log('XXXUPDATED', updated);
+        // console.log('XXXUpdated', updated);
+        if (Object.keys(updated).length < 1) {
+            console.log("XXXThere's no change", oldContribs, newContribs);
+            return this.state.scaleOfSignificance;
+        } else {
+            console.log("XXXTHERE'S A CHANGE");
+            console.log('XXXOld Contribs', oldContribs);
+            console.log('XXXNew Contribs', newContribs);
+            console.log('XXXPrevious Sos', prevSoS);
+            // First check for length changes - that means either a new contrib is added, or one is deleted.
+            // Check if one is Added.
+            let newList = [];
+            if (oldContribs.length < newContribs.length) {
+                // Add a SoS to the list.
+                const newItem = {
+                    id: 0,
+                    key: 0,
+                    value: {
+                        plainText: 'Missing',
+                        htmlText: 'Missing',
+                    },
+                    author: {
+                        rek_author: newContribs[newContribs.length - 1].nameAsPublished,
+                    },
+                };
+                newList = [...this.state.scaleOfSignificance, newItem];
+                console.log('NEW LIST AFTER ADDITION', newList);
+                // Update the list via dispatch
+                // this.props.useFormReducer && this.props.actions.updateAdminScaleSignificance(newList);
+                // return newList;
+            } else if (oldContribs.length > newContribs.length) {
+                console.log('A deletion shall occur');
+                // find the index of the one that's deleted, and remove it from the SoS List.
+                let found = false;
+                newList = [...this.state.scaleOfSignificance];
+                oldContribs.map((contributor, index) => {
+                    if (!found && JSON.stringify(contributor) !== JSON.stringify(newContribs[index])) {
+                        newList.splice(index, 1);
+                        found = true;
+                    }
+                });
+
+                console.log('NEW LIST AFTER DELETION', newList);
+                // return newList;
+                // Update the list via dispatch
+                // this.props.useFormReducer && this.props.actions.updateAdminScaleSignificance(newList);
+            } else {
+                console.log('XXXOLD V NEW', oldContribs, newContribs);
+                newList = [...this.state.scaleOfSignificance];
+                console.log('XXX BEFORE THE CHANGE', [...newList]);
+                let found = false;
+                oldContribs.map((oldItem, index) => {
+                    if (!found && JSON.stringify(oldItem) !== JSON.stringify(newContribs[index])) {
+                        newList[index] = this.state.scaleOfSignificance[index + 1];
+                        newList[index + 1] = this.state.scaleOfSignificance[index];
+                        found = true;
+                    }
+                });
+                console.log('XXX AFTER THE CHANGE,', [...newList]);
+                // return newList;
+            }
+            // Should be able to fire the new list here
+            this.props.actions.updateAdminScaleSignificance(newList);
+            return newList;
+        }
+    };
+
     handleAuthorsListChange = contributors => {
         this.setState({
             contributors,
         });
-        console.log('This.props', this.props.useFormReducer);
-        console.log('Firing updateAdminAuthors');
-        this.props.useFormReducer && this.props.actions.updateAdminAuthors(contributors);
+        // console.log('NEW CONTRIBS READY FOR STATE', newContribs);
+        // this.props.useFormReducer && this.props.actions.updateAdminAuthors(contributors);
+        // this.props.useFormReducer && this.props.actions.update(contributors);
+        // this.props.useFormReducer && this.props.actions.updateAdminScaleSignificance(newContribs);
     };
 
     render() {
@@ -446,6 +594,7 @@ export class ContributorsEditor extends PureComponent {
 export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
     record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
+    ...(state && state.get('adminScaleOfSignificanceReducer') ? state.get('adminScaleOfSignificanceReducer') : null),
 });
 
 function mapDispatchToProps(dispatch) {
