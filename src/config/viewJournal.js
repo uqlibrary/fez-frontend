@@ -180,7 +180,7 @@ export const viewJournalConfig = {
                             isArray: true,
                             primaryKey: 'fez_journal_issn',
                             path: ['fez_sherpa_romeo'],
-                            filterFn: item => !!item.fez_sherpa_romeo,
+                            filterFn: item => !!item.fez_sherpa_romeo && !!item.fez_sherpa_romeo.srm_journal_link,
                         },
                     ],
                     template: 'MultiLinkTemplate',
