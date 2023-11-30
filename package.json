@@ -71,7 +71,7 @@
         "browserify": "^17.0.0",
         "buffer": "^6.0.3",
         "chalk": "^4.1.2",
-        "chromedriver": "100.0.0",
+        "chromedriver": "^115.0.0",
         "cross-env": "^5.2.0",
         "css-loader": "^5.2.7",
         "css-mediaquery": "^0.1.2",

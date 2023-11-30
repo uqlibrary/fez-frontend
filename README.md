@@ -59,6 +59,7 @@ This means that it's exactly like production, except for the git branch that use
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
+- if you are on a Mac, ensure xcode with developer applications is installed
   
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
