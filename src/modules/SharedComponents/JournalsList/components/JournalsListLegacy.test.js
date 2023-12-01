@@ -6,8 +6,10 @@ import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsListLegacy } from './JournalsListLegacy';
 import Cookies from 'js-cookie';
 
-import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import JournalFieldsMap from './partials/JournalFieldsMap';
 import { sanitiseId } from 'helpers/general';
+import locale from 'locale/components';
+import { types, status, getIndicatorProps } from './partials/utils';
 
 const testData = {
     journals: mockData.data,
@@ -20,6 +22,29 @@ const setup = ({ state = {} }) => {
             <JournalsListLegacy {...testData} />
         </WithReduxStore>,
     );
+};
+
+const checkOaTooltips = (dataElement, dataItem) => {
+    const tooltipLocale = locale.components.searchJournals.openAccessIndicators.tooltips;
+    const publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem });
+    const acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem });
+
+    // expect tooltip to match supplied data.
+    if (publishedIndicatorProps) {
+        expect(dataElement.querySelector('.openAccessIndicator')).toHaveAttribute(
+            'aria-label',
+            tooltipLocale[publishedIndicatorProps.type][publishedIndicatorProps.status],
+        );
+    }
+    if (publishedIndicatorProps && publishedIndicatorProps.status !== status.open && acceptedIndicatorProps) {
+        expect(dataElement.querySelector('.openAccessIndicator')).toHaveAttribute(
+            'aria-label',
+            tooltipLocale[acceptedIndicatorProps.type][acceptedIndicatorProps.status],
+        );
+    }
+    if (!!!publishedIndicatorProps && !!!acceptedIndicatorProps) {
+        expect(dataElement.querySelector('.openAccessIndicator')).not.toHaveAttribute('aria-label');
+    }
 };
 
 describe('Journal Search Results list', () => {
@@ -111,9 +136,9 @@ describe('Journal Search Results list', () => {
                     case 'Highest quartile':
                         // data appended with Q
                         break;
-                    case 'Open Access':
+                    case 'Open access':
                         // expect tooltip to match supplied data.
-                        expect(dataElement.querySelector('p').title).toEqual(fieldMap.toolTipLabel(dataItem));
+                        checkOaTooltips(dataElement, dataItem);
                         break;
                     default:
                         break;
@@ -121,11 +146,13 @@ describe('Journal Search Results list', () => {
             });
         });
     });
+
     it('should show the correct information in the table, maximised', () => {
         Cookies.set('minimalView', false);
         const { getByTestId } = setup({
             ...testData,
         });
+
         mockData.data.map((dataItem, index) => {
             // Make sure the title of the Journal is in the document as per the data.
             const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
@@ -140,11 +167,7 @@ describe('Journal Search Results list', () => {
                         expect(dataElement).toHaveTextContent(`Q${fieldMap.translateFn(dataItem)}`);
                         break;
                     case 'Open access':
-                        // expect tooltip to match supplied data.
-                        expect(dataElement.querySelector('p')).toHaveAttribute(
-                            'aria-label',
-                            fieldMap.toolTipLabel(dataItem),
-                        );
+                        checkOaTooltips(dataElement, dataItem);
                         break;
                     case 'CiteScore percentile':
                         // Normalising spaces in this string, which appears to happen in the component.

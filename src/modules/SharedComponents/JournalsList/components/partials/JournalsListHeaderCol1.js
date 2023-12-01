@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import PropTypes from 'prop-types';

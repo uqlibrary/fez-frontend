@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'test-utils';
 import JournalsListDataCol2Full from './JournalsListDataCol2Full';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
 const setup = (state = {}) => {
     return render(<JournalsListDataCol2Full {...{ index: 0, journal: mockData[0], ...state }} />);
