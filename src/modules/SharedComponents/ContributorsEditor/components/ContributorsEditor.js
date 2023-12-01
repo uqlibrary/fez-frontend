@@ -97,9 +97,6 @@ export class ContributorsEditor extends PureComponent {
 
     buildInitialScaleOfSignificance = (props = {}) => {
         if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
-            console.log(
-                'Previous Scale of Significance Props Exist - If this is mounting, we should use the one from SoS',
-            );
             return props.scaleOfSignificance;
         }
 

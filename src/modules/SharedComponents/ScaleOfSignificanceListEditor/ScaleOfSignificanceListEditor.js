@@ -5,9 +5,9 @@ import ListRow from '../Toolbox/ListEditor/components/ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 import FormHelperText from '@mui/material/FormHelperText';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import AddCircle from '@mui/icons-material/Add';
+// import IconButton from '@mui/material/IconButton';
+// import Box from '@mui/material/Box';
+// import AddCircle from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -107,6 +107,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.loadEditForm = this.loadEditForm.bind(this);
         this.showFormInAddMode = this.showFormInAddMode.bind(this);
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
+        this.props.actions.updateAdminScaleSignificance(this.state.itemList);
     }
     componentDidMount() {
         if (this.props?.contributors?.authors?.length > 0) {
@@ -392,7 +393,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         };
         return (
             <div id={`${this.props.listEditorId}-list-editor`}>
-                {this.state.showAddForm ? (
+                {this.state.showAddForm && (
                     <ScaleOfSignificanceForm
                         key={
                             (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
@@ -425,7 +426,8 @@ export class ScaleOfSignificanceListEditor extends Component {
                         showForm={this.showFormInEditMode}
                         formMode={this.state.formMode}
                     />
-                ) : (
+                )}
+                {/* : (
                     <Box display="flex" justifyContent="flex-end" alignItems="flex-end">
                         <IconButton
                             data-analyticsid="rek-significance-showhidebutton"
@@ -445,7 +447,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                             <AddCircle />
                         </IconButton>
                     </Box>
-                )}
+                )} */}
                 <ListRowHeader
                     onDeleteAll={this.deleteAllItems}
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
