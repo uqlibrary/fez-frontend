@@ -79,7 +79,6 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-        console.log('Initial Props in SoS', props);
         const valueAsJson =
             ((props.input || /* istanbul ignore next */ {}).name &&
                 typeof (props.input.value || {}).toJS === 'function' &&
@@ -93,7 +92,6 @@ export class ScaleOfSignificanceListEditor extends Component {
             formMode: 'edit',
         };
 
-        console.log('SHAPE OF ITEMLIST', this.state.itemList);
         if (!!this.props.scaleOfSignificance && this.props.scaleOfSignificance.length > 0) {
             this.state.itemList = [...this.props.scaleOfSignificance];
         }
@@ -111,122 +109,23 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
     }
     componentDidMount() {
-        console.log('test', this.props.contributors.authors);
         if (this.props?.contributors?.authors?.length > 0) {
             this.state.originalAuthors = this.props.contributors.authors;
         }
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
-        console.log('SOS prev', this.props.scaleOfSignificance, this.state.itemList);
-        // If the props have changed, we should set the significance to the props, surely.
-        if (this.props.scaleOfSignificance.length > 0) {
-            // if the INBOUND props have changed, set to the new inbound props.
-            if (Object.keys(diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance)).length > 0) {
-                this.state.itemList = [...this.props.scaleOfSignificance];
-            }
-            // otherwise, the state should be correct.
+
+        if (Object.keys(diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance)).length > 0) {
+            this.setState({
+                itemList: [...this.props.scaleOfSignificance],
+            });
+        } else if (Object.keys(diff(this.state.itemList, prevState.itemList)).length > 0) {
+            this.props.actions.updateAdminScaleSignificance(this.state.itemList);
         }
-        this.props.actions.updateAdminScaleSignificance(this.state.itemList);
-        // if (prevProps.scaleOfSignificance)
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        /* istanbul ignore else */
-        // OLD WAY I DID IT
-        // console.log('CHANGED PROPS IN SIG EDITOR', this.props);
-        // if (this.props.onChange) {
-        //     this.props.onChange(this.transformOutput(this.state.itemList));
-        // }
-        // // DETECT A CHANGE IN THE ORDER OF AUTHORS
-        // if (!!prevProps?.contributors?.authors && Array.isArray(prevProps?.contributors?.authors)) {
-        //     console.log('Entered section A');
-        //     if (JSON.stringify(prevProps.contributors.authors) !== JSON.stringify(this.props.contributors.authors)) {
-        //         console.log('They are not the same. Entered section B');
-        //         // if one is added....
-        //         if (
-        //             this.props.contributors.authors.length > prevProps.contributors.authors.length &&
-        //             this.props.contributors.authors.length > this.state.itemList.length
-        //         ) {
-        //             // Create a new Scale of Significance record.
-        //             // The new record will be the last record in the list in this case.
-        //             const newRecord = this.props.contributors.authors[this.props.contributors.authors.length - 1];
-        //             this.setState({
-        //                 itemList: [
-        //                     ...this.state.itemList,
-        //                     {
-        //                         author: {
-        //                             rek_author: newRecord.nameAsPublished,
-        //                         },
-        //                         id: 0,
-        //                         key: 0,
-        //                         value: {
-        //                             plainText: 'Missing',
-        //                             htmlText: 'Missing',
-        //                         },
-        //                     },
-        //                 ],
-        //             });
-        //         } else if (
-        //             this.props.contributors.authors.length < prevProps.contributors.authors.length &&
-        //             this.props.contributors.authors.length < this.state.itemList.length
-        //         ) {
-        //             const newList = [...this.state.itemList];
-        //             let found = false;
-        //             prevProps.contributors.authors.forEach((previous, index) => {
-        //                 /* istanbul ignore else */
-        //                 if (
-        //                     !found &&
-        //                     JSON.stringify(previous) !== JSON.stringify(this.props.contributors.authors[index])
-        //                 ) {
-        //                     newList.splice(index, 1);
-        //                     found = true;
-        //                 }
-        //             });
-        //             /* istanbul ignore else */
-        //             if (!found && this.state.itemList.length > this.props.contributors.authors.length) {
-        //                 newList.pop();
-        //             }
-        //             this.setState({
-        //                 itemList: [...newList],
-        //             });
-        //         } else if (
-        //             this.props.contributors.authors.length < prevProps.contributors.authors.length &&
-        //             this.props.contributors.authors.length === this.state.itemList.length
-        //         ) {
-        //             this.setState({
-        //                 itemList: [...this.state.itemList],
-        //             });
-        //         } else {
-        //             /* istanbul ignore else */
-        //             if (this.state.itemList.length > 1) {
-        //                 // if the order has changed....
-        //                 console.log('IT SHOULD NOT BE DOING THIS');
-        //                 const newList = [...this.state.itemList];
-        //                 let found = false;
-        //                 prevProps.contributors.authors.forEach((previous, index) => {
-        //                     if (!found) {
-        //                         /* istanbul ignore else */
-        //                         if (
-        //                             JSON.stringify(previous)
-        //                              !== JSON.stringify(this.props.contributors.authors[index])
-        //                         ) {
-        //                             newList[index] = this.state.itemList[index + 1];
-        //                             newList[index + 1] = this.state.itemList[index];
-        //                             found = true;
-        //                         }
-        //                     }
-        //                 });
-        //                 this.setState({
-        //                     itemList: [...newList],
-        //                 });
-        //             }
-        //         }
-        //     }
-        // }
-        // console.log('SHAPE OF ITEMLIST', this.state.itemList);
-        // this.props.actions.updateAdminScaleSignificance(this.state.itemList);
     }
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
@@ -364,10 +263,8 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     moveUpList = (item, index) => {
         /* istanbul ignore next */
-        // Handle the order changing part here?
         if (index === 0) return;
 
-        console.log('this is what it should be', this.state.itemList);
         const itemList = [...this.state.itemList];
         itemList[index] = this.state.itemList[index - 1];
         itemList[index - 1] = this.state.itemList[index];
@@ -376,22 +273,14 @@ export class ScaleOfSignificanceListEditor extends Component {
         const swappedAuthor = { ...itemList[index - 1].author };
         itemList[index].author = swappedAuthor;
         itemList[index - 1].author = movedAuthor;
-        console.log('this is the itemlist now', itemList, this.state.itemList, index);
-        // debugger; // eslint-disable-line no-debugger
-        // console.log('MOVED STUFF', movedAuthor, swappedAuthor, this.state.itemList);
-        // // const { movedAuthor, swappedAuthor } = this.calculateAuthors(movedItem, swappedItem, index, index - 1);
-        // // movedItem.author = swappedAuthor;
-        // // swappedItem.author = movedAuthor;
         this.setState({
             itemList: [...itemList],
         });
-        // console.log('IT NOW SHOULD BE', itemList);
     };
 
     moveDownList = (item, index) => {
         /* istanbul ignore next */
         if (index === this.state.itemList.length - 1) return;
-        console.log('this is what it should be', this.state.itemList);
         const itemList = [...this.state.itemList];
         itemList[index] = this.state.itemList[index + 1];
         itemList[index + 1] = this.state.itemList[index];
@@ -400,12 +289,6 @@ export class ScaleOfSignificanceListEditor extends Component {
         const swappedAuthor = { ...itemList[index + 1].author };
         itemList[index].author = swappedAuthor;
         itemList[index + 1].author = movedAuthor;
-        console.log('this is the itemlist now', itemList, this.state.itemList, index);
-        // debugger; // eslint-disable-line no-debugger
-        // console.log('MOVED STUFF', movedAuthor, swappedAuthor, this.state.itemList);
-        // // const { movedAuthor, swappedAuthor } = this.calculateAuthors(movedItem, swappedItem, index, index - 1);
-        // // movedItem.author = swappedAuthor;
-        // // swappedItem.author = movedAuthor;
         this.setState({
             itemList: [...itemList],
         });
@@ -413,8 +296,16 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     /* istanbul ignore next */
     deleteItem = (item, index) => {
+        const updatedState = [...this.state.itemList];
+        const itemToDelete = item;
+        itemToDelete.key = 0;
+        itemToDelete.value = {
+            plainText: 'Missing',
+            htmlText: 'Missing',
+        };
+        updatedState[index] = itemToDelete;
         this.setState({
-            itemList: this.state.itemList.filter((_, i) => i !== index),
+            itemList: [...updatedState],
         });
     };
 
@@ -463,15 +354,9 @@ export class ScaleOfSignificanceListEditor extends Component {
         const renderListsRows = this.state.itemList.map((item, index) => {
             const tempItem = {
                 id: index,
-                // authorName: item.authorName || item.author?.rek_author || null,
                 author: {
                     // eslint-disable-next-line camelcase
-                    // rek_author: item.author?.rek_author || this.state.itemList[index].author?.rek_author || null,
-                    rek_author:
-                        this.props.contributors?.authors[index]?.nameAsPublished ||
-                        // item.author?.rek_author ||
-                        this.state.itemList[index].author?.rek_author ||
-                        null,
+                    rek_author: this.state.itemList[index].author?.rek_author || null,
                 },
                 key: item.key,
                 value: {
@@ -483,6 +368,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                     key={item.id || item.key || `${item}-${index}`}
                     index={index}
                     item={tempItem}
+                    canDelete={tempItem.key > 0}
                     canMoveDown={index !== this.state.itemList.length - 1}
                     canMoveUp={index !== 0}
                     onMoveUp={this.moveUpList}
@@ -590,7 +476,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 export const mapStateToProps = state => ({
-    contributors: state && state.get('adminAuthorsReducer') ? state.get('adminAuthorsReducer') : null,
+    // contributors: state && state.get('adminAuthorsReducer') ? state.get('adminAuthorsReducer') : null,
     ...(state && state.get('adminScaleOfSignificanceReducer') ? state.get('adminScaleOfSignificanceReducer') : null),
 });
 

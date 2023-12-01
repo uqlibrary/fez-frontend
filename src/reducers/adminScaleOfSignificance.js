@@ -13,10 +13,8 @@ const handlers = {
 
 export default function adminScaleOfSignificanceReducer(state = initialState, action) {
     const handler = handlers[action.type];
-    console.log('Reducer?');
     if (!handler) {
         return state;
     }
-    console.log('ACTION IS', action);
     return handler(state, action);
 }
