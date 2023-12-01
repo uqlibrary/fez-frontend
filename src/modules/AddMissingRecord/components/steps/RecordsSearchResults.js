@@ -139,16 +139,14 @@ export default class RecordsSearchResults extends PureComponent {
                                             {searchResultsTxt.searchResults.text}
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <Suspense fallback={<div>Loading...</div>}>
-                                                <PublicationsList
-                                                    publicationsLoading={this.props.searchLoading}
-                                                    publicationsList={this.props.publicationsList}
-                                                    customActions={actions}
-                                                    publicationsListSubset={unclaimablePublicationsList}
-                                                    subsetCustomActions={unclaimable}
-                                                    showSources
-                                                />
-                                            </Suspense>
+                                            <PublicationsList
+                                                publicationsLoading={this.props.searchLoading}
+                                                publicationsList={this.props.publicationsList}
+                                                customActions={actions}
+                                                publicationsListSubset={unclaimablePublicationsList}
+                                                subsetCustomActions={unclaimable}
+                                                showSources
+                                            />
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
