@@ -60,9 +60,7 @@ context('Book Chapter admin edit', () => {
 
             const isbns = record.fez_record_search_key_isbn.map(item => item.rek_isbn);
             isbns.forEach((isbn, index) => {
-                cy.get('p')
-                    .eq(index)
-                    .should('have.text', isbn);
+                cy.get(`[data-testid="rek-isbn-list-row-${index}"] p`).should('have.text', isbn);
             });
         });
 

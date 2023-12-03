@@ -87,18 +87,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     <RichEditorField
       disabled={false}
       error={false}
-      fullWidth={true}
       id=""
-      inputRef={
-        Object {
-          "current": null,
-        }
-      }
-      instanceRef={
-        Object {
-          "current": null,
-        }
-      }
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -235,18 +224,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
     <RichEditorField
       disabled={false}
       error={false}
-      fullWidth={true}
       id="100"
-      inputRef={
-        Object {
-          "current": null,
-        }
-      }
-      instanceRef={
-        Object {
-          "current": null,
-        }
-      }
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}

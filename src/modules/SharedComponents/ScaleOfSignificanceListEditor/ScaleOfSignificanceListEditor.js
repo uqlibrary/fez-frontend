@@ -352,39 +352,43 @@ export class ScaleOfSignificanceListEditor extends Component {
         });
     };
     render() {
-        const renderListsRows = this.state.itemList.map((item, index) => {
-            const tempItem = {
-                id: index,
-                author: {
-                    // eslint-disable-next-line camelcase
-                    rek_author: this.state.itemList[index].author?.rek_author || null,
-                },
-                key: item.key,
-                value: {
-                    htmlText: item.value?.htmlText || /* istanbul ignore next */ null,
-                },
-            };
-            return (
-                <ListRow
-                    key={item.id || item.key || `${item}-${index}`}
-                    index={index}
-                    item={tempItem}
-                    canDelete={tempItem.key > 0}
-                    canMoveDown={index !== this.state.itemList.length - 1}
-                    canMoveUp={index !== 0}
-                    onMoveUp={this.moveUpList}
-                    onMoveDown={this.moveDownList}
-                    onDelete={this.deleteItem}
-                    onEdit={this.loadEditForm}
-                    {...((this.props.locale && this.props.locale.row) || /* istanbul ignore next */ {})}
-                    hideReorder={this.props.hideReorder}
-                    disabled={this.props.disabled}
-                    itemTemplate={ScaleOfSignificanceTemplate}
-                    canEdit={this.props.canEdit}
-                    listRowId={`${this.props.listEditorId}-list-row-${index}`}
-                />
-            );
-        });
+        const renderListsRows =
+            !!this.state.itemList &&
+            this.state.itemList.map((item, index) => {
+                const tempItem = {
+                    id: index,
+                    // authorName: item.authorName || item.author?.rek_author || null,
+                    author: {
+                        // eslint-disable-next-line camelcase
+                        rek_author: item.author?.rek_author || this.state.itemList[index].author?.rek_author || null,
+                    },
+                    key: item.id,
+                    scaleValue: item.key,
+                    signifValue: {
+                        htmlText: item.value?.htmlText || /* istanbul ignore next */ null,
+                    },
+                };
+                return (
+                    <ListRow
+                        key={item.id || `${item}-${index}`}
+                        index={index}
+                        item={tempItem}
+                        canDelete={tempItem.key > 0}
+                        canMoveDown={index !== this.state.itemList.length - 1}
+                        canMoveUp={index !== 0}
+                        onMoveUp={this.moveUpList}
+                        onMoveDown={this.moveDownList}
+                        onDelete={this.deleteItem}
+                        onEdit={this.loadEditForm}
+                        {...((this.props.locale && this.props.locale.row) || /* istanbul ignore next */ {})}
+                        hideReorder={this.props.hideReorder}
+                        disabled={this.props.disabled}
+                        itemTemplate={ScaleOfSignificanceTemplate}
+                        canEdit={this.props.canEdit}
+                        listRowId={`${this.props.listEditorId}-list-row-${index}`}
+                    />
+                );
+            });
         const noRecordsStyle = {
             textAlign: 'center',
             fontSize: '0.875rem',
@@ -393,61 +397,51 @@ export class ScaleOfSignificanceListEditor extends Component {
         };
         return (
             <div id={`${this.props.listEditorId}-list-editor`}>
-                {this.state.showAddForm && (
-                    <ScaleOfSignificanceForm
-                        key={
-                            (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
-                            'list-editor-form'
-                        }
-                        contributors={this.props.contributors}
-                        saveChangeToItem={this.saveChangeToItem}
-                        remindToAdd={this.props.remindToAdd}
-                        {...((this.props.locale && this.props.locale.form) || /* istanbul ignore next */ {})}
-                        isValid={this.props.isValid}
-                        error={this.props.error}
-                        disabled={
-                            this.props.disabled ||
-                            (this.props.maxCount > 0 &&
-                                /* istanbul ignore next */ this.state.itemList.length >= this.props.maxCount)
-                        }
-                        maxInputLength={this.props.maxInputLength}
-                        normalize={this.props.inputNormalizer}
-                        category={this.props.category}
-                        required={this.props.required}
-                        itemSelectedToEdit={this.getItemSelectedToEdit(
-                            this.state.formMode,
-                            this.state.itemList,
-                            this.state.itemIndexSelectedToEdit,
-                        )}
-                        itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
-                        listEditorId={this.props.listEditorId}
-                        input={this.props.input}
-                        buttonLabel={this.state.buttonLabel}
-                        showForm={this.showFormInEditMode}
-                        formMode={this.state.formMode}
-                    />
-                )}
-                {/* : (
-                    <Box display="flex" justifyContent="flex-end" alignItems="flex-end">
-                        <IconButton
-                            data-analyticsid="rek-significance-showhidebutton"
-                            data-testid="rek-significance-showhidebutton"
-                            onClick={this.showFormInAddMode}
-                            aria-label={this.props.locale.form.locale.addEntryButton}
-                            size="small"
-                            style={{
-                                color: '#fff',
-                                backgroundColor:
-                                    this.state.itemList?.length >= this.props?.contributors?.authors?.length
-                                        ? '#ccc'
-                                        : '#51247A',
-                            }}
-                            disabled={this.state.itemList?.length >= this.props?.contributors?.authors?.length}
-                        >
-                            <AddCircle />
-                        </IconButton>
-                    </Box>
-                )} */}
+                <ScaleOfSignificanceForm
+                    key={
+                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
+                        'list-editor-form'
+                    }
+                    saveChangeToItem={this.saveChangeToItem}
+                    remindToAdd={this.props.remindToAdd}
+                    {...((this.props.locale && this.props.locale.form) || /* istanbul ignore next */ {})}
+                    isValid={this.props.isValid}
+                    error={this.props.error}
+                    disabled={
+                        this.props.disabled ||
+                        (this.props.maxCount > 0 &&
+                            /* istanbul ignore next */ this.state.itemList.length >= this.props.maxCount)
+                    }
+                    maxInputLength={this.props.maxInputLength}
+                    normalize={this.props.inputNormalizer}
+                    category={this.props.category}
+                    required={this.props.required}
+                    itemSelectedToEdit={this.getItemSelectedToEdit(
+                        this.state.formMode,
+                        this.state.itemList,
+                        this.state.itemIndexSelectedToEdit,
+                    )}
+                    itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
+                    listEditorId={this.props.listEditorId}
+                    input={this.props.input}
+                    buttonLabel={this.state.buttonLabel}
+                    showForm={this.showFormInEditMode}
+                    formMode={this.state.formMode}
+                    hidden={!this.state.showAddForm}
+                />
+                {/* <Box display={this.state.showAddForm ? 'none' : 'flex'}
+                     justifyContent="flex-end" alignItems="flex-end">
+                    <IconButton
+                        data-analyticsid="rek-significance-showhidebutton"
+                        data-testid="rek-significance-showhidebutton"
+                        onClick={this.showFormInAddMode}
+                        aria-label={this.props.locale.form.locale.addEntryButton}
+                        size="small"
+                        style={{ color: '#fff', backgroundColor: '#51247A' }}
+                    >
+                        <AddCircle />
+                    </IconButton>
+                    </Box> */}
                 <ListRowHeader
                     onDeleteAll={this.deleteAllItems}
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
