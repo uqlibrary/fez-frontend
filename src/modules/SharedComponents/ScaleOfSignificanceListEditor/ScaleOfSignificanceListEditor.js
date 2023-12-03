@@ -368,12 +368,13 @@ export class ScaleOfSignificanceListEditor extends Component {
                         htmlText: item.value?.htmlText || /* istanbul ignore next */ null,
                     },
                 };
+                console.log('temp item', tempItem);
                 return (
                     <ListRow
                         key={item.id || `${item}-${index}`}
                         index={index}
                         item={tempItem}
-                        canDelete={tempItem.key > 0}
+                        canDelete={tempItem.scaleValue > 0}
                         canMoveDown={index !== this.state.itemList.length - 1}
                         canMoveUp={index !== 0}
                         onMoveUp={this.moveUpList}
