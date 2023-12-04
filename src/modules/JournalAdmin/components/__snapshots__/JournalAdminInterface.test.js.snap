@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`JournalAdminInterface component should render a title with html correctly 1`] = `
+<div>
+  <div
+    class="empty"
+  />
+</div>
+`;
+
 exports[`JournalAdminInterface component tabbed should display successful alert 1`] = `
 <div
   aria-hidden="true"

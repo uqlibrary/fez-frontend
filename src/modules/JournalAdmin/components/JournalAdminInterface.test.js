@@ -3,12 +3,10 @@ import { JournalAdminInterface, navigateToSearchResult } from './JournalAdminInt
 import { useAccountContext, useJournalContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 
-import { JournalContext } from 'context';
-import { ADMIN_JOURNAL } from 'config/general';
 import { journalDoaj } from 'mock/data';
 
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, fireEvent, within, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, within } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -376,7 +374,7 @@ describe('JournalAdminInterface component', () => {
 
         const setTab = jest.fn();
         const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
+        mockUseState.mockImplementation(() => ['admin', setTab]);
 
         const mockUseCallback = jest.spyOn(React, 'useCallback');
         mockUseCallback.mockImplementation(f => f);
@@ -417,34 +415,31 @@ describe('JournalAdminInterface component', () => {
         expect(toggleTabbed).toHaveBeenCalledTimes(1);
 
         map.keydown({ key: 'ArrowRight', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('files');
+        expect(setTab).toHaveBeenCalledWith('bibliographic');
         setTab.mockClear();
 
-        mockUseState.mockImplementation(() => ['files', setTab]);
+        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
         createWrapper();
 
         map.keydown({ key: 'ArrowLeft', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('bibliographic');
+        expect(setTab).toHaveBeenCalledWith('admin');
 
         mockUseState.mockRestore();
     });
 
     it('should render a title with html correctly', () => {
-        const rekTitle =
+        const jnlTitle =
             'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;' +
             'renal m<sup>a</sup>sses&nbsp;™&nbsp;♦';
         useJournalContext.mockImplementation(() => ({
-            record: {
-                jnl_id: 12,
-                rek_title: rekTitle,
-
-                rek_display_type_lookup: 'Journal Article',
-                rek_display_type: 179,
+            journalDetails: {
+                jnl_jid: 12,
+                jnl_title: jnlTitle,
             },
         }));
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const { container } = setup({
+        setup({
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -453,27 +448,26 @@ describe('JournalAdminInterface component', () => {
             },
         });
 
-        expect(container).toMatchSnapshot();
+        expect(document.querySelector('h2 sub')).toHaveTextContent('e');
+        expect(document.querySelector('h2 sup')).toHaveTextContent('a');
     });
     it('should navigate to "My research" after saving a record edit without referral and choosing "Edit another record"', () => {
         const pushFn = jest.fn();
-        const createMode = false;
         const authorDetails = {};
         const history = {
             push: pushFn,
         };
         const location = {
             hash: '',
-            pathname: '/admin/edit/UQ:123456',
+            pathname: '/admin/journal/edit/12',
             search: '',
         };
-        navigateToSearchResult(createMode, authorDetails, history, location);
-        expect(pushFn).toHaveBeenCalledWith('/records/mine');
+        navigateToSearchResult(authorDetails, history, location);
+        expect(pushFn).toHaveBeenCalledWith('/journals/search/');
     });
 
     it('should navigate to navigatedFrom after saving a record edit with referral as an admin and choosing "Edit another record"', () => {
         const pushFn = jest.fn();
-        const createMode = false;
         const authorDetails = {
             is_administrator: 1,
         };
@@ -481,19 +475,10 @@ describe('JournalAdminInterface component', () => {
             push: pushFn,
         };
         const location = {
-            hash: '#/admin/edit/UQ:123456?navigatedFrom=%2Fdashboard',
+            hash: '/admin/journal/edit/12?navigatedFrom=%2Fdashboard',
             search: '',
         };
-        navigateToSearchResult(createMode, authorDetails, history, location);
+        navigateToSearchResult(authorDetails, history, location);
         expect(pushFn).toHaveBeenCalledWith('/dashboard');
-    });
-
-    it('should navigate to admin add after saving a new record as an admin', () => {
-        const pushFn = jest.fn();
-        const history = {
-            push: pushFn,
-        };
-        navigateToSearchResult(true, null, history);
-        expect(pushFn).toHaveBeenCalledWith('/admin/add');
     });
 });
