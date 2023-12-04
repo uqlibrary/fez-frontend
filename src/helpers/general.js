@@ -5,6 +5,17 @@ global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
 global.dc = (...args) => args.forEach(arg => console.log(arg));
 global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
 
+const getNodeEnvVar = (key, _default = undefined) => {
+    try {
+        return !!process.env[key];
+    } catch (e) {
+        return _default;
+    }
+};
+
+export const isJestTest = () => getNodeEnvVar('JEST_WORKER_ID', false);
+export const isRunningInCodeBuild = () => getNodeEnvVar('CODEBUILD_BUILD_ID', false);
+
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
         return objArr1;

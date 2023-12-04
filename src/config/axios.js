@@ -9,19 +9,19 @@ import locale from 'locale/global';
 import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
+import { isRunningInCodeBuild } from '../helpers/general';
 
 let apiClient = axios.create({
     baseURL: API_URL,
     crossdomain: true,
 });
 
-if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc') {
+if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && !isRunningInCodeBuild()) {
     apiClient = setupCache(apiClient, {
         // unfortunately, using the option below to disable cache for tests doesn't work. Some test fails regardless.
         // cache: process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc'
         // debug: dc,
         ttl: 15 * 60 * 1000,
-        generateKey: request => `${request.url}${JSON.stringify(request.params)}`,
     });
 
     // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
