@@ -84,19 +84,13 @@ export const getValueSearchKeyValueList = (journal, searchKey) => {
 
 export default {
     jnl_title: {
-        getValue: journal => getValueFromKey(journal, 'jnl_title'),
+        getValue: journal => getValueFromKey(journal, 'jnl_title') ?? '',
     },
     abbreviatedTitle: {
         getValue: journal => getValueFromSubKey(journal, 'fez_journal_jcr_scie.jnl_jcr_scie_abbrev_title'),
     },
-    publisher: {
-        getValue: journal =>
-            (!!journal &&
-                !!journal.jnl_publisher &&
-                `${getValueFromKey(journal, 'jnl_publisher')}, ${
-                    getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_country
-                }`) ||
-            '',
+    jnl_publisher: {
+        getValue: journal => getValueFromKey(journal, 'jnl_publisher') ?? '',
     },
     refereed: {
         getValue: journal => getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_refereed ?? '',

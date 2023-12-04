@@ -4,7 +4,7 @@ export default {
             groups: [
                 ['jnl_title'],
                 ['abbreviatedTitle'],
-                ['publisher'],
+                ['jnl_publisher'],
                 ['refereed', 'publicationYear', 'publicationFrequency'],
                 ['publicationFormats'],
                 ['description'],

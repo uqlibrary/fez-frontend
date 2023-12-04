@@ -196,8 +196,6 @@ export function isSame(prevProps, nextProps) {
         prevProps.submitting === nextProps.submitting &&
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.journalToView || {}).jnl_jid === (nextProps.journalToView || {}).jnl_jid &&
-        ((prevProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype ===
-            ((nextProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype &&
         prevProps.journalToViewLoading === nextProps.journalToViewLoading &&
         prevProps.formErrors === nextProps.formErrors &&
         prevProps.locked === nextProps.locked

@@ -20,9 +20,7 @@ export default {
                 fullWidth: true,
                 label: 'Title',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
-                required: false,
+                required: true,
             },
         },
         abbreviatedTitle: {
@@ -38,17 +36,15 @@ export default {
                 required: false,
             },
         },
-        publisher: {
+        jnl_publisher: {
             component: GenericTextField,
             componentProps: {
                 textFieldId: 'jnl_publisher',
-                name: 'adminSection.publisher',
+                name: 'adminSection.jnl_publisher',
                 fullWidth: true,
                 label: 'Publisher',
                 placeholder: '',
-                disabled: true,
-                inputProps: { readOnly: true },
-                required: false,
+                required: true,
             },
         },
         refereed: {

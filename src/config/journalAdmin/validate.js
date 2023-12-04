@@ -12,13 +12,10 @@ export default values => {
         adminSection: {},
     };
 
-    // This section is here for interoperability of redux forms an dhow
+    // This section is here for interoperability of redux forms and how
     // the admin system was originally built.
-    // Note that at the time of writing, Journal admin *does not* require
-    // any form of validation.
-    // Additionally, the jnl_title check below is included as a sanity check
-    // to ensure the journal being saved has a title in the data but again, not required.
     !(data.adminSection || {}).jnl_title && (errors.adminSection.jnl_title = summary.jnl_title);
+    !(data.adminSection || {}).jnl_publisher && (errors.adminSection.jnl_publisher = summary.jnl_publisher);
 
     const adminJournalErrors = validateAdminJournal(data, locale);
     errors = deepmerge(errors, adminJournalErrors);
@@ -27,6 +24,5 @@ export default values => {
         (result, [key, value]) => (Object.values(value).length !== 0 && { ...result, [key]: value }) || { ...result },
         {},
     );
-
     return errors;
 };
