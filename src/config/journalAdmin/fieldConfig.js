@@ -143,9 +143,8 @@ export default {
                     const newValue = value.replace('-', '');
                     return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
-                canAdd: false,
-                canEdit: false,
-                disabled: true,
+                canAdd: true,
+                canEdit: true,
                 ListEditorForm: IssnForm,
                 rowItemTemplate: IssnRowItemTemplate,
                 ListEditorItemTemplate: IssnRowItemTemplate,

@@ -16,6 +16,7 @@ export const onSubmit = (values, dispatch, { initialValues }) => {
         ...jnlValues,
         jnl_jid: data.journal.jnl_jid,
     };
+
     return dispatch(adminJournalUpdate({ ...requestObject }))
         .then(() => Promise.resolve())
         .catch(error => {

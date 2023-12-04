@@ -114,18 +114,20 @@ export default {
     },
     issns: {
         getValue: journal => {
-            const returnValue = (journal.fez_journal_issn || []).map(issn => ({
-                rek_order: issn.jnl_issn_order,
-                rek_value: {
-                    key: issn.jnl_issn,
-                    value: {
-                        fez_sherpa_romeo: issn.fez_sherpa_romeo,
-                        fez_ulrichs: issn.fez_ulrichs,
+            const returnValue = (journal.fez_journal_issn || [])
+                .sort((a, b) => a.jnl_issn_order > b.jnl_issn_order)
+                .map(issn => ({
+                    rek_order: issn.jnl_issn_order,
+                    rek_value: {
+                        key: issn.jnl_issn,
+                        value: {
+                            fez_sherpa_romeo: issn.fez_sherpa_romeo,
+                            fez_ulrichs: issn.fez_ulrichs,
+                        },
+                        hasPreload: true,
                     },
-                    hasPreload: true,
-                },
-            }));
-            // delete journal.fez_journal_issn;
+                }));
+            delete journal.fez_journal_issn;
             return returnValue;
         },
     },

@@ -1,11 +1,12 @@
 export const getBibliographicSectionSearchKeys = (data = {}) => {
     const { issns } = data;
+
     return {
         ...(!!issns
             ? {
-                  fez_record_search_key_issn: issns.map(({ rek_value: value, rek_order: order }) => ({
-                      rek_issn: value.key || value,
-                      rek_issn_order: order,
+                  fez_journal_issn: issns.map(({ rek_value: value, rek_order: order }) => ({
+                      jnl_issn: value.key || value,
+                      jnl_issn_order: order,
                   })),
               }
             : {}),
