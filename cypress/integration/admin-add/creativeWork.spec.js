@@ -1,6 +1,7 @@
 context('As an admin, I can', () => {
     // load the admin add page for a Creative Work with the indicated collection and subType and open the NTRO tab
-    function loadNtroTabAdminAdd(collectionRowId, subtypeName) {
+
+    function createBasicRecordType(collectionRowId, subtypeName) {
         // Choose a collection
         cy.get('[data-testid=rek-ismemberof-input]').type('a');
         cy.clickAutoSuggestion('rek-ismemberof', collectionRowId);
@@ -24,6 +25,8 @@ context('As an admin, I can', () => {
             .click();
 
         cy.adminEditTabbedView();
+    }
+    function loadNtroTabAdminAdd() {
         cy.get('[data-testid="ntro-tab"]').click();
     }
 
@@ -100,67 +103,123 @@ context('As an admin, I can', () => {
             .click();
     }
 
+    function createAuthors(authorName) {
+        cy.get('[data-testid="authors-tab"]').click();
+        cy.get('[data-testid="rek-author-add"]').click();
+        cy.get('[data-testid="rek-author-input"]').type(authorName);
+        cy.get('[data-testid="rek-author-add-save"]').click();
+    }
+
     it('add a creative work', () => {
         cy.visit('/admin/add?user=uqstaff');
-
-        loadNtroTabAdminAdd(0, 'Creative Work - Textual');
-
-        const newContributionStatementText = 'another entry';
-        const secondRowId = 1;
-        const originalScale = 'Major';
-
-        assertCanEnterScaleStatementListItem('Minor', 'new entry', 0);
-        assertCanEnterScaleStatementListItem(originalScale, newContributionStatementText, secondRowId);
-        assertCanEnterScaleStatementListItem('Major', 'entry with duplicate scale', 2);
-
-        // when trying to edit an added entry, the form loads properly
-        assertFormIsHidden();
-        clickRowEditButton(secondRowId);
-        cy.get('[data-testid="rek-significance-form"]')
+        // Create record
+        createBasicRecordType(0, 'Creative Work - Textual');
+        // create authors first
+        createAuthors('Test Author');
+        // Check if the basic blank statement has been created for them.
+        // switch to NTRO
+        loadNtroTabAdminAdd();
+        // Assert a blank statement has been created
+        cy.get('[data-testid="scalesignif-author-0"]')
             .should('be.visible')
-            .scrollIntoView();
-        cy.get('[data-testid="rek-significance-select"]')
-            .should('exist')
-            .should('contain', originalScale);
-        cy.readCKEditor('rek-creator-contribution-statement').then(text => {
-            expect(text).to.contain(newContributionStatementText);
-        });
-        // change values of fields and save
-        const addTextToContributionStatement = ' 123';
-        cy.typeCKEditor('rek-creator-contribution-statement', addTextToContributionStatement);
-        const newScale = 'Minor';
-        cy.assertChangeSelectFromTo('rek-significance', originalScale, newScale);
-        saveFormChanges('UPDATE');
-        // data has updated in list editor
-        cy.get(`[data-testid="scalesignif-author-${secondRowId}"]`).should('contain', 'Second');
-        cy.get(`[data-testid="scale-item-${secondRowId}"]`).should('contain', newScale);
-        cy.get(`[data-testid="statement-item-${secondRowId}"]`).should(
-            'contain',
-            `${newContributionStatementText}${addTextToContributionStatement}`,
-        );
-        // editing an entry does not create a new entry
-        cy.get('[data-testid="rek-significance-list"]')
-            .should('exist')
-            .children()
-            .should('have.length', 3);
+            .should('contain', 'Test Author');
+
+        createAuthors('Another Author');
+        loadNtroTabAdminAdd();
+        cy.get('[data-testid="scalesignif-author-0"]')
+            .should('be.visible')
+            .should('contain', 'Test Author');
+        cy.get('[data-testid="scalesignif-author-1"]')
+            .should('be.visible')
+            .should('contain', 'Another Author');
+        // const newContributionStatementText = 'another entry';
+        // const secondRowId = 1;
+        // const originalScale = 'Major';
+
+        // assertCanEnterScaleStatementListItem('Minor', 'new entry', 0);
+        // assertCanEnterScaleStatementListItem(originalScale, newContributionStatementText, secondRowId);
+        // assertCanEnterScaleStatementListItem('Major', 'entry with duplicate scale', 2);
+
+        // // when trying to edit an added entry, the form loads properly
+        // assertFormIsHidden();
+        // clickRowEditButton(secondRowId);
+        // cy.get('[data-testid="rek-significance-form"]')
+        //     .should('be.visible')
+        //     .scrollIntoView();
+        // cy.get('[data-testid="rek-significance-select"]')
+        //     .should('exist')
+        //     .should('contain', originalScale);
+        // cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+        //     expect(text).to.contain(newContributionStatementText);
+        // });
+        // // change values of fields and save
+        // const addTextToContributionStatement = ' 123';
+        // cy.typeCKEditor('rek-creator-contribution-statement', addTextToContributionStatement);
+        // const newScale = 'Minor';
+        // cy.assertChangeSelectFromTo('rek-significance', originalScale, newScale);
+        // saveFormChanges('UPDATE');
+        // // data has updated in list editor
+        // cy.get(`[data-testid="scalesignif-author-${secondRowId}"]`).should('contain', 'Second');
+        // cy.get(`[data-testid="scale-item-${secondRowId}"]`).should('contain', newScale);
+        // cy.get(`[data-testid="statement-item-${secondRowId}"]`).should(
+        //     'contain',
+        //     `${newContributionStatementText}${addTextToContributionStatement}`,
+        // );
+        // // editing an entry does not create a new entry
+        // cy.get('[data-testid="rek-significance-list"]')
+        //     .should('exist')
+        //     .children()
+        //     .should('have.length', 3);
     });
 
     it('delete all added creative work scale of significance and creative statements', () => {
         cy.visit('/admin/add?user=uqstaff');
 
-        loadNtroTabAdminAdd(0, 'Creative Work - Textual');
+        createBasicRecordType(0, 'Creative Work - Textual');
+        createAuthors('First Significance');
+        createAuthors('Second Significance');
+        loadNtroTabAdminAdd();
 
-        assertCanEnterScaleStatementListItem('Minor', 'new entry', 0);
-        assertCanEnterScaleStatementListItem('Major', 'another entry', 1);
+        // Update some statements
+        cy.get('[data-testid="rek-significance-list-row-0-edit"]').click();
+        cy.get('[data-testid="rek-significance-select"]').click();
+        cy.get('[data-testid="rek-significance-option-1"]').click();
+        cy.get('[data-testid="rek-creator-contribution-statement"] [role="textbox"]')
+            .click()
+            .type('MINOR STATEMENT');
+        cy.get('[data-testid="rek-significance-add"]').click();
+        cy.get('[data-testid="rek-significance-list-row-1-edit"]').click();
+        cy.get('[data-testid="rek-significance-select"]').click();
+        cy.get('[data-testid="rek-significance-option-2"]').click();
+        cy.get('[data-testid="rek-creator-contribution-statement"] [role="textbox"]')
+            .click()
+            .type('MAJOR STATEMENT');
+        cy.get('[data-testid="rek-significance-add"]').click();
 
+        cy.get('[data-testid="scalesignif-author-0"]')
+            .should('be.visible')
+            .should('contain', 'First Significance');
+        cy.get('[data-testid="scale-item-0"]').should('contain', 'Minor');
+        cy.get('[data-testid="statement-item-0"]').should('contain', 'MINOR STATEMENT');
+        cy.get('[data-testid="scalesignif-author-1"]')
+            .should('be.visible')
+            .should('contain', 'Second Significance');
+        cy.get('[data-testid="scale-item-1"]').should('contain', 'Major');
+        cy.get('[data-testid="statement-item-1"]').should('contain', 'MAJOR STATEMENT');
+        // assertCanEnterScaleStatementListItem('Minor', 'new entry', 0);
+        // assertCanEnterScaleStatementListItem('Major', 'another entry', 1);
         cy.get('[data-testid="delete-all-rek-significance"]').click();
         cy.waitUntil(() => cy.get('[data-testid="confirm-rek-significance-delete-all"]').should('exist'));
         cy.get('[data-testid="confirm-rek-significance-delete-all"]')
             .should('contain', 'Yes')
             .click();
 
-        cy.waitUntil(() => cy.get('[data-testid="rek-significance-list"]').should('exist'));
-        cy.get('[data-testid="rek-significance-list"]').should('contain', 'No records to display');
+        cy.get('[data-testid="scale-item-0"]').should('contain', 'Missing');
+        cy.get('[data-testid="statement-item-0"]').should('contain', 'Missing');
+        cy.get('[data-testid="scale-item-1"]').should('contain', 'Missing');
+        cy.get('[data-testid="statement-item-1"]').should('contain', 'Missing');
+        // cy.waitUntil(() => cy.get('[data-testid="rek-significance-list"]').should('exist'));
+        // cy.get('[data-testid="rek-significance-list"]').should('contain', 'No records to display');
     });
 
     it('not see Author affiliations for creative work type', () => {

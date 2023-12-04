@@ -312,8 +312,16 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     /* istanbul ignore next */
     deleteAllItems = () => {
+        const newList = [...this.state.itemList];
+        this.state.itemList.map((item, index) => {
+            newList[index].key = 0;
+            newList[index].value = {
+                plainText: 'Missing',
+                htmlText: 'Missing',
+            };
+        });
         this.setState({
-            itemList: [],
+            itemList: newList,
         });
     };
 
@@ -368,7 +376,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                         htmlText: item.value?.htmlText || /* istanbul ignore next */ null,
                     },
                 };
-                console.log('temp item', tempItem);
                 return (
                     <ListRow
                         key={item.id || `${item}-${index}`}
@@ -473,7 +480,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 export const mapStateToProps = state => ({
-    // contributors: state && state.get('adminAuthorsReducer') ? state.get('adminAuthorsReducer') : null,
     ...(state && state.get('adminScaleOfSignificanceReducer') ? state.get('adminScaleOfSignificanceReducer') : null),
 });
 

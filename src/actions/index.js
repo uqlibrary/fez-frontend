@@ -25,5 +25,4 @@ export * from './search';
 export * from './thirdPartyLookupTool';
 export * from './viewRecord';
 export * from './viewCommunitiesCollections';
-export * from './adminAuthors';
 export * from './adminScaleSignificance';

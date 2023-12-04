@@ -876,7 +876,7 @@ export default {
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
                 shouldHandleAffiliations: true,
-                useFormReducer: true,
+                useFormReducer: false,
             },
         },
         editors: {
