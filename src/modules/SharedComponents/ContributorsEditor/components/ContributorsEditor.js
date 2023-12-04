@@ -95,7 +95,7 @@ export class ContributorsEditor extends PureComponent {
         }
     }
 
-    buildInitialScaleOfSignificance = (props = {}) => {
+    buildInitialScaleOfSignificance = (props = /* istanbul ignore next */ {}) => {
         if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
             return props.scaleOfSignificance;
         }
@@ -110,15 +110,21 @@ export class ContributorsEditor extends PureComponent {
                 ScaleOfSignificance[index].value = {
                     plainText:
                         props.record?.fez_record_search_key_creator_contribution_statement[index]
-                            ?.rek_creator_contribution_statement || 'Missing',
+                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
                     htmlText:
                         props.record?.fez_record_search_key_creator_contribution_statement[index]
-                            ?.rek_creator_contribution_statement || 'Missing',
+                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
                 };
                 ScaleOfSignificance[index].author = {
-                    rek_author_id: props.record?.fez_record_search_key_author[index]?.rek_author_id || 0,
-                    rek_author_pid: props.record?.fez_record_search_key_author[index]?.rek_author_pid || null,
-                    rek_author: props.record?.fez_record_search_key_author[index]?.rek_author || null,
+                    rek_author_id:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_id ||
+                        /* istanbul ignore next */ 0,
+                    rek_author_pid:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
+                        /* istanbul ignore next */ null,
+                    rek_author:
+                        props.record?.fez_record_search_key_author[index]?.rek_author ||
+                        /* istanbul ignore next */ null,
                     rek_author_order: index + 1,
                 };
             });

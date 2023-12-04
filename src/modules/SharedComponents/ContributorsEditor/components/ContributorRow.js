@@ -146,9 +146,9 @@ export const ContributorRow = ({
 
     const _onMoveDown = React.useCallback(
         e => {
-            /* istanbul ignore else */
             e.preventDefault();
             e.stopPropagation();
+            /* istanbul ignore else */
             if (!disabled && onMoveDown) {
                 onMoveDown(contributor, index);
             }

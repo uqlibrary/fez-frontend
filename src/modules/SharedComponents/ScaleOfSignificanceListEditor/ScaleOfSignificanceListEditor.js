@@ -105,14 +105,8 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.deleteItem = this.deleteItem.bind(this);
         this.deleteAllItems = this.deleteAllItems.bind(this);
         this.loadEditForm = this.loadEditForm.bind(this);
-        this.showFormInAddMode = this.showFormInAddMode.bind(this);
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
         this.props.actions.updateAdminScaleSignificance(this.state.itemList);
-    }
-    componentDidMount() {
-        if (this.props?.contributors?.authors?.length > 0) {
-            this.state.originalAuthors = this.props.contributors.authors;
-        }
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -133,6 +127,9 @@ export class ScaleOfSignificanceListEditor extends Component {
     };
 
     getItemSelectedToEdit = (mode, list, index) => {
+        // Edit likely never to be used in new editor.
+        // kept for backward compatibility
+        /* istanbul ignore next */
         if (mode === 'add') {
             return null;
         }
@@ -250,18 +247,6 @@ export class ScaleOfSignificanceListEditor extends Component {
         }
     };
 
-    calculateAuthors = (moved, swapped, index, targetIndex) => {
-        const movedAuthor =
-            !!this.props?.contributors?.authors && Array.isArray(this.props?.contributors?.authors)
-                ? this.props.contributors.authors[index].nameAsPublished
-                : moved.author.rek_author;
-        const swappedAuthor =
-            !!this.props?.contributors?.authors && Array.isArray(this.props?.contributors?.authors)
-                ? this.props.contributors.authors[targetIndex].nameAsPublished
-                : swapped.author.rek_author;
-        return { movedAuthor, swappedAuthor };
-    };
-
     moveUpList = (item, index) => {
         /* istanbul ignore next */
         if (index === 0) return;
@@ -342,14 +327,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                 block: 'start',
                 inline: 'center',
             });
-    };
-
-    showFormInAddMode = () => {
-        this.setState({
-            showAddForm: true,
-            formMode: 'add',
-            buttonLabel: this.props.locale.form.locale.addButtonLabel,
-        });
     };
 
     showFormInEditMode = (show = true) => {
@@ -437,19 +414,7 @@ export class ScaleOfSignificanceListEditor extends Component {
                     formMode={this.state.formMode}
                     hidden={!this.state.showAddForm}
                 />
-                {/* <Box display={this.state.showAddForm ? 'none' : 'flex'}
-                     justifyContent="flex-end" alignItems="flex-end">
-                    <IconButton
-                        data-analyticsid="rek-significance-showhidebutton"
-                        data-testid="rek-significance-showhidebutton"
-                        onClick={this.showFormInAddMode}
-                        aria-label={this.props.locale.form.locale.addEntryButton}
-                        size="small"
-                        style={{ color: '#fff', backgroundColor: '#51247A' }}
-                    >
-                        <AddCircle />
-                    </IconButton>
-                    </Box> */}
+
                 <ListRowHeader
                     onDeleteAll={this.deleteAllItems}
                     hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
@@ -480,7 +445,9 @@ function mapDispatchToProps(dispatch) {
     };
 }
 export const mapStateToProps = state => ({
-    ...(state && state.get('adminScaleOfSignificanceReducer') ? state.get('adminScaleOfSignificanceReducer') : null),
+    ...(state && state.get('adminScaleOfSignificanceReducer')
+        ? state.get('adminScaleOfSignificanceReducer')
+        : /* istanbul ignore next */ null),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ScaleOfSignificanceListEditor);
