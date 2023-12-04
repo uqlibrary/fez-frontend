@@ -148,7 +148,7 @@ const webpackConfig = {
             ),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
-            'process.env.CODEBUILD_BUILD_ID': JSON.stringify(process.env.CODEBUILD_BUILD_ID),
+            'process.env.CI_BUILD_NUMBER': JSON.stringify(process.env.CI_BUILD_NUMBER),
         }),
         new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
 

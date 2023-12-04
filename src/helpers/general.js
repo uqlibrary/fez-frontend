@@ -14,7 +14,7 @@ const getNodeEnvVar = (key, _default = undefined) => {
 };
 
 export const isJestTest = () => getNodeEnvVar('JEST_WORKER_ID', false);
-export const isRunningInCodeBuild = () => getNodeEnvVar('CODEBUILD_BUILD_ID', false);
+export const isRunningInCodeBuild = () => getNodeEnvVar('CI_BUILD_NUMBER', false);
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
