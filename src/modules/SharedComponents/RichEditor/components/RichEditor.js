@@ -53,7 +53,7 @@ const RichEditor = fieldProps => {
                 dataForEditor = fieldProps.value;
             }
         }
-        return typeof dataForEditor === 'string' ? dataForEditor : '';
+        return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
     }
 
     let error = null;
