@@ -7,7 +7,7 @@ function setup(testProps = {}) {
         value: 'ping',
         currentTab: 'pong',
         tabbed: false,
-        children: '<p>Test containers</p>',
+        children: <p>Test containers</p>,
         ...testProps,
     };
 
@@ -16,17 +16,16 @@ function setup(testProps = {}) {
 
 describe('TabContainer component', () => {
     it('should render default view', () => {
-        const { container } = setup();
-
-        expect(container).toMatchSnapshot();
+        setup();
+        expect(document.querySelector('p')).toHaveTextContent('Test containers');
     });
 
     it('should render null', () => {
-        const { container } = setup({
+        setup({
             tabbed: true,
             value: 'ping',
             currentTab: 'pong',
         });
-        expect(container).toMatchSnapshot();
+        expect(document.querySelector('p')).not.toBeInTheDocument();
     });
 });

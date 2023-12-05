@@ -165,8 +165,46 @@ export const journalDoaj = {
         "fez_journal_issn": [
             {
                 "jnl_issn_jid": 12,
+                "jnl_issn": "0388-0001",
+                "jnl_issn_type": null,
+                "jnl_issn_order": 2,
+                "fez_sherpa_romeo": {
+                    "srm_id": 33264,
+                    "srm_issn": "0388-0001",
+                    "srm_source_id": "16950",
+                    "srm_journal_name": "Language Sciences",
+                    "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/16950",
+                    "srm_date_updated": "2021-08-30 06:19:20",
+                    "srm_max_embargo_amount": 24,
+                    "srm_max_embargo_units": "months",
+                    "srm_open_access": true
+                },
+                "fez_ulrichs": {
+                    "ulr_id": 27376,
+                    "ulr_issn": "0388-0001",
+                    "ulr_status": "Active",
+                    "ulr_source_id": "129625",
+                    "ulr_title": "Language Sciences",
+                    "ulr_title_id": "89641",
+                    "ulr_abbrev_title": null,
+                    "ulr_publisher": "Elsevier Ltd",
+                    "ulr_country": "United Kingdom",
+                    "ulr_start_year": "1968",
+                    "ulr_frequency": "Bi-monthly",
+                    "ulr_open_access": "0",
+                    "ulr_open_access_url": null,
+                    "ulr_reviewed": "0",
+                    "ulr_refereed": "1",
+                    "ulr_formats": "Print",
+                    "ulr_description": "Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.",
+                    "ulr_last_updated": "2023-11-30 09:20:25",
+                    "fez_ulrichscol": null
+                }
+            },
+            {
+                "jnl_issn_jid": 12,
                 "jnl_issn": "2169-0375",
-                "jnl_issn_type": "454151",
+                "jnl_issn_type": null,
                 "jnl_issn_order": 1,
                 "fez_sherpa_romeo": {
                     "srm_id": 20018198,
@@ -183,7 +221,7 @@ export const journalDoaj = {
                     "ulr_id": 8089530,
                     "ulr_issn": "2169-0375",
                     "ulr_status": "Active",
-                    "ulr_source_id": "471866",
+                    "ulr_source_id": "471881",
                     "ulr_title": "Advanced Nonlinear Studies (Online)",
                     "ulr_title_id": "473255",
                     "ulr_abbrev_title": null,
@@ -197,10 +235,9 @@ export const journalDoaj = {
                     "ulr_refereed": "1",
                     "ulr_formats": "Online",
                     "ulr_description": "Publishes papers on nonlinear problems, particularly those involving differential equations, dynamical systems and related areas.",
-                    "ulr_last_updated": "2023-11-09 01:39:30",
+                    "ulr_last_updated": "2023-12-01 01:53:30",
                     "fez_ulrichscol": null
-                },
-                "jnl_issn_type_lookup": "Online"
+                }
             }
         ],
         "fez_journal_jcr_scie": {
