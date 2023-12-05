@@ -214,7 +214,11 @@ context('As an admin, I can', () => {
         cy.get('[data-testid="statement-item-1"]').should('contain', 'MAJOR STATEMENT');
         // wipe out the current MAJOR statement, setting to missing (via form)
         cy.get('[data-testid="rek-significance-list-row-1-edit"]').click();
+        // cycle input for empty
         cy.get('[data-testid="empty-significance-statement-input"]').click();
+        cy.get('[data-testid="empty-significance-statement-input"]').click();
+        cy.get('[data-testid="empty-significance-statement-input"]').click();
+        // save
         cy.get('[data-testid="rek-significance-add"]').click();
         cy.get('[data-testid="statement-item-0"]').should('contain', 'Missing');
         cy.get('[data-testid="statement-item-1"]').should('contain', 'Missing');

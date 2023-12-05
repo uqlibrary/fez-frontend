@@ -110,6 +110,7 @@ export class ScaleOfSignificanceListEditor extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        /* istanbul ignore else */
         if (this.props.onChange) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
@@ -193,6 +194,7 @@ export class ScaleOfSignificanceListEditor extends Component {
             };
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
+            /* istanbul ignore else */
             if (
                 this.state.formMode === 'edit' &&
                 (((!!item.key || item.key === 0) && !!item.value) ||

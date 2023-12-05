@@ -1,7 +1,7 @@
 import React from 'react';
 import ScaleOfSignificanceListEditor from '../ScaleOfSignificanceListEditor';
 import { List } from 'immutable';
-import { render, WithReduxStore, fireEvent, within, screen } from 'test-utils';
+import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 
 /* eslint react/prop-types: 0 */
 jest.mock('modules/SharedComponents/RichEditor', () => ({

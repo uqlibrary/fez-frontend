@@ -63,6 +63,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: false,
         showRoleInput: false,
         useFormReducer: false,
+        scaleOfSignificance: [],
     };
 
     constructor(props) {
@@ -94,8 +95,7 @@ export class ContributorsEditor extends PureComponent {
             }
         }
     }
-
-    buildInitialScaleOfSignificance = (props = /* istanbul ignore next */ {}) => {
+    buildInitialScaleOfSignificance = props => {
         if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
             return props.scaleOfSignificance;
         }
