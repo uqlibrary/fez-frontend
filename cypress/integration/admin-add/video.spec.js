@@ -61,6 +61,7 @@ context('Author affiliations', () => {
             .click();
 
         // Apply selections
+        cy.wait(200);
         cy.get('button')
             .contains('Create work')
             .should('exist');

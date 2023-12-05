@@ -183,6 +183,7 @@ Cypress.Commands.add(
         cy.get('[data-testid^=contributor-errorIcon]').should(allowed ? 'exist' : 'not.exist');
         cy.get(`[data-testid=rek-author-list-row-${rowId}]`).within(() => {
             cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').should('exist');
+            cy.wait(200);
             cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').click();
         });
         cy.get('[data-testid=rek-author-list]').contains(allowed ? 'No affiliations have been added' : orgName);
