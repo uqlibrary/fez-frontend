@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from 'actions';
 
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
@@ -13,6 +15,8 @@ import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsListWithAffiliates';
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
+
+import { diff } from 'deep-object-diff';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -38,6 +42,9 @@ export class ContributorsEditor extends PureComponent {
         showRoleInput: PropTypes.bool,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
+        actions: PropTypes.any,
+        useFormReducer: PropTypes.bool,
+        scaleOfSignificance: PropTypes.array,
     };
 
     static defaultProps = {
@@ -55,6 +62,8 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        useFormReducer: false,
+        scaleOfSignificance: [],
     };
 
     constructor(props) {
@@ -64,14 +73,64 @@ export class ContributorsEditor extends PureComponent {
             errorMessage: '',
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
+            scaleOfSignificance: this.buildInitialScaleOfSignificance(props),
         };
         this.props.onChange?.(this.state.contributors);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
+
         this.props.onChange?.(this.state.contributors);
+        const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
+        if (this.props.useFormReducer) {
+            if (Object.keys(updated).length > 0) {
+                this.state.scaleOfSignificance = this.props.scaleOfSignificance;
+            } else {
+                this.state.scaleOfSignificance = this.handleSoSChange(
+                    prevState.contributors,
+                    this.state.contributors,
+                    this.props.scaleOfSignificance,
+                );
+            }
+        }
     }
+    buildInitialScaleOfSignificance = props => {
+        if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
+            return props.scaleOfSignificance;
+        }
+
+        const ScaleOfSignificance = [];
+        props.record?.fez_record_search_key_significance &&
+            props.record?.fez_record_search_key_significance.length > 0 &&
+            props.record?.fez_record_search_key_significance.map((item, index) => {
+                ScaleOfSignificance[index] = {};
+                ScaleOfSignificance[index].id = item.rek_significance_id;
+                ScaleOfSignificance[index].key = item.rek_significance;
+                ScaleOfSignificance[index].value = {
+                    plainText:
+                        props.record?.fez_record_search_key_creator_contribution_statement[index]
+                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                    htmlText:
+                        props.record?.fez_record_search_key_creator_contribution_statement[index]
+                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                };
+                ScaleOfSignificance[index].author = {
+                    rek_author_id:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_id ||
+                        /* istanbul ignore next */ 0,
+                    rek_author_pid:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
+                        /* istanbul ignore next */ null,
+                    rek_author:
+                        props.record?.fez_record_search_key_author[index]?.rek_author ||
+                        /* istanbul ignore next */ null,
+                    rek_author_order: index + 1,
+                };
+            });
+
+        return ScaleOfSignificance;
+    };
 
     getContributorsFromProps = props => {
         if (props.input && props.input.name && props.input.value) {
@@ -302,6 +361,65 @@ export class ContributorsEditor extends PureComponent {
         );
     };
 
+    handleSoSChange = (oldContribs, newContribs) => {
+        const updated = diff(oldContribs, newContribs);
+        if (Object.keys(updated).length < 1) {
+            return this.state.scaleOfSignificance;
+        } else {
+            // First check for length changes - that means either a new contrib is added, or one is deleted.
+            // Check if one is Added.
+            let newList = [];
+            if (oldContribs.length < newContribs.length) {
+                // Add a SoS to the list.
+                const newItem = {
+                    id: 0,
+                    key: 0,
+                    value: {
+                        plainText: 'Missing',
+                        htmlText: 'Missing',
+                    },
+                    author: {
+                        rek_author: newContribs[newContribs.length - 1].nameAsPublished,
+                    },
+                };
+                newList = [...this.state.scaleOfSignificance, newItem];
+            } else if (oldContribs.length > newContribs.length) {
+                let found = false;
+                newList = [...this.state.scaleOfSignificance];
+                oldContribs.map((contributor, index) => {
+                    if (!found && JSON.stringify(contributor) !== JSON.stringify(newContribs[index])) {
+                        newList.splice(index, 1);
+                        found = true;
+                    }
+                });
+            } else {
+                const changedIndexes = [];
+                const scaleOfSignificance = [...this.state.scaleOfSignificance];
+                newContribs.map((contrib, index) => {
+                    if (contrib.nameAsPublished !== this.state.scaleOfSignificance[index].author.rek_author) {
+                        changedIndexes.push(index);
+                    }
+                });
+
+                if (changedIndexes.length === 1) {
+                    // Its a name change - no order change
+                    scaleOfSignificance[changedIndexes[0]].author.rek_author =
+                        newContribs[changedIndexes[0]].nameAsPublished;
+                }
+                if (changedIndexes.length === 2) {
+                    // It's an order change
+
+                    scaleOfSignificance[changedIndexes[0]] = this.state.scaleOfSignificance[changedIndexes[1]];
+                    scaleOfSignificance[changedIndexes[1]] = this.state.scaleOfSignificance[changedIndexes[0]];
+                }
+
+                newList = scaleOfSignificance;
+            }
+            this.props.actions.updateAdminScaleSignificance(newList);
+            return newList;
+        }
+    };
+
     handleAuthorsListChange = contributors => {
         this.setState({
             contributors,
@@ -321,6 +439,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            useFormReducer,
         } = this.props;
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
@@ -344,6 +463,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
+                    useFormReducer={useFormReducer}
                 />
             ) : (
                 <AuthorsList
@@ -354,6 +474,7 @@ export class ContributorsEditor extends PureComponent {
                     showRoleInput={showRoleInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
+                    useFormReducer={useFormReducer}
                 />
             );
         }
@@ -435,6 +556,13 @@ export class ContributorsEditor extends PureComponent {
 export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
     record: state && state.get('viewRecordReducer') ? state.get('viewRecordReducer').recordToView : null,
+    ...(state && state.get('adminScaleOfSignificanceReducer') ? state.get('adminScaleOfSignificanceReducer') : null),
 });
 
-export default connect(mapStateToProps)(ContributorsEditor);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContributorsEditor);
