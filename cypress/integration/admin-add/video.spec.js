@@ -63,7 +63,9 @@ context('Author affiliations', () => {
         // Apply selections
         cy.get('button')
             .contains('Create work')
-            .should('exist')
+            .should('exist');
+        cy.get('button')
+            .contains('Create work')
             .click();
 
         cy.assertAffiliationsAllowed({
