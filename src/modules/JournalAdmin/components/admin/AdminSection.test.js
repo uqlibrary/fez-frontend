@@ -1,9 +1,10 @@
 import React from 'react';
-import { rtlRender, WithReduxStore, preview } from 'test-utils';
+import { rtlRender, WithReduxStore } from 'test-utils';
 import AdminSection from './AdminSection';
 import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
 import { reduxForm } from 'redux-form';
+import { fieldConfig } from 'config/journalAdmin';
 
 jest.mock('../../../../context');
 import { useJournalContext, useFormValuesContext } from 'context';
@@ -23,6 +24,7 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('AdminSection component', () => {
+    let fieldIds;
     beforeEach(() => {
         useJournalContext.mockImplementation(() => ({
             journalDetails: {
@@ -32,40 +34,28 @@ describe('AdminSection component', () => {
         }));
 
         useFormValuesContext.mockImplementation(() => ({
-            formValues: {},
+            formValues: Immutable.Map({ ...journalDoaj.data }),
         }));
+        fieldIds = Object.values(fieldConfig.default)
+            .filter(field => field.componentProps.name.includes('adminSection.'))
+            .map(field => field.componentProps.textFieldId || field.componentProps.richEditorId);
     });
 
     it('should render default view', () => {
-        const render = setup();
-        preview.debug();
+        const { getByTestId } = setup();
+        fieldIds.forEach(id => {
+            expect(getByTestId(id)).toBeInTheDocument();
+        });
     });
 
     it('should render disabled view', () => {
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
-    });
-
-    it('should render design form fields', () => {
-        useJournalContext.mockImplementation(() => ({
-            journalDetails: {
-                jnl_jid: 12,
-                jnl_jbject_type_lookup: 'Record',
-                fez_record_search_key_ismemberof: [
-                    {
-                        jnl_jsmemberof: 'Test collection',
-                        parent: {
-                            jnl_jecurity_policy: 2,
-                            jnl_jatastream_policy: 1,
-                        },
-                    },
-                ],
-                jnl_jisplay_type: 313,
-                jnl_jubtype: 'Creative Work - Design/Architectural',
-            },
-        }));
-
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        fieldIds = Object.values(fieldConfig.default)
+            .filter(field => field.componentProps.name.includes('adminSection.') && !!field.componentProps.textFieldId)
+            .map(field => field.componentProps.textFieldId);
+        // only test actual input fields
+        const { getByTestId } = setup({ disabled: true });
+        fieldIds.forEach(id => {
+            expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
+        });
     });
 });

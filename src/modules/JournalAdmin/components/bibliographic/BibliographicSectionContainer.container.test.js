@@ -1,33 +1,56 @@
-it('temp', () => {
-    expect(1).toBeTruthy();
-}); // import { BibliographicSectionContainer, mapStateToProps } from './BibliographicSectionContainer';
-// import Immutable from 'immutable';
+import React from 'react';
+import { rtlRender, WithReduxStore } from 'test-utils';
+import { BibliographicSectionContainer, mapStateToProps } from './BibliographicSectionContainer';
+import Immutable from 'immutable';
+import { journalDoaj } from 'mock/data';
+import { reduxForm } from 'redux-form';
+jest.mock('../../../../context');
+import { useJournalContext, useFormValuesContext } from 'context';
 
-// function setup(testProps = {}, args = { isShallow: true }) {
-//     const props = {
-//         formValues: {
-//             toJS: jest.fn(() => ({})),
-//         },
-//         ...testProps,
-//     };
+const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
+    BibliographicSectionContainer,
+);
 
-//     return renderComponent(BibliographicSectionContainer, props, args);
-// }
+function setup(testProps = {}, renderer = rtlRender) {
+    const props = {
+        ...testProps,
+    };
 
-// describe('BibliographicSectionContainer component', () => {
-//     it('should render default view', () => {
-//         const render = setup();
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
+    return renderer(
+        <WithReduxStore>
+            <WithReduxForm {...props} />
+        </WithReduxStore>,
+    );
+}
 
-//     it('should render disabled view', () => {
-//         const render = setup({ disabled: true });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
+describe('BibliographicSectionContainer component', () => {
+    beforeEach(() => {
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                jnl_jid: 12,
+            },
+            jnlDisplayType: 'adminjournal',
+        }));
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                languages: ['eng'],
+            },
+        }));
+    });
+    it('should render default view', () => {
+        const { getByTestId } = setup();
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('ISSN');
+        expect(getByTestId('jnl_issn_jid-input')).toBeInTheDocument();
+    });
 
-//     it('should map state to props', () => {
-//         expect(mapStateToProps({}, {})).toEqual({
-//             formValues: Immutable.Map({}),
-//         });
-//     });
-// });
+    it('should render disabled view', () => {
+        const { getByTestId } = setup({ disabled: true });
+        expect(getByTestId('jnl_issn_jid-input')).toHaveAttribute('disabled');
+    });
+
+    it('should map state to props', () => {
+        expect(mapStateToProps({}, {})).toEqual({
+            formValues: Immutable.Map({}),
+        });
+    });
+});

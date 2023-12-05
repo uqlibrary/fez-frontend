@@ -10,6 +10,7 @@ import { fieldConfig } from 'config/journalAdmin';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { jnlDisplayType } = useJournalContext();
+
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';

@@ -15,14 +15,13 @@ function setup(testProps) {
 
 describe('Cards component', () => {
     it('renders with title and no help icon', () => {
-        const { container } = setup({});
-        expect(container).toMatchSnapshot();
+        setup({});
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('card title');
     });
 });
-
 describe('AdminCard component', () => {
-    it('should render StyledCard with same props', () => {
-        const { container } = rtlRender(<AdminCard />);
-        expect(container).toMatchSnapshot();
+    it('renders with title and no help icon', () => {
+        rtlRender(<AdminCard title="another title" />);
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('another title');
     });
 });

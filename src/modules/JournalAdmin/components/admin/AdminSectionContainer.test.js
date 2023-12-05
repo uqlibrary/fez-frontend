@@ -1,7 +1,17 @@
+import React from 'react';
+import { rtlRender, WithReduxStore } from 'test-utils';
 import { AdminSectionContainer, mapStateToProps } from './AdminSectionContainer';
 import Immutable from 'immutable';
+import { journalDoaj } from 'mock/data';
+import { reduxForm } from 'redux-form';
+jest.mock('../../../../context');
+import { useJournalContext, useFormValuesContext } from 'context';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
+    AdminSectionContainer,
+);
+
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         formValues: {
             toJS: jest.fn(() => ({})),
@@ -9,13 +19,29 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return renderComponent(AdminSectionContainer, props, args);
+    return renderer(
+        <WithReduxStore>
+            <WithReduxForm {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('AdminSectionContainer component', () => {
+    beforeEach(() => {
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                ...journalDoaj.data,
+            },
+            jnlDisplayType: 'adminjournal',
+        }));
+
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: Immutable.Map({ ...journalDoaj.data }),
+        }));
+    });
     it('should render default view', () => {
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { getByTestId } = setup();
+        expect(getByTestId('jnl_title')).toBeInTheDocument();
     });
 
     it('should map state to props', () => {
