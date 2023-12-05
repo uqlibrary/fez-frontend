@@ -172,9 +172,8 @@ Cypress.Commands.add(
         cy.get('[data-testid="authors-tab"]').click();
 
         // add linked author
-        cy.get('[data-testid=rek-author-add]')
-            .should('exist')
-            .click();
+        cy.get('[data-testid=rek-author-add]').should('exist');
+        cy.get('[data-testid=rek-author-add]').click();
 
         cy.get('[data-testid=rek-author-id-input]').type('uq');
         cy.get('[data-testid=rek-author-id-options]')
@@ -183,9 +182,8 @@ Cypress.Commands.add(
         cy.get('[data-testid=rek-author-add-save]').click();
         cy.get('[data-testid^=contributor-errorIcon]').should(allowed ? 'exist' : 'not.exist');
         cy.get(`[data-testid=rek-author-list-row-${rowId}]`).within(() => {
-            cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]')
-                .should('exist')
-                .click();
+            cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').should('exist');
+            cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').click();
         });
         cy.get('[data-testid=rek-author-list]').contains(allowed ? 'No affiliations have been added' : orgName);
         cy.get('[data-testid=rek-author-list]').within(() => {
