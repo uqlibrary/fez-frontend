@@ -173,6 +173,7 @@ Cypress.Commands.add(
 
         // add linked author
         cy.get('[data-testid=rek-author-add]').should('exist');
+        cy.wait(300);
         cy.get('[data-testid=rek-author-add]').click();
 
         cy.get('[data-testid=rek-author-id-input]').type('uq');
