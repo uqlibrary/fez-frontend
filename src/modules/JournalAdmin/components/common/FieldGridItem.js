@@ -20,15 +20,6 @@ export const FieldGridItem = ({ field, group, disabled }) => {
         ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({}) || {}),
     };
 
-    if (fieldConfig.default[field]?.isComposed) {
-        const Component = fieldConfig.default[field]?.component;
-        return (
-            <Grid item xs={12} md={12 / group.length}>
-                <Component disabled={disabled} {...componentProps} />
-            </Grid>
-        );
-    }
-
     return (
         <Grid item xs={12} md={12 / group.length}>
             <Field disabled={disabled} component={fieldConfig.default[field].component} {...componentProps} />

@@ -1,99 +1,83 @@
-it('temp', () => {
-    expect(1).toBeTruthy();
+import React from 'react';
+import { rtlRender, WithReduxStore } from 'test-utils';
+import FieldGridItem from './FieldGridItem';
+import { reduxForm } from 'redux-form';
+
+jest.mock('../../../../context');
+import { useFormValuesContext, useJournalContext } from 'context';
+
+global.console = {
+    ...global.console,
+    warn: jest.fn(),
+};
+
+const WithReduxForm = reduxForm({ form: 'testForm' })(FieldGridItem);
+
+const setup = (testProps = {}, renderer = rtlRender) => {
+    const props = {
+        ...testProps,
+        group: [1],
+    };
+
+    return renderer(
+        <WithReduxStore>
+            <WithReduxForm {...props} />
+        </WithReduxStore>,
+    );
+};
+
+describe('FieldGridItem', () => {
+    beforeEach(() => {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                jnl_title: 'Test title',
+            },
+        }));
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                jnl_jid: 12,
+                jnl_title: 'This is a test title',
+            },
+            jnlDisplayType: 'adminjournal',
+        }));
+    });
+
+    afterEach(() => {
+        useFormValuesContext.mockReset();
+        useJournalContext.mockReset();
+    });
+
+    it('should render default view', () => {
+        const { getByTestId } = setup({
+            field: 'jnl_title',
+        });
+        expect(getByTestId('jnl_title-input')).toBeInTheDocument();
+    });
+
+    it('should handle missing field config', () => {
+        setup({
+            field: 'fake_field',
+        });
+        expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
+    });
 });
-// import FieldGridItem from './FieldGridItem';
 
-// jest.mock('../../../../context');
-// import { useFormValuesContext, useRecordContext } from 'context';
+describe('FieldGridItem without record', () => {
+    beforeEach(() => {
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                jnl_title: 'Test title',
+            },
+        }));
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {},
+        }));
+    });
 
-// global.console = {
-//     warn: jest.fn(),
-// };
-
-// const setup = (testProps = {}, args = { isShallow: true }) => {
-//     const props = {
-//         ...testProps,
-//         group: [1],
-//     };
-
-//     return renderComponent(FieldGridItem, props, args);
-// };
-
-// describe('FieldGridItem', () => {
-//     beforeEach(() => {
-//         useFormValuesContext.mockImplementation(() => ({
-//             formValues: {
-//                 rek_title: 'Test title',
-//             },
-//         }));
-//         useRecordContext.mockImplementation(() => ({
-//             record: {
-//                 rek_pid: 'UQ:123456',
-//                 rek_title: 'This is test record',
-//                 // rek_object_type_lookup: 'Record',
-//                 // rek_display_type_lookup: 'Journal Article',
-//             },
-//         }));
-//     });
-
-//     afterEach(() => {
-//         useFormValuesContext.mockReset();
-//         useRecordContext.mockReset();
-//     });
-
-//     it('should render default view', () => {
-//         const render = setup({
-//             field: 'rek_title',
-//         });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-
-//     it('should render default view for a composed field', () => {
-//         const render = setup({
-//             field: 'sensitiveHandlingNote',
-//         });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-
-//     it('should render with correct props', () => {
-//         useRecordContext.mockImplementation(() => ({
-//             record: {
-//                 rek_pid: 'UQ:123456',
-//                 rek_title: 'This is test record',
-//                 rek_subtype: 'Creative Work - Visual Art',
-//             },
-//         }));
-
-//         const render = setup({
-//             field: 'editors',
-//         });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-
-//     it('should handle missing field config', () => {
-//         setup({
-//             field: 'fake_field',
-//         });
-//         expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
-//     });
-// });
-
-// describe('FieldGridItem without record', () => {
-//     beforeEach(() => {
-//         useFormValuesContext.mockImplementation(() => ({
-//             formValues: {
-//                 rek_title: 'Test title',
-//             },
-//         }));
-//         useRecordContext.mockImplementation(() => ({
-//             record: {},
-//         }));
-//     });
-
-//     it('should render default view', () => {
-//         const render = setup({
-//             field: 'rek_title',
-//         });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
+    it('should render default view', () => {
+        const { getByTestId } = setup({
+            field: 'jnl_title',
+        });
+        expect(getByTestId('jnl_title-input')).toBeInTheDocument();
+    });
+});

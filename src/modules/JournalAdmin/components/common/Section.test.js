@@ -1,50 +1,51 @@
-it('temp', () => {
-    expect(1).toBeTruthy();
+import React from 'react';
+import { rtlRender } from 'test-utils';
+import { Section, GroupsWithinCard, GroupsWithoutCard } from './Section';
+
+const setup = (testProps = {}, renderer = rtlRender) => {
+    const props = {
+        ...testProps,
+    };
+
+    return renderer(<Section {...props} />);
+};
+
+describe('Section component', () => {
+    it('should render default view with card', () => {
+        setup({
+            disabled: false,
+            cards: [{ title: 'Title', groups: [[]] }],
+        });
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('Title');
+    });
+    it('should render default view without card', () => {
+        setup({
+            disabled: false,
+            cards: [{ groups: [[]] }],
+        });
+        expect(document.querySelector('.AdminCard')).not.toBeInTheDocument();
+    });
 });
-// import { Section, GroupsWithinCard, GroupsWithoutCard } from './Section';
 
-// const setup = (testProps = {}, args = { isShallow: true }) => {
-//     const props = {
-//         ...testProps,
-//     };
+describe('GroupsWithinCard component', () => {
+    it('should render default view', () => {
+        const props = {
+            title: 'Title',
+            groups: [['test']],
+        };
+        rtlRender(<GroupsWithinCard {...props} />);
 
-//     return renderComponent(Section, props, args);
-// };
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('Title');
+    });
+});
 
-// describe('Section component', () => {
-//     it('should render default view', () => {
-//         const render = setup({
-//             disabled: false,
-//             cards: [{ title: 'Title' }],
-//         });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//         const render2 = setup({
-//             disabled: false,
-//             cards: [{}],
-//         });
-//         expect(render2.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
+describe('GroupsWithoutCard component', () => {
+    it('should render default view', () => {
+        const props = {
+            groups: [['test']],
+        };
 
-// describe('GroupsWithinCard component', () => {
-//     it('should render default view', () => {
-//         const props = {
-//             title: 'Title',
-//             groups: [['test']],
-//         };
-//         const args = { isShallow: true };
-//         const render = renderComponent(GroupsWithinCard, props, args);
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
-
-// describe('GroupsWithoutCard component', () => {
-//     it('should render default view', () => {
-//         const props = {
-//             groups: [['test']],
-//         };
-//         const args = { isShallow: true };
-//         const render = renderComponent(GroupsWithoutCard, props, args);
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
+        rtlRender(<GroupsWithoutCard {...props} />);
+        expect(document.querySelector('.AdminCard')).not.toBeInTheDocument();
+    });
+});

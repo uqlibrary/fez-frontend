@@ -1,75 +1,71 @@
-it('temp', () => {
-    expect(1).toBeTruthy();
-}); // import AdminSection from './AdminSection';
+import React from 'react';
+import { rtlRender, WithReduxStore, preview } from 'test-utils';
+import AdminSection from './AdminSection';
+import { journalDoaj } from 'mock/data';
+import Immutable from 'immutable';
+import { reduxForm } from 'redux-form';
 
-// jest.mock('../../../../context');
-// import { useRecordContext, useFormValuesContext } from 'context';
+jest.mock('../../../../context');
+import { useJournalContext, useFormValuesContext } from 'context';
 
-// function setup(testProps = {}, args = { isShallow: true }) {
-//     const props = {
-//         ...testProps,
-//     };
+const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(AdminSection);
 
-//     return renderComponent(AdminSection, props, args);
-// }
+function setup(testProps = {}, renderer = rtlRender) {
+    const props = {
+        ...testProps,
+    };
 
-// describe('AdminSection component', () => {
-//     beforeEach(() => {
-//         useRecordContext.mockImplementation(() => ({
-//             record: {
-//                 rek_pid: 'UQ:123456',
-//                 rek_object_type_lookup: 'Record',
-//                 fez_record_search_key_ismemberof: [
-//                     {
-//                         rek_ismemberof: 'Test collection',
-//                         parent: {
-//                             rek_security_policy: 2,
-//                             rek_datastream_policy: 1,
-//                         },
-//                     },
-//                 ],
-//                 rek_display_type: 179,
-//                 fez_record_search_key_language: [{ rek_language: 'eng' }],
-//             },
-//         }));
+    return renderer(
+        <WithReduxStore>
+            <WithReduxForm {...props} />
+        </WithReduxStore>,
+    );
+}
 
-//         useFormValuesContext.mockImplementation(() => ({
-//             formValues: {
-//                 rek_subtype: 'Creative Work - Design/Architectural',
-//             },
-//         }));
-//     });
+describe('AdminSection component', () => {
+    beforeEach(() => {
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                ...journalDoaj.data,
+            },
+            jnlDisplayType: 'adminjournal',
+        }));
 
-//     it('should render default view', () => {
-//         const render = setup();
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {},
+        }));
+    });
 
-//     it('should render disabled view', () => {
-//         const render = setup({ disabled: true });
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
+    it('should render default view', () => {
+        const render = setup();
+        preview.debug();
+    });
 
-//     it('should render design form fields', () => {
-//         useRecordContext.mockImplementation(() => ({
-//             record: {
-//                 rek_pid: 'UQ:123456',
-//                 rek_object_type_lookup: 'Record',
-//                 fez_record_search_key_ismemberof: [
-//                     {
-//                         rek_ismemberof: 'Test collection',
-//                         parent: {
-//                             rek_security_policy: 2,
-//                             rek_datastream_policy: 1,
-//                         },
-//                     },
-//                 ],
-//                 rek_display_type: 313,
-//                 rek_subtype: 'Creative Work - Design/Architectural',
-//             },
-//         }));
+    it('should render disabled view', () => {
+        const render = setup({ disabled: true });
+        expect(render.getRenderOutput()).toMatchSnapshot();
+    });
 
-//         const render = setup();
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
+    it('should render design form fields', () => {
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                jnl_jid: 12,
+                jnl_jbject_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [
+                    {
+                        jnl_jsmemberof: 'Test collection',
+                        parent: {
+                            jnl_jecurity_policy: 2,
+                            jnl_jatastream_policy: 1,
+                        },
+                    },
+                ],
+                jnl_jisplay_type: 313,
+                jnl_jubtype: 'Creative Work - Design/Architectural',
+            },
+        }));
+
+        const render = setup();
+        expect(render.getRenderOutput()).toMatchSnapshot();
+    });
+});
