@@ -15,7 +15,8 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-wrap-xs-nowrap css-1ws66c0-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-kuk15j-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 284px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -739,7 +740,8 @@ exports[`Application component should determine if it has incomplete works from 
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -1241,7 +1243,8 @@ exports[`Application component should determine if it has incomplete works from 
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -1743,7 +1746,8 @@ exports[`Application component should render alert if user is not fez author 1`]
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -2245,7 +2249,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -2694,7 +2699,8 @@ exports[`Application component should render app for account with fez author wit
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -3143,7 +3149,8 @@ exports[`Application component should render application with routing for the us
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
@@ -3422,7 +3429,8 @@ exports[`Application component should render for anon user 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-avhm1o-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+            style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-e4peo3-MuiGrid-root"
