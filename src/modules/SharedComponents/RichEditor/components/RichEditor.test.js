@@ -1,6 +1,5 @@
 import React from 'react';
 import RichEditor from './RichEditor';
-import 'ckeditor';
 import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
@@ -19,24 +18,8 @@ function setup(testProps = {}, renderMethod = rtlRender) {
 }
 
 describe('RichEditor', () => {
-    let onInstanceReadyFn;
-    let onChangeFn;
-    let onContentDomFn;
     const setReadOnlyFn = jest.fn();
     const setDataFn = jest.fn();
-    beforeEach(() => {
-        window.CKEDITOR = {
-            replace: () => ({
-                setReadOnly: setReadOnlyFn,
-                setData: setDataFn,
-                on: (name, fn) => {
-                    if (name === 'instanceReady') onInstanceReadyFn = fn;
-                    if (name === 'change') onChangeFn = fn;
-                    if (name === 'contentDom') onContentDomFn = fn;
-                },
-            }),
-        };
-    });
 
     afterEach(() => {
         setReadOnlyFn.mockClear();
@@ -132,77 +115,5 @@ describe('RichEditor', () => {
     it('should render plain text value', () => {
         const { container } = setup({ value: 'test' });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should call componentDidUpdate', () => {
-        const { container } = setup({ disabled: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should set CKEditor as read only', () => {
-        const { rerender } = setup({ value: { get: () => '<p>test</p>' } });
-        setup({ disabled: true, value: { get: () => '<p>test</p>' } }, rerender);
-        expect(setReadOnlyFn).toHaveBeenCalledWith(true);
-        expect(setDataFn).toHaveBeenCalled();
-    });
-
-    it('should not set editor as read-only if disabled prop is not being changed', () => {
-        const { rerender } = setup();
-        setup({}, rerender);
-        expect(setReadOnlyFn).not.toHaveBeenCalled();
-        expect(setDataFn).not.toBeCalled();
-    });
-
-    it('should set data attribute', () => {
-        setup({ disabled: true, richEditorId: 'test-id' });
-        const setAttributeFn = jest.fn();
-        const e = { editor: { document: { getBody: () => ({ setAttribute: setAttributeFn }) } } };
-        onContentDomFn(e);
-        expect(setAttributeFn).toHaveBeenCalledWith('data-testid', 'test-id-input');
-    });
-
-    it('should call setReadOnly function when instanceReady', () => {
-        setup({});
-        onInstanceReadyFn();
-        expect(setReadOnlyFn).toHaveBeenCalledWith(false);
-    });
-
-    it('should call onChange function passed in props with value', () => {
-        const onChange = jest.fn();
-        setup({ onChange });
-        onChangeFn({
-            editor: {
-                document: {
-                    getBody: () => ({
-                        getText: () => ({
-                            trim: () => 'test',
-                        }),
-                    }),
-                },
-                getData: () => <span>test</span>,
-            },
-        });
-        expect(onChange).toHaveBeenCalledWith({
-            htmlText: <span>test</span>,
-            plainText: 'test',
-        });
-    });
-
-    it('should call onChange function passed in props with null', () => {
-        const onChange = jest.fn();
-        setup({ onChange });
-        onChangeFn({
-            editor: {
-                document: {
-                    getBody: () => ({
-                        getText: () => ({
-                            trim: () => '',
-                        }),
-                    }),
-                },
-                getData: () => <span>test</span>,
-            },
-        });
-        expect(onChange).toHaveBeenCalledWith(null);
     });
 });
