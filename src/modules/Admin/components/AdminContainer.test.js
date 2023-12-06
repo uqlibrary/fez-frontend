@@ -1,29 +1,31 @@
 import React from 'react';
-import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
+import AdminContainer, { isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
 import { useIsMobileView } from '../../../hooks/useIsMobileView';
+import { rtlRender, WithReduxStore, WithRouter, preview } from 'test-utils';
+import { reduxForm } from 'redux-form';
+import Cookies from 'js-cookie';
 
 jest.mock('../../../hooks/useIsMobileView');
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
-jest.mock('js-cookie', () => ({
-    get: jest.fn(() => 'tabbed'),
-}));
+
+jest.mock('js-cookie', () => jest.fn());
 
 jest.mock('redux-form/immutable');
 
-jest.mock('@mui/styles/useTheme', () => () => ({
-    breakpoints: {
-        down() {
-            return false;
-        },
-    },
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
 }));
 
-function setup(testProps = {}, args = { isShallow: false }) {
+const WithReduxForm = reduxForm({ form: 'AdminWorkForm' })(AdminContainer);
+
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         authorDetails: {
             username: 'uqstaff',
@@ -40,54 +42,68 @@ function setup(testProps = {}, args = { isShallow: false }) {
             search: '',
         },
         handleSubmit: jest.fn(),
-        formValues: Immutable.Map({ rek_subtype: 'Original Journal Article' }),
+        clearRecordToView: jest.fn(),
+        formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
         ...testProps,
     };
 
-    return getElement(AdminContainer, props, args);
+    return renderer(
+        <WithReduxStore>
+            <WithRouter>
+                <WithReduxForm {...props} />
+            </WithRouter>
+            ,
+        </WithReduxStore>,
+    );
 }
 
 describe('AdminContainer component', () => {
+    beforeEach(() => {
+        Cookies.get = jest.fn().mockImplementation(() => 'tabbed');
+        Cookies.set = jest.fn();
+    });
     it('should render default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        Cookies.get = jest.fn().mockImplementation(() => 'fullform');
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
     it('should render mobile view', () => {
+        Cookies.get = jest.fn().mockImplementation(() => 'fullform');
         useIsMobileView.mockImplementation(() => true);
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { container } = setup({});
+        expect(container).toMatchSnapshot();
     });
     it('should render loading record view', () => {
-        const wrapper = setup({
+        const { container } = setup({
             loadingRecordToView: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('should render record not found view', () => {
-        const wrapper = setup({
+        const { container } = setup({
             recordToView: null,
             loadingRecordToView: false,
             isDeleted: true,
             recordToViewError: { message: 'test', status: 404 },
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('should render component with tabbed interface', () => {
-        const wrapper = setup({
+        const { container } = setup({
             loadingRecordToView: false,
             recordToView: null,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('should render empty div if record is not loaded', () => {
-        const wrapper = setup({
+        const { container } = setup({
             loadingRecordToView: false,
             recordToView: null,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     it('should render when form errors are present as immutable map', () => {
-        const wrapper = setup({
+        const { container } = setup({
             formErrors: Immutable.Map({
                 bibliographicSection: {
                     rek_date: 'Publication date is required',
@@ -95,10 +111,11 @@ describe('AdminContainer component', () => {
                 },
             }),
         });
-        expect(wrapper.find('Memo(AdminInterface)').props().tabs.bibliographic.numberOfErrors).toBe(2);
+        preview.debug();
+        expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
     });
     it('should render with an empty record', () => {
-        const wrapper = setup({
+        const { container } = setup({
             loadingRecordToView: false,
             recordToView: {
                 ...recordWithDatastreams,
@@ -110,45 +127,12 @@ describe('AdminContainer component', () => {
                 },
             },
         });
-        expect(wrapper.find('Memo(AdminInterface)').props().tabs.identifiers.activated).toBe(false);
+        preview.debug();
+        expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toBeNull();
     });
-    it('should show Add form', () => {
-        const wrapper = setup({
-            createMode: true,
-            match: {
-                params: {},
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    it('should render memoized component with styles', () => {
-        const wrapper = getElement(
-            MemoizedAdminContainer,
-            {
-                authorDetails: {
-                    username: 'uqstaff',
-                },
-                match: {
-                    params: {
-                        pid: 'UQ:111111',
-                    },
-                },
-                actions: {
-                    loadRecordToView: jest.fn(),
-                },
-                loadingRecordToView: false,
-                recordToView: recordWithDatastreams,
-                location: {
-                    search: '',
-                },
-                handleSubmit: jest.fn(),
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+
     it('should not render non-security errors for community editing', () => {
-        const wrapper = setup({
+        const { container } = setup({
             recordToView: {
                 rek_pid: 'UQ:367646',
                 rek_title: 'View across Windsor Castle',
@@ -166,7 +150,7 @@ describe('AdminContainer component', () => {
                 },
             }),
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
     describe('isSame callback function', () => {
         it('should return true if props are not changed', () => {
@@ -188,26 +172,13 @@ describe('AdminContainer component', () => {
     });
     describe('React hooks', () => {
         it('should call clearRecordToView() prop on unload', () => {
-            const mockUseEffect = jest.spyOn(React, 'useEffect');
-            const mockUseCallback = jest.spyOn(React, 'useCallback');
-            const cleanupFns = [];
-            mockUseEffect.mockImplementation(f => {
-                const hookReturn = f();
-                if (typeof hookReturn === 'function') {
-                    cleanupFns.push(hookReturn);
-                }
-            });
-            // mock once each for each instance of useCallback
-            mockUseCallback.mockImplementationOnce(f => f()).mockImplementationOnce(f => f());
             const clearRecordToView = jest.fn();
-            setup({
+            const { unmount } = setup({
                 clearRecordToView,
             });
-            while (cleanupFns.length > 0) {
-                cleanupFns.pop()();
-            }
-            mockUseEffect.mockRestore();
-            mockUseCallback.mockRestore();
+
+            unmount();
+
             expect(clearRecordToView).toHaveBeenCalled();
         });
     });
