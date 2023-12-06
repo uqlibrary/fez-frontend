@@ -1,43 +1,39 @@
-it('temp', () => {
-    expect(1).toBeTruthy();
+import React from 'react';
+import { rtlRender, WithReduxStore } from 'test-utils';
+import BibliographicSectionContainer from './BibliographicSectionContainer';
+
+jest.mock('../../../../context');
+import { useJournalContext } from 'context';
+import { journalDoaj } from 'mock/data';
+import { reduxForm } from 'redux-form';
+
+const WithReduxForm = reduxForm({
+    form: 'AdminJournalForm',
+})(BibliographicSectionContainer);
+
+function setup(testProps = {}, renderer = rtlRender) {
+    const props = {
+        ...testProps,
+    };
+
+    return renderer(
+        <WithReduxStore>
+            <WithReduxForm {...props} />
+        </WithReduxStore>,
+    );
+}
+
+describe('BibliographicSectionContainer component', () => {
+    it('should render default view', () => {
+        useJournalContext.mockImplementation(() => ({
+            journalDetails: {
+                ...journalDoaj.data,
+            },
+            jnlDisplayType: 'adminjournal',
+        }));
+
+        const { getByTestId } = setup();
+        expect(document.querySelector('.AdminCard')).toHaveTextContent('ISSN');
+        expect(getByTestId('jnl_issn_jid-input')).toBeInTheDocument();
+    });
 });
-// import BibliographicSectionContainer from './BibliographicSectionContainer';
-// import Immutable from 'immutable';
-
-// jest.mock('../../../../context');
-// import { useRecordContext } from 'context';
-
-// function setup(testProps = {}, args = { isShallow: true }) {
-//     const props = {
-//         ...testProps,
-//     };
-
-//     return renderComponent(BibliographicSectionContainer, props, args);
-// }
-
-// describe('BibliographicSectionContainer component', () => {
-//     it('should render default view', () => {
-//         useRecordContext.mockImplementation(() => ({
-//             record: {
-//                 rek_pid: 'UQ:123456',
-//                 rek_object_type_lookup: 'Record',
-//                 fez_record_search_key_ismemberof: [
-//                     {
-//                         rek_ismemberof: 'Test collection',
-//                         parent: {
-//                             rek_security_policy: 2,
-//                             rek_datastream_policy: 1,
-//                         },
-//                     },
-//                 ],
-//                 rek_display_type: 179,
-//             },
-//         }));
-
-//         const render = setup(
-//             {},
-//             { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store },
-//         );
-//         expect(render.getRenderOutput()).toMatchSnapshot();
-//     });
-// });
