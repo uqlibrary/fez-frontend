@@ -16,6 +16,7 @@ let apiClient = axios.create({
     crossdomain: true,
 });
 
+/* istanbul ignore next */
 if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && !isCypressTest()) {
     apiClient = setupCache(apiClient, {
         // unfortunately, using the option below to disable cache for tests doesn't work. Some test fails regardless.
