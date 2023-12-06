@@ -5,11 +5,11 @@ global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
 global.dc = (...args) => args.forEach(arg => console.log(arg));
 global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
 
+/* istanbul ignore next */
 const getNodeEnvVar = (key, _default = undefined) => {
     try {
         return !!process.env[key];
     } catch (e) {
-        /* istanbul ignore next */
         return _default;
     }
 };
