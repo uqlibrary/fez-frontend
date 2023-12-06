@@ -9,18 +9,18 @@ import locale from 'locale/global';
 import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
-import { isCypressTest } from '../helpers/general';
+import { isTest } from '../helpers/general';
 
 let apiClient = axios.create({
     baseURL: API_URL,
     crossdomain: true,
 });
 
-/* istanbul ignore next */
-if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && !isCypressTest()) {
+if (!isTest()) {
+    // note: axios-cache-interceptor is not compatible with tests
+    // upon updating it or changing config settings, make sure to test it using prodtest env while having "debug" config
+    // key uncommented below (make sure to disable stripping of console functions in webpack-dist.config.js too)
     apiClient = setupCache(apiClient, {
-        // unfortunately, using the option below to disable cache for tests doesn't work. Some test fails regardless.
-        // cache: process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc'
         // debug: dc,
         ttl: 15 * 60 * 1000,
     });

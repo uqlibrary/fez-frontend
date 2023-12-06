@@ -9,12 +9,14 @@ const getNodeEnvVar = (key, _default = undefined) => {
     try {
         return !!process.env[key];
     } catch (e) {
+        /* istanbul ignore next */
         return _default;
     }
 };
 
 export const isJestTest = () => getNodeEnvVar('JEST_WORKER_ID', false);
 export const isCypressTest = () => !!window.Cypress;
+export const isTest = () => isJestTest() || isCypressTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
