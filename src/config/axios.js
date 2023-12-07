@@ -20,28 +20,31 @@ if (!isTest()) {
     // note: axios-cache-interceptor is not compatible with tests
     // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {
-        // debug: dc, // only works with when importing from "axios-cache-interceptor.dev"
+        // only works when importing from "axios-cache-interceptor.dev"
+        // make sure to disable stripping of console.* funcs in webpack-dist.config.json
+        debug: dc,
         ttl: 15 * 60 * 1000,
     });
 
     // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
     const nonCachedRoutes = ['records/search', 'journals/search', 'orcid'];
     apiClient.interceptors.request.use(request => {
+        const queryStringParams = Object.keys(request.params || {});
         if (
-            request.cache &&
+            !!request.cache &&
             // disabled it when querystring params are present or when it partially matches a non cached route
-            (Object.keys(request.params || {}).length ||
+            (queryStringParams.length ||
                 request.url.includes('?') ||
                 nonCachedRoutes.find(route => request.url.includes(route)))
         ) {
             /* eslint-disable max-len */
-            // dc(`disabling cache for: ${request.url}${request.params.length ? `?${JSON.stringify(request.params)}` : ''}`);
+            // dc(`disabling cache for: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
             // disabled cache
             request.cache = false;
             return request;
         }
         /* eslint-disable max-len */
-        // dc(`the following request will be cached: ${request.url}${request.params.length ? `?${JSON.stringify(request.params)}` : ''}`);
+        // dc(`the following request will be cached: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
         return request;
     });
 }
