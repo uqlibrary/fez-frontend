@@ -20,7 +20,7 @@ import {
 import { journalArticle } from '../../../../mock/data/testing/records';
 import { getAvState } from '../../../../helpers/datastreams';
 import { getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
-import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
+import { createFezDatastreamInfoArray, withDatastreams } from 'test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
 import moment from 'moment';
 
@@ -484,7 +484,7 @@ describe('AttachedFiles component', () => {
         expect(getByText(text)).toBeInTheDocument();
     });
 
-    it('should toggle preview', async done => {
+    it('should toggle preview', async () => {
         window.matchMedia = createMatchMedia(1024);
         const dataStreams = [
             {
@@ -591,8 +591,6 @@ describe('AttachedFiles component', () => {
         fireEvent.click(getByTestId('file-name-1-preview'));
         fireEvent.click(within(getByTestId('media-preview')).getByRole('button', { name: 'Close' }));
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
-
-        done();
     });
 
     it('should have helper to get the open access status of a file', () => {

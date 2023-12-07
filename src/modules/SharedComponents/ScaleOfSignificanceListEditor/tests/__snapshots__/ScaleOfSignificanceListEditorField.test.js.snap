@@ -4,7 +4,7 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 <Memo(Connect(ScaleOfSignificanceListEditor))
   errorText={null}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
@@ -16,13 +16,13 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> with error attributes 1`] = `
 <Memo(Connect(ScaleOfSignificanceListEditor))
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   listEditorId="rek-significance"
   meta={
-    Object {
+    {
       "errorText": "test",
     }
   }
