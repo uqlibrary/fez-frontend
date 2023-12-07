@@ -25,19 +25,21 @@ if (!isTest()) {
     });
 
     // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
-    const nonCachedRoutes = ['records/search', 'orcid'];
+    const nonCachedRoutes = ['records/search', 'journals/search', 'orcid'];
     apiClient.interceptors.request.use(request => {
         if (
             request.cache &&
             // disabled it when querystring params are present or when it partially matches a non cached route
             (Object.keys(request.params || {}).length || nonCachedRoutes.find(route => request.url.includes(route)))
         ) {
-            // dc(`disabling cache for ${request.url}?${JSON.stringify(request.params)}`);
+            /* eslint-disable max-len */
+            // dc(`disabling cache for: ${request.url}${request.params.length ? `?${JSON.stringify(request.params)}` : ''}`);
             // disabled cache
             request.cache = false;
             return request;
         }
-        // dc(`the following request will be ${request.url}?${JSON.stringify(request.params)}`);
+        /* eslint-disable max-len */
+        // dc(`the following request will be cached: ${request.url}${request.params.length ? `?${JSON.stringify(request.params)}` : ''}`);
         return request;
     });
 }
