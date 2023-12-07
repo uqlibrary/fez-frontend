@@ -16,8 +16,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const { advisoryStatement, ...rest } = data;
     return {
-        ...(!!advisoryStatement && !!(advisoryStatement?.htmlText ?? null)
-            ? { jnl_advisory_statement: advisoryStatement.htmlText }
+        ...(!!advisoryStatement && !!(advisoryStatement?.htmlText ?? advisoryStatement.plainText ?? null)
+            ? { jnl_advisory_statement: advisoryStatement.htmlText || advisoryStatement.plainText }
             : { jnl_advisory_statement: null }),
         ...rest,
     };

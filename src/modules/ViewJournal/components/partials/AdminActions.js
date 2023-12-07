@@ -32,7 +32,7 @@ export const AdminActions = ({ adminActions = [...defaultActions], navigatedFrom
                 navigateToUrl(
                     url,
                     event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
-                    !!action.isRecordEdit && navigatedFrom,
+                    !!action.isJournalEdit && navigatedFrom,
                     options,
                 );
             });

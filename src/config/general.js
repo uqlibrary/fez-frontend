@@ -1358,7 +1358,7 @@ export const JOURNAL_ACTION_URLS = [
         url: jid => `${APP_URL}${PATH_PREFIX}admin/journal/edit/${jid}`,
         inApp: true,
         options: null,
-        isRecordEdit: true,
+        isJournalEdit: true,
     },
 ];
 
