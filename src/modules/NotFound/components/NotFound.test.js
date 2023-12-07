@@ -72,7 +72,7 @@ describe('NotFound page component', () => {
         expect(getByText('The requested page is available to authorised users only.')).toBeInTheDocument();
     });
 
-    it('should render not found page', async done => {
+    it('should render not found page', async () => {
         useLocationHook.mockImplementation(() => ({ pathname: '/abcd' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
@@ -92,11 +92,9 @@ describe('NotFound page component', () => {
         expect(
             getByText('If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.'),
         ).toBeInTheDocument();
-
-        done();
     });
 
-    it('should render not found page for path containing more than one slash', async done => {
+    it('should render not found page for path containing more than one slash', async () => {
         useLocationHook.mockImplementation(() => ({ pathname: '/abcd/test.pdf' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
@@ -116,11 +114,9 @@ describe('NotFound page component', () => {
         ).toBeInTheDocument();
 
         expect(getFavouriteSearchAlias).not.toBeCalled();
-
-        done();
     });
 
-    it('should redirect to records search page if alias found', async done => {
+    it('should redirect to records search page if alias found', async () => {
         mockApi.onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'abcd' }).apiUrl).reply(200, {
             data: { fvs_id: 1, fvs_alias: 'abcd', fvs_search_parameters: '/records/search?test=parameters' },
         });
@@ -139,6 +135,5 @@ describe('NotFound page component', () => {
         });
 
         await waitForElementToBeRemoved(() => getByTestId('empty'));
-        done();
     });
 });

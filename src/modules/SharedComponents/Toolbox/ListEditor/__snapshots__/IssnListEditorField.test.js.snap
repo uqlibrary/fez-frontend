@@ -9,16 +9,16 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
   getItemSelectedToEdit={[Function]}
   hideReorder={false}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
   locale={
-    Object {
-      "form": Object {
-        "locale": Object {
+    {
+      "form": {
+        "locale": {
           "inputFieldLabel": "NoLabel",
         },
       },
@@ -31,7 +31,7 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
   scrollList={false}
   scrollListHeight={250}
   searchKey={
-    Object {
+    {
       "order": "rek_order",
       "value": "rek_value",
     }
@@ -50,16 +50,16 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
   getItemSelectedToEdit={[Function]}
   hideReorder={false}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
   locale={
-    Object {
-      "form": Object {
-        "locale": Object {
+    {
+      "form": {
+        "locale": {
           "inputFieldLabel": "NoLabel",
         },
       },
@@ -67,7 +67,7 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
   }
   maxCount={0}
   meta={
-    Object {
+    {
       "error": "test",
     }
   }
@@ -77,7 +77,7 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
   scrollList={false}
   scrollListHeight={250}
   searchKey={
-    Object {
+    {
       "order": "rek_order",
       "value": "rek_value",
     }

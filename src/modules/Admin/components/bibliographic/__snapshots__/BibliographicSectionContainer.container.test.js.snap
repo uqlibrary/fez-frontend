@@ -3,8 +3,8 @@
 exports[`BibliographicSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {},
+    {
+      "formValues": {},
     }
   }
 >
@@ -15,8 +15,8 @@ exports[`BibliographicSectionContainer component should render default view 1`] 
 exports[`BibliographicSectionContainer component should render disabled view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {},
+    {
+      "formValues": {},
     }
   }
 >

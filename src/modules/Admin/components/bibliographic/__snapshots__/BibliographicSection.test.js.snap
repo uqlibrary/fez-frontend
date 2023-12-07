@@ -3,90 +3,90 @@
 exports[`BibliographicSection component should render default view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "rek_title",
           ],
         ],
         "title": "Title",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "languages",
           ],
-          Array [
+          [
             "fez_record_search_key_journal_name",
             "fez_matched_journals",
           ],
         ],
         "title": "Language of work & Journal name",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isbn",
           ],
         ],
         "title": "ISBN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "issns",
           ],
         ],
         "title": "ISSN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_place_of_publication",
             "fez_record_search_key_publisher",
           ],
-          Array [
+          [
             "fez_record_search_key_volume_number",
             "fez_record_search_key_issue_number",
             "fez_record_search_key_article_number",
           ],
-          Array [
+          [
             "fez_record_search_key_start_page",
             "fez_record_search_key_end_page",
             "fez_record_search_key_total_pages",
           ],
-          Array [
+          [
             "rek_date",
           ],
-          Array [
+          [
             "fez_record_search_key_date_available",
           ],
-          Array [
+          [
             "rek_description",
           ],
         ],
         "title": "Bibliographic",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_keywords",
           ],
         ],
         "title": "Keyword(s)",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "subjects",
           ],
         ],
         "title": "Subject",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isderivationof",
           ],
         ],
@@ -101,92 +101,92 @@ exports[`BibliographicSection component should render default view 1`] = `
 exports[`BibliographicSection component should render design form fields 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "rek_title",
           ],
         ],
         "title": "Title",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "languages",
           ],
         ],
         "title": "Language of work",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isbn",
           ],
         ],
         "title": "ISBN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "issns",
           ],
         ],
         "title": "ISSN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_place_of_publication",
             "fez_record_search_key_publisher",
           ],
-          Array [
+          [
             "fez_record_search_key_edition",
             "fez_record_search_key_volume_number",
             "fez_record_search_key_issue_number",
           ],
-          Array [
+          [
             "fez_record_search_key_series",
           ],
-          Array [
+          [
             "fez_record_search_key_start_page",
             "fez_record_search_key_end_page",
             "fez_record_search_key_total_pages",
           ],
-          Array [
+          [
             "rek_date",
           ],
-          Array [
+          [
             "fez_record_search_key_date_available",
           ],
-          Array [
+          [
             "rek_description",
           ],
-          Array [
+          [
             "fez_record_search_key_original_format",
           ],
         ],
         "title": "Bibliographic",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_keywords",
           ],
         ],
         "title": "Keyword(s)",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "subjects",
           ],
         ],
         "title": "Subject",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isderivationof",
           ],
         ],
@@ -201,90 +201,90 @@ exports[`BibliographicSection component should render design form fields 1`] = `
 exports[`BibliographicSection component should render disabled view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "rek_title",
           ],
         ],
         "title": "Title",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "languages",
           ],
-          Array [
+          [
             "fez_record_search_key_journal_name",
             "fez_matched_journals",
           ],
         ],
         "title": "Language of work & Journal name",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isbn",
           ],
         ],
         "title": "ISBN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "issns",
           ],
         ],
         "title": "ISSN",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_place_of_publication",
             "fez_record_search_key_publisher",
           ],
-          Array [
+          [
             "fez_record_search_key_volume_number",
             "fez_record_search_key_issue_number",
             "fez_record_search_key_article_number",
           ],
-          Array [
+          [
             "fez_record_search_key_start_page",
             "fez_record_search_key_end_page",
             "fez_record_search_key_total_pages",
           ],
-          Array [
+          [
             "rek_date",
           ],
-          Array [
+          [
             "fez_record_search_key_date_available",
           ],
-          Array [
+          [
             "rek_description",
           ],
         ],
         "title": "Bibliographic",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_keywords",
           ],
         ],
         "title": "Keyword(s)",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "subjects",
           ],
         ],
         "title": "Subject",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "fez_record_search_key_isderivationof",
           ],
         ],

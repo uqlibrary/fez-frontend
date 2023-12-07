@@ -3,18 +3,18 @@
 exports[`AuthorsSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
+    {
       "getServerState": undefined,
       "noopCheck": "once",
       "stabilityCheck": "once",
-      "store": Object {
+      "store": {
         "dispatch": [MockFunction],
         "getState": [MockFunction] {
-          "calls": Array [
-            Array [],
+          "calls": [
+            [],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": Immutable.Map {},
             },
@@ -22,7 +22,7 @@ exports[`AuthorsSectionContainer component should render default view 1`] = `
         },
         "subscribe": [MockFunction],
       },
-      "subscription": Object {
+      "subscription": {
         "addNestedSub": [Function],
         "getListeners": [Function],
         "handleChangeWrapper": [Function],
