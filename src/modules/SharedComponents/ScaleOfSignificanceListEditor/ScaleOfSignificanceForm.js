@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
@@ -18,13 +18,12 @@ export const handleSignificanceCallbackFactory = setSignificance => {
     return [callback, [setSignificance]];
 };
 
-export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance, showForm) => {
+export const resetFormCallbackFactory = (setSignificance, showForm) => {
     const callback = () => {
         setSignificance(null);
-        contributionStatementEditor.current.setData(null);
         showForm(false);
     };
-    return [callback, [contributionStatementEditor, setSignificance]];
+    return [callback, [setSignificance]];
 };
 
 export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
@@ -54,21 +53,19 @@ export const ScaleOfSignificanceForm = ({
     itemSelectedToEdit,
     buttonLabel,
     input,
+    hidden,
 }) => {
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
-    const contributionStatementInput = useRef(null);
-    const contributionStatementEditor = useRef(null);
 
     React.useEffect(() => {
+        /* istanbul ignore else */
         if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
             setSignificance(itemSelectedToEdit.key);
             setContributionStatement(itemSelectedToEdit.value);
-            contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
         } else {
             setSignificance(null);
             setContributionStatement('');
-            contributionStatementEditor.current.setData('');
         }
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
@@ -79,7 +76,7 @@ export const ScaleOfSignificanceForm = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance, showForm));
+    const resetForm = useCallback(...resetFormCallbackFactory(setSignificance, showForm));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const saveChanges = useCallback(
         ...saveCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
@@ -97,8 +94,18 @@ export const ScaleOfSignificanceForm = ({
 
     const isValidStatement = statement => !!statement?.plainText?.trim();
 
+    function getContributionStatement() {
+        return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
+    }
+
     return (
-        <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">
+        <Grid
+            container
+            spacing={2}
+            display={hidden ? 'none' : 'row'}
+            alignItems="center"
+            data-testid="rek-significance-form"
+        >
             {!!authorOrderAlert && (
                 <Grid item xs={12}>
                     <Alert {...authorOrderAlert} />
@@ -119,7 +126,6 @@ export const ScaleOfSignificanceForm = ({
             </Grid>
             <Grid item xs={12}>
                 <RichEditorField
-                    fullWidth
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
                     id={(!!id && /* istanbul ignore next */ id) || ''}
@@ -127,8 +133,6 @@ export const ScaleOfSignificanceForm = ({
                     onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
-                    inputRef={contributionStatementInput}
-                    instanceRef={contributionStatementEditor}
                     title={contributionStatementInputFieldLabel}
                     titleProps={{
                         variant: 'caption',
@@ -136,7 +140,7 @@ export const ScaleOfSignificanceForm = ({
                             opacity: 0.666,
                         },
                     }}
-                    value={formMode === 'edit' && !!contributionStatement ? contributionStatement : ''}
+                    value={formMode === 'edit' && !!contributionStatement ? getContributionStatement() : ''}
                     input={input}
                     required
                 />
@@ -177,6 +181,7 @@ ScaleOfSignificanceForm.propTypes = {
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
     formMode: PropTypes.string,
+    hidden: PropTypes.bool,
     input: PropTypes.any,
     itemIndexSelectedToEdit: PropTypes.any,
     itemSelectedToEdit: PropTypes.object,

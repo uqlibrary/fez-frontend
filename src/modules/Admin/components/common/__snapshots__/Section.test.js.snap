@@ -15,8 +15,8 @@ exports[`GroupsWithinCard component should render default view 1`] = `
     >
       <Memo
         groups={
-          Array [
-            Array [
+          [
+            [
               "test",
             ],
           ]
@@ -28,12 +28,12 @@ exports[`GroupsWithinCard component should render default view 1`] = `
 `;
 
 exports[`GroupsWithoutCard component should render default view 1`] = `
-Array [
-  Array [
+[
+  [
     <FieldGridItem
       field="test"
       group={
-        Array [
+        [
           "test",
         ]
       }

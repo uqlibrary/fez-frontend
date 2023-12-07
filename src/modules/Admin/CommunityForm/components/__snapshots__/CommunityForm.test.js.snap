@@ -25,7 +25,7 @@ exports[`Community form should ask when redirecting from form with data (even if
             xs={12}
           >
             <StandardCard
-              help={Object {}}
+              help={{}}
               title="Community details"
             >
               <ForwardRef(Grid)
@@ -39,9 +39,9 @@ exports[`Community form should ask when redirecting from form with data (even if
                   <Field
                     autoFocus={true}
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.forward_ref),
-                        "propTypes": Object {
+                        "propTypes": {
                           "FormHelperTextProps": [Function],
                           "InputLabelProps": [Function],
                           "InputProps": [Function],
@@ -92,7 +92,7 @@ exports[`Community form should ask when redirecting from form with data (even if
                     textFieldId="rek-title"
                     type="text"
                     validate={
-                      Array [
+                      [
                         [Function],
                       ]
                     }
@@ -104,9 +104,9 @@ exports[`Community form should ask when redirecting from form with data (even if
                 >
                   <Field
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.forward_ref),
-                        "propTypes": Object {
+                        "propTypes": {
                           "FormHelperTextProps": [Function],
                           "InputLabelProps": [Function],
                           "InputProps": [Function],
@@ -158,7 +158,7 @@ exports[`Community form should ask when redirecting from form with data (even if
                     rows={5}
                     textFieldId="rek-description"
                     validate={
-                      Array [
+                      [
                         [Function],
                       ]
                     }
@@ -173,14 +173,14 @@ exports[`Community form should ask when redirecting from form with data (even if
                   </ForwardRef(Typography)>
                   <Field
                     ListEditorForm={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.memo),
                         "compare": null,
                         "type": [Function],
                       }
                     }
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.memo),
                         "compare": null,
                         "type": [Function],
@@ -188,19 +188,19 @@ exports[`Community form should ask when redirecting from form with data (even if
                     }
                     listEditorId="rek-keywords"
                     locale={
-                      Object {
-                        "form": Object {
-                          "locale": Object {
+                      {
+                        "form": {
+                          "locale": {
                             "addButtonLabel": "Add",
                             "id": "keywords-input",
                             "inputFieldHint": "Type keywords",
                             "inputFieldLabel": "Keywords",
                           },
                         },
-                        "header": Object {
-                          "locale": Object {
+                        "header": {
+                          "locale": {
                             "deleteAll": "Remove all keywords",
-                            "deleteAllConfirmation": Object {
+                            "deleteAllConfirmation": {
                               "cancelButtonLabel": "No",
                               "confirmButtonLabel": "Yes",
                               "confirmationMessage": "Are you sure you want to delete all keywords?",
@@ -210,10 +210,10 @@ exports[`Community form should ask when redirecting from form with data (even if
                             "reorderColumn": "Reorder keywords",
                           },
                         },
-                        "row": Object {
-                          "locale": Object {
+                        "row": {
+                          "locale": {
                             "deleteHint": "Remove this keyword",
-                            "deleteRecordConfirmation": Object {
+                            "deleteRecordConfirmation": {
                               "cancelButtonLabel": "No",
                               "confirmButtonLabel": "Yes",
                               "confirmationMessage": "Are you sure you want to delete this keyword?",
@@ -228,7 +228,7 @@ exports[`Community form should ask when redirecting from form with data (even if
                     maxCount={10}
                     name="fez_record_search_key_keywords"
                     searchKey={
-                      Object {
+                      {
                         "order": "rek_keywords_order",
                         "value": "rek_keywords",
                       }
@@ -532,7 +532,7 @@ exports[`Community form should not ask when redirecting from form with data afte
             xs={12}
           >
             <StandardCard
-              help={Object {}}
+              help={{}}
               title="Community details"
             >
               <ForwardRef(Grid)
@@ -546,9 +546,9 @@ exports[`Community form should not ask when redirecting from form with data afte
                   <Field
                     autoFocus={true}
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.forward_ref),
-                        "propTypes": Object {
+                        "propTypes": {
                           "FormHelperTextProps": [Function],
                           "InputLabelProps": [Function],
                           "InputProps": [Function],
@@ -599,7 +599,7 @@ exports[`Community form should not ask when redirecting from form with data afte
                     textFieldId="rek-title"
                     type="text"
                     validate={
-                      Array [
+                      [
                         [Function],
                       ]
                     }
@@ -611,9 +611,9 @@ exports[`Community form should not ask when redirecting from form with data afte
                 >
                   <Field
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.forward_ref),
-                        "propTypes": Object {
+                        "propTypes": {
                           "FormHelperTextProps": [Function],
                           "InputLabelProps": [Function],
                           "InputProps": [Function],
@@ -665,7 +665,7 @@ exports[`Community form should not ask when redirecting from form with data afte
                     rows={5}
                     textFieldId="rek-description"
                     validate={
-                      Array [
+                      [
                         [Function],
                       ]
                     }
@@ -680,14 +680,14 @@ exports[`Community form should not ask when redirecting from form with data afte
                   </ForwardRef(Typography)>
                   <Field
                     ListEditorForm={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.memo),
                         "compare": null,
                         "type": [Function],
                       }
                     }
                     component={
-                      Object {
+                      {
                         "$$typeof": Symbol(react.memo),
                         "compare": null,
                         "type": [Function],
@@ -695,19 +695,19 @@ exports[`Community form should not ask when redirecting from form with data afte
                     }
                     listEditorId="rek-keywords"
                     locale={
-                      Object {
-                        "form": Object {
-                          "locale": Object {
+                      {
+                        "form": {
+                          "locale": {
                             "addButtonLabel": "Add",
                             "id": "keywords-input",
                             "inputFieldHint": "Type keywords",
                             "inputFieldLabel": "Keywords",
                           },
                         },
-                        "header": Object {
-                          "locale": Object {
+                        "header": {
+                          "locale": {
                             "deleteAll": "Remove all keywords",
-                            "deleteAllConfirmation": Object {
+                            "deleteAllConfirmation": {
                               "cancelButtonLabel": "No",
                               "confirmButtonLabel": "Yes",
                               "confirmationMessage": "Are you sure you want to delete all keywords?",
@@ -717,10 +717,10 @@ exports[`Community form should not ask when redirecting from form with data afte
                             "reorderColumn": "Reorder keywords",
                           },
                         },
-                        "row": Object {
-                          "locale": Object {
+                        "row": {
+                          "locale": {
                             "deleteHint": "Remove this keyword",
-                            "deleteRecordConfirmation": Object {
+                            "deleteRecordConfirmation": {
                               "cancelButtonLabel": "No",
                               "confirmButtonLabel": "Yes",
                               "confirmationMessage": "Are you sure you want to delete this keyword?",
@@ -735,7 +735,7 @@ exports[`Community form should not ask when redirecting from form with data afte
                     maxCount={10}
                     name="fez_record_search_key_keywords"
                     searchKey={
-                      Object {
+                      {
                         "order": "rek_keywords_order",
                         "value": "rek_keywords",
                       }

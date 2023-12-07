@@ -6,7 +6,8 @@ function setup(testProps = {}) {
     const props = {
         item: {
             id: 0,
-            value: {},
+            scaleValue: null,
+            signifValue: {},
             author: {
                 rek_author: '',
             },
@@ -26,9 +27,13 @@ describe('ScaleOfSignificanceTemplate component', () => {
         const { container } = setup({
             item: {
                 id: 0,
-                value: {},
+                key: null,
+                scaleValue: 454027,
+                signifValue: {
+                    htmlText: '<p>A creative statement</p>',
+                },
                 author: {
-                    rek_author: 'author',
+                    rek_author: 'Joe Smith',
                 },
             },
         });

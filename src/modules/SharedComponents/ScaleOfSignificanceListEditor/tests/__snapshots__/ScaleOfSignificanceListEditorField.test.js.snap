@@ -8,16 +8,16 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
   errorText={null}
   hideReorder={false}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   inputNormalizer={[Function]}
   listEditorId="rek-significance"
   locale={
-    Object {
-      "form": Object {
-        "locale": Object {
+    {
+      "form": {
+        "locale": {
           "addButtonLabel": "Add item",
           "editButtonLabel": "Edit item",
           "significanceInputFieldLabel": "NoLabel",
@@ -29,7 +29,7 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
   onChange={[MockFunction]}
   required={false}
   searchKey={
-    Object {
+    {
       "order": "rek_order",
       "value": "rek_value",
     }
@@ -46,16 +46,16 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
   errorText=""
   hideReorder={false}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   inputNormalizer={[Function]}
   listEditorId="rek-significance"
   locale={
-    Object {
-      "form": Object {
-        "locale": Object {
+    {
+      "form": {
+        "locale": {
           "addButtonLabel": "Add item",
           "editButtonLabel": "Edit item",
           "significanceInputFieldLabel": "NoLabel",
@@ -65,14 +65,14 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
   }
   maxCount={0}
   meta={
-    Object {
+    {
       "errorText": "test",
     }
   }
   onChange={[MockFunction]}
   required={false}
   searchKey={
-    Object {
+    {
       "order": "rek_order",
       "value": "rek_value",
     }

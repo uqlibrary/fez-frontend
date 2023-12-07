@@ -2,51 +2,49 @@
  * CKEditor-specific
  */
 
-const waitForCKEditorInstance = instanceName =>
-    cy.waitUntil(() =>
-        cy.window().then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
-    );
-
-// Allows the targeting of CKEditors
-// CKeditor dynamically names instances as "editor1", "editor2" etc.
 // USAGE : cy.typeCKEditor('editor1', '<p>This is some text</p>');
 Cypress.Commands.add('typeCKEditor', (element, content) => {
-    waitForCKEditorInstance(element);
-    cy.log(`Found #cke_${element}`);
-    cy.window()
-        .its(`CKEDITOR.instances.${element}`)
-        .invoke('setData', content)
-        .then(() => cy.log(`Typed "${content}"`));
+    return cy
+        .get('[data-testid="' + element + '"] .ck-editor__main p')
+        .should('exist')
+        .type(content);
 });
 
 // Read text from CKEditor instance
 // Usage example:
 // cy.readCKEditor('editor1')
 //     .then(text => {
-//         cy.wrap(text)
-//             .should('eq', expected);
+//         expect(text).to.contain(expected);
 //     });
 Cypress.Commands.add('readCKEditor', element => {
-    waitForCKEditorInstance(element);
-    return cy
-        .window()
-        .its(`CKEDITOR.instances.${element}`)
-        .invoke('getData');
+    return cy.get(`[data-testid="${element}"] .ck-editor__main p`).should('exist');
+    // .should('be.visible')
 });
 
-Cypress.Commands.add('killCKEditor', () => {
-    cy.window()
-        .its('CKEDITOR.instances')
-        .then(instances =>
-            Object.keys(instances).forEach(instance => {
-                instances[instance].removeAllListeners();
-                instances[instance].destroy(false);
-            }),
-        )
-        .then(() =>
-            cy
-                .window()
-                .its('CKEDITOR')
-                .invoke('removeAllListeners'),
-        );
+// check content of from CKEditor instance
+// Usage example:
+// cy.checkCKEditor('rek-title', 'words);
+Cypress.Commands.add('checkCKEditor', (element, content = null) => {
+    if (content !== null) {
+        return cy
+            .get('[data-testid="' + element + '"] .ck-editor__main p')
+            .should('exist')
+            .then(text => {
+                expect(text).to.contain(content);
+            });
+    } else {
+        return cy
+            .get('[data-testid="' + element + '"] .ck-editor__main p')
+            .should('exist')
+            .find('[data-cke-filler="true"]')
+            .should('exist');
+    }
+});
+
+Cypress.Commands.add('assertCKEditorEmpty', element => {
+    return cy
+        .get('[data-testid="' + element + '"] .ck-editor__main p')
+        .should('exist')
+        .find('[data-cke-filler="true"]')
+        .should('exist');
 });

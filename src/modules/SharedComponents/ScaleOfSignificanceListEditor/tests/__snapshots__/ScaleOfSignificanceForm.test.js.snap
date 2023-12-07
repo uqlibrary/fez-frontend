@@ -11,7 +11,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   <ForwardRef(Grid)
     item={true}
     style={
-      Object {
+      {
         "flexGrow": 1,
       }
     }
@@ -21,12 +21,12 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       error={true}
       genericSelectFieldId="rek-significance"
       itemsList={
-        Array [
-          Object {
+        [
+          {
             "text": "Minor",
             "value": 454027,
           },
-          Object {
+          {
             "text": "Major",
             "value": 454026,
           },
@@ -43,26 +43,15 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   >
     <RichEditorField
       error={false}
-      fullWidth={true}
       id=""
-      inputRef={
-        Object {
-          "current": null,
-        }
-      }
-      instanceRef={
-        Object {
-          "current": null,
-        }
-      }
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}
       required={true}
       richEditorId="rek-creator-contribution-statement"
       titleProps={
-        Object {
-          "style": Object {
+        {
+          "style": {
             "opacity": 0.666,
           },
           "variant": "caption",
@@ -115,7 +104,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
   <ForwardRef(Grid)
     item={true}
     style={
-      Object {
+      {
         "flexGrow": 1,
       }
     }
@@ -125,12 +114,12 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
       error={true}
       genericSelectFieldId="rek-significance"
       itemsList={
-        Array [
-          Object {
+        [
+          {
             "text": "Minor",
             "value": 454027,
           },
-          Object {
+          {
             "text": "Major",
             "value": 454026,
           },
@@ -147,26 +136,15 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
   >
     <RichEditorField
       error={false}
-      fullWidth={true}
       id="100"
-      inputRef={
-        Object {
-          "current": null,
-        }
-      }
-      instanceRef={
-        Object {
-          "current": null,
-        }
-      }
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}
       required={true}
       richEditorId="rek-creator-contribution-statement"
       titleProps={
-        Object {
-          "style": Object {
+        {
+          "style": {
             "opacity": 0.666,
           },
           "variant": "caption",

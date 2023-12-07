@@ -14,7 +14,7 @@ function setup(testProps = {}) {
 }
 
 describe('BatchImport Component', () => {
-    it('should successfully submit form and display success message', async done => {
+    it('should successfully submit form and display success message', async () => {
         const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
 
         mockApi
@@ -66,11 +66,9 @@ describe('BatchImport Component', () => {
         expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
         expect(getByTestId('batch-import-submit')).toHaveAttribute('disabled');
         expect(createBatchImport).toBeCalled();
-
-        done();
     });
 
-    it('should submit batch import and display submission error', async done => {
+    it('should submit batch import and display submission error', async () => {
         const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
 
         mockApi
@@ -120,8 +118,6 @@ describe('BatchImport Component', () => {
         await waitFor(() => getByTestId('alert-error-batch-import'));
 
         expect(createBatchImport).toBeCalled();
-
-        done();
     });
 
     it('should hide all other fields except directory selector', async () => {
