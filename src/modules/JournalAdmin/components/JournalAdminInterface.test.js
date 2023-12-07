@@ -2,7 +2,6 @@ import React from 'react';
 import { JournalAdminInterface, navigateToSearchResult } from './JournalAdminInterface';
 import { useAccountContext, useJournalContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
-
 import { journalDoaj } from 'mock/data';
 
 import * as redux from 'react-redux';
@@ -253,7 +252,6 @@ describe('JournalAdminInterface component', () => {
                     },
                 },
             });
-
             expect(getByTestId('alert-error')).toHaveTextContent(
                 'THIS WORK IS LOCKED - ' +
                     'This work is currently being edited by Test User (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.',
@@ -480,5 +478,21 @@ describe('JournalAdminInterface component', () => {
         };
         navigateToSearchResult(authorDetails, history, location);
         expect(pushFn).toHaveBeenCalledWith('/dashboard');
+    });
+
+    describe('coverage', () => {
+        beforeEach(() => {
+            useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        });
+        afterEach(() => {
+            useTabbedContext.mockReset();
+        });
+        it('should return an empty div if no journal provided', () => {
+            useJournalContext.mockImplementationOnce(() => ({
+                journalDetails: null,
+            }));
+            setup({});
+            expect(document.querySelector('div.empty')).toBeInTheDocument();
+        });
     });
 });

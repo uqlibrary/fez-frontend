@@ -167,4 +167,12 @@ describe('transformers', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
+    describe('adminUnlockJournal()', () => {
+        it('dispatches expected actions', async () => {
+            const expectedActions = [actions.ADMIN_JOURNAL_UNLOCK];
+
+            await mockActionsStore.dispatch(journalActions.adminUnlockJournal());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
 });

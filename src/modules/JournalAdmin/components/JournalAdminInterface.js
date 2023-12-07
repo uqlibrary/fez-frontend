@@ -127,6 +127,7 @@ export const JournalAdminInterface = ({
 
     const keyHandler = React.useCallback(
         event => {
+            /* istanbul ignore else */
             if (!!event && event.ctrlKey && event.key !== 'Control') {
                 ((event.key === 'ArrowUp' && !tabbed) || (event.key === 'ArrowDown' && tabbed)) && toggleTabbed();
                 const activeTabIndex = activeTabNames.current.indexOf(currentTabValue);
