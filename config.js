@@ -58,7 +58,7 @@ const deployment = {
         api: 'https://api.library.uq.edu.au/v1/',
         auth_login: 'https://fez-testing.library.uq.edu.au/login.php',
         auth_logout: 'https://auth.library.uq.edu.au/logout',
-        gtm: 'GTM-PNKNTSQ',
+        gtm: 'GTM-T4NPC25',
         title: 'UQ eSpace (PRODTEST)',
         short_name: 'eSpace',
         titleSuffix: 'ProdTesting',

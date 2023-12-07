@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { setupCache } from 'axios-cache-adapter';
+import { setupCache } from 'axios-cache-interceptor';
 import { API_URL, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, TOKEN_NAME } from './general';
 import { store } from 'config/store';
 import { logout } from 'actions/account';
@@ -9,30 +9,47 @@ import locale from 'locale/global';
 import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
+import { isTest } from '../helpers/general';
 
-export const cache = setupCache({
-    maxAge: 15 * 60 * 1000,
-    key: request => {
-        return `${request.url}${JSON.stringify(request.params)}`;
-    },
-    exclude: {
-        query: false,
-        paths: [
-            'external/records/search',
-            'records/search?rule=',
-            'records/search?title=',
-            'records/search?doi=',
-            'records/search?id=pmid:',
-            'orcid',
-        ],
-    },
-});
-
-export const api = axios.create({
+let apiClient = axios.create({
     baseURL: API_URL,
-    adapter: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc' ? undefined : cache.adapter,
     crossdomain: true,
 });
+
+if (!isTest()) {
+    // note: axios-cache-interceptor is not compatible with tests
+    // upon updating it or changing config settings, make sure to test it using prodtest env
+    apiClient = setupCache(apiClient, {
+        // the option below only works when importing from "axios-cache-interceptor.dev"
+        // (make sure to disable stripping of console.* funcs in webpack-dist.config.json)
+        // debug: dc,
+        ttl: 15 * 60 * 1000,
+    });
+
+    // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
+    const nonCachedRoutes = ['records/search', 'journals/search', 'orcid'];
+    apiClient.interceptors.request.use(request => {
+        const queryStringParams = Object.keys(request.params || {});
+        if (
+            !!request.cache &&
+            // disabled it when querystring params are present or when it partially matches a non cached route
+            (queryStringParams.length ||
+                request.url.includes('?') ||
+                nonCachedRoutes.find(route => request.url.includes(route)))
+        ) {
+            /* eslint-disable max-len */
+            // dc(`disabling cache for: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
+            // disabled cache
+            request.cache = false;
+            return request;
+        }
+        /* eslint-disable max-len */
+        // dc(`the following request will be cached: ${request.url}${queryStringParams.length ? `?${JSON.stringify(request.params)}` : ''}`);
+        return request;
+    });
+}
+
+export const api = apiClient;
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
@@ -113,7 +130,8 @@ export const createSentryFriendlyError = (message, extras = {}) =>
 api.interceptors.response.use(
     response => {
         if (!isGet) {
-            return cache.store.clear().then(() => Promise.resolve(response.status === 201 ? response : response.data));
+            const promise = Promise.resolve(response.status === 201 ? response : response.data);
+            return api.store?.clear ? api.store?.clear().then(() => promise) : promise;
         }
         return Promise.resolve(response.data);
     },

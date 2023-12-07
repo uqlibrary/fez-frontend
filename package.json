@@ -143,7 +143,7 @@
         "@sentry/react": "^7.15.0",
         "@sentry/tracing": "^7.15.0",
         "axios": "^0.26.0",
-        "axios-cache-adapter": "^2.7.3",
+        "axios-cache-interceptor": "^0.10.2",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
         "ckeditor5-build-classic-extended": "^20.0.1",
