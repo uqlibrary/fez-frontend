@@ -30,7 +30,9 @@ if (!isTest()) {
         if (
             request.cache &&
             // disabled it when querystring params are present or when it partially matches a non cached route
-            (Object.keys(request.params || {}).length || nonCachedRoutes.find(route => request.url.includes(route)))
+            (Object.keys(request.params || {}).length ||
+                request.url.includes('?') ||
+                nonCachedRoutes.find(route => request.url.includes(route)))
         ) {
             /* eslint-disable max-len */
             // dc(`disabling cache for: ${request.url}${request.params.length ? `?${JSON.stringify(request.params)}` : ''}`);
