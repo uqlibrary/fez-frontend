@@ -49,22 +49,12 @@ describe('ScaleOfSignificanceForm callback factories', () => {
     });
 
     it('should create resetForm callback', () => {
-        const testFn = jest.fn();
-        const contributionStatementEditor = {
-            current: {
-                setData: testFn,
-            },
-        };
         const setSignificance = jest.fn();
         const showScaleAdditionForm = jest.fn();
-        const callback = resetFormCallbackFactory(
-            contributionStatementEditor,
-            setSignificance,
-            showScaleAdditionForm,
-        )[0];
+        const callback = resetFormCallbackFactory(setSignificance, showScaleAdditionForm)[0];
         callback();
         expect(setSignificance).toHaveBeenCalledWith(null);
-        expect(testFn).toHaveBeenCalledWith(null);
+        expect(showScaleAdditionForm).toHaveBeenCalledWith(false);
     });
 
     it('should create addItem callback', () => {

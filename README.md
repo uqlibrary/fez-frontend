@@ -79,26 +79,37 @@ You should now be able to run one of the following commands from the CLI:
 - `npm run start:mock`
   - runs <http://localhost:3000/>
   - uses mock data from src/mock
-- `npm run start:url`
-  - runs <http://dev-espace.library.uq.edu.au:3000/> (add `LOCAL-IP dev-espace.library.uq.edu.au` to your /etc/hosts)
-      e.g. 192.168.1.104 dev-epacellibrary.uq.edu.au
-  - uses **staging** api as a backend (you will need to set API_URL in .env to `https://api.library.uq.edu.au/staging/`)
-    - you will need to launch the browser with CORS disabled:
-      
-      On Linux:
-      ```sh
-      google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev
-      ```
-      On Mac:
-      ```sh
-      open -na Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
-      ```
-      On Windows:
-      ```sh
-      "C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSession"
-      ```
-  - add UQLID and UQLID_USER_GROUP cookies for logged-in users (values can be found under Developer Tools -> Application Tab -> Cookies after logging into <https://www.library.uq.edu.au/>)
-  - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
+- `npm run start:url` to view local code against staging api
+
+   setup steps:
+    - update file /etc/hosts (sudo required)
+
+      ensure `dev-espace.library.uq.edu.au` is set to your local IP, or add an entry for it:
+
+      e.g. `172.16.0.20 dev-espace.library.uq.edu.au`
+    - edit project file `.env`
+
+      set API_URL to `https://api.library.uq.edu.au/staging/`
+    - start the web server (previous steps must be done before this point)
+
+      in the terminal, issue `npm run start:url`
+    - launch your browser **with CORS disabled**:
+
+      Linux: `google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev`
+
+      Mac: `open -na Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
+
+      Windows:`"C:\Program Files\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSession"`
+    - Supply user cookie values
+
+      in CORS-disabled browser, 
+      - visit library homepage <https://www.library.uq.edu.au/> 
+      - log in, 
+      - (or manually add UQLID and UQLID_USER_GROUP cookies for logged-in users - values can be found by logging into <https://www.library.uq.edu.au/>, then looking under Developer Tools -> Application Tab -> Cookies)
+    - load site
+
+      in CORS-disabled browser, visit <http://dev-espace.library.uq.edu.au:3000/> 
+    - note: for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
   - To use prod's api, change /config.js > deployment.development.api > to <https://api.library.uq.edu.au/v1/> and re-run
