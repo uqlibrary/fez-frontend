@@ -18,10 +18,9 @@ let apiClient = axios.create({
 
 if (!isTest()) {
     // note: axios-cache-interceptor is not compatible with tests
-    // upon updating it or changing config settings, make sure to test it using prodtest env while having "debug" config
-    // key uncommented below (make sure to disable stripping of console functions in webpack-dist.config.js too)
+    // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {
-        // debug: dc,
+        // debug: dc, // only works with when importing from "axios-cache-interceptor.dev"
         ttl: 15 * 60 * 1000,
     });
 
@@ -33,10 +32,12 @@ if (!isTest()) {
             // disabled it when querystring params are present or when it partially matches a non cached route
             (Object.keys(request.params || {}).length || nonCachedRoutes.find(route => request.url.includes(route)))
         ) {
+            // dc(`disabling cache for ${request.url}?${JSON.stringify(request.params)}`);
             // disabled cache
             request.cache = false;
             return request;
         }
+        // dc(`the following request will be ${request.url}?${JSON.stringify(request.params)}`);
         return request;
     });
 }
