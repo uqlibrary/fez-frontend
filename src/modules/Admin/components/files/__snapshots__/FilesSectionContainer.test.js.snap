@@ -3,8 +3,8 @@
 exports[`FilesSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {},
+    {
+      "formValues": {},
       "onDeleteAttachedFile": [MockFunction],
       "onRenameAttachedFile": undefined,
       "openAccessStatusId": 0,

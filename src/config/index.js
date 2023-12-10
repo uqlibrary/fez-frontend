@@ -15,7 +15,7 @@ export {
     DATASET_ACCESS_CONDITIONS_OPTIONS,
 } from './general';
 
-export { api, generateCancelToken, cache, sessionApi } from './axios';
+export { api, generateCancelToken, sessionApi } from './axios';
 export * as validation from './validation';
 export * as general from './general';
 export { publicationTypes, contentIndicators, numberToWords } from './general';

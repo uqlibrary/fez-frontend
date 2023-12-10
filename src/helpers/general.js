@@ -1,8 +1,22 @@
 import HTMLReactParser from 'html-react-parser';
 
-// note: dd usage by WebpackStrip for dist builds
-global.dd = (...args) => console.dir(args, { depth: null });
-global.dc = (...args) => console.log(...args);
+// note: dd usage is stripped by WebpackStrip for dist builds
+global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
+global.dc = (...args) => args.forEach(arg => console.log(arg));
+global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
+
+/* istanbul ignore next */
+const getNodeEnvVar = (key, _default = undefined) => {
+    try {
+        return !!process.env[key];
+    } catch (e) {
+        return _default;
+    }
+};
+
+export const isJestTest = () => getNodeEnvVar('JEST_WORKER_ID', false);
+export const isCypressTest = () => !!window.Cypress;
+export const isTest = () => isJestTest() || isCypressTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {

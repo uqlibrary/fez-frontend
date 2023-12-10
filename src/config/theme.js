@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
-
 import { orange, red } from '@mui/material/colors';
+import { isJestTest } from '../helpers/general';
 
 const palette = {
     primary: {
@@ -55,14 +55,6 @@ const palette = {
         main: '#c80000',
         dark: '#790000',
     },
-};
-
-const isJestTest = () => {
-    try {
-        return !!process.env.JEST_WORKER_ID;
-    } catch (e) {
-        return false;
-    }
 };
 
 export const mui1theme = createTheme({

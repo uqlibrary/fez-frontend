@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddSectionContainer component should map state to props 1`] = `
-Object {
+{
   "disableSubmit": false,
   "disabled": true,
   "docTypeSubTypeCombo": null,
-  "formValues": Object {
-    "adminSection": Object {
-      "collections": Array [
-        Object {
+  "formValues": {
+    "adminSection": {
+      "collections": [
+        {
           "id": "UQ:3838",
           "value": "School of Languages and Cultures Publications",
         },
@@ -20,7 +20,7 @@ Object {
   "hasDefaultDocTypeSubType": false,
   "hasSubtypes": true,
   "publicationSubtype": "Creative Work - Textual",
-  "publicationSubtypeItems": Array [
+  "publicationSubtypeItems": [
     <ForwardRef(MenuItem)
       value="Research book chapter (original research)"
     >
@@ -77,7 +77,7 @@ Object {
       Other
     </ForwardRef(MenuItem)>,
   ],
-  "subtypes": Array [
+  "subtypes": [
     "Creative Work - Design/Architectural",
     "Creative Work - Textual",
     "Creative Work - Visual Art",
@@ -88,18 +88,18 @@ Object {
 `;
 
 exports[`AddSectionContainer component should map state to props 2`] = `
-Object {
+{
   "disableSubmit": true,
   "disabled": true,
-  "docTypeSubTypeCombo": Object {
+  "docTypeSubTypeCombo": {
     "docTypeId": 177,
     "name": "Creative Work - Textual (Book chapter)",
     "subtype": "Creative Work - Textual",
   },
-  "formValues": Object {
-    "adminSection": Object {
-      "collections": Array [
-        Object {
+  "formValues": {
+    "adminSection": {
+      "collections": [
+        {
           "id": "UQ:3838",
           "value": "School of Languages and Cultures Publications",
         },
@@ -111,7 +111,7 @@ Object {
   "hasDefaultDocTypeSubType": true,
   "hasSubtypes": false,
   "publicationSubtype": null,
-  "publicationSubtypeItems": Array [],
+  "publicationSubtypeItems": [],
   "subtypes": null,
 }
 `;
@@ -119,18 +119,18 @@ Object {
 exports[`AddSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
+    {
       "getServerState": undefined,
       "noopCheck": "once",
       "stabilityCheck": "once",
-      "store": Object {
+      "store": {
         "dispatch": [MockFunction],
         "getState": [MockFunction] {
-          "calls": Array [
-            Array [],
+          "calls": [
+            [],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": Immutable.Map {},
             },
@@ -138,7 +138,7 @@ exports[`AddSectionContainer component should render default view 1`] = `
         },
         "subscribe": [MockFunction],
       },
-      "subscription": Object {
+      "subscription": {
         "addNestedSub": [Function],
         "getListeners": [Function],
         "handleChangeWrapper": [Function],

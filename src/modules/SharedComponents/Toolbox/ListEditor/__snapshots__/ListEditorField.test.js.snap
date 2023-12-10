@@ -5,13 +5,13 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
   error={true}
   errorText="test1"
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }
   maxInputLength={100}
   meta={
-    Object {
+    {
       "error": "test1",
     }
   }
@@ -24,7 +24,7 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
 <FreeTextListEditor
   errorText={null}
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }

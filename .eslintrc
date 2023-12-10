@@ -28,7 +28,8 @@
     "sinon": true,
     "toJson": true,
     "dd": true,
-    "dc": true
+    "dc": true,
+    "dj": true
   },
   "settings": {
     "react": {

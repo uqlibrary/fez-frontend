@@ -22,7 +22,7 @@ exports[`Collection form should ask when redirecting from form with data (even i
           xs={12}
         >
           <StandardCard
-            help={Object {}}
+            help={{}}
             title="Add a missing collection"
           >
             <ForwardRef(Grid)
@@ -46,7 +46,7 @@ exports[`Collection form should ask when redirecting from form with data (even i
                   required={true}
                   selectPrompt="Select a community this collection is a member of"
                   validate={
-                    Array [
+                    [
                       [Function],
                     ]
                   }
@@ -125,7 +125,7 @@ exports[`Collection form should not ask when redirecting from form with data aft
           xs={12}
         >
           <StandardCard
-            help={Object {}}
+            help={{}}
             title="Add a missing collection"
           >
             <ForwardRef(Grid)
@@ -149,7 +149,7 @@ exports[`Collection form should not ask when redirecting from form with data aft
                   required={true}
                   selectPrompt="Select a community this collection is a member of"
                   validate={
-                    Array [
+                    [
                       [Function],
                     ]
                   }
