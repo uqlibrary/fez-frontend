@@ -27,4 +27,9 @@ context('view Journal', () => {
         tabVisibleInWindow('3', 'be.visible');
         tabVisibleInWindow('4', 'be.visible');
     });
+
+    it('should have an advisory statement', () => {
+        cy.visit('/journal/view/12');
+        cy.get('[data-testid=alert]').should('contain.text', 'Advisory statement');
+    });
 });
