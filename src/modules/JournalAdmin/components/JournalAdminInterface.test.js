@@ -449,35 +449,14 @@ describe('JournalAdminInterface component', () => {
         expect(document.querySelector('h2 sub')).toHaveTextContent('e');
         expect(document.querySelector('h2 sup')).toHaveTextContent('a');
     });
-    it('should navigate to "My research" after saving a record edit without referral and choosing "Edit another record"', () => {
+    it('should navigate to journal search page when choosing "Edit another record"', () => {
         const pushFn = jest.fn();
         const authorDetails = {};
         const history = {
             push: pushFn,
         };
-        const location = {
-            hash: '',
-            pathname: '/admin/journal/edit/12',
-            search: '',
-        };
-        navigateToSearchResult(authorDetails, history, location);
+        navigateToSearchResult(authorDetails, history);
         expect(pushFn).toHaveBeenCalledWith('/journals/search/');
-    });
-
-    it('should navigate to navigatedFrom after saving a record edit with referral as an admin and choosing "Edit another record"', () => {
-        const pushFn = jest.fn();
-        const authorDetails = {
-            is_administrator: 1,
-        };
-        const history = {
-            push: pushFn,
-        };
-        const location = {
-            hash: '/admin/journal/edit/12?navigatedFrom=%2Fdashboard',
-            search: '',
-        };
-        navigateToSearchResult(authorDetails, history, location);
-        expect(pushFn).toHaveBeenCalledWith('/dashboard');
     });
 
     describe('coverage', () => {

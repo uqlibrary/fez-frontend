@@ -48,18 +48,18 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (authorDetails, history, location) => {
-    // history.push(pathConfig.journals.search);
-    const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
-    if (
-        authorDetails &&
-        (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
-        !!navigatedFrom
-    ) {
-        history.push(decodeURIComponent(navigatedFrom));
-    } else {
-        history.push(pathConfig.journals.search);
-    }
+export const navigateToSearchResult = (authorDetails, history /* , location*/) => {
+    history.push(pathConfig.journals.search);
+    // const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+    // if (
+    //     authorDetails &&
+    //     (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
+    //     !!navigatedFrom
+    // ) {
+    //     history.push(decodeURIComponent(navigatedFrom));
+    // } else {
+    //     history.push(pathConfig.journals.search);
+    // }
 };
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);

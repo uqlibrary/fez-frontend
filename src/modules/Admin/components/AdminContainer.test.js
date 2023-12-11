@@ -3,7 +3,7 @@ import AdminContainer, { isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
 import { useIsMobileView } from '../../../hooks/useIsMobileView';
-import { rtlRender, WithReduxStore, WithRouter, preview } from 'test-utils';
+import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
 
@@ -111,7 +111,6 @@ describe('AdminContainer component', () => {
                 },
             }),
         });
-        preview.debug();
         expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
     });
     it('should render with an empty record', () => {
@@ -127,7 +126,6 @@ describe('AdminContainer component', () => {
                 },
             },
         });
-        preview.debug();
         expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toBeNull();
     });
 

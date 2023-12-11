@@ -8,7 +8,9 @@ export const journalDoaj = {
         "jnl_updated_date": "2022-09-08 04:56:28",
         "uq_author_id_count": 0,
         "is_favourite": false,
-        "jnl_advisory_statement": "This journal has been withdrawn from publication due to contested claims including copyright infringement. eSpace provides this journal for information purposes only; you are advised to proceed with caution when referencing this journal in your work.",
+        "jnl_advisory_statement": "This is an advisory statement",
+        "jnl_editing_user": "uqlsibba",
+        "jnl_editing_start_date": "2023-12-07 23:57:35",
         "fez_journal_abdc": null,
         "fez_journal_cite_score": {
             "jnl_cite_score_id": 155774,
