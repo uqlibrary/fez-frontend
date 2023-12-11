@@ -3,41 +3,41 @@
 exports[`FilesSection component should render default view for Files on a Data Collection publication type 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "fez_datastream_info",
           ],
         ],
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "files",
           ],
         ],
         "title": "Files",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "advisoryStatement",
           ],
         ],
         "title": "Advisory statement",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "sensitiveHandlingNote",
           ],
         ],
         "title": "Sensitive Handling Note",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "rek_copyright",
           ],
         ],
@@ -52,41 +52,41 @@ exports[`FilesSection component should render default view for Files on a Data C
 exports[`FilesSection component should render default view for Files on a publication type that DOES show advisory statement 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "fez_datastream_info",
           ],
         ],
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "files",
           ],
         ],
         "title": "Files",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "advisoryStatement",
           ],
         ],
         "title": "Advisory statement",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "sensitiveHandlingNote",
           ],
         ],
         "title": "Sensitive Handling Note",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "rek_copyright",
           ],
         ],

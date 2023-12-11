@@ -3,26 +3,26 @@
 exports[`NotesSection component should render default view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "additionalNotes",
           ],
         ],
         "title": "Additional notes",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "internalNotes",
           ],
         ],
         "title": "Internal notes",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "rek_ci_notice_attribution_incomplete",
           ],
         ],
@@ -37,26 +37,26 @@ exports[`NotesSection component should render default view 1`] = `
 exports[`NotesSection component should render disabled view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "additionalNotes",
           ],
         ],
         "title": "Additional notes",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "internalNotes",
           ],
         ],
         "title": "Internal notes",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "rek_ci_notice_attribution_incomplete",
           ],
         ],

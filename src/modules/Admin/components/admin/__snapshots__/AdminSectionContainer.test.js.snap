@@ -3,8 +3,8 @@
 exports[`AdminSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {},
+    {
+      "formValues": {},
     }
   }
 >
