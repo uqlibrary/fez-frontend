@@ -1,3 +1,4 @@
+// from https://github.com/ckeditor/ckeditor5/issues/6433
 // import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
