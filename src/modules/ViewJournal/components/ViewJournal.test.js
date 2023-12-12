@@ -3,7 +3,7 @@ import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
 import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
-import ViewJournal from './ViewJournal';
+import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ id: 1 })),
@@ -707,5 +707,15 @@ describe('ViewJournal', () => {
         expect(getByTestId('page-title')).toHaveTextContent('American Journal of Public Health');
 
         expect(getByText('Test advisory statement')).toBeInTheDocument();
+    });
+
+    describe('getAdvisoryStatement', () => {
+        it('should render html', () => {
+            const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
+            expect(getByTestId('test')).toHaveTextContent('Tester');
+        });
+        it('should render nothing (coverage)', () => {
+            expect(getAdvisoryStatement()).toEqual('');
+        });
     });
 });

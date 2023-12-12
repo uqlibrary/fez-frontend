@@ -21,7 +21,7 @@ import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
 
-const getAdvisoryStatement = html => {
+export const getAdvisoryStatement = html => {
     return !!html ? parseHtmlToJSX(html) : '';
 };
 
