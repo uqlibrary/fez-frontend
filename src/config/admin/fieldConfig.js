@@ -105,6 +105,7 @@ export default {
                 validate: [validation.required],
                 required: true,
                 richEditorId: 'rek-title',
+                singleLine: true,
             },
         },
         internalNotes: {
