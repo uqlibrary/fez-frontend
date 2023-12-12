@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicExtended from 'ckeditor5-build-classic-extended';
-import Capitalise from './Capitalise';
+// import Capitalise from './Capitalise';
 // import LetterCase from 'ckeditor5-letter-case';
 
 const RichEditor = fieldProps => {
     function editorConfig() {
-        const singleLineItems = ['rek-title']; // single line fields don't get multi-line controls
         return {
             toolbar: [
                 'bold',
@@ -18,9 +17,7 @@ const RichEditor = fieldProps => {
                 'strikethrough',
                 'subscript',
                 'superscript',
-                ...(singleLineItems.includes(fieldProps.richEditorId)
-                    ? []
-                    : ['|', 'link', 'numberedList', 'bulletedList']),
+                ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
                 '|',
                 'removeFormat',
                 'specialCharacters',
@@ -31,7 +28,7 @@ const RichEditor = fieldProps => {
             ],
             removePlugins: ['MediaEmbedToolbar'],
             // plugins: [LetterCase],
-            plugins: [Capitalise],
+            // plugins: [Capitalise],
         };
     }
 
@@ -153,6 +150,7 @@ RichEditor.prototypes = {
     onChange: PropTypes.func.isRequired,
     richEditorId: PropTypes.string,
     required: PropTypes.bool,
+    singleLine: PropTypes.bool,
     title: PropTypes.string,
     value: PropTypes.string,
 };
@@ -161,6 +159,7 @@ RichEditor.defaultProps = {
     className: '',
     disabled: false,
     required: false,
+    singleLine: false,
     value: '',
 };
 
