@@ -18,14 +18,6 @@ However if you want to remove or add a plugin to the build you need to follow th
 
 Note that it is also possible to go back to the [Online builder tool](https://ckeditor.com/ckeditor-5/online-builder) and pick other set of plugins. But we encourage you to try the harder way and to learn the principles of Node.js and CKEditor 5 ecosystems that will allow you to do more cool things in the future!
 
-**The following are all done after `cd custom_modules/ckeditor5-custom-build` !!!!**
-
-(if at the root directory, the command is:
-```
-npm install file:custom_modules/ckeditor5-custom-build
-```
-)
-
 ### Installation
 
 In order to rebuild the application you need to install all dependencies first. To do it, open the terminal in the project directory and type:
@@ -57,7 +49,7 @@ Follow the guides available on https://ckeditor.com/docs/ckeditor5/latest/framew
 ## FAQ
 | Where is the place to report bugs and feature requests?
 
-You can create an issue on https://github.com/ckeditor/ckeditor5/issues including the build id - `ky9abpid6guv-wvvi4djbxinq`. Make sure that the question / problem is unique, please look for a possibly asked questions in the search box. Duplicates will be closed.
+You can create an issue on https://github.com/ckeditor/ckeditor5/issues including the build id - `mo999tuploqy-wvvi4djbxinq`. Make sure that the question / problem is unique, please look for a possibly asked questions in the search box. Duplicates will be closed.
 
 | Where can I learn more about the CKEditor 5 framework?
 

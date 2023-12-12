@@ -15,8 +15,7 @@
     "@ckeditor/ckeditor5-list": "40.2.0",
     "@ckeditor/ckeditor5-paragraph": "40.2.0",
     "@ckeditor/ckeditor5-typing": "40.2.0",
-    "@ckeditor/ckeditor5-undo": "40.2.0",
-    "ckeditor5-letter-case": "^1.0.4"
+    "@ckeditor/ckeditor5-undo": "40.2.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^40.2.0",

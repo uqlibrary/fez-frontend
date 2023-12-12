@@ -17,7 +17,7 @@ module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
 
-	entry: path.resolve( __dirname, 'src', 'ckeditor.js' ),
+	entry: path.resolve( __dirname, 'src', 'ckeditor.ts' ),
 
 	output: {
 		// The name under which the editor will be exported.
@@ -47,8 +47,8 @@ module.exports = {
 	plugins: [
 		new CKEditorTranslationsPlugin( {
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
-			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
-			language: 'en-au',
+			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.ts).
+			language: 'en',
 			additionalLanguages: 'all'
 		} ),
 		new webpack.BannerPlugin( {
