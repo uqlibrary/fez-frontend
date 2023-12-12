@@ -1352,6 +1352,15 @@ export const RECORD_ACTION_URLS = [
         options: null,
     },
 ];
+export const JOURNAL_ACTION_URLS = [
+    {
+        label: 'Edit selected journal',
+        url: jid => `${APP_URL}${PATH_PREFIX}admin/journal/edit/${jid}`,
+        inApp: true,
+        options: null,
+        isJournalEdit: true,
+    },
+];
 
 export const MAXIMUM_SECURITY_PUBLIC = 5;
 export const TOP_LEVEL_SECURITY_POLICIES = [
@@ -1788,3 +1797,6 @@ export const COLLECTION_VIEW_TYPE = [
     { id: 456850, value: 'standard', label: 'Standard' },
     { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
 ];
+
+/** journalAdmin  */
+export const ADMIN_JOURNAL = 'adminjournal';

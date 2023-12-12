@@ -317,7 +317,6 @@ export const translateFormErrorsToText = formErrors => {
             errorMessagesList.push(locale.validationErrorsSummary[key]);
         }
     });
-
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 

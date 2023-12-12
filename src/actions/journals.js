@@ -1,4 +1,4 @@
-import { destroy, get, post } from 'repositories/generic';
+import { destroy, get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -12,6 +12,20 @@ import { promptForDownload } from './exportPublicationsDataTransformers';
 import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { lastRequest, api } from '../config/axios';
+import * as transformers from './journalTransformers';
+
+/**
+ * @param data
+ * @param replacer
+ * @return {any}
+ */
+export const sanitiseJnlData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+
+/**
+ * @param keys
+ * @return {function(*, *): undefined|*}
+ */
+const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 // The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
@@ -73,12 +87,12 @@ export const requestMJLIngest = directory => dispatch => {
     );
 };
 
-export const loadJournal = id => dispatch => {
+export const loadJournal = (id, isEdit = false) => dispatch => {
     dispatch({ type: actions.JOURNAL_LOADING });
     return (
         id &&
         !isNaN(id) &&
-        get(JOURNAL_API({ id })).then(
+        get(JOURNAL_API({ id, isEdit })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOADED,
@@ -209,3 +223,77 @@ export const removeFromFavourites = ids => async dispatch => {
         },
     );
 };
+
+const getAdminJournalRequest = data => {
+    // delete extra form values from request object
+    const keys = [
+        'id',
+        'jnl_jid',
+        'journal',
+        'adminSection',
+        'bibliographicSection',
+        'uqDataSection',
+        'doajSection',
+        'indexedSection',
+    ];
+
+    return [
+        {
+            ...data.journal,
+            ...sanitiseJnlData(data, makeReplacer(keys)),
+            ...transformers.getAdminSectionSearchKeys(data.adminSection),
+            ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+        },
+    ];
+};
+
+/**
+ * Update work request for admins: put record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminJournalUpdate(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
+        });
+        const [patchJournalRequest] = getAdminJournalRequest(data);
+        return Promise.resolve([])
+            .then(() => put(JOURNAL_API({ id: data.jnl_jid }), patchJournalRequest))
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_SUCCESS,
+                    payload: {
+                        pid: response.data,
+                    },
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
+export function adminUnlockJournal() {
+    return {
+        type: actions.ADMIN_JOURNAL_UNLOCK,
+    };
+}
+
+/**
+ * Clear journal to be viewed
+ * @returns {action}
+ */
+export function adminJournalClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_CLEAR,
+        });
+    };
+}

@@ -543,6 +543,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         );
         if (config.url.indexOf('query=null') > -1) {
             return [200, { data: {} }];
+        } else if (config.url.indexOf('query=adv') > -1) {
+            return [200, { ...journalsSearch.keywords.advanced }];
         } else if (config.url.indexOf('query=bio') > -1) {
             return [200, { ...journalsSearch.keywords.bio }];
         } else if (config.url.indexOf('query=brain') > -1) {
@@ -594,6 +596,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [200, { ...mockData.journalList }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
+    .reply(200, { ...mockData.journalDoaj })
+    .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
+    .reply(200, { data: { ...mockData.journalDoaj } })
+
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
@@ -796,6 +803,8 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
+
+
     .onAny()
     .reply(config => {
         console.log('url not found...', config);
