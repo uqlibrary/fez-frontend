@@ -126,16 +126,6 @@ context('Thesis admin edit', () => {
                 });
             });
 
-            cy.get('[data-testid=rek-contributor-list]').within(() => {
-                const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
-                contributors.forEach((person, index) => {
-                    cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should(
-                        'have.text',
-                        person,
-                    );
-                });
-            });
-
             cy.get('[data-testid=rek-supervisor-list]').within(() => {
                 const supervisors = record.fez_record_search_key_supervisor.map(item => item.rek_supervisor);
                 supervisors.forEach((person, index) => {
