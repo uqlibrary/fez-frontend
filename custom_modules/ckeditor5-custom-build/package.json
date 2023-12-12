@@ -14,6 +14,8 @@
     "@ckeditor/ckeditor5-link": "40.2.0",
     "@ckeditor/ckeditor5-list": "40.2.0",
     "@ckeditor/ckeditor5-paragraph": "40.2.0",
+    "@ckeditor/ckeditor5-remove-format": "^40.2.0",
+    "@ckeditor/ckeditor5-special-characters": "^40.2.0",
     "@ckeditor/ckeditor5-typing": "40.2.0",
     "@ckeditor/ckeditor5-undo": "40.2.0"
   },

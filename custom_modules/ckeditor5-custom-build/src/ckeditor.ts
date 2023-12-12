@@ -14,6 +14,13 @@ import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { Undo } from '@ckeditor/ckeditor5-undo';
 
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
@@ -26,7 +33,13 @@ class Editor extends ClassicEditor {
 		List,
 		Paragraph,
 		TextTransformation,
-		Undo
+		Undo,
+		RemoveFormat,
+		SpecialCharacters,
+		Strikethrough,
+		Subscript,
+		Superscript,
+		Underline,
 	];
 
 	public static override defaultConfig: EditorConfig = {
@@ -37,6 +50,13 @@ class Editor extends ClassicEditor {
 				'link',
 				'bulletedList',
 				'numberedList',
+				'underline',
+				'strikethrough',
+				'subscript',
+				'superscript',
+				'|',
+				'removeFormat',
+				'specialCharacters',
 				'|',
 				'undo',
 				'redo'
