@@ -148,6 +148,7 @@
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
         "ckeditor5-build-classic-extended": "^20.0.1",
+        "ckeditor5-letter-case": "^1.0.4",
         "classnames": "^2.2.6",
         "core-js": "^3.21.0",
         "debounce-promise": "^3.1.2",

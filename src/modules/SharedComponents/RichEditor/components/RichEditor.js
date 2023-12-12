@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Typography from '@mui/material/Typography';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicExtended from 'ckeditor5-build-classic-extended';
-import Typography from '@mui/material/Typography';
+import Capitalise from './Capitalise';
+// import LetterCase from 'ckeditor5-letter-case';
 
 const RichEditor = fieldProps => {
     function editorConfig() {
@@ -22,11 +24,14 @@ const RichEditor = fieldProps => {
                 '|',
                 'removeFormat',
                 'specialCharacters',
+                'LetterCase',
                 '|',
                 'undo',
                 'redo',
             ],
             removePlugins: ['MediaEmbedToolbar'],
+            // plugins: [LetterCase],
+            plugins: [Capitalise],
         };
     }
 
