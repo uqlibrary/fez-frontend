@@ -42,6 +42,7 @@ export const JournalAdminContainer = ({
     match,
     journalToView,
     journalToViewError,
+    journalLoadingError,
     submitSucceeded,
     submitting,
     unlockJournal,
@@ -76,7 +77,7 @@ export const JournalAdminContainer = ({
 
     if (!!match.params.id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!!match.params.id && (!!!journalToView || Object.keys(journalToView).length === 0)) {
+    } else if (!!match.params.id && (!!!journalToView || journalLoadingError)) {
         return (
             <StandardPage className="viewJournal" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -179,6 +180,7 @@ JournalAdminContainer.propTypes = {
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     journalToViewLoading: PropTypes.bool,
+    journalLoadingError: PropTypes.bool,
     loadJournalToView: PropTypes.func,
     journalToViewError: PropTypes.object,
     locked: PropTypes.bool,
