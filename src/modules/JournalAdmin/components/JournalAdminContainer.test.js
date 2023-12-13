@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, WithReduxStore, WithRouter, preview } from 'test-utils';
+import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import JournalAdminContainer, { isSame } from './JournalAdminContainer';
 import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
@@ -32,6 +32,7 @@ function setup(testProps = {}, renderer = rtlRender) {
             },
         },
         loadJournalToView: jest.fn(),
+        journalLoadingError: false,
         journalToView: journalDoaj.data,
         location: {
             search: '',
@@ -113,11 +114,11 @@ describe('JournalAdminContainer component', () => {
             });
             expect(getByTestId('page-title')).toHaveTextContent('Work not found');
         });
-        it('should render not found message when empty journal is provided', () => {
+
+        it('should render not found message journal error is encountered', () => {
             const { getByTestId } = setup({
-                journalToView: {},
+                journalLoadingError: true,
             });
-            preview.debug();
             expect(getByTestId('page-title')).toHaveTextContent('Work not found');
         });
 

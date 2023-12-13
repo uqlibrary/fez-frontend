@@ -22,7 +22,6 @@ context('JournalAdmin', () => {
         cy.get('[data-testid=jnl_title-input]').should('have.value', 'Advanced Nonlinear Studies UPDATED');
         cy.get('[data-testid=jnl_publisher-input]').type(' UPDATED');
         cy.get('[data-testid=jnl_publisher-input]').should('have.value', 'Walter de Gruyter GmbH UPDATED');
-        cy.get('[data-testid=jnl_publisher-input]').type(' UPDATED');
         cy.typeCKEditor('jnl-advisory-statement', ' UPDATED');
         cy.readCKEditor('jnl-advisory-statement').then(text => {
             expect(text).to.contain('This is an advisory statement UPDATED');
