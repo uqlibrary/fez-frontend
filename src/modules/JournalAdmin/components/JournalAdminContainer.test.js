@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
+import { rtlRender, WithReduxStore, WithRouter, preview } from 'test-utils';
 import JournalAdminContainer, { isSame } from './JournalAdminContainer';
 import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
@@ -106,6 +106,19 @@ describe('JournalAdminContainer component', () => {
             });
             expect(getByTestId('alert')).toBeInTheDocument();
             expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
+        });
+        it('should render not found message when no journal is provided', () => {
+            const { getByTestId } = setup({
+                journalToView: null,
+            });
+            expect(getByTestId('page-title')).toHaveTextContent('Work not found');
+        });
+        it('should render not found message when empty journal is provided', () => {
+            const { getByTestId } = setup({
+                journalToView: {},
+            });
+            preview.debug();
+            expect(getByTestId('page-title')).toHaveTextContent('Work not found');
         });
 
         describe('isSame callback function', () => {
