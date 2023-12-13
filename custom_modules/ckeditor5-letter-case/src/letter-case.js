@@ -27,7 +27,7 @@ const LetterCaseOptions = [
     mode: "titleCase"
   },
   {
-    text: "tOOGLE cASE",
+    text: "tOGGLE cASE",
     mode: "toggleCase"
   }
 ];
@@ -39,6 +39,7 @@ export default class LetterCase extends Plugin {
 
     // Initializing UI
     this.editor.ui.componentFactory.add("LetterCase", locale => {
+      console.log('letter-case componentFactory');
       const dropdownView = createDropdown(locale);
       addListToDropdown(
         dropdownView,
