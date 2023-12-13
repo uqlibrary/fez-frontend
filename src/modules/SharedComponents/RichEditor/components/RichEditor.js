@@ -5,31 +5,29 @@ import Typography from '@mui/material/Typography';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 // import ClassicExtended from 'ckeditor5-build-classic-extended';
 import Editor from '../../../../../custom_modules/ckeditor5-custom-build';
-// import Capitalise from './Capitalise';
-// import LetterCase from 'ckeditor5-letter-case';
 
 const RichEditor = fieldProps => {
     function editorConfig() {
         return {
-            toolbar: [
-                'bold',
-                'italic',
-                'underline',
-                'strikethrough',
-                'subscript',
-                'superscript',
-                ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
-                '|',
-                'removeFormat',
-                'specialCharacters',
-                'LetterCase',
-                '|',
-                'undo',
-                'redo',
-            ],
+            toolbar: {
+                items: [
+                    'bold',
+                    'italic',
+                    'underline',
+                    'strikethrough',
+                    'subscript',
+                    'superscript',
+                    ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
+                    '|',
+                    'LetterCase',
+                    'removeFormat',
+                    'specialCharacters',
+                    '|',
+                    'undo',
+                    'redo',
+                ],
+            },
             removePlugins: ['MediaEmbedToolbar'],
-            // plugins: [LetterCase],
-            // plugins: [Capitalise],
         };
     }
 
