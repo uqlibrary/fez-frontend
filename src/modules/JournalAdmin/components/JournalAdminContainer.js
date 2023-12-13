@@ -76,7 +76,7 @@ export const JournalAdminContainer = ({
 
     if (!!match.params.id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!!match.params.id && !journalToView) {
+    } else if (!!match.params.id && (!!!journalToView || Object.keys(journalToView).length === 0)) {
         return (
             <StandardPage className="viewJournal" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
