@@ -8,6 +8,17 @@ const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > di
 
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
+    cy.waitUntil(
+        () =>
+            cy
+                .get('h2')
+                .should('exist')
+                .should('be.visible'),
+        {
+            timeout: 10000,
+        },
+    );
+
     cy.get('h2').should('contain.text', pid);
 });
 
