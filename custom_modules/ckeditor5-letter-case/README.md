@@ -1,6 +1,10 @@
 CKEditor 5 letter Case Plugin
 ========================================
-<br>
+
+Based from https://github.com/maziyank/ckeditor5-letter-case/ which has not updated since 2020.
+
+Updated ckeditor versions which must match!
+
 This simple plugin allow you to change between lower case and upper case letters, capitalize, or to mix case the text selection in the ckeditor 5.
 
 ## Issues
