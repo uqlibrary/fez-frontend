@@ -7,11 +7,9 @@ import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
 import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { Undo } from '@ckeditor/ckeditor5-undo';
 
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
@@ -28,12 +26,10 @@ import LetterCase from "./LetterCase";
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
 		Bold,
-		Essentials,
 		Italic,
 		Link,
 		List,
 		Paragraph,
-		TextTransformation,
 		Undo,
 		RemoveFormat,
 		SpecialCharacters,
@@ -61,7 +57,8 @@ class Editor extends ClassicEditor {
 				'specialCharacters',
 				'|',
 				'undo',
-				'redo'
+				'redo',
+				'LetterCase',
 			]
 		},
 		language: 'en'
