@@ -599,10 +599,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
     .reply(200, { ...mockData.journalDoaj })
     .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
-    .reply(200, { data: { ...mockData.journalDoaj } })
-
+    .reply(200, { ...mockData.journalDoaj })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 999 }).apiUrl)))
+    .reply(404, { data: "Not Found" })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
+
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
     .reply(200, { ...mockData.userList })
     .onGet(
