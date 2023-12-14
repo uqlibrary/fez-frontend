@@ -382,7 +382,11 @@ export class ContributorsEditor extends PureComponent {
                         rek_author: newContribs[newContribs.length - 1].nameAsPublished,
                     },
                 };
-                newList = [...this.state.scaleOfSignificance, newItem];
+                if (newContribs.length > 1) {
+                    newList = [...this.state.scaleOfSignificance, newItem];
+                } else {
+                    newList = [newItem];
+                }
             } else if (oldContribs.length > newContribs.length) {
                 let found = false;
                 newList = [...this.state.scaleOfSignificance];
@@ -415,7 +419,12 @@ export class ContributorsEditor extends PureComponent {
 
                 newList = scaleOfSignificance;
             }
-            this.props.actions.updateAdminScaleSignificance(newList);
+            if (newList.length > 0) {
+                this.props.actions.updateAdminScaleSignificance(newList);
+            } else {
+                this.props.actions.clearAdminScaleSignificance();
+            }
+
             return newList;
         }
     };

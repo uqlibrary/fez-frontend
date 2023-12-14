@@ -139,7 +139,7 @@ context('As an admin, I can', () => {
         });
     });
 
-    it('Adds, edits and removes statements based on author add, edit or removal', () => {
+    it.only('Adds, edits and removes statements based on author add, edit or removal', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         createBasicRecordType(0, 'Creative Work - Textual');
@@ -229,5 +229,13 @@ context('As an admin, I can', () => {
         cy.get('[data-testid="rek-author-update-save"]').click();
         loadNtroTabAdminAdd();
         cy.get('[data-testid="scalesignif-author-0"]').should('contain', 'UPDATED');
+        // Delete all authors, should delete all statements
+        cy.get('[data-testid="authors-tab"]').click();
+        cy.get('[data-testid="rek-author-list-row-0-delete"]').click();
+        cy.get('[data-testid="rek-author-delete-save"]').click();
+        cy.get('[data-testid="rek-author-list-row-0-delete"]').click();
+        cy.get('[data-testid="rek-author-delete-save"]').click();
+        loadNtroTabAdminAdd();
+        cy.get('[data-testid="rek-significance-list"]').should('contain', 'No records to display');
     });
 });
