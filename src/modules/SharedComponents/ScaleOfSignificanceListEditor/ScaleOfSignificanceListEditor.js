@@ -47,6 +47,7 @@ export class ScaleOfSignificanceListEditor extends Component {
         getItemSelectedToEdit: PropTypes.func,
         listEditorId: PropTypes.string.isRequired,
         scaleOfSignificance: PropTypes.array,
+        clearedScaleAuthors: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -92,7 +93,10 @@ export class ScaleOfSignificanceListEditor extends Component {
             formMode: 'edit',
         };
 
-        if (!!this.props.scaleOfSignificance && this.props.scaleOfSignificance.length > 0) {
+        if (
+            (!!this.props.scaleOfSignificance && this.props.scaleOfSignificance.length > 0) ||
+            !!this.props.clearedScaleAuthors
+        ) {
             this.state.itemList = [...this.props.scaleOfSignificance];
         }
 
@@ -106,7 +110,6 @@ export class ScaleOfSignificanceListEditor extends Component {
         this.deleteAllItems = this.deleteAllItems.bind(this);
         this.loadEditForm = this.loadEditForm.bind(this);
         this.showFormInEditMode = this.showFormInEditMode.bind(this);
-        this.props.actions.updateAdminScaleSignificance(this.state.itemList);
     }
 
     componentDidUpdate(prevProps, prevState) {
