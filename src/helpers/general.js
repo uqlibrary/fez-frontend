@@ -8,16 +8,16 @@ global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
 const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
-        /* istanbul ignore next */
     } catch (e) {
         /* istanbul ignore next */
         return _default;
     }
 };
-
+/* istanbul ignore next */
 export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
 export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
 export const isCypressTest = () => !!window.Cypress;
+/* istanbul ignore next */
 export const isTest = () => isJestTest() || isCypressTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
