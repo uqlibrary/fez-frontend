@@ -6,15 +6,16 @@ global.dc = (...args) => args.forEach(arg => console.log(arg));
 global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
 
 /* istanbul ignore next */
-const getNodeEnvVar = (key, _default = undefined) => {
+const tryCatch = (callback, _default = undefined) => {
     try {
-        return !!process.env[key];
+        return callback();
     } catch (e) {
         return _default;
     }
 };
 
-export const isJestTest = () => getNodeEnvVar('JEST_WORKER_ID', false);
+export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
+export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
 export const isCypressTest = () => !!window.Cypress;
 export const isTest = () => isJestTest() || isCypressTest();
 
