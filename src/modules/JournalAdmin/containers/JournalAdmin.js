@@ -68,6 +68,7 @@ const mapStateToProps = state => {
         author: state.get('accountReducer').author,
         journalToView,
         journalToViewError: state.get('journalReducer').journalToViewError,
+        journalLoadingError: state.get('journalReducer').journalLoadingError,
         ...initialFormValues,
         locked,
         error: state.get('journalReducer').error,

@@ -102,7 +102,7 @@ export const loadJournal = (id, isEdit = false) => dispatch => {
             error => {
                 dispatch({
                     type: actions.JOURNAL_LOAD_FAILED,
-                    payload: error.message,
+                    payload: error,
                 });
             },
         )
