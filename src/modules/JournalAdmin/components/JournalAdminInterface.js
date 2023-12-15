@@ -75,7 +75,6 @@ export const JournalAdminInterface = ({
     location,
     formErrors,
     locked,
-    unlockJournal,
     error,
     tabs,
 }) => {
@@ -150,12 +149,17 @@ export const JournalAdminInterface = ({
     const handleCancel = event => {
         event.preventDefault();
         const pushToHistory = () => history.push(pathConfig.journal.view(journal.jnl_jid));
-        /* istanbul ignore else */
-        if (!!journal.jnl_jid) {
-            /* istanbul ignore next */
-            journal.jnl_editing_user === authorDetails.username
-                ? unlockJournal(journal.jnl_jid, pushToHistory)
-                : pushToHistory();
+
+        const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+        if (
+            authorDetails &&
+            (authorDetails.is_administrator === 1 ||
+                /* istanbul ignore next */ authorDetails.is_super_administrator === 1) &&
+            !!navigatedFrom
+        ) {
+            history.push(decodeURIComponent(navigatedFrom));
+        } else {
+            pushToHistory();
         }
     };
 
@@ -334,7 +338,6 @@ JournalAdminInterface.propTypes = {
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
     tabs: PropTypes.object,
-    unlockJournal: PropTypes.func,
     error: PropTypes.object,
 };
 
