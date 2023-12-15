@@ -23,21 +23,21 @@ Cypress.Commands.add('readCKEditor', element => {
 
 // check content of from CKEditor instance
 // Usage example:
-// cy.checkCKEditor('rek-title', 'words);
+// cy.checkCKEditor('rek-title', 'words');
 Cypress.Commands.add('checkCKEditor', (element, content = null) => {
-    if (content !== null) {
+    if (content === null) {
+        return cy
+            .get('[data-testid="' + element + '"] .ck-editor__main p')
+            .should('exist')
+            .find('[data-cke-filler="true"]')
+            .should('exist');
+    } else {
         return cy
             .get('[data-testid="' + element + '"] .ck-editor__main p')
             .should('exist')
             .then(text => {
                 expect(text).to.contain(content);
             });
-    } else {
-        return cy
-            .get('[data-testid="' + element + '"] .ck-editor__main p')
-            .should('exist')
-            .find('[data-cke-filler="true"]')
-            .should('exist');
     }
 });
 
