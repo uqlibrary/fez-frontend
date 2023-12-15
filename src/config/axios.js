@@ -17,7 +17,7 @@ let apiClient = axios.create({
 });
 
 if (!isDevEnv() && !isTest()) {
-    // note: axios-cache-interceptor is not compatible with tests
+    // note: axios-cache-interceptor is not compatible with axios mock response & tests
     // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {
         // the option below only works when importing from "axios-cache-interceptor.dev"
