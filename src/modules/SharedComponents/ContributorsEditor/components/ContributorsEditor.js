@@ -399,11 +399,12 @@ export class ContributorsEditor extends PureComponent {
             } else {
                 const changedIndexes = [];
                 const scaleOfSignificance = [...this.state.scaleOfSignificance];
-                newContribs.map((contrib, index) => {
-                    if (contrib.nameAsPublished !== this.state.scaleOfSignificance[index].author.rek_author) {
-                        changedIndexes.push(index);
-                    }
-                });
+                this.state.scaleOfSignificance.length > 0 &&
+                    newContribs.map((contrib, index) => {
+                        if (contrib.nameAsPublished !== this.state.scaleOfSignificance[index].author.rek_author) {
+                            changedIndexes.push(index);
+                        }
+                    });
 
                 if (changedIndexes.length === 1) {
                     // Its a name change - no order change
