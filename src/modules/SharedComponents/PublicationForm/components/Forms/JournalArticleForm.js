@@ -109,6 +109,10 @@ export default class JournalArticleForm extends Component {
                                 <Typography>{txt.authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    canEdit
+                                    forceSelectable
+                                    maintainSelected
+                                    hideUqIDFields
                                     contributorEditorId="authors"
                                     showContributorAssignment
                                     name="authors"
@@ -124,6 +128,7 @@ export default class JournalArticleForm extends Component {
                 </Grid>
                 {this.props.isNtro && (
                     <NtroFields
+                        canEdit
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
                         hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}

@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
-
 import { orange, red } from '@mui/material/colors';
+import { isJestTest } from '../helpers/general';
 
 const palette = {
     primary: {
@@ -71,6 +71,12 @@ export const mui1theme = createTheme({
         suppressDeprecationWarnings: true,
     },
     components: {
+        MuiButtonBase: {
+            defaultProps: {
+                // Disable ripple for jest tests
+                disableRipple: isJestTest(),
+            },
+        },
         MuiFormLabel: {
             styleOverrides: {
                 root: {
@@ -157,6 +163,12 @@ export const mui1theme = createTheme({
 export const adminTheme = createTheme({
     palette: palette,
     components: {
+        MuiButtonBase: {
+            defaultProps: {
+                // Disable ripple for jest tests
+                disableRipple: isJestTest(),
+            },
+        },
         MuiFormLabel: {
             styleOverrides: {
                 root: {

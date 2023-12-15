@@ -3,18 +3,18 @@
 exports[`AuthorsSection component should render NTRO design form fields 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "authors",
           ],
         ],
         "title": "Designers",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "editors",
           ],
         ],
@@ -29,10 +29,10 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
 exports[`AuthorsSection component should render default view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "authors",
           ],
         ],
@@ -47,10 +47,10 @@ exports[`AuthorsSection component should render default view 1`] = `
 exports[`AuthorsSection component should render disabled view 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "authors",
           ],
         ],
@@ -65,10 +65,10 @@ exports[`AuthorsSection component should render disabled view 1`] = `
 exports[`AuthorsSection component should render edited book form fields 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "editors",
           ],
         ],
@@ -83,18 +83,18 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
 exports[`AuthorsSection component should render non-NTRO design form fields 1`] = `
 <Section
   cards={
-    Array [
-      Object {
-        "groups": Array [
-          Array [
+    [
+      {
+        "groups": [
+          [
             "authors",
           ],
         ],
         "title": "Designers",
       },
-      Object {
-        "groups": Array [
-          Array [
+      {
+        "groups": [
+          [
             "editors",
           ],
         ],

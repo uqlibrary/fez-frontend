@@ -180,7 +180,7 @@ export const viewJournalConfig = {
                             isArray: true,
                             primaryKey: 'fez_journal_issn',
                             path: ['fez_sherpa_romeo'],
-                            filterFn: item => !!item.fez_sherpa_romeo,
+                            filterFn: item => !!item.fez_sherpa_romeo && !!item.fez_sherpa_romeo.srm_journal_link,
                         },
                     ],
                     template: 'MultiLinkTemplate',
@@ -734,8 +734,9 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-wos-category-ahci',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(item => item.jnl_wos_category_index === 'AHCI')
-                            .length > 0 &&
+                        journalDetails.fez_journal_wos_category.filter(
+                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'AHCI',
+                        ).length > 0 &&
                         journalDetails.fez_journal_wos_category,
                     template: 'WosCategoriesTemplate',
                     templateProps: {
@@ -750,8 +751,9 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-wos-category-scie',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(item => item.jnl_wos_category_index === 'SCIE')
-                            .length > 0 &&
+                        journalDetails.fez_journal_wos_category.filter(
+                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SCIE',
+                        ).length > 0 &&
                         journalDetails.fez_journal_wos_category,
                     template: 'WosCategoriesTemplate',
                     templateProps: {
@@ -766,12 +768,13 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-wos-category-ssci',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(item => item.jnl_wos_category_index === 'SSCI')
-                            .length > 0 &&
+                        journalDetails.fez_journal_wos_category.filter(
+                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
+                        ).length > 0 &&
                         journalDetails.fez_journal_wos_category,
                     template: 'WosCategoriesTemplate',
                     templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'SSCI',
+                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'SSCI',
                         categoryId: 'ssci',
                     },
                 },
@@ -782,12 +785,13 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-wos-category-esci',
                     getData: journalDetails =>
                         !!journalDetails.fez_journal_wos_category &&
-                        journalDetails.fez_journal_wos_category.filter(item => item.jnl_wos_category_index === 'ESCI')
-                            .length > 0 &&
+                        journalDetails.fez_journal_wos_category.filter(
+                            item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
+                        ).length > 0 &&
                         journalDetails.fez_journal_wos_category,
                     template: 'WosCategoriesTemplate',
                     templateProps: {
-                        filterFn: item => item.jnl_wos_category_index === 'ESCI',
+                        filterFn: item => item.jnl_wos_category_lookup && item.jnl_wos_category_index === 'ESCI',
                         categoryId: 'esci',
                     },
                 },

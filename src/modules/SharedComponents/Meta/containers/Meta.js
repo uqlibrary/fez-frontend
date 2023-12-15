@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import Meta from '../components/Meta';
 import { withRouter } from 'react-router-dom';
 
+const defaultObj = {};
 const mapStateToProps = state => {
-    const publication = (!!state.get('viewRecordReducer') && state.get('viewRecordReducer').recordToView) || {};
+    const publication = (!!state.get('viewRecordReducer') && state.get('viewRecordReducer').recordToView) || defaultObj;
     return {
         publication: publication,
     };

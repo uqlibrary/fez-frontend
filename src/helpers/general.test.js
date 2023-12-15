@@ -8,12 +8,28 @@ import {
 } from './general';
 
 describe('general helpers', () => {
-    it('dd should given args using console.dir', () => {
-        const consoleDirMock = jest.spyOn(console, 'dir').mockImplementation(() => {});
+    describe('debugging helpers', () => {
         const args = [true, false, 1, 0, -1, [], {}];
-        dd(...args);
-        expect(consoleDirMock).toBeCalledWith(args, { depth: null });
-        consoleDirMock.mockRestore();
+        it('dd should given args using console.dir', () => {
+            const mock = jest.spyOn(console, 'dir').mockImplementation(() => {});
+            dd(...args);
+            args.forEach(arg => expect(mock).toBeCalledWith(arg, { depth: null }));
+            mock.mockRestore();
+        });
+
+        it('dc should given args using console.log', () => {
+            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
+            dc(...args);
+            args.forEach(arg => expect(mock).toBeCalledWith(arg));
+            mock.mockRestore();
+        });
+
+        it('dj should given args using console.log', () => {
+            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
+            dj(...args);
+            args.forEach(arg => expect(mock).toBeCalledWith(JSON.stringify(arg)));
+            mock.mockRestore();
+        });
     });
 
     it('leftJoin', () => {

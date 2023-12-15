@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from '@mui/material/Table';
 import JournalsListHeaderRow from './JournalsListHeaderRow';
-import { JournalFieldsMap } from './JournalFieldsMap';
+import JournalFieldsMap from './JournalFieldsMap';
 import { act, WithReduxStore, fireEvent, render } from 'test-utils';
 import Immutable from 'immutable';
 import { sanitiseId } from 'helpers/general';
@@ -34,13 +34,21 @@ describe('JournalsListHeaderRow', () => {
         expect(getByTestId('journal-list-header-col-1-select-all')).toHaveAttribute('checked');
     });
     it('should render all headers on with help icons', () => {
+        const mockMap = [...JournalFieldsMap];
+        mockMap.find(field => field.key === 'highest_quartile').subLabel = 'Test sublabel';
+        jest.mock('./JournalFieldsMap', () => mockMap, { virtual: true });
+
         // this just checks the elements are in the page. See search.spec.js for breakpoint tests
-        const { getByTestId } = setup({ isSelectable: true });
+        const { getByTestId, getByText } = setup({ isSelectable: true });
+
         expect(getByTestId('journal-list-header')).toBeInTheDocument();
         JournalFieldsMap.filter(item => item.compactView).map((item, index) => {
             expect(getByTestId(`journal-list-header-${sanitiseId(item.key)}`)).toHaveTextContent(item.label);
             if (index !== 0) {
                 expect(getByTestId(`help-icon-${sanitiseId(item.key)}`)).toBeInTheDocument();
+            }
+            if (item.key === 'highest_quartile') {
+                expect(getByText('Test sublabel')).toBeInTheDocument();
             }
         });
     });

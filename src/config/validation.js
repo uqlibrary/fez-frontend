@@ -281,15 +281,21 @@ export const dateRange = (value, values) => {
     }
 };
 
-export const fullDate = state => {
-    const valid = moment(state).isValid();
-
-    if (!valid) {
-        return 'date is not valid';
+export const isValidDate = date => {
+    try {
+        return moment(date).isValid();
+    } catch (e) {
+        return false;
     }
-
-    return '';
 };
+
+export const isDateSameOrAfter = (date, anotherDate) =>
+    moment(date).isSameOrAfter(moment(anotherDate).format('YYYY-MM-DD'));
+
+export const isDateSameOrBefore = (date, anotherDate) =>
+    moment(date).isSameOrBefore(moment(anotherDate).format('YYYY-MM-DD'));
+
+export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from) && isDateSameOrBefore(date, to);
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 

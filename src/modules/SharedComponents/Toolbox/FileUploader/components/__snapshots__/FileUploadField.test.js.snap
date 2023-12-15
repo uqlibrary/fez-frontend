@@ -3,7 +3,7 @@
 exports[`FileUploadField method should return <FileUploader> 1`] = `
 <Memo(Connect(FileUploader))
   input={
-    Object {
+    {
       "onChange": [MockFunction],
     }
   }

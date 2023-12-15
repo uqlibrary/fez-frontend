@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Files Component  AV Check should not render preview button for infected file 1`] = `
-Array [
-  Object {
+[
+  {
     "dsi_copyright": null,
     "dsi_dsid": "cats.tiff",
     "dsi_embargo_date": null,
@@ -15,7 +15,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -28,7 +28,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -41,7 +41,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -54,7 +54,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "infected",
     "dsi_copyright": null,
@@ -69,7 +69,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -82,7 +82,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -95,7 +95,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -108,7 +108,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -123,7 +123,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -136,7 +136,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -149,7 +149,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -162,7 +162,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -177,7 +177,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -190,7 +190,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -203,7 +203,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -220,8 +220,8 @@ Array [
 `;
 
 exports[`Files Component  AV Check should render the proper av status icon 1`] = `
-Array [
-  Object {
+[
+  {
     "dsi_copyright": null,
     "dsi_dsid": "cats.tiff",
     "dsi_embargo_date": null,
@@ -234,7 +234,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -247,7 +247,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -260,7 +260,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -273,7 +273,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "infected",
     "dsi_copyright": null,
@@ -288,7 +288,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -301,7 +301,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -314,7 +314,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -327,7 +327,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -342,7 +342,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -355,7 +355,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -368,7 +368,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -381,7 +381,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -396,7 +396,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -409,7 +409,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -422,7 +422,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -435,7 +435,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -450,7 +450,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "interview_t.mp3",
     "dsi_embargo_date": null,
@@ -463,7 +463,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -3066,9 +3066,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3228,9 +3225,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>
@@ -3704,9 +3698,6 @@ exports[`Files Component  should render component 2`] = `
                 type="button"
               >
                 Click to login
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -4597,9 +4588,6 @@ exports[`Files Component  should render component for public users 1`] = `
                 type="button"
               >
                 Click to login
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -4922,9 +4910,6 @@ exports[`Files Component  should render files based on security policy correctly
                             d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
                           />
                         </svg>
-                        <span
-                          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                        />
                       </button>
                     </div>
                   </div>
@@ -5532,9 +5517,6 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                           d="M8 5v14l11-7z"
                         />
                       </svg>
-                      <span
-                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                      />
                     </button>
                   </div>
                 </div>

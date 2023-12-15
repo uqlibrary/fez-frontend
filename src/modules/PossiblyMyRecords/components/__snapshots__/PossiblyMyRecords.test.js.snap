@@ -384,9 +384,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Claim this work
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                           <div
@@ -399,9 +396,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Not mine
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                         </div>
@@ -514,9 +508,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Claim this work
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                           <div
@@ -529,9 +520,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Not mine
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                         </div>
@@ -644,9 +632,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Claim this work
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                           <div
@@ -659,9 +644,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                               type="button"
                             >
                               Not mine
-                              <span
-                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                              />
                             </button>
                           </div>
                         </div>
@@ -740,9 +722,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </div>
                   <div
                     aria-expanded="false"
@@ -775,9 +754,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </div>
                   <div
                     aria-expanded="false"
@@ -810,9 +786,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </div>
                 </nav>
               </div>

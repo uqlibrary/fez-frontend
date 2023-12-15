@@ -1,167 +1,162 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicExtended from 'ckeditor5-build-classic-extended';
 import Typography from '@mui/material/Typography';
-import 'ckeditor';
 
-export default class RichEditor extends PureComponent {
-    static propTypes = {
-        value: PropTypes.any,
-        className: PropTypes.string,
-        onChange: PropTypes.func.isRequired,
-        disabled: PropTypes.bool,
-        height: PropTypes.number,
-        meta: PropTypes.object,
-        returnSingleValue: PropTypes.bool,
-        maxValue: PropTypes.number,
-        instructions: PropTypes.any,
-        title: PropTypes.any,
-        titleProps: PropTypes.object,
-        description: PropTypes.any,
-        inputRef: PropTypes.object,
-        instanceRef: PropTypes.object,
-        required: PropTypes.bool,
-        richEditorId: PropTypes.string,
-    };
-
-    static defaultProps = {
-        value: '',
-        className: '',
-        height: 100,
-        disabled: false,
-        returnSingleValue: false,
-        titleProps: {},
-        instanceRef: React.createRef(),
-        required: false,
-    };
-
-    componentDidMount() {
-        this.editorInstance =
-            !!window.CKEDITOR &&
-            window.CKEDITOR.replace(this.props.inputRef.current, {
-                bodyId: `${this.props.richEditorId}-input`,
-                removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
-                height: this.props.height,
-                pasteFilter: 'semantic-content',
-            });
-
-        !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
-        !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
-        !!this.editorInstance &&
-            !!this.props.value &&
-            this.editorInstance.setData(this.props.value.get ? this.props.value.get('htmlText') : this.props.value);
-
-        !!this.editorInstance && (this.editorInstance.id = `${this.props.richEditorId}-editor`);
-        !!this.editorInstance && (this.editorInstance.name = `${this.props.richEditorId}-editor`);
-
-        !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
-        !!this.editorInstance && this.editorInstance.on('change', this.onChange);
-        !!this.editorInstance && this.editorInstance.on('contentDom', this.onContentDom);
-        this.props.instanceRef.current = this.editorInstance;
+const RichEditor = fieldProps => {
+    function editorConfig() {
+        const singleLineItems = ['rek-title']; // single line fields don't get multi-line controls
+        return {
+            toolbar: [
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'subscript',
+                'superscript',
+                ...(singleLineItems.includes(fieldProps.richEditorId)
+                    ? []
+                    : ['|', 'link', 'numberedList', 'bulletedList']),
+                '|',
+                'removeFormat',
+                'specialCharacters',
+                '|',
+                'undo',
+                'redo',
+            ],
+            removePlugins: ['MediaEmbedToolbar'],
+        };
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.disabled !== this.props.disabled && this.editorInstance !== null) {
-            this.editorInstance.setReadOnly(!!this.props.disabled);
-        }
-    }
-
-    onInstanceReady = () => {
-        this.editorInstance.setReadOnly(!!this.props.disabled);
-    };
-
-    onContentDom = e => {
-        e.editor.document.getBody().setAttribute('data-analyticsid', `${this.props.richEditorId}-input`);
-        e.editor.document.getBody().setAttribute('data-testid', `${this.props.richEditorId}-input`);
-    };
-
-    onChange = evt => {
-        const textValue = evt.editor.document
-            .getBody()
-            .getText()
-            .trim();
-        this.props.onChange(
+    // A handler executed when the user types or modifies the editor content.
+    // It updates the state of the application.
+    function handleEditorDataChange(event, editor) {
+        const textValue = editor.getData().replace(/<[^>]*>?/gm, '');
+        const newTypedValue =
             textValue.length > 0
                 ? {
-                      htmlText: evt.editor.getData(),
-                      plainText: evt.editor.document
-                          .getBody()
-                          .getText()
-                          .trim(),
+                      htmlText: editor.getData(),
+                      plainText: textValue,
                   }
-                : null,
-        );
-    };
-
-    render() {
-        let error = null;
-        const inputLength =
-            (this.props.value && this.props.value.plainText && this.props.value.plainText.length) ||
-            this.props.value.length - 7; // default rich editor has "<p></p>"
-        if (this.props.meta && this.props.meta.error) {
-            error =
-                !!this.props.meta.error.props &&
-                React.Children.map(this.props.meta.error.props.children, (child, index) => {
-                    if (child.type) {
-                        return React.cloneElement(child, {
-                            key: index,
-                        });
-                    } else {
-                        return child;
-                    }
-                });
-        }
-        return (
-            <React.Fragment>
-                <span>
-                    {this.props.title && (
-                        <Typography
-                            color={this.props.meta && this.props.meta.error && 'error'}
-                            {...this.props.titleProps}
-                        >
-                            {this.props.title}
-                            {this.props.required && <span> *</span>}
-                        </Typography>
-                    )}
-                    {this.props.description && (
-                        <Typography color={this.props.meta && this.props.meta.error && 'error'} variant={'caption'}>
-                            {this.props.description}
-                        </Typography>
-                    )}
-                </span>
-                <div
-                    className={this.props.className}
-                    id={this.props.richEditorId}
-                    data-analyticsid={this.props.richEditorId}
-                    data-testid={this.props.richEditorId}
-                    ref={this.props.inputRef}
-                />
-                {this.props.meta && this.props.meta.error && (
-                    <Typography
-                        color="error"
-                        variant="caption"
-                        component={'span'}
-                        style={{
-                            display: 'inline-block',
-                        }}
-                    >
-                        {error || this.props.meta.error}
-                        {this.props.maxValue && <span>&nbsp;-&nbsp;</span>}
-                    </Typography>
-                )}
-                {this.props.maxValue && (
-                    <Typography
-                        component={'span'}
-                        style={{
-                            display: 'inline-block',
-                        }}
-                        variant="caption"
-                        color={this.props.meta && this.props.meta.error && 'error'}
-                    >
-                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}
-                        {this.props.instructions || ''}
-                    </Typography>
-                )}
-            </React.Fragment>
-        );
+                : null;
+        fieldProps.onChange(newTypedValue);
     }
-}
+
+    function getContent() {
+        let dataForEditor = '';
+        /* istanbul ignore else */
+        if (fieldProps?.input?.value?.size > 0) {
+            dataForEditor = fieldProps.input.value.get('htmlText') || fieldProps.input.value.get('plainText') || '';
+        } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
+            if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
+                dataForEditor = fieldProps.value.get('htmlText');
+            } else if (!!fieldProps.value.htmlText) {
+                dataForEditor = fieldProps.value.htmlText;
+            } else if (typeof fieldProps.value === 'string' && fieldProps.value.length > 0) {
+                dataForEditor = fieldProps.value;
+            }
+        }
+        return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
+    }
+
+    let error = null;
+    const inputLength =
+        (fieldProps.value && fieldProps.value.plainText && fieldProps.value.plainText.length) ||
+        fieldProps.value.length - 7; // default rich editor has "<p></p>"
+    if (fieldProps.meta && fieldProps.meta.error) {
+        error =
+            !!fieldProps.meta.error.props &&
+            React.Children.map(fieldProps.meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index,
+                    });
+                } else {
+                    return child;
+                }
+            });
+    }
+    // rendered content of empty CKEditor:
+    // <p><br data-cke-filler="true"></p>
+    return (
+        <div
+            id={fieldProps.richEditorId}
+            data-testid={fieldProps.richEditorId}
+            data-analyticsid={fieldProps.richEditorId}
+        >
+            <span>
+                {fieldProps.title && (
+                    <Typography color={fieldProps.meta && fieldProps.meta.error && 'error'} {...fieldProps.titleProps}>
+                        {fieldProps.title}
+                        {fieldProps.required && <span> *</span>}
+                    </Typography>
+                )}
+                {fieldProps.description && (
+                    <Typography color={fieldProps.meta && fieldProps.meta.error && 'error'} variant={'caption'}>
+                        {fieldProps.description}
+                    </Typography>
+                )}
+            </span>
+            <CKEditor
+                className={fieldProps.className}
+                editor={ClassicExtended}
+                config={editorConfig()}
+                data={getContent()}
+                onChange={(event, editor) => {
+                    handleEditorDataChange(event, editor);
+                }}
+            />
+            {fieldProps.meta && fieldProps.meta.error && (
+                <Typography
+                    color="error"
+                    variant="caption"
+                    component={'span'}
+                    style={{
+                        display: 'inline-block',
+                    }}
+                >
+                    {error || fieldProps.meta.error}
+                    {fieldProps.maxValue && <span>&nbsp;-&nbsp;</span>}
+                </Typography>
+            )}
+            {fieldProps.maxValue && (
+                <Typography
+                    component={'span'}
+                    style={{
+                        display: 'inline-block',
+                    }}
+                    variant="caption"
+                    color={fieldProps.meta && fieldProps.meta.error && 'error'}
+                >
+                    {inputLength > 0 ? inputLength : 0} characters of {fieldProps.maxValue}
+                    {fieldProps.instructions || ''}
+                </Typography>
+            )}
+        </div>
+    );
+};
+
+RichEditor.prototypes = {
+    className: PropTypes.string,
+    input: PropTypes.object,
+    inputRef: PropTypes.any,
+    instructions: PropTypes.any,
+    maxValue: PropTypes.number,
+    meta: PropTypes.any,
+    onChange: PropTypes.func.isRequired,
+    richEditorId: PropTypes.string,
+    required: PropTypes.bool,
+    title: PropTypes.string,
+    value: PropTypes.string,
+};
+
+RichEditor.defaultProps = {
+    className: '',
+    disabled: false,
+    required: false,
+    value: '',
+};
+
+export default RichEditor;

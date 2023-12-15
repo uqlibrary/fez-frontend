@@ -90,9 +90,6 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                 type="button"
               >
                 New Search
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </button>
             </div>
           </div>
@@ -255,9 +252,6 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                         d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -322,9 +316,6 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   type="button"
                 >
                   Submit to Incites
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </form>
             </div>
@@ -410,9 +401,6 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                         d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                       />
                     </svg>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
                   </button>
                 </div>
               </div>
@@ -477,9 +465,6 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   type="button"
                 >
                   Submit to Incites
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </button>
               </form>
             </div>

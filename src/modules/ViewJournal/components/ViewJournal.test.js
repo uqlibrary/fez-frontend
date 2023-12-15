@@ -384,6 +384,71 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
     });
 
+    it('Should not show sherpa romeo links when journal links is not available', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                        fez_sherpa_romeo: {
+                            srm_issn: '1111-1111',
+                            srm_journal_link: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '2222-2222',
+                        jnl_issn_order: 2,
+                        fez_sherpa_romeo: {
+                            srm_issn: '2222-2222',
+                            srm_journal_link: '12345',
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('srm-journal-link-0-value')).toHaveTextContent('2222-2222');
+        expect(queryByTestId('srm-journal-link-1-value')).not.toBeInTheDocument();
+    });
+
+    it('Should not show sherpa romeo section when non of journal links are not available', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                        fez_sherpa_romeo: {
+                            srm_issn: '1111-1111',
+                            srm_journal_link: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '2222-2222',
+                        jnl_issn_order: 2,
+                        fez_sherpa_romeo: {
+                            srm_issn: '2222-2222',
+                            srm_journal_link: null,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('srm-journal-link-header')).not.toBeInTheDocument();
+    });
+
     it('should render correct creative licenses (BY-ND)', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -488,11 +553,22 @@ describe('ViewJournal', () => {
                         },
                         jnl_wos_category_lookup: 'Public, Environmental & Occupational Health | Mental & Dental Health',
                     },
+                    {
+                        jnl_wos_category_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        jnl_wos_category: '',
+                        jnl_wos_category_index: 'AHCI',
+                        jnl_wos_category_issn: '0090-0036',
+                        jnl_wos_category_source_date: '2020-09-29',
+                        fez_journal_cwts: {
+                            jnl_cwts_source_year: 2020,
+                            jnl_cwts_title: 'AMERICAN JOURNAL OF PUBLIC HEALTH',
+                        },
+                    },
                 ],
             },
         });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
@@ -511,6 +587,8 @@ describe('ViewJournal', () => {
             'Public, Environmental & Occupational Health (0090-0036)',
         );
         expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
+
+        expect(queryByTestId('jnl-wos-category-ahci-header')).not.toBeInTheDocument();
     });
     // Test for title change
     it('Should correctly show required title change', async () => {
