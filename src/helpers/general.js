@@ -10,13 +10,13 @@ const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
-        /* istanbul ignore next */
         return _default;
     }
 };
-/* istanbul ignore next */
+
 export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
 export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
+/* istanbul ignore next */
 export const isCypressTest = () => !!window.Cypress;
 /* istanbul ignore next */
 export const isTest = () => isJestTest() || isCypressTest();
