@@ -1,7 +1,12 @@
-/**
- * @license Copyright (c) 2014-2023, CKSource Holding sp. z o.o. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
- */
-import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-export default class Editor extends ClassicEditorBase {
+declare class Editor {
 }
+declare namespace Editor {
+    const builtinPlugins: any[];
+    namespace defaultConfig {
+        namespace toolbar {
+            const items: string[];
+        }
+        const language: string;
+    }
+}
+export default Editor;

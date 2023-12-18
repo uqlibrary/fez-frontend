@@ -1,6 +1,4 @@
-export default class LetterCase extends Plugin {
+export default class LetterCase {
     init(): void;
-    getDropdownItemsDefinitions(): Collection<Record<string, any>>;
+    getDropdownItemsDefinitions(): any;
 }
-import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
-import Collection from "@ckeditor/ckeditor5-utils/src/collection";

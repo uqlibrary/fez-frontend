@@ -8,22 +8,16 @@
   "main": "./build/ckeditor.js",
   "types": "./build/ckeditor.d.ts",
   "dependencies": {
-    "@ckeditor/ckeditor5-basic-styles": "40.2.0",
-    "@ckeditor/ckeditor5-editor-classic": "40.2.0",
-    "@ckeditor/ckeditor5-essentials": "40.2.0",
-    "@ckeditor/ckeditor5-link": "40.2.0",
-    "@ckeditor/ckeditor5-list": "40.2.0",
-    "@ckeditor/ckeditor5-paragraph": "40.2.0",
-    "@ckeditor/ckeditor5-remove-format": "^40.2.0",
-    "@ckeditor/ckeditor5-special-characters": "^40.2.0",
-    "@ckeditor/ckeditor5-typing": "40.2.0",
-    "@ckeditor/ckeditor5-undo": "40.2.0"
+    "@ckeditor/ckeditor5-build-classic": "^35.2.0",
+    "@ckeditor/ckeditor5-remove-format": "^35.2.0",
+    "@ckeditor/ckeditor5-special-characters": "^35.2.0",
+    "@ckeditor/ckeditor5-undo": "^35.2.0"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-core": "^40.2.0",
+    "@ckeditor/ckeditor5-core": "^35.2.0",
     "@ckeditor/ckeditor5-dev-translations": "^32.1.2",
     "@ckeditor/ckeditor5-dev-utils": "^32.1.2",
-    "@ckeditor/ckeditor5-theme-lark": "^40.2.0",
+    "@ckeditor/ckeditor5-theme-lark": "^35.2.0",
     "css-loader": "^5.2.7",
     "postcss": "^8.4.32",
     "postcss-loader": "^4.3.0",
