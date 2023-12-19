@@ -626,3 +626,28 @@ Two tests have been Istanbul ignored in order to get the build passing. These ar
 1. MyIncompleteRecord
 
 Despite many hours attempting to find a resolution to the Jest errors both produced no solution could be found, and so their tests have been ignored for now. A [ticket](https://www.pivotaltracker.com/story/show/184445375) has been created to revisit this situation at a later date.
+
+## CKEditor
+
+The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules. Because we needed an extra button on the toolbar, Change Case, we had to _build from source_
+
+Links
+
+- CKE in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
+- Creating the custom build: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+
+If changes to ckeditor are required, these are sample commands:
+
+```bash
+ cd custom_modules/ckeditor5-custom-build/ # change into the modules subdirectory
+ npm ci # install modules from package-lock file
+ npm run build # after your changes, create the build files that our react app will pull in - MANDATORY!!
+ # commit changes (including /build directory!!)
+ cd ../../
+```
+
+We don't seem to need to issue any `ci` or `run build` commands for non-ckeditor localhost development, when not making changes to ckeditor - react picks up the build directory.
+
+Note we are trapped below the latest version - past about V34, ckeditor crashes in cypress (although it runs fine in localhost) - probably the same cause as in https://github.com/ckeditor/ckeditor5/issues/12802
+
+CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same version (although there are a short number of exceptions).

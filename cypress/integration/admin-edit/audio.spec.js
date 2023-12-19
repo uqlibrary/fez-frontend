@@ -65,10 +65,9 @@ context('Audio admin edit', () => {
                     'have.text',
                     record.fez_record_search_key_rights.rek_rights,
                 );
-                cy.get('div:nth-child(14) span span')
-                    .eq(0)
+                cy.get('[data-testid="rek-transcript"]')
+                    .find('.MuiTypography-caption')
                     .should('have.text', 'Transcript');
-                // cy.get('[data-testid="rek-transcript"] .ck-editor__main p').should('exist');
                 cy.readCKEditor('rek-transcript').then(text => {
                     cy.log('text=', text);
                     expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript.substring(0, 10));
