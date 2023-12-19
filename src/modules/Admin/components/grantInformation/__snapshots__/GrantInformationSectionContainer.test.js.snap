@@ -3,8 +3,8 @@
 exports[`GrantInformationSectionContainer should render properly 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {},
+    {
+      "formValues": {},
     }
   }
 >

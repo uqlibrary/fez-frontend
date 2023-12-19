@@ -14,7 +14,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
     >
       <NavigationDialogBox
         txt={
-          Object {
+          {
             "cancelButtonLabel": "No",
             "confirmButtonLabel": "Yes",
             "confirmationMessage": "Are you sure you want to abandon workflow?",
@@ -29,7 +29,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
       >
         <StandardCard
           help={
-            Object {
+            {
               "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
@@ -38,7 +38,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                   rel="noreferrer"
                   style={
-                    Object {
+                    {
                       "fontWeight": 700,
                     }
                   }

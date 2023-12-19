@@ -51,7 +51,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div
@@ -158,7 +158,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div
@@ -256,7 +256,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div

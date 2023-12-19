@@ -3,8 +3,8 @@
 exports[`AuthorsSectionContainer component should render default view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {
+    {
+      "formValues": {
         "isNtro": false,
       },
     }
@@ -19,8 +19,8 @@ exports[`AuthorsSectionContainer component should render default view 1`] = `
 exports[`AuthorsSectionContainer component should render disabled view 1`] = `
 <Context.Provider
   value={
-    Object {
-      "formValues": Object {
+    {
+      "formValues": {
         "isNtro": false,
       },
     }

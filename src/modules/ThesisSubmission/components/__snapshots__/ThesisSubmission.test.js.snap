@@ -98,7 +98,7 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
 `;
 
 exports[`ThesisSubmission should have a helper to generate alert props 1`] = `
-Object {
+{
   "message": "Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.",
   "title": "Error",
   "type": "error_outline",

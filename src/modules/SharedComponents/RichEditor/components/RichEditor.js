@@ -2,30 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicExtended from 'ckeditor5-build-classic-extended';
+import Editor from '../../../../../custom_modules/ckeditor5-custom-build';
 import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
     function editorConfig() {
-        const singleLineItems = ['rek-title']; // single line fields don't get multi-line controls
         return {
-            toolbar: [
-                'bold',
-                'italic',
-                'underline',
-                'strikethrough',
-                'subscript',
-                'superscript',
-                ...(singleLineItems.includes(fieldProps.richEditorId)
-                    ? []
-                    : ['|', 'link', 'numberedList', 'bulletedList']),
-                '|',
-                'removeFormat',
-                'specialCharacters',
-                '|',
-                'undo',
-                'redo',
-            ],
+            toolbar: {
+                items: [
+                    'bold',
+                    'italic',
+                    'underline',
+                    'strikethrough',
+                    'subscript',
+                    'superscript',
+                    ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
+                    '|',
+                    'LetterCase',
+                    'removeFormat',
+                    'specialCharacters',
+                    '|',
+                    'undo',
+                    'redo',
+                ],
+            },
             removePlugins: ['MediaEmbedToolbar'],
         };
     }
@@ -101,7 +101,7 @@ const RichEditor = fieldProps => {
             </span>
             <CKEditor
                 className={fieldProps.className}
-                editor={ClassicExtended}
+                editor={Editor}
                 config={editorConfig()}
                 data={getContent()}
                 onChange={(event, editor) => {
@@ -148,6 +148,7 @@ RichEditor.prototypes = {
     onChange: PropTypes.func.isRequired,
     richEditorId: PropTypes.string,
     required: PropTypes.bool,
+    singleLine: PropTypes.bool,
     title: PropTypes.string,
     value: PropTypes.string,
 };
@@ -156,6 +157,7 @@ RichEditor.defaultProps = {
     className: '',
     disabled: false,
     required: false,
+    singleLine: false,
     value: '',
 };
 

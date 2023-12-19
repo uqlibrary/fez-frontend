@@ -1091,7 +1091,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
 exports[`myDatasets test renders loading screen while loading account data 1`] = `<div />`;
 
 exports[`myDatasets test renders loading screen while loading publications  1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
