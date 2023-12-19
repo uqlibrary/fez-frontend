@@ -17,18 +17,6 @@ module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
     // `config` is the resolved Cypress config
     // initPlugin(on, config);
-    // // https://stackoverflow.com/questions/58947967/cypress-error-the-automation-client-disconnected-cannot-continue-running-tests
-    // // ref: https://docs.cypress.io/api/plugins/browser-launch-api.html#Usage
-    // // https://docs.cypress.io/guides/references/migration-guide#Plugin-Event-beforebrowserlaunch
-    // on('before:browser:launch', (browser = {}, launchOptions) => {
-    //     if (browser.name === 'chrome') {
-    //         launchOptions.args.push('--disable-dev-shm-usage');
-    //         return args;
-    //     }
-    //
-    //     return args;
-    // });
-
     require('@cypress/code-coverage/task')(on, config);
     on('file:preprocessor', require('@cypress/code-coverage/use-browserify-istanbul'));
     return config;

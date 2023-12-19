@@ -106,7 +106,7 @@ context('As an admin, I can', () => {
             .click();
     }
 
-    it.only('add a creative work', () => {
+    it('add a creative work', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         loadNtroTabAdminAdd(0, 'Creative Work - Textual');

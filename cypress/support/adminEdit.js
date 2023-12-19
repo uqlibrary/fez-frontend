@@ -8,6 +8,7 @@ const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > di
 
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
+    // sometimes the page takes a VERY long time to load
     cy.waitUntil(
         () =>
             cy

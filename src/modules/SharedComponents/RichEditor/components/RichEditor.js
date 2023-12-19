@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Typography from '@mui/material/Typography';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
-// import ClassicExtended from 'ckeditor5-build-classic-extended';
 import Editor from '../../../../../custom_modules/ckeditor5-custom-build';
+import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
     function editorConfig() {
@@ -102,7 +101,6 @@ const RichEditor = fieldProps => {
             </span>
             <CKEditor
                 className={fieldProps.className}
-                // editor={ClassicExtended}
                 editor={Editor}
                 config={editorConfig()}
                 data={getContent()}
