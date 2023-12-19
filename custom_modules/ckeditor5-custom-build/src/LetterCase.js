@@ -25,10 +25,6 @@ const LetterCaseOptions = [
     {
         text: "Title Case",
         mode: "titleCase"
-    },
-    {
-        text: "tOGGLE cASE",
-        mode: "toggleCase"
     }
 ];
 
