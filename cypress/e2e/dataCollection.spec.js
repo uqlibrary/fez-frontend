@@ -6,6 +6,7 @@ context('Data Collection form', () => {
     });
 
     beforeEach(() => {
+        cy.waitUntil(() => cy.get('button#submit-data-collection').should('exist'));
         cy.get('button#submit-data-collection')
             .as('submitButton')
             .should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
