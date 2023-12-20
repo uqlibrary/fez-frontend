@@ -1330,5 +1330,8 @@ export default {
                 title: 'Strategic publishing favourites',
             },
         },
+        controlledVocabularies: {
+            title: 'Controlled Vocabularies',
+        },
     },
 };

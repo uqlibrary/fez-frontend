@@ -449,6 +449,13 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.users.title,
                   },
+                  {
+                      path: pathConfig.admin.controlledVocabularies,
+                      component: components.ControlledVocabularies,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.controlledVocabularies.title,
+                  },
               ]
             : []),
         ...(account && account.canMasquerade
