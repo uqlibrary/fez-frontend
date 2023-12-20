@@ -631,6 +631,7 @@ export default class AddDataCollection extends Component {
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     id="submit-data-collection"
+                                    data-testid="submit-data-collection"
                                     variant="contained"
                                     color="primary"
                                     fullWidth
