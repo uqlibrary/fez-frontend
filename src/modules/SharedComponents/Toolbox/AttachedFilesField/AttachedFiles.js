@@ -141,6 +141,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   return a.dsi_order < b.dsi_order ? -1 : 1;
               })
               .map((dataStream, key) => {
+                  const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -154,8 +155,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                   return {
-                      id: key,
-                      key: dataStream.dsi_id,
+                      id,
+                      key: id,
                       pid,
                       fileName,
                       description: dataStream.dsi_label,

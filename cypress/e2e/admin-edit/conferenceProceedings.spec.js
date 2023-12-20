@@ -53,7 +53,7 @@ context('Conference Proceedings admin edit', () => {
                     .eq(0)
                     .should('have.text', 'Attached files');
 
-                cy.get('[data-testid="standard-card-attached-files-content"] > div:nth-child(3)').within(() => {
+                cy.get('[class*=MuiCardContent-root] > div:nth-child(3)').within(() => {
                     cy.get(`a[title="${visibleFilename}"]`).should('have.length', 1);
 
                     // TODO: Write test for file hidden as per new logic
