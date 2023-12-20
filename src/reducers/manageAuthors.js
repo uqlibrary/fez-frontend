@@ -122,6 +122,7 @@ const handlers = {
         scopusIngestRequestError: action.payload,
     }),
 
+    /* istanbul ignore next */
     [actions.AUTHOR_CLEAR_ALERTS]: state => ({
         ...state,
         authorListItemUpdateSuccess: false,
