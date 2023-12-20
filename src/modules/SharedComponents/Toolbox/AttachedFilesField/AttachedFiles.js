@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useFormValuesContext, useRecordContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isDateInBetween, isFileValid, isValidDate } from 'config/validation';
@@ -31,7 +31,7 @@ import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
+import { checkForPreview, checkForThumbnail, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
@@ -141,7 +141,6 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   return a.dsi_order < b.dsi_order ? -1 : 1;
               })
               .map((dataStream, key) => {
-                  const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -155,8 +154,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                   return {
-                      id,
-                      key: id,
+                      id: key,
+                      key: dataStream.dsi_id,
                       pid,
                       fileName,
                       description: dataStream.dsi_label,
