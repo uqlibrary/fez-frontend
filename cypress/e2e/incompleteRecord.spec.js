@@ -163,6 +163,7 @@ context('Incomplete record form', () => {
     });
 
     it('should have working tests for Grants editor', () => {
+        cy.waitUntil(() => cy.get('[data-testid=rek-grant-agency-input]').should('exist'));
         cy.get('[data-testid=rek-grant-agency-input]').type('Grant name');
         cy.get('[data-testid=rek-grant-add]').should('be.disabled');
         cy.get(validationErrorsSelector)
