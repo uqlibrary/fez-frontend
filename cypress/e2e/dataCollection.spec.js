@@ -13,9 +13,10 @@ context('Data Collection form', () => {
         errorCount = errorCount + incrementErrorCountBy;
         cy.waitUntil(() => cy.get('[data-testid=submit-data-collection]').should('exist'));
         cy.get('[data-testid=submit-data-collection]').should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
-        if (errorCount > 0) {
-            cy.get('[data-testid=alert] li').should('have.length', errorCount);
-        }
+        cy.get('[data-testid=alert] li').should(
+            errorCount > 0 ? 'have.length' : 'not.exist',
+            errorCount > 0 ? errorCount : null,
+        );
     }
 
     it('correctly validates', () => {
