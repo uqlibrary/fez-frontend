@@ -6,32 +6,28 @@ import Editor from '../../../../../custom_modules/ckeditor5-custom-build';
 import Typography from '@mui/material/Typography';
 
 const RichEditor = fieldProps => {
-    function editorConfig() {
-        return {
-            toolbar: {
-                items: [
-                    'bold',
-                    'italic',
-                    'underline',
-                    'strikethrough',
-                    'subscript',
-                    'superscript',
-                    ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
-                    '|',
-                    'LetterCase',
-                    'removeFormat',
-                    'specialCharacters',
-                    '|',
-                    'undo',
-                    'redo',
-                ],
-            },
-            removePlugins: ['MediaEmbedToolbar'],
-        };
-    }
+    const editorConfig = {
+        toolbar: {
+            items: [
+                'bold',
+                'italic',
+                'underline',
+                'strikethrough',
+                'subscript',
+                'superscript',
+                ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
+                '|',
+                'LetterCase',
+                'removeFormat',
+                'specialCharacters',
+                '|',
+                'undo',
+                'redo',
+            ],
+        },
+        removePlugins: ['MediaEmbedToolbar'],
+    };
 
-    // A handler executed when the user types or modifies the editor content.
-    // It updates the state of the application.
     function handleEditorDataChange(event, editor) {
         const textValue = editor.getData().replace(/<[^>]*>?/gm, '');
         const newTypedValue =
@@ -102,7 +98,7 @@ const RichEditor = fieldProps => {
             <CKEditor
                 className={fieldProps.className}
                 editor={Editor}
-                config={editorConfig()}
+                config={editorConfig}
                 data={getContent()}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
