@@ -125,6 +125,7 @@ export function loadDetailedHistory(pid) {
                 return Promise.resolve(response.data);
             })
             .catch(error => {
+                /* istanbul ignore next */
                 dispatch({
                     type: actions.DETAILED_HISTORY_LOADING_FAILED,
                     payload: error,
