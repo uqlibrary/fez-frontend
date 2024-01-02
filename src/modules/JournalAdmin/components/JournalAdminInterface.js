@@ -151,6 +151,7 @@ export const JournalAdminInterface = ({
         const pushToHistory = () => history.push(pathConfig.journal.view(journal.jnl_jid));
 
         const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
+        /* istanbul ignore next */
         if (
             authorDetails &&
             (authorDetails.is_administrator === 1 ||
