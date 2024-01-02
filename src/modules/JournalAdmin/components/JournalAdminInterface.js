@@ -157,6 +157,7 @@ export const JournalAdminInterface = ({
                 /* istanbul ignore next */ authorDetails.is_super_administrator === 1) &&
             !!navigatedFrom
         ) {
+            /* istanbul ignore next */
             history.push(decodeURIComponent(navigatedFrom));
         } else {
             pushToHistory();

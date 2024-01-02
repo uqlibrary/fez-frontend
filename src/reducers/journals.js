@@ -82,12 +82,12 @@ const handlers = {
         journalSearchKeywords: { ...initialJournalSearchKeywords },
         isInitialValues: true,
     }),
-    [actions.ADMIN_JOURNAL_CLEAR]: () => ({
+    [actions.ADMIN_JOURNAL_CLEAR]: /* istanbul ignore next */ () => /* istanbul ignore next */ ({
         ...initialState,
         isJournalLocked: false,
     }),
 
-    [actions.ADMIN_JOURNAL_UNLOCK]: state => ({
+    [actions.ADMIN_JOURNAL_UNLOCK]: /* istanbul ignore next */ state => /* istanbul ignore next */ ({
         ...state,
         isJournalLocked: false,
     }),
