@@ -9,15 +9,15 @@ import locale from 'locale/global';
 import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
-import { isTest } from '../helpers/general';
+import { isDevEnv, isTest } from '../helpers/general';
 
 let apiClient = axios.create({
     baseURL: API_URL,
     crossdomain: true,
 });
 
-if (!isTest()) {
-    // note: axios-cache-interceptor is not compatible with tests
+if (!isDevEnv() && !isTest()) {
+    // note: axios-cache-interceptor is not compatible with axios response mocks & tests
     // upon updating it or changing config settings, make sure to test it using prodtest env
     apiClient = setupCache(apiClient, {
         // the option below only works when importing from "axios-cache-interceptor.dev"
