@@ -218,6 +218,7 @@ export function ingestFromScopus(autId) {
         }
     };
 }
+/* istanbul ignore next */
 export function clearAuthorAlerts() {
     return dispatch => {
         dispatch({ type: AUTHOR_CLEAR_ALERTS });

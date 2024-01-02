@@ -765,6 +765,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             <button
               aria-label="Submit for approval"
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"
               type="button"
@@ -1551,6 +1552,7 @@ exports[`AddDataCollection test should render component with a valid collection 
             <button
               aria-label="Submit for approval"
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"
               type="button"
@@ -2333,6 +2335,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
             <button
               aria-label="Submit for approval"
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"
               type="button"
@@ -3115,6 +3118,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
             <button
               aria-label="Submit for approval"
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              data-testid="submit-data-collection"
               id="submit-data-collection"
               tabindex="0"
               type="button"
