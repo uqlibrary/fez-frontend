@@ -33,7 +33,12 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
     cy.get('button#main-menu-button')
         .should('not.be.empty')
         .click();
-    cy.wait(1000);
+    cy.waitUntil(() =>
+        cy
+            .get('#menu-item-0')
+            .should('exist')
+            .should('be.visible'),
+    );
     cy.get('#menu-item-0').click();
     // Say yes to 'Are you sure' if it does trigger
     if (!!locale) {

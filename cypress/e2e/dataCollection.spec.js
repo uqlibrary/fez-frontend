@@ -5,41 +5,41 @@ context('Data Collection form', () => {
         cy.visit('/data-collections/add');
     });
 
-    beforeEach(() => {
-        cy.get('button#submit-data-collection')
-            .as('submitButton')
-            .should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
-        cy.get('[data-testid=alert] li')
-            .as('errors')
-            .should('have.length', errorCount);
-    });
-
     after(() => {
         cy.killWindowUnloadHandler();
     });
 
-    it('validates deposit agreement', () => {
+    function submitButtonCorrect(incrementErrorCountBy = 0) {
+        errorCount = errorCount + incrementErrorCountBy;
+        cy.waitUntil(() => cy.get('[data-testid=submit-data-collection]').should('exist'));
+        cy.get('[data-testid=submit-data-collection]').should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
+        cy.get('[data-testid=alert] li').should(
+            errorCount > 0 ? 'have.length' : 'not.exist',
+            errorCount > 0 ? errorCount : null,
+        );
+    }
+
+    it('correctly validates', () => {
+        // 'validates deposit agreement'
+        submitButtonCorrect();
+
         // Accept the agreement
         cy.get('[data-testid=rek-copyright-input]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
-    });
+        submitButtonCorrect(-1);
 
-    it('validates Dataset information', () => {
+        // 'validates Dataset information'
+
         // Dataset name
         cy.get('[data-testid=rek-title-input]').type('Name of Dataset');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Dataset description
         cy.get('[data-testid=rek-description-input]').type('Description of Dataset');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Contact name
         cy.get('[data-testid=rek-contributor-input]').type('Ky Lane');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Contact name ID
         cy.get('[data-testid=rek-contributor-id-input]').type('David');
@@ -47,18 +47,17 @@ context('Data Collection form', () => {
             .contains('David Stevens')
             .click();
 
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Contact email
         cy.get('[data-testid=rek-contact-details-email-input]').type('k.lane@');
         cy.get('#rek-contact-details-email-helper-text')
             .contains('Email address is not valid')
             .should('have.length', 1);
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
+
         cy.get('[data-testid=rek-contact-details-email-input]').type('uq.edu.au');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // DOI
         cy.get('[data-testid=rek-doi-input]').type('test');
@@ -71,48 +70,42 @@ context('Data Collection form', () => {
                 delay: 30,
             },
         );
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Publisher
         cy.get('[data-testid=rek-publisher-input]').type('A publisher');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Publication date
         cy.get('[data-testid=rek-date-day-input]').type('16');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         cy.get('[data-testid=rek-date-month-select]').click();
         cy.get('li[data-value="11"]').click();
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         cy.get('[data-testid=rek-date-year-input]').type('1976');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
-    });
+        submitButtonCorrect(-1);
 
-    it('validates FoR codes', () => {
+        // 'validates FoR codes'
         // Field of research
         cy.get('[data-testid=rek-subject-input]').type('a');
         cy.get('[data-testid=rek-subject-options]')
             .contains('010101')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
+
         cy.get('button#field-of-research-list-row-0-delete').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', ++errorCount);
+        submitButtonCorrect(1);
 
         cy.get('[data-testid=rek-subject-input]').type('b');
         cy.get('[data-testid=rek-subject-options]')
             .contains('010101')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         cy.get('[data-testid=rek-subject-input]').type('a');
         cy.get('[data-testid=rek-subject-options]')
@@ -123,28 +116,26 @@ context('Data Collection form', () => {
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', ++errorCount);
+        submitButtonCorrect(1);
 
         cy.get('[data-testid=rek-subject-input]').type('b');
         cy.get('[data-testid=rek-subject-options]')
             .contains('010102')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
-    });
+        submitButtonCorrect(-1);
 
-    it('validates creators', () => {
+        // 'validates creators
+
         // Creators
         cy.get('[data-testid=rek-author-input]').type('Ky Lane');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
+
         cy.get('div#contributorForm')
             .find('[data-testid=rek-author-role-input]')
             .type('Custom role');
         cy.get('button[data-testid=rek-author-add]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
+
         cy.get('[data-testid=rek-author-input]').type('Vishal Asai');
         cy.get('div#contributorForm')
             .find('[data-testid=rek-author-role-input]')
@@ -152,63 +143,57 @@ context('Data Collection form', () => {
         cy.get('li[role="option"]')
             .contains('Technician')
             .click();
-
         cy.get('button#rek-author-list-row-delete-1').click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
+
         cy.get('div.Creators')
             .get('button[aria-label="Remove all items"]')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('@errors').should('have.length', ++errorCount);
+        submitButtonCorrect(1);
+
         cy.get('[data-testid=rek-author-input]').type('Ky Lane');
         cy.get('[data-testid=rek-author-role-input]').type('UX Developer');
         cy.get('button[data-testid=rek-author-add]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
-    });
+        submitButtonCorrect(-1);
 
-    it('validates access and licensing info', () => {
+        // 'validates access and licensing info'
+
         // Access conditions
         cy.get('[data-testid=rek-access-conditions-select]').click();
         cy.get('li[data-value="453618"]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         cy.get('[data-testid=rek-access-conditions-select]').click();
         cy.get('li[data-value="453619"]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Licensing and terms of access
         cy.get('[data-testid=rek-license-select]').click();
         cy.get('li[data-value="454104"]').click();
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Copyright notice
         cy.get('[data-testid=rek-rights-input]').type('This is a copyright notice');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
-    });
+        submitButtonCorrect();
 
-    it('validates project information', () => {
+        // 'validates project information'
+        submitButtonCorrect();
+
         // Project name
         cy.get('[data-testid=rek-project-name-input]').type('This is the project name');
-        cy.get('@submitButton').should('be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Project description
         cy.get('[data-testid=rek-project-description-input]').type(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
         );
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', --errorCount);
+        submitButtonCorrect(-1);
 
         // Funding body
         cy.get('[data-testid=rek-grant-agency-input]').type('Funding body 1');
@@ -227,8 +212,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('[data-testid=rek-grant-agency-input]').type('Funding body 3');
         cy.get('[data-testid=rek-grant-agency-add]').click();
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Grant ID
         cy.get('[data-testid=rek-grant-id-input]').type('Grant ID 1');
@@ -246,11 +230,10 @@ context('Data Collection form', () => {
             .click();
         cy.get('[data-testid=rek-grant-id-input]').type('Grant ID 3');
         cy.get('[data-testid=rek-grant-id-add]').click();
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
-    });
+        submitButtonCorrect();
 
-    it('validates dataset details', () => {
+        // 'validates dataset details'
+
         // Type of data
         cy.get('[data-testid=rek-type-of-data-input]').type('Type of data 1');
         cy.get('[data-testid=rek-type-of-data-add').click();
@@ -267,8 +250,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('[data-testid=rek-type-of-data-input]').type('Type of data 3');
         cy.get('[data-testid=rek-type-of-data-add').click();
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Software required
         cy.get('[data-testid=rek-software-required-input]').type('Software required 1');
@@ -286,8 +268,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('[data-testid=rek-software-required-input]').type('Software required 3');
         cy.get('[data-testid=rek-software-required-add]').click();
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Keywords
         cy.get('[data-testid=rek-keywords-input]').type('Keywords 1');
@@ -305,8 +286,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('[data-testid=rek-keywords-input]').type('Keywords 3');
         cy.get('[data-testid=rek-keywords-add]').click();
-        cy.get('@submitButton').should('not.be.disabled');
-        cy.get('@errors').should('have.length', errorCount);
+        submitButtonCorrect();
 
         // Collection Start date
         // the field is not required - if we focus on it, type something in, clear and click on a different field,
@@ -345,10 +325,7 @@ context('Data Collection form', () => {
             .type('1976');
 
         cy.contains('p', 'Date must be before now').should('not.exist');
-
-        cy.get('@errors').should('have.length', errorCount);
-
-        cy.get('@submitButton').should('not.be.disabled');
+        submitButtonCorrect();
 
         // End Collection date
         cy.get('[data-testid=rek-end-date-day-input]').type('16');
@@ -377,18 +354,19 @@ context('Data Collection form', () => {
 
         cy.contains('p', 'Date range is not valid').should('not.exist');
 
-        cy.get('@errors').should('have.length', errorCount);
-        cy.get('@submitButton').should('not.be.disabled');
-    });
+        submitButtonCorrect();
 
-    it('validates related datasets/work', () => {
+        // 'validates related datasets/work'
+        submitButtonCorrect();
+
         // Related datasets
         cy.get('[data-testid=rek-isdatasetof-input]').type('a');
         cy.clickAutoSuggestion('rek-isdatasetof', 0);
-        // cy.get('@submitButton').should('be.disabled');
-        // cy.get('@errors').should('have.length', 1);
+        submitButtonCorrect();
+
         cy.get('[data-testid=rek-isdatasetof-input]').type('a');
         cy.clickAutoSuggestion('rek-isdatasetof', 1);
+        submitButtonCorrect();
 
         cy.get('#related-datasets-list-row-0').should('contain', 'A state-based vaccination register');
         cy.get('#related-datasets-list-row-1').should(
@@ -402,5 +380,6 @@ context('Data Collection form', () => {
             'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
         );
         cy.get('#related-datasets-list-row-1').should('contain', 'A state-based vaccination register');
+        submitButtonCorrect();
     });
 });
