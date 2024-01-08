@@ -97,7 +97,6 @@ export class ContributorsEditor extends PureComponent {
     }
     buildInitialScaleOfSignificance = props => {
         if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
-            console.log('found sig props', props.scaleOfSignificance);
             return props.scaleOfSignificance;
         }
 
