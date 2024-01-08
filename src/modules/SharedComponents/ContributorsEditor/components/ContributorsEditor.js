@@ -97,6 +97,7 @@ export class ContributorsEditor extends PureComponent {
     }
     buildInitialScaleOfSignificance = props => {
         if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
+            console.log('found sig props', props.scaleOfSignificance);
             return props.scaleOfSignificance;
         }
 
@@ -104,29 +105,33 @@ export class ContributorsEditor extends PureComponent {
         props.record?.fez_record_search_key_significance &&
             props.record?.fez_record_search_key_significance.length > 0 &&
             props.record?.fez_record_search_key_significance.map((item, index) => {
-                ScaleOfSignificance[index] = {};
-                ScaleOfSignificance[index].id = item.rek_significance_id;
-                ScaleOfSignificance[index].key = item.rek_significance;
-                ScaleOfSignificance[index].value = {
-                    plainText:
-                        props.record?.fez_record_search_key_creator_contribution_statement[index]
-                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
-                    htmlText:
-                        props.record?.fez_record_search_key_creator_contribution_statement[index]
-                            ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
-                };
-                ScaleOfSignificance[index].author = {
-                    rek_author_id:
-                        props.record?.fez_record_search_key_author[index]?.rek_author_id ||
-                        /* istanbul ignore next */ 0,
-                    rek_author_pid:
-                        props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
-                        /* istanbul ignore next */ null,
-                    rek_author:
-                        props.record?.fez_record_search_key_author[index]?.rek_author ||
-                        /* istanbul ignore next */ null,
-                    rek_author_order: index + 1,
-                };
+                // check here for the length of the significance vs the authors.
+                /* istanbul ignore else */
+                if (props.record?.fez_record_search_key_author.length >= index + 1) {
+                    ScaleOfSignificance[index] = {};
+                    ScaleOfSignificance[index].id = item.rek_significance_id;
+                    ScaleOfSignificance[index].key = item.rek_significance;
+                    ScaleOfSignificance[index].value = {
+                        plainText:
+                            props.record?.fez_record_search_key_creator_contribution_statement[index]
+                                ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                        htmlText:
+                            props.record?.fez_record_search_key_creator_contribution_statement[index]
+                                ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
+                    };
+                    ScaleOfSignificance[index].author = {
+                        rek_author_id:
+                            props.record?.fez_record_search_key_author[index]?.rek_author_id ||
+                            /* istanbul ignore next */ 0,
+                        rek_author_pid:
+                            props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
+                            /* istanbul ignore next */ null,
+                        rek_author:
+                            props.record?.fez_record_search_key_author[index]?.rek_author ||
+                            /* istanbul ignore next */ null,
+                        rek_author_order: index + 1,
+                    };
+                }
             });
 
         return ScaleOfSignificance;
@@ -364,6 +369,7 @@ export class ContributorsEditor extends PureComponent {
     handleSoSChange = (oldContribs, newContribs) => {
         const updated = diff(oldContribs, newContribs);
         if (Object.keys(updated).length < 1) {
+            console.log('A');
             return this.state.scaleOfSignificance;
         } else {
             // First check for length changes - that means either a new contrib is added, or one is deleted.
@@ -371,6 +377,7 @@ export class ContributorsEditor extends PureComponent {
             let newList = [];
             if (oldContribs.length < newContribs.length) {
                 // Add a SoS to the list.
+                console.log('B');
                 const newItem = {
                     id: 0,
                     key: 0,
@@ -388,8 +395,11 @@ export class ContributorsEditor extends PureComponent {
                     newList = [newItem];
                 }
             } else if (oldContribs.length > newContribs.length) {
+                console.log('C');
                 let found = false;
                 newList = [...this.state.scaleOfSignificance];
+                console.log('sig is', this.state.scaleOfSignificance);
+                console.log('props is', this.props.scaleOfSignificance);
                 oldContribs.map((contributor, index) => {
                     if (!found && JSON.stringify(contributor) !== JSON.stringify(newContribs[index])) {
                         newList.splice(index, 1);
@@ -397,6 +407,7 @@ export class ContributorsEditor extends PureComponent {
                     }
                 });
             } else {
+                console.log('D');
                 const changedIndexes = [];
                 const scaleOfSignificance = [...this.state.scaleOfSignificance];
                 this.state.scaleOfSignificance.length > 0 &&
