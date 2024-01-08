@@ -2,6 +2,12 @@ context('As an admin, I can', () => {
     // load the admin add page for a Creative Work with the indicated collection and subType and open the NTRO tab
 
     function createBasicRecordType(collectionRowId, subtypeName) {
+        cy.waitUntil(() =>
+            cy
+                .get('[data-testid=rek-ismemberof-input]')
+                .should('exist')
+                .should('be.visible'),
+        );
         // Choose a collection
         cy.get('[data-testid=rek-ismemberof-input]').type('a');
         cy.clickAutoSuggestion('rek-ismemberof', collectionRowId);
