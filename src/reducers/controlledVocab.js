@@ -1,0 +1,51 @@
+import * as actions from 'actions/actionTypes';
+
+const initState = {
+    itemsList: [],
+    itemsKeyValueList: [],
+    itemsLoading: false,
+    itemsLoadingError: false,
+};
+
+function flatten(list) {
+    // controlled_vocab.controlled_vocab_children
+    return list.map(item => {
+        return [
+            { key: item.controlled_vocab.cvo_id, value: item.controlled_vocab.cvo_title },
+            ...[].concat.apply([], flatten(item.controlled_vocab.controlled_vocab_children)),
+        ];
+    });
+}
+
+const handlers = {
+    [`${actions.VIEW_VOCAB_LOAD_FAILED}@`]: (state, action) => ({
+        ...state,
+        [actions.getActionSuffix(action.type)]: {
+            ...initState,
+            itemsLoadingError: true,
+        },
+    }),
+    [`${actions.VIEW_VOCAB_LOADED}@`]: (state, action) => ({
+        ...state,
+        [actions.getActionSuffix(action.type)]: {
+            ...initState,
+            itemsList: action.payload.map(item => item.controlled_vocab.cvo_title),
+            itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
+        },
+    }),
+    [`${actions.VIEW_VOCAB_LOADING}@`]: (state, action) => ({
+        ...state,
+        [actions.getActionSuffix(action.type)]: {
+            ...initState,
+            itemsLoading: true,
+        },
+    }),
+};
+
+export default function viewVocabReducer(state = {}, action) {
+    const handler = handlers[actions.getAction(action.type)];
+    if (!handler) {
+        return state;
+    }
+    return handler(state, action);
+}
