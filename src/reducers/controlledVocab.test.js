@@ -3,7 +3,7 @@ import viewVocabReducer from './controlledVocab';
 
 describe('Controlled vocabularies reducer', () => {
     it('should return correct state on vocabulary loading', () => {
-        const state = controlledVocabulariesReducer({}, { type: `${actions.VIEW_VOCAB_LOADING}@123456` });
+        const state = viewVocabReducer({}, { type: `${actions.VIEW_VOCAB_LOADING}@123456` });
         expect(state[123456].itemsLoading).toBeTruthy();
         expect(state[123456].itemsLoadingError).toBeFalsy();
     });
@@ -146,7 +146,7 @@ describe('Controlled vocabularies reducer', () => {
     });
 
     it("should return unmodiifed state if action doesn't have a handler", () => {
-        const state = controlledVocabulariesReducer({ abc: 'abc' }, { type: 'INVALID_ACTION_TYPE' });
+        const state = viewVocabReducer({ abc: 'abc' }, { type: 'INVALID_ACTION_TYPE' });
         expect(state).toEqual({ abc: 'abc' });
     });
 });

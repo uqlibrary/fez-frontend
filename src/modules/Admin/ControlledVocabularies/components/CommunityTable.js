@@ -40,7 +40,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
             <Grid container sx={{ paddingTop: '10px' }} data-testid="community-collections-primary-body">
                 {records.map(row => (
                     <CommunityDataRow
-                        key={row?.rek_pid}
+                        key={row.rek_pid}
                         conf={conf}
                         row={row}
                         adminUser={adminUser}

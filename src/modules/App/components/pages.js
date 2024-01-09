@@ -35,6 +35,9 @@ export const CommunityForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
+export const ControlledVocabularies = lazy(() =>
+    lazyRetry(() => import('modules/Admin/ControlledVocabularies/ControlledVocabularies')),
+);
 
 export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
 export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
@@ -65,9 +68,9 @@ export const ThesisSubmission = lazy(() =>
 export const ThirdPartyLookupTool = lazy(() =>
     lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
 );
-export const ControlledVocabularies = lazy(() =>
-    lazyRetry(() => import('modules/Admin/ControlledVocabularies/containers/ControlledVocabularies')),
-);
+// export const ControlledVocabularies = lazy(() =>
+//     lazyRetry(() => import('modules/Admin/ControlledVocabularies/containers/ControlledVocabularies')),
+// );
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';

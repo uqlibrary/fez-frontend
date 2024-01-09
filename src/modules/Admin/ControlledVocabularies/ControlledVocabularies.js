@@ -34,18 +34,19 @@ import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config';
 import { controlledVocabConfig } from 'config';
 
-import * as actions from 'actions';
+// import * as actions from 'actions';
+import * as actions from 'actions/viewControlledVocab';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 
-import { CommunityTable } from './CommunityTable';
+import { CommunityTable } from './components/CommunityTable.js';
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 import Add from '@mui/icons-material/Add';
 
-import { pushHistory } from './functions';
+import { pushHistory } from './components/functions.js';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 
 const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
@@ -103,7 +104,7 @@ export const ControlledVocabularies = () => {
 
     const pageSizeChanged = pageSize => {
         dispatch(
-            actions.loadCommunitiesList({
+            actions.loadControlledVocabList({
                 pageSize: pageSize,
                 page: 1,
                 direction: sortDirection,
@@ -115,22 +116,32 @@ export const ControlledVocabularies = () => {
     const pageChanged = page => {
         pushHistory(history, perPage, page, sortBy, sortDirection);
         dispatch(
-            actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
+            actions.loadControlledVocabList({
+                pageSize: perPage,
+                page: page,
+                direction: sortDirection,
+                sortBy: sortBy,
+            }),
         );
     };
     const sortByChanged = (sortby, direction) => {
         sortDirection = direction;
         sortBy = sortby;
         dispatch(
-            actions.loadCommunitiesList({ pageSize: perPage, page: currentPage, direction: direction, sortBy: sortby }),
+            actions.loadControlledVocabList({
+                pageSize: perPage,
+                page: currentPage,
+                direction: direction,
+                sortBy: sortby,
+            }),
         );
         pushHistory(history, perPage, currentPage, sortby, direction);
     };
-    alert('here5');
+
     React.useEffect(() => {
         if (confirm('see new UI?')) return;
         dispatch(
-            actions.loadCommunitiesList({
+            actions.loadControlledVocabList({
                 pageSize: perPage,
                 page: currentPage,
                 direction: sortDirection,

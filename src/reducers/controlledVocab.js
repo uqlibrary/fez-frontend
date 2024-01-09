@@ -1,49 +1,43 @@
 import * as actions from 'actions/actionTypes';
+// import { record } from 'mock/data';
 
-const initState = {
-    itemsList: [],
-    itemsKeyValueList: [],
-    itemsLoading: false,
-    itemsLoadingError: false,
+export const initialState = {
+    communityList: [],
+    loadingCommunities: false,
+    loadingCommunitiesError: null,
+    totalRecords: 0,
+    startRecord: 0,
+    endRecord: 0,
+    currentPage: 1,
+    perPage: 10,
 };
-
-function flatten(list) {
-    // controlled_vocab.controlled_vocab_children
-    return list.map(item => {
-        return [
-            { key: item.controlled_vocab.cvo_id, value: item.controlled_vocab.cvo_title },
-            ...[].concat.apply([], flatten(item.controlled_vocab.controlled_vocab_children)),
-        ];
-    });
-}
 
 const handlers = {
-    [`${actions.VIEW_VOCAB_LOAD_FAILED}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsLoadingError: true,
-        },
+    [actions.VIEW_COMMUNITIES_LOADING]: () => ({
+        ...initialState,
+        loadingCommunities: true,
     }),
-    [`${actions.VIEW_VOCAB_LOADED}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsList: action.payload.map(item => item.controlled_vocab.cvo_title),
-            itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
-        },
+
+    [actions.VIEW_COMMUNITIES_LOADED]: (state, action) => ({
+        ...initialState,
+        loadingCommunities: false,
+        communityList: action.payload.data,
+        totalRecords: action.payload.total,
+        startRecord: action.payload.from,
+        endRecord: action.payload.to,
+        currentPage: action.payload.current_page,
+        perPage: action.payload.per_page,
     }),
-    [`${actions.VIEW_VOCAB_LOADING}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsLoading: true,
-        },
+
+    [actions.VIEW_COMMUNITIES_LOAD_FAILED]: (state, action) => ({
+        ...initialState,
+        loadingCommunities: false,
+        loadingCommunitiesError: action.payload,
     }),
 };
 
-export default function viewVocabReducer(state = {}, action) {
-    const handler = handlers[actions.getAction(action.type)];
+export default function viewVocabReducer(state = { ...initialState }, action) {
+    const handler = handlers[action.type];
     if (!handler) {
         return state;
     }

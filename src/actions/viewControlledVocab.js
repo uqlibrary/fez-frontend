@@ -3,6 +3,9 @@ import { get } from 'repositories/generic';
 import { VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
 // import { exportCommunities, exportCollections } from './exportCommunitiesCollections';
 
+// zdebug
+export { loadCommunitiesList } from './viewCommunitiesCollections';
+
 /**
  * Load Communities List
  * @param {object}
@@ -20,7 +23,7 @@ export function loadControlledVocabList(params = {}) {
                 alert('here2');
                 console.log('resp=', response);
                 dispatch({
-                    type: actions.VIEW_VOCAB_LOADING,
+                    type: actions.VIEW_VOCAB_LOADED,
                     payload: response,
                 });
 

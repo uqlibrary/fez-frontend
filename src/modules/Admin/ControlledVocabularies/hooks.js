@@ -1,7 +1,7 @@
 import deparam from 'can-deparam';
-import { locale } from '../../../../locale';
+import { locale } from '../../../locale';
 import { useDispatch } from 'react-redux';
-import { COMMUNITY_COLLECTION_BULK_EXPORT_SIZE } from '../../../../config/general';
+import { COMMUNITY_COLLECTION_BULK_EXPORT_SIZE } from '../../../config/general';
 
 /**
  * Parse provided query string and return active filters, facets etc

@@ -13,7 +13,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Button from '@mui/material/Button';
 import { controlledVocabConfig } from 'config';
 import Add from '@mui/icons-material/Add';
-import { useQueryStringParams, useCommunityCollectionControls } from './hooks';
+import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
