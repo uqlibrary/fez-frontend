@@ -13,12 +13,12 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.VIEW_COMMUNITIES_LOADING]: () => ({
+    [actions.VIEW_VOCAB_LOADING]: () => ({
         ...initialState,
         loadingCommunities: true,
     }),
 
-    [actions.VIEW_COMMUNITIES_LOADED]: (state, action) => ({
+    [actions.VIEW_VOCAB_LOADED]: (state, action) => ({
         ...initialState,
         loadingCommunities: false,
         communityList: action.payload.data,
@@ -29,7 +29,7 @@ const handlers = {
         perPage: action.payload.per_page,
     }),
 
-    [actions.VIEW_COMMUNITIES_LOAD_FAILED]: (state, action) => ({
+    [actions.VIEW_VOCAB_LOAD_FAILED]: (state, action) => ({
         ...initialState,
         loadingCommunities: false,
         loadingCommunitiesError: action.payload,
