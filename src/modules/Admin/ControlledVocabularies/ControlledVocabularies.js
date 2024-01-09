@@ -88,6 +88,7 @@ export const ControlledVocabularies = () => {
     sortBy = queryStringObject.sortBy ? queryStringObject.sortBy : sortBy;
 
     const communityList = useSelector(state => state.get('viewVocabReducer').communityList);
+    console.log('communityList=', communityList);
     const loadingCommunities = useSelector(state => state.get('viewVocabReducer').loadingCommunities);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);
@@ -139,7 +140,7 @@ export const ControlledVocabularies = () => {
     };
 
     React.useEffect(() => {
-        if (confirm('see new UI?')) return;
+        // if (confirm('see new UI?')) return;
         dispatch(
             actions.loadControlledVocabList({
                 pageSize: perPage,

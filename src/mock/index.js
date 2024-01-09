@@ -605,7 +605,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, { ...mockData.communityList })
+    .reply(200, { ...mockData.vocabList })
+    // .reply(200, { ...mockData.vocabulariesList })
     .onGet(
         new RegExp(
             escapeRegExp(
