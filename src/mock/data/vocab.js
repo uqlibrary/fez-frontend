@@ -1,5 +1,9 @@
 export const vocabList = {
     "total": 42,
+    "from": 1,
+    "to": 42,
+    "current_page": 1,
+    "per_page": 100,
     "data": [
         {
             "cvo_id": 453669,
