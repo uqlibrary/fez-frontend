@@ -278,7 +278,10 @@ export class AppClass extends PureComponent {
         const titleOffset = this.state.docked && !isThesisSubmissionPage ? 284 : 0;
         const isIndex = this.props.history.location.pathname === '/';
         const isAdminPage =
-            window?.location?.pathname?.startsWith('/admin') || window?.location?.hash?.startsWith('#/admin') || false;
+            window?.location?.pathname?.startsWith('/admin') ||
+            window?.location?.pathname?.startsWith('/batch-import') ||
+            window?.location?.hash?.startsWith('#/admin') ||
+            false;
 
         return (
             <StrictModeConditional condition={!isAdminPage} wrapper={children => <StrictMode>{children}</StrictMode>}>
