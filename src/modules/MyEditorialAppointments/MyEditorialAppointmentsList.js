@@ -210,14 +210,16 @@ export const GetColumns = () => {
                     props.onRowDataChange({
                         ...rowData,
                         eap_role_cvo_id: selectedItem,
+                        eap_role_name: null,
                     });
                 };
 
                 const handleClear = () =>
                     props.onRowDataChange({ ...rowData, eap_role_name: null, eap_role_cvo_id: null });
 
-                const handleRoleNameChangeForOther = e =>
+                const handleRoleNameChangeForOther = e => {
                     props.onRowDataChange({ ...rowData, eap_role_name: e.target.value });
+                };
 
                 return (
                     <React.Fragment>
