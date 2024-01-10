@@ -1,11 +1,8 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
 import * as actions from 'actions';
 
-import { parseHtmlToJSX } from 'helpers/general';
-import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
@@ -13,23 +10,6 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
 import Grid from '@mui/material/Grid';
-
-import { communityCollectionsConfig } from 'config';
-const moment = require('moment');
-
-const returnDateField = (date, conf, classes) => {
-    return (
-        <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
-            <Typography variant="body2">
-                {moment(date)
-                    .local()
-                    .format(conf.dateFormat)}
-            </Typography>
-        </Grid>
-    );
-};
-
-import { Link } from 'react-router-dom';
 
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
@@ -54,76 +34,46 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
         >
             <React.Fragment key={row.rek_pid}>
                 <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
-                        <Box sx={{ float: 'left', width: '24px' }}>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
                                 aria-label="expand row"
                                 size="small"
                                 onClick={() => handleSetOpen(!open)}
-                                id={`expand-row-${row.rek_pid}`}
-                                data-analyticsid={`expand-row-${row.rek_pid}`}
-                                data-testid={`expand-row-${row.rek_pid}`}
+                                id={`expand-row-${row.cvo_id}`}
+                                data-analyticsid={`expand-row-${row.cvo_id}`}
+                                data-testid={`expand-row-${row.cvo_id}`}
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
-                        </Box>{' '}
-                        <Box
-                            sx={{
-                                float: 'right',
-                                width: 'calc(100% - 30px)',
-                                paddingTop: '10px',
-                                paddingBottom: '5px',
-                            }}
-                        >
-                            <Typography variant="body2">
-                                <Link
-                                    to={pathConfig.records.view(row.rek_pid)}
-                                    id={`community-title-${row.rek_pid}`}
-                                    data-testid={`community-title-${row.rek_pid}`}
-                                >
-                                    {parseHtmlToJSX(row.rek_title)}
-                                </Link>
-                            </Typography>
-                            {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
-                            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-                                <Typography variant="caption" sx={{ fontStyle: 'italic' }}>
-                                    {communityCollectionsConfig.formatCreationDate(
-                                        moment(row.rek_created_date)
-                                            .local()
-                                            .format(conf.dateFormat),
-                                    )}
-                                    <Box sx={{ display: { xs: 'inline', sm: 'none' } }} component="span">
-                                        <br />
-                                    </Box>
-                                    <Typography
-                                        sx={{ fontStyle: 'italic', display: { xs: 'none', sm: 'inline' } }}
-                                        component="span"
-                                        variant="caption"
-                                    >
-                                        {' / '}
-                                    </Typography>
-                                    {communityCollectionsConfig.formatUpdatedDate(
-                                        moment(row.rek_updated_date)
-                                            .local()
-                                            .format(conf.dateFormat),
-                                    )}
-                                </Typography>
-                            </Box>
                         </Box>
-                        <div style={{ clear: 'both' }} />
                     </Grid>
-                    {returnDateField(row.rek_created_date, conf, { paddingTop: '10px' })}
-                    {returnDateField(row.rek_updated_date, conf, { paddingTop: '10px' })}
-                    {!!adminUser && (
-                        <Grid item xs={2} sm={1} sx={{ textAlign: 'center' }}>
-                            <AdminActions
-                                record={row.rek_pid}
-                                id={`admin-actions-${row.rek_pid}`}
-                                data-testid={`admin-actions-${row.rek_pid}`}
-                            />
-                        </Grid>
-                    )}
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>{row.cvo_id}</Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={4}>
+                        <Box sx={1}>{row.cvo_title}</Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>{row.cvo_order}</Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>{/* row.cvo_image_filename*/}</Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>{row.cvo_external_id}</Box>
+                    </Grid>
+                    <Grid item xs={1} sm={1} md={1}>
+                        <Box sx={1}>{/* row.cvo_path*/}</Box>
+                    </Grid>
+                    <Grid item md={2} xs={2} sm={2}>
+                        <AdminActions
+                            record={row.rek_pid}
+                            id={`admin-actions-${row.rek_pid}`}
+                            data-testid={`admin-actions-${row.rek_pid}`}
+                        />
+                    </Grid>
                 </Grid>
                 {!!open && (
                     <Grid container>

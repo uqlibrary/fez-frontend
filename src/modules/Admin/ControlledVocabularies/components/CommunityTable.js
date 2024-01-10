@@ -10,6 +10,9 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
         <Grid container spacing={0}>
             {/* Header Row */}
             <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="community-collections-primary-header">
+                <Grid item md={1} sx={1}>
+                    {''}
+                </Grid>
                 <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
                     {labels.id}
                 </Grid>
@@ -29,18 +32,16 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                 <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
                     {labels.path}
                 </Grid>
-                {!!adminUser && (
-                    <Grid item md={2} xs={1} sx={{ textAlign: 'right' }}>
-                        {labels.actions}
-                    </Grid>
-                )}
+                <Grid item md={1} xs={1} sx={{ textAlign: 'right' }}>
+                    {labels.actions}
+                </Grid>
             </Grid>
             {/* Data Row */}
             {console.log('records=', records)}
             <Grid container sx={{ paddingTop: '10px' }} data-testid="community-collections-primary-body">
                 {records.map(row => (
                     <CommunityDataRow
-                        key={row.rek_pid}
+                        key={row.cvo_id}
                         conf={conf}
                         row={row}
                         adminUser={adminUser}
