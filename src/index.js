@@ -2,7 +2,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -56,15 +56,13 @@ if (process.env.ENABLE_LOG) {
 const render = () => {
     const root = createRoot(document.getElementById('react-root'));
     root.render(
-        <StrictMode>
-            <AppErrorBoundary>
-                <Provider store={store}>
-                    <LocalizationProvider dateAdapter={MomentUtils}>
-                        <Root history={reduxHistory} />
-                    </LocalizationProvider>
-                </Provider>
-            </AppErrorBoundary>
-        </StrictMode>,
+        <AppErrorBoundary>
+            <Provider store={store}>
+                <LocalizationProvider dateAdapter={MomentUtils}>
+                    <Root history={reduxHistory} />
+                </LocalizationProvider>
+            </Provider>
+        </AppErrorBoundary>,
     );
 };
 

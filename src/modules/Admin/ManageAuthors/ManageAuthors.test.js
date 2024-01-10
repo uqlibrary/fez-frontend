@@ -679,6 +679,7 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
+
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
