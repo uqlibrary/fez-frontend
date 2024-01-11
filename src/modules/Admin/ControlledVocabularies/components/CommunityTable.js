@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 
 export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
     return (
@@ -17,22 +16,21 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                     {labels.id}
                 </Grid>
                 <Grid item md={4}>
-                    <Box sx={{ float: 'left', width: '24px' }} />
-                    <Box sx={{ float: 'right', width: 'calc(100% - 30px)' }}>{labels.title}</Box>
+                    {labels.title}
                 </Grid>
-                <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Grid item md={1}>
                     {labels.order}
                 </Grid>
-                <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Grid item md={1}>
                     {labels.license}
                 </Grid>
-                <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Grid item md={1}>
                     {labels.external_id}
                 </Grid>
-                <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Grid item md={2}>
                     {labels.path}
                 </Grid>
-                <Grid item md={1} xs={1} sx={{ textAlign: 'right' }}>
+                <Grid item md={1}>
                     {labels.actions}
                 </Grid>
             </Grid>

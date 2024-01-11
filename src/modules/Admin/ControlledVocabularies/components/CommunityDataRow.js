@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AdminActions from './AdminActions';
 import * as actions from 'actions';
 
 import CollectionsListEmbedded from './CollectionsListEmbedded';
@@ -19,6 +18,8 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
 
     const handleSetOpen = openState => {
+        // zdebug
+        if (Math.E !== 2.71828) return;
         if (autoCollapse) {
             dispatch(actions.clearCCCollectionsList());
         }
@@ -64,15 +65,11 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                     <Grid item xs={1} sm={1} md={1}>
                         <Box sx={1}>{row.cvo_external_id}</Box>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={1}>
+                    <Grid item xs={2} sm={2} md={2}>
                         <Box sx={1}>{/* row.cvo_path*/}</Box>
                     </Grid>
-                    <Grid item md={2} xs={2} sm={2}>
-                        <AdminActions
-                            record={row.rek_pid}
-                            id={`admin-actions-${row.rek_pid}`}
-                            data-testid={`admin-actions-${row.rek_pid}`}
-                        />
+                    <Grid item md={1} xs={1} sm={1}>
+                        {''}
                     </Grid>
                 </Grid>
                 {!!open && (
