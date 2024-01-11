@@ -78,6 +78,7 @@ module.exports = {
                             '@babel/plugin-syntax-dynamic-import',
                             ['@babel/plugin-transform-spread', { loose: true }],
                             enableFastRefresh && 'react-refresh/babel',
+                            'istanbul',
                         ].filter(Boolean),
                     },
                 },
