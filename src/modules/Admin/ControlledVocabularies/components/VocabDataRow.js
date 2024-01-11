@@ -10,7 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
 import Grid from '@mui/material/Grid';
 
-export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
+export const VocabDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
 
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
@@ -91,11 +91,11 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
         </Grid>
     );
 };
-CommunityDataRow.propTypes = {
+VocabDataRow.propTypes = {
     conf: PropTypes.object,
     row: PropTypes.object,
     adminUser: PropTypes.bool,
     labels: PropTypes.object,
     autoCollapse: PropTypes.bool,
 };
-export default CommunityDataRow;
+export default VocabDataRow;

@@ -1,14 +1,14 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import CommunityDataRow from './CommunityDataRow';
+import VocabDataRow from './VocabDataRow';
 import Grid from '@mui/material/Grid';
 
-export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
+export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
     return (
         <Grid container spacing={0}>
             {/* Header Row */}
-            <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="community-collections-primary-header">
+            <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-primary-header">
                 <Grid item md={1} sx={1}>
                     {''}
                 </Grid>
@@ -36,9 +36,9 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
             </Grid>
             {/* Data Row */}
             {console.log('records=', records)}
-            <Grid container sx={{ paddingTop: '10px' }} data-testid="community-collections-primary-body">
+            <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-primary-body">
                 {records.map(row => (
-                    <CommunityDataRow
+                    <VocabDataRow
                         key={row.cvo_id}
                         conf={conf}
                         row={row}
@@ -51,7 +51,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
         </Grid>
     );
 };
-CommunityTable.propTypes = {
+VocabTable.propTypes = {
     records: PropTypes.array,
     location: PropTypes.object,
     labels: PropTypes.object,
@@ -59,4 +59,4 @@ CommunityTable.propTypes = {
     autoCollapse: PropTypes.bool,
     adminUser: PropTypes.bool,
 };
-export default CommunityTable;
+export default VocabTable;

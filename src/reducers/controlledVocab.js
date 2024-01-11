@@ -2,9 +2,9 @@ import * as actions from 'actions/actionTypes';
 // import { record } from 'mock/data';
 
 export const initialState = {
-    communityList: [],
-    loadingCommunities: false,
-    loadingCommunitiesError: null,
+    vocabList: [],
+    loadingVocab: false,
+    loadingVocabError: null,
     totalRecords: 0,
     startRecord: 0,
     endRecord: 0,
@@ -15,13 +15,13 @@ export const initialState = {
 const handlers = {
     [actions.VIEW_VOCAB_LOADING]: () => ({
         ...initialState,
-        loadingCommunities: true,
+        loadingVocab: true,
     }),
 
     [actions.VIEW_VOCAB_LOADED]: (state, action) => ({
         ...initialState,
-        loadingCommunities: false,
-        communityList: action.payload.data,
+        loadingVocab: false,
+        vocabList: action.payload.data,
         totalRecords: action.payload.total,
         startRecord: action.payload.from,
         endRecord: action.payload.to,
@@ -31,8 +31,8 @@ const handlers = {
 
     [actions.VIEW_VOCAB_LOAD_FAILED]: (state, action) => ({
         ...initialState,
-        loadingCommunities: false,
-        loadingCommunitiesError: action.payload,
+        loadingVocab: false,
+        loadingVocabError: action.payload,
     }),
 };
 

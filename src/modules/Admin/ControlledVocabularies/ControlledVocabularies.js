@@ -19,7 +19,7 @@ import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 
 import { pushHistory } from './components/functions.js';
-import { CommunityTable } from './components/CommunityTable.js';
+import { VocabTable } from './components/VocabTable.js';
 
 // import { styled } from '@mui/material/styles';
 // import Button from '@mui/material/Button';
@@ -66,13 +66,13 @@ export const ControlledVocabularies = () => {
     sortDirection = sortDirection.charAt(0).toUpperCase() + sortDirection.slice(1);
     sortBy = queryStringObject.sortBy ? queryStringObject.sortBy : sortBy;
 
-    const communityList = useSelector(state => state.get('viewVocabReducer').communityList);
-    console.log('communityList=', communityList);
-    const loadingCommunities = useSelector(state => state.get('viewVocabReducer').loadingCommunities);
+    const vocabList = useSelector(state => state.get('viewVocabReducer').vocabList);
+    console.log('vocabList=', vocabList);
+    const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewVocabReducer').endRecord);
-    const loadingCommunitiesError = useSelector(state => state.get('viewVocabReducer').loadingCommunitiesError);
+    const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
 
     const exportCommunitiesLoading = useSelector(
         state => state.get('exportCommunitiesReducer').exportCommunitiesLoading,
@@ -99,32 +99,28 @@ export const ControlledVocabularies = () => {
 
     const labels = txt.columns.labels;
 
-    const sortedList = [...communityList];
+    const sortedList = [...vocabList];
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
-            {!!!loadingCommunitiesError && (
+            {!!!loadingVocabError && (
                 <React.Fragment>
                     <StandardCard noHeader style={{ marginTop: 10 }}>
-                        {!!!loadingCommunities && (
+                        {!!!loadingVocab && (
                             <Typography
                                 variant="body2"
                                 sx={{ fontWeight: 600, marginBottom: '10px' }}
-                                id="total-communities"
-                                data-testid="total-communities"
+                                id="total-vocab"
+                                data-testid="total-vocab"
                             >
-                                {controlledVocabConfig.communityCountTitle(startRecord, endRecord, totalRecords)}
+                                {controlledVocabConfig.vocabCountTitle(startRecord, endRecord, totalRecords)}
                             </Typography>
                         )}
 
                         {!exportCommunitiesLoading && sortedList.length > 0 ? (
-                            <CommunityTable records={sortedList} labels={labels} conf={txt} adminUser={adminUser} />
+                            <VocabTable records={sortedList} labels={labels} conf={txt} adminUser={adminUser} />
                         ) : (
                             <InlineLoader
-                                loaderId={
-                                    !exportCommunitiesLoading
-                                        ? 'communities-page-loading'
-                                        : 'communities-results-exporting'
-                                }
+                                loaderId={!exportCommunitiesLoading ? 'vocab-page-loading' : 'vocab-results-exporting'}
                                 message={
                                     exportCommunitiesLoading ? txt.loading.exportLoadingMessage : txt.loading.message
                                 }
@@ -133,13 +129,9 @@ export const ControlledVocabularies = () => {
                     </StandardCard>
                 </React.Fragment>
             )}
-            {!!loadingCommunitiesError && (
+            {!!loadingVocabError && (
                 <Grid item xs={12} style={{ marginTop: 10 }}>
-                    <Alert
-                        title="An error has occurred"
-                        message={loadingCommunitiesError.message}
-                        type="info_outline"
-                    />
+                    <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
                 </Grid>
             )}
         </StandardPage>
