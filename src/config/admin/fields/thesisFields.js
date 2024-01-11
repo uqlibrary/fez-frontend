@@ -41,10 +41,6 @@ export default {
             groups: [['authors']],
         },
         {
-            title: 'Editors',
-            groups: [['editors']],
-        },
-        {
             title: 'Supervisors',
             groups: [['supervisors']],
         },
