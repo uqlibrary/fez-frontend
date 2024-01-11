@@ -9,7 +9,7 @@ export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) =
         <Grid container spacing={0}>
             {/* Header Row */}
             <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-primary-header">
-                <Grid item md={1} sx={1}>
+                <Grid item md={1}>
                     {''}
                 </Grid>
                 <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
