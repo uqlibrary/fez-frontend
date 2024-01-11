@@ -241,13 +241,13 @@ export const GetColumns = () => {
                             value={
                                 !!rowData.eap_role_cvo_id
                                     ? {
-                                          value: rowData.eap_role_cvo_id,
-                                          text: EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id],
+                                          value: String(rowData.eap_role_cvo_id),
+                                          text: EDITORIAL_ROLE_MAP[String(rowData.eap_role_cvo_id)],
                                       }
                                     : null
                             }
                         />
-                        {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
+                        {String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
                             <SharedTextField
                                 value={rowData.eap_role_name || ''}
                                 onChange={handleRoleNameChangeForOther}
@@ -264,7 +264,7 @@ export const GetColumns = () => {
             },
             validate: rowData =>
                 !!rowData.eap_role_cvo_id &&
-                (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
+                (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
             cellStyle: matchesMd
                 ? {
                       width: '25%',
