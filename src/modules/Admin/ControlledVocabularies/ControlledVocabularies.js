@@ -19,7 +19,6 @@ import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 
 import { pushHistory } from './components/functions.js';
-import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import { CommunityTable } from './components/CommunityTable.js';
 
 // import { styled } from '@mui/material/styles';
@@ -78,7 +77,6 @@ export const ControlledVocabularies = () => {
     const exportCommunitiesLoading = useSelector(
         state => state.get('exportCommunitiesReducer').exportCommunitiesLoading,
     );
-    const isLoadingOrExporting = loadingCommunities || exportCommunitiesLoading;
 
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
@@ -101,13 +99,6 @@ export const ControlledVocabularies = () => {
 
     const labels = txt.columns.labels;
 
-    const PagindData = {
-        from: startRecord,
-        to: endRecord,
-        total: totalRecords,
-        per_page: perPage,
-        current_page: currentPage,
-    };
     const sortedList = [...communityList];
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
@@ -125,15 +116,6 @@ export const ControlledVocabularies = () => {
                             </Typography>
                         )}
 
-                        <Grid item xs={12}>
-                            <PublicationsListPaging
-                                loading={false}
-                                pagingData={PagindData}
-                                disabled={isLoadingOrExporting}
-                                pagingId="community-collections-paging-top"
-                                data-testid="community-collections-paging-top"
-                            />
-                        </Grid>
                         {!exportCommunitiesLoading && sortedList.length > 0 ? (
                             <CommunityTable records={sortedList} labels={labels} conf={txt} adminUser={adminUser} />
                         ) : (
@@ -148,15 +130,6 @@ export const ControlledVocabularies = () => {
                                 }
                             />
                         )}
-                        <Grid item xs={12} style={{ marginTop: 10 }}>
-                            <PublicationsListPaging
-                                loading={false}
-                                pagingData={PagindData}
-                                disabled={isLoadingOrExporting}
-                                pagingId="community-collections-paging-bottom"
-                                data-testid="community-collections-paging-bottom"
-                            />
-                        </Grid>
                     </StandardCard>
                 </React.Fragment>
             )}
