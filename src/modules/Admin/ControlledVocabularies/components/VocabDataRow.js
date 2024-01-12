@@ -36,13 +36,13 @@ export const VocabDataRow = ({ row }) => {
                             </IconButton>
                         </Box>
                     </Grid>
-                    <Grid item md={8}>
+                    <Grid item md={8} sm={6} xs={6}>
                         <Box>{row.cvo_title}</Box>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={1}>
+                    <Grid item md={1} xs={2} sm={2}>
                         <Box>{/* row.cvo_image_filename*/}</Box>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={1}>
+                    <Grid item md={1} xs={2} sm={2}>
                         <Box>{row.cvo_external_id}</Box>
                     </Grid>
                     <Grid item md={1} xs={1} sm={1}>
