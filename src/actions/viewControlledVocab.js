@@ -1,14 +1,10 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
-// import { exportCommunities, exportCollections } from './exportCommunitiesCollections';
-
-// zdebug
-export { loadCommunitiesList } from './viewCommunitiesCollections';
 
 /**
  * Load Communities List
- * @param {object}
+ *
  * @returns {action}
  */
 export function loadControlledVocabList() {
@@ -75,9 +71,3 @@ export function setControlledVocabArray(rowObject) {
         });
     };
 }
-// export function exportControlledVocabRecords(params) {
-//     return exportCommunities(COMMUNITY_LIST_API({ ...params }));
-// }
-// export function exportCollectionRecords(params) {
-//     return exportCollections(COLLECTION_LIST_API({ ...params }, 'export'));
-// }

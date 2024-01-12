@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import VocabDataRow from './VocabDataRow';
 import Grid from '@mui/material/Grid';
 
-export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
+export const VocabTable = ({ records, labels }) => {
     return (
         <Grid container spacing={0}>
             {/* Header Row */}
@@ -29,14 +29,7 @@ export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) =
             {console.log('records=', records)}
             <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-primary-body">
                 {records.map(row => (
-                    <VocabDataRow
-                        key={row.cvo_id}
-                        conf={conf}
-                        row={row}
-                        adminUser={adminUser}
-                        labels={labels}
-                        autoCollapse={autoCollapse}
-                    />
+                    <VocabDataRow key={row.cvo_id} row={row} />
                 ))}
             </Grid>
         </Grid>
@@ -46,8 +39,5 @@ VocabTable.propTypes = {
     records: PropTypes.array,
     location: PropTypes.object,
     labels: PropTypes.object,
-    conf: PropTypes.object,
-    autoCollapse: PropTypes.bool,
-    adminUser: PropTypes.bool,
 };
 export default VocabTable;

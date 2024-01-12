@@ -20,7 +20,6 @@ export const ControlledVocabularies = () => {
     const adminUser = userIsAdmin();
     const dispatch = useDispatch();
     const vocabList = useSelector(state => state.get('viewVocabReducer').vocabList);
-    console.log('vocabList=', vocabList);
     const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);

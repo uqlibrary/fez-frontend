@@ -3845,18 +3845,13 @@ export default {
         controlledVocabularyCollections: {
             title: {
                 controlledVocabulary: 'Controlled Vocabulary',
-                collections: 'Collections',
             },
-            addCommunityText: 'Add Missing Community',
             snackbar: {
                 message: 'Search results updated',
             },
             dateFormat: 'ddd MMM DD, YYYY',
             loading: {
                 message: '...Loading Data...',
-                noCollections: 'No collections found for this community',
-                noCommunities: 'No communities found.',
-                exportLoadingMessage: 'Exporting search results',
             },
             columns: {
                 labels: {
