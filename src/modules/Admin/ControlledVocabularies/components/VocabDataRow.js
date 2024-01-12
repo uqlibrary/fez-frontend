@@ -53,7 +53,7 @@ export const VocabDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => 
                     <Grid item xs={1} sm={1} md={1}>
                         <Box>{row.cvo_id}</Box>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={4}>
+                    <Grid item md={6}>
                         <Box>{row.cvo_title}</Box>
                     </Grid>
                     <Grid item xs={1} sm={1} md={1}>
@@ -64,9 +64,6 @@ export const VocabDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => 
                     </Grid>
                     <Grid item xs={1} sm={1} md={1}>
                         <Box>{row.cvo_external_id}</Box>
-                    </Grid>
-                    <Grid item xs={2} sm={2} md={2}>
-                        <Box>{/* row.cvo_path*/}</Box>
                     </Grid>
                     <Grid item md={1} xs={1} sm={1}>
                         {''}

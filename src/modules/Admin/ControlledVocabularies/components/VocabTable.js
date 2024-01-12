@@ -15,7 +15,7 @@ export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) =
                 <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
                     {labels.id}
                 </Grid>
-                <Grid item md={4}>
+                <Grid item md={6}>
                     {labels.title}
                 </Grid>
                 <Grid item md={1}>
@@ -26,9 +26,6 @@ export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) =
                 </Grid>
                 <Grid item md={1}>
                     {labels.external_id}
-                </Grid>
-                <Grid item md={2}>
-                    {labels.path}
                 </Grid>
                 <Grid item md={1}>
                     {labels.actions}
