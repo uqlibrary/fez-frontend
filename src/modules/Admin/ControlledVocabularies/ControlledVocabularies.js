@@ -74,10 +74,6 @@ export const ControlledVocabularies = () => {
     const endRecord = useSelector(state => state.get('viewVocabReducer').endRecord);
     const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
 
-    const exportCommunitiesLoading = useSelector(
-        state => state.get('exportCommunitiesReducer').exportCommunitiesLoading,
-    );
-
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
 
@@ -116,15 +112,10 @@ export const ControlledVocabularies = () => {
                             </Typography>
                         )}
 
-                        {!exportCommunitiesLoading && sortedList.length > 0 ? (
+                        {sortedList.length > 0 ? (
                             <VocabTable records={sortedList} labels={labels} conf={txt} adminUser={adminUser} />
                         ) : (
-                            <InlineLoader
-                                loaderId={!exportCommunitiesLoading ? 'vocab-page-loading' : 'vocab-results-exporting'}
-                                message={
-                                    exportCommunitiesLoading ? txt.loading.exportLoadingMessage : txt.loading.message
-                                }
-                            />
+                            <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
                         )}
                     </StandardCard>
                 </React.Fragment>
