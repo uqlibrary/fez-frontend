@@ -176,7 +176,7 @@ context('Thesis admin edit', () => {
                         .should('have.text', record.fez_record_search_key_oa_status.rek_oa_status_lookup);
                     cy.get('[data-testid=rek-license-input]')
                         .should('have.value', record.fez_record_search_key_license.rek_license.toString())
-                        .siblings('[role=button]')
+                        .siblings('[role=combobox]')
                         .invoke('text')
                         .should('equal', record.fez_record_search_key_license.rek_license_lookup);
                 });
