@@ -214,11 +214,9 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 // Controlled Vocabularies
-export const VOCAB_LIST_API = config => {
-    const params = getCCParams(config);
+export const VOCAB_LIST_API = () => {
     return {
         apiUrl: 'vocabularies',
-        options: { params },
     };
 };
 export const CHILD_VOCAB_LIST_API = (config, action = null) => {

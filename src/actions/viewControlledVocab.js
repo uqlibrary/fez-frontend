@@ -11,12 +11,11 @@ export { loadCommunitiesList } from './viewCommunitiesCollections';
  * @param {object}
  * @returns {action}
  */
-export function loadControlledVocabList(params = {}) {
-    const { pageSize, page, direction, sortBy } = params;
+export function loadControlledVocabList() {
     return dispatch => {
         dispatch({ type: actions.VIEW_VOCAB_LOADING });
 
-        return get(VOCAB_LIST_API({ pageSize: pageSize, page: page, direction: direction, sortBy: sortBy }))
+        return get(VOCAB_LIST_API())
             .then(response => {
                 console.log('resp=', response);
                 dispatch({
