@@ -50,14 +50,8 @@ export const VocabDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => 
                             </IconButton>
                         </Box>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={1}>
-                        <Box>{row.cvo_id}</Box>
-                    </Grid>
-                    <Grid item md={6}>
+                    <Grid item md={8}>
                         <Box>{row.cvo_title}</Box>
-                    </Grid>
-                    <Grid item xs={1} sm={1} md={1}>
-                        <Box>{row.cvo_order}</Box>
                     </Grid>
                     <Grid item xs={1} sm={1} md={1}>
                         <Box>{/* row.cvo_image_filename*/}</Box>

@@ -12,14 +12,8 @@ export const VocabTable = ({ records, labels, conf, autoCollapse, adminUser }) =
                 <Grid item md={1}>
                     {''}
                 </Grid>
-                <Grid item md={1} sx={{ display: { xs: 'none', md: 'block' } }}>
-                    {labels.id}
-                </Grid>
-                <Grid item md={6}>
+                <Grid item md={8}>
                     {labels.title}
-                </Grid>
-                <Grid item md={1}>
-                    {labels.order}
                 </Grid>
                 <Grid item md={1}>
                     {labels.license}
