@@ -208,7 +208,7 @@ describe('MyRecords test', () => {
 
         // change sortby
         let element = getByTestId('publication-list-sorting-sort-by');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Title' }));
@@ -216,7 +216,7 @@ describe('MyRecords test', () => {
 
         // change page size
         element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '50' }));
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('50');
     });
@@ -303,7 +303,7 @@ describe('MyRecords test', () => {
 
         expect(getByTestId('export-publications-format')).toBeInTheDocument();
         const element = getByTestId('export-publications-format');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Excel File' }));
@@ -329,12 +329,12 @@ describe('MyRecords test', () => {
 
         // change page size to export page size
         let element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '1000' }));
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('1000');
 
         element = getByTestId('export-publications-format');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Excel File' }));

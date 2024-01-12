@@ -104,13 +104,15 @@ const PublicationsListSorting = props => {
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
+                    <InputLabel id="sort-by-label" shrink>
+                        {props.sortingData.sortLabel}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="sortBy"
                         onChange={sortByChanged}
                         value={sortBy}
                         disabled={props.disabled}
+                        labelId="sort-by-label"
                         data-testid="publication-list-sorting-sort-by"
                     >
                         {props.sortingData.sortBy.map((item, index) => {
@@ -130,13 +132,15 @@ const PublicationsListSorting = props => {
             </Grid>
             <Grid item xs={12} sm={6} md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}>
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
+                    <InputLabel id="sort-order-label" shrink>
+                        {txt.sortDirectionLabel}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="sortOrder"
                         onChange={orderDirectionsChanged}
                         value={sortDirection}
                         disabled={props.disabled}
+                        labelId="sort-order-label"
                         data-testid="publication-list-sorting-sort-order"
                     >
                         {txt.sortDirection.map((item, index) => {
@@ -161,13 +165,15 @@ const PublicationsListSorting = props => {
                 md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
             >
                 <FormControl variant="standard" fullWidth>
-                    <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
+                    <InputLabel id="page-size-label" shrink>
+                        {props.sortingData.pageSize}
+                    </InputLabel>
                     <Select
                         variant="standard"
-                        id="pageSize"
                         value={pageSize}
                         disabled={props.disabled}
                         onChange={pageSizeChanged}
+                        labelId="page-size-label"
                         data-testid="publication-list-sorting-page-size"
                     >
                         {pageLength.map(number => {
@@ -208,13 +214,15 @@ const PublicationsListSorting = props => {
                     md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
                 >
                     <FormControl variant="standard" fullWidth>
-                        <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
+                        <InputLabel id="display-records-as-label" shrink>
+                            {props.sortingData.displayRecordsAsLabel}
+                        </InputLabel>
                         <Select
                             variant="standard"
-                            id="displayRecordsAs"
                             value={displayRecordsAs}
                             disabled={props.disabled}
                             onChange={displayRecordsAsChanged}
+                            labelId="display-records-as-label"
                             data-testid="publication-list-display-records-as"
                         >
                             {selectableCollectionViewType.map(item => {

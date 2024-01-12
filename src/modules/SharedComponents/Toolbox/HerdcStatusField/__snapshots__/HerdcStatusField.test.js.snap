@@ -12,16 +12,17 @@ exports[`HerdcStatusField component should render default view 1`] = `
       id="rek-herdc-status-label"
     />
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls=":r0:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -71,16 +72,17 @@ exports[`HerdcStatusField component should render immutable list as selected val
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls=":r2:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -137,16 +139,17 @@ exports[`HerdcStatusField component should render when given a default value fie
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls=":r3:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span
@@ -196,16 +199,17 @@ exports[`HerdcStatusField component should render with given field props 1`] = `
       Test label
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-controls=":r1:"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
-        role="button"
+        role="combobox"
         tabindex="0"
       >
         <span

@@ -274,7 +274,7 @@ describe('Component PossiblyMyRecords', () => {
 
         // change sortby
         let element = getByTestId('publication-list-sorting-sort-by');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
 
         fireEvent.click(getByRole('option', { name: 'Title' }));
@@ -282,7 +282,7 @@ describe('Component PossiblyMyRecords', () => {
 
         // change page size
         element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '50' }));
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('50');
     });

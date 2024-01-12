@@ -18,7 +18,7 @@ describe('BulkUpdatesList', () => {
     });
 
     it('should render rows for bulk updates', () => {
-        const { getByTestId } = setup({
+        const { getByTestId, debug } = setup({
             list: [
                 {
                     buj_created_at: '2020-09-03 00:30:08',
@@ -40,6 +40,7 @@ describe('BulkUpdatesList', () => {
             ],
         });
 
+        debug(undefined, 100000);
         expect(getByTestId('bulk-updates-list-item-0')).toBeInTheDocument();
         // time is adjusted to local timezone, so for Brisbane the time is +10 hours
         expect(getByTestId('buj-created-at')).toHaveTextContent('2020-09-03 10:30:08');
