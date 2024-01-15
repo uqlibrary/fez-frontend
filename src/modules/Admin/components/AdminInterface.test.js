@@ -5,9 +5,8 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
-import pageLocale from 'locale/pages';
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, fireEvent, within, createEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, within } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),

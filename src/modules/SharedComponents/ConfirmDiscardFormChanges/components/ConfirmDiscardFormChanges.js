@@ -4,6 +4,7 @@ import { locale } from 'locale';
 
 export const ConfirmDiscardFormChanges = props => {
     const { dirty, submitSucceeded, children } = props;
+
     const getDiscardFormChangesConfirmationLocale = () => {
         return locale.global.discardFormChangesConfirmation.confirmationMessage;
     };

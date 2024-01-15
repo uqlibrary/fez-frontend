@@ -36,6 +36,7 @@ export const flattedPathConfig = [
     '/admin/favourite-search',
     '/admin/masquerade',
     '/admin/unpublished',
+    '/admin/journal/edit',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
@@ -448,6 +449,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.users.title,
+                  },
+                  {
+                      path: pathConfig.admin.journalEdit(id),
+                      component: components.JournalAdmin,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.edit.journal.title,
                   },
               ]
             : []),
