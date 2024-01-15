@@ -219,16 +219,6 @@ export const VOCAB_LIST_API = () => {
         apiUrl: 'vocabularies',
     };
 };
-export const CHILD_VOCAB_LIST_API = (config, action = null) => {
-    const params = getCCParams(config);
-    const pid = params.pid;
-    action !== 'export' && delete params.pid;
-
-    return {
-        apiUrl: `vocabularies/${pid}/list`,
-        options: { params },
-    };
-};
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
