@@ -1116,6 +1116,15 @@ export default {
                 culturalInstitutionNotice: {
                     title: 'Cultural Institution (CI) Notice',
                 },
+                uqData: {
+                    title: 'UQ eSpace',
+                },
+                doaj: {
+                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                },
+                indexed: {
+                    title: 'Indexed in',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',
@@ -1223,6 +1232,10 @@ export default {
                     alertId: 'alert-error',
                 },
             },
+            journal: {
+                title: 'Edit journal',
+                loadingMessage: 'Loading journal',
+            },
         },
         deleteRecord: {
             loadingMessage: 'Loading work',
@@ -1305,6 +1318,9 @@ export default {
                     title: 'Error',
                     message: message => message,
                     alertId: 'alert-error',
+                },
+                advisoryStatement: {
+                    title: 'Advisory statement',
                 },
             },
         },

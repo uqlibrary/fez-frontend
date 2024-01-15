@@ -9,6 +9,8 @@ import {
     JOURNAL_SEARCH_KEYWORDS_LOADING,
     JOURNAL_SEARCH_KEYWORDS_FAILED,
     CLEAR_JOURNAL_SEARCH_KEYWORDS,
+    ADMIN_JOURNAL_CLEAR,
+    ADMIN_JOURNAL_UNLOCK,
 } from 'actions/actionTypes';
 
 import journalReducer, { initialJournalSearchKeywords } from './journals';
@@ -17,13 +19,15 @@ const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
-    journalDetails: false,
+    journalDetails: {},
     journalLoading: false,
     journalLoadingError: false,
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
     isInitialValues: true,
+    isJournalLocked: true,
+    journalToViewError: null,
 };
 
 describe('journalReducer reducer', () => {
@@ -97,6 +101,7 @@ describe('journalReducer reducer', () => {
         const previousState = {
             ...initialState,
             journalLoading: true,
+            isJournalLocked: false,
         };
         const expected = {
             ...previousState,
@@ -127,9 +132,11 @@ describe('journalReducer reducer', () => {
             ...previousState,
             journalLoading: false,
             journalLoadingError: true,
+            journalToViewError: 'Test error message',
         };
         const test = journalReducer(previousState, {
             type: JOURNAL_LOAD_FAILED,
+            payload: 'Test error message',
         });
         expect(test).toEqual(expected);
     });
@@ -205,5 +212,17 @@ describe('journalReducer reducer', () => {
             type: CLEAR_JOURNAL_SEARCH_KEYWORDS,
         });
         expect(test).toEqual(expected);
+    });
+
+    it('should clear a journal to view', () => {
+        const test = journalReducer(initialState, { type: ADMIN_JOURNAL_CLEAR });
+        expect(test).toEqual({ ...initialState, isJournalLocked: false });
+    });
+
+    it('should set isJournalLocked flag to false on unlocking the journal', () => {
+        const test = journalReducer(initialState, {
+            type: ADMIN_JOURNAL_UNLOCK,
+        });
+        expect(test).toEqual({ ...initialState, isJournalLocked: false });
     });
 });
