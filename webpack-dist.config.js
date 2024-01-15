@@ -213,7 +213,6 @@ const webpackConfig = {
                     loader: 'babel-loader',
                     options: {
                         plugins: [
-                            '@babel/plugin-proposal-export-namespace-from',
                             '@babel/plugin-proposal-export-default-from',
                             ['@babel/plugin-transform-spread', { loose: true }],
                         ],
