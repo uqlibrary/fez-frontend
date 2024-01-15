@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useFormValuesContext, useRecordContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isDateInBetween, isFileValid, isValidDate } from 'config/validation';
@@ -31,7 +31,7 @@ import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
+import { checkForPreview, checkForThumbnail, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';

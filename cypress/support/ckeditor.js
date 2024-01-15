@@ -23,7 +23,7 @@ Cypress.Commands.add('readCKEditor', element => {
 
 // check content of from CKEditor instance
 // Usage example:
-// cy.checkCKEditor('rek-title', 'words);
+// cy.checkCKEditor('rek-title', 'words');
 Cypress.Commands.add('checkCKEditor', (element, content = null) => {
     if (content !== null) {
         return cy
