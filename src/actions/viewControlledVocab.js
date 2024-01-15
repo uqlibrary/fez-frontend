@@ -13,7 +13,6 @@ export function loadControlledVocabList() {
 
         return get(VOCAB_LIST_API())
             .then(response => {
-                console.log('resp=', response);
                 dispatch({
                     type: actions.VIEW_VOCAB_LOADED,
                     payload: response,

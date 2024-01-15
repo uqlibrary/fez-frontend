@@ -5,7 +5,6 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@mui/material/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { userIsAdmin } from 'hooks';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@mui/material/Typography';
 import { controlledVocabConfig } from 'config';
@@ -17,9 +16,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { VocabTable } from './components/VocabTable.js';
 
 export const ControlledVocabularies = () => {
-    const adminUser = userIsAdmin();
     const dispatch = useDispatch();
-    const vocabList = useSelector(state => state.get('viewVocabReducer').vocabList);
+    const sortedList = useSelector(state => state.get('viewVocabReducer').vocabList);
     const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);
@@ -31,11 +29,10 @@ export const ControlledVocabularies = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const txt = locale.components.controlledVocabularyCollections;
+    const txt = locale.components.controlledVocabulary;
 
     const labels = txt.columns.labels;
 
-    const sortedList = [...vocabList];
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
             {!!!loadingVocabError && (
@@ -53,7 +50,7 @@ export const ControlledVocabularies = () => {
                         )}
 
                         {sortedList.length > 0 ? (
-                            <VocabTable records={sortedList} labels={labels} conf={txt} adminUser={adminUser} />
+                            <VocabTable records={sortedList} labels={labels} />
                         ) : (
                             <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
                         )}

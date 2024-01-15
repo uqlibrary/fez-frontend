@@ -3842,14 +3842,10 @@ export default {
                 sortDirection: 'Asc',
             },
         },
-        controlledVocabularyCollections: {
+        controlledVocabulary: {
             title: {
                 controlledVocabulary: 'Controlled Vocabulary',
             },
-            snackbar: {
-                message: 'Search results updated',
-            },
-            dateFormat: 'ddd MMM DD, YYYY',
             loading: {
                 message: '...Loading Data...',
             },
@@ -3861,32 +3857,8 @@ export default {
                     license: 'License',
                     external_id: 'External ID',
                     path: 'Path',
-                    creation_date: 'Created Date',
-                    updated_date: 'Updated Date',
                     actions: 'Actions',
                 },
-            },
-            export: {
-                label: 'Export page results',
-                format: [{ value: 'excel', label: 'Excel File' }],
-            },
-            sorting: {
-                pageSize: 'Records per page',
-                sortLabel: 'Sort results by',
-                sortDirectionLabel: 'Sort order',
-                sortBy: [
-                    { value: 'title', label: 'Title' },
-                    { value: 'created_date', label: 'Created Date' },
-                    { value: 'updated_date', label: 'Updated Date' },
-                ],
-                sortDirection: ['Desc', 'Asc'],
-                recordsPerPage: [10, 20, 50, 100],
-                exportOnlyLabel: 'Export Only:',
-            },
-            sortingDefaults: {
-                pageSize: 10,
-                sortBy: 'title',
-                sortDirection: 'Asc',
             },
         },
         favouriteJournals: {

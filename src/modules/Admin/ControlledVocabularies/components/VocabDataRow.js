@@ -3,16 +3,10 @@ import PropTypes from 'prop-types';
 
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useSelector } from 'react-redux';
 import Grid from '@mui/material/Grid';
 
 export const VocabDataRow = ({ row }) => {
-    const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
-
-    const open = collectionsOpen.indexOf(row.cvo_id) > -1;
-
     return (
         <Grid
             container
@@ -32,7 +26,7 @@ export const VocabDataRow = ({ row }) => {
                                 data-analyticsid={`expand-row-${row.cvo_id}`}
                                 data-testid={`expand-row-${row.cvo_id}`}
                             >
-                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                                {<KeyboardArrowDownIcon />}
                             </IconButton>
                         </Box>
                     </Grid>

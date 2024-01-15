@@ -26,7 +26,6 @@ export const VocabTable = ({ records, labels }) => {
                 </Grid>
             </Grid>
             {/* Data Row */}
-            {console.log('records=', records)}
             <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-primary-body">
                 {records.map(row => (
                     <VocabDataRow key={row.cvo_id} row={row} />

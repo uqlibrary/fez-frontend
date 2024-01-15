@@ -68,9 +68,6 @@ export const ThesisSubmission = lazy(() =>
 export const ThirdPartyLookupTool = lazy(() =>
     lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
 );
-// export const ControlledVocabularies = lazy(() =>
-//     lazyRetry(() => import('modules/Admin/ControlledVocabularies/containers/ControlledVocabularies')),
-// );
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
