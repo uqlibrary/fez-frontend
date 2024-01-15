@@ -12,12 +12,11 @@ import EnclosedLinkTemplate from './EnclosedLinkTemplate';
 import MultiLinkTemplate from './MultiLinkTemplate';
 import MultiValueTemplate from './MultiValueTemplate';
 import WosCategoriesTemplate from './WosCategoriesTemplate';
-import { useJournalDetailsContext } from '../JournalDataContext';
+import { useJournalContext } from 'context';
 import CreativeCommonsLicenceTemplate from './CreativeCommonsLicenceTemplate';
 
 export const useData = (dataConfig = [], getData, mergeData, separator) => {
-    const { journalDetails } = useJournalDetailsContext();
-
+    const { journalDetails } = useJournalContext();
     let fieldData = null;
 
     if (!!getData) {

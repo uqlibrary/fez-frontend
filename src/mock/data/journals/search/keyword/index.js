@@ -1,3 +1,4 @@
+export { keywordsSearch as advanced } from './advanced';
 export { keywordsSearch as bio } from './bio';
 export { keywordsSearch as cats } from './cats';
 export { keywordsSearch as brain } from './brain';

@@ -54,5 +54,13 @@ export const sherpaRomeo = [
         "srm_journal_name": "Lecture Notes in Artificial Intelligence",
         "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/33095",
         "srm_date_updated":"2020-03-05 12:13:25"
-    }
+    },
+    {
+        "srm_id": 33264,
+        "srm_issn": "0388-0001",
+        "srm_json": "{}",
+        "srm_journal_name": "Language Sciences",
+        "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/16950",
+        "srm_date_updated": "2017-09-30 18:41:17"
+    },
 ];

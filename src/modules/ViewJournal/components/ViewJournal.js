@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -10,34 +11,41 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import * as actions from 'actions';
 
-import { JournalDetailsContext } from './JournalDataContext';
+import { JournalContext } from 'context';
 import Section from './Section';
+import { parseHtmlToJSX } from 'helpers/general';
 
+import { userIsAdmin } from 'hooks';
 import { locale } from 'locale';
 import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
 
+export const getAdvisoryStatement = html => {
+    return !!html ? parseHtmlToJSX(html) : '';
+};
+
 export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
+    const isAdmin = userIsAdmin();
     const txt = locale.pages.journal.view;
 
     const journalLoading = useSelector(state => state.get('journalReducer').journalLoading);
     const journalDetails = useSelector(state => state.get('journalReducer').journalDetails);
     const journalLoadingError = useSelector(state => state.get('journalReducer').journalLoadingError);
-
     const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
     const alertProps = favouriteUpdateError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
+    const journalDetailsLength = Object.keys(journalDetails)?.length || 0;
 
     React.useEffect(() => {
-        !!id && !journalDetails && dispatch(actions.loadJournal(id));
+        !!id && journalDetailsLength === 0 && dispatch(actions.loadJournal(id));
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id]);
+    }, [id, journalDetailsLength]);
 
     if (journalLoading) {
         return <InlineLoader message={txt.loadingMessage} loaderId="journal-loading" />;
@@ -51,7 +59,7 @@ export const ViewJournal = () => {
         );
     }
 
-    if (!journalDetails) {
+    if (journalDetailsLength === 0) {
         return <StandardPage />;
     }
 
@@ -67,10 +75,12 @@ export const ViewJournal = () => {
                         favourite: txt.favouriteTooltip.isFavourite,
                         notFavourite: txt.favouriteTooltip.isNotFavourite,
                     }}
+                    showAdminActions={isAdmin}
+                    sx={{ display: 'flex' }}
                 />
             }
         >
-            <JournalDetailsContext.Provider
+            <JournalContext.Provider
                 value={{
                     journalDetails,
                 }}
@@ -83,6 +93,19 @@ export const ViewJournal = () => {
                                 {...alertProps}
                                 allowDismiss
                                 dismissAction={() => setUpdateFavouriteError(false)}
+                            />
+                        </Grid>
+                    )}
+                    {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
+                        <Grid item xs={12}>
+                            <Alert
+                                type={'info'}
+                                title={txt.advisoryStatement.title}
+                                message={
+                                    <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
+                                        {getAdvisoryStatement(journalDetails.jnl_advisory_statement)}
+                                    </Box>
+                                }
                             />
                         </Grid>
                     )}
@@ -102,7 +125,7 @@ export const ViewJournal = () => {
                             />
                         ))}
                 </Grid>
-            </JournalDetailsContext.Provider>
+            </JournalContext.Provider>
         </StandardPage>
     );
 };
