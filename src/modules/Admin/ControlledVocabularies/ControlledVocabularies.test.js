@@ -11,7 +11,7 @@ import Immutable from 'immutable';
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = ({} = {})) => {
+const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
     return render(
         <WithRouter history={testHistory}>
             <WithReduxStore initialState={Immutable.Map(state)}>

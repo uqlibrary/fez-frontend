@@ -50,7 +50,6 @@ export const VocabDataRow = ({ row }) => {
 VocabDataRow.propTypes = {
     conf: PropTypes.object,
     row: PropTypes.object,
-    adminUser: PropTypes.bool,
     labels: PropTypes.object,
 };
 export default VocabDataRow;
