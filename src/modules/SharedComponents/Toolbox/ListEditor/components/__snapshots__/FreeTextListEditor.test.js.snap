@@ -26,7 +26,7 @@ exports[`FreeTextListEditor component should render default view 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"

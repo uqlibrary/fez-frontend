@@ -32,14 +32,14 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.mouseDown(getByLabelText('Select access conditions'));
         fireEvent.click(getByRole('option', { name: 'Closed Access' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
@@ -62,14 +62,14 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             onAccessConditionChange: testFunction,
             uploadedFile: file,
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select access conditions' }));
+        fireEvent.mouseDown(getByLabelText('Select access conditions'));
         fireEvent.click(getByRole('option', { name: 'Open Access' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });
@@ -78,7 +78,7 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -86,7 +86,7 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.mouseDown(getByLabelText('Select security policy'));
         fireEvent.click(getByRole('option', { name: 'Administrators' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 1);
     });
@@ -95,7 +95,7 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const { getByRole } = setup({
+        const { getByRole, getByLabelText } = setup({
             requireOpenAccessStatus: true,
             isAdmin: true,
             onSecurityPolicyChange: testFunction,
@@ -103,7 +103,7 @@ describe('FileUploadRow', () => {
             index: 0,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Select security policy' }));
+        fireEvent.mouseDown(getByLabelText('Select security policy'));
         fireEvent.click(getByRole('option', { name: 'Public' }));
         expect(testFunction).toHaveBeenCalledWith(file, 0, 5);
     });

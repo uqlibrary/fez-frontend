@@ -178,7 +178,7 @@ describe('AdvancedSearchComponent', () => {
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
@@ -194,7 +194,7 @@ describe('AdvancedSearchComponent', () => {
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         // const list = await waitFor(() => getByTestId('menu-document-type-selector'));
         const options = getAllByRole('option', list);
@@ -209,7 +209,7 @@ describe('AdvancedSearchComponent', () => {
             fieldRows: [{ value: 'i feel lucky', searchField: 'all' }],
         });
 
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
         expect(options[12].checked).toBeTruthy(); // Generic document
