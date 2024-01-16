@@ -90,9 +90,7 @@ api.interceptors.request.use(request => {
         !!request.params.mode &&
         request.params.mode === 'advanced'
     ) {
-        request.paramsSerializer = params => {
-            return param(params);
-        };
+        request.paramsSerializer = { serialize: params => param(params) };
     }
     return request;
 });

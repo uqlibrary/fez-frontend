@@ -88,8 +88,7 @@
         "jest-preview": "^0.2.3",
         "jsdom": "^20.0.3",
         "mini-css-extract-plugin": "^2.7.2",
-        "mockdate": "^2.0.2",
-        "node-sass": "^9.0.0",
+        "mockdate": "^3.0.5",
         "postcss-loader": "^4.2.0",
         "prettier": "^1.19.1",
         "prettier-eslint": "^16.2.0",
@@ -101,7 +100,7 @@
         "redux-mock-store": "^1.5.1",
         "robotstxt-webpack-plugin": "^8.0.0",
         "sass-loader": "^10.2.1",
-        "snapshot-diff": "^0.5.1",
+        "snapshot-diff": "^0.10.0",
         "start-server-and-test": "^2.0.3",
         "string-to-arraybuffer": "^1.0.0",
         "style-loader": "^2.0.0",
@@ -237,8 +236,8 @@
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
     "engines": {
-        "npm": "^8.4.1",
-        "node": "^16.13.2"
+        "npm": ">=8.4.1",
+        "node": ">=16.13.2"
     },
     "babel": {
         "presets": [
