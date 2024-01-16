@@ -114,7 +114,7 @@ describe('CollectionsListEmbedded form', () => {
         expect(getByTestId('publication-list-sorting-page-size')).toHaveTextContent('10');
 
         const element = getByTestId('publication-list-sorting-page-size');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -144,7 +144,7 @@ describe('CollectionsListEmbedded form', () => {
         expect(getByTestId('publication-list-sorting-sort-by')).toHaveTextContent('Title');
 
         const element = getByTestId('publication-list-sorting-sort-by');
-        fireEvent.mouseDown(within(element).getByRole('button'));
+        fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
         act(() => {
             const options = getAllByRole('option');
@@ -185,7 +185,7 @@ describe('CollectionsListEmbedded form', () => {
 
         expect(getByTestId('export-publications-format')).toBeInTheDocument();
         act(() => {
-            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
+            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
         });
         expect(getByRole('listbox')).toBeInTheDocument();
         act(() => {

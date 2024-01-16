@@ -354,20 +354,21 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
+                            aria-controls=":r8:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortBy"
+                            aria-labelledby="sort-by-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortBy"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Published date
@@ -402,20 +403,21 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
+                            aria-controls=":r9:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortOrder"
+                            aria-labelledby="sort-order-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortOrder"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Desc
@@ -450,20 +452,21 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
+                            aria-controls=":ra:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="pageSize"
+                            aria-labelledby="page-size-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="pageSize"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             20
@@ -1011,20 +1014,21 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
+                            aria-controls=":rc:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortBy"
+                            aria-labelledby="sort-by-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortBy"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Published date
@@ -1059,20 +1063,21 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
+                            aria-controls=":rd:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortOrder"
+                            aria-labelledby="sort-order-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortOrder"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Desc
@@ -1107,20 +1112,21 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
+                            aria-controls=":re:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="pageSize"
+                            aria-labelledby="page-size-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="pageSize"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             20
@@ -1668,20 +1674,21 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
+                            aria-controls=":rg:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortBy"
+                            aria-labelledby="sort-by-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortBy"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Published date
@@ -1716,20 +1723,21 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
+                            aria-controls=":rh:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortOrder"
+                            aria-labelledby="sort-order-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortOrder"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             Desc
@@ -1764,20 +1772,21 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
+                            aria-controls=":ri:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="pageSize"
+                            aria-labelledby="page-size-label"
                             class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="pageSize"
-                            role="button"
+                            role="combobox"
                             tabindex="0"
                           >
                             20
@@ -2488,21 +2497,22 @@ exports[`MyRecords test renders loading screen while export publications loading
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
+                            aria-controls=":r4:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortBy"
+                            aria-labelledby="sort-by-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortBy"
-                            role="button"
+                            role="combobox"
                           >
                             Published date
                           </div>
@@ -2537,21 +2547,22 @@ exports[`MyRecords test renders loading screen while export publications loading
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
+                            aria-controls=":r5:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortOrder"
+                            aria-labelledby="sort-order-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortOrder"
-                            role="button"
+                            role="combobox"
                           >
                             Desc
                           </div>
@@ -2586,21 +2597,22 @@ exports[`MyRecords test renders loading screen while export publications loading
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
+                            aria-controls=":r6:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="pageSize"
+                            aria-labelledby="page-size-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="pageSize"
-                            role="button"
+                            role="combobox"
                           >
                             20
                           </div>
@@ -2886,21 +2898,22 @@ exports[`MyRecords test renders loading screen while loading publications while 
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-by-label"
                         >
                           Sort results by
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-by"
                         >
                           <div
+                            aria-controls=":r0:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortBy"
+                            aria-labelledby="sort-by-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortBy"
-                            role="button"
+                            role="combobox"
                           >
                             Published date
                           </div>
@@ -2935,21 +2948,22 @@ exports[`MyRecords test renders loading screen while loading publications while 
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="sort-order-label"
                         >
                           Sort order
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-sort-order"
                         >
                           <div
+                            aria-controls=":r1:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="sortOrder"
+                            aria-labelledby="sort-order-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="sortOrder"
-                            role="button"
+                            role="combobox"
                           >
                             Desc
                           </div>
@@ -2984,21 +2998,22 @@ exports[`MyRecords test renders loading screen while loading publications while 
                         <label
                           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
+                          id="page-size-label"
                         >
                           Works per page
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           data-testid="publication-list-sorting-page-size"
                         >
                           <div
+                            aria-controls=":r2:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-labelledby="pageSize"
+                            aria-labelledby="page-size-label"
                             class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                            id="pageSize"
-                            role="button"
+                            role="combobox"
                           >
                             20
                           </div>

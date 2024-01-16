@@ -27,4 +27,50 @@ context('view Journal', () => {
         tabVisibleInWindow('3', 'be.visible');
         tabVisibleInWindow('4', 'be.visible');
     });
+
+    it('should have an advisory statement', () => {
+        cy.visit('/journal/view/12');
+        cy.get('[data-testid=alert]').should('contain.text', 'Advisory statement');
+    });
+
+    describe('admin', () => {
+        it('should show a larger admin menu button in desktop view', () => {
+            cy.viewport(1200, 1000);
+            cy.visit('/journal/view/12?user=uqstaff');
+            cy.get('[data-testid=admin-actions-button]').should('have.class', 'MuiIconButton-sizeLarge');
+        });
+        it('should show a small admin menu button in mobile view', () => {
+            cy.viewport(480, 1000);
+            cy.visit('/journal/view/12?user=uqstaff');
+            cy.get('[data-testid=admin-actions-button]').should('have.class', 'MuiIconButton-sizeSmall');
+        });
+
+        it('should navigate to the edit admin journal page and use current page url as navigatedFrom value', () => {
+            const baseUrl = Cypress.config('baseUrl');
+            cy.visit('/journal/view/12?user=uqstaff');
+            cy.get('[data-testid=admin-actions-button]')
+                .click()
+                .then(() => {
+                    cy.get('[role="menuitem"]')
+                        .eq(0)
+                        .click();
+                });
+            cy.url().should(
+                'equal',
+                `${baseUrl}/admin/journal/edit/12?navigatedFrom=%2Fjournal%2Fview%2F12%3Fuser%3Duqstaff`,
+            );
+        });
+        it('should navigate to the edit admin journal page and set navigatedFrom to the hash value (coverage)', () => {
+            const baseUrl = Cypress.config('baseUrl');
+            cy.visit('/journal/view/12?user=uqstaff#test');
+            cy.get('[data-testid=admin-actions-button]')
+                .click()
+                .then(() => {
+                    cy.get('[role="menuitem"]')
+                        .eq(0)
+                        .click();
+                });
+            cy.url().should('equal', `${baseUrl}/admin/journal/edit/12?navigatedFrom=test`);
+        });
+    });
 });

@@ -77,6 +77,7 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journals/search/keyword/bio';
 export { journalDetails } from './journal';
+export { journalDoaj } from './journalDoaj';
 export { communityList } from './communityList'
 export { collectionList } from './collectionList'
 export { journalsList } from './journals';

@@ -67,7 +67,7 @@ exports[`Search record should handle skip search 1`] = `
                 </span>
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-describedby="search-query-helper-text"
@@ -191,7 +191,7 @@ exports[`Search record should render stepper and a publication search form 1`] =
                 </span>
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-describedby="search-query-helper-text"

@@ -32,7 +32,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -84,7 +84,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -118,9 +118,10 @@ exports[`GrantListEditor should add grant to the list 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-focused MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-focused MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r19:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -128,7 +129,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -292,7 +293,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -446,7 +447,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -475,7 +476,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -525,7 +526,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -577,7 +578,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -611,9 +612,10 @@ exports[`GrantListEditor should delete all grants 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r44:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -621,7 +623,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -785,7 +787,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -936,7 +938,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -965,7 +967,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -1106,7 +1108,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -1135,7 +1137,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -1185,7 +1187,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -1237,7 +1239,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1271,9 +1273,10 @@ exports[`GrantListEditor should delete all grants 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r44:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1281,7 +1284,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -1364,7 +1367,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -1416,7 +1419,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1450,9 +1453,10 @@ exports[`GrantListEditor should delete grant 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r3n:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1460,7 +1464,7 @@ exports[`GrantListEditor should delete grant 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -1624,7 +1628,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -1775,7 +1779,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -1804,7 +1808,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -1945,7 +1949,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -1974,7 +1978,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -2026,7 +2030,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -2078,7 +2082,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2112,9 +2116,10 @@ exports[`GrantListEditor should delete grant 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r3n:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -2122,7 +2127,7 @@ exports[`GrantListEditor should delete grant 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -2286,7 +2291,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -2438,7 +2443,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -2467,7 +2472,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -2517,7 +2522,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -2569,7 +2574,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2603,9 +2608,10 @@ exports[`GrantListEditor should move the grant down 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r3a:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -2613,7 +2619,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -2777,7 +2783,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -2928,7 +2934,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -2957,7 +2963,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -3098,7 +3104,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -3127,7 +3133,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -3177,7 +3183,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -3229,7 +3235,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -3263,9 +3269,10 @@ exports[`GrantListEditor should move the grant down 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r3a:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -3273,7 +3280,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -3437,7 +3444,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -3588,7 +3595,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -3617,7 +3624,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -3758,7 +3765,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -3787,7 +3794,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -3837,7 +3844,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -3889,7 +3896,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -3923,9 +3930,10 @@ exports[`GrantListEditor should move the grant up 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r27:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -3933,7 +3941,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -4097,7 +4105,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -4248,7 +4256,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -4277,7 +4285,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -4418,7 +4426,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -4447,7 +4455,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -4497,7 +4505,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -4549,7 +4557,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4583,9 +4591,10 @@ exports[`GrantListEditor should move the grant up 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r27:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -4593,7 +4602,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -4757,7 +4766,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -4908,7 +4917,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -4937,7 +4946,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -5078,7 +5087,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -5107,7 +5116,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -5157,7 +5166,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -5209,7 +5218,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5243,9 +5252,10 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r2k:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -5253,7 +5263,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -5417,7 +5427,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -5569,7 +5579,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -5598,7 +5608,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -5648,7 +5658,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -5700,7 +5710,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5734,9 +5744,10 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r2k:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -5744,7 +5755,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -5908,7 +5919,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -6060,7 +6071,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -6089,7 +6100,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -6139,7 +6150,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -6191,7 +6202,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6225,9 +6236,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r2t:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -6235,7 +6247,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -6399,7 +6411,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -6551,7 +6563,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -6581,7 +6593,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -6722,7 +6734,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -6751,7 +6763,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -6801,7 +6813,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -6853,7 +6865,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6887,9 +6899,10 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r2t:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -6897,7 +6910,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -7061,7 +7074,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -7213,7 +7226,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -7243,7 +7256,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -7384,7 +7397,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -7413,7 +7426,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -7463,7 +7476,7 @@ exports[`GrantListEditor should render default view 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -7515,7 +7528,7 @@ exports[`GrantListEditor should render default view 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -7549,9 +7562,10 @@ exports[`GrantListEditor should render default view 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r2:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7559,7 +7573,7 @@ exports[`GrantListEditor should render default view 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -7642,7 +7656,7 @@ exports[`GrantListEditor should render error from props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -7694,7 +7708,7 @@ exports[`GrantListEditor should render error from props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -7728,9 +7742,10 @@ exports[`GrantListEditor should render error from props 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":re:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7738,7 +7753,7 @@ exports[`GrantListEditor should render error from props 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -7826,7 +7841,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -7878,7 +7893,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -7912,9 +7927,10 @@ exports[`GrantListEditor should render error from props as children 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":rh:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7922,7 +7938,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -8015,7 +8031,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -8067,7 +8083,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -8101,9 +8117,10 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r1i:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -8111,7 +8128,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -8275,7 +8292,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -8426,7 +8443,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -8455,7 +8472,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -8595,7 +8612,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -8624,7 +8641,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -8764,7 +8781,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -8793,7 +8810,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -8934,7 +8951,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -8963,7 +8980,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -9013,7 +9030,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -9065,7 +9082,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -9099,9 +9116,10 @@ exports[`GrantListEditor should render string error from props 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":rk:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9109,7 +9127,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -9197,7 +9215,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -9249,7 +9267,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -9283,9 +9301,10 @@ exports[`GrantListEditor should render with default given value 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r5:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9293,7 +9312,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -9457,7 +9476,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -9609,7 +9628,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -9638,7 +9657,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -9688,7 +9707,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -9740,7 +9759,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -9774,9 +9793,10 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":rn:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9784,7 +9804,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -9948,7 +9968,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -10100,7 +10120,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -10129,7 +10149,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>
@@ -10179,7 +10199,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-describedby="rek-grant-agency-helper-text"
@@ -10231,7 +10251,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -10265,9 +10285,10 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
              
           </span>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r10:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -10275,7 +10296,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
               class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-grant-type-select"
               id="rek-grant-type-select"
-              role="button"
+              role="combobox"
             >
               Funder/Sponsor type
             </div>
@@ -10439,7 +10460,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                             />
                           </svg>
                         </button>
@@ -10591,7 +10612,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                             />
                           </svg>
                         </button>
@@ -10620,7 +10641,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                             />
                           </svg>
                         </button>

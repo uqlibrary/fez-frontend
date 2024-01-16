@@ -90,9 +90,7 @@ api.interceptors.request.use(request => {
         !!request.params.mode &&
         request.params.mode === 'advanced'
     ) {
-        request.paramsSerializer = params => {
-            return param(params);
-        };
+        request.paramsSerializer = { serialize: params => param(params) };
     }
     return request;
 });
@@ -116,7 +114,7 @@ const reportToSentry = error => {
 /**
  * Return an instance of an alike in built-in Error class with a public message param and additional given properties
  *
- * @param error
+ * @param message
  * @param extras
  * @return {{}}
  */
@@ -136,24 +134,20 @@ api.interceptors.response.use(
         return Promise.resolve(response.data);
     },
     error => {
-        const reportHttpStatusToSentry = [422, 500];
-        if (
-            !!error &&
-            !!error.response &&
-            !!error.response.status &&
-            reportHttpStatusToSentry.indexOf(error.response.status) !== -1
-        ) {
+        // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+        const handlesErrorsInternally =
+            !error?.config ||
+            (error.config.url && error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1)));
+
+        const reportHttpStatusToSentry = [422];
+        if (!!error?.response?.status && reportHttpStatusToSentry.includes(error.response.status)) {
             reportToSentry(error);
         }
 
-        // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
         let errorMessage = null;
-        if (
-            !!error &&
-            !!error.config &&
-            (!error.config.url || !error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1)))
-        ) {
-            if (!!error.response && !!error.response.status && error.response.status === 403) {
+        const errorStatus = error?.response?.status || -1;
+        if (!handlesErrorsInternally) {
+            if (errorStatus === 403) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                     Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
                     Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
@@ -167,7 +161,7 @@ api.interceptors.response.use(
                 }
             }
 
-            if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
+            if (!!error.message && errorStatus === 500) {
                 errorMessage =
                     ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
@@ -176,14 +170,29 @@ api.interceptors.response.use(
                     store.dispatch(showAppAlert(error.response.data));
                 }
             } else if (!!error.response && !!error.response.status) {
-                errorMessage = locale.global.errorMessages[error.response.status];
-                if ([410, 422].includes(error.response.status)) {
+                const statusMessages = locale.global.errorMessages;
+                errorMessage = statusMessages.hasOwnProperty(errorStatus)
+                    ? statusMessages[errorStatus]
+                    : statusMessages.generic;
+                if ([410, 422].includes(errorStatus)) {
+                    // override for these statuses
                     errorMessage = {
                         ...errorMessage,
                         ...error.response.data,
                     };
                 }
             }
+        }
+
+        const shouldNotAppearInSentry =
+            document.location.hostname === 'localhost' || // testing on AWS sometimes fires these
+            [401, 403].includes(errorStatus) || // login expired - no notice required
+            errorStatus === 0 || // catch those "the network request was interrupted" we see so much
+            errorStatus === '0' || // don't know what format it comes in
+            errorStatus === 500 || // api should handle these
+            errorStatus === 502; // connection timed out - it happens, FE can't do anything about it
+        if (!shouldNotAppearInSentry) {
+            reportToSentry(error);
         }
 
         if (!!errorMessage) {
@@ -196,7 +205,6 @@ api.interceptors.response.use(
                 }),
             );
         } else {
-            reportToSentry(error);
             return Promise.reject(error);
         }
     },

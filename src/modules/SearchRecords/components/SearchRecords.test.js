@@ -1,7 +1,7 @@
 import React from 'react';
 import { default as SearchRecords, normaliseDisplayLookup } from './SearchRecords';
 import { pathConfig } from 'config';
-import { act, fireEvent, renderWithRouter, WithReduxStore, createMatchMedia } from 'test-utils';
+import { act, fireEvent, renderWithRouter, WithReduxStore, createMatchMedia, within } from 'test-utils';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { createMemoryHistory } from 'history';
@@ -252,7 +252,7 @@ describe('SearchRecords page', () => {
         const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
 
-        const { getByRole, getAllByRole } = setup({
+        const { getAllByRole, getByTestId } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
@@ -260,7 +260,7 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: '20' }));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(4);
         fireEvent.click(getAllByRole('option')[2]);
 
@@ -298,7 +298,7 @@ describe('SearchRecords page', () => {
         const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
 
-        const { getByRole, getAllByRole } = setup({
+        const { getAllByRole, getByTestId } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
@@ -306,8 +306,8 @@ describe('SearchRecords page', () => {
             history: historyMock,
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Desc' }));
-        expect(getAllByRole('option').length).toBe(2);
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
+        expect(getAllByRole('option').length).toBe(2); // Desc and Asc
         fireEvent.click(getAllByRole('option')[1]);
 
         expect(testAction).toHaveBeenCalled();
@@ -423,7 +423,7 @@ describe('SearchRecords page', () => {
         const historyMock = createMemoryHistory();
         const testPushFn = jest.spyOn(historyMock, 'push');
 
-        const { getByRole, getAllByRole } = setup({
+        const { getAllByRole, getByTestId } = setup({
             history: historyMock,
             location: {
                 pathname: pathConfig.admin.unpublished,
@@ -439,7 +439,7 @@ describe('SearchRecords page', () => {
             },
         });
 
-        fireEvent.mouseDown(getByRole('button', { name: '20' }));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(4);
         fireEvent.click(getAllByRole('option')[2]);
 
@@ -519,8 +519,9 @@ describe('SearchRecords page', () => {
             searchQuery,
         };
 
-        const { getByRole, getAllByRole, rerender } = setup(testProps);
-        fireEvent.mouseDown(getByRole('button', { name: '20' }));
+        const { getAllByRole, getByTestId, rerender } = setup(testProps);
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
+
         expect(getAllByRole('option').length).toBe(4);
         const pageSizeOptionElement = getAllByRole('option')[2];
         fireEvent.click(pageSizeOptionElement);
@@ -535,7 +536,7 @@ describe('SearchRecords page', () => {
             rerender,
         );
 
-        fireEvent.mouseDown(getByRole('button', { name: 'Please select' }));
+        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(3);
         fireEvent.click(getAllByRole('option')[1]);
 
@@ -698,14 +699,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByRole, getAllByRole } = setup({
+        const { getByTestId, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change pageSize
-        fireEvent.mouseDown(getByRole('button', { name: '20' }));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(4);
         act(() => {
             fireEvent.click(getAllByRole('option')[2]);
@@ -749,14 +750,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByRole, getAllByRole } = setup({
+        const { getByTestId, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change sort direction
-        fireEvent.mouseDown(getByRole('button', { name: 'Desc' }));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(2);
         act(() => {
             fireEvent.click(getAllByRole('option')[1]);
@@ -800,14 +801,14 @@ describe('SearchRecords page', () => {
             initialEntries,
         });
         historyMock.push(initialEntries[0]);
-        const { getByRole, getAllByRole } = setup({
+        const { getByTestId, getAllByRole } = setup({
             ...props, // this props pretends there is a bunch of search results
             history: historyMock,
             actions: { searchEspacePublications: apiMock },
         });
 
         // change sort
-        fireEvent.mouseDown(getByRole('button', { name: 'Search relevance' }));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(8);
         act(() => {
             fireEvent.click(getAllByRole('option')[2]);
@@ -921,14 +922,14 @@ describe('SearchRecords page', () => {
                 initialEntries,
             });
             historyMock.push(initialEntries[0]);
-            const { getByRole, getAllByRole } = setup({
+            const { getByTestId, getAllByRole } = setup({
                 ...props, // this props pretends there is a bunch of search results
                 history: historyMock,
                 actions: { searchEspacePublications: apiMock },
             });
 
             // change display type
-            fireEvent.mouseDown(getByRole('button', { name: 'Auto' }));
+            fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
             expect(getAllByRole('option').length).toBe(3);
             act(() => {
                 fireEvent.click(getAllByRole('option')[1]);
@@ -1118,7 +1119,7 @@ describe('SearchRecords page', () => {
                 historyEntries,
             });
             historyMock.push(historyEntries[0]);
-            const { getByTestId, queryByTestId, getByRole, getAllByRole } = setup({
+            const { getByTestId, queryByTestId, getAllByRole } = setup({
                 ...props, // this props pretends there is a bunch of search results
                 location: {
                     ...historyEntries[0],
@@ -1128,9 +1129,11 @@ describe('SearchRecords page', () => {
 
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
-            expect(getByTestId('publication-list-display-records-as').textContent).toEqual('Image Gallery');
+            expect(within(getByTestId('publication-list-display-records-as')).getByRole('combobox')).toHaveTextContent(
+                'Image Gallery',
+            );
             // change display type
-            fireEvent.mouseDown(getByRole('button', { name: 'Image Gallery' }));
+            fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
             expect(getAllByRole('option').length).toBe(3);
             act(() => {
                 fireEvent.click(getAllByRole('option')[1]);

@@ -26,7 +26,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -102,7 +102,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -163,7 +163,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -195,7 +195,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -280,7 +280,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -312,7 +312,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -397,7 +397,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -429,7 +429,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -514,7 +514,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -546,7 +546,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -631,7 +631,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -663,7 +663,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -748,7 +748,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -780,7 +780,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -865,7 +865,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -897,7 +897,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -982,7 +982,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1014,7 +1014,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1099,7 +1099,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1131,7 +1131,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1218,7 +1218,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1260,7 +1260,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1336,7 +1336,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -1395,7 +1395,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1427,7 +1427,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1512,7 +1512,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1544,7 +1544,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1629,7 +1629,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1661,7 +1661,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1746,7 +1746,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1778,7 +1778,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1863,7 +1863,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -1895,7 +1895,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1980,7 +1980,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2012,7 +2012,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2097,7 +2097,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2129,7 +2129,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2214,7 +2214,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2246,7 +2246,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2331,7 +2331,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2363,7 +2363,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2450,7 +2450,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2492,7 +2492,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2568,7 +2568,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -2627,7 +2627,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2659,7 +2659,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2744,7 +2744,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2776,7 +2776,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2861,7 +2861,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -2893,7 +2893,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2978,7 +2978,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3010,7 +3010,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3095,7 +3095,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3127,7 +3127,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3212,7 +3212,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3244,7 +3244,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3329,7 +3329,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3361,7 +3361,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3446,7 +3446,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3478,7 +3478,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3563,7 +3563,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -3595,7 +3595,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3682,7 +3682,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3778,7 +3778,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -3838,7 +3838,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3934,7 +3934,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -3994,7 +3994,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4062,7 +4062,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4138,7 +4138,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -4197,7 +4197,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -4229,7 +4229,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4314,7 +4314,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -4346,7 +4346,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4433,7 +4433,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4475,7 +4475,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4551,7 +4551,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -4610,7 +4610,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -4642,7 +4642,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4727,7 +4727,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -4759,7 +4759,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4846,7 +4846,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4984,7 +4984,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -5043,7 +5043,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -5075,7 +5075,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5162,7 +5162,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5236,7 +5236,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -5295,7 +5295,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -5327,7 +5327,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5414,7 +5414,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5456,7 +5456,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5532,7 +5532,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -5591,7 +5591,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -5619,7 +5619,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -5650,7 +5650,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5733,7 +5733,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -5764,7 +5764,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5806,7 +5806,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5882,7 +5882,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                 />
               </svg>
             </button>
@@ -5941,7 +5941,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -5969,7 +5969,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -6000,7 +6000,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -6085,7 +6085,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                       />
                     </svg>
                   </button>
@@ -6113,7 +6113,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -6144,7 +6144,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -6227,7 +6227,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
                     />
                   </svg>
                 </button>
@@ -6258,7 +6258,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
