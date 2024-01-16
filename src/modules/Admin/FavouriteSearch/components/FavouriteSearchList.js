@@ -229,7 +229,6 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                 headerStyle: {
                     padding: 16,
                 },
-                idSynonym: 'fvs_id',
             }}
         />
     );

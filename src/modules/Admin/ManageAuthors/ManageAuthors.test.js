@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthors from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, preview } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
 import * as repository from 'repositories';
@@ -410,9 +410,9 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-author-2011'));
-        fireEvent.click(getByTestId('select-author-2012'));
-        fireEvent.click(getByTestId('select-author-2013'));
+        fireEvent.click(getByTestId('select-author-0'));
+        fireEvent.click(getByTestId('select-author-1'));
+        fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
@@ -459,9 +459,9 @@ describe('ManageAuthors', () => {
         expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
         expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('select-author-2011'));
-        fireEvent.click(getByTestId('select-author-2012'));
-        fireEvent.click(getByTestId('select-author-2013'));
+        fireEvent.click(getByTestId('select-author-0'));
+        fireEvent.click(getByTestId('select-author-1'));
+        fireEvent.click(getByTestId('select-author-2'));
         fireEvent.click(getByTestId('authors-delete-selected-authors'));
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
@@ -653,7 +653,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-2000003832-edit-this-author'));
+        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -679,14 +679,13 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
-        preview.debug();
-        expect(getByTestId('aut-display-name-2000003832')).toHaveAttribute('value', 'Test, Name');
-        expect(getByTestId('aut-org-username-2000003832')).toHaveAttribute('value', 'uqtname');
+
+        expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
+        expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
     });
 
     it('should validate inputs and render same info after unsuccessful editing operation', async () => {
@@ -742,7 +741,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-2000003832-edit-this-author'));
+        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -775,8 +774,8 @@ describe('ManageAuthors', () => {
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        await waitFor(() => expect(getByTestId('aut-display-name-2000003832')).toHaveAttribute('value', ''));
-        expect(getByTestId('aut-org-username-2000003832')).toHaveAttribute('value', '');
+        expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', '');
+        expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', '');
     });
 
     it('should delete an author item', async () => {
@@ -873,7 +872,7 @@ describe('ManageAuthors', () => {
         const listItem1 = getByTestId('authors-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('authors-list-row-2000003831-delete-this-author'));
+        fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
@@ -979,15 +978,15 @@ describe('ManageAuthors', () => {
         const listItem1 = getByTestId('authors-list-row-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('authors-list-row-2000003831-delete-this-author'));
+        fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        expect(getByTestId('aut-display-name-2000003831')).toHaveAttribute('value', 'Test, Name');
-        expect(getByTestId('aut-org-username-2000003831')).toHaveAttribute('value', 'uqtname');
-        expect(getByTestId('aut-display-name-2000003832')).toHaveAttribute('value', 'Vishal, Desai');
-        expect(getByTestId('aut-org-username-2000003832')).toHaveAttribute('value', 'uqvdesai');
+        expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
+        expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
+        expect(getByTestId('aut-display-name-1')).toHaveAttribute('value', 'Vishal, Desai');
+        expect(getByTestId('aut-org-username-1')).toHaveAttribute('value', 'uqvdesai');
     });
 
     it('should copy author id to clipboard', async () => {
@@ -1045,7 +1044,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('aut-id-2011-copy-text'));
+        fireEvent.click(getByTestId('aut-id-0-copy-text'));
 
         expect(navigator.clipboard.writeText).toHaveBeenCalledWith(2011);
 
@@ -1182,17 +1181,11 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        expect(getByTestId('authors-list-row-2000003831-ingest-from-scopus').closest('button')).not.toHaveAttribute(
-            'disabled',
-        );
-        expect(getByTestId('authors-list-row-2000003832-ingest-from-scopus').closest('button')).not.toHaveAttribute(
-            'disabled',
-        );
-        expect(getByTestId('authors-list-row-2000003833-ingest-from-scopus').closest('button')).toHaveAttribute(
-            'disabled',
-        );
+        expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-list-row-1-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('authors-list-row-2-ingest-from-scopus').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId('authors-list-row-2000003831-ingest-from-scopus'));
+        fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
         fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
         await waitFor(() => {
@@ -1258,11 +1251,9 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        expect(getByTestId('authors-list-row-2000003831-ingest-from-scopus').closest('button')).not.toHaveAttribute(
-            'disabled',
-        );
+        expect(getByTestId('authors-list-row-0-ingest-from-scopus').closest('button')).not.toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId('authors-list-row-2000003831-ingest-from-scopus'));
+        fireEvent.click(getByTestId('authors-list-row-0-ingest-from-scopus'));
         fireEvent.click(getByTestId('confirm-scopus-ingest-confirmation'));
 
         await waitFor(() => {

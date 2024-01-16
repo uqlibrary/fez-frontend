@@ -276,6 +276,12 @@ new MiniCssExtractPlugin({
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/);
   ```
 
+### React StrictMode
+At the time of writing, `StrictMode` has been enabled for a subset of components only. Redux Forms has been deprecated, causing StrictMode to output numerous console errors that can not be directly fixed. 
+
+For this reason  Admin pages and other select routes have been excluded from StrictMode until such time that Redux Form is replaced in the repo. Look at `src/modules/App/components/App.js` for the implementation of the ```StrictModeConditional``` HoC.
+
+
 ### <a name="gotchas" id="gotchas"></a>Gotchas
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. e.g. behaviours have been

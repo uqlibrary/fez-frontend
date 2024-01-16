@@ -161,7 +161,6 @@ export const BulkUpdatesList = ({ list }) => {
                     paging: false,
                     search: false,
                     toolbar: false,
-                    idSynonym: 'buj_started_at',
                 }}
             />
         </div>

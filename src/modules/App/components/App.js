@@ -72,7 +72,7 @@ const StyledAppTitle = styled(Typography, {
     },
 }));
 
-const StrictModeConditional = ({ condition, wrapper, children }) => (condition ? wrapper(children) : children);
+export const StrictModeConditional = ({ condition, wrapper, children }) => (condition ? wrapper(children) : children);
 
 export class AppClass extends PureComponent {
     static propTypes = {

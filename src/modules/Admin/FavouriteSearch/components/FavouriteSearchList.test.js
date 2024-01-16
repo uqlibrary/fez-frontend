@@ -47,9 +47,9 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-1-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
-        expect(getByTestId('favourite-search-list-edit-item-1')).toBeInTheDocument();
+        expect(getByTestId('favourite-search-list-edit-item-0')).toBeInTheDocument();
     });
 
     it('should render error message for empty description field while editing', () => {
@@ -64,7 +64,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-1-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: '' } });
         expect(getByTestId('fvs-description-helper-text')).toBeInTheDocument();
@@ -83,7 +83,7 @@ describe('FavouriteSearchList', () => {
             ],
         });
         const listItem = getByTestId('favourite-search-list-item-0');
-        fireEvent.click(getByTestId('favourite-search-list-item-1-edit', listItem));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit', listItem));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: '' } });
         expect(queryByTestId('fvs-alias-helper-text')).not.toBeInTheDocument();
@@ -121,16 +121,16 @@ describe('FavouriteSearchList', () => {
         });
         const listItem = getByTestId('favourite-search-list-item-0');
 
-        expect(getByTestId('fvs-description-1', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias-1', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
-        fireEvent.click(getByTestId('favourite-search-list-item-1-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
         // listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
@@ -154,22 +154,22 @@ describe('FavouriteSearchList', () => {
         });
         let listItem = getByTestId('favourite-search-list-item-0');
 
-        expect(getByTestId('fvs-description-1', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias-1', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
 
-        fireEvent.click(getByTestId('favourite-search-list-item-1-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-description-input'), { target: { value: 'testing' } });
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing-testing' } });
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
         listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
 
-        expect(getByTestId('fvs-description-1', listItem)).toHaveTextContent('test');
-        expect(getByTestId('fvs-alias-1', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('test');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('test');
     });
 
     it('should delete favourite search item', async () => {
@@ -194,15 +194,15 @@ describe('FavouriteSearchList', () => {
         const listItem1 = getByTestId('favourite-search-list-item-1');
         expect(listItem1).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
+        fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
-        // const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
+        const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'), { timeout: 1500 });
 
-        // expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing');
     });
 });

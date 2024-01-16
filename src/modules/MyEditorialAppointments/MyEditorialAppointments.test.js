@@ -96,7 +96,7 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId, getByRole, debug } = setup({});
+        const { getByText, getByTestId, getByRole } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
