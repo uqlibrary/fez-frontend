@@ -158,6 +158,20 @@ describe('JournalAdminInterface component', () => {
             fireEvent.click(getByTestId('admin-work-cancel-top'));
             expect(push).toHaveBeenCalledWith('/journal/view/12');
         });
+        it('should call method to handle cancel of the form for existing record and navigate to previous url', () => {
+            const push = jest.fn();
+            const { getByTestId } = setup({
+                history: {
+                    push,
+                },
+                location: {
+                    search: '?navigatedFrom=%2Fjournal%2Fview%2F13',
+                },
+            });
+
+            fireEvent.click(getByTestId('admin-work-cancel-top'));
+            expect(push).toHaveBeenCalledWith('/journal/view/13');
+        });
 
         it('should handle cancel action of submit confirmation for existing record', () => {
             const push = jest.fn();

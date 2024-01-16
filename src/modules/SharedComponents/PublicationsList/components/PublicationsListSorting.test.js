@@ -61,15 +61,15 @@ describe('PublicationsListSorting component', () => {
 
     it('renders with all fields disabled', () => {
         const { getByTestId } = setup({ disabled: true });
-        expect(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button')).toHaveAttribute(
+        expect(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox')).toHaveAttribute(
             'aria-disabled',
             'true',
         );
-        expect(within(getByTestId('publication-list-sorting-sort-order')).getByRole('button')).toHaveAttribute(
+        expect(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox')).toHaveAttribute(
             'aria-disabled',
             'true',
         );
-        expect(within(getByTestId('publication-list-sorting-page-size')).getByRole('button')).toHaveAttribute(
+        expect(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox')).toHaveAttribute(
             'aria-disabled',
             'true',
         );
@@ -78,7 +78,7 @@ describe('PublicationsListSorting component', () => {
     it('renders with non-empty paging data, pageChanged called', () => {
         const testFn = jest.fn();
         const { getByTestId, getByRole } = setup({ onPageSizeChanged: testFn });
-        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '50' }));
         expect(testFn).toBeCalled();
     });
@@ -86,7 +86,7 @@ describe('PublicationsListSorting component', () => {
     it('renders with non-empty paging data, orderDirectionsChanged called', () => {
         const testFn = jest.fn();
         const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
-        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Asc' }));
         expect(testFn).toBeCalled();
     });
@@ -94,7 +94,7 @@ describe('PublicationsListSorting component', () => {
     it('renders with non-empty paging data, sortByChanged called', () => {
         const testFn = jest.fn();
         const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
-        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Title' }));
         expect(testFn).toBeCalled();
     });
@@ -103,7 +103,7 @@ describe('PublicationsListSorting component', () => {
         const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const testFn = jest.fn();
         const { getByTestId, getByRole } = setup({ onExportPublications: testFn, canUseExport: true });
-        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Excel File' }));
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
@@ -111,7 +111,7 @@ describe('PublicationsListSorting component', () => {
     it('renders dropdown for displayRecordsAs if assigned prop, onDisplayRecordsAsChanged called', () => {
         const testFn = jest.fn();
         const { getByTestId, getByRole } = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
-        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Standard' }));
         expect(testFn).toBeCalled();
     });
@@ -125,7 +125,7 @@ describe('PublicationsListSorting component', () => {
     it('renders bulk export options when applicable', () => {
         userIsAdmin.mockImplementation(() => true);
         const { getByTestId, getByRole } = setup({ canUseExport: true, bulkExportSize: 1000 });
-        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getByRole('option', { name: 'Export Only:' })).toBeInTheDocument();
         expect(getByRole('option', { name: '1000' })).toBeInTheDocument();
         userIsAdmin.mockRestore();
@@ -194,7 +194,7 @@ describe('PublicationsListSorting component', () => {
             sortDirection: 'Asc',
             sortBy: 'test_2',
         });
-        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
 
         // Have the correct amount of elements in dropdown
         expect(getAllByRole('option').length).toEqual(3);
@@ -229,7 +229,7 @@ describe('PublicationsListSorting component', () => {
         const { container, getAllByRole, getByTestId } = setup({ showDisplayAs: true });
         expect(container).toMatchSnapshot();
         const selectableCollectionViewType = filterCollectionViewTypes();
-        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
         expect(getAllByRole('option').length).toEqual(selectableCollectionViewType.length);
         // Have the correct amount of elements in dropdown
         selectableCollectionViewType.forEach((viewType, index) => {

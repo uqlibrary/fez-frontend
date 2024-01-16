@@ -25,10 +25,12 @@ export default class ExportPublications extends PureComponent {
 
         return (
             <FormControl variant="standard" fullWidth>
-                <InputLabel shrink>{txt.label}</InputLabel>
+                <InputLabel id="export-publications-format-label" shrink>
+                    {txt.label}
+                </InputLabel>
                 <Select
                     variant="standard"
-                    id="exportPublicationsFormat"
+                    labelId="export-publications-format-label"
                     data-testid="export-publications-format"
                     onChange={this.formatChanged}
                     disabled={this.props.disabled}

@@ -541,7 +541,7 @@ describe('SearchJournals', () => {
         // expect(container).toMatchSnapshot();
         // sortBy
         expect(queryByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
-        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-by')).getByRole('button'));
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
 
         expect(getByRole('listbox')).toBeInTheDocument();
         fireEvent.click(queryByTestId('publication-list-sorting-sort-by-option-0'));
@@ -549,14 +549,14 @@ describe('SearchJournals', () => {
 
         // sortOrder
         expect(queryByTestId('publication-list-sorting-sort-order')).toBeInTheDocument();
-        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-order')).getByRole('button'));
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
         expect(getByRole('listbox')).toBeInTheDocument();
         fireEvent.click(queryByTestId('publication-list-sorting-sort-order-option-0'));
         expect(testHistory.location.search).toContain('sortDirection=Desc');
 
         // pageSize
         expect(queryByTestId('publication-list-sorting-page-size')).toBeInTheDocument();
-        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-page-size')).getByRole('button'));
+        fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getByRole('listbox')).toBeInTheDocument();
         fireEvent.click(queryByTestId('publication-list-sorting-page-size-option-100'));
         expect(testHistory.location.search).toContain('pageSize=100');
@@ -564,7 +564,7 @@ describe('SearchJournals', () => {
         // export
         const exportJournals = jest.spyOn(actions, 'exportJournals');
         expect(queryByTestId('export-publications-format')).toBeInTheDocument();
-        fireEvent.mouseDown(within(queryByTestId('export-publications-format')).getByRole('button'));
+        fireEvent.mouseDown(within(queryByTestId('export-publications-format')).getByRole('combobox'));
         expect(getByRole('listbox')).toBeInTheDocument();
         fireEvent.click(queryByTestId('export-publication-option-0'));
         expect(exportJournals).toHaveBeenCalled();

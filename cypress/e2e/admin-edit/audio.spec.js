@@ -78,7 +78,7 @@ context('Audio admin edit', () => {
                         'have.value',
                         record.fez_record_search_key_alternate_genre.map(item => item.rek_alternate_genre).join(','),
                     )
-                    .siblings('[role=button]')
+                    .siblings('[role=combobox]')
                     .invoke('text')
                     .should(
                         'eq',

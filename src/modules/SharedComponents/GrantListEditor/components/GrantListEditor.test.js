@@ -129,11 +129,11 @@ describe('GrantListEditor', () => {
     });
 
     it('should add grant to the list', () => {
-        const { getByRole, container } = setup();
+        const { getByRole, getByLabelText, container } = setup();
 
         fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
         fireEvent.change(getByRole('textbox', { name: 'Grant ID' }), { target: { value: '123' } });
-        fireEvent.mouseDown(getByRole('button', { name: 'Funder/Sponsor type' }));
+        fireEvent.mouseDown(getByLabelText('Funder/Sponsor type'));
         fireEvent.click(getByRole('option', { name: 'Government' }));
         fireEvent.click(getByRole('button', { name: 'Add grant' }));
 

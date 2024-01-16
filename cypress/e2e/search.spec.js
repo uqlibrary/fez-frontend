@@ -151,12 +151,12 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Auto');
-            cy.get('#displayRecordsAs').click();
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Auto');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
-            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
 
             cy.get('img[data-testid^=imageGalleryItemImage-]').should('have.length', 8);
             cy.get('li[data-testid^=image-gallery-item-]')
@@ -201,12 +201,12 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Auto');
-            cy.get('#displayRecordsAs').click();
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Auto');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
-            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
 
             cy.get('[data-testid=simple-search-input]')
                 .clear()
@@ -216,7 +216,7 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Image Gallery'); // choice should persist
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
             cy.location().should(location => {
                 // choice should persist in querystring too
                 expect(location.search).to.contain('image-gallery');
@@ -242,12 +242,12 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Auto');
-            cy.get('#displayRecordsAs').click();
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Auto');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
-            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
 
             cy.get('li[data-testid^=image-gallery-item-]')
                 .should('have.length', 8)
@@ -277,12 +277,13 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Auto');
-            cy.get('#displayRecordsAs').click();
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Auto');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').click();
+
             cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
-            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
 
             cy.get('li[data-testid^=image-gallery-item-]')
                 .should('have.length', 8)
@@ -312,12 +313,12 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Auto');
-            cy.get('#displayRecordsAs').click();
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Auto');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
-            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('[data-testid="publication-list-display-records-as"] [role="combobox"]').contains('Image Gallery');
 
             cy.get('li[data-testid^=image-gallery-item-]')
                 .should('have.length', 8)
