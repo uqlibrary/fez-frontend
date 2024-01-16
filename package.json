@@ -135,7 +135,6 @@
         "classnames": "^2.5.1",
         "core-js": "^3.35.0",
         "debounce-promise": "^3.1.2",
-        "deep-diff": "^1.0.2",
         "deep-object-diff": "^1.1.0",
         "deepmerge": "^4.2.2",
         "dompurify": "^2.2.6",
@@ -176,7 +175,7 @@
         "redux-thunk": "^2.2.0",
         "regenerator-runtime": "^0.13.9",
         "save": "^2.9.0",
-        "throttle-debounce": "^2.1.0",
+        "throttle-debounce": "^5.0.0",
         "timezones.json": "^1.2.1"
     },
     "optionalDependencies": {
