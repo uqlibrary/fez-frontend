@@ -277,9 +277,9 @@ new MiniCssExtractPlugin({
   ```
 
 ### React StrictMode
-At the time of writing, `StrictMode` has been enabled for a subset of components only. Redux Forms has been deprecated, causing StrictMode to output numerous console errors that can not be directly fixed. 
+At the time of writing, [StrictMode](https://react.dev/reference/react/StrictMode) has been enabled for a subset of components only. Redux Forms has been deprecated, causing StrictMode to output numerous console errors that can not be directly fixed. 
 
-For this reason  Admin pages and other select routes have been excluded from StrictMode until such time that Redux Form is replaced in the repo. Look at `src/modules/App/components/App.js` for the implementation of the ```StrictModeConditional``` HoC.
+Since Redux Form is mostly used in admin pages, these routes and select others have been excluded from StrictMode until such time that Redux Form is replaced in the repo. Look to `src/modules/App/components/App.js` for the implementation of the ```StrictModeConditional``` HoC that enables this selective application of StrictMode.
 
 
 ### <a name="gotchas" id="gotchas"></a>Gotchas
