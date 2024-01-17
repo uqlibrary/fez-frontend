@@ -150,7 +150,15 @@ export const AdvancedSearchRow = props => {
                 </Grid>
                 <StyledGridMobileInput item xs={12} md={6}>
                     <Grid container spacing={2}>
-                        <Grid item sx={{ flexGrow: 1, width: 1 }} zeroMinWidth>
+                        <Grid
+                            item
+                            sx={{
+                                flexGrow: 1,
+                                width: 1,
+                                '& .MuiAutocomplete-inputRoot': { marginTop: 0 },
+                            }}
+                            zeroMinWidth
+                        >
                             <AdvancedSearchRowInput
                                 {...props}
                                 onChange={_handleTextChange}

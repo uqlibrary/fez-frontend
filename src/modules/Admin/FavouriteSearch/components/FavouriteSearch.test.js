@@ -97,10 +97,11 @@ describe('FavouriteSearch', () => {
 
         await waitFor(() => getByText('Favourite searches'));
 
-        fireEvent.click(getByTestId('favourite-search-list-item-0-delete'));
+        fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
+
         expect(deleteFavouriteSearchListItemFn).toBeCalled();
     });
 });

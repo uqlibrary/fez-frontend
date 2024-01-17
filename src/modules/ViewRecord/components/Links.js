@@ -36,18 +36,17 @@ export class Links extends PureComponent {
             alignContent={'center'}
             justifyContent={'center'}
         >
-            <Grid item xs={12} sm={6} data-testid={`${linkId}-link`}>
+            <Grid xs={12} sm={6} data-testid={`${linkId}-link`}>
                 <Typography variant={'body2'} component={'span'}>
                     {link}
                 </Typography>
             </Grid>
             <Grid
-                item
                 xs={11}
                 sm={4}
                 whiteSpace={'nowrap'}
                 textOverflow={'ellipsis'}
-                overflowX={'hidden'}
+                overflow={'hidden'}
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
             >
@@ -55,7 +54,7 @@ export class Links extends PureComponent {
                     {description}
                 </Typography>
             </Grid>
-            <Grid item xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
+            <Grid xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
                 <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
@@ -209,7 +208,7 @@ export class Links extends PureComponent {
             return null;
         }
         return (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard title={txt.title}>
                     <Grid
                         container
@@ -225,17 +224,17 @@ export class Links extends PureComponent {
                             borderBottom: `1px solid ${theme.palette.secondary.light}`,
                         })}
                     >
-                        <Grid item sm={6} data-testid="link-label">
+                        <Grid sm={6} data-testid="link-label">
                             <Typography variant="caption" gutterBottom>
                                 {txt.headerTitles.link}
                             </Typography>
                         </Grid>
-                        <Grid item sm={4} data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid sm={4} data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
                             <Typography variant="caption" gutterBottom>
                                 {txt.headerTitles.description}
                             </Typography>
                         </Grid>
-                        <Grid item sm={2} data-testid="oa-status-label">
+                        <Grid sm={2} data-testid="oa-status-label">
                             <Typography variant="caption" gutterBottom>
                                 {txt.headerTitles.oaStatus}
                             </Typography>

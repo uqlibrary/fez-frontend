@@ -31,7 +31,6 @@ import { createSentryFriendlyError } from '../config/axios';
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
         dispatch({ type: AUTHOR_LIST_LOADING });
-
         try {
             const response = await get(MANAGE_AUTHORS_LIST_API({ page, pageSize, query: search }));
             dispatch({

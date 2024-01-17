@@ -620,6 +620,10 @@ export default {
                     month: 'Month',
                     year: 'Year',
                 },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
+                },
             },
         },
         authors: txt.components.authors,
@@ -933,6 +937,10 @@ export default {
                     floatingLabelText: 'Report number',
                     hintText: '',
                 },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
+                },
                 date: {
                     title: 'Date published',
                     day: 'Day',
@@ -1177,7 +1185,7 @@ export default {
                             <li>s1234567_phd_thesis.pdf</li>
                             <li>s1234567_phd_abstract.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary audio files are to be in MP3 format. <br />
                         Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
@@ -1263,7 +1271,7 @@ export default {
                             <li>s1234567_pd_abstract.pdf</li>
                             <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary audio files are to be in MP3 format. <br />
                         Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),

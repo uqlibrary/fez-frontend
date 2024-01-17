@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, StrictMode } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import Cookies from 'js-cookie';
@@ -72,6 +72,8 @@ const StyledAppTitle = styled(Typography, {
     },
 }));
 
+export const StrictModeConditional = ({ condition, wrapper, children }) => (condition ? wrapper(children) : children);
+
 export class AppClass extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
@@ -88,10 +90,6 @@ export class AppClass extends PureComponent {
         loadingIncompleteRecordData: PropTypes.bool,
         incompleteRecordList: PropTypes.object,
     };
-    static childContextTypes = {
-        userCountry: PropTypes.any,
-        selectFieldMobileOverrides: PropTypes.object,
-    };
 
     constructor(props) {
         super(props);
@@ -100,24 +98,6 @@ export class AppClass extends PureComponent {
             docked: false,
             mediaQuery: window.matchMedia('(min-width: 1280px)'),
             isMobile: window.matchMedia('(max-width: 720px)').matches,
-        };
-    }
-
-    getChildContext() {
-        return {
-            userCountry: 'AU', // this.state.userCountry,
-            selectFieldMobileOverrides: {
-                style: !this.state.isMobile ? { width: '100%' } : {},
-                autoWidth: !this.state.isMobile,
-                fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile
-                    ? {
-                          whiteSpace: 'normal',
-                          lineHeight: '18px',
-                          paddingBottom: '8px',
-                      }
-                    : {},
-            },
         };
     }
 
@@ -297,180 +277,188 @@ export class AppClass extends PureComponent {
         });
         const titleOffset = this.state.docked && !isThesisSubmissionPage ? 284 : 0;
         const isIndex = this.props.history.location.pathname === '/';
-        const isAdminPage = () => {
-            return window?.location?.pathname?.startsWith('/admin') || false;
-        };
+        const isAdminPage =
+            window?.location?.pathname?.startsWith('/admin') ||
+            window?.location?.pathname?.startsWith('/batch-import') ||
+            window?.location?.hash?.startsWith('#/admin') ||
+            false;
 
         return (
-            <StyledGrid container>
-                <Meta routesConfig={routesConfig} />
-                <AppBar className="AppBar" color="primary" position="fixed">
-                    <Toolbar sx={{ height: '70px' }}>
-                        <Grid
-                            container
-                            spacing={1}
-                            alignItems="center"
-                            direction="row"
-                            wrap="nowrap"
-                            justifyContent="flex-start"
-                        >
-                            {!this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage && (
-                                <Grid item>
-                                    <Tooltip
-                                        title={locale.global.mainNavButton.tooltip}
-                                        placement="bottom-end"
-                                        TransitionComponent={Fade}
-                                    >
-                                        <IconButton
-                                            aria-label={locale.global.mainNavButton.aria}
-                                            style={{ marginLeft: '-12px', marginRight: '12px' }}
-                                            onClick={this.toggleDrawer}
-                                            id={'main-menu-button'}
-                                            data-analyticsid={'main-menu-button'}
-                                            size="large"
-                                        >
-                                            <Menu style={{ color: 'white' }} />
-                                        </IconButton>
-                                    </Tooltip>
-                                </Grid>
-                            )}
+            <StrictModeConditional condition={!isAdminPage} wrapper={children => <StrictMode>{children}</StrictMode>}>
+                <StyledGrid container>
+                    <Meta routesConfig={routesConfig} />
+                    <AppBar className="AppBar" color="primary" position="fixed">
+                        <Toolbar sx={{ height: '70px' }}>
                             <Grid
-                                item
-                                xs
-                                style={{
-                                    paddingLeft: titleOffset,
-                                    whiteSpace: 'nowrap',
-                                    overflow: 'hidden',
-                                    textOverflow: 'ellipsis',
-                                }}
+                                container
+                                spacing={1}
+                                alignItems="center"
+                                direction="row"
+                                wrap="nowrap"
+                                justifyContent="flex-start"
                             >
-                                <Grid
-                                    container
-                                    spacing={2}
-                                    alignItems="center"
-                                    justifyContent="flex-start"
-                                    wrap={'nowrap'}
-                                >
-                                    {!this.state.docked && !this.state.menuDrawerOpen && (
-                                        <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                            <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
-                                                {locale.global.logo.label}
-                                            </div>
-                                        </Grid>
-                                    )}
-                                    <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                        <StyledAppTitle
-                                            variant="h5"
-                                            component={'h1'}
-                                            noWrap
-                                            indentTitle={this.state.docked}
+                                {!this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage && (
+                                    <Grid item>
+                                        <Tooltip
+                                            title={locale.global.mainNavButton.tooltip}
+                                            placement="bottom-end"
+                                            TransitionComponent={Fade}
                                         >
-                                            {locale.global.appTitle}
-                                        </StyledAppTitle>
+                                            <IconButton
+                                                aria-label={locale.global.mainNavButton.aria}
+                                                style={{ marginLeft: '-12px', marginRight: '12px' }}
+                                                onClick={this.toggleDrawer}
+                                                id={'main-menu-button'}
+                                                data-analyticsid={'main-menu-button'}
+                                                size="large"
+                                            >
+                                                <Menu style={{ color: 'white' }} />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                )}
+                                <Grid
+                                    item
+                                    xs
+                                    style={{
+                                        paddingLeft: titleOffset,
+                                        whiteSpace: 'nowrap',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                    }}
+                                >
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        alignItems="center"
+                                        justifyContent="flex-start"
+                                        wrap={'nowrap'}
+                                    >
+                                        {!this.state.docked && !this.state.menuDrawerOpen && (
+                                            <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                                <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
+                                                    {locale.global.logo.label}
+                                                </div>
+                                            </Grid>
+                                        )}
+                                        <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                            <StyledAppTitle
+                                                variant="h5"
+                                                component={'h1'}
+                                                noWrap
+                                                indentTitle={this.state.docked}
+                                            >
+                                                {locale.global.appTitle}
+                                            </StyledAppTitle>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
-                            {/* Search */}
-                            {!isThesisSubmissionPage && !isSearchPage && (
-                                <Grid item xs={2} sm={4}>
-                                    <SearchComponent
-                                        autoFocus={isIndex}
-                                        isMobile={this.state.isMobile}
-                                        isInHeader
-                                        showPrefixIcon
-                                        showMobileSearchButton
+                                {/* Search */}
+                                {!isThesisSubmissionPage && !isSearchPage && (
+                                    <Grid item xs={2} sm={4}>
+                                        <SearchComponent
+                                            autoFocus={isIndex}
+                                            isMobile={this.state.isMobile}
+                                            isInHeader
+                                            showPrefixIcon
+                                            showMobileSearchButton
+                                        />
+                                    </Grid>
+                                )}
+                                <Grid item>
+                                    <AuthButton
+                                        isAuthorizedUser={isAuthorizedUser}
+                                        onClick={this.redirectUserToLogin(
+                                            isAuthorizedUser,
+                                            isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
+                                        )}
+                                        signInTooltipText={locale.global.authentication.signInText}
+                                        signOutTooltipText={
+                                            isAuthorizedUser
+                                                ? `${locale.global.authentication.signOutText} - ${this.props.account.name}`
+                                                : ''
+                                        }
+                                        ariaLabel={
+                                            isAuthorizedUser
+                                                ? locale.global.authentication.ariaOut
+                                                : locale.global.authentication.ariaIn
+                                        }
                                     />
                                 </Grid>
-                            )}
-                            <Grid item>
-                                <AuthButton
-                                    isAuthorizedUser={isAuthorizedUser}
-                                    onClick={this.redirectUserToLogin(
-                                        isAuthorizedUser,
-                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
-                                    )}
-                                    signInTooltipText={locale.global.authentication.signInText}
-                                    signOutTooltipText={
-                                        isAuthorizedUser
-                                            ? `${locale.global.authentication.signOutText} - ${this.props.account.name}`
-                                            : ''
-                                    }
-                                    ariaLabel={
-                                        isAuthorizedUser
-                                            ? locale.global.authentication.ariaOut
-                                            : locale.global.authentication.ariaIn
-                                    }
-                                />
                             </Grid>
-                        </Grid>
-                    </Toolbar>
-                </AppBar>
-                {showMenu && (
-                    <MenuDrawer
-                        hasIncompleteWorks={hasIncompleteWorks || false}
-                        menuItems={menuItems}
-                        drawerOpen={this.state.docked || this.state.menuDrawerOpen}
-                        docked={this.state.docked}
-                        history={this.props.history}
-                        logoImage="largeLogo"
-                        logoText={locale.global.logo.label}
-                        logoLink={locale.global.logo.link}
-                        onToggleDrawer={this.toggleDrawer}
-                        isMobile={this.state.isMobile}
-                        locale={{
-                            skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                            skipNavTitle: locale.global.skipNav.title,
-                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
-                        }}
-                    />
-                )}
-                <div className="content-container" id="content-container" style={containerStyle}>
-                    <ScrollTop show containerId="content-container" />
-
-                    <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                        {!isAdminPage() && <alert-list system="espace" />}
-                    </div>
-                    <ConfirmDialogBox
-                        hideCancelButton
-                        onRef={this.setSessionExpiredConfirmation}
-                        onAction={this.props.actions.logout}
-                        locale={locale.global.sessionExpiredConfirmation}
-                    />
-                    {userStatusAlert && (
-                        <Grid
-                            container
-                            alignContent="center"
-                            justifyContent="center"
-                            alignItems="center"
-                            style={{ marginBottom: 12 }}
-                        >
-                            <StyledGridCard item>
-                                <Alert {...userStatusAlert} />
-                            </StyledGridCard>
-                        </Grid>
-                    )}
-                    <AppAlertContainer />
-                    {isAuthorLoading && <InlineLoader message={locale.global.loadingUserAccount} />}
-
-                    {!isAuthorLoading && !isAuthorDetailsLoading && (
-                        <AccountContext.Provider
-                            value={{
-                                account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
+                        </Toolbar>
+                    </AppBar>
+                    {showMenu && (
+                        <MenuDrawer
+                            hasIncompleteWorks={hasIncompleteWorks || false}
+                            menuItems={menuItems}
+                            drawerOpen={this.state.docked || this.state.menuDrawerOpen}
+                            docked={this.state.docked}
+                            history={this.props.history}
+                            logoImage="largeLogo"
+                            logoText={locale.global.logo.label}
+                            logoLink={locale.global.logo.link}
+                            onToggleDrawer={this.toggleDrawer}
+                            isMobile={this.state.isMobile}
+                            locale={{
+                                skipNavAriaLabel: locale.global.skipNav.ariaLabel,
+                                skipNavTitle: locale.global.skipNav.title,
+                                closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
                             }}
-                        >
-                            <React.Suspense fallback={<ContentLoader message="Loading content" />}>
-                                <Switch>
-                                    {routesConfig.map((route, index) => (
-                                        <Route key={`route_${index}`} {...route} />
-                                    ))}
-                                </Switch>
-                            </React.Suspense>
-                        </AccountContext.Provider>
+                        />
                     )}
-                </div>
-                <HelpDrawer />
-                <OfflineSnackbar />
-            </StyledGrid>
+                    <div className="content-container" id="content-container" style={containerStyle}>
+                        <ScrollTop show containerId="content-container" />
+
+                        <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
+                            {!isAdminPage && <alert-list system="espace" />}
+                        </div>
+                        <ConfirmDialogBox
+                            hideCancelButton
+                            onRef={this.setSessionExpiredConfirmation}
+                            onAction={this.props.actions.logout}
+                            locale={locale.global.sessionExpiredConfirmation}
+                        />
+                        {userStatusAlert && (
+                            <Grid
+                                container
+                                alignContent="center"
+                                justifyContent="center"
+                                alignItems="center"
+                                style={{ marginBottom: 12 }}
+                            >
+                                <StyledGridCard item>
+                                    <Alert {...userStatusAlert} />
+                                </StyledGridCard>
+                            </Grid>
+                        )}
+                        <AppAlertContainer />
+                        {isAuthorLoading && <InlineLoader message={locale.global.loadingUserAccount} />}
+
+                        {!isAuthorLoading && !isAuthorDetailsLoading && (
+                            <AccountContext.Provider
+                                value={{
+                                    account: {
+                                        ...this.props.account,
+                                        ...this.props.author,
+                                        ...this.props.authorDetails,
+                                    },
+                                }}
+                            >
+                                <React.Suspense fallback={<ContentLoader message="Loading content" />}>
+                                    <Switch>
+                                        {routesConfig.map((route, index) => (
+                                            <Route key={`route_${index}`} {...route} />
+                                        ))}
+                                    </Switch>
+                                </React.Suspense>
+                            </AccountContext.Provider>
+                        )}
+                    </div>
+                    <HelpDrawer />
+                    <OfflineSnackbar />
+                </StyledGrid>
+            </StrictModeConditional>
         );
     }
 }

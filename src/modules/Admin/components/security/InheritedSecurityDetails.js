@@ -8,7 +8,6 @@ import PolicyDescription from './PolicyDescription';
 
 export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
     <Grid
-        item
         xs={12}
         style={{
             padding: 24,
@@ -21,13 +20,13 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
         <Grid container spacing={1} style={{ marginTop: 8 }}>
             {collections.map(item => (
                 <React.Fragment key={item.rek_ismemberof}>
-                    <Grid item xs={12} sm={2}>
+                    <Grid xs={12} sm={2}>
                         <Typography variant="subtitle1">{`${item.rek_ismemberof}`}</Typography>
                     </Grid>
-                    <Grid item xs={12} sm={7}>
+                    <Grid xs={12} sm={7}>
                         <Typography variant="subtitle2">{`${item.rek_ismemberof_lookup}`}</Typography>
                     </Grid>
-                    <Grid item xs={12} sm={3}>
+                    <Grid xs={12} sm={3}>
                         <Typography variant="body2">
                             <PolicyDescription selectedPolicyKey={(item.parent || {})[parentKey]} />
                         </Typography>

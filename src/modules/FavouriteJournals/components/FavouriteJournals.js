@@ -58,9 +58,9 @@ export const FavouriteJournals = () => {
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3} padding={0}>
-                <Grid item xs>
+                <Grid xs>
                     <Grid container spacing={2} padding={0}>
-                        <Grid item xs sm md={12}>
+                        <Grid xs={12} flexGrow={1}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2} padding={0}>
                                     <FavouriteJournalsList
@@ -78,10 +78,10 @@ export const FavouriteJournals = () => {
                                         journalSearchQueryParams={journalSearchQueryParams}
                                     />
                                 </Grid>
-                                <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} item xs={12}>
+                                <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} xs={12}>
                                     <Grid container spacing={2} padding={0}>
                                         {!!response?.total && (
-                                            <Grid item xs={12} sm={6} md="auto">
+                                            <Grid xs={12} sm={6} md="auto">
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -97,7 +97,7 @@ export const FavouriteJournals = () => {
                                                 />
                                             </Grid>
                                         )}
-                                        <Grid item xs={12} sm={6} md="auto">
+                                        <Grid xs={12} sm={6} md="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}

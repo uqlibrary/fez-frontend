@@ -200,9 +200,9 @@ describe('FavouriteSearchList', () => {
             fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
         });
 
-        // const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'));
+        const listItem = await waitFor(() => getByTestId('favourite-search-list-item-0'), { timeout: 1500 });
 
-        // expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
-        // expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-description-0', listItem)).toHaveTextContent('testing');
+        expect(getByTestId('fvs-alias-0', listItem)).toHaveTextContent('testing');
     });
 });
