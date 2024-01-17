@@ -81,6 +81,7 @@ const publicationTypeListBook = {
             "fez_record_search_key_translated_title":
                 "Restoring the tortoise dynasty: the decline and recovery of the Galapagos giant tortoise",
             "fez_datastream_info": [{
+                "dsi_id": 0,
                 "dsi_pid": "UQ:335214",
                 "dsi_dsid": "ElReinoDelGalapago.pdf",
                 "dsi_embargo_date": null,
@@ -93,6 +94,7 @@ const publicationTypeListBook = {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }, {
+                "dsi_id": 1,
                 "dsi_pid": "UQ:335214",
                 "dsi_dsid": "presmd_ElReinoDelGalapago.xml",
                 "dsi_embargo_date": null,
@@ -105,6 +107,7 @@ const publicationTypeListBook = {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }, {
+                "dsi_id": 2,
                 "dsi_pid": "UQ:335214",
                 "dsi_dsid": "presmd_UQ335214_frontmatter.xml",
                 "dsi_embargo_date": null,
@@ -117,6 +120,7 @@ const publicationTypeListBook = {
                 "dsi_security_policy": 1,
                 "dsi_security_inherited": 0
             }, {
+                "dsi_id": 3,
                 "dsi_pid": "UQ:335214",
                 "dsi_dsid": "UQ335214_frontmatter.pdf",
                 "dsi_embargo_date": null,

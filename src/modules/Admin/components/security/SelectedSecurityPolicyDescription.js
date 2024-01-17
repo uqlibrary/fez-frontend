@@ -8,7 +8,6 @@ import PolicyDescription from './PolicyDescription';
 
 export const SelectedSecurityPolicyDescription = ({ title, selectedPolicyKey }) => (
     <Grid
-        item
         xs={12}
         style={{
             marginTop: 12,
@@ -20,10 +19,10 @@ export const SelectedSecurityPolicyDescription = ({ title, selectedPolicyKey }) 
             {title}
         </Typography>
         <Grid container spacing={1} style={{ marginTop: 8 }}>
-            <Grid item xs={2}>
+            <Grid xs={2}>
                 <b>Name (ID):</b>
             </Grid>
-            <Grid item xs={10}>
+            <Grid xs={10}>
                 <PolicyDescription selectedPolicyKey={selectedPolicyKey} />
             </Grid>
         </Grid>

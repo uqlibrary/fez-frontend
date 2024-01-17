@@ -16,7 +16,6 @@ const JournalsListDataCol3 = ({ journal, minimalView }) => {
         >
             <Grid
                 key={journal.jnl_jid}
-                item
                 style={{
                     height: 44,
                     borderLeft: '1px dashed #e6e6e6',

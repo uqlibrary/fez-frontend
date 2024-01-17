@@ -202,9 +202,7 @@ export const NewViewRecord = ({
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <StyledGridWithTopMargin container id="notFoundGridContainer" data-testid="notFoundGridContainer">
-                    <Grid item xs={12}>
-                        {locale.pages.viewRecord.notFound.message}
-                    </Grid>
+                    <Grid xs={12}>{locale.pages.viewRecord.notFound.message}</Grid>
                 </StyledGridWithTopMargin>
                 {recordToViewError && (
                     <Typography variant={'caption'} style={{ opacity: 0.5 }}>
@@ -238,7 +236,7 @@ export const NewViewRecord = ({
                     />
                 )}
                 <StyledGridWithTopMargin container>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <PublicationCitation
                             publication={recordToView}
                             hideTitle
@@ -251,10 +249,10 @@ export const NewViewRecord = ({
                     </Grid>
 
                     {!isDeleted && !!recordToView && (
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 {isAdmin && !isDeleted && (
-                                    <Grid item>
+                                    <Grid>
                                         <Button
                                             variant="outlined"
                                             startIcon={getAdminRecordButtonIcon(recordToView)}
@@ -269,12 +267,12 @@ export const NewViewRecord = ({
                                         </Button>
                                     </Grid>
                                 )}
-                                <Grid item xs sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Grid xs sx={{ display: 'flex', alignItems: 'center' }}>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
                                 </Grid>
-                                <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Grid sx={{ display: 'flex', alignItems: 'center' }}>
                                     <SocialShare
                                         publication={recordToView}
                                         services={['email', 'print']}
@@ -287,18 +285,18 @@ export const NewViewRecord = ({
                     )}
                 </StyledGridWithTopMargin>
                 {isAdmin && (
-                    <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Grid xs={12} style={{ marginBottom: 24 }}>
                         <DetailedHistory record={recordToView} />
                     </Grid>
                 )}
                 {isDeleted && (
-                    <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Grid xs={12} style={{ marginBottom: 24 }}>
                         <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} />
                     </Grid>
                 )}
                 {/* eslint-disable-next-line camelcase */}
                 {!!version && !!recordToView?.rek_version && (
-                    <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Grid xs={12} style={{ marginBottom: 24 }}>
                         <Alert
                             {...{
                                 ...txt.version.alert.version,

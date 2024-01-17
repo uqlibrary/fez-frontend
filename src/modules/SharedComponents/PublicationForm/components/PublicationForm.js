@@ -127,10 +127,10 @@ export default class PublicationForm extends Component {
                             when={this.props.dirty && !this.props.submitSucceeded}
                             txt={txt.cancelWorkflowConfirmation}
                         />
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                                 <Grid container spacing={1} padding={0}>
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <Field
                                             component={SelectField}
                                             disabled={this.props.submitting}
@@ -146,7 +146,7 @@ export default class PublicationForm extends Component {
                                         </Field>
                                     </Grid>
                                     {(this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) && (
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <Field
                                                 component={SelectField}
                                                 disabled={this.props.submitting}
@@ -168,7 +168,7 @@ export default class PublicationForm extends Component {
                         {!!this.props.formComponent && (
                             <React.Fragment>
                                 {!!this.props.isNtro && <NtroHeader />}
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <this.props.formComponent
                                         formValues={this.props.formValues}
                                         subtype={this.props.subtype}
@@ -179,13 +179,13 @@ export default class PublicationForm extends Component {
                                     />
                                 </Grid>
                                 {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <StandardCard
                                             title={txt.contentIndicators.title}
                                             help={txt.contentIndicators.help}
                                         >
                                             <Grid container spacing={3} padding={0}>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                     <Field
                                                         component={ContentIndicatorsField}
@@ -202,7 +202,7 @@ export default class PublicationForm extends Component {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                         <Field
                                             name="files"
@@ -221,14 +221,14 @@ export default class PublicationForm extends Component {
                             </React.Fragment>
                         )}
                         {!!this.props.formComponent && alertProps && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Grid item xs />
-                        <Grid item xs={12} sm="auto">
+                        <Grid xs />
+                        <Grid xs={12} sm="auto">
                             <Button
                                 color="secondary"
                                 fullWidth
@@ -241,7 +241,7 @@ export default class PublicationForm extends Component {
                             (this.props.hasSubtypes &&
                                 this.props.formValues.get('rek_subtype') &&
                                 this.props.formValues.get('rek_subtype').length > 0)) && (
-                            <Grid item xs={12} sm="auto">
+                            <Grid xs={12} sm="auto">
                                 <Button
                                     style={{ whiteSpace: 'nowrap' }}
                                     id="submit-work"

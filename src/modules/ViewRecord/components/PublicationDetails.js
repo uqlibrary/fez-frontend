@@ -24,12 +24,12 @@ export class PublicationDetails extends PureComponent {
                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                 alignItems="flex-start"
             >
-                <Grid item xs={12} sm={3}>
+                <Grid xs={12} sm={3}>
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}-label`}>
                         {heading}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={9}>
+                <Grid xs={12} sm={9}>
                     <Typography variant="body2" component={'span'} data-testid={`${rowId}`}>
                         {data}
                     </Typography>
@@ -64,7 +64,7 @@ export class PublicationDetails extends PureComponent {
             ) ?? headings.fez_record_search_key_ismemberof;
 
         return (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard title={sectionTitle}>
                     {this.props.publication.rek_display_type_lookup && (
                         <this.ViewRecordRow

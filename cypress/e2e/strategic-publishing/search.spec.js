@@ -656,7 +656,7 @@ context('Strategic Publishing - Search', () => {
             // update sorting
             scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
-            cy.get('[role="listbox"] > li[data-value="score"]').click();
+            cy.get('[role="listbox"] > li[data-value="score"]').click({ force: true });
             cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Search relevance');
             assertScrollIsOnTop();
 
