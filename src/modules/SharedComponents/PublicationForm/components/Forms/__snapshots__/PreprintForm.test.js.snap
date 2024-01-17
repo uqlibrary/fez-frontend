@@ -54,6 +54,7 @@ exports[`PreprintForm renders  component 1`] = `
               <field
                 disabled="false"
                 is="mock"
+                label="DOI"
                 name="fez_record_search_key_doi.rek_doi"
               />
             </div>

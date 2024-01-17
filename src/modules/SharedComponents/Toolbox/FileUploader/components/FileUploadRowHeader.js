@@ -39,7 +39,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}
                     gutter={8}
                 >
-                    <Grid item md={3} sm={2}>
+                    <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                         <Typography variant="caption" gutterBottom>
                             {filenameColumn}
                         </Typography>
@@ -49,18 +49,20 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                             {fileDescriptionColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={3}>
-                        <Typography variant="caption" gutterBottom>
-                            {isAdmin
-                                ? requireOpenAccessStatus && fileSecurityPolicyColumn
-                                : requireOpenAccessStatus && fileAccessColumn}
-                        </Typography>
-                    </Grid>
-                    <Grid item sm={2}>
-                        <Typography variant="caption" gutterBottom>
-                            {requireOpenAccessStatus && embargoDateColumn}
-                        </Typography>
-                    </Grid>
+                    {!!requireOpenAccessStatus && (
+                        <>
+                            <Grid item md={3} sm={3}>
+                                <Typography variant="caption" gutterBottom>
+                                    {isAdmin ? fileSecurityPolicyColumn : fileAccessColumn}
+                                </Typography>
+                            </Grid>
+                            <Grid item sm={2}>
+                                <Typography variant="caption" gutterBottom>
+                                    {embargoDateColumn}
+                                </Typography>
+                            </Grid>
+                        </>
+                    )}
                     <Grid item xs={1} sx={{ textAlign: 'center' }}>
                         <Tooltip title={deleteAllFiles}>
                             <span>
@@ -105,6 +107,7 @@ FileUploadRowHeader.defaultProps = {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
+        requireOpenAccessStatus: true,
     },
 };
 

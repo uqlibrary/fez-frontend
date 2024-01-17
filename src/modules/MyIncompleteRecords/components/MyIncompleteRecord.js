@@ -111,10 +111,10 @@ export const MyIncompleteRecord = props => {
                         locale={saveConfirmationLocale}
                     />
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                 <Grid
                                     container
@@ -126,7 +126,7 @@ export const MyIncompleteRecord = props => {
                                 >
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
                                         <Grid container alignItems="flex-start" width={'100%'}>
-                                            <Grid item xs={12} sm={3}>
+                                            <Grid xs={12} sm={3}>
                                                 <Typography>
                                                     {
                                                         viewRecordLocale.viewRecord.headings.default.publicationDetails
@@ -134,7 +134,7 @@ export const MyIncompleteRecord = props => {
                                                     }
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={12} sm={9}>
+                                            <Grid xs={12} sm={9}>
                                                 <Typography>{recordToFix.rek_display_type_lookup}</Typography>
                                             </Grid>
                                         </Grid>
@@ -151,7 +151,7 @@ export const MyIncompleteRecord = props => {
                                 >
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
                                         <Grid container alignItems="flex-start" width={'100%'}>
-                                            <Grid item xs={12} sm={3}>
+                                            <Grid xs={12} sm={3}>
                                                 <Typography>
                                                     {
                                                         viewRecordLocale.viewRecord.headings.default.publicationDetails
@@ -159,7 +159,7 @@ export const MyIncompleteRecord = props => {
                                                     }
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={12} sm={9}>
+                                            <Grid xs={12} sm={9}>
                                                 <Typography>{recordToFix.rek_subtype}</Typography>
                                             </Grid>
                                         </Grid>
@@ -182,7 +182,7 @@ export const MyIncompleteRecord = props => {
                                 {...ntroFieldProps}
                             />
                         )}
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={authors.title} help={authors.help}>
                                 <Typography>{authors.description}</Typography>
                                 <Field
@@ -201,7 +201,7 @@ export const MyIncompleteRecord = props => {
                             </StandardCard>
                         </Grid>
 
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
                                     component={TextField}
@@ -219,7 +219,7 @@ export const MyIncompleteRecord = props => {
                             </StandardCard>
                         </Grid>
                         {!hasAnyFiles && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.fields.fileUpload.title}>
                                     <Field
                                         name="files"
@@ -234,15 +234,15 @@ export const MyIncompleteRecord = props => {
                             </Grid>
                         )}
                         {alertProps && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Grid item xs sx={{ display: { xs: 'none', md: 'block' } }} />
+                        <Grid xs sx={{ display: { xs: 'none', md: 'block' } }} />
 
-                        <Grid item xs={12} md="auto">
+                        <Grid xs={12} md="auto">
                             <Button
                                 id="cancel-fix-work"
                                 variant="contained"
@@ -252,7 +252,7 @@ export const MyIncompleteRecord = props => {
                                 onClick={_cancelFix}
                             />
                         </Grid>
-                        <Grid item xs={12} md="auto">
+                        <Grid xs={12} md="auto">
                             <Button
                                 id="update-my-work"
                                 variant="contained"

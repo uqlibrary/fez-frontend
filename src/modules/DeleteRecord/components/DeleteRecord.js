@@ -40,10 +40,6 @@ export default class DeleteRecord extends PureComponent {
         errors: PropTypes.object,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
-
     componentDidMount() {
         if (this.props.actions && this.props.match.params && this.props.match.params.pid) {
             this.props.actions.loadRecordToDelete(this.props.match.params.pid);

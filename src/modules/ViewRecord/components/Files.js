@@ -430,7 +430,7 @@ export class FilesClass extends Component {
         if (fileData.length === 0) return null;
 
         return (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
                     {/* eslint-disable-next-line camelcase */}
                     {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
@@ -458,16 +458,15 @@ export class FilesClass extends Component {
                             padding={0}
                             sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                         >
-                            <Grid item xs={2} sm={1}>
+                            <Grid xs={2} sm={1}>
                                 &nbsp;
                             </Grid>
-                            <Grid item sm={4} data-testid="dsi-dsid-label">
+                            <Grid sm={4} data-testid="dsi-dsid-label">
                                 <Typography variant="caption" gutterBottom>
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
                             <Grid
-                                item
                                 sm={6}
                                 md={4}
                                 data-testid="dsi-label-label"
@@ -477,17 +476,12 @@ export class FilesClass extends Component {
                                     {locale.viewRecord.sections.files.description}
                                 </Typography>
                             </Grid>
-                            <Grid
-                                item
-                                md={2}
-                                data-testid="dsi-size-label"
-                                sx={{ display: { xs: 'none', md: 'block' } }}
-                            >
+                            <Grid md={2} data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.viewRecord.sections.files.size}
                                 </Typography>
                             </Grid>
-                            <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+                            <Grid sm sx={{ display: { xs: 'none', sm: 'block' } }} />
                         </Grid>
                     </Box>
 
@@ -504,7 +498,6 @@ export class FilesClass extends Component {
                                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                             >
                                 <Grid
-                                    item
                                     xs={2}
                                     sm={1}
                                     textAlign={'center'}
@@ -514,7 +507,6 @@ export class FilesClass extends Component {
                                     {item.icon}
                                 </Grid>
                                 <Grid
-                                    item
                                     xs={8}
                                     sm={4}
                                     textOverflow={'ellipsis'}
@@ -537,7 +529,6 @@ export class FilesClass extends Component {
                                     />
                                 </Grid>
                                 <Grid
-                                    item
                                     sm={6}
                                     md={4}
                                     textOverflow={'ellipsis'}
@@ -551,7 +542,6 @@ export class FilesClass extends Component {
                                     </Typography>
                                 </Grid>
                                 <Grid
-                                    item
                                     md={2}
                                     textOverflow={'ellipsis'}
                                     whiteSpace={'nowrap'}
@@ -564,7 +554,6 @@ export class FilesClass extends Component {
                                     </Typography>
                                 </Grid>
                                 <Grid
-                                    item
                                     sm
                                     style={{ textAlign: 'right' }}
                                     data-analyticsid={`rek-oa-status-${index}`}

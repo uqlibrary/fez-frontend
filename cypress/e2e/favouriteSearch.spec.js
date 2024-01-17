@@ -8,14 +8,14 @@ context('Favourite search bookmark', () => {
 context('Favourite searches', () => {
     it('should rename and delete a search item correctly', () => {
         cy.visit('/admin/favourite-search?user=uqstaff');
-        cy.get('[data-testid=favourite-search-list-item-0-edit]').click();
+        cy.get('[data-testid=favourite-search-list-item-1-edit]').click();
         cy.get('[data-testid="fvs-description-input"]')
             .clear()
             .type('New value test');
-        cy.get('[data-testid="favourite-search-list-item-0-save"]').click();
-        cy.get('[data-testid="fvs-description-0"]').should('contain', 'New value test');
-        cy.get('[data-testid="favourite-search-list-item-0-delete"]').click();
-        cy.get('[data-testid="favourite-search-list-item-0-save"]').click();
-        cy.get('[data-testid="fvs-description-0"]').should('contain', 'All unpublished records');
+        cy.get('[data-testid="favourite-search-list-item-1-save"]').click();
+        cy.get('[data-testid="fvs-description-1"]').should('contain', 'New value test');
+        cy.get('[data-testid="favourite-search-list-item-1-delete"]').click();
+        cy.get('[data-testid="favourite-search-list-item-1-save"]').click();
+        cy.get('[data-testid="fvs-description-1"]').should('not.exist');
     });
 });

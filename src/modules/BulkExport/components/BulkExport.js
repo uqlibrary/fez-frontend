@@ -180,8 +180,18 @@ const BulkExport = ({
                 sx={{ margin: 0, padding: 2 }}
                 maxWidth="md"
             >
-                <MuiDialogTitle disableTypography>
-                    <Typography variant="h4" id="bulk-export-dialog-title">
+                <MuiDialogTitle>
+                    <Typography
+                        variant="span"
+                        id="bulk-export-dialog-title"
+                        sx={{
+                            margin: 0,
+                            fontWeight: 300,
+                            fontSize: '2.125rem',
+                            lineHeight: 1.235,
+                            letterSpacing: '0.00735em',
+                        }}
+                    >
                         {buttonText}
                     </Typography>
                     <IconButton

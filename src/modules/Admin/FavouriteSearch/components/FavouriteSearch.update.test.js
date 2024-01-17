@@ -58,10 +58,10 @@ describe('FavouriteSearch', () => {
         const updateFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'updateFavouriteSearchListItem');
 
         await waitFor(() => getByText('Favourite searches'));
-        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
+        fireEvent.click(getByTestId('favourite-search-list-item-1-edit'));
 
         act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
+            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
         expect(updateFavouriteSearchListItemFn).toBeCalled();
     });

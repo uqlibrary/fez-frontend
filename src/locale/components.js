@@ -4103,11 +4103,11 @@ export default {
                                 <React.Fragment>
                                     <p>Search journals by their assigned:</p>
                                     <ul>
-                                        <li>field of research code from the ERA process (ERA);</li>
-                                        <li>
+                                        <li key={'ERA'}>field of research code from the ERA process (ERA);</li>
+                                        <li key={'CITE'}>
                                             subject areas from the All Science Journal Classification (CiteScore); or
                                         </li>
-                                        <li>
+                                        <li key={'WOS'}>
                                             subjects from the Web of Science. For example: Science Citation Index
                                             Expanded (WOSSCIE) or Web of Science: Emerging Sources Citation Index
                                             (WOSESCI); Arts & Humanities Citation Index (WOSAHCI).
@@ -4233,9 +4233,11 @@ export default {
                             </p>
                             <p>The following lists are available:</p>
                             <ul>
-                                <li>ABDC (Australian Business Deans Council)</li>
-                                <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
-                                <li>ERA (Excellence in Research Australia)</li>
+                                <li key={'ABDC'}>ABDC (Australian Business Deans Council)</li>
+                                <li key={'CWTS'}>
+                                    CWTS (Centre of Science and Technology Studies at Leiden University)
+                                </li>
+                                <li key={'ERA'}>ERA (Excellence in Research Australia)</li>
                             </ul>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
