@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from 'test-utils';
+import { render, screen } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -8,11 +8,14 @@ import VocabDataRow from './VocabDataRow';
 
 const vocabDataRow = mockData.vocabList.data[0];
 
-const setup = vocabDataRow => render(<VocabDataRow row={vocabDataRow} />);
-
 describe('ControlledVocabularies VocabDataRow', () => {
-    it('should render the table', async () => {
-        const myTable = setup(vocabDataRow);
-        expect(myTable).toMatchSnapshot();
+    it('should render the row', async () => {
+        render(<VocabDataRow row={vocabDataRow} />);
+        expect(screen.getByText('AIATSIS codes')).toBeInTheDocument();
+    });
+    it('should have the expand button', async () => {
+        render(<VocabDataRow row={vocabDataRow} />);
+        const button = screen.getByRole('button', { id: 'expand-row-454025' });
+        expect(button).toBeInTheDocument();
     });
 });
