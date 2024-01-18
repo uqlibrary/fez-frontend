@@ -1,5 +1,4 @@
 import * as actions from 'actions/actionTypes';
-// import { record } from 'mock/data';
 
 export const initialState = {
     vocabList: [],

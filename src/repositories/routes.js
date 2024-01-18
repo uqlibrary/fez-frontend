@@ -213,10 +213,10 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
-// Controlled Vocabularies
+// Controlled Vocabularies top list
 export const VOCAB_LIST_API = () => {
     return {
-        apiUrl: 'vocabularies',
+        apiUrl: 'vocabularies/list',
     };
 };
 
