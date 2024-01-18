@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import JournalFieldsMap from './JournalFieldsMap';
@@ -18,23 +19,11 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 width: '101%',
                 borderBottom: '1px solid #CCC',
                 marginBottom: '6px',
-                height: '40px',
-                [theme.breakpoints.up('md')]: {
-                    height: '32px',
-                },
+                paddingTop: '2px',
+                ...(!isSelectable && { height: '35px' }),
             })}
         >
-            <Grid
-                item
-                xs="auto"
-                id="journal-list-header-checkbox"
-                sx={theme => ({
-                    height: '40px',
-                    [theme.breakpoints.up('md')]: {
-                        height: '32px',
-                    },
-                })}
-            >
+            <Grid item xs="auto" id="journal-list-header-checkbox">
                 {isSelectable && (
                     <Tooltip title="Select All" placement="right">
                         <Checkbox
@@ -43,9 +32,6 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                             sx={theme => ({
                                 padding: '2px',
                                 marginTop: '4px',
-                                [theme.breakpoints.up('md')]: {
-                                    marginTop: '-8px',
-                                },
                             })}
                             checked={checked}
                             label="Select All"
@@ -64,14 +50,6 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 id="journal-list-header-col-1"
                 data-testid="journal-list-header-col-1"
                 sx={theme => ({
-                    [theme.breakpoints.down('md')]: {
-                        display: 'flex',
-                        alignItems: 'center',
-                    },
-                    height: '40px',
-                    [theme.breakpoints.up('sm')]: {
-                        height: '32px',
-                    },
                     paddingLeft: 1,
                     ...(isSelectable ? { paddingLeft: 2 } : {}),
                 })}
