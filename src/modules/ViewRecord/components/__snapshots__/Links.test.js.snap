@@ -104,10 +104,9 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -178,10 +177,9 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -238,10 +236,9 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -307,10 +304,9 @@ exports[`Component Links  Full mount render 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -452,10 +448,9 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -584,10 +579,9 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -799,10 +793,9 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -868,10 +861,9 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -937,10 +929,9 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1078,10 +1069,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1152,10 +1142,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1221,10 +1210,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1281,10 +1269,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1341,10 +1328,9 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1473,10 +1459,9 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1547,10 +1532,9 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1607,10 +1591,9 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1667,10 +1650,9 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1727,10 +1709,9 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1859,10 +1840,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1928,10 +1908,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1988,10 +1967,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2048,10 +2026,9 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2180,10 +2157,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2254,10 +2230,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2314,10 +2289,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2374,10 +2348,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2434,10 +2407,9 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2566,10 +2538,9 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-pubmed-central-id-description"
             data-testid="rek-pubmed-central-id-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2640,10 +2611,9 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2700,10 +2670,9 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2760,10 +2729,9 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2820,10 +2788,9 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2956,10 +2923,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-doi-description"
             data-testid="rek-doi-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3025,10 +2991,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3085,10 +3050,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3145,10 +3109,9 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-2-description"
             data-testid="rek-link-2-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3276,10 +3239,9 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3421,10 +3383,9 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3552,10 +3513,9 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3692,10 +3652,9 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3832,10 +3791,9 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3972,10 +3930,9 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-title-description"
             data-testid="rek-title-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -4103,10 +4060,9 @@ exports[`Component Links  should use special default description if the link has
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-0-description"
             data-testid="rek-link-0-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -4163,10 +4119,9 @@ exports[`Component Links  should use special default description if the link has
             </span>
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-cu3rdh-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-11 MuiGrid2-grid-sm-4 css-gqui2b-MuiGrid2-root"
             data-analyticsid="rek-link-1-description"
             data-testid="rek-link-1-description"
-            overflowx="hidden"
           >
             <span
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"

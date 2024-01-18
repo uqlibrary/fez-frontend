@@ -38,10 +38,6 @@ export default class CollectionForm extends Component {
         newRecord: PropTypes.object,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
-
     constructor(props) {
         super(props);
     }
@@ -76,20 +72,20 @@ export default class CollectionForm extends Component {
             return (
                 <StandardPage title={txt.title}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txt.afterSubmitTitle}>
                                 <Typography>{txt.afterSubmitText}</Typography>
                             </StandardCard>
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid item xs />
-                        <Grid item>
+                        <Grid xs />
+                        <Grid>
                             <Button variant="contained" fullWidth onClick={this.reloadForm}>
                                 {txt.reloadFormButton}
                             </Button>
                         </Grid>
-                        <Grid item>
+                        <Grid>
                             <Button variant="contained" color="primary" fullWidth onClick={this.afterSubmit}>
                                 {txt.afterSubmitButton}
                             </Button>
@@ -128,7 +124,7 @@ export default class CollectionForm extends Component {
                         />
                         <Grid container spacing={3} padding={0}>
                             {!!!hasParams && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <StandardCard title={txt.title} help={txt.help}>
                                         <Grid
                                             container
@@ -137,7 +133,7 @@ export default class CollectionForm extends Component {
                                             id="community-selector"
                                             data-testid="community-selector"
                                         >
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <Field
                                                     component={CommunitySelectField}
                                                     disabled={this.props.submitting}
@@ -155,10 +151,10 @@ export default class CollectionForm extends Component {
                             {(!!hasParams ||
                                 (this.props.formValues.get('fez_record_search_key_ismemberof') &&
                                     this.props.formValues.get('fez_record_search_key_ismemberof').length > 0)) && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <StandardCard title={detailsTitle} help={txt.details.help}>
                                         <Grid container spacing={3} padding={0}>
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <Field
                                                     component={TextField}
                                                     textFieldId="rek-title"
@@ -173,7 +169,7 @@ export default class CollectionForm extends Component {
                                                 />
                                             </Grid>
 
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <Field
                                                     component={TextField}
                                                     textFieldId="rek-description"
@@ -188,7 +184,7 @@ export default class CollectionForm extends Component {
                                                 />
                                             </Grid>
 
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <Typography>{txt.formLabels.keywords.description}</Typography>
                                                 <Field
                                                     component={NewListEditorField}
@@ -207,7 +203,7 @@ export default class CollectionForm extends Component {
                                                 />
                                             </Grid>
 
-                                            <Grid item xs={12}>
+                                            <Grid xs={12}>
                                                 <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                                 <Field
                                                     component={RichEditorField}
@@ -225,14 +221,14 @@ export default class CollectionForm extends Component {
                                 </Grid>
                             )}
                             {alertProps && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Alert {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
                         <Grid container spacing={2} padding={0}>
-                            <Grid item xs={false} sm />
-                            <Grid item xs={12} sm="auto">
+                            <Grid xs={false} sm />
+                            <Grid xs={12} sm="auto">
                                 <Button
                                     data-analyticsid="cancel-collection"
                                     data-testid="cancel-collection"
@@ -245,7 +241,7 @@ export default class CollectionForm extends Component {
                                     {txt.cancel}
                                 </Button>
                             </Grid>
-                            <Grid item xs={12} sm="auto">
+                            <Grid xs={12} sm="auto">
                                 <Button
                                     data-analyticsid="submit-collection"
                                     data-testid="submit-collection"

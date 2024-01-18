@@ -47,10 +47,6 @@ export default class FixRecord extends PureComponent {
         errors: PropTypes.object,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
-
     constructor(props) {
         super(props);
 
@@ -171,7 +167,7 @@ export default class FixRecord extends PureComponent {
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                     <form onSubmit={this._handleDefaultSubmit}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <StandardCard title={txt.subTitle} help={txt.help}>
                                     <PublicationCitation
                                         publication={this.props.recordToFix}
@@ -203,14 +199,15 @@ export default class FixRecord extends PureComponent {
                                         onCancelAction={this._navigateToDashboard}
                                         locale={saveConfirmationLocale}
                                     />
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                             <Grid container spacing={2} padding={0}>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Field
                                                         component={TextField}
                                                         disabled={this.props.submitting}
                                                         name="comments"
+                                                        textFieldId="comments"
                                                         type="text"
                                                         fullWidth
                                                         multiline
@@ -218,11 +215,12 @@ export default class FixRecord extends PureComponent {
                                                         label={txtFixForm.comments.fieldLabels.comments}
                                                     />
                                                 </Grid>
-                                                <Grid item xs={12}>
+                                                <Grid xs={12}>
                                                     <Field
                                                         component={TextField}
                                                         disabled={this.props.submitting}
                                                         name="rek_link"
+                                                        textFieldId="rek_link"
                                                         type="text"
                                                         fullWidth
                                                         label={txtFixForm.comments.fieldLabels.url}
@@ -233,18 +231,18 @@ export default class FixRecord extends PureComponent {
                                         </StandardCard>
                                     </Grid>
                                     {showContentIndicatorsField(this.props.recordToFix) && (
-                                        <Grid item xs={12}>
+                                        <Grid xs={12}>
                                             <StandardCard
                                                 title={txtFixForm.contentIndicators.title}
                                                 help={txtFixForm.contentIndicators.help}
                                             >
                                                 <Grid container spacing={3} padding={0}>
-                                                    <Grid item xs={12}>
+                                                    <Grid xs={12}>
                                                         <Typography>
                                                             {txtFixForm.contentIndicators.description}
                                                         </Typography>
                                                     </Grid>
-                                                    <Grid item xs={12}>
+                                                    <Grid xs={12}>
                                                         <Field
                                                             component={ContentIndicatorsField}
                                                             displayType={this.props.recordToFix.rek_display_type}
@@ -260,7 +258,7 @@ export default class FixRecord extends PureComponent {
                                             </StandardCard>
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <StandardCard
                                             title={txtFixForm.fileUpload.title}
                                             help={txtFixForm.fileUpload.help}
@@ -278,7 +276,7 @@ export default class FixRecord extends PureComponent {
                                 </React.Fragment>
                             )}
                             {this.state.selectedRecordAction === 'unclaim' && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
                                         <Alert {...txtUnclaimForm.alert} />
                                         {txtUnclaimForm.description}
@@ -293,14 +291,14 @@ export default class FixRecord extends PureComponent {
                             )}
 
                             {alertProps && (
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Alert pushToTop {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
                         <Grid container spacing={3}>
-                            <Grid item xs />
-                            <Grid item>
+                            <Grid xs />
+                            <Grid>
                                 <Button
                                     variant={'contained'}
                                     fullWidth
@@ -311,7 +309,7 @@ export default class FixRecord extends PureComponent {
                                 />
                             </Grid>
                             {this.state.selectedRecordAction && (
-                                <Grid item>
+                                <Grid>
                                     <Button
                                         variant={'contained'}
                                         color={'primary'}
