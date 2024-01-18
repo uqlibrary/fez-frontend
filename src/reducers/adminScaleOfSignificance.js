@@ -15,6 +15,9 @@ const handlers = {
         ...initialState,
         clearedScaleAuthors: true,
     }),
+    [actions.ADMIN_SCALE_SIGNIFICANCE_RESET]: () => ({
+        ...initialState,
+    }),
 };
 
 export default function adminScaleOfSignificanceReducer(state = initialState, action) {

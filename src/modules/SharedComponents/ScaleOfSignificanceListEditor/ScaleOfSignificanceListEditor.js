@@ -98,6 +98,7 @@ export class ScaleOfSignificanceListEditor extends Component {
             !!this.props.clearedScaleAuthors
         ) {
             this.state.itemList = [...this.props.scaleOfSignificance];
+            this.props.onChange(this.transformOutput(this.state.itemList));
         }
 
         this.state.originalItemList = this.state.itemList;
