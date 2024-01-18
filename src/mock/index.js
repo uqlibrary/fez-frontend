@@ -610,6 +610,15 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(
         new RegExp(
             escapeRegExp(
+                routes.VOCAB_LIST_API({ pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' }).apiUrl,
+            ),
+        ),
+    )
+    .reply(200, { ...mockData.vocabList })
+    // .reply(200, { ...mockData.vocabulariesList })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
                 routes.COMMUNITY_LIST_API({ pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' }).apiUrl,
             ),
         ),

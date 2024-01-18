@@ -43,4 +43,5 @@ export { default as topCitedPublicationsReducer } from './topCitedPublications';
 export { default as viewRecordReducer } from './viewRecord';
 export { default as viewCommunitiesReducer } from './communities';
 export { default as viewCollectionsReducer } from './collections';
+export { default as viewVocabReducer } from './controlledVocab';
 export { default as adminScaleOfSignificanceReducer } from './adminScaleOfSignificance';

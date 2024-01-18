@@ -3843,6 +3843,25 @@ export default {
                 sortDirection: 'Asc',
             },
         },
+        controlledVocabulary: {
+            title: {
+                controlledVocabulary: 'Controlled Vocabulary',
+            },
+            loading: {
+                message: '...Loading Data...',
+            },
+            columns: {
+                labels: {
+                    id: 'ID',
+                    title: 'Title',
+                    order: 'Order',
+                    license: 'License',
+                    external_id: 'External ID',
+                    path: 'Path',
+                    actions: 'Actions',
+                },
+            },
+        },
         favouriteJournals: {
             title: 'My Favourite Journals',
             buttons: {
