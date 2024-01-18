@@ -225,7 +225,7 @@ export const AdminInterface = ({
                     name={`${tab}Section`}
                 />
             </StandardCard>
-            {tabs[tab].subComponent && (
+            {tabs[tab].subComponent?.component && (
                 <StandardCard
                     standardCardId={`${tabs[tab].subComponent.title.toLowerCase().replace(/ /g, '-')}-section`}
                     title={tabs[tab].subComponent.title}
