@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, screen } from 'test-utils';
+import { render } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -10,10 +10,14 @@ import locale from 'locale/components';
 const sortedList = mockData.vocabList.data;
 const labels = locale.components.controlledVocabulary.columns.labels;
 
+function setup(TestElement, testProps = {}) {
+    return render(<TestElement {...testProps} />);
+}
+
 describe('ControlledVocabularies VocabTable', () => {
     it('should render the table', async () => {
-        render(<VocabTable records={sortedList} labels={labels} />);
-        expect(screen.getByText('AIATSIS codes')).toBeInTheDocument();
-        expect(screen.getByText('Title')).toBeInTheDocument();
+        const { getByText } = setup(VocabTable, { records: sortedList, labels: labels });
+        expect(getByText('AIATSIS codes')).toBeInTheDocument();
+        expect(getByText('Title')).toBeInTheDocument();
     });
 });
