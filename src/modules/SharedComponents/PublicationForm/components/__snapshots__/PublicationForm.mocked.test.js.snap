@@ -14,7 +14,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
     >
       <NavigationDialogBox
         txt={
-          Object {
+          {
             "cancelButtonLabel": "No",
             "confirmButtonLabel": "Yes",
             "confirmationMessage": "Are you sure you want to abandon workflow?",
@@ -24,12 +24,11 @@ exports[`Component PublicationForm should render properly with non-matching doct
         when={true}
       />
       <ForwardRef(Grid)
-        item={true}
         xs={12}
       >
         <StandardCard
           help={
-            Object {
+            {
               "buttonLabel": "Close",
               "text": <p>
                 For more information about each type, click
@@ -38,7 +37,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                   rel="noreferrer"
                   style={
-                    Object {
+                    {
                       "fontWeight": 700,
                     }
                   }
@@ -58,7 +57,6 @@ exports[`Component PublicationForm should render properly with non-matching doct
             spacing={1}
           >
             <ForwardRef(Grid)
-              item={true}
               xs={12}
             >
               <Field
@@ -236,11 +234,9 @@ exports[`Component PublicationForm should render properly with non-matching doct
       spacing={3}
     >
       <ForwardRef(Grid)
-        item={true}
         xs={true}
       />
       <ForwardRef(Grid)
-        item={true}
         sm="auto"
         xs={12}
       >

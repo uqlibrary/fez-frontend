@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent, within } from 'test-utils';
 
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
@@ -268,12 +268,12 @@ describe('Search Journals Results component', () => {
 
         const sortBy = locale.components.searchJournals.sorting.sortBy;
 
-        const { getAllByRole, getByRole } = setup({
+        const { getByTestId, getByRole } = setup({
             state: { journalsListLoaded: true, journalsList },
             testHistory,
         });
 
-        fireEvent.mouseDown(getAllByRole('button', { id: 'sortBy' })[0]);
+        fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
 
         const listItem = getByRole('listbox');
 

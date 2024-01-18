@@ -13,17 +13,18 @@ exports[`FieldGridItem should render default view 1`] = `
     name="bibliographicSection.rek_title"
     required={true}
     richEditorId="rek-title"
+    singleLine={true}
     title="Formatted title"
     titleProps={
-      Object {
-        "style": Object {
+      {
+        "style": {
           "opacity": 0.666,
         },
         "variant": "caption",
       }
     }
     validate={
-      Array [
+      [
         [Function],
       ]
     }
@@ -54,24 +55,24 @@ exports[`FieldGridItem should render with correct props 1`] = `
     contributorEditorId="rek-contributor"
     isAdmin={true}
     locale={
-      Object {
-        "form": Object {
-          "locale": Object {
+      {
+        "form": {
+          "locale": {
             "addButton": "Add editor",
-            "affiliations": Object {
+            "affiliations": {
               "affiliationPctTitle": "Affiliation %",
-              "alert": Object {
-                "authorOrphan": Object {
+              "alert": {
+                "authorOrphan": {
                   "message": "Author requires at least one affiliation to be added",
                 },
-                "percentile": Object {
+                "percentile": {
                   "actionButtonLabel": "Recalculate Percentages",
                   "message": "Percentage sum total of all affiliations must equal 100%",
                 },
                 "title": "Author affiliation information is incomplete",
               },
               "cancelButton": "Cancel",
-              "editButton": Object {
+              "editButton": {
                 "tooltip": "Edit affiliations for this author",
               },
               "getChipLabel": [Function],
@@ -92,8 +93,8 @@ exports[`FieldGridItem should render with correct props 1`] = `
             "nameAsPublishedLabel": "Editor's name as published",
           },
         },
-        "header": Object {
-          "locale": Object {
+        "header": {
+          "locale": {
             "contributorAssignmentColumn": "Select your name",
             "identifierColumn": "UQ identifiers",
             "nameColumn": "Editor's name as published",
@@ -101,8 +102,8 @@ exports[`FieldGridItem should render with correct props 1`] = `
             "roleColumn": "Creator role",
           },
         },
-        "row": Object {
-          "locale": Object {
+        "row": {
+          "locale": {
             "deleteHint": "Remove this item",
             "editHint": "Edit this item",
             "moveDownHint": "Move item down the order",
@@ -131,17 +132,18 @@ exports[`FieldGridItem without record should render default view 1`] = `
     name="bibliographicSection.rek_title"
     required={true}
     richEditorId="rek-title"
+    singleLine={true}
     title="Formatted title"
     titleProps={
-      Object {
-        "style": Object {
+      {
+        "style": {
           "opacity": 0.666,
         },
         "variant": "caption",
       }
     }
     validate={
-      Array [
+      [
         [Function],
       ]
     }

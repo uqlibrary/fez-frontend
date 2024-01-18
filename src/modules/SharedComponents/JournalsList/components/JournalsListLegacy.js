@@ -108,7 +108,7 @@ const JournalsListLegacy = ({
             data-testid="journal-list"
             alignItems="stretch"
         >
-            <StyledGridTitleColumn item>
+            <StyledGridTitleColumn>
                 {/* Header */}
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
@@ -131,7 +131,7 @@ const JournalsListLegacy = ({
                         );
                     })}
             </StyledGridTitleColumn>
-            <StyledGridMoreColumnsWidth item xs minimalView={minimalView}>
+            <StyledGridMoreColumnsWidth xs minimalView={minimalView}>
                 <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
                     <StyledGridHeaderRow container spacing={0} padding={0} alignItems="flex-end">
                         {/* Header */}
@@ -147,7 +147,7 @@ const JournalsListLegacy = ({
                     </StyledGridHeaderRow>
                     {/* Data */}
                     <Grid container spacing={0} padding={0} alignItems="center">
-                        <Grid item xs={12} style={{ marginTop: 6 }}>
+                        <Grid xs={12} style={{ marginTop: 6 }}>
                             {journals &&
                                 journals.length > 0 &&
                                 journals.map((item, index) => {
@@ -161,7 +161,7 @@ const JournalsListLegacy = ({
                     </Grid>
                 </div>
             </StyledGridMoreColumnsWidth>
-            <Grid item xs={'auto'}>
+            <Grid xs={'auto'}>
                 {/* Header */}
                 <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
                 {/* Data */}

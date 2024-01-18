@@ -47,9 +47,6 @@ export default class SbsSubmission extends Component {
         newRecordFileUploadingOrIssueError: PropTypes.bool,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
     /* istanbul ignore next */
     componentDidUpdate() {
         if (this.props.isSessionValid && !this.props.submitting) {

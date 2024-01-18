@@ -25,7 +25,7 @@ import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/genera
 import { useAccountContext } from 'context';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 export const cancelSubmit = () => {
@@ -133,7 +133,7 @@ export const ThesisSubmission = ({
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-user-blocked">
                 <Grid container spacing={3}>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <Alert
                             message={formLocale.thesisSubmission.message}
                             type="info"
@@ -149,10 +149,10 @@ export const ThesisSubmission = ({
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-succeeded">
                 <Grid container spacing={3}>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <StandardCard title={thesisLocale.afterSubmitTitle}>
                             <Grid container spacing={3}>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Typography>{thesisLocale.afterSubmitText}</Typography>
                                 </Grid>
                             </Grid>
@@ -161,7 +161,7 @@ export const ThesisSubmission = ({
                 </Grid>
                 {(newRecordFileUploadingOrIssueError || retries > 0) && (
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             {newRecordFileUploadingOrIssueError && (
                                 <Alert
                                     {...getfileUploadAlertProps(
@@ -181,8 +181,8 @@ export const ThesisSubmission = ({
                     </Grid>
                 )}
                 <Grid container spacing={2}>
-                    <Grid item xs />
-                    <Grid item>
+                    <Grid xs />
+                    <Grid>
                         <Button
                             children={thesisLocale.afterSubmit}
                             color={!newRecordFileUploadingOrIssueError ? 'primary' : 'inherit'}
@@ -216,10 +216,10 @@ export const ThesisSubmission = ({
                         locale={formLocale.thesisSubmission.depositConfirmation}
                     />
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txt.information.title} help={txt.information.help}>
                                 <Grid container spacing={3}>
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <Field
                                             component={RichEditorField}
                                             name="thesisTitle"
@@ -231,7 +231,7 @@ export const ThesisSubmission = ({
                                             richEditorId="rek-title"
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid xs={12} sm={6}>
                                         <Field
                                             component={TextField}
                                             disabled={submitting}
@@ -245,7 +245,7 @@ export const ThesisSubmission = ({
                                             textFieldId="rek-author"
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid xs={12} sm={6}>
                                         <Field
                                             component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
@@ -257,7 +257,7 @@ export const ThesisSubmission = ({
                                             required
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <Field
                                             component={OrgUnitNameField}
                                             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
@@ -267,7 +267,7 @@ export const ThesisSubmission = ({
                                             {...txt.information.fieldLabels.orgUnitName}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid xs={12}>
                                         <Field
                                             component={RichEditorField}
                                             disabled={submitting}
@@ -281,7 +281,7 @@ export const ThesisSubmission = ({
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                 <Field
                                     component={ContributorsEditorField}
@@ -294,7 +294,7 @@ export const ThesisSubmission = ({
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txtFoR.title} help={txtFoR.help}>
                                 <Typography>{txtFoR.text}</Typography>
                                 <Field
@@ -311,7 +311,7 @@ export const ThesisSubmission = ({
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
                                 <Typography>{txt.keywords.description}</Typography>
                                 <Field
@@ -331,7 +331,7 @@ export const ThesisSubmission = ({
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid xs={12}>
                             <StandardCard
                                 title={formLocale.thesisSubmission.fileUpload.title}
                                 help={formLocale.thesisSubmission.fileUpload.help}
@@ -348,14 +348,14 @@ export const ThesisSubmission = ({
                         </Grid>
 
                         {alertProps && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <Alert {...alertProps} alertId="thesis-submission-validation" />
                             </Grid>
                         )}
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid item xs={false} sm />
-                        <Grid item xs={12} sm="auto">
+                        <Grid xs={false} sm />
+                        <Grid xs={12} sm="auto">
                             <Button
                                 data-testid="cancel-deposit-thesis"
                                 variant="contained"
@@ -366,7 +366,7 @@ export const ThesisSubmission = ({
                                 onClick={cancelSubmit}
                             />
                         </Grid>
-                        <Grid item xs={12} sm="auto">
+                        <Grid xs={12} sm="auto">
                             <Button
                                 variant="contained"
                                 id="submit-thesis"

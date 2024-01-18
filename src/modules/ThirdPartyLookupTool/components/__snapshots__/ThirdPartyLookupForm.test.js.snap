@@ -50,7 +50,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                   />
                 </svg>
               </button>
@@ -132,7 +132,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -232,7 +232,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -257,7 +257,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -339,7 +339,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                   />
                 </svg>
               </button>
@@ -419,7 +419,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -444,7 +444,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -526,7 +526,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
                   />
                 </svg>
               </button>
@@ -606,7 +606,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -631,7 +631,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -734,7 +734,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -761,7 +761,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"

@@ -63,7 +63,7 @@ const StyledResponsiveWrapper = styled('div')(({ theme }) => ({
             display: 'block',
             marginBlockEnd: '12px',
 
-            '& > div:first-child': {
+            '& > div:first-of-type': {
                 display: 'none',
             },
         },
@@ -210,14 +210,16 @@ export const GetColumns = () => {
                     props.onRowDataChange({
                         ...rowData,
                         eap_role_cvo_id: selectedItem,
+                        eap_role_name: null,
                     });
                 };
 
                 const handleClear = () =>
                     props.onRowDataChange({ ...rowData, eap_role_name: null, eap_role_cvo_id: null });
 
-                const handleRoleNameChangeForOther = e =>
+                const handleRoleNameChangeForOther = e => {
                     props.onRowDataChange({ ...rowData, eap_role_name: e.target.value });
+                };
 
                 return (
                     <React.Fragment>
@@ -239,13 +241,13 @@ export const GetColumns = () => {
                             value={
                                 !!rowData.eap_role_cvo_id
                                     ? {
-                                          value: rowData.eap_role_cvo_id,
-                                          text: EDITORIAL_ROLE_MAP[rowData.eap_role_cvo_id],
+                                          value: String(rowData.eap_role_cvo_id),
+                                          text: EDITORIAL_ROLE_MAP[String(rowData.eap_role_cvo_id)],
                                       }
                                     : null
                             }
                         />
-                        {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
+                        {String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER && (
                             <SharedTextField
                                 value={rowData.eap_role_name || ''}
                                 onChange={handleRoleNameChangeForOther}
@@ -262,7 +264,7 @@ export const GetColumns = () => {
             },
             validate: rowData =>
                 !!rowData.eap_role_cvo_id &&
-                (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
+                (String(rowData.eap_role_cvo_id) === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
             cellStyle: matchesMd
                 ? {
                       width: '25%',

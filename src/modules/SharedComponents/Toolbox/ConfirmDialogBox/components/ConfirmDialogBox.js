@@ -90,7 +90,7 @@ export class ConfirmDialogBox extends Component {
                 <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                     <DialogTitle data-testid="message-title">{this.props.locale.confirmationTitle}</DialogTitle>
                     <DialogContent>
-                        <DialogContentText data-testid="message-content">
+                        <DialogContentText data-testid="message-content" component="div">
                             {this.props.locale.confirmationMessage}
                         </DialogContentText>
                     </DialogContent>

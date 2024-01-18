@@ -25,7 +25,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -102,7 +102,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -179,7 +179,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -256,7 +256,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -333,7 +333,7 @@ exports[`SearchComponent should render default view 1`] = `
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -458,16 +458,17 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r9:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -515,7 +516,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -523,7 +524,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -572,16 +573,17 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":rb:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -639,7 +641,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -668,7 +670,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r9:"
+                        id=":rd:"
                         type="text"
                         value=" to "
                       />
@@ -684,7 +686,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -906,16 +908,17 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r1:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -963,7 +966,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -971,7 +974,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1020,16 +1023,17 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r3:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -1087,7 +1091,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1116,7 +1120,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3:"
+                        id=":r5:"
                         type="text"
                         value=" to "
                       />
@@ -1132,7 +1136,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1357,7 +1361,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
           viewBox="0 0 24 24"
         >
           <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
           />
         </svg>
       </button>
@@ -1419,7 +1423,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
           viewBox="0 0 24 24"
         >
           <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"
           />
         </svg>
       </button>
@@ -1501,16 +1505,17 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r43:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -1558,7 +1563,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1566,7 +1571,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1615,16 +1620,17 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r3v:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -1682,7 +1688,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1711,7 +1717,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r2q:"
+                        id=":r41:"
                         type="text"
                         value=" to "
                       />
@@ -1727,7 +1733,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1920,7 +1926,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
               viewBox="0 0 24 24"
             >
               <path
-                d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
               />
             </svg>
           </button>
@@ -2021,16 +2027,17 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r30:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -2078,7 +2085,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2086,7 +2093,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2135,16 +2142,17 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r32:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -2202,7 +2210,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2231,7 +2239,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r27:"
+                        id=":r34:"
                         type="text"
                         value=" to "
                       />
@@ -2247,7 +2255,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2444,7 +2452,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2569,16 +2577,17 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":ri:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -2626,7 +2635,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2634,7 +2643,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2683,16 +2692,17 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":rk:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -2750,7 +2760,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2779,7 +2789,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":rg:"
+                        id=":rm:"
                         type="text"
                         value=" to "
                       />
@@ -2795,7 +2805,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3017,16 +3027,17 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r2q:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -3074,7 +3085,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -3082,7 +3093,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3131,16 +3142,17 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r2s:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -3198,7 +3210,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3227,7 +3239,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r23:"
+                        id=":r2u:"
                         type="text"
                         value=" to "
                       />
@@ -3243,7 +3255,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3417,7 +3429,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
             Search eSpace
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -3542,16 +3554,17 @@ exports[`SearchComponent should update advanced search row on search text change
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Any field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r3l:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Any field
@@ -3599,7 +3612,7 @@ exports[`SearchComponent should update advanced search row on search text change
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Type a value to search all fields for"
@@ -3607,7 +3620,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     data-testid="any-field"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3655,16 +3668,17 @@ exports[`SearchComponent should update advanced search row on search text change
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r3n:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -3722,7 +3736,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -3751,7 +3765,7 @@ exports[`SearchComponent should update advanced search row on search text change
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r2l:"
+                        id=":r3p:"
                         type="text"
                         value=" to "
                       />
@@ -3767,7 +3781,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4014,16 +4028,17 @@ exports[`SearchComponent should update date range filter 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r4h:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -4071,7 +4086,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4079,7 +4094,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4128,16 +4143,17 @@ exports[`SearchComponent should update date range filter 1`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r4j:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -4195,7 +4211,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4224,7 +4240,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r37:"
+                        id=":r4l:"
                         type="text"
                         value=" to "
                       />
@@ -4240,7 +4256,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4284,7 +4300,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4333,7 +4349,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3a:"
+                        id=":r4o:"
                         type="text"
                         value=" to "
                       />
@@ -4347,7 +4363,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4412,7 +4428,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4461,7 +4477,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3d:"
+                        id=":r4r:"
                         type="text"
                         value=" to "
                       />
@@ -4475,7 +4491,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4743,16 +4759,17 @@ exports[`SearchComponent should update date range filter 2`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
+                        aria-controls=":r4h:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
                         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
-                        role="button"
+                        role="combobox"
                         tabindex="0"
                       >
                         Select a field
@@ -4800,7 +4817,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                 class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-1mm6vk1-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4808,7 +4825,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4857,16 +4874,17 @@ exports[`SearchComponent should update date range filter 2`] = `
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-8q97mm-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
+                    aria-controls=":r4j:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     id="document-type-selector"
-                    role="button"
+                    role="combobox"
                     tabindex="0"
                   >
                     <span
@@ -4924,7 +4942,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -4953,7 +4971,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r37:"
+                        id=":r4l:"
                         type="text"
                         value=" to "
                       />
@@ -4969,7 +4987,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5013,7 +5031,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5062,7 +5080,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3a:"
+                        id=":r4o:"
                         type="text"
                         value=" to "
                       />
@@ -5076,7 +5094,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5141,7 +5159,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5190,7 +5208,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                         aria-invalid="false"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                         disabled=""
-                        id=":r3d:"
+                        id=":r4r:"
                         type="text"
                         value=" to "
                       />
@@ -5204,7 +5222,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-4c9bx7-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"

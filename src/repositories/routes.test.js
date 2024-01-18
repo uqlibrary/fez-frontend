@@ -1,6 +1,5 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
-import { JOURNAL_KEYWORDS_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -877,6 +876,11 @@ describe('Backend routes method', () => {
     it('should construct url for journal details api', () => {
         expect(routes.JOURNAL_API({ id: '12' })).toEqual({
             apiUrl: 'journals/12',
+        });
+    });
+    it('should construct url for journal details api in edit mode', () => {
+        expect(routes.JOURNAL_API({ id: '12', isEdit: true })).toEqual({
+            apiUrl: 'journals/12?from=admin-form',
         });
     });
 

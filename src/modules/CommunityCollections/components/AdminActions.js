@@ -60,14 +60,18 @@ export const AdminActions = ({
         const options = action.options || null;
         const url = action.url(pid);
         const clickHandler = (forceNewTab = false) =>
-            debounce(300, true, event => {
-                navigateToUrl(
-                    url,
-                    event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
-                    !!action.isRecordEdit,
-                    options,
-                );
-            });
+            debounce(
+                300,
+                event => {
+                    navigateToUrl(
+                        url,
+                        event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
+                        !!action.isRecordEdit,
+                        options,
+                    );
+                },
+                { atBegin: true },
+            );
         const label = action.label;
         return {
             label,

@@ -26,13 +26,6 @@ import { default as locale } from 'locale/components';
 import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExisting } from '../helpers';
 
-const classes = {
-    background: {
-        backgroundColor: 'secondary.light',
-        padding: 2,
-    },
-};
-
 export const FullAuthorDetails = ({
     disabled,
     data: rowData,
@@ -80,7 +73,7 @@ export const FullAuthorDetails = ({
                     <TableCell colSpan={4}>
                         <ScrollToSection scrollToSection>
                             <form>
-                                <Box sx={{ ...classes.background }}>
+                                <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
                                             <NameData />
@@ -142,7 +135,7 @@ export const FullAuthorDetails = ({
                     onKeyDown={handleKeyPress}
                     id="author-delete-row"
                     data-testid="author-delete-row"
-                    sx={{ ...classes.background }}
+                    sx={{ backgroundColor: 'secondary.light', padding: 2 }}
                 >
                     <ConfirmationBox
                         confirmationBoxId="authors-delete-this-author-confirmation"

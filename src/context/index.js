@@ -10,6 +10,7 @@ import RecordContext from './RecordContext';
 import RecordsSelectorContext from './RecordsSelectorContext';
 import TabbedContext from './TabbedContext';
 import ScrollToSectionContext from './ScrollToSectionContext';
+import JournalContext from './JournalContext';
 
 export const useAccountContext = () => useContext(AccountContext);
 export const useEditableContext = () => useContext(EditableContext);
@@ -21,6 +22,7 @@ export const useRecordContext = () => useContext(RecordContext);
 export const useRecordsSelectorContext = () => useContext(RecordsSelectorContext);
 export const useTabbedContext = () => useContext(TabbedContext);
 export const useScrollToSectionContext = () => useContext(ScrollToSectionContext);
+export const useJournalContext = () => useContext(JournalContext);
 
 export {
     AccountContext,
@@ -33,4 +35,5 @@ export {
     RecordsSelectorContext,
     ScrollToSectionContext,
     TabbedContext,
+    JournalContext,
 };

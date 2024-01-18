@@ -78,8 +78,7 @@ export default {
         errorMessages: {
             401: {
                 message:
-                    'You are not authorised to access the requested information. Please contact eSpace ' +
-                    'administrators or try again later.',
+                    'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.',
                 status: 401,
             },
             403: {
@@ -100,22 +99,18 @@ export default {
             },
             422: {
                 message:
-                    'Error has occurred during request and request cannot be processed. Please contact ' +
-                    'eSpace administrators or try again later.',
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
                 status: 422,
             },
             500: {
                 message:
-                    'Error has occurred during request and request cannot be processed. Please contact ' +
-                    'eSpace administrators or try again later.',
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
                 status: 500,
             },
             generic:
-                'Error has occurred during request and request cannot be processed. Please contact eSpace ' +
-                'administrators or try again later.',
+                'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             genericAlternate:
-                "Error has occurred during request and request can't be processed. Please contact eSpace " +
-                'administrators or try again later.',
+                "Error has occurred during request and request can't be processed. Please contact eSpace administrators or try again later.",
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',

@@ -74,12 +74,8 @@ const getIcon = ({ rowData, inProblemState }) => {
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     return (
         <Grid container spacing={2}>
-            <Grid item sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>
-                {icon}
-            </Grid>
-            <Grid item sx={{ ...(linked ? classes.linked : {}) }}>
-                {text}
-            </Grid>
+            <Grid sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>{icon}</Grid>
+            <Grid sx={{ ...(linked ? classes.linked : {}) }}>{text}</Grid>
         </Grid>
     );
 });
@@ -150,10 +146,10 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
             editComponent: props => {
                 return (
                     <Grid container spacing={2}>
-                        <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                             <PersonOutlined color="secondary" />
                         </Grid>
-                        <Grid item style={{ flexGrow: '1' }}>
+                        <Grid style={{ flexGrow: '1' }}>
                             <CustomTextField
                                 autoFocus
                                 value={props.value || ''}
@@ -328,7 +324,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                       field: 'orgaff',
                       render: rowData => (
                           <Grid container>
-                              <Grid item xs={12}>
+                              <Grid xs={12}>
                                   <Typography
                                       variant="body2"
                                       className={linkedClass(rowData)}
@@ -338,7 +334,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
                                       {rowData.orgaff}
                                   </Typography>
                               </Grid>
-                              <Grid item xs={12}>
+                              <Grid xs={12}>
                                   <Typography
                                       variant="caption"
                                       className={linkedClass(rowData)}

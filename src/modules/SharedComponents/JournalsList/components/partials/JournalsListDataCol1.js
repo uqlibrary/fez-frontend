@@ -27,7 +27,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
             }}
         >
             {isSelectable && (
-                <Grid item xs={1} style={{ height: 48 }}>
+                <Grid xs={1} style={{ height: 48 }}>
                     <Tooltip title={`Select ${journal.jnl_title}`} placement="right">
                         <Checkbox
                             id={`journal-list-data-col-1-checkbox-${index}`}
@@ -45,7 +45,6 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                 </Grid>
             )}
             <Grid
-                item
                 xs={11}
                 id={`journal-list-data-col-1-title-${index}`}
                 data-testid={`journal-list-data-col-1-title-${index}`}
@@ -74,7 +73,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                     </Typography>
                 </Tooltip>
             </Grid>
-            <Grid item xs />
+            <Grid xs />
         </Grid>
     );
 };

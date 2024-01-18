@@ -88,7 +88,7 @@ exports[`Component FileUploader should delete all files 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -211,7 +211,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -270,7 +270,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -315,7 +315,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -346,7 +346,7 @@ exports[`Component FileUploader should delete first file 1`] = `
             gutter="8"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
@@ -362,20 +362,6 @@ exports[`Component FileUploader should delete first file 1`] = `
               >
                 Description
               </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -401,7 +387,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -476,7 +462,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -516,7 +502,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -646,7 +632,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -705,7 +691,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -750,7 +736,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -781,7 +767,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
             gutter="8"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
@@ -797,20 +783,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               >
                 Description
               </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -836,7 +808,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -911,7 +883,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -951,7 +923,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1047,7 +1019,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1087,7 +1059,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1217,7 +1189,7 @@ exports[`Component FileUploader should handle file order change 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -1340,7 +1312,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -1399,7 +1371,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -1444,7 +1416,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -1534,7 +1506,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -1609,7 +1581,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1636,13 +1608,14 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r1s:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -1714,7 +1687,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -1810,7 +1783,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1837,13 +1810,14 @@ exports[`Component FileUploader should handle file order change 2`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r1o:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -1914,7 +1888,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2044,7 +2018,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -2103,7 +2077,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -2148,7 +2122,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -2238,7 +2212,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -2313,7 +2287,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -2340,13 +2314,14 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r1o:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -2418,7 +2393,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2514,7 +2489,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -2541,13 +2516,14 @@ exports[`Component FileUploader should handle file order change 3`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r1s:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -2618,7 +2594,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -2762,7 +2738,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -2887,7 +2863,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -3010,7 +2986,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -3069,7 +3045,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -3114,7 +3090,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -3145,7 +3121,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
             gutter="8"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
@@ -3161,20 +3137,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               >
                 Description
               </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -3200,7 +3162,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -3275,7 +3237,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -3315,7 +3277,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3411,7 +3373,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -3451,7 +3413,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -3581,7 +3543,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -3704,7 +3666,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -3763,7 +3725,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -3808,7 +3770,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -3898,7 +3860,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -3973,7 +3935,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4000,13 +3962,14 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r2n:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Open Access
@@ -4051,7 +4014,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r2k:"
+                  id=":r2t:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"
@@ -4104,7 +4067,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4200,7 +4163,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4227,13 +4190,14 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r2r:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -4304,7 +4268,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -4470,7 +4434,7 @@ exports[`Component FileUploader should render default component 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -4593,7 +4557,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -4717,7 +4681,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -4840,7 +4804,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -4963,7 +4927,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -5022,7 +4986,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -5067,7 +5031,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -5157,7 +5121,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -5232,7 +5196,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -5259,13 +5223,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":rs:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -5336,7 +5301,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5432,7 +5397,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -5459,13 +5424,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r10:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -5536,7 +5502,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -5666,7 +5632,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -5725,7 +5691,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -5770,7 +5736,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -5860,7 +5826,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -5935,7 +5901,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -5962,13 +5928,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":rs:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Closed Access
@@ -6032,7 +5999,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -6128,7 +6095,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6155,13 +6122,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r10:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -6232,7 +6200,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -6362,7 +6330,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -6421,7 +6389,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -6466,7 +6434,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -6556,7 +6524,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -6631,7 +6599,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6658,13 +6626,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":rs:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Closed Access
@@ -6728,7 +6697,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -6824,7 +6793,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6851,13 +6820,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r10:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-1-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
                   id="dsi-open-access-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Open Access
@@ -6902,7 +6872,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r10:"
+                  id=":r12:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="02/02/2022"
@@ -6955,7 +6925,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -7121,7 +7091,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -7244,7 +7214,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -7303,7 +7273,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -7348,7 +7318,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -7379,7 +7349,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             gutter="8"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
@@ -7395,20 +7365,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               >
                 Description
               </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -7434,7 +7390,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -7509,7 +7465,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -7549,7 +7505,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -7645,7 +7601,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -7685,7 +7641,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -7815,7 +7771,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -7938,7 +7894,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -7997,7 +7953,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -8042,7 +7998,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -8132,7 +8088,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -8207,7 +8163,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8235,17 +8191,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1d:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
                   id="dsi-security-policy-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select security policy
@@ -8315,7 +8272,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -8411,7 +8368,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8439,17 +8396,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1h:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
                   id="dsi-security-policy-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select security policy
@@ -8519,7 +8477,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -8649,7 +8607,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -8708,7 +8666,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -8753,7 +8711,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -8843,7 +8801,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -8918,7 +8876,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8946,17 +8904,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1d:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
                   id="dsi-security-policy-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Administrators
@@ -9021,7 +8980,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -9117,7 +9076,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9145,17 +9104,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1h:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
                   id="dsi-security-policy-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select security policy
@@ -9225,7 +9185,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -9355,7 +9315,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -9414,7 +9374,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -9459,7 +9419,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -9549,7 +9509,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -9624,7 +9584,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9652,17 +9612,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1d:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-0-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
                   id="dsi-security-policy-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Administrators
@@ -9727,7 +9688,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -9823,7 +9784,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9851,17 +9812,18 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
-  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
               >
                 <div
+                  aria-controls=":r1h:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-security-policy-1-select"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
                   id="dsi-security-policy-1-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Public
@@ -9907,7 +9869,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <input
                   aria-invalid="false"
                   class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  id=":r1e:"
+                  id=":r1j:"
                   placeholder="dd/mm/yyyy"
                   type="tel"
                   value="01/01/2020"
@@ -9960,7 +9922,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -10126,7 +10088,7 @@ exports[`Component FileUploader should render security policy selector if admin 
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -10249,7 +10211,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -10308,7 +10270,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -10353,7 +10315,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -10398,7 +10360,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
                   />
                 </svg>
               </div>
@@ -10429,7 +10391,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
             gutter="8"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 MuiGrid-grid-md-3 css-ndmp4p-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-8 css-3b1rzb-MuiGrid-root"
             >
               <span
                 class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
@@ -10445,20 +10407,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
               >
                 Description
               </span>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-auylq4-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1uiojy0-MuiTypography-root"
-              />
             </div>
             <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 css-1sp6z08-MuiGrid-root"
@@ -10484,7 +10432,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -10559,7 +10507,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -10599,7 +10547,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>
@@ -10729,7 +10677,7 @@ exports[`Component FileUploader should update file description 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
                         />
                       </svg>
                     </div>
@@ -10788,7 +10736,7 @@ exports[`Component FileUploader should update file description 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
                   />
                 </svg>
               </div>
@@ -10833,7 +10781,7 @@ exports[`Component FileUploader should update file description 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                   />
                 </svg>
               </div>
@@ -10923,7 +10871,7 @@ exports[`Component FileUploader should update file description 1`] = `
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
                     />
                   </svg>
                 </button>
@@ -10998,7 +10946,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -11025,13 +10973,14 @@ exports[`Component FileUploader should update file description 1`] = `
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-controls=":r17:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="dsi-open-access-0-select"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
                   id="dsi-open-access-0-select"
-                  role="button"
+                  role="combobox"
                   tabindex="0"
                 >
                   Select access conditions
@@ -11102,7 +11051,7 @@ exports[`Component FileUploader should update file description 1`] = `
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                   />
                 </svg>
               </button>

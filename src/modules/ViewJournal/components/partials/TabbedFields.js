@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
-import { JournalDetailsContext } from '../JournalDataContext';
+import { JournalContext } from 'context';
 import ViewRow from './ViewRow';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -56,7 +56,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
                         value={String(index)}
                     >
                         <StandardCard noHeader>
-                            <JournalDetailsContext.Provider
+                            <JournalContext.Provider
                                 value={{
                                     journalDetails: tab,
                                 }}
@@ -70,7 +70,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
                                         />
                                     );
                                 })}
-                            </JournalDetailsContext.Provider>
+                            </JournalContext.Provider>
                         </StandardCard>
                     </TabContainer>
                 ))}

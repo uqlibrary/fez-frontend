@@ -25,7 +25,7 @@ describe('DocumentTypeMultipleField component', () => {
         const { container, getByTestId } = setup({ disabled: true });
         expect(container).toMatchSnapshot();
         expect(getByTestId('document-type-selector')).toHaveClass('Mui-disabled');
-        expect(within(getByTestId('document-type-selector')).getByRole('button')).toHaveAttribute(
+        expect(within(getByTestId('document-type-selector')).getByRole('combobox')).toHaveAttribute(
             'aria-disabled',
             'true',
         );
@@ -37,7 +37,7 @@ describe('DocumentTypeMultipleField component', () => {
             docTypes: defaultDocTypes,
         });
         expect(container).toMatchSnapshot();
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         expect(getByRole('option', { name: 'Design' })).toHaveAttribute('aria-selected', 'true');
         expect(getByRole('option', { name: 'Data Collection' })).toHaveAttribute('aria-selected', 'true');
     });
@@ -47,7 +47,7 @@ describe('DocumentTypeMultipleField component', () => {
         const { getByTestId, getByRole } = setup({
             updateDocTypeValues: updateDocTypeValuesFn,
         });
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Design' }));
 
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith([316]);

@@ -35,10 +35,6 @@ export default class CommunityForm extends Component {
         newRecord: PropTypes.object,
     };
 
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object,
-    };
-
     constructor(props) {
         super(props);
     }

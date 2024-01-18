@@ -398,7 +398,7 @@ describe('SearchComponent', () => {
 
     it('should update doc type values', () => {
         const { getByTestId, getByRole } = setup({ isAdvancedSearch: true });
-        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('button'));
+        fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Design' }));
         fireEvent.click(getByRole('option', { name: 'Data Collection' }));
         expect(getByTestId('rek-display-type-caption')).toHaveTextContent(

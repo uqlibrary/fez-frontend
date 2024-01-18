@@ -3,10 +3,10 @@
 exports[`AttachedFilesField component should render default view 1`] = `
 <AttachedFiles
   canEdit={false}
-  dataStreams={Array []}
+  dataStreams={[]}
   deleteHint="Remove this file"
   fileRestrictionsConfig={
-    Object {
+    {
       "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
       "fileUploadLimit": 10,
     }
@@ -33,8 +33,8 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
 <AttachedFiles
   canEdit={false}
   dataStreams={
-    Array [
-      Object {
+    [
+      {
         "dsi_copyright": null,
         "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
         "dsi_embargo_date": null,
@@ -53,15 +53,15 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
   }
   deleteHint="Remove this file"
   fileRestrictionsConfig={
-    Object {
+    {
       "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
       "fileUploadLimit": 10,
     }
   }
   meta={
-    Object {
+    {
       "initial": Immutable.List [
-        Object {
+        {
           "dsi_copyright": null,
           "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
           "dsi_embargo_date": null,

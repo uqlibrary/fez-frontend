@@ -19,17 +19,17 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-cahh6t-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-mfn3ij-MuiGrid2-root"
         style="margin-top: -12px;"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
@@ -53,13 +53,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </p>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-            style="width: 100%;"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r1:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
@@ -67,7 +67,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
-              role="button"
+              role="combobox"
               tabindex="0"
             >
               Month
@@ -100,13 +100,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
@@ -149,17 +149,17 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-cahh6t-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-mfn3ij-MuiGrid2-root"
         style="margin-top: -12px;"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
@@ -183,13 +183,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </p>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-            style="width: 100%;"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r7:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
@@ -197,7 +197,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
-              role="button"
+              role="combobox"
               tabindex="0"
             >
               Month
@@ -230,13 +230,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
@@ -279,17 +279,17 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
       class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-cahh6t-MuiGrid2-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-mfn3ij-MuiGrid2-root"
         style="margin-top: -12px;"
       >
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
@@ -313,13 +313,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </p>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error  css-1xb96nr-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-            style="width: 100%;"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-controls=":r4:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="undefined-month-select"
@@ -327,7 +327,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
               data-analyticsid="undefined-month-select"
               data-testid="undefined-month-select"
               id="undefined-month-select"
-              role="button"
+              role="combobox"
               tabindex="0"
             >
               Month
@@ -360,13 +360,13 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
           </div>
         </div>
         <div
-          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-4 css-v17b3k-MuiGrid2-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-fza2tk-MuiGrid2-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"

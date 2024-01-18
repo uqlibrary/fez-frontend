@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AttachedFiles component AV Check should render download link infected files, preview link for non infected and none for derivatives 1`] = `
-Array [
-  Object {
+[
+  {
     "dsi_copyright": null,
     "dsi_dsid": "cats.tiff",
     "dsi_embargo_date": null,
@@ -15,7 +15,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -28,7 +28,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -41,7 +41,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -54,7 +54,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "infected",
     "dsi_copyright": null,
@@ -69,7 +69,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -82,7 +82,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -95,7 +95,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -108,7 +108,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -123,7 +123,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -136,7 +136,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -149,7 +149,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -162,7 +162,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -177,7 +177,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -190,7 +190,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -203,7 +203,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -216,7 +216,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -231,7 +231,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "interview_t.mp3",
     "dsi_embargo_date": null,
@@ -244,7 +244,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -263,8 +263,8 @@ Array [
 `;
 
 exports[`AttachedFiles component AV Check should render the proper av status icon 1`] = `
-Array [
-  Object {
+[
+  {
     "dsi_copyright": null,
     "dsi_dsid": "cats.tiff",
     "dsi_embargo_date": null,
@@ -277,7 +277,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -290,7 +290,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -303,7 +303,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_cats_t.jpg",
     "dsi_embargo_date": null,
@@ -316,7 +316,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "infected",
     "dsi_copyright": null,
@@ -331,7 +331,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -344,7 +344,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -357,7 +357,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_dogs_t.jpg",
     "dsi_embargo_date": null,
@@ -370,7 +370,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -385,7 +385,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -398,7 +398,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -411,7 +411,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_birds_t.jpg",
     "dsi_embargo_date": null,
@@ -424,7 +424,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,
@@ -439,7 +439,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "preview_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -452,7 +452,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "thumbnail_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -465,7 +465,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "web_fish_t.jpg",
     "dsi_embargo_date": null,
@@ -478,7 +478,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "clean",
     "dsi_copyright": null,
@@ -493,7 +493,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_copyright": null,
     "dsi_dsid": "interview_t.mp3",
     "dsi_embargo_date": null,
@@ -506,7 +506,7 @@ Array [
     "dsi_size": 27932352,
     "dsi_state": "A",
   },
-  Object {
+  {
     "dsi_av_check_date": "2000-01-01 00:00:00",
     "dsi_av_check_state": "unscannable",
     "dsi_copyright": null,

@@ -8,7 +8,7 @@ import {
     StandaloneSearchBox,
     useJsApiLoader,
 } from '@react-google-maps/api';
-import get from 'lodash.get';
+import get from 'lodash/get';
 
 const containerStyle = {
     height: '400px',

@@ -26,10 +26,10 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -58,10 +58,10 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
               id="standard-card-your-thesis-has-been-deposited-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -75,13 +75,13 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -98,7 +98,7 @@ exports[`ThesisSubmission should display successfull submission screen 1`] = `
 `;
 
 exports[`ThesisSubmission should have a helper to generate alert props 1`] = `
-Object {
+{
   "message": "Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.",
   "title": "Error",
   "type": "error_outline",
@@ -137,10 +137,10 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
           data-testid="confirmDialogBox"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -169,10 +169,10 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                 id="standard-card-thesis-information-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -182,7 +182,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -192,7 +192,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -202,7 +202,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -212,7 +212,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -226,7 +226,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -263,7 +263,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -305,7 +305,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -347,7 +347,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -383,7 +383,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               data-testid="alert"
@@ -441,13 +441,13 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               aria-label="Cancel"
@@ -461,7 +461,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -507,10 +507,10 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -539,10 +539,10 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
               id="standard-card-your-thesis-has-been-deposited-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -556,13 +556,13 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -612,10 +612,10 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           data-testid="confirmDialogBox"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -644,10 +644,10 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                 id="standard-card-thesis-information-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -657,7 +657,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -667,7 +667,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -677,7 +677,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -687,7 +687,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -701,7 +701,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -738,7 +738,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -780,7 +780,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -822,7 +822,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -859,13 +859,13 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               aria-label="Cancel"
@@ -878,7 +878,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -923,10 +923,10 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -955,10 +955,10 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
               id="standard-card-your-thesis-has-been-deposited-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -972,13 +972,13 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -1028,10 +1028,10 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           data-testid="confirmDialogBox"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1060,10 +1060,10 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                 id="standard-card-thesis-information-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -1073,7 +1073,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -1083,7 +1083,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -1093,7 +1093,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -1103,7 +1103,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                     />
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                   >
                     <field
                       is="mock"
@@ -1117,7 +1117,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1154,7 +1154,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1196,7 +1196,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1238,7 +1238,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1275,13 +1275,13 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-true css-1vknvy4-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               aria-label="Cancel"
@@ -1294,7 +1294,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -1339,10 +1339,10 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1371,10 +1371,10 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
               id="standard-card-your-thesis-has-been-deposited-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1388,10 +1388,10 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             data-testid="alert"
@@ -1418,7 +1418,7 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
                       />
                     </svg>
                   </div>
@@ -1443,13 +1443,13 @@ exports[`ThesisSubmission should show file upload retry failure alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth css-16alwzc-MuiButtonBase-root-MuiButton-root"
@@ -1491,10 +1491,10 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
@@ -1523,10 +1523,10 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
               id="standard-card-your-thesis-has-been-deposited-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+                class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -1540,10 +1540,10 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
         >
           <div
             data-testid="alert"
@@ -1570,7 +1570,7 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
                       />
                     </svg>
                   </div>
@@ -1609,13 +1609,13 @@ exports[`ThesisSubmission should show the file upload failure alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-x3vexg-MuiGrid2-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1gtgtdn-MuiGrid2-root"
         />
         <div
-          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedInherit MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorInherit MuiButton-fullWidth css-16alwzc-MuiButtonBase-root-MuiButton-root"

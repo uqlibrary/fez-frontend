@@ -59,6 +59,7 @@ This means that it's exactly like production, except for the git branch that use
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
+- if you are on a Mac, ensure xcode with developer applications is installed
   
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
@@ -112,7 +113,7 @@ You should now be able to run one of the following commands from the CLI:
     - note: for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - To use prod's api, change config.json -> deployment.development.api key value to <https://api.library.uq.edu.au/v1/> and re-run
+  - To use prod's api, change /config.js > deployment.development.api > to <https://api.library.uq.edu.au/v1/> and re-run
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
@@ -274,6 +275,12 @@ new MiniCssExtractPlugin({
   ```javascript
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/);
   ```
+
+### React StrictMode
+At the time of writing, [StrictMode](https://react.dev/reference/react/StrictMode) has been enabled for a subset of components only. Redux Forms has been deprecated, causing StrictMode to output numerous console errors that can not be directly fixed. 
+
+Since Redux Form is mostly used in admin pages, these routes and select others have been excluded from StrictMode until such time that Redux Form is replaced in the repo. Look to `src/modules/App/components/App.js` for the implementation of the ```StrictModeConditional``` HoC that enables this selective application of StrictMode.
+
 
 ### <a name="gotchas" id="gotchas"></a>Gotchas
 
@@ -625,3 +632,28 @@ Two tests have been Istanbul ignored in order to get the build passing. These ar
 1. MyIncompleteRecord
 
 Despite many hours attempting to find a resolution to the Jest errors both produced no solution could be found, and so their tests have been ignored for now. A [ticket](https://www.pivotaltracker.com/story/show/184445375) has been created to revisit this situation at a later date.
+
+## CKEditor
+
+The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules. Because we needed an extra button on the toolbar, Change Case, we had to _build from source_
+
+Links
+
+- CKE in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
+- Creating the custom build: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+
+If changes to ckeditor are required, these are sample commands:
+
+```bash
+ cd custom_modules/ckeditor5-custom-build/ # change into the modules subdirectory
+ npm ci # install modules from package-lock file
+ npm run build # after your changes, create the build files that our react app will pull in - MANDATORY!!
+ # commit changes (including /build directory!!)
+ cd ../../
+```
+
+We don't seem to need to issue any `ci` or `run build` commands for non-ckeditor localhost development, when not making changes to ckeditor - react picks up the build directory.
+
+Note we are trapped below the latest version - past about V34, ckeditor crashes in cypress (although it runs fine in localhost) - probably the same cause as in https://github.com/ckeditor/ckeditor5/issues/12802
+
+CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same version (although there are a short number of exceptions).

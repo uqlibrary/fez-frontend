@@ -3,7 +3,7 @@ import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
 import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
-import ViewJournal from './ViewJournal';
+import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ id: 1 })),
@@ -384,6 +384,71 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
     });
 
+    it('Should not show sherpa romeo links when journal links is not available', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                        fez_sherpa_romeo: {
+                            srm_issn: '1111-1111',
+                            srm_journal_link: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '2222-2222',
+                        jnl_issn_order: 2,
+                        fez_sherpa_romeo: {
+                            srm_issn: '2222-2222',
+                            srm_journal_link: '12345',
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('srm-journal-link-0-value')).toHaveTextContent('2222-2222');
+        expect(queryByTestId('srm-journal-link-1-value')).not.toBeInTheDocument();
+    });
+
+    it('Should not show sherpa romeo section when non of journal links are not available', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                jnl_title: 'test',
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1111-1111',
+                        jnl_issn_order: 1,
+                        fez_sherpa_romeo: {
+                            srm_issn: '1111-1111',
+                            srm_journal_link: null,
+                        },
+                    },
+                    {
+                        jnl_issn: '2222-2222',
+                        jnl_issn_order: 2,
+                        fez_sherpa_romeo: {
+                            srm_issn: '2222-2222',
+                            srm_journal_link: null,
+                        },
+                    },
+                ],
+            },
+        });
+
+        const { queryByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(queryByTestId('srm-journal-link-header')).not.toBeInTheDocument();
+    });
+
     it('should render correct creative licenses (BY-ND)', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -624,6 +689,33 @@ describe('ViewJournal', () => {
             });
 
             expect(queryByTestId('alert-error')).not.toBeInTheDocument();
+        });
+    });
+
+    it('should display journal with advisory statement', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                jnl_advisory_statement: 'Test advisory statement',
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('page-title')).toHaveTextContent('American Journal of Public Health');
+
+        expect(getByText('Test advisory statement')).toBeInTheDocument();
+    });
+
+    describe('getAdvisoryStatement', () => {
+        it('should render html', () => {
+            const { getByTestId } = render(getAdvisoryStatement('<p data-testid="test">Tester</p>'));
+            expect(getByTestId('test')).toHaveTextContent('Tester');
+        });
+        it('should render nothing (coverage)', () => {
+            expect(getAdvisoryStatement()).toEqual('');
         });
     });
 });
