@@ -20,8 +20,6 @@ export const ControlledVocabularies = () => {
     const sortedList = useSelector(state => state.get('viewVocabReducer').vocabList);
     const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
-    const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);
-    const endRecord = useSelector(state => state.get('viewVocabReducer').endRecord);
     const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
 
     React.useEffect(() => {
@@ -45,7 +43,7 @@ export const ControlledVocabularies = () => {
                                 id="total-vocab"
                                 data-testid="total-vocab"
                             >
-                                {controlledVocabConfig.vocabCountTitle(startRecord, endRecord, totalRecords)}
+                                {controlledVocabConfig.vocabCountTitle(totalRecords)}
                             </Typography>
                         )}
 
