@@ -22,14 +22,6 @@ export const ControlledVocabularies = () => {
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
 
-    const startRecord = useSelector(state => state.get('viewVocabReducer').startRecord);
-    const endRecord = useSelector(state => state.get('viewVocabReducer').endRecord);
-    // when API return undefined but total has value, use those instead.
-    if (totalRecords && totalRecords > 0) {
-        if (!startRecord) startRecord = 1;
-        if (!endRecord) endRecord = totalRecords;
-    }
-
     React.useEffect(() => {
         dispatch(actions.loadControlledVocabList());
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -51,7 +43,7 @@ export const ControlledVocabularies = () => {
                                 id="total-vocab"
                                 data-testid="total-vocab"
                             >
-                                {controlledVocabConfig.vocabCountTitle(startRecord, endRecord, totalRecords)}
+                                {controlledVocabConfig.vocabCountTitle(totalRecords)}
                             </Typography>
                         )}
 
