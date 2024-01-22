@@ -456,6 +456,7 @@ export const AuthorsListWithAffiliates = ({
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
+        // eslint-disable-next-line camelcase
         setIsEditing({ editing, aut_id });
     };
 

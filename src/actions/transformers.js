@@ -382,9 +382,10 @@ export const getRecordAuthorAffiliations = (authors, canHaveAffiliations = false
         fez_author_affiliation: authors.reduce((accumulated, author) => {
             const newArray = [...accumulated];
             author.affiliations?.forEach(affiliation => {
-                // eslint-disable-next-line camelcase
+                /* eslint-disable camelcase */
                 const { af_author_id, af_percent_affiliation, af_org_id, af_status } = affiliation;
                 newArray.push({ af_author_id, af_percent_affiliation, af_org_id, af_status });
+                /* eslint-enable camelcase */
             });
             return newArray;
         }, []),
