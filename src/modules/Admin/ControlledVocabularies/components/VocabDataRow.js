@@ -4,9 +4,26 @@ import PropTypes from 'prop-types';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
+import VocabTableChild from './VocabTableChild';
+import { useSelector, useDispatch } from 'react-redux';
+import * as actions from 'actions';
 
 export const VocabDataRow = ({ row }) => {
+    const dispatch = useDispatch();
+
+    const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
+
+    const open = vocabOpened.indexOf(row.cvo_id) > -1;
+    const triggerChildren = openState => {
+        // alert('here');
+        // dispatch(actions.clearCCCollectionsList());
+        console.log('openState=', openState);
+        console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
+        dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
+    };
+
     return (
         <Grid
             container
@@ -25,8 +42,11 @@ export const VocabDataRow = ({ row }) => {
                                 id={`expand-row-${row.cvo_id}`}
                                 data-analyticsid={`expand-row-${row.cvo_id}`}
                                 data-testid={`expand-row-${row.cvo_id}`}
+                                onClick={() => {
+                                    triggerChildren(!open);
+                                }}
                             >
-                                {<KeyboardArrowDownIcon />}
+                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </Box>
                     </Grid>
@@ -43,6 +63,13 @@ export const VocabDataRow = ({ row }) => {
                         {''}
                     </Grid>
                 </Grid>
+                {!!open && (
+                    <Grid container>
+                        <Grid item md={12}>
+                            <VocabTableChild parentRow={row} />
+                        </Grid>
+                    </Grid>
+                )}
             </React.Fragment>
         </Grid>
     );
