@@ -28,7 +28,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -703,7 +703,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -1726,7 +1726,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -2461,7 +2461,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -2802,7 +2802,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -3083,7 +3083,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -3543,7 +3543,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -3931,7 +3931,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -4282,7 +4282,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -4675,7 +4675,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -4896,7 +4896,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -5177,7 +5177,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -5398,7 +5398,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -8282,7 +8282,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
@@ -8643,7 +8643,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
               >
                 <div
                   aria-label="Photograph of  Professor J Researcher"
-                  class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+                  class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
                   title="Professor J Researcher"
                 >
                   <img
