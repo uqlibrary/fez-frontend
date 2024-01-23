@@ -24,6 +24,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                 padding: 0,
                 height: 48,
                 overflow: 'hidden',
+                minWidth: '50%',
             }}
         >
             {isSelectable && (
