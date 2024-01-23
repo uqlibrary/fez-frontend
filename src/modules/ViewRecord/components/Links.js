@@ -16,9 +16,24 @@ import { openAccessConfig } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import moment from 'moment';
 
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import componentsLocale from 'locale/components';
+import { getDownloadLicence } from 'helpers/licence';
+
 export class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: false,
+            link: undefined,
+        };
+    }
+    openRdmDownloadUrl = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
     };
 
     LinkRow = ({ link, linkId, description, openAccessStatus }) => (
@@ -150,7 +165,19 @@ export class Links extends PureComponent {
         return {
             index: index,
             link: (
-                <ExternalLink href={link.rek_link} title={linkDescription} id={`publication-${index}`}>
+                <ExternalLink
+                    href={link.rek_link}
+                    title={linkDescription}
+                    id={`publication-${index}`}
+                    {...(isRDM && openAccessStatus.isOpenAccess
+                        ? {
+                              onClick: e => {
+                                  e.preventDefault();
+                                  this.setState({ isOpen: true, link: link.rek_link });
+                              },
+                          }
+                        : {})}
+                >
                     {link.rek_link}
                 </ExternalLink>
             ),
@@ -163,6 +190,7 @@ export class Links extends PureComponent {
         const record = this.props.publication;
 
         const txt = locale.viewRecord.sections.links;
+        const licenceTxt = componentsLocale.components.attachedFiles;
         const pubmedCentralId =
             record.fez_record_search_key_pubmed_central_id &&
             record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
@@ -207,8 +235,16 @@ export class Links extends PureComponent {
         ) {
             return null;
         }
+
         return (
             <Grid xs={12}>
+                <ConfirmationBox
+                    confirmationBoxId="link-rdm-accept-licence"
+                    isOpen={this.state.isOpen}
+                    onAction={() => this.openRdmDownloadUrl(this.state.link)}
+                    onClose={() => this.setState({ isOpen: false, link: undefined })}
+                    locale={licenceTxt.licenceConfirmation(getDownloadLicence(this.props.publication))}
+                />
                 <StandardCard title={txt.title}>
                     <Grid
                         container

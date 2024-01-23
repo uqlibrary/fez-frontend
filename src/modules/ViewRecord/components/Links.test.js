@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Links from './Links';
-import { recordLinks } from 'mock/data/testing/records';
+import { recordLinks, recordWithRDM } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
-import { renderWithRouter } from 'test-utils';
+import { renderWithRouter, fireEvent } from 'test-utils';
 import { getIconTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
 
 function setup(testProps = {}) {
@@ -400,5 +400,30 @@ describe('Component Links ', () => {
         });
 
         expect(container).toMatchSnapshot();
+    });
+
+    it('should be able to trigger and cancel licence confirmation', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRDM,
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(getByTestId('cancel-link-rdm-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('cancel-link-rdm-accept-licence'));
+    });
+
+    it('should be able to trigger and accept licence confirmation', () => {
+        global.open = jest.fn();
+        const { getByTestId } = setup({
+            publication: recordWithRDM,
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(getByTestId('confirm-link-rdm-accept-licence')).toBeInTheDocument();
+        fireEvent.click(getByTestId('confirm-link-rdm-accept-licence'));
+
+        expect(global.open).toHaveBeenCalledWith(
+            'https://rdm.uq.edu.au/files/28783df0-dbaf-11ea-96e8-37be674663fa',
+            '_blank',
+            'noopener,noreferrer',
+        );
     });
 });
