@@ -17,7 +17,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
         <ForwardRef(Checkbox)
           checked={false}
           inputProps={
-            Object {
+            {
               "data-analyticsid": "empty-significance-statement-input",
               "data-testid": "empty-significance-statement-input",
               "id": "empty-significance-statement-input",
@@ -32,7 +32,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           data-testid="empty-significance-statement-label"
           id="empty-significance-statement-label"
           sx={
-            Object {
+            {
               "fontSize": 16,
               "fontWeight": 300,
               "lineHeight": "24px",
@@ -44,7 +44,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
         </ForwardRef(Typography)>
       }
       sx={
-        Object {
+        {
           "margin": 0,
         }
       }
@@ -154,7 +154,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
         <ForwardRef(Checkbox)
           checked={false}
           inputProps={
-            Object {
+            {
               "data-analyticsid": "empty-significance-statement-input",
               "data-testid": "empty-significance-statement-input",
               "id": "empty-significance-statement-input",
@@ -169,7 +169,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
           data-testid="empty-significance-statement-label"
           id="empty-significance-statement-label"
           sx={
-            Object {
+            {
               "fontSize": 16,
               "fontWeight": 300,
               "lineHeight": "24px",
@@ -181,7 +181,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
         </ForwardRef(Typography)>
       }
       sx={
-        Object {
+        {
           "margin": 0,
         }
       }

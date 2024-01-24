@@ -368,7 +368,6 @@ export class ContributorsEditor extends PureComponent {
     handleSoSChange = (oldContribs, newContribs) => {
         const updated = diff(oldContribs, newContribs);
         if (Object.keys(updated).length < 1) {
-            console.log('A');
             return this.state.scaleOfSignificance;
         } else {
             // First check for length changes - that means either a new contrib is added, or one is deleted.
@@ -376,7 +375,6 @@ export class ContributorsEditor extends PureComponent {
             let newList = [];
             if (oldContribs.length < newContribs.length) {
                 // Add a SoS to the list.
-                console.log('B');
                 const newItem = {
                     id: 0,
                     key: 0,
@@ -394,11 +392,8 @@ export class ContributorsEditor extends PureComponent {
                     newList = [newItem];
                 }
             } else if (oldContribs.length > newContribs.length) {
-                console.log('C');
                 let found = false;
                 newList = [...this.state.scaleOfSignificance];
-                console.log('sig is', this.state.scaleOfSignificance);
-                console.log('props is', this.props.scaleOfSignificance);
                 oldContribs.map((contributor, index) => {
                     if (!found && JSON.stringify(contributor) !== JSON.stringify(newContribs[index])) {
                         newList.splice(index, 1);
@@ -406,7 +401,6 @@ export class ContributorsEditor extends PureComponent {
                     }
                 });
             } else {
-                console.log('D');
                 const changedIndexes = [];
                 const scaleOfSignificance = [...this.state.scaleOfSignificance];
                 this.state.scaleOfSignificance.length > 0 &&
@@ -430,11 +424,7 @@ export class ContributorsEditor extends PureComponent {
 
                 newList = scaleOfSignificance;
             }
-            if (newList.length > 0) {
-                this.props.actions.updateAdminScaleSignificance(newList);
-            } else {
-                this.props.actions.clearAdminScaleSignificance();
-            }
+            this.props.actions.updateAdminScaleSignificance(newList);
 
             return newList;
         }

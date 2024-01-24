@@ -92,15 +92,6 @@ export class ScaleOfSignificanceListEditor extends Component {
             showAddForm: false,
             formMode: 'edit',
         };
-
-        if (
-            (!!this.props.scaleOfSignificance && this.props.scaleOfSignificance.length > 0) ||
-            !!this.props.clearedScaleAuthors
-        ) {
-            this.state.itemList = [...this.props.scaleOfSignificance];
-            this.props.onChange(this.transformOutput(this.state.itemList));
-        }
-
         this.state.originalItemList = this.state.itemList;
 
         this.transformOutput = this.transformOutput.bind(this);

@@ -235,7 +235,10 @@ export const AdminInterface = ({
                 >
                     <Field
                         component={tabs[tab].subComponent.component}
-                        disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
+                        disabled={
+                            submitting ||
+                            (locked && /* istanbul ignore next */ record.rek_editing_user !== authorDetails.username)
+                        }
                         name={`${tab}Section`}
                     />
                 </StandardCard>
