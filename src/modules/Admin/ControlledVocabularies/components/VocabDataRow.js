@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
-import VocabTableChild from './VocabTableChild';
+import ChildVocabTable from './ChildVocabTable';
 import { useSelector, useDispatch } from 'react-redux';
 import * as actions from 'actions';
 
@@ -22,6 +22,13 @@ export const VocabDataRow = ({ row }) => {
         console.log('openState=', openState);
         console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
+        // if (openState) {
+        //     dispatch(
+        //         actions.loadChildVocabList({
+        //             pid: row.cvo_id,
+        //         }),
+        //     );
+        // }
     };
 
     return (
@@ -66,7 +73,7 @@ export const VocabDataRow = ({ row }) => {
                 {!!open && (
                     <Grid container>
                         <Grid item md={12}>
-                            <VocabTableChild parentRow={row} />
+                            <ChildVocabTable parentRow={row} />
                         </Grid>
                     </Grid>
                 )}

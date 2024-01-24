@@ -67,6 +67,7 @@ export {
 
 export { vocabulariesList } from './vocabularies';
 export { vocabList } from './vocab';
+export { childVocabList } from './childVocab';
 export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails, orcidSyncStatus, orcidSyncResponse, orcidSyncNullResponse } from './orcid';

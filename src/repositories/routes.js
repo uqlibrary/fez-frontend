@@ -220,6 +220,12 @@ export const VOCAB_LIST_API = () => {
     };
 };
 
+export const CHILD_VOCAB_LIST_API = parentId => {
+    return {
+        apiUrl: `vocabularies/${parentId}`,
+    };
+};
+
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
     const params = getCCParams(config);
