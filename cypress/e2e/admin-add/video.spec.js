@@ -1,5 +1,6 @@
 context('As an admin,', () => {
     it('I can add a video', () => {
+        cy.viewport(1200, 1600);
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection

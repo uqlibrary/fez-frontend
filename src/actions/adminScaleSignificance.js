@@ -5,8 +5,3 @@ export function updateAdminScaleSignificance(items) {
         dispatch({ type: actions.ADMIN_SCALE_SIGNIFICANCE_UPDATED, payload: items });
     };
 }
-export function clearAdminScaleSignificance() {
-    return dispatch => {
-        dispatch({ type: actions.ADMIN_SCALE_SIGNIFICANCE_CLEARED });
-    };
-}

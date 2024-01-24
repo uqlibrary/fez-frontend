@@ -125,7 +125,8 @@ context('Creative Work admin edit, general', () => {
 
         it('loads the correct content in the significance and statement list rows', () => {
             cy.adminEditTabbedView();
-            cy.get('[data-testid="ntro-tab"]').click();
+            // Scale of significance moved into authors tab
+            cy.get('[data-testid="authors-tab"]').click();
             cy.get('[data-testid=ntro-section-content]')
                 .as('NTRO')
                 .within(() => {
@@ -156,7 +157,8 @@ context('Creative Work admin edit, general', () => {
         });
         it('can edit an existing significance and statement row', () => {
             cy.adminEditTabbedView();
-            cy.get('[data-testid="ntro-tab"]').click();
+            // NTRO section now located in authors tab
+            cy.get('[data-testid="authors-tab"]').click();
             cy.get('[data-testid=ntro-section-content]')
                 .as('NTRO')
                 .within(() => {
@@ -200,7 +202,8 @@ context('Creative Work admin edit, general', () => {
 
         it('can edit a significance and statement row where that was previously "Missing"', () => {
             cy.adminEditTabbedView();
-            cy.get('[data-testid="ntro-tab"]').click();
+            // NTRO section now located in authors tab
+            cy.get('[data-testid="authors-tab"]').click();
             cy.get('[data-testid=ntro-section-content]')
                 .as('NTRO')
                 .within(() => {
@@ -239,7 +242,8 @@ context('Creative Work admin edit, general', () => {
 
         it('can reorder the scale-statement row set', () => {
             cy.adminEditTabbedView();
-            cy.get('[data-testid="ntro-tab"]').click();
+            // NTRO section now located in authors tab
+            cy.get('[data-testid="authors-tab"]').click();
             cy.get('[data-testid=ntro-section-content]')
                 .as('NTRO')
                 .within(() => {
@@ -274,7 +278,7 @@ context('Creative Work admin edit, general', () => {
 
         it('can edit the scale-statement row set then be reordered and the record is still updated', () => {
             cy.adminEditTabbedView();
-            cy.get('[data-testid="ntro-tab"]').click();
+            cy.get('[data-testid="authors-tab"]').click();
             cy.get('[data-testid=ntro-section-content]')
                 .as('NTRO')
                 .within(() => {
