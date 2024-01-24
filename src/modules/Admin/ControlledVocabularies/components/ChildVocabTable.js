@@ -62,16 +62,13 @@ export const ChildVocabTable = ({ parentRow }) => {
                     </Grid>
                     {/* Header Row */}
                     <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                        <Grid item md={1}>
-                            {''}
-                        </Grid>
-                        <Grid item md={8} sm={6} xs={6}>
+                        <Grid item md={8}>
                             {labels.title}
                         </Grid>
-                        <Grid item md={1} xs={2} sm={2}>
+                        <Grid item md={2}>
                             {labels.license}
                         </Grid>
-                        <Grid item md={1} xs={2} sm={2}>
+                        <Grid item md={1}>
                             {labels.external_id}
                         </Grid>
                         <Grid item md={1}>
