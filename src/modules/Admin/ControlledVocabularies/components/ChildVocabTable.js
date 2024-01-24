@@ -7,6 +7,8 @@ import locale from 'locale/components';
 import ChildVocabDataRow from './ChildVocabDataRow';
 import { useSelector, useDispatch } from 'react-redux';
 import * as actions from 'actions';
+import { controlledVocabConfig } from 'config/controlledVocabConfig';
+import Typography from '@mui/material/Typography';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -31,6 +33,8 @@ export const ChildVocabTable = ({ parentRow }) => {
     const vocabList = useSelector(state => state.get('viewChildVocabReducer').vocabList);
     const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
     const loadingChildVocabError = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocabError);
+    const totalRecords = useSelector(state => state.get('viewChildVocabReducer').totalRecords);
+
     console.log('loadingChildVocab=', loadingChildVocab);
     console.log('loadingChildVocabError=', loadingChildVocabError);
 
@@ -47,10 +51,14 @@ export const ChildVocabTable = ({ parentRow }) => {
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 <Grid container spacing={0}>
                     <Grid item md={12}>
-                        Title: {parentRow.cvo_title}
-                    </Grid>
-                    <Grid item md={12}>
-                        Key: {parentRow.cvo_id}
+                        <Typography
+                            variant="body2"
+                            sx={{ fontWeight: 600, marginBottom: '10px' }}
+                            id={`total-vocab-${parentRow.cvo_id}`}
+                            data-testid={`total-vocab-${parentRow.cvo_id}`}
+                        >
+                            {controlledVocabConfig.vocabCountTitle(totalRecords, parentRow.cvo_title)}
+                        </Typography>
                     </Grid>
                     {/* Header Row */}
                     <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">

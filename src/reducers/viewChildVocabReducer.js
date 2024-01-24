@@ -24,7 +24,7 @@ const handlers = {
             ...initialState,
             loadingChildVocab: false,
             vocabList: action.payload.data,
-            // totalRecords: action.payload.total,
+            totalRecords: action.payload.total,
             // startRecord: action.payload.from,
             // endRecord: action.payload.to,
             // currentPage: action.payload.current_page,

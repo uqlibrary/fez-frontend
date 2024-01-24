@@ -7,7 +7,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@mui/material/Typography';
-import { controlledVocabConfig } from 'config';
+import { controlledVocabConfig } from 'config/controlledVocabConfig';
 
 import * as actions from 'actions/viewControlledVocab';
 import locale from 'locale/components';
