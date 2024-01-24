@@ -609,6 +609,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.userList })
     .onGet(
         new RegExp(
+            routes.CHILD_VOCAB_LIST_API('451780').apiUrl,
+        ),
+    )
+    .reply(200, { ...mockData.childVocabListFieldsOfResearch })
+    .onGet(
+        new RegExp(
             routes.CHILD_VOCAB_LIST_API('\\d+').apiUrl,
         ),
     )
