@@ -73,7 +73,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     {/* Data Row */}
                     <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
                         {vocabList.map(row => (
-                            <ChildVocabDataRow key={row.cvo_id} row={row} />
+                            <ChildVocabDataRow key={row.controlled_vocab.cvo_id} row={row.controlled_vocab} />
                         ))}
                     </Grid>
                 </Grid>

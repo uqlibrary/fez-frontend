@@ -17,16 +17,20 @@ const handlers = {
         loadingChildVocab: true,
     }),
 
-    [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => ({
-        ...initialState,
-        loadingChildVocab: false,
-        vocabList: action.payload.data,
-        // totalRecords: action.payload.total,
-        // startRecord: action.payload.from,
-        // endRecord: action.payload.to,
-        // currentPage: action.payload.current_page,
-        // perPage: action.payload.per_page,
-    }),
+    [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
+        // code to extract data
+
+        return {
+            ...initialState,
+            loadingChildVocab: false,
+            vocabList: action.payload.data,
+            // totalRecords: action.payload.total,
+            // startRecord: action.payload.from,
+            // endRecord: action.payload.to,
+            // currentPage: action.payload.current_page,
+            // perPage: action.payload.per_page,
+        };
+    },
 
     [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => ({
         ...initialState,

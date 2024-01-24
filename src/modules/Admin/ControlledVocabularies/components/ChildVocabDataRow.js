@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+// import IconButton from '@mui/material/IconButton';
+// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+// import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
 import ChildVocabTable from './ChildVocabTable';
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux';
 // import * as actions from 'actions';
 
@@ -41,25 +43,16 @@ export const ChildVocabDataRow = ({ row }) => {
         >
             <React.Fragment key={row.cvo_id}>
                 <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item xs={1} sm={1} md={1}>
-                        <Box sx={{ float: 'left', width: '24px' }}>
-                            <IconButton
-                                sx={{ paddingTop: '5px' }}
-                                aria-label="expand row"
-                                size="small"
-                                id={`expand-row-${row.cvo_id}`}
-                                data-analyticsid={`expand-row-${row.cvo_id}`}
-                                data-testid={`expand-row-${row.cvo_id}`}
-                                // onClick={() => {
-                                //     triggerChildren(!open);
-                                // }}
-                            >
-                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            </IconButton>
-                        </Box>
-                    </Grid>
                     <Grid item md={8} sm={6} xs={6}>
-                        <Box>{row.cvo_title}</Box>
+                        <Typography variant="body2">
+                            <Link
+                                to={`?id=${row.cvo_id}`}
+                                id={`child-vocab-title-${row.cvo_id}`}
+                                data-testid={`child-vocab-title-${row.cvo_id}`}
+                            >
+                                <Box>{row.cvo_title}</Box>
+                            </Link>
+                        </Typography>
                     </Grid>
                     <Grid item md={1} xs={2} sm={2}>
                         <Box>{/* row.cvo_image_filename*/}</Box>
