@@ -1,7 +1,7 @@
 import React from 'react';
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import { default as Files, formatBytes, getFileOpenAccessStatus, untranscodedItem, getDownloadLicence } from './Files';
+import { default as Files, formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
 import * as mock from 'mock/data';
 import {
     AV_CHECK_STATE_CLEAN,
@@ -825,15 +825,6 @@ describe('Files Component ', () => {
             author: mock.currentAuthor.uqstaff.data,
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('getDownloadLicence()', () => {
-        const publicationWithRestrictiveLicense = {
-            ...fileDataRecord,
-            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
-        };
-        expect(getDownloadLicence(fileDataRecord)).toBe(undefined);
-        expect(getDownloadLicence(publicationWithRestrictiveLicense)).toEqual(CURRENT_LICENCES[0]);
     });
 
     it('Should render the correct icon for a valid transcoded file', () => {

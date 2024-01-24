@@ -62,3 +62,4 @@ export { default as UQ339703} from './recordWithWSoD';
 export { default as recordWithNoAffiliationIssues } from './recordWithNoAffiliationIssues'
 export { default as recordWithIncorrectAffiliation } from './recordWithIncorrectAffiliation'
 export { default as recordWithOrphanedAffiliation } from './recordWithOrphanedAffiliation'
+export { default as recordWithRDM } from './recordWithRDM'
