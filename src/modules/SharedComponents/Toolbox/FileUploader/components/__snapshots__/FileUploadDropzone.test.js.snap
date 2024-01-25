@@ -10,60 +10,56 @@ exports[`Component FileUploadDropzone should render component with default props
     >
       <div
         id="FileUploadDropZone"
+        role="presentation"
+        style="padding: 0px;"
         tabindex="0"
       >
+        <input
+          aria-label="Upload files"
+          data-analyticsid="fez-datastream-info-input"
+          data-testid="fez-datastream-info-input"
+          id="Uploader"
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
         <div
-          aria-disabled="false"
-          class=""
-          style="position: relative; padding: 0px;"
+          class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                  data-testid="CloudUploadIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
-                    data-testid="CloudUploadIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                />
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                  />
+                </svg>
               </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              />
             </div>
           </div>
-          <input
-            aria-label="Upload files"
-            autocomplete="off"
-            data-analyticsid="fez-datastream-info-input"
-            data-testid="fez-datastream-info-input"
-            id="Uploader"
-            multiple=""
-            style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
-            type="file"
-          />
         </div>
       </div>
     </div>
@@ -81,61 +77,56 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
     >
       <div
         id="FileUploadDropZone"
+        role="presentation"
+        style="padding: 0px;"
         tabindex="0"
       >
+        <input
+          aria-label="Upload files"
+          data-analyticsid="fez-datastream-info-input"
+          data-testid="fez-datastream-info-input"
+          id="Uploader"
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
         <div
-          aria-disabled="true"
-          class=""
-          style="position: relative; padding: 0px;"
+          class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container FileUploadTermsAndConditions-root css-17u2nle-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-1gbklo2-MuiTypography-root"
-              />
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-16756mf-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
+                  data-testid="CloudUploadIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ik97yr-MuiSvgIcon-root"
-                    data-testid="CloudUploadIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-                />
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5 5 5z"
+                  />
+                </svg>
               </div>
+              <div
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+              />
             </div>
           </div>
-          <input
-            aria-label="Upload files"
-            autocomplete="off"
-            data-analyticsid="fez-datastream-info-input"
-            data-testid="fez-datastream-info-input"
-            disabled=""
-            id="Uploader"
-            multiple=""
-            style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;"
-            type="file"
-          />
         </div>
       </div>
     </div>
