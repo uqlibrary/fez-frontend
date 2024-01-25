@@ -23,8 +23,8 @@ const handlers = {
         return {
             ...initialState,
             loadingChildVocab: false,
-            vocabList: action.payload.data,
-            totalRecords: action.payload.total,
+            vocabList: action.payload.data ?? [],
+            totalRecords: action.payload.total ?? 0,
             // startRecord: action.payload.from,
             // endRecord: action.payload.to,
             // currentPage: action.payload.current_page,
