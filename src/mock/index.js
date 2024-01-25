@@ -37,7 +37,8 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
+// user = user || 'uqresearcher';
+user = user || 'uqstaff';
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -609,16 +610,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.userList })
     .onGet(
         new RegExp(
-            routes.CHILD_VOCAB_LIST_API('451780').apiUrl,
-        ),
-    )
-    .reply(200, { ...mockData.childVocabList[451780] })
-    .onGet(
-        new RegExp(
             routes.CHILD_VOCAB_LIST_API('\\d+').apiUrl,
         ),
     )
-    .reply(200, { ...mockData.childVocabList[0] })
+    .reply(config=>{
+        let id=config.url.replace(/^.*\/(\d+)$/,'$1') || 0;
+        return [200, { ...mockData.childVocabList[id] }];
+    })
     .onGet(
         new RegExp(
             escapeRegExp(
@@ -626,10 +624,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(config=>{
-        console.log('config=',config);
-        return [200, { ...mockData.vocabList }];
-    })
+    .reply(200, { ...mockData.vocabList })
     // .reply(200, { ...mockData.vocabulariesList })
     .onGet(
         new RegExp(
