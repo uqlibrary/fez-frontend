@@ -626,7 +626,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, { ...mockData.vocabList })
+    .reply(config=>{
+        console.log('config=',config);
+        return [200, { ...mockData.vocabList }];
+    })
     // .reply(200, { ...mockData.vocabulariesList })
     .onGet(
         new RegExp(
