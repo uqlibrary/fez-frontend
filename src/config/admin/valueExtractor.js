@@ -568,9 +568,9 @@ export default {
                 };
             });
 
-            delete record.fez_record_search_key_author;
-            delete record.fez_record_search_key_significance;
-            delete record.fez_record_search_key_creator_contribution_statement;
+            // delete record.fez_record_search_key_author;
+            // delete record.fez_record_search_key_significance;
+            // delete record.fez_record_search_key_creator_contribution_statement;
 
             return returnValue;
         },
