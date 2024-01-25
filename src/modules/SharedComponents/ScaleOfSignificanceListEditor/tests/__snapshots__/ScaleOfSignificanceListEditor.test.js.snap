@@ -1,532 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScaleOfSignificanceListEditor tests should add an entry 1`] = `
-<div>
-  <div
-    id="test-list-editor-list-editor"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
-      data-testid="rek-significance-form"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        style="flex-grow: 1;"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="true"
-            data-testid="rek-significance-label"
-            id="rek-significance-label"
-          >
-            NoLabel
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-          >
-            <div
-              aria-controls=":r1h:"
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-              data-testid="rek-significance-select"
-              id="rek-significance-select"
-              role="combobox"
-              tabindex="0"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </div>
-            <input
-              aria-hidden="true"
-              aria-invalid="true"
-              aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-              data-analyticsid="rek-significance-input"
-              data-testid="rek-significance-input"
-              id="rek-significance-input"
-              required=""
-              tabindex="-1"
-              value=""
-            />
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-              data-testid="ArrowDropDownIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 10l5 5 5-5z"
-              />
-            </svg>
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-1d7hrfi-MuiFormHelperText-root"
-            data-testid="rek-significance-helper-text"
-            id="rek-significance-helper-text"
-          />
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      >
-        <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-        >
-          <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
-          >
-            <input
-              aria-invalid="false"
-              aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-              data-testid="rek-creator-contribution-statement"
-              id="rek-creator-contribution-statement"
-              type="text"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-            >
-              <legend
-                class="css-ihdtdm"
-              >
-                <span
-                  class="notranslate"
-                >
-                  ​
-                </span>
-              </legend>
-            </fieldset>
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-          data-analyticsid="rek-significance-add"
-          data-testid="rek-significance-add"
-          disabled=""
-          id="add-items"
-          tabindex="-1"
-          type="button"
-        >
-          Edit item
-        </button>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-          data-analyticsid="rek-significance-clear"
-          data-testid="rek-significance-clear"
-          id="clear-items"
-          tabindex="0"
-          type="button"
-        />
-      </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      style="flex-grow: 1; padding: 8px;"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-          >
-            Name
-          </span>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-1olnuyg-MuiGrid-root"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-          >
-            Reorder items
-          </span>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-        >
-          <span
-            aria-label="Remove all items"
-            class=""
-            data-mui-internal-clone-element="true"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="delete-all-test-list-editor"
-              data-testid="delete-all-test-list-editor"
-              id="delete-all-test-list-editor"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="DeleteForeverIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                />
-              </svg>
-            </button>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      data-testid="test-list-editor-list"
-      id="test-list-editor-list"
-    >
-      <div
-        data-testid="test-list-editor-list-row-0"
-        id="test-list-editor-list-row-0"
-        style="flex-grow: 1; padding: 8px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scalesignif-author-0"
-                  style="color: rgba(0, 0, 0, 0.5);"
-                >
-                  First
-                   listed author 
-                  (Test, Tom)
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scale-item-0"
-                  id="scale-item-0"
-                >
-                  Missing
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="statement-item-0"
-                  id="statement-item-0"
-                >
-                  Missing
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-              >
-                <span
-                  aria-label="Move item down the order"
-                  class=""
-                  data-mui-internal-clone-element="true"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="test-list-editor-list-row-0-move-down"
-                    data-testid="test-list-editor-list-row-0-move-down"
-                    id="test-list-editor-list-row-0-move-down"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="KeyboardArrowDownIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                      />
-                    </svg>
-                  </button>
-                </span>
-              </div>
-              <span
-                aria-label="Edit this item"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="test-list-editor-list-row-0-edit"
-                  data-testid="test-list-editor-list-row-0-edit"
-                  id="test-list-editor-list-row-0-edit"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="EditIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        data-testid="test-list-editor-list-row-1"
-        id="test-list-editor-list-row-1"
-        style="flex-grow: 1; padding: 8px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scalesignif-author-1"
-                  style="color: rgba(0, 0, 0, 0.5);"
-                >
-                  Second
-                   listed author 
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scale-item-1"
-                  id="scale-item-1"
-                >
-                  Minor
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="statement-item-1"
-                  id="statement-item-1"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
-              >
-                <span
-                  aria-label="Move item up the order"
-                  class=""
-                  data-mui-internal-clone-element="true"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                    data-analyticsid="test-list-editor-list-row-1-move-up"
-                    data-testid="test-list-editor-list-row-1-move-up"
-                    id="test-list-editor-list-row-1-move-up"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="KeyboardArrowUpIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                      />
-                    </svg>
-                  </button>
-                </span>
-              </div>
-              <span
-                aria-label="Edit this item"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="test-list-editor-list-row-1-edit"
-                  data-testid="test-list-editor-list-row-1-edit"
-                  id="test-list-editor-list-row-1-edit"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="EditIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-1-delete"
-                data-testid="test-list-editor-list-row-1-delete"
-                id="test-list-editor-list-row-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ScaleOfSignificanceListEditor tests should process incomplete props without error 1`] = `
 <div>
   <div
@@ -536,6 +9,44 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
       data-testid="rek-significance-form"
     >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
@@ -562,7 +73,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r16:"
+              aria-controls=":r10:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -671,30 +182,6 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
@@ -758,349 +245,6 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
 </div>
 `;
 
-exports[`ScaleOfSignificanceListEditor tests should render add form 1`] = `
-<div>
-  <div
-    id="test-list-editor-list-editor"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
-      data-testid="rek-significance-form"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-        style="flex-grow: 1;"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-significance-label"
-            id="rek-significance-label"
-          >
-            NoLabel
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-          >
-            <div
-              aria-controls=":r1a:"
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-labelledby="rek-significance-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-              data-testid="rek-significance-select"
-              id="rek-significance-select"
-              role="combobox"
-              tabindex="0"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </div>
-            <input
-              aria-hidden="true"
-              aria-invalid="true"
-              aria-labelledby="rek-significance-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-              data-analyticsid="rek-significance-input"
-              data-testid="rek-significance-input"
-              id="rek-significance-input"
-              required=""
-              tabindex="-1"
-              value=""
-            />
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-              data-testid="ArrowDropDownIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 10l5 5 5-5z"
-              />
-            </svg>
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
-            data-testid="rek-significance-helper-text"
-            id="rek-significance-helper-text"
-          />
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-      >
-        <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
-        >
-          <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-15brhq2-MuiInputBase-root-MuiOutlinedInput-root"
-          >
-            <input
-              aria-invalid="false"
-              aria-label="contribution-statement"
-              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-              data-testid="rek-creator-contribution-statement"
-              id="rek-creator-contribution-statement"
-              type="text"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-            >
-              <legend
-                class="css-ihdtdm"
-              >
-                <span
-                  class="notranslate"
-                >
-                  ​
-                </span>
-              </legend>
-            </fieldset>
-          </div>
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-1qpzhgb-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-          data-analyticsid="rek-significance-add"
-          data-testid="rek-significance-add"
-          disabled=""
-          id="add-items"
-          tabindex="-1"
-          type="button"
-        >
-          Add item
-        </button>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-1equabv-MuiGrid-root"
-      >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-          data-analyticsid="rek-significance-clear"
-          data-testid="rek-significance-clear"
-          id="clear-items"
-          tabindex="0"
-          type="button"
-        />
-      </div>
-    </div>
-    <div
-      class="MuiBox-root css-182uewa"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      style="flex-grow: 1; padding: 8px;"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-19d556j-MuiGrid-root"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-6xj14a-MuiGrid-root"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
-          >
-            Name
-          </span>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-        >
-          <span
-            aria-label="Remove all items"
-            class=""
-            data-mui-internal-clone-element="true"
-          >
-            <button
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="delete-all-test-list-editor"
-              data-testid="delete-all-test-list-editor"
-              id="delete-all-test-list-editor"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="DeleteForeverIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                />
-              </svg>
-            </button>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div
-      data-testid="test-list-editor-list"
-      id="test-list-editor-list"
-    >
-      <div
-        data-testid="test-list-editor-list-row-0"
-        id="test-list-editor-list-row-0"
-        style="flex-grow: 1; padding: 8px;"
-      >
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-1x0yq54-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scalesignif-author-0"
-                  style="color: rgba(0, 0, 0, 0.5);"
-                >
-                  First
-                   listed author 
-                  (Test, Tom)
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
-              >
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="scale-item-0"
-                  id="scale-item-0"
-                >
-                  Missing
-                </p>
-              </div>
-              <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-b1im03-MuiGrid-root"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  data-testid="statement-item-0"
-                  id="statement-item-0"
-                >
-                  Missing
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-o9thq8-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
-            >
-              <span
-                aria-label="Edit this item"
-                class=""
-                data-mui-internal-clone-element="true"
-              >
-                <button
-                  aria-label="Edit this item"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                  data-analyticsid="test-list-editor-list-row-0-edit"
-                  data-testid="test-list-editor-list-row-0-edit"
-                  id="test-list-editor-list-row-0-edit"
-                  tabindex="0"
-                  type="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                    data-testid="EditIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                    />
-                  </svg>
-                </button>
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
 <div>
   <div
@@ -1112,6 +256,44 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -1136,7 +318,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r1t:"
+              aria-controls=":r14:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -1247,30 +429,6 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-182uewa"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
       style="flex-grow: 1; padding: 8px;"
     >
       <div
@@ -1409,34 +567,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
     </div>
@@ -1453,6 +584,44 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
       data-testid="rek-significance-form"
     >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
@@ -1479,7 +648,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r7:"
+              aria-controls=":r6:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1590,30 +759,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
@@ -1756,35 +901,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                disabled=""
-                id="test-list-editor-list-row-0-delete"
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
     </div>
@@ -1801,6 +918,44 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
       data-testid="rek-significance-form"
     >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
@@ -1936,30 +1091,6 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
@@ -2100,34 +1231,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
     </div>
@@ -2146,6 +1250,44 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -2170,7 +1312,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":re:"
+              aria-controls=":rc:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -2279,30 +1421,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
@@ -2479,34 +1597,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
       <div
@@ -2624,34 +1715,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-1-delete"
-                data-testid="test-list-editor-list-row-1-delete"
-                id="test-list-editor-list-row-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
     </div>
@@ -2670,6 +1734,44 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -2694,7 +1796,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":rq:"
+              aria-controls=":rm:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -2803,30 +1905,6 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
@@ -3003,34 +2081,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-0-delete"
-                data-testid="test-list-editor-list-row-0-delete"
-                id="test-list-editor-list-row-0-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
       <div
@@ -3148,34 +2199,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
           </div>
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-1lgqump-MuiGrid-root"
-          >
-            <span
-              aria-label="Remove this item"
-              class=""
-              data-mui-internal-clone-element="true"
-            >
-              <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
-                data-analyticsid="test-list-editor-list-row-1-delete"
-                data-testid="test-list-editor-list-row-1-delete"
-                id="test-list-editor-list-row-1-delete"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="DeleteIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
+          />
         </div>
       </div>
     </div>
@@ -3192,6 +2216,44 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-fx6fda-MuiGrid-root"
       data-testid="rek-significance-form"
     >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-fcbanr-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-analyticsid="empty-significance-statement-input"
+              data-indeterminate="false"
+              data-testid="empty-significance-statement-input"
+              id="empty-significance-statement-input"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
+            data-testid="empty-significance-statement-label"
+            id="empty-significance-statement-label"
+          >
+            Create a Missing Statement
+          </div>
+        </label>
+      </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
         style="flex-grow: 1;"
@@ -3218,7 +2280,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r24:"
+              aria-controls=":r1a:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="rek-significance-select"
@@ -3327,30 +2389,6 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
           type="button"
         />
       </div>
-    </div>
-    <div
-      class="MuiBox-root css-1l4fxj8"
-    >
-      <button
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
-        data-analyticsid="rek-significance-showhidebutton"
-        data-testid="rek-significance-showhidebutton"
-        style="color: rgb(255, 255, 255); background-color: rgb(81, 36, 122);"
-        tabindex="0"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="AddIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
-          />
-        </svg>
-      </button>
     </div>
     <div
       style="flex-grow: 1; padding: 8px;"
