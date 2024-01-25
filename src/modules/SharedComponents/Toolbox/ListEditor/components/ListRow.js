@@ -15,6 +15,7 @@ export const ListRow = ({
     canEdit,
     canMoveDown,
     canMoveUp,
+    canDelete,
     disabled,
     hideReorder,
     index,
@@ -49,7 +50,6 @@ export const ListRow = ({
         !disabled && !!onMoveDown && onMoveDown(item, index);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index]);
-
     return (
         <div style={{ flexGrow: 1, padding: 8 }} id={`${listRowId}`} data-testid={`${listRowId}`}>
             <ConfirmationBox
@@ -128,20 +128,22 @@ export const ListRow = ({
                     </Grid>
                 )}
                 <Grid item xs={2} sm={1} textAlign={'center'}>
-                    <Tooltip title={deleteHint}>
-                        <span>
-                            <IconButton
-                                onClick={showConfirmation}
-                                disabled={disabled}
-                                id={`${listRowId}-delete`}
-                                data-analyticsid={`${listRowId}-delete`}
-                                data-testid={`${listRowId}-delete`}
-                                size="large"
-                            >
-                                <Delete />
-                            </IconButton>
-                        </span>
-                    </Tooltip>
+                    {canDelete && (
+                        <Tooltip title={deleteHint}>
+                            <span>
+                                <IconButton
+                                    onClick={showConfirmation}
+                                    disabled={disabled}
+                                    id={`${listRowId}-delete`}
+                                    data-analyticsid={`${listRowId}-delete`}
+                                    data-testid={`${listRowId}-delete`}
+                                    size="large"
+                                >
+                                    <Delete />
+                                </IconButton>
+                            </span>
+                        </Tooltip>
+                    )}
                 </Grid>
             </Grid>
         </div>
@@ -152,6 +154,7 @@ ListRow.propTypes = {
     canEdit: PropTypes.bool,
     canMoveDown: PropTypes.bool,
     canMoveUp: PropTypes.bool,
+    canDelete: PropTypes.bool,
     disabled: PropTypes.bool,
     hideReorder: PropTypes.bool,
     index: PropTypes.number.isRequired,
@@ -180,6 +183,7 @@ ListRow.defaultProps = {
     },
     itemTemplate: GenericTemplate,
     form: 'Form',
+    canDelete: true,
 };
 
 export default React.memo(ListRow);

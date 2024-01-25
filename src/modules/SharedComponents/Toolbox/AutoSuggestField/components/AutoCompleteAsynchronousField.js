@@ -160,7 +160,6 @@ export const AutoCompleteAsynchronousField = ({
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
                 {...((!!OptionTemplate && {
                     renderOption: (props, option) => {
-                        console.log('render', props);
                         return (
                             <li
                                 {...props}
