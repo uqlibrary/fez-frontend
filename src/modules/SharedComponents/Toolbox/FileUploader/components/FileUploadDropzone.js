@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@mui/material/Grid';
@@ -22,37 +22,26 @@ export const removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
     return { validFiles: validFiles, invalidFileNames: invalidFileNames };
 };
 
-export class FileUploadDropzone extends PureComponent {
-    static propTypes = {
-        onDrop: PropTypes.func.isRequired,
-        maxSize: PropTypes.number.isRequired,
-        locale: PropTypes.object.isRequired,
-        fileNameRestrictions: PropTypes.instanceOf(RegExp).isRequired,
-        mimeTypeWhitelist: PropTypes.object.isRequired,
-        filesInQueue: PropTypes.array,
-        fileUploadLimit: PropTypes.number,
-        disabled: PropTypes.bool,
-    };
-
-    static defaultProps = {
-        fileUploadLimit: 10,
-        filesInQueue: [],
-        fileNameRestrictions: FILE_NAME_RESTRICTION,
-        mimeTypeWhitelist: MIME_TYPE_WHITELIST,
-    };
-
-    constructor(props) {
-        super(props);
-        this.dropzoneRef = null;
-    }
+export const FileUploadDropzone = ({
+    onDrop,
+    maxSize,
+    locale,
+    fileNameRestrictions,
+    mimeTypeWhitelist,
+    filesInQueue,
+    fileUploadLimit,
+    disabled,
+}) => {
+    let dropzoneRef = null;
+    const formValues = useContext(FormValuesContext);
 
     /* istanbul ignore next */
-    onReadFileError = (file, errors, resolve) => () => {
+    const onReadFileError = (file, errors, resolve) => () => {
         errors.push(file.name);
         return resolve(false);
     };
 
-    onReadFileLoad = (file, resolve) => () => {
+    const onReadFileLoad = (file, resolve) => () => {
         resolve(file);
     };
 
@@ -63,10 +52,10 @@ export class FileUploadDropzone extends PureComponent {
      * @param errors
      * @param resolve
      */
-    readFile = (file, errors, resolve) => {
+    const readFile = (file, errors, resolve) => {
         const fileReader = new FileReader();
-        fileReader.onerror = this.onReadFileError(file, errors, resolve);
-        fileReader.onload = this.onReadFileLoad(file, resolve);
+        fileReader.onerror = onReadFileError(file, errors, resolve);
+        fileReader.onload = onReadFileLoad(file, resolve);
         const slice = file.slice(0, 10);
         return fileReader.readAsDataURL(slice);
     };
@@ -79,7 +68,7 @@ export class FileUploadDropzone extends PureComponent {
      * @param existingFiles - Files that are already attached from a previous upload.
      * @returns Object
      */
-    removeDuplicate = (incomingFiles, filesInQueue, existingFiles) => {
+    const removeDuplicate = (incomingFiles, filesInQueue, existingFiles) => {
         // Ignore files from incomingFiles which have same name with different extension
         const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce(
             (unique, file) => {
@@ -166,11 +155,11 @@ export class FileUploadDropzone extends PureComponent {
      * @param errors
      * @returns {Promise.<*>}
      */
-    removeDroppedFolders = (filesAndFolders, errors) => {
+    const removeDroppedFolders = (filesAndFolders, errors) => {
         return Promise.all(
             filesAndFolders.map(file => {
                 return new Promise(resolve => {
-                    this.readFile(file, errors, resolve);
+                    readFile(file, errors, resolve);
                 });
             }),
         );
@@ -186,7 +175,7 @@ export class FileUploadDropzone extends PureComponent {
      * @param mimeTypeWhitelist - object ext -> mimetype
      * @returns Object
      */
-    removeInvalidMimeTypes = (files, mimeTypeWhitelist) => {
+    const removeInvalidMimeTypes = (files, mimeTypeWhitelist) => {
         const validMimeTypeFiles = files.filter(
             file =>
                 file &&
@@ -223,7 +212,7 @@ export class FileUploadDropzone extends PureComponent {
      * @param maxAllowed files to return
      * @returns Object
      */
-    removeTooManyFiles = (incomingFiles, maxAllowed) => {
+    const removeTooManyFiles = (incomingFiles, maxAllowed) => {
         const tooManyFiles = incomingFiles.slice(maxAllowed).map(file => file.name);
         const limitedFiles = incomingFiles.slice(0, maxAllowed);
 
@@ -237,36 +226,32 @@ export class FileUploadDropzone extends PureComponent {
      * @param rejectedFiles
      * @private
      */
-    _onDrop = (incomingFiles, rejectedFiles) => {
-        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
+    const _onDrop = (incomingFiles, rejectedFiles) => {
         // eslint-disable-next-line camelcase
-        const existingFiles = this?.context?.formValues?.fez_datastream_info ?? [];
+        const existingFiles = formValues?.formValues?.fez_datastream_info ?? [];
         const notFiles = [];
         // Remove folders from accepted files (async)
-        this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
+        removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
             // Remove invalid file names
             const { validFiles, invalidFileNames } = removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
             // Remove duplicate files from accepted files
-            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(
+            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = removeDuplicate(
                 validFiles,
                 filesInQueue,
                 existingFiles,
             );
 
             // Remove invalid mime type files - based on it's extension
-            const { validMimeTypeFiles, invalidMimeTypeFiles } = this.removeInvalidMimeTypes(
-                uniqueFiles,
-                mimeTypeWhitelist,
-            );
+            const { validMimeTypeFiles, invalidMimeTypeFiles } = removeInvalidMimeTypes(uniqueFiles, mimeTypeWhitelist);
 
             // Remove files exceeding the max number of files allowed
-            const { limitedFiles, tooManyFiles } = this.removeTooManyFiles(
+            const { limitedFiles, tooManyFiles } = removeTooManyFiles(
                 validMimeTypeFiles,
                 fileUploadLimit - filesInQueue.length,
             );
 
-            this.props.onDrop(
+            onDrop(
                 limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })),
                 {
                     tooBigFiles: rejectedFiles.map(file => file.name),
@@ -285,43 +270,55 @@ export class FileUploadDropzone extends PureComponent {
      * Open dropzone on key pressed
      */
     /* istanbul ignore next */
-    _onKeyPress = () => {
-        this.dropzoneRef.open();
+    const _onKeyPress = () => {
+        dropzoneRef.open();
     };
 
-    render() {
-        const { maxSize, disabled, locale } = this.props;
-
-        return (
-            <Grid container>
-                <Grid item xs={12}>
-                    <div tabIndex={0} onKeyPress={this._onKeyPress} id="FileUploadDropZone">
-                        <Dropzone
-                            inputProps={{
-                                id: 'Uploader',
-                                'aria-label': 'Upload files',
-                                'data-analyticsid': 'fez-datastream-info-input',
-                                'data-testid': 'fez-datastream-info-input',
-                            }}
-                            ref={ref => {
-                                this.dropzoneRef = ref;
-                            }}
-                            maxSize={maxSize}
-                            onDrop={this._onDrop}
-                            style={{ padding: '0px' }}
-                            disabled={disabled}
-                            disableClick={disabled}
-                            disablePreview
-                        >
-                            <FileUploadDropzoneStaticContent locale={locale} />
-                        </Dropzone>
-                    </div>
-                </Grid>
+    return (
+        <Grid container>
+            <Grid item xs={12}>
+                <div tabIndex={0} onKeyUp={_onKeyPress} id="FileUploadDropZone">
+                    <Dropzone
+                        inputProps={{
+                            id: 'Uploader',
+                            'aria-label': 'Upload files',
+                            'data-analyticsid': 'fez-datastream-info-input',
+                            'data-testid': 'fez-datastream-info-input',
+                        }}
+                        ref={ref => {
+                            dropzoneRef = ref;
+                        }}
+                        maxSize={maxSize}
+                        onDrop={_onDrop}
+                        style={{ padding: '0px' }}
+                        disabled={disabled}
+                        disableClick={disabled}
+                        disablePreview
+                    >
+                        <FileUploadDropzoneStaticContent locale={locale} />
+                    </Dropzone>
+                </div>
             </Grid>
-        );
-    }
-}
+        </Grid>
+    );
+};
 
-FileUploadDropzone.contextType = FormValuesContext;
+FileUploadDropzone.propTypes = {
+    onDrop: PropTypes.func.isRequired,
+    maxSize: PropTypes.number.isRequired,
+    locale: PropTypes.object.isRequired,
+    fileNameRestrictions: PropTypes.instanceOf(RegExp).isRequired,
+    mimeTypeWhitelist: PropTypes.object.isRequired,
+    filesInQueue: PropTypes.array,
+    fileUploadLimit: PropTypes.number,
+    disabled: PropTypes.bool,
+};
+
+FileUploadDropzone.defaultProps = {
+    fileUploadLimit: 10,
+    filesInQueue: [],
+    fileNameRestrictions: FILE_NAME_RESTRICTION,
+    mimeTypeWhitelist: MIME_TYPE_WHITELIST,
+};
 
 export default FileUploadDropzone;
