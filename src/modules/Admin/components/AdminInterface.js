@@ -225,6 +225,24 @@ export const AdminInterface = ({
                     name={`${tab}Section`}
                 />
             </StandardCard>
+            {tabs[tab].subComponent?.component && (
+                <StandardCard
+                    standardCardId={`${tabs[tab].subComponent.title.toLowerCase().replace(/ /g, '-')}-section`}
+                    title={tabs[tab].subComponent.title}
+                    primaryHeader
+                    squareTop
+                    smallTitle
+                >
+                    <Field
+                        component={tabs[tab].subComponent.component}
+                        disabled={
+                            submitting ||
+                            (locked && /* istanbul ignore next */ record.rek_editing_user !== authorDetails.username)
+                        }
+                        name={`${tab}Section`}
+                    />
+                </StandardCard>
+            )}
         </TabContainer>
     );
 

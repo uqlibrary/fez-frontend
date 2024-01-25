@@ -13,7 +13,7 @@ import VolumeUp from '@mui/icons-material/VolumeUp';
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig } from 'config';
-import { AV_CHECK_STATE_INFECTED, CURRENT_LICENCES } from 'config/general';
+import { AV_CHECK_STATE_INFECTED } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -29,6 +29,7 @@ import {
     isAdded,
     isDerivative,
 } from 'helpers/datastreams';
+import { getDownloadLicence } from 'helpers/licence';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
 import Box from '@mui/material/Box';
@@ -43,11 +44,6 @@ export const getSecurityAccess = (dataStream, props) => {
         /* istanbul ignore next */
         (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     );
-};
-
-export const getDownloadLicence = publication => {
-    const licence = ((publication && publication.fez_record_search_key_license) || {}).rek_license;
-    return CURRENT_LICENCES.find(item => item.value === licence);
 };
 
 export const getFileOpenAccessStatus = (publication, dataStream, props) => {

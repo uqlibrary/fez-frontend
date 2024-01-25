@@ -1,5 +1,6 @@
 context('As an admin,', () => {
     it('I can add a video', () => {
+        cy.viewport(1200, 1600);
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection
@@ -61,9 +62,12 @@ context('Author affiliations', () => {
             .click();
 
         // Apply selections
+        cy.wait(200);
         cy.get('button')
             .contains('Create work')
-            .should('exist')
+            .should('exist');
+        cy.get('button')
+            .contains('Create work')
             .click();
 
         cy.assertAffiliationsAllowed({

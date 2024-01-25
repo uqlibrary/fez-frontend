@@ -1,6 +1,6 @@
 /* prettier-ignore */
 {
-  "parser": "babel-eslint",          // https://github.com/babel/babel-eslint
+  "parser": "@babel/eslint-parser",          // https://github.com/babel/babel
   "env": {
     "browser": true,
     "node": true,
@@ -243,6 +243,12 @@
     "jsx-a11y/href-no-hash": "off",
     "uqlibrary/no-uql-token": 2
   },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+},
   "plugins": [
     "react",
     "react-hooks",

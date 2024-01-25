@@ -1,10 +1,6 @@
 import { pathConfig } from 'config';
-import {
-    checkForThumbnail,
-    getFileOpenAccessStatus,
-    getSecurityAccess,
-    getDownloadLicence,
-} from 'modules/ViewRecord/components/Files';
+import { checkForThumbnail, getFileOpenAccessStatus, getSecurityAccess } from 'modules/ViewRecord/components/Files';
+import { getDownloadLicence } from 'helpers/licence';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { default as config } from 'config/imageGalleryConfig';
 
