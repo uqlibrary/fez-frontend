@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Dropzone from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import Grid from '@mui/material/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
@@ -32,7 +32,6 @@ export const FileUploadDropzone = ({
     fileUploadLimit,
     disabled,
 }) => {
-    let dropzoneRef = null;
     const formValues = useContext(FormValuesContext);
 
     /* istanbul ignore next */
@@ -254,7 +253,7 @@ export const FileUploadDropzone = ({
             onDrop(
                 limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })),
                 {
-                    tooBigFiles: rejectedFiles.map(file => file.name),
+                    tooBigFiles: rejectedFiles.map(file => file.file.name),
                     notFiles: notFiles,
                     invalidFileNames: invalidFileNames,
                     invalidMimeTypeFiles: invalidMimeTypeFiles,
@@ -266,37 +265,21 @@ export const FileUploadDropzone = ({
         });
     };
 
-    /**
-     * Open dropzone on key pressed
-     */
-    /* istanbul ignore next */
-    const _onKeyPress = () => {
-        dropzoneRef.open();
-    };
+    const { getRootProps, getInputProps } = useDropzone({ onDrop: _onDrop, maxSize, disabled, noClick: disabled });
 
     return (
         <Grid container>
             <Grid item xs={12}>
-                <div tabIndex={0} onKeyUp={_onKeyPress} id="FileUploadDropZone">
-                    <Dropzone
-                        inputProps={{
+                <div tabIndex={0} {...getRootProps({ id: 'FileUploadDropZone', style: { padding: '0px' } })}>
+                    <input
+                        {...getInputProps({
                             id: 'Uploader',
                             'aria-label': 'Upload files',
                             'data-analyticsid': 'fez-datastream-info-input',
                             'data-testid': 'fez-datastream-info-input',
-                        }}
-                        ref={ref => {
-                            dropzoneRef = ref;
-                        }}
-                        maxSize={maxSize}
-                        onDrop={_onDrop}
-                        style={{ padding: '0px' }}
-                        disabled={disabled}
-                        disableClick={disabled}
-                        disablePreview
-                    >
-                        <FileUploadDropzoneStaticContent locale={locale} />
-                    </Dropzone>
+                        })}
+                    />
+                    <FileUploadDropzoneStaticContent locale={locale} />
                 </div>
             </Grid>
         </Grid>
