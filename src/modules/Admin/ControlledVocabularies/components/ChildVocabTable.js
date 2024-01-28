@@ -65,8 +65,14 @@ export const ChildVocabTable = ({ parentRow }) => {
                         <Grid item md={1}>
                             {labels.id}
                         </Grid>
-                        <Grid item md={7}>
+                        <Grid item md={3}>
                             {labels.title}
+                        </Grid>
+                        <Grid item md={3}>
+                            <Box>{labels.desc}</Box>
+                        </Grid>
+                        <Grid item md={1}>
+                            <Box>{labels.order}</Box>
                         </Grid>
                         <Grid item md={2}>
                             {labels.license}

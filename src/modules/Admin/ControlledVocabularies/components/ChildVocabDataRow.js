@@ -46,7 +46,7 @@ export const ChildVocabDataRow = ({ row }) => {
                     <Grid item md={1}>
                         <Box>{row.cvo_id}</Box>
                     </Grid>
-                    <Grid item md={7}>
+                    <Grid item md={3}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
@@ -56,6 +56,12 @@ export const ChildVocabDataRow = ({ row }) => {
                                 <Box>{row.cvo_title}</Box>
                             </Link>
                         </Typography>
+                    </Grid>
+                    <Grid item md={3}>
+                        <Box>{row.cvo_desc}</Box>
+                    </Grid>
+                    <Grid item md={1}>
+                        <Box>{row.cvo_order}</Box>
                     </Grid>
                     <Grid item md={2}>
                         <Box>{row.cvo_image_filename}</Box>

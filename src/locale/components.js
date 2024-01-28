@@ -3854,6 +3854,7 @@ export default {
                     id: 'ID',
                     title: 'Title',
                     order: 'Order',
+                    desc: 'Description',
                     license: 'License',
                     external_id: 'External ID',
                     path: 'Path',
