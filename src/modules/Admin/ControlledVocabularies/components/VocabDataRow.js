@@ -19,8 +19,8 @@ export const VocabDataRow = ({ row }) => {
     const triggerChildren = openState => {
         // alert('here');
         // dispatch(actions.clearCCCollectionsList());
-        console.log('openState=', openState);
-        console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
+        // console.log('openState=', openState);
+        // console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
         // if (openState) {
         //     dispatch(

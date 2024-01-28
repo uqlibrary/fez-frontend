@@ -43,7 +43,10 @@ export const ChildVocabDataRow = ({ row }) => {
         >
             <React.Fragment key={row.cvo_id}>
                 <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item md={8}>
+                    <Grid item md={1}>
+                        <Box>{row.cvo_id}</Box>
+                    </Grid>
+                    <Grid item md={7}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
