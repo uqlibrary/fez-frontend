@@ -29,7 +29,7 @@ describe('ControlledVocabularies', () => {
         userIsAdmin.mockImplementation(() => true);
 
         const { getByText } = setup();
-        const txt = 'Displaying 42 total controlled vocabularies';
+        const txt = 'Displaying 42 controlled vocabularies';
         await waitFor(() => getByText(txt));
         expect(getByText(txt)).toBeInTheDocument();
     });
