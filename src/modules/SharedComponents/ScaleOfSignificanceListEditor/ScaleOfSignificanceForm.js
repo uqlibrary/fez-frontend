@@ -121,6 +121,7 @@ export const ScaleOfSignificanceForm = ({
         resetFormLabel,
         id,
         authorOrderAlert,
+        emptySignificanceLabel,
     } = locale;
 
     const isValidSignificance = sig => !!sig;
@@ -133,6 +134,8 @@ export const ScaleOfSignificanceForm = ({
     function getContributionStatement() {
         return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
     }
+
+    console.log('locale:', locale);
 
     return (
         <Grid
@@ -169,7 +172,7 @@ export const ScaleOfSignificanceForm = ({
                             id={'empty-significance-statement-label'}
                             data-testid={'empty-significance-statement-label'}
                         >
-                            Create a Missing Statement
+                            {emptySignificanceLabel}
                         </Typography>
                     }
                 />
