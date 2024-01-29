@@ -2,7 +2,7 @@
   @for $i from 1 through 5 {
     div:nth-of-type(#{$i}) {
       .citationMetrics, .citationMetrics a {
-        color: adjust-hue(hsl(-45, 100%, 20%), ($i/5)*120) !important;
+        color: adjust-hue(hsl(-45, 100%, 20%), calc($i/5)*120) !important;
       }
     }
   }
