@@ -16,7 +16,7 @@ export const ChildVocabDataRow = ({ row }) => {
     // const dispatch = useDispatch();
 
     // const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
-    console.log('row=', row);
+    // console.log('row=', row);
     const open = false;
     // const open = vocabOpened.indexOf(row.cvo_id) > -1;
     // const triggerChildren = openState => {

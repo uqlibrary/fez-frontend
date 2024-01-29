@@ -15,9 +15,6 @@ const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
-    console.log('useDispatch=', typeof useDispatch, 'actions=', typeof actions);
-    // const [sortDirection, setSortDirection] = React.useState('Asc');
-    // const [sortBy, setSortBy] = React.useState('title');
     const open = true;
     React.useEffect(() => {
         /* istanbul ignore else */
