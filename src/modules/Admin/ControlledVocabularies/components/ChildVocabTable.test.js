@@ -22,7 +22,6 @@ function setup(testProps = {}, state={}) {
 describe('ControlledVocabularies ChildVocabTable', () => {
     it('should render the child table', async () => {
         const { getByText } = setup({ parentRow: parentRow});
-        // expect(getByText('AIATSIS codes')).toBeInTheDocument();
         expect(getByText('Description')).toBeInTheDocument();
     });
 });

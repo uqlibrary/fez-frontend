@@ -14,7 +14,6 @@ const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
-    console.log('parentRow=',parentRow);
     const dispatch = useDispatch();
     const open = true;
     React.useEffect(() => {
