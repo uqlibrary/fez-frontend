@@ -1,15 +1,22 @@
 import React from 'react';
 
-import { renderWithRedux } from 'test-utils';
+import { render, WithReduxStore, WithRouter} from 'test-utils';
+import Immutable from 'immutable';
 
 import * as mockData from 'mock/data';
 
 import VocabDataRow from './VocabDataRow';
 
 const vocabDataRow = mockData.vocabList.data[0];
-function setup(testProps = {}) {
-    return renderWithRedux(<VocabDataRow {...testProps} />);
-}
+
+const setup = ( testProps = {}, state = {}) => {
+    return render(
+        <WithReduxStore initialState={Immutable.Map(state)}>
+            <VocabDataRow {...testProps} />
+        </WithReduxStore>
+);
+};
+
 
 describe('ControlledVocabularies VocabDataRow', () => {
     it('should render the row', async () => {
