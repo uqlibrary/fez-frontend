@@ -1,15 +1,23 @@
 import React from 'react';
 
-import { render } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
 import VocabDataRow from './VocabDataRow';
 
 const vocabDataRow = mockData.vocabList.data[0];
-function setup(testProps = {}) {
-    return render(<VocabDataRow {...testProps} />);
-}
+const setup = (testProps = {}, state = {}) => {
+    return render(
+        <WithReduxStore initialState={state}>
+            <VocabDataRow {...testProps} />
+        </WithReduxStore>,
+    );
+};
+
+// function setup(testProps = {}) {
+//     return renderWithRedux(<VocabDataRow {...testProps} />);
+// }
 
 describe('ControlledVocabularies VocabDataRow', () => {
     it('should render the row', async () => {
