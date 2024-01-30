@@ -14,21 +14,21 @@ const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
+    console.log('parentRow=', parentRow);
     const dispatch = useDispatch();
-    const open = true;
+
     React.useEffect(() => {
         /* istanbul ignore else */
-        if (open) {
-            dispatch(
-                actions.loadChildVocabList({
-                    pid: parentRow.cvo_id,
-                }),
-            );
-        }
+        dispatch(
+            actions.loadChildVocabList({
+                pid: parentRow.cvo_id,
+            }),
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [open]);
+    }, []);
     const vocabList = useSelector(state => state.get('viewChildVocabReducer').vocabList);
     const totalRecords = useSelector(state => state.get('viewChildVocabReducer').totalRecords);
+    console.log('vocabList=', vocabList);
 
     return (
         <Box
@@ -88,7 +88,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     );
 };
 ChildVocabTable.propTypes = {
-    // records: PropTypes.array,
     parentRow: PropTypes.object,
 };
 export default ChildVocabTable;
