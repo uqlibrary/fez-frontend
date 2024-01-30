@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -6,14 +6,19 @@ import Box from '@mui/material/Box';
 // import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 // import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
-import ChildVocabTable from './ChildVocabTable';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+
 import AdminActions from './AdminActions';
+import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
+
+import ChildVocabTable from './ChildVocabTable';
 // import { useSelector, useDispatch } from 'react-redux';
 // import * as actions from 'actions';
 
-export const ChildVocabDataRow = ({ row, onAdminEditActionClick }) => {
+export const ChildVocabDataRow = ({ row }) => {
+    const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
+
     // const dispatch = useDispatch();
 
     // const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
@@ -70,7 +75,7 @@ export const ChildVocabDataRow = ({ row, onAdminEditActionClick }) => {
                                 {
                                     label: 'Edit vocabulary',
                                     options: null,
-                                    onClick: onAdminEditActionClick,
+                                    onClick: () => onAdminEditActionClick(row),
                                 },
                             ]}
                         />
@@ -91,6 +96,5 @@ ChildVocabDataRow.propTypes = {
     conf: PropTypes.object,
     row: PropTypes.object,
     labels: PropTypes.object,
-    onAdminEditActionClick: PropTypes.func.isRequired,
 };
 export default ChildVocabDataRow;

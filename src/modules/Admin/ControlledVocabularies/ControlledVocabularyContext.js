@@ -12,28 +12,36 @@ export const ACTION = {
 export const defaultManageDialogState = {
     id: 'controlledVocabulary',
     isOpen: false,
-    covId: undefined,
-    vocab: undefined,
+    parentId: undefined,
+    row: undefined,
     title: undefined,
     action: '',
 };
-export const manageDialogReducer = (state, action) => {
-    switch (action.type) {
+export const manageDialogReducer = (_, action) => {
+    const { type, ...nextState } = action;
+    switch (type) {
         case ACTION.ADD:
             return {
                 ...defaultManageDialogState,
-                ...state,
+                ...nextState,
                 isOpen: true,
                 title: 'Add vocabulary',
-                action: action.type,
+                action: type,
             };
         case ACTION.EDIT: {
-            return {
+            console.log({
                 ...defaultManageDialogState,
-                ...state,
+                ...nextState,
                 isOpen: true,
                 title: 'Update vocabulary',
-                action: action.type,
+                action: type,
+            });
+            return {
+                ...defaultManageDialogState,
+                ...nextState,
+                isOpen: true,
+                title: 'Update vocabulary',
+                action: type,
             };
         }
         case ACTION.CLOSE: {
@@ -53,16 +61,12 @@ export const ControlledVocabulariesProvider = ({ children }) => {
         console.log('onAdminAddActionClick', parentId);
         actionDispatch({ type: ACTION.ADD, parentId });
     };
-    const onAdminEditActionClick = vocab => {
-        console.log('onAdminEditActionClick', vocab);
-        actionDispatch({ type: ACTION.ADD, vocab });
+    const onAdminEditActionClick = row => {
+        console.log('onAdminEditActionClick', row);
+        actionDispatch({ type: ACTION.EDIT, row });
     };
     const onHandleDialogClickClose = () => {
         actionDispatch({ type: ACTION.CLOSE });
-    };
-
-    const onHandleDialogClickSave = data => {
-        console.log('onManageDialogClickSave', data);
     };
 
     return (
@@ -72,7 +76,6 @@ export const ControlledVocabulariesProvider = ({ children }) => {
                     onAdminAddActionClick,
                     onAdminEditActionClick,
                     onHandleDialogClickClose,
-                    onHandleDialogClickSave,
                 }}
             >
                 {children}

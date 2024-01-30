@@ -13,7 +13,10 @@ export default {
             component: props => (
                 <TextField variant="standard" {...props} inputProps={{ ...props.inputProps, maxLength: 8 }} />
             ),
-            validate: (value, _, action) => action === 'edit' && isEmptyStr(value),
+            validate: (value, _, action) => {
+                console.log(value, action);
+                return action === 'edit' && !Number.isFinite(value);
+            },
             fieldParams: { canEdit: false, renderInAdd: false },
         },
         cvo_title: {
@@ -52,6 +55,10 @@ export default {
         },
         cvo_order: {
             component: props => <TextField variant="standard" {...props} />,
+            validate: value => {
+                if (typeof value === 'string' && value === '') return false;
+                else return !Number.isFinite(parseInt(value, 10));
+            },
             fieldParams: {
                 canEdit: true,
                 canAdd: true,

@@ -33,13 +33,13 @@ const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
     },
 }));
 
-export const ControlledVocabularies = () => {
+const ControlledVocabularies = () => {
     const dispatch = useDispatch();
     const sortedList = useSelector(state => state.get('viewVocabReducer').vocabList);
     const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
-    const actions = useContext(ControlledVocabulariesActionContext);
+    const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const adminDialogState = useContext(ControlledVocabulariesStateContext);
 
     React.useEffect(() => {
@@ -50,62 +50,71 @@ export const ControlledVocabularies = () => {
     const txt = locale.components.controlledVocabulary;
 
     const labels = txt.columns.labels;
+
+    const onHandleDialogClickSave = data => {
+        console.log('onManageDialogClickSave', data);
+    };
+
+    return (
+        <StandardPage title={txt.title.controlledVocabulary}>
+            <UpdateDialog
+                {...adminDialogState}
+                locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
+                columns={txt.form.columns}
+                fields={fieldConfig.fields}
+                onCancelAction={onHandleDialogClickClose}
+                onAction={onHandleDialogClickSave}
+            />
+            {!!!loadingVocabError && (
+                <React.Fragment>
+                    <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
+                        <StyledAddButtonWrapper data-testid="admin-add-community">
+                            <Button
+                                data-testid="admin-add-vocabulary-button"
+                                startIcon={<Add />}
+                                variant={'contained'}
+                                color={'primary'}
+                                onClick={onAdminAddActionClick}
+                            >
+                                Add Vocabulary
+                            </Button>
+                        </StyledAddButtonWrapper>
+                    </Box>
+                    <StandardCard noHeader style={{ marginTop: 10 }}>
+                        {!!!loadingVocab && (
+                            <Typography
+                                variant="body2"
+                                sx={{ fontWeight: 600, marginBottom: '10px' }}
+                                id="total-vocab"
+                                data-testid="total-vocab"
+                            >
+                                {controlledVocabConfig.vocabCountTitle(totalRecords)}
+                            </Typography>
+                        )}
+
+                        {sortedList.length > 0 ? (
+                            <VocabTable records={sortedList} labels={labels} />
+                        ) : (
+                            <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
+                        )}
+                    </StandardCard>
+                </React.Fragment>
+            )}
+            {!!loadingVocabError && (
+                <Grid item xs={12} style={{ marginTop: 10 }}>
+                    <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
+                </Grid>
+            )}
+        </StandardPage>
+    );
+};
+
+export const ControlledVocabulariesWrapper = () => {
     return (
         <ControlledVocabulariesProvider>
-            {console.log(actions)}
-            <StandardPage title={txt.title.controlledVocabulary}>
-                <UpdateDialog
-                    {...adminDialogState}
-                    locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
-                    columns={txt.form.columns}
-                    fields={fieldConfig.fields}
-                    row={{}}
-                    onCancelAction={actions.onHandleDialogClickClose}
-                    onAction={actions.onHandleDialogClickSave}
-                />
-                {!!!loadingVocabError && (
-                    <React.Fragment>
-                        <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
-                            <StyledAddButtonWrapper data-testid="admin-add-community">
-                                <Button
-                                    data-testid="admin-add-vocabulary-button"
-                                    startIcon={<Add />}
-                                    variant={'contained'}
-                                    color={'primary'}
-                                    onClick={actions.onAdminAddActionClick}
-                                >
-                                    Add Vocabulary
-                                </Button>
-                            </StyledAddButtonWrapper>
-                        </Box>
-                        <StandardCard noHeader style={{ marginTop: 10 }}>
-                            {!!!loadingVocab && (
-                                <Typography
-                                    variant="body2"
-                                    sx={{ fontWeight: 600, marginBottom: '10px' }}
-                                    id="total-vocab"
-                                    data-testid="total-vocab"
-                                >
-                                    {controlledVocabConfig.vocabCountTitle(totalRecords)}
-                                </Typography>
-                            )}
-
-                            {sortedList.length > 0 ? (
-                                <VocabTable records={sortedList} labels={labels} />
-                            ) : (
-                                <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
-                            )}
-                        </StandardCard>
-                    </React.Fragment>
-                )}
-                {!!loadingVocabError && (
-                    <Grid item xs={12} style={{ marginTop: 10 }}>
-                        <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
-                    </Grid>
-                )}
-            </StandardPage>
+            <ControlledVocabularies />
         </ControlledVocabulariesProvider>
     );
 };
 
-export default React.memo(ControlledVocabularies);
+export default React.memo(ControlledVocabulariesWrapper);

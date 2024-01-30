@@ -78,7 +78,9 @@ export const VocabDataRow = ({ row }) => {
                                 {
                                     label: 'Edit vocabulary',
                                     options: null,
-                                    onClick: onAdminEditActionClick,
+                                    onClick: () => {
+                                        onAdminEditActionClick(row);
+                                    },
                                 },
                             ]}
                         />
