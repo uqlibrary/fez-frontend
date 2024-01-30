@@ -39,8 +39,6 @@ const handlers = {
     }),
 
     [actions.SET_OPENED_VOCAB]: (state, action) => {
-        console.log('action=', action);
-        // return state;
         const collectionArray = [...state.vocabOpened];
         !!action.payload.open
             ? collectionArray.push(action.payload.id)

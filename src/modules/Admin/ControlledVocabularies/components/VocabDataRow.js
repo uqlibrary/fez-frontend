@@ -17,18 +17,7 @@ export const VocabDataRow = ({ row }) => {
 
     const open = vocabOpened.indexOf(row.cvo_id) > -1;
     const triggerChildren = openState => {
-        // alert('here');
-        // dispatch(actions.clearCCCollectionsList());
-        // console.log('openState=', openState);
-        // console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
-        // if (openState) {
-        //     dispatch(
-        //         actions.loadChildVocabList({
-        //             pid: row.cvo_id,
-        //         }),
-        //     );
-        // }
     };
 
     return (
@@ -82,8 +71,6 @@ export const VocabDataRow = ({ row }) => {
     );
 };
 VocabDataRow.propTypes = {
-    conf: PropTypes.object,
     row: PropTypes.object,
-    labels: PropTypes.object,
 };
 export default VocabDataRow;
