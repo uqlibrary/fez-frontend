@@ -26,7 +26,7 @@ export const ChildVocabDataRow = ({ row }) => {
                                 id={`child-vocab-title-${row.cvo_id}`}
                                 data-testid={`child-vocab-title-${row.cvo_id}`}
                             >
-                                <Box>{row.cvo_title}</Box>
+                                {row.cvo_title}
                             </Link>
                         </Typography>
                     </Grid>
