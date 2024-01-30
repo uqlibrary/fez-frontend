@@ -1816,8 +1816,7 @@ export default {
         },
         culturalNoticeOC: {
             title: 'Open to Collaborate',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg',
+            imagePath: 'https://localcontexts.org/wp-content/uploads/2020/11/ci_notice_open_to_collaborate.png',
             text: (
                 <span>
                     The University of Queensland is committed to the development of new modes of collaboration,

@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -120,7 +119,6 @@ export const ScaleOfSignificanceForm = ({
         contributionStatementInputFieldLabel,
         resetFormLabel,
         id,
-        authorOrderAlert,
         emptySignificanceLabel,
     } = locale;
 
@@ -145,12 +143,6 @@ export const ScaleOfSignificanceForm = ({
             alignItems="center"
             data-testid="rek-significance-form"
         >
-            {!!authorOrderAlert && (
-                <Grid item xs={12}>
-                    <Alert {...authorOrderAlert} />
-                </Grid>
-            )}
-
             <Grid item xs={12}>
                 <FormControlLabel
                     sx={{ margin: 0 }}
