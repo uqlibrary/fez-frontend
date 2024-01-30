@@ -257,6 +257,7 @@ export class AdditionalInformation extends PureComponent {
                         backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
                         width: 100,
                         height: 100,
+                        backgroundSize: 'cover',
                     }}
                 />
                 <br />
