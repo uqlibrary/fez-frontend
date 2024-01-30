@@ -4,7 +4,7 @@ exports[`Dashboard Author Details test Render the authors details as expected fo
 <div>
   <div
     aria-label="Photograph of  Professor undefined undefined"
-    class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
+    class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
     title="Professor undefined undefined"
   >
     <img

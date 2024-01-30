@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -155,6 +156,7 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH,
         }),
+        new ESLintPlugin({ exclude: ['node_modules', 'custom_modules'] }),
         new RobotstxtPlugin(options),
         {
             // custom plugin that fires at the end of the build process, and outputs
@@ -199,12 +201,6 @@ const webpackConfig = {
     },
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                exclude: [/node_modules/, /custom_modules/],
-                enforce: 'pre',
-                use: 'eslint-loader',
-            },
             {
                 test: /\.js?$/,
                 include: [resolve(__dirname, 'src')],

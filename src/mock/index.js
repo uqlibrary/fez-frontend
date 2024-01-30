@@ -389,6 +389,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(config => {
         return [200, { data: { ...mockData.recordWithProblematicAuthorAffiliations } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:0ff5a8a' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordWithRDM } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
     .reply(config => {
         return [200, { data: [...mockData.organisationalUnits] }];

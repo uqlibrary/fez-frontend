@@ -178,19 +178,27 @@ export const AdminContainer = ({
                                         component: AuthorsSection,
                                         activated: isActivated(),
                                         numberOfErrors: tabErrors.current.authorsSection || null,
+                                        subComponent: {
+                                            title: 'NTRO',
+                                            component: NTRO_SUBTYPES.includes(
+                                                !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
+                                            )
+                                                ? NtroSection
+                                                : null,
+                                        },
                                     },
                                     identifiers: {
                                         component: IdentifiersSection,
                                         activated: isActivated(),
                                     },
-                                    ntro: {
-                                        component: NtroSection,
-                                        activated:
-                                            isActivated() &&
-                                            NTRO_SUBTYPES.includes(
-                                                !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
-                                            ),
-                                    },
+                                    // ntro: {
+                                    //     component: NtroSection,
+                                    //     activated:
+                                    //         isActivated() &&
+                                    //         NTRO_SUBTYPES.includes(
+                                    //             !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
+                                    //         ),
+                                    // },
                                     grants: {
                                         component: GrantInformationSection,
                                         activated:
