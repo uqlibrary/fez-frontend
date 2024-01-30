@@ -3861,6 +3861,33 @@ export default {
                     actions: 'Actions',
                 },
             },
+            form: {
+                actions: 'Actions',
+                addButtonLabel: 'Add User',
+                columns: {
+                    cvo_id: {
+                        label: 'ID',
+                    },
+                    cvo_title: {
+                        label: 'Title',
+                    },
+                    cvo_desc: {
+                        label: 'Description',
+                    },
+                    cvo_image_filename: {
+                        label: 'Image file name',
+                    },
+                    cvo_external_id: {
+                        label: 'External ID',
+                    },
+                    cvo_order: {
+                        label: 'Order',
+                    },
+                    cvo_hide: {
+                        label: 'Disable',
+                    },
+                },
+            },
         },
         favouriteJournals: {
             title: 'My Favourite Journals',

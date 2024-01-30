@@ -9,14 +9,15 @@ import Grid from '@mui/material/Grid';
 import ChildVocabTable from './ChildVocabTable';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import AdminActions from './AdminActions';
 // import { useSelector, useDispatch } from 'react-redux';
 // import * as actions from 'actions';
 
-export const ChildVocabDataRow = ({ row }) => {
+export const ChildVocabDataRow = ({ row, onAdminEditActionClick }) => {
     // const dispatch = useDispatch();
 
     // const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
-    console.log('row=', row);
+
     const open = false;
     // const open = vocabOpened.indexOf(row.cvo_id) > -1;
     // const triggerChildren = openState => {
@@ -61,7 +62,18 @@ export const ChildVocabDataRow = ({ row }) => {
                         <Box>{row.cvo_external_id}</Box>
                     </Grid>
                     <Grid item md={1}>
-                        {''}
+                        <AdminActions
+                            vocab={row.cvo_id}
+                            id={`admin-actions-${row.cvo_id}`}
+                            data-testid={`admin-actions-${row.cvo_id}`}
+                            adminActions={[
+                                {
+                                    label: 'Edit vocabulary',
+                                    options: null,
+                                    onClick: onAdminEditActionClick,
+                                },
+                            ]}
+                        />
                     </Grid>
                 </Grid>
                 {!!open && (
@@ -79,5 +91,6 @@ ChildVocabDataRow.propTypes = {
     conf: PropTypes.object,
     row: PropTypes.object,
     labels: PropTypes.object,
+    onAdminEditActionClick: PropTypes.func.isRequired,
 };
 export default ChildVocabDataRow;

@@ -1,21 +1,28 @@
-import React from 'react';
-
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import locale from 'locale/components';
-import ChildVocabDataRow from './ChildVocabDataRow';
-import { useSelector, useDispatch } from 'react-redux';
-import * as actions from 'actions';
-import { controlledVocabConfig } from 'config/controlledVocabConfig';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Add from '@mui/icons-material/Add';
+
+import locale from 'locale/components';
+import * as actions from 'actions';
+
+import ChildVocabDataRow from './ChildVocabDataRow';
+import { controlledVocabConfig } from 'config/controlledVocabConfig';
+import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
-    console.log('useDispatch=', typeof useDispatch, 'actions=', typeof actions);
+    const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
+
     // const [sortDirection, setSortDirection] = React.useState('Asc');
     // const [sortBy, setSortBy] = React.useState('title');
     const open = true;
@@ -35,8 +42,13 @@ export const ChildVocabTable = ({ parentRow }) => {
     const loadingChildVocabError = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocabError);
     const totalRecords = useSelector(state => state.get('viewChildVocabReducer').totalRecords);
 
-    console.log('loadingChildVocab=', loadingChildVocab);
-    console.log('loadingChildVocabError=', loadingChildVocabError);
+    const handleAddActionClick = () => {
+        console.log('handleAddActionClick', parentRow.cvo_id);
+        onAdminAddActionClick(parentRow.cvo_id);
+    };
+    const onAdminEditActionClick = vocab => {
+        console.log('onAdminEditActionClick', vocab);
+    };
 
     return (
         <Box
@@ -48,6 +60,17 @@ export const ChildVocabTable = ({ parentRow }) => {
             data-testid={`vocab-table-${parentRow.cvo_id}`}
             id={`vocab-table-${parentRow.cvo_id}`}
         >
+            <Button
+                id={`admin-add-community-button-${parentRow.cvo_id}`}
+                data-testid={`admin-add-community-button-${parentRow.cvo_id}`}
+                startIcon={<Add />}
+                variant={'contained'}
+                color={'primary'}
+                sx={{ marginBottom: '10px' }}
+                onClick={handleAddActionClick}
+            >
+                Add Child Vocabulary
+            </Button>
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 <Grid container spacing={0}>
                     <Grid item md={12}>
@@ -78,7 +101,11 @@ export const ChildVocabTable = ({ parentRow }) => {
                     {/* Data Row */}
                     <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
                         {vocabList.map(row => (
-                            <ChildVocabDataRow key={row.controlled_vocab.cvo_id} row={row.controlled_vocab} />
+                            <ChildVocabDataRow
+                                key={row.controlled_vocab.cvo_id}
+                                row={row.controlled_vocab}
+                                onAdminEditActionClick={onAdminEditActionClick}
+                            />
                         ))}
                     </Grid>
                 </Grid>
