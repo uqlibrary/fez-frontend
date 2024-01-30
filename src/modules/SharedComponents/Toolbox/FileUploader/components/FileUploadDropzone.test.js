@@ -43,22 +43,6 @@ describe('Component FileUploadDropzone', () => {
         expect(container).toMatchSnapshot();
     });
 
-    /* it('should open files selection dialog', () => {
-        const wrapper = setup({}, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        const testFn = jest.fn();
-
-        wrapper.find('FileUploadDropzone').instance().dropzoneRef.open = testFn;
-        wrapper
-            .find('FileUploadDropzone')
-            .instance()
-            ._onKeyPress();
-
-        wrapper.update();
-        expect(testFn).toHaveBeenCalled();
-    });*/
-
     it('should remove duplicate files', async () => {
         const onDropFn = jest.fn();
         const { getByTestId } = setup({ onDrop: onDropFn });
@@ -101,6 +85,7 @@ describe('Component FileUploadDropzone', () => {
         });
     });
 
+    // eslint-disable-next-line max-len
     it('should remove files with same filename but different extension from dropped incoming files if already exist', async () => {
         const onDropFn = jest.fn();
         const { getByTestId } = setup(
@@ -294,11 +279,9 @@ describe('Component FileUploadDropzone', () => {
             dataTransfer: { files: [], types: [] },
         });
 
+        // onDrop cb is not being called when there's no file dropped
         await waitFor(() => {
-            expect(onDropFn).toHaveBeenCalledWith(
-                [],
-                expect.objectContaining({ duplicateFiles: [], sameFileNameWithDifferentExt: [] }),
-            );
+            expect(onDropFn).not.toHaveBeenCalled();
         });
     });
 
@@ -309,7 +292,7 @@ describe('Component FileUploadDropzone', () => {
         const file2 = new File(['hello'], 'a.002.zip', { type: 'application/zip' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
-            dataTransfer: { files: [file1, file2], types: [] },
+            dataTransfer: { files: [file1, file2], types: ['Files', 'Files'] },
         });
 
         await waitFor(() => {
@@ -354,7 +337,7 @@ describe('Component FileUploadDropzone', () => {
         const file2 = new File(['hello'], 'b.txt', { type: 'text/plain' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
-            dataTransfer: { files: [file1, file2], types: [] },
+            dataTransfer: { files: [file1, file2], types: ['Files', 'Files'] },
         });
 
         await waitFor(() => {
@@ -373,7 +356,7 @@ describe('Component FileUploadDropzone', () => {
         const file2 = new File(['hello'], 'b.png', { type: 'image/png' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
-            dataTransfer: { files: [file1, file2], types: [] },
+            dataTransfer: { files: [file1, file2], types: ['Files', 'Files'] },
         });
 
         await waitFor(() => {

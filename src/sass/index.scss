@@ -1,13 +1,13 @@
 // Charts styles from toolbox
-@import "./charts";
+@use "./charts";
 // SVG Icons
-@import "./icons";
+@use "./icons";
 // Import the fez-frontend modules styles
-@import './components';
+@use './components';
 // Print styles
-@import "./print";
+@use "./print";
 // Browser update script styles
-@import './browserUpdate';
+@use './browserUpdate';
 
 html, body {
   overflow: hidden;
