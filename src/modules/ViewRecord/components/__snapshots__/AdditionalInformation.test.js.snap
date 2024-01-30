@@ -2002,7 +2002,7 @@ exports[`Additional Information Component  should render component with Attribut
                     <div
                       class="fez-icon_cilabel"
                       data-testid="fez-icon-cilabel"
-                      style="background-image: url(https://localcontexts.org/wp-content/uploads/2020/11/ci_notice_attribution_incomplete.png); width: 100px; height: 100px;"
+                      style="background-image: url(https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png); width: 100px; height: 100px;"
                     />
                     <br />
                     <strong>
