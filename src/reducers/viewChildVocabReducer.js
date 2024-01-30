@@ -19,9 +19,8 @@ const handlers = {
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
         // code to extract data
-
         return {
-            ...initialState,
+            ...state,
             loadingChildVocab: false,
             vocabList: action.payload.data ?? [],
             totalRecords: action.payload.total ?? 0,
@@ -29,7 +28,7 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => ({
-        ...initialState,
+        ...state,
         loadingChildVocab: false,
         loadingChildVocabError: action.payload,
     }),
