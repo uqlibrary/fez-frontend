@@ -1824,7 +1824,7 @@ export default {
         },
         culturalNoticeOC: {
             title: 'Open to Collaborate',
-            imagePath: 'https://localcontexts.org/wp-content/uploads/2020/11/ci_notice_open_to_collaborate.png',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png',
             text: (
                 <span>
                     The University of Queensland is committed to the development of new modes of collaboration,
@@ -1844,7 +1844,7 @@ export default {
         },
         culturalNoticeAI: {
             title: 'Attribution Incomplete',
-            imagePath: 'https://localcontexts.org/wp-content/uploads/2020/11/ci_notice_attribution_incomplete.png',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png',
             text: (
                 <span>
                     Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are

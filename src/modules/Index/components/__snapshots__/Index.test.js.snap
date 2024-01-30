@@ -204,7 +204,7 @@ exports[`Index page should render placeholders 1`] = `
                     <img
                       alt="Open to Collaborate"
                       class="css-rd2owr"
-                      src="https://localcontexts.org/wp-content/uploads/2020/11/ci_notice_open_to_collaborate.png"
+                      src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                     />
                     <p
                       class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
