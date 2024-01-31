@@ -23,14 +23,6 @@ const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ i
     );
 };
 
-// function setup(testProps = {}, state={}) {
-//     return render(
-//         <WithReduxStore initialState={Immutable.Map(state)}>
-//             <ChildVocabTable {...testProps} />
-//         </WithReduxStore>
-//     );
-// }
-
 describe('ControlledVocabularies ChildVocabTable', () => {
     it('should render the child table', async () => {
         mockApi.onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
