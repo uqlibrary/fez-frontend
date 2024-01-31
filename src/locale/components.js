@@ -905,12 +905,7 @@ export default {
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
                         editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
                         addEntryButton: 'Add entry',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                            alertId: 'alert-info',
-                        },
+                        authorOrderAlert: null,
                     },
                 },
                 header: {
@@ -953,11 +948,8 @@ export default {
                         editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         resetFormLabel: 'Cancel',
                         deleteHint: 'Clear this statement',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                        },
+                        authorOrderAlert: null,
+                        emptySignificanceLabel: 'Create a Missing Scale/Significance and Research Statement',
                     },
                 },
                 header: {
