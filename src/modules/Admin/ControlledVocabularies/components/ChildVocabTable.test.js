@@ -57,11 +57,13 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         expect(getByText('Description')).toBeInTheDocument();
         await waitFor(() => 
         {
-            // getByText('Yukulta');
-            expect(getByTestId('child-vocab-title-453670')).toBeDefined();
+            //get text not working
+            // expect(getByText('Yukulta')).toBeInTheDocument();
+            //getByTestId works
+            // expect(getByTestId('child-vocab-title-453670')).toBeDefined();
+            expect(getByTestId('child-vocab-title-453670')).toBeInTheDocument();
         }
         );
-        // expect(getByText('Yukulta')).toBeInTheDocument();
         
     });
 });
