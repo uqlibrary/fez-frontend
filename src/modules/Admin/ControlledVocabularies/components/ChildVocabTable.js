@@ -14,7 +14,6 @@ const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
-    console.log('parentRow=', parentRow);
     const dispatch = useDispatch();
 
     React.useEffect(() => {
@@ -28,7 +27,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     }, []);
     const vocabList = useSelector(state => state.get('viewChildVocabReducer').vocabList);
     const totalRecords = useSelector(state => state.get('viewChildVocabReducer').totalRecords);
-    console.log('vocabList=', vocabList);
 
     return (
         <Box
