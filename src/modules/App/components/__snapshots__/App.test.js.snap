@@ -666,7 +666,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1175,7 +1175,7 @@ exports[`Application component should determine if it has incomplete works from 
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -1678,7 +1678,7 @@ exports[`Application component should determine if it has incomplete works from 
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2181,7 +2181,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -2631,7 +2631,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3081,7 +3081,7 @@ exports[`Application component should render app for account with fez author wit
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
@@ -3811,7 +3811,7 @@ exports[`Application component should render for anon user 1`] = `
                         <img
                           alt="Open to Collaborate"
                           class="css-rd2owr"
-                          src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                          src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
                           class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"

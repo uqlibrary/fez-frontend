@@ -3373,8 +3373,7 @@ export default {
         },
         culturalNoticeAI: {
             title: 'Attribution Incomplete',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png',
             text:
                 'Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution',
         },
