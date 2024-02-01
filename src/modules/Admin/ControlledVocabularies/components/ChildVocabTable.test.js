@@ -30,7 +30,6 @@ describe('ControlledVocabularies ChildVocabTable', () => {
 
         const initState = {};
         const { getByText, getByTestId } = setup({ parentRow: parentRow }, initState);
-        // ztodo: when loading one children, it updated the other expanded children.
         expect(getByText('Description')).toBeInTheDocument();
         await waitFor(() => {
             expect(getByTestId('child-vocab-title-453670')).toBeInTheDocument();

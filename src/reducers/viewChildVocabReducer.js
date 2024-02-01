@@ -18,11 +18,10 @@ const handlers = {
     }),
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        console.log('action=', action);
-        console.log('state=', state);
         if (!action.payload.data || action.payload.data.length <= 0) {
             return {
-                ...state,
+                // ...state,
+                openedVocabLists: state.openedVocabLists,
                 loadingChildVocab: false,
             };
         }
@@ -35,24 +34,12 @@ const handlers = {
             },
             ...state.openedVocabLists,
         ];
-        console.log('list=', list);
         const filteredList = list.filter(obj => {
-            const isPresent = uniqueValues.has(obj.data.cvr_parent_cvo_id);
-            uniqueValues.add(obj.data.cvr_parent_cvo_id);
+            const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
+            uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
             return !isPresent;
         });
 
-        console.log('filteredList=', filteredList);
-        // console.log('action=', action);
-        // // code to extract data
-        // const existingList = state.openedVocabLists;
-        // if (action.payload.data && action.payload.data.length > 0) {
-        //     const parentId = action.payload.data[0].cvr_parent_cvo_id;
-        //     existingList[parentId] = {
-        //         data: action.payload.data,
-        //         total: action.payload.total,
-        //     };
-        // }
         return {
             ...initialState,
             loadingChildVocab: false,
