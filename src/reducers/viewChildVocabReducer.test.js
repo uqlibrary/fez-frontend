@@ -51,6 +51,29 @@ describe('viewChildVocab reducer', () => {
         expect(test).toEqual(expected);
     });
 
+    it('sets child controlled vocabulary loaded state with empty payload', () => {
+        const previousState = {
+            ...initialState,
+            loadingChildVocab: true,
+            openedVocabLists: [
+                {
+                    total: 1,
+                    data: [{ item: 'test' }],
+                },
+            ],
+        };
+        const expected = {
+            ...previousState,
+            loadingChildVocab: false,
+        };
+
+        const test = viewChildVocabReducer(previousState, {
+            type: VIEW_CHILD_VOCAB_LOADED,
+            payload: {},
+        });
+        expect(test).toEqual(expected);
+    });
+
     it('sets child controlled vocabulary failed state', () => {
         const previousState = {
             ...initialState,

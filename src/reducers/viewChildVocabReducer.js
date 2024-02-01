@@ -20,8 +20,7 @@ const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
         if (!action.payload.data || action.payload.data.length <= 0) {
             return {
-                // ...state,
-                openedVocabLists: state.openedVocabLists,
+                ...state,
                 loadingChildVocab: false,
             };
         }
