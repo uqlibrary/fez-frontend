@@ -13,35 +13,33 @@ export const defaultManageDialogState = {
     id: 'controlledVocabulary',
     isOpen: false,
     parentId: undefined,
-    row: undefined,
+    row: {},
     title: undefined,
     action: '',
 };
 export const manageDialogReducer = (_, action) => {
-    const { type, ...nextState } = action;
+    const { type, row, ...nextState } = action;
     switch (type) {
         case ACTION.ADD:
             return {
                 ...defaultManageDialogState,
                 ...nextState,
+                action: type,
                 isOpen: true,
                 title: 'Add vocabulary',
-                action: type,
+                row: {
+                    ...row,
+                    ...(nextState.parentId ? { cvr_parent_cvo_id: nextState.parentId } : {}),
+                },
             };
         case ACTION.EDIT: {
-            console.log({
-                ...defaultManageDialogState,
-                ...nextState,
-                isOpen: true,
-                title: 'Update vocabulary',
-                action: type,
-            });
             return {
                 ...defaultManageDialogState,
                 ...nextState,
+                action: type,
                 isOpen: true,
                 title: 'Update vocabulary',
-                action: type,
+                row,
             };
         }
         case ACTION.CLOSE: {
@@ -50,7 +48,7 @@ export const manageDialogReducer = (_, action) => {
             };
         }
         default:
-            throw Error('Unknown action');
+            throw Error('Unknown action: ', action);
     }
 };
 
@@ -73,6 +71,7 @@ export const ControlledVocabulariesProvider = ({ children }) => {
         <ControlledVocabulariesStateContext.Provider value={manageDialogState}>
             <ControlledVocabulariesActionContext.Provider
                 value={{
+                    actionDispatch,
                     onAdminAddActionClick,
                     onAdminEditActionClick,
                     onHandleDialogClickClose,

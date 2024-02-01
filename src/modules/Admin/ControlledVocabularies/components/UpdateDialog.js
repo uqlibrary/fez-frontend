@@ -163,6 +163,7 @@ export const UpdateDialogue = ({
                                                         },
                                                         fullWidth: true,
                                                         type: dataFields[field]?.fieldParams?.type ?? undefined,
+                                                        disabled: isBusy,
                                                     }),
                                                     data,
                                                     row,

@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import { get } from 'repositories/generic';
-import { VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
+import { get, post } from 'repositories/generic';
+import { VOCAB_API, VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
 
 /**
  * Load Top Controlled Vocabulary List
@@ -67,5 +67,26 @@ export function setOpenedVocab(rowObject) {
                 open: rowObject.open,
             },
         });
+    };
+}
+
+export function addControlledVocabulary(request) {
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_ADMIN_BUSY });
+        return post(VOCAB_API(), request)
+            .then(response => {
+                dispatch({
+                    type: actions.VOCAB_ADMIN_SUCCESS,
+                    payload: response?.data ?? /* istanbul ignore next */ {},
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.VOCAB_ADMIN_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
     };
 }

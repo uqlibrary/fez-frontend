@@ -24,7 +24,9 @@ import {
     ControlledVocabulariesProvider,
     ControlledVocabulariesStateContext,
     ControlledVocabulariesActionContext,
+    ACTION,
 } from './ControlledVocabularyContext';
+import { transformAddRequest } from './components/utils';
 
 const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
     float: 'left',
@@ -39,6 +41,8 @@ const ControlledVocabularies = () => {
     const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
     const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
     const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
+    const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
+
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const adminDialogState = useContext(ControlledVocabulariesStateContext);
 
@@ -52,7 +56,34 @@ const ControlledVocabularies = () => {
     const labels = txt.columns.labels;
 
     const onHandleDialogClickSave = data => {
-        console.log('onManageDialogClickSave', data);
+        console.log(data);
+        const request = structuredClone(data);
+        const wrappedRequest = transformAddRequest({ request });
+
+        setAdminDialogueBusy(true);
+
+        if (adminDialogState.action === ACTION.ADD) {
+            dispatch(actions.addControlledVocabulary(wrappedRequest))
+                .then(() => {
+                    const adminFunction = data.hasOwnProperty('cvr_parent_cvo_id')
+                        ? actions.loadChildVocabList
+                        : actions.loadControlledVocabList;
+                    dispatch(
+                        adminFunction({
+                            pid: data.cvr_parent_cvo_id,
+                        }),
+                    ).then(() => {
+                        setAdminDialogueBusy(false);
+                        onHandleDialogClickClose();
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                })
+                .finally(() => {
+                    setAdminDialogueBusy(false);
+                });
+        }
     };
 
     return (
@@ -64,6 +95,7 @@ const ControlledVocabularies = () => {
                 fields={fieldConfig.fields}
                 onCancelAction={onHandleDialogClickClose}
                 onAction={onHandleDialogClickSave}
+                isBusy={adminDialogueBusy}
             />
             {!!!loadingVocabError && (
                 <React.Fragment>
@@ -74,7 +106,7 @@ const ControlledVocabularies = () => {
                                 startIcon={<Add />}
                                 variant={'contained'}
                                 color={'primary'}
-                                onClick={onAdminAddActionClick}
+                                onClick={() => onAdminAddActionClick()}
                             >
                                 Add Vocabulary
                             </Button>

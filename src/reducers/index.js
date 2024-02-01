@@ -44,5 +44,6 @@ export { default as viewRecordReducer } from './viewRecord';
 export { default as viewCommunitiesReducer } from './communities';
 export { default as viewCollectionsReducer } from './collections';
 export { default as adminScaleOfSignificanceReducer } from './adminScaleOfSignificance';
+export { default as vocabAdminReducer } from './controlledVocabAdmin';
 export { default as viewVocabReducer } from './controlledVocab';
 export { default as viewChildVocabReducer } from './viewChildVocabReducer';

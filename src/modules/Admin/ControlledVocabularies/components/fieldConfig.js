@@ -7,20 +7,19 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { isEmptyStr } from './helpers';
 
+const rxWholeNumberOnly = new RegExp(/^\d+$/);
+
 export default {
     fields: {
-        cvo_id: {
-            component: props => (
-                <TextField variant="standard" {...props} inputProps={{ ...props.inputProps, maxLength: 8 }} />
-            ),
-            validate: (value, _, action) => {
-                console.log(value, action);
-                return action === 'edit' && !Number.isFinite(value);
-            },
-            fieldParams: { canEdit: false, renderInAdd: false },
-        },
         cvo_title: {
-            component: props => <TextField variant="standard" {...props} required />,
+            component: props => (
+                <TextField
+                    variant="standard"
+                    {...props}
+                    required
+                    inputProps={{ ...props.inputProps, maxLength: 255 }}
+                />
+            ),
             validate: value => isEmptyStr(value), // should return true if a validation error exists
             fieldParams: {
                 minWidth: 180,
@@ -39,7 +38,7 @@ export default {
             },
         },
         cvo_external_id: {
-            component: props => <TextField variant="standard" {...props} />,
+            component: props => <TextField variant="standard" {...props} fullWidth={false} />,
             fieldParams: {
                 canEdit: true,
                 canAdd: true,
@@ -54,10 +53,12 @@ export default {
             },
         },
         cvo_order: {
-            component: props => <TextField variant="standard" {...props} />,
+            component: props => (
+                <TextField variant="standard" {...props} fullWidth={false} inputProps={{ pattern: '[0-9]{1,4}' }} />
+            ),
             validate: value => {
-                if (typeof value === 'string' && value === '') return false;
-                else return !Number.isFinite(parseInt(value, 10));
+                if (typeof value === 'undefined' || value === '') return false;
+                return !rxWholeNumberOnly.test(value);
             },
             fieldParams: {
                 canEdit: true,
@@ -74,6 +75,7 @@ export default {
             fieldParams: {
                 minWidth: 100,
                 canEdit: true,
+                renderInAdd: false,
                 type: 'checkbox',
             },
         },
