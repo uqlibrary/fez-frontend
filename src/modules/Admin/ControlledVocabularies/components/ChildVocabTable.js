@@ -26,21 +26,15 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const existingList = useSelector(state => state.get('viewChildVocabReducer').openedVocabLists);
+    // console.log('existingList=', existingList);
+    const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
     let vocabList = [];
     let totalRecords = 0;
-    if (Object.hasOwn(existingList, parentRow.cvo_id)) {
-        console.log('inside');
-        vocabList = existingList[parentRow.cvo_id].data;
-        totalRecords = existingList[parentRow.cvo_id].total;
-    } else {
-        console.log('existingList doesnot have parentRow.cvo_id');
+    if (findItem) {
+        vocabList = findItem.data;
+        totalRecords = findItem.total;
     }
-    console.log('existingList=', existingList);
-    console.log('JSON.stringify(existingList)', JSON.stringify(existingList));
-    console.log('existingList[parentRow.cvo_id]=', existingList[parentRow.cvo_id]);
-    console.log('existingList[453669]=', existingList['453669']);
-    console.log('parentRow.cvo_id=', parentRow.cvo_id);
-    console.log('vocabList=', vocabList);
+    // console.log('vocabList=', vocabList);
 
     return (
         <Box
