@@ -6,7 +6,6 @@ import { createMemoryHistory } from 'history';
 import * as mockData from 'mock/data';
 
 import ChildVocabTable from './ChildVocabTable';
-import locale from 'locale/components';
 import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 import * as repositories from 'repositories';
@@ -25,18 +24,16 @@ const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ i
 
 describe('ControlledVocabularies ChildVocabTable', () => {
     it('should render the child table', async () => {
-        mockApi.onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
-        .reply(200, mockData.childVocabList[453669]);
+        mockApi
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
+            .reply(200, mockData.childVocabList[453669]);
 
-        const initState={};
-        const { getByText, getByTestId } = setup({ parentRow: parentRow}, initState);
-        //ztodo: when loading one children, it updated the other expanded children.
+        const initState = {};
+        const { getByText, getByTestId } = setup({ parentRow: parentRow }, initState);
+        // ztodo: when loading one children, it updated the other expanded children.
         expect(getByText('Description')).toBeInTheDocument();
-        await waitFor(() => 
-        {
+        await waitFor(() => {
             expect(getByTestId('child-vocab-title-453670')).toBeInTheDocument();
-        }
-        );
-        
+        });
     });
 });

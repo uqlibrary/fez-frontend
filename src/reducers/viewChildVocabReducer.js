@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    vocabList: [],
+    openedVocabLists: {},
     loadingChildVocab: false,
     loadingChildVocabError: null,
     totalRecords: 0,
@@ -18,12 +18,20 @@ const handlers = {
     }),
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
+        console.log('action=', action);
         // code to extract data
+        const existingList = state.openedVocabLists;
+        if (action.payload.data && action.payload.data.length > 0) {
+            const parentId = action.payload.data[0].cvr_parent_cvo_id;
+            existingList[parentId] = {
+                data: action.payload.data,
+                total: action.payload.total,
+            };
+        }
         return {
-            ...state,
+            ...initialState,
             loadingChildVocab: false,
-            vocabList: action.payload.data ?? [],
-            totalRecords: action.payload.total ?? 0,
+            openedVocabLists: existingList,
         };
     },
 

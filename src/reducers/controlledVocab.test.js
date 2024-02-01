@@ -76,11 +76,11 @@ describe('viewVocab reducer', () => {
     it('sets controlled vocabulary children close', () => {
         const previousState = {
             ...initialState,
-            vocabOpened: [1]
+            vocabOpened: [1],
         };
         const expected = {
             ...previousState,
-            vocabOpened: []
+            vocabOpened: [],
         };
         const test = viewVocabReducer(previousState, {
             type: SET_OPENED_VOCAB,
@@ -91,15 +91,15 @@ describe('viewVocab reducer', () => {
         });
         expect(test).toEqual(expected);
     });
-    
+
     it('sets controlled vocabulary children open', () => {
         const previousState = {
             ...initialState,
-            vocabOpened: []
+            vocabOpened: [],
         };
         const expected = {
             ...previousState,
-            vocabOpened: [1]
+            vocabOpened: [1],
         };
         const test = viewVocabReducer(previousState, {
             type: SET_OPENED_VOCAB,
@@ -110,5 +110,4 @@ describe('viewVocab reducer', () => {
         });
         expect(test).toEqual(expected);
     });
-    
 });
