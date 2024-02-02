@@ -39,7 +39,7 @@ const handlers = {
     }),
 
     [actions.SET_OPENED_VOCAB]: (state, action) => {
-        const tmpArray = [...state.vocabOpened];
+        let tmpArray = [...state.vocabOpened];
         !!action.payload.open
             ? tmpArray.push(action.payload.id)
             : (tmpArray = tmpArray.filter(item => item !== action.payload.id));
