@@ -39,9 +39,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
               "textAlign": "justify",
             }
           }
-        >
-          Create a Missing Statement
-        </ForwardRef(Typography)>
+        />
       }
       sx={
         {
@@ -176,9 +174,7 @@ exports[`ScaleOfSignificanceForm component should render with id 1`] = `
               "textAlign": "justify",
             }
           }
-        >
-          Create a Missing Statement
-        </ForwardRef(Typography)>
+        />
       }
       sx={
         {
