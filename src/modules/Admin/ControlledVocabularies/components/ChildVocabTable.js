@@ -15,6 +15,7 @@ import * as actions from 'actions';
 import ChildVocabDataRow from './ChildVocabDataRow';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
+import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -22,6 +23,7 @@ const labels = txt.columns.labels;
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
+    const state = useContext(ControlledVocabulariesStateContext);
 
     // const [sortDirection, setSortDirection] = React.useState('Asc');
     // const [sortBy, setSortBy] = React.useState('title');
@@ -68,9 +70,12 @@ export const ChildVocabTable = ({ parentRow }) => {
                 color={'primary'}
                 sx={{ marginBottom: '10px' }}
                 onClick={handleAddActionClick}
+                disabled={state.isOpen}
             >
                 Add Child Vocabulary
             </Button>
+
+            <Box id={`portal-add-${parentRow.cvo_id}`} />
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 <Grid container spacing={0}>
                     <Grid item md={12}>

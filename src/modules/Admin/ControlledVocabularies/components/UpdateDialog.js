@@ -2,10 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -13,7 +9,10 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { filterComponentProps } from './utils';
+import { ACTION } from '../ControlledVocabularyContext';
 
 const rootId = 'update_dialog';
 
@@ -95,137 +94,169 @@ export const UpdateDialogue = ({
         }));
     };
 
+    const containerStyles =
+        action === ACTION.ADD && !!row.cvr_parent_cvo_id
+            ? {}
+            : {
+                  backgroundColor: '#eee',
+                  padding: '20px',
+                  boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
+              };
+
     return (
-        <Dialog
-            sx={{ minHeight: '30vh', maxHeight: '50vh', padding: 6 }}
-            open={isOpen}
-            id={`${componentId}`}
-            data-testid={`${componentId}`}
-        >
-            <DialogTitle id={`${componentId}-title`} data-testid={`${componentId}-title`}>
-                {title}
-            </DialogTitle>
-            <DialogContent
-                id={`${componentId}-content`}
-                data-testid={`${componentId}-content`}
-                sx={{ minWidth: !noMinContentWidth ? 300 : 'auto' }}
-            >
-                <Grid container padding={0} spacing={2}>
-                    {isOpen &&
-                        !!data &&
-                        !!dataFields &&
-                        Object.keys(dataFields).map(field => (
-                            <React.Fragment key={field}>
-                                {((action === 'edit' && !!(dataFields[field]?.fieldParams?.renderInUpdate ?? true)) ||
-                                    (action === 'add' && !!(dataFields[field]?.fieldParams?.renderInAdd ?? true))) && (
-                                    <Grid item xs={12}>
-                                        {((action === 'edit' && !!!(dataFields[field]?.fieldParams?.canEdit ?? true)) ||
-                                            (action === 'add' &&
-                                                !!!(dataFields[field]?.fieldParams?.canAdd ?? true))) && (
-                                            <>
-                                                <Typography variant="body2">{dataColumns[field].label}</Typography>
-                                                <Typography variant="body1">
-                                                    {!!dataFields[field]?.computedValue
-                                                        ? dataFields[field].computedValue(
-                                                              props[dataFields[field].computedValueProp],
-                                                          )
-                                                        : dataFields[field]?.valueFormatter?.(data?.[field]) ??
-                                                          data?.[field]}
-                                                </Typography>
-                                            </>
-                                        )}
-                                        {((action === 'edit' && !!(dataFields[field]?.fieldParams?.canEdit ?? true)) ||
-                                            (action === 'add' &&
-                                                !!(dataFields[field]?.fieldParams?.canAdd ?? true))) && (
-                                            <>
-                                                {dataFields[field]?.component(
-                                                    filterComponentProps({
-                                                        id: `${field}-input`,
-                                                        name: field,
-                                                        label: dataColumns[field].label,
-                                                        value:
-                                                            dataFields[field]?.valueFormatter?.(data?.[field]) ??
-                                                            data?.[field] ??
-                                                            '',
-                                                        error:
-                                                            dataFields[field]?.validate?.(data?.[field], data) ?? false,
-                                                        checked: !!data?.[field],
-                                                        onChange: handleChange,
-                                                        onClick: _onClickAction,
-                                                        InputLabelProps: {
-                                                            shrink: true,
-                                                            htmlFor: `${field}-input`,
-                                                            id: `${field}-label`,
-                                                            ['data-testid']: `${field}-label`,
-                                                        },
-                                                        inputProps: {
-                                                            ['data-testid']: `${field}-input`,
-                                                        },
-                                                        fullWidth: true,
-                                                        type: dataFields[field]?.fieldParams?.type ?? undefined,
-                                                        disabled: isBusy,
-                                                    }),
-                                                    data,
-                                                    row,
+        <>
+            {isOpen && (
+                <Box
+                    sx={{
+                        marginBlockEnd: 2,
+                        ...containerStyles,
+                    }}
+                >
+                    <StandardCard title={title} standardCardId={`${componentId}`} subCard>
+                        <Box sx={{ padding: 2 }}>
+                            <Box
+                                id={`${componentId}-content`}
+                                data-testid={`${componentId}-content`}
+                                sx={{ minWidth: !noMinContentWidth ? 300 : 'auto' }}
+                            >
+                                <Grid container padding={0} spacing={2}>
+                                    {isOpen &&
+                                        !!data &&
+                                        !!dataFields &&
+                                        Object.keys(dataFields).map(field => (
+                                            <React.Fragment key={field}>
+                                                {((action === 'edit' &&
+                                                    !!(dataFields[field]?.fieldParams?.renderInUpdate ?? true)) ||
+                                                    (action === 'add' &&
+                                                        !!(dataFields[field]?.fieldParams?.renderInAdd ?? true))) && (
+                                                    <Grid item xs={12}>
+                                                        {((action === 'edit' &&
+                                                            !!!(dataFields[field]?.fieldParams?.canEdit ?? true)) ||
+                                                            (action === 'add' &&
+                                                                !!!(
+                                                                    dataFields[field]?.fieldParams?.canAdd ?? true
+                                                                ))) && (
+                                                            <>
+                                                                <Typography variant="body2">
+                                                                    {dataColumns[field].label}
+                                                                </Typography>
+                                                                <Typography variant="body1">
+                                                                    {!!dataFields[field]?.computedValue
+                                                                        ? dataFields[field].computedValue(
+                                                                              props[
+                                                                                  dataFields[field].computedValueProp
+                                                                              ],
+                                                                          )
+                                                                        : dataFields[field]?.valueFormatter?.(
+                                                                              data?.[field],
+                                                                          ) ?? data?.[field]}
+                                                                </Typography>
+                                                            </>
+                                                        )}
+                                                        {((action === 'edit' &&
+                                                            !!(dataFields[field]?.fieldParams?.canEdit ?? true)) ||
+                                                            (action === 'add' &&
+                                                                !!(
+                                                                    dataFields[field]?.fieldParams?.canAdd ?? true
+                                                                ))) && (
+                                                            <>
+                                                                {dataFields[field]?.component(
+                                                                    filterComponentProps({
+                                                                        id: `${field}-input`,
+                                                                        name: field,
+                                                                        label: dataColumns[field].label,
+                                                                        value:
+                                                                            dataFields[field]?.valueFormatter?.(
+                                                                                data?.[field],
+                                                                            ) ??
+                                                                            data?.[field] ??
+                                                                            '',
+                                                                        error:
+                                                                            dataFields[field]?.validate?.(
+                                                                                data?.[field],
+                                                                                data,
+                                                                            ) ?? false,
+                                                                        checked: !!data?.[field],
+                                                                        onChange: handleChange,
+                                                                        onClick: _onClickAction,
+                                                                        InputLabelProps: {
+                                                                            shrink: true,
+                                                                            htmlFor: `${field}-input`,
+                                                                            id: `${field}-label`,
+                                                                            ['data-testid']: `${field}-label`,
+                                                                        },
+                                                                        inputProps: {
+                                                                            ['data-testid']: `${field}-input`,
+                                                                        },
+                                                                        fullWidth: true,
+                                                                        type:
+                                                                            dataFields[field]?.fieldParams?.type ??
+                                                                            undefined,
+                                                                        disabled: isBusy,
+                                                                    }),
+                                                                    data,
+                                                                    row,
+                                                                )}
+                                                            </>
+                                                        )}
+                                                    </Grid>
                                                 )}
-                                            </>
+                                            </React.Fragment>
+                                        ))}
+                                </Grid>
+                            </Box>
+                            {(!hideCancelButton || !hideActionButton) && (
+                                <Grid
+                                    container
+                                    id={`${rootId}-actions`}
+                                    data-testid={`${rootId}-actions`}
+                                    sx={{ marginTop: 2 }}
+                                >
+                                    <Grid item xs={12} justifyContent="flex-end" display={'flex'}>
+                                        {!hideCancelButton && (
+                                            <Button
+                                                variant={'outlined'}
+                                                onClick={_onCancelAction}
+                                                id={`${rootId}-cancel-button`}
+                                                data-testid={`${rootId}-cancel-button`}
+                                                fullWidth={isMobileView}
+                                                disabled={isBusy}
+                                                sx={{ marginInlineEnd: 2 }}
+                                            >
+                                                {locale.cancelButtonLabel}
+                                            </Button>
+                                        )}
+                                        {!hideActionButton && (
+                                            <Button
+                                                variant="contained"
+                                                autoFocus
+                                                color={'primary'}
+                                                onClick={_onAction}
+                                                id={`${rootId}-action-button`}
+                                                data-testid={`${rootId}-action-button`}
+                                                fullWidth={isMobileView}
+                                                disabled={isBusy || !isValid}
+                                            >
+                                                {isBusy ? (
+                                                    <CircularProgress
+                                                        color="inherit"
+                                                        size={25}
+                                                        id={`${rootId}-progress`}
+                                                        data-testid={`${rootId}-progress`}
+                                                    />
+                                                ) : (
+                                                    locale.confirmButtonLabel
+                                                )}
+                                            </Button>
                                         )}
                                     </Grid>
-                                )}
-                            </React.Fragment>
-                        ))}
-                </Grid>
-            </DialogContent>
-            {(!hideCancelButton || !hideActionButton) && (
-                <DialogActions id={`${rootId}-actions`} data-testid={`${rootId}-actions`}>
-                    <Grid container sx={{ padding: '8px 16px' }}>
-                        {!hideCancelButton && (
-                            <Grid item xs={12} sm={6}>
-                                <Box justifyContent="flex-start" display={'flex'}>
-                                    <Button
-                                        variant={'outlined'}
-                                        onClick={_onCancelAction}
-                                        id={`${rootId}-cancel-button`}
-                                        data-testid={`${rootId}-cancel-button`}
-                                        fullWidth={isMobileView}
-                                        disabled={isBusy}
-                                    >
-                                        {locale.cancelButtonLabel}
-                                    </Button>
-                                </Box>
-                            </Grid>
-                        )}
-                        {!hideActionButton && (
-                            <Grid item xs={12} sm={6}>
-                                <Box justifyContent="flex-end" display={'flex'} sx={{ marginTop: [2] }}>
-                                    <Button
-                                        variant="contained"
-                                        autoFocus
-                                        color={'primary'}
-                                        onClick={_onAction}
-                                        id={`${rootId}-action-button`}
-                                        data-testid={`${rootId}-action-button`}
-                                        fullWidth={isMobileView}
-                                        disabled={isBusy || !isValid}
-                                    >
-                                        {isBusy ? (
-                                            <CircularProgress
-                                                color="inherit"
-                                                size={25}
-                                                id={`${rootId}-progress`}
-                                                data-testid={`${rootId}-progress`}
-                                            />
-                                        ) : (
-                                            locale.confirmButtonLabel
-                                        )}
-                                    </Button>
-                                </Box>
-                            </Grid>
-                        )}
-                    </Grid>
-                </DialogActions>
+                                </Grid>
+                            )}
+                        </Box>
+                    </StandardCard>
+                </Box>
             )}
-        </Dialog>
+        </>
     );
 };
 

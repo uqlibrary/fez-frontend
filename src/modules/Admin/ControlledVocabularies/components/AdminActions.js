@@ -11,7 +11,7 @@ export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     window.open(fullUri, target, options);
 };
 
-export const AdminActions = ({ adminActions = [], vocab }) => {
+export const AdminActions = ({ adminActions = [], vocab, disabled = false }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -30,16 +30,19 @@ export const AdminActions = ({ adminActions = [], vocab }) => {
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url?.(cvoId) ?? '';
-        const clickHandler =
-            action.onClick ??
-            ((forceNewTab = false) =>
-                debounce(
-                    300,
-                    event => {
-                        navigateToUrl(url, event.ctrlKey || forceNewTab ? '_blank' : linkTarget, options);
-                    },
-                    { atBegin: true },
-                ));
+        const clickHandler = action.onClick
+            ? () => {
+                  action.onClick();
+                  handleClose();
+              }
+            : (forceNewTab = false) =>
+                  debounce(
+                      300,
+                      event => {
+                          navigateToUrl(url, event.ctrlKey || forceNewTab ? '_blank' : linkTarget, options);
+                      },
+                      { atBegin: true },
+                  );
         const label = action.label;
         return {
             label,
@@ -73,6 +76,7 @@ export const AdminActions = ({ adminActions = [], vocab }) => {
                         onClick={option.clickHandler}
                         onContextMenu={() => option.clickHandler(true)}
                         onAuxClick={() => option.clickHandler(true)}
+                        disabled={disabled}
                     >
                         {option.label}
                     </MenuItem>
@@ -85,6 +89,7 @@ export const AdminActions = ({ adminActions = [], vocab }) => {
 AdminActions.propTypes = {
     adminActions: PropTypes.array,
     vocab: PropTypes.number.isRequired,
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(AdminActions);

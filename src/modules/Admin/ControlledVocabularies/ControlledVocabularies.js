@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
+import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -88,17 +89,21 @@ const ControlledVocabularies = () => {
 
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
-            <UpdateDialog
-                {...adminDialogState}
-                locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
-                columns={txt.form.columns}
-                fields={fieldConfig.fields}
-                onCancelAction={onHandleDialogClickClose}
-                onAction={onHandleDialogClickSave}
-                isBusy={adminDialogueBusy}
-            />
+            {createPortal(
+                <UpdateDialog
+                    {...adminDialogState}
+                    locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
+                    columns={txt.form.columns}
+                    fields={fieldConfig.fields}
+                    onCancelAction={onHandleDialogClickClose}
+                    onAction={onHandleDialogClickSave}
+                    isBusy={adminDialogueBusy}
+                />,
+                adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
+                adminDialogState.portalId ?? 'portal-root',
+            )}
             {!!!loadingVocabError && (
-                <React.Fragment>
+                <Box marginBlockStart={2}>
                     <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
                         <StyledAddButtonWrapper data-testid="admin-add-community">
                             <Button
@@ -107,12 +112,14 @@ const ControlledVocabularies = () => {
                                 variant={'contained'}
                                 color={'primary'}
                                 onClick={() => onAdminAddActionClick()}
+                                disabled={adminDialogState.isOpen}
                             >
                                 Add Vocabulary
                             </Button>
                         </StyledAddButtonWrapper>
                     </Box>
-                    <StandardCard noHeader style={{ marginTop: 10 }}>
+                    <Box id={'portal-root'} />
+                    <StandardCard noHeader>
                         {!!!loadingVocab && (
                             <Typography
                                 variant="body2"
@@ -130,10 +137,10 @@ const ControlledVocabularies = () => {
                             <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
                         )}
                     </StandardCard>
-                </React.Fragment>
+                </Box>
             )}
             {!!loadingVocabError && (
-                <Grid item xs={12} style={{ marginTop: 10 }}>
+                <Grid item xs={12}>
                     <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
                 </Grid>
             )}

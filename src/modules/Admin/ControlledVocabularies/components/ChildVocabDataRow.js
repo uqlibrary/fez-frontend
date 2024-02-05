@@ -11,19 +11,19 @@ import { Link } from 'react-router-dom';
 
 import AdminActions from './AdminActions';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
+import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 
-import ChildVocabTable from './ChildVocabTable';
 // import { useSelector, useDispatch } from 'react-redux';
 // import * as actions from 'actions';
 
 export const ChildVocabDataRow = ({ row }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
+    const state = useContext(ControlledVocabulariesStateContext);
 
     // const dispatch = useDispatch();
 
     // const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
 
-    const open = false;
     // const open = vocabOpened.indexOf(row.cvo_id) > -1;
     // const triggerChildren = openState => {
     //     // alert('here');
@@ -47,7 +47,8 @@ export const ChildVocabDataRow = ({ row }) => {
             data-testid={`row-${row.cvo_id}`}
             sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <React.Fragment key={row.cvo_id}>
+            <Box id={`portal-edit-${row.cvo_id}`} />
+            {state.row.cvo_id !== row.cvo_id && (
                 <Grid container sx={{ paddingBottom: '10px' }}>
                     <Grid item md={8}>
                         <Typography variant="body2">
@@ -68,6 +69,7 @@ export const ChildVocabDataRow = ({ row }) => {
                     </Grid>
                     <Grid item md={1}>
                         <AdminActions
+                            disabled={state.isOpen}
                             vocab={row.cvo_id}
                             id={`admin-actions-${row.cvo_id}`}
                             data-testid={`admin-actions-${row.cvo_id}`}
@@ -81,14 +83,7 @@ export const ChildVocabDataRow = ({ row }) => {
                         />
                     </Grid>
                 </Grid>
-                {!!open && (
-                    <Grid container>
-                        <Grid item md={12}>
-                            <ChildVocabTable parentRow={row} />
-                        </Grid>
-                    </Grid>
-                )}
-            </React.Fragment>
+            )}
         </Grid>
     );
 };

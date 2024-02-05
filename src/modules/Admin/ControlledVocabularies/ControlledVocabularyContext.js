@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 export const ControlledVocabulariesStateContext = createContext(null);
 export const ControlledVocabulariesActionContext = createContext(null);
 
+export const defaultPortalId = 'portal-root';
+export const getPortalId = (cvoId, action) => (!!cvoId ? `portal-${action}-${cvoId}` : defaultPortalId);
 export const ACTION = {
     ADD: 'add',
     EDIT: 'edit',
@@ -16,6 +18,7 @@ export const defaultManageDialogState = {
     row: {},
     title: undefined,
     action: '',
+    portalId: undefined,
 };
 export const manageDialogReducer = (_, action) => {
     const { type, row, ...nextState } = action;
@@ -57,11 +60,11 @@ export const ControlledVocabulariesProvider = ({ children }) => {
 
     const onAdminAddActionClick = parentId => {
         console.log('onAdminAddActionClick', parentId);
-        actionDispatch({ type: ACTION.ADD, parentId });
+        actionDispatch({ type: ACTION.ADD, parentId, portalId: getPortalId(parentId, ACTION.ADD) });
     };
     const onAdminEditActionClick = row => {
         console.log('onAdminEditActionClick', row);
-        actionDispatch({ type: ACTION.EDIT, row });
+        actionDispatch({ type: ACTION.EDIT, row, portalId: getPortalId(row.cvo_id, ACTION.EDIT) });
     };
     const onHandleDialogClickClose = () => {
         actionDispatch({ type: ACTION.CLOSE });
