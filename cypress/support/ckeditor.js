@@ -3,11 +3,16 @@
  */
 
 // USAGE : cy.typeCKEditor('editor1', '<p>This is some text</p>');
+// This is a workaround for type issue with CKEditor5 >= v35 https://github.com/ckeditor/ckeditor5/issues/12802
+// Another solution is to install https://github.com/dmtrKovalenko/cypress-real-events and use realType
 Cypress.Commands.add('typeCKEditor', (element, content) => {
     return cy
-        .get('[data-testid="' + element + '"] .ck-editor__main p')
+        .get('[data-testid="' + element + '"] [contenteditable]')
         .should('exist')
-        .type(content);
+        .then(el => {
+            const editor = el[0].ckeditorInstance;
+            editor.setData(content);
+        });
 });
 
 // Read text from CKEditor instance
