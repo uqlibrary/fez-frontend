@@ -90,3 +90,9 @@ export function addControlledVocabulary(request) {
             });
     };
 }
+
+export function clearAdminControlledVocabulary() {
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_ADMIN_CLEAR });
+    };
+}

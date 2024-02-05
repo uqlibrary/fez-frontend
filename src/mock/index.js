@@ -614,15 +614,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.userList })
 
     .onPost(routes.VOCAB_API().apiUrl)
-    .reply(config => {
-        const data = JSON.parse(config.data);
-        if(!data.hasOwnProperty('cvo_id')){
-            data['cvo_id']=999;
-            data['cvo_created_at']=Date.now();
-            data['cvo_updated_at']=Date.now();
-        } 
-        return [200, { data  }]
-    })
+    .reply(422, {message: 'Some error happened'})
+    // .reply(config => {
+    //     const data = JSON.parse(config.data);
+    //     if(!data.hasOwnProperty('cvo_id')){
+    //         data['cvo_id']=999;
+    //         data['cvo_created_at']=Date.now();
+    //         data['cvo_updated_at']=Date.now();
+    //     } 
+    //     return [200, { data  }]
+    // })
     
     .onGet(
         new RegExp(

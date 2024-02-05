@@ -39,10 +39,10 @@ export const ChildVocabTable = ({ parentRow }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
-    const vocabList = useSelector(state => state.get('viewChildVocabReducer').vocabList);
-    const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
-    const loadingChildVocabError = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocabError);
-    const totalRecords = useSelector(state => state.get('viewChildVocabReducer').totalRecords);
+
+    const { vocabList, loadingChildVocab, loadingChildVocabError, totalRecords } = useSelector(state =>
+        state.get('viewChildVocabReducer'),
+    );
 
     const handleAddActionClick = () => {
         console.log('handleAddActionClick', parentRow.cvo_id);

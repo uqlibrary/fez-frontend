@@ -25,6 +25,8 @@ const handlers = {
         vocabAdminBusy: false,
         vocabAdminError: action.payload,
     }),
+
+    [actions.VOCAB_ADMIN_CLEAR]: () => ({ ...initialState }),
 };
 
 export default function vocabAdminReducer(state = { ...initialState }, action) {

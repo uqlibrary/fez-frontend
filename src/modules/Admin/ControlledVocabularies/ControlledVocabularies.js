@@ -38,10 +38,10 @@ const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
 
 const ControlledVocabularies = () => {
     const dispatch = useDispatch();
-    const sortedList = useSelector(state => state.get('viewVocabReducer').vocabList);
-    const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
-    const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
-    const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
+    const { vocabList: sortedList, loadingVocab, totalRecords, loadingVocabError } = useSelector(state =>
+        state.get('viewVocabReducer'),
+    );
+    const { vocabAdminError } = useSelector(state => state.get('vocabAdminReducer'));
     const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
@@ -56,7 +56,7 @@ const ControlledVocabularies = () => {
 
     const labels = txt.columns.labels;
 
-    const onHandleDialogClickSave = data => {
+    const handleDialogClickSave = data => {
         console.log(data);
         const request = structuredClone(data);
         const wrappedRequest = transformAddRequest({ request });
@@ -87,6 +87,16 @@ const ControlledVocabularies = () => {
         }
     };
 
+    const handleDialogClickClose = () => {
+        onHandleDialogClickClose();
+        dispatch(actions.clearAdminControlledVocabulary());
+    };
+
+    const updateAlert =
+        vocabAdminError && adminDialogState.isOpen
+            ? { alertProps: { title: 'Error', type: 'error_outline', message: vocabAdminError } }
+            : {};
+
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
             {createPortal(
@@ -95,9 +105,10 @@ const ControlledVocabularies = () => {
                     locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
                     columns={txt.form.columns}
                     fields={fieldConfig.fields}
-                    onCancelAction={onHandleDialogClickClose}
-                    onAction={onHandleDialogClickSave}
+                    onCancelAction={handleDialogClickClose}
+                    onAction={handleDialogClickSave}
                     isBusy={adminDialogueBusy}
+                    {...updateAlert}
                 />,
                 adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
                 adminDialogState.portalId ?? 'portal-root',
