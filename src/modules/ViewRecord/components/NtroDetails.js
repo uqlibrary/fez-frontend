@@ -32,7 +32,7 @@ export class NtroDetails extends PureComponent {
                 sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                 alignItems="flex-start"
             >
-                <Grid item xs={12} sm={3} data-testid={`${rowId}-label`}>
+                <Grid xs={12} sm={3} data-testid={`${rowId}-label`}>
                     <Typography
                         variant="body2"
                         component={'span'}
@@ -52,7 +52,7 @@ export class NtroDetails extends PureComponent {
                         </Typography>
                     )}
                 </Grid>
-                <Grid item xs={12} sm={9}>
+                <Grid xs={12} sm={9}>
                     <Typography variant="body2" component={'span'} sx={{ ...sx }} data-testid={rowId}>
                         {data}
                     </Typography>
@@ -69,10 +69,12 @@ export class NtroDetails extends PureComponent {
             return null;
         }
         return (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Significance */}
-                    {publication.fez_record_search_key_significance &&
+                    {publication.fez_record_search_key_author &&
+                        publication.fez_record_search_key_author.length > 0 &&
+                        publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
                             if (
@@ -110,7 +112,9 @@ export class NtroDetails extends PureComponent {
                             }
                         })}
                     {/* Contribution statement */}
-                    {publication.fez_record_search_key_creator_contribution_statement &&
+                    {publication.fez_record_search_key_author &&
+                        publication.fez_record_search_key_author.length > 0 &&
+                        publication.fez_record_search_key_creator_contribution_statement &&
                         publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if (

@@ -43,7 +43,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard
                     standardCardId="record-security-card"
                     title={text.cardTitle(record.rek_pid)}
@@ -53,14 +53,14 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                     <Grid container spacing={2} padding={0}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.record.title}
                                         collections={record.fez_record_search_key_ismemberof}
                                         parentKey="rek_security_policy"
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Field
                                         component={OverrideSecurity}
                                         name="securitySection.rek_security_inherited"
@@ -75,7 +75,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                         {(recordType === RECORD_TYPE_COMMUNITY ||
                             recordType === RECORD_TYPE_COLLECTION ||
                             (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <SecuritySelector
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={text}
@@ -87,7 +87,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                             </Grid>
                         )}
                         {recordType === RECORD_TYPE_COLLECTION && (
-                            <Grid item xs={12}>
+                            <Grid xs={12}>
                                 <SecuritySelector
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={{
@@ -107,7 +107,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
             </Grid>
             {!!dataStreams && dataStreams.length > 0 && (
                 <React.Fragment>
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                         <StandardCard
                             standardCardId="datastream-security-card"
                             title={text.dataStream.cardTitle(record.rek_pid)}
@@ -115,14 +115,14 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                             subCard
                         >
                             <Grid container spacing={1} padding={0}>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.dataStream.title}
                                         collections={record.fez_record_search_key_ismemberof}
                                         parentKey="rek_datastream_policy"
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid xs={12}>
                                     <Field
                                         key={dataStreams.length}
                                         component={DataStreamSecuritySelector}

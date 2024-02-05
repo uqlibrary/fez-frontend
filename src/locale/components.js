@@ -905,12 +905,7 @@ export default {
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
                         editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
                         addEntryButton: 'Add entry',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                            alertId: 'alert-info',
-                        },
+                        authorOrderAlert: null,
                     },
                 },
                 header: {
@@ -952,11 +947,9 @@ export default {
                         addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         resetFormLabel: 'Cancel',
-                        authorOrderAlert: {
-                            message:
-                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
-                            type: 'info',
-                        },
+                        deleteHint: 'Clear this statement',
+                        authorOrderAlert: null,
+                        emptySignificanceLabel: 'Create a Missing Scale/Significance and Research Statement',
                     },
                 },
                 header: {
@@ -1823,8 +1816,7 @@ export default {
         },
         culturalNoticeOC: {
             title: 'Open to Collaborate',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png',
             text: (
                 <span>
                     The University of Queensland is committed to the development of new modes of collaboration,
@@ -1844,8 +1836,7 @@ export default {
         },
         culturalNoticeAI: {
             title: 'Attribution Incomplete',
-            imagePath:
-                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg',
+            imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png',
             text: (
                 <span>
                     Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are
@@ -4103,11 +4094,11 @@ export default {
                                 <React.Fragment>
                                     <p>Search journals by their assigned:</p>
                                     <ul>
-                                        <li>field of research code from the ERA process (ERA);</li>
-                                        <li>
+                                        <li key={'ERA'}>field of research code from the ERA process (ERA);</li>
+                                        <li key={'CITE'}>
                                             subject areas from the All Science Journal Classification (CiteScore); or
                                         </li>
-                                        <li>
+                                        <li key={'WOS'}>
                                             subjects from the Web of Science. For example: Science Citation Index
                                             Expanded (WOSSCIE) or Web of Science: Emerging Sources Citation Index
                                             (WOSESCI); Arts & Humanities Citation Index (WOSAHCI).
@@ -4233,9 +4224,11 @@ export default {
                             </p>
                             <p>The following lists are available:</p>
                             <ul>
-                                <li>ABDC (Australian Business Deans Council)</li>
-                                <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
-                                <li>ERA (Excellence in Research Australia)</li>
+                                <li key={'ABDC'}>ABDC (Australian Business Deans Council)</li>
+                                <li key={'CWTS'}>
+                                    CWTS (Centre of Science and Technology Studies at Leiden University)
+                                </li>
+                                <li key={'ERA'}>ERA (Excellence in Research Australia)</li>
                             </ul>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>

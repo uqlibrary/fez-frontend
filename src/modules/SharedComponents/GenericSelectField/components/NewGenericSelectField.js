@@ -39,7 +39,6 @@ export const NewGenericSelectField = ({
     const [selectValue, setSelectValue] = React.useState(multiple ? [] : '');
     const [inputError, setInputError] = React.useState(!!error);
     const [inputErrorText, setInputErrorText] = React.useState(errorText || error || null);
-
     const promptMenuItem = {
         value: '',
         text: selectPrompt,

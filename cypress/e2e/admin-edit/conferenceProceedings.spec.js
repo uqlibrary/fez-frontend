@@ -33,7 +33,13 @@ context('Conference Proceedings admin edit', () => {
                 cy.get('h4').should('contain', 'Title of proceedings');
             });
 
+        cy.wait(1000);
+
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.get('[data-testid=rek-contributor-add]')
+            .should('exist')
+            .click();
+
         cy.log('Author Details tab');
         cy.get('[data-testid=authors-section-content]')
             .as('editorDetailsTab')

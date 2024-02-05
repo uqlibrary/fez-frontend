@@ -70,12 +70,12 @@ export class AdditionalInformation extends PureComponent {
                     }}
                     alignItems="flex-start"
                 >
-                    <Grid item xs={12} sm={3}>
+                    <Grid xs={12} sm={3}>
                         <Typography variant="body2" component={'span'} data-testid={labelTestId}>
                             {heading}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={9}>
+                    <Grid xs={12} sm={9}>
                         <Typography variant="body2" component={'span'}>
                             {data}
                         </Typography>
@@ -257,6 +257,7 @@ export class AdditionalInformation extends PureComponent {
                         backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
                         width: 100,
                         height: 100,
+                        backgroundSize: 'cover',
                     }}
                 />
                 <br />
@@ -425,7 +426,7 @@ export class AdditionalInformation extends PureComponent {
             return null;
         }
         return (
-            <Grid item xs={12}>
+            <Grid xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
                     {this.renderColumns()}
                 </StandardCard>

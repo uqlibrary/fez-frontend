@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import App, { StrictModeConditional } from './App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
@@ -458,5 +458,26 @@ describe('Application component', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const { container } = setup({ isMobile: true });
         expect(container).toMatchSnapshot();
+    });
+
+    it('StrictModeConditional should wrap the App JSX', () => {
+        const { getByTestId, getByText } = render(
+            <StrictModeConditional condition wrapper={children => <div data-testid="wrapper">{children}</div>}>
+                <div>content here</div>
+            </StrictModeConditional>,
+        );
+
+        expect(getByTestId('wrapper')).toBeInTheDocument();
+        expect(getByText('content here')).toBeInTheDocument();
+    });
+    it('StrictModeConditional should not wrap the App JSX', () => {
+        const { queryByTestId, getByText } = render(
+            <StrictModeConditional condition={false} wrapper={children => <div data-testid="wrapper">{children}</div>}>
+                <div>content here</div>
+            </StrictModeConditional>,
+        );
+
+        expect(queryByTestId('wrapper')).not.toBeInTheDocument();
+        expect(getByText('content here')).toBeInTheDocument();
     });
 });

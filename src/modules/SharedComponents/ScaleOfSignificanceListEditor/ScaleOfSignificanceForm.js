@@ -5,8 +5,10 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
+import Typography from '@mui/material/Typography';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 export const handleContributionStatementCallbackFactory = setContributionStatement => {
     const callback = value => setContributionStatement(value);
@@ -26,11 +28,26 @@ export const resetFormCallbackFactory = (setSignificance, showForm) => {
     return [callback, [setSignificance]];
 };
 
-export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
+export const saveCallbackFactory = (
+    disabled,
+    emptySignificance,
+    significance,
+    contributionStatement,
+    saveChangeToItem,
+    resetForm,
+) => {
     const callback = event => {
+        if (emptySignificance) {
+            saveChangeToItem({ key: 0, value: { plainText: 'Missing', htmlText: 'Missing' } });
+            resetForm && resetForm();
+            return;
+        }
         // add item if user hits 'enter' key on input field
         /* istanbul ignore next */
-        if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
+        if (
+            !emptySignificance &&
+            (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter'))
+        ) {
             /* istanbul ignore next */
             return;
         }
@@ -39,7 +56,7 @@ export const saveCallbackFactory = (disabled, significance, contributionStatemen
         resetForm();
         // move focus to name as published text field after item was added
     };
-    return [callback, [disabled, significance, contributionStatement, saveChangeToItem, resetForm]];
+    return [callback, [disabled, emptySignificance, significance, contributionStatement, saveChangeToItem, resetForm]];
 };
 
 export const ScaleOfSignificanceForm = ({
@@ -55,6 +72,7 @@ export const ScaleOfSignificanceForm = ({
     input,
     hidden,
 }) => {
+    const [emptySignificance, setEmptySignificance] = useState(false);
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
 
@@ -69,6 +87,13 @@ export const ScaleOfSignificanceForm = ({
         }
     }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
+    React.useEffect(() => {
+        /* istanbul ignore else */
+        if (showForm) {
+            setEmptySignificance(false);
+        }
+    }, [showForm]);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleContributionStatement = useCallback(
         ...handleContributionStatementCallbackFactory(setContributionStatement),
@@ -79,7 +104,14 @@ export const ScaleOfSignificanceForm = ({
     const resetForm = useCallback(...resetFormCallbackFactory(setSignificance, showForm));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const saveChanges = useCallback(
-        ...saveCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
+        ...saveCallbackFactory(
+            disabled,
+            emptySignificance,
+            significance,
+            contributionStatement,
+            saveChangeToItem,
+            resetForm,
+        ),
     );
 
     const {
@@ -87,16 +119,21 @@ export const ScaleOfSignificanceForm = ({
         contributionStatementInputFieldLabel,
         resetFormLabel,
         id,
-        authorOrderAlert,
+        emptySignificanceLabel,
     } = locale;
 
     const isValidSignificance = sig => !!sig;
+    const handleEmptySignificance = event => {
+        setEmptySignificance(event.target.checked ? true : false);
+    };
 
     const isValidStatement = statement => !!statement?.plainText?.trim();
 
     function getContributionStatement() {
         return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
     }
+
+    console.log('locale:', locale);
 
     return (
         <Grid
@@ -106,18 +143,39 @@ export const ScaleOfSignificanceForm = ({
             alignItems="center"
             data-testid="rek-significance-form"
         >
-            {!!authorOrderAlert && (
-                <Grid item xs={12}>
-                    <Alert {...authorOrderAlert} />
-                </Grid>
-            )}
+            <Grid item xs={12}>
+                <FormControlLabel
+                    sx={{ margin: 0 }}
+                    control={
+                        <Checkbox
+                            inputProps={{
+                                'data-analyticsid': 'empty-significance-statement-input',
+                                'data-testid': 'empty-significance-statement-input',
+                                id: 'empty-significance-statement-input',
+                            }}
+                            checked={emptySignificance}
+                            onChange={handleEmptySignificance}
+                        />
+                    }
+                    label={
+                        <Typography
+                            sx={{ textAlign: 'justify', fontSize: 16, fontWeight: 300, lineHeight: '24px' }}
+                            component="div"
+                            id={'empty-significance-statement-label'}
+                            data-testid={'empty-significance-statement-label'}
+                        >
+                            {emptySignificanceLabel}
+                        </Typography>
+                    }
+                />
+            </Grid>
             <Grid item style={{ flexGrow: 1 }} xs={12}>
                 <NewGenericSelectField
                     genericSelectFieldId="rek-significance"
                     label={significanceInputFieldLabel}
                     onChange={handleSignificance}
-                    disabled={disabled}
-                    error={!!errorText || !isValidSignificance(significance)}
+                    disabled={disabled || emptySignificance}
+                    error={!emptySignificance && (!!errorText || !isValidSignificance(significance))}
                     errorText={errorText}
                     value={significance || null}
                     itemsList={SIGNIFICANCE}
@@ -132,7 +190,7 @@ export const ScaleOfSignificanceForm = ({
                     onChange={handleContributionStatement}
                     onKeyPress={saveChanges}
                     error={!!errorText}
-                    disabled={disabled}
+                    disabled={disabled || emptySignificance}
                     title={contributionStatementInputFieldLabel}
                     titleProps={{
                         variant: 'caption',
@@ -155,7 +213,8 @@ export const ScaleOfSignificanceForm = ({
                     variant="contained"
                     children={buttonLabel}
                     disabled={
-                        disabled || !isValidSignificance(significance) || !isValidStatement(contributionStatement)
+                        !emptySignificance &&
+                        (disabled || !isValidSignificance(significance) || !isValidStatement(contributionStatement))
                     }
                     onClick={saveChanges}
                 />

@@ -402,6 +402,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
 
     const [data, setData] = React.useState([]);
+    const [triggerState, setTriggerState] = React.useState(true);
     React.useEffect(() => {
         const result = [];
         list.forEach((item, index) => {
@@ -410,7 +411,13 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
             result.push({ ...item });
         });
         setData(result);
+        if (triggerState) {
+            setTriggerState(false);
+            onChange(result);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [list]);
+
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
@@ -653,6 +660,7 @@ AuthorsList.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
+    useFormReducer: PropTypes.bool,
 };
 
 export default React.memo(AuthorsList);

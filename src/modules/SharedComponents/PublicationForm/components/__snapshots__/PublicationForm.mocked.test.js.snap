@@ -24,7 +24,6 @@ exports[`Component PublicationForm should render properly with non-matching doct
         when={true}
       />
       <ForwardRef(Grid)
-        item={true}
         xs={12}
       >
         <StandardCard
@@ -58,7 +57,6 @@ exports[`Component PublicationForm should render properly with non-matching doct
             spacing={1}
           >
             <ForwardRef(Grid)
-              item={true}
               xs={12}
             >
               <Field
@@ -236,11 +234,9 @@ exports[`Component PublicationForm should render properly with non-matching doct
       spacing={3}
     >
       <ForwardRef(Grid)
-        item={true}
         xs={true}
       />
       <ForwardRef(Grid)
-        item={true}
         sm="auto"
         xs={12}
       >
