@@ -42,9 +42,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -287,9 +285,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -617,9 +613,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -951,9 +945,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -1281,9 +1273,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -1765,9 +1755,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
@@ -2249,9 +2237,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             class="MuiTypography-root MuiTypography-body1 css-dtq7j5-MuiTypography-root"
             data-testid="empty-significance-statement-label"
             id="empty-significance-statement-label"
-          >
-            Create a Missing Statement
-          </div>
+          />
         </label>
       </div>
       <div
