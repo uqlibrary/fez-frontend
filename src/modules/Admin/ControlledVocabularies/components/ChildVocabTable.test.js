@@ -36,3 +36,28 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         });
     });
 });
+
+describe('ControlledVocabularies ChildVocabTable Loader', () => {
+    it('should render the loader', async () => {
+        mockApi
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
+            .reply(200, mockData.childVocabList[453669]);
+
+        const initState = {};
+        const { getByTestId } = setup({ parentRow: parentRow }, initState);
+        expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
+    });
+
+    it('should hide the loader', async () => {
+        mockApi
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
+            .reply(200, mockData.childVocabList[453669]);
+
+        const initState = {};
+        const { getByTestId, queryByText } = setup({ parentRow: parentRow }, initState);
+        await waitFor(() => {
+            getByTestId('child-vocab-title-453670');
+        });
+        expect(queryByText('Loading Data')).not.toBeInTheDocument();
+    });
+});
