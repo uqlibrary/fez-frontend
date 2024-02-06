@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as actions from 'actions';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import Typography from '@mui/material/Typography';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -26,6 +27,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const existingList = useSelector(state => state.get('viewChildVocabReducer').openedVocabLists);
+    const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
     const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
     let vocabList = [];
     let totalRecords = 0;
@@ -85,6 +87,9 @@ export const ChildVocabTable = ({ parentRow }) => {
                         {vocabList.map(row => (
                             <ChildVocabDataRow key={row.controlled_vocab.cvo_id} row={row.controlled_vocab} />
                         ))}
+                        {loadingChildVocab && (
+                            <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
+                        )}
                     </Grid>
                 </Grid>
             </Box>
