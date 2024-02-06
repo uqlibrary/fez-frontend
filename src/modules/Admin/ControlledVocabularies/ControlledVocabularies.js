@@ -17,10 +17,9 @@ import { VocabTable } from './components/VocabTable.js';
 
 export const ControlledVocabularies = () => {
     const dispatch = useDispatch();
-    const sortedList = useSelector(state => state.get('viewVocabReducer').vocabList);
-    const loadingVocab = useSelector(state => state.get('viewVocabReducer').loadingVocab);
-    const totalRecords = useSelector(state => state.get('viewVocabReducer').totalRecords);
-    const loadingVocabError = useSelector(state => state.get('viewVocabReducer').loadingVocabError);
+    const { vocabList: sortedList, loadingVocab, totalRecords, loadingVocabError } = useSelector(state =>
+        state.get('viewVocabReducer'),
+    );
 
     React.useEffect(() => {
         dispatch(actions.loadControlledVocabList());

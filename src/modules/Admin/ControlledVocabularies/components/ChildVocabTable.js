@@ -26,8 +26,10 @@ export const ChildVocabTable = ({ parentRow }) => {
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    const existingList = useSelector(state => state.get('viewChildVocabReducer').openedVocabLists);
-    const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
+    const { openedVocabLists: existingList, loadingChildVocab } = useSelector(state =>
+        state.get('viewChildVocabReducer'),
+    );
+    // const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
     const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
     let vocabList = [];
     let totalRecords = 0;
