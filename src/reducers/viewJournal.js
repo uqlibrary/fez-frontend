@@ -19,7 +19,7 @@ const handlers = {
             ...initialState,
             loadingJournalToView: false,
             journalToView: action.payload,
-            isJournalLocked: !!action.payload.jnl_editing_user,
+            isJournalLocked: !!action.payload && !!action.payload.jnl_editing_user,
         };
     },
 
