@@ -31,15 +31,16 @@ export const ViewJournal = () => {
     const isAdmin = userIsAdmin();
     const txt = locale.pages.journal.view;
 
-    const journalLoading = useSelector(state => state.get('journalReducer').journalLoading);
-    const journalDetails = useSelector(state => state.get('journalReducer').journalDetails);
-    const journalLoadingError = useSelector(state => state.get('journalReducer').journalLoadingError);
+    const journalLoading = useSelector(state => state.get('viewJournalReducer').loadingJournalToView);
+    const journalDetails = useSelector(state => state.get('viewJournalReducer').journalToView);
+    const journalLoadingError = useSelector(state => state.get('viewJournalReducer').journalToViewError);
     const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
     const alertProps = favouriteUpdateError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
-    const journalDetailsLength = Object.keys(journalDetails)?.length || 0;
+
+    const journalDetailsLength = (!!journalDetails && Object.keys(journalDetails)?.length) || 0;
 
     React.useEffect(() => {
         !!id && journalDetailsLength === 0 && dispatch(actions.loadJournal(id));
