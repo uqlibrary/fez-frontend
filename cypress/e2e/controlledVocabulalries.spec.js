@@ -10,4 +10,10 @@ context('Controlled vocabularies', () => {
         cy.get('[data-testid="row-451780"]').should('contain', 'Fields of Research');
         dismissPopover();
     });
+
+    it('Renders the child level controlled vocabulary screen', () => {
+        cy.get('[data-testid="expand-row-453669"]').click();
+        cy.get('[data-testid="row-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
+        dismissPopover();
+    });
 });
