@@ -963,7 +963,7 @@ export const viewJournalConfig = {
 
                             let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
                             if (publisher && discount) {
-                                returnData = returnData.replace('<discount>', 'Discount available ');
+                                returnData = returnData.replace('<discount>', ' discount available');
                             } else {
                                 returnData = returnData.replace('<discount>', '');
                             }
