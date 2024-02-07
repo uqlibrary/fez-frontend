@@ -934,19 +934,43 @@ export const viewJournalConfig = {
                             publisher:
                                 journalDetails.fez_journal_read_and_publish &&
                                 journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
+                            discount:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
+                            capped:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped,
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: data =>
                             !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
-                        prefix: data =>
-                            !!data.publisher
-                                ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
-                                      '<publisher>',
-                                      `${data.publisher}`,
-                                  )
-                                : 'No',
+                        prefix: data => {
+                            // const discountText = !!data.publisher && data.discount ? 'Discount available ' : '';
+                            // let returnData = '';
+                            // returnData = !!data.publisher
+                            //     ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
+                            //           '<publisher>',
+                            //           `${data.publisher}`,
+                            //       )
+                            //     : 'No';
+                            // returnData = returnData.replace('<discount>', discountText);
+                            // return returnData;
+
+                            const { publisher, discount } = data;
+                            const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
+
+                            let returnData = publisher ? prefixText.replace('<publisher>', publisher) : 'No';
+                            if (publisher && discount) {
+                                returnData = returnData.replace('<discount>', ' discount available');
+                            } else {
+                                returnData = returnData.replace('<discount>', '');
+                            }
+
+                            return returnData;
+                        },
+
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
                     },
