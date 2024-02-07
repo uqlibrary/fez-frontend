@@ -30,8 +30,8 @@ phases:
     runtime-versions:
       java: corretto17
       nodejs: 20
-    # commands:
-      # - n 20
+    commands:
+      - n 20
       # - command
   pre_build:
     commands:
