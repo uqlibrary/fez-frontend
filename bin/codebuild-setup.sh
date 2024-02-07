@@ -6,11 +6,11 @@ set -e
 printf "Node "; node -v;
 printf "(Codeship default) npm v"; npm -v
 
-# printf "\n\n--- GET LATEST VERSION OF NPM 10.4.0 ---\n"
-# echo "$ npm install -g npm@10.4.0"
-# npm install -g npm@10.4.0
+printf "\n\n--- GET LATEST VERSION OF NPM 10.4.0 ---\n"
+echo "$ npm install -g npm@10.4.0"
+npm install -g npm@10.4.0
 
-# printf "\nNow running npm v"; npm -v
+printf "\nNow running npm v"; npm -v
 
 printf "\n$ npm cache clear\n"
 # npm cache verify
