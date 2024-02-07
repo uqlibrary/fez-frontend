@@ -47,11 +47,11 @@ describe('ControlledVocabularies VocabDataRow', () => {
     });
 
     it('should expand when clicking button', async () => {
-        const { getByTestId, getByText } = setup({ row: vocabDataRow });
+        const { getByTestId } = setup({ row: vocabDataRow });
         const button = getByTestId('expand-row-453669');
         fireEvent.click(button);
         await waitFor(() => {
-            expect(getByText('ID')).toBeInTheDocument();
+            expect(getByTestId('vocab-child-header')).toBeInTheDocument();
         });
     });
 });
