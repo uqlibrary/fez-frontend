@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
+import { SubmissionError } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -39,7 +40,7 @@ const ControlledVocabularies = () => {
     const { vocabList: sortedList, loadingVocab, totalRecords, loadingVocabError } = useSelector(state =>
         state.get('viewVocabReducer'),
     );
-    const { vocabAdminError } = useSelector(state => state.get('vocabAdminReducer'));
+
     // const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
@@ -74,6 +75,7 @@ const ControlledVocabularies = () => {
                 })
                 .catch(error => {
                     console.error(error);
+                    throw new SubmissionError({ _error: error });
                 });
         }
         return null;
@@ -84,11 +86,6 @@ const ControlledVocabularies = () => {
         dispatch(actions.clearAdminControlledVocabulary());
     };
 
-    const updateAlert =
-        vocabAdminError && adminDialogState.isOpen
-            ? { alertProps: { title: 'Error', type: 'error_outline', message: vocabAdminError } }
-            : {};
-
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
             {createPortal(
@@ -97,8 +94,6 @@ const ControlledVocabularies = () => {
                     locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
                     onCancelAction={handleDialogClickClose}
                     onAction={handleDialogClickSave}
-                    // isBusy={adminDialogueBusy}
-                    {...updateAlert}
                 />,
                 adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
                 adminDialogState.portalId ?? 'portal-root',

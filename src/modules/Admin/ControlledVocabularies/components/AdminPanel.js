@@ -37,6 +37,7 @@ const AdminPanel = ({
     onCancelAction,
     onClose,
     noMinContentWidth,
+    error,
     formValues,
     formErrors,
     handleSubmit,
@@ -44,11 +45,10 @@ const AdminPanel = ({
     pristine,
     valid,
     parentId,
-    alertProps,
     ...props
 }) => {
     const componentId = `${rootId}-${id}`;
-    console.log(formValues.toJS(), formErrors.toJS(), submitting);
+    console.log(formValues.toJS(), formErrors, submitting);
 
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.only('xs')) || false;
@@ -120,6 +120,7 @@ const AdminPanel = ({
                                         <Field
                                             component={TextField}
                                             variant="standard"
+                                            inputProps={{ maxLength: 255 }}
                                             fullWidth
                                             textFieldId="cvo-desc"
                                             name="cvo_desc"
@@ -136,6 +137,7 @@ const AdminPanel = ({
                                             component={TextField}
                                             variant="standard"
                                             textFieldId="cvo-external-id"
+                                            inputProps={{ maxLength: 10 }}
                                             name="cvo_external_id"
                                             disabled={submitting}
                                         />
@@ -147,6 +149,7 @@ const AdminPanel = ({
                                             variant="standard"
                                             fullWidth
                                             textFieldId="cvo-image-filename"
+                                            inputProps={{ maxLength: 64 }}
                                             name="cvo_image_filename"
                                             disabled={submitting}
                                         />
@@ -199,7 +202,7 @@ const AdminPanel = ({
                                                 id={`${rootId}-cancel-button`}
                                                 data-testid={`${rootId}-cancel-button`}
                                                 fullWidth={isMobileView}
-                                                disabled={submitting || !valid}
+                                                disabled={submitting}
                                                 sx={{ marginInlineEnd: 2 }}
                                             >
                                                 {locale.cancelButtonLabel}
@@ -232,10 +235,10 @@ const AdminPanel = ({
                                     </Grid>
                                 </Grid>
                             )}
-                            {alertProps && (
+                            {!!error && (
                                 <Grid container id={`${rootId}-alert`} data-testid={`${rootId}-alert`}>
                                     <Grid item xs={12}>
-                                        <Alert {...alertProps} />
+                                        <Alert title="Error" type="error_outline" message={error.message} />
                                     </Grid>
                                 </Grid>
                             )}

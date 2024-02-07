@@ -23,6 +23,9 @@ export const transformAddRequest = ({ request, parentId }) => {
     if (!!parentId) {
         request.cvr_parent_cvo_id = parentId;
     }
+    if (request.hasOwnProperty('cvo_hide')) {
+        request.cvo_hide = !!request.cvo_hide ? 1 : 0;
+    }
 
     return request;
 };
