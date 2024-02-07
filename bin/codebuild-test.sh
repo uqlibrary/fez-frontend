@@ -56,6 +56,15 @@ function checkCodeStyle {
     fi
 }
 
+# required for Ubuntu 22.04 https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies
+function installCypressDependencies {
+    apt-get update && apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+}
+
+if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+  installCypressDependencies
+fi
+
 npm run pretest:unit:ci
 
 case "$PIPE_NUM" in
