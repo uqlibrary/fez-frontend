@@ -19,11 +19,9 @@ filterComponentProps.propTypes = {
     props: PropTypes.object.isRequired,
 };
 
-export const transformAddRequest = ({ request }) => {
-    if (request.hasOwnProperty('parentId')) {
-        const id = request.parentId;
-        delete request.parentId;
-        request.cvr_parent_cvo_id = id;
+export const transformAddRequest = ({ request, parentId }) => {
+    if (!!parentId) {
+        request.cvr_parent_cvo_id = parentId;
     }
 
     return request;

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
@@ -13,14 +12,13 @@ import Add from '@mui/icons-material/Add';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import * as actions from 'actions/viewControlledVocab';
 import locale from 'locale/components';
-import fieldConfig from './components/fieldConfig';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { VocabTable } from './components/VocabTable';
-import UpdateDialog from './components/UpdateDialog';
+import AdminPanel from './components/AdminPanelContainer';
 import {
     ControlledVocabulariesProvider,
     ControlledVocabulariesStateContext,
@@ -42,7 +40,7 @@ const ControlledVocabularies = () => {
         state.get('viewVocabReducer'),
     );
     const { vocabAdminError } = useSelector(state => state.get('vocabAdminReducer'));
-    const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
+    // const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const adminDialogState = useContext(ControlledVocabulariesStateContext);
@@ -56,16 +54,15 @@ const ControlledVocabularies = () => {
 
     const labels = txt.columns.labels;
 
-    const handleDialogClickSave = data => {
-        console.log(data);
-        const request = structuredClone(data);
-        const wrappedRequest = transformAddRequest({ request });
-
-        setAdminDialogueBusy(true);
+    const handleDialogClickSave = parentId => values => {
+        const data = { ...values.toJS() };
+        const wrappedRequest = transformAddRequest({ request: data, parentId });
+        console.log(parentId, wrappedRequest);
 
         if (adminDialogState.action === ACTION.ADD) {
-            dispatch(actions.addControlledVocabulary(wrappedRequest))
+            return dispatch(actions.addControlledVocabulary(wrappedRequest))
                 .then(() => {
+                    onHandleDialogClickClose();
                     const adminFunction = data.hasOwnProperty('cvr_parent_cvo_id')
                         ? actions.loadChildVocabList
                         : actions.loadControlledVocabList;
@@ -73,18 +70,13 @@ const ControlledVocabularies = () => {
                         adminFunction({
                             pid: data.cvr_parent_cvo_id,
                         }),
-                    ).then(() => {
-                        setAdminDialogueBusy(false);
-                        onHandleDialogClickClose();
-                    });
+                    );
                 })
                 .catch(error => {
                     console.error(error);
-                })
-                .finally(() => {
-                    setAdminDialogueBusy(false);
                 });
         }
+        return null;
     };
 
     const handleDialogClickClose = () => {
@@ -100,14 +92,12 @@ const ControlledVocabularies = () => {
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
             {createPortal(
-                <UpdateDialog
+                <AdminPanel
                     {...adminDialogState}
                     locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
-                    columns={txt.form.columns}
-                    fields={fieldConfig.fields}
                     onCancelAction={handleDialogClickClose}
                     onAction={handleDialogClickSave}
-                    isBusy={adminDialogueBusy}
+                    // isBusy={adminDialogueBusy}
                     {...updateAlert}
                 />,
                 adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,

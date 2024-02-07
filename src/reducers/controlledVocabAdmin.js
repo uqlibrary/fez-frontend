@@ -20,6 +20,11 @@ const handlers = {
         vocab: action.payload.data,
     }),
 
+    [actions.VOCAB_ADMIN_ACTION]: (_, action) => ({
+        ...initialState,
+        vocab: action.payload,
+    }),
+
     [actions.VOCAB_ADMIN_FAILED]: (_, action) => ({
         ...initialState,
         vocabAdminBusy: false,

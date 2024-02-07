@@ -75,7 +75,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 Add Child Vocabulary
             </Button>
 
-            <Box id={`portal-add-${parentRow.cvo_id}`} />
+            <Box id={`portal-add-${parentRow.cvo_id}`} sx={{ width: '100%' }} />
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 <Grid container spacing={0}>
                     <Grid item md={12}>

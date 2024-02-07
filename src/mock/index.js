@@ -9,7 +9,7 @@ import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 200 });
+const mock = new MockAdapter(api, { delayResponse: 2000 });
 const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 200 });
 const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&');
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
@@ -614,16 +614,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.userList })
 
     .onPost(routes.VOCAB_API().apiUrl)
-    .reply(422, {message: 'Some error happened'})
-    // .reply(config => {
-    //     const data = JSON.parse(config.data);
-    //     if(!data.hasOwnProperty('cvo_id')){
-    //         data['cvo_id']=999;
-    //         data['cvo_created_at']=Date.now();
-    //         data['cvo_updated_at']=Date.now();
-    //     } 
-    //     return [200, { data  }]
-    // })
+    // .reply(422, {message: 'Some error happened'})
+    .reply(config => {
+        const data = JSON.parse(config.data);
+        if(!data.hasOwnProperty('cvo_id')){
+            data['cvo_id']=999;
+            data['cvo_created_at']=Date.now();
+            data['cvo_updated_at']=Date.now();
+        } 
+        return [200, { data  }]
+    })
     
     .onGet(
         new RegExp(

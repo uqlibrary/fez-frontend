@@ -1,5 +1,7 @@
 import React, { useReducer, createContext } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import * as actions from 'actions';
 
 export const ControlledVocabulariesStateContext = createContext(null);
 export const ControlledVocabulariesActionContext = createContext(null);
@@ -15,13 +17,12 @@ export const defaultManageDialogState = {
     id: 'controlledVocabulary',
     isOpen: false,
     parentId: undefined,
-    row: {},
     title: undefined,
     action: '',
     portalId: undefined,
 };
 export const manageDialogReducer = (_, action) => {
-    const { type, row, ...nextState } = action;
+    const { type, ...nextState } = action;
     switch (type) {
         case ACTION.ADD:
             return {
@@ -30,10 +31,6 @@ export const manageDialogReducer = (_, action) => {
                 action: type,
                 isOpen: true,
                 title: 'Add vocabulary',
-                row: {
-                    ...row,
-                    ...(nextState.parentId ? { cvr_parent_cvo_id: nextState.parentId } : {}),
-                },
             };
         case ACTION.EDIT: {
             return {
@@ -42,7 +39,6 @@ export const manageDialogReducer = (_, action) => {
                 action: type,
                 isOpen: true,
                 title: 'Update vocabulary',
-                row,
             };
         }
         case ACTION.CLOSE: {
@@ -57,6 +53,7 @@ export const manageDialogReducer = (_, action) => {
 
 export const ControlledVocabulariesProvider = ({ children }) => {
     const [manageDialogState, actionDispatch] = useReducer(manageDialogReducer, defaultManageDialogState);
+    const dispatch = useDispatch();
 
     const onAdminAddActionClick = parentId => {
         console.log('onAdminAddActionClick', parentId);
@@ -64,7 +61,13 @@ export const ControlledVocabulariesProvider = ({ children }) => {
     };
     const onAdminEditActionClick = row => {
         console.log('onAdminEditActionClick', row);
-        actionDispatch({ type: ACTION.EDIT, row, portalId: getPortalId(row.cvo_id, ACTION.EDIT) });
+        dispatch(actions.setAdminActionVocab(row));
+        actionDispatch({
+            type: ACTION.EDIT,
+            cvo_id: row.cvo_id,
+            parentId: row.cvr_parent_cvo_id,
+            portalId: getPortalId(row.cvo_id, ACTION.EDIT),
+        });
     };
     const onHandleDialogClickClose = () => {
         actionDispatch({ type: ACTION.CLOSE });

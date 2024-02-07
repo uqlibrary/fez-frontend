@@ -47,8 +47,8 @@ export const ChildVocabDataRow = ({ row }) => {
             data-testid={`row-${row.cvo_id}`}
             sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <Box id={`portal-edit-${row.cvo_id}`} />
-            {state.row.cvo_id !== row.cvo_id && (
+            <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
+            {state.cvo_id !== row.cvo_id && (
                 <Grid container sx={{ paddingBottom: '10px' }}>
                     <Grid item md={8}>
                         <Typography variant="body2">

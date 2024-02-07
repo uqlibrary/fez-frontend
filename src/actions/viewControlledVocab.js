@@ -70,6 +70,15 @@ export function setOpenedVocab(rowObject) {
     };
 }
 
+export function setAdminActionVocab(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.VOCAB_ADMIN_ACTION,
+            payload: data,
+        });
+    };
+}
+
 export function addControlledVocabulary(request) {
     return dispatch => {
         dispatch({ type: actions.VOCAB_ADMIN_BUSY });
