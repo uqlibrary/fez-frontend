@@ -947,17 +947,6 @@ export const viewJournalConfig = {
                         href: data =>
                             !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
                         prefix: data => {
-                            // const discountText = !!data.publisher && data.discount ? 'Discount available ' : '';
-                            // let returnData = '';
-                            // returnData = !!data.publisher
-                            //     ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
-                            //           '<publisher>',
-                            //           `${data.publisher}`,
-                            //       )
-                            //     : 'No';
-                            // returnData = returnData.replace('<discount>', discountText);
-                            // return returnData;
-
                             const { publisher, discount } = data;
                             const { prefixText } = viewJournalLocale.viewJournal.readAndPublish;
 
