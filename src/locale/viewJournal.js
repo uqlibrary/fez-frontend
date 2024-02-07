@@ -16,7 +16,7 @@ export default {
         readAndPublish: {
             heading: 'Read and publish agreement',
             ariaLabel: 'Click to view read and publish agreement',
-            prefixText: 'Yes, via <publisher> ',
+            prefixText: 'Yes, <discount>via <publisher> ',
             postfixText: '',
             linkText: 'Read and Publish Agreement',
             externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
