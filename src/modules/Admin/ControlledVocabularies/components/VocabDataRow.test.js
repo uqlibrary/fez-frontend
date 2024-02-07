@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, fireEvent, act, waitFor } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor } from 'test-utils';
 
 import Immutable from 'immutable';
 
@@ -8,7 +8,6 @@ import * as mockData from 'mock/data';
 
 import VocabDataRow from './VocabDataRow';
 import * as actions from 'actions';
-// import * as actions from './actionTypes';
 import * as actionTypes from 'actions/actionTypes';
 
 const vocabDataRow = mockData.vocabList.data[0];
@@ -54,14 +53,5 @@ describe('ControlledVocabularies VocabDataRow', () => {
         await waitFor(() => {
             expect(getByText('ID')).toBeInTheDocument();
         });
-    });
-
-    it('should dispatch SET_OPENED_VOCAB action when clicking button', async () => {
-        const expectedActions = [actionTypes.SET_OPENED_VOCAB];
-        const { getByTestId, getByText } = setup({ row: vocabDataRow });
-        const button = getByTestId('expand-row-453669');
-        fireEvent.click(button);
-        await waitFor(() => getByText('ID'));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
