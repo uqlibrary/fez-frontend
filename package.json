@@ -236,8 +236,8 @@
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
     },
     "engines": {
-        "npm": ">=8.4.1",
-        "node": ">=16.13.2"
+        "npm": ">=10.2.3",
+        "node": ">=18.19.0"
     },
     "babel": {
         "presets": [
