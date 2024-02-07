@@ -17,6 +17,7 @@ export const VocabDataRow = ({ row }) => {
 
     const open = vocabOpened.indexOf(row.cvo_id) > -1;
     const triggerChildren = openState => {
+        console.log('triggerChild');
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
     };
 

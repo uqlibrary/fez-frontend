@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { render, WithReduxStore } from 'test-utils';
+import { render, WithReduxStore, fireEvent, act, waitFor } from 'test-utils';
 
 import Immutable from 'immutable';
 
 import * as mockData from 'mock/data';
 
 import VocabDataRow from './VocabDataRow';
+import * as actions from 'actions';
+// import * as actions from './actionTypes';
+import * as actionTypes from 'actions/actionTypes';
 
 const vocabDataRow = mockData.vocabList.data[0];
 
@@ -19,6 +22,15 @@ const setup = (testProps = {}, state = {}) => {
 };
 
 describe('ControlledVocabularies VocabDataRow', () => {
+    beforeEach(() => {
+        mockActionsStore = setupStoreForActions();
+        mockApi = setupMockAdapter();
+    });
+
+    afterEach(() => {
+        mockApi.reset();
+    });
+
     it('should render the row', async () => {
         const { getByText } = setup({ row: vocabDataRow });
         expect(getByText('AIATSIS codes')).toBeInTheDocument();
@@ -27,5 +39,29 @@ describe('ControlledVocabularies VocabDataRow', () => {
         const { getByTestId } = setup({ row: vocabDataRow });
         const button = getByTestId('expand-row-453669');
         expect(button).toBeInTheDocument();
+    });
+    it('should dispatch SET_OPENED_VOCAB action', async () => {
+        const expectedActions = [actionTypes.SET_OPENED_VOCAB];
+        await mockActionsStore.dispatch(actions.setOpenedVocab({ id: 453669, open: true }));
+        const result = mockActionsStore.getActions();
+        expect(result).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should expand when clicking button', async () => {
+        const { getByTestId, getByText } = setup({ row: vocabDataRow });
+        const button = getByTestId('expand-row-453669');
+        fireEvent.click(button);
+        await waitFor(() => {
+            expect(getByText('ID')).toBeInTheDocument();
+        });
+    });
+
+    it('should dispatch SET_OPENED_VOCAB action when clicking button', async () => {
+        const expectedActions = [actionTypes.SET_OPENED_VOCAB];
+        const { getByTestId, getByText } = setup({ row: vocabDataRow });
+        const button = getByTestId('expand-row-453669');
+        fireEvent.click(button);
+        await waitFor(() => getByText('ID'));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 });
