@@ -17,6 +17,8 @@ import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
@@ -48,6 +50,18 @@ export const ChildVocabTable = ({ parentRow }) => {
         console.log('handleAddActionClick', parentRow.cvo_id);
         onAdminAddActionClick(parentRow.cvo_id);
     };
+   
+    const { openedVocabLists: existingList, loadingChildVocab } = useSelector(state =>
+        state.get('viewChildVocabReducer'),
+    );
+    // const loadingChildVocab = useSelector(state => state.get('viewChildVocabReducer').loadingChildVocab);
+    const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
+    let vocabList = [];
+    let totalRecords = 0;
+    if (findItem) {
+        vocabList = findItem.data;
+        totalRecords = findItem.total;
+    }
 
     return (
         <Box
@@ -87,8 +101,17 @@ export const ChildVocabTable = ({ parentRow }) => {
                     </Grid>
                     {/* Header Row */}
                     <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                        <Grid item md={8}>
+                        <Grid item md={1}>
+                            {labels.id}
+                        </Grid>
+                        <Grid item md={3}>
                             {labels.title}
+                        </Grid>
+                        <Grid item md={3}>
+                            <Box>{labels.desc}</Box>
+                        </Grid>
+                        <Grid item md={1}>
+                            <Box>{labels.order}</Box>
                         </Grid>
                         <Grid item md={2}>
                             {labels.license}
@@ -109,6 +132,9 @@ export const ChildVocabTable = ({ parentRow }) => {
                                 parentId={parentRow.cvo_id}
                             />
                         ))}
+                        {loadingChildVocab && (
+                            <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
+                        )}
                     </Grid>
                 </Grid>
             </Box>
@@ -116,7 +142,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     );
 };
 ChildVocabTable.propTypes = {
-    // records: PropTypes.array,
     parentRow: PropTypes.object,
 };
 export default ChildVocabTable;

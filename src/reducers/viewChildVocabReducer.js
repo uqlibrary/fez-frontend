@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    vocabList: [],
+    openedVocabLists: [],
     loadingChildVocab: false,
     loadingChildVocabError: null,
     totalRecords: 0,
@@ -12,28 +12,42 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.VIEW_CHILD_VOCAB_LOADING]: () => ({
-        ...initialState,
+    [actions.VIEW_CHILD_VOCAB_LOADING]: state => ({
+        ...state,
         loadingChildVocab: true,
     }),
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        // code to extract data
+        if (!action.payload.data || action.payload.data.length <= 0) {
+            return {
+                ...state,
+                loadingChildVocab: false,
+            };
+        }
+
+        const uniqueValues = new Set();
+        const list = [
+            {
+                data: action.payload.data,
+                total: action.payload.total,
+            },
+            ...state.openedVocabLists,
+        ];
+        const filteredList = list.filter(obj => {
+            const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
+            uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
+            return !isPresent;
+        });
 
         return {
             ...initialState,
             loadingChildVocab: false,
-            vocabList: action.payload.data ?? [],
-            totalRecords: action.payload.total ?? 0,
-            // startRecord: action.payload.from,
-            // endRecord: action.payload.to,
-            // currentPage: action.payload.current_page,
-            // perPage: action.payload.per_page,
+            openedVocabLists: [...filteredList],
         };
     },
 
     [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => ({
-        ...initialState,
+        ...state,
         loadingChildVocab: false,
         loadingChildVocabError: action.payload,
     }),

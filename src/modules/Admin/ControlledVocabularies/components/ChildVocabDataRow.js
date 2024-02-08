@@ -25,16 +25,25 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
             <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
             {state.cvo_id !== row.cvo_id && (
                 <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item md={8}>
+                    <Grid item md={1}>
+                        <Box>{row.cvo_id}</Box>
+                    </Grid>
+                    <Grid item md={3}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
                                 id={`child-vocab-title-${row.cvo_id}`}
                                 data-testid={`child-vocab-title-${row.cvo_id}`}
                             >
-                                <Box>{row.cvo_title}</Box>
+                                {row.cvo_title}
                             </Link>
                         </Typography>
+                    </Grid>
+                    <Grid item md={3}>
+                        <Box>{row.cvo_desc}</Box>
+                    </Grid>
+                    <Grid item md={1}>
+                        <Box>{row.cvo_order}</Box>
                     </Grid>
                     <Grid item md={2}>
                         <Box>{row.cvo_image_filename}</Box>

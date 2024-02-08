@@ -39,15 +39,13 @@ const handlers = {
     }),
 
     [actions.SET_OPENED_VOCAB]: (state, action) => {
-        console.log('action=', action);
-        // return state;
-        const collectionArray = [...state.vocabOpened];
+        let tmpArray = [...state.vocabOpened];
         !!action.payload.open
-            ? collectionArray.push(action.payload.id)
-            : (collectionArray = collectionArray.filter(item => item !== action.payload.id));
+            ? tmpArray.push(action.payload.id)
+            : (tmpArray = tmpArray.filter(item => item !== action.payload.id));
         return {
             ...state,
-            vocabOpened: collectionArray,
+            vocabOpened: tmpArray,
         };
     },
 };
