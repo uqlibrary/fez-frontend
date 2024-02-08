@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import { get, post } from 'repositories/generic';
+import { get, post, put } from 'repositories/generic';
 import { VOCAB_API, VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
 
 /**
@@ -79,10 +79,11 @@ export function setAdminActionVocab(data) {
     };
 }
 
-export function addControlledVocabulary(request) {
+export function adminControlledVocabulary(request, action) {
+    const adminFunction = action === 'add' ? post : put;
     return dispatch => {
         dispatch({ type: actions.VOCAB_ADMIN_BUSY });
-        return post(VOCAB_API(), request)
+        return adminFunction(VOCAB_API(), request)
             .then(response => {
                 dispatch({
                     type: actions.VOCAB_ADMIN_SUCCESS,

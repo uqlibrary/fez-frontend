@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
 import IconButton from '@mui/material/IconButton';
+import Edit from '@mui/icons-material/Edit';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -10,7 +11,6 @@ import Grid from '@mui/material/Grid';
 
 import * as actions from 'actions';
 
-import AdminActions from './AdminActions';
 import ChildVocabTable from './ChildVocabTable';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
@@ -24,20 +24,8 @@ export const VocabDataRow = ({ row }) => {
 
     const open = vocabOpened.indexOf(row.cvo_id) > -1;
     const triggerChildren = openState => {
-        // alert('here');
-        // dispatch(actions.clearCCCollectionsList());
-
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
-        // if (openState) {
-        //     dispatch(
-        //         actions.loadChildVocabList({
-        //             pid: row.cvo_id,
-        //         }),
-        //     );
-        // }
     };
-
-    console.log(state);
 
     return (
         <Grid
@@ -77,21 +65,17 @@ export const VocabDataRow = ({ row }) => {
                             <Box>{row.cvo_external_id}</Box>
                         </Grid>
                         <Grid item xs={2} sm={1} sx={{ textAlign: 'center' }}>
-                            <AdminActions
+                            <IconButton
+                                id={`admin-edit-button-${row.cvo_id}`}
+                                data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                                data-testid={`admin-edit-button-${row.cvo_id}`}
+                                aria-label="Edit"
+                                onClick={() => onAdminEditActionClick({ row })}
+                                size="large"
                                 disabled={state.isOpen}
-                                vocab={row.cvo_id}
-                                id={`admin-actions-${row.cvo_id}`}
-                                data-testid={`admin-actions-${row.cvo_id}`}
-                                adminActions={[
-                                    {
-                                        label: 'Edit vocabulary',
-                                        options: null,
-                                        onClick: () => {
-                                            onAdminEditActionClick(row);
-                                        },
-                                    },
-                                ]}
-                            />
+                            >
+                                <Edit fontSize="small" />
+                            </IconButton>
                         </Grid>
                     </Grid>
                 )}

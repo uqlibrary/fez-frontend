@@ -24,9 +24,8 @@ import {
     ControlledVocabulariesProvider,
     ControlledVocabulariesStateContext,
     ControlledVocabulariesActionContext,
-    ACTION,
 } from './ControlledVocabularyContext';
-import { transformAddRequest } from './components/utils';
+import { transformAdminRequest } from './components/utils';
 
 const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
     float: 'left',
@@ -57,28 +56,23 @@ const ControlledVocabularies = () => {
 
     const handleDialogClickSave = parentId => values => {
         const data = { ...values.toJS() };
-        const wrappedRequest = transformAddRequest({ request: data, parentId });
+        const wrappedRequest = transformAdminRequest({ request: data, parentId, action: adminDialogState.action });
         console.log(parentId, wrappedRequest);
 
-        if (adminDialogState.action === ACTION.ADD) {
-            return dispatch(actions.addControlledVocabulary(wrappedRequest))
-                .then(() => {
-                    onHandleDialogClickClose();
-                    const adminFunction = data.hasOwnProperty('cvr_parent_cvo_id')
-                        ? actions.loadChildVocabList
-                        : actions.loadControlledVocabList;
-                    dispatch(
-                        adminFunction({
-                            pid: data.cvr_parent_cvo_id,
-                        }),
-                    );
-                })
-                .catch(error => {
-                    console.error(error);
-                    throw new SubmissionError({ _error: error });
-                });
-        }
-        return null;
+        return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
+            .then(() => {
+                onHandleDialogClickClose();
+                const adminFunction = !!parentId ? actions.loadChildVocabList : actions.loadControlledVocabList;
+                dispatch(
+                    adminFunction({
+                        pid: parentId,
+                    }),
+                );
+            })
+            .catch(error => {
+                console.error(error);
+                throw new SubmissionError({ _error: error });
+            });
     };
 
     const handleDialogClickClose = () => {

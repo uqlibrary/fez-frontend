@@ -59,13 +59,13 @@ export const ControlledVocabulariesProvider = ({ children }) => {
         console.log('onAdminAddActionClick', parentId);
         actionDispatch({ type: ACTION.ADD, parentId, portalId: getPortalId(parentId, ACTION.ADD) });
     };
-    const onAdminEditActionClick = row => {
-        console.log('onAdminEditActionClick', row);
+    const onAdminEditActionClick = ({ parentId, row }) => {
+        console.log('onAdminEditActionClick', parentId, row);
         dispatch(actions.setAdminActionVocab(row));
         actionDispatch({
             type: ACTION.EDIT,
             cvo_id: row.cvo_id,
-            parentId: row.cvr_parent_cvo_id,
+            parentId,
             portalId: getPortalId(row.cvo_id, ACTION.EDIT),
         });
     };

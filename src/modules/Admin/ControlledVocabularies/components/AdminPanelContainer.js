@@ -22,7 +22,7 @@ const validate = data => {
         errors.cvo_desc = 'Must be 255 characters or less';
     }
 
-    if (typeof values.cvo_order !== 'undefined' && values.cvo_order !== '') {
+    if (typeof values.cvo_order !== 'undefined' && values.cvo_order !== '' && values.cvo_order !== null) {
         const num = Number(values.cvo_order);
         if (isNaN(num)) errors.cvo_order = 'Must be a number';
         else if (!rxWholeNumberOnly.test(values.cvo_order)) {

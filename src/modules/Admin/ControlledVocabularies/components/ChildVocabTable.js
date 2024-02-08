@@ -48,9 +48,6 @@ export const ChildVocabTable = ({ parentRow }) => {
         console.log('handleAddActionClick', parentRow.cvo_id);
         onAdminAddActionClick(parentRow.cvo_id);
     };
-    const onAdminEditActionClick = vocab => {
-        console.log('onAdminEditActionClick', vocab);
-    };
 
     return (
         <Box
@@ -109,7 +106,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                             <ChildVocabDataRow
                                 key={row.controlled_vocab.cvo_id}
                                 row={row.controlled_vocab}
-                                onAdminEditActionClick={onAdminEditActionClick}
+                                parentId={parentRow.cvo_id}
                             />
                         ))}
                     </Grid>

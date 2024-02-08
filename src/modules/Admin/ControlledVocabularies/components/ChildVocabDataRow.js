@@ -2,43 +2,18 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-// import IconButton from '@mui/material/IconButton';
-// import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-// import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import IconButton from '@mui/material/IconButton';
+import Edit from '@mui/icons-material/Edit';
 
-import AdminActions from './AdminActions';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 
-// import { useSelector, useDispatch } from 'react-redux';
-// import * as actions from 'actions';
-
-export const ChildVocabDataRow = ({ row }) => {
+export const ChildVocabDataRow = ({ row, parentId }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
-
-    // const dispatch = useDispatch();
-
-    // const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
-
-    // const open = vocabOpened.indexOf(row.cvo_id) > -1;
-    // const triggerChildren = openState => {
-    //     // alert('here');
-    //     // dispatch(actions.clearCCCollectionsList());
-    //     console.log('openState=', openState);
-    //     console.log('dispatch=', dispatch, 'actions=', typeof actions.setOpenedVocab);
-    //     dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
-    //     // if (openState) {
-    //     //     dispatch(
-    //     //         actions.loadChildVocabList({
-    //     //             pid: row.cvo_id,
-    //     //         }),
-    //     //     );
-    //     // }
-    // };
 
     return (
         <Grid
@@ -68,19 +43,17 @@ export const ChildVocabDataRow = ({ row }) => {
                         <Box>{row.cvo_external_id}</Box>
                     </Grid>
                     <Grid item md={1}>
-                        <AdminActions
+                        <IconButton
+                            id={`admin-edit-button-${row.cvo_id}`}
+                            data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                            data-testid={`admin-edit-button-${row.cvo_id}`}
+                            aria-label="Edit"
+                            onClick={() => onAdminEditActionClick({ row, parentId })}
+                            size="large"
                             disabled={state.isOpen}
-                            vocab={row.cvo_id}
-                            id={`admin-actions-${row.cvo_id}`}
-                            data-testid={`admin-actions-${row.cvo_id}`}
-                            adminActions={[
-                                {
-                                    label: 'Edit vocabulary',
-                                    options: null,
-                                    onClick: () => onAdminEditActionClick(row),
-                                },
-                            ]}
-                        />
+                        >
+                            <Edit fontSize="small" />
+                        </IconButton>
                     </Grid>
                 </Grid>
             )}
@@ -88,8 +61,7 @@ export const ChildVocabDataRow = ({ row }) => {
     );
 };
 ChildVocabDataRow.propTypes = {
-    conf: PropTypes.object,
     row: PropTypes.object,
-    labels: PropTypes.object,
+    parentId: PropTypes.number.isRequired,
 };
 export default ChildVocabDataRow;

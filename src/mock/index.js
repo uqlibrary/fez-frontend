@@ -624,6 +624,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         } 
         return [200, { data  }]
     })
+    .onPut(routes.VOCAB_API().apiUrl)
+    // .reply(422, {message: 'DOH'})
+    .reply(config =>[200, { data: config.data  }])
     
     .onGet(
         new RegExp(
