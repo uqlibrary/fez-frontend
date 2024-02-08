@@ -108,3 +108,13 @@ const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
+
+// jsdom v20 is unable to parse CKEditor 5 v41 css files
+// suppressing the CSS parsing error messages as they dont really break the tests
+const originalConsoleError = console.error;
+const jsDomCssError = 'Error: Could not parse CSS stylesheet';
+console.error = (...params) => {
+    if (!params.find(p => p.toString().includes(jsDomCssError))) {
+        originalConsoleError(...params);
+    }
+};
