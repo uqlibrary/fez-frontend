@@ -635,12 +635,33 @@ Despite many hours attempting to find a resolution to the Jest errors both produ
 
 ## CKEditor
 
-The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules. Because we needed an extra button on the toolbar, Change Case, we had to _build from source_
+The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules.
+Case Change is a premium feature (fees involved) since v41, but because we are using a free version of the Change Case plugin, we had to _build from source_
 
-Links
+### Links
 
-- CKE in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
-- Creating the custom build: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+- CKEditor in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
+- Creating the custom build (Classic): https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+
+### Plugins
+
+- Autoformat
+- Bold
+- General HTML Support
+- Italic
+- Link
+- List
+- Paste From Office
+- Remove Format
+- Special Characters (Arrows, Currency, Essentials, Latin, Mathematical, Text)
+- Strikethrough
+- Subscript
+- Superscript
+- Text transformation
+- Underline
+- Word count
+- Letter Case Plugin
+  - https://github.com/maziyank/ckeditor5-letter-case
 
 If changes to ckeditor are required, these are sample commands:
 
@@ -654,6 +675,8 @@ If changes to ckeditor are required, these are sample commands:
 
 We don't seem to need to issue any `ci` or `run build` commands for non-ckeditor localhost development, when not making changes to ckeditor - react picks up the build directory.
 
-Note we are trapped below the latest version - past about V34, ckeditor crashes in cypress (although it runs fine in localhost) - probably the same cause as in https://github.com/ckeditor/ckeditor5/issues/12802
-
 CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same version (although there are a short number of exceptions).
+
+### Known Issue with Cypress
+- https://github.com/ckeditor/ckeditor5/issues/12802
+
