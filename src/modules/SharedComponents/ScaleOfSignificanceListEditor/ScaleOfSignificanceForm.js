@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -120,7 +119,7 @@ export const ScaleOfSignificanceForm = ({
         contributionStatementInputFieldLabel,
         resetFormLabel,
         id,
-        authorOrderAlert,
+        emptySignificanceLabel,
     } = locale;
 
     const isValidSignificance = sig => !!sig;
@@ -134,6 +133,8 @@ export const ScaleOfSignificanceForm = ({
         return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
     }
 
+    console.log('locale:', locale);
+
     return (
         <Grid
             container
@@ -142,12 +143,6 @@ export const ScaleOfSignificanceForm = ({
             alignItems="center"
             data-testid="rek-significance-form"
         >
-            {!!authorOrderAlert && (
-                <Grid item xs={12}>
-                    <Alert {...authorOrderAlert} />
-                </Grid>
-            )}
-
             <Grid item xs={12}>
                 <FormControlLabel
                     sx={{ margin: 0 }}
@@ -169,7 +164,7 @@ export const ScaleOfSignificanceForm = ({
                             id={'empty-significance-statement-label'}
                             data-testid={'empty-significance-statement-label'}
                         >
-                            Create a Missing Statement
+                            {emptySignificanceLabel}
                         </Typography>
                     }
                 />
