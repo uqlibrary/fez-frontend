@@ -3846,7 +3846,7 @@ export default {
                     title: 'Title',
                     order: 'Order',
                     desc: 'Description',
-                    license: 'License',
+                    visibility: '',
                     external_id: 'External ID',
                     path: 'Path',
                     actions: 'Actions',

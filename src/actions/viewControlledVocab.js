@@ -7,11 +7,11 @@ import { VOCAB_API, VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/ro
  *
  * @returns {action}
  */
-export function loadControlledVocabList() {
+export function loadControlledVocabList({ cachebust = null } = {}) {
     return dispatch => {
         dispatch({ type: actions.VIEW_VOCAB_LOADING });
 
-        return get(VOCAB_LIST_API())
+        return get(VOCAB_LIST_API({ cachebust }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_VOCAB_LOADED,
@@ -34,11 +34,11 @@ export function loadControlledVocabList() {
  *
  * @returns {action}
  */
-export function loadChildVocabList({ pid: parentId }) {
+export function loadChildVocabList({ pid: parentId, cachebust = null }) {
     return dispatch => {
         dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING });
 
-        return get(CHILD_VOCAB_LIST_API(parentId))
+        return get(CHILD_VOCAB_LIST_API({ parentId, cachebust }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_CHILD_VOCAB_LOADED,

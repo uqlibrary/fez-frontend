@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
 
 import * as actions from 'actions';
 
@@ -37,34 +39,39 @@ export const VocabDataRow = ({ row }) => {
             <React.Fragment key={row.cvo_id}>
                 <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
                 {state.cvo_id !== row.cvo_id && (
-                    <Grid container sx={{ paddingBottom: '10px' }}>
-                        <Grid item xs={1} sm={1} md={1}>
-                            <Box sx={{ float: 'left', width: '24px' }}>
-                                <IconButton
-                                    sx={{ paddingTop: '5px' }}
-                                    aria-label="expand row"
-                                    size="small"
-                                    id={`expand-row-${row.cvo_id}`}
-                                    data-analyticsid={`expand-row-${row.cvo_id}`}
-                                    data-testid={`expand-row-${row.cvo_id}`}
-                                    onClick={() => {
-                                        triggerChildren(!open);
-                                    }}
-                                >
-                                    {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                                </IconButton>
+                    <Grid
+                        container
+                        sx={{ paddingBottom: '10px', ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}) }}
+                    >
+                        <Grid item xs={12} sm={1} md={1}>
+                            <IconButton
+                                sx={{ paddingTop: '5px' }}
+                                aria-label="expand row"
+                                size="small"
+                                id={`expand-row-${row.cvo_id}`}
+                                data-analyticsid={`expand-row-${row.cvo_id}`}
+                                data-testid={`expand-row-${row.cvo_id}`}
+                                onClick={() => {
+                                    triggerChildren(!open);
+                                }}
+                            >
+                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                            </IconButton>
+                        </Grid>
+                        <Grid item xs={12} sm={8} md={9}>
+                            <Box display={'flex'}>
+                                {row.cvo_title}
+                                {row.cvo_hide === 1 && (
+                                    <Tooltip title="This vocabulary is hidden">
+                                        <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                    </Tooltip>
+                                )}
                             </Box>
                         </Grid>
-                        <Grid item md={8} sm={6} xs={6}>
-                            <Box>{row.cvo_title}</Box>
+                        <Grid item xs={12} sm={2} md={1}>
+                            {row.cvo_external_id}
                         </Grid>
-                        <Grid item md={1} xs={2} sm={2}>
-                            <Box>{/* row.cvo_image_filename*/}</Box>
-                        </Grid>
-                        <Grid item md={1} xs={2} sm={2}>
-                            <Box>{row.cvo_external_id}</Box>
-                        </Grid>
-                        <Grid item xs={2} sm={1} sx={{ textAlign: 'center' }}>
+                        <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
                             <IconButton
                                 id={`admin-edit-button-${row.cvo_id}`}
                                 data-analyticsid={`admin-edit-button-${row.cvo_id}`}
@@ -81,7 +88,7 @@ export const VocabDataRow = ({ row }) => {
                 )}
                 {!!open && state.cvo_id !== row.cvo_id && (
                     <Grid container>
-                        <Grid item md={12}>
+                        <Grid item xs={12}>
                             <ChildVocabTable parentRow={row} />
                         </Grid>
                     </Grid>

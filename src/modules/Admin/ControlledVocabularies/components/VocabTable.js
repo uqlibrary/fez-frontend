@@ -9,19 +9,16 @@ export const VocabTable = ({ records, labels }) => {
         <Grid container spacing={0}>
             {/* Header Row */}
             <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-primary-header">
-                <Grid item md={1}>
+                <Grid item sm={1}>
                     {''}
                 </Grid>
-                <Grid item md={8} sm={6} xs={6}>
+                <Grid item xs={12} sm={8} md={9}>
                     {labels.title}
                 </Grid>
-                <Grid item md={1} xs={2} sm={2}>
-                    {labels.license}
-                </Grid>
-                <Grid item md={1} xs={2} sm={2}>
+                <Grid item xs={12} sm={2} md={1}>
                     {labels.external_id}
                 </Grid>
-                <Grid item md={1}>
+                <Grid item xs={12} sm={1}>
                     {labels.actions}
                 </Grid>
             </Grid>

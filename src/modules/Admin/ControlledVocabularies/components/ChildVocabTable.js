@@ -27,9 +27,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
-    // const [sortDirection, setSortDirection] = React.useState('Asc');
-    // const [sortBy, setSortBy] = React.useState('title');
-    const open = true;
     React.useEffect(() => {
         /* istanbul ignore else */
         if (open) {
@@ -40,17 +37,13 @@ export const ChildVocabTable = ({ parentRow }) => {
             );
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [open]);
-
-    const { vocabList, loadingChildVocab, loadingChildVocabError, totalRecords } = useSelector(state =>
-        state.get('viewChildVocabReducer'),
-    );
+    }, []);
 
     const handleAddActionClick = () => {
         console.log('handleAddActionClick', parentRow.cvo_id);
         onAdminAddActionClick(parentRow.cvo_id);
     };
-   
+
     const { openedVocabLists: existingList, loadingChildVocab } = useSelector(state =>
         state.get('viewChildVocabReducer'),
     );

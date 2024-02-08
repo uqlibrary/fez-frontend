@@ -70,11 +70,6 @@ const AdminPanel = ({
         };
     }
 
-    // const _onAction = data => {
-    //     console.log(data);
-    //     handleSubmit?.(data);
-    // };
-
     const _onCancelAction = () => {
         onClose?.();
         onCancelAction?.();
@@ -254,8 +249,6 @@ AdminPanel.propTypes = {
     ...propTypes, // all redux-form props
     action: PropTypes.oneOf(['', 'add', 'edit']).isRequired,
     locale: PropTypes.object.isRequired,
-    fields: PropTypes.object.isRequired,
-    columns: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     title: PropTypes.string,
     row: PropTypes.object,

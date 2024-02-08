@@ -54,6 +54,11 @@ const ControlledVocabularies = () => {
 
     const labels = txt.columns.labels;
 
+    const handleDialogClickClose = () => {
+        onHandleDialogClickClose();
+        dispatch(actions.clearAdminControlledVocabulary());
+    };
+
     const handleDialogClickSave = parentId => values => {
         const data = { ...values.toJS() };
         const wrappedRequest = transformAdminRequest({ request: data, parentId, action: adminDialogState.action });
@@ -61,11 +66,12 @@ const ControlledVocabularies = () => {
 
         return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
             .then(() => {
-                onHandleDialogClickClose();
+                handleDialogClickClose();
                 const adminFunction = !!parentId ? actions.loadChildVocabList : actions.loadControlledVocabList;
                 dispatch(
                     adminFunction({
                         pid: parentId,
+                        cachebust: Date.now(),
                     }),
                 );
             })
@@ -75,65 +81,62 @@ const ControlledVocabularies = () => {
             });
     };
 
-    const handleDialogClickClose = () => {
-        onHandleDialogClickClose();
-        dispatch(actions.clearAdminControlledVocabulary());
-    };
-
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
-            {createPortal(
-                <AdminPanel
-                    {...adminDialogState}
-                    locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
-                    onCancelAction={handleDialogClickClose}
-                    onAction={handleDialogClickSave}
-                />,
-                adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
-                adminDialogState.portalId ?? 'portal-root',
-            )}
-            {!!!loadingVocabError && (
-                <Box marginBlockStart={2}>
-                    <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
-                        <StyledAddButtonWrapper data-testid="admin-add-community">
-                            <Button
-                                data-testid="admin-add-vocabulary-button"
-                                startIcon={<Add />}
-                                variant={'contained'}
-                                color={'primary'}
-                                onClick={() => onAdminAddActionClick()}
-                                disabled={adminDialogState.isOpen}
-                            >
-                                Add Vocabulary
-                            </Button>
-                        </StyledAddButtonWrapper>
-                    </Box>
-                    <Box id={'portal-root'} />
-                    <StandardCard noHeader>
-                        {!!!loadingVocab && (
-                            <Typography
-                                variant="body2"
-                                sx={{ fontWeight: 600, marginBottom: '10px' }}
-                                id="total-vocab"
-                                data-testid="total-vocab"
-                            >
-                                {controlledVocabConfig.vocabCountTitle(totalRecords)}
-                            </Typography>
-                        )}
+            <>
+                {createPortal(
+                    <AdminPanel
+                        {...adminDialogState}
+                        locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
+                        onCancelAction={handleDialogClickClose}
+                        onAction={handleDialogClickSave}
+                    />,
+                    adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
+                    adminDialogState.portalId ?? 'portal-root',
+                )}
+                {!!!loadingVocabError && (
+                    <Box marginBlockStart={2}>
+                        <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
+                            <StyledAddButtonWrapper data-testid="admin-add-community">
+                                <Button
+                                    data-testid="admin-add-vocabulary-button"
+                                    startIcon={<Add />}
+                                    variant={'contained'}
+                                    color={'primary'}
+                                    onClick={() => onAdminAddActionClick()}
+                                    disabled={adminDialogState.isOpen}
+                                >
+                                    Add Vocabulary
+                                </Button>
+                            </StyledAddButtonWrapper>
+                        </Box>
+                        <Box id={'portal-root'} />
+                        <StandardCard noHeader>
+                            {!!!loadingVocab && (
+                                <Typography
+                                    variant="body2"
+                                    sx={{ fontWeight: 600, marginBottom: '10px' }}
+                                    id="total-vocab"
+                                    data-testid="total-vocab"
+                                >
+                                    {controlledVocabConfig.vocabCountTitle(totalRecords)}
+                                </Typography>
+                            )}
 
-                        {sortedList.length > 0 ? (
-                            <VocabTable records={sortedList} labels={labels} />
-                        ) : (
-                            <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
-                        )}
-                    </StandardCard>
-                </Box>
-            )}
-            {!!loadingVocabError && (
-                <Grid item xs={12}>
-                    <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
-                </Grid>
-            )}
+                            {sortedList.length > 0 ? (
+                                <VocabTable records={sortedList} labels={labels} />
+                            ) : (
+                                <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
+                            )}
+                        </StandardCard>
+                    </Box>
+                )}
+                {!!loadingVocabError && (
+                    <Grid item xs={12}>
+                        <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
+                    </Grid>
+                )}
+            </>
         </StandardPage>
     );
 };

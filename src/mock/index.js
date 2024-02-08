@@ -37,8 +37,8 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
-// user = user || 'uqstaff';
+// user = user || 'uqresearcher';
+user = user || 'uqstaff';
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -628,19 +628,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(422, {message: 'DOH'})
     .reply(config =>[200, { data: config.data  }])
     
-    .onGet(
-        new RegExp(
-            routes.CHILD_VOCAB_LIST_API('\\d+').apiUrl,
-        ),
-    )
+    .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*', cachebust: '.*'}).apiUrl)))
     .reply(config=>{
+        console.log('deb',config);
         let id=config.url.replace(/^.*\/(\d+)$/,'$1') || 0;
         return [200, { ...mockData.childVocabList[id] }];
     })
     .onGet(
         new RegExp(
             escapeRegExp(
-                routes.VOCAB_LIST_API({ pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' }).apiUrl,
+                routes.VOCAB_LIST_API('.*').apiUrl,
             ),
         ),
     )
