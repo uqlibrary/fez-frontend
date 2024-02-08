@@ -23,7 +23,7 @@ This means that it's exactly like production, except for the git branch that use
 
 ## Technology
 
-- Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
+- Code: `React (~20.11), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design` - [MUI 5](https://mui.com/material-ui) ([see notes below](#mui-v5-upgrade) on the upgrade to MUI 5)
 - Build and dev tools: `Webpack`
@@ -47,15 +47,15 @@ This means that it's exactly like production, except for the git branch that use
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version of at least 16.13.2:
+- With `nvm` installed and/or updated, install `node` version of at least 20.11.0:
 
    ```
-   nvm install 16.13.2 
+   nvm install 20.11.0 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
+  nvm use 20.11.0 && npm i -g npm@10.4.0 jest webpack-dev-server
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
