@@ -90,7 +90,12 @@ export const ChildVocabTable = ({ parentRow }) => {
                             <ChildVocabDataRow key={row.controlled_vocab.cvo_id} row={row.controlled_vocab} />
                         ))}
                         {loadingChildVocab && (
-                            <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
+                            <Grid item md={12}>
+                                <InlineLoader
+                                    loaderId="childControlledVocab-page-loading"
+                                    message={txt.loading.message}
+                                />
+                            </Grid>
                         )}
                     </Grid>
                 </Grid>
