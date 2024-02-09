@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Tooltip from '@mui/material/Tooltip';
 
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
@@ -20,13 +22,21 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
             container
             key={row.cvo_id}
             data-testid={`row-${row.cvo_id}`}
-            sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
+            sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
+            <Box id={`portal-edit-${row.cvo_id}`} />
             {state.cvo_id !== row.cvo_id && (
-                <Grid container sx={{ paddingBottom: '10px' }}>
+                <Box
+                    sx={{
+                        ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
+                    }}
+                    display={'flex'}
+                    alignItems={'center'}
+                    width={'100%'}
+                    paddingBlockEnd={'10px'}
+                >
                     <Grid item md={1}>
-                        <Box>{row.cvo_id}</Box>
+                        {row.cvo_id}
                     </Grid>
                     <Grid item md={3}>
                         <Typography variant="body2">
@@ -36,20 +46,25 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                                 data-testid={`child-vocab-title-${row.cvo_id}`}
                             >
                                 {row.cvo_title}
+                                {row.cvo_hide === 1 && (
+                                    <Tooltip title="This vocabulary is hidden">
+                                        <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                    </Tooltip>
+                                )}
                             </Link>
                         </Typography>
                     </Grid>
                     <Grid item md={3}>
-                        <Box>{row.cvo_desc}</Box>
+                        {row.cvo_desc}
                     </Grid>
                     <Grid item md={1}>
-                        <Box>{row.cvo_order}</Box>
+                        {row.cvo_order}
                     </Grid>
                     <Grid item md={2}>
-                        <Box>{row.cvo_image_filename}</Box>
+                        {row.cvo_image_filename}
                     </Grid>
                     <Grid item md={1}>
-                        <Box>{row.cvo_external_id}</Box>
+                        {row.cvo_external_id}
                     </Grid>
                     <Grid item md={1}>
                         <IconButton
@@ -64,7 +79,7 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                             <Edit fontSize="small" />
                         </IconButton>
                     </Grid>
-                </Grid>
+                </Box>
             )}
         </Grid>
     );

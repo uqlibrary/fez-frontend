@@ -5,11 +5,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
-import Tooltip from '@mui/material/Tooltip';
 
 import * as actions from 'actions';
 
@@ -39,9 +39,14 @@ export const VocabDataRow = ({ row }) => {
             <React.Fragment key={row.cvo_id}>
                 <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
                 {state.cvo_id !== row.cvo_id && (
-                    <Grid
-                        container
-                        sx={{ paddingBottom: '10px', ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}) }}
+                    <Box
+                        sx={{
+                            ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
+                        }}
+                        display={'flex'}
+                        alignItems={'center'}
+                        width={'100%'}
+                        paddingBlockEnd={'10px'}
                     >
                         <Grid item xs={12} sm={1} md={1}>
                             <IconButton
@@ -84,7 +89,7 @@ export const VocabDataRow = ({ row }) => {
                                 <Edit fontSize="small" />
                             </IconButton>
                         </Grid>
-                    </Grid>
+                    </Box>
                 )}
                 {!!open && state.cvo_id !== row.cvo_id && (
                     <Grid container>
