@@ -2285,32 +2285,36 @@ export default {
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 14,
                 },
                 {
-                    field: 'fez_record_search_key_geographic_area',
+                    field: 'fez_record_search_key_keywords',
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_advisory_statement',
+                    field: 'fez_record_search_key_geographic_area',
                     order: 16,
                 },
                 {
-                    field: 'fez_record_search_key_sensitive_handling_note_id',
+                    field: 'fez_record_search_key_advisory_statement',
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_sensitive_handling_note_other',
-                    order: 17.5,
-                },
-                {
-                    field: 'fez_record_search_key_acknowledgements',
+                    field: 'fez_record_search_key_sensitive_handling_note_id',
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_transcript',
+                    field: 'fez_record_search_key_sensitive_handling_note_other',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_acknowledgements',
+                    order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_transcript',
+                    order: 21,
                 },
             ],
             'Newspaper Article': [
