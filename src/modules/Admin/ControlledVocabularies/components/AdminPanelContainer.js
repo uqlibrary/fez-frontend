@@ -35,7 +35,6 @@ const validate = data => {
 
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    console.log(props);
     return {
         onSubmit: props.onAction(props.parentId ?? null),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),

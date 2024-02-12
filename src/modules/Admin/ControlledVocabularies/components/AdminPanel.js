@@ -48,7 +48,6 @@ const AdminPanel = ({
     ...props
 }) => {
     const componentId = `${rootId}-${id}`;
-    console.log(formValues.toJS(), formErrors, submitting);
 
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.only('xs')) || false;

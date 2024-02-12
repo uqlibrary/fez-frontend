@@ -628,10 +628,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(422, {message: 'DOH'})
     .reply(config =>[200, { data: config.data  }])
     
-    .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*', cachebust: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*'}).apiUrl)))
     .reply(config=>{
-        console.log('deb',config);
-        let id=config.url.replace(/^.*\/(\d+)$/,'$1') || 0;
+        const id=config.url.split('/').pop().split('?')[0];
         return [200, { ...mockData.childVocabList[id] }];
     })
     .onGet(

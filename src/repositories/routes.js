@@ -226,12 +226,9 @@ export const VOCAB_LIST_API = ({ cachebust }) => {
     };
 };
 
-export const CHILD_VOCAB_LIST_API = ({ parentId, cachebust }) => {
-    console.log(`vocabularies/${parentId}${cachebust ? `?cb=${cachebust}` : ''}`);
-    return {
-        apiUrl: `vocabularies/${parentId}${cachebust ? `?cb=${cachebust}` : ''}`,
-    };
-};
+export const CHILD_VOCAB_LIST_API = ({ parentId, cachebust }) => ({
+    apiUrl: `vocabularies/admin/${parentId}${cachebust ? `?cb=${cachebust}` : ''}`,
+});
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
