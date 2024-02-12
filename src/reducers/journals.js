@@ -11,15 +11,10 @@ export const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
-    journalDetails: {},
-    journalLoading: false,
-    journalLoadingError: false,
     journalSearchKeywordsLoading: false,
     journalSearchKeywords: { ...initialJournalSearchKeywords },
     journalSearchKeywordsError: null,
     isInitialValues: true,
-    isJournalLocked: false, // TODO
-    journalToViewError: null,
 };
 
 const handlers = {
@@ -39,27 +34,6 @@ const handlers = {
         itemsList: [],
         itemsLoading: false,
         itemsLoadingError: true,
-    }),
-    [actions.JOURNAL_LOADING]: state => ({
-        ...state,
-        journalDetails: {},
-        journalLoading: true,
-        journalLoadingError: false,
-        journalToViewError: null,
-    }),
-    [actions.JOURNAL_LOADED]: (state, action) => ({
-        ...state,
-        journalDetails: action.payload,
-        journalLoading: false,
-        journalToViewError: null,
-        isJournalLocked: !!action.payload.jnl_editing_user,
-    }),
-    [actions.JOURNAL_LOAD_FAILED]: (state, action) => ({
-        ...state,
-        journalDetails: {},
-        journalLoading: false,
-        journalLoadingError: true,
-        journalToViewError: action.payload,
     }),
     [actions.JOURNAL_SEARCH_KEYWORDS_LOADING]: state => ({
         ...state,
@@ -81,15 +55,6 @@ const handlers = {
         ...state,
         journalSearchKeywords: { ...initialJournalSearchKeywords },
         isInitialValues: true,
-    }),
-    [actions.ADMIN_JOURNAL_CLEAR]: () => ({
-        ...initialState,
-        isJournalLocked: false,
-    }),
-
-    [actions.ADMIN_JOURNAL_UNLOCK]: state => ({
-        ...state,
-        isJournalLocked: false,
     }),
 };
 

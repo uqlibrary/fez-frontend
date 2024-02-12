@@ -1,10 +1,18 @@
 import React from 'react';
-import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import JournalAdminContainer, { isSame } from './JournalAdminContainer';
 import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
 import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
+
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -21,7 +29,7 @@ const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ 
     JournalAdminContainer,
 );
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup(testProps = {}) {
     const props = {
         authorDetails: {
             username: 'uqstaff',
@@ -42,13 +50,13 @@ function setup(testProps = {}, renderer = rtlRender) {
         ...testProps,
     };
 
-    return renderer(
-        <WithReduxStore>
-            <WithRouter>
-                <WithReduxForm {...props} />
-            </WithRouter>
+    return render(
+        <WithRouter>
+            <WithReduxStore>
+                <WithReduxForm {...props} />,
+            </WithReduxStore>
             ,
-        </WithReduxStore>,
+        </WithRouter>,
     );
 }
 

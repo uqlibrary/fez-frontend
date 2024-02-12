@@ -11,6 +11,14 @@ import { useJournalContext, useFormValuesContext } from 'context';
 
 const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(AdminSection);
 
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
+
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,

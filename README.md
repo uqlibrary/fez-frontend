@@ -23,7 +23,7 @@ This means that it's exactly like production, except for the git branch that use
 
 ## Technology
 
-- Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
+- Code: `React (~20.11), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design` - [MUI 5](https://mui.com/material-ui) ([see notes below](#mui-v5-upgrade) on the upgrade to MUI 5)
 - Build and dev tools: `Webpack`
@@ -47,15 +47,15 @@ This means that it's exactly like production, except for the git branch that use
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version of at least 16.13.2:
+- With `nvm` installed and/or updated, install `node` version of at least 20.11.0:
 
    ```
-   nvm install 16.13.2 
+   nvm install 20.11.0 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
+  nvm use 20.11.0 && npm i -g npm@10.4.0 jest webpack-dev-server
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
@@ -635,12 +635,33 @@ Despite many hours attempting to find a resolution to the Jest errors both produ
 
 ## CKEditor
 
-The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules. Because we needed an extra button on the toolbar, Change Case, we had to _build from source_
+The Rich Editor is implemented with [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). This is installed with npm modules.
+Case Change is a premium feature (fees involved) since v41, but because we are using a free version of the Change Case plugin, we had to _build from source_
 
-Links
+### Links
 
-- CKE in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
-- Creating the custom build: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+- CKEditor in React https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html
+- Creating the custom build (Classic): https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start-other.html
+
+### Plugins
+
+- Autoformat
+- Bold
+- General HTML Support
+- Italic
+- Link
+- List
+- Paste From Office
+- Remove Format
+- Special Characters (Arrows, Currency, Essentials, Latin, Mathematical, Text)
+- Strikethrough
+- Subscript
+- Superscript
+- Text transformation
+- Underline
+- Word count
+- Letter Case Plugin
+  - https://github.com/maziyank/ckeditor5-letter-case
 
 If changes to ckeditor are required, these are sample commands:
 
@@ -654,6 +675,8 @@ If changes to ckeditor are required, these are sample commands:
 
 We don't seem to need to issue any `ci` or `run build` commands for non-ckeditor localhost development, when not making changes to ckeditor - react picks up the build directory.
 
-Note we are trapped below the latest version - past about V34, ckeditor crashes in cypress (although it runs fine in localhost) - probably the same cause as in https://github.com/ckeditor/ckeditor5/issues/12802
-
 CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same version (although there are a short number of exceptions).
+
+### Known Issue with Cypress
+- https://github.com/ckeditor/ckeditor5/issues/12802
+

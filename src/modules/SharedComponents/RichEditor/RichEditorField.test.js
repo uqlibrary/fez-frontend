@@ -2,6 +2,14 @@ import React from 'react';
 import RichEditorField from './RichEditorField';
 import { rtlRender } from 'test-utils';
 
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
+
 function setup(testProps = {}) {
     const props = {
         ...testProps,

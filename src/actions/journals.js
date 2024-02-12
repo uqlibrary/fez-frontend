@@ -88,21 +88,22 @@ export const requestMJLIngest = directory => dispatch => {
 };
 
 export const loadJournal = (id, isEdit = false) => dispatch => {
-    dispatch({ type: actions.JOURNAL_LOADING });
+    dispatch({ type: actions.VIEW_JOURNAL_LOADING });
     return (
         id &&
         !isNaN(id) &&
         get(JOURNAL_API({ id, isEdit })).then(
             response => {
                 dispatch({
-                    type: actions.JOURNAL_LOADED,
+                    type: actions.VIEW_JOURNAL_LOADED,
                     payload: response.data,
                 });
+                return Promise.resolve(response.data);
             },
             error => {
                 dispatch({
-                    type: actions.JOURNAL_LOAD_FAILED,
-                    payload: error,
+                    type: actions.VIEW_JOURNAL_LOAD_FAILED,
+                    payload: error.message,
                 });
             },
         )
