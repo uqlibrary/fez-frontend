@@ -24,7 +24,7 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
             data-testid={`row-${row.cvo_id}`}
             sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <Box id={`portal-edit-${row.cvo_id}`} />
+            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} />
             {state.cvo_id !== row.cvo_id && (
                 <Box
                     sx={{

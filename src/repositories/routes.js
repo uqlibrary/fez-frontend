@@ -220,7 +220,7 @@ export const VOCAB_API = () => {
     };
 };
 
-export const VOCAB_LIST_API = ({ cachebust }) => {
+export const VOCAB_LIST_API = ({ cachebust = null } = {}) => {
     return {
         apiUrl: `vocabularies/list${cachebust ? `?cb=${cachebust}` : ''}`,
     };

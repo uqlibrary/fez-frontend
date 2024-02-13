@@ -10,12 +10,32 @@ import VocabDataRow from './VocabDataRow';
 import * as actions from 'actions';
 import * as actionTypes from 'actions/actionTypes';
 
+jest.mock('../ControlledVocabularyContext');
+import {
+    ControlledVocabulariesActionContext,
+    ControlledVocabulariesStateContext,
+} from '../ControlledVocabularyContext';
+
 const vocabDataRow = mockData.vocabList.data[0];
 
 const setup = (testProps = {}, state = {}) => {
+    const actionContext = {
+        onAdminEditActionClick: jest.fn(),
+        ...testProps.actionContext,
+    };
+    const stateContext = {
+        cvo_id: null,
+        isOpen: false,
+        ...testProps.stateContext,
+    };
+
     return render(
         <WithReduxStore initialState={Immutable.Map(state)}>
-            <VocabDataRow {...testProps} />
+            <ControlledVocabulariesActionContext.Provider value={actionContext}>
+                <ControlledVocabulariesStateContext.Provider value={stateContext}>
+                    <VocabDataRow {...testProps} />
+                </ControlledVocabulariesStateContext.Provider>
+            </ControlledVocabulariesActionContext.Provider>
         </WithReduxStore>,
     );
 };
@@ -48,10 +68,17 @@ describe('ControlledVocabularies VocabDataRow', () => {
 
     it('should expand when clicking button', async () => {
         const { getByTestId } = setup({ row: vocabDataRow });
+
         const button = getByTestId('expand-row-453669');
         fireEvent.click(button);
         await waitFor(() => {
             expect(getByTestId('vocab-child-header')).toBeInTheDocument();
         });
+    });
+    it('should hide row and child rows when admin panel displayed', async () => {
+        const { queryByTestId } = setup({ row: vocabDataRow, stateContext: { cvo_id: 453669, isOpen: true } });
+
+        expect(queryByTestId('expand-row-453669')).not.toBeInTheDocument();
+        expect(queryByTestId('vocab-child-header')).not.toBeInTheDocument();
     });
 });

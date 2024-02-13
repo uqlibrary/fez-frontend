@@ -47,7 +47,7 @@ export const manageDialogReducer = (_, action) => {
             };
         }
         default:
-            throw Error('Unknown action: ', action);
+            throw Error(`Unknown action: ${type}`);
     }
 };
 

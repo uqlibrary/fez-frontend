@@ -14,8 +14,10 @@ import Grid from '@mui/material/Grid';
 import * as actions from 'actions';
 
 import ChildVocabTable from './ChildVocabTable';
-import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
-import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
+import {
+    ControlledVocabulariesActionContext,
+    ControlledVocabulariesStateContext,
+} from '../ControlledVocabularyContext';
 
 export const VocabDataRow = ({ row }) => {
     const dispatch = useDispatch();
@@ -37,7 +39,11 @@ export const VocabDataRow = ({ row }) => {
             sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
             <React.Fragment key={row.cvo_id}>
-                <Box id={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
+                <Box
+                    id={`portal-edit-${row.cvo_id}`}
+                    data-testid={`portal-edit-${row.cvo_id}`}
+                    sx={{ width: '100%' }}
+                />
                 {state.cvo_id !== row.cvo_id && (
                     <Box
                         sx={{

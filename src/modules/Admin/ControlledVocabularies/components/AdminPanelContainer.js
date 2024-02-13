@@ -15,11 +15,6 @@ const validate = data => {
     const errors = {};
     if (!values.cvo_title) {
         errors.cvo_title = 'Required';
-    } else if (values.cvo_title.length > 255) {
-        errors.cvo_title = 'Must be 255 characters or less';
-    }
-    if (!!values.cvo_desc && values.cvo_desc.length > 255) {
-        errors.cvo_desc = 'Must be 255 characters or less';
     }
 
     if (typeof values.cvo_order !== 'undefined' && values.cvo_order !== '' && values.cvo_order !== null) {

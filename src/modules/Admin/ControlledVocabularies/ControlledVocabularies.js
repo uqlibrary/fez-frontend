@@ -62,12 +62,12 @@ const ControlledVocabularies = () => {
     const handleDialogClickSave = parentId => values => {
         const data = { ...values.toJS() };
         const wrappedRequest = transformAdminRequest({ request: data, parentId, action: adminDialogState.action });
-        console.log(parentId, wrappedRequest);
 
         return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
             .then(() => {
                 handleDialogClickClose();
                 const adminFunction = !!parentId ? actions.loadChildVocabList : actions.loadControlledVocabList;
+
                 dispatch(
                     adminFunction({
                         pid: parentId,
@@ -110,7 +110,7 @@ const ControlledVocabularies = () => {
                                 </Button>
                             </StyledAddButtonWrapper>
                         </Box>
-                        <Box id={'portal-root'} />
+                        <Box id={'portal-root'} data-testid={'portal-root'} />
                         <StandardCard noHeader>
                             {!!!loadingVocab && (
                                 <Typography

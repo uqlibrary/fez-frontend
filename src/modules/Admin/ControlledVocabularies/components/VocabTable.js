@@ -33,7 +33,6 @@ export const VocabTable = ({ records, labels }) => {
 };
 VocabTable.propTypes = {
     records: PropTypes.array,
-    location: PropTypes.object,
     labels: PropTypes.object,
 };
 export default VocabTable;
