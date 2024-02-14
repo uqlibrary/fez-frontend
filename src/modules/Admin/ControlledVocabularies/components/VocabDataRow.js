@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
+import locale from 'locale/components';
 
 import * as actions from 'actions';
 
@@ -24,6 +25,7 @@ export const VocabDataRow = ({ row }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
+    const txt = locale.components.controlledVocabulary;
     const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
 
     const open = vocabOpened.indexOf(row.cvo_id) > -1;
@@ -73,7 +75,7 @@ export const VocabDataRow = ({ row }) => {
                             <Box display={'flex'}>
                                 {row.cvo_title}
                                 {row.cvo_hide === 1 && (
-                                    <Tooltip title="This vocabulary is hidden">
+                                    <Tooltip title={txt.admin.tooltip.hidden}>
                                         <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
                                     </Tooltip>
                                 )}

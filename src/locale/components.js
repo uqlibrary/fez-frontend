@@ -3834,6 +3834,32 @@ export default {
             },
         },
         controlledVocabulary: {
+            admin: {
+                addButtonLabel: 'Add vocabulary',
+                addChildButtonLabel: 'Add child vocabulary',
+                editButtonLabel: 'Update vocabulary',
+                addTitle: 'Add vocabulary',
+                editTitle: 'Update vocabulary',
+                confirmButtonLabel: 'Save',
+                cancelButtonLabel: 'cancel',
+                form: {
+                    title: 'Title',
+                    description: 'Description',
+                    externalId: 'External ID',
+                    filename: 'Filename',
+                    order: 'Order',
+                    inactive: 'Inactive',
+                    error: {
+                        title: 'Error',
+                    },
+                },
+                tooltip: {
+                    hidden: 'This vocabulary is hidden',
+                },
+            },
+            error: {
+                title: 'An error has occurred',
+            },
             title: {
                 controlledVocabulary: 'Controlled Vocabulary',
             },

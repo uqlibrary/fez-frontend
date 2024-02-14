@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions';
 
+import locale from 'locale/components';
+
 export const ControlledVocabulariesStateContext = createContext(null);
 export const ControlledVocabulariesActionContext = createContext(null);
 
@@ -30,7 +32,7 @@ export const manageDialogReducer = (_, action) => {
                 ...nextState,
                 action: type,
                 isOpen: true,
-                title: 'Add vocabulary',
+                title: locale.components.controlledVocabulary.admin.addTitle,
             };
         case ACTION.EDIT: {
             return {
@@ -38,7 +40,7 @@ export const manageDialogReducer = (_, action) => {
                 ...nextState,
                 action: type,
                 isOpen: true,
-                title: 'Update vocabulary',
+                title: locale.components.controlledVocabulary.admin.editTitle,
             };
         }
         case ACTION.CLOSE: {
@@ -56,11 +58,9 @@ export const ControlledVocabulariesProvider = ({ children }) => {
     const dispatch = useDispatch();
 
     const onAdminAddActionClick = parentId => {
-        console.log('onAdminAddActionClick', parentId);
         actionDispatch({ type: ACTION.ADD, parentId, portalId: getPortalId(parentId, ACTION.ADD) });
     };
     const onAdminEditActionClick = ({ parentId, row }) => {
-        console.log('onAdminEditActionClick', parentId, row);
         dispatch(actions.setAdminActionVocab(row));
         actionDispatch({
             type: ACTION.EDIT,

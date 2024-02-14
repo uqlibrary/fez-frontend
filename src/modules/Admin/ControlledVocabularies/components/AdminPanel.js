@@ -1,13 +1,10 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { reduxForm, getFormValues, getFormSyncErrors, Field, propTypes } from 'redux-form/immutable';
-import Immutable from 'immutable';
+import { Field, propTypes } from 'redux-form/immutable';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -33,13 +30,10 @@ const AdminPanel = ({
     id,
     hideActionButton = false,
     hideCancelButton = false,
-    onAction,
     onCancelAction,
     onClose,
     noMinContentWidth,
     error,
-    formValues,
-    formErrors,
     handleSubmit,
     submitting,
     pristine,
@@ -97,7 +91,7 @@ const AdminPanel = ({
                             >
                                 <Grid container padding={0} spacing={2}>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_title">Title</label>
+                                        <label htmlFor="cvo_title">{locale.form.title}</label>
                                         <Field
                                             component={TextField}
                                             variant="standard"
@@ -110,7 +104,7 @@ const AdminPanel = ({
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_desc">Description</label>
+                                        <label htmlFor="cvo_desc">{locale.form.description}</label>
                                         <Field
                                             component={TextField}
                                             variant="standard"
@@ -125,7 +119,7 @@ const AdminPanel = ({
                                     </Grid>
                                     <Grid item xs={12}>
                                         <label htmlFor="cvo_external_id" style={{ display: 'block' }}>
-                                            External ID
+                                            {locale.form.externalId}
                                         </label>
                                         <Field
                                             component={TextField}
@@ -137,7 +131,7 @@ const AdminPanel = ({
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_image_filename">Filename</label>
+                                        <label htmlFor="cvo_image_filename">{locale.form.filename}</label>
                                         <Field
                                             component={TextField}
                                             variant="standard"
@@ -150,7 +144,7 @@ const AdminPanel = ({
                                     </Grid>
                                     <Grid item xs={12}>
                                         <label htmlFor="cvo_order" style={{ display: 'block' }}>
-                                            Order
+                                            {locale.form.order}
                                         </label>
                                         <Field
                                             component={TextField}
@@ -163,7 +157,7 @@ const AdminPanel = ({
 
                                     <Grid item xs={12}>
                                         <label htmlFor="cvo_hide" style={{ display: 'block' }}>
-                                            Disabled
+                                            {locale.form.inactive}
                                         </label>
                                         <Field
                                             component={renderCheckbox}
@@ -232,7 +226,11 @@ const AdminPanel = ({
                             {!!error && (
                                 <Grid container id={`${rootId}-alert`} data-testid={`${rootId}-alert`}>
                                     <Grid item xs={12}>
-                                        <Alert title="Error" type="error_outline" message={error.message} />
+                                        <Alert
+                                            title={locale.form.error.title}
+                                            type="error_outline"
+                                            message={error.message}
+                                        />
                                     </Grid>
                                 </Grid>
                             )}

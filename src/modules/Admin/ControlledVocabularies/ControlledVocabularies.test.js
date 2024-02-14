@@ -17,7 +17,6 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
             <WithRouter history={testHistory}>
                 <ControlledVocabularies {...state} />
             </WithRouter>
-            ,
         </WithReduxStore>,
     );
 };

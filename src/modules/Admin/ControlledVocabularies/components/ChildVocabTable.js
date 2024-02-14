@@ -76,7 +76,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 onClick={handleAddActionClick}
                 disabled={state.isOpen}
             >
-                Add Child Vocabulary
+                {txt.admin.addChildButtonLabel}
             </Button>
 
             <Box

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithReduxStore, WithRouter, userEvent } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -8,13 +8,37 @@ import ChildVocabDataRow from './ChildVocabDataRow';
 import Immutable from 'immutable';
 import { createMemoryHistory } from 'history';
 
+jest.mock('../ControlledVocabularyContext');
+import {
+    ControlledVocabulariesActionContext,
+    ControlledVocabulariesStateContext,
+} from '../ControlledVocabularyContext';
+
 const row = mockData.childVocabList['453669'].data[0].controlled_vocab;
 
 function setup(testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) {
+    const { actionContext, stateContext, ...rest } = testProps;
+
+    const actionContextProps = {
+        onAdminEditActionClick: jest.fn(),
+        ...actionContext,
+    };
+    const stateContextProps = {
+        cvo_id: null,
+        isOpen: false,
+        ...stateContext,
+    };
+
+    const props = { parentId: 1, ...rest };
+
     return render(
         <WithRouter history={testHistory}>
             <WithReduxStore initialState={Immutable.Map(state)}>
-                <ChildVocabDataRow {...testProps} />
+                <ControlledVocabulariesActionContext.Provider value={actionContextProps}>
+                    <ControlledVocabulariesStateContext.Provider value={stateContextProps}>
+                        <ChildVocabDataRow {...props} />
+                    </ControlledVocabulariesStateContext.Provider>
+                </ControlledVocabulariesActionContext.Provider>
             </WithReduxStore>
         </WithRouter>,
     );
@@ -24,5 +48,21 @@ describe('ControlledVocabularies ChildVocabTable', () => {
     it('should render the child table row', async () => {
         const { getByText } = setup({ row: row });
         expect(getByText('Yukulta / Ganggalidda language G34')).toBeInTheDocument();
+    });
+
+    it('should fire the edit vocab function when the edit button is clicked', async () => {
+        const mockFn = jest.fn();
+        const { getByTestId, getByText } = setup({
+            row: row,
+            actionContext: {
+                onAdminEditActionClick: mockFn,
+            },
+        });
+        expect(getByText('Yukulta / Ganggalidda language G34')).toBeInTheDocument();
+        await userEvent.click(getByTestId('admin-edit-button-453670'));
+        expect(mockFn).toHaveBeenCalledWith({
+            parentId: 1,
+            row: expect.objectContaining({ cvo_title: 'Yukulta / Ganggalidda language G34' }),
+        });
     });
 });

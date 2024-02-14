@@ -87,7 +87,7 @@ const ControlledVocabularies = () => {
                 {createPortal(
                     <AdminPanel
                         {...adminDialogState}
-                        locale={{ confirmButtonLabel: 'Save', cancelButtonLabel: 'cancel' }}
+                        locale={txt.admin}
                         onCancelAction={handleDialogClickClose}
                         onAction={handleDialogClickSave}
                     />,
@@ -106,7 +106,7 @@ const ControlledVocabularies = () => {
                                     onClick={() => onAdminAddActionClick()}
                                     disabled={adminDialogState.isOpen}
                                 >
-                                    Add Vocabulary
+                                    {txt.admin.addButtonLabel}
                                 </Button>
                             </StyledAddButtonWrapper>
                         </Box>
@@ -133,7 +133,7 @@ const ControlledVocabularies = () => {
                 )}
                 {!!loadingVocabError && (
                     <Grid item xs={12}>
-                        <Alert title="An error has occurred" message={loadingVocabError.message} type="info_outline" />
+                        <Alert title={txt.error.title} message={loadingVocabError.message} type="info_outline" />
                     </Grid>
                 )}
             </>

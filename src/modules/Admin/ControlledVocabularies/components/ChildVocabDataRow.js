@@ -9,9 +9,12 @@ import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Tooltip from '@mui/material/Tooltip';
+import locale from 'locale/components';
 
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
+
+const txt = locale.components.controlledVocabulary;
 
 export const ChildVocabDataRow = ({ row, parentId }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
@@ -35,10 +38,8 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                     width={'100%'}
                     paddingBlockEnd={'10px'}
                 >
-                    <Grid item md={1}>
-                        {row.cvo_id}
-                    </Grid>
-                    <Grid item md={3}>
+                    <Grid md={1}>{row.cvo_id}</Grid>
+                    <Grid md={3}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
@@ -47,26 +48,18 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                             >
                                 {row.cvo_title}
                                 {row.cvo_hide === 1 && (
-                                    <Tooltip title="This vocabulary is hidden">
+                                    <Tooltip title={txt.admin.tooltip.hidden}>
                                         <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
                                     </Tooltip>
                                 )}
                             </Link>
                         </Typography>
                     </Grid>
-                    <Grid item md={3}>
-                        {row.cvo_desc}
-                    </Grid>
-                    <Grid item md={1}>
-                        {row.cvo_order}
-                    </Grid>
-                    <Grid item md={2}>
-                        {row.cvo_image_filename}
-                    </Grid>
-                    <Grid item md={1}>
-                        {row.cvo_external_id}
-                    </Grid>
-                    <Grid item md={1}>
+                    <Grid md={3}>{row.cvo_desc}</Grid>
+                    <Grid md={1}>{row.cvo_order}</Grid>
+                    <Grid md={2}>{row.cvo_image_filename}</Grid>
+                    <Grid md={1}>{row.cvo_external_id}</Grid>
+                    <Grid md={1}>
                         <IconButton
                             id={`admin-edit-button-${row.cvo_id}`}
                             data-analyticsid={`admin-edit-button-${row.cvo_id}`}

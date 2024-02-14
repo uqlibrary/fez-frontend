@@ -10,7 +10,7 @@ const FORM_NAME = 'ControlledVocabAdmin';
 
 const rxWholeNumberOnly = new RegExp(/^\d+$/);
 
-const validate = data => {
+export const validate = data => {
     const values = data.toJS();
     const errors = {};
     if (!values.cvo_title) {
