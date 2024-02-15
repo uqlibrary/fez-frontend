@@ -614,7 +614,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.userList })
 
     .onPost(routes.VOCAB_API().apiUrl)
-    // .reply(422, {message: 'Some error happened yo'})
+    // .reply(422, {message: 'Some error message'})
     .reply(config => {
         const data = JSON.parse(config.data);
         if(!data.hasOwnProperty('cvo_id')){
@@ -625,7 +625,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, { data  }]
     })
     .onPut(routes.VOCAB_API().apiUrl)
-    // .reply(422, {message: 'DOH'})
+    // .reply(422, {message: 'Some error message'})
     .reply(config =>[200, { data: config.data  }])
     
     .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*'}).apiUrl)))
@@ -641,7 +641,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ),
     )
     .reply(200, { ...mockData.vocabList })
-    // .reply(200, { ...mockData.vocabulariesList })
+    // .reply(422, {message: 'Some error message'})
     .onGet(
         new RegExp(
             escapeRegExp(

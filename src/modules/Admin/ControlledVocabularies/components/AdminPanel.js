@@ -67,7 +67,6 @@ const AdminPanel = ({
         onClose?.();
         onCancelAction?.();
     };
-
     React.useEffect(() => {
         if (!props.initialized) props.initialize(props.initialValues);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -81,6 +80,7 @@ const AdminPanel = ({
                         marginBlockEnd: 2,
                         ...containerStyles,
                     }}
+                    data-testid={`${componentId}-container`}
                 >
                     <StandardCard title={title} standardCardId={`${componentId}`} subCard>
                         <form onSubmit={handleSubmit}>
@@ -224,9 +224,10 @@ const AdminPanel = ({
                                 </Grid>
                             )}
                             {!!error && (
-                                <Grid container id={`${rootId}-alert`} data-testid={`${rootId}-alert`}>
+                                <Grid container>
                                     <Grid item xs={12}>
                                         <Alert
+                                            alertId={`${rootId}-alert`}
                                             title={locale.form.error.title}
                                             type="error_outline"
                                             message={error.message}

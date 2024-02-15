@@ -67,8 +67,8 @@ export const ChildVocabTable = ({ parentRow }) => {
             id={`vocab-table-${parentRow.cvo_id}`}
         >
             <Button
-                id={`admin-add-community-button-${parentRow.cvo_id}`}
-                data-testid={`admin-add-community-button-${parentRow.cvo_id}`}
+                id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
                 startIcon={<Add />}
                 variant={'contained'}
                 color={'primary'}

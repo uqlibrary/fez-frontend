@@ -133,7 +133,12 @@ const ControlledVocabularies = () => {
                 )}
                 {!!loadingVocabError && (
                     <Grid item xs={12}>
-                        <Alert title={txt.error.title} message={loadingVocabError.message} type="info_outline" />
+                        <Alert
+                            alertId="alert_controlled_vocabularies"
+                            title={txt.error.title}
+                            message={loadingVocabError.message}
+                            type="info_outline"
+                        />
                     </Grid>
                 )}
             </>

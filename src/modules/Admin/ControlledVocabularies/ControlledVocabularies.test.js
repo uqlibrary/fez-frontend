@@ -114,9 +114,9 @@ describe('ControlledVocabularies', () => {
 
     it('should show relevant error message', async () => {
         userIsAdmin.mockImplementation(() => false);
-        mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(500, { error: 'Error' });
+        mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(422, { message: 'Some error message' });
 
         const { getByText } = setup();
-        await waitFor(() => getByText(/An error has occurred/));
+        await waitFor(() => getByText(/Some error message/));
     });
 });

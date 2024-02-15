@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, WithRouter, userEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, userEvent, within } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -52,13 +52,15 @@ describe('ControlledVocabularies ChildVocabTable', () => {
 
     it('should fire the edit vocab function when the edit button is clicked', async () => {
         const mockFn = jest.fn();
-        const { getByTestId, getByText } = setup({
+        const { getByTestId } = setup({
             row: row,
             actionContext: {
                 onAdminEditActionClick: mockFn,
             },
         });
-        expect(getByText('Yukulta / Ganggalidda language G34')).toBeInTheDocument();
+        expect(within(getByTestId('row-453670')).getByText('453670'));
+        expect(within(getByTestId('row-453670')).getByText('Yukulta / Ganggalidda language G34'));
+        expect(within(getByTestId('row-453670')).getByText(/^G34$/));
         await userEvent.click(getByTestId('admin-edit-button-453670'));
         expect(mockFn).toHaveBeenCalledWith({
             parentId: 1,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
 import * as mockData from 'mock/data';
@@ -83,8 +83,7 @@ describe('ChildVocabTable', () => {
             },
         });
         await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
-        await userEvent.click(getByTestId('admin-add-community-button-453669'));
+        await userEvent.click(getByTestId('admin-add-vocabulary-button-453669'));
         expect(mockFn).toHaveBeenCalledWith(453669);
-        preview.debug();
     });
 });
