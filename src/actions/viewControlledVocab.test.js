@@ -18,13 +18,8 @@ describe('View controlled vocabulary actions', () => {
             mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, { data: { ...mockData.vocabList } });
 
             const expectedActions = [actions.VIEW_VOCAB_LOADING, actions.VIEW_VOCAB_LOADED];
-            const expectedActionsException = [actions.VIEW_VOCAB_LOADING, actions.VIEW_VOCAB_LOAD_FAILED];
-            try {
-                await mockActionsStore.dispatch(viewRecordActions.loadControlledVocabList());
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsException);
-            }
+            await mockActionsStore.dispatch(viewRecordActions.loadControlledVocabList());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
         it('dispatches expected actions when loading top level controlled vocabularies from API failed', async () => {
             mockApi.onAny().reply(500);
@@ -45,13 +40,8 @@ describe('View controlled vocabulary actions', () => {
                 .reply(200, { data: { ...mockData.childVocabList['453669'] } });
 
             const expectedActions = [actions.VIEW_CHILD_VOCAB_LOADING, actions.VIEW_CHILD_VOCAB_LOADED];
-            const expectedActionsException = [actions.VIEW_CHILD_VOCAB_LOADING, actions.VIEW_CHILD_VOCAB_LOAD_FAILED];
-            try {
-                await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669 }));
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            } catch (e) {
-                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActionsException);
-            }
+            await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
         it('dispatches expected actions when loading child level controlled vocabularies from API failed', async () => {
             mockApi.onAny().reply(500);

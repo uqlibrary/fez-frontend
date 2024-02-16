@@ -57,7 +57,8 @@ describe('ChildVocabTable', () => {
         const { getByText, getByTestId } = setup({ parentRow: parentRow });
         expect(getByText('Description')).toBeInTheDocument();
         await waitFor(() => {
-            expect(getByTestId('child-vocab-title-453670')).toBeInTheDocument();
+            expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
+            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
 
@@ -66,10 +67,10 @@ describe('ChildVocabTable', () => {
         expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
     });
 
-    it('should hide the loader', async () => {
+    it('should hide the loader after the data is loaded', async () => {
         const { getByTestId, queryByText } = setup({ parentRow: parentRow });
         await waitFor(() => {
-            getByTestId('child-vocab-title-453670');
+            getByTestId('child-row-em-456960');
         });
         expect(queryByText('Loading Data')).not.toBeInTheDocument();
     });

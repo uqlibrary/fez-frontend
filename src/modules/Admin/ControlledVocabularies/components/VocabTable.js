@@ -12,13 +12,13 @@ export const VocabTable = ({ records, labels }) => {
                 <Grid item sm={1}>
                     {''}
                 </Grid>
-                <Grid item xs={12} sm={8} md={9}>
+                <Grid item xs={12} sm={8} md={9} data-testid="vocab-primary-header-title">
                     {labels.title}
                 </Grid>
-                <Grid item xs={12} sm={2} md={1}>
+                <Grid item xs={12} sm={2} md={1} data-testid="vocab-primary-header-eid">
                     {labels.external_id}
                 </Grid>
-                <Grid item xs={12} sm={1}>
+                <Grid item xs={12} sm={1} data-testid="vocab-primary-header-action">
                     {labels.actions}
                 </Grid>
             </Grid>

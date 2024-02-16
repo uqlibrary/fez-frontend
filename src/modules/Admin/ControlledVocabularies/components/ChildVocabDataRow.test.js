@@ -46,8 +46,16 @@ function setup(testProps = {}, state = {}, testHistory = createMemoryHistory({ i
 
 describe('ControlledVocabularies ChildVocabTable', () => {
     it('should render the child table row', async () => {
-        const { getByText } = setup({ row: row });
-        expect(getByText('Yukulta / Ganggalidda language G34')).toBeInTheDocument();
+        const { getByTestId } = setup({ row: row });
+        expect(getByTestId('child-row-id-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-desc-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-order-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-image-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-eid-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-action-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-title-link-453670')).toBeInTheDocument();
+        expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
     });
 
     it('should fire the edit vocab function when the edit button is clicked', async () => {

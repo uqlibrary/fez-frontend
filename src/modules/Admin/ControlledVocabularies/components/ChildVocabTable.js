@@ -130,7 +130,12 @@ export const ChildVocabTable = ({ parentRow }) => {
                             />
                         ))}
                         {loadingChildVocab && (
-                            <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
+                            <Grid item md={12}>
+                                <InlineLoader
+                                    loaderId="childControlledVocab-page-loading"
+                                    message={txt.loading.message}
+                                />
+                            </Grid>
                         )}
                     </Grid>
                 </Grid>
