@@ -66,9 +66,10 @@ describe('ControlledVocabularies ChildVocabTable', () => {
                 onAdminEditActionClick: mockFn,
             },
         });
-        expect(within(getByTestId('row-453670')).getByText('453670'));
-        expect(within(getByTestId('row-453670')).getByText('Yukulta / Ganggalidda language G34'));
-        expect(within(getByTestId('row-453670')).getByText(/^G34$/));
+
+        expect(within(getByTestId('child-row-em-453670')).getByText('453670'));
+        expect(within(getByTestId('child-row-em-453670')).getByText('Yukulta / Ganggalidda language G34'));
+        expect(within(getByTestId('child-row-em-453670')).getByText(/^G34$/));
         await userEvent.click(getByTestId('admin-edit-button-453670'));
         expect(mockFn).toHaveBeenCalledWith({
             parentId: 1,

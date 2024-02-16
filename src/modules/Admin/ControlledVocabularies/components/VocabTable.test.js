@@ -43,7 +43,6 @@ describe('ControlledVocabularies VocabTable', () => {
     it('should render the table', async () => {
         const { getByTestId } = setup({ records: sortedList, labels: labels });
         expect(getByTestId('vocab-primary-header-title')).toBeInTheDocument();
-        expect(getByTestId('vocab-primary-header-license')).toBeInTheDocument();
         expect(getByTestId('vocab-primary-header-eid')).toBeInTheDocument();
         expect(getByTestId('vocab-primary-header-action')).toBeInTheDocument();
         expect(getByTestId('row-em-453669')).toBeInTheDocument();
