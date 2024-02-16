@@ -77,6 +77,17 @@ describe('ControlledVocabularies', () => {
                 expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
             });
         });
+        it('should capture error when save when button clicked', async () => {
+            const message = 'Test error message';
+            mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(422, { message });
+            await showAddForm().then(async ({ getByTestId }) => {
+                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                await userEvent.click(getByTestId('update_dialog-action-button'));
+                await waitForElementToBeRemoved(getByTestId('update_dialog-progress'));
+
+                expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
+            });
+        });
     });
     describe('admin EDIT form', () => {
         const showEditForm = async () => {
