@@ -32,7 +32,8 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         const { getByText, getByTestId } = setup({ parentRow: parentRow }, initState);
         expect(getByText('Description')).toBeInTheDocument();
         await waitFor(() => {
-            expect(getByTestId('child-vocab-title-453670')).toBeInTheDocument();
+            expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
+            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
 });
@@ -48,7 +49,7 @@ describe('ControlledVocabularies ChildVocabTable Loader', () => {
         expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
     });
 
-    it('should hide the loader', async () => {
+    it('should hide the loader after the data is loaded', async () => {
         mockApi
             .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
             .reply(200, mockData.childVocabList[453669]);
@@ -56,7 +57,7 @@ describe('ControlledVocabularies ChildVocabTable Loader', () => {
         const initState = {};
         const { getByTestId, queryByText } = setup({ parentRow: parentRow }, initState);
         await waitFor(() => {
-            getByTestId('child-vocab-title-453670');
+            getByTestId('child-row-em-456960');
         });
         expect(queryByText('Loading Data')).not.toBeInTheDocument();
     });

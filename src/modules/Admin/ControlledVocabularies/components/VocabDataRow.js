@@ -24,7 +24,7 @@ export const VocabDataRow = ({ row }) => {
         <Grid
             container
             key={row.cvo_id}
-            data-testid={`row-${row.cvo_id}`}
+            data-testid={`row-em-${row.cvo_id}`}
             sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
             <React.Fragment key={row.cvo_id}>

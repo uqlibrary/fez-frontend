@@ -11,38 +11,38 @@ export const ChildVocabDataRow = ({ row }) => {
         <Grid
             container
             key={row.cvo_id}
-            data-testid={`row-${row.cvo_id}`}
+            data-testid={`child-row-em-${row.cvo_id}`}
             sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
             <React.Fragment key={row.cvo_id}>
                 <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item md={1}>
+                    <Grid item md={1} data-testid={`child-row-id-${row.cvo_id}`}>
                         <Box>{row.cvo_id}</Box>
                     </Grid>
-                    <Grid item md={3}>
+                    <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
-                                id={`child-vocab-title-${row.cvo_id}`}
-                                data-testid={`child-vocab-title-${row.cvo_id}`}
+                                id={`child-row-title-link-${row.cvo_id}`}
+                                data-testid={`child-row-title-link-${row.cvo_id}`}
                             >
                                 {row.cvo_title}
                             </Link>
                         </Typography>
                     </Grid>
-                    <Grid item md={3}>
+                    <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
                         <Box>{row.cvo_desc}</Box>
                     </Grid>
-                    <Grid item md={1}>
+                    <Grid item md={1} data-testid={`child-row-order-${row.cvo_id}`}>
                         <Box>{row.cvo_order}</Box>
                     </Grid>
-                    <Grid item md={2}>
+                    <Grid item md={2} data-testid={`child-row-image-${row.cvo_id}`}>
                         <Box>{row.cvo_image_filename}</Box>
                     </Grid>
-                    <Grid item md={1}>
+                    <Grid item md={1} data-testid={`child-row-eid-${row.cvo_id}`}>
                         <Box>{row.cvo_external_id}</Box>
                     </Grid>
-                    <Grid item md={1}>
+                    <Grid item md={1} data-testid={`child-row-action-${row.cvo_id}`}>
                         {''}
                     </Grid>
                 </Grid>
