@@ -28,6 +28,16 @@ describe('ViewJournal', () => {
         expect(getByTestId('alert-error-journal-load')).toBeInTheDocument();
     });
 
+    it('should handle empty response', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {});
+
+        const { container, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(container).toMatchSnapshot();
+    });
+
     it('should display journal details basic section', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {

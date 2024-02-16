@@ -6,9 +6,16 @@ import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent } from 'test-utils';
 import * as repositories from 'repositories';
-
 import { useParams } from 'react-router';
 import * as UserIsAdmin from 'hooks/userIsAdmin';
+
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),

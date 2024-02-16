@@ -3,6 +3,14 @@ import RichEditor from './RichEditor';
 import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
+
 function setup(testProps = {}, renderMethod = rtlRender) {
     const props = {
         onChange: jest.fn(), // PropTypes.func.isRequired,
