@@ -43,10 +43,16 @@ describe('transformAdminRequest', () => {
         expect(transformedRequest).not.toHaveProperty('cvr_parent_cvo_id');
     });
 
-    // test that the function converts the cvo_hide property to a number
+    // test that the function converts the cvo_hide property to a 0
     test('should convert the cvo_hide property to a number', () => {
         const transformedRequest = transformAdminRequest({ request: mockRequest });
         expect(transformedRequest).toHaveProperty('cvo_hide', 0);
+    });
+
+    // test that the function converts the cvo_hide property to a 1
+    test('should convert the cvo_hide property to a number', () => {
+        const transformedRequest = transformAdminRequest({ request: { ...mockRequest, cvo_hide: true } });
+        expect(transformedRequest).toHaveProperty('cvo_hide', 1);
     });
 
     // test that the function converts the cvo_order property to a number

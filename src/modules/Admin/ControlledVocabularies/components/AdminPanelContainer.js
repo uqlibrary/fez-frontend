@@ -29,7 +29,7 @@ export const validate = data => {
 };
 
 const mapStateToProps = (state, props) => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formErrors = getFormSyncErrors(FORM_NAME)(state);
     return {
         onSubmit: props.onAction(props.parentId ?? null),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),

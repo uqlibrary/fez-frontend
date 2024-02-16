@@ -85,8 +85,8 @@ const AdminPanel = ({
                     <StandardCard title={title} standardCardId={`${componentId}`} subCard>
                         <form onSubmit={handleSubmit}>
                             <Box
-                                id={`${componentId}-content`}
-                                data-testid={`${componentId}-content`}
+                                id={`${componentId}-vc-content`}
+                                data-testid={`${componentId}-vc-content`}
                                 sx={{ minWidth: !noMinContentWidth ? 300 : 'auto', padding: 2 }}
                             >
                                 <Grid container padding={0} spacing={2}>
