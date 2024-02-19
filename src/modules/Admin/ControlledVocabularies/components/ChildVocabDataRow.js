@@ -63,10 +63,18 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                     <Grid md={1} data-testid={`child-row-order-${row.cvo_id}`}>
                         {row.cvo_order}
                     </Grid>
-                    <Grid md={2} data-testid={`child-row-image-${row.cvo_id}`}>
+                    <Grid
+                        md={2}
+                        data-testid={`child-row-image-${row.cvo_id}`}
+                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
                         {row.cvo_image_filename}
                     </Grid>
-                    <Grid md={1} data-testid={`child-row-eid-${row.cvo_id}`}>
+                    <Grid
+                        md={1}
+                        data-testid={`child-row-eid-${row.cvo_id}`}
+                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
                         {row.cvo_external_id}
                     </Grid>
                     <Grid md={1} data-testid={`child-row-action-${row.cvo_id}`}>

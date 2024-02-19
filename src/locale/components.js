@@ -3876,6 +3876,7 @@ export default {
                     external_id: 'External ID',
                     path: 'Path',
                     actions: 'Actions',
+                    filename: 'Image',
                 },
             },
             form: {
