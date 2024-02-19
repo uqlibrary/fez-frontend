@@ -111,7 +111,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                             <Box>{labels.order}</Box>
                         </Grid>
                         <Grid item md={2}>
-                            {labels.license}
+                            {labels.filename}
                         </Grid>
                         <Grid item md={1}>
                             {labels.external_id}

@@ -60,4 +60,11 @@ describe('transformAdminRequest', () => {
         const transformedRequest = transformAdminRequest({ request: mockRequest });
         expect(transformedRequest).toHaveProperty('cvo_order', 1);
     });
+
+    // test that the function converts an empty cvo_order property to null
+    test('should convert the cvo_order property to null', () => {
+        const request = { ...mockRequest, cvo_order: '' };
+        const transformedRequest = transformAdminRequest({ request });
+        expect(transformedRequest).toHaveProperty('cvo_order', null);
+    });
 });
