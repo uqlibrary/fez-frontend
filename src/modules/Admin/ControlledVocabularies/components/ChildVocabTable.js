@@ -10,9 +10,15 @@ import * as actions from 'actions';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import Typography from '@mui/material/Typography';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { useLocation } from 'react-router-dom';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
+
+console.log('location=', location.search);
+const urlParams = new URLSearchParams(location.search);
+const id = urlParams.has('id') ? urlParams.get('id') : 0;
+console.log('id=', id);
 
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
@@ -26,6 +32,13 @@ export const ChildVocabTable = ({ parentRow }) => {
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    const { search } = useLocation();
+    React.useEffect(() => {
+        // Handle changes to the query string here
+        console.log('Query string changed:', search);
+    }, [search]);
+
     const { openedVocabLists: existingList, loadingChildVocab } = useSelector(state =>
         state.get('viewChildVocabReducer'),
     );
