@@ -1,17 +1,17 @@
 import * as actions from './actionTypes';
-import { get } from 'repositories/generic';
-import { VOCAB_LIST_API } from 'repositories/routes';
+import { get, post, put } from 'repositories/generic';
+import { VOCAB_API, VOCAB_LIST_API, CHILD_VOCAB_LIST_API } from 'repositories/routes';
 
 /**
- * Load Communities List
+ * Load Top Controlled Vocabulary List
  *
  * @returns {action}
  */
-export function loadControlledVocabList() {
+export function loadControlledVocabList({ cachebust = null } = {}) {
     return dispatch => {
         dispatch({ type: actions.VIEW_VOCAB_LOADING });
 
-        return get(VOCAB_LIST_API())
+        return get(VOCAB_LIST_API({ cachebust }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_VOCAB_LOADED,
@@ -26,5 +26,81 @@ export function loadControlledVocabList() {
                     payload: error,
                 });
             });
+    };
+}
+
+/**
+ * Load Child Controlled Vocabulary List
+ *
+ * @returns {action}
+ */
+export function loadChildVocabList({ pid: parentId, cachebust = null }) {
+    return dispatch => {
+        dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING });
+
+        return get(CHILD_VOCAB_LIST_API({ parentId, cachebust }))
+            .then(response => {
+                dispatch({
+                    type: actions.VIEW_CHILD_VOCAB_LOADED,
+                    payload: response,
+                });
+
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.VIEW_CHILD_VOCAB_LOAD_FAILED,
+                    payload: error,
+                });
+            });
+    };
+}
+
+export function setOpenedVocab(rowObject) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_OPENED_VOCAB,
+            payload: {
+                id: rowObject.id,
+                open: rowObject.open,
+            },
+        });
+    };
+}
+
+export function setAdminActionVocab(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.VOCAB_ADMIN_ACTION,
+            payload: data,
+        });
+    };
+}
+
+export function adminControlledVocabulary(request, action) {
+    const adminFunction = action === 'add' ? post : put;
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_ADMIN_BUSY });
+        return adminFunction(VOCAB_API(), request)
+            .then(response => {
+                dispatch({
+                    type: actions.VOCAB_ADMIN_SUCCESS,
+                    payload: response?.data ?? /* istanbul ignore next */ {},
+                });
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.VOCAB_ADMIN_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
+export function clearAdminControlledVocabulary() {
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_ADMIN_CLEAR });
     };
 }

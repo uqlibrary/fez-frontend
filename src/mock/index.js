@@ -38,6 +38,7 @@ if (user && !mockData.accounts[user]) {
 
 // default user is researcher if user is not defined
 user = user || 'uqresearcher';
+// user = user || 'uqstaff';
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -611,15 +612,36 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
 
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
     .reply(200, { ...mockData.userList })
+
+    .onPost(routes.VOCAB_API().apiUrl)
+    // .reply(422, {message: 'Some error message'})
+    .reply(config => {
+        const data = JSON.parse(config.data);
+        if(!data.hasOwnProperty('cvo_id')){
+            data['cvo_id']=999;
+            data['cvo_created_at']=Date.now();
+            data['cvo_updated_at']=Date.now();
+        } 
+        return [200, { data  }]
+    })
+    .onPut(routes.VOCAB_API().apiUrl)
+    // .reply(422, {message: 'Some error message'})
+    .reply(config =>[200, { data: config.data  }])
+    
+    .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*'}).apiUrl)))
+    .reply(config=>{
+        const id=config.url.split('/').pop().split('?')[0];
+        return [200, { ...mockData.childVocabList[id] }];
+    })
     .onGet(
         new RegExp(
             escapeRegExp(
-                routes.VOCAB_LIST_API({ pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' }).apiUrl,
+                routes.VOCAB_LIST_API('.*').apiUrl,
             ),
         ),
     )
     .reply(200, { ...mockData.vocabList })
-    // .reply(200, { ...mockData.vocabulariesList })
+    // .reply(422, {message: 'Some error message'})
     .onGet(
         new RegExp(
             escapeRegExp(

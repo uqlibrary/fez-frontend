@@ -1,0 +1,11 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://docs.zed.dev/configuration/configuring-zed#folder-specific-settings
+{
+    "buffer_font_family": "Menlo",
+    "buffer_font_size": 12,
+    "ui_font_family": "Menlo",
+    // The default font size for text in the UI
+    "ui_font_size": 12
+}

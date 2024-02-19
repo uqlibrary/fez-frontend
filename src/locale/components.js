@@ -3834,6 +3834,32 @@ export default {
             },
         },
         controlledVocabulary: {
+            admin: {
+                addButtonLabel: 'Add vocabulary',
+                addChildButtonLabel: 'Add child vocabulary',
+                editButtonLabel: 'Update vocabulary',
+                addTitle: 'Add vocabulary',
+                editTitle: 'Update vocabulary',
+                confirmButtonLabel: 'Save',
+                cancelButtonLabel: 'cancel',
+                form: {
+                    title: 'Title',
+                    description: 'Description',
+                    externalId: 'External ID',
+                    filename: 'Filename',
+                    order: 'Order',
+                    inactive: 'Inactive',
+                    error: {
+                        title: 'Error',
+                    },
+                },
+                tooltip: {
+                    hidden: 'This vocabulary is hidden',
+                },
+            },
+            error: {
+                title: 'An error has occurred',
+            },
             title: {
                 controlledVocabulary: 'Controlled Vocabulary',
             },
@@ -3845,10 +3871,38 @@ export default {
                     id: 'ID',
                     title: 'Title',
                     order: 'Order',
-                    license: 'License',
+                    desc: 'Description',
+                    visibility: '',
                     external_id: 'External ID',
                     path: 'Path',
                     actions: 'Actions',
+                },
+            },
+            form: {
+                actions: 'Actions',
+                addButtonLabel: 'Add User',
+                columns: {
+                    cvo_id: {
+                        label: 'ID',
+                    },
+                    cvo_title: {
+                        label: 'Title',
+                    },
+                    cvo_desc: {
+                        label: 'Description',
+                    },
+                    cvo_image_filename: {
+                        label: 'Image file name',
+                    },
+                    cvo_external_id: {
+                        label: 'External ID',
+                    },
+                    cvo_order: {
+                        label: 'Order',
+                    },
+                    cvo_hide: {
+                        label: 'Disable',
+                    },
                 },
             },
         },
