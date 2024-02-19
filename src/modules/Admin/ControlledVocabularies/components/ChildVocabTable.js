@@ -15,28 +15,23 @@ import { useLocation } from 'react-router-dom';
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
-console.log('location=', location.search);
-const urlParams = new URLSearchParams(location.search);
-const id = urlParams.has('id') ? urlParams.get('id') : 0;
-console.log('id=', id);
-
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
+    const { search } = useLocation();
 
     React.useEffect(() => {
+        console.log('Query string changed:', search);
+        console.log('location=', location.search);
+        const urlParams = new URLSearchParams(location.search);
+        const parentId = urlParams.has('id') + 0 ? urlParams.get('id') + 0 : parentRow.cvo_id;
+        console.log('id=', parentId);
         /* istanbul ignore else */
         dispatch(
             actions.loadChildVocabList({
-                pid: parentRow.cvo_id,
+                pid: parentId,
             }),
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    const { search } = useLocation();
-    React.useEffect(() => {
-        // Handle changes to the query string here
-        console.log('Query string changed:', search);
     }, [search]);
 
     const { openedVocabLists: existingList, loadingChildVocab } = useSelector(state =>
