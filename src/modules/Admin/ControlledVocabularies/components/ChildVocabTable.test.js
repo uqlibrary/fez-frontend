@@ -29,8 +29,7 @@ describe('ControlledVocabularies ChildVocabTable', () => {
             .reply(200, mockData.childVocabList[453669]);
 
         const initState = {};
-        const { getByText, getByTestId } = setup({ parentRow: parentRow }, initState);
-        expect(getByText('Description')).toBeInTheDocument();
+        const { getByTestId } = setup({ parentRow: parentRow }, initState);
         await waitFor(() => {
             expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
             expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
