@@ -4,8 +4,8 @@
   "main": "index.js",
   "bundleDependencies": [],
   "engines": {
-    "npm": ">=8.4.1",
-    "node": ">=16.13.2"
+    "npm": ">=10.2.3",
+    "node": ">=18.19.0"
   },
   "scripts": {
     "jest": "jest --coverage lib/**/*.test.js",

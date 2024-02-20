@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2014-2023, CKSource Holding sp. z o.o. All rights reserved.
+ * @license Copyright (c) 2014-2024, CKSource Holding sp. z o.o. All rights reserved.
  * This file is licensed under the terms of the MIT License (see LICENSE.md).
  */
 

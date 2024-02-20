@@ -11,6 +11,14 @@ const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ 
     AdminSectionContainer,
 );
 
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
+
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         formValues: {
