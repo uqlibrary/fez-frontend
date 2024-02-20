@@ -5,8 +5,18 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import * as actions from 'actions';
 
 export const ChildVocabDataRow = ({ row }) => {
+    const dispatch = useDispatch();
+    const replaceChildVocabTable = parentId => {
+        dispatch(
+            actions.loadChildVocabList({
+                pid: parentId,
+            }),
+        );
+    };
     return (
         <Grid
             container
@@ -22,8 +32,11 @@ export const ChildVocabDataRow = ({ row }) => {
                     <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography variant="body2">
                             <Link
-                                to={`?id=${row.cvo_id}`}
+                                to="#"
                                 id={`child-row-title-link-${row.cvo_id}`}
+                                onClick={() => {
+                                    replaceChildVocabTable(row.cvo_id);
+                                }}
                                 data-testid={`child-row-title-link-${row.cvo_id}`}
                             >
                                 {row.cvo_title}
