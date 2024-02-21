@@ -49,11 +49,14 @@ const handlers = {
 
         const rootId = action.rootId || action.parentId;
         console.log('new child Data=', { ...state.childData, [rootId]: filteredList[0].data });
+        const path = 'Todo: Set Path';
+        // ztodo: find it, ref vocabs-field-research.js for the data structure
+        const currentChildData = filteredList[0].data;
         return {
             ...state,
             loadingChildVocab: false,
             openedVocabLists: [...filteredList],
-            childData: { ...state.childData, [rootId]: filteredList[0].data },
+            childData: { ...state.childData, [rootId]: { path: path, data: currentChildData } },
         };
     },
 

@@ -36,10 +36,11 @@ export function loadControlledVocabList() {
  */
 export function loadChildVocabList({ pid: parentId, rootId }) {
     console.log('loadChildVocabList=', parentId);
+    const idToGet = rootId || parentId;
     return dispatch => {
         dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING, parentId, rootId });
 
-        return get(CHILD_VOCAB_LIST_API(parentId))
+        return get(CHILD_VOCAB_LIST_API(idToGet))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_CHILD_VOCAB_LOADED,
