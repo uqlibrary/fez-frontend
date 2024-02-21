@@ -1,6 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
+    childData: [],
     openedVocabLists: [],
     loadingChildVocab: false,
     loadingChildVocabError: null,
@@ -12,12 +13,16 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.VIEW_CHILD_VOCAB_LOADING]: state => ({
+    [actions.VIEW_CHILD_VOCAB_LOADING]: (state, action) => ({
         ...state,
         loadingChildVocab: true,
+        openedVocabLists: [],
+        childData: { ...state.childData, [action.payloadId]: [] },
     }),
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
+        console.log('VIEW_CHILD_VOCAB_LOADED=', action.payload.data);
+        console.log('state.childData=', state.childData);
         if (!action.payload.data || action.payload.data.length <= 0) {
             return {
                 ...state,
@@ -39,10 +44,12 @@ const handlers = {
             return !isPresent;
         });
 
+        console.log('new child Data=', { ...state.childData, [action.payloadId]: filteredList[0].data });
         return {
-            ...initialState,
+            ...state,
             loadingChildVocab: false,
             openedVocabLists: [...filteredList],
+            childData: { ...state.childData, [action.payloadId]: filteredList[0].data },
         };
     },
 
