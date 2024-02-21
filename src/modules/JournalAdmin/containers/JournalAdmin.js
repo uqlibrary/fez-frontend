@@ -54,21 +54,21 @@ const mapStateToProps = state => {
     let journalToView = {};
     let locked = false;
 
-    journalToView = state.get('journalReducer').journalDetails;
+    journalToView = state.get('viewJournalReducer').journalToView;
 
-    locked = state.get('journalReducer').isJournalLocked;
-    initialFormValues = getInitialFormValues(journalToView) || {};
+    locked = state.get('viewJournalReducer').isJournalLocked;
+    initialFormValues = (!!journalToView && journalToView.jnl_jid && getInitialFormValues(journalToView)) || {};
 
     return {
         formValues,
         formErrors,
         disableSubmit: !!journalToView && formErrors && !(formErrors instanceof Immutable.Map),
-        journalToViewLoading: state.get('journalReducer').journalLoading,
+        journalToViewLoading: state.get('viewJournalReducer').loadingJournalToView,
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
         journalToView,
-        journalToViewError: state.get('journalReducer').journalToViewError,
-        journalLoadingError: state.get('journalReducer').journalLoadingError,
+        journalToViewError: state.get('viewJournalReducer').journalToViewError,
+        journalLoadingError: state.get('viewJournalReducer').journalLoadingError,
         ...initialFormValues,
         locked,
         error: state.get('journalReducer').error,

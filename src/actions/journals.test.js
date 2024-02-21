@@ -80,7 +80,7 @@ describe('Search action creators', () => {
             const { apiUrl, options } = repositories.routes.JOURNAL_API({ id: 1 });
             mockApi.onGet(apiUrl, options).reply(200, { data: [] });
 
-            const expectedActions = [actions.JOURNAL_LOADING, actions.JOURNAL_LOADED];
+            const expectedActions = [actions.VIEW_JOURNAL_LOADING, actions.VIEW_JOURNAL_LOADED];
 
             await mockActionsStore.dispatch(journalActions.loadJournal(1));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -90,7 +90,11 @@ describe('Search action creators', () => {
             const { apiUrl, options } = repositories.routes.JOURNAL_API({ id: 1 });
             mockApi.onGet(apiUrl, options).reply(500);
 
-            const expectedActions = [actions.JOURNAL_LOADING, actions.APP_ALERT_SHOW, actions.JOURNAL_LOAD_FAILED];
+            const expectedActions = [
+                actions.VIEW_JOURNAL_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.VIEW_JOURNAL_LOAD_FAILED
+            ];
 
             await mockActionsStore.dispatch(journalActions.loadJournal(1));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

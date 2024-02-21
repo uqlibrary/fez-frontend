@@ -7,6 +7,14 @@ import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
 
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+window.ResizeObserver = ResizeObserver;
+
 jest.mock('../../../hooks/useIsMobileView');
 
 jest.mock('../submitHandler', () => ({
