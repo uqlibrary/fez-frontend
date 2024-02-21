@@ -25,6 +25,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
+                rootId: 0,
             }),
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,7 +37,7 @@ export const ChildVocabTable = ({ parentRow }) => {
     console.log('existingList=', existingList);
     console.log('childData=', childData);
 
-    const totalRecords = childData.length;
+    // const totalRecords = childData.length;
     // const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
     // let vocabList = [];
     // let totalRecords = 0;
@@ -70,7 +71,10 @@ export const ChildVocabTable = ({ parentRow }) => {
                                 id={`total-vocab-${parentRow.cvo_id}`}
                                 data-testid={`total-vocab-${parentRow.cvo_id}`}
                             >
-                                {controlledVocabConfig.vocabCountTitle(totalRecords, parentRow.cvo_title)}
+                                {controlledVocabConfig.vocabCountTitle(
+                                    childData[parentRow.cvo_id].length,
+                                    parentRow.cvo_title,
+                                )}
                             </Typography>
                         </Grid>
                         {/* Header Row */}
@@ -100,7 +104,11 @@ export const ChildVocabTable = ({ parentRow }) => {
                         {/* Data Row */}
                         <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
                             {childData[parentRow.cvo_id].map(row => (
-                                <ChildVocabDataRow key={row.controlled_vocab.cvo_id} row={row.controlled_vocab} />
+                                <ChildVocabDataRow
+                                    key={row.controlled_vocab.cvo_id}
+                                    row={row.controlled_vocab}
+                                    rootId={parentRow.cvo_id}
+                                />
                             ))}
                         </Grid>
                     </Grid>

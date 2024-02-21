@@ -8,12 +8,14 @@ import Typography from '@mui/material/Typography';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions';
 
-export const ChildVocabDataRow = ({ row }) => {
+export const ChildVocabDataRow = ({ row, rootId }) => {
+    console.log('ChildVocabDataRow=', row);
     const dispatch = useDispatch();
     const replaceChildVocabTable = parentId => {
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
+                rootId,
             }),
         );
     };
@@ -75,5 +77,6 @@ export const ChildVocabDataRow = ({ row }) => {
 };
 ChildVocabDataRow.propTypes = {
     row: PropTypes.object,
+    rootId: PropTypes.number,
 };
 export default ChildVocabDataRow;
