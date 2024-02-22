@@ -30,23 +30,44 @@ exports[`Component PublicationForm should render properly with non-matching doct
           help={
             {
               "buttonLabel": "Close",
-              "text": <p>
-                For more information about each type, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                  rel="noreferrer"
-                  style={
-                    {
-                      "fontWeight": 700,
+              "text": <React.Fragment>
+                <p>
+                  Access the help guide
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records"
+                    rel="noreferrer"
+                    style={
+                      {
+                        "fontWeight": 700,
+                      }
                     }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Non-traditional research output types",
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </p>
+                <h3>
+                  Non-traditional research output types
+                </h3>
+                <p>
+                  For more information about each type, click
+                   
+                  <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                    rel="noreferrer"
+                    style={
+                      {
+                        "fontWeight": 700,
+                      }
+                    }
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </p>
+              </React.Fragment>,
+              "title": "Add a missing work",
             }
           }
           title="Work type"

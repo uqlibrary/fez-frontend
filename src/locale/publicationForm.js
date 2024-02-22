@@ -16,19 +16,33 @@ export default {
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
         help: {
-            title: 'Non-traditional research output types',
+            title: 'Add a missing work',
             text: (
-                <p>
-                    For more information about each type, click{' '}
-                    <a
-                        style={{ fontWeight: 700 }}
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                    >
-                        here
-                    </a>
-                </p>
+                <>
+                    <p>
+                        Access the help guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records"
+                        >
+                            here
+                        </a>
+                    </p>
+                    <h3>Non-traditional research output types</h3>
+                    <p>
+                        For more information about each type, click{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                        >
+                            here
+                        </a>
+                    </p>
+                </>
             ),
             buttonLabel: 'Close',
         },
