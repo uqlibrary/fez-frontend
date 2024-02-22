@@ -71,7 +71,6 @@ const ControlledVocabularies = () => {
                 dispatch(
                     adminFunction({
                         pid: parentId,
-                        cachebust: Date.now(),
                     }),
                 );
             })
