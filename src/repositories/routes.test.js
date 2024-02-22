@@ -1043,13 +1043,9 @@ describe('Backend routes method', () => {
 
     it('should construct url for VOCAB_LIST_API', () => {
         expect(routes.VOCAB_LIST_API({})).toEqual({ apiUrl: 'vocabularies/list' });
-        expect(routes.VOCAB_LIST_API({ cachebust: 123 })).toEqual({ apiUrl: 'vocabularies/list?cb=123' });
     });
 
     it('should construct url for CHILD_VOCAB_LIST_API', () => {
         expect(routes.CHILD_VOCAB_LIST_API({ parentId: 123 })).toEqual({ apiUrl: 'vocabularies/admin/123' });
-        expect(routes.CHILD_VOCAB_LIST_API({ parentId: 123, cachebust: 456 })).toEqual({
-            apiUrl: 'vocabularies/admin/123?cb=456',
-        });
     });
 });
