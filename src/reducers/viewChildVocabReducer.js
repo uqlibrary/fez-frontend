@@ -1,4 +1,5 @@
 import * as actions from 'actions/actionTypes';
+import { findCurrentChild } from './fnVocab';
 
 export const initialState = {
     childData: {},
@@ -48,10 +49,15 @@ const handlers = {
         });
 
         const rootId = action.rootId || action.parentId;
-        console.log('new child Data=', { ...state.childData, [rootId]: filteredList[0].data });
         const path = 'Todo: Set Path';
         // ztodo: find it, ref vocabs-field-research.js for the data structure
-        const currentChildData = filteredList[0].data;
+        // const currentChildData = filteredList[0].data;
+        // const lists = filteredList[0].data;
+
+        const currentChildData = findCurrentChild(action.payload.data, action.parentId);
+        console.log('currentChildData=', currentChildData);
+        console.log('new child Data=', { ...state.childData, [rootId]: currentChildData });
+
         return {
             ...state,
             loadingChildVocab: false,
