@@ -30,11 +30,9 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const { openedVocabLists: existingList, loadingChildVocab, childData } = useSelector(state =>
-        state.get('viewChildVocabReducer'),
-    );
-    console.log('existingList=', existingList);
+    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
     console.log('childData=', childData);
+    console.log('parentRow.cvo_id=', parentRow.cvo_id);
 
     // const totalRecords = childData.length;
     // const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);

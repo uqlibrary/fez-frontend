@@ -3,7 +3,6 @@ import { findCurrentChild } from './fnVocab';
 
 export const initialState = {
     childData: {},
-    openedVocabLists: [],
     loadingChildVocab: false,
     loadingChildVocabError: null,
     totalRecords: 0,
@@ -19,7 +18,6 @@ const handlers = {
         return {
             ...state,
             loadingChildVocab: true,
-            openedVocabLists: [],
             childData: { ...state.childData, [rootId]: [] },
         };
     },
@@ -27,26 +25,24 @@ const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
         console.log('VIEW_CHILD_VOCAB_LOADED action=', action);
         console.log('state.childData=', state.childData);
-        if (!action.payload.data || action.payload.data.length <= 0) {
+        if (!action.payload.data) {
             return {
                 ...state,
                 loadingChildVocab: false,
             };
         }
 
-        const uniqueValues = new Set();
-        const list = [
-            {
-                data: action.payload.data,
-                total: action.payload.total,
-            },
-            ...state.openedVocabLists,
-        ];
-        const filteredList = list.filter(obj => {
-            const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
-            uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
-            return !isPresent;
-        });
+        // const uniqueValues = new Set();
+        // const list = [
+        //     {
+        //         data: action.payload.data,
+        //     },
+        // ];
+        // const filteredList = list.filter(obj => {
+        //     const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
+        //     uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
+        //     return !isPresent;
+        // });
 
         const rootId = action.rootId || action.parentId;
         const path = 'Todo: Set Path';
@@ -56,12 +52,11 @@ const handlers = {
 
         const currentChildData = findCurrentChild(action.payload.data, action.parentId);
         console.log('currentChildData=', currentChildData);
-        console.log('new child Data=', { ...state.childData, [rootId]: currentChildData });
+        console.log('new child Data=', { ...state.childData, [rootId]: { path: path, data: currentChildData } });
 
         return {
             ...state,
             loadingChildVocab: false,
-            openedVocabLists: [...filteredList],
             childData: { ...state.childData, [rootId]: { path: path, data: currentChildData } },
         };
     },
