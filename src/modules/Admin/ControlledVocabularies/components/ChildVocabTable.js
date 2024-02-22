@@ -64,6 +64,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 {!!!loadingChildVocab &&
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id] &&
+                    childData[parentRow.cvo_id].data &&
                     childData[parentRow.cvo_id].data.length > 0 && (
                         <Grid container spacing={0}>
                             <Grid item md={12}>
@@ -74,7 +75,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     data-testid={`total-vocab-${parentRow.cvo_id}`}
                                 >
                                     {controlledVocabConfig.vocabCountTitle(
-                                        childData[parentRow.cvo_id].length,
+                                        childData[parentRow.cvo_id].data.length,
                                         parentRow.cvo_title,
                                     )}
                                 </Typography>
