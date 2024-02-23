@@ -13,7 +13,7 @@ context('Controlled vocabularies', () => {
 
     it('Renders the child level controlled vocabulary screen', () => {
         cy.get('[data-testid="expand-row-453669"]').click();
-        cy.get('[data-testid="row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
+        cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
         dismissPopover();
     });
 

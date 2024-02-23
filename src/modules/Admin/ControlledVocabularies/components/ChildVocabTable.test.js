@@ -57,7 +57,7 @@ describe('ChildVocabTable', () => {
         const { getByText, getByTestId } = setup({ parentRow: parentRow });
         expect(getByText('Description')).toBeInTheDocument();
         await waitFor(() => {
-            expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
+            expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
             expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
