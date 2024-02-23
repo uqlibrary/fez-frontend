@@ -32,10 +32,10 @@ exports[`Component PublicationForm should render properly with non-matching doct
               "buttonLabel": "Close",
               "text": <React.Fragment>
                 <p>
-                  Access the help guide
+                  For help manually adding a work, access the help guide
                    
                   <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records"
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
                     rel="noreferrer"
                     style={
                       {
