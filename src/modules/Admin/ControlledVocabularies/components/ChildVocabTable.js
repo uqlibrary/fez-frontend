@@ -30,6 +30,16 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // const replaceChildVocabTable = parentId => {
+    //     dispatch(
+    //         actions.loadChildVocabList({
+    //             pid: parentId,
+    //             rootId: parentRow.cvo_id,
+    //         }),
+    //     );
+    // };
+    // console.log('replaceChildVocabTable=', replaceChildVocabTable);
+
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
     console.log('childData=', childData);
     console.log('parentRow.cvo_id=', parentRow.cvo_id);
@@ -72,11 +82,15 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     id={`total-vocab-${parentRow.cvo_id}`}
                                     data-testid={`total-vocab-${parentRow.cvo_id}`}
                                 >
-                                    {controlledVocabConfig.vocabCountTitle(
-                                        childData[parentRow.cvo_id].data.length,
-                                        parentRow.cvo_title,
-                                        childData[parentRow.cvo_id].path,
-                                    )}
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                            __html: controlledVocabConfig.vocabChildCountTitle(
+                                                childData[parentRow.cvo_id].data.length,
+                                                parentRow.cvo_title,
+                                                childData[parentRow.cvo_id].path,
+                                            ),
+                                        }}
+                                    />
                                 </Typography>
                             </Grid>
                             {/* Header Row */}
