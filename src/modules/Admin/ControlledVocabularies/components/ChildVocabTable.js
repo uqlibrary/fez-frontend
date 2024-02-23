@@ -63,7 +63,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id].data &&
-                    childData[parentRow.cvo_id].data.length > 0 && (
+                    childData[parentRow.cvo_id].data.length >= 0 && (
                         <Grid container spacing={0}>
                             <Grid item md={12}>
                                 <Typography
