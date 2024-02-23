@@ -274,6 +274,10 @@ export default {
         information: {
             title: 'Research report information',
             fieldLabels: {
+                orgUnitName: {
+                    floatingLabelText: 'Organisational unit',
+                    hintText: 'Organisational unit, eg. School of Business',
+                },
                 documentTitle: {
                     label: 'Title',
                     placeholder: 'Type title of research report',
@@ -427,7 +431,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, department or centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {
