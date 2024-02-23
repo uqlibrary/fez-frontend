@@ -75,6 +75,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     {controlledVocabConfig.vocabCountTitle(
                                         childData[parentRow.cvo_id].data.length,
                                         parentRow.cvo_title,
+                                        childData[parentRow.cvo_id].path,
                                     )}
                                 </Typography>
                             </Grid>

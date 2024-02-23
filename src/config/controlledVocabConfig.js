@@ -4,9 +4,14 @@ export const controlledVocabConfig = {
     collapseSwitchText: 'Auto-close other expanded',
     viewControlledVocabTitle: 'Explore',
     viewControlledVocabText: 'View',
-    vocabCountTitle: (total, parentTitle) => {
+    vocabCountTitle: (total, parentTitle, extraPath = []) => {
         let ret = `Displaying ${total} controlled vocabularies`;
-        ret += parentTitle ? ' of ' + parentTitle : '';
+        let breadCrumb = parentTitle;
+        for (let i = 0; i < extraPath.length; i++) {
+            breadCrumb += ' > ' + extraPath[i].title;
+        }
+
+        ret += breadCrumb ? ' of: ' + breadCrumb : '';
         return ret;
     },
     collectionCountTitle: (start, end, total, community) =>

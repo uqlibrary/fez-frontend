@@ -1,26 +1,37 @@
-export const findCurrentChild = (lists, parentId) => {
+export const findCurrentChild = (lists, parentId, currentPath = []) => {
     console.log('parentId=', parentId);
     console.log('lists.len=', lists);
-    if (parentId === 0) return lists;
+    if (parentId === 0) return [lists, currentPath];
     if (lists && lists.length) {
         // current level
         if (lists[0].cvr_parent_cvo_id === parentId) {
-            return lists;
+            return [lists, currentPath];
         } else {
             // child level
             for (let i = 0; i < lists.length; i++) {
                 const em = lists[i];
                 if (em.cvr_child_cvo_id === parentId) {
-                    return em.controlled_vocab.controlled_vocab_children;
+                    const path = [
+                        ...currentPath,
+                        { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title },
+                    ];
+                    console.log('path=', path);
+                    return [em.controlled_vocab.controlled_vocab_children, path];
                 }
             }
             // further level
             for (let i = 0; i < lists.length; i++) {
                 const em = lists[i];
-                const currentList = findCurrentChild(em.controlled_vocab.controlled_vocab_children, parentId);
-                if (currentList) return currentList;
+                const path = [...currentPath, { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title }];
+                // console.log('path=', path);
+                const [currentList, newPath] = findCurrentChild(
+                    em.controlled_vocab.controlled_vocab_children,
+                    parentId,
+                    path,
+                );
+                if (currentList) return [currentList, newPath];
             }
         }
     }
-    return [];
+    return [[], [...currentPath]];
 };
