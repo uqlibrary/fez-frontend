@@ -29,10 +29,11 @@ export default {
                         >
                             here
                         </a>
+                        .
                     </p>
-                    <h3>Non-traditional research output types</h3>
+                    <h3>Non-traditional research outputs</h3>
                     <p>
-                        For more information about each type, click{' '}
+                        For help selecting the relevant type for your work, access the guide{' '}
                         <a
                             style={{ fontWeight: 700 }}
                             target="_blank"
@@ -41,6 +42,7 @@ export default {
                         >
                             here
                         </a>
+                        .
                     </p>
                 </>
             ),
