@@ -46,12 +46,13 @@ exports[`Component PublicationForm should render properly with non-matching doct
                   >
                     here
                   </a>
+                  .
                 </p>
                 <h3>
-                  Non-traditional research output types
+                  Non-traditional research outputs
                 </h3>
                 <p>
-                  For more information about each type, click
+                  For help selecting the relevant type for your work, access the guide
                    
                   <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
@@ -65,6 +66,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
                   >
                     here
                   </a>
+                  .
                 </p>
               </React.Fragment>,
               "title": "Add a missing work",
