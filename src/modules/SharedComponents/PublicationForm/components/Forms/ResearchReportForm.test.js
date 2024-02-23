@@ -76,7 +76,7 @@ describe('ResearchReportForm renders ', () => {
             },
         };
         const { container } = setup(testProps);
-        expect(container.getElementsByTagName('field').length).toEqual(14);
+        expect(container.getElementsByTagName('field').length).toEqual(15);
     });
 
     it('component with all fields disabled', () => {
@@ -87,7 +87,7 @@ describe('ResearchReportForm renders ', () => {
             submitting: true,
         };
         const { container } = setup(testProps);
-        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(14);
+        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(15);
     });
 
     it('should normalize total pages field', () => {
@@ -105,7 +105,7 @@ describe('ResearchReportForm renders ', () => {
             isNtro: true,
         };
         const { container } = setup(testProps);
-        expect(container.getElementsByTagName('field').length).toEqual(17);
+        expect(container.getElementsByTagName('field').length).toEqual(18);
         expect(container.querySelectorAll('[data-testid=standard-card-ntro-data] field').length).toEqual(5);
     });
 

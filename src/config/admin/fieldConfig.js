@@ -1468,9 +1468,9 @@ export default {
             component: OrgUnitNameField,
             componentProps: {
                 fullWidth: true,
-                label: 'School, department, or centre',
+                label: 'School, Centre or Institute',
                 name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
-                floatingLabelText: 'School, department, or centre',
+                floatingLabelText: 'School, Centre or Institute',
                 showClear: true,
             },
         },
