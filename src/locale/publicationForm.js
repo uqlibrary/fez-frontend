@@ -20,12 +20,12 @@ export default {
             text: (
                 <>
                     <p>
-                        Access the help guide{' '}
+                        For help manually adding a work, access the help guide{' '}
                         <a
                             style={{ fontWeight: 700 }}
                             target="_blank"
                             rel="noreferrer"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
                         >
                             here
                         </a>
