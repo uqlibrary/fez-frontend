@@ -81,12 +81,12 @@ export const ChildVocabTable = ({ parentRow }) => {
             id={`vocab-table-${parentRow.cvo_id}`}
         >
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
-                {loadingChildVocab && (
+                {loadingChildVocab[parentRow.cvo_id] && (
                     <Grid item md={12}>
                         <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
                     </Grid>
                 )}
-                {!!!loadingChildVocab &&
+                {!!!loadingChildVocab[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id].data &&

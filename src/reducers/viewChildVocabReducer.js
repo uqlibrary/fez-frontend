@@ -3,7 +3,7 @@ import { findCurrentChild } from './fnVocab';
 
 export const initialState = {
     childData: {},
-    loadingChildVocab: false,
+    loadingChildVocab: {},
     loadingChildVocabError: null,
     totalRecords: 0,
     startRecord: 0,
@@ -17,7 +17,7 @@ const handlers = {
         const rootId = action.rootId || action.parentId;
         return {
             ...state,
-            loadingChildVocab: true,
+            loadingChildVocab: { rootId: true },
             childData: { ...state.childData, [rootId]: { path: [], data: [] } },
         };
     },
@@ -25,10 +25,11 @@ const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
         console.log('VIEW_CHILD_VOCAB_LOADED action=', action);
         console.log('state.childData=', state.childData);
+        const rootId = action.rootId || action.parentId;
         if (!action.payload.data) {
             return {
                 ...state,
-                loadingChildVocab: false,
+                loadingChildVocab: { rootId: false },
             };
         }
 
@@ -44,7 +45,6 @@ const handlers = {
         //     return !isPresent;
         // });
 
-        const rootId = action.rootId || action.parentId;
         // const path = 'Todo: Set Path';
         // ztodo: find it, ref vocabs-field-research.js for the data structure
         // const currentChildData = filteredList[0].data;
@@ -56,14 +56,14 @@ const handlers = {
 
         return {
             ...state,
-            loadingChildVocab: false,
+            loadingChildVocab: { rootId: false },
             childData: { ...state.childData, [rootId]: { path: path, data: currentChildData } },
         };
     },
 
     [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => ({
         ...state,
-        loadingChildVocab: false,
+        loadingChildVocab: { rootId: false },
         loadingChildVocabError: action.payload,
     }),
 };
