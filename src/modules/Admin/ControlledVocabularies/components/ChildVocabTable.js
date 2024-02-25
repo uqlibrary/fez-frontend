@@ -30,19 +30,69 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // const replaceChildVocabTable = parentId => {
-    //     dispatch(
-    //         actions.loadChildVocabList({
-    //             pid: parentId,
-    //             rootId: parentRow.cvo_id,
-    //         }),
-    //     );
-    // };
-    // console.log('replaceChildVocabTable=', replaceChildVocabTable);
-
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
     console.log('childData=', childData);
     console.log('parentRow.cvo_id=', parentRow.cvo_id);
+
+    let breadCrumbElements = [];
+    if (childData[parentRow.cvo_id]) {
+        breadCrumbElements = childData[parentRow.cvo_id].path;
+    }
+
+    breadCrumbElements.unshift({ id: 0, title: parentRow.cvo_title });
+
+    const replaceChildVocabTable = parentId => {
+        dispatch(
+            actions.loadChildVocabList({
+                pid: parentId,
+                rootId: parentRow.cvo_id,
+            }),
+        );
+    };
+    // console.log('replaceChildVocabTable=', replaceChildVocabTable);
+
+    // vocabChildCountTitle = (total, parentTitle, extraPath = []) => {
+    //     let ret = `Displaying ${total} controlled vocabularies`;
+    //     const changeToLink = (id, title) => {
+    //         return <span onClick={replaceChildVocabTable(id, title)} />;
+    //     };
+    //     let breadCrumb = changeToLink(0, parentTitle);
+    //     for (let i = 0; i < extraPath.length; i++) {
+    //         const link = changeToLink(extraPath[i].id, extraPath[i].title);
+    //         breadCrumb += ` > ${link}`;
+    //     }
+
+    //     ret += breadCrumb ? ' of: ' + breadCrumb : '';
+    //     return ret;
+    // };
+
+    // A functional component that renders a list of buttons
+    const BreadCrumb = () => {
+        // Event handler for button clicks
+        const handleButtonClick = (event, id) => {
+            console.log(event.target);
+            replaceChildVocabTable(id);
+        };
+
+        const buttons = breadCrumbElements
+            .map((em, index) => (
+                <button key={index} onClick={event => handleButtonClick(event, em.id)}>
+                    {em.title}
+                </button>
+            ))
+            .reduce((total, current) => {
+                return [total, ' > ', current];
+            });
+
+        // // Create an array of button elements dynamically
+        // const buttons = ['Thing 1', 'Thing 2', 'Thing 3'].map((label, index) => (
+        //     <button key={index} onClick={event => handleButtonClick(event, index)}>
+        //         {label}
+        //     </button>
+        // ));
+
+        return <div className="button-list">{buttons}</div>;
+    };
 
     // const totalRecords = childData.length;
     // const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
@@ -82,15 +132,11 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     id={`total-vocab-${parentRow.cvo_id}`}
                                     data-testid={`total-vocab-${parentRow.cvo_id}`}
                                 >
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: controlledVocabConfig.vocabChildCountTitle(
-                                                childData[parentRow.cvo_id].data.length,
-                                                parentRow.cvo_title,
-                                                childData[parentRow.cvo_id].path,
-                                            ),
-                                        }}
-                                    />
+                                    {controlledVocabConfig.vocabCountTitle(
+                                        childData[parentRow.cvo_id].data.length,
+                                        parentRow.cvo_title,
+                                    )}
+                                    <BreadCrumb />
                                 </Typography>
                             </Grid>
                             {/* Header Row */}

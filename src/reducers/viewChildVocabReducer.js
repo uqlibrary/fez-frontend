@@ -18,7 +18,7 @@ const handlers = {
         return {
             ...state,
             loadingChildVocab: true,
-            childData: { ...state.childData, [rootId]: { path: '', data: [] } },
+            childData: { ...state.childData, [rootId]: { path: [], data: [] } },
         };
     },
 
