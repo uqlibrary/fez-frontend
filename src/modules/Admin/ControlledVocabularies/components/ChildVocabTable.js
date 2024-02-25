@@ -19,7 +19,7 @@ export const ChildVocabTable = ({ parentRow }) => {
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
-        console.log('useEffect id=', parentId);
+
         /* istanbul ignore else */
         dispatch(
             actions.loadChildVocabList({
@@ -49,24 +49,7 @@ export const ChildVocabTable = ({ parentRow }) => {
             }),
         );
     };
-    // console.log('replaceChildVocabTable=', replaceChildVocabTable);
 
-    // vocabChildCountTitle = (total, parentTitle, extraPath = []) => {
-    //     let ret = `Displaying ${total} controlled vocabularies`;
-    //     const changeToLink = (id, title) => {
-    //         return <span onClick={replaceChildVocabTable(id, title)} />;
-    //     };
-    //     let breadCrumb = changeToLink(0, parentTitle);
-    //     for (let i = 0; i < extraPath.length; i++) {
-    //         const link = changeToLink(extraPath[i].id, extraPath[i].title);
-    //         breadCrumb += ` > ${link}`;
-    //     }
-
-    //     ret += breadCrumb ? ' of: ' + breadCrumb : '';
-    //     return ret;
-    // };
-
-    // A functional component that renders a list of buttons
     const BreadCrumb = () => {
         // Event handler for button clicks
         const handleButtonClick = (event, id) => {
@@ -84,24 +67,8 @@ export const ChildVocabTable = ({ parentRow }) => {
                 return [total, ' > ', current];
             });
 
-        // // Create an array of button elements dynamically
-        // const buttons = ['Thing 1', 'Thing 2', 'Thing 3'].map((label, index) => (
-        //     <button key={index} onClick={event => handleButtonClick(event, index)}>
-        //         {label}
-        //     </button>
-        // ));
-
         return <div className="button-list">{buttons}</div>;
     };
-
-    // const totalRecords = childData.length;
-    // const findItem = existingList.find(em => em.data && em.data[0].cvr_parent_cvo_id === parentRow.cvo_id);
-    // let vocabList = [];
-    // let totalRecords = 0;
-    // if (findItem) {
-    //     vocabList = findItem.data;
-    //     totalRecords = findItem.total;
-    // }
 
     return (
         <Box
