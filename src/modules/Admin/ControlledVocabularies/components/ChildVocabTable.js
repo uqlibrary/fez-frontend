@@ -24,7 +24,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
-                rootId: 0,
+                rootId: parentId,
             }),
         );
         // eslint-disable-next-line react-hooks/exhaustive-deps
