@@ -50,8 +50,6 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         expect(getByTestId('child-row-id-453670')).toHaveTextContent('453670');
         expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
         expect(getByTestId('child-row-desc-453670')).toHaveTextContent('');
-        expect(getByTestId('child-row-order-453670')).toHaveTextContent('');
-        expect(getByTestId('child-row-image-453670')).toHaveTextContent('');
         expect(getByTestId('child-row-eid-453670')).toHaveTextContent('G34');
         expect(getByTestId('child-row-action-453670')).toHaveTextContent('');
         expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);

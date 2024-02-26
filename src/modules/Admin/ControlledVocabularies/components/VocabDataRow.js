@@ -71,7 +71,7 @@ export const VocabDataRow = ({ row }) => {
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </Grid>
-                        <Grid item xs={12} sm={8} md={9}>
+                        <Grid item xs={12} sm={3} md={4}>
                             <Box display={'flex'}>
                                 {row.cvo_title}
                                 {row.cvo_hide === 1 && (
@@ -81,10 +81,13 @@ export const VocabDataRow = ({ row }) => {
                                 )}
                             </Box>
                         </Grid>
-                        <Grid item xs={12} sm={2} md={1}>
+                        <Grid xs={12} sm={4} md={5} data-testid={`child-row-desc-${row.cvo_id}`}>
+                            {row.cvo_desc}
+                        </Grid>
+                        <Grid item xs={12} sm={3} md={1}>
                             {row.cvo_external_id}
                         </Grid>
-                        <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
+                        <Grid item xs={12} sm={1}>
                             <IconButton
                                 id={`admin-edit-button-${row.cvo_id}`}
                                 data-analyticsid={`admin-edit-button-${row.cvo_id}`}

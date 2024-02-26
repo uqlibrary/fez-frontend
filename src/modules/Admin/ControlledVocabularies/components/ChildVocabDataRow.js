@@ -27,7 +27,7 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
             data-testid={`child-row-em-${row.cvo_id}`}
             sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} />
+            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
             {state.cvo_id !== row.cvo_id && (
                 <Box
                     sx={{
@@ -38,10 +38,10 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                     width={'100%'}
                     paddingBlockEnd={'10px'}
                 >
-                    <Grid md={1} data-testid={`child-row-id-${row.cvo_id}`}>
+                    <Grid xs={12} sm={1} data-testid={`child-row-id-${row.cvo_id}`}>
                         {row.cvo_id}
                     </Grid>
-                    <Grid md={3} data-testid={`child-row-title-${row.cvo_id}`}>
+                    <Grid xs={12} sm={3} md={4} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography variant="body2">
                             <Link
                                 to={`?id=${row.cvo_id}`}
@@ -57,27 +57,19 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                             </Link>
                         </Typography>
                     </Grid>
-                    <Grid md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
+                    <Grid xs={12} sm={4} md={5} data-testid={`child-row-desc-${row.cvo_id}`}>
                         {row.cvo_desc}
                     </Grid>
-                    <Grid md={1} data-testid={`child-row-order-${row.cvo_id}`}>
-                        {row.cvo_order}
-                    </Grid>
                     <Grid
-                        md={2}
-                        data-testid={`child-row-image-${row.cvo_id}`}
-                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
-                    >
-                        {row.cvo_image_filename}
-                    </Grid>
-                    <Grid
+                        xs={12}
+                        sm={3}
                         md={1}
                         data-testid={`child-row-eid-${row.cvo_id}`}
                         sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
                     >
                         {row.cvo_external_id}
                     </Grid>
-                    <Grid md={1} data-testid={`child-row-action-${row.cvo_id}`}>
+                    <Grid xs={12} sm={1} data-testid={`child-row-action-${row.cvo_id}`}>
                         <IconButton
                             id={`admin-edit-button-${row.cvo_id}`}
                             data-analyticsid={`admin-edit-button-${row.cvo_id}`}
