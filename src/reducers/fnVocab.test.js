@@ -1,5 +1,5 @@
 import { findCurrentChild } from './fnVocab';
-import { vocabsFieldResearch } from 'mock/data/vocabs-field-research.js';
+import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
 
 describe('Test findCurrentChild', () => {
     it('returns the top level when specifying 0', () => {

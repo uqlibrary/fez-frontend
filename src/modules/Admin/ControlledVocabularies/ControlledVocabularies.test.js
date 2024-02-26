@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, WithRouter, waitFor } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, preview } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -29,9 +29,9 @@ describe('ControlledVocabularies', () => {
         userIsAdmin.mockImplementation(() => true);
 
         const { getByText } = setup();
+        preview.debug();
         const txt = 'Displaying 42 controlled vocabularies';
-        await waitFor(() => getByText(txt));
-        expect(getByText(txt)).toBeInTheDocument();
+        await expect(getByText(txt)).toBeInTheDocument();
     });
 
     it('should show loading message', async () => {
@@ -39,8 +39,7 @@ describe('ControlledVocabularies', () => {
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, {});
 
         const { getByText } = setup();
-        await waitFor(() => getByText('...Loading Data...'));
-        expect(getByText('...Loading Data...')).toBeInTheDocument();
+        await expect(getByText('...Loading Data...')).toBeInTheDocument();
     });
 
     it('should show relevant error message', async () => {
