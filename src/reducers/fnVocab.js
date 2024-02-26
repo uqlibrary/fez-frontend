@@ -1,6 +1,4 @@
 export const findCurrentChild = (lists, parentId, currentPath = []) => {
-    console.log('parentId=', parentId);
-    console.log('lists.len=', lists);
     if (parentId === 0) return [lists, currentPath];
     if (lists && lists.length) {
         // current level
@@ -15,7 +13,6 @@ export const findCurrentChild = (lists, parentId, currentPath = []) => {
                         ...currentPath,
                         { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title },
                     ];
-                    console.log('path=', path);
                     return [em.controlled_vocab.controlled_vocab_children, path];
                 }
             }
@@ -23,7 +20,6 @@ export const findCurrentChild = (lists, parentId, currentPath = []) => {
             for (let i = 0; i < lists.length; i++) {
                 const em = lists[i];
                 const path = [...currentPath, { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title }];
-                // console.log('path=', path);
                 const [currentList, newPath] = findCurrentChild(
                     em.controlled_vocab.controlled_vocab_children,
                     parentId,

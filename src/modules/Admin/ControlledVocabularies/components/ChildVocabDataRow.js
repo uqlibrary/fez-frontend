@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-// import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions';
 
 export const ChildVocabDataRow = ({ row, rootId }) => {
-    console.log('ChildVocabDataRow=', row);
     const dispatch = useDispatch();
     const replaceChildVocabTable = parentId => {
         dispatch(

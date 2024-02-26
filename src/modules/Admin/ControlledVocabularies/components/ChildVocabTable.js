@@ -31,8 +31,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     }, []);
 
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
-    console.log('childData=', childData);
-    console.log('parentRow.cvo_id=', parentRow.cvo_id);
 
     let breadCrumbElements = [];
     if (childData[parentRow.cvo_id]) {
@@ -55,7 +53,6 @@ export const ChildVocabTable = ({ parentRow }) => {
     const BreadCrumb = () => {
         // Event handler for button clicks
         const handleButtonClick = (event, id) => {
-            console.log(event.target);
             replaceChildVocabTable(id);
         };
 

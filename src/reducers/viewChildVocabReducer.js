@@ -23,8 +23,6 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        console.log('VIEW_CHILD_VOCAB_LOADED action=', action);
-        console.log('state.childData=', state.childData);
         const rootId = action.rootId || action.parentId;
         if (!action.payload.data) {
             return {
@@ -33,26 +31,7 @@ const handlers = {
             };
         }
 
-        // const uniqueValues = new Set();
-        // const list = [
-        //     {
-        //         data: action.payload.data,
-        //     },
-        // ];
-        // const filteredList = list.filter(obj => {
-        //     const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
-        //     uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
-        //     return !isPresent;
-        // });
-
-        // const path = 'Todo: Set Path';
-        // ztodo: find it, ref vocabs-field-research.js for the data structure
-        // const currentChildData = filteredList[0].data;
-        // const lists = filteredList[0].data;
-
         const [currentChildData, path] = findCurrentChild(action.payload.data, action.parentId);
-        console.log('currentChildData=', currentChildData);
-        console.log('new child Data=', { ...state.childData, [rootId]: { path: path, data: currentChildData } });
 
         return {
             ...state,
