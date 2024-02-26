@@ -37,7 +37,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         breadCrumbElements = childData[parentRow.cvo_id].path;
     }
 
-    if (breadCrumbElements && breadCrumbElements[0] && breadCrumbElements[0].id !== 0) {
+    if ((breadCrumbElements.length > 0 && breadCrumbElements[0].id !== 0) || !breadCrumbElements.length) {
         breadCrumbElements.unshift({ id: 0, title: parentRow.cvo_title });
     }
 
@@ -63,7 +63,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 </button>
             ))
             .reduce((total, current) => {
-                return [total, ' > ', current];
+                return total ? [total, ' > ', current] : current;
             }, '');
 
         return <div className="button-list">{buttons}</div>;
