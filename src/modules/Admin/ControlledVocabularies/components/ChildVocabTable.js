@@ -66,7 +66,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 return total ? [total, ' > ', current] : current;
             }, '');
 
-        return <div className="button-list">{buttons}</div>;
+        return <>{buttons}</>;
     };
 
     return (
@@ -101,7 +101,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     {controlledVocabConfig.vocabCountTitle(
                                         childData[parentRow.cvo_id].data.length,
                                         parentRow.cvo_title,
-                                    )}
+                                    )}{' '}
                                     <BreadCrumb />
                                 </Typography>
                             </Grid>
