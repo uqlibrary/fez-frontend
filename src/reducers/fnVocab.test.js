@@ -35,7 +35,6 @@ describe('Test findCurrentChild', () => {
 
     it('returns the 4th level', () => {
         const [list, path] = findCurrentChild(vocabsFieldResearch.data, 451801, []);
-        console.log('retpath=', path);
         expect(list).toEqual([]);
         expect(path).toEqual([
             { id: 451799, title: '01 Mathematical Sciences' },

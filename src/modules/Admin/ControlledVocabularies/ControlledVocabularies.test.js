@@ -23,13 +23,14 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
 
 describe('ControlledVocabularies', () => {
     mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, mockData.vocabList);
+    mockApi.onAny().reply(200, mockData.vocabList);
 
     const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
     it('should render the controlled vocabulary list page as admin', async () => {
         userIsAdmin.mockImplementation(() => true);
 
         const { getByText } = setup();
-        preview.debug();
+        // preview.debug();
         const txt = 'Displaying 42 controlled vocabularies';
         await expect(getByText(txt)).toBeInTheDocument();
     });
