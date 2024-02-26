@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import { useDispatch } from 'react-redux';
-import * as actions from 'actions';
+import * as actions from 'actions/viewControlledVocab';
 
 export const ChildVocabDataRow = ({ row, rootId }) => {
     const dispatch = useDispatch();
@@ -40,18 +39,6 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
                         >
                             {row.cvo_title}
                         </Box>
-                        <Typography variant="body2">
-                            {/* <Link
-                                to="#"
-                                id={`child-row-title-link-${row.cvo_id}`}
-                                onClick={() => {
-                                    replaceChildVocabTable(row.cvo_id);
-                                }}
-                                data-testid={`child-row-title-link-${row.cvo_id}`}
-                            >
-                                {row.cvo_title}
-                            </Link> */}
-                        </Typography>
                     </Grid>
                     <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
                         <Box>{row.cvo_desc}</Box>
