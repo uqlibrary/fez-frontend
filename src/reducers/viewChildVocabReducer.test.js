@@ -3,14 +3,10 @@ import { VIEW_CHILD_VOCAB_LOADING, VIEW_CHILD_VOCAB_LOADED, VIEW_CHILD_VOCAB_LOA
 import viewChildVocabReducer from './viewChildVocabReducer';
 
 const initialState = {
-    openedVocabLists: [],
-    loadingChildVocab: false,
+    childData: {},
+    loadingChildVocab: {},
     loadingChildVocabError: null,
     totalRecords: 0,
-    startRecord: 0,
-    endRecord: 0,
-    currentPage: 1,
-    perPage: 10,
 };
 
 describe('viewChildVocab reducer', () => {
@@ -20,33 +16,33 @@ describe('viewChildVocab reducer', () => {
         };
         const expected = {
             ...previousState,
-            loadingChildVocab: true,
+            loadingChildVocab: { 453669: true },
+            childData: { 453669: { data: [], path: [] } },
         };
-        const test = viewChildVocabReducer(previousState, { type: VIEW_CHILD_VOCAB_LOADING, payload: 'test1' });
+        const test = viewChildVocabReducer(previousState, {
+            type: VIEW_CHILD_VOCAB_LOADING,
+            payload: 'test1',
+            rootId: 453669,
+            parentId: 453669,
+        });
         expect(test).toEqual(expected);
     });
 
     it('sets child controlled vocabulary loaded state', () => {
         const previousState = {
             ...initialState,
-            loadingChildVocab: true,
+            loadingChildVocab: { 451799: true },
         };
         const expected = {
             ...previousState,
-            openedVocabLists: [
-                {
-                    total: 1,
-                    data: [{ item: 'test' }],
-                },
-            ],
-            loadingChildVocab: false,
+            childData: { 451799: { data: [], path: [] } },
+            loadingChildVocab: { 451799: false },
         };
         const test = viewChildVocabReducer(previousState, {
             type: VIEW_CHILD_VOCAB_LOADED,
-            payload: {
-                total: 1,
-                data: [{ item: 'test' }],
-            },
+            payload: { data: {} },
+            rootId: 451799,
+            parentId: 451799,
         });
         expect(test).toEqual(expected);
     });
@@ -54,22 +50,19 @@ describe('viewChildVocab reducer', () => {
     it('sets child controlled vocabulary loaded state with empty payload', () => {
         const previousState = {
             ...initialState,
-            loadingChildVocab: true,
-            openedVocabLists: [
-                {
-                    total: 1,
-                    data: [{ item: 'test' }],
-                },
-            ],
+            loadingChildVocab: { 451799: true },
+            childData: {},
         };
         const expected = {
             ...previousState,
-            loadingChildVocab: false,
+            loadingChildVocab: { 451799: false },
         };
 
         const test = viewChildVocabReducer(previousState, {
             type: VIEW_CHILD_VOCAB_LOADED,
             payload: {},
+            rootId: 451799,
+            parentId: 451799,
         });
         expect(test).toEqual(expected);
     });
@@ -77,11 +70,11 @@ describe('viewChildVocab reducer', () => {
     it('sets child controlled vocabulary failed state', () => {
         const previousState = {
             ...initialState,
-            loadingChildVocab: true,
+            loadingChildVocab: { 451799: true },
         };
         const expected = {
             ...previousState,
-            loadingChildVocab: false,
+            loadingChildVocab: { 451799: false },
             loadingChildVocabError: { error: true },
         };
         const test = viewChildVocabReducer(previousState, {
@@ -89,6 +82,8 @@ describe('viewChildVocab reducer', () => {
             payload: {
                 error: true,
             },
+            rootId: 451799,
+            parentId: 451799,
         });
         expect(test).toEqual(expected);
     });
