@@ -15,6 +15,7 @@ export const vocabList = {
             "cvo_created_at": "2022-01-19 09:09:05",
             "cvo_updated_at": "2023-12-06 12:05:08"
         },
+        //commet out some data to test easily on field of research
         // {
         //     "cvo_id": 453235,
         //     "cvo_title": "All Science Journals Classification",
