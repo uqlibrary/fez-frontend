@@ -2534,10 +2534,7 @@ export default {
                     field: 'rek_title',
                     order: 2,
                 },
-                {
-                    field: 'fez_record_search_key_org_unit_name',
-                    order: 2.3,
-                },
+
                 {
                     field: 'rek_description',
                     order: 2.5,
@@ -2593,6 +2590,10 @@ export default {
                 {
                     field: 'fez_record_search_key_publisher',
                     order: 11,
+                },
+                {
+                    field: 'fez_record_search_key_org_unit_name',
+                    order: 11.1,
                 },
                 {
                     field: 'fez_record_search_key_series',
