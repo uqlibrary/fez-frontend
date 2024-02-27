@@ -43,19 +43,19 @@ export const ChildVocabTable = ({ parentRow }) => {
         breadCrumbElements.unshift({ id: 0, title: parentRow.cvo_title });
     }
 
-    const replaceChildVocabTable = parentId => {
+    const replaceChildVocabTable = (parentId, rootId) => {
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
-                rootId: parentRow.cvo_id,
+                rootId: rootId,
             }),
         );
     };
 
-    const VocabBreadCrumb = () => {
+    const VocabBreadCrumb = rootId => {
         // Event handler for button clicks
         const handleButtonClick = (event, id) => {
-            replaceChildVocabTable(id);
+            replaceChildVocabTable(id, rootId);
         };
 
         const buttons = breadCrumbElements
@@ -100,7 +100,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     childData[parentRow.cvo_id].data.length >= 0 && (
                         <Grid container spacing={0}>
                             <Grid item md={12}>
-                                <VocabBreadCrumb />
+                                <VocabBreadCrumb rootId={parentRow.cvo_id} />
                                 <Typography
                                     variant="body2"
                                     sx={{ fontWeight: 600, marginBottom: '10px' }}
