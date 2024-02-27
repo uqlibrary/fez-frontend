@@ -8,7 +8,7 @@ import { Typography } from '@mui/material';
 
 export const ChildVocabDataRow = ({ row, rootId }) => {
     const dispatch = useDispatch();
-    const replaceChildVocabTable = (parentId, rootId) => {
+    const replaceChildVocabTable = parentId => {
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
@@ -34,7 +34,7 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
                             style={{ color: '#3872a8', cursor: 'pointer' }}
                             variant="body2"
                             onClick={() => {
-                                replaceChildVocabTable(row.cvo_id, rootId);
+                                replaceChildVocabTable(row.cvo_id);
                             }}
                             data-testid={`child-row-title-link-${row.cvo_id}`}
                         >
