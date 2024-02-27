@@ -35,7 +35,7 @@ export function loadControlledVocabList() {
  * @returns {action}
  */
 export function loadChildVocabList({ pid: parentId, rootId }) {
-    const idToGet = rootId || parentId;
+    const idToGet = rootId;
     return dispatch => {
         dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING, parentId, rootId });
 
