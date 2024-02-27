@@ -40,7 +40,7 @@ export const ChildVocabTable = ({ parentRow }) => {
     }
 
     if ((breadCrumbElements.length > 0 && breadCrumbElements[0].id !== 0) || !breadCrumbElements.length) {
-        breadCrumbElements.unshift({ id: 0, title: parentRow.cvo_title });
+        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
     }
 
     const replaceChildVocabTable = parentId => {
@@ -59,11 +59,12 @@ export const ChildVocabTable = ({ parentRow }) => {
         };
 
         const buttons = breadCrumbElements
-            .map((em, index) => (
+            .map(em => (
                 <Link
+                    key={`nav-${em.id}`}
                     component="button"
                     underline="hover"
-                    data-testid={`nav-${index}`}
+                    data-testid={`nav-${em.id}`}
                     variant="button"
                     onClick={event => handleButtonClick(event, em.id)}
                 >
