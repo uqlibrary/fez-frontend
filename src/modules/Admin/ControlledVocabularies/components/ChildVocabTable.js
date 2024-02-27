@@ -3,6 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 import locale from 'locale/components';
 import ChildVocabDataRow from './ChildVocabDataRow';
 import { useSelector, useDispatch } from 'react-redux';
@@ -50,7 +52,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         );
     };
 
-    const BreadCrumb = () => {
+    const VocabBreadCrumb = () => {
         // Event handler for button clicks
         const handleButtonClick = (event, id) => {
             replaceChildVocabTable(id);
@@ -58,15 +60,21 @@ export const ChildVocabTable = ({ parentRow }) => {
 
         const buttons = breadCrumbElements
             .map((em, index) => (
-                <button key={index} onClick={event => handleButtonClick(event, em.id)}>
+                <Link
+                    component="button"
+                    underline="hover"
+                    data-testid={`nav-${index}`}
+                    variant="button"
+                    onClick={event => handleButtonClick(event, em.id)}
+                >
                     {em.title}
-                </button>
+                </Link>
             ))
             .reduce((total, current) => {
                 return total ? [total, ' > ', current] : current;
             }, '');
 
-        return <>{buttons}</>;
+        return <Breadcrumbs>{buttons}</Breadcrumbs>;
     };
 
     return (
@@ -92,6 +100,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     childData[parentRow.cvo_id].data.length >= 0 && (
                         <Grid container spacing={0}>
                             <Grid item md={12}>
+                                <VocabBreadCrumb />
                                 <Typography
                                     variant="body2"
                                     sx={{ fontWeight: 600, marginBottom: '10px' }}
@@ -102,7 +111,6 @@ export const ChildVocabTable = ({ parentRow }) => {
                                         childData[parentRow.cvo_id].data.length,
                                         parentRow.cvo_title,
                                     )}{' '}
-                                    <BreadCrumb />
                                 </Typography>
                             </Grid>
                             {/* Header Row */}
