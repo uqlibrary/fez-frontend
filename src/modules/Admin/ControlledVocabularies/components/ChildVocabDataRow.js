@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
+import { Typography } from '@mui/material';
 
 export const ChildVocabDataRow = ({ row, rootId }) => {
     const dispatch = useDispatch();
@@ -28,16 +29,17 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
                         <Box>{row.cvo_id}</Box>
                     </Grid>
                     <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
-                        <Box
+                        <Typography
                             id={`child-row-title-link-${row.cvo_id}`}
                             style={{ color: '#3872a8', cursor: 'pointer' }}
+                            variant="body2"
                             onClick={() => {
                                 replaceChildVocabTable(row.cvo_id);
                             }}
                             data-testid={`child-row-title-link-${row.cvo_id}`}
                         >
                             {row.cvo_title}
-                        </Box>{' '}
+                        </Typography>{' '}
                     </Grid>
                     <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
                         <Box>{row.cvo_desc}</Box>
