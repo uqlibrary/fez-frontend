@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore, within, preview } from 'test-utils';
+import { render, WithReduxStore, within } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -22,7 +22,6 @@ function setup(testProps = {}, state = {}) {
 describe('ControlledVocabularies VocabTable', () => {
     it('should render the table', async () => {
         const { getByTestId } = setup({ records: sortedList, labels: labels });
-        preview.debug();
         expect(within(getByTestId('vocab-primary-header')).getByText('Title')).toBeInTheDocument();
         expect(within(getByTestId('vocab-primary-header')).getByText('License')).toBeInTheDocument();
         expect(within(getByTestId('vocab-primary-header')).getByText('External ID')).toBeInTheDocument();
