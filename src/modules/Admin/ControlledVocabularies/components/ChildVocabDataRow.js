@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
@@ -29,16 +29,17 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
                         <Box>{row.cvo_id}</Box>
                     </Grid>
                     <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
-                        <Box
-                            id={`child-row-title-link-${row.cvo_id}`}
+                        <Link
                             style={{ color: '#3872a8', cursor: 'pointer' }}
+                            id={`child-row-title-link-${row.cvo_id}`}
+                            data-testid={`child-row-title-link-${row.cvo_id}`}
                             onClick={() => {
                                 replaceChildVocabTable(row.cvo_id);
                             }}
-                            data-testid={`child-row-title-link-${row.cvo_id}`}
+                            variant="body2"
                         >
                             {row.cvo_title}
-                        </Box>
+                        </Link>
                     </Grid>
                     <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
                         <Box>{row.cvo_desc}</Box>

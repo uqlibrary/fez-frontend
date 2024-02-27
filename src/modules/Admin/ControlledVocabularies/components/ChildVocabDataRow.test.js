@@ -8,7 +8,6 @@ import ChildVocabDataRow from './ChildVocabDataRow';
 import Immutable from 'immutable';
 import { createMemoryHistory } from 'history';
 import * as actions from 'actions/viewControlledVocab';
-import { useDispatch } from 'react-redux';
 
 const row = mockData.childVocabList['453669'].data[0].controlled_vocab;
 
