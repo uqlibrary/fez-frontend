@@ -39,9 +39,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         breadCrumbElements = childData[parentRow.cvo_id].path;
     }
 
-    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
-        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
-    }
+    breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
 
     const replaceChildVocabTable = parentId => {
         dispatch(
