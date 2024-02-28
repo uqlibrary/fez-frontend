@@ -22,7 +22,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
-export const ChildVocabTable = ({ parentRow }) => {
+export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
@@ -66,18 +66,20 @@ export const ChildVocabTable = ({ parentRow }) => {
             data-testid={`vocab-table-${parentRow.cvo_id}`}
             id={`vocab-table-${parentRow.cvo_id}`}
         >
-            <Button
-                id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
-                data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
-                startIcon={<Add />}
-                variant={'contained'}
-                color={'primary'}
-                sx={{ marginBottom: '10px' }}
-                onClick={handleAddActionClick}
-                disabled={state.isOpen}
-            >
-                {txt.admin.addChildButtonLabel}
-            </Button>
+            {!locked && (
+                <Button
+                    id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                    data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                    startIcon={<Add />}
+                    variant={'contained'}
+                    color={'primary'}
+                    sx={{ marginBottom: '10px' }}
+                    onClick={handleAddActionClick}
+                    disabled={state.isOpen}
+                >
+                    {txt.admin.addChildButtonLabel}
+                </Button>
+            )}
 
             <Box
                 id={`portal-add-${parentRow.cvo_id}`}
@@ -101,18 +103,20 @@ export const ChildVocabTable = ({ parentRow }) => {
                         <Grid item xs={12} sm={1}>
                             {labels.id}
                         </Grid>
-                        <Grid item xs={12} sm={3} md={4}>
+                        <Grid item xs={12} sm={locked ? 5 : 4}>
                             {labels.title}
                         </Grid>
-                        <Grid item xs={12} sm={4} md={5}>
+                        <Grid item xs={12} sm={5}>
                             <Box>{labels.desc}</Box>
                         </Grid>
-                        <Grid item xs={12} sm={3} md={1}>
+                        <Grid item xs={12} sm={1}>
                             {labels.external_id}
                         </Grid>
-                        <Grid item xs={12} sm={1}>
-                            {labels.actions}
-                        </Grid>
+                        {!locked && (
+                            <Grid item xs={12} sm={1}>
+                                {labels.actions}
+                            </Grid>
+                        )}
                     </Grid>
                     {/* Data Row */}
                     <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
@@ -121,6 +125,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                                 key={row.controlled_vocab.cvo_id}
                                 row={row.controlled_vocab}
                                 parentId={parentRow.cvo_id}
+                                locked={locked}
                             />
                         ))}
                         {loadingChildVocab && (
@@ -139,5 +144,6 @@ export const ChildVocabTable = ({ parentRow }) => {
 };
 ChildVocabTable.propTypes = {
     parentRow: PropTypes.object,
+    locked: PropTypes.bool,
 };
 export default ChildVocabTable;

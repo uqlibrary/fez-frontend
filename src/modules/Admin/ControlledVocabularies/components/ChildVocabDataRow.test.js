@@ -54,6 +54,33 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         expect(getByTestId('child-row-action-453670')).toHaveTextContent('');
         expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
     });
+    it('should render a locked child table row', async () => {
+        const { getByTestId, queryByTestId } = setup({ row: row, locked: true });
+        expect(getByTestId('child-row-id-453670')).toHaveTextContent('453670');
+        expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
+        expect(getByTestId('child-row-desc-453670')).toHaveTextContent('');
+        expect(getByTestId('child-row-eid-453670')).toHaveTextContent('G34');
+        expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
+        expect(queryByTestId('child-row-action-453670')).not.toBeInTheDocument();
+        expect(queryByTestId('admin-edit-button-453670')).not.toBeInTheDocument();
+
+        // expect 4 columns, ignoring the portal which is first child in the child row
+        expect(getByTestId('child-row-em-453670').children[1].children.length).toBe(4);
+    });
+    it('should render a locked child table row with hidden icon', async () => {
+        const { getByTestId, queryByTestId } = setup({ row: { ...row, cvo_hide: 1 }, locked: true });
+        expect(getByTestId('child-row-id-453670')).toHaveTextContent('453670');
+        expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
+        expect(getByTestId('child-row-desc-453670')).toHaveTextContent('');
+        expect(getByTestId('child-row-eid-453670')).toHaveTextContent('G34');
+        expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
+        expect(queryByTestId('child-row-action-453670')).not.toBeInTheDocument();
+        expect(queryByTestId('admin-edit-button-453670')).not.toBeInTheDocument();
+        expect(queryByTestId('row-hidden-icon-453670')).toBeInTheDocument();
+
+        // expect 4 columns, ignoring the portal which is first child in the child row
+        expect(getByTestId('child-row-em-453670').children[1].children.length).toBe(4);
+    });
 
     it('should fire the edit vocab function when the edit button is clicked', async () => {
         const mockFn = jest.fn();

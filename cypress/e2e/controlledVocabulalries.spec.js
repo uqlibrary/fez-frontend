@@ -4,16 +4,41 @@ context('Controlled vocabularies', () => {
     });
     const dismissPopover = () => cy.get('body').click(0, 0);
 
-    it('Renders the top level controlled vocabulary screen', () => {
+    it.only('Renders the top level controlled vocabulary screen', () => {
         cy.get('[data-testid="page-title"]').should('contain', 'Controlled Vocabulary');
         cy.get('[data-testid="total-vocab"]').should('contain', 'Displaying 42 controlled vocabularies');
         cy.get('[data-testid="row-em-451780"]').should('contain', 'Fields of Research');
+        // half of all rows should be editable
+        cy.get('[data-testid^=admin-edit-button-]').should('have.length', 21);
+        // half of all rows should be readonly
+        cy.get('[data-testid^=row-locked-icon-]').should('have.length', 21);
         dismissPopover();
+
+        // test tooltips
+        cy.get('[data-testid=row-hidden-icon-453226]').trigger('mouseover');
+        cy.get('[role=tooltip]').should('contain', 'This vocabulary is hidden');
+        cy.get('[data-testid=row-locked-icon-456849]').trigger('mouseover');
+        cy.get('[role=tooltip]').should('contain', 'This vocabulary and children are read-only');
     });
 
-    it('Renders the child level controlled vocabulary screen', () => {
+    it('Renders the editable child level controlled vocabulary screen', () => {
         cy.get('[data-testid="expand-row-453669"]').click();
         cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
+        cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.visible');
+        cy.get('[data-testid=vocab-child-body]').within(() => {
+            cy.get('[data-testid^=child-row-em-]').should('have.length', 165);
+            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 165);
+        });
+        dismissPopover();
+    });
+    it('Renders the readonly child level controlled vocabulary screen', () => {
+        cy.get('[data-testid="expand-row-454139"]').click();
+        cy.get('[data-testid="child-row-em-454140"]').should('contain', 'Associate Editor');
+        cy.get('[data-testid=admin-add-vocabulary-button-454139]').should('not.exist');
+        cy.get('[data-testid=vocab-child-body]').within(() => {
+            cy.get('[data-testid^=child-row-em-]').should('have.length', 9);
+            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 0);
+        });
         dismissPopover();
     });
 

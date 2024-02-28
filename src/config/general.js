@@ -1800,3 +1800,29 @@ export const COLLECTION_VIEW_TYPE = [
 
 /** journalAdmin  */
 export const ADMIN_JOURNAL = 'adminjournal';
+
+/** read only controlled vocabularies (hard coded above) */
+const READONLY_VOCABS_IDS = [
+    453607,
+    453982,
+    453991,
+    453995,
+    453596,
+    454089,
+    454025,
+    450000,
+    453219,
+    453222,
+    453630,
+    453691,
+    454119,
+    456854,
+    454139,
+    453617,
+    453614,
+    456851,
+    456849,
+    456850,
+    453662,
+];
+export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);

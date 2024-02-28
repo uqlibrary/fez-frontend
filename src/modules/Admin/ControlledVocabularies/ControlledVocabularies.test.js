@@ -44,6 +44,17 @@ describe('ControlledVocabularies', () => {
         await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
 
         expect(getByText('Displaying 42 controlled vocabularies')).toBeInTheDocument();
+        // check sorting is working
+        expect(getByTestId('vocab-primary-body').firstChild).toHaveTextContent('AIATSIS codes');
+        expect(getByTestId('vocab-primary-body').lastChild).toHaveTextContent('A Collection View Type of Standard');
+        // first row should have edit button
+        expect(
+            within(getByTestId('vocab-primary-body').firstChild).getByTestId('admin-edit-button-453669'),
+        ).toBeInTheDocument();
+        // last row should not have edit button
+        expect(
+            within(getByTestId('vocab-primary-body').lastChild).queryByTestId('admin-edit-button-456850'),
+        ).not.toBeInTheDocument();
     });
 
     describe('admin ADD form', () => {

@@ -3855,6 +3855,7 @@ export default {
                 },
                 tooltip: {
                     hidden: 'This vocabulary is hidden',
+                    readonly: 'This vocabulary and children are read-only',
                 },
             },
             error: {
