@@ -1,8 +1,53 @@
 import * as actions from 'actions/actionTypes';
 
+/**
+ * Find the current expanded list and their path based on the parentId and the root list
+ *
+ * @param {array} lists the root list
+ * @param {integer} parentId the clicked ID
+ * @param {array} currentPath the current list's path
+ *
+ * @returns {array} two elements, the first is the list to show, the second is the path to it
+ */
+export function findCurrentChild(lists, parentId, currentPath = []) {
+    if (parentId === 0) return [lists, currentPath];
+    if (lists && lists.length) {
+        // current level
+        if (lists[0].cvr_parent_cvo_id === parentId) {
+            return [lists, currentPath];
+        } else {
+            // child level
+            for (let i = 0; i < lists.length; i++) {
+                const em = lists[i];
+                if (em.cvr_child_cvo_id === parentId) {
+                    const path = [
+                        ...currentPath,
+                        { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title },
+                    ];
+                    return [em.controlled_vocab.controlled_vocab_children, path];
+                }
+            }
+            // further level
+            for (let i = 0; i < lists.length; i++) {
+                const em = lists[i];
+                const path = [...currentPath, { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title }];
+                const [currentList, newPath] = findCurrentChild(
+                    em.controlled_vocab.controlled_vocab_children,
+                    parentId,
+                    path,
+                );
+                if (currentList && newPath.length) {
+                    return [currentList, newPath];
+                }
+            }
+        }
+    }
+    return [[], []];
+}
+
 export const initialState = {
-    openedVocabLists: [],
-    loadingChildVocab: false,
+    childData: {},
+    loadingChildVocab: {},
     loadingChildVocabError: null,
     totalRecords: 0,
     startRecord: 0,
@@ -12,45 +57,40 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.VIEW_CHILD_VOCAB_LOADING]: state => ({
-        ...state,
-        loadingChildVocab: true,
-    }),
-
-    [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        if (!action.payload.data || action.payload.data.length <= 0) {
-            return {
-                ...state,
-                loadingChildVocab: false,
-            };
-        }
-
-        const uniqueValues = new Set();
-        const list = [
-            {
-                data: action.payload.data,
-                total: action.payload.total,
-            },
-            ...state.openedVocabLists,
-        ];
-        const filteredList = list.filter(obj => {
-            const isPresent = uniqueValues.has(obj.data[0].cvr_parent_cvo_id);
-            uniqueValues.add(obj.data[0].cvr_parent_cvo_id);
-            return !isPresent;
-        });
-
+    [actions.VIEW_CHILD_VOCAB_LOADING]: (state, action) => {
+        const rootId = action.rootId;
+        state.loadingChildVocab[rootId] = true;
         return {
-            ...initialState,
-            loadingChildVocab: false,
-            openedVocabLists: [...filteredList],
+            ...state,
+            childData: { ...state.childData, [rootId]: { path: [], data: [] } },
         };
     },
 
-    [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => ({
-        ...state,
-        loadingChildVocab: false,
-        loadingChildVocabError: action.payload,
-    }),
+    [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
+        const rootId = action.rootId;
+        if (!action.payload.data) {
+            state.loadingChildVocab[rootId] = false;
+            return {
+                ...state,
+            };
+        }
+
+        const [currentChildData, path] = findCurrentChild(action.payload.data, action.parentId);
+
+        state.loadingChildVocab[rootId] = false;
+        return {
+            ...state,
+            childData: { ...state.childData, [rootId]: { path: path, data: currentChildData } },
+        };
+    },
+
+    [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => {
+        state.loadingChildVocab[action.rootId] = false;
+        return {
+            ...state,
+            loadingChildVocabError: action.payload,
+        };
+    },
 };
 
 export default function viewChildVocabReducer(state = { ...initialState }, action) {

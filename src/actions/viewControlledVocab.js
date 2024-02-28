@@ -34,15 +34,17 @@ export function loadControlledVocabList() {
  *
  * @returns {action}
  */
-export function loadChildVocabList({ pid: parentId }) {
+export function loadChildVocabList({ pid: parentId, rootId }) {
+    const idToGet = rootId;
     return dispatch => {
-        dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING });
-
-        return get(CHILD_VOCAB_LIST_API({ parentId }))
+        dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING, parentId, rootId });
+        return get(CHILD_VOCAB_LIST_API(idToGet))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_CHILD_VOCAB_LOADED,
                     payload: response,
+                    parentId,
+                    rootId,
                 });
 
                 return Promise.resolve(response);
@@ -51,6 +53,7 @@ export function loadChildVocabList({ pid: parentId }) {
                 dispatch({
                     type: actions.VIEW_CHILD_VOCAB_LOAD_FAILED,
                     payload: error,
+                    payloadId: 0,
                 });
             });
     };

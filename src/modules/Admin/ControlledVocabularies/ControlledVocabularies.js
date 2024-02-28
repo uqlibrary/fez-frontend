@@ -46,6 +46,7 @@ const ControlledVocabularies = () => {
     const adminDialogState = useContext(ControlledVocabulariesStateContext);
 
     React.useEffect(() => {
+        console.log('dispatch');
         dispatch(actions.loadControlledVocabList());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -53,6 +54,7 @@ const ControlledVocabularies = () => {
     const txt = locale.components.controlledVocabulary;
 
     const labels = txt.columns.labels;
+    console.log('sortedList=', sortedList.length);
 
     const handleDialogClickClose = () => {
         onHandleDialogClickClose();

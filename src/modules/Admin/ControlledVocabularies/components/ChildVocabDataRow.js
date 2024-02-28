@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Unstable_Grid2';
+
+import Grid from '@mui/material/Grid';
+import { useDispatch } from 'react-redux';
+import * as actions from 'actions/viewControlledVocab';
+
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
@@ -16,9 +19,19 @@ import { ControlledVocabulariesStateContext } from '../ControlledVocabularyConte
 
 const txt = locale.components.controlledVocabulary;
 
-export const ChildVocabDataRow = ({ row, parentId }) => {
+export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
+
+    const dispatch = useDispatch();
+    const replaceChildVocabTable = parentId => {
+        dispatch(
+            actions.loadChildVocabList({
+                pid: parentId,
+                rootId,
+            }),
+        );
+    };
 
     return (
         <Grid
@@ -42,19 +55,21 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
                         {row.cvo_id}
                     </Grid>
                     <Grid md={3} data-testid={`child-row-title-${row.cvo_id}`}>
-                        <Typography variant="body2">
-                            <Link
-                                to={`?id=${row.cvo_id}`}
-                                id={`child-row-title-link-${row.cvo_id}`}
-                                data-testid={`child-row-title-link-${row.cvo_id}`}
-                            >
-                                {row.cvo_title}
-                                {row.cvo_hide === 1 && (
-                                    <Tooltip title={txt.admin.tooltip.hidden}>
-                                        <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
-                                    </Tooltip>
-                                )}
-                            </Link>
+                        <Typography
+                            id={`child-row-title-link-${row.cvo_id}`}
+                            style={{ color: '#3872a8', cursor: 'pointer' }}
+                            variant="body2"
+                            onClick={() => {
+                                replaceChildVocabTable(row.cvo_id);
+                            }}
+                            data-testid={`child-row-title-link-${row.cvo_id}`}
+                        >
+                            {row.cvo_title}
+                            {row.cvo_hide === 1 && (
+                                <Tooltip title={txt.admin.tooltip.hidden}>
+                                    <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                </Tooltip>
+                            )}
                         </Typography>
                     </Grid>
                     <Grid md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
@@ -98,5 +113,6 @@ export const ChildVocabDataRow = ({ row, parentId }) => {
 ChildVocabDataRow.propTypes = {
     row: PropTypes.object,
     parentId: PropTypes.number.isRequired,
+    rootId: PropTypes.number,
 };
 export default ChildVocabDataRow;

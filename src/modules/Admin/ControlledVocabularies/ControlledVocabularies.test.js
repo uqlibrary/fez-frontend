@@ -23,7 +23,6 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
 
 describe('ControlledVocabularies', () => {
     const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
-
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, mockData.vocabList);
@@ -33,7 +32,21 @@ describe('ControlledVocabularies', () => {
     afterEach(() => {
         mockApi.reset();
     });
+  
+    it('should render the controlled vocabulary list page as admin', async () => {
+        const { getByText, getByTestId } = setup();
+        await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+        const txt = 'Displaying 42 total controlled vocabularies';
+        expect(getByText(txt)).toBeInTheDocument();
+    });
 
+    it('should show loading message', async () => {
+        mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, {});
+
+        const { getByText } = setup();
+        await expect(getByText('...Loading Data...')).toBeInTheDocument();
+    });
+  
     it('should show loading message', async () => {
         const { getByText } = setup();
         await waitFor(() => getByText('...Loading Data...'));
@@ -122,11 +135,10 @@ describe('ControlledVocabularies', () => {
             });
         });
     });
-
+  
     it('should show relevant error message', async () => {
         userIsAdmin.mockImplementation(() => false);
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(422, { message: 'Some error message' });
-
         const { getByText } = setup();
         await waitFor(() => getByText(/Some error message/));
     });

@@ -67,12 +67,11 @@ describe('ControlledVocabularies VocabDataRow', () => {
     });
 
     it('should expand when clicking button', async () => {
-        const { getByTestId } = setup({ row: vocabDataRow });
-
+        const { getByTestId, getByText } = setup({ row: vocabDataRow });
         const button = getByTestId('expand-row-453669');
         fireEvent.click(button);
         await waitFor(() => {
-            expect(getByTestId('vocab-child-header')).toBeInTheDocument();
+            expect(getByText('...Loading Data...')).toBeInTheDocument();
         });
     });
     it('should hide row and child rows when admin panel displayed', async () => {
