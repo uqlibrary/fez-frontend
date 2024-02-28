@@ -27,6 +27,8 @@ import {
 } from './ControlledVocabularyContext';
 import { transformAdminRequest } from './components/utils';
 
+import { isReadonlyVocab } from 'config/general';
+
 const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
     float: 'left',
     [theme.breakpoints.down('sm')]: {
@@ -36,11 +38,15 @@ const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
 
 const ControlledVocabularies = () => {
     const dispatch = useDispatch();
-    const { vocabList: sortedList, loadingVocab, totalRecords, loadingVocabError } = useSelector(state =>
+    const { vocabList, loadingVocab, totalRecords, loadingVocabError } = useSelector(state =>
         state.get('viewVocabReducer'),
     );
 
-    // const [adminDialogueBusy, setAdminDialogueBusy] = React.useState(false);
+    const sortedList = React.useMemo(() => {
+        // sort top level vocab list to show editable rows first
+        const tmpArr = vocabList.map(vocab => ({ ...vocab, locked: isReadonlyVocab(vocab.cvo_id) }));
+        return tmpArr.sort((a, b) => a.locked - b.locked);
+    }, [vocabList]);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const adminDialogState = useContext(ControlledVocabulariesStateContext);

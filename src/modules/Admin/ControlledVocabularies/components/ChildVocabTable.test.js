@@ -61,6 +61,14 @@ describe('ChildVocabTable', () => {
             expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
+    it('should render the locked child table', async () => {
+        const { queryByTestId, getByTestId } = setup({ parentRow: parentRow, locked: true });
+        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+        // Add button should not be present
+        expect(queryByTestId('admin-add-vocabulary-button-453669')).not.toBeInTheDocument();
+        // expect 4 columns
+        expect(getByTestId('vocab-child-header').children.length).toBe(4);
+    });
 
     it('should render the loader', async () => {
         const { getByTestId } = setup({ parentRow: parentRow });
