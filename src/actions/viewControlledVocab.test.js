@@ -36,7 +36,7 @@ describe('View controlled vocabulary actions', () => {
         });
         it('dispatches expected actions when loading child level controlled vocabularies from API successfully', async () => {
             mockApi
-                .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: 453669 }).apiUrl)
+                .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
                 .reply(200, { data: { ...mockData.childVocabList['453669'] } });
 
             const expectedActions = [actions.VIEW_CHILD_VOCAB_LOADING, actions.VIEW_CHILD_VOCAB_LOADED];

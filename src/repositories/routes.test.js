@@ -1046,6 +1046,6 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for CHILD_VOCAB_LIST_API', () => {
-        expect(routes.CHILD_VOCAB_LIST_API({ parentId: 123 })).toEqual({ apiUrl: 'vocabularies/admin/123' });
+        expect(routes.CHILD_VOCAB_LIST_API(123)).toEqual({ apiUrl: 'vocabularies/123' });
     });
 });
