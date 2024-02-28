@@ -49,7 +49,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         onAdminAddActionClick(parentRow.cvo_id);
     };
 
-  const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
+    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
     let breadCrumbElements = [];
     if (childData[parentRow.cvo_id]) {
@@ -177,6 +177,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                                     <ChildVocabDataRow
                                         key={row.controlled_vocab.cvo_id}
                                         row={row.controlled_vocab}
+                                        parentId={parentRow.cvo_id}
                                         rootId={parentRow.cvo_id}
                                     />
                                 ))}

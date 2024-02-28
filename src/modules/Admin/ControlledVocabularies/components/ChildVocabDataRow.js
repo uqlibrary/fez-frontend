@@ -7,7 +7,6 @@ import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
 
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
