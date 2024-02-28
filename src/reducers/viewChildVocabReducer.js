@@ -1,5 +1,14 @@
 import * as actions from 'actions/actionTypes';
 
+/**
+ * Find the current expanded list and their path based on the parentId and the root list
+ *
+ * @param {array} lists the root list
+ * @param {integer} parentId the clicked ID
+ * @param {array} currentPath the current list's path
+ *
+ * @returns {array} two elements, the first is the list to show, the second is the path to it
+ */
 export function findCurrentChild(lists, parentId, currentPath = []) {
     if (parentId === 0) return [lists, currentPath];
     if (lists && lists.length) {
@@ -27,11 +36,13 @@ export function findCurrentChild(lists, parentId, currentPath = []) {
                     parentId,
                     path,
                 );
-                if (currentList) return [currentList, newPath];
+                if (currentList && newPath.length) {
+                    return [currentList, newPath];
+                }
             }
         }
     }
-    return [[], [...currentPath]];
+    return [[], []];
 }
 
 export const initialState = {

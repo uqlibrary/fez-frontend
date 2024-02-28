@@ -122,6 +122,13 @@ describe('Test findCurrentChild', () => {
         ]);
     });
 
+    it('returns the 3rd level empty', () => {
+        const [listPureMath, pathPureMath] = findCurrentChild(vocabsFieldResearch.data, 451800, []);
+        const [list, path] = findCurrentChild(listPureMath, 4518009, pathPureMath);
+        expect(list).toEqual([]);
+        expect(path).toEqual([]);
+    });
+
     it('returns the 4th level', () => {
         const [list, path] = findCurrentChild(vocabsFieldResearch.data, 451801, []);
         expect(list).toEqual([]);
@@ -132,8 +139,21 @@ describe('Test findCurrentChild', () => {
         ]);
     });
 
-    it('returns []', () => {
+    it('returns the 4th level empty', () => {
+        const [listAlgebra, pathAlgebra] = findCurrentChild(vocabsFieldResearch.data, 451801, []);
+        const [list, path] = findCurrentChild(listAlgebra, 4518019, pathAlgebra);
+        expect(list).toEqual([]);
+        expect(path).toEqual([]);
+    });
+
+    it('returns [] for []', () => {
         const [list, path] = findCurrentChild([], 451801, []);
+        expect(list).toEqual([]);
+        expect(path).toEqual([]);
+    });
+
+    it('returns [] when can not find at the child and further level', () => {
+        const [list, path] = findCurrentChild(vocabsFieldResearch.data, 4518019, []);
         expect(list).toEqual([]);
         expect(path).toEqual([]);
     });
