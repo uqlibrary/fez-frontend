@@ -39,7 +39,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         breadCrumbElements = childData[parentRow.cvo_id].path;
     }
 
-    if ((breadCrumbElements.length > 0 && breadCrumbElements[0].id !== 0) || !breadCrumbElements.length) {
+    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
         breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
     }
 
