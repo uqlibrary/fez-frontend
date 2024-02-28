@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
+
 import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
-import { Typography } from '@mui/material';
 
-export const ChildVocabDataRow = ({ row, rootId }) => {
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import IconButton from '@mui/material/IconButton';
+import Edit from '@mui/icons-material/Edit';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Tooltip from '@mui/material/Tooltip';
+import locale from 'locale/components';
+
+import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
+import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
+
+const txt = locale.components.controlledVocabulary;
+
+export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
+    const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
+    const state = useContext(ControlledVocabulariesStateContext);
+
     const dispatch = useDispatch();
     const replaceChildVocabTable = parentId => {
         dispatch(
@@ -16,19 +32,29 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
             }),
         );
     };
+
     return (
         <Grid
             container
             key={row.cvo_id}
             data-testid={`child-row-em-${row.cvo_id}`}
-            sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
+            sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <React.Fragment key={row.cvo_id}>
-                <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item md={1} data-testid={`child-row-id-${row.cvo_id}`}>
-                        <Box>{row.cvo_id}</Box>
+            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} />
+            {state.cvo_id !== row.cvo_id && (
+                <Box
+                    sx={{
+                        ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
+                    }}
+                    display={'flex'}
+                    alignItems={'center'}
+                    width={'100%'}
+                    paddingBlockEnd={'10px'}
+                >
+                    <Grid md={1} data-testid={`child-row-id-${row.cvo_id}`}>
+                        {row.cvo_id}
                     </Grid>
-                    <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
+                    <Grid md={3} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography
                             id={`child-row-title-link-${row.cvo_id}`}
                             style={{ color: '#3872a8', cursor: 'pointer' }}
@@ -39,30 +65,54 @@ export const ChildVocabDataRow = ({ row, rootId }) => {
                             data-testid={`child-row-title-link-${row.cvo_id}`}
                         >
                             {row.cvo_title}
-                        </Typography>{' '}
+                            {row.cvo_hide === 1 && (
+                                <Tooltip title={txt.admin.tooltip.hidden}>
+                                    <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                </Tooltip>
+                            )}
+                        </Typography>
                     </Grid>
-                    <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
-                        <Box>{row.cvo_desc}</Box>
+                    <Grid md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
+                        {row.cvo_desc}
                     </Grid>
-                    <Grid item md={1} data-testid={`child-row-order-${row.cvo_id}`}>
-                        <Box>{row.cvo_order}</Box>
+                    <Grid md={1} data-testid={`child-row-order-${row.cvo_id}`}>
+                        {row.cvo_order}
                     </Grid>
-                    <Grid item md={2} data-testid={`child-row-image-${row.cvo_id}`}>
-                        <Box>{row.cvo_image_filename}</Box>
+                    <Grid
+                        md={2}
+                        data-testid={`child-row-image-${row.cvo_id}`}
+                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
+                        {row.cvo_image_filename}
                     </Grid>
-                    <Grid item md={1} data-testid={`child-row-eid-${row.cvo_id}`}>
-                        <Box>{row.cvo_external_id}</Box>
+                    <Grid
+                        md={1}
+                        data-testid={`child-row-eid-${row.cvo_id}`}
+                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                    >
+                        {row.cvo_external_id}
                     </Grid>
-                    <Grid item md={1} data-testid={`child-row-action-${row.cvo_id}`}>
-                        {''}
+                    <Grid md={1} data-testid={`child-row-action-${row.cvo_id}`}>
+                        <IconButton
+                            id={`admin-edit-button-${row.cvo_id}`}
+                            data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                            data-testid={`admin-edit-button-${row.cvo_id}`}
+                            aria-label="Edit"
+                            onClick={() => onAdminEditActionClick({ row, parentId })}
+                            size="large"
+                            disabled={state.isOpen}
+                        >
+                            <Edit fontSize="small" />
+                        </IconButton>
                     </Grid>
-                </Grid>
-            </React.Fragment>
+                </Box>
+            )}
         </Grid>
     );
 };
 ChildVocabDataRow.propTypes = {
     row: PropTypes.object,
+    parentId: PropTypes.number.isRequired,
     rootId: PropTypes.number,
 };
 export default ChildVocabDataRow;

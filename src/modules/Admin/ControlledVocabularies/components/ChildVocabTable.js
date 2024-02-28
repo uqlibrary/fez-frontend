@@ -1,16 +1,26 @@
-import React from 'react';
-
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Add from '@mui/icons-material/Add';
+
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
+
 import locale from 'locale/components';
-import ChildVocabDataRow from './ChildVocabDataRow';
-import { useSelector, useDispatch } from 'react-redux';
 import * as actions from 'actions';
+
+import ChildVocabDataRow from './ChildVocabDataRow';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
-import Typography from '@mui/material/Typography';
+import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
+import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
+
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 const txt = locale.components.controlledVocabulary;
@@ -18,6 +28,8 @@ const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow }) => {
     const dispatch = useDispatch();
+    const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
+    const state = useContext(ControlledVocabulariesStateContext);
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
@@ -32,7 +44,12 @@ export const ChildVocabTable = ({ parentRow }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
+    const handleAddActionClick = () => {
+        console.log('handleAddActionClick', parentRow.cvo_id);
+        onAdminAddActionClick(parentRow.cvo_id);
+    };
+
+  const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
     let breadCrumbElements = [];
     if (childData[parentRow.cvo_id]) {
@@ -86,6 +103,24 @@ export const ChildVocabTable = ({ parentRow }) => {
             data-testid={`vocab-table-${parentRow.cvo_id}`}
             id={`vocab-table-${parentRow.cvo_id}`}
         >
+            <Button
+                id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                startIcon={<Add />}
+                variant={'contained'}
+                color={'primary'}
+                sx={{ marginBottom: '10px' }}
+                onClick={handleAddActionClick}
+                disabled={state.isOpen}
+            >
+                {txt.admin.addChildButtonLabel}
+            </Button>
+
+            <Box
+                id={`portal-add-${parentRow.cvo_id}`}
+                data-testid={`portal-add-${parentRow.cvo_id}`}
+                sx={{ width: '100%' }}
+            />
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 {loadingChildVocab[parentRow.cvo_id] && (
                     <Grid item md={12}>

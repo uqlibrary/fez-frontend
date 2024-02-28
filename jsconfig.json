@@ -3,6 +3,17 @@
     "baseUrl": "src",
     "paths": {
       "test-utils": ["../utils/test-utils"]
-    }
-  }
+    },
+  },
+  "exclude": [
+    ".git",
+    ".app-cache",
+    ".npm",
+    ".npm-tmp",
+    "dist",
+    "dist*",
+    "node_modules",
+    "**/dist/*",
+    "**/node_modules/*",
+  ]
 }
