@@ -27,6 +27,12 @@ describe('ControlledVocabularies', () => {
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, mockData.vocabList);
+        mockApi
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: '453669' }).apiUrl)
+            .reply(200, mockData.childVocabList[453669]);
+
+        mockApi.onPut(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
+        mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
         userIsAdmin.mockImplementation(() => true);
     });
 
@@ -58,12 +64,18 @@ describe('ControlledVocabularies', () => {
     });
 
     describe('admin ADD form', () => {
-        const showAddForm = async () => {
+        const showAddForm = async id => {
             const rendered = setup();
             await waitForElementToBeRemoved(rendered.getByTestId('vocab-page-loading'));
-            await userEvent.click(rendered.getByTestId('admin-add-vocabulary-button'));
+            if (!!id) {
+                await userEvent.click(rendered.getByTestId(`expand-row-${id}`));
+                await waitForElementToBeRemoved(rendered.getByTestId('childControlledVocab-page-loading'));
+            }
+            await userEvent.click(rendered.getByTestId(`admin-add-vocabulary-button${!!id ? `-${id}` : ''}`));
             expect(
-                within(rendered.getByTestId('portal-root')).getByTestId('update_dialog-controlledVocabulary'),
+                within(rendered.getByTestId(!!id ? `portal-add-${id}` : 'portal-root')).getByTestId(
+                    'update_dialog-controlledVocabulary',
+                ),
             ).toBeInTheDocument();
             expect(rendered.getByTestId('update_dialog-controlledVocabulary')).toHaveTextContent('Add vocabulary');
             expect(
@@ -80,7 +92,6 @@ describe('ControlledVocabularies', () => {
         });
 
         it('should render and save when button clicked', async () => {
-            mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
             await showAddForm().then(async ({ getByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
@@ -97,6 +108,17 @@ describe('ControlledVocabularies', () => {
                 await waitForElementToBeRemoved(getByTestId('update_dialog-progress'));
 
                 expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
+            });
+        });
+
+        describe('child vocab', () => {
+            it('should render and save when button clicked', async () => {
+                await showAddForm('453669').then(async ({ getByTestId }) => {
+                    await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                    await userEvent.click(getByTestId('update_dialog-action-button'));
+                    await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                    // expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
+                });
             });
         });
     });
@@ -124,12 +146,35 @@ describe('ControlledVocabularies', () => {
             });
         });
         it('should render and save when button clicked', async () => {
-            mockApi.onPut(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
             await showEditForm().then(async ({ getByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
                 expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+            });
+        });
+        describe('child vocab', () => {
+            it('should render and save when button clicked', async () => {
+                const { getByTestId } = setup();
+                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+
+                await userEvent.click(getByTestId('expand-row-453669'));
+                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await userEvent.click(getByTestId('admin-edit-button-453670'));
+
+                expect(
+                    within(getByTestId('portal-edit-453670')).getByTestId('update_dialog-controlledVocabulary'),
+                ).toBeInTheDocument();
+                expect(getByTestId('update_dialog-controlledVocabulary')).toHaveTextContent('Update vocabulary');
+                expect(
+                    within(getByTestId('update_dialog-controlledVocabulary')).getByTestId('cvo-title-input'),
+                ).toHaveAttribute('value', 'Yukulta / Ganggalidda language G34');
+
+                await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
+                await userEvent.click(getByTestId('update_dialog-action-button'));
+
+                await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
         });
     });

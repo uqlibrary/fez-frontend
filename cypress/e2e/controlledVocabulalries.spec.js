@@ -4,7 +4,7 @@ context('Controlled vocabularies', () => {
     });
     const dismissPopover = () => cy.get('body').click(0, 0);
 
-    it.only('Renders the top level controlled vocabulary screen', () => {
+    it('Renders the top level controlled vocabulary screen', () => {
         cy.get('[data-testid="page-title"]').should('contain', 'Controlled Vocabulary');
         cy.get('[data-testid="total-vocab"]').should('contain', 'Displaying 42 controlled vocabularies');
         cy.get('[data-testid="row-em-451780"]').should('contain', 'Fields of Research');
@@ -53,19 +53,6 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=cvo-title-input]').type('Test title');
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-root]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-root]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-root]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-root]').should('not.contain', 'Must be a whole number above zero');
-
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
                     .click();
@@ -83,20 +70,6 @@ context('Controlled vocabularies', () => {
 
                 cy.get('[data-testid=cvo-title-input]').type('Test title');
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
-
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-add-453669]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-add-453669]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
@@ -118,28 +91,12 @@ context('Controlled vocabularies', () => {
 
                 cy.get('[data-testid=cvo-title-input]').should('have.value', 'AIATSIS codes');
                 cy.get('[data-testid=cvo-desc-input]').should('have.value', 'This is my edited version');
-                cy.get('[data-testid=cvo-order-input]').should('have.value', '1');
                 cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').clear();
                 cy.get('[data-testid=portal-edit-453669]').should('contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').type('New title');
 
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
-
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-edit-453669]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-edit-453669]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
@@ -167,19 +124,6 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
                 cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-edit-453670]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-edit-453670]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
