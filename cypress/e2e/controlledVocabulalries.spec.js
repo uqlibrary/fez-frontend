@@ -38,6 +38,16 @@ context('Controlled vocabularies', () => {
 
         dismissPopover();
     });
+
+    it('Expand two rows', () => {
+        cy.get('[data-testid="expand-row-451780"]').click();
+        cy.get('[data-testid="child-row-em-451799"]').should('contain', '01 Mathematical Sciences');
+
+        cy.get('[data-testid="expand-row-453669"]').click();
+        cy.get('[data-testid="nav-451780"]').should('have.length', 1);
+
+        dismissPopover();
+    });
   
     describe('admin', () => {
         describe('adding vocabs', () => {
