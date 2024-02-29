@@ -48,7 +48,6 @@ export const AdminContainer = ({
     formErrors,
     formValues,
     handleSubmit,
-    history,
     isDeleted,
     isJobCreated,
     loadingRecordToView,
@@ -120,9 +119,7 @@ export const AdminContainer = ({
 
     return (
         <React.Fragment>
-            {createMode && showAddForm && (
-                <AddSection onCreate={handleAddFormDisplay} createMode={createMode} history={history} />
-            )}
+            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
@@ -143,7 +140,6 @@ export const AdminContainer = ({
                                 submitSucceeded={submitSucceeded}
                                 dirty={dirty}
                                 disableSubmit={disableSubmit}
-                                history={history}
                                 location={location}
                                 createMode={createMode}
                                 isDeleted={isDeleted}
@@ -260,7 +256,6 @@ AdminContainer.propTypes = {
     formErrors: PropTypes.object,
     formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     recordToViewError: PropTypes.object,

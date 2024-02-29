@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import deparam from 'can-deparam';
 import param from 'can-param';
@@ -115,7 +115,7 @@ export const useSelectedJournals = ({ state = {}, available = {} }) => {
 };
 
 export const useJournalSearch = (path = pathConfig.journals.search) => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
 
@@ -128,8 +128,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 
     const handleSearch = (searchQuery, state = {}) => {
-        history.push({
-            pathname: path,
+        navigate(path, {
             search: param(searchQuery),
             state: state,
         });

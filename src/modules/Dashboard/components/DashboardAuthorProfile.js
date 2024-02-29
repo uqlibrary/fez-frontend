@@ -20,12 +20,12 @@ export class DashboardAuthorProfile extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
         authorDetails: PropTypes.object,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         classes: PropTypes.object,
     };
 
     render() {
-        const { author, authorDetails, history } = this.props;
+        const { author, authorDetails, navigate } = this.props;
         if (!authorDetails) {
             return <div className="AuthorProfile empty" />;
         }
@@ -77,7 +77,7 @@ export class DashboardAuthorProfile extends PureComponent {
                                         google_scholar: Boolean(author.aut_google_scholar_id),
                                         orcid: Boolean(author.aut_orcid_id),
                                     }}
-                                    history={history}
+                                    navigate={navigate}
                                 />
                             </Grid>
                         </Grid>

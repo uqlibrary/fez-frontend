@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import { createNewRecord } from 'actions';
 import AddDataCollection from '../components/AddDataCollection';
-import { withRouter } from 'react-router-dom';
 import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
 import { locale } from 'locale';
 import moment from 'moment';
@@ -94,7 +93,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AddDataCollectionForm = connect(mapStateToProps, mapDispatchToProps)(AddDataCollectionContainer);
-AddDataCollectionForm = withRouter(AddDataCollectionForm);
+const AddDataCollectionForm = connect(mapStateToProps, mapDispatchToProps)(AddDataCollectionContainer);
 
 export default AddDataCollectionForm;

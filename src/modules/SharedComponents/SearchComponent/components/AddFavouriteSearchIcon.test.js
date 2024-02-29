@@ -5,7 +5,7 @@ import * as Context from 'context';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import Immutable from 'immutable';
 
-import { useLocation } from 'react-router';
+import { useLocation } from 'react-router-dom';
 jest.mock('react-router');
 
 function setup(state = Immutable.Map({})) {

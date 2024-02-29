@@ -10,8 +10,8 @@ import { filterNonValidKeywords, useJournalSearch, useSelectedKeywords } from '.
 import { clearJournalSearchKeywords, searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
-import { useHistory } from 'react-router';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { useNavigationType, useLocation } from 'react-router-dom';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -27,7 +27,8 @@ export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
 
 let lastRequest;
 export const SearchJournals = () => {
-    const history = useHistory();
+    const navigateType = useNavigationType();
+    const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
     const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
@@ -104,24 +105,22 @@ export const SearchJournals = () => {
      * once a given search is made and keywords are selected
      */
     React.useEffect(() => {
-        return history.listen(location => {
-            // in case it's not a browser back/forward button click
-            if (history.action !== 'POP') {
-                return;
-            }
+        // in case it's not a browser back/forward button click
+        if (navigateType !== 'POP') {
+            return;
+        }
 
-            // get current search query
-            const searchQueryParams = deparam(location.search.substr(1));
-            const keywordsFromUrl = filterNonValidKeywords(searchQueryParams?.keywords);
-            if (!Object.keys(keywordsFromUrl).length || !areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
-                return;
-            }
+        // get current search query
+        const searchQueryParams = deparam(location.search.substr(1));
+        const keywordsFromUrl = filterNonValidKeywords(searchQueryParams?.keywords);
+        if (!Object.keys(keywordsFromUrl).length || !areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
+            return;
+        }
 
-            // if there are differences between selectedKeywords state variable
-            // and the current search query keywords, update the state
-            setSelectedKeywords(searchQueryParams.keywords);
-            setShowInputControls(false);
-        });
+        // if there are differences between selectedKeywords state variable
+        // and the current search query keywords, update the state
+        setSelectedKeywords(searchQueryParams.keywords);
+        setShowInputControls(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
 

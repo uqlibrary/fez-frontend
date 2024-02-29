@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { useBlocker, useNavigate } from 'react-router-dom';
 
 /**
  * A replacement component for the react-router `Prompt`.
@@ -8,58 +8,52 @@ import { withRouter } from 'react-router-dom';
  *
  * https://gist.github.com/bummzack/a586533607ece482475e0c211790dd50
  */
-export class NavigationPrompt extends PureComponent {
-    static propTypes = {
-        when: PropTypes.bool.isRequired,
-        children: PropTypes.func.isRequired,
-        history: PropTypes.object,
-    };
+const NavigationPrompt = ({ when, children }) => {
+    const [nextLocation, setNextLocation] = useState(null);
+    const navigate = useNavigate();
+    let confirmationBox = null;
 
-    constructor(props) {
-        super(props);
-        this.state = { nextLocation: null };
-        this.confirmationBox = null;
-    }
-
-    componentDidMount() {
-        this.unblock = this.props.history.block(this.blockNavigation);
-    }
-
-    componentWillUnmount() {
-        this.unblock();
-    }
-
-    blockNavigation = nextLocation => {
-        if (this.props.when) {
-            this.setState({
-                nextLocation: nextLocation,
-            });
-            this.confirmationBox.showConfirmation();
-            return !this.props.when;
+    const blockNavigation = nextLocation => {
+        if (when) {
+            setNextLocation(nextLocation);
+            confirmationBox.showConfirmation();
+            // return !when;
         }
 
-        return this.props.when;
+        return when;
     };
 
-    setNavigationConfirmation = ref => {
-        this.confirmationBox = ref;
+    const blocker = useBlocker(({ nextLocation }) => blockNavigation(nextLocation));
+
+    useEffect(() => {
+        return () => {
+            blocker && blocker.state === 'blocked' && blocker.reset();
+        };
+    }, [blocker, confirmationBox]);
+
+    const navigateToNextLocation = () => {
+        blocker.rest();
+        navigate(nextLocation.pathname);
     };
 
-    _onCancel = () => {
-        this.setState({ nextLocation: null });
+    const setNavigationConfirmation = ref => {
+        confirmationBox = ref;
     };
 
-    _onConfirm = () => {
-        this.navigateToNextLocation();
+    const _onCancel = () => {
+        setNextLocation(null);
     };
 
-    navigateToNextLocation = () => {
-        this.unblock();
-        this.props.history.push(this.state.nextLocation.pathname);
+    const _onConfirm = () => {
+        navigateToNextLocation();
     };
 
-    render() {
-        return <div>{this.props.children(this.setNavigationConfirmation, this._onConfirm, this._onCancel)}</div>;
-    }
-}
-export default withRouter(NavigationPrompt);
+    return <div>{children(setNavigationConfirmation, _onConfirm, _onCancel)}</div>;
+};
+
+NavigationPrompt.propTypes = {
+    when: PropTypes.bool.isRequired,
+    children: PropTypes.func.isRequired,
+};
+
+export default NavigationPrompt;

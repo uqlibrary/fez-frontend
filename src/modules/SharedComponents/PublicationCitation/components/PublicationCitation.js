@@ -51,6 +51,7 @@ import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGallery
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
 import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
+import { withNavigate } from 'helpers/withNavigate';
 
 const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
@@ -163,7 +164,7 @@ export class PublicationCitation extends PureComponent {
         hideLinks: PropTypes.bool,
         hideTitle: PropTypes.bool,
         hideViewFullStatisticsLink: PropTypes.bool,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         location: PropTypes.object,
         publication: PropTypes.object.isRequired,
         publicationsLoading: PropTypes.bool,
@@ -233,10 +234,10 @@ export class PublicationCitation extends PureComponent {
     }
 
     _handleDefaultActions = action => {
-        const { history, publication } = this.props;
+        const { navigate, publication } = this.props;
         /* istanbul ignore else  */
         if (action === 'fixRecord') {
-            history.push(pathConfig.records.fix(publication.rek_pid));
+            navigate(pathConfig.records.fix(publication.rek_pid));
         }
     };
 
@@ -598,4 +599,4 @@ export class PublicationCitation extends PureComponent {
     }
 }
 
-export default withTheme()(PublicationCitation);
+export default withNavigate()(withTheme()(PublicationCitation));

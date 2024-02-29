@@ -35,7 +35,6 @@ export const JournalAdminContainer = ({
     // eslint-disable-next-line no-unused-vars
     formValues,
     handleSubmit,
-    history,
     journalToViewLoading,
     loadJournalToView,
     locked,
@@ -124,8 +123,6 @@ export const JournalAdminContainer = ({
                             clearJournalToView={clearJournalToView}
                             dirty={dirty}
                             disableSubmit={disableSubmit}
-                            history={history}
-                            location={location}
                             formErrors={formErrors}
                             destroy={destroy}
                             locked={locked}
@@ -178,7 +175,6 @@ JournalAdminContainer.propTypes = {
     formErrors: PropTypes.object,
     formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
     journalToViewLoading: PropTypes.bool,
     journalLoadingError: PropTypes.bool,
     loadJournalToView: PropTypes.func,

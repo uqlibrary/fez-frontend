@@ -1,8 +1,7 @@
 import React from 'react';
-import { Router } from 'react-router';
-import { Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
-// MUI1
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+
+// MUI
 import { mui1theme } from 'config';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
@@ -10,24 +9,25 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { App } from 'modules/App';
 import { ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToTop';
 
-const Root = ({ history }) => {
-    return (
-        <Router history={history}>
-            <ScrollToTop>
-                <StyledEngineProvider injectFirst>
-                    <ThemeProvider theme={mui1theme}>
-                        <Switch>
-                            <Route component={App} />
-                        </Switch>
-                    </ThemeProvider>
-                </StyledEngineProvider>
-            </ScrollToTop>
-        </Router>
-    );
-};
+const router = createBrowserRouter([
+    {
+        path: '*',
+        element: (
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={mui1theme}>
+                    <App>
+                        <ScrollToTop>
+                            <Outlet />
+                        </ScrollToTop>
+                    </App>
+                </ThemeProvider>
+            </StyledEngineProvider>
+        ),
+    },
+]);
 
-Root.propTypes = {
-    history: PropTypes.object,
+const Root = () => {
+    return <RouterProvider router={router} />;
 };
 
 export default Root;

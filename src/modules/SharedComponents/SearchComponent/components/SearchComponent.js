@@ -16,8 +16,9 @@ import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
 import hash from 'hash-sum';
+import { withNavigate } from 'helpers/withNavigate';
 
-export default class SearchComponent extends PureComponent {
+export class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
@@ -39,7 +40,7 @@ export default class SearchComponent extends PureComponent {
         isAdmin: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         location: PropTypes.object,
     };
 
@@ -266,7 +267,7 @@ export default class SearchComponent extends PureComponent {
             return;
         }
 
-        this.props.history.push({
+        this.props.navigate({
             pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
             search: param(searchQuery),
         });
@@ -563,3 +564,5 @@ export default class SearchComponent extends PureComponent {
         );
     }
 }
+
+export default withNavigate()(SearchComponent);

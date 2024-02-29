@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 const FORM_NAME = 'FixRecord';
 
@@ -74,6 +73,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 FixRecordContainer = connect(mapStateToProps, mapDispatchToProps)(FixRecordContainer);
-FixRecordContainer = withRouter(FixRecordContainer);
 
 export default FixRecordContainer;

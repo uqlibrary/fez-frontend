@@ -21,7 +21,7 @@ export default class Orcid extends Component {
         accountAuthorLoading: PropTypes.bool,
         accountAuthorSaving: PropTypes.bool,
         accountAuthorError: PropTypes.string,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         actions: PropTypes.object.isRequired,
     };
 
@@ -178,7 +178,7 @@ export default class Orcid extends Component {
     }
 
     _navigateToDashboard = () => {
-        this.props.history.push(pathConfig.dashboard);
+        this.props.navigate(pathConfig.dashboard);
     };
 
     _setAuthoriseConfirmation = ref => {

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Meta from '../components/Meta';
-import { withRouter } from 'react-router-dom';
+import { withNavigate } from 'helpers/withNavigate';
 
 const defaultObj = {};
 const mapStateToProps = state => {
@@ -12,6 +12,5 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = () => ({});
 
-let MetaContainer = connect(mapStateToProps, mapDispatchToProps)(Meta);
-MetaContainer = withRouter(MetaContainer);
-export default MetaContainer;
+const MetaContainer = connect(mapStateToProps, mapDispatchToProps)(Meta);
+export default withNavigate()(MetaContainer);

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { withNavigate } from 'helpers/withNavigate';
 
 export class ScrollToTop extends Component {
     static propTypes = {
@@ -24,4 +24,4 @@ export class ScrollToTop extends Component {
     }
 }
 
-export default withRouter(ScrollToTop);
+export default withNavigate(ScrollToTop);

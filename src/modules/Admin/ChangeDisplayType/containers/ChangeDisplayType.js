@@ -1,6 +1,5 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 import { change, formValueSelector, getFormSyncErrors, reduxForm, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
 
@@ -66,4 +65,4 @@ const mapDispatchToProps = dispatch => {
 
 const ChangeDisplayTypeReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(ChangeDisplayTypeContainer);
 
-export default withRouter(ChangeDisplayTypeReduxFormContainer);
+export default ChangeDisplayTypeReduxFormContainer;

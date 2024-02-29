@@ -27,14 +27,15 @@ import {
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { withNavigate } from 'helpers/withNavigate';
 
-export default class DeleteRecord extends PureComponent {
+export class DeleteRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         recordToDelete: PropTypes.object,
         loadingRecordToDelete: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         errors: PropTypes.object,
@@ -63,11 +64,11 @@ export default class DeleteRecord extends PureComponent {
     #COMMUNITY_COLLECTION_KEY = 'communityCollection';
 
     _navigateToSearchPage = () => {
-        this.props.history.push(pathConfig.records.search);
+        this.props.navigate(pathConfig.records.search);
     };
 
     _navigateToViewPage = () => {
-        this.props.history.push(pathConfig.records.view(this.props.match.params.pid));
+        this.props.navigate(pathConfig.records.view(this.props.match.params.pid));
     };
 
     _setSuccessConfirmation = ref => {
@@ -75,7 +76,7 @@ export default class DeleteRecord extends PureComponent {
     };
 
     _cancel = () => {
-        this.props.history.goBack();
+        this.props.navigate(-1);
     };
     /* istanbul ignore next */
     _handleDefaultSubmit = event => {
@@ -309,3 +310,5 @@ export default class DeleteRecord extends PureComponent {
         );
     }
 }
+
+export default withNavigate()(DeleteRecord);

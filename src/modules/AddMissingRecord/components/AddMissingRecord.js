@@ -6,13 +6,14 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { Stepper } from 'modules/SharedComponents/Toolbox/Stepper';
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
+import { withNavigate } from 'helpers/withNavigate';
 
-export default class AddMissingRecord extends PureComponent {
+export class AddMissingRecord extends PureComponent {
     static propTypes = {
         rawSearchQuery: PropTypes.string,
         addRecordStep: PropTypes.func,
         actions: PropTypes.object,
-        history: PropTypes.object,
+        navigate: PropTypes.func,
         location: PropTypes.object,
         match: PropTypes.object,
         author: PropTypes.object,
@@ -22,7 +23,7 @@ export default class AddMissingRecord extends PureComponent {
         super(props);
 
         if (!this.props.rawSearchQuery && this.props.match.path === pathConfig.records.add.results) {
-            this.props.history.replace(pathConfig.records.add.find);
+            this.props.navigate(pathConfig.records.add.find, { replace: true });
         }
     }
 
@@ -44,3 +45,5 @@ export default class AddMissingRecord extends PureComponent {
         );
     }
 }
+
+export default withNavigate()(AddMissingRecord);

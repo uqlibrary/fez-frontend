@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useHistory } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { Map } from 'immutable';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import {
@@ -174,7 +174,6 @@ const getIsAuthorLinked = (recordToFix, author) => {
 
 export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) => {
     const dispatch = useDispatch();
-    const history = useHistory();
     const isAdmin = userIsAdmin();
     const { pid } = useParams();
 
@@ -232,7 +231,6 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
             account={account}
             author={author}
             recordToFix={recordToFix}
-            history={history}
             {...rest}
         />
     );

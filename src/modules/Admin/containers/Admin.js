@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { change, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
-import { withRouter } from 'react-router';
 import { adminInterfaceConfig, validate, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
@@ -188,4 +187,4 @@ function mapDispatchToProps(dispatch) {
 
 const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
 
-export default withRouter(AdminReduxFormContainer);
+export default AdminReduxFormContainer;

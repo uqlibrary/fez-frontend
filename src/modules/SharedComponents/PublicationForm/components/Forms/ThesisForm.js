@@ -21,7 +21,6 @@ import Typography from '@mui/material/Typography';
 export default class ThesisForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-        history: PropTypes.object,
     };
     constructor(props) {
         super(props);

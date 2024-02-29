@@ -26,8 +26,9 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { pathConfig, validation } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
+import { withNavigate } from 'helpers/withNavigate';
 
-export default class FixRecord extends PureComponent {
+export class FixRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -38,7 +39,7 @@ export default class FixRecord extends PureComponent {
         author: PropTypes.object,
         accountAuthorLoading: PropTypes.bool,
 
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
 
@@ -103,15 +104,15 @@ export default class FixRecord extends PureComponent {
     };
 
     _navigateToMyResearch = () => {
-        this.props.history.push(pathConfig.records.mine);
+        this.props.navigate(pathConfig.records.mine);
     };
 
     _navigateToDashboard = () => {
-        this.props.history.push(pathConfig.dashboard);
+        this.props.navigate(pathConfig.dashboard);
     };
 
     _cancelFix = () => {
-        this.props.history.goBack();
+        this.props.navigate(-1);
     };
 
     _actionSelected = (event, value) => {
@@ -131,7 +132,7 @@ export default class FixRecord extends PureComponent {
     render() {
         // if author is not linked to this record, abandon form
         if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-            this.props.history.go(-1);
+            this.props.navigate(-1);
             return <div />;
         }
 
@@ -330,3 +331,5 @@ export default class FixRecord extends PureComponent {
         );
     }
 }
+
+export default withNavigate()(FixRecord);

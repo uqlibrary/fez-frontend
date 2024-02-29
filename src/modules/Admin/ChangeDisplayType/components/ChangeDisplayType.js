@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { parseHtmlToJSX } from 'helpers/general';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { Field } from 'redux-form/immutable';
 import { useConfirmationState } from 'hooks';
 
