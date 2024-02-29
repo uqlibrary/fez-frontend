@@ -16,7 +16,7 @@ context('Controlled vocabularies', () => {
         cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
         dismissPopover();
     });
-  
+
     it('Navigate field of research', () => {
         cy.get('[data-testid="expand-row-451780"]').click();
         cy.get('[data-testid="child-row-em-451799"]').should('contain', '01 Mathematical Sciences');
@@ -48,7 +48,7 @@ context('Controlled vocabularies', () => {
 
         dismissPopover();
     });
-  
+
     describe('admin', () => {
         describe('adding vocabs', () => {
             it('should show an Add panel when the top-level Add button is clicked', () => {
@@ -194,5 +194,6 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=portal-root]').should('not.contain', 'Update vocabulary');
                 cy.get('[data-testid=admin-edit-button-453670]').should('exist');
             });
-        });  
+        });
+    });
 });
