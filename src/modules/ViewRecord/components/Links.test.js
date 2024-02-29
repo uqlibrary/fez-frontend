@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Links from './Links';
-import { recordLinks, recordWithRDM } from 'mock/data/testing/records';
+import { recordLinks, recordWithRDM, recordWithRdmMediatedAccess } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
 import { renderWithRouter, fireEvent } from 'test-utils';
@@ -10,7 +10,9 @@ import { getIconTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
 function setup(testProps = {}) {
     const props = {
         classes: {},
-        publication: testProps.publication || recordLinks,
+        publication: recordLinks,
+        isAdmin: false,
+        ...testProps,
     };
     return renderWithRouter(<Links {...props} />);
 }
@@ -301,6 +303,7 @@ describe('Component Links ', () => {
                     },
                 ],
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -322,6 +325,7 @@ describe('Component Links ', () => {
                     rek_embargo_to: '2100-01-01',
                 },
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -340,6 +344,7 @@ describe('Component Links ', () => {
                     rek_access_conditions: openAccessConfig.DATASET_MEDIATED_ACCESS_ID,
                 },
             },
+            isAdmin: true,
         });
 
         expect(container).toMatchSnapshot();
@@ -425,5 +430,25 @@ describe('Component Links ', () => {
             '_blank',
             'noopener,noreferrer',
         );
+    });
+
+    it('should replace RDM mediated links with a link to contact the data team for non-admin users', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRdmMediatedAccess,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute('href', 'mailto:data@library.uq.edu.au');
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Send email to data@library.uq.edu.au');
+    });
+
+    it('should show RDM mediated links for Admin users', () => {
+        const { getByTestId } = setup({
+            publication: recordWithRdmMediatedAccess,
+            isAdmin: true,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute(
+            'href',
+            'https://rdm.uq.edu.au/files/2944bd40-791c-11ee-bd1b-c7b4fca67552',
+        );
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Request access');
     });
 });
