@@ -22,7 +22,6 @@ export const ControlledVocabularies = () => {
     );
 
     React.useEffect(() => {
-        console.log('dispatch');
         dispatch(actions.loadControlledVocabList());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -30,7 +29,6 @@ export const ControlledVocabularies = () => {
     const txt = locale.components.controlledVocabulary;
 
     const labels = txt.columns.labels;
-    console.log('sortedList=', sortedList.length);
 
     return (
         <StandardPage title={txt.title.controlledVocabulary}>
