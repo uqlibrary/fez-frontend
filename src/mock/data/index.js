@@ -57,6 +57,7 @@ export {
     recordWithTiffAndThumbnail,
     recordWithProblematicAuthorAffiliations,
     recordWithRDM,
+    recordWithRDMMediatedAccess,
     recordBookWithAuthorAffiliations,
     unpublishedSearchList,
     UQ716942uqagrinb,
