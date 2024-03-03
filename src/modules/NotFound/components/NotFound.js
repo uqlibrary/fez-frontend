@@ -49,10 +49,7 @@ export const NotFound = () => {
 
     if (!!existingAlias) {
         const [pathname, search] = existingAlias.fvs_search_parameters.split('?');
-        navigate(pathname, {
-            search: search,
-            state: { redirectedFromNotFound: true },
-        });
+        navigate({ pathname: pathname, search: search }, { state: { redirectedFromNotFound: true } });
     }
 
     if (!!account.id && !isValidFileRoute && !isValidRoute && !existingAliasChecking) {

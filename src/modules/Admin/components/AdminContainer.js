@@ -53,18 +53,19 @@ export const AdminContainer = ({
     loadingRecordToView,
     loadRecordToView,
     locked,
-    match,
     recordToView,
     recordToViewError,
     submitSucceeded,
     submitting,
     unlockRecord,
+    params,
     error,
 }) => {
+    const { pid } = params;
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
-    const [showAddForm, setShowAddForm] = React.useState(!match.params.pid);
+    const [showAddForm, setShowAddForm] = React.useState(!pid);
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
@@ -82,14 +83,14 @@ export const AdminContainer = ({
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     React.useEffect(() => {
-        !!match.params.pid && !!loadRecordToView && loadRecordToView(match.params.pid, true);
+        !!pid && !!loadRecordToView && loadRecordToView(pid, true);
         return () => {
             clearRecordToView();
         };
-    }, [loadRecordToView, clearRecordToView, match.params.pid]);
+    }, [loadRecordToView, clearRecordToView, pid]);
 
     const txt = locale.pages.edit;
-    if (!!match.params.pid && loadingRecordToView) {
+    if (!!pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!recordToView && isDeleted) {
         return (
@@ -106,7 +107,7 @@ export const AdminContainer = ({
                 )}
             </StandardPage>
         );
-    } else if (!!match.params.pid && !recordToView) {
+    } else if (!!pid && !recordToView) {
         return <div className="empty" />;
     }
 
@@ -260,7 +261,6 @@ AdminContainer.propTypes = {
     loadRecordToView: PropTypes.func,
     recordToViewError: PropTypes.object,
     locked: PropTypes.bool,
-    match: PropTypes.object,
     recordToView: PropTypes.object,
     isDeleted: PropTypes.bool,
     isJobCreated: PropTypes.bool,
@@ -268,6 +268,7 @@ AdminContainer.propTypes = {
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
     unlockRecord: PropTypes.func,
+    params: PropTypes.object,
     error: PropTypes.object,
 };
 

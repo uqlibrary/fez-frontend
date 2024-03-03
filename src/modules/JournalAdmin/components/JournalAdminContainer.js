@@ -24,6 +24,7 @@ import { JournalContext, TabbedContext } from 'context';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { useIsMobileView } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
+import { useParams } from 'react-router-dom';
 
 export const JournalAdminContainer = ({
     authorDetails,
@@ -38,7 +39,6 @@ export const JournalAdminContainer = ({
     journalToViewLoading,
     loadJournalToView,
     locked,
-    match,
     journalToView,
     journalToViewError,
     journalLoadingError,
@@ -47,6 +47,7 @@ export const JournalAdminContainer = ({
     unlockJournal,
     error,
 }) => {
+    const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
@@ -66,17 +67,17 @@ export const JournalAdminContainer = ({
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
     React.useEffect(() => {
-        !!match.params.id && !!loadJournalToView && loadJournalToView(match.params.id, true);
+        !!id && !!loadJournalToView && loadJournalToView(id, true);
         return () => {
             clearJournalToView();
         };
-    }, [loadJournalToView, clearJournalToView, match.params.id]);
+    }, [loadJournalToView, clearJournalToView, id]);
 
     const txt = locale.pages.edit;
 
-    if (!!match.params.id && journalToViewLoading) {
+    if (!!id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!!match.params.id && (!!!journalToView || journalLoadingError)) {
+    } else if (!!id && (!!!journalToView || journalLoadingError)) {
         return (
             <StandardPage className="viewJournal" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -91,7 +92,7 @@ export const JournalAdminContainer = ({
                 )}
             </StandardPage>
         );
-    } else if (!match.params.id && !journalToView) {
+    } else if (!id && !journalToView) {
         return <div className="empty" />;
     }
 
@@ -180,7 +181,6 @@ JournalAdminContainer.propTypes = {
     loadJournalToView: PropTypes.func,
     journalToViewError: PropTypes.object,
     locked: PropTypes.bool,
-    match: PropTypes.object,
     journalToView: PropTypes.object,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,

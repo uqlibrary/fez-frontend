@@ -122,7 +122,7 @@ export const SearchJournals = () => {
         setSelectedKeywords(searchQueryParams.keywords);
         setShowInputControls(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedKeywords]);
+    }, [selectedKeywords, location]);
 
     /**
      *  Hide search input controls if there aren't any selected keywords

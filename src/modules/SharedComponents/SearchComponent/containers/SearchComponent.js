@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import SearchComponent from '../components/SearchComponent';
 import * as actions from 'actions';
 import deparam from 'can-deparam';
+import { withNavigate } from 'helpers/withNavigate';
 
 const defaultObj = {};
 
@@ -46,4 +47,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 const SearchComponentContainer = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
-export default SearchComponentContainer;
+export default withNavigate()(SearchComponentContainer);

@@ -36,14 +36,14 @@ export class DeleteRecord extends PureComponent {
         loadingRecordToDelete: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
         navigate: PropTypes.func.isRequired,
-        match: PropTypes.object.isRequired,
+        params: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         errors: PropTypes.object,
     };
 
     componentDidMount() {
-        if (this.props.actions && this.props.match.params && this.props.match.params.pid) {
-            this.props.actions.loadRecordToDelete(this.props.match.params.pid);
+        if (this.props.actions && this.props.params && this.props.params.pid) {
+            this.props.actions.loadRecordToDelete(this.props.params.pid);
         }
     }
 
@@ -68,7 +68,7 @@ export class DeleteRecord extends PureComponent {
     };
 
     _navigateToViewPage = () => {
-        this.props.navigate(pathConfig.records.view(this.props.match.params.pid));
+        this.props.navigate(pathConfig.records.view(this.props.params.pid));
     };
 
     _setSuccessConfirmation = ref => {
@@ -76,7 +76,7 @@ export class DeleteRecord extends PureComponent {
     };
 
     _cancel = () => {
-        this.props.navigate(-1);
+        this._navigateToViewPage();
     };
     /* istanbul ignore next */
     _handleDefaultSubmit = event => {

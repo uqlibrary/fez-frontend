@@ -34,7 +34,7 @@ export default class MyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         navigate: PropTypes.func.isRequired,
-        navigateType: PropTypes.object,
+        navigateType: PropTypes.string,
         actions: PropTypes.object,
     };
 

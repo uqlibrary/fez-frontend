@@ -40,7 +40,7 @@ export class FixRecord extends PureComponent {
         accountAuthorLoading: PropTypes.bool,
 
         navigate: PropTypes.func.isRequired,
-        match: PropTypes.object.isRequired,
+        params: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
 
         publicationToFixFileUploadingError: PropTypes.bool,
@@ -57,8 +57,8 @@ export class FixRecord extends PureComponent {
     }
 
     componentDidMount() {
-        if (this.props.actions && this.props.match.params && this.props.match.params.pid) {
-            this.props.actions.loadRecordToFix(this.props.match.params.pid);
+        if (this.props.actions && this.props.params && this.props.params.pid) {
+            this.props.actions.loadRecordToFix(this.props.params.pid);
         }
     }
 
@@ -112,7 +112,7 @@ export class FixRecord extends PureComponent {
     };
 
     _cancelFix = () => {
-        this.props.navigate(-1);
+        this._navigateToMyResearch();
     };
 
     _actionSelected = (event, value) => {

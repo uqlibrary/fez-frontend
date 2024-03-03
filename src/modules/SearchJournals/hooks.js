@@ -128,10 +128,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 
     const handleSearch = (searchQuery, state = {}) => {
-        navigate(path, {
-            search: param(searchQuery),
-            state: state,
-        });
+        navigate({ pathname: path, search: param(searchQuery) }, { state: state });
     };
 
     return {

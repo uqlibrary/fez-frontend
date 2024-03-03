@@ -238,11 +238,6 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
 
 MyIncompleteRecordContainer.propTypes = {
     disableInitialGrants: PropTypes.bool,
-    match: PropTypes.shape({
-        params: PropTypes.shape({
-            pid: PropTypes.string.isRequired,
-        }),
-    }),
 };
 
 export default React.memo(MyIncompleteRecordContainer);

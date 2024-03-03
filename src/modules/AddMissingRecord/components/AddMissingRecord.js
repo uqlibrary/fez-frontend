@@ -15,14 +15,13 @@ export class AddMissingRecord extends PureComponent {
         actions: PropTypes.object,
         navigate: PropTypes.func,
         location: PropTypes.object,
-        match: PropTypes.object,
         author: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
 
-        if (!this.props.rawSearchQuery && this.props.match.path === pathConfig.records.add.results) {
+        if (!this.props.rawSearchQuery && this.props.location.pathname === pathConfig.records.add.results) {
             this.props.navigate(pathConfig.records.add.find, { replace: true });
         }
     }

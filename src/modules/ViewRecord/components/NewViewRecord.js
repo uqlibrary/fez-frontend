@@ -92,7 +92,7 @@ export const NewViewRecord = ({
     const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
-    const isNotFoundRoute = !!pid && (!pid.match(pidRegExp) || pid === notFound);
+    const isNotFoundRoute = !!pid && (!new RegExp(pidRegExp, 'i').test(pid) || pid === notFound);
     const isAdmin = userIsAdmin();
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
     const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();

@@ -24,4 +24,4 @@ export class ScrollToTop extends Component {
     }
 }
 
-export default withNavigate(ScrollToTop);
+export default withNavigate()(ScrollToTop);

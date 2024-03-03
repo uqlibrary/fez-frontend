@@ -15,11 +15,11 @@ const router = createBrowserRouter([
         element: (
             <StyledEngineProvider injectFirst>
                 <ThemeProvider theme={mui1theme}>
-                    <App>
-                        <ScrollToTop>
+                    <ScrollToTop>
+                        <App>
                             <Outlet />
-                        </ScrollToTop>
-                    </App>
+                        </App>
+                    </ScrollToTop>
                 </ThemeProvider>
             </StyledEngineProvider>
         ),

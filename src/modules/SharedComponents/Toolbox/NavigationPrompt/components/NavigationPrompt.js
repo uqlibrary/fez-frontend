@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useBlocker, useNavigate } from 'react-router-dom';
 
@@ -10,37 +10,32 @@ import { useBlocker, useNavigate } from 'react-router-dom';
  */
 const NavigationPrompt = ({ when, children }) => {
     const [nextLocation, setNextLocation] = useState(null);
+    const [confirmationBox, setConfirmationBox] = useState(null);
     const navigate = useNavigate();
-    let confirmationBox = null;
 
-    const blockNavigation = nextLocation => {
-        if (when) {
+    const blockNavigation = (currentLocation, nextLocation) => {
+        if (when && nextLocation.pathname !== currentLocation.pathname) {
             setNextLocation(nextLocation);
             confirmationBox.showConfirmation();
-            // return !when;
+            return true;
         }
 
-        return when;
+        return false;
     };
 
-    const blocker = useBlocker(({ nextLocation }) => blockNavigation(nextLocation));
-
-    useEffect(() => {
-        return () => {
-            blocker && blocker.state === 'blocked' && blocker.reset();
-        };
-    }, [blocker, confirmationBox]);
+    const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
     const navigateToNextLocation = () => {
-        blocker.rest();
+        blocker.proceed();
         navigate(nextLocation.pathname);
     };
 
     const setNavigationConfirmation = ref => {
-        confirmationBox = ref;
+        setConfirmationBox(ref);
     };
 
     const _onCancel = () => {
+        blocker.reset();
         setNextLocation(null);
     };
 
