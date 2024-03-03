@@ -30,7 +30,6 @@ export const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/users',
-    '/admin/add',
     '/admin/edit',
     '/admin/delete',
     '/admin/favourite-search',
