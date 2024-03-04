@@ -222,7 +222,7 @@ export const VOCAB_LIST_API = () => {
 
 export const CHILD_VOCAB_LIST_API = parentId => {
     return {
-        apiUrl: `vocabularies/${parentId}`,
+        apiUrl: `vocabularies/admin/${parentId}`,
     };
 };
 

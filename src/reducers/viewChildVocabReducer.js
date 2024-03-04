@@ -58,6 +58,7 @@ export const initialState = {
 
 const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADING]: (state, action) => {
+        console.log('loading=', action);
         const rootId = action.rootId;
         state.loadingChildVocab[rootId] = true;
         return {
@@ -85,7 +86,9 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOAD_FAILED]: (state, action) => {
-        state.loadingChildVocab[action.rootId] = false;
+        Object.keys(state.loadingChildVocab).forEach(key => {
+            state.loadingChildVocab[key] = false;
+        });
         return {
             ...state,
             loadingChildVocabError: action.payload,
