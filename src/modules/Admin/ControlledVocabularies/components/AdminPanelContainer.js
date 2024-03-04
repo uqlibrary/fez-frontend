@@ -31,7 +31,7 @@ export const validate = data => {
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state);
     return {
-        onSubmit: props.onAction(props.parentId ?? null),
+        onSubmit: props.onAction(props.parentId ?? null, props.rootVocabId),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),

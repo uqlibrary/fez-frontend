@@ -59,9 +59,14 @@ const ControlledVocabularies = () => {
         dispatch(actions.clearAdminControlledVocabulary());
     };
 
-    const handleDialogClickSave = parentId => values => {
+    const handleDialogClickSave = (parentId, rootVocabId) => values => {
         const data = { ...values.toJS() };
-        const wrappedRequest = transformAdminRequest({ request: data, parentId, action: adminDialogState.action });
+        const wrappedRequest = transformAdminRequest({
+            request: data,
+            parentId,
+            rootVocabId,
+            action: adminDialogState.action,
+        });
 
         return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
             .then(() => {
@@ -71,6 +76,7 @@ const ControlledVocabularies = () => {
                 dispatch(
                     adminFunction({
                         pid: parentId,
+                        rootId: rootVocabId,
                     }),
                 );
             })

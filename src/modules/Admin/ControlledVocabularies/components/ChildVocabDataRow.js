@@ -99,7 +99,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
                             data-analyticsid={`admin-edit-button-${row.cvo_id}`}
                             data-testid={`admin-edit-button-${row.cvo_id}`}
                             aria-label="Edit"
-                            onClick={() => onAdminEditActionClick({ row, parentId })}
+                            onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
                             size="large"
                             disabled={state.isOpen}
                         >
