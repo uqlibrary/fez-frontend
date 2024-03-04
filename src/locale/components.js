@@ -4291,6 +4291,16 @@ export default {
                     title: 'Refine results',
                     text: (
                         <React.Fragment>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Evidence of Peer Review</h3>
+                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Highest quartile</h3>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>Listed in</h3>
                             <p>
                                 Indicates a journal has met the quality indicators/requirements for a list compiled by a
@@ -4304,26 +4314,18 @@ export default {
                                 </li>
                                 <li key={'ERA'}>ERA (Excellence in Research Australia)</li>
                             </ul>
-                            <h3>Indexed in</h3>
-                            <p>Indicates database providers which index the journal.</p>
                             <h3>Open access: accepted version</h3>
                             <p>
                                 Sort by length of time before an author accepted or self-archived version of an article
                                 is open and freely available via UQ eSpace.
                             </p>
-                            <h3>Journal impact factor highest quartile</h3>
-                            <p>Sort by JIF Quartile, where Q1 is best.</p>
-                            <h3>CiteScore highest quartile</h3>
-                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
-                            <h3>Highest quartile</h3>
-                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
                             <h3>Open access: published version</h3>
                             <p>
                                 Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
                                 publisher to make a publication immediately available and openly accessible.
                             </p>
-                            <h3>Evidence of Peer Review</h3>
-                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Favourite Journals</h3>
+                            <p>Limits results to favourited journals.</p>
                         </React.Fragment>
                     ),
                     testId: 'journal-search-facets',
