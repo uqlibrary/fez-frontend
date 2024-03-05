@@ -72,7 +72,7 @@ const ControlledVocabularies = () => {
             .then(() => {
                 handleDialogClickClose();
                 const adminFunction =
-                    rootVocabId && +parentId !== +rootVocabId
+                    rootVocabId && Number(parentId) !== Number(rootVocabId)
                         ? actions.loadChildVocabList
                         : actions.loadControlledVocabList;
                 dispatch(
