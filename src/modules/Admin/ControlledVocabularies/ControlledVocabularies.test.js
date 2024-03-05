@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitForElementToBeRemoved } from 'test-utils';
+import { preview } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -84,10 +85,14 @@ describe('ControlledVocabularies', () => {
         it('should render and save when button clicked', async () => {
             mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
             await showAddForm().then(async ({ getByTestId }) => {
+                preview.debug();
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
                 expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                // await waitFor(() => {
+                //     expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                // });
             });
         });
         it('should capture error when save when button clicked', async () => {

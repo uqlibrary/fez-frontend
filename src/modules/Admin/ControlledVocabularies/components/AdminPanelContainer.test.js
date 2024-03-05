@@ -156,7 +156,8 @@ describe('AdminPanel with Redux-Form', () => {
             cvo_hide: true,
         };
         const parentId = 1234;
-        const { getByTestId } = setup({ onAction: mockActionFn, parentId });
+        const rootVocabId = 567;
+        const { getByTestId } = setup({ onAction: mockActionFn, parentId, rootVocabId });
 
         expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
 
@@ -168,6 +169,6 @@ describe('AdminPanel with Redux-Form', () => {
         await userEvent.click(getByTestId('cvo-hide-input'));
 
         await userEvent.click(getByTestId('update_dialog-action-button'));
-        expect(mockActionFn).toHaveBeenCalledWith(parentId);
+        expect(mockActionFn).toHaveBeenCalledWith(parentId, rootVocabId);
     });
 });
