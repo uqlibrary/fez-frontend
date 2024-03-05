@@ -19,6 +19,7 @@ import { ControlledVocabulariesStateContext } from '../ControlledVocabularyConte
 const txt = locale.components.controlledVocabulary;
 
 export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
+    console.log('ChildVocabDataRow.parentId=', parentId, 'rootId=', rootId, 'row=', row);
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 

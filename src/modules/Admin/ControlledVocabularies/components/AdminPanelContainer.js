@@ -29,6 +29,7 @@ export const validate = data => {
 };
 
 const mapStateToProps = (state, props) => {
+    console.log('props=', props);
     const formErrors = getFormSyncErrors(FORM_NAME)(state);
     return {
         onSubmit: props.onAction(props.parentId ?? null, props.rootVocabId),
