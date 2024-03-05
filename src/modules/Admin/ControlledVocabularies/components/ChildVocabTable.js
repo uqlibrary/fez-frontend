@@ -94,7 +94,11 @@ export const ChildVocabTable = ({ parentRow }) => {
                 return total ? [total, ' > ', current] : current;
             }, '');
 
-        return <Breadcrumbs id={id}>{buttons}</Breadcrumbs>;
+        return (
+            <Breadcrumbs aria-label="breadcrumb" separator="›" id={id}>
+                {buttons}
+            </Breadcrumbs>
+        );
     };
     VocabBreadCrumb.propTypes = {
         id: PropTypes.string,
