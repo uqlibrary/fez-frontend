@@ -135,6 +135,6 @@ describe('ChildVocabTable', () => {
         });
         await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
         await userEvent.click(getByTestId('admin-add-vocabulary-button-453669'));
-        expect(mockFn).toHaveBeenCalledWith(453669);
+        expect(mockFn).toHaveBeenCalledWith(453669, 453669);
     });
 });
