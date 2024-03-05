@@ -81,7 +81,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                 <Link
                     key={`nav-${em.id}`}
                     component="button"
-                    underline="hover"
+                    underline="always"
                     id={`nav-${em.id}`}
                     data-testid={`nav-${em.id}`}
                     variant="button"
