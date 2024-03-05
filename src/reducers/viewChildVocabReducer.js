@@ -13,13 +13,13 @@ export function findCurrentChild(lists, parentId, currentPath = []) {
     if (parentId === 0) return [lists, currentPath];
     if (lists && lists.length) {
         // current level
-        if (lists[0].cvr_parent_cvo_id === parentId) {
+        if (+lists[0].cvr_parent_cvo_id === +parentId) {
             return [lists, currentPath];
         } else {
             // child level
             for (let i = 0; i < lists.length; i++) {
                 const em = lists[i];
-                if (em.cvr_child_cvo_id === parentId) {
+                if (+em.cvr_child_cvo_id === +parentId) {
                     const path = [
                         ...currentPath,
                         { id: em.controlled_vocab.cvo_id, title: em.controlled_vocab.cvo_title },
@@ -68,6 +68,7 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
+        console.log('loaded', action);
         const rootId = action.rootId;
         if (!action.payload.data) {
             state.loadingChildVocab[rootId] = false;
@@ -77,6 +78,8 @@ const handlers = {
         }
 
         const [currentChildData, path] = findCurrentChild(action.payload.data, action.parentId);
+        console.log('path', path);
+        console.log('currentChildData', currentChildData);
 
         state.loadingChildVocab[rootId] = false;
         return {
