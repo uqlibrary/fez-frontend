@@ -71,7 +71,8 @@ const ControlledVocabularies = () => {
         return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
             .then(() => {
                 handleDialogClickClose();
-                const adminFunction = !!parentId ? actions.loadChildVocabList : actions.loadControlledVocabList;
+                const adminFunction =
+                    +parentId !== +rootVocabId ? actions.loadChildVocabList : actions.loadControlledVocabList;
 
                 dispatch(
                     adminFunction({

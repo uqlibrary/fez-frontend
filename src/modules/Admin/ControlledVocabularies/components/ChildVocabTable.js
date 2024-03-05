@@ -45,8 +45,9 @@ export const ChildVocabTable = ({ parentRow }) => {
     }, []);
 
     const handleAddActionClick = () => {
-        console.log('handleAddActionClick', parentRow.cvo_id);
-        onAdminAddActionClick(parentRow.cvo_id);
+        const navs = document.querySelectorAll(`#vocabNav-${parentRow.cvo_id} [id^=nav]`);
+        const parentId = navs[navs.length - 1].id.replace('nav-', '');
+        onAdminAddActionClick(parentId, parentRow.cvo_id);
     };
 
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
@@ -69,7 +70,7 @@ export const ChildVocabTable = ({ parentRow }) => {
         );
     };
 
-    const VocabBreadCrumb = () => {
+    const VocabBreadCrumb = ({ id }) => {
         // Event handler for button clicks
         const handleButtonClick = (event, id) => {
             replaceChildVocabTable(id);
@@ -81,6 +82,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     key={`nav-${em.id}`}
                     component="button"
                     underline="hover"
+                    id={`nav-${em.id}`}
                     data-testid={`nav-${em.id}`}
                     variant="button"
                     onClick={event => handleButtonClick(event, em.id)}
@@ -92,7 +94,10 @@ export const ChildVocabTable = ({ parentRow }) => {
                 return total ? [total, ' > ', current] : current;
             }, '');
 
-        return <Breadcrumbs>{buttons}</Breadcrumbs>;
+        return <Breadcrumbs id={id}>{buttons}</Breadcrumbs>;
+    };
+    VocabBreadCrumb.propTypes = {
+        id: PropTypes.string,
     };
 
     return (
@@ -136,7 +141,7 @@ export const ChildVocabTable = ({ parentRow }) => {
                     childData[parentRow.cvo_id].data.length >= 0 && (
                         <Grid container spacing={0}>
                             <Grid item md={12}>
-                                <VocabBreadCrumb />
+                                <VocabBreadCrumb id={`vocabNav-${parentRow.cvo_id}`} />
                                 <Typography
                                     variant="body2"
                                     sx={{ fontWeight: 600, marginBottom: '10px' }}
