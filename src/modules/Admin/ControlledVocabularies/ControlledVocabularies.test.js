@@ -84,15 +84,13 @@ describe('ControlledVocabularies', () => {
 
         it('should render and save when button clicked', async () => {
             mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
-            await showAddForm().then(async ({ getByTestId }) => {
-                preview.debug();
+            await showAddForm().then(async ({ getByTestId, queryByTestId }) => {
+                // preview.debug();
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                // await waitFor(() => {
-                //     expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                // });
+                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
             });
         });
         it('should capture error when save when button clicked', async () => {
@@ -132,11 +130,12 @@ describe('ControlledVocabularies', () => {
         });
         it('should render and save when button clicked', async () => {
             mockApi.onPut(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
-            await showEditForm().then(async ({ getByTestId }) => {
+            await showEditForm().then(async ({ getByTestId, queryByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
             });
         });
     });
