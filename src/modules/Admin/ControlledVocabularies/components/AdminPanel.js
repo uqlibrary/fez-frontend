@@ -39,11 +39,9 @@ const AdminPanel = ({
     pristine,
     valid,
     parentId,
-    rootVocabId,
     ...props
 }) => {
     const componentId = `${rootId}-${id}`;
-    console.log('AdminPanel rootVocabId=', rootVocabId);
 
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.only('xs')) || false;

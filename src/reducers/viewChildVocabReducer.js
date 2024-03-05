@@ -58,7 +58,6 @@ export const initialState = {
 
 const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADING]: (state, action) => {
-        console.log('loading=', action);
         const rootId = action.rootId;
         state.loadingChildVocab[rootId] = true;
         return {
@@ -68,7 +67,6 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        console.log('loaded', action);
         const rootId = action.rootId;
         if (!action.payload.data) {
             state.loadingChildVocab[rootId] = false;
@@ -78,8 +76,6 @@ const handlers = {
         }
 
         const [currentChildData, path] = findCurrentChild(action.payload.data, action.parentId);
-        console.log('path', path);
-        console.log('currentChildData', currentChildData);
 
         state.loadingChildVocab[rootId] = false;
         return {

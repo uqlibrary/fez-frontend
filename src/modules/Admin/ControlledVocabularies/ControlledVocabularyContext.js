@@ -36,9 +36,6 @@ export const manageDialogReducer = (_, action) => {
                 title: locale.components.controlledVocabulary.admin.addTitle,
             };
         case ACTION.EDIT: {
-            console.log('defaultManageDialogState=', defaultManageDialogState);
-            console.log('nextState=', nextState);
-            console.log('action=', action);
             return {
                 ...defaultManageDialogState,
                 ...nextState,
@@ -62,7 +59,6 @@ export const ControlledVocabulariesProvider = ({ children }) => {
     const dispatch = useDispatch();
 
     const onAdminAddActionClick = (parentId, rootVocabId) => {
-        console.log('onAdminAddActionClick pid, rid', parentId, rootVocabId);
         actionDispatch({ type: ACTION.ADD, parentId, rootVocabId, portalId: getPortalId(rootVocabId, ACTION.ADD) });
     };
     const onAdminEditActionClick = ({ parentId, rootVocabId, row }) => {
