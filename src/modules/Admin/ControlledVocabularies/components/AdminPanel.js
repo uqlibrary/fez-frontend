@@ -39,10 +39,8 @@ const AdminPanel = ({
     pristine,
     valid,
     parentId,
-    rootVocabId,
     ...props
 }) => {
-    console.log('AdminPanel.parentId=', parentId, 'rootVocabId=', rootVocabId);
     const componentId = `${rootId}-${id}`;
 
     const theme = useTheme();

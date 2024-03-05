@@ -62,7 +62,6 @@ export const ControlledVocabulariesProvider = ({ children }) => {
         actionDispatch({ type: ACTION.ADD, parentId, rootVocabId, portalId: getPortalId(rootVocabId, ACTION.ADD) });
     };
     const onAdminEditActionClick = ({ parentId, rootVocabId, row }) => {
-        console.log('onAdminEditActionClick parentId=', parentId, 'rootVocabId=', rootVocabId);
         dispatch(actions.setAdminActionVocab(row));
         actionDispatch({
             type: ACTION.EDIT,

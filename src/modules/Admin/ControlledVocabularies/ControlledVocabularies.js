@@ -68,8 +68,6 @@ const ControlledVocabularies = () => {
             action: adminDialogState.action,
         });
 
-        console.log('parentId=', parentId, 'rootVocabId=', rootVocabId);
-        console.log('data=', data);
         return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
             .then(() => {
                 handleDialogClickClose();
@@ -77,7 +75,6 @@ const ControlledVocabularies = () => {
                     rootVocabId && +parentId !== +rootVocabId
                         ? actions.loadChildVocabList
                         : actions.loadControlledVocabList;
-                console.log('adminFunction=', adminFunction);
                 dispatch(
                     adminFunction({
                         pid: parentId,

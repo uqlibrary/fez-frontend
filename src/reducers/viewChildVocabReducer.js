@@ -67,7 +67,6 @@ const handlers = {
     },
 
     [actions.VIEW_CHILD_VOCAB_LOADED]: (state, action) => {
-        console.log('loaded=', action);
         const rootId = action.rootId;
         if (!action.payload.data) {
             state.loadingChildVocab[rootId] = false;
@@ -77,7 +76,6 @@ const handlers = {
         }
 
         const [currentChildData, path] = findCurrentChild(action.payload.data, action.parentId);
-        console.log('path=', path);
 
         state.loadingChildVocab[rootId] = false;
         return {
