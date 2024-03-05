@@ -24,8 +24,7 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
-    devtool: 'eval-source-map',
-    // devtool: 'source-map',
+    devtool: 'source-map',
     entry: {
         webpackDevClient: `webpack-dev-server/client?http://${url}:${port}`,
         webPackDevServer: 'webpack/hot/only-dev-server',

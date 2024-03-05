@@ -43,7 +43,6 @@ export class Page extends Component {
 
     render() {
         const { title, children, help, standardPageId } = this.props;
-
         return (
             <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
                 {title && (
