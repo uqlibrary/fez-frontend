@@ -16,19 +16,35 @@ export default {
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
         help: {
-            title: 'Non-traditional research output types',
+            title: 'Add a missing work',
             text: (
-                <p>
-                    For more information about each type, click{' '}
-                    <a
-                        style={{ fontWeight: 700 }}
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                    >
-                        here
-                    </a>
-                </p>
+                <>
+                    <p>
+                        For help manually adding a work, access the help guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                    <h3>Non-traditional research outputs</h3>
+                    <p>
+                        For help selecting the relevant type for your work, access the guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                </>
             ),
             buttonLabel: 'Close',
         },
