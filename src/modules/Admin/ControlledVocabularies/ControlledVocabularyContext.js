@@ -19,6 +19,7 @@ export const defaultManageDialogState = {
     id: 'controlledVocabulary',
     isOpen: false,
     parentId: undefined,
+    rootVocabId: undefined,
     title: undefined,
     action: '',
     portalId: undefined,
@@ -57,15 +58,16 @@ export const ControlledVocabulariesProvider = ({ children }) => {
     const [manageDialogState, actionDispatch] = useReducer(manageDialogReducer, defaultManageDialogState);
     const dispatch = useDispatch();
 
-    const onAdminAddActionClick = parentId => {
-        actionDispatch({ type: ACTION.ADD, parentId, portalId: getPortalId(parentId, ACTION.ADD) });
+    const onAdminAddActionClick = (parentId, rootVocabId) => {
+        actionDispatch({ type: ACTION.ADD, parentId, rootVocabId, portalId: getPortalId(rootVocabId, ACTION.ADD) });
     };
-    const onAdminEditActionClick = ({ parentId, row }) => {
+    const onAdminEditActionClick = ({ parentId, rootVocabId, row }) => {
         dispatch(actions.setAdminActionVocab(row));
         actionDispatch({
             type: ACTION.EDIT,
             cvo_id: row.cvo_id,
             parentId,
+            rootVocabId,
             portalId: getPortalId(row.cvo_id, ACTION.EDIT),
         });
     };

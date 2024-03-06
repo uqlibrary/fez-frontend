@@ -46,7 +46,7 @@ describe('ControlledVocabularies VocabTable', () => {
         expect(within(getByTestId('vocab-primary-header')).getByText('External ID')).toBeInTheDocument();
         expect(within(getByTestId('vocab-primary-header')).getByText('Actions')).toBeInTheDocument();
         expect(getByTestId('row-em-453669')).toBeInTheDocument();
-        expect(document.querySelectorAll('[data-testid^=row-em-]').length).toEqual(42);
+        expect(document.querySelectorAll('[data-testid^=row-em-]').length).toEqual(21);
         expect(getByTestId('vocab-primary-body')).toBeInTheDocument();
     });
 });

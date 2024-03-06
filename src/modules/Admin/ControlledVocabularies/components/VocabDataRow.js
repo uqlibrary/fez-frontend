@@ -94,6 +94,7 @@ export const VocabDataRow = ({ row }) => {
                             )}
                         </Grid>
                         <Grid
+                            item
                             xs={12}
                             sm={5}
                             data-testid={`child-row-desc-${row.cvo_id}`}
@@ -111,7 +112,7 @@ export const VocabDataRow = ({ row }) => {
                                     data-analyticsid={`admin-edit-button-${row.cvo_id}`}
                                     data-testid={`admin-edit-button-${row.cvo_id}`}
                                     aria-label="Edit"
-                                    onClick={() => onAdminEditActionClick({ row })}
+                                    onClick={() => onAdminEditActionClick({ row, parentId: 0, rootVocabId: 0 })}
                                     size="large"
                                     disabled={state.isOpen}
                                 >
