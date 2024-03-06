@@ -416,6 +416,21 @@ describe('Component Links ', () => {
         fireEvent.click(getByTestId('cancel-link-rdm-accept-licence'));
     });
 
+    it('should not trigger licence popup if publication has a non-reuse licence', () => {
+        const { getByTestId, queryByTestId } = setup({
+            publication: {
+                ...recordWithRDM,
+                fez_record_search_key_license: {
+                    rek_license: 456713, // cc licence
+                },
+            },
+        });
+        fireEvent.click(getByTestId('publication-0-link'));
+        expect(queryByTestId('link-rdm-accept-licence')).not.toBeInTheDocument();
+        // as the clicked link is a standard href with target=_blank,
+        // assume clicking it worked as expected
+    });
+
     it('should be able to trigger and accept licence confirmation', () => {
         global.open = jest.fn();
         const { getByTestId } = setup({
