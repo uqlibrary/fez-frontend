@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
@@ -11,6 +12,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Grid from '@mui/material/Grid';
 import locale from 'locale/components';
+import { isReadonlyVocab } from 'config/general';
 
 import * as actions from 'actions';
 
@@ -32,6 +34,7 @@ export const VocabDataRow = ({ row }) => {
     const triggerChildren = openState => {
         dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
     };
+    const locked = isReadonlyVocab(row.cvo_id);
 
     return (
         <Grid
@@ -56,7 +59,7 @@ export const VocabDataRow = ({ row }) => {
                         width={'100%'}
                         paddingBlockEnd={'10px'}
                     >
-                        <Grid item xs={12} sm={1} md={1}>
+                        <Grid item xs={12} sm={1}>
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
                                 aria-label="expand row"
@@ -71,38 +74,57 @@ export const VocabDataRow = ({ row }) => {
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </Grid>
-                        <Grid item xs={12} sm={8} md={9}>
-                            <Box display={'flex'}>
-                                {row.cvo_title}
-                                {row.cvo_hide === 1 && (
-                                    <Tooltip title={txt.admin.tooltip.hidden}>
-                                        <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
-                                    </Tooltip>
-                                )}
-                            </Box>
+                        <Grid item xs={12} sm={4}>
+                            {row.cvo_title}
+                            {row.cvo_hide === 1 && (
+                                <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
+                                    <VisibilityOffIcon
+                                        fontSize="small"
+                                        sx={{ display: 'inline-block', paddingLeft: 1 }}
+                                    />
+                                </Tooltip>
+                            )}
+                            {locked && (
+                                <Tooltip
+                                    title={txt.admin.tooltip.readonly}
+                                    data-testid={`row-locked-icon-${row.cvo_id}`}
+                                >
+                                    <LockOutlinedIcon fontSize="small" color={'secondary'} />
+                                </Tooltip>
+                            )}
                         </Grid>
-                        <Grid item xs={12} sm={2} md={1}>
+                        <Grid
+                            xs={12}
+                            sm={5}
+                            data-testid={`child-row-desc-${row.cvo_id}`}
+                            sx={{ wordBreak: 'break-word' }}
+                        >
+                            {row.cvo_desc}
+                        </Grid>
+                        <Grid item xs={12} sm={1}>
                             {row.cvo_external_id}
                         </Grid>
-                        <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
-                            <IconButton
-                                id={`admin-edit-button-${row.cvo_id}`}
-                                data-analyticsid={`admin-edit-button-${row.cvo_id}`}
-                                data-testid={`admin-edit-button-${row.cvo_id}`}
-                                aria-label="Edit"
-                                onClick={() => onAdminEditActionClick({ row })}
-                                size="large"
-                                disabled={state.isOpen}
-                            >
-                                <Edit fontSize="small" />
-                            </IconButton>
+                        <Grid item xs={12} sm={1}>
+                            {!locked && (
+                                <IconButton
+                                    id={`admin-edit-button-${row.cvo_id}`}
+                                    data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                                    data-testid={`admin-edit-button-${row.cvo_id}`}
+                                    aria-label="Edit"
+                                    onClick={() => onAdminEditActionClick({ row })}
+                                    size="large"
+                                    disabled={state.isOpen}
+                                >
+                                    <Edit fontSize="small" />
+                                </IconButton>
+                            )}
                         </Grid>
                     </Box>
                 )}
                 {!!open && state.cvo_id !== row.cvo_id && (
                     <Grid container>
                         <Grid item xs={12}>
-                            <ChildVocabTable parentRow={row} />
+                            <ChildVocabTable parentRow={row} locked={locked} />
                         </Grid>
                     </Grid>
                 )}

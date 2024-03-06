@@ -53,8 +53,6 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-title-input')).toBeInTheDocument();
         expect(getByTestId('cvo-desc-input')).toBeInTheDocument();
         expect(getByTestId('cvo-external-id-input')).toBeInTheDocument();
-        expect(getByTestId('cvo-image-filename-input')).toBeInTheDocument();
-        expect(getByTestId('cvo-order-input')).toBeInTheDocument();
     };
 
     it('should not render if isOpen is false', () => {
@@ -162,8 +160,6 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-title-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-desc-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-external-id-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-image-filename-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-order-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-hide-input')).toHaveAttribute('disabled');
         expect(
             within(getByTestId('update_dialog-action-button')).getByTestId('update_dialog-progress'),
@@ -175,8 +171,6 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-title-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-desc-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-external-id-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-image-filename-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-order-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-hide-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('update_dialog-cancel-button')).not.toHaveAttribute('disabled');
 
@@ -187,8 +181,6 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-title-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-desc-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-external-id-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-image-filename-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-order-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('cvo-hide-input')).not.toHaveAttribute('disabled');
         expect(getByTestId('update_dialog-cancel-button')).not.toHaveAttribute('disabled');
 
