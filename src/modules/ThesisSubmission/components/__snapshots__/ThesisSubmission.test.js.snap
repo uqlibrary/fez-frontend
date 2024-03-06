@@ -206,7 +206,7 @@ exports[`ThesisSubmission should render component with buttons disabled on submi
                   >
                     <field
                       is="mock"
-                      label="Enrolling unit"
+                      label="School, Centre or Institute"
                       name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                       required="true"
                     />
@@ -681,7 +681,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   >
                     <field
                       is="mock"
-                      label="Enrolling unit"
+                      label="School, Centre or Institute"
                       name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                       required="true"
                     />
@@ -1097,7 +1097,7 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   >
                     <field
                       is="mock"
-                      label="Enrolling unit"
+                      label="School, Centre or Institute"
                       name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                       required="true"
                     />
