@@ -102,6 +102,33 @@ describe('ControlledVocabularies', () => {
                 expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
             });
         });
+
+        it('should render and save when button clicked for child level', async () => {
+            mockApi
+                .onGet(repositories.routes.CHILD_VOCAB_LIST_API(451780).apiUrl)
+                .reply(200, mockData.childVocabList[451780]);
+            mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
+            const showAddForm2 = async () => {
+                const rendered = setup();
+                await waitForElementToBeRemoved(rendered.getByTestId('vocab-page-loading'));
+                await userEvent.click(rendered.getByTestId('expand-row-451780'));
+                await waitForElementToBeRemoved(rendered.getByTestId('childControlledVocab-page-loading'));
+                await userEvent.click(rendered.getByTestId('admin-add-vocabulary-button-451780'));
+                expect(rendered.getByTestId('update_dialog-controlledVocabulary')).toBeInTheDocument();
+                expect(rendered.getByTestId('update_dialog-controlledVocabulary')).toHaveTextContent('Add vocabulary');
+                expect(
+                    within(rendered.getByTestId('update_dialog-controlledVocabulary')).getByTestId('cvo-title-input'),
+                ).toHaveAttribute('value', '');
+                return Promise.resolve(rendered);
+            };
+            await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
+                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                await userEvent.click(getByTestId('update_dialog-action-button'));
+                await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
+            });
+        });
     });
     describe('admin EDIT form', () => {
         const showEditForm = async () => {
