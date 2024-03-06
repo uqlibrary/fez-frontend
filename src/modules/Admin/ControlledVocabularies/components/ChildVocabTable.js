@@ -51,6 +51,7 @@ export const ChildVocabTable = ({ parentRow }) => {
     };
 
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
+    console.log('loadingChildVocab', loadingChildVocab);
 
     let breadCrumbElements = [];
     if (childData[parentRow.cvo_id]) {
@@ -139,7 +140,6 @@ export const ChildVocabTable = ({ parentRow }) => {
                     </Grid>
                 )}
                 {!!!loadingChildVocab[parentRow.cvo_id] &&
-                    childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id] &&
                     childData[parentRow.cvo_id].data &&
                     childData[parentRow.cvo_id].data.length >= 0 && (
