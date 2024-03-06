@@ -27,7 +27,7 @@ describe('ControlledVocabularies', () => {
         mockApi = setupMockAdapter();
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, mockData.vocabList);
         mockApi
-            .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: '453669' }).apiUrl)
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
             .reply(200, mockData.childVocabList[453669]);
 
         mockApi.onPut(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
@@ -216,6 +216,8 @@ describe('ControlledVocabularies', () => {
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
         });
