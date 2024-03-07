@@ -68,6 +68,7 @@ export default {
                     linkPrefix: 'https://scholar.google.com/scholar?q=intitle:%22[title]%22',
                     linkDescription: 'Search Google Scholar for this open access article',
                 },
+                rdmRequestAccessTitle: 'Send email to [data_email]',
             },
             abstract: {
                 default: 'Abstract',
