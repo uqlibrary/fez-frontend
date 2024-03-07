@@ -58,8 +58,6 @@ const ControlledVocabularies = () => {
 
     const txt = locale.components.controlledVocabulary;
 
-    const labels = txt.columns.labels;
-
     const handleDialogClickClose = () => {
         onHandleDialogClickClose();
         dispatch(actions.clearAdminControlledVocabulary());
@@ -70,7 +68,6 @@ const ControlledVocabularies = () => {
         const wrappedRequest = transformAdminRequest({
             request: data,
             parentId,
-            rootVocabId,
             action: adminDialogState.action,
         });
 
@@ -134,7 +131,7 @@ const ControlledVocabularies = () => {
                             )}
 
                             {sortedList.length > 0 ? (
-                                <VocabTable records={sortedList} labels={labels} />
+                                <VocabTable records={sortedList} labels={txt.columns.labels} />
                             ) : (
                                 <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
                             )}
