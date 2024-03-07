@@ -50,9 +50,33 @@ describe('ControlledVocabularies VocabDataRow', () => {
         mockApi.reset();
     });
 
-    it('should render the row', async () => {
-        const { getByText } = setup({ row: vocabDataRow });
+    it('should render the row with edit button', async () => {
+        const { getByText, getByTestId, queryByTestId } = setup({ row: vocabDataRow });
         expect(getByText('AIATSIS codes')).toBeInTheDocument();
+        expect(getByTestId('admin-edit-button-453669')).toBeInTheDocument();
+        expect(queryByTestId('row-locked-icon-453669')).not.toBeInTheDocument();
+    });
+    it('should render the readonly row without edit button and with lock icon', async () => {
+        const { getByText, getByTestId, queryByTestId } = setup({ row: { ...vocabDataRow, cvo_id: 450000 } });
+        expect(getByText('AIATSIS codes')).toBeInTheDocument();
+        expect(queryByTestId('admin-edit-button-450000')).not.toBeInTheDocument();
+        expect(getByTestId('row-locked-icon-450000')).toBeInTheDocument();
+    });
+    it('should render the row with hidden icon', async () => {
+        const { getByText, getByTestId } = setup({ row: { ...vocabDataRow, cvo_hide: 1 } });
+        expect(getByText('AIATSIS codes')).toBeInTheDocument();
+        expect(getByTestId('admin-edit-button-453669')).toBeInTheDocument();
+        expect(getByTestId('row-hidden-icon-453669')).toBeInTheDocument();
+    });
+    it('should render the row with hidden and lock icon', async () => {
+        const { getByText, getByTestId, queryByTestId } = setup({
+            row: { ...vocabDataRow, cvo_id: 450000, cvo_hide: 1 },
+        });
+
+        expect(getByText('AIATSIS codes')).toBeInTheDocument();
+        expect(queryByTestId('admin-edit-button-450000')).not.toBeInTheDocument();
+        expect(getByTestId('row-locked-icon-450000')).toBeInTheDocument();
+        expect(getByTestId('row-hidden-icon-450000')).toBeInTheDocument();
     });
     it('should have the expand button', async () => {
         const { getByTestId } = setup({ row: vocabDataRow });

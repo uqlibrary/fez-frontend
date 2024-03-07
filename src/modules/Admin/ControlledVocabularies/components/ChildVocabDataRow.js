@@ -18,7 +18,7 @@ import { ControlledVocabulariesStateContext } from '../ControlledVocabularyConte
 
 const txt = locale.components.controlledVocabulary;
 
-export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
+export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
@@ -39,7 +39,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
             data-testid={`child-row-em-${row.cvo_id}`}
             sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
-            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} />
+            <Box id={`portal-edit-${row.cvo_id}`} data-testid={`portal-edit-${row.cvo_id}`} sx={{ width: '100%' }} />
             {state.cvo_id !== row.cvo_id && (
                 <Box
                     sx={{
@@ -50,10 +50,10 @@ export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
                     width={'100%'}
                     paddingBlockEnd={'10px'}
                 >
-                    <Grid item md={1} data-testid={`child-row-id-${row.cvo_id}`}>
+                    <Grid item xs={12} sm={1} data-testid={`child-row-id-${row.cvo_id}`}>
                         {row.cvo_id}
                     </Grid>
-                    <Grid item md={3} data-testid={`child-row-title-${row.cvo_id}`}>
+                    <Grid item xs={12} sm={4} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography
                             id={`child-row-title-link-${row.cvo_id}`}
                             style={{ color: '#3872a8', cursor: 'pointer' }}
@@ -65,47 +65,45 @@ export const ChildVocabDataRow = ({ row, parentId, rootId }) => {
                         >
                             {row.cvo_title}
                             {row.cvo_hide === 1 && (
-                                <Tooltip title={txt.admin.tooltip.hidden}>
+                                <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
                                     <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
                                 </Tooltip>
                             )}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} data-testid={`child-row-desc-${row.cvo_id}`}>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={5}
+                        data-testid={`child-row-desc-${row.cvo_id}`}
+                        sx={{ wordBreak: 'break-word' }}
+                    >
                         {row.cvo_desc}
                     </Grid>
-                    <Grid item md={1} data-testid={`child-row-order-${row.cvo_id}`}>
-                        {row.cvo_order}
-                    </Grid>
                     <Grid
                         item
-                        md={2}
-                        data-testid={`child-row-image-${row.cvo_id}`}
-                        sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
-                    >
-                        {row.cvo_image_filename}
-                    </Grid>
-                    <Grid
-                        item
-                        md={1}
+                        xs={12}
+                        sm={1}
                         data-testid={`child-row-eid-${row.cvo_id}`}
                         sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
                     >
                         {row.cvo_external_id}
                     </Grid>
-                    <Grid item md={1} data-testid={`child-row-action-${row.cvo_id}`}>
-                        <IconButton
-                            id={`admin-edit-button-${row.cvo_id}`}
-                            data-analyticsid={`admin-edit-button-${row.cvo_id}`}
-                            data-testid={`admin-edit-button-${row.cvo_id}`}
-                            aria-label="Edit"
-                            onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
-                            size="large"
-                            disabled={state.isOpen}
-                        >
-                            <Edit fontSize="small" />
-                        </IconButton>
-                    </Grid>
+                    {!locked && (
+                        <Grid item xs={12} sm={1} data-testid={`child-row-action-${row.cvo_id}`}>
+                            <IconButton
+                                id={`admin-edit-button-${row.cvo_id}`}
+                                data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                                data-testid={`admin-edit-button-${row.cvo_id}`}
+                                aria-label="Edit"
+                                onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
+                                size="large"
+                                disabled={state.isOpen}
+                            >
+                                <Edit fontSize="small" />
+                            </IconButton>
+                        </Grid>
+                    )}
                 </Box>
             )}
         </Grid>
@@ -115,5 +113,6 @@ ChildVocabDataRow.propTypes = {
     row: PropTypes.object,
     parentId: PropTypes.number.isRequired,
     rootId: PropTypes.number,
+    locked: PropTypes.bool,
 };
 export default ChildVocabDataRow;

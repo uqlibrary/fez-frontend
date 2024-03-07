@@ -26,7 +26,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
 
-export const ChildVocabTable = ({ parentRow }) => {
+export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
@@ -115,18 +115,20 @@ export const ChildVocabTable = ({ parentRow }) => {
             data-testid={`vocab-table-${parentRow.cvo_id}`}
             id={`vocab-table-${parentRow.cvo_id}`}
         >
-            <Button
-                id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
-                data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
-                startIcon={<Add />}
-                variant={'contained'}
-                color={'primary'}
-                sx={{ marginBottom: '10px' }}
-                onClick={handleAddActionClick}
-                disabled={state.isOpen}
-            >
-                {txt.admin.addChildButtonLabel}
-            </Button>
+            {!locked && (
+                <Button
+                    id={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                    data-testid={`admin-add-vocabulary-button-${parentRow.cvo_id}`}
+                    startIcon={<Add />}
+                    variant={'contained'}
+                    color={'primary'}
+                    sx={{ marginBottom: '10px' }}
+                    onClick={handleAddActionClick}
+                    disabled={state.isOpen}
+                >
+                    {txt.admin.addChildButtonLabel}
+                </Button>
+            )}
 
             <Box
                 id={`portal-add-${parentRow.cvo_id}`}
@@ -160,27 +162,23 @@ export const ChildVocabTable = ({ parentRow }) => {
                             </Grid>
                             {/* Header Row */}
                             <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                                <Grid item md={1}>
+                                <Grid item xs={12} sm={1}>
                                     {labels.id}
                                 </Grid>
-                                <Grid item md={3}>
+                                <Grid item xs={12} sm={locked ? 5 : 4}>
                                     {labels.title}
                                 </Grid>
-                                <Grid item md={3}>
-                                    <Box>{labels.desc}</Box>
+                                <Grid item xs={12} sm={5}>
+                                    {labels.desc}
                                 </Grid>
-                                <Grid item md={1}>
-                                    <Box>{labels.order}</Box>
-                                </Grid>
-                                <Grid item md={2}>
-                                    {labels.license}
-                                </Grid>
-                                <Grid item md={1}>
+                                <Grid item xs={12} sm={1}>
                                     {labels.external_id}
                                 </Grid>
-                                <Grid item md={1}>
-                                    {labels.actions}
-                                </Grid>
+                                {!locked && (
+                                    <Grid item xs={12} sm={1}>
+                                        {labels.actions}
+                                    </Grid>
+                                )}
                             </Grid>
                             {/* Data Row */}
                             <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
@@ -201,5 +199,6 @@ export const ChildVocabTable = ({ parentRow }) => {
 };
 ChildVocabTable.propTypes = {
     parentRow: PropTypes.object,
+    locked: PropTypes.bool,
 };
 export default ChildVocabTable;
