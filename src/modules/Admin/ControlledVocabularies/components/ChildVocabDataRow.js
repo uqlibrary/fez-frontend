@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
 
-import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -54,9 +54,9 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                         {row.cvo_id}
                     </Grid>
                     <Grid item xs={12} sm={locked ? 5 : 4} data-testid={`child-row-title-${row.cvo_id}`}>
-                        <Typography
+                        <Link
                             id={`child-row-title-link-${row.cvo_id}`}
-                            style={{ color: '#3872a8', cursor: 'pointer' }}
+                            component="button"
                             variant="body2"
                             onClick={() => {
                                 replaceChildVocabTable(row.cvo_id);
@@ -69,7 +69,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                                     <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
                                 </Tooltip>
                             )}
-                        </Typography>
+                        </Link>
                     </Grid>
                     <Grid
                         item

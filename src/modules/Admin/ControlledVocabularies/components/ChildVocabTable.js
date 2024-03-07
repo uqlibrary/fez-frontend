@@ -34,7 +34,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
 
-        /* istanbul ignore else */
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
@@ -51,7 +50,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     };
 
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
-    console.log('loadingChildVocab', loadingChildVocab);
 
     let breadCrumbElements = [];
     if (childData[parentRow.cvo_id]) {
@@ -141,59 +139,56 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                         <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
                     </Grid>
                 )}
-                {!!!loadingChildVocab[parentRow.cvo_id] &&
-                    childData[parentRow.cvo_id] &&
-                    childData[parentRow.cvo_id].data &&
-                    childData[parentRow.cvo_id].data.length >= 0 && (
-                        <Grid container spacing={0}>
-                            <Grid item md={12}>
-                                <VocabBreadCrumb id={`vocabNav-${parentRow.cvo_id}`} />
-                                <Typography
-                                    variant="body2"
-                                    sx={{ fontWeight: 600, marginBottom: '10px' }}
-                                    id={`total-vocab-${parentRow.cvo_id}`}
-                                    data-testid={`total-vocab-${parentRow.cvo_id}`}
-                                >
-                                    {controlledVocabConfig.vocabCountTitle(
-                                        childData[parentRow.cvo_id].data.length,
-                                        parentRow.cvo_title,
-                                    )}{' '}
-                                </Typography>
-                            </Grid>
-                            {/* Header Row */}
-                            <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                                <Grid item xs={12} sm={1}>
-                                    {labels.id}
-                                </Grid>
-                                <Grid item xs={12} sm={locked ? 5 : 4}>
-                                    {labels.title}
-                                </Grid>
-                                <Grid item xs={12} sm={5}>
-                                    {labels.desc}
-                                </Grid>
-                                <Grid item xs={12} sm={1}>
-                                    {labels.external_id}
-                                </Grid>
-                                {!locked && (
-                                    <Grid item xs={12} sm={1}>
-                                        {labels.actions}
-                                    </Grid>
-                                )}
-                            </Grid>
-                            {/* Data Row */}
-                            <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
-                                {childData[parentRow.cvo_id].data.map(row => (
-                                    <ChildVocabDataRow
-                                        key={row.controlled_vocab.cvo_id}
-                                        row={row.controlled_vocab}
-                                        parentId={row.cvr_parent_cvo_id}
-                                        rootId={parentRow.cvo_id}
-                                        locked={locked}
-                                    />
-                                ))}
-                            </Grid>
+                {!!!loadingChildVocab[parentRow.cvo_id] && (childData[parentRow.cvo_id]?.data?.length ?? -1) >= 0 && (
+                    <Grid container spacing={0}>
+                        <Grid item md={12}>
+                            <VocabBreadCrumb id={`vocabNav-${parentRow.cvo_id}`} />
+                            <Typography
+                                variant="body2"
+                                sx={{ fontWeight: 600, marginBottom: '10px' }}
+                                id={`total-vocab-${parentRow.cvo_id}`}
+                                data-testid={`total-vocab-${parentRow.cvo_id}`}
+                            >
+                                {controlledVocabConfig.vocabCountTitle(
+                                    childData[parentRow.cvo_id].data.length,
+                                    parentRow.cvo_title,
+                                )}{' '}
+                            </Typography>
                         </Grid>
-                    )}
+                        {/* Header Row */}
+                        <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
+                            <Grid item xs={12} sm={1}>
+                                {labels.id}
+                            </Grid>
+                            <Grid item xs={12} sm={locked ? 5 : 4}>
+                                {labels.title}
+                            </Grid>
+                            <Grid item xs={12} sm={5}>
+                                {labels.desc}
+                            </Grid>
+                            <Grid item xs={12} sm={1}>
+                                {labels.external_id}
+                            </Grid>
+                            {!locked && (
+                                <Grid item xs={12} sm={1}>
+                                    {labels.actions}
+                                </Grid>
+                            )}
+                        </Grid>
+                        {/* Data Row */}
+                        <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
+                            {childData[parentRow.cvo_id].data.map(row => (
+                                <ChildVocabDataRow
+                                    key={row.controlled_vocab.cvo_id}
+                                    row={row.controlled_vocab}
+                                    parentId={row.cvr_parent_cvo_id}
+                                    rootId={parentRow.cvo_id}
+                                    locked={locked}
+                                />
+                            ))}
+                        </Grid>
+                    </Grid>
+                )}
             </Box>
         </Box>
     );

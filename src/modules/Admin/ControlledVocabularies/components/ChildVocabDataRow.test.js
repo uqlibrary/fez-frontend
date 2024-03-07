@@ -65,7 +65,7 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
         expect(getByTestId('child-row-desc-453670')).toHaveTextContent('');
         expect(getByTestId('child-row-eid-453670')).toHaveTextContent('G34');
-        expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
+        expect(getByTestId('child-row-title-link-453670')).toHaveClass('MuiLink-button');
         expect(queryByTestId('child-row-action-453670')).not.toBeInTheDocument();
         expect(queryByTestId('admin-edit-button-453670')).not.toBeInTheDocument();
 
@@ -78,7 +78,7 @@ describe('ControlledVocabularies ChildVocabTable', () => {
         expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
         expect(getByTestId('child-row-desc-453670')).toHaveTextContent('');
         expect(getByTestId('child-row-eid-453670')).toHaveTextContent('G34');
-        expect(getByTestId('child-row-title-link-453670').href).toMatch(/\/\?id=453670$/);
+        expect(getByTestId('child-row-title-link-453670')).toHaveClass('MuiLink-button');
         expect(queryByTestId('child-row-action-453670')).not.toBeInTheDocument();
         expect(queryByTestId('admin-edit-button-453670')).not.toBeInTheDocument();
         expect(queryByTestId('row-hidden-icon-453670')).toBeInTheDocument();

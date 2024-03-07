@@ -21,7 +21,7 @@ html, body {
   background-color: #F7F7F7;
 }
 
-a {
+a, button.MuiLink-button {
   color: #3872a8;
   text-decoration: none;
   &:hover {
