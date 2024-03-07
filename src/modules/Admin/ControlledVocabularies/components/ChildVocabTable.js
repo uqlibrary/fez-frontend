@@ -188,6 +188,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                         row={row.controlled_vocab}
                                         parentId={row.cvr_parent_cvo_id}
                                         rootId={parentRow.cvo_id}
+                                        locked={locked}
                                     />
                                 ))}
                             </Grid>

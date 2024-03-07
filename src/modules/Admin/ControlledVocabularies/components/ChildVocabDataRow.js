@@ -53,7 +53,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                     <Grid item xs={12} sm={1} data-testid={`child-row-id-${row.cvo_id}`}>
                         {row.cvo_id}
                     </Grid>
-                    <Grid item xs={12} sm={4} data-testid={`child-row-title-${row.cvo_id}`}>
+                    <Grid item xs={12} sm={locked ? 5 : 4} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Typography
                             id={`child-row-title-link-${row.cvo_id}`}
                             style={{ color: '#3872a8', cursor: 'pointer' }}
