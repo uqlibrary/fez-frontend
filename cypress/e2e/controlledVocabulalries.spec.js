@@ -95,6 +95,7 @@ context('Controlled vocabularies', () => {
 
             it('should show an Add panel when a child Add button is clicked', () => {
                 cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
                 cy.get('[data-testid=portal-add-453669]').should('contain', 'Add vocabulary');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');

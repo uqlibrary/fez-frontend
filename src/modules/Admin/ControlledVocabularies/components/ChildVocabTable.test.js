@@ -82,10 +82,11 @@ describe('ChildVocabTable', () => {
             .onGet(repositories.routes.CHILD_VOCAB_LIST_API(451780).apiUrl)
             .reply(200, mockData.childVocabList[451780]);
 
-        const parentRowResearch = mockData.vocabList.data[1];
+        const parentRowResearch = mockData.vocabList.data.find(em => em.cvo_title === 'Fields of Research');
         const initState = {};
         const { getByTestId } = setup({ parentRow: parentRowResearch }, initState);
 
+        // todo
         await waitFor(() => {
             expect(getByTestId('child-row-title-451799')).toHaveTextContent('01 Mathematical Sciences');
             expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(2);
