@@ -32,6 +32,7 @@ export class Links extends PureComponent {
         this.state = {
             isOpen: false,
             link: undefined,
+            licence: undefined,
         };
     }
     openRdmDownloadUrl = url => {
@@ -177,6 +178,8 @@ export class Links extends PureComponent {
             openInNew: !mustRequestRdmAccessFromDataTeam,
         };
 
+        const licence = getDownloadLicence(this.props.publication);
+
         return {
             index: index,
             link: (
@@ -185,11 +188,15 @@ export class Links extends PureComponent {
                     title={variableLinkDetails.title}
                     id={`publication-${index}`}
                     openInNewIcon={variableLinkDetails.openInNew}
-                    {...(isRDM && openAccessStatus.isOpenAccess
+                    {...(isRDM && openAccessStatus.isOpenAccess && !!licence
                         ? {
                               onClick: e => {
                                   e.preventDefault();
-                                  this.setState({ isOpen: true, link: link.rek_link });
+                                  this.setState({
+                                      isOpen: true,
+                                      link: link.rek_link,
+                                      licence: componentsLocale.components.attachedFiles.licenceConfirmation(licence),
+                                  });
                               },
                           }
                         : {})}
@@ -206,7 +213,6 @@ export class Links extends PureComponent {
         const record = this.props.publication;
 
         const txt = locale.viewRecord.sections.links;
-        const licenceTxt = componentsLocale.components.attachedFiles;
         const pubmedCentralId =
             record.fez_record_search_key_pubmed_central_id &&
             record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
@@ -259,7 +265,7 @@ export class Links extends PureComponent {
                     isOpen={this.state.isOpen}
                     onAction={() => this.openRdmDownloadUrl(this.state.link)}
                     onClose={() => this.setState({ isOpen: false, link: undefined })}
-                    locale={licenceTxt.licenceConfirmation(getDownloadLicence(this.props.publication))}
+                    locale={this.state.licence}
                 />
                 <StandardCard title={txt.title}>
                     <Grid
