@@ -274,6 +274,10 @@ export default {
         information: {
             title: 'Research report information',
             fieldLabels: {
+                orgUnitName: {
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'Organisational unit, eg. School of Business',
+                },
                 documentTitle: {
                     label: 'Title',
                     placeholder: 'Type title of research report',
@@ -427,7 +431,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, department or centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {
@@ -502,8 +506,8 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business',
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'School, Centre or Institute, eg. School of Business',
                 },
                 date: {
                     title: 'Publication date',
@@ -942,7 +946,7 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 series: {
@@ -997,7 +1001,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre ',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {

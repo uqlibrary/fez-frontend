@@ -23,6 +23,7 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                ['fez_record_search_key_org_unit_name'],
                 ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
