@@ -7,8 +7,6 @@ import Immutable from 'immutable';
 import * as mockData from 'mock/data';
 
 import VocabDataRow from './VocabDataRow';
-import * as actions from 'actions';
-import * as actionTypes from 'actions/actionTypes';
 
 jest.mock('../ControlledVocabularyContext');
 import {
@@ -82,12 +80,6 @@ describe('ControlledVocabularies VocabDataRow', () => {
         const { getByTestId } = setup({ row: vocabDataRow });
         const button = getByTestId('expand-row-453669');
         expect(button).toBeInTheDocument();
-    });
-    it('should dispatch SET_OPENED_VOCAB action', async () => {
-        const expectedActions = [actionTypes.SET_OPENED_VOCAB];
-        await mockActionsStore.dispatch(actions.setOpenedVocab({ id: 453669, open: true }));
-        const result = mockActionsStore.getActions();
-        expect(result).toHaveDispatchedActions(expectedActions);
     });
 
     it('should expand when clicking button', async () => {

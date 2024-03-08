@@ -49,7 +49,7 @@ const ControlledVocabularies = () => {
     }, [vocabList]);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
-    const adminDialogState = useContext(ControlledVocabulariesStateContext);
+    const state = useContext(ControlledVocabulariesStateContext);
 
     React.useEffect(() => {
         dispatch(actions.loadControlledVocabList());
@@ -68,10 +68,10 @@ const ControlledVocabularies = () => {
         const wrappedRequest = transformAdminRequest({
             request: data,
             parentId,
-            action: adminDialogState.action,
+            action: state.action,
         });
 
-        return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
+        return dispatch(actions.adminControlledVocabulary(wrappedRequest, state.action))
             .then(() => {
                 handleDialogClickClose();
                 const adminFunction = rootVocabId ? actions.loadChildVocabList : actions.loadControlledVocabList;
@@ -93,13 +93,13 @@ const ControlledVocabularies = () => {
             <>
                 {createPortal(
                     <AdminPanel
-                        {...adminDialogState}
+                        {...state}
                         locale={txt.admin}
                         onCancelAction={handleDialogClickClose}
                         onAction={handleDialogClickSave}
                     />,
-                    adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
-                    adminDialogState.portalId ?? 'portal-root',
+                    state.portalId ? document.getElementById(state.portalId) : document.body,
+                    state.portalId ?? 'portal-root',
                 )}
                 {!!!loadingVocabError && (
                     <Box marginBlockStart={2}>
@@ -111,7 +111,7 @@ const ControlledVocabularies = () => {
                                     variant={'contained'}
                                     color={'primary'}
                                     onClick={() => onAdminAddActionClick()}
-                                    disabled={adminDialogState.isOpen}
+                                    disabled={state.isOpen}
                                 >
                                     {txt.admin.addButtonLabel}
                                 </Button>

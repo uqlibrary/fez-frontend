@@ -30,7 +30,6 @@ export const VocabDataRow = ({ row }) => {
 
     /*
     Here, make sure the open state works as expected, pass to children if needed.
-    Push Master to Prod for the rdm link fix.
     Fix the buttons being disabled in children when the open admin panel parent is collapsed and reopened.
     Issue of the error seems to be fixed using a state for open/shut but the buttons are disabled
     */
@@ -92,6 +91,7 @@ export const VocabDataRow = ({ row }) => {
                             )}
                         </Grid>
                         <Grid
+                            item
                             xs={12}
                             sm={5}
                             data-testid={`child-row-desc-${row.cvo_id}`}

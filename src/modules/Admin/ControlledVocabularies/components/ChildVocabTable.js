@@ -5,23 +5,20 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
 
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-
 import locale from 'locale/components';
 import * as actions from 'actions';
+
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 import ChildVocabDataRow from './ChildVocabDataRow';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
-
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import Breadcrumbs from './Breadcrumbs';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -30,6 +27,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
+    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
@@ -49,59 +47,21 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
         onAdminAddActionClick(parentId, parentRow.cvo_id);
     };
 
-    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
-
-    let breadCrumbElements = [];
-    if (childData[parentRow.cvo_id]) {
-        breadCrumbElements = childData[parentRow.cvo_id].path;
-    }
-
-    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
-        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
-    }
-
-    const replaceChildVocabTable = parentId => {
+    // Event handler for button clicks
+    const handleBreadcrumbClick = ({ id }) => {
         dispatch(
             actions.loadChildVocabList({
-                pid: parentId,
+                pid: id,
                 rootId: parentRow.cvo_id,
             }),
         );
     };
 
-    const VocabBreadCrumb = ({ id }) => {
-        // Event handler for button clicks
-        const handleButtonClick = (event, id) => {
-            replaceChildVocabTable(id);
-        };
-
-        const buttons = breadCrumbElements
-            .map(em => (
-                <Link
-                    key={`nav-${em.id}`}
-                    component="button"
-                    underline="always"
-                    id={`nav-${em.id}`}
-                    data-testid={`nav-${em.id}`}
-                    variant="button"
-                    onClick={event => handleButtonClick(event, em.id)}
-                >
-                    {em.title}
-                </Link>
-            ))
-            .reduce((total, current) => {
-                return total ? [total, ' > ', current] : current;
-            }, '');
-
-        return (
-            <Breadcrumbs aria-label="breadcrumb" separator="›" id={id}>
-                {buttons}
-            </Breadcrumbs>
-        );
-    };
-    VocabBreadCrumb.propTypes = {
-        id: PropTypes.string,
-    };
+    const breadCrumbElements = childData[parentRow.cvo_id]?.path ?? [];
+    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
+        // add in parent node
+        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
+    }
 
     return (
         <Box
@@ -142,7 +102,11 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                 {!!!loadingChildVocab[parentRow.cvo_id] && (childData[parentRow.cvo_id]?.data?.length ?? -1) >= 0 && (
                     <Grid container spacing={0}>
                         <Grid item md={12}>
-                            <VocabBreadCrumb id={`vocabNav-${parentRow.cvo_id}`} />
+                            <Breadcrumbs
+                                id={`vocabNav-${parentRow.cvo_id}`}
+                                data={breadCrumbElements}
+                                onBreadcrumbClick={handleBreadcrumbClick}
+                            />
                             <Typography
                                 variant="body2"
                                 sx={{ fontWeight: 600, marginBottom: '10px' }}

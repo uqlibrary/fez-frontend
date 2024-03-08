@@ -62,6 +62,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                                 replaceChildVocabTable(row.cvo_id);
                             }}
                             data-testid={`child-row-title-link-${row.cvo_id}`}
+                            sx={{ cursor: 'pointer' }}
                         >
                             {row.cvo_title}
                             {row.cvo_hide === 1 && (

@@ -59,18 +59,6 @@ export function loadChildVocabList({ pid: parentId, rootId }) {
     };
 }
 
-export function setOpenedVocab(rowObject) {
-    return dispatch => {
-        dispatch({
-            type: actions.SET_OPENED_VOCAB,
-            payload: {
-                id: rowObject.id,
-                open: rowObject.open,
-            },
-        });
-    };
-}
-
 export function setAdminActionVocab(data) {
     return dispatch => {
         dispatch({

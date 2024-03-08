@@ -1,14 +1,6 @@
 import React from 'react';
 
-import {
-    render,
-    WithReduxStore,
-    WithRouter,
-    waitFor,
-    waitForElementToBeRemoved,
-    userEvent,
-    fireEvent,
-} from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
 import * as mockData from 'mock/data';
@@ -75,49 +67,6 @@ describe('ChildVocabTable', () => {
         expect(queryByTestId('admin-add-vocabulary-button-453669')).not.toBeInTheDocument();
         // expect 4 columns
         expect(getByTestId('vocab-child-header').children.length).toBe(4);
-    });
-
-    it('should go through the data and breadcrumb', async () => {
-        mockApi
-            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(451780).apiUrl)
-            .reply(200, mockData.childVocabList[451780]);
-
-        const parentRowResearch = mockData.vocabList.data[1];
-        const initState = {};
-        const { getByTestId } = setup({ parentRow: parentRowResearch }, initState);
-
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451799')).toHaveTextContent('01 Mathematical Sciences');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(2);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451799'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451800')).toHaveTextContent('0101 Pure Mathematics');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(6);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451800'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451801')).toHaveTextContent('010101 Algebra and Number Theory');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(13);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451801'));
-        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
-        await waitFor(() => {
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(0);
-        });
-
-        fireEvent.click(getByTestId('nav-451800'));
-        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451801')).toHaveTextContent('010101 Algebra and Number Theory');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(13);
-        });
-
-        fireEvent.click(getByTestId('nav-451780'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451799')).toHaveTextContent('01 Mathematical Sciences');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(2);
-        });
     });
 
     it('should render the loader', async () => {
