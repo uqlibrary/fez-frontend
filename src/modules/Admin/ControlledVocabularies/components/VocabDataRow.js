@@ -28,11 +28,6 @@ export const VocabDataRow = ({ row }) => {
 
     const locked = isReadonlyVocab(row.cvo_id);
 
-    /*
-    Here, make sure the open state works as expected, pass to children if needed.
-    Fix the buttons being disabled in children when the open admin panel parent is collapsed and reopened.
-    Issue of the error seems to be fixed using a state for open/shut but the buttons are disabled
-    */
     return (
         <Grid
             container
