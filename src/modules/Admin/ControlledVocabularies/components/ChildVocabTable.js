@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
+import TablePagination from '@mui/material/TablePagination';
 
 import locale from 'locale/components';
 import * as actions from 'actions';
@@ -62,6 +63,26 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
         // add in parent node
         breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
     }
+
+    const vocabList = childData[parentRow.cvo_id]?.data || [];
+    const total = vocabList.length;
+    const [pageCurrent, setPageCurrent] = React.useState(0);
+    const [perPage, setPerPage] = React.useState(2);
+
+    let start = pageCurrent * perPage;
+    let end = start + Math.min(perPage, total - perPage * pageCurrent);
+    const handlePageChange = (event, value) => {
+        setPageCurrent(value);
+        start = value * perPage;
+        end = start + Math.min(perPage, total - perPage * pageCurrent);
+    };
+    const handlePerPageChange = event => {
+        const newPerPage = parseInt(event.target.value, 10);
+        setPerPage(newPerPage);
+        setPageCurrent(0);
+        start = 0;
+        end = start + Math.min(newPerPage, total - newPerPage * pageCurrent);
+    };
 
     return (
         <Box
@@ -141,7 +162,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                         </Grid>
                         {/* Data Row */}
                         <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
-                            {childData[parentRow.cvo_id].data.map(row => (
+                            {vocabList.slice(start, end).map(row => (
                                 <ChildVocabDataRow
                                     key={row.controlled_vocab.cvo_id}
                                     row={row.controlled_vocab}
@@ -150,6 +171,21 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                     locked={locked}
                                 />
                             ))}
+                            <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
+                                <Grid item xs={3}>
+                                    <TablePagination
+                                        count={total}
+                                        page={pageCurrent}
+                                        rowsPerPage={perPage}
+                                        rowsPerPageOptions={[2, 10, 25, 50]}
+                                        color="primary"
+                                        showFirstButton
+                                        showLastButton
+                                        onPageChange={handlePageChange}
+                                        onRowsPerPageChange={handlePerPageChange}
+                                    />
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 )}
