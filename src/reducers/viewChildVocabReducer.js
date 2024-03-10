@@ -52,12 +52,14 @@ export const initialState = {
     totalRecords: 0,
     startRecord: 0,
     endRecord: 0,
-    currentPage: 1,
-    perPage: 10,
+    currentPage: 0, // start from 0
+    perPage: 2,
 };
 
 const handlers = {
     [actions.VIEW_CHILD_VOCAB_LOADING]: (state, action) => {
+        state.currentPage = initialState.currentPage;
+        state.perPage = initialState.perPage;
         const rootId = action.rootId;
         state.loadingChildVocab[rootId] = true;
         return {
@@ -91,6 +93,20 @@ const handlers = {
         return {
             ...state,
             loadingChildVocabError: action.payload,
+        };
+    },
+
+    [actions.VOCAB_SET_PER_PAGE]: (state, action) => {
+        return {
+            ...state,
+            perPage: action.payload,
+        };
+    },
+
+    [actions.VOCAB_SET_CURRENT_PAGE]: (state, action) => {
+        return {
+            ...state,
+            currentPage: action.payload,
         };
     },
 };

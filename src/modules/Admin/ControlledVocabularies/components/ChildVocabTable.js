@@ -28,7 +28,11 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
-    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
+    const { loadingChildVocab, childData, perPage, currentPage } = useSelector(state =>
+        state.get('viewChildVocabReducer'),
+    );
+
+    console.log('perPage=', perPage, 'currentPage=', currentPage);
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
@@ -66,22 +70,20 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
 
     const vocabList = childData[parentRow.cvo_id]?.data || [];
     const total = vocabList.length;
-    const [pageCurrent, setPageCurrent] = React.useState(0);
-    const [perPage, setPerPage] = React.useState(2);
 
-    let start = pageCurrent * perPage;
-    let end = start + Math.min(perPage, total - perPage * pageCurrent);
+    let start = currentPage * perPage;
+    let end = start + Math.min(perPage, total - perPage * currentPage);
     const handlePageChange = (event, value) => {
-        setPageCurrent(value);
+        dispatch(actions.setCurrentPage(value));
         start = value * perPage;
-        end = start + Math.min(perPage, total - perPage * pageCurrent);
+        end = start + Math.min(perPage, total - perPage * currentPage);
     };
     const handlePerPageChange = event => {
         const newPerPage = parseInt(event.target.value, 10);
-        setPerPage(newPerPage);
-        setPageCurrent(0);
+        dispatch(actions.setVocabPerPage(newPerPage));
+        dispatch(actions.setCurrentPage(0));
         start = 0;
-        end = start + Math.min(newPerPage, total - newPerPage * pageCurrent);
+        end = start + Math.min(newPerPage, total - newPerPage * currentPage);
     };
 
     return (
@@ -173,17 +175,25 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                             ))}
                             <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
                                 <Grid item xs={3}>
-                                    <TablePagination
-                                        count={total}
-                                        page={pageCurrent}
-                                        rowsPerPage={perPage}
-                                        rowsPerPageOptions={[2, 10, 25, 50]}
-                                        color="primary"
-                                        showFirstButton
-                                        showLastButton
-                                        onPageChange={handlePageChange}
-                                        onRowsPerPageChange={handlePerPageChange}
-                                    />
+                                    {!!total && (
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <TablePagination
+                                                        count={total}
+                                                        page={currentPage}
+                                                        rowsPerPage={perPage}
+                                                        rowsPerPageOptions={[2, 10, 25, 50]}
+                                                        color="primary"
+                                                        showFirstButton
+                                                        showLastButton
+                                                        onPageChange={handlePageChange}
+                                                        onRowsPerPageChange={handlePerPageChange}
+                                                    />
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    )}
                                 </Grid>
                             </Grid>
                         </Grid>
