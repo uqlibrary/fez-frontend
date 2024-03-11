@@ -110,6 +110,40 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Add vocabulary');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('not.be.disabled');
             });
+
+            it('should close the admin panel and re-enable admin functionality after collapsing a row while the admin panel is visible', () => {
+                // expand
+                cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
+                cy.get('[data-testid=update_dialog-controlledVocabulary]').should('exist');
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
+                cy.get('[data-testid=admin-add-vocabulary-button]').should('be.disabled');
+                cy.get('[data-testid=admin-edit-button-453669]').should('be.disabled');
+                // collapse
+                cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid=admin-add-vocabulary-button]').should('not.be.disabled');
+                cy.get('[data-testid=admin-edit-button-453669]').should('not.be.disabled');
+                // expand again
+                cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('not.be.disabled');
+                cy.get('[data-testid=update_dialog-controlledVocabulary]').should('not.exist');
+            });
+
+            it('should close the admin panel and re-enable admin functionality when clicking breadcrumbs with the admin panel visible', () => {
+                // expand
+                cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid=child-row-title-453670]').click();
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
+                cy.get('[data-testid=update_dialog-controlledVocabulary]').should('exist');
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
+                cy.get('[data-testid=admin-add-vocabulary-button]').should('be.disabled');
+                cy.get('[data-testid=admin-edit-button-453669]').should('be.disabled');
+                cy.get('[data-testid=nav-453669]').click(); // navigate via breadcrumbs
+
+                cy.get('[data-testid=update_dialog-controlledVocabulary]').should('not.exist');
+                cy.get('[data-testid=admin-add-vocabulary-button]').should('not.be.disabled');
+                cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('not.be.disabled');
+            });
         });
         describe('editing vocabs', () => {
             it('should show a populated Edit panel when a top-level Edit button is clicked', () => {
