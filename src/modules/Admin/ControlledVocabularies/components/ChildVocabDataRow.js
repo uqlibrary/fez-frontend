@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
+
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import * as actions from 'actions/viewControlledVocab';
+
+import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -16,9 +18,19 @@ import { ControlledVocabulariesStateContext } from '../ControlledVocabularyConte
 
 const txt = locale.components.controlledVocabulary;
 
-export const ChildVocabDataRow = ({ row, parentId, locked }) => {
+export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
+
+    const dispatch = useDispatch();
+    const replaceChildVocabTable = parentId => {
+        dispatch(
+            actions.loadChildVocabList({
+                pid: parentId,
+                rootId,
+            }),
+        );
+    };
 
     return (
         <Grid
@@ -42,23 +54,23 @@ export const ChildVocabDataRow = ({ row, parentId, locked }) => {
                         {row.cvo_id}
                     </Grid>
                     <Grid item xs={12} sm={locked ? 5 : 4} data-testid={`child-row-title-${row.cvo_id}`}>
-                        <Typography variant="body2">
-                            <Link
-                                to={`?id=${row.cvo_id}`}
-                                id={`child-row-title-link-${row.cvo_id}`}
-                                data-testid={`child-row-title-link-${row.cvo_id}`}
-                            >
-                                {row.cvo_title}
-                                {row.cvo_hide === 1 && (
-                                    <Tooltip
-                                        title={txt.admin.tooltip.hidden}
-                                        data-testid={`row-hidden-icon-${row.cvo_id}`}
-                                    >
-                                        <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
-                                    </Tooltip>
-                                )}
-                            </Link>
-                        </Typography>
+                        <Link
+                            id={`child-row-title-link-${row.cvo_id}`}
+                            component="button"
+                            variant="body2"
+                            onClick={() => {
+                                replaceChildVocabTable(row.cvo_id);
+                            }}
+                            data-testid={`child-row-title-link-${row.cvo_id}`}
+                            sx={{ cursor: 'pointer' }}
+                        >
+                            {row.cvo_title}
+                            {row.cvo_hide === 1 && (
+                                <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
+                                    <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                </Tooltip>
+                            )}
+                        </Link>
                     </Grid>
                     <Grid
                         item
@@ -85,7 +97,7 @@ export const ChildVocabDataRow = ({ row, parentId, locked }) => {
                                 data-analyticsid={`admin-edit-button-${row.cvo_id}`}
                                 data-testid={`admin-edit-button-${row.cvo_id}`}
                                 aria-label="Edit"
-                                onClick={() => onAdminEditActionClick({ row, parentId })}
+                                onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
                                 size="large"
                                 disabled={state.isOpen}
                             >
@@ -101,6 +113,7 @@ export const ChildVocabDataRow = ({ row, parentId, locked }) => {
 ChildVocabDataRow.propTypes = {
     row: PropTypes.object,
     parentId: PropTypes.number.isRequired,
+    rootId: PropTypes.number,
     locked: PropTypes.bool,
 };
 export default ChildVocabDataRow;

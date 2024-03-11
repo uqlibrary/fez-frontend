@@ -1,4 +1,4 @@
-import { VIEW_VOCAB_LOADING, VIEW_VOCAB_LOADED, VIEW_VOCAB_LOAD_FAILED, SET_OPENED_VOCAB } from 'actions/actionTypes';
+import { VIEW_VOCAB_LOADING, VIEW_VOCAB_LOADED, VIEW_VOCAB_LOAD_FAILED } from 'actions/actionTypes';
 
 import viewVocabReducer from './controlledVocab';
 
@@ -68,44 +68,6 @@ describe('viewVocab reducer', () => {
             type: VIEW_VOCAB_LOAD_FAILED,
             payload: {
                 error: true,
-            },
-        });
-        expect(test).toEqual(expected);
-    });
-
-    it('sets controlled vocabulary children close', () => {
-        const previousState = {
-            ...initialState,
-            vocabOpened: [1],
-        };
-        const expected = {
-            ...previousState,
-            vocabOpened: [],
-        };
-        const test = viewVocabReducer(previousState, {
-            type: SET_OPENED_VOCAB,
-            payload: {
-                open: false,
-                id: 1,
-            },
-        });
-        expect(test).toEqual(expected);
-    });
-
-    it('sets controlled vocabulary children open', () => {
-        const previousState = {
-            ...initialState,
-            vocabOpened: [],
-        };
-        const expected = {
-            ...previousState,
-            vocabOpened: [1],
-        };
-        const test = viewVocabReducer(previousState, {
-            type: SET_OPENED_VOCAB,
-            payload: {
-                open: true,
-                id: 1,
             },
         });
         expect(test).toEqual(expected);

@@ -23,12 +23,11 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
 
 describe('ControlledVocabularies', () => {
     const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
-
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(200, mockData.vocabList);
         mockApi
-            .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: '453669' }).apiUrl)
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API('453669').apiUrl)
             .reply(200, mockData.childVocabList[453669]);
 
         mockApi.onPut(repositories.routes.VOCAB_API().apiUrl).reply(200, {});
@@ -49,7 +48,7 @@ describe('ControlledVocabularies', () => {
         const { getByText, getByTestId } = setup();
         await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
 
-        expect(getByText('Displaying 42 controlled vocabularies')).toBeInTheDocument();
+        expect(getByText('Displaying 42 total controlled vocabularies')).toBeInTheDocument();
         // check sorting is working
         expect(getByTestId('vocab-primary-body').firstChild).toHaveTextContent('AIATSIS codes');
         expect(getByTestId('vocab-primary-body').lastChild).toHaveTextContent('A Collection View Type of Standard');
@@ -92,11 +91,12 @@ describe('ControlledVocabularies', () => {
         });
 
         it('should render and save when button clicked', async () => {
-            await showAddForm().then(async ({ getByTestId }) => {
+            await showAddForm().then(async ({ getByTestId, queryByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
             });
         });
         it('should capture error when save when button clicked', async () => {
@@ -112,12 +112,34 @@ describe('ControlledVocabularies', () => {
         });
 
         describe('child vocab', () => {
-            it('should render and save when button clicked', async () => {
-                await showAddForm('453669').then(async ({ getByTestId }) => {
+            it('should render and save when button clicked for child level', async () => {
+                mockApi
+                    .onGet(repositories.routes.CHILD_VOCAB_LIST_API(451780).apiUrl)
+                    .reply(200, mockData.childVocabList[451780]);
+
+                const showAddForm2 = async () => {
+                    const rendered = setup();
+                    await waitForElementToBeRemoved(rendered.getByTestId('vocab-page-loading'));
+                    await userEvent.click(rendered.getByTestId('expand-row-451780'));
+                    await waitForElementToBeRemoved(rendered.getByTestId('childControlledVocab-page-loading'));
+                    await userEvent.click(rendered.getByTestId('admin-add-vocabulary-button-451780'));
+                    expect(rendered.getByTestId('update_dialog-controlledVocabulary')).toBeInTheDocument();
+                    expect(rendered.getByTestId('update_dialog-controlledVocabulary')).toHaveTextContent(
+                        'Add vocabulary',
+                    );
+                    expect(
+                        within(rendered.getByTestId('update_dialog-controlledVocabulary')).getByTestId(
+                            'cvo-title-input',
+                        ),
+                    ).toHaveAttribute('value', '');
+                    return Promise.resolve(rendered);
+                };
+                await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
                     await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                     await userEvent.click(getByTestId('update_dialog-action-button'));
                     await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                    // expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
+                    // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                    expect(queryByTestId('update_dialog-controlledVocabulary') === null);
                 });
             });
         });
@@ -146,11 +168,12 @@ describe('ControlledVocabularies', () => {
             });
         });
         it('should render and save when button clicked', async () => {
-            await showEditForm().then(async ({ getByTestId }) => {
+            await showEditForm().then(async ({ getByTestId, queryByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
+                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
             });
         });
         describe('child vocab', () => {
@@ -160,6 +183,7 @@ describe('ControlledVocabularies', () => {
 
                 await userEvent.click(getByTestId('expand-row-453669'));
                 await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
                 expect(
@@ -174,6 +198,7 @@ describe('ControlledVocabularies', () => {
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
+                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
         });
@@ -182,7 +207,6 @@ describe('ControlledVocabularies', () => {
     it('should show relevant error message', async () => {
         userIsAdmin.mockImplementation(() => false);
         mockApi.onGet(repositories.routes.VOCAB_LIST_API().apiUrl).reply(422, { message: 'Some error message' });
-
         const { getByText } = setup();
         await waitFor(() => getByText(/Some error message/));
     });

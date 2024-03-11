@@ -226,9 +226,11 @@ export const VOCAB_LIST_API = () => {
     };
 };
 
-export const CHILD_VOCAB_LIST_API = ({ parentId }) => ({
-    apiUrl: `vocabularies/admin/${parentId}`,
-});
+export const CHILD_VOCAB_LIST_API = parentId => {
+    return {
+        apiUrl: `vocabularies/admin/${parentId}`,
+    };
+};
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
