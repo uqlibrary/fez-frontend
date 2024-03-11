@@ -63,3 +63,4 @@ export { default as recordWithNoAffiliationIssues } from './recordWithNoAffiliat
 export { default as recordWithIncorrectAffiliation } from './recordWithIncorrectAffiliation'
 export { default as recordWithOrphanedAffiliation } from './recordWithOrphanedAffiliation'
 export { default as recordWithRDM } from './recordWithRDM'
+export { default as recordWithRDMMediatedAccess } from './recordWithRDMMediatedAccess'

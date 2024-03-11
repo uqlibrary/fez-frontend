@@ -30,7 +30,7 @@ export default class ThesisCitation extends Component {
         };
 
         // eSpace citation view for Thesis
-        // {Author}{Year| (|).}<i>{Title| |.}</i>{Thesis type| |,}{School, Department or Centre| |,}{Institution| |.} {doi| https://doi.org/|}
+        // {Author}{Year| (|).}<i>{Title| |.}</i>{Thesis type| |,}{School, Centre or Institute| |,}{Institution| |.} {doi| https://doi.org/|}
 
         return (
             <div className="citationContent citationThesis">
@@ -49,7 +49,7 @@ export default class ThesisCitation extends Component {
                 {/* {Thesis type| |,} */}
                 <Partials.CitationView className="citationThesisType" value={record.thesisType} suffix="," />
 
-                {/* {School, Department or Centre| |,} */}
+                {/* {School, Centre or Institute| |,} */}
                 <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix="," />
 
                 {/* {Institution| |.} */}

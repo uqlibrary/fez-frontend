@@ -1468,9 +1468,9 @@ export default {
             component: OrgUnitNameField,
             componentProps: {
                 fullWidth: true,
-                label: 'School, department, or centre',
+                label: 'School, Centre or Institute',
                 name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
-                floatingLabelText: 'School, department, or centre',
+                floatingLabelText: 'School, Centre or Institute',
                 showClear: true,
             },
         },
@@ -1943,6 +1943,12 @@ export default {
             }),
         },
         [PUBLICATION_TYPE_RESEARCH_REPORT]: {
+            fez_record_search_key_org_unit_name: () => ({
+                label: 'School, centre, or institute',
+                floatingLabelText: 'School, centre, or institute',
+                required: false,
+                validate: [],
+            }),
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
                 validate: [validation.required],

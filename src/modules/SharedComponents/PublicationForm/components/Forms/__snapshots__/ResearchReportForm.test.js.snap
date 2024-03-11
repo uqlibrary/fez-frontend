@@ -81,6 +81,16 @@ exports[`ResearchReportForm renders  component 1`] = `
               />
             </div>
             <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="School, Centre or Institute"
+                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+              />
+            </div>
+            <div
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-wg4xta-MuiGrid-root"
             >
               <field
@@ -429,6 +439,16 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                 is="mock"
                 label="Report number"
                 name="fez_record_search_key_report_number.rek_report_number"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
+            >
+              <field
+                disabled="false"
+                is="mock"
+                label="School, Centre or Institute"
+                name="fez_record_search_key_org_unit_name.rek_org_unit_name"
               />
             </div>
             <div
