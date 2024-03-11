@@ -1,14 +1,6 @@
 import React from 'react';
 
-import {
-    render,
-    WithReduxStore,
-    WithRouter,
-    waitFor,
-    waitForElementToBeRemoved,
-    userEvent,
-    fireEvent,
-} from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
 import { createMemoryHistory } from 'history';
 
 import * as mockData from 'mock/data';
@@ -65,7 +57,6 @@ describe('ChildVocabTable', () => {
         const { getByTestId } = setup({ parentRow: parentRow });
         await waitFor(() => {
             expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
     it('should render the locked child table', async () => {
@@ -77,50 +68,6 @@ describe('ChildVocabTable', () => {
         expect(getByTestId('vocab-child-header').children.length).toBe(4);
     });
 
-    it('should go through the data and breadcrumb', async () => {
-        mockApi
-            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(451780).apiUrl)
-            .reply(200, mockData.childVocabList[451780]);
-
-        const parentRowResearch = mockData.vocabList.data.find(em => em.cvo_title === 'Fields of Research');
-        const initState = {};
-        const { getByTestId } = setup({ parentRow: parentRowResearch }, initState);
-
-        // todo
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451799')).toHaveTextContent('01 Mathematical Sciences');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(2);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451799'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451800')).toHaveTextContent('0101 Pure Mathematics');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(6);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451800'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451801')).toHaveTextContent('010101 Algebra and Number Theory');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(13);
-        });
-        fireEvent.click(getByTestId('child-row-title-link-451801'));
-        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
-        await waitFor(() => {
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(0);
-        });
-
-        fireEvent.click(getByTestId('nav-451800'));
-        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451801')).toHaveTextContent('010101 Algebra and Number Theory');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(13);
-        });
-
-        fireEvent.click(getByTestId('nav-451780'));
-        await waitFor(() => {
-            expect(getByTestId('child-row-title-451799')).toHaveTextContent('01 Mathematical Sciences');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(2);
-        });
-    });
-
     it('should render the loader', async () => {
         const { getByTestId } = setup({ parentRow: parentRow });
         expect(getByTestId('childControlledVocab-page-loading')).toBeInTheDocument();
@@ -129,7 +76,7 @@ describe('ChildVocabTable', () => {
     it('should hide the loader after the data is loaded', async () => {
         const { getByTestId, queryByText } = setup({ parentRow: parentRow });
         await waitFor(() => {
-            getByTestId('child-row-em-456960');
+            getByTestId('child-row-em-453670');
         });
         expect(queryByText('Loading Data')).not.toBeInTheDocument();
     });
@@ -145,5 +92,70 @@ describe('ChildVocabTable', () => {
         await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
         await userEvent.click(getByTestId('admin-add-vocabulary-button-453669'));
         expect(mockFn).toHaveBeenCalledWith(453669, 453669);
+    });
+
+    it('should show pagination correctly', async () => {
+        const { getByTestId, getByRole, getByText } = setup({ parentRow: parentRow });
+        await waitFor(() => {
+            expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
+            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(10);
+        });
+        expect(getByTestId('vocab-child-paging')).toBeInTheDocument();
+        expect(getByText('1–10 of 165')).toBeInTheDocument();
+
+        const user = userEvent.setup();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to next page',
+            }),
+        );
+        expect(getByText('11–20 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to last page',
+            }),
+        );
+        expect(getByText('161–165 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to previous page',
+            }),
+        );
+        expect(getByText('151–160 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to first page',
+            }),
+        );
+        expect(getByText('1–10 of 165')).toBeInTheDocument();
+
+        const rowsPerPageButton = getByRole('combobox');
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /25/,
+            }),
+        );
+        expect(getByText('1–25 of 165')).toBeInTheDocument();
+
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /50/,
+            }),
+        );
+        expect(getByText('1–50 of 165')).toBeInTheDocument();
+
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /All/,
+            }),
+        );
+        expect(getByText('1–165 of 165')).toBeInTheDocument();
     });
 });

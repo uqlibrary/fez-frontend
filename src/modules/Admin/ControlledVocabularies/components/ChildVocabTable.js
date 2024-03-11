@@ -5,23 +5,21 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
-
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
+import TablePagination from '@mui/material/TablePagination';
 
 import locale from 'locale/components';
 import * as actions from 'actions';
+
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 import ChildVocabDataRow from './ChildVocabDataRow';
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
-
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import Breadcrumbs from './Breadcrumbs';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -30,11 +28,13 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
+    const { loadingChildVocab, childData, perPage, currentPage } = useSelector(state =>
+        state.get('viewChildVocabReducer'),
+    );
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
 
-        /* istanbul ignore else */
         dispatch(
             actions.loadChildVocabList({
                 pid: parentId,
@@ -45,63 +45,42 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     }, []);
 
     const handleAddActionClick = () => {
-        const navs = document.querySelectorAll(`#vocabNav-${parentRow.cvo_id} [id^=nav]`);
-        const parentId = +navs[navs.length - 1].id.replace('nav-', '');
-        onAdminAddActionClick(parentId, parentRow.cvo_id);
+        const [currentRow] = childData[parentRow.cvo_id].path.slice(-1);
+        onAdminAddActionClick(currentRow.id, parentRow.cvo_id);
     };
 
-    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
-
-    let breadCrumbElements = [];
-    if (childData[parentRow.cvo_id]) {
-        breadCrumbElements = childData[parentRow.cvo_id].path;
-    }
-
-    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
-        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
-    }
-
-    const replaceChildVocabTable = parentId => {
+    // Event handler for button clicks
+    const handleBreadcrumbClick = ({ id }) => {
         dispatch(
             actions.loadChildVocabList({
-                pid: parentId,
+                pid: id,
                 rootId: parentRow.cvo_id,
             }),
         );
     };
 
-    const VocabBreadCrumb = ({ id }) => {
-        // Event handler for button clicks
-        const handleButtonClick = (event, id) => {
-            replaceChildVocabTable(id);
-        };
+    const breadCrumbElements = childData[parentRow.cvo_id]?.path ?? [];
+    if (!breadCrumbElements.find(em => em.id === parentRow.cvo_id)) {
+        // add in parent node
+        breadCrumbElements.unshift({ id: parentRow.cvo_id, title: parentRow.cvo_title });
+    }
 
-        const buttons = breadCrumbElements
-            .map(em => (
-                <Link
-                    key={`nav-${em.id}`}
-                    component="button"
-                    underline="always"
-                    id={`nav-${em.id}`}
-                    data-testid={`nav-${em.id}`}
-                    variant="button"
-                    onClick={event => handleButtonClick(event, em.id)}
-                >
-                    {em.title}
-                </Link>
-            ))
-            .reduce((total, current) => {
-                return total ? [total, ' > ', current] : current;
-            }, '');
+    const vocabList = childData[parentRow.cvo_id]?.data || [];
+    const total = vocabList.length;
 
-        return (
-            <Breadcrumbs aria-label="breadcrumb" separator="›" id={id}>
-                {buttons}
-            </Breadcrumbs>
-        );
+    let start = currentPage * perPage;
+    let end = start + Math.min(perPage, total - perPage * currentPage);
+    const handlePageChange = (event, value) => {
+        dispatch(actions.setCurrentPage(value));
+        start = value * perPage;
+        end = start + Math.min(perPage, total - perPage * currentPage);
     };
-    VocabBreadCrumb.propTypes = {
-        id: PropTypes.string,
+    const handlePerPageChange = event => {
+        const newPerPage = parseInt(event.target.value, 10);
+        dispatch(actions.setVocabPerPage(newPerPage));
+        dispatch(actions.setCurrentPage(0));
+        start = 0;
+        end = start + Math.min(newPerPage, total - newPerPage * currentPage);
     };
 
     return (
@@ -140,59 +119,84 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                         <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
                     </Grid>
                 )}
-                {!!!loadingChildVocab[parentRow.cvo_id] &&
-                    childData[parentRow.cvo_id] &&
-                    childData[parentRow.cvo_id].data &&
-                    childData[parentRow.cvo_id].data.length >= 0 && (
-                        <Grid container spacing={0}>
-                            <Grid item md={12}>
-                                <VocabBreadCrumb id={`vocabNav-${parentRow.cvo_id}`} />
-                                <Typography
-                                    variant="body2"
-                                    sx={{ fontWeight: 600, marginBottom: '10px' }}
-                                    id={`total-vocab-${parentRow.cvo_id}`}
-                                    data-testid={`total-vocab-${parentRow.cvo_id}`}
-                                >
-                                    {controlledVocabConfig.vocabCountTitle(
-                                        childData[parentRow.cvo_id].data.length,
-                                        parentRow.cvo_title,
-                                    )}{' '}
-                                </Typography>
+                {!!!loadingChildVocab[parentRow.cvo_id] && (childData[parentRow.cvo_id]?.data?.length ?? -1) >= 0 && (
+                    <Grid container spacing={0}>
+                        <Grid item md={12}>
+                            <Breadcrumbs
+                                id={`vocabNav-${parentRow.cvo_id}`}
+                                data={breadCrumbElements}
+                                onBreadcrumbClick={handleBreadcrumbClick}
+                            />
+                            <Typography
+                                variant="body2"
+                                sx={{ fontWeight: 600, marginBottom: '10px' }}
+                                id={`total-vocab-${parentRow.cvo_id}`}
+                                data-testid={`total-vocab-${parentRow.cvo_id}`}
+                            >
+                                {controlledVocabConfig.vocabCountTitle(
+                                    childData[parentRow.cvo_id].data.length,
+                                    parentRow.cvo_title,
+                                )}{' '}
+                            </Typography>
+                        </Grid>
+                        {/* Header Row */}
+                        <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
+                            <Grid item xs={12} sm={1}>
+                                {labels.id}
                             </Grid>
-                            {/* Header Row */}
-                            <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                                <Grid item xs={12} sm={1}>
-                                    {labels.id}
-                                </Grid>
-                                <Grid item xs={12} sm={locked ? 5 : 4}>
-                                    {labels.title}
-                                </Grid>
-                                <Grid item xs={12} sm={5}>
-                                    <Box>{labels.desc}</Box>
-                                </Grid>
-                                <Grid item xs={12} sm={1}>
-                                    {labels.external_id}
-                                </Grid>
-                                {!locked && (
-                                    <Grid item xs={12} sm={1}>
-                                        {labels.actions}
-                                    </Grid>
-                                )}
+                            <Grid item xs={12} sm={locked ? 5 : 4}>
+                                {labels.title}
                             </Grid>
-                            {/* Data Row */}
-                            <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
-                                {childData[parentRow.cvo_id].data.map(row => (
-                                    <ChildVocabDataRow
-                                        key={row.controlled_vocab.cvo_id}
-                                        row={row.controlled_vocab}
-                                        parentId={row.cvr_parent_cvo_id}
-                                        rootId={parentRow.cvo_id}
-                                        locked={locked}
-                                    />
-                                ))}
+                            <Grid item xs={12} sm={5}>
+                                {labels.desc}
+                            </Grid>
+                            <Grid item xs={12} sm={1}>
+                                {labels.external_id}
+                            </Grid>
+                            {!locked && (
+                                <Grid item xs={12} sm={1}>
+                                    {labels.actions}
+                                </Grid>
+                            )}
+                        </Grid>
+                        {/* Data Row */}
+                        <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
+                            {vocabList.slice(start, end).map(row => (
+                                <ChildVocabDataRow
+                                    key={row.controlled_vocab.cvo_id}
+                                    row={row.controlled_vocab}
+                                    parentId={row.cvr_parent_cvo_id}
+                                    rootId={parentRow.cvo_id}
+                                    locked={locked}
+                                />
+                            ))}
+                            <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
+                                <Grid item xs={3}>
+                                    {!!total && (
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <TablePagination
+                                                        data-testid="vocab-child-paging"
+                                                        count={total}
+                                                        page={currentPage}
+                                                        rowsPerPage={perPage}
+                                                        rowsPerPageOptions={[10, 25, 50, { label: 'All', value: -1 }]}
+                                                        color="primary"
+                                                        showFirstButton
+                                                        showLastButton
+                                                        onPageChange={handlePageChange}
+                                                        onRowsPerPageChange={handlePerPageChange}
+                                                    />
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    )}
+                                </Grid>
                             </Grid>
                         </Grid>
-                    )}
+                    </Grid>
+                )}
             </Box>
         </Box>
     );

@@ -9,14 +9,12 @@ export const initialState = {
     endRecord: 0,
     currentPage: 1,
     perPage: 10,
-    vocabOpened: [],
 };
 
 const handlers = {
-    [actions.VIEW_VOCAB_LOADING]: state => ({
+    [actions.VIEW_VOCAB_LOADING]: () => ({
         ...initialState,
         loadingVocab: true,
-        vocabOpened: state.vocabOpened,
     }),
 
     [actions.VIEW_VOCAB_LOADED]: (state, action) => ({
@@ -28,26 +26,13 @@ const handlers = {
         endRecord: action.payload.to,
         currentPage: action.payload.current_page,
         perPage: action.payload.per_page,
-        vocabOpened: state.vocabOpened,
     }),
 
     [actions.VIEW_VOCAB_LOAD_FAILED]: (state, action) => ({
         ...initialState,
         loadingVocab: false,
         loadingVocabError: action.payload,
-        vocabOpened: state.vocabOpened,
     }),
-
-    [actions.SET_OPENED_VOCAB]: (state, action) => {
-        let tmpArray = [...state.vocabOpened];
-        !!action.payload.open
-            ? tmpArray.push(action.payload.id)
-            : (tmpArray = tmpArray.filter(item => item !== action.payload.id));
-        return {
-            ...state,
-            vocabOpened: tmpArray,
-        };
-    },
 };
 
 export default function viewVocabReducer(state = { ...initialState }, action) {

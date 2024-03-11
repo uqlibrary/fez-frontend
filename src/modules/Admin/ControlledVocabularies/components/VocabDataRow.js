@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
 
 import IconButton from '@mui/material/IconButton';
 import Edit from '@mui/icons-material/Edit';
@@ -14,8 +13,6 @@ import Grid from '@mui/material/Grid';
 import locale from 'locale/components';
 import { isReadonlyVocab } from 'config/general';
 
-import * as actions from 'actions';
-
 import ChildVocabTable from './ChildVocabTable';
 import {
     ControlledVocabulariesActionContext,
@@ -23,17 +20,12 @@ import {
 } from '../ControlledVocabularyContext';
 
 export const VocabDataRow = ({ row }) => {
-    const dispatch = useDispatch();
+    const [open, setIsOpen] = React.useState(false);
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
     const txt = locale.components.controlledVocabulary;
-    const vocabOpened = useSelector(state => state.get('viewVocabReducer').vocabOpened);
 
-    const open = vocabOpened.indexOf(row.cvo_id) > -1;
-    const triggerChildren = openState => {
-        dispatch(actions.setOpenedVocab({ id: row.cvo_id, open: openState }));
-    };
     const locked = isReadonlyVocab(row.cvo_id);
 
     return (
@@ -68,7 +60,7 @@ export const VocabDataRow = ({ row }) => {
                                 data-analyticsid={`expand-row-${row.cvo_id}`}
                                 data-testid={`expand-row-${row.cvo_id}`}
                                 onClick={() => {
-                                    triggerChildren(!open);
+                                    setIsOpen(!open);
                                 }}
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}

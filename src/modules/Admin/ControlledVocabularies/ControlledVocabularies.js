@@ -49,7 +49,7 @@ const ControlledVocabularies = () => {
     }, [vocabList]);
 
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
-    const adminDialogState = useContext(ControlledVocabulariesStateContext);
+    const state = useContext(ControlledVocabulariesStateContext);
 
     React.useEffect(() => {
         dispatch(actions.loadControlledVocabList());
@@ -57,8 +57,6 @@ const ControlledVocabularies = () => {
     }, []);
 
     const txt = locale.components.controlledVocabulary;
-
-    const labels = txt.columns.labels;
 
     const handleDialogClickClose = () => {
         onHandleDialogClickClose();
@@ -70,15 +68,12 @@ const ControlledVocabularies = () => {
         const wrappedRequest = transformAdminRequest({
             request: data,
             parentId,
-            rootVocabId,
-            action: adminDialogState.action,
+            action: state.action,
         });
 
-        return dispatch(actions.adminControlledVocabulary(wrappedRequest, adminDialogState.action))
+        return dispatch(actions.adminControlledVocabulary(wrappedRequest, state.action))
             .then(() => {
                 handleDialogClickClose();
-                rootVocabId && Number(parentId) !== Number(rootVocabId);
-                rootVocabId && Number(parentId) !== Number(rootVocabId);
                 const adminFunction = rootVocabId ? actions.loadChildVocabList : actions.loadControlledVocabList;
                 dispatch(
                     adminFunction({
@@ -98,13 +93,13 @@ const ControlledVocabularies = () => {
             <>
                 {createPortal(
                     <AdminPanel
-                        {...adminDialogState}
+                        {...state}
                         locale={txt.admin}
                         onCancelAction={handleDialogClickClose}
                         onAction={handleDialogClickSave}
                     />,
-                    adminDialogState.portalId ? document.getElementById(adminDialogState.portalId) : document.body,
-                    adminDialogState.portalId ?? 'portal-root',
+                    state.portalId ? document.getElementById(state.portalId) : document.body,
+                    state.portalId ?? 'portal-root',
                 )}
                 {!!!loadingVocabError && (
                     <Box marginBlockStart={2}>
@@ -116,7 +111,7 @@ const ControlledVocabularies = () => {
                                     variant={'contained'}
                                     color={'primary'}
                                     onClick={() => onAdminAddActionClick()}
-                                    disabled={adminDialogState.isOpen}
+                                    disabled={state.isOpen}
                                 >
                                     {txt.admin.addButtonLabel}
                                 </Button>
@@ -136,7 +131,7 @@ const ControlledVocabularies = () => {
                             )}
 
                             {sortedList.length > 0 ? (
-                                <VocabTable records={sortedList} labels={labels} />
+                                <VocabTable records={sortedList} labels={txt.columns.labels} />
                             ) : (
                                 <InlineLoader loaderId={'vocab-page-loading'} message={txt.loading.message} />
                             )}

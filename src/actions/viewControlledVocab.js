@@ -59,18 +59,6 @@ export function loadChildVocabList({ pid: parentId, rootId }) {
     };
 }
 
-export function setOpenedVocab(rowObject) {
-    return dispatch => {
-        dispatch({
-            type: actions.SET_OPENED_VOCAB,
-            payload: {
-                id: rowObject.id,
-                open: rowObject.open,
-            },
-        });
-    };
-}
-
 export function setAdminActionVocab(data) {
     return dispatch => {
         dispatch({
@@ -105,5 +93,17 @@ export function adminControlledVocabulary(request, action) {
 export function clearAdminControlledVocabulary() {
     return dispatch => {
         dispatch({ type: actions.VOCAB_ADMIN_CLEAR });
+    };
+}
+
+export function setVocabPerPage(value) {
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_SET_PER_PAGE, payload: value });
+    };
+}
+
+export function setCurrentPage(value) {
+    return dispatch => {
+        dispatch({ type: actions.VOCAB_SET_CURRENT_PAGE, payload: value });
     };
 }
