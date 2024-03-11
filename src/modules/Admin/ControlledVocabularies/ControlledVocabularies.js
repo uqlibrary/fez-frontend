@@ -104,7 +104,7 @@ const ControlledVocabularies = () => {
                 {!!!loadingVocabError && (
                     <Box marginBlockStart={2}>
                         <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
-                            <StyledAddButtonWrapper data-testid="admin-add-community">
+                            <StyledAddButtonWrapper data-testid="admin-add-vocabulary">
                                 <Button
                                     data-testid="admin-add-vocabulary-button"
                                     startIcon={<Add />}
