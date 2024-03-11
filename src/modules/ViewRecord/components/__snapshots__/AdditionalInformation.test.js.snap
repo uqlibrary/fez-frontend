@@ -20273,7 +20273,7 @@ exports[`Additional Information Component  should render component with working 
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-org-unit-name-label"
               >
-                School, Department or Centre
+                School, Centre or Institute
               </span>
             </div>
             <div

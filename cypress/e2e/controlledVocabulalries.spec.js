@@ -6,14 +6,71 @@ context('Controlled vocabularies', () => {
 
     it('Renders the top level controlled vocabulary screen', () => {
         cy.get('[data-testid="page-title"]').should('contain', 'Controlled Vocabulary');
-        cy.get('[data-testid="total-vocab"]').should('contain', 'Displaying 42 controlled vocabularies');
+        cy.get('[data-testid="total-vocab"]').should('contain', 'Displaying 42 total controlled vocabularies');
         cy.get('[data-testid="row-em-451780"]').should('contain', 'Fields of Research');
+        // half of all rows should be editable
+        cy.get('[data-testid^=admin-edit-button-]').should('have.length', 21);
+        // half of all rows should be readonly
+        cy.get('[data-testid^=row-locked-icon-]').should('have.length', 21);
+        dismissPopover();
+
+        // test tooltips
+        cy.get('[data-testid=row-hidden-icon-453226]').trigger('mouseover');
+        cy.get('[role=tooltip]').should('contain', 'This vocabulary is hidden');
+        cy.get('[data-testid=row-locked-icon-456849]').trigger('mouseover');
+        cy.get('[role=tooltip]').should('contain', 'This vocabulary and children are read-only');
+    });
+
+    it('Renders the editable child level controlled vocabulary screen', () => {
+        cy.get('[data-testid="expand-row-453669"]').click();
+        cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
+        cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.visible');
+        cy.get('[data-testid=vocab-child-body]').within(() => {
+            cy.get('[data-testid^=child-row-em-]').should('have.length', 165);
+            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 165);
+        });
+        dismissPopover();
+    });
+    it('Renders the readonly child level controlled vocabulary screen', () => {
+        cy.get('[data-testid="expand-row-454139"]').click();
+        cy.get('[data-testid="child-row-em-454140"]').should('contain', 'Associate Editor');
+        cy.get('[data-testid=admin-add-vocabulary-button-454139]').should('not.exist');
+        cy.get('[data-testid=vocab-child-body]').within(() => {
+            cy.get('[data-testid^=child-row-em-]').should('have.length', 9);
+            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 0);
+        });
         dismissPopover();
     });
 
-    it('Renders the child level controlled vocabulary screen', () => {
+    it('Navigate field of research', () => {
+        cy.get('[data-testid="expand-row-451780"]').click();
+        cy.get('[data-testid="child-row-em-451799"]').should('contain', '01 Mathematical Sciences');
+
+        cy.get('[data-testid="child-row-title-link-451799"]').click();
+        cy.get('[data-testid="child-row-em-451800"]').should('contain', '0101 Pure Mathematics');
+
+        cy.get('[data-testid="child-row-title-link-451800"]').click();
+        cy.get('[data-testid="child-row-em-451801"]').should('contain', '010101 Algebra and Number Theory');
+
+        cy.get('[data-testid="child-row-title-link-451801"]').click();
+        cy.get('[data-testid="nav-451801"]').should('contain', '010101 Algebra and Number Theory');
+
+        cy.get('[data-testid="nav-451800"]').click();
+        cy.get('[data-testid="child-row-title-451801"]').should('contain', '010101 Algebra and Number Theory');
+
+        cy.get('[data-testid="nav-451780"]').click();
+        cy.get('[data-testid="child-row-title-451799"]').should('contain', '01 Mathematical Sciences');
+
+        dismissPopover();
+    });
+
+    it('Expand two rows', () => {
+        cy.get('[data-testid="expand-row-451780"]').click();
+        cy.get('[data-testid="child-row-em-451799"]').should('contain', '01 Mathematical Sciences');
+
         cy.get('[data-testid="expand-row-453669"]').click();
-        cy.get('[data-testid="row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
+        cy.get('[data-testid="nav-451780"]').should('have.length', 1);
+
         dismissPopover();
     });
 
@@ -27,19 +84,6 @@ context('Controlled vocabularies', () => {
 
                 cy.get('[data-testid=cvo-title-input]').type('Test title');
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
-
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-root]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-root]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-root]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-root]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
@@ -58,20 +102,6 @@ context('Controlled vocabularies', () => {
 
                 cy.get('[data-testid=cvo-title-input]').type('Test title');
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
-
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-add-453669]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-add-453669]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-add-453669]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
@@ -93,28 +123,12 @@ context('Controlled vocabularies', () => {
 
                 cy.get('[data-testid=cvo-title-input]').should('have.value', 'AIATSIS codes');
                 cy.get('[data-testid=cvo-desc-input]').should('have.value', 'This is my edited version');
-                cy.get('[data-testid=cvo-order-input]').should('have.value', '1');
                 cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').clear();
                 cy.get('[data-testid=portal-edit-453669]').should('contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').type('New title');
 
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
-
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-edit-453669]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-edit-453669]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')
@@ -142,19 +156,6 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
                 cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]').type('A');
-                cy.get('[data-testid=portal-edit-453670]').should('contain', 'Must be a number');
-                cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(1.1);
-                cy.get('[data-testid=portal-edit-453670]').should('contain', 'Must be a whole number above zero');
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a number');
-                cy.get('[data-testid=cvo-order-input]')
-                    .clear()
-                    .type(2);
-                cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Must be a whole number above zero');
 
                 cy.get('[data-testid=update_dialog-action-button]')
                     .should('not.be.disabled')

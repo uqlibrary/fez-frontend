@@ -73,8 +73,6 @@ describe('AdminPanel with Redux-Form', () => {
         expect(getByTestId('cvo-title-input')).toHaveValue(values.cvo_title ?? '');
         expect(getByTestId('cvo-desc-input')).toHaveValue(values.cvo_desc ?? '');
         expect(getByTestId('cvo-external-id-input')).toHaveValue(values.cvo_external_id ?? '');
-        expect(getByTestId('cvo-image-filename-input')).toHaveValue(values.cvo_image_filename ?? '');
-        expect(getByTestId('cvo-order-input')).toHaveValue(values.cvo_order ?? '');
         if (!!values.cvo_hide) expect(getByTestId('cvo-hide-input')).toBeChecked();
         else expect(getByTestId('cvo-hide-input')).not.toBeChecked();
     };
@@ -134,8 +132,6 @@ describe('AdminPanel with Redux-Form', () => {
         await userEvent.type(getByTestId('cvo-title-input'), expected.cvo_title);
         await userEvent.type(getByTestId('cvo-desc-input'), expected.cvo_desc);
         await userEvent.type(getByTestId('cvo-external-id-input'), expected.cvo_external_id);
-        await userEvent.type(getByTestId('cvo-image-filename-input'), expected.cvo_image_filename);
-        await userEvent.type(getByTestId('cvo-order-input'), expected.cvo_order);
         await userEvent.click(getByTestId('cvo-hide-input'));
 
         assertFieldValues(getByTestId, expected);
@@ -156,18 +152,17 @@ describe('AdminPanel with Redux-Form', () => {
             cvo_hide: true,
         };
         const parentId = 1234;
-        const { getByTestId } = setup({ onAction: mockActionFn, parentId });
+        const rootVocabId = 567;
+        const { getByTestId } = setup({ onAction: mockActionFn, parentId, rootVocabId });
 
         expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
 
         await userEvent.type(getByTestId('cvo-title-input'), expected.cvo_title);
         await userEvent.type(getByTestId('cvo-desc-input'), expected.cvo_desc);
         await userEvent.type(getByTestId('cvo-external-id-input'), expected.cvo_external_id);
-        await userEvent.type(getByTestId('cvo-image-filename-input'), expected.cvo_image_filename);
-        await userEvent.type(getByTestId('cvo-order-input'), expected.cvo_order);
         await userEvent.click(getByTestId('cvo-hide-input'));
 
         await userEvent.click(getByTestId('update_dialog-action-button'));
-        expect(mockActionFn).toHaveBeenCalledWith(parentId);
+        expect(mockActionFn).toHaveBeenCalledWith(parentId, rootVocabId);
     });
 });

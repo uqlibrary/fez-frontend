@@ -393,6 +393,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(config => {
         return [200, { data: { ...mockData.recordWithRDM } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:92b978e' }).apiUrl)))
+    .reply(config => {
+        return [200, { data: { ...mockData.recordWithRDMMediatedAccess } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
     .reply(config => {
         return [200, { data: [...mockData.organisationalUnits] }];
@@ -628,7 +632,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(422, {message: 'Some error message'})
     .reply(config =>[200, { data: config.data  }])
     
-    .onGet(new RegExp(escapeRegExp(routes.CHILD_VOCAB_LIST_API( {parentId: '.*'}).apiUrl)))
+    .onGet(
+        new RegExp(
+            routes.CHILD_VOCAB_LIST_API('\\d+').apiUrl,
+        ),
+    )
     .reply(config=>{
         const id=config.url.split('/').pop().split('?')[0];
         return [200, { ...mockData.childVocabList[id] }];

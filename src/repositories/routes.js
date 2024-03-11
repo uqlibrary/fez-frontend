@@ -220,15 +220,17 @@ export const VOCAB_API = () => {
     };
 };
 
-export const VOCAB_LIST_API = ({ cachebust = null } = {}) => {
+export const VOCAB_LIST_API = () => {
     return {
-        apiUrl: `vocabularies/list${cachebust ? `?cb=${cachebust}` : ''}`,
+        apiUrl: 'vocabularies/list',
     };
 };
 
-export const CHILD_VOCAB_LIST_API = ({ parentId, cachebust }) => ({
-    apiUrl: `vocabularies/admin/${parentId}${cachebust ? `?cb=${cachebust}` : ''}`,
-});
+export const CHILD_VOCAB_LIST_API = parentId => {
+    return {
+        apiUrl: `vocabularies/admin/${parentId}`,
+    };
+};
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {

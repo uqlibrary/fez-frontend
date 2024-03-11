@@ -131,31 +131,6 @@ const AdminPanel = ({
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_image_filename">{locale.form.filename}</label>
-                                        <Field
-                                            component={TextField}
-                                            variant="standard"
-                                            fullWidth
-                                            textFieldId="cvo-image-filename"
-                                            inputProps={{ maxLength: 64 }}
-                                            name="cvo_image_filename"
-                                            disabled={submitting}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <label htmlFor="cvo_order" style={{ display: 'block' }}>
-                                            {locale.form.order}
-                                        </label>
-                                        <Field
-                                            component={TextField}
-                                            variant="standard"
-                                            textFieldId="cvo-order"
-                                            name="cvo_order"
-                                            disabled={submitting}
-                                        />
-                                    </Grid>
-
-                                    <Grid item xs={12}>
                                         <label htmlFor="cvo_hide" style={{ display: 'block' }}>
                                             {locale.form.inactive}
                                         </label>

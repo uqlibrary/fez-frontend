@@ -45,7 +45,7 @@ describe('ChildVocabTable', () => {
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi
-            .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: 453669 }).apiUrl)
+            .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
             .reply(200, mockData.childVocabList[453669]);
     });
 
@@ -54,12 +54,19 @@ describe('ChildVocabTable', () => {
     });
 
     it('should render the child table', async () => {
-        const { getByText, getByTestId } = setup({ parentRow: parentRow });
-        expect(getByText('Description')).toBeInTheDocument();
+        const { getByTestId } = setup({ parentRow: parentRow });
         await waitFor(() => {
-            expect(getByTestId('child-row-title-453670')).toBeInTheDocument();
+            expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
             expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
+    });
+    it('should render the locked child table', async () => {
+        const { queryByTestId, getByTestId } = setup({ parentRow: parentRow, locked: true });
+        await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+        // Add button should not be present
+        expect(queryByTestId('admin-add-vocabulary-button-453669')).not.toBeInTheDocument();
+        // expect 4 columns
+        expect(getByTestId('vocab-child-header').children.length).toBe(4);
     });
 
     it('should render the loader', async () => {
@@ -85,6 +92,6 @@ describe('ChildVocabTable', () => {
         });
         await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
         await userEvent.click(getByTestId('admin-add-vocabulary-button-453669'));
-        expect(mockFn).toHaveBeenCalledWith(453669);
+        expect(mockFn).toHaveBeenCalledWith(453669, 453669);
     });
 });

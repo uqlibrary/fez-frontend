@@ -16,19 +16,35 @@ export default {
         inputLabelText: 'Work type',
         hintText: 'Select a Work type from the dropdown list',
         help: {
-            title: 'Non-traditional research output types',
+            title: 'Add a missing work',
             text: (
-                <p>
-                    For more information about each type, click{' '}
-                    <a
-                        style={{ fontWeight: 700 }}
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
-                    >
-                        here
-                    </a>
-                </p>
+                <>
+                    <p>
+                        For help manually adding a work, access the help guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                    <h3>Non-traditional research outputs</h3>
+                    <p>
+                        For help selecting the relevant type for your work, access the guide{' '}
+                        <a
+                            style={{ fontWeight: 700 }}
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                        >
+                            here
+                        </a>
+                        .
+                    </p>
+                </>
             ),
             buttonLabel: 'Close',
         },
@@ -258,6 +274,10 @@ export default {
         information: {
             title: 'Research report information',
             fieldLabels: {
+                orgUnitName: {
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'Organisational unit, eg. School of Business',
+                },
                 documentTitle: {
                     label: 'Title',
                     placeholder: 'Type title of research report',
@@ -411,7 +431,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, department or centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {
@@ -486,8 +506,8 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business',
+                    floatingLabelText: 'School, Centre or Institute',
+                    hintText: 'School, Centre or Institute, eg. School of Business',
                 },
                 date: {
                     title: 'Publication date',
@@ -926,7 +946,7 @@ export default {
                     hintText: '',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 series: {
@@ -981,7 +1001,7 @@ export default {
                     placeholder: 'Title of paper',
                 },
                 orgUnitName: {
-                    floatingLabelText: 'School, Institute or Centre ',
+                    floatingLabelText: 'School, Centre or Institute',
                     hintText: '',
                 },
                 orgName: {

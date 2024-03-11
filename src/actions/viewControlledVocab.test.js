@@ -36,11 +36,11 @@ describe('View controlled vocabulary actions', () => {
         });
         it('dispatches expected actions when loading child level controlled vocabularies from API successfully', async () => {
             mockApi
-                .onGet(repositories.routes.CHILD_VOCAB_LIST_API({ parentId: 453669 }).apiUrl)
+                .onGet(repositories.routes.CHILD_VOCAB_LIST_API(453669).apiUrl)
                 .reply(200, { data: { ...mockData.childVocabList['453669'] } });
 
             const expectedActions = [actions.VIEW_CHILD_VOCAB_LOADING, actions.VIEW_CHILD_VOCAB_LOADED];
-            await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669 }));
+            await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669, rootId: 453669 }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
         it('dispatches expected actions when loading child level controlled vocabularies from API failed', async () => {
@@ -52,7 +52,7 @@ describe('View controlled vocabulary actions', () => {
                 actions.VIEW_CHILD_VOCAB_LOAD_FAILED,
             ];
 
-            await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669 }));
+            await mockActionsStore.dispatch(viewRecordActions.loadChildVocabList({ pid: 453669, rootId: 453669 }));
             const result = mockActionsStore.getActions();
             expect(result).toHaveDispatchedActions(expectedActions);
         });

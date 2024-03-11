@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, WithReduxStore } from 'test-utils';
+import { render, WithReduxStore, within } from 'test-utils';
 
 import * as mockData from 'mock/data';
 
@@ -42,11 +42,11 @@ function setup(testProps = {}, state = {}) {
 describe('ControlledVocabularies VocabTable', () => {
     it('should render the table', async () => {
         const { getByTestId } = setup({ records: sortedList, labels: labels });
-        expect(getByTestId('vocab-primary-header-title')).toBeInTheDocument();
-        expect(getByTestId('vocab-primary-header-eid')).toBeInTheDocument();
-        expect(getByTestId('vocab-primary-header-action')).toBeInTheDocument();
+        expect(within(getByTestId('vocab-primary-header')).getByText('Title')).toBeInTheDocument();
+        expect(within(getByTestId('vocab-primary-header')).getByText('External ID')).toBeInTheDocument();
+        expect(within(getByTestId('vocab-primary-header')).getByText('Actions')).toBeInTheDocument();
         expect(getByTestId('row-em-453669')).toBeInTheDocument();
-        expect(document.querySelectorAll('[data-testid^=row-em-]').length).toEqual(42);
+        expect(document.querySelectorAll('[data-testid^=row-em-]').length).toEqual(21);
         expect(getByTestId('vocab-primary-body')).toBeInTheDocument();
     });
 });
