@@ -178,6 +178,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                             <tbody>
                                                 <tr>
                                                     <TablePagination
+                                                        data-testid="vocab-child-paging"
                                                         count={total}
                                                         page={currentPage}
                                                         rowsPerPage={perPage}

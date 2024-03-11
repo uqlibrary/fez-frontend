@@ -57,7 +57,6 @@ describe('ChildVocabTable', () => {
         const { getByTestId } = setup({ parentRow: parentRow });
         await waitFor(() => {
             expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
-            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(165);
         });
     });
     it('should render the locked child table', async () => {
@@ -77,7 +76,7 @@ describe('ChildVocabTable', () => {
     it('should hide the loader after the data is loaded', async () => {
         const { getByTestId, queryByText } = setup({ parentRow: parentRow });
         await waitFor(() => {
-            getByTestId('child-row-em-456960');
+            getByTestId('child-row-em-453670');
         });
         expect(queryByText('Loading Data')).not.toBeInTheDocument();
     });
@@ -93,5 +92,70 @@ describe('ChildVocabTable', () => {
         await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
         await userEvent.click(getByTestId('admin-add-vocabulary-button-453669'));
         expect(mockFn).toHaveBeenCalledWith(453669, 453669);
+    });
+
+    it('should show pagination correctly', async () => {
+        const { getByTestId, getByRole, getByText } = setup({ parentRow: parentRow });
+        await waitFor(() => {
+            expect(getByTestId('child-row-title-453670')).toHaveTextContent('Yukulta / Ganggalidda language G34');
+            expect(document.querySelectorAll('[data-testid^=child-row-em-]').length).toEqual(10);
+        });
+        expect(getByTestId('vocab-child-paging')).toBeInTheDocument();
+        expect(getByText('1–10 of 165')).toBeInTheDocument();
+
+        const user = userEvent.setup();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to next page',
+            }),
+        );
+        expect(getByText('11–20 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to last page',
+            }),
+        );
+        expect(getByText('161–165 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to previous page',
+            }),
+        );
+        expect(getByText('151–160 of 165')).toBeInTheDocument();
+
+        await user.click(
+            getByRole('button', {
+                name: 'Go to first page',
+            }),
+        );
+        expect(getByText('1–10 of 165')).toBeInTheDocument();
+
+        const rowsPerPageButton = getByRole('combobox');
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /25/,
+            }),
+        );
+        expect(getByText('1–25 of 165')).toBeInTheDocument();
+
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /50/,
+            }),
+        );
+        expect(getByText('1–50 of 165')).toBeInTheDocument();
+
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /All/,
+            }),
+        );
+        expect(getByText('1–165 of 165')).toBeInTheDocument();
     });
 });
