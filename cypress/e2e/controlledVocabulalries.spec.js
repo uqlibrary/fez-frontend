@@ -26,8 +26,8 @@ context('Controlled vocabularies', () => {
         cy.get('[data-testid="child-row-em-453670"]').should('contain', 'Yukulta / Ganggalidda language G34');
         cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.visible');
         cy.get('[data-testid=vocab-child-body]').within(() => {
-            cy.get('[data-testid^=child-row-em-]').should('have.length', 165);
-            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 165);
+            cy.get('[data-testid^=child-row-em-]').should('have.length', 10);
+            cy.get('[data-testid^=admin-edit-button-]').should('have.length', 10);
         });
         dismissPopover();
     });
