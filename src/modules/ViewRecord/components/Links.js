@@ -165,6 +165,19 @@ export class Links extends PureComponent {
             ? this.getRDMLinkOAStatus(this.props.publication)
             : (isLinkNoDoi && linkNoDoiOpenAccessStatus) || {};
 
+        const mustRequestRdmAccessFromDataTeam = isRDM && !openAccessStatus.isOpenAccess && !this.props.isAdmin;
+        const variableLinkDetails = {
+            href: mustRequestRdmAccessFromDataTeam ? `mailto:${viewRecordsConfig.genericDataEmail}` : link.rek_link,
+            title: mustRequestRdmAccessFromDataTeam
+                ? locale.viewRecord.sections.links.rdmRequestAccessTitle.replace(
+                      '[data_email]',
+                      viewRecordsConfig.genericDataEmail,
+                  )
+                : linkDescription,
+            text: mustRequestRdmAccessFromDataTeam ? viewRecordsConfig.genericDataEmail : link.rek_link,
+            openInNew: !mustRequestRdmAccessFromDataTeam,
+        };
+
         const licence = getDownloadLicence(this.props.publication);
 
         return {
@@ -174,6 +187,7 @@ export class Links extends PureComponent {
                     href={typeof window !== 'undefined' && variableLinkDetails.href}
                     title={variableLinkDetails.title}
                     id={`publication-${index}`}
+                    openInNewIcon={variableLinkDetails.openInNew}
                     {...(isRDM && openAccessStatus.isOpenAccess && !!licence
                         ? {
                               onClick: e => {
