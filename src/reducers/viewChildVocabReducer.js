@@ -53,7 +53,7 @@ export const initialState = {
     startRecord: 0,
     endRecord: 0,
     currentPage: 0, // start from 0
-    perPage: 2,
+    perPage: 10,
 };
 
 const handlers = {
