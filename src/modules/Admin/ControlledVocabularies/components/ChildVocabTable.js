@@ -45,9 +45,8 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     }, []);
 
     const handleAddActionClick = () => {
-        const navs = document.querySelectorAll(`#vocabNav-${parentRow.cvo_id} [id^=nav]`);
-        const parentId = +navs[navs.length - 1].id.replace('nav-', '');
-        onAdminAddActionClick(parentId, parentRow.cvo_id);
+        const [currentRow] = childData[parentRow.cvo_id].path.slice(-1);
+        onAdminAddActionClick(currentRow.id, parentRow.cvo_id);
     };
 
     // Event handler for button clicks
