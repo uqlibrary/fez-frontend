@@ -184,7 +184,13 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                                         count={total}
                                                         page={currentPage}
                                                         rowsPerPage={perPage}
-                                                        rowsPerPageOptions={[10, 25, 50, { label: 'All', value: -1 }]}
+                                                        rowsPerPageOptions={[
+                                                            10,
+                                                            20,
+                                                            50,
+                                                            100,
+                                                            { label: 'All', value: -1 },
+                                                        ]}
                                                         color="primary"
                                                         showFirstButton
                                                         showLastButton

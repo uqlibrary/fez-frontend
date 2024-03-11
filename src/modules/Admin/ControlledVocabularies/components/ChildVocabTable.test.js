@@ -137,10 +137,10 @@ describe('ChildVocabTable', () => {
         await user.click(rowsPerPageButton);
         await user.click(
             getByRole('option', {
-                name: /25/,
+                name: /20/,
             }),
         );
-        expect(getByText('1–25 of 165')).toBeInTheDocument();
+        expect(getByText('1–20 of 165')).toBeInTheDocument();
 
         await user.click(rowsPerPageButton);
         await user.click(
@@ -149,6 +149,14 @@ describe('ChildVocabTable', () => {
             }),
         );
         expect(getByText('1–50 of 165')).toBeInTheDocument();
+
+        await user.click(rowsPerPageButton);
+        await user.click(
+            getByRole('option', {
+                name: /100/,
+            }),
+        );
+        expect(getByText('1–100 of 165')).toBeInTheDocument();
 
         await user.click(rowsPerPageButton);
         await user.click(
