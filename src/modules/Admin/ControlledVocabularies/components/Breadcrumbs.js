@@ -6,28 +6,6 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
 
 const Breadcrumbs = ({ id, data, onBreadcrumbClick, disableLastPath = true }) => {
-    const buttons = data.map((item, index) => (
-        <Link
-            key={`nav-${item.id}`}
-            id={`nav-${item.id}`}
-            data-testid={`nav-${item.id}`}
-            component="button"
-            onClick={event => onBreadcrumbClick({ event, id: item.id })}
-            disabled={disableLastPath && index === data.length - 1}
-            {...(disableLastPath && index === data.length - 1
-                ? {
-                      sx: {
-                          textDecoration: 'none',
-                          color: 'default.light',
-                          cursor: 'default',
-                      },
-                  }
-                : {})}
-        >
-            {item.title}
-        </Link>
-    ));
-
     return (
         <MuiBreadcrumbs
             aria-label="breadcrumb"
@@ -35,7 +13,27 @@ const Breadcrumbs = ({ id, data, onBreadcrumbClick, disableLastPath = true }) =>
             id={id}
             data-testid={id}
         >
-            {buttons}
+            {data.map((item, index) => (
+                <Link
+                    key={`nav-${item.id}`}
+                    id={`nav-${item.id}`}
+                    data-testid={`nav-${item.id}`}
+                    component="button"
+                    onClick={event => onBreadcrumbClick({ event, id: item.id })}
+                    disabled={disableLastPath && index === data.length - 1}
+                    {...(disableLastPath && index === data.length - 1
+                        ? {
+                              sx: {
+                                  textDecoration: 'none',
+                                  color: 'default.light',
+                                  cursor: 'default',
+                              },
+                          }
+                        : {})}
+                >
+                    {item.title}
+                </Link>
+            ))}
         </MuiBreadcrumbs>
     );
 };
