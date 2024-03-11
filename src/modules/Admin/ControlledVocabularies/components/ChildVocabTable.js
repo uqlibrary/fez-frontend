@@ -25,7 +25,7 @@ const labels = txt.columns.labels;
 
 export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
-    const { onAdminAddActionClick } = useContext(ControlledVocabulariesActionContext);
+    const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
@@ -48,6 +48,9 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
 
     // Event handler for button clicks
     const handleBreadcrumbClick = ({ id }) => {
+        if (state.isOpen && state.rootVocabId === parentRow.cvo_id) {
+            onHandleDialogClickClose();
+        }
         dispatch(
             actions.loadChildVocabList({
                 pid: id,

@@ -21,7 +21,7 @@ import {
 
 export const VocabDataRow = ({ row }) => {
     const [open, setIsOpen] = React.useState(false);
-    const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
+    const { onAdminEditActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
     const txt = locale.components.controlledVocabulary;
@@ -61,6 +61,9 @@ export const VocabDataRow = ({ row }) => {
                                 data-testid={`expand-row-${row.cvo_id}`}
                                 onClick={() => {
                                     setIsOpen(!open);
+                                    if (state.isOpen && state.rootVocabId === row.cvo_id) {
+                                        onHandleDialogClickClose();
+                                    }
                                 }}
                             >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
