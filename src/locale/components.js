@@ -3834,6 +3834,9 @@ export default {
             },
         },
         controlledVocabulary: {
+            paging: {
+                allButton: 'All',
+            },
             admin: {
                 addButtonLabel: 'Add vocabulary',
                 addChildButtonLabel: 'Add child vocabulary',
