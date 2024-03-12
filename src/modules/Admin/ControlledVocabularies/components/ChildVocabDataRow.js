@@ -58,6 +58,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                             id={`child-row-title-link-${row.cvo_id}`}
                             component="button"
                             variant="body2"
+                            align="left"
                             onClick={() => {
                                 replaceChildVocabTable(row.cvo_id);
                             }}
