@@ -72,6 +72,7 @@ const SearchRecords = ({
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
+    const [searchFields, setSearchFields] = useState([]);
 
     React.useEffect(() => {
         /* istanbul ignore next */
@@ -91,6 +92,7 @@ const SearchRecords = ({
         displayRecordsAsChanged,
     } = useSearchRecordsControls(queryParams, updateQueryString, actions);
     const handleFacetExcludesFromSearchFields = searchFields => {
+        setSearchFields(searchFields ?? /* istanbul ignore next */ []);
         !!searchFields &&
             setSearchParams({
                 ...queryParams,
@@ -139,14 +141,14 @@ const SearchRecords = ({
                     isUnpublishedBufferPage,
                     searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
                 );
-                setSearchParams(queryParams);
+                setSearchParams({ ...queryParams, advancedSearchFields: getAdvancedSearchFields(searchFields) });
                 actions.searchEspacePublications(queryParams);
                 actions.clearSearchQuery();
                 actions.resetExportPublicationsStatus();
             }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [queryParamsHash]);
+    }, [queryParamsHash, searchFields]);
 
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;

@@ -369,6 +369,11 @@ describe('SearchRecords page', () => {
         fireEvent.click(getByTestId('advanced-search'));
 
         expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
+
+        // search again without changing terms
+        fireEvent.click(getByTestId('advanced-search'));
+        // should still be hidden
+        expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
     });
 
     it('should update the queryString and make API call when facet is changed', () => {
