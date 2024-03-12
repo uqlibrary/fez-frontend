@@ -189,7 +189,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                                             20,
                                                             50,
                                                             100,
-                                                            { label: 'All', value: -1 },
+                                                            { label: txt.paging.allButton, value: -1 },
                                                         ]}
                                                         color="primary"
                                                         showFirstButton
