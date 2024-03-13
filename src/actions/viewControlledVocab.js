@@ -95,15 +95,3 @@ export function clearAdminControlledVocabulary() {
         dispatch({ type: actions.VOCAB_ADMIN_CLEAR });
     };
 }
-
-export function setVocabPerPage(value) {
-    return dispatch => {
-        dispatch({ type: actions.VOCAB_SET_PER_PAGE, payload: value });
-    };
-}
-
-export function setCurrentPage(value) {
-    return dispatch => {
-        dispatch({ type: actions.VOCAB_SET_CURRENT_PAGE, payload: value });
-    };
-}

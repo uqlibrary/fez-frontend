@@ -28,7 +28,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
-    // const { loadingChildVocab, childData, perPage, currentPage } = useSelector(state =>
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
     const [perPage, setPerPage] = React.useState(2);
@@ -79,15 +78,12 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     let start = currentPage * perPage;
     let end = calculateEnd(start, perPage, total, currentPage);
     const handlePageChange = (event, value) => {
-        // dispatch(actions.setCurrentPage(value));
         setCurrentPage(value);
         start = value * perPage;
         end = calculateEnd(start, perPage, total, currentPage);
     };
     const handlePerPageChange = event => {
         const newPerPage = parseInt(event.target.value, 10);
-        // dispatch(actions.setVocabPerPage(newPerPage));
-        // dispatch(actions.setCurrentPage(0));
         setPerPage(newPerPage);
         setCurrentPage(0);
         start = 0;

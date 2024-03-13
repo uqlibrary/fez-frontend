@@ -98,18 +98,5 @@ describe('View controlled vocabulary actions', () => {
             await mockActionsStore.dispatch(viewRecordActions.clearAdminControlledVocabulary());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
-
-        it('dispatches expected actions when set rows per page', async () => {
-            const expectedActions = [actions.VOCAB_SET_PER_PAGE];
-
-            await mockActionsStore.dispatch(viewRecordActions.setVocabPerPage(25));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-        it('dispatches expected actions when set current page', async () => {
-            const expectedActions = [actions.VOCAB_SET_CURRENT_PAGE];
-
-            await mockActionsStore.dispatch(viewRecordActions.setCurrentPage(1));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
     });
 });
