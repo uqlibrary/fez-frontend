@@ -76,9 +76,9 @@ const SearchRecords = ({
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
 
     React.useEffect(() => {
-        /* istanbul ignore next */
+        // This effect ensures the change to display type in the UI, followed by search term text change,
+        // maintains the user chosen display preference in the results.
         if (!!userSelectedDisplayAs && userSelectedDisplayAs !== queryParams.displayRecordsAs) {
-            /* istanbul ignore next */
             updateQueryString({ ...queryParams, displayRecordsAs: userSelectedDisplayAs });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps

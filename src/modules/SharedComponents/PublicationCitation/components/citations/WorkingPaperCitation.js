@@ -55,7 +55,7 @@ export default class WorkingPaperCitation extends Component {
                 {/* {Report Number| |.} */}
                 <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
 
-                {/* {School, Department or Centre| |,} */}
+                {/* {School, Centre or Institute| |,} */}
                 <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix=", " />
 
                 {/* {Institution| |.} */}

@@ -317,7 +317,7 @@ export const NewViewRecord = ({
                                 isAdmin={!!isAdmin}
                                 isAuthor={isAuthorOfNtroWork}
                             />
-                            <Links publication={recordToView} />
+                            <Links publication={recordToView} isAdmin={!!isAdmin} />
                             <RelatedPublications publication={recordToView} />
                             <AdditionalInformation publication={recordToView} account={account} isNtro={isNtro} />
                             {isNtro && <NtroDetails publication={recordToView} account={account} />}
