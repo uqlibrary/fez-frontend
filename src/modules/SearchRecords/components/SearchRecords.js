@@ -19,7 +19,7 @@ import { RecordsSelectorContext } from 'context';
 
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/general';
-import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
@@ -72,7 +72,7 @@ const SearchRecords = ({
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
-    const [searchFields, setSearchFields] = useState([]);
+    // const [searchFields, setSearchFields] = useState([]);
 
     React.useEffect(() => {
         // This effect ensures the change to display type in the UI, followed by search term text change,
@@ -91,14 +91,6 @@ const SearchRecords = ({
         handleExport,
         displayRecordsAsChanged,
     } = useSearchRecordsControls(queryParams, updateQueryString, actions);
-    const handleFacetExcludesFromSearchFields = searchFields => {
-        setSearchFields(searchFields ?? /* istanbul ignore next */ []);
-        !!searchFields &&
-            setSearchParams({
-                ...queryParams,
-                advancedSearchFields: getAdvancedSearchFields(searchFields),
-            });
-    };
 
     /**
      * Handle the user changing the Display As view type via the UI.
@@ -141,14 +133,14 @@ const SearchRecords = ({
                     isUnpublishedBufferPage,
                     searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
                 );
-                setSearchParams({ ...queryParams, advancedSearchFields: getAdvancedSearchFields(searchFields) });
+                setSearchParams({ ...queryParams });
                 actions.searchEspacePublications(queryParams);
                 actions.clearSearchQuery();
                 actions.resetExportPublicationsStatus();
             }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [queryParamsHash, searchFields]);
+    }, [queryParamsHash]);
 
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;
@@ -208,7 +200,6 @@ const SearchRecords = ({
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
                             searchLoading={searchLoading}
                             showAdvancedSearchButton
-                            updateFacetExcludesFromSearchFields={handleFacetExcludesFromSearchFields}
                         />
                     </StandardCard>
                 </Grid>
@@ -337,12 +328,7 @@ const SearchRecords = ({
                             <FacetsFilter
                                 activeFacets={searchParams.activeFacets}
                                 disabled={isLoadingOrExporting}
-                                excludeFacetsList={
-                                    (searchParams.advancedSearchFields &&
-                                        searchParams.advancedSearchFields.length &&
-                                        searchParams.advancedSearchFields) ||
-                                    locale.pages.searchRecords.facetsFilter.excludeFacetsList
-                                }
+                                excludeFacetsList={locale.pages.searchRecords.facetsFilter.excludeFacetsList}
                                 facetsData={publicationsListFacets}
                                 lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                 onFacetsChanged={facetsChanged}
