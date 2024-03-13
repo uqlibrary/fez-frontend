@@ -28,9 +28,11 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const dispatch = useDispatch();
     const { onAdminAddActionClick, onHandleDialogClickClose } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
-    const { loadingChildVocab, childData, perPage, currentPage } = useSelector(state =>
-        state.get('viewChildVocabReducer'),
-    );
+    // const { loadingChildVocab, childData, perPage, currentPage } = useSelector(state =>
+    const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
+
+    const [perPage, setPerPage] = React.useState(2);
+    const [currentPage, setCurrentPage] = React.useState(0);
 
     React.useEffect(() => {
         const parentId = parentRow.cvo_id;
@@ -77,14 +79,17 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     let start = currentPage * perPage;
     let end = calculateEnd(start, perPage, total, currentPage);
     const handlePageChange = (event, value) => {
-        dispatch(actions.setCurrentPage(value));
+        // dispatch(actions.setCurrentPage(value));
+        setCurrentPage(value);
         start = value * perPage;
         end = calculateEnd(start, perPage, total, currentPage);
     };
     const handlePerPageChange = event => {
         const newPerPage = parseInt(event.target.value, 10);
-        dispatch(actions.setVocabPerPage(newPerPage));
-        dispatch(actions.setCurrentPage(0));
+        // dispatch(actions.setVocabPerPage(newPerPage));
+        // dispatch(actions.setCurrentPage(0));
+        setPerPage(newPerPage);
+        setCurrentPage(0);
         start = 0;
         end = calculateEnd(start, newPerPage, total, currentPage);
     };
@@ -174,6 +179,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                     parentId={row.cvr_parent_cvo_id}
                                     rootId={parentRow.cvo_id}
                                     locked={locked}
+                                    setCurrentPage={setCurrentPage}
                                 />
                             ))}
                             <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
@@ -186,6 +192,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                             page={currentPage}
                                             rowsPerPage={perPage}
                                             rowsPerPageOptions={[
+                                                2,
                                                 10,
                                                 20,
                                                 50,

@@ -18,7 +18,7 @@ import { ControlledVocabulariesStateContext } from '../ControlledVocabularyConte
 
 const txt = locale.components.controlledVocabulary;
 
-export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
+export const ChildVocabDataRow = ({ row, parentId, rootId, locked, setCurrentPage }) => {
     const { onAdminEditActionClick } = useContext(ControlledVocabulariesActionContext);
     const state = useContext(ControlledVocabulariesStateContext);
 
@@ -30,6 +30,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                 rootId,
             }),
         );
+        setCurrentPage(0);
     };
 
     return (
@@ -116,5 +117,6 @@ ChildVocabDataRow.propTypes = {
     parentId: PropTypes.number.isRequired,
     rootId: PropTypes.number,
     locked: PropTypes.bool,
+    setCurrentPage: PropTypes.func,
 };
 export default ChildVocabDataRow;
