@@ -176,30 +176,25 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                             <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
                                 <Grid item xs={3}>
                                     {!!total && (
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <TablePagination
-                                                        data-testid="vocab-child-paging"
-                                                        count={total}
-                                                        page={currentPage}
-                                                        rowsPerPage={perPage}
-                                                        rowsPerPageOptions={[
-                                                            10,
-                                                            20,
-                                                            50,
-                                                            100,
-                                                            { label: txt.paging.allButton, value: -1 },
-                                                        ]}
-                                                        color="primary"
-                                                        showFirstButton
-                                                        showLastButton
-                                                        onPageChange={handlePageChange}
-                                                        onRowsPerPageChange={handlePerPageChange}
-                                                    />
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <TablePagination
+                                            component="div"
+                                            data-testid="vocab-child-paging"
+                                            count={total}
+                                            page={currentPage}
+                                            rowsPerPage={perPage}
+                                            rowsPerPageOptions={[
+                                                10,
+                                                20,
+                                                50,
+                                                100,
+                                                { label: txt.paging.allButton, value: -1 },
+                                            ]}
+                                            color="primary"
+                                            showFirstButton
+                                            showLastButton
+                                            onPageChange={handlePageChange}
+                                            onRowsPerPageChange={handlePerPageChange}
+                                        />
                                     )}
                                 </Grid>
                             </Grid>
