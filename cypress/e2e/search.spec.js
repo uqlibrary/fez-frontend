@@ -465,7 +465,7 @@ context('Advanced Search', () => {
     beforeEach(() => {
         // visit advanced search page as an admin
         cy.visit(
-            'http://localhost:3000/records/search?user=uqstaff&searchQueryParams%5Ball%5D=test&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+            '/records/search?user=uqstaff&searchQueryParams%5Ball%5D=test&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
         );
         cy.viewport(960, 768);
     });
