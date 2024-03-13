@@ -71,19 +71,22 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const vocabList = childData[parentRow.cvo_id]?.data || [];
     const total = vocabList.length;
 
+    const calculateEnd = (start, perPage, total, currentPage) =>
+        start + Math.min(perPage, total - perPage * currentPage);
+
     let start = currentPage * perPage;
-    let end = start + Math.min(perPage, total - perPage * currentPage);
+    let end = calculateEnd(start, perPage, total, currentPage);
     const handlePageChange = (event, value) => {
         dispatch(actions.setCurrentPage(value));
         start = value * perPage;
-        end = start + Math.min(perPage, total - perPage * currentPage);
+        end = calculateEnd(start, perPage, total, currentPage);
     };
     const handlePerPageChange = event => {
         const newPerPage = parseInt(event.target.value, 10);
         dispatch(actions.setVocabPerPage(newPerPage));
         dispatch(actions.setCurrentPage(0));
         start = 0;
-        end = start + Math.min(newPerPage, total - newPerPage * currentPage);
+        end = calculateEnd(start, newPerPage, total, currentPage);
     };
 
     return (
