@@ -98,9 +98,10 @@ export class SearchComponent extends PureComponent {
         const isAdvancedSearchMinimisedChanged =
             props.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
         const searchQueryChanged =
-            props.searchQueryParams &&
-            state.prevProps?.searchQueryParams &&
-            hash(props.searchQueryParams) !== hash(state.prevProps?.searchQueryParams);
+            !state.prevProps?.searchQueryParams ||
+            (props.searchQueryParams &&
+                state.prevProps?.searchQueryParams &&
+                hash(props.searchQueryParams) !== hash(state.prevProps?.searchQueryParams));
 
         if (
             !isOpenAccessInAdvancedModeChanged &&

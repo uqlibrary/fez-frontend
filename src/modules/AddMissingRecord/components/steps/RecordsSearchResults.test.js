@@ -1,13 +1,13 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, fireEvent,  } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
-        history: {},
         account: accounts.uqresearcher || testProps.account || {},
+        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return renderMethod(
@@ -29,17 +29,12 @@ describe('Search record results', () => {
     });
 
     it('should render stepper and no results', () => {
-        const { container } = setup({
-            history: {},
-        });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should render spinner', () => {
-        const { container } = setup({
-            history: {},
-            searchLoading: true,
-        });
+        const { container } = setup({ searchLoading: true });
         expect(container).toMatchSnapshot();
     });
 
@@ -47,28 +42,24 @@ describe('Search record results', () => {
         'should call componentDidUpdate lifecycle method and focus on ' +
             'create new record button if no publications found',
         () => {
-            const pushFn = jest.fn();
+            const navigateFn = jest.fn();
             const { getByRole, rerender } = setup({
                 publicationList: [],
-                history: { push: pushFn },
+                navigate: navigateFn,
             });
-            setup({ publicationList: [], history: { push: pushFn } }, rerender);
+            setup({ publicationList: [], navigate: navigateFn }, rerender);
 
             expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
             fireEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
 
-            expect(pushFn).toHaveBeenCalled();
+            expect(navigateFn).toHaveBeenCalled();
         },
     );
 
     it('should navigate to find on cancel workflow', () => {
         const cancelWorkflow = jest.fn();
-        const history = {
-            push: cancelWorkflow,
-        };
-
         const { getByRole } = setup({
-            history: history,
+            navigate: cancelWorkflow,
         });
 
         fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
@@ -85,9 +76,6 @@ describe('Search record results', () => {
             const actions = {
                 setClaimPublication: setClaimPublication,
                 setRedirectPath: setRedirectPath,
-            };
-            const history = {
-                push: navigateToClaimPublication,
             };
             const publicationsList = [
                 {
@@ -180,7 +168,7 @@ describe('Search record results', () => {
             ];
 
             const { getByTestId, getByRole, container } = setup({
-                history: history,
+                navigate: navigateToClaimPublication,
                 actions: actions,
                 publicationsList: publicationsList,
             });

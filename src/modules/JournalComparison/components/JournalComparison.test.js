@@ -4,7 +4,10 @@ import { JournalComparison } from '../index';
 
 import { useLocation } from 'react-router-dom';
 
-jest.mock('react-router');
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
+}));
 
 const setup = () => {
     return render(

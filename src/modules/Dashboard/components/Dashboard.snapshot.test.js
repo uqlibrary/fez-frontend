@@ -18,6 +18,13 @@ const mockActions = {
     loadOrcidSyncStatus: jest.fn(),
 };
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         theme: {},
@@ -40,7 +47,6 @@ function setup(testProps = {}, renderMethod = render) {
         possiblyYourPublicationsCountLoading: false,
         actions: mockActions,
         loadingIncompleteRecordData: false,
-        history: {},
         incomplete: {
             publicationsListPagingData: {},
             loadingPublicationsList: false,
@@ -65,6 +71,7 @@ describe('Dashboard test', () => {
         Object.values(mockActions).forEach(action => {
             action.mockClear();
         });
+        mockUseNavigate.mockRestore();
     });
 
     it('renders alert for non-authors', () => {
@@ -171,10 +178,9 @@ describe('Dashboard test', () => {
     });
 
     it('does navigate to records add find page when clicked addPublicationLure', () => {
-        const testPushFn = jest.fn();
-        const { getByTestId } = setup({ history: { push: testPushFn } });
+        const { getByTestId } = setup({});
         fireEvent.click(getByTestId('action-button'));
-        expect(testPushFn).toHaveBeenCalledWith('/records/add/find');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/find');
     });
 
     it('does render latest and trending publications tabs correctly', () => {
@@ -205,10 +211,9 @@ describe('Dashboard test', () => {
     });
 
     it('_claimYourPublications method', () => {
-        const testFn = jest.fn();
-        const { getByTestId } = setup({ possiblyYourPublicationsCount: 5, history: { push: testFn } });
+        const { getByTestId } = setup({ possiblyYourPublicationsCount: 5 });
         fireEvent.click(getByTestId('action-button'));
-        expect(testFn).toBeCalledWith('/records/possible');
+        expect(mockUseNavigate).toBeCalledWith('/records/possible');
     });
 
     it('handleTabChange method', () => {
@@ -529,7 +534,6 @@ describe('Dashboard test', () => {
     });
 
     it('redirectToMissingRecordslist method', () => {
-        const testFn = jest.fn();
         const { getByText } = setup({
             incomplete: {
                 publicationsList: [],
@@ -545,10 +549,9 @@ describe('Dashboard test', () => {
                 },
             },
             authorDetails: mock.authorDetails.uqresearcher,
-            history: { push: testFn },
         });
         fireEvent.click(getByText(/View and Complete/i));
-        expect(testFn).toBeCalledWith('/records/incomplete');
+        expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
     });
 
     /* it('calls action to sync to ORCID', () => {

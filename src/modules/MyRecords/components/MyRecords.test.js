@@ -17,10 +17,8 @@ function setup(testProps = {}, renderMethod = render) {
             pathname: pathConfig.records.mine,
             state: null,
         },
-        history: {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
+        navigate: testProps.navigate || jest.fn(),
+        navigationType: testProps.navigationType || 'PUSH',
         accountLoading: false,
         authorDetails: {},
         exportPublicationsLoading: false,
@@ -232,18 +230,18 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const { container, rerender } = setup({
             accountLoading: true,
-            actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.records.mine,
         });
 
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
+                actions: { loadAuthorPublications: testAction },
                 location: { pathname: pathConfig.records.mine, state: { page: 2, hasPublications: true } },
             },
             rerender,
         );
-        // expect(testAction).toBeCalled();
+        expect(testAction).toBeCalled();
         expect(container).toMatchSnapshot();
     });
 
@@ -251,19 +249,20 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const { container, rerender } = setup({
             accountLoading: true,
-            actions: { loadAuthorPublications: testAction },
+
             thisUrl: pathConfig.records.mine,
         });
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
+                actions: { loadAuthorPublications: testAction },
                 location: { pathname: pathConfig.records.mine, state: null },
                 loadingPublicationsList: false,
                 publicationsList: [],
             },
             rerender,
         );
-        // expect(testAction).toHaveBeenCalled();
+        expect(testAction).toHaveBeenCalled();
         expect(container).toMatchSnapshot();
     });
 
@@ -273,7 +272,7 @@ describe('MyRecords test', () => {
 
         setup(
             {
-                history: { action: 'PUSH' },
+                navigationType: 'PUSH',
                 location: { pathname: pathConfig.records.mine },
                 mine: {
                     loadingPublicationsList: false,

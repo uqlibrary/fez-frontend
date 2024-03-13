@@ -247,8 +247,8 @@ exports[`SearchComponent should display simple search with query string 2`] = `
           data-testid="simple-search"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
             data-testid="simple-search-label"
             for="simple-search-input"
             id="simple-search-label"
@@ -268,7 +268,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
               label="Search eSpace"
               placeholder="Enter your search query to search all fields in eSpace"
               type="search"
-              value=""
+              value="i feel very lucky"
             />
           </div>
         </div>
@@ -2576,29 +2576,29 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      aria-label="Click to select a field to search from the list - Any field currently selected"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-controls=":ri:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
-                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="field-type-select"
                         id="field-type-select"
                         role="combobox"
                         tabindex="0"
                       >
-                        Select a field
+                        Any field
                       </div>
                       <input
                         aria-hidden="true"
-                        aria-invalid="true"
+                        aria-invalid="false"
                         class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                         name="field-type-select"
                         tabindex="-1"
-                        value="0"
+                        value="all"
                       />
                       <svg
                         aria-hidden="true"
@@ -2613,10 +2613,8 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                       </svg>
                     </div>
                     <p
-                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
-                    >
-                      Please select a field to search
-                    </p>
+                      class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+                    />
                   </div>
                 </div>
                 <div
@@ -2624,7 +2622,9 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
-                  />
+                  >
+                    contains
+                  </p>
                 </div>
               </div>
             </div>
@@ -2638,25 +2638,24 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
                 >
                   <div
-                    aria-label="Select a field to search on"
+                    aria-label="Type a value to search all fields for"
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                    data-testid="initial"
+                    data-testid="any-field"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         autocomplete="search"
-                        class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                        data-analyticsid="initial-input"
-                        data-testid="initial-input"
-                        disabled=""
-                        id="initial-input"
-                        name="search-field-initial"
-                        placeholder="Select a field to search on"
+                        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="any-field-input"
+                        data-testid="any-field-input"
+                        id="any-field-input"
+                        name="search-field-any-field"
+                        placeholder="Add some text to search all fields with"
                         type="text"
-                        value=""
+                        value="i feel very lucky"
                       />
                     </div>
                   </div>
@@ -2871,12 +2870,11 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
-            disabled=""
             id="add-another-search-row"
-            tabindex="-1"
+            tabindex="0"
             type="button"
           >
             Add another field
@@ -2945,7 +2943,33 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
             <span
               class="MuiBox-root css-1hg9omi"
               data-testid="advanced-search-caption-container"
-            />
+            >
+              <span
+                data-testid="all-caption"
+              >
+                <span
+                  class="MuiBox-root css-1i7p2di"
+                  data-testid="all-caption-title"
+                  id="all-caption-title"
+                >
+                  Any field
+                </span>
+                <span
+                  class="MuiBox-root css-1pfoj4l"
+                  data-testid="all-caption-combiner"
+                  id="all-caption-combiner"
+                >
+                  contains
+                </span>
+                <span
+                  class="MuiBox-root css-14h1whs"
+                  data-testid="all-caption-value"
+                  id="all-caption-value"
+                >
+                  i feel very lucky
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </div>

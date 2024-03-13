@@ -28,9 +28,8 @@ function setup(testProps) {
 }
 
 describe('Dashboard Researcher IDs test', () => {
-    const testFn = jest.fn();
     const props = {
-        history: { push: testFn },
+        navigate: jest.fn(),
         classes: {},
         values: {
             researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
@@ -41,17 +40,13 @@ describe('Dashboard Researcher IDs test', () => {
         authenticated: { researcher: true, scopus: false, google_scholar: false, orcid: true },
     };
 
-    afterEach(() => {
-        testFn.mockReset();
-    });
-
     it('Render the authors Researcher IDs as expected for a UQ researcher', () => {
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
     });
 
     it('Testing clicking on ID internal links', () => {
-        const pushMock = jest.fn();
+        const testFn = jest.fn();
         const testValues = {
             ...props,
             values: {
@@ -59,7 +54,7 @@ describe('Dashboard Researcher IDs test', () => {
                 orcid: null,
             },
             authenticated: { researcher: false, scopus: false, google_scholar: false, orcid: false },
-            history: { push: pushMock },
+            navigate: testFn,
         };
         const { container, getByTestId } = setup(testValues);
 
@@ -67,9 +62,9 @@ describe('Dashboard Researcher IDs test', () => {
 
         const link = getByTestId('orcid');
         fireEvent.click(link);
-        expect(pushMock).toHaveBeenCalledTimes(1);
+        expect(testFn).toHaveBeenCalledTimes(1);
         fireEvent.keyPress(link, { key: 'Enter', keyCode: 13 });
-        expect(pushMock).toHaveBeenCalledTimes(2);
+        expect(testFn).toHaveBeenCalledTimes(2);
     });
 
     it('Testing auth internal links', () => {

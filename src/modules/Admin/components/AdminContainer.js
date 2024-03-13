@@ -141,7 +141,6 @@ export const AdminContainer = ({
                                 submitSucceeded={submitSucceeded}
                                 dirty={dirty}
                                 disableSubmit={disableSubmit}
-                                location={location}
                                 createMode={createMode}
                                 isDeleted={isDeleted}
                                 isJobCreated={isJobCreated}

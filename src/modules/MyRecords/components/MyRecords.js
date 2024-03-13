@@ -34,7 +34,7 @@ export default class MyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         navigate: PropTypes.func.isRequired,
-        navigateType: PropTypes.string,
+        navigationType: PropTypes.string,
         actions: PropTypes.object,
     };
 
@@ -71,7 +71,7 @@ export default class MyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             state.prevProps?.location !== props.location &&
-            props.navigateType === 'POP' &&
+            props.navigationType === 'POP' &&
             props.location.pathname === state.prevProps?.thisUrl
         ) {
             return {

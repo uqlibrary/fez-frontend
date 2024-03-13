@@ -5,7 +5,7 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { journalDoaj } from 'mock/data';
 
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, fireEvent, within } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, within, act } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -40,6 +40,15 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
+const mockUseNavigate = jest.fn();
+let mockUseLocation = {};
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         authorDetails: {
@@ -49,12 +58,6 @@ function setup(testProps = {}, renderMethod = render) {
         },
         submitting: false,
         handleSubmit: jest.fn(),
-        history: {
-            push: jest.fn(),
-        },
-        location: {
-            search: '',
-        },
         tabs: {
             admin: {
                 activated: true,
@@ -93,12 +96,14 @@ describe('JournalAdminInterface component', () => {
             journalDetails: journalDoaj.data,
         }));
         useDispatchMock.mockImplementation(() => () => {});
+        mockUseLocation = { pathname: '/', search: '' };
     });
 
     afterEach(() => {
         useAccountContext.mockReset();
         useJournalContext.mockReset();
         useDispatchMock.mockRestore();
+        mockUseNavigate.mockClear();
     });
 
     describe('full form', () => {
@@ -148,52 +153,31 @@ describe('JournalAdminInterface component', () => {
             expect(handleSubmitFn).toHaveBeenCalled();
         });
         it('should call method to handle cancel of the form for existing record', () => {
-            const push = jest.fn();
-            const { getByTestId } = setup({
-                history: {
-                    push,
-                },
-            });
+            const { getByTestId } = setup();
 
             fireEvent.click(getByTestId('admin-work-cancel-top'));
-            expect(push).toHaveBeenCalledWith('/journal/view/12');
+            expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/12');
         });
         it('should call method to handle cancel of the form for existing record and navigate to previous url', () => {
-            const push = jest.fn();
-            const { getByTestId } = setup({
-                history: {
-                    push,
-                },
-                location: {
-                    search: '?navigatedFrom=%2Fjournal%2Fview%2F13',
-                },
-            });
+            mockUseLocation.search = '?navigatedFrom=%2Fjournal%2Fview%2F13';
+            const { getByTestId } = setup();
 
             fireEvent.click(getByTestId('admin-work-cancel-top'));
-            expect(push).toHaveBeenCalledWith('/journal/view/13');
+            expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/13');
         });
 
         it('should handle cancel action of submit confirmation for existing record', () => {
-            const push = jest.fn();
-
-            const { getByTestId, rerender } = setup({
-                history: {
-                    push,
-                },
-            });
+            const { getByTestId, rerender } = setup();
 
             setup(
                 {
                     submitSucceeded: true,
-                    history: {
-                        push,
-                    },
                 },
                 rerender,
             );
 
             fireEvent.click(getByTestId('cancel-dialog-box'));
-            expect(push).toHaveBeenCalledWith('/journal/view/12');
+            expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/12');
         });
 
         it('should render error', () => {
@@ -384,19 +368,12 @@ describe('JournalAdminInterface component', () => {
             toggleTabbed,
         }));
 
-        const setTab = jest.fn();
-        const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(() => ['admin', setTab]);
-
-        const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementation(f => f);
-
         const map = {};
         window.addEventListener = jest.fn((event, cb) => {
             map[event] = cb;
         });
 
-        const createWrapper = () => {
+        const createWrapper = () =>
             setup({
                 tabs: {
                     admin: {
@@ -409,7 +386,6 @@ describe('JournalAdminInterface component', () => {
                     },
                 },
             });
-        };
 
         createWrapper();
         expect(toggleTabbed).toHaveBeenCalledTimes(0);
@@ -422,21 +398,23 @@ describe('JournalAdminInterface component', () => {
             toggleTabbed,
         }));
 
-        createWrapper();
+        const { getByRole } = createWrapper();
         map.keydown({ key: 'ArrowDown', ctrlKey: true });
         expect(toggleTabbed).toHaveBeenCalledTimes(1);
 
-        map.keydown({ key: 'ArrowRight', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('bibliographic');
-        setTab.mockClear();
+        act(() => {
+            map.keydown({ key: 'ArrowRight', ctrlKey: true });
+        });
+        expect(getByRole('tab', { name: 'Admin' })).toHaveAttribute('aria-selected', 'false');
+        expect(getByRole('tab', { name: 'Bibliographic' })).toHaveAttribute('aria-selected', 'true');
 
-        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
-        createWrapper();
+        // createWrapper();
 
-        map.keydown({ key: 'ArrowLeft', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('admin');
-
-        mockUseState.mockRestore();
+        act(() => {
+            map.keydown({ key: 'ArrowLeft', ctrlKey: true });
+        });
+        expect(getByRole('tab', { name: 'Admin' })).toHaveAttribute('aria-selected', 'true');
+        expect(getByRole('tab', { name: 'Bibliographic' })).toHaveAttribute('aria-selected', 'false');
     });
 
     it('should render a title with html correctly', () => {
@@ -464,13 +442,9 @@ describe('JournalAdminInterface component', () => {
         expect(document.querySelector('h2 sup')).toHaveTextContent('a');
     });
     it('should navigate to journal search page when choosing "Edit another record"', () => {
-        const pushFn = jest.fn();
         const authorDetails = {};
-        const history = {
-            push: pushFn,
-        };
-        navigateToSearchResult(authorDetails, history);
-        expect(pushFn).toHaveBeenCalledWith('/journals/search/');
+        navigateToSearchResult(authorDetails, mockUseNavigate);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/journals/search/');
     });
 
     describe('coverage', () => {

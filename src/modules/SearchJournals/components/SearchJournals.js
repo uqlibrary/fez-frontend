@@ -27,7 +27,7 @@ export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
 
 let lastRequest;
 export const SearchJournals = () => {
-    const navigateType = useNavigationType();
+    const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
@@ -106,7 +106,7 @@ export const SearchJournals = () => {
      */
     React.useEffect(() => {
         // in case it's not a browser back/forward button click
-        if (navigateType !== 'POP') {
+        if (navigationType !== 'POP') {
             return;
         }
 

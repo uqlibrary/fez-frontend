@@ -25,7 +25,6 @@ import * as recordForms from './Forms';
 import { publicationTypes, validation } from 'config';
 import { default as txt } from 'locale/publicationForm';
 import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS } from 'config/general';
-import { withNavigate } from 'helpers/withNavigate';
 
 export class PublicationForm extends Component {
     static propTypes = {
@@ -45,7 +44,6 @@ export class PublicationForm extends Component {
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
         initialValues: PropTypes.object,
-        navigate: PropTypes.func,
     };
 
     constructor(props) {
@@ -264,4 +262,4 @@ export class PublicationForm extends Component {
     }
 }
 
-export default withNavigate()(PublicationForm);
+export default PublicationForm;

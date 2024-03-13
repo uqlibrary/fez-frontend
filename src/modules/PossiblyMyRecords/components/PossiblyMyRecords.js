@@ -36,6 +36,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         navigate: PropTypes.func.isRequired,
+        navigationType: PropTypes.string,
         actions: PropTypes.object,
 
         hidePublicationFailed: PropTypes.bool,
@@ -69,7 +70,7 @@ export default class PossiblyMyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             state.prevProps?.location !== props.location &&
-            // props.history?.action === 'POP' &&
+            props.navigationType === 'POP' &&
             props.location.pathname === pathConfig.records.possible
         ) {
             props.actions.searchPossiblyYourPublications({ ...state });

@@ -51,4 +51,4 @@ NavigationPrompt.propTypes = {
     children: PropTypes.func.isRequired,
 };
 
-export default NavigationPrompt;
+export default React.memo(NavigationPrompt);

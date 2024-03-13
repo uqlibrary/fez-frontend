@@ -38,17 +38,12 @@ function setup(testProps = {}, renderer = rtlRender) {
         authorDetails: {
             username: 'uqstaff',
         },
-        match: {
-            params: {
-                pid: 'UQ:111111',
-            },
+        params: {
+            pid: 'UQ:111111',
         },
         loadRecordToView: jest.fn(),
         loadingRecordToView: false,
         recordToView: recordWithDatastreams,
-        location: {
-            search: '',
-        },
         handleSubmit: jest.fn(),
         clearRecordToView: jest.fn(),
         formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
@@ -128,10 +123,8 @@ describe('AdminContainer component', () => {
                 ...recordWithDatastreams,
                 rek_object_type_lookup: null,
             },
-            match: {
-                params: {
-                    pid: 'UQ:123456',
-                },
+            params: {
+                pid: 'UQ:123456',
             },
         });
         expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toBeNull();

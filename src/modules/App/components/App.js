@@ -85,10 +85,10 @@ const AppClass = ({
     actions,
     incompleteRecordList,
 }) => {
-    let sessionExpiredConfirmationBox = null;
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [sessionExpiredConfirmationBox, setSessionExpiredConfirmationBox] = useState(null);
     const [menuDrawerOpen, setMenuDrawerOpen] = useState(false);
     const [docked, setDocked] = useState(false);
     const [mediaQuery, setMediaQuery] = useState(window.matchMedia('(min-width: 1280px)'));
@@ -158,7 +158,7 @@ const AppClass = ({
     };
 
     const setSessionExpiredConfirmation = ref => {
-        sessionExpiredConfirmationBox = ref;
+        setSessionExpiredConfirmationBox(ref);
     };
 
     if (accountLoading) {

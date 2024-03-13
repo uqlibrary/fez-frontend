@@ -24,7 +24,9 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
     const isInit = React.useRef(true);
 
     const throttledLoadSuggestions = React.useRef(
-        throttle(2000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
+        throttle(2000, newValue => {
+            dispatch(loadJournalSearchKeywords(newValue));
+        }),
     );
     /**
      * Journal search input handler

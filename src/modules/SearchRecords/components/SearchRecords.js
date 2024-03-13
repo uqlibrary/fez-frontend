@@ -22,7 +22,8 @@ import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/genera
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { pathConfig } from 'config/pathConfig';
 
 /*
 a method to ensure we only use the view type strings as
@@ -46,8 +47,6 @@ const SearchRecords = ({
     canUseExport,
     exportPublicationsLoading,
     isAdvancedSearch,
-    isUnpublishedBufferPage,
-    location,
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
@@ -59,6 +58,8 @@ const SearchRecords = ({
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
     const navigate = useNavigate();
+    const location = useLocation();
+    const isUnpublishedBufferPage = location.pathname === pathConfig.admin.unpublished;
 
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
@@ -117,7 +118,7 @@ const SearchRecords = ({
      * Effect to handle initial render
      */
     React.useEffect(() => {
-        actions.searchEspacePublications(queryParams);
+        // actions.searchEspacePublications(queryParams);
         return actions.clearSearchQuery();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -361,8 +362,6 @@ SearchRecords.propTypes = {
     canUseExport: PropTypes.bool,
     exportPublicationsLoading: PropTypes.bool,
     isAdvancedSearch: PropTypes.bool,
-    isUnpublishedBufferPage: PropTypes.bool,
-    location: PropTypes.object.isRequired,
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,

@@ -45,7 +45,16 @@ const StyledSkipNav = styled('div')(() => ({
     },
 }));
 
-const MenuDrawer = ({ menuItems, logoImage, logoText, logoLink, drawerOpen, docked, onToggleDrawer, locale }) => {
+export const MenuDrawer = ({
+    menuItems,
+    logoImage,
+    logoText,
+    logoLink,
+    drawerOpen,
+    docked,
+    onToggleDrawer,
+    locale,
+}) => {
     const navigate = useNavigate();
     const focusOnElementId = elementId => {
         /* istanbul ignore else */

@@ -1,14 +1,23 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, waitForElementToBeRemoved, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 import * as JournalActions from 'actions/journals';
 
 import MasterJournalListIngest from './MasterJournalListIngest';
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}) {
     return render(
         <WithReduxStore>
-            <MasterJournalListIngest {...testProps} />
+            <WithRouter>
+                <MasterJournalListIngest {...testProps} />
+            </WithRouter>
         </WithReduxStore>,
     );
 }
@@ -21,6 +30,7 @@ describe('MasterJournalListIngest Component', () => {
 
     afterEach(() => {
         mockApi.reset();
+        mockUseNavigate.mockClear();
     });
 
     it('should successfully submit form and display success message', async () => {
@@ -39,9 +49,7 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        act(() => {
-            fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
-        });
+        fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
 
         expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
         await waitFor(() => getByTestId('alert-done-mjl-ingest'));
@@ -61,20 +69,15 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        act(() => {
-            fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
-        });
+        fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
 
         expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
         await waitFor(() => getByTestId('alert-error-mjl-ingest'));
     });
 
     it('should redirect to index page on cancel', () => {
-        const testFn = jest.fn();
-        const { getByTestId } = setup({ history: { push: testFn } });
-        act(() => {
-            fireEvent.click(getByTestId('master-journal-list-ingest-cancel'));
-        });
-        expect(testFn).toHaveBeenCalledWith('/');
+        const { getByTestId } = setup();
+        fireEvent.click(getByTestId('master-journal-list-ingest-cancel'));
+        expect(mockUseNavigate).toHaveBeenCalledWith('/');
     });
 });
