@@ -30,7 +30,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     const state = useContext(ControlledVocabulariesStateContext);
     const { loadingChildVocab, childData } = useSelector(state => state.get('viewChildVocabReducer'));
 
-    const [perPage, setPerPage] = React.useState(2);
+    const [perPage, setPerPage] = React.useState(10);
     const [currentPage, setCurrentPage] = React.useState(0);
 
     React.useEffect(() => {
@@ -188,7 +188,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                             page={currentPage}
                                             rowsPerPage={perPage}
                                             rowsPerPageOptions={[
-                                                2,
                                                 10,
                                                 20,
                                                 50,

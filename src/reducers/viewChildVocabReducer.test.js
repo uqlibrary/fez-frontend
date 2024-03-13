@@ -1,10 +1,4 @@
-import {
-    VIEW_CHILD_VOCAB_LOADING,
-    VIEW_CHILD_VOCAB_LOADED,
-    VIEW_CHILD_VOCAB_LOAD_FAILED,
-    VOCAB_SET_CURRENT_PAGE,
-    VOCAB_SET_PER_PAGE,
-} from 'actions/actionTypes';
+import { VIEW_CHILD_VOCAB_LOADING, VIEW_CHILD_VOCAB_LOADED, VIEW_CHILD_VOCAB_LOAD_FAILED } from 'actions/actionTypes';
 
 import viewChildVocabReducer, { findCurrentChild } from './viewChildVocabReducer';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
@@ -25,8 +19,6 @@ describe('viewChildVocab reducer', () => {
             ...previousState,
             loadingChildVocab: { 453669: true },
             childData: { 453669: { data: [], path: [] } },
-            currentPage: 0,
-            perPage: 10,
         };
         const test = viewChildVocabReducer(previousState, {
             type: VIEW_CHILD_VOCAB_LOADING,
@@ -93,34 +85,6 @@ describe('viewChildVocab reducer', () => {
             },
             rootId: 451799,
             parentId: 451799,
-        });
-        expect(test).toEqual(expected);
-    });
-    it('sets child controlled vocabulary current page', () => {
-        const previousState = {
-            ...initialState,
-        };
-        const expected = {
-            ...previousState,
-            currentPage: 1,
-        };
-        const test = viewChildVocabReducer(previousState, {
-            type: VOCAB_SET_CURRENT_PAGE,
-            payload: 1,
-        });
-        expect(test).toEqual(expected);
-    });
-    it('sets child controlled vocabulary rows per page', () => {
-        const previousState = {
-            ...initialState,
-        };
-        const expected = {
-            ...previousState,
-            perPage: -1,
-        };
-        const test = viewChildVocabReducer(previousState, {
-            type: VOCAB_SET_PER_PAGE,
-            payload: -1,
         });
         expect(test).toEqual(expected);
     });
