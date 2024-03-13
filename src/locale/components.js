@@ -3834,6 +3834,7 @@ export default {
             },
         },
         controlledVocabulary: {
+            searchPlaceHolder: 'Search',
             paging: {
                 allButton: 'All',
             },

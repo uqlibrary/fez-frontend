@@ -9,6 +9,9 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import SearchIcon from '@mui/icons-material/Search';
 
 import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import * as actions from 'actions/viewControlledVocab';
@@ -103,7 +106,7 @@ const ControlledVocabularies = () => {
                 )}
                 {!!!loadingVocabError && (
                     <Box marginBlockStart={2}>
-                        <Box sx={{ overflow: 'auto', marginBottom: '10px' }}>
+                        <Box sx={{ overflow: 'auto', marginBottom: '10px' }} display="flex" justifyContent="start">
                             <StyledAddButtonWrapper data-testid="admin-add-vocabulary">
                                 <Button
                                     data-testid="admin-add-vocabulary-button"
@@ -112,10 +115,23 @@ const ControlledVocabularies = () => {
                                     color={'primary'}
                                     onClick={() => onAdminAddActionClick()}
                                     disabled={state.isOpen}
+                                    sx={{ marginRight: '10px' }}
                                 >
                                     {txt.admin.addButtonLabel}
                                 </Button>
                             </StyledAddButtonWrapper>
+                            <TextField
+                                id="vocab-search"
+                                placeholder={txt.searchPlaceHolder}
+                                size="small"
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <SearchIcon />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
                         </Box>
                         <Box id={'portal-root'} data-testid={'portal-root'} />
                         <StandardCard noHeader>
