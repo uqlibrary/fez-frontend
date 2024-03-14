@@ -201,6 +201,52 @@ describe('ControlledVocabularies', () => {
                 await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
+            it('should close the opened dialog when page changes', async () => {
+                const { getByTestId, getByRole, getByText } = setup();
+                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+
+                await userEvent.click(getByTestId('expand-row-453669'));
+                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+
+                await userEvent.click(getByTestId('admin-edit-button-453670'));
+
+                expect(
+                    within(getByTestId('portal-edit-453670')).getByTestId('update_dialog-controlledVocabulary'),
+                ).toBeInTheDocument();
+
+                expect(getByTestId('admin-edit-button-453671')).toBeDisabled();
+                await userEvent.click(
+                    getByRole('button', {
+                        name: 'Go to next page',
+                    }),
+                );
+                expect(getByText('11–20 of 165')).toBeInTheDocument();
+                expect(getByTestId('admin-edit-button-453680')).toBeEnabled();
+            });
+            it('should close the opened dialog when rows-per-page changes', async () => {
+                const { getByTestId, getByRole, getByText } = setup();
+                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+
+                await userEvent.click(getByTestId('expand-row-453669'));
+                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+
+                await userEvent.click(getByTestId('admin-edit-button-453670'));
+
+                expect(
+                    within(getByTestId('portal-edit-453670')).getByTestId('update_dialog-controlledVocabulary'),
+                ).toBeInTheDocument();
+
+                expect(getByTestId('admin-edit-button-453671')).toBeDisabled();
+                const rowsPerPageButton = getByRole('combobox');
+                await userEvent.click(rowsPerPageButton);
+                await userEvent.click(
+                    getByRole('option', {
+                        name: /20/,
+                    }),
+                );
+                expect(getByText('1–20 of 165')).toBeInTheDocument();
+                expect(getByTestId('admin-edit-button-453671')).toBeEnabled();
+            });
         });
     });
 
