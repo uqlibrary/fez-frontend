@@ -72,7 +72,6 @@ const SearchRecords = ({
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
-    // const [searchFields, setSearchFields] = useState([]);
 
     React.useEffect(() => {
         /* istanbul ignore next */
