@@ -84,6 +84,9 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
         end = calculateEnd(start, perPage, total, currentPage);
     };
     const handlePerPageChange = event => {
+        if (state.isOpen && state.rootVocabId === parentRow.cvo_id) {
+            onHandleDialogClickClose();
+        }
         const newPerPage = parseInt(event.target.value, 10);
         setPerPage(newPerPage);
         setCurrentPage(0);
