@@ -20,6 +20,7 @@ import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 import Breadcrumbs from './Breadcrumbs';
+import { calculateEnd } from './components/utils';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
@@ -71,9 +72,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
 
     const vocabList = childData[parentRow.cvo_id]?.data || [];
     const total = vocabList.length;
-
-    const calculateEnd = (start, perPage, total, currentPage) =>
-        start + Math.min(perPage, total - perPage * currentPage);
 
     let start = currentPage * perPage;
     let end = calculateEnd(start, perPage, total, currentPage);

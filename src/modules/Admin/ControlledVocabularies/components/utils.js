@@ -35,3 +35,16 @@ export const transformAdminRequest = ({ request, parentId, action }) => {
 
     return data;
 };
+
+/**
+ * Find the end index of the pagination
+ *
+ * @param {integer} start the start record index of the page (the first is 1)
+ * @param {integer} perPage the maximum number of records per page
+ * @param {integer} total the total records
+ * @param {integer} currentPage the current page, the first page is 0
+ *
+ * @returns {integer} the end index (the first is 1)
+ */
+export const calculateEnd = (start, perPage, total, currentPage) =>
+    start + Math.min(perPage, total - perPage * currentPage);
