@@ -20,7 +20,7 @@ import { controlledVocabConfig } from 'config/controlledVocabConfig';
 import { ControlledVocabulariesActionContext } from '../ControlledVocabularyContext';
 import { ControlledVocabulariesStateContext } from '../ControlledVocabularyContext';
 import Breadcrumbs from './Breadcrumbs';
-import { calculateEnd } from './components/utils';
+import { calculateEnd } from './utils';
 
 const txt = locale.components.controlledVocabulary;
 const labels = txt.columns.labels;
