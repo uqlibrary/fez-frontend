@@ -12,6 +12,7 @@ export default class LookupForm extends Component {
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
         itemSelectedToEdit: PropTypes.object,
+        useCachedData: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -52,6 +53,7 @@ export default class LookupForm extends Component {
                         errorText={this.props.errorText}
                         category={this.props.category}
                         required={this.props.required}
+                        {...(!!this.props.useCachedData ? { useCachedData: this.props.useCachedData } : {})}
                     />
                 )}
             </React.Fragment>

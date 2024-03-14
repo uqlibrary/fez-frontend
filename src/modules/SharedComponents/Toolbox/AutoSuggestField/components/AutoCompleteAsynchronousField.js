@@ -29,13 +29,15 @@ export const AutoCompleteAsynchronousField = ({
     prefilledSearch,
     required,
     supplemental,
+    useCachedData = false,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [value, setValue] = useState(defaultValue || null);
     const active = useRef(true);
-
+    const shouldUseCachedData = useRef();
+    shouldUseCachedData.current = useCachedData && options.length > 0;
     const loading = itemsLoading;
     const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));
 
@@ -70,17 +72,21 @@ export const AutoCompleteAsynchronousField = ({
     );
 
     useEffect(() => {
-        if (inputValue && throttledLoadSuggestions) {
+        if (shouldUseCachedData.current) console.log('USING CACHED DATA');
+        if (!shouldUseCachedData.current && inputValue && throttledLoadSuggestions) {
+            console.log('CALLING API', shouldUseCachedData.current, inputValue);
             throttledLoadSuggestions.current(inputValue);
         }
-    }, [inputValue]);
+    }, [inputValue, shouldUseCachedData]);
 
     useEffect(() => {
+        console.log('setOptions effect,', shouldUseCachedData.current, loading, itemsList);
         active.current = !loading && itemsList.length > 0;
 
         !!active.current && setOptions(itemsList);
 
         return () => {
+            console.log('unmount');
             active.current = false;
         };
     }, [itemsList, loading]);
@@ -208,6 +214,7 @@ AutoCompleteAsynchronousField.propTypes = {
     placeholder: PropTypes.string,
     prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
+    useCachedData: PropTypes.bool,
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
 
