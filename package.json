@@ -160,6 +160,7 @@
         "react-dom": "^18.2.0",
         "react-dropzone": "^14.2.3",
         "react-helmet-async": "^1.2.3",
+        "react-hook-form": "^7.51.0",
         "react-image": "^4.1.0",
         "react-jss": "^8.6.1",
         "react-lazy-load-image-component": "^1.5.4",
