@@ -1,6 +1,6 @@
 // import the function to be tested
 import { ACTION } from '../ControlledVocabularyContext';
-import { transformAdminRequest } from './utils';
+import { transformAdminRequest, calculateEnd } from './utils';
 
 // define some mock data for testing
 const mockRequest = {
@@ -66,5 +66,14 @@ describe('transformAdminRequest', () => {
         const request = { ...mockRequest, cvo_order: '' };
         const transformedRequest = transformAdminRequest({ request });
         expect(transformedRequest).toHaveProperty('cvo_order', null);
+    });
+});
+
+describe('calculateEnd', () => {
+    test('Should return perPage when records are bigger than that the page can show', () => {
+        expect(calculateEnd(0, 10, 15, 0)).toEqual(10);
+    });
+    test('Should return remaing records when remaining records are smaller than that the page can show', () => {
+        expect(calculateEnd(0, 10, 15, 1)).toEqual(5);
     });
 });
