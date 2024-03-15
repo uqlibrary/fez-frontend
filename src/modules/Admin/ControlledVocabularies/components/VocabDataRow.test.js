@@ -19,6 +19,7 @@ const vocabDataRow = mockData.vocabList.data[0];
 const setup = (testProps = {}, state = {}) => {
     const actionContext = {
         onAdminEditActionClick: jest.fn(),
+        onHandleDialogClickClose: jest.fn(),
         ...testProps.actionContext,
     };
     const stateContext = {

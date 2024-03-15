@@ -53,9 +53,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
 
     // Event handler for button clicks
     const handleBreadcrumbClick = ({ id }) => {
-        if (state.isOpen && state.rootVocabId === parentRow.cvo_id) {
-            onHandleDialogClickClose();
-        }
         dispatch(
             actions.loadChildVocabList({
                 pid: id,
@@ -76,23 +73,22 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
     let start = currentPage * perPage;
     let end = calculateEnd(start, perPage, total, currentPage);
     const handlePageChange = (event, value) => {
-        if (state.isOpen && state.rootVocabId === parentRow.cvo_id) {
-            onHandleDialogClickClose();
-        }
         setCurrentPage(value);
         start = value * perPage;
         end = calculateEnd(start, perPage, total, currentPage);
     };
     const handlePerPageChange = event => {
-        if (state.isOpen && state.rootVocabId === parentRow.cvo_id) {
-            onHandleDialogClickClose();
-        }
         const newPerPage = parseInt(event.target.value, 10);
         setPerPage(newPerPage);
         setCurrentPage(0);
         start = 0;
         end = calculateEnd(start, newPerPage, total, currentPage);
     };
+
+    React.useEffect(() => {
+        onHandleDialogClickClose();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [perPage, currentPage, breadCrumbElements]);
 
     return (
         <Box
@@ -179,7 +175,6 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                     parentId={row.cvr_parent_cvo_id}
                                     rootId={parentRow.cvo_id}
                                     locked={locked}
-                                    setCurrentPage={setCurrentPage}
                                     handlePageChange={handlePageChange}
                                 />
                             ))}
