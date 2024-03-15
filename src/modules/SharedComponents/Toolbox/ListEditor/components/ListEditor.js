@@ -37,7 +37,6 @@ export default class ListEditor extends Component {
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
         listEditorId: PropTypes.string.isRequired,
-        useCachedData: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -299,7 +298,6 @@ export default class ListEditor extends Component {
                     )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                     listEditorId={this.props.listEditorId}
-                    {...(!!this.props.useCachedData ? { useCachedData: this.props.useCachedData } : {})}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader

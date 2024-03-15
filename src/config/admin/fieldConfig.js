@@ -707,7 +707,6 @@ export default {
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
                 canEdit: true,
                 listEditorId: 'rek-subjects',
-                useCachedData: true,
             },
         },
         fez_record_search_key_refereed_source: {
