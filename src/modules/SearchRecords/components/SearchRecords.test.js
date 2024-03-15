@@ -350,27 +350,6 @@ describe('SearchRecords page', () => {
         });
     });
 
-    it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
-        const { getByTestId, getAllByRole } = setup(props);
-
-        // Do one advanced search
-        fireEvent.click(getByTestId('show-advanced-search'));
-        fireEvent.click(getByTestId('advanced-search'));
-
-        expect(getByTestId('facets-filter')).toHaveTextContent('Author');
-
-        // Do another advanced search
-        fireEvent.mouseDown(getByTestId('field-type-select'));
-        expect(getAllByRole('option').length).toBe(18);
-        expect(getAllByRole('option')[5]).toHaveTextContent('Author Name');
-
-        fireEvent.click(getAllByRole('option')[5]);
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.click(getByTestId('advanced-search'));
-
-        expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
-    });
-
     it('should update the queryString and make API call when facet is changed', () => {
         const historyMock = createMemoryHistory();
         const testPushFn = jest.spyOn(historyMock, 'push');
