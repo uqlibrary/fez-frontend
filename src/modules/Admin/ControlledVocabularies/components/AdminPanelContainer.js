@@ -35,7 +35,7 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: (state && state.get('vocabAdminReducer') && state.get('vocabAdminReducer').vocab) || {},
+        initialValues: state?.get('vocabAdminReducer')?.vocab || {},
     };
 };
 
