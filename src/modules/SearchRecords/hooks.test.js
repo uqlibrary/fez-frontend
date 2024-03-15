@@ -1,4 +1,4 @@
-import { getAdvancedSearchFields, parseSearchQueryStringFromUrl } from './hooks';
+import { parseSearchQueryStringFromUrl } from './hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 
 describe('parseSearchQueryStringFromUrl helper', () => {
@@ -181,23 +181,5 @@ describe('parseSearchQueryStringFromUrl helper', () => {
             sortBy: 'score',
             sortDirection: 'Desc',
         });
-    });
-});
-
-describe('getAdvancedSearchFields helper', () => {
-    it('should add specified search field names to the returned list', () => {
-        const input = [
-            {
-                searchField: 'rek_title',
-                value: 'test title',
-            },
-            {
-                searchField: 'all',
-                value: 'test',
-            },
-            {},
-        ];
-        const expected = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title'];
-        expect(getAdvancedSearchFields(input)).toStrictEqual(expected);
     });
 });
