@@ -180,6 +180,7 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                     rootId={parentRow.cvo_id}
                                     locked={locked}
                                     setCurrentPage={setCurrentPage}
+                                    handlePageChange={handlePageChange}
                                 />
                             ))}
                             <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
