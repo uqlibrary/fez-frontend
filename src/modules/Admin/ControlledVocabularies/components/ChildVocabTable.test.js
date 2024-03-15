@@ -20,6 +20,7 @@ const parentRow = mockData.vocabList.data[0];
 const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
     const actionContext = {
         onAdminEditActionClick: jest.fn(),
+        onHandleDialogClickClose: jest.fn(),
         ...testProps.actionContext,
     };
     const stateContext = {
