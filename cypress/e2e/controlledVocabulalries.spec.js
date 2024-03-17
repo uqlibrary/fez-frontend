@@ -133,7 +133,7 @@ context('Controlled vocabularies', () => {
             it('should close the admin panel and re-enable admin functionality when clicking breadcrumbs with the admin panel visible', () => {
                 // expand
                 cy.get('[data-testid=expand-row-453669]').click();
-                cy.get('[data-testid=child-row-title-453670]').click();
+                cy.get('[data-testid=child-row-title-link-453670]').click();
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
                 cy.get('[data-testid=update_dialog-controlledVocabulary]').should('exist');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
