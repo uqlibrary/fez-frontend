@@ -59,25 +59,6 @@ export const parseSearchQueryStringFromUrl = (queryString, canBulkExport = false
 };
 
 /**
- * @param searchFields
- * @return {string[]}
- */
-export const getAdvancedSearchFields = searchFields => {
-    const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
-    // Iterate the searchfields and add their map from locale into the excluded facets array
-    const importedFacetExcludes = [];
-    searchFields.map(searchFieldItem => {
-        if (searchFieldItem.searchField) {
-            const fieldType = locale.components.searchComponent.advancedSearch.fieldTypes[searchFieldItem.searchField];
-            if (fieldType.map) {
-                importedFacetExcludes.push(fieldType.map);
-            }
-        }
-    });
-    return excludesFromLocale.concat(importedFacetExcludes);
-};
-
-/**
  * @param showOpenAccessOnly
  * @return Object
  */

@@ -22,7 +22,6 @@ export class SearchComponent extends PureComponent {
     static propTypes = {
         searchQueryParams: PropTypes.object,
         activeFacets: PropTypes.any,
-        updateFacetExcludesFromSearchFields: PropTypes.func,
         searchLoading: PropTypes.bool,
 
         isMobile: PropTypes.bool,
@@ -56,7 +55,6 @@ export class SearchComponent extends PureComponent {
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
-        updateFacetExcludesFromSearchFields: () => {},
     };
 
     constructor(props) {
@@ -145,7 +143,6 @@ export class SearchComponent extends PureComponent {
                 },
             };
         }
-        !!props.isAdvancedSearch && props.updateFacetExcludesFromSearchFields(state.advancedSearch.fieldRows);
 
         return { ...newState, prevProps: { ...props } };
     }
