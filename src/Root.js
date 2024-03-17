@@ -1,5 +1,6 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { RouterProvider, Outlet } from 'react-router-dom';
+import { createRouter } from 'config/router';
 
 // MUI
 import { mui1theme } from 'config';
@@ -9,7 +10,7 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { App } from 'modules/App';
 import { ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToTop';
 
-const router = createBrowserRouter([
+const router = createRouter([
     {
         path: '*',
         element: (

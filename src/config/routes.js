@@ -95,12 +95,10 @@ export const getRoutesConfig = ({
             element: <components.StandardPage {...locale.pages.about} />,
         },
         {
-            // path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
             path: pathConfig.records.view(':pid'),
             element: <components.NewViewRecord />,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            // regExPath: pathConfig.records.view(`(${pidRegExp}|${notFound})`),
         },
         {
             path: pathConfig.records.search,
@@ -251,7 +249,6 @@ export const getRoutesConfig = ({
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.fixRecord.title,
-                      // regExPath: pathConfig.records.fix(`(${pidRegExp})`),
                   },
                   {
                       path: pathConfig.records.add.find,
