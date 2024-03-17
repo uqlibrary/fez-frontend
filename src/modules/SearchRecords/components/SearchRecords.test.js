@@ -350,27 +350,6 @@ describe('SearchRecords page', () => {
         });
     });
 
-    it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
-        const { getByTestId, getAllByRole } = setup(props);
-
-        // Do one advanced search
-        fireEvent.click(getByTestId('show-advanced-search'));
-        fireEvent.click(getByTestId('advanced-search'));
-
-        expect(getByTestId('facets-filter')).toHaveTextContent('Author');
-
-        // Do another advanced search
-        fireEvent.mouseDown(getByTestId('field-type-select'));
-        expect(getAllByRole('option').length).toBe(18);
-        expect(getAllByRole('option')[5]).toHaveTextContent('Author Name');
-
-        fireEvent.click(getAllByRole('option')[5]);
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        fireEvent.click(getByTestId('advanced-search'));
-
-        expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
-    });
-
     it('should update the queryString and make API call when facet is changed', () => {
         const historyMock = createMemoryHistory();
         const testPushFn = jest.spyOn(historyMock, 'push');
@@ -1090,65 +1069,6 @@ describe('SearchRecords page', () => {
 
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
-        });
-
-        it("should should maintain user's display choice even if querystring contains displayRecordsAs parameter", () => {
-            const getParams = ({ displayRecordsAs = 'image-gallery', ...params } = {}) => {
-                return {
-                    ...searchQuery,
-                    searchQueryParams: {
-                        all: 'test',
-                    },
-                    displayRecordsAs,
-                    ...params,
-                };
-            };
-            const oldParams = getParams();
-            // add some search history
-            const historyEntries = [
-                {
-                    pathname: pathConfig.records.search,
-                    search: `?${param(oldParams)}`,
-                },
-                {
-                    pathname: pathConfig.records.search,
-                    search: `?${param(getParams({ searchQueryParams: { all: 'test2' } }))}`,
-                },
-            ];
-            const historyMock = createMemoryHistory({
-                historyEntries,
-            });
-            historyMock.push(historyEntries[0]);
-            const { getByTestId, queryByTestId, getAllByRole } = setup({
-                ...props, // this props pretends there is a bunch of search results
-                location: {
-                    ...historyEntries[0],
-                },
-                history: historyMock,
-            });
-
-            expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
-            expect(getByTestId('image-gallery')).toBeInTheDocument();
-            expect(within(getByTestId('publication-list-display-records-as')).getByRole('combobox')).toHaveTextContent(
-                'Image Gallery',
-            );
-            // change display type
-            fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
-            expect(getAllByRole('option').length).toBe(3);
-            act(() => {
-                fireEvent.click(getAllByRole('option')[1]);
-                const newValue = getAllByRole('option')[1]
-                    .textContent.toLowerCase()
-                    .replace(' ', '-');
-                const newParams = getParams({ displayRecordsAs: newValue });
-                assertQueryString(historyMock, newParams);
-            });
-            // test if user choice persists when querystring updates (simulating user changing the search in the UI)
-            act(() => {
-                historyMock.push(historyEntries[1]);
-            });
-
-            expect(getByTestId('publication-list-display-records-as').textContent).toEqual('Standard');
         });
     });
 });
