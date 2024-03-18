@@ -86,6 +86,10 @@ context('Strategic Publishing - Favourite Journals', () => {
         cy.get('[data-testid="remove-from-favourites-button"]')
             .should('not.be.disabled')
             .click();
+        // theres a random wait before calling the API
+        cy.wait(200);
+        // API should refetch the favourite journal list after removal
+        cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]').should('not.be.checked');
         cy.get('[data-testid="return-to-search-results-button"]').click();
         // go back to search results
         cy.location().should(loc => {

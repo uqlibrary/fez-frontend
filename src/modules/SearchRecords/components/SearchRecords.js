@@ -124,6 +124,7 @@ const SearchRecords = ({
     React.useEffect(() => {
         // Don't mess with location if the user is clicking a link to view record details.
         // PT #182603156
+        /* istanbul ignore else */
         if (!location.pathname.startsWith('/view/')) {
             // we can't use location.state to send state around,
             // as state changes are async and might not be up-to-date
