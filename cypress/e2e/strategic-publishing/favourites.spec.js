@@ -1,7 +1,7 @@
 context('Strategic Publishing - Favourite Journals', () => {
     it('Should render', () => {
         cy.visit('/journals/favourites/');
-        cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]', { timeout: 1000 });
+        cy.get('#journal-list-data-col-1-checkbox-1').should('exist');
         cy.injectAxe();
         cy.checkA11y(
             'div.StandardPage',
