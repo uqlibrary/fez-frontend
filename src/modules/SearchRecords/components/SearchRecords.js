@@ -22,6 +22,8 @@ import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/genera
 import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { pathConfig } from 'config/pathConfig';
 
 /*
 a method to ensure we only use the view type strings as
@@ -44,10 +46,7 @@ const SearchRecords = ({
     actions,
     canUseExport,
     exportPublicationsLoading,
-    history,
     isAdvancedSearch,
-    isUnpublishedBufferPage,
-    location,
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
@@ -58,11 +57,14 @@ const SearchRecords = ({
 }) => {
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const isUnpublishedBufferPage = location.pathname === pathConfig.admin.unpublished;
 
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
-        history,
+        navigate,
         location,
         searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
         canBulkExport,
@@ -109,7 +111,7 @@ const SearchRecords = ({
      * Effect to handle initial render
      */
     React.useEffect(() => {
-        actions.searchEspacePublications(queryParams);
+        // actions.searchEspacePublications(queryParams);
         return actions.clearSearchQuery();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -120,24 +122,22 @@ const SearchRecords = ({
      * - it will dispatch a request to the API on changes
      */
     React.useEffect(() => {
-        return history.listen(location => {
-            // Don't mess with location if the user is clicking a link to view record details.
-            // PT #182603156
-            if (!location.pathname.startsWith('/view/')) {
-                // we can't use location.state to send state around,
-                // as state changes are async and might not be up-to-date
-                const queryParams = getQueryParams(
-                    location.search.substr(1),
-                    canBulkExport,
-                    isUnpublishedBufferPage,
-                    searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
-                );
-                setSearchParams({ ...queryParams });
-                actions.searchEspacePublications(queryParams);
-                actions.clearSearchQuery();
-                actions.resetExportPublicationsStatus();
-            }
-        });
+        // Don't mess with location if the user is clicking a link to view record details.
+        // PT #182603156
+        if (!location.pathname.startsWith('/view/')) {
+            // we can't use location.state to send state around,
+            // as state changes are async and might not be up-to-date
+            const queryParams = getQueryParams(
+                location.search.substr(1),
+                canBulkExport,
+                isUnpublishedBufferPage,
+                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
+            );
+            setSearchParams({ ...queryParams });
+            actions.searchEspacePublications(queryParams);
+            actions.clearSearchQuery();
+            actions.resetExportPublicationsStatus();
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
 
@@ -348,10 +348,7 @@ SearchRecords.propTypes = {
     actions: PropTypes.object,
     canUseExport: PropTypes.bool,
     exportPublicationsLoading: PropTypes.bool,
-    history: PropTypes.object.isRequired,
     isAdvancedSearch: PropTypes.bool,
-    isUnpublishedBufferPage: PropTypes.bool,
-    location: PropTypes.object.isRequired,
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,

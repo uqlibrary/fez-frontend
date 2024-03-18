@@ -29,6 +29,7 @@ import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
 import { useDispatch } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,
@@ -48,8 +49,8 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (authorDetails, history /* , location*/) => {
-    history.push(pathConfig.journals.search);
+export const navigateToSearchResult = (authorDetails, navigate /* , location*/) => {
+    navigate(pathConfig.journals.search);
     // const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
     // if (
     //     authorDetails &&
@@ -71,8 +72,6 @@ export const JournalAdminInterface = ({
     submitSucceeded,
     dirty,
     disableSubmit,
-    history,
-    location,
     formErrors,
     locked,
     error,
@@ -80,6 +79,8 @@ export const JournalAdminInterface = ({
 }) => {
     const dispatch = useDispatch();
     const { journalDetails: journal } = useJournalContext();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const { tabbed, toggleTabbed } = useTabbedContext();
     const defaultTab = 'admin';
@@ -148,7 +149,7 @@ export const JournalAdminInterface = ({
 
     const handleCancel = event => {
         event.preventDefault();
-        const pushToHistory = () => history.push(pathConfig.journal.view(journal.jnl_jid));
+        const navigateTo = () => navigate(pathConfig.journal.view(journal.jnl_jid));
 
         const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
         if (
@@ -157,9 +158,9 @@ export const JournalAdminInterface = ({
                 /* istanbul ignore next */ authorDetails.is_super_administrator === 1) &&
             !!navigatedFrom
         ) {
-            history.push(decodeURIComponent(navigatedFrom));
+            navigate(decodeURIComponent(navigatedFrom));
         } else {
-            pushToHistory();
+            navigateTo();
         }
     };
 
@@ -172,7 +173,7 @@ export const JournalAdminInterface = ({
     }
 
     const navigateToViewJournal = id => {
-        history.push(pathConfig.journal.view(id));
+        navigate(pathConfig.journal.view(id));
     };
 
     const renderTabContainer = tab => (
@@ -253,7 +254,7 @@ export const JournalAdminInterface = ({
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={() => navigateToSearchResult(authorDetails, history, location)}
+                        onAction={() => navigateToSearchResult(authorDetails, navigate, location)}
                         locale={saveConfirmationLocale}
                         onCancelAction={() => navigateToViewJournal(journal.jnl_jid)}
                     />
@@ -332,8 +333,6 @@ JournalAdminInterface.propTypes = {
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
-    location: PropTypes.object,
     locked: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,

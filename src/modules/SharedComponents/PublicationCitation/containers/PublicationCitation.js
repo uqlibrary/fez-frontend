@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import PublicationCitation from '../components/PublicationCitation';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
 const mapStateToProps = state => {
@@ -15,6 +14,5 @@ const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-let PublicationCitationContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationCitation);
-PublicationCitationContainer = withRouter(PublicationCitationContainer);
+const PublicationCitationContainer = connect(mapStateToProps, mapDispatchToProps)(PublicationCitation);
 export default PublicationCitationContainer;

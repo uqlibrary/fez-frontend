@@ -2,7 +2,7 @@ import React from 'react';
 import JournalName from './JournalName';
 import { journalArticle } from 'mock/data/testing/records';
 import { sanitiseData } from 'actions/records';
-import { renderWithRouter } from 'test-utils';
+import { render, WithRouter } from 'test-utils';
 
 let testJournalArticle = sanitiseData(journalArticle);
 
@@ -12,7 +12,11 @@ function setup(testProps = {}) {
         publication: testProps.publication || testJournalArticle,
     };
 
-    return renderWithRouter(<JournalName {...props} />);
+    return render(
+        <WithRouter>
+            <JournalName {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Journal Name Component test ', () => {

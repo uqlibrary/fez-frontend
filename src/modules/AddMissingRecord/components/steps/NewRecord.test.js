@@ -6,8 +6,8 @@ import { NEW_RECORD_API } from 'repositories/routes';
 
 function setup(testProps = {}) {
     const props = {
-        history: {},
         actions: {},
+        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return render(
@@ -42,14 +42,14 @@ describe('Add new record', () => {
     it('should show confirmation box and navigate to the correct route on button clicks', async () => {
         const requestCreateNewRecord = jest.spyOn(RecordActions, 'createNewRecord');
         const clearNewRecordFn = jest.fn();
-        const pushFn = jest.fn();
+        const navigateFn = jest.fn();
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
         const { getByTestId, getByRole, getByText } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
             actions: { clearNewRecord: clearNewRecordFn },
-            history: { push: pushFn },
+            navigate: navigateFn,
         });
 
         // interact with the form
@@ -92,16 +92,16 @@ describe('Add new record', () => {
 
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));
         expect(clearNewRecordFn).toBeCalledTimes(1);
-        expect(pushFn).toHaveBeenNthCalledWith(1, '/records/mine');
+        expect(navigateFn).toHaveBeenNthCalledWith(1, '/records/mine');
 
         fireEvent.click(getByRole('button', { name: 'Add another missing work' }));
         expect(clearNewRecordFn).toBeCalledTimes(2);
-        expect(pushFn).toHaveBeenNthCalledWith(2, '/records/add/find');
+        expect(navigateFn).toHaveBeenNthCalledWith(2, '/records/add/find');
     });
 
     it('should show and navigate to fix record on button click and display file upload error', async () => {
         const clearNewRecordFn = jest.fn();
-        const pushFn = jest.fn();
+        const navigateFn = jest.fn();
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
@@ -109,7 +109,7 @@ describe('Add new record', () => {
             author: { aut_id: 44 }, // no display name
             account: { class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'] }, // hdr student
             actions: { clearNewRecord: clearNewRecordFn },
-            history: { push: pushFn },
+            navigate: navigateFn,
             newRecord: { rek_pid: 'UQ:1' },
             newRecordFileUploadingOrIssueError: true,
         });
@@ -134,14 +134,14 @@ describe('Add new record', () => {
 
         fireEvent.click(getByRole('button', { name: 'Fix work' }));
         expect(clearNewRecordFn).toBeCalledTimes(1);
-        expect(pushFn).toBeCalledWith('/records/UQ:1/fix');
+        expect(navigateFn).toBeCalledWith('/records/UQ:1/fix');
     });
 
     it('should restart workflow', async () => {
         const navigateToSearch = jest.fn();
         const { getByRole } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
-            history: { push: navigateToSearch },
+            navigate: navigateToSearch,
             actions: { clearNewRecord: jest.fn() },
         });
 

@@ -107,12 +107,12 @@ export class DashboardResearcherIdsClass extends React.Component {
             google_scholar: PropTypes.bool,
             orcid: PropTypes.bool,
         }),
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
     };
 
     navigateToRoute = (event, item) => {
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
-        this.props.history.push(link.notLinkedUrl[item]);
+        this.props.navigate(link.notLinkedUrl[item]);
     };
 
     render() {

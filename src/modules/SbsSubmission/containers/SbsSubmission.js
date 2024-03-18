@@ -6,7 +6,6 @@ import SbsSubmission from '../components/SbsSubmission';
 import { submitThesis, checkSession, clearSessionExpiredFlag } from 'actions';
 import { general } from 'config';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 import moment from 'moment';
 
@@ -78,8 +77,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 SbsSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(SbsSubmissionContainer);
-
-SbsSubmissionContainer = withRouter(SbsSubmissionContainer);
 
 const SbsSubmissionContainerWithReducer = () => (
     <ReloadReducerFromLocalStorage>

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
 import Masquerade from '../components/Masquerade';
@@ -17,7 +16,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let MasqueradeContainer = connect(mapStateToProps, mapDispatchToProps)(Masquerade);
-MasqueradeContainer = withRouter(MasqueradeContainer);
+const MasqueradeContainer = connect(mapStateToProps, mapDispatchToProps)(Masquerade);
 
 export default MasqueradeContainer;

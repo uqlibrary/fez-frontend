@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 import ImageGallery, { getItemUrl, getItemsPerRow } from './ImageGallery';
 import { collectionSearchResultsImages } from 'mock/data';
@@ -9,7 +9,11 @@ const setup = (props = {}, render = rtlRender) => {
         publicationsList: [],
         ...props,
     };
-    return render(<ImageGallery {...testProps} />);
+    return render(
+        <WithRouter>
+            <ImageGallery {...testProps} />
+        </WithRouter>,
+    );
 };
 
 describe('Image Gallery', () => {

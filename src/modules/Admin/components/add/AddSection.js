@@ -15,6 +15,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { pathConfig } from 'config';
+import { useNavigate } from 'react-router-dom';
 
 export const AddSection = ({
     hasDefaultDocTypeSubType,
@@ -25,8 +26,8 @@ export const AddSection = ({
     disabled = false,
     onCreate,
     disableSubmit,
-    history,
 }) => {
+    const navigate = useNavigate();
     const allPublicationTypes = Object.values(publicationTypes());
     const availablePublicationTypes = allPublicationTypes.filter(
         pubType => !DOCUMENT_TYPES_EDIT_ONLY.includes(pubType.id),
@@ -43,7 +44,7 @@ export const AddSection = ({
     /* istanbul ignore next */
     const handleCancel = event => {
         event.preventDefault();
-        history.push(pathConfig.index);
+        navigate(pathConfig.index);
     };
     return (
         <form>
@@ -150,7 +151,6 @@ AddSection.propTypes = {
     publicationSubtype: PropTypes.string,
     hasSubtypes: PropTypes.bool,
     formValues: PropTypes.any,
-    history: PropTypes.object,
     actions: PropTypes.object,
     onCreate: PropTypes.func,
 };

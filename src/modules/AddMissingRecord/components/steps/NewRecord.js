@@ -14,7 +14,7 @@ export default class NewRecord extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         actions: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
         author: PropTypes.object,
@@ -33,17 +33,17 @@ export default class NewRecord extends PureComponent {
 
     _restartWorkflow = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(pathConfig.records.add.find);
+        this.props.navigate(pathConfig.records.add.find);
     };
 
     _navigateToMyResearch = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(pathConfig.records.mine);
+        this.props.navigate(pathConfig.records.mine);
     };
 
     _navigateToFixRecord = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.push(pathConfig.records.fix(this.props.newRecord.rek_pid));
+        this.props.navigate(pathConfig.records.fix(this.props.newRecord.rek_pid));
     };
 
     render() {

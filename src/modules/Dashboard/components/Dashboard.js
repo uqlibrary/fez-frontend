@@ -27,6 +27,7 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 import { withIsMobileView } from '../../../hooks';
+import { withNavigate } from 'helpers/withNavigate';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -101,7 +102,7 @@ export class DashboardClass extends PureComponent {
 
         // navigations, app actions
         actions: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
 
         // orcid sync
         loadingOrcidSyncStatus: PropTypes.bool,
@@ -173,11 +174,11 @@ export class DashboardClass extends PureComponent {
     };
 
     _claimYourPublications = () => {
-        this.props.history.push(pathConfig.records.possible);
+        this.props.navigate(pathConfig.records.possible);
     };
 
     _addPublication = () => {
-        this.props.history.push(pathConfig.records.add.find);
+        this.props.navigate(pathConfig.records.add.find);
     };
 
     handleTabChange = (event, value) => {
@@ -187,7 +188,7 @@ export class DashboardClass extends PureComponent {
     };
 
     redirectToIncompleteRecordlist = () => {
-        this.props.history.push(pathConfig.records.incomplete);
+        this.props.navigate(pathConfig.records.incomplete);
     };
 
     requestOrcidSync = () => {
@@ -210,7 +211,7 @@ export class DashboardClass extends PureComponent {
                 <DashboardAuthorProfile
                     authorDetails={this.props.authorDetails}
                     author={this.props.author}
-                    history={this.props.history}
+                    navigate={this.props.navigate}
                 />
             </OrcidSyncContext.Provider>
         </Grid>
@@ -484,5 +485,5 @@ DashboardClass.defaultProps = {
     loadOrcidSyncDelay: 5,
 };
 
-const Dashboard = withIsMobileView()(DashboardClass);
+const Dashboard = withNavigate()(withIsMobileView()(DashboardClass));
 export default Dashboard;

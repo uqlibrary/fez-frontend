@@ -1,7 +1,7 @@
 import React from 'react';
 import { dataCollection } from 'mock/data/testing/records';
 import AvailableVersions from './AvailableVersions';
-import { renderWithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 function setup(testProps) {
     const props = {
@@ -9,7 +9,11 @@ function setup(testProps) {
         publication: testProps.publication || dataCollection,
         title: testProps.title || '',
     };
-    return renderWithRouter(<AvailableVersions {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <AvailableVersions {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Available Versions Component ', () => {

@@ -88,12 +88,20 @@ export const getQueryParams = (queryString, canBulkExport, isUnpublishedBufferPa
 });
 
 /**
- * @param activeFacets
+ * @param navigate
+ * @param location
+ * @param showOpenAccessOnly
  * @param canBulkExport
  * @param isUnpublishedBufferPage
  * @return Object
  */
-export const useQueryStringParams = (history, location, showOpenAccessOnly, canBulkExport, isUnpublishedBufferPage) => {
+export const useQueryStringParams = (
+    navigate,
+    location,
+    showOpenAccessOnly,
+    canBulkExport,
+    isUnpublishedBufferPage,
+) => {
     const queryParams = getQueryParams(
         location.search.substr(1),
         canBulkExport,
@@ -102,7 +110,7 @@ export const useQueryStringParams = (history, location, showOpenAccessOnly, canB
     );
 
     const updateQueryString = queryParams => {
-        history.push({
+        navigate({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
                     ? pathConfig.admin.unpublished

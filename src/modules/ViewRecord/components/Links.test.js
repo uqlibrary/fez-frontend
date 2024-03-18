@@ -4,7 +4,7 @@ import Links from './Links';
 import { recordLinks, recordWithRDM, recordWithRdmMediatedAccess } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
-import { renderWithRouter, fireEvent } from 'test-utils';
+import { WithRouter, fireEvent, rtlRender } from 'test-utils';
 import { getIconTestId } from '../../SharedComponents/Partials/OpenAccessIcon';
 
 function setup(testProps = {}) {
@@ -14,7 +14,11 @@ function setup(testProps = {}) {
         isAdmin: false,
         ...testProps,
     };
-    return renderWithRouter(<Links {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <Links {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Component Links ', () => {

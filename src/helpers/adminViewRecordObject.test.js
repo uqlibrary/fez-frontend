@@ -2,13 +2,11 @@ import { navigateToEdit, authorAffiliates } from './adminViewRecordObject';
 import viewRecord from 'locale/viewRecord';
 
 describe('Author Affiliations', () => {
-    const mockHistory = {
-        push: jest.fn(),
-    };
+    const mockNavigate = jest.fn();
     it('Should correctly handle navigation', () => {
         const expected = '/admin/edit/UQ:1?tab=authors';
-        navigateToEdit(mockHistory, 'UQ:1');
-        expect(mockHistory.push).toBeCalledWith(expected);
+        navigateToEdit(mockNavigate, 'UQ:1');
+        expect(mockNavigate).toBeCalledWith(expected);
     });
     it('should calculate affiliations correctly for valid affiliation data', () => {
         const KEY = 'fez_author_affiliation';
@@ -53,7 +51,7 @@ describe('Author Affiliations', () => {
             ],
         };
 
-        const result = authorAffiliates(KEY, CONTENT, mockHistory, 'UQ:1', []);
+        const result = authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', []);
         expect(result).toEqual(viewRecord.viewRecord.adminViewRecordDrawerFields.hasAffiliates);
     });
 
@@ -63,7 +61,7 @@ describe('Author Affiliations', () => {
             fez_author_affiliation: null,
         };
 
-        const result = authorAffiliates(KEY, CONTENT, mockHistory, 'UQ:1', []);
+        const result = authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', []);
         expect(result).toEqual(viewRecord.viewRecord.adminViewRecordDrawerFields.hasNoAffiliates);
     });
 
@@ -118,7 +116,7 @@ describe('Author Affiliations', () => {
             ],
         };
 
-        const result = JSON.stringify(authorAffiliates(KEY, CONTENT, mockHistory, 'UQ:1', PROBLEMS));
+        const result = JSON.stringify(authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', PROBLEMS));
         expect(result).toMatchSnapshot();
     });
 
@@ -167,7 +165,7 @@ describe('Author Affiliations', () => {
             ],
         };
 
-        const result = JSON.stringify(authorAffiliates(KEY, CONTENT, mockHistory, 'UQ:1', PROBLEMS));
+        const result = JSON.stringify(authorAffiliates(KEY, CONTENT, mockNavigate, 'UQ:1', PROBLEMS));
         expect(result).toMatchSnapshot();
     });
 });
