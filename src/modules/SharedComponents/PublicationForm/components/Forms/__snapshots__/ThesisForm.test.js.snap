@@ -138,7 +138,7 @@ exports[`ThesisForm  should render component 1`] = `
               <field
                 disabled="false"
                 is="mock"
-                label="Enrolling unit"
+                label="School, Centre or Institute"
                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                 required="true"
               />

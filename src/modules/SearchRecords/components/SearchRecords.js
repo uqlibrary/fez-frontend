@@ -19,7 +19,7 @@ import { RecordsSelectorContext } from 'context';
 
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/general';
-import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
@@ -74,9 +74,9 @@ const SearchRecords = ({
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
 
     React.useEffect(() => {
-        /* istanbul ignore next */
+        // This effect ensures the change to display type in the UI, followed by search term text change,
+        // maintains the user chosen display preference in the results.
         if (!!userSelectedDisplayAs && userSelectedDisplayAs !== queryParams.displayRecordsAs) {
-            /* istanbul ignore next */
             updateQueryString({ ...queryParams, displayRecordsAs: userSelectedDisplayAs });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -90,13 +90,6 @@ const SearchRecords = ({
         handleExport,
         displayRecordsAsChanged,
     } = useSearchRecordsControls(queryParams, updateQueryString, actions);
-    const handleFacetExcludesFromSearchFields = searchFields => {
-        !!searchFields &&
-            setSearchParams({
-                ...queryParams,
-                advancedSearchFields: getAdvancedSearchFields(searchFields),
-            });
-    };
 
     /**
      * Handle the user changing the Display As view type via the UI.
@@ -139,7 +132,7 @@ const SearchRecords = ({
                     isUnpublishedBufferPage,
                     searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
                 );
-                setSearchParams(queryParams);
+                setSearchParams({ ...queryParams });
                 actions.searchEspacePublications(queryParams);
                 actions.clearSearchQuery();
                 actions.resetExportPublicationsStatus();
@@ -206,7 +199,6 @@ const SearchRecords = ({
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
                             searchLoading={searchLoading}
                             showAdvancedSearchButton
-                            updateFacetExcludesFromSearchFields={handleFacetExcludesFromSearchFields}
                         />
                     </StandardCard>
                 </Grid>
@@ -335,12 +327,7 @@ const SearchRecords = ({
                             <FacetsFilter
                                 activeFacets={searchParams.activeFacets}
                                 disabled={isLoadingOrExporting}
-                                excludeFacetsList={
-                                    (searchParams.advancedSearchFields &&
-                                        searchParams.advancedSearchFields.length &&
-                                        searchParams.advancedSearchFields) ||
-                                    locale.pages.searchRecords.facetsFilter.excludeFacetsList
-                                }
+                                excludeFacetsList={locale.pages.searchRecords.facetsFilter.excludeFacetsList}
                                 facetsData={publicationsListFacets}
                                 lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                 onFacetsChanged={facetsChanged}

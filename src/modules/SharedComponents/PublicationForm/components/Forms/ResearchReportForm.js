@@ -8,7 +8,8 @@ import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { IssnListEditorField, ListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { SeriesField } from 'modules/SharedComponents/LookupFields';
+
+import { OrgUnitNameField, SeriesField } from 'modules/SharedComponents/LookupFields';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import { validation } from 'config';
@@ -77,6 +78,7 @@ export default class ResearchReportForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
+
                             <Grid item xs={12} sm={4}>
                                 <Field
                                     component={TextField}
@@ -109,6 +111,14 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.reportNumber}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={OrgUnitNameField}
+                                    name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                                    disabled={this.props.submitting}
+                                    {...txt.information.fieldLabels.orgUnitName}
                                 />
                             </Grid>
                             {!this.props.isNtro && (
