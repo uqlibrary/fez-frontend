@@ -135,6 +135,7 @@ context('Controlled vocabularies', () => {
                 // expand
                 cy.get('[data-testid=expand-row-453669]').click();
                 cy.get('[data-testid=child-row-title-link-453670]').click();
+                cy.get('[data-testid=child-row-title-link-453670]').should('not.exist');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
                 cy.get('[data-testid=update_dialog-controlledVocabulary]').should('exist');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
