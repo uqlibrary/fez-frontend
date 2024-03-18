@@ -96,6 +96,7 @@ context('Search', () => {
 
     context('Simple search with back and forward buttons pressed', () => {
         it('should update the queryString and make API call when going back and forward on a search', () => {
+            cy.viewport(xl, 1600);
             // simple search input field
             const catSearchString =
                 '?searchQueryParams%5Ball%5D=cat&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
@@ -117,7 +118,7 @@ context('Search', () => {
             cy.location('search').should('eq', dogSearchString);
 
             // sort by
-            cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').contains('Search relevance')
+            cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').contains('Search relevance');
             cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Title').click();
             cy.location('search').should('contain', 'sortBy=title');

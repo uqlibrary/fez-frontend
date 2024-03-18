@@ -15,7 +15,7 @@ context('Strategic Publishing - Favourite Journals', () => {
 
     it('Should toggle select all', () => {
         cy.visit('/journals/favourites/');
-        cy.get('#journal-list-header-col-1-select-all', { timeout: 1000 }).should('not.checked');
+        cy.get('#journal-list-header-col-1-select-all').should('not.checked');
         cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
         cy.get('#journal-list-data-col-1-checkbox-1').should('not.be.checked');
         // select all
