@@ -117,9 +117,8 @@ context('Search', () => {
             cy.location('search').should('eq', dogSearchString);
 
             // sort by
-            cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]')
-                .contains('Search relevance')
-                .click();
+            cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').contains('Search relevance')
+            cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', 'Title').click();
             cy.location('search').should('contain', 'sortBy=title');
             cy.get('[data-testid="publication-list-sorting-sort-by"] [role="combobox"]').contains('Title');
@@ -149,9 +148,8 @@ context('Search', () => {
             cy.get('[data-testid="publication-list-sorting-sort-order"] [role="combobox"]').contains('Asc');
 
             // page size
-            cy.get('[data-testid="publication-list-sorting-page-size"] [role="combobox"]')
-                .contains('20')
-                .click();
+            cy.get('[data-testid="publication-list-sorting-page-size"] [role="combobox"]').contains('20');
+            cy.get('[data-testid="publication-list-sorting-page-size"] [role="combobox"]').click();
             cy.contains('[role=listbox] li', '10').click();
             cy.location('search').should('contain', 'pageSize=10');
             cy.get('[data-testid="publication-list-sorting-page-size"] [role="combobox"]').contains('10');
