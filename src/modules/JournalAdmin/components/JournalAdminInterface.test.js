@@ -1,5 +1,5 @@
 import React from 'react';
-import { JournalAdminInterface, navigateToSearchResult } from './JournalAdminInterface';
+import { getQueryStringValue, JournalAdminInterface, navigateToSearchResult } from './JournalAdminInterface';
 import { useAccountContext, useJournalContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { journalDoaj } from 'mock/data';
@@ -460,6 +460,10 @@ describe('JournalAdminInterface component', () => {
             }));
             setup({});
             expect(document.querySelector('div.empty')).toBeInTheDocument();
+        });
+        it('getQueryStringValue should return correct value', () => {
+            const location = { pathname: '/', search: '', hash: '#?test=abc' };
+            expect(getQueryStringValue(location, 'test')).toEqual('abc');
         });
     });
 });

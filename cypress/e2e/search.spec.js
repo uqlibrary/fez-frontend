@@ -17,7 +17,7 @@ context('Search', () => {
         cy.visit('/records/search');
     });
 
-    it.skip('Doing a basic search to advanced search', () => {
+    it('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('[data-testid=simple-search-input]')
             .should(
@@ -95,7 +95,7 @@ context('Search', () => {
     });
 
     context('Simple search with back and forward buttons pressed', () => {
-        it.skip('should update the queryString and make API call when going back and forward on a search', () => {
+        it('should update the queryString and make API call when going back and forward on a search', () => {
             // simple search input field
             const catSearchString =
                 '?searchQueryParams%5Ball%5D=cat&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
@@ -196,7 +196,7 @@ context('Search', () => {
     });
 
     context('facets', () => {
-        it.skip('should have facets that can be selected', () => {
+        it('should have facets that can be selected', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -232,7 +232,7 @@ context('Search', () => {
     });
 
     context('Search results in Image Gallery', () => {
-        it.skip('has Display As drop down with expected values', () => {
+        it('has Display As drop down with expected values', () => {
             cy.viewport(xl, 1600);
 
             cy.get('[data-testid=simple-search-input]')
@@ -284,7 +284,7 @@ context('Search', () => {
             });
         });
 
-        it.skip('should preserve users displayAs choice across searches', () => {
+        it('should preserve users displayAs choice across searches', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -324,7 +324,7 @@ context('Search', () => {
             });
         });
 
-        it.skip('should show 4 items in the first row at >=medium breakpoint', () => {
+        it('should show 4 items in the first row at >=medium breakpoint', () => {
             cy.viewport(md, 768);
             cy.get('[data-testid=simple-search-input]')
                 .should(
@@ -359,7 +359,7 @@ context('Search', () => {
                         .should('have.length', 4);
                 });
         });
-        it.skip('should show 3 items in the first row at >=small & <medium breakpoint', () => {
+        it('should show 3 items in the first row at >=small & <medium breakpoint', () => {
             cy.viewport(sm, 768);
             cy.get('[data-testid=simple-search-input]')
                 .should(
@@ -395,7 +395,7 @@ context('Search', () => {
                         .should('have.length', 3);
                 });
         });
-        it.skip('should show 2 items in the first row at >=xs & <small breakpoint', () => {
+        it('should show 2 items in the first row at >=xs & <small breakpoint', () => {
             cy.viewport(xs, 768);
             cy.get('[data-testid=simple-search-input]')
                 .should(
@@ -486,12 +486,12 @@ context('Advanced Search', () => {
             .should('contain', 'Searching for works');
     });
 
-    it.skip('can bulk edit Advisory statement', () => {
+    it('can bulk edit Advisory statement', () => {
         const advisoryStatementOptionId = 8;
         assertSearchKeyUpdates(advisoryStatementOptionId, 'rek-advisory-statement');
     });
 
-    it.skip('can bulk edit Additional notes', () => {
+    it('can bulk edit Additional notes', () => {
         const additionalNotesOptionId = 5;
         assertSearchKeyUpdates(additionalNotesOptionId, 'rek-notes');
     });
