@@ -115,6 +115,7 @@ context('Controlled vocabularies', () => {
             it('should close the admin panel and re-enable admin functionality after collapsing a row while the admin panel is visible', () => {
                 // expand
                 cy.get('[data-testid=expand-row-453669]').click();
+                cy.get('[data-testid=total-vocab-453669').should('contain', '165');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').click();
                 cy.get('[data-testid=update_dialog-controlledVocabulary]').should('exist');
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
