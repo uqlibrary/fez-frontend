@@ -5,16 +5,15 @@ import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitFor
 import * as mockData from 'mock/data';
 
 import * as UserIsAdmin from 'hooks/userIsAdmin';
-import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
 
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
+const setup = ({ state = {} } = {}) => {
     return render(
         <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter history={testHistory}>
+            <WithRouter>
                 <ControlledVocabularies {...state} />
             </WithRouter>
         </WithReduxStore>,

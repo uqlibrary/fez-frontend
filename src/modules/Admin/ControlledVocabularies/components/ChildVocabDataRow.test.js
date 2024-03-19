@@ -6,7 +6,6 @@ import * as mockData from 'mock/data';
 
 import ChildVocabDataRow from './ChildVocabDataRow';
 import Immutable from 'immutable';
-import { createMemoryHistory } from 'history';
 import * as actions from 'actions/viewControlledVocab';
 
 jest.mock('../ControlledVocabularyContext');
@@ -17,7 +16,7 @@ import {
 
 const row = mockData.childVocabList['453669'].data[0].controlled_vocab;
 
-function setup(testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) {
+function setup(testProps = {}, state = {}) {
     const { actionContext, stateContext, ...rest } = testProps;
 
     const actionContextProps = {
@@ -33,7 +32,7 @@ function setup(testProps = {}, state = {}, testHistory = createMemoryHistory({ i
     const props = { parentId: 1, ...rest };
 
     return render(
-        <WithRouter history={testHistory}>
+        <WithRouter>
             <WithReduxStore initialState={Immutable.Map(state)}>
                 <ControlledVocabulariesActionContext.Provider value={actionContextProps}>
                     <ControlledVocabulariesStateContext.Provider value={stateContextProps}>

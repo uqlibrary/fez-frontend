@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
-import { createMemoryHistory } from 'history';
 
 import * as mockData from 'mock/data';
 
@@ -17,7 +16,7 @@ import {
 
 const parentRow = mockData.vocabList.data[0];
 
-const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
+const setup = (testProps = {}, state = {}) => {
     const actionContext = {
         onAdminEditActionClick: jest.fn(),
         onHandleDialogClickClose: jest.fn(),
@@ -31,7 +30,7 @@ const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ i
 
     return render(
         <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter history={testHistory}>
+            <WithRouter>
                 <ControlledVocabulariesActionContext.Provider value={actionContext}>
                     <ControlledVocabulariesStateContext.Provider value={stateContext}>
                         <ChildVocabTable {...testProps} />
