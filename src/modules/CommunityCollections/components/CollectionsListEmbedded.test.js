@@ -3,7 +3,6 @@ import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor, createMatc
 
 import * as mockData from 'mock/data';
 
-import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
 
 import CollectionsListEmbedded from './CollectionsListEmbedded';
@@ -24,10 +23,10 @@ const testProps = {
     open: true,
 };
 
-const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
+const setup = (testProps = {}, state = {}) => {
     return render(
         <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter history={testHistory}>
+            <WithRouter>
                 <CollectionsListEmbedded {...testProps} />
             </WithRouter>
         </WithReduxStore>,
