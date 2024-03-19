@@ -10,6 +10,7 @@ import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
 import { isDevEnv, isTest } from '../helpers/general';
+import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
 
 let apiClient = axios.create({
     baseURL: API_URL,
@@ -28,9 +29,12 @@ if (!isDevEnv() && !isTest()) {
 
     // the place the below is declared matters - see https://axios-cache-interceptor.js.org/guide/interceptors
     const nonCachedRoutes = ['records/search', 'journals/search', 'orcid'];
+    const ignoreServerHeaderRoutes = [`vocabularies?cvo_ids=${FIELD_OF_RESEARCH_VOCAB_ID},${AIATSIS_CODES_VOCAB_ID}`];
     apiClient.interceptors.request.use(request => {
         const queryStringParams = Object.keys(request.params || {});
-        if (
+        if (!!request.cache && ignoreServerHeaderRoutes.find(route => request.url.includes(route))) {
+            request.cache.interpretHeader = false;
+        } else if (
             !!request.cache &&
             // disabled it when querystring params are present or when it partially matches a non cached route
             (queryStringParams.length ||
