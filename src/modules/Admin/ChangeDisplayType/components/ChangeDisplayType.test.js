@@ -11,7 +11,8 @@ const mockRecord = {
     },
 };
 
-jest.mock('react-router', () => ({
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ pid: mockRecord.rek_pid })),
 }));
 

@@ -1,4 +1,5 @@
 import * as routes from './routes';
+import * as pages from 'modules/App/components/pages';
 import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
 import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
 
@@ -165,57 +166,57 @@ describe('Routes getMenuConfig method', () => {
 });
 
 describe('Routes getRoutesConfig method', () => {
-    it('should return a list of routes for anon user', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: null });
-        expect(testRoutes.length).toEqual(9);
+    it('should return a list of routes for a non user', () => {
+        const testRoutes = routes.getRoutesConfig({ components: pages, account: null });
+        expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({
-            components: {},
+            components: pages,
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
         const testRoutes = routes.getRoutesConfig({
-            components: {},
+            components: pages,
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(32);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getRoutesConfig({
-            components: {},
+            components: pages,
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(54);
+        expect(testRoutes.length).toEqual(52);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({
-            components: {},
+            components: pages,
             account: accounts.s2222222,
             forceOrcidRegistration: true,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(10);
+        expect(testRoutes.length).toEqual(9);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({
-            components: {},
+            components: pages,
             account: accounts.s2222222,
             forceOrcidRegistration: false,
             isHdrStudent: true,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(29);
     });
 });
 

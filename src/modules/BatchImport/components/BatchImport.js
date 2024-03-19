@@ -27,6 +27,7 @@ import { validation, publicationTypes } from 'config';
 import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
+import { useNavigate } from 'react-router-dom';
 
 export const FORM_NAME = 'BatchImport';
 const selector = formValueSelector(FORM_NAME);
@@ -51,7 +52,8 @@ const csvIngestDoctypesList = Object.values(publicationTypes(false))
         text: item.name,
     }));
 
-export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded, submitting, history }) => {
+export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded, submitting }) => {
+    const navigate = useNavigate();
     const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const communityID = useSelector(state => selector(state, 'communityID'));
@@ -90,7 +92,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
     }, [batchImportTxt, error, formErrors, reset, submitSucceeded, submitting]);
 
     const _abandonImport = () => {
-        history.push(pathConfig.index);
+        navigate(pathConfig.index);
     };
 
     return (
@@ -228,7 +230,6 @@ BatchImport.propTypes = {
     dirty: PropTypes.bool,
     error: PropTypes.string,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
     reset: PropTypes.func,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,

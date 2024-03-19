@@ -16,7 +16,7 @@ import MomentUtils from '@date-io/moment';
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
-import { store, reduxHistory, reducers } from 'config/store';
+import { store, reducers } from 'config/store';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -59,7 +59,7 @@ const render = () => {
         <AppErrorBoundary>
             <Provider store={store}>
                 <LocalizationProvider dateAdapter={MomentUtils}>
-                    <Root history={reduxHistory} />
+                    <Root />
                 </LocalizationProvider>
             </Provider>
         </AppErrorBoundary>,

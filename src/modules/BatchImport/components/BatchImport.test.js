@@ -1,19 +1,31 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
+import { fireEvent, render, WithRouter, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
 import BatchImport from './BatchImport';
 
+const mockUseNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}) {
     return render(
         <WithReduxStore>
-            <BatchImport {...testProps} />
+            <WithRouter>
+                <BatchImport {...testProps} />
+            </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('BatchImport Component', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('should successfully submit form and display success message', async () => {
         const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
 
@@ -159,10 +171,8 @@ describe('BatchImport Component', () => {
     });
 
     it('navigates to homepage on cancel', async () => {
-        const pushFn = jest.fn();
-        const history = { push: pushFn };
-        const { getByTestId } = setup({ history: history });
+        const { getByTestId } = setup();
         fireEvent.click(getByTestId('batch-import-cancel'));
-        expect(pushFn).toHaveBeenCalledWith('/');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/');
     });
 });

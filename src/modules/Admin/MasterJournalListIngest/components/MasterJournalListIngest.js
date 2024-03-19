@@ -15,6 +15,7 @@ import { requestMJLIngest } from 'actions';
 import { validation, pathConfig } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
+import { useNavigate } from 'react-router-dom';
 
 export const FORM_NAME = 'MasterJournalListIngest';
 
@@ -25,7 +26,8 @@ const onSubmit = (values, dispatch) => {
     });
 };
 
-const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded, submitting }) => {
+const MasterJournalListIngest = ({ error, handleSubmit, submitSucceeded, submitting }) => {
+    const navigate = useNavigate();
     const [validationErrors, setValidationErrors] = useState(null);
     const txt = componentsLocale.components.MasterJournalListIngest;
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
@@ -51,7 +53,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
     }, [error, formErrors, submitSucceeded, submitting]);
 
     const cancelIngest = () => {
-        history.push(pathConfig.index);
+        navigate(pathConfig.index);
     };
 
     return (
@@ -118,7 +120,6 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
 MasterJournalListIngest.propTypes = {
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
 };

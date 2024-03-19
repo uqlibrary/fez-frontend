@@ -31,17 +31,12 @@ function setup(testProps = {}, renderer = rtlRender) {
         authorDetails: {
             username: 'uqstaff',
         },
-        match: {
-            params: {
-                pid: 'UQ:111111',
-            },
+        params: {
+            pid: 'UQ:111111',
         },
         loadRecordToView: jest.fn(),
         loadingRecordToView: false,
         recordToView: recordWithDatastreams,
-        location: {
-            search: '',
-        },
         handleSubmit: jest.fn(),
         clearRecordToView: jest.fn(),
         formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
@@ -67,9 +62,7 @@ describe('AdminContainer component', () => {
     it('should show Add form', () => {
         const { container } = setup({
             createMode: true,
-            match: {
-                params: {},
-            },
+            params: {},
         });
         expect(container).toMatchSnapshot();
     });

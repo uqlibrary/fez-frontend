@@ -1,20 +1,20 @@
 import React from 'react';
 import GoogleScholar from './GoogleScholar';
 import Immutable from 'immutable';
-import { act, render, fireEvent, WithReduxStore, WithRouter, waitFor } from 'test-utils';
+import { render, fireEvent, WithReduxStore, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 import * as AuthorAction from 'actions/authors';
-import { Route } from 'react-router';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 
 const setup = ({ state = {} } = {}) => {
     return render(
         <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter>
-                <Route path="/dashboard">Dashboard</Route>
-                <Route path="/" exact>
-                    <GoogleScholar />
-                </Route>
-            </WithRouter>
+            <MemoryRouter>
+                <Routes>
+                    <Route path="/dashboard" element={<div>Dashboard</div>} />
+                    <Route path="/" exact element={<GoogleScholar />} />
+                </Routes>
+            </MemoryRouter>
         </WithReduxStore>,
     );
 };
@@ -46,9 +46,7 @@ describe('GoogleScholar form', () => {
 
         expect(queryByText('This field is required')).toBeNull();
 
-        act(() => {
-            fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
-        });
+        fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
 
         await waitFor(() => getByText('Dashboard'));
 
@@ -78,9 +76,7 @@ describe('GoogleScholar form', () => {
 
         expect(queryByText('This field is required')).toBeNull();
 
-        await act(async () => {
-            fireEvent.keyDown(getByTestId('submit-aut-google-scholar-id'), { key: 'Enter', code: 'Enter' });
-        });
+        fireEvent.keyDown(getByTestId('submit-aut-google-scholar-id'), { key: 'Enter', code: 'Enter' });
 
         expect(getByText('Saving -')).toBeInTheDocument();
 
@@ -114,9 +110,7 @@ describe('GoogleScholar form', () => {
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
-        act(() => {
-            fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
-        });
+        fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
 
         await waitFor(() => getByText('Dashboard'));
 

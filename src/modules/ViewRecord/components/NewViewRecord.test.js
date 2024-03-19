@@ -7,7 +7,7 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { recordVersionLegacy } from 'mock/data';
 import locale from 'locale/pages';
 import { notFound } from 'config/routes';
@@ -22,10 +22,10 @@ jest.mock('../../../hooks', () => ({
     belongsToAuthor: jest.requireActual('../../../hooks').belongsToAuthor,
 }));
 
-jest.mock('react-router', () => ({
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
-    useHistory: jest.fn(() => ({ push: jest.fn() })),
-    useLocation: jest.fn(() => ({})),
+    useNavigate: jest.fn(() => jest.fn()),
 }));
 
 const setup = (testProps = {}, renderer = render) => {

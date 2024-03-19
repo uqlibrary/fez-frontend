@@ -1,22 +1,24 @@
 import React from 'react';
 import FindRecords from './FindRecords';
-import { render, WithReduxStore, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        history: {},
+        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return render(
         <WithReduxStore>
-            <FindRecords {...props} />
+            <WithRouter>
+                <FindRecords {...props} />
+            </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Search record', () => {
     it('should render stepper and a publication search form', () => {
-        const { container } = setup({ history: {} });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
@@ -25,7 +27,7 @@ describe('Search record', () => {
         const navigateToResults = jest.fn();
 
         const { getByRole } = setup({
-            history: { push: navigateToResults },
+            navigate: navigateToResults,
             actions: { searchPublications: searchPublications },
         });
 
@@ -40,14 +42,12 @@ describe('Search record', () => {
     });
 
     it('should handle skip search', () => {
-        const pushFn = jest.fn();
+        const navigateFn = jest.fn();
         const { container, getByRole } = setup({
-            history: {
-                push: pushFn,
-            },
+            navigate: navigateFn,
         });
         expect(container).toMatchSnapshot();
         fireEvent.click(getByRole('button', { name: 'Skip search' }));
-        expect(pushFn).toHaveBeenCalledWith('/records/add/new');
+        expect(navigateFn).toHaveBeenCalledWith('/records/add/new');
     });
 });

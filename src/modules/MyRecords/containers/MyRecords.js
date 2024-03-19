@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { locale } from 'locale';
 import MyRecords from '../components/MyRecords';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import { withNavigate } from 'helpers/withNavigate';
 import * as actions from 'actions';
 import { pathConfig } from 'config';
 
@@ -30,6 +30,5 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ResearchContainer = connect(mapStateToProps, mapDispatchToProps)(MyRecords);
-ResearchContainer = withRouter(ResearchContainer);
-export default ResearchContainer;
+const ResearchContainer = connect(mapStateToProps, mapDispatchToProps)(MyRecords);
+export default withNavigate()(ResearchContainer);

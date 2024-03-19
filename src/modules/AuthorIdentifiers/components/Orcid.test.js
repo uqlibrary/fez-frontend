@@ -18,9 +18,7 @@ function setup(testProps = {}, renderMethod = rtlRender) {
             dismissAppAlert: jest.fn(),
             resetSavingAuthorState: jest.fn(),
         },
-        history: testProps.history || {
-            push: jest.fn(),
-        },
+        navigate: testProps.navigate || jest.fn(),
     };
     return renderMethod(<Orcid {...props} />);
 }
@@ -62,7 +60,7 @@ describe('Component Orcid ', () => {
 
     it('should redirect to the dashbaord', () => {
         const testMethod = jest.fn();
-        setup({ author: { aut_orcid_id: '11111' }, history: { push: testMethod } });
+        setup({ author: { aut_orcid_id: '11111' }, navigate: testMethod });
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
@@ -144,24 +142,24 @@ describe('Component Orcid ', () => {
     it('should navigate back to dashboard if author already has orcid', () => {
         const { rerender } = setup({ accountAuthorLoading: true });
 
-        const pushFn = jest.fn();
+        const navigateFn = jest.fn();
         // account/author has been loaded
         setup(
             {
                 account: accounts.uqresearcher,
                 author: currentAuthor.uqresearcher.data,
-                history: { push: pushFn },
+                navigate: navigateFn,
             },
             rerender,
         );
 
-        expect(pushFn).toHaveBeenCalledWith('/dashboard');
+        expect(navigateFn).toHaveBeenCalledWith('/dashboard');
     });
 
     it("should navigate back to dashboard if author's orcid id was updated successfully", () => {
         const author = { ...currentAuthor.uqnoauthid.data, aut_orcid_id: null };
         const showAppAlertFn = jest.fn();
-        const pushFn = jest.fn();
+        const navigateFn = jest.fn();
         const { rerender } = setup({
             account: accounts.uqresearcher,
             author: author,
@@ -176,13 +174,13 @@ describe('Component Orcid ', () => {
                     showAppAlert: showAppAlertFn,
                     resetSavingAuthorState: jest.fn(),
                 },
-                history: { push: pushFn },
+                navigate: navigateFn,
             },
             rerender,
         );
 
         expect(showAppAlertFn).toHaveBeenCalled();
-        expect(pushFn).toHaveBeenCalledWith('/dashboard');
+        expect(navigateFn).toHaveBeenCalledWith('/dashboard');
     });
 
     it('should start author update when author is loaded on mount and orcid response received', () => {

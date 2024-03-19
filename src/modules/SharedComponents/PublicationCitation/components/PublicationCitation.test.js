@@ -9,13 +9,13 @@ function setup(testProps = {}) {
     const props = {
         classes: {},
         publication: mockRecordToFix,
-        history: { push: jest.fn() },
         actions: testProps.actions || {
             setRecordToView: jest.fn(),
         },
         hideLinks: false,
         citationStyle: 'header',
         theme: mui1theme,
+        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return render(
@@ -202,14 +202,14 @@ describe('PublicationCitation ', () => {
     });
 
     it('should handle default actions', () => {
-        const pushFn = jest.fn();
+        const mockUseNavigate2 = jest.fn();
         const { getByRole } = setup({
             showDefaultActions: true,
-            history: { push: pushFn },
+            navigate: mockUseNavigate2,
         });
 
         fireEvent.click(getByRole('button', { name: 'Request Correction' }));
-        expect(pushFn).toBeCalledWith('/records/UQ:41878/fix');
+        expect(mockUseNavigate2).toBeCalledWith('/records/UQ:41878/fix');
     });
 
     it('should render primary action button', () => {

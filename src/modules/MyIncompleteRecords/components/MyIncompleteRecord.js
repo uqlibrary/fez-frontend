@@ -26,6 +26,7 @@ import { default as pagesLocale } from '../locale';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
+import { useNavigate } from 'react-router-dom';
 
 export const MyIncompleteRecord = props => {
     const {
@@ -41,12 +42,13 @@ export const MyIncompleteRecord = props => {
         hasAnyFiles,
         publicationToFixFileUploadingError,
         disableDeleteAllGrants,
-        history,
     } = props;
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const txt = pagesLocale;
+
+    const navigate = useNavigate();
 
     /* istanbul ignore next */
     useEffect(() => {
@@ -55,7 +57,7 @@ export const MyIncompleteRecord = props => {
 
     // if author is not linked to this record, abandon form
     if (!isAuthorLinked) {
-        history.go(-1);
+        navigate(-1);
         return <div id="author-not-linked" data-testid="author-not-linked" />;
     }
 
@@ -81,15 +83,15 @@ export const MyIncompleteRecord = props => {
     );
 
     const _navigateToMyIncomplete = () => {
-        history.push(pathConfig.records.incomplete);
+        navigate(pathConfig.records.incomplete);
     };
 
     const _navigateToDashboard = () => {
-        history.push(pathConfig.dashboard);
+        navigate(pathConfig.dashboard);
     };
 
     const _cancelFix = () => {
-        history.push(pathConfig.records.incomplete);
+        navigate(pathConfig.records.incomplete);
     };
 
     const _handleDefaultSubmit = event => {
@@ -276,7 +278,6 @@ MyIncompleteRecord.propTypes = {
     dirty: PropTypes.bool,
     submitting: PropTypes.bool,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
 
     disableSubmit: PropTypes.bool,
 

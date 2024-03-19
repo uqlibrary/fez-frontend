@@ -74,7 +74,7 @@ const assertCollapsiblePanel = index => {
 
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
-        cy.visit('localhost:3000/journals/search/');
+        cy.visit('/journals/search/');
         cy.injectAxe();
     });
 
@@ -584,7 +584,8 @@ context('Strategic Publishing - Search', () => {
                 .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('not.exist');
 
-            // check the number of mock results is now showing the new number of expected results (should be different)
+            // check the number of mock results is now showing the new number of expected results
+            // (should be different)
             cy.get('@ResultTitles').should('have.length', resultsLengthWithKeywordOnly);
 
             cy.go('back');
@@ -616,7 +617,21 @@ context('Strategic Publishing - Search', () => {
                 violations => console.log(violations),
             );
         });
+
+        // Migrated from jest but looks like a bug
+        it('should handle invalid keywords when browser history changes', () => {
+            cy.visit('/journals/search/?keywords=invalid-keyword');
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+            cy.get('[data-testid="journal-search-item-addable-keyword-biochemistry-0"]').click();
+            cy.get('[data-testid="journal-search-button"]').click();
+            cy.get('[data-testid="journal-list"]').should('be.visible');
+            cy.go('back');
+            cy.go('back');
+            cy.go('back');
+            cy.get('[data-testid="journal-search-chip-keyword-biochemistry"]').should('exist');
+        });
     });
+
     context('Handling the Clear functionality', () => {
         beforeEach(() => {
             setupInitialSearchAndAssert();

@@ -60,9 +60,6 @@ function setup(testProps = {}, renderMethod = render) {
         pristine: testProps.pristine || false,
         author: testProps.author || null,
         actions: testProps.actions || {},
-        history: testProps.history || {
-            push: jest.fn(),
-        },
         ...testProps,
     };
 

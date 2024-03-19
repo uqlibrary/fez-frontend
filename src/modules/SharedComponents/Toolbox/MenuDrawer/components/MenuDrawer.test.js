@@ -24,6 +24,12 @@ const defaultLocale = {
     closeMenuLabel: 'Close menu',
 };
 
+const mockUseNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         ...testProps,
@@ -33,7 +39,6 @@ function setup(testProps = {}, renderMethod = render) {
         logoLink: 'test',
         menuItems: testProps.menuItems || defaultMenuItems,
         onToggleDrawer: testProps.onToggleDrawer || jest.fn(),
-        history: testProps.history || { push: jest.fn() },
         locale: testProps.locale || defaultLocale,
         drawerOpen: testProps.drawerOpen || false,
         docked: testProps.docked || false,
@@ -46,6 +51,10 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('Component MenuDrawer', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('should render empty drawer', () => {
         const { baseElement } = setup();
         expect(baseElement).toMatchSnapshot();
@@ -71,13 +80,12 @@ describe('Component MenuDrawer', () => {
     it('should have working method for navigating to links', () => {
         global.open = jest.fn();
         const toggleFn = jest.fn();
-        const pushFn = jest.fn();
-        const { getByRole } = setup({ drawerOpen: true, onToggleDrawer: toggleFn, history: { push: pushFn } });
+        const { getByRole } = setup({ drawerOpen: true, onToggleDrawer: toggleFn });
         fireEvent.click(getByRole('button', { name: 'Close menu' }));
         expect(toggleFn).toBeCalled();
 
         fireEvent.click(getByRole('button', { name: /Primary text 0/i }));
-        expect(pushFn).toBeCalledWith('/');
+        expect(mockUseNavigate).toBeCalledWith('/');
 
         fireEvent.click(getByRole('button', { name: /Primary text 1/i }));
         expect(global.open).toBeCalledWith('https://www.example.com', '_blank');
