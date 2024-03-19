@@ -8,7 +8,6 @@ function setup(testProps = {}) {
         authorDetails: mock.authorDetails.uqresearcher,
         author: mock.currentAuthor.uqresearcher.data,
         history: {},
-        classes: {},
         ...testProps,
     };
     return render(

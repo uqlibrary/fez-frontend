@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import locale from 'locale/pages';
@@ -31,35 +31,29 @@ const StyledGridDateRange = styled(Grid)(({ theme }) => ({
     fontWeight: theme.typography.fontWeightLight,
 }));
 
-export class DashboardArticleCount extends PureComponent {
-    static propTypes = {
-        articleCount: PropTypes.number,
-        articleFirstYear: PropTypes.number,
-        articleLastYear: PropTypes.number,
-    };
+export const DashboardArticleCount = ({ articleCount, articleFirstYear, articleLastYear }) => {
+    const txt = locale.pages.dashboard.header.dashboardArticleCount;
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const txt = locale.pages.dashboard.header.dashboardArticleCount;
-        return (
-            <Grid container direction={'column'}>
-                {this.props.articleCount && this.props.articleFirstYear && this.props.articleLastYear && (
-                    <React.Fragment>
-                        <StyledGridNumArticles item>{this.props.articleCount}</StyledGridNumArticles>
-                        <StyledGridArticlesFrom item>{txt.countTitle}</StyledGridArticlesFrom>
-                        <StyledGridDateRange item>
-                            {this.props.articleFirstYear}
-                            <span>{txt.yearSeparator}</span>
-                            {this.props.articleLastYear}
-                        </StyledGridDateRange>
-                    </React.Fragment>
-                )}
-            </Grid>
-        );
-    }
-}
+    return (
+        <Grid container direction={'column'}>
+            {articleCount && articleFirstYear && articleLastYear && (
+                <React.Fragment>
+                    <StyledGridNumArticles item>{articleCount}</StyledGridNumArticles>
+                    <StyledGridArticlesFrom item>{txt.countTitle}</StyledGridArticlesFrom>
+                    <StyledGridDateRange item>
+                        {articleFirstYear}
+                        <span>{txt.yearSeparator}</span>
+                        {articleLastYear}
+                    </StyledGridDateRange>
+                </React.Fragment>
+            )}
+        </Grid>
+    );
+};
+DashboardArticleCount.propTypes = {
+    articleCount: PropTypes.number,
+    articleFirstYear: PropTypes.number,
+    articleLastYear: PropTypes.number,
+};
 
 export default DashboardArticleCount;
