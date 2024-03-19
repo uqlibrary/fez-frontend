@@ -26,7 +26,7 @@ import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsLi
 
 import { CommunityTable } from './components/CommunityTable';
 import queryString from 'query-string';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Add from '@mui/icons-material/Add';
 
 import { navigateTo } from './components/functions';
@@ -52,6 +52,7 @@ export const CommunityList = () => {
     };
 
     const navigate = useNavigate();
+    const location = useLocation();
     let sortDirection = 'Asc';
     let sortBy = 'title';
 
@@ -60,6 +61,7 @@ export const CommunityList = () => {
     const dispatch = useDispatch();
 
     const queryStringObject = queryString.parse(
+        /* istanbul ignore next*/
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
