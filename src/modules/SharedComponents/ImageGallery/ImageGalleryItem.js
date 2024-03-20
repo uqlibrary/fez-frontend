@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import txt from 'locale/components';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 import { handleKeyboardPressActivate } from 'helpers/general';
 
@@ -67,8 +67,8 @@ const internalClasses = {
     },
 };
 
-const viewRecord = (history, url) => {
-    history.push(url);
+const viewRecord = (navigate, url) => {
+    navigate(url);
 };
 
 export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
@@ -85,7 +85,6 @@ const ImageGalleryItem = ({
     withTitle,
     withAlert,
     url,
-    history,
     classes,
     lazyLoading,
     itemWidth,
@@ -96,10 +95,11 @@ const ImageGalleryItem = ({
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
     const [unavailable, setUnavailable] = React.useState(false);
-    let historyObject = useHistory();
+    const navigate = useNavigate();
+    /* let historyObject = useHistory();
     if (!!history) {
         historyObject = history;
-    }
+    } */
 
     const alertMessage = React.useMemo(() => {
         return getAlertMessageText({ unavailable, restricted, advisory });
@@ -109,7 +109,7 @@ const ImageGalleryItem = ({
     const clickLink =
         !!url && url.length > 0
             ? {
-                  onClick: () => viewRecord(historyObject, url),
+                  onClick: () => viewRecord(navigate, url),
                   role: 'button',
               }
             : {};
@@ -133,7 +133,7 @@ const ImageGalleryItem = ({
                 },
             }}
             tabIndex={0}
-            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(historyObject, url))}
+            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
             {...listItemAriaLabel}
             {...clickLink}
             {...rest}
@@ -201,7 +201,6 @@ ImageGalleryItem.propTypes = {
     withTitle: PropTypes.bool,
     withAlert: PropTypes.bool,
     url: PropTypes.string,
-    history: PropTypes.object,
     security: PropTypes.object,
     classes: PropTypes.shape({
         imageListItem: PropTypes.shape({

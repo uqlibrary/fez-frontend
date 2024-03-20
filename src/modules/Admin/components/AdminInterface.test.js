@@ -6,14 +6,13 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, fireEvent, within } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, within, act } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
 jest.mock('../../../context');
 
-// jest.mock('redux-form/immutable');
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
     destroy: jest.fn(),
@@ -41,6 +40,15 @@ jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),
 }));
 
+const mockUseNavigate = jest.fn();
+let mockUseLocation = {};
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         createMode: false,
@@ -51,12 +59,6 @@ function setup(testProps = {}, renderMethod = render) {
         },
         submitting: false,
         handleSubmit: jest.fn(),
-        history: {
-            push: jest.fn(),
-        },
-        location: {
-            search: '',
-        },
         tabs: {
             security: {
                 activated: true,
@@ -85,7 +87,6 @@ describe('AdminInterface component', () => {
     beforeAll(() => {
         mockUseEffect = jest.spyOn(React, 'useEffect');
     });
-
     beforeEach(() => {
         mockUseEffect.mockImplementation(f => {
             const hookReturn = f();
@@ -108,6 +109,7 @@ describe('AdminInterface component', () => {
             },
         }));
         useDispatchMock.mockImplementation(() => () => {});
+        mockUseLocation = { pathname: '/', search: '' };
     });
 
     afterEach(() => {
@@ -117,6 +119,7 @@ describe('AdminInterface component', () => {
             cleanupFns.pop()();
         }
         useDispatchMock.mockRestore();
+        mockUseNavigate.mockClear();
     });
 
     afterAll(() => {
@@ -376,6 +379,7 @@ describe('AdminInterface component', () => {
 
     it('should render security tab from query string params by default', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        mockUseLocation.search = '?tab=security';
 
         const { getByTestId } = setup({
             tabs: {
@@ -400,9 +404,6 @@ describe('AdminInterface component', () => {
                     component: () => 'SecuritySectionComponent',
                 },
             },
-            location: {
-                search: '?tab=security',
-            },
         });
 
         expect(getByTestId('security-tab').getAttribute('aria-selected')).toBe('true');
@@ -415,19 +416,12 @@ describe('AdminInterface component', () => {
             toggleTabbed,
         }));
 
-        const setTab = jest.fn();
-        const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(() => ['bibliographic', setTab]);
-
-        const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementation(f => f);
-
         const map = {};
         window.addEventListener = jest.fn((event, cb) => {
             map[event] = cb;
         });
 
-        const createWrapper = () => {
+        const createWrapper = () =>
             setup({
                 createMode: true,
                 tabs: {
@@ -445,7 +439,6 @@ describe('AdminInterface component', () => {
                     },
                 },
             });
-        };
 
         createWrapper();
         expect(toggleTabbed).toHaveBeenCalledTimes(0);
@@ -458,21 +451,22 @@ describe('AdminInterface component', () => {
             toggleTabbed,
         }));
 
-        createWrapper();
+        const { getByRole } = createWrapper();
         map.keydown({ key: 'ArrowDown', ctrlKey: true });
         expect(toggleTabbed).toHaveBeenCalledTimes(1);
 
-        map.keydown({ key: 'ArrowRight', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('files');
-        setTab.mockClear();
+        act(() => {
+            map.keydown({ key: 'ArrowRight', ctrlKey: true });
+        });
+        expect(getByRole('tab', { name: 'Bibliographic' })).toHaveAttribute('aria-selected', 'false');
+        expect(getByRole('tab', { name: 'Files' })).toHaveAttribute('aria-selected', 'true');
 
-        mockUseState.mockImplementation(() => ['files', setTab]);
-        createWrapper();
+        act(() => {
+            map.keydown({ key: 'ArrowLeft', ctrlKey: true });
+        });
 
-        map.keydown({ key: 'ArrowLeft', ctrlKey: true });
-        expect(setTab).toHaveBeenCalledWith('bibliographic');
-
-        mockUseState.mockRestore();
+        expect(getByRole('tab', { name: 'Bibliographic' })).toHaveAttribute('aria-selected', 'true');
+        expect(getByRole('tab', { name: 'Files' })).toHaveAttribute('aria-selected', 'false');
     });
 
     it('should render alert message for retracted records', () => {
@@ -522,6 +516,7 @@ describe('AdminInterface component', () => {
     });
 
     it('should switch the tab', () => {
+        mockUseLocation.search = '?tab=security';
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
         const { getByTestId } = setup({
@@ -546,9 +541,6 @@ describe('AdminInterface component', () => {
                     activated: true,
                     component: () => 'SecuritySectionComponent',
                 },
-            },
-            location: {
-                search: '?tab=security',
             },
         });
 
@@ -688,45 +680,33 @@ describe('AdminInterface component', () => {
     });
 
     it('should navigate to "My research" after saving a record edit without referral and choosing "Edit another record"', () => {
-        const pushFn = jest.fn();
         const createMode = false;
         const authorDetails = {};
-        const history = {
-            push: pushFn,
-        };
         const location = {
             hash: '',
             pathname: '/admin/edit/UQ:123456',
             search: '',
         };
-        navigateToSearchResult(createMode, authorDetails, history, location);
-        expect(pushFn).toHaveBeenCalledWith('/records/mine');
+        navigateToSearchResult(createMode, authorDetails, mockUseNavigate, location);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/mine');
     });
 
     it('should navigate to navigatedFrom after saving a record edit with referral as an admin and choosing "Edit another record"', () => {
-        const pushFn = jest.fn();
         const createMode = false;
         const authorDetails = {
             is_administrator: 1,
-        };
-        const history = {
-            push: pushFn,
         };
         const location = {
             hash: '#/admin/edit/UQ:123456?navigatedFrom=%2Fdashboard',
             search: '',
         };
-        navigateToSearchResult(createMode, authorDetails, history, location);
-        expect(pushFn).toHaveBeenCalledWith('/dashboard');
+        navigateToSearchResult(createMode, authorDetails, mockUseNavigate, location);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/dashboard');
     });
 
     it('should navigate to admin add after saving a new record as an admin', () => {
-        const pushFn = jest.fn();
-        const history = {
-            push: pushFn,
-        };
-        navigateToSearchResult(true, null, history);
-        expect(pushFn).toHaveBeenCalledWith('/admin/add');
+        navigateToSearchResult(true, null, mockUseNavigate);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/admin/add');
     });
 
     it('should call method to show submit confirmation', () => {
@@ -737,8 +717,6 @@ describe('AdminInterface component', () => {
                 showConfirmation: testFn,
             },
         }));
-        const mockUseCallback = jest.spyOn(React, 'useCallback');
-        mockUseCallback.mockImplementation(f => f());
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         useRecordContext.mockImplementation(() => ({}));
 
@@ -748,7 +726,6 @@ describe('AdminInterface component', () => {
         expect(testFn).toHaveBeenCalledTimes(1);
 
         mockUseRef.mockRestore();
-        mockUseCallback.mockRestore();
     });
 
     it('should call method to handle cancel of the form for new record', () => {
@@ -760,16 +737,11 @@ describe('AdminInterface component', () => {
                 rek_editing_user: 'noone',
             },
         }));
-        const push = jest.fn();
 
-        const { getByTestId } = setup({
-            history: {
-                push,
-            },
-        });
+        const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('admin-work-cancel-top'));
-        expect(push).toHaveBeenCalledWith('/');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/');
     });
 
     it('should call method to handle cancel of the form for existing record', () => {
@@ -782,16 +754,10 @@ describe('AdminInterface component', () => {
                 rek_editing_user: 'noone',
             },
         }));
-        const push = jest.fn();
-        const { getByTestId } = setup({
-            history: {
-                push,
-            },
-        });
+        const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('admin-work-cancel-top'));
-        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
-        push.mockClear();
+        expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
     });
 
     it('should handle cancel action of submit confirmation for new record', () => {
@@ -803,27 +769,17 @@ describe('AdminInterface component', () => {
             },
         }));
 
-        const push = jest.fn();
-
-        const { getByTestId, rerender } = setup({
-            history: {
-                push,
-            },
-        });
+        const { getByTestId, rerender } = setup();
 
         setup(
             {
                 submitSucceeded: true,
-                history: {
-                    push,
-                },
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(push).toHaveBeenCalledTimes(0);
-        push.mockClear();
+        expect(mockUseNavigate).toHaveBeenCalledTimes(0);
     });
 
     it('should handle cancel action of submit confirmation for existing record', () => {
@@ -835,26 +791,17 @@ describe('AdminInterface component', () => {
                 rek_pid: 'UQ:111111',
             },
         }));
-        const push = jest.fn();
 
-        const { getByTestId, rerender } = setup({
-            history: {
-                push,
-            },
-        });
+        const { getByTestId, rerender } = setup();
 
         setup(
             {
                 submitSucceeded: true,
-                history: {
-                    push,
-                },
             },
             rerender,
         );
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(push).toHaveBeenCalledWith('/view/UQ:111111');
-        push.mockClear();
+        expect(mockUseNavigate).toHaveBeenCalledWith('/view/UQ:111111');
     });
 
     it('should render unpublish button for published record', () => {

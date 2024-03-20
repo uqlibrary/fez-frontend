@@ -21,10 +21,8 @@ function setup(testProps = {}, renderMethod = render) {
             pathname: pathConfig.records.possible,
             state: null,
         },
-        history: {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
+        navigate: testProps.navigate || jest.fn(),
+        navigationType: testProps.navigationType || 'PUSH',
         ...testProps,
     };
     return renderMethod(
@@ -185,9 +183,7 @@ describe('Component PossiblyMyRecords', () => {
                 hideRecordErrorReset: jest.fn(),
                 searchPossiblyYourPublications: testAction,
             },
-            history: {
-                action: 'POP',
-            },
+            navigationType: 'POP',
             location: {
                 pathname: pathConfig.records.possible,
                 state: {
@@ -215,9 +211,7 @@ describe('Component PossiblyMyRecords', () => {
                 hideRecordErrorReset: jest.fn(),
                 searchPossiblyYourPublications: testAction,
             },
-            history: {
-                action: 'POP',
-            },
+            navigationType: 'POP',
             location: {
                 pathname: pathConfig.records.possible,
                 state: null,

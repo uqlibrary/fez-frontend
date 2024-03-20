@@ -8,11 +8,11 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
-import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
-import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
-import { LoadingButton } from '../../SharedComponents/LoadingButton';
-import { useLocation } from 'react-router';
+import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
+import { useLocation } from 'react-router-dom';
 
 export const FavouriteJournals = () => {
     const dispatch = useDispatch();

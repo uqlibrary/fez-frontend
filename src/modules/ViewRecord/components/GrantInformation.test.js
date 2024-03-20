@@ -6,7 +6,6 @@ import { rtlRender } from 'test-utils';
 function setup(testProps = {}) {
     const props = {
         publication: journalArticle,
-        history: { push: jest.fn() },
         actions: testProps.actions,
         classes: {},
         ...testProps,

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
 import ThirdPartyLookupTool from '../components/ThirdPartyLookupTool';
@@ -17,7 +16,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ThirdPartyLookupContainer = connect(mapStateToProps, mapDispatchToProps)(ThirdPartyLookupTool);
-ThirdPartyLookupContainer = withRouter(ThirdPartyLookupContainer);
+const ThirdPartyLookupContainer = connect(mapStateToProps, mapDispatchToProps)(ThirdPartyLookupTool);
 
 export default ThirdPartyLookupContainer;

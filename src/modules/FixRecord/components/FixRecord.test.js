@@ -9,6 +9,15 @@ jest.mock('redux-form/immutable', () => ({
     Field: jest.fn(),
 }));
 
+const mockUseNavigate = jest.fn();
+let mockParams = {};
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useParams: () => mockParams,
+}));
+
 function setup(testProps, renderMethod = render) {
     const props = {
         autofill: jest.fn(),
@@ -54,8 +63,6 @@ function setup(testProps, renderMethod = render) {
                 author: Immutable.Map(testProps.author || { aut_id: 410 }),
             }),
         actions: testProps.actions || { clearFixRecord: jest.fn() },
-        history: testProps.history || { go: jest.fn() },
-        match: testProps.match || {},
 
         publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
         ...testProps,
@@ -93,7 +100,10 @@ describe('Component FixRecord', () => {
 
     afterEach(() => {
         mockOnChange = undefined;
+        mockUseNavigate.mockClear();
+        mockParams = {};
     });
+
     it('should render loader when author is loading', () => {
         const { container } = setup({ recordToFix: mockRecordToFix, accountAuthorLoading: true });
         expect(container).toMatchSnapshot();
@@ -105,16 +115,13 @@ describe('Component FixRecord', () => {
     });
 
     it('should redirect if author not linked', () => {
-        const testMethod = jest.fn();
-        setup({ author: { aut_id: 1001 }, recordToFix: mockRecordToFix, history: { go: testMethod } });
-        expect(testMethod).toHaveBeenCalled();
+        setup({ author: { aut_id: 1001 }, recordToFix: mockRecordToFix });
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
         const { container } = setup({ recordToFix: mockRecordToFix });
         expect(container).toMatchSnapshot();
-
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
     });
 
     it('should render fix record form', () => {
@@ -137,12 +144,12 @@ describe('Component FixRecord', () => {
     });
 
     it('should load record if record is not loaded', () => {
+        mockParams = { pid: 'UQ:1001' };
         const actionFunction = jest.fn();
         setup({
             loadingRecordToFix: false,
             recordToFix: null,
             actions: { loadRecordToFix: actionFunction, clearFixRecord: jest.fn() },
-            match: { params: { pid: 'UQ:1001' } },
         });
 
         expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
@@ -154,19 +161,18 @@ describe('Component FixRecord', () => {
         });
         act(() => mockOnChange(undefined, 'unclaim'));
 
-        const pushMock = jest.fn();
         setup(
             {
                 recordToFix: mockRecordToFix,
                 submitSucceeded: true,
-                history: { push: pushMock },
             },
             rerender,
         );
 
         expect(getByText(/You have unclaimed this work successfully/i)).toBeInTheDocument();
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(pushMock).toBeCalledWith('/records/mine');
+        expect(mockUseNavigate).toBeCalledWith('/records/mine');
+        expect(mockUseNavigate).toBeCalledTimes(1);
     });
 
     it('should display confirmation box after successful unclaim and go back to previous page', () => {
@@ -175,18 +181,17 @@ describe('Component FixRecord', () => {
         });
         act(() => mockOnChange(undefined, 'unclaim'));
 
-        const goBackMock = jest.fn();
         setup(
             {
                 recordToFix: mockRecordToFix,
                 submitSucceeded: true,
-                history: { goBack: goBackMock },
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(goBackMock).toBeCalled();
+        expect(mockUseNavigate).toBeCalled();
+        expect(mockUseNavigate).toBeCalledTimes(1);
     });
 
     it('should display confirmation box after successful submission and go to dashboard', () => {
@@ -195,18 +200,16 @@ describe('Component FixRecord', () => {
         });
         act(() => mockOnChange(undefined, 'fix'));
 
-        const pushMock = jest.fn();
         setup(
             {
                 recordToFix: mockRecordToFix,
                 submitSucceeded: true,
-                history: { push: pushMock },
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(pushMock).toBeCalled();
+        expect(mockUseNavigate).toBeCalledWith('/dashboard');
     });
 
     it('should render the confirm dialog box with an alert due to a file upload failure', () => {

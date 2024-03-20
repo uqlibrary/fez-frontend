@@ -10,13 +10,12 @@ import {
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
-} from '../../../config/general';
-import { createFezDatastreamInfoArray, rtlRender, withDatastreams } from '../../../../utils/test-utils';
-import { getTestId as getAvStateIconTestId } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
+} from 'config/general';
+import { getTestId as getAvStateIconTestId } from 'modules/SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
 import { getTestId as getThumbTestId } from './partials/Thumbnail';
-import { sanitiseId } from '../../../helpers/general';
-import { getAvState } from '../../../helpers/datastreams';
-import { renderWithRouter, fireEvent, act } from 'test-utils';
+import { sanitiseId } from 'helpers/general';
+import { getAvState } from 'helpers/datastreams';
+import { createFezDatastreamInfoArray, withDatastreams, rtlRender, WithRouter, fireEvent, act } from 'test-utils';
 
 jest.mock('./MediaPreview');
 
@@ -30,7 +29,11 @@ function setup(testProps) {
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
-    return renderWithRouter(<Files {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <Files {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Files Component ', () => {

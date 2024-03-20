@@ -39,8 +39,9 @@ import {
 } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
-import { translateFormErrorsToText } from '../../../config/validation';
+import { translateFormErrorsToText } from 'config/validation';
 import { useDispatch } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,
@@ -60,9 +61,9 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (createMode, authorDetails, history, location) => {
+export const navigateToSearchResult = (createMode, authorDetails, navigate, location) => {
     if (createMode) {
-        history.push(pathConfig.admin.add);
+        navigate(pathConfig.admin.add);
     }
     const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
     if (
@@ -70,9 +71,9 @@ export const navigateToSearchResult = (createMode, authorDetails, history, locat
         (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
         !!navigatedFrom
     ) {
-        history.push(decodeURIComponent(navigatedFrom));
+        navigate(decodeURIComponent(navigatedFrom));
     } else {
-        history.push(pathConfig.records.mine);
+        navigate(pathConfig.records.mine);
     }
 };
 
@@ -87,8 +88,6 @@ export const AdminInterface = ({
     disableSubmit,
     formErrors,
     handleSubmit,
-    history,
-    location,
     locked,
     submitSucceeded,
     submitting,
@@ -100,6 +99,8 @@ export const AdminInterface = ({
     const { record } = useRecordContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
     const isSuperAdmin = useIsUserSuperAdmin();
+    const navigate = useNavigate();
+    const location = useLocation();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
     const defaultTab = objectType === RECORD_TYPE_RECORD ? 'bibliographic' : 'security';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
@@ -163,17 +164,23 @@ export const AdminInterface = ({
         return () => window.removeEventListener('keydown', keyHandler);
     });
 
+    const navigateToViewRecord = pid => {
+        if (!!pid && validation.isValidPid(pid)) {
+            navigate(pathConfig.records.view(pid));
+        }
+    };
+
     const handleCancel = event => {
         event.preventDefault();
-        const pushToHistory = () => history.push(pathConfig.records.view(record.rek_pid));
+        const navigateToViewPage = () => navigate(pathConfig.records.view(record.rek_pid));
         if (!!record.rek_pid) {
             /* istanbul ignore next */
             record.rek_editing_user === authorDetails.username
-                ? unlockRecord(record.rek_pid, pushToHistory)
-                : pushToHistory();
+                ? unlockRecord(record.rek_pid, navigateToViewPage)
+                : navigateToViewPage();
         } else {
             // Else this is a new record, so just go to the homepage
-            history.push(pathConfig.index);
+            navigate(pathConfig.index);
         }
     };
 
@@ -203,12 +210,6 @@ export const AdminInterface = ({
             </StandardPage>
         );
     }
-
-    const navigateToViewRecord = pid => {
-        if (!!pid && validation.isValidPid(pid)) {
-            history.push(pathConfig.records.view(pid));
-        }
-    };
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
@@ -369,7 +370,7 @@ export const AdminInterface = ({
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={() => navigateToSearchResult(createMode, authorDetails, history, location)}
+                        onAction={() => navigateToSearchResult(createMode, authorDetails, navigate, location)}
                         locale={saveConfirmationLocale}
                         onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
@@ -465,8 +466,6 @@ AdminInterface.propTypes = {
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object,
-    location: PropTypes.object,
     locked: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,

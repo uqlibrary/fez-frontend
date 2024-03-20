@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToFavourites } from '../../../../actions';
-import locale from '../../../../locale/components';
-import { LoadingButton } from '../../../SharedComponents/LoadingButton';
-import { ConfirmationBox } from '../../../SharedComponents/Toolbox/ConfirmDialogBox';
+import { addToFavourites } from 'actions/journals';
+import locale from 'locale/components';
+import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const AddToFavouritesButton = ({ selectedJournals = {}, disabled, clearSelectedJournals }) => {
     const dispatch = useDispatch();

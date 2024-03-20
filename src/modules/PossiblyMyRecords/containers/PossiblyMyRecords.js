@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import PossiblyMyRecords from '../components/PossiblyMyRecords';
-import { withRouter } from 'react-router-dom';
+import { withNavigate } from 'helpers/withNavigate';
 
 const mapStateToProps = state => {
     return {
@@ -18,7 +18,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ClaimPublicationContainer = connect(mapStateToProps, mapDispatchToProps)(PossiblyMyRecords);
-ClaimPublicationContainer = withRouter(ClaimPublicationContainer);
+const ClaimPublicationContainer = connect(mapStateToProps, mapDispatchToProps)(PossiblyMyRecords);
 
-export default ClaimPublicationContainer;
+export default withNavigate()(ClaimPublicationContainer);

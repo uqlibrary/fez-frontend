@@ -1,6 +1,6 @@
 import React from 'react';
 import { AddSection } from './AddSection';
-import { rtlRender } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -24,7 +24,11 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return rtlRender(<AddSection {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <AddSection {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('AddSection component', () => {

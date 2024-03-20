@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
+import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
 
 // pick utils
 import MomentUtils from '@date-io/moment';
@@ -16,7 +16,7 @@ import MomentUtils from '@date-io/moment';
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
-import { store, reduxHistory, reducers } from 'config/store';
+import { store, reducers } from 'config/store';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -30,8 +30,12 @@ if (process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
-            new Integrations.BrowserTracing({
-                routingInstrumentation: Sentry.reactRouterV5Instrumentation(history),
+            Sentry.reactRouterV6BrowserTracingIntegration({
+                useEffect: React.useEffect,
+                useLocation,
+                useNavigationType,
+                createRoutesFromChildren,
+                matchRoutes,
             }),
         ],
         autoSessionTracking: true,
@@ -59,7 +63,7 @@ const render = () => {
         <AppErrorBoundary>
             <Provider store={store}>
                 <LocalizationProvider dateAdapter={MomentUtils}>
-                    <Root history={reduxHistory} />
+                    <Root />
                 </LocalizationProvider>
             </Provider>
         </AppErrorBoundary>,

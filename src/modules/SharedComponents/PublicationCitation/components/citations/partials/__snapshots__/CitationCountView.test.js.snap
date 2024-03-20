@@ -4,7 +4,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
 <div>
   <a
     aria-label="Google"
-    class="wosCitationCount css-si3g8d"
+    class="wosCitationCount css-pi8u"
     data-analyticsid="citation-count-link"
     data-testid="citation-count-link"
     href="www.google.com"

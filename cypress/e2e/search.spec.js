@@ -17,7 +17,7 @@ context('Search', () => {
         cy.visit('/records/search');
     });
 
-    it.skip('Doing a basic search to advanced search', () => {
+    it('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('[data-testid=simple-search-input]')
             .should(
@@ -92,6 +92,30 @@ context('Search', () => {
             .should('exist')
             .should('contain', 'Searching for works');
         cy.get('[data-testid="search-records-results"]').contains('Displaying works 1 to 7 of 7 total works.');
+    });
+
+    context('Simple search with back and forward buttons pressed', () => {
+        it('should update the queryString and make API call when going back and forward on a search', () => {
+            // simple search input field
+            const catSearchString =
+                '?searchQueryParams%5Ball%5D=cat&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
+            const dogSearchString =
+                '?searchQueryParams%5Ball%5D=dog&page=1&pageSize=20&sortBy=score&sortDirection=Desc';
+            cy.get('[data-testid=simple-search-input]').type('cat{enter}');
+            cy.location('search').should('eq', catSearchString);
+            cy.get('[data-testid=simple-search-input]')
+                .clear()
+                .type('dog{enter}');
+            cy.location('search').should('eq', dogSearchString);
+
+            cy.go('back');
+            cy.get('[data-testid=simple-search-input]').should('have.value', 'cat');
+            cy.location('search').should('eq', catSearchString);
+
+            cy.go('forward');
+            cy.get('[data-testid=simple-search-input]').should('have.value', 'dog');
+            cy.location('search').should('eq', dogSearchString);
+        });
     });
 
     context('facets', () => {
@@ -364,9 +388,25 @@ context('Advanced Search', () => {
     beforeEach(() => {
         // visit advanced search page as an admin
         cy.visit(
-            'http://localhost:3000/records/search?user=uqstaff&searchQueryParams%5Ball%5D=test&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+            '/records/search?user=uqstaff&searchQueryParams%5Ball%5D=test&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
         );
         cy.viewport(960, 768);
+    });
+
+    it('should search records when advanced search options are updated', () => {
+        cy.get('[data-testid="search-records-loading"]').should('not.exist');
+        cy.get('[data-testid="show-advanced-search"').click();
+        cy.get('[data-testid="from"]').type('2005');
+        cy.get('[data-testid="to"]').type('2018');
+        cy.get('[data-testid="advanced-search"]').click();
+        cy.location('search').should(
+            'contain',
+            'activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2005&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2018',
+        );
+        cy.get('[data-testid="facet-year-range-caption"').should('exist');
+        cy.get('[data-testid="search-records-loading"]')
+            .should('exist')
+            .should('contain', 'Searching for works');
     });
 
     it('can bulk edit Advisory statement', () => {

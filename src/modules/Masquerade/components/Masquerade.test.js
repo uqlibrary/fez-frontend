@@ -6,9 +6,6 @@ function setup(testProps = {}) {
     const props = {
         author: null,
         actions: {},
-        history: {
-            push: jest.fn(),
-        },
         account: {},
         ...testProps,
     };

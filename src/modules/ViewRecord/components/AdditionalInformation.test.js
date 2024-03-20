@@ -2,7 +2,7 @@ import React from 'react';
 import * as records from 'mock/data/testing/records';
 import AdditionalInformation from './AdditionalInformation';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
-import { renderWithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 import { useJsApiLoader } from '@react-google-maps/api';
 
@@ -31,7 +31,11 @@ function setup(testProps = {}) {
         account: {},
         ...testProps,
     };
-    return renderWithRouter(<AdditionalInformation {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <AdditionalInformation {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Additional Information Component ', () => {
