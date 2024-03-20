@@ -7,15 +7,18 @@ import { accounts } from 'mock/data/account';
 
 import { render, WithReduxStore, WithRouter, act } from 'test-utils';
 import Immutable from 'immutable';
-import * as ReactRouterHooks from 'react-router';
+import { useLocation } from 'react-router-dom';
 import * as Context from 'context';
 import * as FavouriteSearchAction from 'actions/favouriteSearch';
 
 import * as repositories from 'repositories';
 import { waitForElementToBeRemoved, waitFor } from '@testing-library/dom';
 
-jest.mock('react-router');
-
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: jest.fn(() => jest.fn()),
+    useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
+}));
 function setup(state = {}, renderer = render) {
     return renderer(
         <WithReduxStore initialState={Immutable.Map(state)}>
@@ -32,7 +35,8 @@ describe('NotFound page component', () => {
     let getFavouriteSearchAlias;
 
     beforeEach(() => {
-        useLocationHook = jest.spyOn(ReactRouterHooks, 'useLocation');
+        useLocation.mockClear();
+        // useLocationHook = jest.spyOn(ReactRouterHooks, 'useLocation');
         useAccountContext = jest.spyOn(Context, 'useAccountContext');
         getFavouriteSearchAlias = jest.spyOn(FavouriteSearchAction, 'getFavouriteSearchAlias');
     });
@@ -42,7 +46,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render auth required page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.about }));
+        useLocation.mockImplementation(() => ({ pathname: pathConfig.about }));
         useAccountContext.mockImplementation(() => ({ account: null }));
 
         const { getByText } = setup();
@@ -53,7 +57,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render permissions denied page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.admin.masquerade }));
+        useLocation.mockImplementation(() => ({ pathname: pathConfig.admin.masquerade }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
         const { getByText } = setup();
@@ -63,7 +67,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render permissions denied or not found page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: '/view/UQ:1/test.pdf' }));
+        useLocation.mockImplementation(() => ({ pathname: '/view/UQ:1/test.pdf' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
         const { getByText } = setup();
@@ -73,7 +77,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render not found page', async () => {
-        useLocationHook.mockImplementation(() => ({ pathname: '/abcd' }));
+        useLocation.mockImplementation(() => ({ pathname: '/abcd' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
         const { getByText, getByTestId } = setup();
@@ -95,7 +99,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render not found page for path containing more than one slash', async () => {
-        useLocationHook.mockImplementation(() => ({ pathname: '/abcd/test.pdf' }));
+        useLocation.mockImplementation(() => ({ pathname: '/abcd/test.pdf' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqresearcher }));
 
         const { getByText } = setup();
@@ -120,7 +124,7 @@ describe('NotFound page component', () => {
         mockApi.onGet(repositories.routes.FAVOURITE_SEARCH_LIST_API({ id: 'abcd' }).apiUrl).reply(200, {
             data: { fvs_id: 1, fvs_alias: 'abcd', fvs_search_parameters: '/records/search?test=parameters' },
         });
-        useLocationHook.mockImplementation(() => ({ pathname: '/abcd' }));
+        useLocation.mockImplementation(() => ({ pathname: '/abcd' }));
         useAccountContext.mockImplementation(() => ({ account: accounts.uqstaff }));
 
         const { getByTestId } = setup({

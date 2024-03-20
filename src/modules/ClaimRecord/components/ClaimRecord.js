@@ -39,7 +39,7 @@ export default class ClaimRecord extends PureComponent {
         publicationToClaimFileUploadingError: PropTypes.bool,
         publicationFailedToClaim: PropTypes.string,
         redirectPath: PropTypes.string,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         actions: PropTypes.object.isRequired,
     };
 
@@ -52,7 +52,7 @@ export default class ClaimRecord extends PureComponent {
             : null;
 
         if (!author || !publication) {
-            this.props.history.go(-1);
+            this.props.navigate(-1);
         }
     }
     componentDidMount() {
@@ -77,21 +77,21 @@ export default class ClaimRecord extends PureComponent {
     }
 
     _navigateToMyResearch = () => {
-        this.props.history.push(pathConfig.records.mine);
+        this.props.navigate(pathConfig.records.mine);
     };
 
     _cancelClaim = () => {
         this.props.actions.clearNewRecord();
-        this.props.history.goBack();
+        this.props.navigate(-1);
     };
 
     _claimAnother = () => {
         if (!!this.props.redirectPath) {
-            this.props.history.push(this.props.redirectPath);
+            this.props.navigate(this.props.redirectPath);
             this.props.actions.clearNewRecord();
             this.props.actions.clearRedirectPath();
         } else {
-            this.props.history.goBack();
+            this.props.navigate(-1);
         }
     };
 
@@ -116,7 +116,7 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _navigateToFixRecord = () => {
-        this.props.history.push(pathConfig.records.fix(this._publication().rek_pid));
+        this.props.navigate(pathConfig.records.fix(this._publication().rek_pid));
     };
 
     _publication = () => {

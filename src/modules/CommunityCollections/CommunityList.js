@@ -26,10 +26,10 @@ import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsLi
 
 import { CommunityTable } from './components/CommunityTable';
 import queryString from 'query-string';
-import { useHistory } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Add from '@mui/icons-material/Add';
 
-import { pushHistory } from './components/functions';
+import { navigateTo } from './components/functions';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 
 const StyledAddButtonWrapper = styled('div')(({ theme }) => ({
@@ -51,7 +51,8 @@ export const CommunityList = () => {
         setAutoCollapse(event.target.checked);
     };
 
-    const history = useHistory();
+    const navigate = useNavigate();
+    const location = useLocation();
     let sortDirection = 'Asc';
     let sortBy = 'title';
 
@@ -60,10 +61,11 @@ export const CommunityList = () => {
     const dispatch = useDispatch();
 
     const queryStringObject = queryString.parse(
+        /* istanbul ignore next*/
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
-    const { queryParams } = useQueryStringParams(history.location);
+    const { queryParams } = useQueryStringParams(location);
     const { handleCommunityExport } = useCommunityCollectionControls(queryParams, actions);
 
     sortDirection = queryStringObject.sortDirection ? queryStringObject.sortDirection : sortDirection;
@@ -94,10 +96,10 @@ export const CommunityList = () => {
                 sortBy: sortBy,
             }),
         );
-        pushHistory(history, pageSize, 1, sortBy, sortDirection);
+        navigateTo(navigate, pageSize, 1, sortBy, sortDirection);
     };
     const pageChanged = page => {
-        pushHistory(history, perPage, page, sortBy, sortDirection);
+        navigateTo(navigate, perPage, page, sortBy, sortDirection);
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
         );
@@ -108,7 +110,7 @@ export const CommunityList = () => {
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: currentPage, direction: direction, sortBy: sortby }),
         );
-        pushHistory(history, perPage, currentPage, sortby, direction);
+        navigateTo(navigate, perPage, currentPage, sortby, direction);
     };
 
     React.useEffect(() => {
@@ -120,7 +122,7 @@ export const CommunityList = () => {
                 sortBy: sortBy,
             }),
         );
-        pushHistory(history, perPage, currentPage, sortBy, sortDirection);
+        navigateTo(navigate, perPage, currentPage, sortBy, sortDirection);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

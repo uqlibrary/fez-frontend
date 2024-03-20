@@ -20,6 +20,13 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         autofill: jest.fn(),
@@ -72,6 +79,10 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('should render data set form', () => {
         const { container, getByRole } = setup();
         expect(container).toMatchSnapshot();
@@ -107,7 +118,6 @@ describe('AddDataCollection test', () => {
 
     it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
-        const pushFn = jest.fn();
         const { rerender } = setup({
             submitSucceeded: false,
         });
@@ -118,16 +128,13 @@ describe('AddDataCollection test', () => {
                 actions: {
                     clearNewRecord: clearNewRecordFn,
                 },
-                history: {
-                    push: pushFn,
-                },
             },
             rerender,
         );
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
         expect(clearNewRecordFn).toHaveBeenCalled();
-        expect(pushFn).toHaveBeenCalledWith('/data-collections/mine');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
     });
 
     it('should get save confirmation locale correctly', () => {

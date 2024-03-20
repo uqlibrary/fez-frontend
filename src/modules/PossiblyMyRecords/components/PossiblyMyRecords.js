@@ -35,7 +35,8 @@ export default class PossiblyMyRecords extends PureComponent {
         loadingPossibleCounts: PropTypes.bool,
 
         location: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
+        navigationType: PropTypes.string,
         actions: PropTypes.object,
 
         hidePublicationFailed: PropTypes.bool,
@@ -69,7 +70,7 @@ export default class PossiblyMyRecords extends PureComponent {
         // handle browser back button - set state from location/dispatch action for this state
         if (
             state.prevProps?.location !== props.location &&
-            props.history.action === 'POP' &&
+            props.navigationType === 'POP' &&
             props.location.pathname === pathConfig.records.possible
         ) {
             props.actions.searchPossiblyYourPublications({ ...state });
@@ -102,9 +103,8 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.actions.hideRecordErrorReset();
     }
 
-    pushPageHistory = () => {
-        this.props.history.push({
-            pathname: `${pathConfig.records.possible}`,
+    navigateTo = () => {
+        this.props.navigate(`${pathConfig.records.possible}`, {
             search: `?ts=${Date.now()}`,
             state: { ...this.state, prevProps: {} },
         });
@@ -130,7 +130,7 @@ export default class PossiblyMyRecords extends PureComponent {
 
     _claimPublication = item => {
         this.props.actions.setClaimPublication(item);
-        this.props.history.push(pathConfig.records.claim);
+        this.props.navigate(pathConfig.records.claim);
     };
 
     _facetsChanged = activeFacets => {
@@ -139,7 +139,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -149,7 +149,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -159,7 +159,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 
@@ -181,7 +181,7 @@ export default class PossiblyMyRecords extends PureComponent {
             {
                 page: page,
             },
-            this.pushPageHistory,
+            this.navigateTo,
         );
     };
 

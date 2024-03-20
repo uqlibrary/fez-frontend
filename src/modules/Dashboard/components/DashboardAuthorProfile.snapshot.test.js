@@ -7,7 +7,7 @@ function setup(testProps = {}) {
     const props = {
         authorDetails: mock.authorDetails.uqresearcher,
         author: mock.currentAuthor.uqresearcher.data,
-        history: {},
+        navigate: jest.fn(),
         classes: {},
         ...testProps,
     };

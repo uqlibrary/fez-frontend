@@ -1,17 +1,28 @@
 import React from 'react';
-import { render, WithRouter, act, fireEvent } from 'test-utils';
-import { createMemoryHistory } from 'history';
+import { render, WithRouter, fireEvent } from 'test-utils';
 import { CommonButtons } from '../index';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
+const mockUseNavigate = jest.fn();
+const mockUseLocation = { pathname: '/' };
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation,
+}));
+
+const setup = ({ state = {}, initialEntries = ['/'] } = {}) => {
     return render(
-        <WithRouter history={testHistory}>
+        <WithRouter initialEntries={initialEntries}>
             <CommonButtons {...state} />
         </WithRouter>,
     );
 };
 
 describe('CommonButtons', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
     it('should render', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId('journal-search-favourite-journals-button')).toBeInTheDocument();
@@ -25,16 +36,12 @@ describe('CommonButtons', () => {
     });
 
     it('should change URL when Favourite Journals button pressed', () => {
-        const testHistory = createMemoryHistory({ initialEntries: ['/'] });
-
-        const { queryByTestId } = setup({ testHistory });
+        const { queryByTestId } = setup();
         expect(queryByTestId('journal-search-favourite-journals-button')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(queryByTestId('journal-search-favourite-journals-button'));
-        });
+        fireEvent.click(queryByTestId('journal-search-favourite-journals-button'));
 
-        expect(testHistory.location.pathname).toContain('journals/favourites/');
+        expect(mockUseNavigate).toBeCalledWith('/journals/favourites/', { state: { prevLocation: { pathname: '/' } } });
     });
 
     it('should call supplied function when Search All Journals button pressed', () => {
@@ -42,9 +49,7 @@ describe('CommonButtons', () => {
         const { queryByTestId } = setup({ state: { onSearchAll: mockHandleSearchAllJournalsFn } });
         expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(queryByTestId('journal-search-browse-all-button'));
-        });
+        fireEvent.click(queryByTestId('journal-search-browse-all-button'));
 
         expect(mockHandleSearchAllJournalsFn).toHaveBeenCalled();
     });

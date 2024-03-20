@@ -3,7 +3,6 @@ import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
 import Immutable from 'immutable';
-import { withRouter } from 'react-router';
 import { bindActionCreators } from 'redux';
 
 import { adminInterfaceConfig, validate, valueExtractor } from 'config/journalAdmin';
@@ -86,4 +85,4 @@ function mapDispatchToProps(dispatch) {
 
 const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
 
-export default withRouter(AdminReduxFormContainer);
+export default AdminReduxFormContainer;

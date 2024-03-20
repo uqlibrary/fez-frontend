@@ -25,7 +25,7 @@ export default class RecordsSearchResults extends PureComponent {
         publicationsList: PropTypes.array,
         searchLoading: PropTypes.bool,
         loadingPublicationSources: PropTypes.object,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         actions: PropTypes.object,
         rawSearchQuery: PropTypes.string,
     };
@@ -47,17 +47,17 @@ export default class RecordsSearchResults extends PureComponent {
     };
 
     _showNewRecordForm = () => {
-        this.props.history.push(pathConfig.records.add.new);
+        this.props.navigate(pathConfig.records.add.new);
     };
 
     _cancelWorkflow = () => {
-        this.props.history.push(pathConfig.records.add.find);
+        this.props.navigate(pathConfig.records.add.find);
     };
 
     _claimPublication = item => {
         this.props.actions.setClaimPublication(item);
         this.props.actions.setRedirectPath(pathConfig.records.add.find);
-        this.props.history.push(pathConfig.records.claim);
+        this.props.navigate(pathConfig.records.claim);
     };
 
     getUnclaimablePublicationsList = publicationsList => {

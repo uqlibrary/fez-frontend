@@ -8,6 +8,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import { withNavigate } from 'helpers/withNavigate';
 
 export class MyLatestPublications extends PureComponent {
     static propTypes = {
@@ -16,7 +17,7 @@ export class MyLatestPublications extends PureComponent {
         loadingLatestPublications: PropTypes.bool,
         accountAuthorDetailsLoading: PropTypes.bool,
         actions: PropTypes.object,
-        history: PropTypes.object.isRequired,
+        navigate: PropTypes.func.isRequired,
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
     };
@@ -35,7 +36,7 @@ export class MyLatestPublications extends PureComponent {
     }
 
     _viewMyResearch = () => {
-        this.props.history.push(pathConfig.records.mine);
+        this.props.navigate(pathConfig.records.mine);
     };
 
     render() {
@@ -80,4 +81,4 @@ export class MyLatestPublications extends PureComponent {
     }
 }
 
-export default MyLatestPublications;
+export default withNavigate()(MyLatestPublications);

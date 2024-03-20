@@ -7,7 +7,9 @@ import { handleKeyboardPressActivate } from 'helpers/general';
 
 export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
+    const handleDeleteKeyword = React.useCallback(() => {
+        onKeywordDelete(keyword);
+    }, [onKeywordDelete, keyword]);
 
     const idValue = sanitiseId(`journal-search-chip-${keyword.type}-${keyword.text}`);
     return (

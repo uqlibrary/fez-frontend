@@ -44,9 +44,6 @@ export const pathConfig = {
         collectionListAPI: 'communities',
     },
     communityList: '/communities',
-    collectionList: {
-        path: pid => `/communities/${pid}/collections`,
-    },
     dashboard: '/dashboard',
     about: '/about',
     hdrSubmission: '/rhdsubmission',
@@ -209,7 +206,6 @@ export const pathConfig = {
     },
     journals: {
         search: '/journals/search/',
-        results: '/journals/results/',
         compare: '/journals/compare/',
         favourites: '/journals/favourites/',
     },

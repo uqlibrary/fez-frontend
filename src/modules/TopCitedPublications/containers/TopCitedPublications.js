@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import TopCitedPublications from '../components/TopCitedPublications';
 import * as actions from 'actions';
-import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
     return {
@@ -16,7 +15,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let TopCitedPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(TopCitedPublications);
-TopCitedPublicationsContainer = withRouter(TopCitedPublicationsContainer);
+const TopCitedPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(TopCitedPublications);
 
 export default TopCitedPublicationsContainer;

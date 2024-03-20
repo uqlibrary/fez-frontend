@@ -5,6 +5,15 @@ import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
+const mockUseNavigate = jest.fn();
+let mockUseLocation = {};
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation,
+}));
+
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         ...testProps,
@@ -19,8 +28,6 @@ function setup(testProps = {}, renderMethod = render) {
             logout: jest.fn(),
             searchAuthorPublications: jest.fn(),
         },
-        location: testProps.location || {},
-        history: testProps.history || { location: {} },
     };
 
     window.matchMedia = function matchMedia() {
@@ -33,7 +40,7 @@ function setup(testProps = {}, renderMethod = render) {
 
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <WithRouter route={'/*'} initialEntries={['/']}>
                 <App {...props} />
             </WithRouter>
         </WithReduxStore>,
@@ -60,11 +67,13 @@ describe('Application component', () => {
             aut_org_username: 'uqauthor1',
             aut_orcid_id: 'abc-abc-abc',
         };
+        mockUseLocation = { pathname: '/', search: '' };
     });
 
     afterEach(() => {
         // delete window.location;
         window.location = saveLocation;
+        mockUseNavigate.mockClear();
     });
 
     it('should render loading screen while account is loading', () => {
@@ -73,7 +82,7 @@ describe('Application component', () => {
     });
 
     it('should render for anon user', () => {
-        const { container } = setup({ location: { pathname: '/' } });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
@@ -86,6 +95,7 @@ describe('Application component', () => {
     });
 
     it('should render alert if user is not fez author', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { container } = setup({
             account: account,
             author: null,
@@ -138,7 +148,8 @@ describe('Application component', () => {
         const assignFn = jest.fn();
         delete window.location;
         window.location = { assign: assignFn };
-        setup({ account: null, location: { pathname: '/rhdsubmission' } });
+        mockUseLocation.pathname = '/rhdsubmission';
+        setup({ account: null });
         expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
     });
 
@@ -148,10 +159,10 @@ describe('Application component', () => {
     // but they are a student.
     it('redirects user to login if going to a secure file url and not user logged in yet', () => {
         window.location = { assign: jest.fn() };
+        mockUseLocation.pathname = '/view/UQ:1/test.pdf';
         const { container } = setup({
             accountLoading: false,
             account: null,
-            location: { pathname: '/view/UQ:1/test.pdf' },
         });
         expect(container).toMatchSnapshot();
     });
@@ -174,10 +185,8 @@ describe('Application component', () => {
     });
 
     it('should not render alert if user is not fez author and on the journal search page', () => {
+        mockUseLocation.pathname = pathConfig.journals.search;
         const { queryByTestId } = setup({
-            location: {
-                pathname: pathConfig.journals.search,
-            },
             account: account,
             author: null,
         });
@@ -186,10 +195,8 @@ describe('Application component', () => {
     });
 
     it('should not render alert if user is not fez author and on the journal view page', () => {
+        mockUseLocation.pathname = pathConfig.journal.view(1);
         const { queryByTestId } = setup({
-            location: {
-                pathname: pathConfig.journal.view(1),
-            },
             account: account,
             author: null,
         });
@@ -197,7 +204,7 @@ describe('Application component', () => {
     });
 
     it('should render orcid alert for account with fez author without ORCID ID', () => {
-        const pushFn = jest.fn();
+        mockUseLocation.pathname = '/not-public-page';
         const { getByTestId } = setup({
             account: account,
             author: {
@@ -205,16 +212,16 @@ describe('Application component', () => {
                 aut_orcid_id: null,
             },
             authorDetails: {},
-            history: { push: pushFn, location: { pathname: '/' } },
         });
 
         expect(getByTestId('orcid-optional')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));
-        expect(pushFn).toBeCalledWith('/author-identifiers/orcid/link');
+        expect(mockUseNavigate).toBeCalledWith('/author-identifiers/orcid/link');
     });
 
     it('should render orcid alert for account with fez author without ORCID ID and redirect when receiving orcid response', () => {
+        mockUseLocation = { pathname: '/not-public-page', search: '?code=010101' };
         const assignFn = jest.fn();
         delete global.window.location;
         global.window.location = {
@@ -238,29 +245,30 @@ describe('Application component', () => {
     });
 
     it('should not show orcid alert for a student without an author account', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account.s2222222,
             author: {
                 ...currentAuthor.s2222222.data,
                 aut_orcid_id: null,
             },
-            location: { pathname: '/' },
             authorDetails: {},
         });
         expect(queryByTestId('orcid-optional')).not.toBeInTheDocument();
     });
 
     it('should not show orcid alert for a student without an author account', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account.s3333333,
             author: currentAuthor.s3333333.data,
-            location: { pathname: '/' },
             authorDetails: {},
         });
         expect(queryByTestId('orcid-optional')).not.toBeInTheDocument();
     });
 
     it('should not render orcid alert for account with fez author without ORCID ID but is an admin', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account,
             author: {
@@ -277,6 +285,7 @@ describe('Application component', () => {
     });
 
     it('should not render orcid alert for account with fez author without ORCID ID but is a super admin', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account,
             author: {
@@ -293,6 +302,7 @@ describe('Application component', () => {
     });
 
     it('should not render orcid alert for account with fez author with ORCID ID but is an admin', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account,
             author: author,
@@ -305,6 +315,7 @@ describe('Application component', () => {
     });
 
     it('should not render orcid alert for account with fez author with ORCID ID but is a super admin', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { queryByTestId } = setup({
             account: account,
             author: author,
@@ -317,6 +328,7 @@ describe('Application component', () => {
     });
 
     it('should render orcid alert for account with author account without a ORCID ID', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { getByTestId } = setup({
             account: account,
             author: {
@@ -330,10 +342,8 @@ describe('Application component', () => {
     });
 
     it('should not render orcid alert for account with fez author without ORCID ID on thesis submission page', () => {
+        mockUseLocation.pathname = pathConfig.hdrSubmission;
         const { queryByTestId } = setup({
-            location: {
-                pathname: pathConfig.hdrSubmission,
-            },
             account: account,
             author: {
                 ...author,
@@ -346,6 +356,7 @@ describe('Application component', () => {
     });
 
     it('should render orcid alert for HDR student', () => {
+        mockUseLocation.pathname = '/not-public-page';
         const { getByTestId } = setup({
             account: accounts.s2222222,
             author: {
@@ -407,31 +418,36 @@ describe('Application component', () => {
     });
 
     it('should determine if it has incomplete works from props and hide menu item', () => {
-        const { container } = setup({
-            account: { name: 'test1' },
+        const { queryByRole } = setup({
+            account: account,
+            author: author,
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: jest.fn(),
+                logout: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
                     publicationsListPagingData: {
-                        total: 10,
+                        total: 0,
                     },
                 },
             },
         });
-        expect(container).toMatchSnapshot();
+        fireEvent.click(queryByRole('button', { name: /Click to open the main navigation/i }));
+        expect(queryByRole('button', { name: 'My incomplete works' })).not.toBeInTheDocument();
     });
 
     it('should determine if it has incomplete works from props and show menu item', () => {
-        const { container } = setup({
-            account: { name: 'test1' },
+        const { getByRole } = setup({
+            account: account,
+            author: author,
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: jest.fn(),
+                logout: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
@@ -441,7 +457,9 @@ describe('Application component', () => {
                 },
             },
         });
-        expect(container).toMatchSnapshot();
+
+        fireEvent.click(getByRole('button', { name: /Click to open the main navigation/i }));
+        expect(getByRole('button', { name: 'My incomplete works' }));
     });
 
     it('should toggleDrawer', () => {
@@ -455,7 +473,7 @@ describe('Application component', () => {
     });
 
     it('Should display mobile correctly', () => {
-        // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
+        mockUseLocation.pathname = '/not-public-page';
         const { container } = setup({ isMobile: true });
         expect(container).toMatchSnapshot();
     });
@@ -470,6 +488,7 @@ describe('Application component', () => {
         expect(getByTestId('wrapper')).toBeInTheDocument();
         expect(getByText('content here')).toBeInTheDocument();
     });
+
     it('StrictModeConditional should not wrap the App JSX', () => {
         const { queryByTestId, getByText } = render(
             <StrictModeConditional condition={false} wrapper={children => <div data-testid="wrapper">{children}</div>}>

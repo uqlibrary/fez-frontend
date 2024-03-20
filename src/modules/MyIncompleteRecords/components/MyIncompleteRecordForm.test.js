@@ -5,10 +5,17 @@ import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { useNavigate } from 'react-router-dom';
+import { mockRecordToFix } from 'mock/data/testing/records';
 
 jest.mock('actions', () => ({
     updateIncompleteRecord: data =>
         data.author.aut_id === 410 ? Promise.resolve() : Promise.reject(Error('Some error')),
+}));
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: jest.fn(() => jest.fn()),
 }));
 
 function setup(testProps = {}) {
@@ -42,10 +49,6 @@ describe('MyIncompleteRecordForm', () => {
                 showSignificance: true,
             },
             isAuthorLinked: true,
-            history: {
-                push: jest.fn(),
-                go: jest.fn(),
-            },
         });
 
         expect(container).toMatchSnapshot();
@@ -119,5 +122,15 @@ describe('MyIncompleteRecordForm', () => {
         expect(errors).toEqual({
             authorsAffiliation: 'Rows marked with a red prefix must be updated',
         });
+    });
+
+    it('should redirect if author not linked', () => {
+        const testFn = jest.fn();
+        useNavigate.mockImplementation(() => testFn);
+        setup({
+            recordToFix: mockRecordToFix,
+            isAuthorLinked: false,
+        });
+        expect(testFn).toHaveBeenCalled();
     });
 });

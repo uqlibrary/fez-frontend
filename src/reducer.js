@@ -8,7 +8,7 @@ import { default as fileUploadReducer } from 'modules/SharedComponents/Toolbox/F
 import * as reducers from './reducers';
 import * as plugins from './reducers/formReducerPlugins';
 
-const rootReducer = ({ routerReducer }) =>
+const rootReducer = () =>
     combineReducers({
         form: formReducer.plugin({
             PublicationForm: plugins.resetValue,
@@ -18,7 +18,6 @@ const rootReducer = ({ routerReducer }) =>
         }),
         helpDrawer: helpDrawerReducer,
         fileUpload: fileUploadReducer,
-        router: routerReducer,
         ...reducers,
     });
 

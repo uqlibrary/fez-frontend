@@ -11,10 +11,6 @@ jest.mock('redux-form/immutable', () => ({
 
 function setup(testProps = {}) {
     const props = {
-        history: {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         vocabId: testProps.vocabId || 0, // : PropTypes.number

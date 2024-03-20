@@ -1,7 +1,7 @@
 import React from 'react';
 import ThesisSubmission, { afterSubmit, cancelSubmit, getFormSubmitAlertProps } from './ThesisSubmission';
 import { default as formLocale } from 'locale/publicationForm';
-import { THESIS_UPLOAD_RETRIES } from 'config/general';
+import * as config from 'config/general';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import Immutable from 'immutable';
 import { useAccountContext } from 'context';
@@ -24,7 +24,13 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
-function setup(testProps) {
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => jest.fn(),
+    useLocation: () => ({ pathname: '/', search: '' }),
+}));
+
+function setup(testProps, renderMethod = render) {
     const props = {
         dirty: testProps.dirty || false,
         isSessionValid: testProps.isSessionValid || true,
@@ -42,7 +48,7 @@ function setup(testProps) {
         ...testProps,
     };
 
-    return render(
+    return renderMethod(
         <WithReduxStore>
             <WithRouter>
                 <ThesisSubmission {...props} />
@@ -63,6 +69,7 @@ describe('ThesisSubmission', () => {
                 id: 's2222222',
             },
         }));
+        config.THESIS_UPLOAD_RETRIES = 1;
     });
 
     it('should render sbs thesis submission form', () => {
@@ -131,25 +138,39 @@ describe('ThesisSubmission', () => {
     });
 
     it('should show file upload retry failure alert', () => {
-        const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(() => [THESIS_UPLOAD_RETRIES, jest.fn()]);
-        const { getByText, container } = setup({
+        const retryUploadFn = jest.fn();
+        const { getByRole, getByText, container } = setup({
             author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
             newRecordFileUploadingOrIssueError: true,
             submitSucceeded: true,
+            retryUpload: retryUploadFn,
         });
+        fireEvent.click(getByRole('button', { name: 'Retry upload' }));
+
+        expect(retryUploadFn).toBeCalled();
         expect(getByText(/FILE UPLOAD ERROR/i)).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
     it('should show file upload retry success alert', () => {
-        const mockUseState = jest.spyOn(React, 'useState');
-        mockUseState.mockImplementation(() => [1, jest.fn()]);
-        const { getByText } = setup({
+        const { getByRole, getByText, rerender } = setup({
             author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
-            newRecordFileUploadingOrIssueError: false,
+            newRecordFileUploadingOrIssueError: true,
             submitSucceeded: true,
+            retryUpload: jest.fn(),
         });
+
+        fireEvent.click(getByRole('button', { name: 'Retry upload' }));
+
+        setup(
+            {
+                author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
+                newRecordFileUploadingOrIssueError: false,
+                submitSucceeded: true,
+            },
+            rerender,
+        );
+
         expect(getByText(/File upload retry succeeded/i)).toBeInTheDocument();
     });
 

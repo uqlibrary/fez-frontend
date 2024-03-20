@@ -1,14 +1,21 @@
 import React from 'react';
 import TitleOrPidOptionTemplate from './TitleOrPidOptionTemplate';
-import { rtlRender, withRouter, withRedux } from 'test-utils';
+import { rtlRender, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return rtlRender(withRouter()(withRedux()(<TitleOrPidOptionTemplate {...props} />)));
+    return rtlRender(
+        <WithReduxStore>
+            <WithRouter>
+                <TitleOrPidOptionTemplate {...props} />
+            </WithRouter>
+        </WithReduxStore>,
+    );
 }
+
 describe('TitleOrPidOptionTemplate component', () => {
     it('should render FoR option correctly', () => {
         const mockRecord = {
