@@ -1,5 +1,5 @@
 import React from 'react';
-import Dashboard, { fibonacci } from './Dashboard';
+import Dashboard, { fibonacci, isWaitingForSync } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
@@ -579,6 +579,15 @@ describe('Dashboard test', () => {
         fibonacciSeries.forEach((num, index) => {
             expect(fibonacci(index)).toBe(num);
         });
+    });
+
+    it('should have helper to determine orcId loading status', () => {
+        expect(isWaitingForSync({ orj_status: 'Pending' })).toBe(true);
+        expect(isWaitingForSync({ orj_status: 'In Progress' })).toBe(true);
+        expect(isWaitingForSync({ orj_status: 'Fail' })).toBe(false);
+        expect(isWaitingForSync({ other_status: 'Pending' })).toBe(false);
+        expect(isWaitingForSync({})).toBe(false);
+        expect(isWaitingForSync()).toBe(false);
     });
 
     it('should wait for ORCID sync to complete', () => {
