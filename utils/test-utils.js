@@ -2,8 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from '@testing-library/react';
-import { Router } from 'react-router-dom';
-import { Route } from 'react-router';
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 
@@ -13,7 +12,6 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 import { getStore } from '../src/config/store';
 import Immutable from 'immutable';
-import { createMemoryHistory } from 'history';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -38,41 +36,17 @@ AllTheProviders.propTypes = {
     children: PropTypes.node,
 };
 
-export const rtlRender = (ui, options) => render(ui, { wrapper: AllTheProviders, ...options });
-
-export const renderWithRouter = (
-    ui,
-    { route = '/', history = createMemoryHistory({ initialEntries: [route] }), renderMethod = render } = {},
-) => {
-    return renderMethod(
-        <AllTheProviders>
-            <Router history={history}>{ui}</Router>
-        </AllTheProviders>,
-    );
-};
-
-export const WithRouter = ({ children, route = '/', history = createMemoryHistory({ initialEntries: [route] }) }) => (
-    <AllTheProviders>
-        <Router history={history}>{children}</Router>
-    </AllTheProviders>
-);
-export const renderWithRedux = ({ initialState }) => render => {
+export const rtlRender = (ui, options) => {
     return {
-        ...render,
-        store: getStore({ initialState, history: render.history }),
+        user: userEvent.setup(),
+        ...render(ui, { wrapper: AllTheProviders, ...options }),
     };
 };
 
-export const withRouter = ({
-    route = '/',
-    path = '/',
-    history = createMemoryHistory({ initialEntries: [route] }),
-} = {}) => WrappedComponent => {
-    return (
-        <Router history={history}>
-            <Route path={path} children={WrappedComponent} />
-        </Router>
-    );
+export const WithRouter = ({ children, route = '/', initialEntries = [route] }) => {
+    const routes = [{ path: route, element: children }];
+    const router = createMemoryRouter(routes, { initialEntries: initialEntries });
+    return <RouterProvider router={router} />;
 };
 
 export const withRedux = (initialState = Immutable.Map()) => WrappedComponent => {
@@ -191,10 +165,7 @@ module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
     rtlRender,
-    renderWithRouter,
-    renderWithRedux,
     withRedux,
-    withRouter,
     AllTheProviders,
     WithReduxStore,
     assertTooltipText,

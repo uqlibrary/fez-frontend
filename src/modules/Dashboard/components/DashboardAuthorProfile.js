@@ -68,7 +68,7 @@ export const DashboardAuthorProfile = ({ author, authorDetails, history }) => {
                                     google_scholar: Boolean(author.aut_google_scholar_id),
                                     orcid: Boolean(author.aut_orcid_id),
                                 }}
-                                history={history}
+                                navigate={navigate}
                             />
                         </Grid>
                     </Grid>

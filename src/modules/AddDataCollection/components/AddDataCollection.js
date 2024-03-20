@@ -34,6 +34,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { withNavigate } from 'helpers/withNavigate';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -54,7 +55,7 @@ export const licenseText = licenses => {
         .join('');
 };
 
-export default class AddDataCollection extends Component {
+export class AddDataCollection extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         author: PropTypes.object,
@@ -74,7 +75,7 @@ export default class AddDataCollection extends Component {
     _navigateToMyDatasets = () => {
         this.props.resetForm();
         this.props.actions.clearNewRecord();
-        this.props.history.push(pathConfig.dataset.mine);
+        this.props.navigate(pathConfig.dataset.mine);
     };
 
     _restartWorkflow = () => {
@@ -157,6 +158,7 @@ export default class AddDataCollection extends Component {
             );
             return template;
         };
+
         return (
             <StandardPage title={txt.pageTitle}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
@@ -643,3 +645,5 @@ export default class AddDataCollection extends Component {
         );
     }
 }
+
+export default withNavigate()(AddDataCollection);

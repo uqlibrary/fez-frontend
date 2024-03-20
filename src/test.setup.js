@@ -21,6 +21,8 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 
 // jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
+// setup global fetch for navigate in jest
+import 'whatwg-fetch';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];

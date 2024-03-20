@@ -6,7 +6,7 @@ import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent } from 'test-utils';
 import * as repositories from 'repositories';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 
 class ResizeObserver {
@@ -17,9 +17,10 @@ class ResizeObserver {
 
 window.ResizeObserver = ResizeObserver;
 
-jest.mock('react-router', () => ({
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
-    useHistory: jest.fn(() => ({ go: jest.fn() })),
+    useNavigate: jest.fn(() => jest.fn()),
 }));
 
 const setup = (testProps = {}, state = {}) => {
@@ -28,11 +29,11 @@ const setup = (testProps = {}, state = {}) => {
     };
 
     return render(
-        <WithRouter>
-            <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={Immutable.Map(state)}>
+            <WithRouter>
                 <MyIncompleteRecordContainer {...props} />
-            </WithReduxStore>
-        </WithRouter>,
+            </WithRouter>
+        </WithReduxStore>,
     );
 };
 

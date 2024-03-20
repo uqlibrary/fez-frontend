@@ -5,7 +5,7 @@ import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        history: {},
+        navigate: jest.fn(),
         actions: {
             searchLatestPublications: jest.fn(),
         },
@@ -49,7 +49,7 @@ describe('Component MyLatestPublications', () => {
 
     it('_viewMyResearch method', () => {
         const testFn = jest.fn();
-        const { getByRole } = setup({ history: { push: testFn } });
+        const { getByRole } = setup({ navigate: testFn });
         fireEvent.click(getByRole('button', { name: /View all/i }));
         // wrapper.instance()._viewMyResearch();
         expect(testFn).toHaveBeenCalledWith('/records/mine');

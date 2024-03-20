@@ -1,7 +1,7 @@
 import React from 'react';
 import { dataCollection, recordWithRelatedItems } from 'mock/data/testing/records';
 import RelatedPublications from './RelatedPublications';
-import { renderWithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,7 +10,11 @@ function setup(testProps = {}) {
         title: testProps.title || '',
         ...testProps,
     };
-    return renderWithRouter(<RelatedPublications {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <RelatedPublications {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Related publications Component ', () => {

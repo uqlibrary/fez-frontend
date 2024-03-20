@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import locale from 'locale/components';
 import { pathConfig } from 'config';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const StyledGridButtonContainer = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -16,11 +16,10 @@ const StyledGridButtonContainer = styled(Grid)(({ theme }) => ({
 
 const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals = false }) => {
     const location = useLocation();
-    const history = useHistory();
+    const navigate = useNavigate();
     const txt = locale.components.searchJournals;
     const handleFavouriteJournalsClick = () => {
-        history.push({
-            pathname: pathConfig.journals.favourites,
+        navigate(pathConfig.journals.favourites, {
             state: { prevLocation: location },
         });
     };

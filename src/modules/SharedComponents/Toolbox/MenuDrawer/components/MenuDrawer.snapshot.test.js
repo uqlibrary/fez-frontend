@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuDrawer from './MenuDrawer';
-import { render, WithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 const defaultMenuItems = [
     {
@@ -21,9 +21,8 @@ function setup(testProps = {}) {
             closeMenuLabel: 'close',
         },
         menuItems: testProps.menuItems || defaultMenuItems,
-        history: testProps.history || { push: jest.fn() },
     };
-    return render(
+    return rtlRender(
         <WithRouter>
             <MenuDrawer {...props} />
         </WithRouter>,

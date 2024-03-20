@@ -14,10 +14,8 @@ function setup(testProps = {}, renderMethod = render) {
             pathname: pathConfig.dataset.mine,
             state: null,
         },
-        history: {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
+        navigate: testProps.navigate || jest.fn(),
+        navigationType: testProps.navigationType || '',
         accountLoading: false,
         localePages: locale.pages.myDatasets,
         publicationsListPagingData: {},
@@ -129,7 +127,7 @@ describe('myDatasets test', () => {
 
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
                 location: { pathname: pathConfig.dataset.mine, state: { page: 2, hasPublications: true } },
             },
             rerender,
@@ -145,9 +143,10 @@ describe('myDatasets test', () => {
             actions: { loadAuthorPublications: testAction },
             thisUrl: pathConfig.dataset.mine,
         });
+
         setup(
             {
-                history: { action: 'POP' },
+                navigationType: 'POP',
                 location: { pathname: pathConfig.dataset.mine, state: null },
                 loadingPublicationsList: false,
                 publicationsList: [],

@@ -1,17 +1,20 @@
 import React from 'react';
 import { publicationDetails } from 'mock/data/testing/records';
 import PublicationDetails from './PublicationDetails';
-import { renderWithRouter } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
         publication: testProps.publication || publicationDetails,
-        history: testProps.history || { push: jest.fn() },
         actions: testProps.actions,
         classes: { ul: 'ul', gridRow: 'gridRow' },
     };
-    return renderWithRouter(<PublicationDetails {...props} />);
+    return rtlRender(
+        <WithRouter>
+            <PublicationDetails {...props} />
+        </WithRouter>,
+    );
 }
 
 describe('Publication Details Component ', () => {

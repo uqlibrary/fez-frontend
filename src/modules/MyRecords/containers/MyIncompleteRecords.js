@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { locale } from 'locale';
 import MyRecords from '../components/MyRecords';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
+import { withNavigate } from 'helpers/withNavigate';
 import * as actions from 'actions';
 import { pathConfig } from 'config';
 
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
         publicationsListCustomActions: [
             {
                 label: locale.pages.incompletePublications.publicationsList.complete,
-                handleAction: item => ownProps.history.push(pathConfig.records.incompleteFix(item.rek_pid)),
+                handleAction: item => ownProps.navigate(pathConfig.records.incompleteFix(item.rek_pid)),
                 primary: true,
             },
         ],
@@ -32,6 +32,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const incompleteResearchContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(MyRecords));
+const incompleteResearchContainer = withNavigate()(connect(mapStateToProps, mapDispatchToProps)(MyRecords));
 
 export default incompleteResearchContainer;

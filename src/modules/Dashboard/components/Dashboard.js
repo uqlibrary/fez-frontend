@@ -101,7 +101,6 @@ const Dashboard = ({
 
     // navigations, app actions
     actions,
-    history,
 
     // orcid sync
     loadingOrcidSyncStatus,
@@ -153,11 +152,11 @@ const Dashboard = ({
     }, [loadingOrcidSyncStatus]);
 
     const _claimYourPublications = () => {
-        history.push(pathConfig.records.possible);
+        navigate(pathConfig.records.possible);
     };
 
     const _addPublication = () => {
-        history.push(pathConfig.records.add.find);
+        navigate(pathConfig.records.add.find);
     };
 
     const handleTabChange = (event, value) => {
@@ -165,7 +164,7 @@ const Dashboard = ({
     };
 
     const redirectToIncompleteRecordlist = () => {
-        history.push(pathConfig.records.incomplete);
+        navigate(pathConfig.records.incomplete);
     };
 
     const requestOrcidSync = () => {
@@ -185,7 +184,11 @@ const Dashboard = ({
                     },
                 }}
             >
-                <DashboardAuthorProfile authorDetails={authorDetails} author={author} history={history} />
+                <DashboardAuthorProfile
+                    authorDetails={authorDetails}
+                    author={author}
+                    navigate={navigate}
+                />
             </OrcidSyncContext.Provider>
         </Grid>
     );
@@ -438,7 +441,6 @@ const Dashboard = ({
 };
 
 Dashboard.propTypes = {
-    isMobileView: PropTypes.bool,
     // account data
     account: PropTypes.object.isRequired,
     authorDetails: PropTypes.object,
@@ -468,7 +470,6 @@ Dashboard.propTypes = {
 
     // navigations, app actions
     actions: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired,
 
     // orcid sync
     loadingOrcidSyncStatus: PropTypes.bool,

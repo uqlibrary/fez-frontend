@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import MyLatestPublications from '../components/MyLatestPublications';
 import * as actions from 'actions';
 
@@ -19,4 +18,4 @@ function mapDispatchToProps(dispatch) {
 
 const MyLatestPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyLatestPublications);
 
-export default withRouter(MyLatestPublicationsContainer);
+export default MyLatestPublicationsContainer;

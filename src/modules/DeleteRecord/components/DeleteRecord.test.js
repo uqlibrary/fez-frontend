@@ -22,6 +22,15 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
+const mockUseNavigate = jest.fn();
+let mockParams = {};
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useParams: () => mockParams,
+}));
+
 function setup(testProps, renderMethod = render) {
     const props = {
         autofill: jest.fn(),
@@ -63,8 +72,6 @@ function setup(testProps, renderMethod = render) {
                 publication: Immutable.Map(testProps.recordToDelete || mockRecordToDelete),
             }),
         actions: testProps.actions || { loadRecordToDelete: jest.fn(), clearDeleteRecord: jest.fn() },
-        history: testProps.history || { go: jest.fn() },
-        match: testProps.match || {},
 
         ...testProps,
     };
@@ -78,6 +85,11 @@ function setup(testProps, renderMethod = render) {
 }
 
 describe('Component DeleteRecord', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+        mockParams = {};
+    });
+
     it('should render loader when record is loading', () => {
         const { container } = setup({ recordToDelete: mockRecordToDelete, loadingRecordToDelete: true });
         expect(container).toMatchSnapshot();
@@ -191,10 +203,9 @@ describe('Component DeleteRecord', () => {
     });
 
     it('should display confirmation box after successful submission and go to record view page', () => {
-        const pushMock = jest.fn();
+        mockParams = { pid: 'UQ:1001' };
         const { getAllByText, getByTestId, rerender } = setup({
             recordToDelete: mockRecordToDelete,
-            match: { params: { pid: 'UQ:1001' } },
         });
 
         setup(
@@ -202,8 +213,6 @@ describe('Component DeleteRecord', () => {
                 recordToDelete: mockRecordToDelete,
                 dirty: true,
                 submitSucceeded: true,
-                history: { push: pushMock },
-                match: { params: { pid: 'UQ:1001' } },
             },
             rerender,
         );
@@ -212,11 +221,11 @@ describe('Component DeleteRecord', () => {
         expect(getAllByText(/Work has been deleted/i).length).toEqual(2);
 
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(pushMock).toBeCalledWith('/view/UQ:1001');
+        expect(mockUseNavigate).toBeCalledWith('/view/UQ:1001');
     });
 
     it('should display confirmation box after successful submission and go to search page', () => {
-        const pushMock = jest.fn();
+        mockParams = { pid: 'UQ:1001' };
         const { getByTestId, rerender } = setup({
             recordToDelete: mockRecordToDelete,
         });
@@ -225,21 +234,18 @@ describe('Component DeleteRecord', () => {
                 recordToDelete: mockRecordToDelete,
                 dirty: true,
                 submitSucceeded: true,
-                history: { push: pushMock },
-                match: { params: { pid: 'UQ:1001' } },
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(pushMock).toBeCalledWith('/records/search');
+        expect(mockUseNavigate).toBeCalledWith('/records/search');
     });
 
     it('should go back to previous page on cancel', () => {
-        const goBackMock = jest.fn();
-        const { getByTestId } = setup({ recordToDelete: mockRecordToDelete, history: { goBack: goBackMock } });
+        const { getByTestId } = setup({ recordToDelete: mockRecordToDelete });
         fireEvent.click(getByTestId('cancel-delete-record'));
-        expect(goBackMock).toBeCalled();
+        expect(mockUseNavigate).toBeCalled();
     });
 
     it('should run handleSubmit on submit', () => {

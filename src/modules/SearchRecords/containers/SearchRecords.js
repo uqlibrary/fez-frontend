@@ -2,15 +2,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SearchRecords from '../components/SearchRecords';
 import * as actions from 'actions';
-import { withRouter } from 'react-router-dom';
-import { pathConfig } from 'config';
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps = state => ({
     ...state.get('searchRecordsReducer'),
     ...state.get('exportPublicationsReducer'),
     ...state.get('accountReducer'),
     canUseExport: true,
-    isUnpublishedBufferPage: props.location.pathname === pathConfig.admin.unpublished,
 });
 
 function mapDispatchToProps(dispatch) {
@@ -19,7 +16,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchRecordsContainer = connect(mapStateToProps, mapDispatchToProps)(SearchRecords);
-SearchRecordsContainer = withRouter(SearchRecordsContainer);
+const SearchRecordsContainer = connect(mapStateToProps, mapDispatchToProps)(SearchRecords);
 
 export default SearchRecordsContainer;

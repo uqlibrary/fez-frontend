@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import BulkExport from '../components/BulkExport';
 import * as actions from 'actions';
-import { withRouter } from 'react-router-dom';
 
 function mapDispatchToProps(dispatch) {
     return {
@@ -10,4 +9,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(BulkExport));
+export default connect(null, mapDispatchToProps)(BulkExport);

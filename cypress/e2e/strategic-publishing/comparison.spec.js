@@ -1,6 +1,6 @@
 context('Strategic Publishing - Comparison', () => {
     it('Should render', () => {
-        cy.visit('localhost:3000/journals/compare/');
+        cy.visit('/journals/compare/');
         cy.injectAxe();
         cy.contains('No journals were selected for comparison');
         cy.checkA11y(

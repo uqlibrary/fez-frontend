@@ -5,6 +5,7 @@ import { journalDoaj } from 'mock/data';
 import Immutable from 'immutable';
 import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
+import { useParams } from 'react-router-dom';
 
 class ResizeObserver {
     observe() {}
@@ -25,6 +26,11 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useParams: jest.fn(),
+}));
+
 const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
     JournalAdminContainer,
 );
@@ -34,17 +40,9 @@ function setup(testProps = {}) {
         authorDetails: {
             username: 'uqstaff',
         },
-        match: {
-            params: {
-                id: 12,
-            },
-        },
         loadJournalToView: jest.fn(),
         journalLoadingError: false,
         journalToView: journalDoaj.data,
-        location: {
-            search: '',
-        },
         handleSubmit: jest.fn(),
         clearJournalToView: jest.fn(),
         ...testProps,
@@ -65,6 +63,10 @@ describe('JournalAdminContainer component', () => {
         beforeAll(() => {
             Cookies.get = jest.fn().mockImplementation(() => 'fullform');
             Cookies.set = jest.fn();
+        });
+
+        beforeEach(() => {
+            useParams.mockImplementation(() => ({ id: 12 }));
         });
 
         it('should render default view', async () => {
@@ -93,13 +95,9 @@ describe('JournalAdminContainer component', () => {
         });
 
         it('should render empty div if journal is not loaded', () => {
+            useParams.mockImplementation(() => ({ id: undefined }));
             setup({
                 journalToView: undefined,
-                match: {
-                    params: {
-                        id: undefined,
-                    },
-                },
             });
             const div = document.querySelector('.empty');
             expect(div).not.toBeNull();
@@ -116,6 +114,7 @@ describe('JournalAdminContainer component', () => {
             expect(getByTestId('alert')).toBeInTheDocument();
             expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
         });
+
         it('should render not found message when no journal is provided', () => {
             const { getByTestId } = setup({
                 journalToView: null,

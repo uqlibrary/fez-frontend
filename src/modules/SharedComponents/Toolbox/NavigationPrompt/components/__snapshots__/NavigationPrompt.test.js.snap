@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavigationPrompt component should call componentWillUnmount and unblock method 1`] = `
-<div>
-  <div>
-    <span
-      class="MuiBox-root css-0"
-      data-testid="confirmDialogBox"
-    />
-  </div>
-</div>
-`;
-
 exports[`NavigationPrompt component should not render 1`] = `
 <div>
   <div>

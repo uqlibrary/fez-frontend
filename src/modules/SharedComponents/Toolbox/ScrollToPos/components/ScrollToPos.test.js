@@ -1,14 +1,13 @@
 import React from 'react';
 import { render, WithRouter } from 'test-utils';
 
-import { createMemoryHistory } from 'history';
 import Grid from '@mui/material/Grid';
 
 import ScrollToPos from './ScrollToPos';
 
-const setup = ({ testHistory = createMemoryHistory({ initialEntries: ['/'] }), selector, x, y } = {}) => {
+const setup = ({ selector, x, y } = {}) => {
     return render(
-        <WithRouter history={testHistory}>
+        <WithRouter>
             <Grid container id="testElement" data-testid="test-element">
                 <ScrollToPos selector={selector} x={x} y={y} />
             </Grid>
