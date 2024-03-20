@@ -59,4 +59,4 @@ DashboardAuthorDetails.propTypes = {
     orgUnits: PropTypes.array,
     positions: PropTypes.array,
 };
-export default DashboardAuthorDetails;
+export default React.memo(DashboardAuthorDetails);

@@ -146,4 +146,4 @@ DashboardResearcherIds.propTypes = {
         orcid: PropTypes.bool,
     }),
 };
-export default React.memo(DashboardResearcherIds);
+export default DashboardResearcherIds;

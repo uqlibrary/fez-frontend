@@ -43,13 +43,11 @@ export const DashboardAuthorProfile = ({ author, authorDetails }) => {
                     <Grid container>
                         <Grid item xs={12}>
                             <DashboardAuthorDetails
-                                {...{
-                                    title: author.aut_title || '',
-                                    givenName: author.aut_fname || '',
-                                    familyName: author.aut_lname || '',
-                                    orgUnits: authorDetails.org_units,
-                                    positions: authorDetails.positions,
-                                }}
+                                title={author.aut_title || ''}
+                                givenName={author.aut_fname || ''}
+                                familyName={author.aut_lname || ''}
+                                orgUnits={authorDetails.org_units}
+                                positions={authorDetails.positions}
                             />
                         </Grid>
                         <Grid item xs={12}>
