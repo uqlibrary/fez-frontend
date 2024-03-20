@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
+
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
@@ -16,7 +17,7 @@ const StyledCard = styled(Card)({
     padding: 16,
 });
 
-export const DashboardAuthorProfile = ({ author, authorDetails, history }) => {
+export const DashboardAuthorProfile = ({ author, authorDetails }) => {
     if (!authorDetails) {
         return <div className="AuthorProfile empty" />;
     }
@@ -68,7 +69,6 @@ export const DashboardAuthorProfile = ({ author, authorDetails, history }) => {
                                     google_scholar: Boolean(author.aut_google_scholar_id),
                                     orcid: Boolean(author.aut_orcid_id),
                                 }}
-                                navigate={navigate}
                             />
                         </Grid>
                     </Grid>
@@ -84,7 +84,6 @@ export const DashboardAuthorProfile = ({ author, authorDetails, history }) => {
 DashboardAuthorProfile.propTypes = {
     author: PropTypes.object,
     authorDetails: PropTypes.object,
-    history: PropTypes.object.isRequired,
 };
 
 export default DashboardAuthorProfile;

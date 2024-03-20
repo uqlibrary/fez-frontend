@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 import { OrcidSyncContext } from 'context';
 
@@ -109,6 +110,7 @@ const Dashboard = ({
     orcidSyncEnabled,
     loadOrcidSyncDelay,
 }) => {
+    const navigate = useNavigate();
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
@@ -184,11 +186,7 @@ const Dashboard = ({
                     },
                 }}
             >
-                <DashboardAuthorProfile
-                    authorDetails={authorDetails}
-                    author={author}
-                    navigate={navigate}
-                />
+                <DashboardAuthorProfile authorDetails={authorDetails} author={author} />
             </OrcidSyncContext.Provider>
         </Grid>
     );
