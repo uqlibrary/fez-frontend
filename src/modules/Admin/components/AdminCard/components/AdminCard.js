@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-const Cards = ({ title, children, classes }) => {
+const AdminCard = ({ title, children, classes }) => {
     return (
         <Grid container spacing={0} sx={{ mt: '8px' }} className={`${classes?.card} AdminCard`}>
             <Grid item xs={12}>
@@ -45,10 +45,10 @@ const Cards = ({ title, children, classes }) => {
         </Grid>
     );
 };
-Cards.propTypes = {
+AdminCard.propTypes = {
     title: PropTypes.any,
     children: PropTypes.any,
     classes: PropTypes.object,
 };
 
-export default React.memo(Cards);
+export default AdminCard;

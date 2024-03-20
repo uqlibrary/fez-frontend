@@ -56,4 +56,4 @@ DashboardArticleCount.propTypes = {
     articleLastYear: PropTypes.number,
 };
 
-export default DashboardArticleCount;
+export default React.memo(DashboardArticleCount);
