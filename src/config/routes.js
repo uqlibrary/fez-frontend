@@ -442,7 +442,7 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.admin.controlledVocabularies,
-                      component: components.ControlledVocabularies,
+                      element: <components.ControlledVocabularies />,
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.controlledVocabularies.title,
