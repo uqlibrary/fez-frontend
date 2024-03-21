@@ -403,7 +403,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 `;
 
 exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-7ldjcq-MuiGrid-root"
     style="margin-top: 12px;"
@@ -540,5 +540,5 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       </a>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;

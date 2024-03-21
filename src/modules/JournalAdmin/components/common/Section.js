@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
-import { AdminCard } from 'modules/JournalAdmin/components/AdminCard';
+import AdminCard from '../AdminCard/components/AdminCard';
 import { FieldGridItem } from './FieldGridItem';
 
 export const GroupsWithoutCard = React.memo(({ groups, disabled }) =>
