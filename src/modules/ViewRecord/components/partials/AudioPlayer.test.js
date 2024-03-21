@@ -6,7 +6,6 @@ import AudioPlayer from './AudioPlayer';
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        pid: testProps.pid || journalArticle.rek_pid,
         fileName:
             testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: testProps.mimeType || 'audio/mp3',
