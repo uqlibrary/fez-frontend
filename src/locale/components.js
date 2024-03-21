@@ -990,32 +990,37 @@ export default {
                 title: 'Add authors to a work',
                 text: (
                     <>
-                        <p>
-                            Add all author names (in format Last name, First name) in the order they appear on the work.
-                            <br />
-                            <br />
-                            Click on your name, to identify as the submitting author. A blue banner should appear.
-                            Detailed instructions are available{' '}
-                            <a
-                                target="_blank"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
-                            >
-                                here
-                            </a>
-                        </p>
-                        <p>
-                            <b>Add authors to a non-traditional research output</b>
-                            <br />
-                            <br />
-                            For more information about identification of author, creator, designer, or curator etc.
-                            click{' '}
-                            <a
-                                target="_blank"
-                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                            >
-                                here
-                            </a>
-                        </p>
+                        <div>
+                            <p>
+                                Add all author names (in format Last name, First name) in the order they appear on the
+                                work.
+                                <br />
+                                <br />
+                                Click on your name, to identify as the submitting author. A blue banner should appear.
+                                Detailed instructions are available{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Add authors to a non-traditional research output</h3>
+                            <p>
+                                For more information about identification of author, creator, designer, or curator etc.
+                                click{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
                     </>
                 ),
                 buttonLabel: 'CLOSE',
