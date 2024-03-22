@@ -282,10 +282,6 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
             project: process.env.SENTRY_PROJECT,
             // Auth tokens can be obtained from https://sentry.io/orgredirect/organizations/:orgslug/settings/auth-tokens/
             authToken: process.env.SENTRY_AUTH_TOKEN,
-            sourcemaps: {
-                assets: ['./dist'],
-                ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
-            },
         }),
     );
 }
