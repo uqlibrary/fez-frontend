@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Links from './Links';
+import Links, { isDataTeamCollection } from './Links';
 import { recordLinks, recordWithRDM, recordWithRdmMediatedAccess } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
@@ -459,6 +459,35 @@ describe('Component Links ', () => {
         expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Send email to data@library.uq.edu.au');
     });
 
+    it('should not replace RDM mediated links with a link to contact the data team for non-admin users, if the publication is not in the required collection', () => {
+        const updatedRecordWithRdmMediatedAccess = {
+            ...recordWithRdmMediatedAccess,
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:289097',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:289097',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Some Group not in the list',
+                },
+            ],
+        };
+        const { getByTestId } = setup({
+            publication: updatedRecordWithRdmMediatedAccess,
+        });
+        expect(getByTestId('publication-0-link')).toHaveAttribute(
+            'href',
+            'https://rdm.uq.edu.au/files/2944bd40-791c-11ee-bd1b-c7b4fca67552',
+        );
+        expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Request access');
+    });
+
     it('should show RDM mediated links for Admin users', () => {
         const { getByTestId } = setup({
             publication: recordWithRdmMediatedAccess,
@@ -469,5 +498,42 @@ describe('Component Links ', () => {
             'https://rdm.uq.edu.au/files/2944bd40-791c-11ee-bd1b-c7b4fca67552',
         );
         expect(getByTestId('publication-0-link')).toHaveAttribute('title', 'Request access');
+    });
+
+    it('isDataTeamCollection should return expected values', () => {
+        const test = {
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:06510ce',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:06510ce',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Research Data Collections',
+                },
+                {
+                    rek_ismemberof_id: 12857393,
+                    rek_ismemberof_pid: 'UQ:8e39846',
+                    rek_ismemberof_xsdmf_id: null,
+                    rek_ismemberof: 'UQ:289097',
+                    rek_ismemberof_order: 1,
+                    parent: {
+                        rek_pid: 'UQ:289097',
+                        rek_security_policy: 5,
+                        rek_datastream_policy: 5,
+                    },
+                    rek_ismemberof_lookup: 'Research Data Collections',
+                },
+            ],
+        };
+        expect(isDataTeamCollection(test)).toBeTruthy();
+        test.fez_record_search_key_ismemberof[0] = {};
+        expect(isDataTeamCollection(test)).not.toBeTruthy();
+        expect(isDataTeamCollection({})).not.toBeTruthy();
     });
 });
