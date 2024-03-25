@@ -1,24 +1,28 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-
-import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
-// eslint-disable-next-line max-len
-import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import moment from 'moment';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig, viewRecordsConfig } from 'config';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
-import moment from 'moment';
-
-import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, dataTeamCollections } from 'config/general';
 import componentsLocale from 'locale/components';
 import { getDownloadLicence } from 'helpers/licence';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
+// eslint-disable-next-line max-len
+import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+
+export const isDataTeamCollection = publication =>
+    dataTeamCollections.some(pid => {
+        return publication.fez_record_search_key_ismemberof?.find(item => item.rek_ismemberof === pid);
+    });
 
 export class Links extends PureComponent {
     static propTypes = {
@@ -165,7 +169,12 @@ export class Links extends PureComponent {
             ? this.getRDMLinkOAStatus(this.props.publication)
             : (isLinkNoDoi && linkNoDoiOpenAccessStatus) || {};
 
-        const mustRequestRdmAccessFromDataTeam = isRDM && !openAccessStatus.isOpenAccess && !this.props.isAdmin;
+        const mustRequestRdmAccessFromDataTeam =
+            isRDM &&
+            !openAccessStatus.isOpenAccess &&
+            !this.props.isAdmin &&
+            isDataTeamCollection(this.props.publication);
+
         const variableLinkDetails = {
             href: mustRequestRdmAccessFromDataTeam ? `mailto:${viewRecordsConfig.genericDataEmail}` : link.rek_link,
             title: mustRequestRdmAccessFromDataTeam
