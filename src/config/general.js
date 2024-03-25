@@ -1800,3 +1800,6 @@ export const COLLECTION_VIEW_TYPE = [
 
 /** journalAdmin  */
 export const ADMIN_JOURNAL = 'adminjournal';
+
+/** Links */
+export const dataTeamCollections = ['UQ:06510ce'];
