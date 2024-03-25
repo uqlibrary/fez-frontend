@@ -3857,6 +3857,84 @@ export default {
                 sortDirection: 'Asc',
             },
         },
+        controlledVocabulary: {
+            paging: {
+                allButton: 'All',
+            },
+            admin: {
+                addButtonLabel: 'Add vocabulary',
+                addChildButtonLabel: 'Add child vocabulary',
+                editButtonLabel: 'Update vocabulary',
+                addTitle: 'Add vocabulary',
+                editTitle: 'Update vocabulary',
+                confirmButtonLabel: 'Save',
+                cancelButtonLabel: 'cancel',
+                form: {
+                    title: 'Title',
+                    description: 'Description',
+                    externalId: 'External ID',
+                    filename: 'Filename',
+                    order: 'Order',
+                    inactive: 'Inactive',
+                    error: {
+                        title: 'Error',
+                    },
+                },
+                tooltip: {
+                    hidden: 'This vocabulary is hidden',
+                    readonly: 'This vocabulary and children are read-only',
+                },
+            },
+            error: {
+                title: 'An error has occurred',
+            },
+            title: {
+                controlledVocabulary: 'Controlled Vocabulary',
+            },
+            loading: {
+                message: '...Loading Data...',
+            },
+            columns: {
+                labels: {
+                    id: 'ID',
+                    title: 'Title',
+                    order: 'Order',
+                    desc: 'Description',
+                    visibility: '',
+                    external_id: 'External ID',
+                    path: 'Path',
+                    actions: 'Actions',
+                    filename: 'Image',
+                },
+            },
+            form: {
+                actions: 'Actions',
+                addButtonLabel: 'Add User',
+                columns: {
+                    cvo_id: {
+                        label: 'ID',
+                    },
+                    cvo_title: {
+                        label: 'Title',
+                    },
+                    cvo_desc: {
+                        label: 'Description',
+                    },
+                    cvo_image_filename: {
+                        label: 'Image file name',
+                    },
+                    cvo_external_id: {
+                        label: 'External ID',
+                    },
+                    cvo_order: {
+                        label: 'Order',
+                    },
+                    cvo_hide: {
+                        label: 'Disable',
+                    },
+                },
+            },
+        },
         favouriteJournals: {
             title: 'My Favourite Journals',
             buttons: {

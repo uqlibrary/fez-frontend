@@ -88,6 +88,9 @@ export default {
         manageUsers: {
             primaryText: 'Manage users',
         },
+        controlledVocabularies: {
+            primaryText: 'Manage controlled vocabularies',
+        },
         journals: {
             search: {
                 primaryText: 'Journal search',

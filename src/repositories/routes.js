@@ -213,6 +213,25 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
+// Controlled Vocabularies top list
+export const VOCAB_API = () => {
+    return {
+        apiUrl: 'vocabularies',
+    };
+};
+
+export const VOCAB_LIST_API = () => {
+    return {
+        apiUrl: 'vocabularies/list',
+    };
+};
+
+export const CHILD_VOCAB_LIST_API = parentId => {
+    return {
+        apiUrl: `vocabularies/admin/${parentId}`,
+    };
+};
+
 // Communities and Collections
 export const COMMUNITY_LIST_API = config => {
     const params = getCCParams(config);
