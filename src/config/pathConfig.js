@@ -179,6 +179,7 @@ export const pathConfig = {
         manageUsers: '/admin/users',
         masterJournalListIngest: '/admin/master-journal-list-ingest',
         journalEdit: id => `/admin/journal/edit/${id}`,
+        controlledVocabularies: '/admin/controlled-vocabularies',
     },
     authorIdentifiers: {
         orcid: {
