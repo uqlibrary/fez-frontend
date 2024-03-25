@@ -171,6 +171,7 @@ export const getRoutesConfig = ({
             ...publicPages,
             ...thesisSubmissionPages,
             {
+                path: '/*',
                 element: <components.Orcid />,
                 pageTitle: locale.pages.orcidLink.title,
             },
