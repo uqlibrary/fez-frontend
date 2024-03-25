@@ -441,6 +441,13 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.journal.title,
                   },
+                  {
+                      path: pathConfig.admin.controlledVocabularies,
+                      element: <components.ControlledVocabularies />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.controlledVocabularies.title,
+                  },
               ]
             : []),
         ...(account && account.canMasquerade
@@ -661,6 +668,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.admin.manageUsers,
                       ...locale.menu.manageUsers,
+                  },
+                  {
+                      linkTo: pathConfig.admin.controlledVocabularies,
+                      ...locale.menu.controlledVocabularies,
                   },
                   {
                       linkTo: pathConfig.admin.legacyEspace,
