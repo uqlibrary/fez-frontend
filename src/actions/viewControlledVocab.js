@@ -11,7 +11,7 @@ export function loadControlledVocabList() {
     return dispatch => {
         dispatch({ type: actions.VIEW_VOCAB_LOADING });
 
-        return get(VOCAB_LIST_API() + '?cb=' + Date.now())
+        return get(VOCAB_LIST_API())
             .then(response => {
                 dispatch({
                     type: actions.VIEW_VOCAB_LOADED,
@@ -38,7 +38,7 @@ export function loadChildVocabList({ pid: parentId, rootId }) {
     return dispatch => {
         dispatch({ type: actions.VIEW_CHILD_VOCAB_LOADING, parentId, rootId });
 
-        return get(CHILD_VOCAB_LIST_API(rootId) + '?cb=' + Date.now())
+        return get(CHILD_VOCAB_LIST_API(rootId))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_CHILD_VOCAB_LOADED,

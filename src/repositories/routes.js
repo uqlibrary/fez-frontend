@@ -222,13 +222,13 @@ export const VOCAB_API = () => {
 
 export const VOCAB_LIST_API = () => {
     return {
-        apiUrl: 'vocabularies/list',
+        apiUrl: `vocabularies/list?cb=${Date.now()}`,
     };
 };
 
 export const CHILD_VOCAB_LIST_API = parentId => {
     return {
-        apiUrl: `vocabularies/admin/${parentId}`,
+        apiUrl: `vocabularies/admin/${parentId}?cb=${Date.now()}`,
     };
 };
 
