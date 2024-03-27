@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewViewRecord should render not found 1`] = `
+exports[`ViewRecord should render not found 1`] = `
 <div>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"

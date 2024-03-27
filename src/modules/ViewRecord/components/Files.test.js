@@ -1,7 +1,7 @@
 import React from 'react';
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import { default as Files, formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
+import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
 import * as mock from 'mock/data';
 import {
     AV_CHECK_STATE_CLEAN,
