@@ -32,6 +32,7 @@ function setup(testProps = {}, renderMethod = render) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
+        navigate: testProps.navigate || jest.fn(),
         dirty: true,
         form: 'form',
         initialized: false,
@@ -51,10 +52,6 @@ function setup(testProps = {}, renderMethod = render) {
             }),
         handleSubmit: testProps.handleSubmit || jest.fn(),
         actions: testProps.actions || { loadFullRecordToClaim: jest.fn(), clearClaimPublication: jest.fn() },
-        history: testProps.history || {
-            push: jest.fn(),
-            go: jest.fn(),
-        },
         publicationToClaimFileUploadingError: testProps.publicationToClaimFileUploadingError || false,
         ...testProps,
     };
@@ -87,6 +84,7 @@ describe('Component ClaimRecord ', () => {
             },
         );
     });
+
     it('should render claim publication form', () => {
         const { container } = setup();
         expect(container.getElementsByTagName('field').length).toEqual(5);
@@ -524,54 +522,54 @@ describe('Component ClaimRecord ', () => {
 
     it('should display confirmation box after successful submission', () => {
         const { getByTestId, rerender } = setup();
-        const pushMock = jest.fn();
         const clearNewRecordMock = jest.fn();
         const clearRedirectPathMock = jest.fn();
+        const mockUseNavigate = jest.fn();
         setup(
             {
                 submitSucceeded: true,
                 redirectPath: '/test',
-                history: { push: pushMock },
                 actions: {
                     clearNewRecord: clearNewRecordMock,
                     clearRedirectPath: clearRedirectPathMock,
                     clearClaimPublication: jest.fn(),
                 },
+                navigate: mockUseNavigate,
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(pushMock).toBeCalledWith('/records/mine');
+        expect(mockUseNavigate).toBeCalledWith('/records/mine');
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(pushMock).toBeCalledWith('/test');
+        expect(mockUseNavigate).toBeCalledWith('/test');
         expect(clearNewRecordMock).toBeCalled();
         expect(clearRedirectPathMock).toBeCalled();
     });
 
     it('should display confirmation box after successful submission and go back to previous page', () => {
         const { getByTestId, rerender } = setup();
-        const goBackMock = jest.fn();
+        const mockUseNavigate = jest.fn();
         setup(
             {
                 submitSucceeded: true,
-                history: { goBack: goBackMock },
+                navigate: mockUseNavigate,
             },
             rerender,
         );
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(goBackMock).toBeCalled();
+        expect(mockUseNavigate).toBeCalledWith(-1);
     });
 
     it('should render the confirm dialog with an alert due to a file upload error', () => {
         const { container, getByTestId, getByText, rerender } = setup();
-        const pushMock = jest.fn();
+        const mockUseNavigate = jest.fn();
         setup(
             {
                 submitSucceeded: true,
                 publicationToClaimFileUploadingError: true,
-                history: { push: pushMock },
+                navigate: mockUseNavigate,
             },
             rerender,
         );
@@ -579,31 +577,31 @@ describe('Component ClaimRecord ', () => {
         expect(getByText(/File upload and\/or edits\/changes\/comments post failed/i)).toBeInTheDocument();
         fireEvent.click(getByTestId('alternate-dialog-box'));
 
-        expect(pushMock).toBeCalledWith('/records/UQ:676287/fix');
+        expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
         expect(container).toMatchSnapshot();
     });
 
     it('should go back to previous page on cancel', () => {
-        const goBackMock = jest.fn();
         const clearNewRecordMock = jest.fn();
+        const mockUseNavigate = jest.fn();
         const { getByText } = setup({
             actions: {
                 loadFullRecordToClaim: jest.fn(),
                 clearNewRecord: clearNewRecordMock,
                 clearClaimPublication: jest.fn(),
             },
-            history: { goBack: goBackMock },
+            navigate: mockUseNavigate,
         });
 
         fireEvent.click(getByText('Cancel this claim'));
         expect(clearNewRecordMock).toBeCalled();
-        expect(goBackMock).toBeCalled();
+        expect(mockUseNavigate).toBeCalledWith(-1);
     });
 
     it('should redirect if no author or record set', () => {
-        const testMethod = jest.fn();
-        setup({ initialValues: Immutable.Map({ author: null }), history: { go: testMethod } });
-        expect(testMethod).toHaveBeenCalled();
+        const mockUseNavigate = jest.fn();
+        setup({ initialValues: Immutable.Map({ author: null }), navigate: mockUseNavigate });
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
 
     it('should validate contributor with contributor only', () => {

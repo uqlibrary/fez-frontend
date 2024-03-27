@@ -2,10 +2,10 @@ import { SubmissionError } from 'redux-form/immutable';
 import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'actions';
 import { detailedDiff } from 'deep-object-diff';
 
-export const onSubmit = (values, dispatch, { initialValues, match }) => {
+export const onSubmit = (values, dispatch, { initialValues, params }) => {
     const data = (values && values.toJS()) || null;
     const recType = (!!data.publication && data.publication.rek_object_type_lookup) || '';
-    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === match.params.pid;
+    const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === params.pid;
 
     let action = null;
     let recValues = {};

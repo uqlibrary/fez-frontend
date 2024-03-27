@@ -2,17 +2,28 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
+import {
+    render,
+    waitForElementToBeRemoved,
+    WithReduxStore,
+    WithRouter,
+    act,
+    fireEvent,
+    createMatchMedia,
+} from 'test-utils';
 import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
 
-jest.mock('react-router', () => ({
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ id: 1 })),
 }));
 
 const setup = () => {
     return render(
         <WithReduxStore>
-            <ViewJournal />
+            <WithRouter>
+                <ViewJournal />
+            </WithRouter>
         </WithReduxStore>,
     );
 };

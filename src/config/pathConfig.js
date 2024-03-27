@@ -44,9 +44,6 @@ export const pathConfig = {
         collectionListAPI: 'communities',
     },
     communityList: '/communities',
-    collectionList: {
-        path: pid => `/communities/${pid}/collections`,
-    },
     dashboard: '/dashboard',
     about: '/about',
     hdrSubmission: '/rhdsubmission',
@@ -182,6 +179,7 @@ export const pathConfig = {
         manageUsers: '/admin/users',
         masterJournalListIngest: '/admin/master-journal-list-ingest',
         journalEdit: id => `/admin/journal/edit/${id}`,
+        controlledVocabularies: '/admin/controlled-vocabularies',
     },
     authorIdentifiers: {
         orcid: {
@@ -208,7 +206,6 @@ export const pathConfig = {
     },
     journals: {
         search: '/journals/search/',
-        results: '/journals/results/',
         compare: '/journals/compare/',
         favourites: '/journals/favourites/',
     },

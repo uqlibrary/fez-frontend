@@ -17,7 +17,7 @@ import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
@@ -45,7 +45,7 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
 
 export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals = false }) => {
     const location = useLocation();
-    const history = useHistory();
+    const navigate = useNavigate();
     const txt = locale.components.searchJournals;
 
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
@@ -74,8 +74,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
     );
 
     const handleJournalsComparisonClick = () =>
-        history.push({
-            pathname: pathConfig.journals.compare,
+        navigate(pathConfig.journals.compare, {
             state: {
                 prevLocation: location,
                 journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]),

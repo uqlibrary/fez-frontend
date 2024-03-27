@@ -1036,4 +1036,16 @@ describe('Backend routes method', () => {
             },
         });
     });
+
+    it('should construct url for VOCAB_API', () => {
+        expect(routes.VOCAB_API()).toEqual({ apiUrl: 'vocabularies' });
+    });
+
+    it('should construct url for VOCAB_LIST_API', () => {
+        expect(routes.VOCAB_LIST_API({}).apiUrl).toMatch('vocabularies/list');
+    });
+
+    it('should construct url for CHILD_VOCAB_LIST_API', () => {
+        expect(routes.CHILD_VOCAB_LIST_API(123).apiUrl).toMatch('vocabularies/admin/123');
+    });
 });

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
 import { useDispatch } from 'react-redux';
-import { useParams, useHistory } from 'react-router';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -17,8 +17,8 @@ import Button from '@mui/material/Button';
 
 import { belongsToAuthor, userIsAdmin } from 'hooks';
 import { AUTH_URL_LOGIN, general } from 'config';
-import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
-import { notFound } from '../../../config/routes';
+import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from 'config/general';
+import { notFound, pidRegExp } from 'config/routes';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
@@ -88,11 +88,11 @@ export const NewViewRecord = ({
     recordToViewError,
     recordToView,
 }) => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
-    const isNotFoundRoute = !!pid && pid === notFound;
+    const isNotFoundRoute = !!pid && (!new RegExp(pidRegExp, 'i').test(pid) || pid === notFound);
     const isAdmin = userIsAdmin();
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
     const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();
@@ -184,7 +184,7 @@ export const NewViewRecord = ({
                 txt.adminRecordData.drawer.sectionTitles,
                 recordToView,
                 fields.viewRecord.adminViewRecordDrawerFields,
-                history,
+                navigate,
                 pid,
                 shouldHandleAuthorAffiliations(recordToView),
                 composeAuthorAffiliationProblems(
@@ -317,7 +317,7 @@ export const NewViewRecord = ({
                                 isAdmin={!!isAdmin}
                                 isAuthor={isAuthorOfNtroWork}
                             />
-                            <Links publication={recordToView} />
+                            <Links publication={recordToView} isAdmin={!!isAdmin} />
                             <RelatedPublications publication={recordToView} />
                             <AdditionalInformation publication={recordToView} account={account} isNtro={isNtro} />
                             {isNtro && <NtroDetails publication={recordToView} account={account} />}

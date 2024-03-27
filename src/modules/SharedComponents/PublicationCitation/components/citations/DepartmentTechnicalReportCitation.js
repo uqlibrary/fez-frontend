@@ -55,7 +55,7 @@ export default class DepartmentTechnicalReportCitation extends Component {
                 {/* {Report Number| |.} */}
                 <Partials.CitationView className="citationReportNumber" value={record.reportNumber} />
 
-                {/* {School, Department or Centre| |,} */}
+                {/* {School, Centre or Institute| |,} */}
                 <Partials.CitationView className="citationOrgUnit" value={record.orgUnitName} suffix=", " />
 
                 {/* {Institution| |.} */}

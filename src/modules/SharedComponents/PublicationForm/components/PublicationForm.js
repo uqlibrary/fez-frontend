@@ -26,7 +26,7 @@ import { publicationTypes, validation } from 'config';
 import { default as txt } from 'locale/publicationForm';
 import { DOCTYPE_SUBTYPE_MAPPING, NEW_DOCTYPES_OPTIONS } from 'config/general';
 
-export default class PublicationForm extends Component {
+export class PublicationForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         hasSubtypes: PropTypes.bool,
@@ -44,7 +44,6 @@ export default class PublicationForm extends Component {
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
         initialValues: PropTypes.object,
-        history: PropTypes.object,
     };
 
     constructor(props) {
@@ -175,7 +174,7 @@ export default class PublicationForm extends Component {
                                         isNtro={this.props.isNtro}
                                         isAuthorSelected={this.props.isAuthorSelected}
                                         submitting={this.props.submitting}
-                                        history={this.props.history}
+                                        navigate={this.props.navigate}
                                     />
                                 </Grid>
                                 {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
@@ -262,3 +261,5 @@ export default class PublicationForm extends Component {
         );
     }
 }
+
+export default PublicationForm;

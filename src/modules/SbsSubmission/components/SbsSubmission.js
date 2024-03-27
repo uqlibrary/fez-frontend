@@ -41,7 +41,6 @@ export default class SbsSubmission extends Component {
         author: PropTypes.object,
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
-        history: PropTypes.object,
         isSessionValid: PropTypes.bool,
         newRecord: PropTypes.object,
         newRecordFileUploadingOrIssueError: PropTypes.bool,

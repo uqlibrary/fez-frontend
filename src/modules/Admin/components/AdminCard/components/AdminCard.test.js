@@ -1,5 +1,5 @@
 import React from 'react';
-import { AdminCard, Cards } from './AdminCard';
+import AdminCard from './AdminCard';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
@@ -10,7 +10,7 @@ function setup(testProps) {
         },
         ...testProps,
     };
-    return rtlRender(<Cards {...props} />);
+    return rtlRender(<AdminCard {...props} />);
 }
 
 describe('Cards component', () => {

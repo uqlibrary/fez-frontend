@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Field, reduxForm, SubmissionError } from 'redux-form/immutable';
@@ -20,10 +20,10 @@ const FORM_NAME = 'GoogleScholar';
 /**
  * Function to redirect user to Dashboard page
  *
- * @param {object} history History object from react-router
+ * @param {function} navigate function from react-router-dom
  */
-export const navigateToDashboard = history => {
-    history.push(pathConfig.dashboard);
+export const navigateToDashboard = navigate => {
+    navigate(pathConfig.dashboard);
 };
 
 /**
@@ -41,7 +41,7 @@ const onSubmit = (values, dispatch, props) => {
 
 export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, submitSucceeded, submitting }) => {
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const txt = locale.pages.googleScholarLink;
     const cardLocale = !!author && !author.aut_google_scholar_id ? txt.add : txt.edit;
@@ -55,7 +55,7 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
                         dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
                     }),
                 );
-                navigateToDashboard(history);
+                navigateToDashboard(navigate);
             }
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +66,7 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
         event.key === 'Enter' && handleSubmit();
     };
 
-    const handleCancel = () => navigateToDashboard(history);
+    const handleCancel = () => navigateToDashboard(navigate);
 
     const getAlert = () => {
         let alertProps = null;
@@ -157,14 +157,14 @@ export const GoogleScholarReduxForm = reduxForm({
 })(GoogleScholarForm);
 
 export const GoogleScholar = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const author = useSelector(state => state.get('accountReducer').author);
     const accountAuthorLoading = useSelector(state => state.get('accountReducer').accountAuthorLoading);
 
     React.useEffect(function callback() {
         if (!accountAuthorLoading && !author) {
-            navigateToDashboard(history);
+            navigateToDashboard(navigate);
         }
 
         return () => dispatch(resetSavingAuthorState());

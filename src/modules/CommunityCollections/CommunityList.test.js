@@ -14,22 +14,25 @@ import {
 
 import * as mockData from 'mock/data';
 
-import * as PushHistory from './components/functions';
-
 import * as UserIsAdmin from 'hooks/userIsAdmin';
-import { createMemoryHistory } from 'history';
-import Immutable from 'immutable';
 
 import CommunityList from './CommunityList';
 import * as repositories from 'repositories';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = ({} = {})) => {
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
+const setup = (props = {}) => {
     return render(
-        <WithRouter history={testHistory}>
-            <WithReduxStore initialState={Immutable.Map(state)}>
-                <CommunityList {...state} />
-            </WithReduxStore>
-        </WithRouter>,
+        <WithReduxStore>
+            <WithRouter>
+                <CommunityList {...props} />
+            </WithRouter>
+        </WithReduxStore>,
     );
 };
 
@@ -97,9 +100,7 @@ describe('CommunityList form', () => {
         await waitFor(() => getByText('Sort results by'));
         expect(getByText('Auto-close collections')).toBeInTheDocument();
 
-        act(() => {
-            fireEvent.click(getByTestId('collection-auto-collapse'));
-        });
+        fireEvent.click(getByTestId('collection-auto-collapse'));
 
         fireEvent.click(getByTestId('expand-row-UQ:12096'));
         await waitForElementToBeRemoved(() => getByTestId('collections-page-loading'));
@@ -114,9 +115,7 @@ describe('CommunityList form', () => {
         await waitForElementToBeRemoved(() => getByTestId('collections-page-loading'));
         expect(queryAllByText(/Displaying 1 to 3 of 3 collections/).length).toBe(1);
 
-        act(() => {
-            fireEvent.click(getByTestId('collection-auto-collapse'));
-        });
+        fireEvent.click(getByTestId('collection-auto-collapse'));
 
         fireEvent.click(getByTestId('expand-row-UQ:12096'));
         await waitForElementToBeRemoved(() => getByTestId('collections-page-loading'));
@@ -130,9 +129,7 @@ describe('CommunityList form', () => {
         expect(queryByText('Add New Community')).not.toBeInTheDocument();
         const element = getByTestId('community-collections-paging-bottom');
         const button = element.querySelector('.paging-next');
-        act(() => {
-            fireEvent.click(button);
-        });
+        fireEvent.click(button);
     });
     it('should allow page changing', async () => {
         mockApi
@@ -148,21 +145,22 @@ describe('CommunityList form', () => {
 
         const { getByText, getByTestId } = setup();
 
-        const testFn = jest.spyOn(PushHistory, 'pushHistory');
         await waitFor(() => getByText('Sort results by'));
 
         const firstTestElement = getByTestId('community-collections-paging-bottom');
         const buttonNext = firstTestElement.querySelector('.paging-next');
 
-        buttonNext.click();
+        act(() => {
+            buttonNext.click();
+        });
         await waitFor(() => getByText('Sort results by'));
-        expect(testFn).toHaveBeenCalled();
+        expect(mockUseNavigate).toHaveBeenCalled();
 
         const secondTestElement = getByTestId('community-collections-paging-bottom');
         const buttonPrev = secondTestElement.querySelector('.paging-previous');
         buttonPrev.click();
         await waitFor(() => getByText('Sort results by'));
-        expect(testFn).toHaveBeenCalled();
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
     it('should allow perPage changing', async () => {
         mockApi
@@ -184,9 +182,10 @@ describe('CommunityList form', () => {
         const element = getByTestId('publication-list-sorting-page-size');
         fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
+
+        const options = getAllByRole('option');
+        fireEvent.mouseDown(options[3]);
         act(() => {
-            const options = getAllByRole('option');
-            fireEvent.mouseDown(options[3]);
             options[3].click();
         });
         await waitFor(() => getByText('Sort results by'));
@@ -212,10 +211,10 @@ describe('CommunityList form', () => {
         const element = getByTestId('publication-list-sorting-sort-by');
         fireEvent.mouseDown(within(element).getByRole('combobox'));
         expect(getByRole('listbox')).not.toEqual(null);
-        act(() => {
-            const options = getAllByRole('option');
 
-            fireEvent.mouseDown(options[2]);
+        const options = getAllByRole('option');
+        fireEvent.mouseDown(options[2]);
+        act(() => {
             options[2].click();
         });
 
@@ -230,13 +229,13 @@ describe('CommunityList form', () => {
         await waitFor(() => getByText('Export page results'));
 
         expect(getByTestId('export-publications-format')).toBeInTheDocument();
-        act(() => {
-            fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
-        });
+
+        fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
+
         expect(getByRole('listbox')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(getByTestId('export-publication-option-0'));
-        });
+
+        fireEvent.click(getByTestId('export-publication-option-0'));
+
         expect(getByTestId('communities-results-exporting')).toBeInTheDocument();
     });
 

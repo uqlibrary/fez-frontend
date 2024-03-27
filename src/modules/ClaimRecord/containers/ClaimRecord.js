@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { getFormSyncErrors, getFormValues, reduxForm, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
+import { withNavigate } from 'helpers/withNavigate';
 
 const FORM_NAME = 'ClaimRecord';
 
@@ -54,6 +54,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 ClaimPublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(ClaimPublicationFormContainer);
-ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 
-export default ClaimPublicationFormContainer;
+export default withNavigate()(ClaimPublicationFormContainer);

@@ -1,35 +1,42 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-
-import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
-// eslint-disable-next-line max-len
-import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import moment from 'moment';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
-import { openAccessConfig } from 'config';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
-import moment from 'moment';
-
-import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { openAccessConfig, viewRecordsConfig } from 'config';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, dataTeamCollections } from 'config/general';
 import componentsLocale from 'locale/components';
 import { getDownloadLicence } from 'helpers/licence';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
+// eslint-disable-next-line max-len
+import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+
+export const isDataTeamCollection = publication =>
+    dataTeamCollections.some(pid => {
+        return publication.fez_record_search_key_ismemberof?.find(item => item.rek_ismemberof === pid);
+    });
 
 export class Links extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        isAdmin: PropTypes.bool.isRequired,
     };
 
     constructor(props) {
         super(props);
+
         this.state = {
             isOpen: false,
             link: undefined,
+            licence: undefined,
         };
     }
     openRdmDownloadUrl = url => {
@@ -162,23 +169,48 @@ export class Links extends PureComponent {
             ? this.getRDMLinkOAStatus(this.props.publication)
             : (isLinkNoDoi && linkNoDoiOpenAccessStatus) || {};
 
+        const mustRequestRdmAccessFromDataTeam =
+            isRDM &&
+            !openAccessStatus.isOpenAccess &&
+            !this.props.isAdmin &&
+            isDataTeamCollection(this.props.publication);
+
+        const variableLinkDetails = {
+            href: mustRequestRdmAccessFromDataTeam ? `mailto:${viewRecordsConfig.genericDataEmail}` : link.rek_link,
+            title: mustRequestRdmAccessFromDataTeam
+                ? locale.viewRecord.sections.links.rdmRequestAccessTitle.replace(
+                      '[data_email]',
+                      viewRecordsConfig.genericDataEmail,
+                  )
+                : linkDescription,
+            text: mustRequestRdmAccessFromDataTeam ? viewRecordsConfig.genericDataEmail : link.rek_link,
+            openInNew: !mustRequestRdmAccessFromDataTeam,
+        };
+
+        const licence = getDownloadLicence(this.props.publication);
+
         return {
             index: index,
             link: (
                 <ExternalLink
-                    href={link.rek_link}
-                    title={linkDescription}
+                    href={typeof window !== 'undefined' && variableLinkDetails.href}
+                    title={variableLinkDetails.title}
                     id={`publication-${index}`}
-                    {...(isRDM && openAccessStatus.isOpenAccess
+                    openInNewIcon={variableLinkDetails.openInNew}
+                    {...(isRDM && openAccessStatus.isOpenAccess && !!licence
                         ? {
                               onClick: e => {
                                   e.preventDefault();
-                                  this.setState({ isOpen: true, link: link.rek_link });
+                                  this.setState({
+                                      isOpen: true,
+                                      link: link.rek_link,
+                                      licence: componentsLocale.components.attachedFiles.licenceConfirmation(licence),
+                                  });
                               },
                           }
                         : {})}
                 >
-                    {link.rek_link}
+                    {variableLinkDetails.text}
                 </ExternalLink>
             ),
             description: linkDescription,
@@ -190,7 +222,6 @@ export class Links extends PureComponent {
         const record = this.props.publication;
 
         const txt = locale.viewRecord.sections.links;
-        const licenceTxt = componentsLocale.components.attachedFiles;
         const pubmedCentralId =
             record.fez_record_search_key_pubmed_central_id &&
             record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
@@ -243,7 +274,7 @@ export class Links extends PureComponent {
                     isOpen={this.state.isOpen}
                     onAction={() => this.openRdmDownloadUrl(this.state.link)}
                     onClose={() => this.setState({ isOpen: false, link: undefined })}
-                    locale={licenceTxt.licenceConfirmation(getDownloadLicence(this.props.publication))}
+                    locale={this.state.licence}
                 />
                 <StandardCard title={txt.title}>
                     <Grid

@@ -33,3 +33,14 @@ context('Dashboard', () => {
         });
     });
 });
+
+context.only('Dashboard with no OrcID', () => {
+    it('should show the Link ORCID ID form in place of dashboard', () => {
+        cy.visit('/dashboard?user=s4444444');
+        cy.get('[data-testid=orcid-required]').should('exist');
+        cy.get('[data-testid=standard-card-i-already-have-an-orcid-id]').should('exist');
+        cy.get('[data-testid=standard-card-i-need-an-orcid-id-content]').should('exist');
+        cy.get('[data-testid=standard-card-espace-works-per-year]').should('not.exist');
+        cy.get('[data-testid=standard-card-work-types-overview-content]').should('not.exist');
+    });
+});

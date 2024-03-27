@@ -987,17 +987,41 @@ export default {
             descriptionAuthorOrEditor:
                 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
-                title: 'Authors/Designers name',
+                title: 'Add authors to a work',
                 text: (
-                    <p>
-                        For more information about identification of author/creator/designer, click{' '}
-                        <a
-                            target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                        >
-                            here
-                        </a>
-                    </p>
+                    <>
+                        <div>
+                            <p>
+                                Add all author names (in format Last name, First name) in the order they appear on the
+                                work.
+                                <br />
+                                <br />
+                                Click on your name, to identify as the submitting author. A blue banner should appear.
+                                Detailed instructions are available{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-records#s-lg-box-18496096"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Add authors to a non-traditional research output</h3>
+                            <p>
+                                For more information about identification of author, creator, designer, or curator etc.
+                                click{' '}
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                                >
+                                    here
+                                </a>
+                                .
+                            </p>
+                        </div>
+                    </>
                 ),
                 buttonLabel: 'CLOSE',
             },
@@ -3833,6 +3857,84 @@ export default {
                 sortDirection: 'Asc',
             },
         },
+        controlledVocabulary: {
+            paging: {
+                allButton: 'All',
+            },
+            admin: {
+                addButtonLabel: 'Add vocabulary',
+                addChildButtonLabel: 'Add child vocabulary',
+                editButtonLabel: 'Update vocabulary',
+                addTitle: 'Add vocabulary',
+                editTitle: 'Update vocabulary',
+                confirmButtonLabel: 'Save',
+                cancelButtonLabel: 'cancel',
+                form: {
+                    title: 'Title',
+                    description: 'Description',
+                    externalId: 'External ID',
+                    filename: 'Filename',
+                    order: 'Order',
+                    inactive: 'Inactive',
+                    error: {
+                        title: 'Error',
+                    },
+                },
+                tooltip: {
+                    hidden: 'This vocabulary is hidden',
+                    readonly: 'This vocabulary and children are read-only',
+                },
+            },
+            error: {
+                title: 'An error has occurred',
+            },
+            title: {
+                controlledVocabulary: 'Controlled Vocabulary',
+            },
+            loading: {
+                message: '...Loading Data...',
+            },
+            columns: {
+                labels: {
+                    id: 'ID',
+                    title: 'Title',
+                    order: 'Order',
+                    desc: 'Description',
+                    visibility: '',
+                    external_id: 'External ID',
+                    path: 'Path',
+                    actions: 'Actions',
+                    filename: 'Image',
+                },
+            },
+            form: {
+                actions: 'Actions',
+                addButtonLabel: 'Add User',
+                columns: {
+                    cvo_id: {
+                        label: 'ID',
+                    },
+                    cvo_title: {
+                        label: 'Title',
+                    },
+                    cvo_desc: {
+                        label: 'Description',
+                    },
+                    cvo_image_filename: {
+                        label: 'Image file name',
+                    },
+                    cvo_external_id: {
+                        label: 'External ID',
+                    },
+                    cvo_order: {
+                        label: 'Order',
+                    },
+                    cvo_hide: {
+                        label: 'Disable',
+                    },
+                },
+            },
+        },
         favouriteJournals: {
             title: 'My Favourite Journals',
             buttons: {
@@ -4217,6 +4319,16 @@ export default {
                     title: 'Refine results',
                     text: (
                         <React.Fragment>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Evidence of Peer Review</h3>
+                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Highest quartile</h3>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>Listed in</h3>
                             <p>
                                 Indicates a journal has met the quality indicators/requirements for a list compiled by a
@@ -4230,26 +4342,18 @@ export default {
                                 </li>
                                 <li key={'ERA'}>ERA (Excellence in Research Australia)</li>
                             </ul>
-                            <h3>Indexed in</h3>
-                            <p>Indicates database providers which index the journal.</p>
                             <h3>Open access: accepted version</h3>
                             <p>
                                 Sort by length of time before an author accepted or self-archived version of an article
                                 is open and freely available via UQ eSpace.
                             </p>
-                            <h3>Journal impact factor highest quartile</h3>
-                            <p>Sort by JIF Quartile, where Q1 is best.</p>
-                            <h3>CiteScore highest quartile</h3>
-                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
-                            <h3>Highest quartile</h3>
-                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
                             <h3>Open access: published version</h3>
                             <p>
                                 Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
                                 publisher to make a publication immediately available and openly accessible.
                             </p>
-                            <h3>Evidence of Peer Review</h3>
-                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
+                            <h3>Favourite Journals</h3>
+                            <p>Limits results to favourited journals.</p>
                         </React.Fragment>
                     ),
                     testId: 'journal-search-facets',

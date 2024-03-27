@@ -1,44 +1,48 @@
 import React from 'react';
-import { render, WithRouter, act, fireEvent } from 'test-utils';
-import { createMemoryHistory } from 'history';
+import { render, WithRouter, fireEvent } from 'test-utils';
 import BackToSearchButton from './BackToSearchButton';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
+const setup = ({ state = {}, initialEntries = ['/'] } = {}) => {
     return render(
-        <WithRouter history={testHistory}>
+        <WithRouter initialEntries={initialEntries}>
             <BackToSearchButton {...state} />
         </WithRouter>,
     );
 };
 
 describe('Back To Search button', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
     it('should render', () => {
         const { queryByTestId } = setup({});
         expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
     });
 
-    it('should return back to / when clicked', () => {
-        const testHistory = createMemoryHistory({ initialEntries: ['/'] });
-        const { queryByTestId } = setup({});
+    it('should return back to search page when clicked', () => {
+        const { queryByTestId } = setup();
         expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('return-to-search-results-button'));
-        });
-        expect(testHistory.location.pathname).toEqual('/');
+        fireEvent.click(queryByTestId('return-to-search-results-button'));
+        expect(mockUseNavigate).toHaveBeenCalledWith('/journals/search/');
     });
 
     it('should return back to previous location if supplied', () => {
-        const testHistory = createMemoryHistory({ initialEntries: ['/'] });
+        const prevLocation = { pathname: 'test', search: '?query=abc', isActive: true };
         const { queryByTestId } = setup({
-            testHistory,
             state: {
-                prevLocation: { pathname: '/test', search: '?query=abc', isActive: true },
+                prevLocation: prevLocation,
             },
         });
         expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
-        act(() => {
-            fireEvent.click(queryByTestId('return-to-search-results-button'));
-        });
-        expect(testHistory.location.pathname).toEqual('/test');
+        fireEvent.click(queryByTestId('return-to-search-results-button'));
+        expect(mockUseNavigate).toHaveBeenCalledWith(prevLocation, { replace: true });
     });
 });

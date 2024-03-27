@@ -3,9 +3,8 @@ import { bindActionCreators } from 'redux';
 import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import DeleteRecord from '../components/DeleteRecord';
-import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import { DELETED } from '../../../config/general';
+import { DELETED } from 'config/general';
 
 const FORM_NAME = 'DeleteRecord';
 
@@ -53,6 +52,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 DeleteRecordContainer = connect(mapStateToProps, mapDispatchToProps)(DeleteRecordContainer);
-DeleteRecordContainer = withRouter(DeleteRecordContainer);
 
 export default DeleteRecordContainer;

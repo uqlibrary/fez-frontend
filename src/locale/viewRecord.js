@@ -68,6 +68,7 @@ export default {
                     linkPrefix: 'https://scholar.google.com/scholar?q=intitle:%22[title]%22',
                     linkDescription: 'Search Google Scholar for this open access article',
                 },
+                rdmRequestAccessTitle: 'Send email to [data_email]',
             },
             abstract: {
                 default: 'Abstract',
@@ -172,7 +173,7 @@ export default {
                 fez_record_search_key_proceedings_title: 'Proceedings title',
                 fez_record_search_key_language_of_proceedings_title: 'Language of proceedings title',
                 fez_record_search_key_translated_proceedings_title: 'Translated proceedings title',
-                fez_record_search_key_org_unit_name: 'School, Department or Centre',
+                fez_record_search_key_org_unit_name: 'School, Centre or Institute',
                 fez_record_search_key_org_name: 'Institution',
                 fez_record_search_key_access_conditions: 'Access conditions',
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
@@ -2285,32 +2286,36 @@ export default {
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_keywords',
+                    field: 'fez_record_search_key_subject',
                     order: 14,
                 },
                 {
-                    field: 'fez_record_search_key_geographic_area',
+                    field: 'fez_record_search_key_keywords',
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_advisory_statement',
+                    field: 'fez_record_search_key_geographic_area',
                     order: 16,
                 },
                 {
-                    field: 'fez_record_search_key_sensitive_handling_note_id',
+                    field: 'fez_record_search_key_advisory_statement',
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_sensitive_handling_note_other',
-                    order: 17.5,
-                },
-                {
-                    field: 'fez_record_search_key_acknowledgements',
+                    field: 'fez_record_search_key_sensitive_handling_note_id',
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_transcript',
+                    field: 'fez_record_search_key_sensitive_handling_note_other',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_acknowledgements',
+                    order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_transcript',
+                    order: 21,
                 },
             ],
             'Newspaper Article': [
@@ -2530,6 +2535,7 @@ export default {
                     field: 'rek_title',
                     order: 2,
                 },
+
                 {
                     field: 'rek_description',
                     order: 2.5,
@@ -2585,6 +2591,10 @@ export default {
                 {
                     field: 'fez_record_search_key_publisher',
                     order: 11,
+                },
+                {
+                    field: 'fez_record_search_key_org_unit_name',
+                    order: 11.1,
                 },
                 {
                     field: 'fez_record_search_key_series',

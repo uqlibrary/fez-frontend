@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import AddMissingRecord from '../components/AddMissingRecord';
-import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
     return {
@@ -19,7 +18,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let AddMissingRecordContainer = connect(mapStateToProps, mapDispatchToProps)(AddMissingRecord);
-AddMissingRecordContainer = withRouter(AddMissingRecordContainer);
+const AddMissingRecordContainer = connect(mapStateToProps, mapDispatchToProps)(AddMissingRecord);
 
 export default AddMissingRecordContainer;

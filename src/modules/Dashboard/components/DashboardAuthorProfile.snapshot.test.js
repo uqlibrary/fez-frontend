@@ -1,19 +1,19 @@
 import React from 'react';
 import { DashboardAuthorProfile } from './DashboardAuthorProfile';
 import * as mock from 'mock/data';
-import { render, WithReduxStore } from 'test-utils';
+import { render, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
         authorDetails: mock.authorDetails.uqresearcher,
         author: mock.currentAuthor.uqresearcher.data,
-        history: {},
-        classes: {},
         ...testProps,
     };
     return render(
         <WithReduxStore>
-            <DashboardAuthorProfile {...props} />
+            <WithRouter>
+                <DashboardAuthorProfile {...props} />
+            </WithRouter>
         </WithReduxStore>,
     );
 }

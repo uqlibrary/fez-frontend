@@ -59,25 +59,6 @@ export const parseSearchQueryStringFromUrl = (queryString, canBulkExport = false
 };
 
 /**
- * @param searchFields
- * @return {string[]}
- */
-export const getAdvancedSearchFields = searchFields => {
-    const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
-    // Iterate the searchfields and add their map from locale into the excluded facets array
-    const importedFacetExcludes = [];
-    searchFields.map(searchFieldItem => {
-        if (searchFieldItem.searchField) {
-            const fieldType = locale.components.searchComponent.advancedSearch.fieldTypes[searchFieldItem.searchField];
-            if (fieldType.map) {
-                importedFacetExcludes.push(fieldType.map);
-            }
-        }
-    });
-    return excludesFromLocale.concat(importedFacetExcludes);
-};
-
-/**
  * @param showOpenAccessOnly
  * @return Object
  */
@@ -107,12 +88,20 @@ export const getQueryParams = (queryString, canBulkExport, isUnpublishedBufferPa
 });
 
 /**
- * @param activeFacets
+ * @param navigate
+ * @param location
+ * @param showOpenAccessOnly
  * @param canBulkExport
  * @param isUnpublishedBufferPage
  * @return Object
  */
-export const useQueryStringParams = (history, location, showOpenAccessOnly, canBulkExport, isUnpublishedBufferPage) => {
+export const useQueryStringParams = (
+    navigate,
+    location,
+    showOpenAccessOnly,
+    canBulkExport,
+    isUnpublishedBufferPage,
+) => {
     const queryParams = getQueryParams(
         location.search.substr(1),
         canBulkExport,
@@ -121,7 +110,7 @@ export const useQueryStringParams = (history, location, showOpenAccessOnly, canB
     );
 
     const updateQueryString = queryParams => {
-        history.push({
+        navigate({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
                     ? pathConfig.admin.unpublished
