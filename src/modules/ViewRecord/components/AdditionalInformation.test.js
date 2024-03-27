@@ -1,6 +1,6 @@
 import React from 'react';
 import * as records from 'mock/data/testing/records';
-import AdditionalInformation from './AdditionalInformation';
+import AdditionalInformation, { formatDate } from './AdditionalInformation';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
@@ -352,5 +352,22 @@ describe('Additional Information Component ', () => {
             },
         });
         expect(container).toMatchSnapshot();
+    });
+
+    describe('exported functions', () => {
+        it('formatDate', () => {
+            // valid date with default format
+            rtlRender(<>{formatDate('2016-09-13T01:19:06Z')}</>);
+            expect(document.querySelector('.citationDate')).toHaveTextContent('2016-09-13');
+
+            // valid date with specific format
+            rtlRender(<>{formatDate('2016-09-13T01:19:06Z', 'DD-MM-YYYY')}</>);
+            expect(document.querySelectorAll('.citationDate')[1]).toHaveTextContent('13-09-2016');
+
+            // invalid date with default format
+            rtlRender(<>{formatDate('2016-09-33T01:19:06Z')}</>);
+            expect(document.querySelectorAll('.citationDate')[2]).toHaveClass('empty');
+            expect(document.querySelectorAll('.citationDate')[2]).toHaveTextContent('');
+        });
     });
 });
