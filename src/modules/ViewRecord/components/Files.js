@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
@@ -159,31 +159,47 @@ export const formatBytes = bytes => {
     return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
 };
 
-export class FilesClass extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        isAdmin: PropTypes.bool,
-        isAuthor: PropTypes.bool,
-        author: PropTypes.object,
-        account: PropTypes.object,
+const Files = props => {
+    const { publication } = props;
+    const [preview, setPreview] = useState({
+        fileName: null,
+        mediaUrl: null,
+        webMediaUrl: null,
+        previewMediaUrl: null,
+        mimeType: null,
+        checksums: {},
+    });
+
+    const getUrl = (pid, fileName, checksum = '') => {
+        return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            preview: {
-                fileName: null,
-                mediaUrl: null,
-                webMediaUrl: null,
-                previewMediaUrl: null,
-                mimeType: null,
-                checksums: {},
-                videoLoading: true,
-            },
-        };
-    }
+    const hidePreview = () => {
+        setPreview({
+            fileName: null,
+            mediaUrl: null,
+            webMediaUrl: null,
+            previewMediaUrl: null,
+            mimeType: null,
+            securityStatus: null,
+        });
+    };
 
-    renderFileIcon = (
+    const showPreview = ({ checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
+        setPreview({
+            checksums,
+            fileName,
+            imageError: false,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            videoLoading: true,
+            webMediaUrl,
+        });
+    };
+
+    const renderFileIcon = (
         pid,
         mimeType,
         fileName,
@@ -196,16 +212,14 @@ export class FilesClass extends Component {
         if (thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
-                mediaUrl: this.getUrl(pid, fileName, checksums && checksums.media),
-                webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums && checksums.web) : null,
-                previewMediaUrl: previewFileName
-                    ? this.getUrl(pid, previewFileName, checksums && checksums.preview)
-                    : null,
+                mediaUrl: getUrl(pid, fileName, checksums && checksums.media),
+                webMediaUrl: webFileName ? getUrl(pid, webFileName, checksums && checksums.web) : null,
+                previewMediaUrl: previewFileName ? getUrl(pid, previewFileName, checksums && checksums.preview) : null,
                 thumbnailMediaUrl:
-                    thumbnailFileName && this.getUrl(pid, thumbnailFileName, checksums && checksums.thumbnail),
+                    thumbnailFileName && getUrl(pid, thumbnailFileName, checksums && checksums.thumbnail),
                 fileName: fileName,
                 thumbnailFileName,
-                onClick: this.showPreview,
+                onClick: showPreview,
                 securityStatus: securityStatus,
             };
             return <Thumbnail {...thumbnailProps} />;
@@ -222,44 +236,11 @@ export class FilesClass extends Component {
         }
     };
 
-    hidePreview = () => {
-        this.setState({
-            preview: {
-                fileName: null,
-                mediaUrl: null,
-                webMediaUrl: null,
-                previewMediaUrl: null,
-                mimeType: null,
-                securityStatus: null,
-            },
-        });
+    const isFileValid = dataStream => {
+        return getSecurityAccess(dataStream, props) && !isDerivative(dataStream) && isAdded(dataStream);
     };
 
-    showPreview = ({ checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
-        this.setState({
-            preview: {
-                checksums,
-                fileName,
-                imageError: false,
-                mediaUrl,
-                mimeType,
-                previewMediaUrl,
-                securityStatus,
-                videoLoading: true,
-                webMediaUrl,
-            },
-        });
-    };
-
-    getUrl = (pid, fileName, checksum = '') => {
-        return pid && fileName && pathConfig.file.url(pid, fileName, checksum);
-    };
-
-    isFileValid = dataStream => {
-        return getSecurityAccess(dataStream, this.props) && !isDerivative(dataStream) && isAdded(dataStream);
-    };
-
-    getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
+    const getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
         const checksums = {
             media: dataStream.dsi_checksum,
             thumbnail: undefined,
@@ -285,15 +266,14 @@ export class FilesClass extends Component {
         return checksums;
     };
 
-    getFileData = publication => {
+    const getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
         const attachments = publication.fez_record_search_key_file_attachment_name;
-        const componentProps = this.props;
 
         return !!!dataStreams
             ? []
             : dataStreams
-                  .filter(this.isFileValid)
+                  .filter(isFileValid)
                   .map(item => {
                       if (
                           (item.dsi_order === null || item.dsi_order === undefined) &&
@@ -331,13 +311,13 @@ export class FilesClass extends Component {
                       const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
                       const previewFileName = checkForPreview(fileName, dataStreams);
                       const webFileName = checkForWeb(fileName, dataStreams);
-                      const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                      const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, props);
                       /**
-                       *  datastreams are being filtered by this.isFileValid which calls getSecurityAccess,
+                       *  datastreams are being filtered by isFileValid which calls getSecurityAccess,
                        *  securityAccess will always be true
                        */
-                      const securityAccess = getSecurityAccess(dataStream, componentProps);
-                      const checksums = this.getChecksums(
+                      const securityAccess = getSecurityAccess(dataStream, props);
+                      const checksums = getChecksums(
                           dataStream,
                           thumbnailFileName,
                           previewFileName,
@@ -353,13 +333,13 @@ export class FilesClass extends Component {
                           mimeType: mimeType,
                           calculatedSize: formatBytes(dataStream.dsi_size),
                           allowDownload: !isInfected && openAccessStatus.allowDownload,
-                          icon: this.renderFileIcon(
+                          icon: renderFileIcon(
                               pid,
                               mimeType,
                               fileName,
                               !isInfected &&
                                   !getDownloadLicence(publication) &&
-                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                                  !(!props.account && dataStream.dsi_security_policy === 4)
                                   ? thumbnailFileName
                                   : null,
                               previewFileName,
@@ -370,16 +350,16 @@ export class FilesClass extends Component {
                           openAccessStatus: openAccessStatus,
                           previewMediaUrl: isInfected
                               ? null
-                              : this.getUrl(
+                              : getUrl(
                                     pid,
                                     previewFileName ? previewFileName : fileName,
                                     checksums && checksums.preview,
                                 ),
-                          webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                          mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                          webMediaUrl: webFileName ? getUrl(pid, webFileName, checksums.web) : null,
+                          mediaUrl: getUrl(pid, fileName, checksums.media),
                           securityStatus: securityAccess,
                           checksums: checksums,
-                          requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
+                          requiresLoginToDownload: !props.account && dataStream.dsi_security_policy === 4,
                           avCheck: {
                               state: dataStream.dsi_av_check_state,
                               date: dataStream.dsi_av_check_date,
@@ -389,217 +369,207 @@ export class FilesClass extends Component {
                   });
     };
 
-    handleImageFailed = () => {
-        this.setState(state => ({
-            ...state,
-            preview: {
-                ...state.preview,
-                imageError: true,
-            },
-        }));
+    const handleImageFailed = () => {
+        setPreview({
+            ...preview,
+            imageError: true,
+        });
     };
 
-    handleVideoFailed = event => {
-        this.setState(state => ({
-            ...state,
-            preview: {
-                ...state.preview,
-                videoErrorCode: event.code,
-                videoErrorMsg: event.message,
-            },
-        }));
+    const handleVideoFailed = event => {
+        setPreview({
+            ...preview,
+            videoErrorCode: event.code,
+            videoErrorMsg: event.message,
+        });
     };
 
-    handleVideoLoad = () => {
-        this.setState(state => ({
-            ...state,
-            preview: {
-                ...state.preview,
-                videoLoading: false,
-            },
-        }));
+    const handleVideoLoad = () => {
+        setPreview({
+            ...preview,
+            videoLoading: false,
+        });
     };
 
-    render() {
-        const { publication } = this.props;
-        const fileData = this.getFileData(publication);
-        if (fileData.length === 0) return null;
+    const fileData = getFileData(publication);
+    if (fileData.length === 0) return null;
 
-        return (
-            <Grid xs={12}>
-                <StandardCard title={locale.viewRecord.sections.files.title}>
-                    {/* eslint-disable-next-line camelcase */}
-                    {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
-                        <Alert
-                            allowDismiss
-                            type={'info'}
-                            message={getAdvisoryStatement(publication, locale.culturalSensitivityStatement)}
-                        />
-                    )}
-                    {/* eslint-disable-next-line camelcase */}
-                    {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                        <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
-                    )}
-                    {/* istanbul ignore next */ !!fileData.filter(
-                        ({ requiresLoginToDownload }) => requiresLoginToDownload,
-                    ).length > 0 && (
-                        <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
-                    )}
-                    <Box sx={{ padding: { xs: '8px 0', sm: 1 } }}>
+    return (
+        <Grid xs={12}>
+            <StandardCard title={locale.viewRecord.sections.files.title}>
+                {/* eslint-disable-next-line camelcase */}
+                {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
+                    <Alert
+                        allowDismiss
+                        type={'info'}
+                        message={getAdvisoryStatement(publication, locale.culturalSensitivityStatement)}
+                    />
+                )}
+                {/* eslint-disable-next-line camelcase */}
+                {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
+                    <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
+                )}
+                {/* istanbul ignore next */ !!fileData.filter(({ requiresLoginToDownload }) => requiresLoginToDownload)
+                    .length > 0 && (
+                    <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
+                )}
+                <Box sx={{ padding: { xs: '8px 0', sm: 1 } }}>
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        padding={0}
+                        sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
+                    >
+                        <Grid xs={2} sm={1}>
+                            &nbsp;
+                        </Grid>
+                        <Grid sm={4} data-testid="dsi-dsid-label">
+                            <Typography variant="caption" gutterBottom>
+                                {locale.viewRecord.sections.files.fileName}
+                            </Typography>
+                        </Grid>
+                        <Grid sm={6} md={4} data-testid="dsi-label-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.viewRecord.sections.files.description}
+                            </Typography>
+                        </Grid>
+                        <Grid md={2} data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.viewRecord.sections.files.size}
+                            </Typography>
+                        </Grid>
+                        <Grid sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+                    </Grid>
+                </Box>
+
+                {fileData.map((item, index) => (
+                    <Box sx={{ padding: { xs: '8px 0', sm: 1 } }} key={index}>
                         <Grid
                             container
                             direction="row"
                             alignItems="center"
+                            key={`file-${index}`}
                             spacing={2}
                             padding={0}
+                            wrap={'nowrap'}
                             sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
                         >
-                            <Grid xs={2} sm={1}>
-                                &nbsp;
+                            <Grid
+                                xs={2}
+                                sm={1}
+                                textAlign={'center'}
+                                data-analyticsid={`dsi-mimetype-${index}`}
+                                data-testid={`dsi-mimetype-${index}`}
+                            >
+                                {item.icon}
                             </Grid>
-                            <Grid sm={4} data-testid="dsi-dsid-label">
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.viewRecord.sections.files.fileName}
-                                </Typography>
+                            <Grid
+                                xs={8}
+                                sm={4}
+                                textOverflow={'ellipsis'}
+                                whiteSpace={'nowrap'}
+                                overflow={'hidden'}
+                                data-analyticsid={`dsi-dsid-${index}`}
+                                data-testid={`dsi-dsid-${index}`}
+                            >
+                                <FileName
+                                    {...item}
+                                    id={`file-name-${index}`}
+                                    downloadLicence={getDownloadLicence(publication)}
+                                    onFileSelect={showPreview}
+                                    tooltip={
+                                        item.avCheck.isInfected
+                                            ? getAvStateDescription(item.avCheck.state, item.checkedAt)
+                                            : ''
+                                    }
+                                    disabled={item.avCheck.isInfected}
+                                />
                             </Grid>
                             <Grid
                                 sm={6}
                                 md={4}
-                                data-testid="dsi-label-label"
+                                textOverflow={'ellipsis'}
+                                whiteSpace={'nowrap'}
+                                overflow={'hidden'}
+                                data-testid={`dsi-label-${index}`}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
                             >
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.viewRecord.sections.files.description}
+                                <Typography variant="body2" noWrap>
+                                    {item.description}
                                 </Typography>
                             </Grid>
-                            <Grid md={2} data-testid="dsi-size-label" sx={{ display: { xs: 'none', md: 'block' } }}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.viewRecord.sections.files.size}
+                            <Grid
+                                md={2}
+                                textOverflow={'ellipsis'}
+                                whiteSpace={'nowrap'}
+                                overflow={'hidden'}
+                                data-testid={`dsi-size-${index}`}
+                                sx={{ display: { xs: 'none', md: 'block' } }}
+                            >
+                                <Typography variant="body2" noWrap>
+                                    {item.calculatedSize}
                                 </Typography>
                             </Grid>
-                            <Grid sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+                            <Grid
+                                sm
+                                style={{ textAlign: 'right' }}
+                                data-analyticsid={`rek-oa-status-${index}`}
+                                data-testid={`rek-oa-status-${index}`}
+                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                            >
+                                <Box style={{ whiteSpace: 'nowrap' }}>
+                                    <Box component={'span'} paddingRight={1}>
+                                        <FileAvStateIcon
+                                            state={item.avCheck?.state}
+                                            checkedAt={item.avCheck?.date}
+                                            id={`${item.pid}-${item.fileName}`}
+                                        />
+                                    </Box>
+                                    <Box component={'span'} paddingRight={1}>
+                                        <OpenAccessIcon
+                                            {...item.openAccessStatus}
+                                            securityStatus={item.securityStatus}
+                                        />
+                                    </Box>
+                                </Box>
+                            </Grid>
                         </Grid>
                     </Box>
+                ))}
+                {preview.mediaUrl && preview.mimeType && (
+                    <MediaPreview
+                        fileName={getUrl(
+                            publication.rek_pid,
+                            preview.fileName,
+                            preview.checksums && preview.checksums.media,
+                        )}
+                        mediaUrl={preview.mediaUrl}
+                        webMediaUrl={preview.webMediaUrl}
+                        previewMediaUrl={preview.previewMediaUrl}
+                        mimeType={preview.mimeType}
+                        videoErrorMsg={preview.videoErrorMsg}
+                        videoErrorCode={preview.videoErrorCode}
+                        videoLoading={preview.videoLoading}
+                        imageError={preview.imageError}
+                        onClose={hidePreview}
+                        onVideoFailed={handleVideoFailed}
+                        onImageFailed={handleImageFailed}
+                        onVideoLoad={handleVideoLoad}
+                    />
+                )}
+            </StandardCard>
+        </Grid>
+    );
+};
 
-                    {fileData.map((item, index) => (
-                        <Box sx={{ padding: { xs: '8px 0', sm: 1 } }} key={index}>
-                            <Grid
-                                container
-                                direction="row"
-                                alignItems="center"
-                                key={`file-${index}`}
-                                spacing={2}
-                                padding={0}
-                                wrap={'nowrap'}
-                                sx={{ borderBottom: '1px solid', borderBottomColor: 'secondary.light' }}
-                            >
-                                <Grid
-                                    xs={2}
-                                    sm={1}
-                                    textAlign={'center'}
-                                    data-analyticsid={`dsi-mimetype-${index}`}
-                                    data-testid={`dsi-mimetype-${index}`}
-                                >
-                                    {item.icon}
-                                </Grid>
-                                <Grid
-                                    xs={8}
-                                    sm={4}
-                                    textOverflow={'ellipsis'}
-                                    whiteSpace={'nowrap'}
-                                    overflow={'hidden'}
-                                    data-analyticsid={`dsi-dsid-${index}`}
-                                    data-testid={`dsi-dsid-${index}`}
-                                >
-                                    <FileName
-                                        {...item}
-                                        id={`file-name-${index}`}
-                                        downloadLicence={getDownloadLicence(publication)}
-                                        onFileSelect={this.showPreview}
-                                        tooltip={
-                                            item.avCheck.isInfected
-                                                ? getAvStateDescription(item.avCheck.state, item.checkedAt)
-                                                : ''
-                                        }
-                                        disabled={item.avCheck.isInfected}
-                                    />
-                                </Grid>
-                                <Grid
-                                    sm={6}
-                                    md={4}
-                                    textOverflow={'ellipsis'}
-                                    whiteSpace={'nowrap'}
-                                    overflow={'hidden'}
-                                    data-testid={`dsi-label-${index}`}
-                                    sx={{ display: { xs: 'none', sm: 'block' } }}
-                                >
-                                    <Typography variant="body2" noWrap>
-                                        {item.description}
-                                    </Typography>
-                                </Grid>
-                                <Grid
-                                    md={2}
-                                    textOverflow={'ellipsis'}
-                                    whiteSpace={'nowrap'}
-                                    overflow={'hidden'}
-                                    data-testid={`dsi-size-${index}`}
-                                    sx={{ display: { xs: 'none', md: 'block' } }}
-                                >
-                                    <Typography variant="body2" noWrap>
-                                        {item.calculatedSize}
-                                    </Typography>
-                                </Grid>
-                                <Grid
-                                    sm
-                                    style={{ textAlign: 'right' }}
-                                    data-analyticsid={`rek-oa-status-${index}`}
-                                    data-testid={`rek-oa-status-${index}`}
-                                    sx={{ display: { xs: 'none', sm: 'block' } }}
-                                >
-                                    <Box style={{ whiteSpace: 'nowrap' }}>
-                                        <Box component={'span'} paddingRight={1}>
-                                            <FileAvStateIcon
-                                                state={item.avCheck?.state}
-                                                checkedAt={item.avCheck?.date}
-                                                id={`${item.pid}-${item.fileName}`}
-                                            />
-                                        </Box>
-                                        <Box component={'span'} paddingRight={1}>
-                                            <OpenAccessIcon
-                                                {...item.openAccessStatus}
-                                                securityStatus={item.securityStatus}
-                                            />
-                                        </Box>
-                                    </Box>
-                                </Grid>
-                            </Grid>
-                        </Box>
-                    ))}
-                    {this.state.preview.mediaUrl && this.state.preview.mimeType && (
-                        <MediaPreview
-                            fileName={this.getUrl(
-                                publication.rek_pid,
-                                this.state.preview.fileName,
-                                this.state.preview.checksums && this.state.preview.checksums.media,
-                            )}
-                            mediaUrl={this.state.preview.mediaUrl}
-                            webMediaUrl={this.state.preview.webMediaUrl}
-                            previewMediaUrl={this.state.preview.previewMediaUrl}
-                            mimeType={this.state.preview.mimeType}
-                            videoErrorMsg={this.state.preview.videoErrorMsg}
-                            videoErrorCode={this.state.preview.videoErrorCode}
-                            videoLoading={this.state.preview.videoLoading}
-                            imageError={this.state.preview.imageError}
-                            onClose={this.hidePreview}
-                            onVideoFailed={this.handleVideoFailed}
-                            onImageFailed={this.handleImageFailed}
-                            onVideoLoad={this.handleVideoLoad}
-                        />
-                    )}
-                </StandardCard>
-            </Grid>
-        );
-    }
-}
+Files.propTypes = {
+    publication: PropTypes.object.isRequired,
+    isAdmin: PropTypes.bool,
+    isAuthor: PropTypes.bool,
+    author: PropTypes.object,
+    account: PropTypes.object,
+};
 
-export default FilesClass;
+export default Files;
