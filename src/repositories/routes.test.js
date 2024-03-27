@@ -1042,10 +1042,10 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for VOCAB_LIST_API', () => {
-        expect(routes.VOCAB_LIST_API({})).toEqual({ apiUrl: 'vocabularies/list' });
+        expect(routes.VOCAB_LIST_API({}).apiUrl).toMatch('vocabularies/list');
     });
 
     it('should construct url for CHILD_VOCAB_LIST_API', () => {
-        expect(routes.CHILD_VOCAB_LIST_API(123)).toEqual({ apiUrl: 'vocabularies/admin/123' });
+        expect(routes.CHILD_VOCAB_LIST_API(123).apiUrl).toMatch('vocabularies/admin/123');
     });
 });

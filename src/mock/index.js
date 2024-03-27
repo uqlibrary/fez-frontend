@@ -610,7 +610,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
     .reply(200, { ...mockData.journalDoaj })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 999 }).apiUrl)))
-    .reply(404, { data: "Not Found" })
+    .reply(404, { data: 'Not Found' })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
 
@@ -621,33 +621,26 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(422, {message: 'Some error message'})
     .reply(config => {
         const data = JSON.parse(config.data);
-        if(!data.hasOwnProperty('cvo_id')){
-            data['cvo_id']=999;
-            data['cvo_created_at']=Date.now();
-            data['cvo_updated_at']=Date.now();
-        } 
-        return [200, { data  }]
+        if (!data.hasOwnProperty('cvo_id')) {
+            data['cvo_id'] = 999;
+            data['cvo_created_at'] = Date.now();
+            data['cvo_updated_at'] = Date.now();
+        }
+        return [200, { data }];
     })
     .onPut(routes.VOCAB_API().apiUrl)
     // .reply(422, {message: 'Some error message'})
-    .reply(config =>[200, { data: config.data  }])
-    
-    .onGet(
-        new RegExp(
-            routes.CHILD_VOCAB_LIST_API('\\d+').apiUrl,
-        ),
-    )
-    .reply(config=>{
-        const id=config.url.split('/').pop().split('?')[0];
+    .reply(config => [200, { data: config.data }])
+
+    .onGet(new RegExp(routes.CHILD_VOCAB_LIST_API('\\d+.*', false).apiUrl))
+    .reply(config => {
+        const id = config.url
+            .split('/')
+            .pop()
+            .split('?')[0];
         return [200, { ...mockData.childVocabList[id] }];
     })
-    .onGet(
-        new RegExp(
-            escapeRegExp(
-                routes.VOCAB_LIST_API('.*').apiUrl,
-            ),
-        ),
-    )
+    .onGet(new RegExp(escapeRegExp(routes.VOCAB_LIST_API(false).apiUrl + '.*')))
     .reply(200, { ...mockData.vocabList })
     // .reply(422, {message: 'Some error message'})
     .onGet(
@@ -848,7 +841,6 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
-
 
     .onAny()
     .reply(config => {
