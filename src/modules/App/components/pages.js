@@ -72,7 +72,7 @@ export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from '
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
-export { default as NewViewRecord } from 'modules/ViewRecord/containers/NewViewRecord';
+export { ViewRecord } from 'modules/ViewRecord/components/ViewRecord';
 export { NotFound } from 'modules/NotFound/components/NotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
