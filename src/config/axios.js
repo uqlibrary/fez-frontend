@@ -190,7 +190,7 @@ api.interceptors.response.use(
 
         const shouldNotAppearInSentry =
             document.location.hostname === 'localhost' || // testing on AWS sometimes fires these
-            [401, 403].includes(errorStatus) || // login expired - no notice required
+            [401, 403, 404, 410].includes(errorStatus) || // login expired - no notice required
             errorStatus === 0 || // catch those "the network request was interrupted" we see so much
             errorStatus === '0' || // don't know what format it comes in
             errorStatus === 500 || // api should handle these
