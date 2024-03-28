@@ -28,6 +28,13 @@ export default class Orcid extends Component {
     constructor(props) {
         super(props);
 
+        // eslint-disable-next-line camelcase
+        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
+            // this._navigateToDashboard();
+            // TODO:: convert to funct comp then call navigate in useEffect
+            window.location.assign(pathConfig.dashboard);
+        }
+
         // when ORCID registration went through, and ORCID has redirected back to eSpace
         // check status of ORCID redirect, if it's still in the same session (state)
         // in prod/staging
@@ -101,10 +108,6 @@ export default class Orcid extends Component {
     }
 
     componentDidMount() {
-        // eslint-disable-next-line camelcase
-        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
-            this._navigateToDashboard();
-        }
         // link author to orcid when orcid authorisation response is received from orcid website
         // (url contains required parameters)
         if (
