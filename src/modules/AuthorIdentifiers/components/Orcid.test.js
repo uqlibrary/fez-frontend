@@ -60,7 +60,13 @@ describe('Component Orcid ', () => {
 
     it('should redirect to the dashbaord', () => {
         const testMethod = jest.fn();
-        setup({ author: { aut_orcid_id: '11111' }, navigate: testMethod });
+        delete window.location;
+        window.location = {
+            assign: testMethod,
+            hash: '',
+            search: '',
+        };
+        setup({ author: { aut_orcid_id: '11111' } });
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
 
@@ -133,7 +139,7 @@ describe('Component Orcid ', () => {
         const { getByText } = setup({
             accountAuthorSaving: true,
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data,
+            author: { ...currentAuthor.uqresearcher.data, aut_orcid_id: null },
         });
 
         expect(getByText(/Invalid authorisation state response from ORCID/i));
@@ -211,6 +217,7 @@ describe('Component Orcid ', () => {
         };
 
         const { rerender } = setup({
+            accountAuthorLoading: true,
             account: null,
             author: null,
         });

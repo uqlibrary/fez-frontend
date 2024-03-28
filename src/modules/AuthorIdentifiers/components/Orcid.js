@@ -30,7 +30,9 @@ export default class Orcid extends Component {
 
         // eslint-disable-next-line camelcase
         if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
-            this._navigateToDashboard();
+            // this._navigateToDashboard();
+            // TODO:: convert to funct comp then call navigate in useEffect
+            window.location.assign(pathConfig.dashboard);
         }
 
         // when ORCID registration went through, and ORCID has redirected back to eSpace
