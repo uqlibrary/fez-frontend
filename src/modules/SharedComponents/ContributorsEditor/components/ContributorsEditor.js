@@ -404,6 +404,7 @@ export class ContributorsEditor extends PureComponent {
                 const changedIndexes = [];
                 const scaleOfSignificance = [...this.state.scaleOfSignificance];
                 this.state.scaleOfSignificance.length > 0 &&
+                    newContribs.length === this.state.scaleOfSignificance.length &&
                     newContribs.map((contrib, index) => {
                         if (contrib.nameAsPublished !== this.state.scaleOfSignificance[index].author.rek_author) {
                             changedIndexes.push(index);
