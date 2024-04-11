@@ -765,7 +765,7 @@ export const AuthorsListWithAffiliates = ({
                     draggable: false,
                     addRowPosition: 'first',
                     search: data.length > 10,
-                    emptyRowsWhenPaging: true,
+                    emptyRowsWhenPaging: false,
                     ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
                     ...(data.length > 10 ? { paging: true } : { paging: false }),
                     .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
