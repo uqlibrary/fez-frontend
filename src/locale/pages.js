@@ -214,6 +214,10 @@ export default {
                 </StandardCard>
             ),
         },
+        adminDashboard: {
+            loading: 'Loading admin dashboard',
+            title: 'Admin dashboard',
+        },
         dashboard: {
             loading: 'Loading your dashboard',
             header: {

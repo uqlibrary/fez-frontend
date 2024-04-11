@@ -344,6 +344,13 @@ export const getRoutesConfig = ({
         ...(authorDetails && isAdmin(authorDetails)
             ? [
                   {
+                      path: pathConfig.admin.dashboard,
+                      element: <components.AdminDashboard />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.adminDashboard.title,
+                  },
+                  {
                       path: pathConfig.admin.add,
                       element: <components.Admin createMode />,
                       exact: true,

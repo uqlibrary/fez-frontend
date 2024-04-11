@@ -20,6 +20,9 @@ export const loremIpsum =
 
 export default {
     components: {
+        adminDashboard: {
+            title: 'Admin dashboard',
+        },
         publicationsList: {
             selectAllText: 'Select all',
         },
