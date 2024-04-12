@@ -768,7 +768,7 @@ export const AuthorsListWithAffiliates = ({
                     emptyRowsWhenPaging: false,
                     ...(data.length > 10 ? { maxBodyHeight: 600 } : {}),
                     ...(data.length > 10 ? { paging: true } : { paging: false }),
-                    .../* istanbul ignore next */ { pageSize: data.length > 100 ? 50 : 10 },
+                    ...{ pageSize: /* istanbul ignore next */ data.length > 100 ? 50 : 10 },
                     pageSizeOptions: [10, 50, 100, 200, 500],
                     padding: 'dense',
                     rowStyle: rowData => {
