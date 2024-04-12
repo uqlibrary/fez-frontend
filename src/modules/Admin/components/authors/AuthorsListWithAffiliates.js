@@ -766,10 +766,10 @@ export const AuthorsListWithAffiliates = ({
                     addRowPosition: 'first',
                     search: data.length > 10,
                     emptyRowsWhenPaging: false,
-                    ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
+                    ...(data.length > 10 ? { maxBodyHeight: 600 } : {}),
                     ...(data.length > 10 ? { paging: true } : { paging: false }),
-                    .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
-                    pageSizeOptions: [5, 50, 100, 200, 500],
+                    .../* istanbul ignore next */ { pageSize: data.length > 100 ? 50 : 10 },
+                    pageSizeOptions: [10, 50, 100, 200, 500],
                     padding: 'dense',
                     rowStyle: rowData => {
                         if (!!rowData.aut_id) {
