@@ -34,3 +34,5 @@ export { TRANSITION_COHORT } from './thesisSubmissionTransition';
 export { default as imageGalleryConfig } from './imageGalleryConfig';
 export { communityCollectionsConfig } from './communityCollections';
 export { controlledVocabConfig } from './controlledVocabConfig';
+
+export * as adminDashboardConfig from './adminDashboard';
