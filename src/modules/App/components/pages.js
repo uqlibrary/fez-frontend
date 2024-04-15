@@ -58,7 +58,7 @@ export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('module
 export const MyIncompleteRecord = lazy(() =>
     lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
 );
-export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/containers/Orcid')));
+export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
     lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
 );
