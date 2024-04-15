@@ -42,7 +42,16 @@ if (process.env.ENABLE_LOG) {
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
         allowUrls: [/library\.uq\.edu\.au/],
-        ignoreErrors: ['Object Not Found Matching Id'],
+        ignoreErrors: [
+            // Ignore browser extension errors
+            /window\.bannerNight/,
+            /mce-visual-caret-hidden/,
+            'Object Not Found Matching Id',
+            'Network Error',
+            'Request aborted',
+            'timeout exceeded',
+            'Failed to fetch',
+        ],
         beforeBreadcrumb(breadcrumb, hint) {
             if (breadcrumb.category === 'xhr' && breadcrumb.data.method !== 'GET' && !!hint.xhr.__sentry_xhr__) {
                 const data = {
