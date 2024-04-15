@@ -48,6 +48,7 @@ const AdminDashboard = () => {
                 {adminDashboardConfig.tabs.map(tab => {
                     return (
                         <Tab
+                            key={tab.title}
                             label={tab.title}
                             {...a11yProps(tab.id)}
                             {...adminDashboardConfig.tabProps.find(_tab => _tab.id === tab.id)?.render(tmpCount)}
@@ -56,7 +57,7 @@ const AdminDashboard = () => {
                 })}
             </Tabs>
             {adminDashboardConfig.tabs.map(tab => (
-                <CustomTabPanel value={activeTab} index={tab.id}>
+                <CustomTabPanel key={tab.id} value={activeTab} index={tab.id}>
                     {tab.component}
                 </CustomTabPanel>
             ))}
