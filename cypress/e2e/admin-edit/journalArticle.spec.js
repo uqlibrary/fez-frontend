@@ -151,7 +151,7 @@ context('Journal Article admin edit', () => {
                                         .should(
                                             'have.attr',
                                             'href',
-                                            'https://go.openathens.net/redirector/uq.edu.au?url=' +
+                                            'https://resolver.library.uq.edu.au/openathens/redir?qurl=' +
                                                 encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/') +
                                                 ulrichsId[index],
                                         );
