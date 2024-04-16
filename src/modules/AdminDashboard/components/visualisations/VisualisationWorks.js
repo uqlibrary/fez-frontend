@@ -5,7 +5,29 @@ import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer
 import { ChartsText } from '@mui/x-charts/ChartsText';
 import { PiePlot } from '@mui/x-charts/PieChart';
 
+import debounce from 'debounce-promise';
+
+const SINGLE_CHAR_WIDTH = 29;
+const MAX_ELEMENT_WIDTH = 214;
+
 const VisualisationWorks = ({ text, amount, colour = '#B60DCE' }) => {
+    const [elementWidth, setElementWidth] = React.useState(0);
+    const _ref = React.useRef();
+
+    const handleResize = debounce(() => {
+        setElementWidth(_ref?.current?.getBoundingClientRect()?.width ?? MAX_ELEMENT_WIDTH);
+    }, 200);
+
+    React.useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [handleResize]);
+
+    React.useEffect(() => {
+        handleResize();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <ResponsiveChartContainer
             series={[
@@ -20,13 +42,14 @@ const VisualisationWorks = ({ text, amount, colour = '#B60DCE' }) => {
                 },
             ]}
             height={160}
+            ref={_ref}
         >
             <PiePlot />
             {text && (
                 <ChartsText
                     text={text}
                     y="60%"
-                    x={`${Math.floor(110 / (text.length < 3 ? text.length + 1 : text.length))}%`}
+                    x={Math.floor(elementWidth / 2 - (text.length * SINGLE_CHAR_WIDTH) / 2)}
                     fontSize={50}
                     fontWeight={400}
                     fontFamily="Roboto, Arial, sans-serif"

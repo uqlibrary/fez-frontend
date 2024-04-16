@@ -7,14 +7,13 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
+
+import SectionTitle from './SectionTitle';
 
 const RibbonChartContainer = ({ data, label, children, ...rest }) => {
     return (
         <React.Fragment>
-            <Typography textTransform={'uppercase'} fontWeight={400}>
-                {label}
-            </Typography>
+            <SectionTitle>{label}</SectionTitle>
 
             <TableContainer {...rest}>
                 <Table aria-label="table">

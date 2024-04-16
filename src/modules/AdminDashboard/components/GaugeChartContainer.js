@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 import SectionTitle from './SectionTitle';
 
-const PieChartContainer = ({ label, subtext, children }) => {
+const GaugeChartContainer = ({ label, subtext, children }) => {
     return (
         <React.Fragment>
             <SectionTitle textAlign={'center'}>{label}</SectionTitle>
@@ -19,10 +19,10 @@ const PieChartContainer = ({ label, subtext, children }) => {
     );
 };
 
-PieChartContainer.propTypes = {
+GaugeChartContainer.propTypes = {
     label: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     subtext: PropTypes.any,
 };
 
-export default React.memo(PieChartContainer);
+export default React.memo(GaugeChartContainer);

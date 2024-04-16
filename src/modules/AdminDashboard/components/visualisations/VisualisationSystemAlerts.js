@@ -5,15 +5,13 @@ import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer
 import { BarPlot } from '@mui/x-charts/BarChart';
 
 const VisualisationSystemAlerts = ({
-    today,
     assigned,
     remaining,
-    colours = { today: '#35A9A5', assigned: '#338CFA', remaining: '#B60DCE' },
+    colours = { assigned: '#338CFA', remaining: '#B60DCE' },
 }) => {
     return (
         <ResponsiveChartContainer
             series={[
-                { data: [today], type: 'bar', stack: 'SystemAlerts', layout: 'horizontal', color: colours.today },
                 { data: [assigned], type: 'bar', stack: 'SystemAlerts', layout: 'horizontal', color: colours.assigned },
                 {
                     data: [remaining],
@@ -44,14 +42,12 @@ const VisualisationSystemAlerts = ({
 };
 // stacking bar not working, also get rid of axis scale
 VisualisationSystemAlerts.propTypes = {
-    today: PropTypes.number.isRequired,
     assigned: PropTypes.number.isRequired,
     remaining: PropTypes.number.isRequired,
     colours: PropTypes.shape({
-        today: PropTypes.string.isRequired,
         assigned: PropTypes.string.isRequired,
         remaining: PropTypes.string.isRequired,
-    }).isRequired,
+    }),
 };
 
 export default React.memo(VisualisationSystemAlerts);
