@@ -88,14 +88,9 @@ const Orcid = () => {
         // http://espace/path/to/page/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a
         // or in dev environment
         // http://development/espace/branch/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a#path/to/page/
-        const queryString =
-            location.hash.indexOf('?') >= 0
-                ? location.hash.substr(location.hash.indexOf('?') + 1)
-                : location.search.substr(1);
-
         let queryParams;
         try {
-            queryParams = parse(queryString);
+            queryParams = parse(location.search.substr(1));
         } catch (e) {
             /* istanbul ignore next */
             queryParams = {
@@ -104,11 +99,15 @@ const Orcid = () => {
             };
         }
 
-        setExistingOrcidRequest({
-            show_login: false,
-            family_names: account ? account.lastName : '',
-            given_names: account ? account.firstName : '',
-        });
+        if (account) {
+            setOrcidRequest({ ...orcidRequest, state: createOrcidStateId(account) });
+
+            setExistingOrcidRequest({
+                ...existingOrcidRequest,
+                family_names: account.lastName,
+                given_names: account.firstName,
+            });
+        }
 
         if (queryParams.code && queryParams.state) {
             setOrcidResponse({
@@ -147,12 +146,8 @@ const Orcid = () => {
     };
 
     const getOrcidUrl = isNew => {
-        const orcidStateId = createOrcidStateId(account);
-        setOrcidRequest({ ...orcidRequest, state: orcidStateId });
-
         const params = {
             ...orcidRequest,
-            state: orcidStateId,
             ...(isNew ? { show_login: true } : existingOrcidRequest),
         };
         const stringifiedParams = Object.keys(params)

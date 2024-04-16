@@ -91,7 +91,7 @@ describe('Component Orcid ', () => {
         window.location = {
             assign: assignFn,
         };
-        mockUseLocation = { ...mockUseLocation, hash: '/?code=123&state=b650667a7eb582897f036e66099b78c7' };
+
         const { getByRole, getByTestId } = setup({
             state: {
                 accountReducer: {
@@ -114,7 +114,6 @@ describe('Component Orcid ', () => {
         delete window.location;
         window.location = {
             assign: assignFn,
-            hash: 'http://localhost:3000?code=123&state=b650667a7eb582897f036e66099b78c7',
         };
         const { getByRole, getByTestId } = setup({
             state: {
