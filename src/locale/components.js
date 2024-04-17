@@ -22,6 +22,41 @@ export default {
     components: {
         adminDashboard: {
             title: 'Admin dashboard',
+            systemalerts: {
+                title: 'System Alerts',
+                total: { label: 'Total' },
+                today: {
+                    label: 'New today',
+                },
+                assigned: {
+                    label: 'Assigned',
+                    suffix: value => `(${value}%)`,
+                },
+                unassigned: {
+                    label: 'Unassigned',
+                    suffix: value => `(${value}%)`,
+                },
+            },
+            works: {
+                unprocessed: 'Unprocessed Works',
+                unprocessedSubText: 'view',
+                processed: 'Processed Works',
+                processedSubText: 'this iteration',
+            },
+            openaccess: {
+                researchOutput: {
+                    title: 'OA Status',
+                    subText: 'of research output',
+                    chart: {
+                        text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
+                        subtext: total => `of ${total} records`,
+                    },
+                },
+            },
+            quicklinks: {
+                title: 'Quick Links',
+                addLinkText: '+ add',
+            },
         },
         publicationsList: {
             selectAllText: 'Select all',

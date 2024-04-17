@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
+import locale from 'locale/components';
+
 import QuickLinkContainer from './QuickLinkContainer';
 import RibbonChartContainer from './RibbonChartContainer';
 import PieChartContainer from './PieChartContainer';
@@ -14,43 +16,7 @@ import VisualisationWorks from './visualisations/VisualisationWorks';
 import VisualisationOpenAccess from './visualisations/VisualisationOpenAccess';
 
 const colours = { assigned: '#338CFA', unassigned: '#B60DCE' };
-const locale = {
-    systemalerts: {
-        title: 'System Alerts',
-        total: { label: 'Total' },
-        today: {
-            label: 'New today',
-        },
-        assigned: {
-            label: 'Assigned',
-            suffix: value => `(${value}%)`,
-        },
-        unassigned: {
-            label: 'Unassigned',
-            suffix: value => `(${value}%)`,
-        },
-    },
-    works: {
-        unprocessed: 'Unprocessed Works',
-        unprocessedSubText: 'view',
-        processed: 'Processed Works',
-        processedSubText: 'this iteration',
-    },
-    openaccess: {
-        researchOutput: {
-            title: 'OA Status',
-            subText: 'of research output',
-            chart: {
-                text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
-                subtext: total => `of ${total} records`,
-            },
-        },
-    },
-    quicklinks: {
-        title: 'Quick Links',
-        addLinkText: '+ add',
-    },
-};
+
 const data = {
     systemalerts: {
         total: 150,
@@ -69,6 +35,8 @@ const data = {
 };
 
 const Today = () => {
+    const txt = locale.components.adminDashboard;
+
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} md={7}>
@@ -76,9 +44,9 @@ const Today = () => {
                     <Grid item xs={12} marginBlockEnd={4}>
                         <RibbonChartContainer
                             data={data.systemalerts}
-                            locale={locale.systemalerts}
+                            locale={txt.systemalerts}
                             colours={colours}
-                            label={locale.systemalerts.title}
+                            label={txt.systemalerts.title}
                         >
                             <VisualisationSystemAlerts
                                 today={data.systemalerts.today}
@@ -89,7 +57,7 @@ const Today = () => {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <PieChartContainer
-                            label={locale.works.unprocessed}
+                            label={txt.works.unprocessed}
                             subtext={
                                 <ExternalLink id={'unprocessed-link'} data-testid={'unprocessed-link'} href={'#'}>
                                     <Typography
@@ -98,7 +66,7 @@ const Today = () => {
                                         fontWeight={200}
                                         display={'inline-block'}
                                     >
-                                        {locale.works.unprocessedSubText}
+                                        {txt.works.unprocessedSubText}
                                     </Typography>
                                 </ExternalLink>
                             }
@@ -108,10 +76,10 @@ const Today = () => {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <PieChartContainer
-                            label={locale.works.processed}
+                            label={txt.works.processed}
                             subtext={
                                 <Typography fontSize={'0.875rem'} variant="span" fontWeight={200}>
-                                    {locale.works.processedSubText}
+                                    {txt.works.processedSubText}
                                 </Typography>
                             }
                         >
@@ -124,16 +92,16 @@ const Today = () => {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <GaugeChartContainer
-                            label={locale.openaccess.researchOutput.title}
+                            label={txt.openaccess.researchOutput.title}
                             subtext={
                                 <Typography fontSize={'0.875rem'} variant="span" fontWeight={200}>
-                                    {locale.openaccess.researchOutput.subText}
+                                    {txt.openaccess.researchOutput.subText}
                                 </Typography>
                             }
                         >
                             <VisualisationOpenAccess
-                                text={locale.openaccess.researchOutput.chart.text(data.oa.current, data.oa.total)}
-                                subText={locale.openaccess.researchOutput.chart.subtext(data.oa.total)}
+                                text={txt.openaccess.researchOutput.chart.text(data.oa.current, data.oa.total)}
+                                subText={txt.openaccess.researchOutput.chart.subtext(data.oa.total)}
                                 amount={data.oa.current}
                                 maxAmount={data.oa.total}
                             />
@@ -142,7 +110,7 @@ const Today = () => {
                 </Grid>
             </Grid>
             <Grid item xs={12} md={5}>
-                <QuickLinkContainer locale={locale.quicklinks} />
+                <QuickLinkContainer locale={txt.quicklinks} />
             </Grid>
         </Grid>
     );
