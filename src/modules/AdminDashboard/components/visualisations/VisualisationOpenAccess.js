@@ -44,6 +44,7 @@ const VisualisationOpenAccess = ({
                     '&:last-of-type': { fill: colourValue },
                 },
             }}
+            disableAxisListener
         >
             <GaugeReferenceArc />
             <GaugeValueArc />

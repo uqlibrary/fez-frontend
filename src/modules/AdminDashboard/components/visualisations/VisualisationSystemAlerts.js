@@ -12,16 +12,16 @@ const VisualisationSystemAlerts = ({
     return (
         <ResponsiveChartContainer
             series={[
-                { data: [assigned], type: 'bar', stack: 'SystemAlerts', layout: 'horizontal', color: colours.assigned },
+                { data: [assigned], type: 'bar', stack: 'SystemAlerts', layout: 'horizontal' },
                 {
                     data: [remaining],
                     type: 'bar',
                     stack: 'SystemAlerts',
                     layout: 'horizontal',
-                    color: colours.remaining,
                 },
             ]}
             height={40}
+            colors={[colours.assigned, colours.remaining]}
             yAxis={[
                 {
                     data: ['A', 'B', 'C'],
@@ -32,9 +32,11 @@ const VisualisationSystemAlerts = ({
             margin={{
                 left: 0,
                 right: 0,
-                top: 0,
-                bottom: 0,
+                top: 10,
+                bottom: 10,
             }}
+            disableAxisListener
+            sx={{ '& [class$="-MuiBarElement-root"]': { height: '20px !important' } }}
         >
             <BarPlot />
         </ResponsiveChartContainer>

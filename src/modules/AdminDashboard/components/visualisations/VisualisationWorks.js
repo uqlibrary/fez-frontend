@@ -43,6 +43,7 @@ const VisualisationWorks = ({ text, amount, colour = '#B60DCE' }) => {
             ]}
             height={160}
             ref={_ref}
+            disableAxisListener
         >
             <PiePlot />
             {text && (
