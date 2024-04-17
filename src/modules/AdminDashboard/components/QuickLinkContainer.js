@@ -10,7 +10,7 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import SectionTitle from './SectionTitle';
 import QuickLink from './QuickLink';
 
-const QuickLinkContainer = () => {
+const QuickLinkContainer = ({ locale }) => {
     const data = [
         { id: 150, title: '2021+ Imported Records with an Author ID and Research Subtypes Only', amount: 10 },
         { id: 1, title: '2021+ Imported Records with no Author ID with subtype exclusions', amount: 30 },
@@ -27,7 +27,7 @@ const QuickLinkContainer = () => {
     return (
         <Box paddingInlineStart={2} borderLeft={'1px solid rgba(224, 224, 224, 1)'}>
             <SectionTitle>
-                Quick Links
+                {locale.title}
                 <ExternalLink id={'add-quick-link'} data-testid={'add-quick-link'} href={'#'} openInNewIcon={false}>
                     <Typography
                         fontSize={'0.875rem'}
@@ -38,12 +38,12 @@ const QuickLinkContainer = () => {
                         display={'inline-block'}
                         fontWeight={200}
                     >
-                        + add
+                        {locale.addLinkText}
                     </Typography>
                 </ExternalLink>
             </SectionTitle>
 
-            <Stack spacing={1} marginBlockStart={2}>
+            <Stack spacing={2} marginBlockStart={2}>
                 {data.map(link => (
                     <QuickLink key={link.id} link={link} onLinkClick={onLinkClick} />
                 ))}
@@ -53,7 +53,7 @@ const QuickLinkContainer = () => {
 };
 
 QuickLinkContainer.propTypes = {
-    param: PropTypes.any,
+    locale: PropTypes.object.isRequired,
 };
 
 export default React.memo(QuickLinkContainer);

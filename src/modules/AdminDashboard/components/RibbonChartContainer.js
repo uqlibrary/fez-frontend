@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { useTheme } from '@mui/material/styles';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,7 +12,9 @@ import TableRow from '@mui/material/TableRow';
 
 import SectionTitle from './SectionTitle';
 
-const RibbonChartContainer = ({ data, label, children, ...rest }) => {
+const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest }) => {
+    const theme = useTheme();
+
     return (
         <React.Fragment>
             <SectionTitle>{label}</SectionTitle>
@@ -20,16 +24,28 @@ const RibbonChartContainer = ({ data, label, children, ...rest }) => {
                     <TableHead>
                         <TableRow>
                             <TableCell size="small" width={200} />
-                            {data.map(column => (
-                                <TableCell
-                                    key={`h_${column.label}`}
-                                    align="center"
-                                    size="small"
-                                    sx={{ ...(column.sx ?? {}) }}
-                                >
-                                    {column.label}
-                                </TableCell>
-                            ))}
+                            {Object.keys(locale)
+                                .filter(item => locale[item].hasOwnProperty('label'))
+                                .map(key => {
+                                    const column = locale[key];
+                                    return (
+                                        <TableCell
+                                            key={key}
+                                            align="center"
+                                            size="small"
+                                            sx={{
+                                                ...(Object.keys(colours).includes(key)
+                                                    ? {
+                                                          borderBottom: `3px solid ${colours[key]}`,
+                                                          padding: theme.spacing(1),
+                                                      }
+                                                    : {}),
+                                            }}
+                                        >
+                                            {column.label}
+                                        </TableCell>
+                                    );
+                                })}
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -37,11 +53,14 @@ const RibbonChartContainer = ({ data, label, children, ...rest }) => {
                             <TableCell align="left" size="small" width={150}>
                                 {children}
                             </TableCell>
-                            {data.map(row => (
-                                <TableCell key={row.label} align="center" size="small">
-                                    {`${row.value}${row.suffix ? ` ${row.suffix}` : ''}`}
-                                </TableCell>
-                            ))}
+                            {Object.keys(data).map(key => {
+                                const value = data[key];
+                                return (
+                                    <TableCell key={key} align="center" size="small">
+                                        {`${value}${data[key]?.suffix?.(value) ?? ''}`}
+                                    </TableCell>
+                                );
+                            })}
                         </TableRow>
                     </TableBody>
                 </Table>
@@ -50,7 +69,9 @@ const RibbonChartContainer = ({ data, label, children, ...rest }) => {
     );
 };
 RibbonChartContainer.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
+    locale: PropTypes.object.isRequired,
+    colours: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
 };
