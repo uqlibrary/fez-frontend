@@ -48,3 +48,4 @@ export { default as adminScaleOfSignificanceReducer } from './adminScaleOfSignif
 export { default as vocabAdminReducer } from './controlledVocabAdmin';
 export { default as viewVocabReducer } from './controlledVocab';
 export { default as viewChildVocabReducer } from './viewChildVocabReducer';
+export { default as adminDashboardReducer } from './adminDashboard';

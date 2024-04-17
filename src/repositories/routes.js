@@ -611,3 +611,7 @@ export const ORGANISATIONAL_UNITS = () => ({
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
 });
+
+export const ADMIN_DASHBOARD_TODAY_API = () => ({
+    apiUrl: 'admin/dashboard/today',
+});

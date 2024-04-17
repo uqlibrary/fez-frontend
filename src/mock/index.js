@@ -659,7 +659,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, { ...mockData.collectionList });
+    .reply(200, { ...mockData.collectionList })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_TODAY_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardToday} });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)

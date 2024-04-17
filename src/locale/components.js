@@ -57,6 +57,10 @@ export default {
                 title: 'Quick Links',
                 addLinkText: '+ add',
             },
+            loading: {
+                message: 'Loading dashboard...',
+                nodata: 'No data available',
+            },
         },
         publicationsList: {
             selectAllText: 'Select all',
