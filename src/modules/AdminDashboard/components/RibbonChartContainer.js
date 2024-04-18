@@ -18,53 +18,54 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
     return (
         <React.Fragment>
             <SectionTitle>{label}</SectionTitle>
-
-            <TableContainer {...rest}>
-                <Table aria-label="table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell size="small" width={200} />
-                            {Object.keys(locale)
-                                .filter(item => locale[item].hasOwnProperty('label'))
-                                .map(key => {
-                                    const column = locale[key];
+            {!!data && (
+                <TableContainer {...rest}>
+                    <Table aria-label="table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell size="small" width={200} />
+                                {Object.keys(locale)
+                                    .filter(item => locale[item].hasOwnProperty('label'))
+                                    .map(key => {
+                                        const column = locale[key];
+                                        return (
+                                            <TableCell
+                                                key={key}
+                                                align="center"
+                                                size="small"
+                                                sx={{
+                                                    ...(Object.keys(colours).includes(key)
+                                                        ? {
+                                                              borderBottom: `3px solid ${colours[key]}`,
+                                                              padding: theme.spacing(1),
+                                                          }
+                                                        : {}),
+                                                }}
+                                            >
+                                                {column.label}
+                                            </TableCell>
+                                        );
+                                    })}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell align="left" size="small" width={150}>
+                                    {children}
+                                </TableCell>
+                                {Object.keys(data).map(key => {
+                                    const value = data[key];
                                     return (
-                                        <TableCell
-                                            key={key}
-                                            align="center"
-                                            size="small"
-                                            sx={{
-                                                ...(Object.keys(colours).includes(key)
-                                                    ? {
-                                                          borderBottom: `3px solid ${colours[key]}`,
-                                                          padding: theme.spacing(1),
-                                                      }
-                                                    : {}),
-                                            }}
-                                        >
-                                            {column.label}
+                                        <TableCell key={key} align="center" size="small">
+                                            {`${value}${data[key]?.suffix?.(value) ?? ''}`}
                                         </TableCell>
                                     );
                                 })}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell align="left" size="small" width={150}>
-                                {children}
-                            </TableCell>
-                            {Object.keys(data).map(key => {
-                                const value = data[key];
-                                return (
-                                    <TableCell key={key} align="center" size="small">
-                                        {`${value}${data[key]?.suffix?.(value) ?? ''}`}
-                                    </TableCell>
-                                );
-                            })}
-                        </TableRow>
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            )}
         </React.Fragment>
     );
 };

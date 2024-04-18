@@ -613,5 +613,9 @@ export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
 });
 
 export const ADMIN_DASHBOARD_TODAY_API = () => ({
-    apiUrl: 'admin/dashboard/today',
+    apiUrl: 'dashboard/today',
+});
+
+export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
+    apiUrl: 'dashboard/quicklinks',
 });

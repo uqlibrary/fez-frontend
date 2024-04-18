@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/components';
 import * as actions from 'actions';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 import RibbonChartContainer from './RibbonChartContainer';
 import PieChartContainer from './PieChartContainer';
@@ -32,16 +32,22 @@ const Today = () => {
     }, []);
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} minHeight={300}>
             <Grid item xs={12} md={7}>
-                {!!adminDashboardTodayLoading && (
-                    <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
-                )}
-                {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} marginBlockEnd={4}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} marginBlockEnd={4}>
+                        {!!adminDashboardTodayLoading && (
+                            <Skeleton
+                                animation="wave"
+                                height={95}
+                                width={'100%'}
+                                id={'admin-dashboard-systemalerts-skeleton'}
+                                data-testid={'admin-dashboard-systemalerts-skeleton'}
+                            />
+                        )}
+                        {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                             <RibbonChartContainer
-                                data={adminDashboardTodayData.systemalerts}
+                                data={adminDashboardTodayData?.systemalerts}
                                 locale={txt.systemalerts}
                                 colours={colours}
                                 label={txt.systemalerts.title}
@@ -52,8 +58,19 @@ const Today = () => {
                                     remaining={adminDashboardTodayData.systemalerts.unassigned}
                                 />
                             </RibbonChartContainer>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
+                        )}
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        {!!adminDashboardTodayLoading && (
+                            <Skeleton
+                                animation="wave"
+                                height={225}
+                                width={'100%'}
+                                id={'admin-dashboard-systemalerts-skeleton'}
+                                data-testid={'admin-dashboard-systemalerts-skeleton'}
+                            />
+                        )}
+                        {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                             <PieChartContainer
                                 label={txt.works.unprocessed}
                                 subtext={
@@ -74,8 +91,19 @@ const Today = () => {
                                     amount={adminDashboardTodayData.works.unprocessed}
                                 />
                             </PieChartContainer>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
+                        )}
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        {!!adminDashboardTodayLoading && (
+                            <Skeleton
+                                animation="wave"
+                                height={225}
+                                width={'100%'}
+                                id={'admin-dashboard-systemalerts-skeleton'}
+                                data-testid={'admin-dashboard-systemalerts-skeleton'}
+                            />
+                        )}
+                        {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                             <PieChartContainer
                                 label={txt.works.processed}
                                 subtext={
@@ -90,8 +118,19 @@ const Today = () => {
                                     colour="#35A9A5"
                                 />
                             </PieChartContainer>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
+                        )}
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        {!!adminDashboardTodayLoading && (
+                            <Skeleton
+                                animation="wave"
+                                height={225}
+                                width={'100%'}
+                                id={'admin-dashboard-systemalerts-skeleton'}
+                                data-testid={'admin-dashboard-systemalerts-skeleton'}
+                            />
+                        )}
+                        {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                             <GaugeChartContainer
                                 label={txt.openaccess.researchOutput.title}
                                 subtext={
@@ -112,9 +151,10 @@ const Today = () => {
                                     maxAmount={adminDashboardTodayData.oa.total}
                                 />
                             </GaugeChartContainer>
-                        </Grid>
+                        )}
                     </Grid>
-                )}
+                </Grid>
+
                 {!!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                     <Typography fontSize={'1rem'} fontWeight={400} textAlign={'center'}>
                         {txt.loading.nodata}

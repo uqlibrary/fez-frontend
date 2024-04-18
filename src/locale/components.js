@@ -56,6 +56,10 @@ export default {
             quicklinks: {
                 title: 'Quick Links',
                 addLinkText: '+ add',
+                loading: {
+                    message: 'Loading quick links...',
+                    nodata: 'Add your first quick link using the "add" button',
+                },
             },
             loading: {
                 message: 'Loading dashboard...',

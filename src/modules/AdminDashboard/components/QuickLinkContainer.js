@@ -1,31 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 
+import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+import * as actions from 'actions';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 import SectionTitle from './SectionTitle';
 import QuickLink from './QuickLink';
 
 const QuickLinkContainer = ({ locale }) => {
-    const data = [
-        { id: 150, title: '2021+ Imported Records with an Author ID and Research Subtypes Only', amount: 10 },
-        { id: 1, title: '2021+ Imported Records with no Author ID with subtype exclusions', amount: 30 },
-        { id: 2, title: '2016 - 2020 Imported Records with an Author ID and Research Subtypes Only', amount: 60 },
-        { id: 3, title: '2016 - 2020 Imported Records with no Author ID with subtype exclusions', amount: 90 },
-        { id: 4, title: 'Not yet publicly available (with merged metadata)', amount: 110 },
-        { id: 5, title: 'Not yet publicly available (classic)', amount: 2345 },
-    ];
+    const dispatch = useDispatch();
+    const {
+        adminDashboardQuickLinksData,
+        adminDashboardQuickLinksLoading,
+        adminDashboardQuickLinksSuccess,
+    } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
+
+    useEffect(() => {
+        dispatch(actions.loadAdminDashboardQuickLinks());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const onLinkClick = id => {
         console.log(id, 'click');
     };
 
     return (
-        <Box paddingInlineStart={2} borderLeft={'1px solid rgba(224, 224, 224, 1)'}>
+        <Box
+            paddingInlineStart={2}
+            borderLeft={'1px solid rgba(224, 224, 224, 1)'}
+            sx={{ height: '100%', minHeight: '100%', display: 'flex', flexDirection: 'column' }}
+        >
             <SectionTitle>
                 {locale.title}
                 <ExternalLink id={'add-quick-link'} data-testid={'add-quick-link'} href={'#'} openInNewIcon={false}>
@@ -43,11 +53,36 @@ const QuickLinkContainer = ({ locale }) => {
                 </ExternalLink>
             </SectionTitle>
 
-            <Stack spacing={2} marginBlockStart={2}>
-                {data.map(link => (
-                    <QuickLink key={link.id} link={link} onLinkClick={onLinkClick} />
+            {!!adminDashboardQuickLinksLoading &&
+                [0, 0, 0, 0, 0, 0, 0, 0].map(() => (
+                    <Skeleton
+                        animation="wave"
+                        height={50}
+                        width={'100%'}
+                        id={'admin-dashboard-quicklinks-skeleton'}
+                        data-testid={'admin-dashboard-quicklinks-skeleton'}
+                    />
                 ))}
-            </Stack>
+            {(!!!adminDashboardQuickLinksData || (adminDashboardQuickLinksData?.length ?? 0) === 0) &&
+                adminDashboardQuickLinksSuccess && (
+                    <Typography
+                        fontSize={'0.8rem'}
+                        fontWeight={300}
+                        textAlign={'center'}
+                        mt={1}
+                        flex={1}
+                        alignContent={'center'}
+                    >
+                        {locale.loading.nodata}
+                    </Typography>
+                )}
+            {!!adminDashboardQuickLinksData && adminDashboardQuickLinksSuccess && (
+                <Stack spacing={2} marginBlockStart={2}>
+                    {adminDashboardQuickLinksData.map(link => (
+                        <QuickLink key={link.id} link={link} onLinkClick={onLinkClick} />
+                    ))}
+                </Stack>
+            )}
         </Box>
     );
 };
