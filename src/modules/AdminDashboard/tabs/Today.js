@@ -9,15 +9,15 @@ import locale from 'locale/components';
 import * as actions from 'actions';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-import RibbonChartContainer from './RibbonChartContainer';
-import PieChartContainer from './PieChartContainer';
-import GaugeChartContainer from './GaugeChartContainer';
-import QuickLinkContainer from './QuickLinkContainer';
-import VisualisationSystemAlerts from './visualisations/VisualisationSystemAlerts';
-import VisualisationWorks from './visualisations/VisualisationWorks';
-import VisualisationOpenAccess from './visualisations/VisualisationOpenAccess';
+import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 
-const colours = { assigned: '#338CFA', unassigned: '#B60DCE' };
+import RibbonChartContainer from '../components/RibbonChartContainer';
+import PieChartContainer from '../components/PieChartContainer';
+import GaugeChartContainer from '../components/GaugeChartContainer';
+import QuickLinkContainer from '../components/QuickLinkContainer';
+import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
+import VisualisationWorks from '../components/visualisations/VisualisationWorks';
+import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
 
 const Today = () => {
     const txt = locale.components.adminDashboard;
@@ -49,7 +49,7 @@ const Today = () => {
                             <RibbonChartContainer
                                 data={adminDashboardTodayData?.systemalerts}
                                 locale={txt.systemalerts}
-                                colours={colours}
+                                colours={COLOURS}
                                 label={txt.systemalerts.title}
                             >
                                 <VisualisationSystemAlerts
@@ -74,7 +74,11 @@ const Today = () => {
                             <PieChartContainer
                                 label={txt.works.unprocessed}
                                 subtext={
-                                    <ExternalLink id={'unprocessed-link'} data-testid={'unprocessed-link'} href={'#'}>
+                                    <ExternalLink
+                                        id={'unprocessed-link'}
+                                        data-testid={'unprocessed-link'}
+                                        href={LINK_UNPROCESSED_WORKS}
+                                    >
                                         <Typography
                                             fontSize={'0.875rem'}
                                             variant="span"

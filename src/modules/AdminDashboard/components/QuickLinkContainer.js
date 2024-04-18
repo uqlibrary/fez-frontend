@@ -10,11 +10,13 @@ import Box from '@mui/material/Box';
 import * as actions from 'actions';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
+import { arrayMove } from '../utils';
 import SectionTitle from './SectionTitle';
-import QuickLink from './QuickLink';
+import QuickLink, { menuActions } from './QuickLink';
 
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
+    const [data, setData] = React.useState([]);
     const {
         adminDashboardQuickLinksData,
         adminDashboardQuickLinksLoading,
@@ -22,12 +24,39 @@ const QuickLinkContainer = ({ locale }) => {
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
     useEffect(() => {
-        dispatch(actions.loadAdminDashboardQuickLinks());
+        if ((adminDashboardQuickLinksData?.length ?? 0) === 0) {
+            dispatch(actions.loadAdminDashboardQuickLinks());
+        } else {
+            setData(adminDashboardQuickLinksData);
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [adminDashboardQuickLinksData]);
 
-    const onLinkClick = id => {
-        console.log(id, 'click');
+    const onLinkClick = link => () => {
+        console.log(link, 'click');
+    };
+
+    const onMenuItemClick = index => action => {
+        console.log(index, action);
+        let modifiedArray;
+
+        switch (action) {
+            case menuActions.top:
+                modifiedArray = arrayMove(data, index, 0);
+                break;
+            case menuActions.up:
+                modifiedArray = arrayMove(data, index, index - 1);
+                break;
+            case menuActions.bottom:
+                modifiedArray = arrayMove(data, index, data.length);
+                break;
+            case menuActions.down:
+                modifiedArray = arrayMove(data, index, index + 1);
+                break;
+            default:
+                console.log('action not handled', action);
+        }
+        setData(modifiedArray);
     };
 
     return (
@@ -64,23 +93,29 @@ const QuickLinkContainer = ({ locale }) => {
                         data-testid={'admin-dashboard-quicklinks-skeleton'}
                     />
                 ))}
-            {(!!!adminDashboardQuickLinksData || (adminDashboardQuickLinksData?.length ?? 0) === 0) &&
-                adminDashboardQuickLinksSuccess && (
-                    <Typography
-                        fontSize={'0.8rem'}
-                        fontWeight={300}
-                        textAlign={'center'}
-                        mt={1}
-                        flex={1}
-                        alignContent={'center'}
-                    >
-                        {locale.loading.nodata}
-                    </Typography>
-                )}
-            {!!adminDashboardQuickLinksData && adminDashboardQuickLinksSuccess && (
+            {(!!!data || (data?.length ?? 0) === 0) && adminDashboardQuickLinksSuccess && (
+                <Typography
+                    fontSize={'0.8rem'}
+                    fontWeight={300}
+                    textAlign={'center'}
+                    mt={1}
+                    flex={1}
+                    alignContent={'center'}
+                >
+                    {locale.loading.nodata}
+                </Typography>
+            )}
+            {!!data && adminDashboardQuickLinksSuccess && (
                 <Stack spacing={2} marginBlockStart={2}>
-                    {adminDashboardQuickLinksData.map((link, index) => (
-                        <QuickLink key={link.id} index={index} link={link} onLinkClick={onLinkClick} />
+                    {data.map((link, index) => (
+                        <QuickLink
+                            key={link.id}
+                            index={index}
+                            itemCount={data.length}
+                            link={link}
+                            onLinkClick={onLinkClick(link)}
+                            onMenuItemClick={onMenuItemClick(index)}
+                        />
                     ))}
                 </Stack>
             )}

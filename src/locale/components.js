@@ -1,7 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
+
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -54,7 +57,11 @@ export default {
                 },
             },
             quicklinks: {
-                title: 'Quick Links',
+                title: (
+                    <>
+                        Quick Links <OpenInNew fontSize="small" />
+                    </>
+                ),
                 addLinkText: '+ add',
                 loading: {
                     message: 'Loading quick links...',

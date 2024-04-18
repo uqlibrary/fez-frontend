@@ -2,9 +2,9 @@ import React from 'react';
 
 import Chip from '@mui/material/Chip';
 
-import Today from './components/Today';
-import SystemAlerts from './components/SystemAlerts';
-import Reports from './components/Reports';
+import Today from './tabs/Today';
+import SystemAlerts from './tabs/SystemAlerts';
+import Reports from './tabs/Reports';
 
 export const tabs = [
     { id: 0, title: 'TODAY', component: <Today /> },
@@ -20,3 +20,8 @@ export const tabProps = [
         },
     },
 ];
+
+export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
+
+export const LINK_UNPROCESSED_WORKS =
+    'https://espace.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=ismemberof%3A+UQ%3A218198&searchQueryParams%5Ball%5D%5Blabel%5D=&searchMode=advanced';
