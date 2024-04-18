@@ -54,8 +54,9 @@ const QuickLinkContainer = ({ locale }) => {
             </SectionTitle>
 
             {!!adminDashboardQuickLinksLoading &&
-                [0, 0, 0, 0, 0, 0, 0, 0].map(() => (
+                [0, 0, 0, 0, 0, 0, 0, 0].map((_, index) => (
                     <Skeleton
+                        key={index}
                         animation="wave"
                         height={50}
                         width={'100%'}
@@ -78,8 +79,8 @@ const QuickLinkContainer = ({ locale }) => {
                 )}
             {!!adminDashboardQuickLinksData && adminDashboardQuickLinksSuccess && (
                 <Stack spacing={2} marginBlockStart={2}>
-                    {adminDashboardQuickLinksData.map(link => (
-                        <QuickLink key={link.id} link={link} onLinkClick={onLinkClick} />
+                    {adminDashboardQuickLinksData.map((link, index) => (
+                        <QuickLink key={link.id} index={index} link={link} onLinkClick={onLinkClick} />
                     ))}
                 </Stack>
             )}

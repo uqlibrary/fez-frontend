@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 import * as adminDashboardConfig from './config';
 
@@ -35,11 +36,12 @@ const a11yProps = index => ({
 
 const AdminDashboard = () => {
     const [activeTab, setActiveTab] = React.useState(0);
+    const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardReducer'));
 
     const handleChange = (event, newActiveTab) => {
         setActiveTab(newActiveTab);
     };
-    const tmpCount = 150;
+
     const txt = locale.components.adminDashboard;
 
     return (
@@ -51,7 +53,9 @@ const AdminDashboard = () => {
                             key={tab.title}
                             label={tab.title}
                             {...a11yProps(tab.id)}
-                            {...adminDashboardConfig.tabProps.find(_tab => _tab.id === tab.id)?.render(tmpCount)}
+                            {...adminDashboardConfig.tabProps
+                                .find(_tab => _tab.id === tab.id)
+                                ?.render(adminDashboardTodayData?.systemalerts?.total)}
                         />
                     );
                 })}

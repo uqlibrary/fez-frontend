@@ -13,5 +13,10 @@ export const tabs = [
 ];
 
 export const tabProps = [
-    { id: 1, render: count => ({ icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' }) },
+    {
+        id: 1,
+        render: count => {
+            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
+        },
+    },
 ];
