@@ -14,6 +14,9 @@ import { arrayMove } from '../utils';
 import SectionTitle from './SectionTitle';
 import QuickLink, { menuActions } from './QuickLink';
 
+export const animationTemplate = (i, duration, delay) =>
+    `animateFadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
+
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
@@ -115,6 +118,7 @@ const QuickLinkContainer = ({ locale }) => {
                             link={link}
                             onLinkClick={onLinkClick(link)}
                             onMenuItemClick={onMenuItemClick(index)}
+                            sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
                         />
                     ))}
                 </Stack>
