@@ -22,7 +22,7 @@ export const menuActions = {
     bottom: 'MOVEBOTTOM',
 };
 
-const QuickLink = ({ link, index, itemCount, /* onLinkClick,*/ onMenuItemClick, ...rest }) => {
+const QuickLink = ({ link, index, itemCount, onMenuItemClick, ...rest }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -139,7 +139,6 @@ QuickLink.propTypes = {
     }),
     index: PropTypes.number.isRequired,
     itemCount: PropTypes.number.isRequired,
-    onLinkClick: PropTypes.func.isRequired,
     onMenuItemClick: PropTypes.func.isRequired,
 };
 
