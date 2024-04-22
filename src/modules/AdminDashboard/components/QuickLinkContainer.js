@@ -6,9 +6,9 @@ import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 import * as actions from 'actions';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 import { arrayMove } from '../utils';
 
@@ -25,7 +25,7 @@ export const VIEWMODES = {
     EDIT: 2,
 };
 
-export const emptyActionState = { action: VIEWMODES.VIEW, item: null };
+export const emptyActionState = { action: VIEWMODES.VIEW, item: { title: '', target: '' } };
 export const actionReducer = (_, action) => {
     switch (action.type) {
         case VIEWMODES.ADD:
@@ -53,6 +53,7 @@ const QuickLinkContainer = ({ locale }) => {
         adminDashboardQuickLinksData,
         adminDashboardQuickLinksLoading,
         adminDashboardQuickLinksSuccess,
+        adminDashboardQuickLinksAdding,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
     useEffect(() => {
@@ -98,28 +99,61 @@ const QuickLinkContainer = ({ locale }) => {
         }
     };
 
+    const closeAdminPanel = () => {
+        actionDispatch({
+            type: 'CLEAR',
+        });
+    };
+
+    const handleAdminSubmitClick = React.useCallback(data => {
+        const wrappedRequest = structuredClone(data);
+        actions
+            .adminAddDashboardQuickLink(wrappedRequest)
+            .then(() => {
+                setData(prev => prev.unshift({ id: Date.now(), amount: 0, order: 0, ...wrappedRequest }));
+                closeAdminPanel();
+                //     openConfirmationAlert(locale.config.alerts.success(), 'success');
+                //     actions.loadInspectionDevices();
+            })
+            .catch(error => {
+                console.error(error);
+                // openConfirmationAlert(locale.config.alerts.failed(pageLocale.snackbar.addFail), 'error');
+            })
+            .finally(() => {
+                // setDialogueBusy(false);
+            });
+
+        console.log(data);
+    }, []);
+
+    const handleAdminCancelClick = () => {
+        closeAdminPanel();
+    };
+    const onAdminAddClick = () => {
+        actionDispatch({
+            ...emptyActionState,
+            type: VIEWMODES.ADD,
+        });
+    };
+
     return (
         <Box
             paddingInlineStart={2}
             borderLeft={'1px solid rgba(224, 224, 224, 1)'}
             sx={{ height: '100%', minHeight: '100%', display: 'flex', flexDirection: 'column' }}
         >
-            <SectionTitle>
+            <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
                 {locale.title}
                 {actionState.action === VIEWMODES.VIEW && (
-                    <ExternalLink id={'add-quick-link'} data-testid={'add-quick-link'} href={'#'} openInNewIcon={false}>
-                        <Typography
-                            fontSize={'0.875rem'}
-                            paddingInlineStart={1}
-                            paddingInlineEnd={2}
-                            textTransform={'none'}
-                            variant="span"
-                            display={'inline-block'}
-                            fontWeight={200}
-                        >
-                            {locale.addLinkText}
-                        </Typography>
-                    </ExternalLink>
+                    <Button
+                        id={'add-quick-link'}
+                        data-testid={'add-quick-link'}
+                        variant="text"
+                        sx={{ textTransform: 'none', flex: 1, justifyContent: 'end' }}
+                        onClick={onAdminAddClick}
+                    >
+                        {locale.addLinkText}
+                    </Button>
                 )}
             </SectionTitle>
 
@@ -166,13 +200,28 @@ const QuickLinkContainer = ({ locale }) => {
                     )}
                 </>
             )}
+            {actionState.action === VIEWMODES.ADD && (
+                <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
+                    Add new quick link
+                    <QuickLinkAdmin
+                        item={actionState.item}
+                        onSubmitClick={handleAdminSubmitClick}
+                        onCancelClick={handleAdminCancelClick}
+                    />
+                </Box>
+            )}
             {actionState.action === VIEWMODES.EDIT && (
                 <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
                     Edit{' '}
                     <Typography fontWeight={500} variant="span">
                         {actionState.item.title}
                     </Typography>
-                    <QuickLinkAdmin item={actionState.item} />
+                    <QuickLinkAdmin
+                        item={actionState.item}
+                        onSubmitClick={handleAdminSubmitClick}
+                        onCancelClick={handleAdminCancelClick}
+                        busy={adminDashboardQuickLinksAdding}
+                    />
                 </Box>
             )}
         </Box>

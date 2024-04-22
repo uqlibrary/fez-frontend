@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { useForm, Controller } from 'react-hook-form';
@@ -6,14 +6,13 @@ import { useForm, Controller } from 'react-hook-form';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import LoadingButton from '@mui/lab/LoadingButton';
 
-const QuickLinkAdmin = ({ item, onCancelClick }) => {
+const QuickLinkAdmin = ({ item, onSubmitClick, onCancelClick, busy = false }) => {
     const { handleSubmit, control } = useForm({ defaultValues: item });
-    const [data, setData] = useState(null);
-    console.log(data, item);
     return (
-        <form onSubmit={handleSubmit(data => setData(data))} className="form">
-            <Grid container mt={2} spacing={1}>
+        <form onSubmit={handleSubmit(data => onSubmitClick(data))} className="form">
+            <Grid container mt={2} spacing={2}>
                 <Grid item xs={12}>
                     <Controller
                         render={({ field }) => (
@@ -49,13 +48,20 @@ const QuickLinkAdmin = ({ item, onCancelClick }) => {
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <Button fullWidth variant="contained" color="default" onClick={onCancelClick}>
-                        Cancel
-                    </Button>
+                    <LoadingButton
+                        type="submit"
+                        fullWidth
+                        color="primary"
+                        variant="contained"
+                        loading={busy}
+                        loadingPosition="start"
+                    >
+                        Save
+                    </LoadingButton>
                 </Grid>
                 <Grid item xs={12}>
-                    <Button type="submit" fullWidth color="primary" variant="contained">
-                        Save
+                    <Button fullWidth variant="contained" color="default" onClick={onCancelClick} disabled={busy}>
+                        Cancel
                     </Button>
                 </Grid>
             </Grid>
@@ -65,7 +71,9 @@ const QuickLinkAdmin = ({ item, onCancelClick }) => {
 
 QuickLinkAdmin.propTypes = {
     item: PropTypes.object.isRequired,
-    onCancelClick: PropTypes.func,
+    onSubmitClick: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired,
+    busy: PropTypes.bool,
 };
 
 export default React.memo(QuickLinkAdmin);
