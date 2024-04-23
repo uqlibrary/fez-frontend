@@ -192,6 +192,7 @@ const QuickLinkContainer = ({ locale }) => {
                                         <QuickLink
                                             key={link.id}
                                             index={index}
+                                            locale={locale.link}
                                             itemCount={data.length}
                                             link={link}
                                             onMenuItemClick={onMenuItemClick(index)}
@@ -205,16 +206,19 @@ const QuickLinkContainer = ({ locale }) => {
 
                     {actionState.action !== VIEWMODES.VIEW && (
                         <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
-                            {actionState.action === VIEWMODES.ADD && 'Add new quick link'}
+                            {actionState.action === VIEWMODES.ADD && locale.admin.add.title}
                             {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (
                                 <>
-                                    {actionState.action === VIEWMODES.EDIT ? 'Edit ' : 'DELETE '}
+                                    {actionState.action === VIEWMODES.EDIT
+                                        ? locale.admin.edit.title
+                                        : locale.admin.delete.title}
                                     <Typography fontWeight={500} variant="span">
                                         {actionState.item.title}
                                     </Typography>
                                 </>
                             )}
                             <QuickLinkAdmin
+                                locale={locale.admin}
                                 item={actionState.item}
                                 action={actionState.action}
                                 onSubmitClick={handleAdminSubmitClick}

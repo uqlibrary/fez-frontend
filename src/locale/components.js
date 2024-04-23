@@ -67,6 +67,38 @@ export default {
                     message: 'Loading quick links...',
                     nodata: 'Add your first quick link using the "add" button',
                 },
+                link: {
+                    menu: {
+                        editLabel: 'Edit',
+                        deleteLabel: 'Delete',
+                        moveUpLabel: 'Move up',
+                        moveTopLabel: 'Move to top',
+                        moveDownLabel: 'Move down',
+                        moveBottomLabel: 'Move to bottom',
+                    },
+                },
+                admin: {
+                    add: {
+                        title: 'Add new quick link',
+                    },
+                    edit: {
+                        title: 'Edit ',
+                    },
+                    delete: {
+                        title: 'DELETE ',
+                    },
+                    button: {
+                        delete: 'Delete',
+                        save: 'Save',
+                        deleteBusy: 'Deleting...',
+                        saveBusy: 'Saving...',
+                        cancel: 'Cancel',
+                    },
+                    fields: {
+                        title: 'Title',
+                        link: 'Link',
+                    },
+                },
             },
             loading: {
                 message: 'Loading dashboard...',

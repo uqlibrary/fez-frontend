@@ -22,38 +22,38 @@ export const MENUACTIONS = {
     BOTTOM: 'MOVEBOTTOM',
 };
 
-const QuickLink = ({ link, index, itemCount, onMenuItemClick, ...rest }) => {
+const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
     const menuOptions = [
         {
-            label: 'Edit',
+            label: locale.menu.editLabel,
             action: MENUACTIONS.EDIT,
             disabled: false,
         },
         {
-            label: 'Delete',
+            label: locale.menu.deleteLabel,
             action: MENUACTIONS.DELETE,
             disabled: false,
         },
         {
-            label: 'Move up',
+            label: locale.menu.moveUpLabel,
             action: MENUACTIONS.UP,
             disabled: index === 0,
         },
         {
-            label: 'Move to top',
+            label: locale.menu.moveTopLabel,
             action: MENUACTIONS.TOP,
             disabled: index === 0,
         },
         {
-            label: 'Move down',
+            label: locale.menu.moveDownLabel,
             action: MENUACTIONS.DOWN,
             disabled: index + 1 === itemCount,
         },
         {
-            label: 'Move to bottom',
+            label: locale.menu.moveBottomLabel,
             action: MENUACTIONS.BOTTOM,
             disabled: index + 1 === itemCount,
         },
@@ -138,6 +138,7 @@ QuickLink.propTypes = {
         amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     }),
     index: PropTypes.number.isRequired,
+    locale: PropTypes.object.isRequired,
     itemCount: PropTypes.number.isRequired,
     onMenuItemClick: PropTypes.func.isRequired,
 };

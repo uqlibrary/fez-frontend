@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const QuickLinkAdmin = ({ item, action, onSubmitClick, onCancelClick, busy = false }) => {
+const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, busy = false }) => {
     const {
         handleSubmit,
         control,
@@ -15,15 +15,15 @@ const QuickLinkAdmin = ({ item, action, onSubmitClick, onCancelClick, busy = fal
     } = useForm({ defaultValues: item });
 
     const isDelete = action === 'DELETE';
-    const primaryButtonLabel = isDelete ? 'Delete' : 'Save';
-    const primaryButtonLabelBusy = isDelete ? 'Deleting...' : 'Saving...';
+    const primaryButtonLabel = isDelete ? locale.button.delete : locale.button.save;
+    const primaryButtonLabelBusy = isDelete ? locale.button.deleteBusy : locale.button.saveBusy;
 
     const buttonArray = [
         <Button type="submit" fullWidth color={isDelete ? 'error' : 'primary'} variant="contained" disabled={busy}>
             {busy ? primaryButtonLabelBusy : primaryButtonLabel}
         </Button>,
         <Button fullWidth variant="contained" color="default" onClick={onCancelClick} disabled={busy}>
-            Cancel
+            {locale.button.cancel}
         </Button>,
     ];
     const buttons = isDelete ? buttonArray.reverse() : buttonArray;
@@ -38,7 +38,7 @@ const QuickLinkAdmin = ({ item, action, onSubmitClick, onCancelClick, busy = fal
                                 {...field}
                                 fullWidth
                                 variant="standard"
-                                label="Title"
+                                label={locale.fields.title}
                                 required
                                 multiline
                                 maxRows={2}
@@ -57,7 +57,7 @@ const QuickLinkAdmin = ({ item, action, onSubmitClick, onCancelClick, busy = fal
                                 {...field}
                                 fullWidth
                                 variant="standard"
-                                label="Link"
+                                label={locale.fields.link}
                                 required
                                 multiline
                                 maxRows={3}
@@ -80,6 +80,7 @@ const QuickLinkAdmin = ({ item, action, onSubmitClick, onCancelClick, busy = fal
 };
 
 QuickLinkAdmin.propTypes = {
+    locale: PropTypes.object.isRequired,
     item: PropTypes.object.isRequired,
     action: PropTypes.string.isRequired,
     onSubmitClick: PropTypes.func.isRequired,
