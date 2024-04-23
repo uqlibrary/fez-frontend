@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import { get, post } from 'repositories/generic';
+import { get, post, put, destroy } from 'repositories/generic';
 import { ADMIN_DASHBOARD_TODAY_API, ADMIN_DASHBOARD_QUICKLINKS_API } from 'repositories/routes';
 
 /**
@@ -52,19 +52,21 @@ export function loadAdminDashboardQuickLinks() {
     };
 }
 
-export function adminAddDashboardQuickLink(request) {
+export function adminDashboardQuickLink(request, action) {
+    // eslint-disable-next-line no-nested-ternary
+    const verb = action === 'DELETE' ? destroy : action === 'EDIT' ? put : post;
     return dispatch => {
-        dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_ADDING });
-        return post(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
+        dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
+        return verb(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
             .then(response => {
                 if (response?.status?.toLowerCase() === 'ok') {
                     dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_SUCCESS,
+                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
                         payload: response,
                     });
                 } else {
                     dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_FAILED,
+                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
                         payload: response.message,
                     });
                 }
@@ -72,10 +74,64 @@ export function adminAddDashboardQuickLink(request) {
             })
             .catch(error => {
                 dispatch({
-                    type: actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_FAILED,
+                    type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
                     payload: error.message,
                 });
                 return Promise.reject(error);
             });
     };
 }
+// export function adminEditDashboardQuickLink(request) {
+//     return dispatch => {
+//         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
+//         return put(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
+//             .then(response => {
+//                 if (response?.status?.toLowerCase() === 'ok') {
+//                     dispatch({
+//                         type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
+//                         payload: response,
+//                     });
+//                 } else {
+//                     dispatch({
+//                         type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
+//                         payload: response.message,
+//                     });
+//                 }
+//                 return Promise.resolve(response);
+//             })
+//             .catch(error => {
+//                 dispatch({
+//                     type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
+//                     payload: error.message,
+//                 });
+//                 return Promise.reject(error);
+//             });
+//     };
+// }
+// export function adminDeleteDashboardQuickLink(request) {
+//     return dispatch => {
+//         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
+//         return destroy(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
+//             .then(response => {
+//                 if (response?.status?.toLowerCase() === 'ok') {
+//                     dispatch({
+//                         type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
+//                         payload: response,
+//                     });
+//                 } else {
+//                     dispatch({
+//                         type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
+//                         payload: response.message,
+//                     });
+//                 }
+//                 return Promise.resolve(response);
+//             })
+//             .catch(error => {
+//                 dispatch({
+//                     type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
+//                     payload: error.message,
+//                 });
+//                 return Promise.reject(error);
+//             });
+//     };
+// }

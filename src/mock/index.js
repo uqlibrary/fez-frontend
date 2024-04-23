@@ -667,9 +667,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(
         new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl))
     )
-    .reply(200, { data: {...mockData.adminDashboardQuickLinks} })
-    .onPost(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)
-    .reply(() => [200, { status: 'OK' }]);
+    .reply(200, { data: {...mockData.adminDashboardQuickLinks} });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -815,7 +813,12 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             aut_id: 111,
             aut_display_name: 'Mock Test',
         },
-    });
+    })
+    .onPost(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [200, { status: 'OK' }])
+    .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [200, { status: 'OK' }]);
+    
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
@@ -851,6 +854,9 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
+
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(200, { status: 'OK' })
 
     .onAny()
     .reply(config => {

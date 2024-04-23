@@ -5,9 +5,9 @@ export const initialState = {
     adminDashboardQuickLinksLoading: false,
     adminDashboardQuickLinksSuccess: null,
     adminDashboardQuickLinksError: null,
-    adminDashboardQuickLinksAdding: false,
-    adminDashboardQuickLinksAddSuccess: null,
-    adminDashboardQuickLinksAddError: null,
+    adminDashboardQuickLinksUpdating: false,
+    adminDashboardQuickLinksUpdateSuccess: null,
+    adminDashboardQuickLinksUpdateError: null,
 };
 
 const handlers = {
@@ -15,36 +15,36 @@ const handlers = {
         ...initialState,
         adminDashboardQuickLinksLoading: true,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_SUCCESS]: (_, action) => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_SUCCESS]: (state, action) => ({
         ...initialState,
         adminDashboardQuickLinksLoading: false,
         adminDashboardQuickLinksSuccess: true,
         adminDashboardQuickLinksData: action.payload.data,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_FAILED]: (_, action) => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_FAILED]: (state, action) => ({
         ...initialState,
         adminDashboardQuickLinksLoading: false,
         adminDashboardQuickLinksError: action.payload,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_ADDING]: state => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING]: state => ({
         ...state,
-        adminDashboardQuickLinksAdding: true,
+        adminDashboardQuickLinksUpdating: true,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_SUCCESS]: state => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS]: state => ({
         ...state,
-        adminDashboardQuickLinksAdding: false,
-        adminDashboardQuickLinksAddSuccess: true,
+        adminDashboardQuickLinksUpdating: false,
+        adminDashboardQuickLinksUpdateSuccess: true,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_FAILED]: (state, action) => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED]: (state, action) => ({
         ...state,
-        adminDashboardQuickLinksAdding: false,
-        adminDashboardQuickLinksAddError: action.payload,
+        adminDashboardQuickLinksUpdating: false,
+        adminDashboardQuickLinksUpdateError: action.payload,
     }),
-    [actions.ADMIN_DASHBOARD_QUICKLINKS_ADD_CLEAR]: state => ({
+    [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_CLEAR]: state => ({
         ...state,
-        dminDashboardQuickLinksAdding: false,
-        adminDashboardQuickLinksAddSuccess: false,
-        adminDashboardQuickLinksAddError: null,
+        adminDashboardQuickLinksUpdating: false,
+        adminDashboardQuickLinksUpdateSuccess: false,
+        adminDashboardQuickLinksUpdateError: null,
     }),
     [actions.ADMIN_DASHBOARD_QUICKLINKS_CLEAR]: () => ({ ...initialState }),
 };

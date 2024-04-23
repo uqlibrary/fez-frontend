@@ -13,13 +13,13 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 import { stringToColour, abbreviateNumber } from '../utils';
 
-export const menuActions = {
-    edit: 'EDIT',
-    delete: 'DELETE',
-    up: 'MOVEUP',
-    top: 'MOVETOP',
-    down: 'MOVEDOWN',
-    bottom: 'MOVEBOTTOM',
+export const MENUACTIONS = {
+    EDIT: 'EDIT',
+    DELETE: 'DELETE',
+    UP: 'MOVEUP',
+    TOP: 'MOVETOP',
+    DOWN: 'MOVEDOWN',
+    BOTTOM: 'MOVEBOTTOM',
 };
 
 const QuickLink = ({ link, index, itemCount, onMenuItemClick, ...rest }) => {
@@ -29,32 +29,32 @@ const QuickLink = ({ link, index, itemCount, onMenuItemClick, ...rest }) => {
     const menuOptions = [
         {
             label: 'Edit',
-            action: menuActions.edit,
+            action: MENUACTIONS.EDIT,
             disabled: false,
         },
         {
             label: 'Delete',
-            action: menuActions.delete,
+            action: MENUACTIONS.DELETE,
             disabled: false,
         },
         {
             label: 'Move up',
-            action: menuActions.up,
+            action: MENUACTIONS.UP,
             disabled: index === 0,
         },
         {
             label: 'Move to top',
-            action: menuActions.top,
+            action: MENUACTIONS.TOP,
             disabled: index === 0,
         },
         {
             label: 'Move down',
-            action: menuActions.down,
+            action: MENUACTIONS.DOWN,
             disabled: index + 1 === itemCount,
         },
         {
             label: 'Move to bottom',
-            action: menuActions.bottom,
+            action: MENUACTIONS.BOTTOM,
             disabled: index + 1 === itemCount,
         },
     ];
@@ -135,7 +135,7 @@ QuickLink.propTypes = {
     link: PropTypes.shape({
         title: PropTypes.string.isRequired,
         target: PropTypes.string.isRequired,
-        amount: PropTypes.number.isRequired,
+        amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     }),
     index: PropTypes.number.isRequired,
     itemCount: PropTypes.number.isRequired,

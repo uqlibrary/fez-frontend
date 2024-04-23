@@ -13,16 +13,17 @@ import * as actions from 'actions';
 import { arrayMove } from '../utils';
 
 import SectionTitle from './SectionTitle';
-import QuickLink, { menuActions } from './QuickLink';
+import QuickLink, { MENUACTIONS } from './QuickLink';
 import QuickLinkAdmin from './QuickLinkAdmin';
 
 export const animationTemplate = (i, duration, delay) =>
     `animateFadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
 
 export const VIEWMODES = {
-    VIEW: 0,
-    ADD: 1,
-    EDIT: 2,
+    VIEW: 'VIEW',
+    ADD: 'ADD',
+    EDIT: 'EDIT',
+    DELETE: 'DELETE',
 };
 
 export const emptyActionState = { action: VIEWMODES.VIEW, item: { title: '', target: '' } };
@@ -34,6 +35,11 @@ export const actionReducer = (_, action) => {
                 item: action.item,
             };
         case VIEWMODES.EDIT:
+            return {
+                action: action.type,
+                item: action.item,
+            };
+        case VIEWMODES.DELETE:
             return {
                 action: action.type,
                 item: action.item,
@@ -53,16 +59,13 @@ const QuickLinkContainer = ({ locale }) => {
         adminDashboardQuickLinksData,
         adminDashboardQuickLinksLoading,
         adminDashboardQuickLinksSuccess,
-        adminDashboardQuickLinksAdding,
+        adminDashboardQuickLinksUpdating,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
     useEffect(() => {
-        console.log('in effect');
         if ((adminDashboardQuickLinksData?.length ?? 0) === 0) {
-            console.log('load');
             dispatch(actions.loadAdminDashboardQuickLinks());
         } else {
-            console.log('set');
             setData(adminDashboardQuickLinksData);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -70,28 +73,28 @@ const QuickLinkContainer = ({ locale }) => {
 
     const onMenuItemClick = index => action => {
         switch (action) {
-            case menuActions.edit:
+            case MENUACTIONS.EDIT:
                 actionDispatch({
                     type: VIEWMODES.EDIT,
                     item: data.find((_, dataIndex) => dataIndex === index),
                 });
                 break;
-            case menuActions.delete:
+            case MENUACTIONS.DELETE:
                 actionDispatch({
-                    type: VIEWMODES.EDIT,
+                    type: VIEWMODES.DELETE,
                     item: data.find((_, dataIndex) => dataIndex === index),
                 });
                 break;
-            case menuActions.top:
+            case MENUACTIONS.TOP:
                 setData(arrayMove(data, index, 0));
                 break;
-            case menuActions.up:
+            case MENUACTIONS.UP:
                 setData(arrayMove(data, index, index - 1));
                 break;
-            case menuActions.bottom:
+            case MENUACTIONS.BOTTOM:
                 setData(arrayMove(data, index, data.length));
                 break;
-            case menuActions.down:
+            case MENUACTIONS.DOWN:
                 setData(arrayMove(data, index, index + 1));
                 break;
             default:
@@ -105,15 +108,14 @@ const QuickLinkContainer = ({ locale }) => {
         });
     };
 
-    const handleAdminSubmitClick = React.useCallback(data => {
-        const wrappedRequest = structuredClone(data);
-        actions
-            .adminAddDashboardQuickLink(wrappedRequest)
+    const handleAdminSubmitClick = item => {
+        const request = structuredClone(item);
+
+        dispatch(actions.adminDashboardQuickLink(request, actionState.action))
             .then(() => {
-                setData(prev => prev.unshift({ id: Date.now(), amount: 0, order: 0, ...wrappedRequest }));
                 closeAdminPanel();
                 //     openConfirmationAlert(locale.config.alerts.success(), 'success');
-                //     actions.loadInspectionDevices();
+                dispatch(actions.loadAdminDashboardQuickLinks());
             })
             .catch(error => {
                 console.error(error);
@@ -122,9 +124,7 @@ const QuickLinkContainer = ({ locale }) => {
             .finally(() => {
                 // setDialogueBusy(false);
             });
-
-        console.log(data);
-    }, []);
+    };
 
     const handleAdminCancelClick = () => {
         closeAdminPanel();
@@ -149,7 +149,7 @@ const QuickLinkContainer = ({ locale }) => {
                         id={'add-quick-link'}
                         data-testid={'add-quick-link'}
                         variant="text"
-                        sx={{ textTransform: 'none', flex: 1, justifyContent: 'end' }}
+                        sx={{ textTransform: 'none', marginLeft: 'auto' }}
                         onClick={onAdminAddClick}
                     >
                         {locale.addLinkText}
@@ -169,60 +169,61 @@ const QuickLinkContainer = ({ locale }) => {
                     />
                 ))}
 
-            {actionState.action === VIEWMODES.VIEW && (
+            {!adminDashboardQuickLinksLoading && (
                 <>
-                    {(!!!data || (data?.length ?? 0) === 0) && adminDashboardQuickLinksSuccess && (
-                        <Typography
-                            fontSize={'0.8rem'}
-                            fontWeight={300}
-                            textAlign={'center'}
-                            mt={1}
-                            flex={1}
-                            alignContent={'center'}
-                        >
-                            {locale.loading.nodata}
-                        </Typography>
+                    {actionState.action === VIEWMODES.VIEW && (
+                        <>
+                            {(!!!data || (data?.length ?? 0) === 0) && adminDashboardQuickLinksSuccess && (
+                                <Typography
+                                    fontSize={'0.8rem'}
+                                    fontWeight={300}
+                                    textAlign={'center'}
+                                    mt={1}
+                                    flex={1}
+                                    alignContent={'center'}
+                                >
+                                    {locale.loading.nodata}
+                                </Typography>
+                            )}
+
+                            {!!data && adminDashboardQuickLinksSuccess && (
+                                <Stack spacing={2} marginBlockStart={2}>
+                                    {data.map((link, index) => (
+                                        <QuickLink
+                                            key={link.id}
+                                            index={index}
+                                            itemCount={data.length}
+                                            link={link}
+                                            onMenuItemClick={onMenuItemClick(index)}
+                                            sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
+                                        />
+                                    ))}
+                                </Stack>
+                            )}
+                        </>
                     )}
 
-                    {!!data && adminDashboardQuickLinksSuccess && (
-                        <Stack spacing={2} marginBlockStart={2}>
-                            {data.map((link, index) => (
-                                <QuickLink
-                                    key={link.id}
-                                    index={index}
-                                    itemCount={data.length}
-                                    link={link}
-                                    onMenuItemClick={onMenuItemClick(index)}
-                                    sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
-                                />
-                            ))}
-                        </Stack>
+                    {actionState.action !== VIEWMODES.VIEW && (
+                        <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
+                            {actionState.action === VIEWMODES.ADD && 'Add new quick link'}
+                            {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (
+                                <>
+                                    {actionState.action === VIEWMODES.EDIT ? 'Edit ' : 'DELETE '}
+                                    <Typography fontWeight={500} variant="span">
+                                        {actionState.item.title}
+                                    </Typography>
+                                </>
+                            )}
+                            <QuickLinkAdmin
+                                item={actionState.item}
+                                action={actionState.action}
+                                onSubmitClick={handleAdminSubmitClick}
+                                onCancelClick={handleAdminCancelClick}
+                                busy={adminDashboardQuickLinksUpdating}
+                            />
+                        </Box>
                     )}
                 </>
-            )}
-            {actionState.action === VIEWMODES.ADD && (
-                <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
-                    Add new quick link
-                    <QuickLinkAdmin
-                        item={actionState.item}
-                        onSubmitClick={handleAdminSubmitClick}
-                        onCancelClick={handleAdminCancelClick}
-                    />
-                </Box>
-            )}
-            {actionState.action === VIEWMODES.EDIT && (
-                <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
-                    Edit{' '}
-                    <Typography fontWeight={500} variant="span">
-                        {actionState.item.title}
-                    </Typography>
-                    <QuickLinkAdmin
-                        item={actionState.item}
-                        onSubmitClick={handleAdminSubmitClick}
-                        onCancelClick={handleAdminCancelClick}
-                        busy={adminDashboardQuickLinksAdding}
-                    />
-                </Box>
             )}
         </Box>
     );
