@@ -20,23 +20,49 @@ import VisualisationWorks from '../components/visualisations/VisualisationWorks'
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
 
 const Today = () => {
-    const txt = locale.components.adminDashboard;
+    const txt = locale.components.adminDashboard.today;
     const dispatch = useDispatch();
+    const {
+        // adminDashboardConfigData,
+        adminDashboardConfigLoading,
+        adminDashboardConfigSuccess,
+        adminDashboardConfigError,
+    } = useSelector(state => state.get('adminDashboardConfigReducer'));
     const { adminDashboardTodayData, adminDashboardTodayLoading, adminDashboardTodaySuccess } = useSelector(state =>
-        state.get('adminDashboardReducer'),
+        state.get('adminDashboardTodayReducer'),
     );
 
     useEffect(() => {
-        dispatch(actions.loadAdminDashboardToday());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        if (!adminDashboardConfigError && !adminDashboardConfigSuccess && !adminDashboardConfigLoading) {
+            dispatch(actions.loadAdminDashboardConfig())
+                .then(() => {
+                    dispatch(actions.loadAdminDashboardToday());
+                })
+                .catch(error => {
+                    console.error(error);
+                    // openConfirmationAlert(locale.config.alerts.failed(pageLocale.snackbar.addFail), 'error');
+                })
+                .finally(() => {
+                    // setDialogueBusy(false);
+                });
+        }
+    }, [adminDashboardConfigError, adminDashboardConfigLoading, adminDashboardConfigSuccess, dispatch]);
+
+    if (!!adminDashboardConfigError) {
+        return (
+            <Typography fontSize={'1rem'} fontWeight={400} textAlign={'center'}>
+                {txt.loading.noconfig}
+            </Typography>
+        );
+    }
 
     return (
         <Grid container spacing={2} minHeight={300}>
             <Grid item xs={12} md={7}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} marginBlockEnd={4}>
-                        {!!adminDashboardTodayLoading && (
+                        {((!!adminDashboardTodayLoading && (adminDashboardTodayData?.length ?? 0) === 0) ||
+                            !!adminDashboardConfigLoading) && (
                             <Skeleton
                                 animation="wave"
                                 height={95}

@@ -36,7 +36,7 @@ const a11yProps = index => ({
 
 const AdminDashboard = () => {
     const [activeTab, setActiveTab] = React.useState(0);
-    const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardReducer'));
+    const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardTodayReducer'));
 
     const handleChange = (event, newActiveTab) => {
         setActiveTab(newActiveTab);
@@ -52,6 +52,7 @@ const AdminDashboard = () => {
                         <Tab
                             key={tab.title}
                             label={tab.title}
+                            sx={{ minHeight: 'auto' }}
                             {...a11yProps(tab.id)}
                             {...adminDashboardConfig.tabProps
                                 .find(_tab => _tab.id === tab.id)

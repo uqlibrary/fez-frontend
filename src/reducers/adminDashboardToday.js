@@ -26,7 +26,7 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_TODAY_CLEAR]: () => ({ ...initialState }),
 };
 
-export default function adminDashboardReducer(state = { ...initialState }, action) {
+export default function adminDashboardTodayReducer(state = { ...initialState }, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

@@ -104,4 +104,4 @@ export { organisationalUnits } from './organisationalUnits';
 export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';
 
 
-export { adminDashboardToday, adminDashboardQuickLinks } from './adminDashboard';
+export { adminDashboardConfig, adminDashboardToday, adminDashboardQuickLinks, adminDashboardSystemAlerts } from './adminDashboard';
