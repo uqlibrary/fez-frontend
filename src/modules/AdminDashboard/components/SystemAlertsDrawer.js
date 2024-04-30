@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
@@ -21,12 +20,27 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
 }));
 
 const SystemAlertsDrawer = ({ row, open, onCloseDrawer }) => {
+    const [systemAlert, setSystemAlert] = useState({});
+    const [busy] = useState(false);
+
     const users = useSelector(
         state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ?? [],
     );
     const adminUsers = [{ id: 0, name: 'Unassigned' }, ...users];
+
+    React.useEffect(() => {
+        setSystemAlert(row);
+    }, [row, setSystemAlert]);
+
+    let buttonLabel;
+    if (!!systemAlert?.assigned_to && !systemAlert?.resolved_by) {
+        buttonLabel = !busy ? 'Mark as resolved' : 'Resolving...';
+    } else if (!systemAlert?.assigned_to || !!systemAlert?.resolved_by) {
+        buttonLabel = 'Mark as resolved';
+    }
+
     return (
-        !!row && (
+        !!systemAlert && (
             <Drawer anchor="right" open={open} onClose={onCloseDrawer} id="system-alert-detail">
                 <Box
                     sx={{ width: [320, 500] }}
@@ -38,14 +52,14 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer }) => {
                     flexDirection={'column'}
                 >
                     <Typography fontSize={'1.45rem'} fontWeight={500}>
-                        {row.topic}
+                        {systemAlert.topic}
                     </Typography>
                     <ExternalLink
                         id={'system-alert-detail-link'}
                         data-testid={'system-alert-detail-link'}
-                        href={row.link}
+                        href={systemAlert.link}
                     >
-                        {row.link}
+                        {systemAlert.link}
                     </ExternalLink>
                     <StyledDivider />
                     <Grid container spacing={1}>
@@ -53,17 +67,17 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer }) => {
                             <Typography fontWeight={400}>Alert ID</Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.id}
+                            {systemAlert.id}
                         </Grid>
                         <Grid item xs={4}>
                             <Typography fontWeight={400}>Received</Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.created_date}
+                            {systemAlert.created_date}
                         </Grid>
                     </Grid>
                     <StyledDivider />
-                    <Typography>{row.content}</Typography>
+                    <Typography>{systemAlert.content}</Typography>
                     <StyledDivider />
                     <Autocomplete
                         id="alert-detail-user"
@@ -79,15 +93,28 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer }) => {
                         )}
                         options={adminUsers}
                         getOptionLabel={option => option.name}
-                        defaultValue={
-                            !!row.assigned_to ? adminUsers.find(user => user.id === row.assigned_to) : adminUsers[0]
+                        value={
+                            !!systemAlert.assigned_to
+                                ? adminUsers.find(user => user.id === systemAlert.assigned_to)
+                                : adminUsers[0]
                         }
+                        onChange={(_, newValue) => {
+                            console.log(newValue);
+                            setSystemAlert({ ...row, assigned_to: newValue.id });
+                        }}
                     />
-                    <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
-                        <Button fullWidth color="primary" variant="contained" disabled={!!!row.assigned_to}>
-                            Mark as resolved
-                        </Button>
-                    </Box>
+                    {!!buttonLabel && (
+                        <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
+                            <Button
+                                fullWidth
+                                color="primary"
+                                variant="contained"
+                                disabled={busy || !!!systemAlert.assigned_to}
+                            >
+                                {buttonLabel}
+                            </Button>
+                        </Box>
+                    )}
                 </Box>
             </Drawer>
         )
