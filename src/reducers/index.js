@@ -48,3 +48,7 @@ export { default as adminScaleOfSignificanceReducer } from './adminScaleOfSignif
 export { default as vocabAdminReducer } from './controlledVocabAdmin';
 export { default as viewVocabReducer } from './controlledVocab';
 export { default as viewChildVocabReducer } from './viewChildVocabReducer';
+export { default as adminDashboardConfigReducer } from './adminDashboardConfig';
+export { default as adminDashboardTodayReducer } from './adminDashboardToday';
+export { default as adminDashboardQuickLinksReducer } from './adminDashboardQuickLinks';
+export { default as adminDashboardSystemAlertsReducer } from './adminDashboardSystemAlerts';

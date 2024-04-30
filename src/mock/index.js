@@ -659,7 +659,23 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, { ...mockData.collectionList });
+    .reply(200, { ...mockData.collectionList })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardConfig} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_TODAY_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardToday} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardQuickLinks} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardSystemAlerts} });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -805,7 +821,12 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             aut_id: 111,
             aut_display_name: 'Mock Test',
         },
-    });
+    })
+    .onPost(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [200, { status: 'OK' }])
+    .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [200, { status: 'OK' }]);
+    
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
@@ -841,6 +862,9 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
+
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(200, { status: 'OK' })
 
     .onAny()
     .reply(config => {

@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 
@@ -22,6 +23,92 @@ export default {
     components: {
         adminDashboard: {
             title: 'Admin dashboard',
+            today: {
+                systemalerts: {
+                    title: 'System Alerts',
+                    total: { label: 'Total' },
+                    today: {
+                        label: 'New today',
+                    },
+                    assigned: {
+                        label: 'Assigned',
+                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
+                    },
+                    unassigned: {
+                        label: 'Unassigned',
+                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
+                    },
+                },
+                works: {
+                    unprocessed: 'Unprocessed Works',
+                    unprocessedSubText: 'view',
+                    processed: 'Processed Works',
+                    processedSubText: 'this iteration',
+                },
+                openaccess: {
+                    researchOutput: {
+                        title: 'OA Status',
+                        subText: 'of research output',
+                        chart: {
+                            text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
+                            subtext: total => `of ${total} records`,
+                        },
+                    },
+                },
+                quicklinks: {
+                    title: 'Quick Links ',
+                    addLinkText: '+ add',
+                    loading: {
+                        message: 'Loading quick links...',
+                        nodata: 'Add your first quick link using the "add" button',
+                    },
+                    link: {
+                        menu: {
+                            editLabel: 'Edit',
+                            deleteLabel: 'Delete',
+                            moveUpLabel: 'Move up',
+                            moveTopLabel: 'Move to top',
+                            moveDownLabel: 'Move down',
+                            moveBottomLabel: 'Move to bottom',
+                        },
+                    },
+                    admin: {
+                        add: {
+                            title: 'Add new quick link',
+                        },
+                        edit: {
+                            title: 'Edit ',
+                        },
+                        delete: {
+                            title: 'DELETE ',
+                        },
+                        button: {
+                            delete: 'Delete',
+                            save: 'Save',
+                            deleteBusy: 'Deleting...',
+                            saveBusy: 'Saving...',
+                            cancel: 'Cancel',
+                        },
+                        fields: {
+                            title: 'Title',
+                            link: 'Link',
+                        },
+                    },
+                },
+                loading: {
+                    message: 'Loading dashboard...',
+                    nodata: 'No data available',
+                    noconfig: 'No config available',
+                },
+            },
+            systemalerts: {
+                title: count => `${count} system alerts`,
+                loading: {
+                    message: 'Loading system alerts...',
+                    nodata: 'No alerts available',
+                    noconfig: 'No config available',
+                },
+            },
         },
         publicationsList: {
             selectAllText: 'Select all',

@@ -611,3 +611,19 @@ export const ORGANISATIONAL_UNITS = () => ({
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
 });
+
+export const ADMIN_DASHBOARD_CONFIG_API = () => ({
+    apiUrl: 'dashboard/config',
+});
+
+export const ADMIN_DASHBOARD_TODAY_API = () => ({
+    apiUrl: 'dashboard/today',
+});
+
+export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
+    apiUrl: 'dashboard/quicklinks',
+});
+
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
+    apiUrl: 'dashboard/systemalerts',
+});
