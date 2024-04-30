@@ -53,14 +53,16 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
                                 <TableCell align="left" size="small" width={150}>
                                     {children}
                                 </TableCell>
-                                {Object.keys(data).map(key => {
-                                    const value = data[key];
-                                    return (
-                                        <TableCell key={key} align="center" size="small">
-                                            {`${value}${data[key]?.suffix?.(value) ?? ''}`}
-                                        </TableCell>
-                                    );
-                                })}
+                                {Object.keys(data)
+                                    .filter(key => locale.hasOwnProperty(key))
+                                    .map(key => {
+                                        const value = data[key];
+                                        return (
+                                            <TableCell key={key} align="center" size="small">
+                                                {`${value}${locale[key]?.suffix?.(data.total, value) ?? ''}`}
+                                            </TableCell>
+                                        );
+                                    })}
                             </TableRow>
                         </TableBody>
                     </Table>

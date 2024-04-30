@@ -4,8 +4,6 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 
-import OpenInNew from '@mui/icons-material/OpenInNew';
-
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -34,11 +32,11 @@ export default {
                     },
                     assigned: {
                         label: 'Assigned',
-                        suffix: value => `(${value}%)`,
+                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
                     },
                     unassigned: {
                         label: 'Unassigned',
-                        suffix: value => `(${value}%)`,
+                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
                     },
                 },
                 works: {
@@ -58,11 +56,7 @@ export default {
                     },
                 },
                 quicklinks: {
-                    title: (
-                        <>
-                            Quick Links <OpenInNew fontSize="small" />
-                        </>
-                    ),
+                    title: 'Quick Links ',
                     addLinkText: '+ add',
                     loading: {
                         message: 'Loading quick links...',

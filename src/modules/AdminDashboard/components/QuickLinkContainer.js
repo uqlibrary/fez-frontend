@@ -140,7 +140,14 @@ const QuickLinkContainer = ({ locale }) => {
         <Box
             paddingInlineStart={2}
             borderLeft={'1px solid rgba(224, 224, 224, 1)'}
-            sx={{ height: '100%', minHeight: '100%', display: 'flex', flexDirection: 'column' }}
+            sx={{
+                height: '100%',
+                minHeight: '100%',
+                maxHeight: '400px',
+                display: 'flex',
+                flexDirection: 'column',
+                overflow: 'auto',
+            }}
         >
             <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
                 {locale.title}
@@ -187,19 +194,21 @@ const QuickLinkContainer = ({ locale }) => {
                             )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
-                                <Stack spacing={2} marginBlockStart={2}>
-                                    {data.map((link, index) => (
-                                        <QuickLink
-                                            key={link.id}
-                                            index={index}
-                                            locale={locale.link}
-                                            itemCount={data.length}
-                                            link={link}
-                                            onMenuItemClick={onMenuItemClick(index)}
-                                            sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
-                                        />
-                                    ))}
-                                </Stack>
+                                <Box paddingInlineEnd={2} maxHeight={400} overflow={'auto'}>
+                                    <Stack spacing={2} marginBlockStart={2}>
+                                        {data.map((link, index) => (
+                                            <QuickLink
+                                                key={link.id}
+                                                index={index}
+                                                locale={locale.link}
+                                                itemCount={data.length}
+                                                link={link}
+                                                onMenuItemClick={onMenuItemClick(index)}
+                                                sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
+                                            />
+                                        ))}
+                                    </Stack>
+                                </Box>
                             )}
                         </>
                     )}

@@ -8,9 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
+import { INTERNAL_LINK_DOMAIN } from '../config';
 import { stringToColour, abbreviateNumber } from '../utils';
 
 export const MENUACTIONS = {
@@ -81,10 +83,15 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                             borderRadius: 2,
                             color: 'white !important',
                             textShadow: '0px 0px 2px rgba(0,0,0,0.87)',
+                            ...(!link.target.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
                         }}
                         aria-label="count"
                     >
-                        {abbreviateNumber(link.amount, 1)}
+                        {link.target.includes(INTERNAL_LINK_DOMAIN) ? (
+                            abbreviateNumber(link.amount, 1)
+                        ) : (
+                            <OpenInNew fontSize="small" />
+                        )}
                     </Box>
                 }
                 title={

@@ -22,12 +22,9 @@ import VisualisationOpenAccess from '../components/visualisations/VisualisationO
 const Today = () => {
     const txt = locale.components.adminDashboard.today;
     const dispatch = useDispatch();
-    const {
-        // adminDashboardConfigData,
-        adminDashboardConfigLoading,
-        adminDashboardConfigSuccess,
-        adminDashboardConfigError,
-    } = useSelector(state => state.get('adminDashboardConfigReducer'));
+    const { adminDashboardConfigLoading, adminDashboardConfigSuccess, adminDashboardConfigError } = useSelector(state =>
+        state.get('adminDashboardConfigReducer'),
+    );
     const { adminDashboardTodayData, adminDashboardTodayLoading, adminDashboardTodaySuccess } = useSelector(state =>
         state.get('adminDashboardTodayReducer'),
     );

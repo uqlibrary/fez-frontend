@@ -56,7 +56,7 @@ const AdminDashboard = () => {
                             {...a11yProps(tab.id)}
                             {...adminDashboardConfig.tabProps
                                 .find(_tab => _tab.id === tab.id)
-                                ?.render(adminDashboardTodayData?.systemalerts?.total)}
+                                ?.render(adminDashboardTodayData?.systemalerts?.mine)}
                         />
                     );
                 })}
