@@ -866,6 +866,9 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
     .reply(200, { status: 'OK' })
 
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({row: '.*'}).apiUrl)))
+    .reply(200, { status: 'OK' })
+
     .onAny()
     .reply(config => {
         console.log('url not found...', config);

@@ -142,7 +142,7 @@ QuickLink.propTypes = {
     link: PropTypes.shape({
         title: PropTypes.string.isRequired,
         target: PropTypes.string.isRequired,
-        amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+        amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     }),
     index: PropTypes.number.isRequired,
     locale: PropTypes.object.isRequired,

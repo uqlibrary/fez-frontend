@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { useAccountContext } from 'context';
+import * as actions from 'actions';
 
 import Chip from '@mui/material/Chip';
+import Skeleton from '@mui/material/Skeleton';
 import { DataGrid } from '@mui/x-data-grid';
 
 import SystemAlertsDrawer from './SystemAlertsDrawer';
+import { transformSystemAlertRequest } from '../transformers';
 
 const ALERTSTATUS = {
     UNASSIGNED: 'Unassigned',
@@ -37,10 +42,23 @@ const columns = users => [
 ];
 
 const SystemAlertsDataTable = () => {
+    const { account } = useAccountContext();
+    const dispatch = useDispatch();
+
     const [open, setOpen] = React.useState(false);
     const [row, setRow] = React.useState(null);
+
     const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
-    const { adminDashboardSystemAlertsData } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
+    const {
+        adminDashboardSystemAlertsData,
+        adminDashboardSystemAlertsLoading,
+        adminDashboardSystemAlertsFailed,
+    } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
+
+    React.useEffect(() => {
+        if (!!adminDashboardConfigData) dispatch(actions.loadAdminDashboardSystemAlerts());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleRowClick = params => {
         setRow(params.row);
@@ -49,11 +67,43 @@ const SystemAlertsDataTable = () => {
     const handleCloseDrawer = () => {
         setOpen(false);
     };
+    const handleSystemAlertUpdate = (action, row) => {
+        console.log(account, action, row);
+
+        const wrappedRequest = transformSystemAlertRequest(action, row);
+
+        dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
+            .then(() => {
+                //     openConfirmationAlert(locale.config.alerts.success(), 'success');
+                dispatch(actions.loadAdminDashboardSystemAlerts());
+            })
+            .catch(error => {
+                console.error(error);
+                // openConfirmationAlert(locale.config.alerts.failed(pageLocale.snackbar.addFail), 'error');
+            })
+            .finally(() => {
+                // setDialogueBusy(false);
+            });
+    };
+    if (!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading) {
+        return (
+            <Skeleton
+                animation="wave"
+                height={50}
+                width={'100%'}
+                id={'admin-dashboard-systemalerts-skeleton'}
+                data-testid={'admin-dashboard-systemalerts-skeleton'}
+            />
+        );
+    }
 
     return (
         <React.Fragment>
+            {adminDashboardSystemAlertsLoading && !!adminDashboardSystemAlertsData && 'Updating...'}
+            {adminDashboardSystemAlertsFailed && 'Failed to update list.'}
+
             <DataGrid
-                rows={adminDashboardSystemAlertsData}
+                rows={adminDashboardSystemAlertsData ?? []}
                 columns={columns(adminDashboardConfigData.admin_users)}
                 initialState={{
                     pagination: {
@@ -62,8 +112,14 @@ const SystemAlertsDataTable = () => {
                 }}
                 pageSizeOptions={[10, 25, 50, 100]}
                 onRowClick={handleRowClick}
+                autoHeight
             />
-            <SystemAlertsDrawer open={open} row={row} onCloseDrawer={handleCloseDrawer} />
+            <SystemAlertsDrawer
+                open={open}
+                row={row}
+                onCloseDrawer={handleCloseDrawer}
+                onSystemAlertUpdate={handleSystemAlertUpdate}
+            />
         </React.Fragment>
     );
 };
