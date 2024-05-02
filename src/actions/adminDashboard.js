@@ -84,6 +84,10 @@ export function loadAdminDashboardQuickLinks() {
     };
 }
 
+/**
+ * Handles admin operations on quick links (edit, delete)
+ * @returns {function(*)}
+ */
 export function adminDashboardQuickLink(request, action) {
     // eslint-disable-next-line no-nested-ternary
     const verb = action === 'DELETE' ? destroy : action === 'EDIT' ? put : post;
@@ -115,7 +119,7 @@ export function adminDashboardQuickLink(request, action) {
 }
 
 /**
- * Fetches the metrics for the System Alerts tab
+ * Fetches the System Alerts
  * @returns {function(*)}
  */
 export function loadAdminDashboardSystemAlerts() {
@@ -135,6 +139,38 @@ export function loadAdminDashboardSystemAlerts() {
                     type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_FAILED,
                     payload: error.message,
                 });
+            });
+    };
+}
+
+/**
+ * Handles admin operations on system alerts (assign, resolve)
+ * @returns {function(*)}
+ */
+export function adminDashboardSystemAlerts(request) {
+    return dispatch => {
+        dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING });
+        return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API(), request)
+            .then(response => {
+                if (response?.status?.toLowerCase() === 'ok') {
+                    dispatch({
+                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
+                        payload: response,
+                    });
+                } else {
+                    dispatch({
+                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED,
+                        payload: response.message,
+                    });
+                }
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
             });
     };
 }
