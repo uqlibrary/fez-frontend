@@ -71,3 +71,11 @@ export const arrayMove = (data, fromIndex, toIndex) => {
 
     return arr;
 };
+
+export const filterObjectProps = (data, propsToKeep) => {
+    const obj = structuredClone(data);
+    Object.keys(obj).forEach(key => {
+        if (!propsToKeep.includes(key)) delete obj[key];
+    });
+    return obj;
+};
