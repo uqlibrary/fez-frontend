@@ -47,25 +47,10 @@ export const abbreviateNumber = (number, decPlaces) => {
 };
 
 export const arrayMove = (data, fromIndex, toIndex) => {
-    // https://www.w3resource.com/javascript-exercises/javascript-array-exercise-38.php
     const oldIndex = fromIndex < 0 ? 0 : fromIndex;
     const newIndex = toIndex > data.length - 1 ? data.length - 1 : toIndex;
 
     const arr = [...data];
-
-    while (oldIndex < 0) {
-        oldIndex += arr.length;
-    }
-    while (newIndex < 0) {
-        newIndex += arr.length;
-    }
-
-    if (newIndex >= arr.length) {
-        let k = newIndex - arr.length;
-        while (k-- + 1) {
-            arr.push(undefined);
-        }
-    }
 
     arr.splice(newIndex, 0, arr.splice(oldIndex, 1)[0]);
 
