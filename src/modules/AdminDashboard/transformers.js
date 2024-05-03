@@ -7,3 +7,9 @@ export const transformSystemAlertRequest = (action, row) => {
 
     return request;
 };
+
+export const transformQuickLinkReorderRequest = data => {
+    const keys = ['id', 'order'];
+    const request = data.map(row => filterObjectProps(row, keys));
+    return request;
+};

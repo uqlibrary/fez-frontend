@@ -57,6 +57,13 @@ export const arrayMove = (data, fromIndex, toIndex) => {
     return arr;
 };
 
+export const reorderArray = (data, fromIndex, toIndex) => {
+    const arr = arrayMove(data, fromIndex, toIndex);
+    arr.forEach((item, index) => (item.order = index));
+
+    return arr;
+};
+
 export const filterObjectProps = (data, propsToKeep) => {
     const obj = structuredClone(data);
     Object.keys(obj).forEach(key => {
