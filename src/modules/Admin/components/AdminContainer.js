@@ -92,7 +92,7 @@ export const AdminContainer = ({
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!recordToView && isDeleted) {
+    } else if (!recordToView) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -107,8 +107,6 @@ export const AdminContainer = ({
                 )}
             </StandardPage>
         );
-    } else if (!!pid && !recordToView) {
-        return <div className="empty" />;
     }
 
     const isActivated = () => {
