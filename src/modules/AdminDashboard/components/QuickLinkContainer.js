@@ -7,52 +7,23 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import * as actions from 'actions';
 
-import { arrayMove } from '../utils';
+import { animationTemplate, VIEWMODES, MENUACTIONS, VIEWADMINPANELMODES } from '../config';
+import { reorderArray } from '../utils';
+import { transformQuickLinkReorderRequest } from '../transformers';
+import { emptyQuickLinksActionState as emptyActionState, quickLinksActionReducer as actionReducer } from '../reducers';
 
 import SectionTitle from './SectionTitle';
-import QuickLink, { MENUACTIONS } from './QuickLink';
+import QuickLink from './QuickLink';
 import QuickLinkAdmin from './QuickLinkAdmin';
-
-export const animationTemplate = (i, duration, delay) =>
-    `animateFadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
-
-export const VIEWMODES = {
-    VIEW: 'VIEW',
-    ADD: 'ADD',
-    EDIT: 'EDIT',
-    DELETE: 'DELETE',
-};
-
-export const emptyActionState = { action: VIEWMODES.VIEW, item: { title: '', target: '' } };
-export const actionReducer = (_, action) => {
-    switch (action.type) {
-        case VIEWMODES.ADD:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        case VIEWMODES.EDIT:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        case VIEWMODES.DELETE:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        default:
-            return { ...emptyActionState };
-    }
-};
 
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
-    // eslint-disable-next-line no-unused-vars
+
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
@@ -62,14 +33,32 @@ const QuickLinkContainer = ({ locale }) => {
         adminDashboardQuickLinksUpdating,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
+    const clear = () => {
+        actionDispatch({
+            type: 'CLEAR',
+        });
+    };
+
     useEffect(() => {
-        if ((adminDashboardQuickLinksData?.length ?? 0) === 0) {
+        if (!adminDashboardQuickLinksSuccess && (adminDashboardQuickLinksData?.length ?? 0) === 0) {
             dispatch(actions.loadAdminDashboardQuickLinks());
         } else {
             setData(adminDashboardQuickLinksData);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [adminDashboardQuickLinksData]);
+    }, [adminDashboardQuickLinksData, adminDashboardQuickLinksSuccess]);
+
+    const handleReordering = data => {
+        const request = transformQuickLinkReorderRequest(data);
+        dispatch(actions.adminDashboardQuickLink(request, 'REORDER'))
+            .then(() => {
+                clear();
+            })
+            .catch(error => {
+                console.error(error);
+                dispatch(actions.loadAdminDashboardQuickLinks()); // re-load the quick links if the save failed
+            });
+    };
 
     const onMenuItemClick = index => action => {
         switch (action) {
@@ -86,26 +75,28 @@ const QuickLinkContainer = ({ locale }) => {
                 });
                 break;
             case MENUACTIONS.TOP:
-                setData(arrayMove(data, index, 0));
+                const dataTop = reorderArray(data, index, 0);
+                setData(dataTop);
+                handleReordering(dataTop);
                 break;
             case MENUACTIONS.UP:
-                setData(arrayMove(data, index, index - 1));
+                const dataUp = reorderArray(data, index, index - 1);
+                setData(dataUp);
+                handleReordering(dataUp);
                 break;
             case MENUACTIONS.BOTTOM:
-                setData(arrayMove(data, index, data.length));
+                const dataBottom = reorderArray(data, index, data.length);
+                setData(dataBottom);
+                handleReordering(dataBottom);
                 break;
             case MENUACTIONS.DOWN:
-                setData(arrayMove(data, index, index + 1));
+                const dataDown = reorderArray(data, index, index + 1);
+                setData(dataDown);
+                handleReordering(dataDown);
                 break;
             default:
                 console.log('action not handled', action);
         }
-    };
-
-    const closeAdminPanel = () => {
-        actionDispatch({
-            type: 'CLEAR',
-        });
     };
 
     const handleAdminSubmitClick = item => {
@@ -113,21 +104,16 @@ const QuickLinkContainer = ({ locale }) => {
 
         dispatch(actions.adminDashboardQuickLink(request, actionState.action))
             .then(() => {
-                closeAdminPanel();
-                //     openConfirmationAlert(locale.config.alerts.success(), 'success');
+                clear();
                 dispatch(actions.loadAdminDashboardQuickLinks());
             })
             .catch(error => {
                 console.error(error);
-                // openConfirmationAlert(locale.config.alerts.failed(pageLocale.snackbar.addFail), 'error');
-            })
-            .finally(() => {
-                // setDialogueBusy(false);
             });
     };
 
     const handleAdminCancelClick = () => {
-        closeAdminPanel();
+        clear();
     };
     const onAdminAddClick = () => {
         actionDispatch({
@@ -151,6 +137,9 @@ const QuickLinkContainer = ({ locale }) => {
         >
             <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
                 {locale.title}
+                {!!adminDashboardQuickLinksLoading && (
+                    <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
+                )}
                 {actionState.action === VIEWMODES.VIEW && (
                     <Button
                         id={'add-quick-link'}
@@ -164,7 +153,8 @@ const QuickLinkContainer = ({ locale }) => {
                 )}
             </SectionTitle>
 
-            {!!adminDashboardQuickLinksLoading &&
+            {!!!adminDashboardQuickLinksData &&
+                !!adminDashboardQuickLinksLoading &&
                 [0, 0, 0, 0, 0, 0, 0, 0].map((_, index) => (
                     <Skeleton
                         key={index}
@@ -213,7 +203,7 @@ const QuickLinkContainer = ({ locale }) => {
                         </>
                     )}
 
-                    {actionState.action !== VIEWMODES.VIEW && (
+                    {VIEWADMINPANELMODES.includes(actionState.action) && (
                         <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
                             {actionState.action === VIEWMODES.ADD && locale.admin.add.title}
                             {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (

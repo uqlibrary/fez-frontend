@@ -90,7 +90,7 @@ export function loadAdminDashboardQuickLinks() {
  */
 export function adminDashboardQuickLink(request, action) {
     // eslint-disable-next-line no-nested-ternary
-    const verb = action === 'DELETE' ? destroy : action === 'EDIT' ? put : post;
+    const verb = action === 'DELETE' ? destroy : action === 'EDIT' || action === 'REORDER' ? put : post;
     return dispatch => {
         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
         return verb(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
