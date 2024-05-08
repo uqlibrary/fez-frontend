@@ -1280,8 +1280,9 @@ exports[`AdminContainer component should render record not found view 1`] = `
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-        style="margin-top: -24px;"
+        class="MuiGrid-root MuiGrid-container css-dcferp-MuiGrid-root"
+        data-testid="workNotFoundGridContainer"
+        id="workNotFoundGridContainer"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -1338,8 +1339,9 @@ exports[`AdminContainer component should render work not found if record is not 
       class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
-        style="margin-top: -24px;"
+        class="MuiGrid-root MuiGrid-container css-dcferp-MuiGrid-root"
+        data-testid="workNotFoundGridContainer"
+        id="workNotFoundGridContainer"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"

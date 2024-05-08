@@ -20,8 +20,6 @@ import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 
 import AddSection from './add/AddSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
@@ -34,8 +32,8 @@ import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { RecordContext, TabbedContext } from 'context';
-import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
 import { useIsMobileView } from '../../../hooks';
 
 export const AdminContainer = ({
@@ -93,20 +91,7 @@ export const AdminContainer = ({
     if (!!pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!recordToView) {
-        return (
-            <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <Grid container style={{ marginTop: -24 }}>
-                    <Grid item xs={12}>
-                        {locale.pages.viewRecord.notFound.message}
-                    </Grid>
-                </Grid>
-                {recordToViewError && (
-                    <Typography variant={'caption'} style={{ opacity: 0.5 }}>
-                        {`(${recordToViewError.status} - ${recordToViewError.message})`}
-                    </Typography>
-                )}
-            </StandardPage>
-        );
+        return <WorkNotFound loadingError={recordToViewError} />;
     }
 
     const isActivated = () => {
