@@ -11,52 +11,19 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import * as actions from 'actions';
 
+import { animationTemplate, VIEWMODES, MENUACTIONS, VIEWADMINPANELMODES } from '../config';
 import { reorderArray } from '../utils';
 import { transformQuickLinkReorderRequest } from '../transformers';
+import { emptyQuickLinksActionState as emptyActionState, quickLinksActionReducer as actionReducer } from '../reducers';
 
 import SectionTitle from './SectionTitle';
-import QuickLink, { MENUACTIONS } from './QuickLink';
+import QuickLink from './QuickLink';
 import QuickLinkAdmin from './QuickLinkAdmin';
-
-export const animationTemplate = (i, duration, delay) =>
-    `animateFadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
-
-export const VIEWMODES = {
-    VIEW: 'VIEW',
-    ADD: 'ADD',
-    EDIT: 'EDIT',
-    DELETE: 'DELETE',
-};
-export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DELETE];
-export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
-
-export const emptyActionState = { action: VIEWMODES.VIEW, item: { title: '', target: '' }, data: null };
-export const actionReducer = (_, action) => {
-    switch (action.type) {
-        case VIEWMODES.ADD:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        case VIEWMODES.EDIT:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        case VIEWMODES.DELETE:
-            return {
-                action: action.type,
-                item: action.item,
-            };
-        default:
-            return { ...emptyActionState };
-    }
-};
 
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
-    // eslint-disable-next-line no-unused-vars
+
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
@@ -85,14 +52,11 @@ const QuickLinkContainer = ({ locale }) => {
         const request = transformQuickLinkReorderRequest(data);
         dispatch(actions.adminDashboardQuickLink(request, 'REORDER'))
             .then(() => {
-                // clear();
+                clear();
             })
             .catch(error => {
                 console.error(error);
                 dispatch(actions.loadAdminDashboardQuickLinks()); // re-load the quick links if the save failed
-            })
-            .finally(() => {
-                // setDialogueBusy(false);
             });
     };
 
@@ -145,9 +109,6 @@ const QuickLinkContainer = ({ locale }) => {
             })
             .catch(error => {
                 console.error(error);
-            })
-            .finally(() => {
-                // setDialogueBusy(false);
             });
     };
 
