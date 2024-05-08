@@ -92,7 +92,6 @@ const SystemAlertsDataTable = ({ locale }) => {
 
     return (
         <React.Fragment>
-            {adminDashboardSystemAlertsLoading && !!adminDashboardSystemAlertsData && locale.updating}
             {adminDashboardSystemAlertsFailed && locale.updateFailed}
 
             <DataGrid
