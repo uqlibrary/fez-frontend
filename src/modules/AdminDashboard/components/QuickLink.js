@@ -12,17 +12,8 @@ import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-import { INTERNAL_LINK_DOMAIN } from '../config';
+import { INTERNAL_LINK_DOMAIN, MENUACTIONS } from '../config';
 import { stringToColour, abbreviateNumber } from '../utils';
-
-export const MENUACTIONS = {
-    EDIT: 'EDIT',
-    DELETE: 'DELETE',
-    UP: 'MOVEUP',
-    TOP: 'MOVETOP',
-    DOWN: 'MOVEDOWN',
-    BOTTOM: 'MOVEBOTTOM',
-};
 
 const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest }) => {
     const [anchorEl, setAnchorEl] = useState(null);
