@@ -30,7 +30,7 @@ const SystemAlerts = () => {
             </Typography>
             <Grid container>
                 <Grid item xs={12}>
-                    <SystemAlertsDataTable />
+                    <SystemAlertsDataTable locale={txt} />
                 </Grid>
             </Grid>
         </Box>

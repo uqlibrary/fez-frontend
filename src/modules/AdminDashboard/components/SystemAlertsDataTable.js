@@ -12,36 +12,34 @@ import { DataGrid } from '@mui/x-data-grid';
 import SystemAlertsDrawer from './SystemAlertsDrawer';
 import { transformSystemAlertRequest } from '../transformers';
 
-const ALERTSTATUS = {
-    UNASSIGNED: 'Unassigned',
-    UNKNOWN: 'Unknown',
+const columns = (locale, users) => {
+    const alertStatus = locale.alertStatus;
+    const alertStatusOption = Object.values(alertStatus);
+    return [
+        { field: 'created_date', headerName: locale.columns.createdDate, width: 150 },
+        { field: 'topic', headerName: locale.columns.topic, flex: 1 },
+        {
+            field: 'status',
+            headerName: locale.columns.status,
+            width: 160,
+            valueGetter: (_, row) =>
+                !!row.assigned_to
+                    ? users.find(user => user.id === row.assigned_to)?.name ?? alertStatus.UNKNOWN
+                    : alertStatus.UNASSIGNED,
+            renderCell: params => (
+                <Chip
+                    data-testid={`alert-status-${params.id}`}
+                    label={params.value}
+                    variant="outlined"
+                    size="small"
+                    color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
+                />
+            ),
+        },
+    ];
 };
-const alertStatusOption = Object.values(ALERTSTATUS);
 
-const columns = users => [
-    { field: 'created_date', headerName: 'Created', width: 150 },
-    { field: 'topic', headerName: 'Topic', flex: 1 },
-    {
-        field: 'status',
-        headerName: 'Status',
-        width: 160,
-        valueGetter: (value, row) =>
-            !!row.assigned_to
-                ? users.find(user => user.id === row.assigned_to)?.name ?? ALERTSTATUS.UNKNOWN
-                : ALERTSTATUS.UNASSIGNED,
-        renderCell: params => (
-            <Chip
-                data-testid={`alert-status-${params.id}`}
-                label={params.value}
-                variant="outlined"
-                size="small"
-                color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
-            />
-        ),
-    },
-];
-
-const SystemAlertsDataTable = () => {
+const SystemAlertsDataTable = ({ locale }) => {
     const { account } = useAccountContext();
     const dispatch = useDispatch();
 
@@ -74,15 +72,10 @@ const SystemAlertsDataTable = () => {
 
         dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
             .then(() => {
-                //     openConfirmationAlert(locale.config.alerts.success(), 'success');
                 dispatch(actions.loadAdminDashboardSystemAlerts());
             })
             .catch(error => {
                 console.error(error);
-                // openConfirmationAlert(locale.config.alerts.failed(pageLocale.snackbar.addFail), 'error');
-            })
-            .finally(() => {
-                // setDialogueBusy(false);
             });
     };
     if (!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading) {
@@ -99,12 +92,12 @@ const SystemAlertsDataTable = () => {
 
     return (
         <React.Fragment>
-            {adminDashboardSystemAlertsLoading && !!adminDashboardSystemAlertsData && 'Updating...'}
-            {adminDashboardSystemAlertsFailed && 'Failed to update list.'}
+            {adminDashboardSystemAlertsLoading && !!adminDashboardSystemAlertsData && locale.updating}
+            {adminDashboardSystemAlertsFailed && locale.updateFailed}
 
             <DataGrid
                 rows={adminDashboardSystemAlertsData ?? []}
-                columns={columns(adminDashboardConfigData.admin_users)}
+                columns={columns(locale, adminDashboardConfigData.admin_users)}
                 initialState={{
                     pagination: {
                         paginationModel: { page: 0, pageSize: 10 },
@@ -119,13 +112,14 @@ const SystemAlertsDataTable = () => {
                 row={row}
                 onCloseDrawer={handleCloseDrawer}
                 onSystemAlertUpdate={handleSystemAlertUpdate}
+                locale={locale}
             />
         </React.Fragment>
     );
 };
 
 SystemAlertsDataTable.propTypes = {
-    param: PropTypes.any,
+    locale: PropTypes.object.isRequired,
 };
 
 export default React.memo(SystemAlertsDataTable);
