@@ -20,18 +20,20 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
     marginBottom: theme.spacing(2),
 }));
 
-const SystemAlertsDrawer = ({ row, open, onCloseDrawer, onSystemAlertUpdate }) => {
+const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
+    const txt = locale.drawer;
     const users = useSelector(
         state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ?? [],
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
-    const adminUsers = React.useMemo(() => [{ id: 0, name: 'Unassigned' }, ...users], [users]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const adminUsers = React.useMemo(() => [{ id: 0, name: locale.alertStatus.UNASSIGNED }, ...users], [users]);
 
     let buttonLabel;
     if (!!!row?.assigned_to || !!row?.resolved_by) buttonLabel = null;
     else if (!!row?.assigned_to && !row?.resolved_by) {
-        buttonLabel = !adminDashboardSystemAlertsUpdating ? 'Mark as resolved' : 'Updating...';
+        buttonLabel = !adminDashboardSystemAlertsUpdating ? txt.markResolved : txt.updating;
     }
 
     const handleCloseDrawer = props => {
@@ -39,8 +41,6 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer, onSystemAlertUpdate }) =
     };
 
     const handleAssignedChange = (_, newValue) => {
-        // console.log(newValue);
-        // setSystemAlert({ ...row, assigned_to: newValue.id === 0 ? null : newValue.id });
         onSystemAlertUpdate('assign', newValue);
     };
 
@@ -73,13 +73,13 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer, onSystemAlertUpdate }) =
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400}>Alert ID</Typography>
+                            <Typography fontWeight={400}>{txt.alertId}</Typography>
                         </Grid>
                         <Grid item xs={8}>
                             {row.id}
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400}>Received</Typography>
+                            <Typography fontWeight={400}>{txt.received}</Typography>
                         </Grid>
                         <Grid item xs={8}>
                             {row.created_date}
@@ -95,8 +95,8 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer, onSystemAlertUpdate }) =
                         renderInput={params => (
                             <TextField
                                 {...params}
-                                label="Status"
-                                helperText="Assign a staff member to this issue"
+                                label={txt.status}
+                                helperText={txt.statusHelpText}
                                 variant="standard"
                                 InputProps={{
                                     ...params.InputProps,
@@ -137,6 +137,7 @@ const SystemAlertsDrawer = ({ row, open, onCloseDrawer, onSystemAlertUpdate }) =
 };
 
 SystemAlertsDrawer.propTypes = {
+    locale: PropTypes.object.isRequired,
     row: PropTypes.object,
     open: PropTypes.bool.isRequired,
     onCloseDrawer: PropTypes.func.isRequired,

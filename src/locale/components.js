@@ -108,6 +108,25 @@ export default {
                     nodata: 'No alerts available',
                     noconfig: 'No config available',
                 },
+                updating: 'Updating...',
+                updateFailed: 'Failed to update list.',
+                columns: {
+                    createdDate: 'Created',
+                    topic: 'Topic',
+                    status: 'Status',
+                },
+                drawer: {
+                    markResolved: 'Mark as resolved',
+                    updating: 'Updating...',
+                    alertId: 'Alert ID',
+                    received: 'Received',
+                    status: 'Status',
+                    statusHelpText: 'Assign a staff member to this issue',
+                },
+                alertStatus: {
+                    UNASSIGNED: 'Unassigned',
+                    UNKNOWN: 'Unknown',
+                },
             },
         },
         publicationsList: {
