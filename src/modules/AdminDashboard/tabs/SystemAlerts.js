@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import locale from 'locale/components';
 
@@ -13,7 +14,9 @@ const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.systemalerts;
 
     const { adminDashboardConfigSuccess } = useSelector(state => state.get('adminDashboardConfigReducer'));
-    const { adminDashboardSystemAlertsData } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
+    const { adminDashboardSystemAlertsData, adminDashboardSystemAlertsLoading } = useSelector(state =>
+        state.get('adminDashboardSystemAlertsReducer'),
+    );
 
     if (!adminDashboardConfigSuccess) {
         return (
@@ -27,6 +30,9 @@ const SystemAlerts = () => {
         <Box>
             <Typography fontSize={'1.25rem'} fontWeight={'300'}>
                 {txt.title(adminDashboardSystemAlertsData?.length ?? '')}
+                {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
+                    <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
+                )}
             </Typography>
             <Grid container>
                 <Grid item xs={12}>
