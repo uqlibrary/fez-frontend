@@ -129,7 +129,7 @@ const QuickLinkContainer = ({ locale }) => {
             sx={{
                 height: '100%',
                 minHeight: '100%',
-                maxHeight: '400px',
+                maxHeight: '800px',
                 display: 'flex',
                 flexDirection: 'column',
                 overflow: 'auto',
@@ -184,7 +184,7 @@ const QuickLinkContainer = ({ locale }) => {
                             )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
-                                <Box paddingInlineEnd={2} maxHeight={400} overflow={'auto'}>
+                                <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
                                     <Stack spacing={2} marginBlockStart={2}>
                                         {data.map((link, index) => (
                                             <QuickLink
