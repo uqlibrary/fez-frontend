@@ -128,6 +128,18 @@ export default {
                     UNKNOWN: 'Unknown',
                 },
             },
+            reports: {
+                loading: {
+                    config: 'Loading config data...',
+                    nodata: 'No data available',
+                    noconfig: 'No config available',
+                },
+            },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
+            },
         },
         publicationsList: {
             selectAllText: 'Select all',

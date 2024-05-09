@@ -8,13 +8,14 @@ import locale from 'locale/components';
 
 import * as actions from 'actions';
 
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
 import { DataGrid } from '@mui/x-data-grid';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 import { transformSystemAlertRequest } from '../transformers';
@@ -49,9 +50,7 @@ const columns = (locale, users) => {
 const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.systemalerts;
 
-    const { adminDashboardConfigData, adminDashboardConfigSuccess } = useSelector(state =>
-        state.get('adminDashboardConfigReducer'),
-    );
+    const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
     const {
         adminDashboardSystemAlertsData,
         adminDashboardSystemAlertsLoading,
@@ -64,7 +63,7 @@ const SystemAlerts = () => {
     const [row, setRow] = React.useState(null);
 
     React.useEffect(() => {
-        if (!!adminDashboardConfigData) dispatch(actions.loadAdminDashboardSystemAlerts());
+        dispatch(actions.loadAdminDashboardSystemAlerts());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -88,61 +87,53 @@ const SystemAlerts = () => {
                 console.error(error);
             });
     };
-
-    if (!adminDashboardConfigSuccess) {
-        return (
-            <Typography fontSize={'1rem'} fontWeight={400} textAlign={'center'}>
-                {txt.loading.noconfig}
-            </Typography>
-        );
-    }
-
-    if (!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading) {
-        return (
-            <Skeleton
-                animation="wave"
-                height={50}
-                width={'100%'}
-                id={'admin-dashboard-systemalerts-skeleton'}
-                data-testid={'admin-dashboard-systemalerts-skeleton'}
-            />
-        );
-    }
-
     return (
-        <Box>
+        <StandardCard noHeader>
             <Typography fontSize={'1.25rem'} fontWeight={'300'}>
                 {txt.title(adminDashboardSystemAlertsData?.length ?? '')}
                 {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
                     <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                 )}
             </Typography>
+
+            {!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading && (
+                <Skeleton
+                    animation="wave"
+                    height={50}
+                    width={'100%'}
+                    id={'admin-dashboard-systemalerts-skeleton'}
+                    data-testid={'admin-dashboard-systemalerts-skeleton'}
+                />
+            )}
             <Grid container>
                 <Grid item xs={12}>
                     {adminDashboardSystemAlertsFailed && txt.updateFailed}
-
-                    <DataGrid
-                        rows={adminDashboardSystemAlertsData ?? []}
-                        columns={columns(txt, adminDashboardConfigData.admin_users)}
-                        initialState={{
-                            pagination: {
-                                paginationModel: { page: 0, pageSize: 10 },
-                            },
-                        }}
-                        pageSizeOptions={[10, 25, 50, 100]}
-                        onRowClick={handleRowClick}
-                        autoHeight
-                    />
-                    <SystemAlertsDrawer
-                        open={open}
-                        row={row}
-                        onCloseDrawer={handleCloseDrawer}
-                        onSystemAlertUpdate={handleSystemAlertUpdate}
-                        locale={txt}
-                    />
+                    {!!adminDashboardSystemAlertsData && (
+                        <>
+                            <DataGrid
+                                rows={adminDashboardSystemAlertsData ?? []}
+                                columns={columns(txt, adminDashboardConfigData.admin_users)}
+                                initialState={{
+                                    pagination: {
+                                        paginationModel: { page: 0, pageSize: 10 },
+                                    },
+                                }}
+                                pageSizeOptions={[10, 25, 50, 100]}
+                                onRowClick={handleRowClick}
+                                autoHeight
+                            />
+                            <SystemAlertsDrawer
+                                open={open}
+                                row={row}
+                                onCloseDrawer={handleCloseDrawer}
+                                onSystemAlertUpdate={handleSystemAlertUpdate}
+                                locale={txt}
+                            />
+                        </>
+                    )}
                 </Grid>
             </Grid>
-        </Box>
+        </StandardCard>
     );
 };
 
