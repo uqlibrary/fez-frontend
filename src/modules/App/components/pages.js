@@ -76,7 +76,7 @@ export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
 export { ViewRecord } from 'modules/ViewRecord/components/ViewRecord';
-export { NotFound } from 'modules/NotFound/components/NotFound';
+export { PageNotFound } from 'modules/NotFound/components/PageNotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
 export { FavouriteJournals } from 'modules/FavouriteJournals';
