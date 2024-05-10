@@ -129,6 +129,8 @@ export default {
                 },
             },
             reports: {
+                exportTitle: 'Export-only reports',
+                displayTitle: 'Display reports',
                 loading: {
                     config: 'Loading config data...',
                     nodata: 'No data available',

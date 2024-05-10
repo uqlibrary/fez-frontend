@@ -9,7 +9,7 @@ import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, { delayResponse: 1200 });
+const mock = new MockAdapter(api, { delayResponse: 200 });
 const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 200 });
 const escapeRegExp = input => input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&');
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
