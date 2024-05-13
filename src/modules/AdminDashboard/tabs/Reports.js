@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import moment from 'moment';
 
 import { useSelector } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -12,13 +15,154 @@ import Button from '@mui/material/Button';
 // import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 
+import { DataGrid } from '@mui/x-data-grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
+import { DEFAULT_DATE_FORMAT } from '../config';
+
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import SectionTitle from '../components/SectionTitle';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+
+const adminDashboardReportWorksData = [
+    {
+        id: 1,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+    {
+        id: 2,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+    {
+        id: 3,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+    {
+        id: 4,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+    {
+        id: 5,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+    {
+        id: 6,
+        pid: 'UQ:abc123',
+        date_created: '9/4/2024 10:44',
+        work_type: 'Journal Article - Article (original research)',
+        user: 'uqmfeene',
+        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+    },
+];
+const adminDashboardReportSystemAlertsData = [
+    {
+        id: 1,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 2,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 3,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 4,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 5,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 6,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 7,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+];
 
 const exportReportOptions = [
     {
@@ -47,11 +191,11 @@ const exportReportOptions = [
 ];
 const displayReportOptions = [
     {
-        value: 1,
+        value: 'workshistory',
         label: 'Works history',
     },
     {
-        value: 2,
+        value: 'systemalertlog',
         label: 'System alert log',
     },
 ];
@@ -77,6 +221,60 @@ const optionDoubleRowRender = (props, option) => (
     </li>
 );
 
+const columns = (locale, report) => {
+    const txt = locale.columns[report];
+    switch (report) {
+        case 'workshistory':
+            return [
+                {
+                    field: 'date_created',
+                    headerName: txt.dateCreated,
+                    width: 150,
+                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                },
+                { field: 'pid', headerName: txt.pid, width: 150 },
+                { field: 'work_type', headerName: txt.workType, flex: 1 },
+                { field: 'user', headerName: txt.user, width: 150 },
+                { field: 'topic', headerName: txt.action, flex: 1 },
+            ];
+        default:
+            return [
+                {
+                    field: 'date_created',
+                    headerName: txt.dateCreated,
+                    width: 150,
+                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                },
+                { field: 'assigned_to', headerName: txt.assignedTo, width: 150 },
+                {
+                    field: 'assigned_date',
+                    headerName: txt.assignedDate,
+                    width: 150,
+                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                },
+                { field: 'title', headerName: txt.title, flex: 1 },
+                { field: 'resolved_by', headerName: txt.resolvedBy, width: 150 },
+                {
+                    field: 'resolved_date',
+                    headerName: txt.resolvedDate,
+                    width: 150,
+                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                },
+                { field: 'content', headerName: txt.content, flex: 1 },
+                {
+                    field: 'link',
+                    headerName: txt.link,
+                    flex: 1,
+                    renderCell: row => (
+                        <ExternalLink id={`link_${row.id}`} href={row.value} inline>
+                            {row.value}
+                        </ExternalLink>
+                    ),
+                },
+            ];
+    }
+};
+
 const Reports = () => {
     const txt = locale.components.adminDashboard.reports;
     const [exportReport, setExportReport] = React.useState(null);
@@ -85,8 +283,24 @@ const Reports = () => {
     const [toDate, setToDate] = React.useState(null);
 
     const handleFilterChange = (action, props) => {
-        console.log(action, props);
+        switch (action) {
+            case 'filterDateFrom':
+                // eslint-disable-next-line react/prop-types
+                setFromDate(props.format());
+                break;
+            default:
+                // eslint-disable-next-line react/prop-types
+                setToDate(props.format());
+        }
     };
+
+    const isValid = () => {
+        if (!!displayReport) {
+            if ((!!fromDate && !!toDate) || (!!!fromDate && !!!toDate)) return true;
+        }
+        return false;
+    };
+
     return (
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
             <StandardCard noHeader>
@@ -130,7 +344,7 @@ const Reports = () => {
                             id="report-export-button"
                             data-testid="report-export-button"
                             variant="contained"
-                            disabled={!!!exportReport}
+                            disabled={!isValid()}
                         >
                             Export Report
                         </Button>
@@ -189,6 +403,13 @@ const Reports = () => {
                                 onChange={props => handleFilterChange('filterDateFrom', props)}
                                 defaultValue=""
                                 disableFuture
+                                maxDate={toDate}
+                                slotProps={{
+                                    textField: {
+                                        isRequired: !!toDate && !!!fromDate,
+                                        helperText: !!toDate && !!!fromDate ? 'Required' : '',
+                                    },
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4}>
@@ -206,6 +427,7 @@ const Reports = () => {
                                 onChange={props => handleFilterChange('filterDateTo', props)}
                                 defaultValue=""
                                 disableFuture
+                                minDate={fromDate}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -227,6 +449,21 @@ const Reports = () => {
                             >
                                 Export
                             </Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container mt={2}>
+                        <Grid item xs={12}>
+                            <DataGrid
+                                rows={adminDashboardReportSystemAlertsData ?? []}
+                                columns={displayReport ? columns(txt, displayReport.value) : []}
+                                initialState={{
+                                    pagination: {
+                                        paginationModel: { page: 0, pageSize: 10 },
+                                    },
+                                }}
+                                pageSizeOptions={[10, 25, 50, 100]}
+                                autoHeight
+                            />
                         </Grid>
                     </Grid>
                 </StandardCard>

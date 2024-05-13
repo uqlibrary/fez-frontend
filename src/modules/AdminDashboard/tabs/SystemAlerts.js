@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import moment from 'moment';
+
 import { useAccountContext } from 'context';
 
 import locale from 'locale/components';
@@ -17,6 +19,7 @@ import { DataGrid } from '@mui/x-data-grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
+import { DEFAULT_DATE_FORMAT } from '../config';
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 import { transformSystemAlertRequest } from '../transformers';
 
@@ -24,7 +27,12 @@ const columns = (locale, users) => {
     const alertStatus = locale.alertStatus;
     const alertStatusOption = Object.values(alertStatus);
     return [
-        { field: 'created_date', headerName: locale.columns.createdDate, width: 150 },
+        {
+            field: 'created_date',
+            headerName: locale.columns.createdDate,
+            width: 150,
+            valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+        },
         { field: 'topic', headerName: locale.columns.topic, flex: 1 },
         {
             field: 'status',

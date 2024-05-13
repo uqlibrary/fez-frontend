@@ -136,6 +136,25 @@ export default {
                     nodata: 'No data available',
                     noconfig: 'No config available',
                 },
+                columns: {
+                    workshistory: {
+                        dateCreated: 'Date created',
+                        pid: 'PID',
+                        workType: 'Work type',
+                        user: 'User',
+                        action: 'Action',
+                    },
+                    systemalertlog: {
+                        dateCreated: 'Date created',
+                        title: 'Title',
+                        assignedTo: 'Assigned to',
+                        assignedDate: 'Date assigned',
+                        resolvedBy: 'Resolved by',
+                        resolvedDate: 'Date resolved',
+                        content: 'Description',
+                        link: 'Link',
+                    },
+                },
             },
             loading: {
                 config: 'Loading config data...',
