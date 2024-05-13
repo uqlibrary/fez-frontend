@@ -29,8 +29,20 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
-    it('should display error alert if journal is not loaded correctly', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(404);
+    it('should display journal not found page error on 404', async () => {
+        mockApi
+            .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
+            .reply(404, { data: 'not found' });
+
+        const { getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByText('Journal not found')).toBeInTheDocument();
+    });
+
+    it('should display error alert if journal is not loaded correctly due to other errors', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(500);
 
         const { getByTestId, getByText } = setup();
 

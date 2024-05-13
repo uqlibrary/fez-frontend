@@ -160,7 +160,7 @@ export default {
                 buttonLabel: 'CLOSE',
             },
         },
-        notFound: {
+        pageNotFound: {
             title: 'Page not found',
             children: (
                 <StandardCard>
@@ -174,6 +174,20 @@ export default {
                         </li>
                     </ul>
                 </StandardCard>
+            ),
+        },
+        workNotFound: {
+            title: 'Work not found',
+            message: (
+                <div>
+                    <p>The work you are attempting to access does not appear in our system.</p>
+                    <p>
+                        If you believe this is in error, please{' '}
+                        <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
+                            contact the eSpace team.
+                        </a>
+                    </p>
+                </div>
             ),
         },
         authenticationRequired: {
@@ -591,20 +605,6 @@ export default {
                     </>
                 ),
                 alertId: 'alert-info',
-            },
-            notFound: {
-                title: 'Work not found',
-                message: (
-                    <div>
-                        <p>The work you are attempting to access does not appear in our system.</p>
-                        <p>
-                            If you believe this is in error, please{' '}
-                            <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
-                                contact the eSpace team.
-                            </a>
-                        </p>
-                    </div>
-                ),
             },
             version: {
                 title: 'View Version',

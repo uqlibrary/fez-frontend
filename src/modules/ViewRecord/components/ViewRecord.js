@@ -7,7 +7,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
@@ -41,6 +40,7 @@ import Links from './Links';
 import NtroDetails from './NtroDetails';
 import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -200,18 +200,7 @@ export const ViewRecord = () => {
     if (!isNotFoundRoute && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
-        return (
-            <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <StyledGridWithTopMargin container id="notFoundGridContainer" data-testid="notFoundGridContainer">
-                    <Grid xs={12}>{locale.pages.viewRecord.notFound.message}</Grid>
-                </StyledGridWithTopMargin>
-                {recordToViewError && (
-                    <Typography variant={'caption'} style={{ opacity: 0.5 }}>
-                        {`(${recordToViewError.status} - ${recordToViewError.message})`}
-                    </Typography>
-                )}
-            </StandardPage>
-        );
+        return <WorkNotFound loadingError={recordToViewError} />;
     } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
