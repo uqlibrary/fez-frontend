@@ -66,7 +66,6 @@ export const trendingPublications = {
                 "rek_article_number_xsdmf_id":null,
                 "rek_article_number":"343"
             },
-            "fez_record_search_key_additional_notes":null,
             "fez_record_search_key_assigned_group_id":[
                 
             ],
