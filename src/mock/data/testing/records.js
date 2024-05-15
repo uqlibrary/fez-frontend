@@ -54,12 +54,6 @@ export const dataCollection = {
         "rek_access_conditions_xsdmf_id": null,
         "rek_access_conditions": "453619"
     },
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 103,
-        "rek_additional_notes_pid": "UQ:407731",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "CheckM is open source software available at http://ecogenomics.github.io/CheckM"
-    },
     "fez_record_search_key_ands_collection_type": {
         "rek_ands_collection_type_id": 3813,
         "rek_ands_collection_type_pid": "UQ:407731",
@@ -3447,7 +3441,7 @@ export const journalArticle = {
     "rek_altmetric_id": 20711411,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -4319,7 +4313,7 @@ export const bookChapter = {
     "rek_altmetric_id": 4881278,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -4698,7 +4692,7 @@ export const book = {
     "rek_altmetric_id": null,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -5005,7 +4999,7 @@ export const editedBook = {
     "rek_altmetric_id": null,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -5251,7 +5245,7 @@ export const conferencePaper = {
     "rek_altmetric_id": 5589576,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -5771,7 +5765,7 @@ export const generic = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -6238,7 +6232,7 @@ export const audioDocument = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
         {
@@ -7047,7 +7041,7 @@ export const mockRecordToFix = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
 
@@ -7563,7 +7557,7 @@ export const mockRecordToDelete = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
 
@@ -8348,7 +8342,7 @@ export const researchReport = {
     "rek_copyright": null,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
 
@@ -8938,12 +8932,6 @@ export const manuscript = {
     "rek_copyright_xsdmf_id": null,
     "rek_copyright": "on",
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 1145,
-        "rek_additional_notes_pid": "UQ:677394",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "Letter dated 15 July 1944 from Thea Astley to Mr [Paul] Grano sending 9 poems for criticism. Poems not included in collection."
-    },
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
@@ -9612,7 +9600,7 @@ export const videoDocument = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
 
@@ -10005,7 +9993,7 @@ export const journal = {
     "rek_copyright": "on",
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [
 
@@ -12457,12 +12445,6 @@ export const recordLinks = {
     "rek_altmetric_id_xsdmf_id": null,
     "rek_copyright_xsdmf_id": null,
     "rek_copyright": "on",
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 44,
-        "rek_additional_notes_pid": "UQ:344368",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "Testing notes"
-    },
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
@@ -13253,7 +13235,6 @@ export const dataCollectionWithFoRCodes = {
         rek_access_conditions: "453619",
         rek_access_conditions_lookup: "Open Access"
     },
-    fez_record_search_key_additional_notes: null,
     fez_record_search_key_ands_collection_type: {
         rek_ands_collection_type_id: 3474,
         rek_ands_collection_type_pid: "UQ:354076",
@@ -18867,7 +18848,7 @@ export const recordWithRDM = {
         "rek_access_conditions": "453619",
         "rek_access_conditions_lookup": "Open Access"
     },
-    "fez_record_search_key_additional_notes": null,
+    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_ands_collection_type": {
         "rek_ands_collection_type_id": 4759,
@@ -19187,12 +19168,6 @@ export const recordWithRdmMediatedAccess = {
         "rek_access_conditions_xsdmf_id": null,
         "rek_access_conditions": "453618",
         "rek_access_conditions_lookup": "Mediated Access"
-    },
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 10504,
-        "rek_additional_notes_pid": "UQ:92b978e",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "GRDC funded project: UOQ2203-006RTX\nIn collaboration with the Grains Orana Alliance (GOA)"
     },
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_ands_collection_type": {

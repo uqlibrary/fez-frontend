@@ -489,18 +489,11 @@ export default {
     },
     additionalNotes: {
         getValue: record =>
-            !!record.fez_record_search_key_additional_notes &&
-            !!record.fez_record_search_key_additional_notes.rek_additional_notes
-                ? getValueSearchKeyCKEditor(
-                      record,
-                      'fez_record_search_key_additional_notes.rek_additional_notes',
-                      'fez_record_search_key_additional_notes.rek_additional_notes',
-                  )
-                : getValueSearchKeyCKEditor(
-                      record,
-                      'fez_record_search_key_notes.rek_notes',
-                      'fez_record_search_key_notes.rek_notes',
-                  ),
+            getValueSearchKeyCKEditor(
+                record,
+                'fez_record_search_key_notes.rek_notes',
+                'fez_record_search_key_notes.rek_notes',
+            ),
     },
     advisoryStatement: {
         getValue: record =>
