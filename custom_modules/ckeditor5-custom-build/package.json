@@ -16,7 +16,6 @@
     "@ckeditor/ckeditor5-link": "41.0.0",
     "@ckeditor/ckeditor5-list": "41.0.0",
     "@ckeditor/ckeditor5-paragraph": "41.0.0",
-    "@ckeditor/ckeditor5-paste-from-office": "41.0.0",
     "@ckeditor/ckeditor5-remove-format": "41.0.0",
     "@ckeditor/ckeditor5-special-characters": "41.0.0",
     "@ckeditor/ckeditor5-typing": "41.0.0",
