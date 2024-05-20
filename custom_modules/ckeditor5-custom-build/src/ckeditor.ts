@@ -20,7 +20,6 @@ import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
 import {
 	SpecialCharacters,
@@ -49,7 +48,6 @@ class Editor extends ClassicEditor {
 		Link,
 		List,
 		Paragraph,
-		PasteFromOffice,
 		RemoveFormat,
 		SpecialCharacters,
 		SpecialCharactersArrows,

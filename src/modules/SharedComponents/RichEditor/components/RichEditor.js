@@ -100,6 +100,12 @@ const RichEditor = fieldProps => {
                 editor={Editor}
                 config={editorConfig}
                 data={getContent()}
+                onReady={editor => {
+                    const documentView = editor.editing.view.document;
+                    documentView.on('clipboardInput', (event, data) => {
+                        data.content = editor.data.htmlProcessor.toView(data.dataTransfer.getData('text/plain'));
+                    });
+                }}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
                 }}
