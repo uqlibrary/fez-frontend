@@ -102,8 +102,8 @@ const RichEditor = fieldProps => {
                 data={getContent()}
                 onReady={editor => {
                     const documentView = editor.editing.view.document;
+                    /* istanbul ignore next */
                     documentView.on('clipboardInput', (event, data) => {
-                        /* istanbul ignore next line*/
                         data.content = editor.data.htmlProcessor.toView(data.dataTransfer.getData('text/plain'));
                     });
                 }}
