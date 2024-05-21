@@ -484,7 +484,7 @@ context('Journal Article admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it.only('should allow paste text only in ckeditor', () => {
+    it('should allow paste text only in ckeditor', () => {
         const record = recordList.data[1];
         cy.loadRecordForAdminEdit(record.rek_pid);
         // should ignore html content in the paste event
@@ -493,16 +493,16 @@ context('Journal Article admin edit', () => {
                 pasteType: 'text/html',
                 pastePayload: '<a href="https://link.com">Link</a>',
             })
-            .invoke('html')
-            .should('not.equal', 'Link');
+            .invoke('text')
+            .should('eq', '');
 
         cy.readCKEditor('rek-notes')
             .paste({
                 pasteType: 'text/plain',
                 pastePayload: 'Link',
             })
-            .invoke('html')
-            .should('equal', 'Link');
+            .invoke('text')
+            .should('eq', 'Link');
     });
 
     describe('Author Affiliations', () => {
