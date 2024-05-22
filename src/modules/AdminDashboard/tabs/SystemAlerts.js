@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import moment from 'moment';
 
-import { useAccountContext } from 'context';
-
 import locale from 'locale/components';
 
 import * as actions from 'actions';
@@ -64,7 +62,7 @@ const SystemAlerts = () => {
         adminDashboardSystemAlertsLoading,
         adminDashboardSystemAlertsFailed,
     } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
-    const { account } = useAccountContext();
+
     const dispatch = useDispatch();
 
     const [open, setOpen] = React.useState(false);
@@ -83,8 +81,6 @@ const SystemAlerts = () => {
         setOpen(false);
     };
     const handleSystemAlertUpdate = (action, row) => {
-        console.log(account, action, row);
-
         const wrappedRequest = transformSystemAlertRequest(action, row);
 
         dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))

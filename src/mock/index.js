@@ -675,7 +675,21 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(
         new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl))
     )
-    .reply(200, { data: {...mockData.adminDashboardSystemAlerts} });
+    .reply(200, { data: {...mockData.adminDashboardSystemAlerts} })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({id: '.*'}).apiUrl)))
+    .reply(() => {
+        return [200, 'Exported file contents', {
+            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        }];
+    }) 
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'workshistory'}).apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardReportWorksData} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'systemalertlog'}).apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardReportSystemAlertsData} });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)

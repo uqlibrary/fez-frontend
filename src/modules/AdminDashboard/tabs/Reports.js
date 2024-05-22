@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useReducer } from 'react';
+// import PropTypes from 'prop-types';
 
 import moment from 'moment';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import Grid from '@mui/material/Grid';
@@ -20,149 +20,14 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
+import * as actions from 'actions';
+
 import { DEFAULT_DATE_FORMAT } from '../config';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-
-import SectionTitle from '../components/SectionTitle';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-const adminDashboardReportWorksData = [
-    {
-        id: 1,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-    {
-        id: 2,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-    {
-        id: 3,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-    {
-        id: 4,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-    {
-        id: 5,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-    {
-        id: 6,
-        pid: 'UQ:abc123',
-        date_created: '9/4/2024 10:44',
-        work_type: 'Journal Article - Article (original research)',
-        user: 'uqmfeene',
-        topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
-    },
-];
-const adminDashboardReportSystemAlertsData = [
-    {
-        id: 1,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 2,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 3,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 4,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 5,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 6,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-    {
-        id: 7,
-        date_created: '9/4/2024 10:44',
-        assigned_to: 'Michael Feeney',
-        assigned_date: '9/4/2024 10:44',
-        resolved_by: 'Elizabeth Alvey',
-        resolved_date: '9/4/2024 10:44',
-        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-        content:
-            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-    },
-];
+import SectionTitle from '../components/SectionTitle';
 
 const exportReportOptions = [
     {
@@ -277,28 +142,67 @@ const columns = (locale, report) => {
 
 const Reports = () => {
     const txt = locale.components.adminDashboard.reports;
+
+    const dispatch = useDispatch();
+
     const [exportReport, setExportReport] = React.useState(null);
     const [displayReport, setDisplayReport] = React.useState(null);
     const [fromDate, setFromDate] = React.useState(null);
     const [toDate, setToDate] = React.useState(null);
+    const [fromDateError, setFromDateError] = React.useState('');
+    const [toDateError, setToDateError] = React.useState('');
+    const [systemAlertId, setSystemAlertId] = React.useState('');
 
-    const handleFilterChange = (action, props) => {
-        switch (action) {
-            case 'filterDateFrom':
-                // eslint-disable-next-line react/prop-types
-                setFromDate(props.format());
-                break;
-            default:
-                // eslint-disable-next-line react/prop-types
-                setToDate(props.format());
+    const {
+        adminDashboardDisplayReportData,
+        adminDashboardDisplayReportLoading,
+        adminDashboardDisplayReportSuccess,
+        adminDashboardDisplayReportError,
+    } = useSelector(state => state.get('adminDashboardDisplayReportReducer'));
+
+    const isValid = React.useMemo(() => {
+        if (!!displayReport) {
+            setFromDateError('');
+            setToDateError('');
+            if (!!!fromDate && !!!toDate) return true;
+            const mFrom = moment(fromDate);
+            const mTo = moment(toDate);
+            if (mFrom.isValid() && !mTo.isValid()) {
+                setToDateError('Required');
+                return false;
+            } else if (mTo.isValid() && !mFrom.isValid()) {
+                setFromDateError('Required');
+                return false;
+            } else if (mFrom.isValid() && mTo.isValid()) {
+                if (!mFrom.isSameOrBefore(mTo)) {
+                    setFromDateError('Must not be after "to" date');
+                    return false;
+                } else return true;
+            }
+            return false;
+        }
+        return false;
+    }, [displayReport, fromDate, toDate]);
+
+    const handleExportReportClick = () => {
+        dispatch(actions.loadAdminDashboardExportReport({ id: exportReport.value }));
+    };
+
+    const handleDisplayReportClick = () => {
+        if (isValid) {
+            const request = {
+                id: displayReport.value,
+                ...(!!fromDate ? { dateFrom: fromDate } : {}),
+                ...(!!toDate ? { dateTo: toDate } : {}),
+                ...(displayReport.value === 'systemalertlog' && !!systemAlertId ? { alertId: systemAlertId } : {}),
+            };
+            dispatch(actions.loadAdminDashboardDisplayReport(request));
         }
     };
 
-    const isValid = () => {
-        if (!!displayReport) {
-            if ((!!fromDate && !!toDate) || (!!!fromDate && !!!toDate)) return true;
-        }
-        return false;
+    const handleDisplayReportChange = value => {
+        setDisplayReport(value);
+        dispatch(actions.clearAdminDashboardDisplayReport());
     };
 
     return (
@@ -344,7 +248,8 @@ const Reports = () => {
                             id="report-export-button"
                             data-testid="report-export-button"
                             variant="contained"
-                            disabled={!isValid()}
+                            disabled={!!!exportReport}
+                            onClick={handleExportReportClick}
                         >
                             Export Report
                         </Button>
@@ -385,8 +290,27 @@ const Reports = () => {
                                     'data-testid': `${reportDisplayExportId}-options`,
                                 }}
                                 value={displayReport}
-                                onChange={(_, value) => setDisplayReport(value)}
+                                onChange={(_, value) => handleDisplayReportChange(value)}
                             />
+                            {displayReport?.value === 'systemalertlog' && (
+                                <TextField
+                                    label={'System alert ID'}
+                                    variant="standard"
+                                    fullWidth
+                                    inputProps={{
+                                        id: 'report-display-system-alert-id-input',
+                                        'data-analyticsid': 'report-display-system-alert-id-input',
+                                        'data-testid': 'report-display-system-alert-id-input',
+                                    }}
+                                    InputLabelProps={{
+                                        'data-testid': 'report-display-system-alert-id-label',
+                                    }}
+                                    sx={{ mt: 1 }}
+                                    // eslint-disable-next-line react/prop-types
+                                    onChange={props => setSystemAlertId(props.target.value)}
+                                    value={systemAlertId}
+                                />
+                            )}
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <DatePicker
@@ -396,20 +320,26 @@ const Reports = () => {
                                     label: 'From',
                                     'aria-label': 'From',
                                     'aria-labelledby': 'report-display-date-from-label',
+                                    'data-analyticsid': 'report-display-date-from-input',
                                 }}
                                 label="From"
                                 value={fromDate}
-                                renderInput={params => <TextField {...params} variant="standard" fullWidth />}
-                                onChange={props => handleFilterChange('filterDateFrom', props)}
+                                renderInput={params => (
+                                    <TextField
+                                        {...params}
+                                        variant="standard"
+                                        fullWidth
+                                        error={!!fromDateError}
+                                        required={!!fromDateError}
+                                        helperText={fromDateError}
+                                    />
+                                )}
+                                // eslint-disable-next-line react/prop-types
+                                onChange={props => setFromDate(!!props ? moment(props).format() : null)}
                                 defaultValue=""
                                 disableFuture
                                 maxDate={toDate}
-                                slotProps={{
-                                    textField: {
-                                        isRequired: !!toDate && !!!fromDate,
-                                        helperText: !!toDate && !!!fromDate ? 'Required' : '',
-                                    },
-                                }}
+                                disabled={!!!displayReport}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4}>
@@ -420,14 +350,26 @@ const Reports = () => {
                                     label: 'To',
                                     'aria-label': 'To',
                                     'aria-labelledby': 'report-display-date-to-label',
+                                    'data-analyticsid': 'report-display-date-to-input',
                                 }}
                                 label="To"
                                 value={toDate}
-                                renderInput={params => <TextField {...params} variant="standard" fullWidth />}
-                                onChange={props => handleFilterChange('filterDateTo', props)}
+                                renderInput={params => (
+                                    <TextField
+                                        {...params}
+                                        variant="standard"
+                                        fullWidth
+                                        error={!!toDateError}
+                                        required={!!fromDate}
+                                        helperText={toDateError}
+                                    />
+                                )}
+                                // eslint-disable-next-line react/prop-types
+                                onChange={props => setToDate(!!props ? moment(props).format() : null)}
                                 defaultValue=""
                                 disableFuture
                                 minDate={fromDate}
+                                disabled={!!!displayReport}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -435,7 +377,8 @@ const Reports = () => {
                                 id="report-display-button"
                                 data-testid="report-display-button"
                                 variant="contained"
-                                disabled={!!!displayReport}
+                                disabled={!isValid}
+                                onClick={handleDisplayReportClick}
                             >
                                 Run Report
                             </Button>
@@ -444,28 +387,31 @@ const Reports = () => {
                                 data-testid="report-display-export-button"
                                 variant="contained"
                                 color="secondary"
-                                disabled
+                                disabled={!!!adminDashboardDisplayReportData}
                                 sx={{ marginInlineStart: 1 }}
                             >
                                 Export
                             </Button>
                         </Grid>
                     </Grid>
-                    <Grid container mt={2}>
-                        <Grid item xs={12}>
-                            <DataGrid
-                                rows={adminDashboardReportSystemAlertsData ?? []}
-                                columns={displayReport ? columns(txt, displayReport.value) : []}
-                                initialState={{
-                                    pagination: {
-                                        paginationModel: { page: 0, pageSize: 10 },
-                                    },
-                                }}
-                                pageSizeOptions={[10, 25, 50, 100]}
-                                autoHeight
-                            />
+                    {!!displayReport && (
+                        <Grid container mt={2}>
+                            <Grid item xs={12}>
+                                <DataGrid
+                                    rows={adminDashboardDisplayReportData ?? []}
+                                    columns={displayReport ? columns(txt, displayReport.value) : []}
+                                    initialState={{
+                                        pagination: {
+                                            paginationModel: { page: 0, pageSize: 10 },
+                                        },
+                                    }}
+                                    pageSizeOptions={[10, 25, 50, 100]}
+                                    autoHeight
+                                    loading={adminDashboardDisplayReportLoading}
+                                />
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    )}
                 </StandardCard>
             </Box>
         </LocalizationProvider>

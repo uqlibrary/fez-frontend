@@ -53,3 +53,144 @@ export const adminDashboardSystemAlerts = {
         {id:188, topic: 'My Works - Claimed Work - UQ:4489ca8 - uqwtomas', content: 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.', link: 'https://espace.library.uq.edu.au/view/UQ:efd126', created_date: '3/4/2024 15:55:00', updated_date: null, resolved_date: undefined, assigned_to: 2333, resolved_by: undefined },
     ],
 };
+
+export const adminDashboardReportWorksData = {
+    data: [
+        {
+            id: 1,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+        {
+            id: 2,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+        {
+            id: 3,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+        {
+            id: 4,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+        {
+            id: 5,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+        {
+            id: 6,
+            pid: 'UQ:abc123',
+            date_created: '9/4/2024 10:44',
+            work_type: 'Journal Article - Article (original research)',
+            user: 'uqmfeene',
+            topic: 'Updated record by O’Keefe, Christopher J, (User ID: 64567)',
+        },
+    ]
+};
+
+export const adminDashboardReportSystemAlertsData = {
+    data: [
+    {
+        id: 1,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 2,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 3,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 4,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 5,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 6,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+    {
+        id: 7,
+        date_created: '9/4/2024 10:44',
+        assigned_to: 'Michael Feeney',
+        assigned_date: '9/4/2024 10:44',
+        resolved_by: 'Elizabeth Alvey',
+        resolved_date: '9/4/2024 10:44',
+        title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
+        content:
+            'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
+        link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
+    },
+]};
