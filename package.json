@@ -174,7 +174,8 @@
         "regenerator-runtime": "^0.13.9",
         "save": "^2.9.0",
         "throttle-debounce": "^5.0.0",
-        "timezones.json": "^1.2.1"
+        "timezones.json": "^1.2.1",
+        "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
     },
     "optionalDependencies": {
         "fsevents": "^2.3.0"

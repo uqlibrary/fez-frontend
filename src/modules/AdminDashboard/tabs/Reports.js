@@ -3,6 +3,8 @@ import React, { useReducer } from 'react';
 // import PropTypes from 'prop-types';
 
 import moment from 'moment';
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -15,7 +17,7 @@ import Button from '@mui/material/Button';
 // import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, gridClasses } from '@mui/x-data-grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
@@ -26,6 +28,7 @@ import { DEFAULT_DATE_FORMAT } from '../config';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
 import SectionTitle from '../components/SectionTitle';
 
@@ -86,55 +89,63 @@ const optionDoubleRowRender = (props, option) => (
     </li>
 );
 
-const columns = (locale, report) => {
+const getColumns = (locale, report) => {
     const txt = locale.columns[report];
     switch (report) {
         case 'workshistory':
             return [
+                { field: 'id', order: 0 },
                 {
                     field: 'date_created',
                     headerName: txt.dateCreated,
                     width: 150,
                     valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    order: 2,
                 },
-                { field: 'pid', headerName: txt.pid, width: 150 },
-                { field: 'work_type', headerName: txt.workType, flex: 1 },
-                { field: 'user', headerName: txt.user, width: 150 },
-                { field: 'topic', headerName: txt.action, flex: 1 },
+                { field: 'pid', headerName: txt.pid, width: 150, order: 1 },
+                { field: 'work_type', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
+                { field: 'user', headerName: txt.user, width: 150, order: 4 },
+                { field: 'topic', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
             ];
         default:
             return [
+                { field: 'id', order: 0 },
                 {
                     field: 'date_created',
                     headerName: txt.dateCreated,
                     width: 150,
                     valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    order: 1,
                 },
-                { field: 'assigned_to', headerName: txt.assignedTo, width: 150 },
+                { field: 'assigned_to', headerName: txt.assignedTo, width: 150, order: 2 },
                 {
                     field: 'assigned_date',
                     headerName: txt.assignedDate,
                     width: 150,
                     valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    order: 3,
                 },
-                { field: 'title', headerName: txt.title, flex: 1 },
-                { field: 'resolved_by', headerName: txt.resolvedBy, width: 150 },
+                { field: 'title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
+                { field: 'resolved_by', headerName: txt.resolvedBy, width: 150, order: 4 },
                 {
                     field: 'resolved_date',
                     headerName: txt.resolvedDate,
                     width: 150,
                     valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    order: 5,
                 },
-                { field: 'content', headerName: txt.content, flex: 1 },
+                { field: 'content', headerName: txt.content, minWidth: 400, flex: 1, order: 8 },
                 {
                     field: 'link',
                     headerName: txt.link,
+                    minWidth: 400,
                     flex: 1,
                     renderCell: row => (
                         <ExternalLink id={`link_${row.id}`} href={row.value} inline>
                             {row.value}
                         </ExternalLink>
                     ),
+                    order: 9,
                 },
             ];
     }
@@ -156,14 +167,11 @@ const Reports = () => {
     const {
         adminDashboardDisplayReportData,
         adminDashboardDisplayReportLoading,
-        adminDashboardDisplayReportSuccess,
         adminDashboardDisplayReportError,
     } = useSelector(state => state.get('adminDashboardDisplayReportReducer'));
-    const {
-        adminDashboardExportReportLoading,
-        adminDashboardExportReportSuccess,
-        adminDashboardExportReportError,
-    } = useSelector(state => state.get('adminDashboardExportReportReducer'));
+    const { adminDashboardExportReportLoading, adminDashboardExportReportError } = useSelector(state =>
+        state.get('adminDashboardExportReportReducer'),
+    );
 
     const isValid = React.useMemo(() => {
         if (!!displayReport) {
@@ -189,6 +197,11 @@ const Reports = () => {
         return false;
     }, [displayReport, fromDate, toDate]);
 
+    const columns = React.useMemo(() => {
+        return !!displayReport ? getColumns(txt, displayReport.value) : [];
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [displayReport]);
+
     const handleExportReportClick = () => {
         dispatch(
             actions.loadAdminDashboardExportReport({
@@ -202,6 +215,19 @@ const Reports = () => {
             .catch(error => {
                 console.error(error);
             });
+    };
+
+    const handleExportDisplayReportClick = () => {
+        const worksheet = XLSX.utils.json_to_sheet(adminDashboardDisplayReportData);
+        const workbook = XLSX.utils.book_new();
+        const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
+        XLSX.utils.sheet_add_aoa(worksheet, [colHeaders], {
+            origin: 'A1',
+        });
+        XLSX.utils.book_append_sheet(workbook, worksheet, displayReport.label);
+
+        const fname = getFileName('xlsx');
+        XLSX.writeFileXLSX(workbook, fname);
     };
 
     const handleDisplayReportClick = () => {
@@ -410,6 +436,7 @@ const Reports = () => {
                                 color="secondary"
                                 disabled={!!!adminDashboardDisplayReportData}
                                 sx={{ marginInlineStart: 1 }}
+                                onClick={handleExportDisplayReportClick}
                             >
                                 Export
                             </Button>
@@ -418,17 +445,35 @@ const Reports = () => {
                     {!!displayReport && (
                         <Grid container mt={2}>
                             <Grid item xs={12}>
+                                {console.log(columns)}
                                 <DataGrid
                                     rows={adminDashboardDisplayReportData ?? []}
-                                    columns={displayReport ? columns(txt, displayReport.value) : []}
+                                    columns={columns ?? []}
                                     initialState={{
                                         pagination: {
                                             paginationModel: { page: 0, pageSize: 10 },
+                                        },
+                                        columns: {
+                                            columnVisibilityModel: {
+                                                id: false,
+                                            },
                                         },
                                     }}
                                     pageSizeOptions={[10, 25, 50, 100]}
                                     autoHeight
                                     loading={adminDashboardDisplayReportLoading}
+                                    autosizeOptions={{
+                                        columns: ['title', 'content', 'link'],
+                                        includeOutliers: true,
+                                        includeHeaders: true,
+                                    }}
+                                    disableColumnMenu
+                                    getRowHeight={() => 'auto'}
+                                    sx={{
+                                        [`& .${gridClasses.cell}`]: {
+                                            py: 1,
+                                        },
+                                    }}
                                 />
                             </Grid>
                         </Grid>
