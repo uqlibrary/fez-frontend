@@ -159,6 +159,11 @@ const Reports = () => {
         adminDashboardDisplayReportSuccess,
         adminDashboardDisplayReportError,
     } = useSelector(state => state.get('adminDashboardDisplayReportReducer'));
+    const {
+        adminDashboardExportReportLoading,
+        adminDashboardExportReportSuccess,
+        adminDashboardExportReportError,
+    } = useSelector(state => state.get('adminDashboardExportReportReducer'));
 
     const isValid = React.useMemo(() => {
         if (!!displayReport) {
@@ -185,7 +190,18 @@ const Reports = () => {
     }, [displayReport, fromDate, toDate]);
 
     const handleExportReportClick = () => {
-        dispatch(actions.loadAdminDashboardExportReport({ id: exportReport.value }));
+        dispatch(
+            actions.loadAdminDashboardExportReport({
+                id: exportReport.value,
+                export_to: 'excel',
+            }),
+        )
+            .then(() => {
+                dispatch(actions.clearAdminDashboardExportReport());
+            })
+            .catch(error => {
+                console.error(error);
+            });
     };
 
     const handleDisplayReportClick = () => {
@@ -241,6 +257,7 @@ const Reports = () => {
                             }}
                             value={exportReport}
                             onChange={(_, value) => setExportReport(value)}
+                            disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -248,8 +265,12 @@ const Reports = () => {
                             id="report-export-button"
                             data-testid="report-export-button"
                             variant="contained"
-                            disabled={!!!exportReport}
                             onClick={handleExportReportClick}
+                            disabled={
+                                !!!exportReport ||
+                                adminDashboardExportReportLoading ||
+                                adminDashboardDisplayReportLoading
+                            }
                         >
                             Export Report
                         </Button>

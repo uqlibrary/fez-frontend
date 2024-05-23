@@ -9,6 +9,8 @@ import {
     ADMIN_DASHBOARD_EXPORT_REPORT_API,
 } from 'repositories/routes';
 
+import { promptForDownload } from './exportPublicationsDataTransformers';
+
 /**
  * Fetches the config data for admin dashboard
  * @returns {function(*)}
@@ -181,22 +183,36 @@ export function adminDashboardSystemAlerts(request) {
  * Fetches export (legacy) report data as a file attachment
  * @returns {function(*)}
  */
-export function loadAdminDashboardExportReport(id) {
+export function loadAdminDashboardExportReport(request) {
     return dispatch => {
+        const exportConfig = {
+            format: request.export_to,
+        };
+
         dispatch({
             type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_LOADING,
         });
-        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API(id))
+
+        const getOptions = { responseType: 'blob' };
+
+        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: request.id }), { ...getOptions })
             .then(response => {
+                promptForDownload(exportConfig.format, response);
+
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_SUCCESS,
-                    payload: response.data,
+                    payload: exportConfig,
                 });
+
+                return Promise.resolve();
             })
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_FAILED,
-                    payload: error.message,
+                    payload: {
+                        ...exportConfig,
+                        errorMessage: error.message,
+                    },
                 });
             });
     };
@@ -231,6 +247,14 @@ export function clearAdminDashboardDisplayReport() {
     return dispatch => {
         dispatch({
             type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_CLEAR,
+        });
+    };
+}
+
+export function clearAdminDashboardExportReport() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_CLEAR,
         });
     };
 }

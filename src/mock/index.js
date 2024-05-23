@@ -677,8 +677,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     )
     .reply(200, { data: {...mockData.adminDashboardSystemAlerts} })
     .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({id: '.*'}).apiUrl)))
-    .reply(() => {
-        return [200, 'Exported file contents', {
+    .reply(config => {
+        return [200, `Exported file contents for report ${config.url.split('=')[1]}`, {
             'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         }];
     }) 
