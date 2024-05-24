@@ -23,7 +23,6 @@ import QuickLinkAdmin from './QuickLinkAdmin';
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
-
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {

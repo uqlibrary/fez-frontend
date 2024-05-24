@@ -29,6 +29,7 @@ export function loadAdminDashboardConfig() {
                 return Promise.resolve(response);
             })
             .catch(error => {
+                console.error(error.message);
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_CONFIG_FAILED,
                     payload: error.message,
@@ -237,7 +238,9 @@ export function loadAdminDashboardDisplayReport(request) {
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_FAILED,
-                    payload: error.message,
+                    payload: {
+                        errorMessage: error.message,
+                    },
                 });
             });
     };

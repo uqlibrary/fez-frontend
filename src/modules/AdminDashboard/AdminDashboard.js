@@ -68,7 +68,6 @@ const AdminDashboard = () => {
     return (
         <StandardPage title={txt.title}>
             {adminDashboardConfigLoading && <InlineLoader message={txt.loading.config} />}
-
             {((!adminDashboardConfigLoading && !!!adminDashboardConfigData) ||
                 (Array.isArray(adminDashboardConfigData) && adminDashboardConfigData.length === 0) ||
                 !!adminDashboardConfigError) && (

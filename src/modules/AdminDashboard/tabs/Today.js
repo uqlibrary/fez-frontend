@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 
@@ -26,9 +27,19 @@ const Today = () => {
     const { adminDashboardTodayData, adminDashboardTodayLoading, adminDashboardTodaySuccess } = useSelector(state =>
         state.get('adminDashboardTodayReducer'),
     );
+    const { adminDashboardQuickLinksUpdateFailed } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
     return (
         <StandardCard noHeader>
+            {adminDashboardQuickLinksUpdateFailed && (
+                <Grid item xs={12} sx={{ mb: 1 }}>
+                    <Alert
+                        type="error_outline"
+                        title={txt.quicklinks.error.title}
+                        message={txt.quicklinks.error.updating}
+                    />
+                </Grid>
+            )}
             <Grid container spacing={2} minHeight={300}>
                 <Grid item xs={12} md={7}>
                     <Grid container spacing={2}>

@@ -671,7 +671,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(
         new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl))
     )
-    .reply(200, { data: {...mockData.adminDashboardQuickLinks} })
+    .reply(421, { data: {...mockData.adminDashboardQuickLinks} })
     .onGet(
         new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl))
     )

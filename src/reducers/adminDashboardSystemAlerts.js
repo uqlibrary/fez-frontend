@@ -4,10 +4,10 @@ export const initialState = {
     adminDashboardSystemAlertsData: null,
     adminDashboardSystemAlertsLoading: false,
     adminDashboardSystemAlertsSuccess: null,
-    adminDashboardSystemAlertsError: null,
+    adminDashboardSystemAlertsFailed: null,
     adminDashboardSystemAlertsUpdating: false,
     adminDashboardSystemAlertsUpdateSuccess: null,
-    adminDashboardSystemAlertsUpdateError: null,
+    adminDashboardSystemAlertsUpdateFailed: null,
 };
 
 const handlers = {
@@ -25,7 +25,7 @@ const handlers = {
         ...initialState,
         ...state,
         adminDashboardSystemAlertsLoading: false,
-        adminDashboardSystemAlertsError: action.payload,
+        adminDashboardSystemAlertsFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING]: state => ({
         ...state,
@@ -39,7 +39,7 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED]: (state, action) => ({
         ...state,
         adminDashboardSystemAlertsUpdating: false,
-        adminDashboardSystemAlertsUpdateError: action.payload,
+        adminDashboardSystemAlertsUpdateFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_CLEAR]: () => ({ ...initialState }),
 };

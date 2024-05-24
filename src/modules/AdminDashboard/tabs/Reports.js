@@ -14,7 +14,7 @@ import Box from '@mui/material/Box';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-// import CircularProgress from '@mui/material/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
@@ -23,50 +23,16 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import locale from 'locale/components';
 
 import * as actions from 'actions';
+import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
 import { DEFAULT_DATE_FORMAT } from '../config';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { getFileName } from 'actions/exportPublicationsDataTransformers';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import SectionTitle from '../components/SectionTitle';
 
-const exportReportOptions = [
-    {
-        value: 1,
-        label: 'Wok ID dups',
-        subtext:
-            'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
-    },
-    {
-        value: 2,
-        label: 'Scopus ID Dups',
-        subtext:
-            'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
-    },
-    {
-        value: 3,
-        label: 'DOI Dups',
-        subtext:
-            'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
-    },
-    {
-        value: 4,
-        label: 'UQ Incites Authors',
-        subtext: 'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
-    },
-];
-const displayReportOptions = [
-    {
-        value: 'workshistory',
-        label: 'Works history',
-    },
-    {
-        value: 'systemalertlog',
-        label: 'System alert log',
-    },
-];
 const reportExportOnlyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
 
@@ -181,20 +147,21 @@ const Reports = () => {
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
             if (mFrom.isValid() && !mTo.isValid()) {
-                setToDateError('Required');
+                setToDateError(txt.error.required);
                 return false;
             } else if (mTo.isValid() && !mFrom.isValid()) {
-                setFromDateError('Required');
+                setFromDateError(txt.error.required);
                 return false;
             } else if (mFrom.isValid() && mTo.isValid()) {
                 if (!mFrom.isSameOrBefore(mTo)) {
-                    setFromDateError('Must not be after "to" date');
+                    setFromDateError(txt.error.dateNotAfter);
                     return false;
                 } else return true;
             }
             return false;
         }
         return false;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [displayReport, fromDate, toDate]);
 
     const columns = React.useMemo(() => {
@@ -210,7 +177,7 @@ const Reports = () => {
             }),
         )
             .then(() => {
-                dispatch(actions.clearAdminDashboardExportReport());
+                //! adminDashboardExportReportError && dispatch(actions.clearAdminDashboardExportReport());
             })
             .catch(error => {
                 console.error(error);
@@ -251,20 +218,26 @@ const Reports = () => {
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
             <StandardCard noHeader>
                 <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
+
                 <Grid container spacing={2}>
+                    {adminDashboardExportReportError && (
+                        <Grid item xs={12}>
+                            <Alert type="error_outline" title={txt.error.title} message={txt.error.general} />
+                        </Grid>
+                    )}
                     <Grid item xs={12} sm={6}>
                         <Autocomplete
                             disablePortal
                             id={reportExportOnlyId}
-                            options={exportReportOptions}
+                            options={txt.options.export}
                             isOptionEqualToValue={(option, value) => option.value === value.value}
                             renderOption={optionDoubleRowRender}
                             renderInput={params => (
                                 <TextField
                                     {...params}
                                     variant="standard"
-                                    label="Report"
-                                    helperText={'Report will download direct to your device'}
+                                    label={txt.label.report}
+                                    helperText={txt.label.helperText}
                                     inputProps={{
                                         ...params.inputProps,
                                         id: `${reportExportOnlyId}-input`,
@@ -298,7 +271,16 @@ const Reports = () => {
                                 adminDashboardDisplayReportLoading
                             }
                         >
-                            Export Report
+                            {adminDashboardExportReportLoading && (
+                                <CircularProgress
+                                    color="inherit"
+                                    size={20}
+                                    id={'export-report-progress'}
+                                    data-testid={'export-report-progress'}
+                                    sx={{ mr: 1 }}
+                                />
+                            )}
+                            {txt.label.exportReport}
                         </Button>
                     </Grid>
                 </Grid>
@@ -307,18 +289,23 @@ const Reports = () => {
                 <StandardCard noHeader>
                     <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
                     <Grid container spacing={2}>
+                        {adminDashboardDisplayReportError && (
+                            <Grid item xs={12}>
+                                <Alert type="error_outline" title={txt.error.title} message={txt.error.general} />
+                            </Grid>
+                        )}
                         <Grid item xs={12} sm={4}>
                             <Autocomplete
                                 disablePortal
                                 id={reportDisplayExportId}
                                 fullWidth
                                 variant="standard"
-                                options={displayReportOptions}
+                                options={txt.options.display}
                                 isOptionEqualToValue={(option, value) => option.value === value.value}
                                 renderInput={params => (
                                     <TextField
                                         {...params}
-                                        label={'Report'}
+                                        label={txt.label.report}
                                         variant="standard"
                                         inputProps={{
                                             ...params.inputProps,
@@ -341,7 +328,7 @@ const Reports = () => {
                             />
                             {displayReport?.value === 'systemalertlog' && (
                                 <TextField
-                                    label={'System alert ID'}
+                                    label={txt.label.systemId}
                                     variant="standard"
                                     fullWidth
                                     inputProps={{
@@ -364,12 +351,12 @@ const Reports = () => {
                                 inputProps={{
                                     id: 'report-display-date-from-input',
                                     'data-testid': 'report-display-date-from-input',
-                                    label: 'From',
-                                    'aria-label': 'From',
+                                    label: txt.label.dateFrom,
+                                    'aria-label': txt.label.dateFrom,
                                     'aria-labelledby': 'report-display-date-from-label',
                                     'data-analyticsid': 'report-display-date-from-input',
                                 }}
-                                label="From"
+                                label={txt.label.dateFrom}
                                 value={fromDate}
                                 renderInput={params => (
                                     <TextField
@@ -394,12 +381,12 @@ const Reports = () => {
                                 inputProps={{
                                     id: 'report-display-date-to-input',
                                     'data-testid': 'report-display-date-to-input',
-                                    label: 'To',
-                                    'aria-label': 'To',
+                                    label: txt.label.dateTo,
+                                    'aria-label': txt.label.dateTo,
                                     'aria-labelledby': 'report-display-date-to-label',
                                     'data-analyticsid': 'report-display-date-to-input',
                                 }}
-                                label="To"
+                                label={txt.label.dateTo}
                                 value={toDate}
                                 renderInput={params => (
                                     <TextField
@@ -424,10 +411,21 @@ const Reports = () => {
                                 id="report-display-button"
                                 data-testid="report-display-button"
                                 variant="contained"
-                                disabled={!isValid}
+                                disabled={
+                                    !isValid || adminDashboardDisplayReportLoading || adminDashboardExportReportLoading
+                                }
                                 onClick={handleDisplayReportClick}
                             >
-                                Run Report
+                                {adminDashboardDisplayReportLoading && (
+                                    <CircularProgress
+                                        color="inherit"
+                                        size={20}
+                                        id={'display-report-progress'}
+                                        data-testid={'display-report-progress'}
+                                        sx={{ mr: 1 }}
+                                    />
+                                )}
+                                {txt.label.runReport}
                             </Button>
                             <Button
                                 id="report-display-export-button"
@@ -438,16 +436,15 @@ const Reports = () => {
                                 sx={{ marginInlineStart: 1 }}
                                 onClick={handleExportDisplayReportClick}
                             >
-                                Export
+                                {txt.label.export}
                             </Button>
                         </Grid>
                     </Grid>
-                    {!!displayReport && (
+                    {!!adminDashboardDisplayReportData && (
                         <Grid container mt={2}>
                             <Grid item xs={12}>
-                                {console.log(columns)}
                                 <DataGrid
-                                    rows={adminDashboardDisplayReportData ?? []}
+                                    rows={adminDashboardDisplayReportData}
                                     columns={columns ?? []}
                                     initialState={{
                                         pagination: {

@@ -16,6 +16,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { DataGrid } from '@mui/x-data-grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { DEFAULT_DATE_FORMAT } from '../config';
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
@@ -61,6 +62,7 @@ const SystemAlerts = () => {
         adminDashboardSystemAlertsData,
         adminDashboardSystemAlertsLoading,
         adminDashboardSystemAlertsFailed,
+        adminDashboardSystemAlertsUpdateFailed,
     } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
     const dispatch = useDispatch();
@@ -100,6 +102,15 @@ const SystemAlerts = () => {
                 )}
             </Typography>
 
+            {(adminDashboardSystemAlertsFailed || adminDashboardSystemAlertsUpdateFailed) && (
+                <Grid item xs={12} sx={{ mb: 1 }}>
+                    <Alert
+                        type="error_outline"
+                        title={txt.error.title}
+                        message={adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general}
+                    />
+                </Grid>
+            )}
             {!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading && (
                 <Skeleton
                     animation="wave"
@@ -111,7 +122,6 @@ const SystemAlerts = () => {
             )}
             <Grid container>
                 <Grid item xs={12}>
-                    {adminDashboardSystemAlertsFailed && txt.updateFailed}
                     {!!adminDashboardSystemAlertsData && (
                         <>
                             <DataGrid
