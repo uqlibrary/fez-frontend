@@ -683,13 +683,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }];
     }) 
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'workshistory'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'workshistory', dateFrom: '.*', dateTo: '.*'}).apiUrl))
     )
     .reply(200, { data: {...mockData.adminDashboardReportWorksData} })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'systemalertlog'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'systemalertlog', dateFrom: '.*', dateTo: '.*', alertId: '.*'}).apiUrl))
     )
-    .reply(200, { data: {...mockData.adminDashboardReportSystemAlertsData} });
+    .reply(200, { data: {...mockData.adminDashboardReportSystemAlertsData}});
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)

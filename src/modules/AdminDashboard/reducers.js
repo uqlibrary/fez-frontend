@@ -22,3 +22,43 @@ export const quickLinksActionReducer = (_, action) => {
             return { ...emptyQuickLinksActionState };
     }
 };
+
+export const emptyReportActionState = {
+    type: 'none',
+    exportReport: null,
+    displayReport: null,
+    fromDate: null,
+    toDate: null,
+    systemAlertId: '',
+};
+export const reportActionReducer = (state, action) => {
+    switch (action.type) {
+        case 'exportReport':
+            return {
+                ...state,
+                exportReport: action.value,
+            };
+        case 'displayReport':
+            return {
+                ...state,
+                displayReport: action.value,
+            };
+        case 'fromDate':
+            return {
+                ...state,
+                fromDate: action.value,
+            };
+        case 'toDate':
+            return {
+                ...state,
+                toDate: action.value,
+            };
+        case 'systemAlertId':
+            return {
+                ...state,
+                systemAlertId: action.value,
+            };
+        default:
+            return { ...emptyReportActionState };
+    }
+};

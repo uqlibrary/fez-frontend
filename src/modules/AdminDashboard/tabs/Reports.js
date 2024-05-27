@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 // import PropTypes from 'prop-types';
 
 import moment from 'moment';
@@ -21,6 +21,7 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/components';
+import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 
 import * as actions from 'actions';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
@@ -101,14 +102,11 @@ const Reports = () => {
 
     const dispatch = useDispatch();
 
-    const [exportReport, setExportReport] = React.useState(null);
-    const [displayReport, setDisplayReport] = React.useState(null);
-    const [fromDate, setFromDate] = React.useState(null);
-    const [toDate, setToDate] = React.useState(null);
-    const [systemAlertId, setSystemAlertId] = React.useState('');
+    const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
         adminDashboardDisplayReportData,
+        adminDashboardDisplayReportDataType,
         adminDashboardDisplayReportLoading,
         adminDashboardDisplayReportError,
     } = useSelector(state => state.get('adminDashboardDisplayReportReducer'));
@@ -118,21 +116,26 @@ const Reports = () => {
 
     const { isValid, fromDateError, toDateError, systemAlertError } = useValidateReport({
         locale: txt.error,
-        displayReport: displayReport?.value,
-        fromDate,
-        toDate,
-        systemAlertId,
+        displayReport: actionState.displayReport?.value,
+        fromDate: actionState.fromDate,
+        toDate: actionState.toDate,
+        systemAlertId: actionState.systemAlertId,
     });
 
     const columns = React.useMemo(() => {
-        return !!displayReport ? getColumns(txt, displayReport.value) : [];
+        if (!!actionState.displayReport) {
+            return getColumns(txt, actionState.displayReport.value);
+        } else if (!!adminDashboardDisplayReportDataType) {
+            return getColumns(txt, adminDashboardDisplayReportDataType);
+        }
+        return [];
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [displayReport]);
+    }, [actionState.displayReport]);
 
     const handleExportReportClick = () => {
         dispatch(
             actions.loadAdminDashboardExportReport({
-                id: exportReport.value,
+                id: actionState.exportReport.value,
                 export_to: 'excel',
             }),
         )
@@ -147,7 +150,7 @@ const Reports = () => {
     const handleExportDisplayReportClick = () => {
         const fname = getFileName('xlsx');
         const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
-        const sheetLabel = displayReport.label;
+        const sheetLabel = actionState.displayReport.label;
 
         exportReportToExcel(fname, sheetLabel, colHeaders, adminDashboardDisplayReportData);
     };
@@ -155,17 +158,19 @@ const Reports = () => {
     const handleDisplayReportClick = () => {
         if (isValid) {
             const request = {
-                id: displayReport.value,
-                ...(!!fromDate ? { dateFrom: fromDate } : {}),
-                ...(!!toDate ? { dateTo: toDate } : {}),
-                ...(displayReport.value === 'systemalertlog' && !!systemAlertId ? { alertId: systemAlertId } : {}),
+                id: actionState.displayReport.value,
+                ...(!!actionState.fromDate ? { dateFrom: actionState.fromDate } : {}),
+                ...(!!actionState.toDate ? { dateTo: actionState.toDate } : {}),
+                ...(actionState.displayReport.value === 'systemalertlog' && !!actionState.systemAlertId
+                    ? { alertId: actionState.systemAlertId }
+                    : {}),
             };
             dispatch(actions.loadAdminDashboardDisplayReport(request));
         }
     };
 
     const handleDisplayReportChange = value => {
-        setDisplayReport(value);
+        actionDispatch({ type: 'displayReport', value });
         dispatch(actions.clearAdminDashboardDisplayReport());
     };
 
@@ -209,8 +214,8 @@ const Reports = () => {
                                 'data-analyticsid': `${reportExportOnlyId}-options`,
                                 'data-testid': `${reportExportOnlyId}-options`,
                             }}
-                            value={exportReport}
-                            onChange={(_, value) => setExportReport(value)}
+                            value={actionState.exportReport}
+                            onChange={(_, value) => actionDispatch({ type: 'exportReport', value })}
                             disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
                         />
                     </Grid>
@@ -221,7 +226,7 @@ const Reports = () => {
                             variant="contained"
                             onClick={handleExportReportClick}
                             disabled={
-                                !!!exportReport ||
+                                !!!actionState.exportReport ||
                                 adminDashboardExportReportLoading ||
                                 adminDashboardDisplayReportLoading
                             }
@@ -278,10 +283,10 @@ const Reports = () => {
                                     'data-analyticsid': `${reportDisplayExportId}-options`,
                                     'data-testid': `${reportDisplayExportId}-options`,
                                 }}
-                                value={displayReport}
+                                value={actionState.displayReport}
                                 onChange={(_, value) => handleDisplayReportChange(value)}
                             />
-                            {displayReport?.value === 'systemalertlog' && (
+                            {actionState.displayReport?.value === 'systemalertlog' && (
                                 <TextField
                                     label={txt.label.systemId}
                                     variant="standard"
@@ -295,9 +300,11 @@ const Reports = () => {
                                         'data-testid': 'report-display-system-alert-id-label',
                                     }}
                                     sx={{ mt: 1 }}
-                                    // eslint-disable-next-line react/prop-types
-                                    onChange={props => setSystemAlertId(props.target.value)}
-                                    value={systemAlertId}
+                                    onChange={props =>
+                                        // eslint-disable-next-line react/prop-types
+                                        actionDispatch({ type: 'systemAlertId', value: props.target.value })
+                                    }
+                                    value={actionState.systemAlertId}
                                     helperText={systemAlertError}
                                     error={!!systemAlertError}
                                 />
@@ -314,7 +321,7 @@ const Reports = () => {
                                     'data-analyticsid': 'report-display-date-from-input',
                                 }}
                                 label={txt.label.dateFrom}
-                                value={fromDate}
+                                value={actionState.fromDate}
                                 renderInput={params => (
                                     <TextField
                                         {...params}
@@ -326,11 +333,13 @@ const Reports = () => {
                                     />
                                 )}
                                 // eslint-disable-next-line react/prop-types
-                                onChange={props => setFromDate(!!props ? moment(props).format() : null)}
+                                onChange={props =>
+                                    actionDispatch({ type: 'fromDate', value: !!props ? moment(props).format() : null })
+                                }
                                 defaultValue=""
                                 disableFuture
-                                maxDate={toDate}
-                                disabled={!!!displayReport}
+                                maxDate={actionState.toDate}
+                                disabled={!!!actionState.displayReport}
                             />
                         </Grid>
                         <Grid item xs={12} sm={4}>
@@ -344,23 +353,25 @@ const Reports = () => {
                                     'data-analyticsid': 'report-display-date-to-input',
                                 }}
                                 label={txt.label.dateTo}
-                                value={toDate}
+                                value={actionState.toDate}
                                 renderInput={params => (
                                     <TextField
                                         {...params}
                                         variant="standard"
                                         fullWidth
                                         error={!!toDateError}
-                                        required={!!fromDate}
+                                        required={!!actionState.fromDate}
                                         helperText={toDateError}
                                     />
                                 )}
                                 // eslint-disable-next-line react/prop-types
-                                onChange={props => setToDate(!!props ? moment(props).format() : null)}
+                                onChange={props =>
+                                    actionDispatch({ type: 'toDate', value: !!props ? moment(props).format() : null })
+                                }
                                 defaultValue=""
                                 disableFuture
-                                minDate={fromDate}
-                                disabled={!!!displayReport}
+                                minDate={actionState.fromDate}
+                                disabled={!!!actionState.displayReport}
                             />
                         </Grid>
                         <Grid item xs={12}>
