@@ -16,7 +16,7 @@ const handlers = {
         ...initialState,
         adminDashboardConfigLoading: false,
         adminDashboardConfigSuccess: true,
-        adminDashboardConfigData: action.payload,
+        adminDashboardConfigData: action.payload.data,
     }),
     [actions.ADMIN_DASHBOARD_CONFIG_FAILED]: (_, action) => ({
         ...initialState,

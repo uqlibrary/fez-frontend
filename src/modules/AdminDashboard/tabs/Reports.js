@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-import React, { useReducer } from 'react';
+import React from 'react';
 // import PropTypes from 'prop-types';
 
 import moment from 'moment';
-import * as XLSX from 'xlsx';
-import { saveAs } from 'file-saver';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -15,45 +12,27 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
-import Typography from '@mui/material/Typography';
 
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/components';
 
 import * as actions from 'actions';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import { DEFAULT_DATE_FORMAT } from '../config';
-
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { DEFAULT_DATE_FORMAT, optionDoubleRowRender } from '../config';
+import { useValidateReport } from '../hooks';
+import { exportReportToExcel } from '../utils';
 
 import SectionTitle from '../components/SectionTitle';
 
 const reportExportOnlyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
-
-const optionDoubleRowRender = (props, option) => (
-    <li
-        {...props}
-        style={{
-            flexDirection: 'column',
-            justifyContent: 'left',
-            alignItems: 'flex-start',
-            fontWeight: 400,
-        }}
-    >
-        <Typography variant="body1" color="textPrimary">
-            {option.label}
-        </Typography>
-        <Typography variant="body1" color="textSecondary">
-            {option.subtext}
-        </Typography>
-    </li>
-);
 
 const getColumns = (locale, report) => {
     const txt = locale.columns[report];
@@ -126,8 +105,6 @@ const Reports = () => {
     const [displayReport, setDisplayReport] = React.useState(null);
     const [fromDate, setFromDate] = React.useState(null);
     const [toDate, setToDate] = React.useState(null);
-    const [fromDateError, setFromDateError] = React.useState('');
-    const [toDateError, setToDateError] = React.useState('');
     const [systemAlertId, setSystemAlertId] = React.useState('');
 
     const {
@@ -139,30 +116,13 @@ const Reports = () => {
         state.get('adminDashboardExportReportReducer'),
     );
 
-    const isValid = React.useMemo(() => {
-        if (!!displayReport) {
-            setFromDateError('');
-            setToDateError('');
-            if (!!!fromDate && !!!toDate) return true;
-            const mFrom = moment(fromDate);
-            const mTo = moment(toDate);
-            if (mFrom.isValid() && !mTo.isValid()) {
-                setToDateError(txt.error.required);
-                return false;
-            } else if (mTo.isValid() && !mFrom.isValid()) {
-                setFromDateError(txt.error.required);
-                return false;
-            } else if (mFrom.isValid() && mTo.isValid()) {
-                if (!mFrom.isSameOrBefore(mTo)) {
-                    setFromDateError(txt.error.dateNotAfter);
-                    return false;
-                } else return true;
-            }
-            return false;
-        }
-        return false;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [displayReport, fromDate, toDate]);
+    const { isValid, fromDateError, toDateError, systemAlertError } = useValidateReport({
+        locale: txt.error,
+        displayReport: displayReport?.value,
+        fromDate,
+        toDate,
+        systemAlertId,
+    });
 
     const columns = React.useMemo(() => {
         return !!displayReport ? getColumns(txt, displayReport.value) : [];
@@ -177,7 +137,7 @@ const Reports = () => {
             }),
         )
             .then(() => {
-                //! adminDashboardExportReportError && dispatch(actions.clearAdminDashboardExportReport());
+                !adminDashboardExportReportError && dispatch(actions.clearAdminDashboardExportReport());
             })
             .catch(error => {
                 console.error(error);
@@ -185,16 +145,11 @@ const Reports = () => {
     };
 
     const handleExportDisplayReportClick = () => {
-        const worksheet = XLSX.utils.json_to_sheet(adminDashboardDisplayReportData);
-        const workbook = XLSX.utils.book_new();
-        const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
-        XLSX.utils.sheet_add_aoa(worksheet, [colHeaders], {
-            origin: 'A1',
-        });
-        XLSX.utils.book_append_sheet(workbook, worksheet, displayReport.label);
-
         const fname = getFileName('xlsx');
-        XLSX.writeFileXLSX(workbook, fname);
+        const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
+        const sheetLabel = displayReport.label;
+
+        exportReportToExcel(fname, sheetLabel, colHeaders, adminDashboardDisplayReportData);
     };
 
     const handleDisplayReportClick = () => {
@@ -343,6 +298,8 @@ const Reports = () => {
                                     // eslint-disable-next-line react/prop-types
                                     onChange={props => setSystemAlertId(props.target.value)}
                                     value={systemAlertId}
+                                    helperText={systemAlertError}
+                                    error={!!systemAlertError}
                                 />
                             )}
                         </Grid>

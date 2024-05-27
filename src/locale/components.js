@@ -178,6 +178,7 @@ export default {
                     general: 'An error occurred while retrieving the report.',
                     required: 'Required',
                     dateNotAfter: 'Must not be after "to" date',
+                    systemAlertId: 'Must be a positive whole number',
                 },
                 options: {
                     export: [

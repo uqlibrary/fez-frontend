@@ -32,12 +32,6 @@ const QuickLinkContainer = ({ locale }) => {
         adminDashboardQuickLinksUpdating,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
-    const clear = () => {
-        actionDispatch({
-            type: 'CLEAR',
-        });
-    };
-
     useEffect(() => {
         if (!adminDashboardQuickLinksSuccess && (adminDashboardQuickLinksData?.length ?? 0) === 0) {
             dispatch(actions.loadAdminDashboardQuickLinks());
@@ -46,6 +40,12 @@ const QuickLinkContainer = ({ locale }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [adminDashboardQuickLinksData, adminDashboardQuickLinksSuccess]);
+
+    const clear = () => {
+        actionDispatch({
+            type: 'CLEAR',
+        });
+    };
 
     const handleReordering = data => {
         const request = transformQuickLinkReorderRequest(data);

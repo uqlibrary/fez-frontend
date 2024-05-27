@@ -19,8 +19,10 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { DEFAULT_DATE_FORMAT } from '../config';
-import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 import { transformSystemAlertRequest } from '../transformers';
+import { useSystemAlertDrawer } from '../hooks';
+
+import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 
 const columns = (locale, users) => {
     const alertStatus = locale.alertStatus;
@@ -58,6 +60,7 @@ const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.systemalerts;
 
     const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
+
     const {
         adminDashboardSystemAlertsData,
         adminDashboardSystemAlertsLoading,
@@ -67,8 +70,7 @@ const SystemAlerts = () => {
 
     const dispatch = useDispatch();
 
-    const [open, setOpen] = React.useState(false);
-    const [row, setRow] = React.useState(null);
+    const { open, row, openDrawer, closeDrawer } = useSystemAlertDrawer();
 
     React.useEffect(() => {
         dispatch(actions.loadAdminDashboardSystemAlerts());
@@ -76,11 +78,10 @@ const SystemAlerts = () => {
     }, []);
 
     const handleRowClick = params => {
-        setRow(params.row);
-        setOpen(true);
+        openDrawer(params.row);
     };
     const handleCloseDrawer = () => {
-        setOpen(false);
+        closeDrawer();
     };
     const handleSystemAlertUpdate = (action, row) => {
         const wrappedRequest = transformSystemAlertRequest(action, row);
