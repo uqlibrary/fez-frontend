@@ -60,7 +60,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10091,
@@ -496,7 +495,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": {
 			"rek_advisory_statement": "This is an example advisory statement"
 		},
@@ -1000,7 +998,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [],
 		"fez_record_search_key_architect_name": [],
@@ -1382,7 +1379,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10066,
@@ -1794,7 +1790,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10067,
@@ -2272,7 +2267,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10068,
@@ -2750,7 +2744,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10069,
@@ -3162,7 +3155,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [],
 		"fez_record_search_key_architect_name": [],
@@ -3544,7 +3536,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10070,
@@ -3950,7 +3941,6 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10071,
@@ -4404,7 +4394,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10072,
@@ -4858,7 +4848,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10073,
@@ -5348,7 +5338,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10074,
@@ -5814,7 +5804,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10075,
@@ -6250,7 +6240,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10076,
@@ -6710,7 +6700,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10077,
@@ -7122,7 +7112,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10078,
@@ -7510,7 +7500,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10079,
@@ -7922,7 +7912,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10080,
@@ -8316,7 +8306,7 @@ export default {
 		"rek_security_policy": 1,
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
-		"fez_record_search_key_additional_notes": null,
+		
 		"fez_record_search_key_advisory_statement": null,
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10081,
