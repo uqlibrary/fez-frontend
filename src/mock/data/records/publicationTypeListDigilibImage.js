@@ -59,7 +59,7 @@ export default {
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": null,
-            "fez_record_search_key_additional_notes": null,
+            
             "fez_record_search_key_alternative_title": [{
                 "rek_alternative_title_id": 9633,
                 "rek_alternative_title_pid": "UQ:108093",
@@ -652,7 +652,7 @@ export default {
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": null,
-            "fez_record_search_key_additional_notes": null,
+            
             "fez_record_search_key_alternative_title": [],
             "fez_record_search_key_architect_name": [],
             "fez_record_search_key_architect_id": [],

@@ -569,7 +569,7 @@ export class AddDataCollection extends Component {
                                         <Grid xs={12}>
                                             <Field
                                                 component={TextField}
-                                                name="fez_record_search_key_additional_notes.rek_additional_notes"
+                                                name="fez_record_search_key_notes.rek_notes"
                                                 textFieldId="rek-additional-notes"
                                                 type="text"
                                                 disabled={this.props.submitting}

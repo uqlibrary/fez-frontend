@@ -52,7 +52,7 @@ export default {
         "rek_datastream_policy": null,
         "fez_record_search_key_advisory_statement": null,
         "fez_record_search_key_article_number": null,
-        "fez_record_search_key_additional_notes": null,
+        
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
         "fez_record_search_key_author": [
