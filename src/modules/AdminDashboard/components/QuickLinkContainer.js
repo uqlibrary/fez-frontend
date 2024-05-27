@@ -23,7 +23,6 @@ import QuickLinkAdmin from './QuickLinkAdmin';
 const QuickLinkContainer = ({ locale }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
-
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
@@ -33,12 +32,6 @@ const QuickLinkContainer = ({ locale }) => {
         adminDashboardQuickLinksUpdating,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
-    const clear = () => {
-        actionDispatch({
-            type: 'CLEAR',
-        });
-    };
-
     useEffect(() => {
         if (!adminDashboardQuickLinksSuccess && (adminDashboardQuickLinksData?.length ?? 0) === 0) {
             dispatch(actions.loadAdminDashboardQuickLinks());
@@ -47,6 +40,12 @@ const QuickLinkContainer = ({ locale }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [adminDashboardQuickLinksData, adminDashboardQuickLinksSuccess]);
+
+    const clear = () => {
+        actionDispatch({
+            type: 'CLEAR',
+        });
+    };
 
     const handleReordering = data => {
         const request = transformQuickLinkReorderRequest(data);

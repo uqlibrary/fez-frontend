@@ -125,7 +125,7 @@
         "@mui/system": "^5.14.8",
         "@mui/x-charts": "^7.1.1",
         "@mui/x-data-grid": "^7.3.0",
-        "@mui/x-date-pickers": "^5.0.15",
+        "@mui/x-date-pickers": "^5.0.20",
         "@react-google-maps/api": "^2.19.2",
         "@sentry/react": "^7.107.0",
         "axios": "^1.6.8",
@@ -174,7 +174,8 @@
         "regenerator-runtime": "^0.13.9",
         "save": "^2.9.0",
         "throttle-debounce": "^5.0.0",
-        "timezones.json": "^1.2.1"
+        "timezones.json": "^1.2.1",
+        "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
     },
     "optionalDependencies": {
         "fsevents": "^2.3.0"

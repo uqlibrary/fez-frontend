@@ -94,6 +94,10 @@ export default {
                             link: 'Link',
                         },
                     },
+                    error: {
+                        title: 'Error',
+                        updating: 'An error occurred updating the quick link data.',
+                    },
                 },
                 loading: {
                     message: 'Loading dashboard...',
@@ -109,7 +113,6 @@ export default {
                     noconfig: 'No config available',
                 },
                 updating: 'Updating...',
-                updateFailed: 'Failed to update list.',
                 columns: {
                     createdDate: 'Created',
                     topic: 'Topic',
@@ -127,6 +130,98 @@ export default {
                     UNASSIGNED: 'Unassigned',
                     UNKNOWN: 'Unknown',
                 },
+                error: {
+                    title: 'Error',
+                    general: 'An error occurred while retrieving system alert data.',
+                    updateFailed: 'An error occurred updating the system alert data.',
+                },
+            },
+            reports: {
+                exportTitle: 'Export-only reports',
+                displayTitle: 'Display reports',
+                loading: {
+                    config: 'Loading config data...',
+                    nodata: 'No data available',
+                    noconfig: 'No config available',
+                },
+                label: {
+                    report: 'Report',
+                    systemId: 'System alert ID',
+                    dateFrom: 'From',
+                    dateTo: 'To',
+                    runReport: 'Run report',
+                    export: 'Export',
+                    exportReport: 'Export report',
+                    helperText: 'Report will download direct to your device',
+                },
+                columns: {
+                    workshistory: {
+                        dateCreated: 'Date created',
+                        pid: 'PID',
+                        workType: 'Work type',
+                        user: 'User',
+                        action: 'Action',
+                    },
+                    systemalertlog: {
+                        dateCreated: 'Date created',
+                        title: 'Title',
+                        assignedTo: 'Assigned to',
+                        assignedDate: 'Date assigned',
+                        resolvedBy: 'Resolved by',
+                        resolvedDate: 'Date resolved',
+                        content: 'Description',
+                        link: 'Link',
+                    },
+                },
+                error: {
+                    title: 'Error',
+                    general: 'An error occurred while retrieving the report.',
+                    required: 'Required',
+                    dateNotAfter: 'Must not be after "to" date',
+                    systemAlertId: 'Must be a positive whole number',
+                },
+                options: {
+                    export: [
+                        {
+                            value: 1,
+                            label: 'Wok ID dups',
+                            subtext:
+                                'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
+                        },
+                        {
+                            value: 2,
+                            label: 'Scopus ID Dups',
+                            subtext:
+                                'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
+                        },
+                        {
+                            value: 3,
+                            label: 'DOI Dups',
+                            subtext:
+                                'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
+                        },
+                        {
+                            value: 4,
+                            label: 'UQ Incites Authors',
+                            subtext: 'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
+                        },
+                    ],
+                    display: [
+                        {
+                            value: 'workshistory',
+                            label: 'Works history',
+                        },
+                        {
+                            value: 'systemalertlog',
+                            label: 'System alert log',
+                        },
+                    ],
+                },
+            },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
             },
         },
         publicationsList: {

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 
 import Today from './tabs/Today';
 import SystemAlerts from './tabs/SystemAlerts';
@@ -48,3 +49,24 @@ export const VIEWMODES = {
 };
 export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DELETE];
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
+
+export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
+
+export const optionDoubleRowRender = (props, option) => (
+    <li
+        {...props}
+        style={{
+            flexDirection: 'column',
+            justifyContent: 'left',
+            alignItems: 'flex-start',
+            fontWeight: 400,
+        }}
+    >
+        <Typography variant="body1" color="textPrimary">
+            {option.label}
+        </Typography>
+        <Typography variant="body1" color="textSecondary">
+            {option.subtext}
+        </Typography>
+    </li>
+);

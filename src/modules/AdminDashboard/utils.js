@@ -1,5 +1,7 @@
 // import React from 'react';
 
+import * as XLSX from 'xlsx';
+
 export const stringToColour = string => {
     let hash = 0;
     let i;
@@ -70,4 +72,16 @@ export const filterObjectProps = (data, propsToKeep) => {
         if (!propsToKeep.includes(key)) delete obj[key];
     });
     return obj;
+};
+
+export const exportReportToExcel = (fname, sheetName, headers, data) => {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    !!headers &&
+        XLSX.utils.sheet_add_aoa(worksheet, [headers], {
+            origin: 'A1',
+        });
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+    return XLSX.writeFileXLSX(workbook, fname);
 };

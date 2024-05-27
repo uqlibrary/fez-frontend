@@ -627,3 +627,20 @@ export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
 export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
     apiUrl: 'dashboard/systemalerts',
 });
+
+export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ id }) => {
+    return {
+        apiUrl: `dashboard/legacyreport?id=${id}`,
+    };
+};
+
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ id, dateFrom, dateTo, alertId }) => {
+    const request = { id, dateFrom, dateTo, alertId };
+    const query = Object.keys(request)
+        .map(key => key + '=' + encodeURIComponent(request[key]))
+        .join('&');
+
+    return {
+        apiUrl: `dashboard/report?${query}`,
+    };
+};
