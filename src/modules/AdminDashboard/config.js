@@ -1,26 +1,5 @@
 import React from 'react';
-
-import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-
-import Today from './tabs/Today';
-import SystemAlerts from './tabs/SystemAlerts';
-import Reports from './tabs/Reports';
-
-export const tabs = [
-    { id: 0, title: 'TODAY', component: <Today /> },
-    { id: 1, title: 'SYSTEM ALERTS', component: <SystemAlerts /> },
-    { id: 2, title: 'REPORTS', component: <Reports /> },
-];
-
-export const tabProps = [
-    {
-        id: 1,
-        render: count => {
-            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
-        },
-    },
-];
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 

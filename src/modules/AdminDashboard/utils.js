@@ -45,7 +45,7 @@ export const abbreviateNumber = (number, decPlaces) => {
         }
     }
 
-    return _number;
+    return `${_number}`;
 };
 
 export const arrayMove = (data, fromIndex, toIndex) => {
@@ -74,7 +74,7 @@ export const filterObjectProps = (data, propsToKeep) => {
     return obj;
 };
 
-export const exportReportToExcel = (fname, sheetName, headers, data) => {
+export const exportReportToExcel = (fname, sheetName, headers, data, testing = false) => {
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
     !!headers &&
@@ -82,6 +82,8 @@ export const exportReportToExcel = (fname, sheetName, headers, data) => {
             origin: 'A1',
         });
     XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
-
-    return XLSX.writeFileXLSX(workbook, fname);
+    if (!testing) {
+        XLSX.writeFileXLSX(workbook, fname);
+    }
+    return true;
 };

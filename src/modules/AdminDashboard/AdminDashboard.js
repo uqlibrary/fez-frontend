@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
-import * as adminDashboardConfig from './config';
 import * as actions from 'actions';
 
 import Tabs from '@mui/material/Tabs';
@@ -13,6 +12,26 @@ import locale from 'locale/components';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+
+import Today from './tabs/Today';
+import SystemAlerts from './tabs/SystemAlerts';
+import Reports from './tabs/Reports';
+import Chip from '@mui/material/Chip';
+
+export const tabProps = [
+    {
+        id: 1,
+        render: count => {
+            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
+        },
+    },
+];
+
+export const tabsConfig = [
+    { id: 0, title: 'TODAY', component: <Today /> },
+    { id: 1, title: 'SYSTEM ALERTS', component: <SystemAlerts /> },
+    { id: 2, title: 'REPORTS', component: <Reports /> },
+];
 
 const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
     <div
@@ -79,21 +98,21 @@ const AdminDashboard = () => {
             {!!adminDashboardConfigData && (
                 <>
                     <Tabs value={activeTab} onChange={handleChange} aria-label="admin dashboard tabbed interface">
-                        {adminDashboardConfig.tabs.map(tab => {
+                        {tabsConfig.map(tab => {
                             return (
                                 <Tab
                                     key={tab.title}
                                     label={tab.title}
                                     sx={{ minHeight: 'auto' }}
                                     {...a11yProps(tab.id)}
-                                    {...adminDashboardConfig.tabProps
+                                    {...tabProps
                                         .find(_tab => _tab.id === tab.id)
                                         ?.render(adminDashboardTodayData?.systemalerts?.mine)}
                                 />
                             );
                         })}
                     </Tabs>
-                    {adminDashboardConfig.tabs.map(tab => (
+                    {tabsConfig.map(tab => (
                         <CustomTabPanel key={tab.id} value={activeTab} index={tab.id}>
                             {tab.component}
                         </CustomTabPanel>
