@@ -216,6 +216,7 @@ export default {
                 height: 100,
                 format: value => Immutable.Map(value),
                 richEditorId: 'rek-description',
+                textOnlyOnPaste: false,
             },
         },
         rek_date: {
