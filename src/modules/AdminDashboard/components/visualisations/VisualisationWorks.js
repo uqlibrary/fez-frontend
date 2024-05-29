@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer';
-import { ChartsText } from '@mui/x-charts/ChartsText';
-import { PiePlot } from '@mui/x-charts/PieChart';
+import { ResponsiveChartContainer, ChartsText, PiePlot } from '@mui/x-charts';
 
 import debounce from 'debounce-promise';
 

@@ -57,7 +57,7 @@ const columns = (locale, users) => {
 };
 
 const SystemAlerts = () => {
-    const txt = locale.components.adminDashboard.systemalerts;
+    const txt = locale.components.adminDashboard.tabs.systemalerts;
 
     const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
 

@@ -22,22 +22,22 @@ export const tabProps = [
     {
         id: 1,
         render: count => {
-            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
+            return count
+                ? {
+                      icon: <Chip color="error" label={count} size="small" data-testid={`tab-counter-${count}`} />,
+                      iconPosition: 'end',
+                  }
+                : {};
         },
     },
 ];
 
-export const tabsConfig = [
-    { id: 0, title: 'TODAY', component: <Today /> },
-    { id: 1, title: 'SYSTEM ALERTS', component: <SystemAlerts /> },
-    { id: 2, title: 'REPORTS', component: <Reports /> },
-];
-
-const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
+export const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
     <div
         role="tabpanel"
         hidden={value !== index}
         id={`admin-dashboard-tabs-${index}`}
+        data-testid={`admin-dashboard-tabs-${index}`}
         aria-labelledby={`admin-dashboard-tab-${index}`}
         {...rest}
     >
@@ -56,6 +56,7 @@ const a11yProps = index => ({
 });
 
 const AdminDashboard = () => {
+    const txt = locale.components.adminDashboard;
     const dispatch = useDispatch();
     const [activeTab, setActiveTab] = React.useState(0);
     const {
@@ -65,25 +66,29 @@ const AdminDashboard = () => {
         adminDashboardConfigError,
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
-    React.useEffect(() => {
-        if (!adminDashboardConfigError && !adminDashboardConfigSuccess && !adminDashboardConfigLoading) {
-            dispatch(actions.loadAdminDashboardConfig())
-                .then(() => {
-                    dispatch(actions.loadAdminDashboardToday());
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        }
-    }, [adminDashboardConfigError, adminDashboardConfigLoading, adminDashboardConfigSuccess, dispatch]);
-
+    if (!adminDashboardConfigError && !adminDashboardConfigSuccess && !adminDashboardConfigLoading) {
+        dispatch(actions.loadAdminDashboardConfig())
+            .then(() => {
+                dispatch(actions.loadAdminDashboardToday());
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
     const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardTodayReducer'));
+
+    const tabsConfig = React.useMemo(() => {
+        return [
+            { id: 0, title: txt.tabs.today.tabLabel, component: <Today /> },
+            { id: 1, title: txt.tabs.systemalerts.tabLabel, component: <SystemAlerts /> },
+            { id: 2, title: txt.tabs.reports.tabLabel, component: <Reports /> },
+        ];
+    }, [txt]);
 
     const handleChange = (event, newActiveTab) => {
         setActiveTab(newActiveTab);
     };
 
-    const txt = locale.components.adminDashboard;
     return (
         <StandardPage title={txt.title}>
             {adminDashboardConfigLoading && <InlineLoader message={txt.loading.config} />}

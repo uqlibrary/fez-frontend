@@ -837,9 +837,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
         },
     })
     .onPost(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
-    .reply(() => [200, { status: 'OK' }])
+    .reply(() => [201, {}])
     .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
-    .reply(() => [200, { status: 'OK' }]);
+    .reply(() => [201, {}]);
     
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
@@ -879,10 +879,10 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
     //.reply(500, { message: ['error - failed to save quicklink update'] })
-    .reply(200, { status: 'OK' })
+    .reply(201, {})
 
     .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({row: '.*'}).apiUrl)))
-    .reply(200, { status: 'OK' })
+    .reply(201, {})
 
     .onAny()
     .reply(config => {

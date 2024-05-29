@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer';
-import { BarPlot } from '@mui/x-charts/BarChart';
+import { ResponsiveChartContainer, BarPlot } from '@mui/x-charts';
 
 const VisualisationSystemAlerts = ({
     assigned,

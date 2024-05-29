@@ -22,7 +22,7 @@ import VisualisationWorks from '../components/visualisations/VisualisationWorks'
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
 
 const Today = () => {
-    const txt = locale.components.adminDashboard.today;
+    const txt = locale.components.adminDashboard.tabs.today;
 
     const { adminDashboardTodayData, adminDashboardTodayLoading, adminDashboardTodaySuccess } = useSelector(state =>
         state.get('adminDashboardTodayReducer'),

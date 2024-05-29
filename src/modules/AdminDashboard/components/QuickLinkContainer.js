@@ -100,7 +100,6 @@ const QuickLinkContainer = ({ locale }) => {
 
     const handleAdminSubmitClick = item => {
         const request = structuredClone(item);
-
         dispatch(actions.adminDashboardQuickLink(request, actionState.action))
             .then(() => {
                 clear();

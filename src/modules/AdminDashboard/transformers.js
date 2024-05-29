@@ -9,7 +9,7 @@ export const transformSystemAlertRequest = (action, row) => {
 };
 
 export const transformQuickLinkReorderRequest = data => {
-    const keys = ['id', 'order'];
+    const keys = ['qlk_id', 'qlk_order'];
     const request = data.map(row => filterObjectProps(row, keys));
     return request;
 };

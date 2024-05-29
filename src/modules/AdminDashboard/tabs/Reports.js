@@ -98,7 +98,7 @@ const getColumns = (locale, report) => {
 };
 
 const Reports = () => {
-    const txt = locale.components.adminDashboard.reports;
+    const txt = locale.components.adminDashboard.tabs.reports;
 
     const dispatch = useDispatch();
 

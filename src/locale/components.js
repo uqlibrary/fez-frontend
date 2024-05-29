@@ -23,199 +23,205 @@ export default {
     components: {
         adminDashboard: {
             title: 'Admin dashboard',
-            today: {
-                systemalerts: {
-                    title: 'System Alerts',
-                    total: { label: 'Total' },
-                    today: {
-                        label: 'New today',
-                    },
-                    assigned: {
-                        label: 'Assigned',
-                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
-                    },
-                    unassigned: {
-                        label: 'Unassigned',
-                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
-                    },
-                },
-                works: {
-                    unprocessed: 'Unprocessed Works',
-                    unprocessedSubText: 'view',
-                    processed: 'Processed Works',
-                    processedSubText: 'this iteration',
-                },
-                openaccess: {
-                    researchOutput: {
-                        title: 'OA Status',
-                        subText: 'of research output',
-                        chart: {
-                            text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
-                            subtext: total => `of ${total} records`,
+            tabs: {
+                today: {
+                    tabLabel: 'TODAY',
+                    systemalerts: {
+                        title: 'System Alerts',
+                        total: { label: 'Total' },
+                        today: {
+                            label: 'New today',
+                        },
+                        assigned: {
+                            label: 'Assigned',
+                            suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
+                        },
+                        unassigned: {
+                            label: 'Unassigned',
+                            suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
                         },
                     },
-                },
-                quicklinks: {
-                    title: 'Quick Links ',
-                    addLinkText: '+ add',
+                    works: {
+                        unprocessed: 'Unprocessed Works',
+                        unprocessedSubText: 'view',
+                        processed: 'Processed Works',
+                        processedSubText: 'this iteration',
+                    },
+                    openaccess: {
+                        researchOutput: {
+                            title: 'OA Status',
+                            subText: 'of research output',
+                            chart: {
+                                text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
+                                subtext: total => `of ${total} records`,
+                            },
+                        },
+                    },
+                    quicklinks: {
+                        title: 'Quick Links ',
+                        addLinkText: '+ add',
+                        loading: {
+                            message: 'Loading quick links...',
+                            nodata: 'Add your first quick link using the "add" button',
+                        },
+                        link: {
+                            menu: {
+                                editLabel: 'Edit',
+                                deleteLabel: 'Delete',
+                                moveUpLabel: 'Move up',
+                                moveTopLabel: 'Move to top',
+                                moveDownLabel: 'Move down',
+                                moveBottomLabel: 'Move to bottom',
+                            },
+                        },
+                        admin: {
+                            add: {
+                                title: 'Add new quick link',
+                            },
+                            edit: {
+                                title: 'Edit ',
+                            },
+                            delete: {
+                                title: 'DELETE ',
+                            },
+                            button: {
+                                delete: 'Delete',
+                                save: 'Save',
+                                deleteBusy: 'Deleting...',
+                                saveBusy: 'Saving...',
+                                cancel: 'Cancel',
+                            },
+                            fields: {
+                                title: 'Title',
+                                link: 'Link',
+                            },
+                        },
+                        error: {
+                            title: 'Error',
+                            updating: 'An error occurred updating the quick link data.',
+                        },
+                    },
                     loading: {
-                        message: 'Loading quick links...',
-                        nodata: 'Add your first quick link using the "add" button',
+                        message: 'Loading dashboard...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
                     },
-                    link: {
-                        menu: {
-                            editLabel: 'Edit',
-                            deleteLabel: 'Delete',
-                            moveUpLabel: 'Move up',
-                            moveTopLabel: 'Move to top',
-                            moveDownLabel: 'Move down',
-                            moveBottomLabel: 'Move to bottom',
-                        },
+                },
+                systemalerts: {
+                    tabLabel: 'SYSTEM ALERTS',
+                    title: count => `${count} system alerts`,
+                    loading: {
+                        message: 'Loading system alerts...',
+                        nodata: 'No alerts available',
+                        noconfig: 'No config available',
                     },
-                    admin: {
-                        add: {
-                            title: 'Add new quick link',
+                    updating: 'Updating...',
+                    columns: {
+                        createdDate: 'Created',
+                        topic: 'Topic',
+                        status: 'Status',
+                    },
+                    drawer: {
+                        markResolved: 'Mark as resolved',
+                        updating: 'Updating...',
+                        alertId: 'Alert ID',
+                        received: 'Received',
+                        status: 'Status',
+                        statusHelpText: 'Assign a staff member to this issue',
+                    },
+                    alertStatus: {
+                        UNASSIGNED: 'Unassigned',
+                        UNKNOWN: 'Unknown',
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving system alert data.',
+                        updateFailed: 'An error occurred updating the system alert data.',
+                    },
+                },
+                reports: {
+                    tabLabel: 'REPORTS',
+                    exportTitle: 'Export-only reports',
+                    displayTitle: 'Display reports',
+                    loading: {
+                        config: 'Loading config data...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                    label: {
+                        report: 'Report',
+                        systemId: 'System alert ID',
+                        dateFrom: 'From',
+                        dateTo: 'To',
+                        runReport: 'Run report',
+                        export: 'Export',
+                        exportReport: 'Export report',
+                        helperText: 'Report will download direct to your device',
+                    },
+                    columns: {
+                        workshistory: {
+                            dateCreated: 'Date created',
+                            pid: 'PID',
+                            workType: 'Work type',
+                            user: 'User',
+                            action: 'Action',
                         },
-                        edit: {
-                            title: 'Edit ',
-                        },
-                        delete: {
-                            title: 'DELETE ',
-                        },
-                        button: {
-                            delete: 'Delete',
-                            save: 'Save',
-                            deleteBusy: 'Deleting...',
-                            saveBusy: 'Saving...',
-                            cancel: 'Cancel',
-                        },
-                        fields: {
+                        systemalertlog: {
+                            dateCreated: 'Date created',
                             title: 'Title',
+                            assignedTo: 'Assigned to',
+                            assignedDate: 'Date assigned',
+                            resolvedBy: 'Resolved by',
+                            resolvedDate: 'Date resolved',
+                            content: 'Description',
                             link: 'Link',
                         },
                     },
                     error: {
                         title: 'Error',
-                        updating: 'An error occurred updating the quick link data.',
+                        general: 'An error occurred while retrieving the report.',
+                        required: 'Required',
+                        dateNotAfter: 'Must not be after "to" date',
+                        systemAlertId: 'Must be a positive whole number',
                     },
-                },
-                loading: {
-                    message: 'Loading dashboard...',
-                    nodata: 'No data available',
-                    noconfig: 'No config available',
-                },
-            },
-            systemalerts: {
-                title: count => `${count} system alerts`,
-                loading: {
-                    message: 'Loading system alerts...',
-                    nodata: 'No alerts available',
-                    noconfig: 'No config available',
-                },
-                updating: 'Updating...',
-                columns: {
-                    createdDate: 'Created',
-                    topic: 'Topic',
-                    status: 'Status',
-                },
-                drawer: {
-                    markResolved: 'Mark as resolved',
-                    updating: 'Updating...',
-                    alertId: 'Alert ID',
-                    received: 'Received',
-                    status: 'Status',
-                    statusHelpText: 'Assign a staff member to this issue',
-                },
-                alertStatus: {
-                    UNASSIGNED: 'Unassigned',
-                    UNKNOWN: 'Unknown',
-                },
-                error: {
-                    title: 'Error',
-                    general: 'An error occurred while retrieving system alert data.',
-                    updateFailed: 'An error occurred updating the system alert data.',
-                },
-            },
-            reports: {
-                exportTitle: 'Export-only reports',
-                displayTitle: 'Display reports',
-                loading: {
-                    config: 'Loading config data...',
-                    nodata: 'No data available',
-                    noconfig: 'No config available',
-                },
-                label: {
-                    report: 'Report',
-                    systemId: 'System alert ID',
-                    dateFrom: 'From',
-                    dateTo: 'To',
-                    runReport: 'Run report',
-                    export: 'Export',
-                    exportReport: 'Export report',
-                    helperText: 'Report will download direct to your device',
-                },
-                columns: {
-                    workshistory: {
-                        dateCreated: 'Date created',
-                        pid: 'PID',
-                        workType: 'Work type',
-                        user: 'User',
-                        action: 'Action',
+                    options: {
+                        export: [
+                            {
+                                value: 1,
+                                label: 'Wok ID dups',
+                                subtext:
+                                    'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
+                            },
+                            {
+                                value: 2,
+                                label: 'Scopus ID Dups',
+                                subtext:
+                                    'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
+                            },
+                            {
+                                value: 3,
+                                label: 'DOI Dups',
+                                subtext:
+                                    'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
+                            },
+                            {
+                                value: 4,
+                                label: 'UQ Incites Authors',
+                                subtext:
+                                    'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
+                            },
+                        ],
+                        display: [
+                            {
+                                value: 'workshistory',
+                                label: 'Works history',
+                            },
+                            {
+                                value: 'systemalertlog',
+                                label: 'System alert log',
+                            },
+                        ],
                     },
-                    systemalertlog: {
-                        dateCreated: 'Date created',
-                        title: 'Title',
-                        assignedTo: 'Assigned to',
-                        assignedDate: 'Date assigned',
-                        resolvedBy: 'Resolved by',
-                        resolvedDate: 'Date resolved',
-                        content: 'Description',
-                        link: 'Link',
-                    },
-                },
-                error: {
-                    title: 'Error',
-                    general: 'An error occurred while retrieving the report.',
-                    required: 'Required',
-                    dateNotAfter: 'Must not be after "to" date',
-                    systemAlertId: 'Must be a positive whole number',
-                },
-                options: {
-                    export: [
-                        {
-                            value: 1,
-                            label: 'Wok ID dups',
-                            subtext:
-                                'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
-                        },
-                        {
-                            value: 2,
-                            label: 'Scopus ID Dups',
-                            subtext:
-                                'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
-                        },
-                        {
-                            value: 3,
-                            label: 'DOI Dups',
-                            subtext:
-                                'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
-                        },
-                        {
-                            value: 4,
-                            label: 'UQ Incites Authors',
-                            subtext: 'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
-                        },
-                    ],
-                    display: [
-                        {
-                            value: 'workshistory',
-                            label: 'Works history',
-                        },
-                        {
-                            value: 'systemalertlog',
-                            label: 'System alert log',
-                        },
-                    ],
                 },
             },
             loading: {

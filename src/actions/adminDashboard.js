@@ -24,7 +24,7 @@ export function loadAdminDashboardConfig() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_CONFIG_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
                 return Promise.resolve(response);
             })
@@ -52,7 +52,7 @@ export function loadAdminDashboardToday() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_TODAY_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -100,17 +100,10 @@ export function adminDashboardQuickLink(request, action) {
         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
         return verb(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
+                    payload: response,
+                });
                 return Promise.resolve(response);
             })
             .catch(error => {
@@ -157,17 +150,11 @@ export function adminDashboardSystemAlerts(request) {
         dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING });
         return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
+                    payload: response,
+                });
+
                 return Promise.resolve(response);
             })
             .catch(error => {

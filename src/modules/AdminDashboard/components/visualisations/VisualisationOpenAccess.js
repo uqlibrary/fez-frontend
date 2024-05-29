@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { GaugeContainer, GaugeValueArc, GaugeReferenceArc, useGaugeState, GaugeValueText } from '@mui/x-charts/Gauge';
+import { GaugeContainer, GaugeValueArc, GaugeReferenceArc, useGaugeState, GaugeValueText } from '@mui/x-charts';
 
 const GaugePointer = () => {
     const { valueAngle, outerRadius, cx, cy } = useGaugeState();
