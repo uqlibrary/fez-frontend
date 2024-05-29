@@ -101,11 +101,13 @@ const RichEditor = fieldProps => {
                 config={editorConfig}
                 data={getContent()}
                 onReady={editor => {
-                    const documentView = editor.editing.view.document;
-                    /* istanbul ignore next */
-                    documentView.on('clipboardInput', (event, data) => {
-                        data.content = editor.data.htmlProcessor.toView(data.dataTransfer.getData('text/plain'));
-                    });
+                    if (fieldProps.textOnlyOnPaste) {
+                        const documentView = editor.editing.view.document;
+                        /* istanbul ignore next */
+                        documentView.on('clipboardInput', (event, data) => {
+                            data.content = editor.data.htmlProcessor.toView(data.dataTransfer.getData('text/plain'));
+                        });
+                    }
                 }}
                 onChange={(event, editor) => {
                     handleEditorDataChange(event, editor);
@@ -152,6 +154,7 @@ RichEditor.prototypes = {
     richEditorId: PropTypes.string,
     required: PropTypes.bool,
     singleLine: PropTypes.bool,
+    textOnlyOnPaste: PropTypes.bool,
     title: PropTypes.string,
     value: PropTypes.string,
 };
@@ -161,6 +164,7 @@ RichEditor.defaultProps = {
     disabled: false,
     required: false,
     singleLine: false,
+    textOnlyOnPaste: true,
     value: '',
 };
 
