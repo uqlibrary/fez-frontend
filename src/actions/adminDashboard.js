@@ -77,7 +77,7 @@ export function loadAdminDashboardQuickLinks() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_QUICKLINKS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -129,7 +129,7 @@ export function loadAdminDashboardSystemAlerts() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -220,7 +220,7 @@ export function loadAdminDashboardDisplayReport(request) {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {

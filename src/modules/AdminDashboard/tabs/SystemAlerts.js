@@ -29,19 +29,19 @@ const columns = (locale, users) => {
     const alertStatusOption = Object.values(alertStatus);
     return [
         {
-            field: 'created_date',
+            field: 'sat_created_date',
             headerName: locale.columns.createdDate,
             width: 150,
             valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
         },
-        { field: 'topic', headerName: locale.columns.topic, flex: 1 },
+        { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
             field: 'status',
             headerName: locale.columns.status,
             width: 160,
             valueGetter: (_, row) =>
-                !!row.assigned_to
-                    ? users.find(user => user.id === row.assigned_to)?.name ?? alertStatus.UNKNOWN
+                !!row.sat_assigned_to
+                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
                     : alertStatus.UNASSIGNED,
             renderCell: params => (
                 <Chip
@@ -136,6 +136,7 @@ const SystemAlerts = () => {
                                 pageSizeOptions={[10, 25, 50, 100]}
                                 onRowClick={handleRowClick}
                                 autoHeight
+                                getRowId={row => row.sat_id}
                             />
                             <SystemAlertsDrawer
                                 open={open}

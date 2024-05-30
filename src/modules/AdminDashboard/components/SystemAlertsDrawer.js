@@ -31,8 +31,8 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     const adminUsers = React.useMemo(() => [{ id: 0, name: locale.alertStatus.UNASSIGNED }, ...users], [users]);
 
     let buttonLabel;
-    if (!!!row?.assigned_to || !!row?.resolved_by) buttonLabel = null;
-    else if (!!row?.assigned_to && !row?.resolved_by) {
+    if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;
+    else if (!!row?.sat_assigned_to && !row?.sat_resolved_by) {
         buttonLabel = !adminDashboardSystemAlertsUpdating ? txt.markResolved : txt.updating;
     }
 
@@ -61,14 +61,14 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     flexDirection={'column'}
                 >
                     <Typography fontSize={'1.45rem'} fontWeight={500}>
-                        {row.topic}
+                        {row.sat_title}
                     </Typography>
                     <ExternalLink
                         id={'system-alert-detail-link'}
                         data-testid={'system-alert-detail-link'}
-                        href={row.link}
+                        href={row.sat_link}
                     >
-                        {row.link}
+                        {row.sat_link}
                     </ExternalLink>
                     <StyledDivider />
                     <Grid container spacing={1}>
@@ -76,17 +76,17 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             <Typography fontWeight={400}>{txt.alertId}</Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.id}
+                            {row.sat_id}
                         </Grid>
                         <Grid item xs={4}>
                             <Typography fontWeight={400}>{txt.received}</Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.created_date}
+                            {row.sat_created_date}
                         </Grid>
                     </Grid>
                     <StyledDivider />
-                    <Typography>{row.content}</Typography>
+                    <Typography>{row.sat_content}</Typography>
                     <StyledDivider />
                     <Autocomplete
                         id="alert-detail-user"
@@ -113,9 +113,13 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                         )}
                         options={adminUsers}
                         getOptionLabel={option => option.name}
-                        value={!!row.assigned_to ? adminUsers.find(user => user.id === row.assigned_to) : adminUsers[0]}
+                        value={
+                            !!row.sat_assigned_to
+                                ? adminUsers.find(user => user.id === row.sat_assigned_to)
+                                : adminUsers[0]
+                        }
                         onChange={handleAssignedChange}
-                        disabled={adminDashboardSystemAlertsUpdating || !!row.resolved_by}
+                        disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
                     />
                     {!!buttonLabel && (
                         <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
@@ -123,7 +127,11 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 fullWidth
                                 color="primary"
                                 variant="contained"
-                                disabled={adminDashboardSystemAlertsUpdating || !!!row.assigned_to || !!row.resolved_by}
+                                disabled={
+                                    adminDashboardSystemAlertsUpdating ||
+                                    !!!row.sat_assigned_to ||
+                                    !!row.sat_resolved_by
+                                }
                                 onClick={handleResolveButtonClick}
                             >
                                 {buttonLabel}

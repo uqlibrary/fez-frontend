@@ -45,7 +45,7 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                 disabled={isDelete}
                             />
                         )}
-                        name="title"
+                        name="qlk_title"
                         control={control}
                     />
                     {errors.title && errors.title.message}
@@ -64,7 +64,7 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                 disabled={isDelete}
                             />
                         )}
-                        name="target"
+                        name="qlk_link"
                         control={control}
                     />
                     {errors.target && errors.target.message}

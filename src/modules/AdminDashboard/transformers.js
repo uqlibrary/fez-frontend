@@ -1,7 +1,8 @@
 import { filterObjectProps } from './utils';
 
 export const transformSystemAlertRequest = (action, row) => {
-    const keys = action === 'resolve' ? ['id', 'resolved_date', 'resolved_id'] : ['id', 'assigned_to'];
+    const keys =
+        action === 'resolve' ? ['sat_id', 'sat_resolved_date', 'sat_resolved_by'] : ['sat_id', 'sat_assigned_to'];
 
     const request = filterObjectProps(row, keys);
 

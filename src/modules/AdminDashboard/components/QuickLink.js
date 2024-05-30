@@ -67,19 +67,19 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                 avatar={
                     <Box
                         sx={{
-                            bgcolor: stringToColour(link.title),
+                            bgcolor: stringToColour(link.qlk_title),
                             fontWeight: 'bold',
                             fontSize: '1rem',
                             padding: 1,
                             borderRadius: 2,
                             color: 'white !important',
                             textShadow: '0px 0px 2px rgba(0,0,0,0.87)',
-                            ...(!link.target.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
+                            ...(!link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
                         }}
                         aria-label="count"
                     >
-                        {link.target.includes(INTERNAL_LINK_DOMAIN) ? (
-                            abbreviateNumber(link.amount, 1)
+                        {link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? (
+                            abbreviateNumber(link.qlk_amount, 1)
                         ) : (
                             <OpenInNew fontSize="small" />
                         )}
@@ -89,11 +89,11 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                     <ExternalLink
                         id={`quick-link-${index}`}
                         data-testid={`quick-link-${index}`}
-                        href={link.target}
+                        href={link.qlk_link}
                         inline
                         openInNewIcon={false}
                     >
-                        {link.title}
+                        {link.qlk_title}
                     </ExternalLink>
                 }
                 action={
@@ -131,9 +131,9 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
 
 QuickLink.propTypes = {
     link: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        target: PropTypes.string.isRequired,
-        amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        qlk_title: PropTypes.string.isRequired,
+        qlk_link: PropTypes.string.isRequired,
+        qlk_amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     }),
     index: PropTypes.number.isRequired,
     locale: PropTypes.object.isRequired,

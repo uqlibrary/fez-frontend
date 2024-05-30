@@ -186,7 +186,7 @@ const QuickLinkContainer = ({ locale }) => {
                                     <Stack spacing={2} marginBlockStart={2}>
                                         {data.map((link, index) => (
                                             <QuickLink
-                                                key={link.id}
+                                                key={link.qlk_id}
                                                 index={index}
                                                 locale={locale.link}
                                                 itemCount={data.length}
@@ -210,7 +210,7 @@ const QuickLinkContainer = ({ locale }) => {
                                         ? locale.admin.edit.title
                                         : locale.admin.delete.title}
                                     <Typography fontWeight={500} variant="span">
-                                        {actionState.item.title}
+                                        {actionState.item.qlk_title}
                                     </Typography>
                                 </>
                             )}
