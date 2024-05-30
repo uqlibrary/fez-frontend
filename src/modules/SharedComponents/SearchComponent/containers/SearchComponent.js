@@ -7,10 +7,27 @@ import { withNavigate } from 'helpers/withNavigate';
 
 const defaultObj = {};
 
+/**
+ * Filter out with labels only.
+ *
+ * @param object
+ * @return {{}}
+ */
+const filterInvalidSearchQueryParams = searchQuery => ({
+    ...searchQuery,
+    searchQueryParams: Object.keys(searchQuery?.searchQueryParams || {}).reduce((validated, key) => {
+        const term = searchQuery.searchQueryParams[key];
+        if (key === 'all' || term.hasOwnProperty('value')) {
+            validated[key] = term;
+        }
+        return validated;
+    }, {}),
+});
+
 export const mapStateToProps = (state, ownProps) => {
     let searchQuery;
     try {
-        searchQuery = deparam(ownProps.location.search.substr(1)) || {};
+        searchQuery = filterInvalidSearchQueryParams(deparam(ownProps.location.search.substr(1)) || {});
     } catch (e) {
         searchQuery = {};
     }
