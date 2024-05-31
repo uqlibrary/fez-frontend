@@ -4,9 +4,9 @@ import { mapStateToProps } from './containers/SearchComponent';
 describe('mapStateToProps', () => {
     const expected = {
         isAdmin: false,
-        isAdvancedSearch: undefined,
+        isAdvancedSearch: true,
         isAdvancedSearchMinimised: undefined,
-        isOpenAccessInAdvancedMode: undefined,
+        isOpenAccessInAdvancedMode: false,
         isUnpublishedBufferPage: false,
         searchQueryParams: {},
     };
@@ -18,14 +18,18 @@ describe('mapStateToProps', () => {
                 search: '?q=%E0%A4%A',
             },
         };
-        expect(mapStateToProps(state, ownProps)).toEqual(expected);
+        expect(mapStateToProps(state, ownProps)).toEqual({
+            ...expected,
+            isAdvancedSearch: undefined,
+            isOpenAccessInAdvancedMode: undefined,
+        });
     });
-    it('Should parse query string param with value & label', () => {
+    it('Should parse advanced search QS params with value & label', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
                 search:
-                    '?searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=IsMemberOf',
+                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=IsMemberOf',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -38,12 +42,12 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('Should parse query string param with value and empty label', () => {
+    it('Should parse advanced search QS params with value and empty label', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
                 search:
-                    '?searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
+                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -56,12 +60,12 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('Should parse value only params', () => {
+    it('Should advanced search QS params value only params', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
                 search:
-                    '?searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&rek_ismemberof%5D%5Blabel%5D=Malformed',
+                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&rek_ismemberof%5D%5Blabel%5D=Malformed',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -73,22 +77,22 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('should filter out params with label only', () => {
+    it('should remove advanced search QS params with label only', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
                 search:
-                    '?rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=LabelOnly',
+                    '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=LabelOnly',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual(expected);
     });
-    it('should filter out params with empty label only', () => {
+    it('should remove advanced search QS params with empty label only', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
                 search:
-                    '?rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
+                    '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual(expected);
