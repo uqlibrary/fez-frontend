@@ -41,6 +41,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
                                                           }
                                                         : {}),
                                                 }}
+                                                role="columnheader"
                                             >
                                                 {column.label}
                                             </TableCell>
@@ -72,11 +73,11 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
     );
 };
 RibbonChartContainer.propTypes = {
-    data: PropTypes.object.isRequired,
-    locale: PropTypes.object.isRequired,
-    colours: PropTypes.object.isRequired,
     label: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
+    data: PropTypes.object,
+    locale: PropTypes.object,
+    colours: PropTypes.object,
+    children: PropTypes.node,
 };
 
 export default React.memo(RibbonChartContainer);
