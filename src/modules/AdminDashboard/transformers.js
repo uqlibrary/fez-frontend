@@ -9,6 +9,12 @@ export const transformSystemAlertRequest = (action, row) => {
     return request;
 };
 
+export const transformQuickLinkUpdateRequest = data => {
+    const keys = ['qlk_id', 'qlk_title', 'qlk_link'];
+    const request = filterObjectProps(data, keys);
+    return request;
+};
+
 export const transformQuickLinkReorderRequest = data => {
     const keys = ['qlk_id', 'qlk_order'];
     const request = data.map(row => filterObjectProps(row, keys));

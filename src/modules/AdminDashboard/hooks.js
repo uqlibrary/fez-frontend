@@ -1,6 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 
+import { useDispatch } from 'react-redux';
+import { useConfirmationState } from 'hooks';
+import { isEmptyStr } from './utils';
+
 export const useSystemAlertDrawer = () => {
     const [_open, _setOpen] = React.useState(false);
     const [_row, _setRow] = React.useState({});
@@ -63,4 +67,19 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
     }, [displayReport, fromDate, toDate, systemAlertId]);
 
     return { isValid, fromDateError, toDateError, systemAlertError };
+};
+
+export const useAlertStatus = ({ message, hideAction }) => {
+    const dispatch = useDispatch();
+    const [alertIsVisible, showAlert, _hideAlert] = useConfirmationState();
+    const hideAlert = () => {
+        dispatch(hideAction());
+    };
+
+    React.useEffect(() => {
+        if (!alertIsVisible) {
+            if (!isEmptyStr(message)) showAlert();
+        } else if (isEmptyStr(message)) _hideAlert();
+    }, [_hideAlert, alertIsVisible, message, showAlert]);
+    return [alertIsVisible, hideAlert];
 };

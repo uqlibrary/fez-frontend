@@ -116,6 +116,14 @@ export function adminDashboardQuickLink(request, action) {
     };
 }
 
+export function adminDashboardQuickLinkUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_CLEAR,
+        });
+    };
+}
+
 /**
  * Fetches the System Alerts
  * @returns {function(*)}
@@ -164,6 +172,14 @@ export function adminDashboardSystemAlerts(request) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminDashboardSystemAlertsUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR,
+        });
     };
 }
 

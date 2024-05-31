@@ -6,12 +6,14 @@ import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+import * as actions from 'actions';
 import locale from 'locale/components';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
+import { useAlertStatus } from '../hooks';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import PieChartContainer from '../components/PieChartContainer';
@@ -23,20 +25,28 @@ import VisualisationOpenAccess from '../components/visualisations/VisualisationO
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
-
     const { adminDashboardTodayData, adminDashboardTodayLoading, adminDashboardTodaySuccess } = useSelector(state =>
         state.get('adminDashboardTodayReducer'),
     );
     const { adminDashboardQuickLinksUpdateFailed } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
+    const [alertIsVisible, hideAlert] = useAlertStatus({
+        message: adminDashboardQuickLinksUpdateFailed,
+        hideAction: actions.adminDashboardQuickLinkUpdateClear,
+    });
+
     return (
         <StandardCard noHeader>
-            {adminDashboardQuickLinksUpdateFailed && (
+            {alertIsVisible && (
                 <Grid item xs={12} sx={{ mb: 1 }}>
                     <Alert
                         type="error_outline"
                         title={txt.quicklinks.error.title}
                         message={txt.quicklinks.error.updating}
+                        allowDismiss
+                        dismissAction={() => {
+                            hideAlert();
+                        }}
                     />
                 </Grid>
             )}
@@ -129,7 +139,6 @@ const Today = () => {
                                     animation="wave"
                                     height={225}
                                     width={'100%'}
-                                    id={'admin-dashboard-systemalerts-skeleton'}
                                     data-testid={'admin-dashboard-systemalerts-skeleton'}
                                 />
                             )}

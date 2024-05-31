@@ -87,3 +87,6 @@ export const exportReportToExcel = (fname, sheetName, headers, data, testing = f
     }
     return true;
 };
+
+export const isEmptyStr = str =>
+    str === null || str === undefined || (typeof str === 'string' && !!!str.trim()) || typeof str !== 'string';

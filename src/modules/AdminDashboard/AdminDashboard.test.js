@@ -2,17 +2,13 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, preview } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
 
 import * as DashboardActions from 'actions/adminDashboard';
-import * as actions from '../../actions/actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
-import * as Hooks from './hooks';
-
-import ActionDashboard, { tabProps, tabsConfig, CustomTabPanel } from './AdminDashboard';
-import AdminDashboard from './AdminDashboard';
+import AdminDashboard, { tabProps, CustomTabPanel } from './AdminDashboard';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     return renderer(
@@ -28,30 +24,62 @@ describe('AdminDashboard', () => {
         mockApi = setupMockAdapter();
         mockApi
             .onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl)
-            .reply(200, mockData.adminDashboardConfig);
-        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_TODAY_API().apiUrl).reply(200, mockData.adminDashboardToday);
+            .reply(200, { data: { ...mockData.adminDashboardConfig } });
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_TODAY_API().apiUrl)
+            .reply(200, { data: { ...mockData.adminDashboardToday } });
     });
 
     afterEach(() => {
         mockApi.reset();
     });
 
-    it('should render no config error', async () => {
+    it('should render no config error (empty config array)', async () => {
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, []);
         const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');
-        const { getByText } = setup();
+        const { getByTestId, getByText } = setup();
         expect(loadAdminDashboardConfigFn).toHaveBeenCalled();
+        expect(getByTestId('page-title')).toHaveTextContent('Admin dashboard');
+        await waitForElementToBeRemoved(getByText('Loading config data...'));
+        expect(getByText('No config available')).toBeInTheDocument();
+    });
+    it('should render no config error (null return)', async () => {
+        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, null);
+        const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');
+        const { getByTestId, getByText } = setup();
+        expect(loadAdminDashboardConfigFn).toHaveBeenCalled();
+        expect(getByTestId('page-title')).toHaveTextContent('Admin dashboard');
+        await waitForElementToBeRemoved(getByText('Loading config data...'));
+        expect(getByText('No config available')).toBeInTheDocument();
+    });
+    it('should render no config error (loading error message)', async () => {
+        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(422, { message: 'test' });
+        const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');
+        const { getByTestId, getByText } = setup();
+        expect(loadAdminDashboardConfigFn).toHaveBeenCalled();
+        expect(getByTestId('page-title')).toHaveTextContent('Admin dashboard');
         await waitForElementToBeRemoved(getByText('Loading config data...'));
         expect(getByText('No config available')).toBeInTheDocument();
     });
 
-    it('should render', async () => {
+    it('should render page tabbed component and loaders', async () => {
         const loadAdminDashboardTodayFn = jest.spyOn(DashboardActions, 'loadAdminDashboardToday');
 
-        const { getByText } = setup();
-        expect(loadAdminDashboardTodayFn).toHaveBeenCalled();
-        preview.debug();
+        const { getByTestId, getAllByTestId, getByText, getAllByRole } = setup();
+        await waitFor(() => expect(loadAdminDashboardTodayFn).toHaveBeenCalled());
+
+        expect(getAllByRole('tab').length).toBe(3);
+        expect(getAllByRole('tab')[0]).toHaveTextContent('TODAY');
+        expect(getAllByRole('tab')[1]).toHaveTextContent('SYSTEM ALERTS');
+        expect(getAllByRole('tab')[2]).toHaveTextContent('REPORTS');
+        expect(getAllByTestId('admin-dashboard-systemalerts-skeleton').length).toBe(3);
+        expect(getAllByTestId('admin-dashboard-quicklinks-skeleton').length).toBe(8);
+        expect(getByText('Quick Links')).toBeInTheDocument();
+        expect(getByTestId('quick-link-progressor')).toBeInTheDocument();
     });
+
+    // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
+    // Coverage for the when charts are shown etc. is covered in Cypress instead.
 
     describe('tabProps', () => {
         it('should return a numbered badge', () => {
@@ -59,7 +87,7 @@ describe('AdminDashboard', () => {
             const { getByTestId } = render(<>{tab.icon}</>);
             expect(getByTestId('tab-counter-100')).toBeInTheDocument();
         });
-        it('should return a numbered badge', () => {
+        it('should not return a numbered badge', () => {
             const tab = tabProps.find(tab => tab.id === 1).render();
             const { container } = render(<>{tab.icon}</>);
             expect(container.querySelector('[test-id^=tab-counter-]')).not.toBeInTheDocument();

@@ -27,7 +27,7 @@ import * as actions from 'actions';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
 import { DEFAULT_DATE_FORMAT, optionDoubleRowRender } from '../config';
-import { useValidateReport } from '../hooks';
+import { useValidateReport, useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 
 import SectionTitle from '../components/SectionTitle';
@@ -108,11 +108,20 @@ const Reports = () => {
         adminDashboardDisplayReportData,
         adminDashboardDisplayReportDataType,
         adminDashboardDisplayReportLoading,
-        adminDashboardDisplayReportError,
+        adminDashboardDisplayReportFailed,
     } = useSelector(state => state.get('adminDashboardDisplayReportReducer'));
-    const { adminDashboardExportReportLoading, adminDashboardExportReportError } = useSelector(state =>
+    const { adminDashboardExportReportLoading, adminDashboardExportReportFailed } = useSelector(state =>
         state.get('adminDashboardExportReportReducer'),
     );
+
+    const [exportAlertIsVisible, hideExportAlert] = useAlertStatus({
+        message: adminDashboardExportReportFailed?.errorMessage,
+        hideAction: actions.clearAdminDashboardExportReport,
+    });
+    const [displayAlertIsVisible, hideDisplayAlert] = useAlertStatus({
+        message: adminDashboardDisplayReportFailed?.errorMessage,
+        hideAction: actions.clearAdminDashboardDisplayReport,
+    });
 
     const { isValid, fromDateError, toDateError, systemAlertError } = useValidateReport({
         locale: txt.error,
@@ -140,7 +149,7 @@ const Reports = () => {
             }),
         )
             .then(() => {
-                !adminDashboardExportReportError && dispatch(actions.clearAdminDashboardExportReport());
+                //! adminDashboardExportReportFailed && dispatch(actions.clearAdminDashboardExportReport());
             })
             .catch(error => {
                 console.error(error);
@@ -180,9 +189,17 @@ const Reports = () => {
                 <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
 
                 <Grid container spacing={2}>
-                    {adminDashboardExportReportError && (
+                    {exportAlertIsVisible && (
                         <Grid item xs={12}>
-                            <Alert type="error_outline" title={txt.error.title} message={txt.error.general} />
+                            <Alert
+                                type="error_outline"
+                                title={txt.error.title}
+                                message={txt.error.general}
+                                allowDismiss
+                                dismissAction={() => {
+                                    hideExportAlert();
+                                }}
+                            />
                         </Grid>
                     )}
                     <Grid item xs={12} sm={6}>
@@ -249,9 +266,17 @@ const Reports = () => {
                 <StandardCard noHeader>
                     <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
                     <Grid container spacing={2}>
-                        {adminDashboardDisplayReportError && (
+                        {displayAlertIsVisible && (
                             <Grid item xs={12}>
-                                <Alert type="error_outline" title={txt.error.title} message={txt.error.general} />
+                                <Alert
+                                    type="error_outline"
+                                    title={txt.error.title}
+                                    message={txt.error.general}
+                                    allowDismiss
+                                    dismissAction={() => {
+                                        hideDisplayAlert();
+                                    }}
+                                />
                             </Grid>
                         )}
                         <Grid item xs={12} sm={4}>

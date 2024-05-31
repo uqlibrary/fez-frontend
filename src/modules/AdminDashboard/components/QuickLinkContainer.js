@@ -13,7 +13,7 @@ import * as actions from 'actions';
 
 import { animationTemplate, VIEWMODES, MENUACTIONS, VIEWADMINPANELMODES } from '../config';
 import { reorderArray } from '../utils';
-import { transformQuickLinkReorderRequest } from '../transformers';
+import { transformQuickLinkUpdateRequest, transformQuickLinkReorderRequest } from '../transformers';
 import { emptyQuickLinksActionState as emptyActionState, quickLinksActionReducer as actionReducer } from '../reducers';
 
 import SectionTitle from './SectionTitle';
@@ -99,7 +99,7 @@ const QuickLinkContainer = ({ locale }) => {
     };
 
     const handleAdminSubmitClick = item => {
-        const request = structuredClone(item);
+        const request = transformQuickLinkUpdateRequest(item);
         dispatch(actions.adminDashboardQuickLink(request, actionState.action))
             .then(() => {
                 clear();
@@ -136,9 +136,14 @@ const QuickLinkContainer = ({ locale }) => {
             <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
                 {locale.title}
                 {!!adminDashboardQuickLinksLoading && (
-                    <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
+                    <CircularProgress
+                        color="inherit"
+                        size={20}
+                        sx={{ marginInlineStart: 1 }}
+                        data-testid={'quick-link-progressor'}
+                    />
                 )}
-                {actionState.action === VIEWMODES.VIEW && (
+                {actionState.action === VIEWMODES.VIEW && !adminDashboardQuickLinksLoading && (
                     <Button
                         id={'add-quick-link'}
                         data-testid={'add-quick-link'}
@@ -159,7 +164,6 @@ const QuickLinkContainer = ({ locale }) => {
                         animation="wave"
                         height={50}
                         width={'100%'}
-                        id={'admin-dashboard-quicklinks-skeleton'}
                         data-testid={'admin-dashboard-quicklinks-skeleton'}
                     />
                 ))}

@@ -5,6 +5,7 @@ import {
     reorderArray,
     filterObjectProps,
     exportReportToExcel,
+    isEmptyStr,
 } from './utils';
 
 describe('utils', () => {
@@ -150,6 +151,19 @@ describe('utils', () => {
         });
         it('should return true result for all params', () => {
             expect(exportReportToExcel('test.xslx', 'test', ['id'], [{ id: 1 }], TEST_MODE)).toBe(true);
+        });
+    });
+
+    describe('isEmptyStr', () => {
+        it('returns expected results', () => {
+            expect(isEmptyStr('test')).toEqual(false);
+            expect(isEmptyStr('')).toEqual(true);
+            expect(isEmptyStr(null)).toEqual(true);
+            expect(isEmptyStr(undefined)).toEqual(true);
+            expect(isEmptyStr([])).toEqual(true);
+            expect(isEmptyStr({})).toEqual(true);
+            expect(isEmptyStr(['a'])).toEqual(true);
+            expect(isEmptyStr({ a: 'a' })).toEqual(true);
         });
     });
 });

@@ -1,13 +1,17 @@
 import * as actions from 'actions/actionTypes';
 
+const initialSystemAlertUpdateState = {
+    adminDashboardSystemAlertsUpdating: false,
+    adminDashboardSystemAlertsUpdateSuccess: null,
+    adminDashboardSystemAlertsUpdateFailed: null,
+};
+
 export const initialState = {
     adminDashboardSystemAlertsData: null,
     adminDashboardSystemAlertsLoading: false,
     adminDashboardSystemAlertsSuccess: null,
     adminDashboardSystemAlertsFailed: null,
-    adminDashboardSystemAlertsUpdating: false,
-    adminDashboardSystemAlertsUpdateSuccess: null,
-    adminDashboardSystemAlertsUpdateFailed: null,
+    ...initialSystemAlertUpdateState,
 };
 
 const handlers = {
@@ -42,6 +46,7 @@ const handlers = {
         adminDashboardSystemAlertsUpdateFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_CLEAR]: () => ({ ...initialState }),
+    [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR]: state => ({ ...state, ...initialSystemAlertUpdateState }),
 };
 
 export default function adminDashboardSystemAlertsReducer(state = { ...initialState }, action) {

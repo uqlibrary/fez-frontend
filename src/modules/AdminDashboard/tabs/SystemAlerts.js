@@ -20,7 +20,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { DEFAULT_DATE_FORMAT } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
-import { useSystemAlertDrawer } from '../hooks';
+import { useSystemAlertDrawer, useAlertStatus } from '../hooks';
 
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 
@@ -72,6 +72,11 @@ const SystemAlerts = () => {
 
     const { open, row, openDrawer, closeDrawer } = useSystemAlertDrawer();
 
+    const [alertIsVisible, hideAlert] = useAlertStatus({
+        message: adminDashboardSystemAlertsFailed || adminDashboardSystemAlertsUpdateFailed,
+        hideAction: actions.adminDashboardSystemAlertsUpdateClear,
+    });
+
     React.useEffect(() => {
         dispatch(actions.loadAdminDashboardSystemAlerts());
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,12 +108,20 @@ const SystemAlerts = () => {
                 )}
             </Typography>
 
-            {(adminDashboardSystemAlertsFailed || adminDashboardSystemAlertsUpdateFailed) && (
+            {alertIsVisible && (
                 <Grid item xs={12} sx={{ mb: 1 }}>
                     <Alert
                         type="error_outline"
                         title={txt.error.title}
                         message={adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general}
+                        {...(!!adminDashboardSystemAlertsUpdateFailed
+                            ? {
+                                  allowDismiss: true,
+                                  dismissAction: () => {
+                                      hideAlert();
+                                  },
+                              }
+                            : {})}
                     />
                 </Grid>
             )}
