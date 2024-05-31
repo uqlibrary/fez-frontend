@@ -4,8 +4,10 @@ import SearchComponent from '../components/SearchComponent';
 import * as actions from 'actions';
 import deparam from 'can-deparam';
 import { withNavigate } from 'helpers/withNavigate';
+import { locale } from '../../../../locale';
 
 const defaultObj = {};
+const allowedAdvancedSearchFields = Object.keys(locale.components.searchComponent.advancedSearch.fieldTypes);
 
 /**
  * Filter out with labels only.
@@ -13,11 +15,15 @@ const defaultObj = {};
  * @param object
  * @return {{}}
  */
-const filterInvalidSearchQueryParams = searchQuery => ({
+const removeInvalidSearchQueryParams = searchQuery => ({
     ...searchQuery,
     searchQueryParams: Object.keys(searchQuery?.searchQueryParams || {}).reduce((validated, key) => {
         const term = searchQuery.searchQueryParams[key];
-        if (key === 'all' || term.hasOwnProperty('value')) {
+        // for non advanced searches allow any field, otherwise make sure it has a value and it's allowed
+        if (
+            searchQuery.searchMode !== 'advanced' ||
+            (term.hasOwnProperty('value') && allowedAdvancedSearchFields.includes(key))
+        ) {
             validated[key] = term;
         }
         return validated;
@@ -27,7 +33,7 @@ const filterInvalidSearchQueryParams = searchQuery => ({
 export const mapStateToProps = (state, ownProps) => {
     let searchQuery;
     try {
-        searchQuery = filterInvalidSearchQueryParams(deparam(ownProps.location.search.substr(1)) || {});
+        searchQuery = removeInvalidSearchQueryParams(deparam(ownProps.location.search.substr(1)) || {});
     } catch (e) {
         searchQuery = {};
     }
