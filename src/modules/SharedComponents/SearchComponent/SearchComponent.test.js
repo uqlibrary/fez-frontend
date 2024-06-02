@@ -24,7 +24,7 @@ describe('mapStateToProps', () => {
             isOpenAccessInAdvancedMode: undefined,
         });
     });
-    it('Should parse advanced search QS params with value & label', () => {
+    it('Should parse QS params for advanced search with value and label', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
@@ -42,7 +42,7 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('Should parse advanced search QS params with value and empty label', () => {
+    it('Should parse QS params for advanced search with value and empty label', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
@@ -60,7 +60,7 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('Should advanced search QS params value only params', () => {
+    it('Should parse QS params for advanced search with value only params', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
@@ -77,7 +77,7 @@ describe('mapStateToProps', () => {
             },
         });
     });
-    it('should remove advanced search QS params with label only', () => {
+    it('should remove QS params for advanced search with label only', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
@@ -87,7 +87,7 @@ describe('mapStateToProps', () => {
         };
         expect(mapStateToProps(state, ownProps)).toEqual(expected);
     });
-    it('should remove advanced search QS params with empty label only', () => {
+    it('should remove QS params for advanced search with empty label only', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
