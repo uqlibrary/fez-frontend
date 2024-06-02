@@ -19,7 +19,8 @@ const removeInvalidSearchQueryParams = searchQuery => ({
     ...searchQuery,
     searchQueryParams: Object.keys(searchQuery?.searchQueryParams || {}).reduce((validated, key) => {
         const term = searchQuery.searchQueryParams[key];
-        // for non advanced searches allow any field, otherwise make sure it has a value and it's allowed
+        // allow any params for non advanced searches,
+        // otherwise make sure given fields have values and are allowed
         if (
             searchQuery.searchMode !== 'advanced' ||
             (term.hasOwnProperty('value') && allowedAdvancedSearchFields.includes(key))
