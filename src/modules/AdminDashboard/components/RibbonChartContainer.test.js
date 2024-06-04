@@ -39,7 +39,6 @@ describe('RibbonChartContainer', () => {
         });
         expect(getByText(label)).toBeInTheDocument();
         expect(queryByTestId('test-child')).not.toBeInTheDocument();
-        preview.debug();
     });
 
     it('should render component', () => {

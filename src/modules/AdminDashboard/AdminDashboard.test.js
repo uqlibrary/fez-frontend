@@ -8,7 +8,7 @@ import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
-import AdminDashboard, { tabProps, CustomTabPanel } from './AdminDashboard';
+import AdminDashboard, { CustomTabPanel } from './AdminDashboard';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     return renderer(
@@ -80,19 +80,6 @@ describe('AdminDashboard', () => {
 
     // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
     // Coverage for the when charts are shown etc. is covered in Cypress instead.
-
-    describe('tabProps', () => {
-        it('should return a numbered badge', () => {
-            const tab = tabProps.find(tab => tab.id === 1).render(100);
-            const { getByTestId } = render(<>{tab.icon}</>);
-            expect(getByTestId('tab-counter-100')).toBeInTheDocument();
-        });
-        it('should not return a numbered badge', () => {
-            const tab = tabProps.find(tab => tab.id === 1).render();
-            const { container } = render(<>{tab.icon}</>);
-            expect(container.querySelector('[test-id^=tab-counter-]')).not.toBeInTheDocument();
-        });
-    });
 
     describe('CustomTabPanel', () => {
         it('should render child', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, userEvent, waitFor, act, preview } from 'test-utils';
+import { render, userEvent, act } from 'test-utils';
 import QuickLink from './QuickLink';
 
 const locale = {

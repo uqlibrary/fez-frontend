@@ -20,7 +20,7 @@ import SectionTitle from './SectionTitle';
 import QuickLink from './QuickLink';
 import QuickLinkAdmin from './QuickLinkAdmin';
 
-const QuickLinkContainer = ({ locale }) => {
+const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
@@ -49,6 +49,7 @@ const QuickLinkContainer = ({ locale }) => {
 
     const handleReordering = data => {
         const request = transformQuickLinkReorderRequest(data);
+
         dispatch(actions.adminDashboardQuickLink(request, 'REORDER'))
             .then(() => {
                 clear();
@@ -196,7 +197,10 @@ const QuickLinkContainer = ({ locale }) => {
                                                 itemCount={data.length}
                                                 link={link}
                                                 onMenuItemClick={onMenuItemClick(index)}
-                                                sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
+                                                sx={{
+                                                    ...initialViewProps,
+                                                    animation: animationTemplate(index, 200, 100),
+                                                }}
                                             />
                                         ))}
                                     </Stack>
@@ -206,7 +210,10 @@ const QuickLinkContainer = ({ locale }) => {
                     )}
 
                     {VIEWADMINPANELMODES.includes(actionState.action) && (
-                        <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
+                        <Box
+                            paddingBlockStart={2}
+                            sx={{ ...initialViewProps, animation: animationTemplate(1, 200, 100) }}
+                        >
                             {actionState.action === VIEWMODES.ADD && locale.admin.add.title}
                             {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (
                                 <>
@@ -236,6 +243,7 @@ const QuickLinkContainer = ({ locale }) => {
 
 QuickLinkContainer.propTypes = {
     locale: PropTypes.object.isRequired,
+    initialViewProps: PropTypes.object,
 };
 
 export default React.memo(QuickLinkContainer);

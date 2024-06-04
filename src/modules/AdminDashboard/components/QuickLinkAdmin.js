@@ -29,7 +29,7 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
     const buttons = isDelete ? buttonArray.reverse() : buttonArray;
 
     return (
-        <form onSubmit={handleSubmit(onSubmitClick)} className="formAddQuickLink">
+        <form onSubmit={handleSubmit(onSubmitClick)} className="formAddQuickLink" data-testid="quicklinks-admin-form">
             <Grid container mt={2} spacing={2}>
                 <Grid item xs={12}>
                     <Controller
@@ -43,6 +43,9 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                 multiline
                                 maxRows={2}
                                 disabled={isDelete}
+                                inputProps={{
+                                    'data-testid': 'qlk_title',
+                                }}
                             />
                         )}
                         name="qlk_title"
@@ -62,6 +65,9 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                                 multiline
                                 maxRows={3}
                                 disabled={isDelete}
+                                inputProps={{
+                                    'data-testid': 'qlk_link',
+                                }}
                             />
                         )}
                         name="qlk_link"
