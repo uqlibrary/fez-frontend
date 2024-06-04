@@ -74,12 +74,14 @@ export const useAlertStatus = ({ message, hideAction }) => {
     const [alertIsVisible, showAlert, _hideAlert] = useConfirmationState();
     const hideAlert = () => {
         dispatch(hideAction());
+        _hideAlert();
     };
 
     React.useEffect(() => {
         if (!alertIsVisible) {
             if (!isEmptyStr(message)) showAlert();
-        } else if (isEmptyStr(message)) _hideAlert();
-    }, [_hideAlert, alertIsVisible, message, showAlert]);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [alertIsVisible, message]);
     return [alertIsVisible, hideAlert];
 };

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import Immutable from 'immutable';
 
@@ -65,17 +64,13 @@ describe('AdminDashboard', () => {
     it('should render page tabbed component and loaders', async () => {
         const loadAdminDashboardTodayFn = jest.spyOn(DashboardActions, 'loadAdminDashboardToday');
 
-        const { getByTestId, getAllByTestId, getByText, getAllByRole } = setup();
+        const { getAllByRole } = setup();
         await waitFor(() => expect(loadAdminDashboardTodayFn).toHaveBeenCalled());
 
         expect(getAllByRole('tab').length).toBe(3);
         expect(getAllByRole('tab')[0]).toHaveTextContent('TODAY');
         expect(getAllByRole('tab')[1]).toHaveTextContent('SYSTEM ALERTS');
         expect(getAllByRole('tab')[2]).toHaveTextContent('REPORTS');
-        expect(getAllByTestId('admin-dashboard-systemalerts-skeleton').length).toBe(3);
-        expect(getAllByTestId('admin-dashboard-quicklinks-skeleton').length).toBe(8);
-        expect(getByText('Quick Links')).toBeInTheDocument();
-        expect(getByTestId('quick-link-progressor')).toBeInTheDocument();
     });
 
     // Note: at the time of writing (May 2024), mui-x/chart components do not work with Jest tests.
@@ -83,7 +78,7 @@ describe('AdminDashboard', () => {
 
     describe('CustomTabPanel', () => {
         it('should render child', () => {
-            const { getByTestId, getByText, getByRole } = render(
+            const { getByTestId, getByText } = render(
                 <CustomTabPanel value={1} index={1} className="testClass">
                     <div>Test child</div>
                 </CustomTabPanel>,

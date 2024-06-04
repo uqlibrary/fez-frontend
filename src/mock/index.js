@@ -878,7 +878,7 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     .reply(200, mockData.currentAuthor.uqstaff)
 
     .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
-    //.reply(500, { message: ['error - failed to save quicklink update'] })
+    // .reply(422, { message: 'failed to save quicklink update' })
     .reply(201, {})
 
     .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({row: '.*'}).apiUrl)))
