@@ -66,6 +66,21 @@ export default class ClaimRecord extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        if (prevProps.fullPublicationToClaimLoading === true && this.props.fullPublicationToClaimLoading === false) {
+            const contentIndicators =
+                (this.props.fullPublicationToClaim &&
+                    (this.props.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
+                        item => item.rek_content_indicator,
+                    )) ||
+                [];
+
+            // update content indicator initial value for the ContentIndicatorsField component
+            this.props.initialize({
+                publication: this.props.initialValues.get('publication'),
+                author: this.props.initialValues.get('publication'),
+                contentIndicators,
+            });
+        }
         /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
