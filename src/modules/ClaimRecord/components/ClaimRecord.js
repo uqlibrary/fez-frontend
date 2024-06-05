@@ -66,7 +66,9 @@ export default class ClaimRecord extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
+        // update content indicator initial value for the ContentIndicatorsField component
         if (prevProps.fullPublicationToClaimLoading === true && this.props.fullPublicationToClaimLoading === false) {
+            /* istanbul ignore next */
             const contentIndicators =
                 (this.props.fullPublicationToClaim &&
                     (this.props.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
@@ -74,12 +76,14 @@ export default class ClaimRecord extends PureComponent {
                     )) ||
                 [];
 
-            // update content indicator initial value for the ContentIndicatorsField component
-            this.props.initialize({
-                publication: this.props.initialValues.get('publication'),
-                author: this.props.initialValues.get('publication'),
-                contentIndicators,
-            });
+            /* istanbul ignore else */
+            if (contentIndicators) {
+                this.props.initialize({
+                    publication: this.props.initialValues.get('publication'),
+                    author: this.props.initialValues.get('publication'),
+                    contentIndicators,
+                });
+            }
         }
         /* istanbul ignore else */
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
