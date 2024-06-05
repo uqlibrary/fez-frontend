@@ -17,7 +17,6 @@ import { DataGrid, gridClasses } from '@mui/x-data-grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/components';
@@ -26,7 +25,7 @@ import { emptyReportActionState as emptyActionState, reportActionReducer as acti
 import * as actions from 'actions';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import { DEFAULT_DATE_FORMAT, optionDoubleRowRender } from '../config';
+import { getDisplayReportColumns, optionDoubleRowRender } from '../config';
 import { useValidateReport, useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 
@@ -34,68 +33,6 @@ import SectionTitle from '../components/SectionTitle';
 
 const reportExportOnlyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
-
-const getColumns = (locale, report) => {
-    const txt = locale.columns[report];
-    switch (report) {
-        case 'workshistory':
-            return [
-                { field: 'id', order: 0 },
-                {
-                    field: 'date_created',
-                    headerName: txt.dateCreated,
-                    width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
-                    order: 2,
-                },
-                { field: 'pid', headerName: txt.pid, width: 150, order: 1 },
-                { field: 'work_type', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
-                { field: 'user', headerName: txt.user, width: 150, order: 4 },
-                { field: 'topic', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
-            ];
-        default:
-            return [
-                { field: 'id', order: 0 },
-                {
-                    field: 'date_created',
-                    headerName: txt.dateCreated,
-                    width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
-                    order: 1,
-                },
-                { field: 'assigned_to', headerName: txt.assignedTo, width: 150, order: 2 },
-                {
-                    field: 'assigned_date',
-                    headerName: txt.assignedDate,
-                    width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
-                    order: 3,
-                },
-                { field: 'title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
-                { field: 'resolved_by', headerName: txt.resolvedBy, width: 150, order: 4 },
-                {
-                    field: 'resolved_date',
-                    headerName: txt.resolvedDate,
-                    width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
-                    order: 5,
-                },
-                { field: 'content', headerName: txt.content, minWidth: 400, flex: 1, order: 8 },
-                {
-                    field: 'link',
-                    headerName: txt.link,
-                    minWidth: 400,
-                    flex: 1,
-                    renderCell: row => (
-                        <ExternalLink id={`link_${row.id}`} href={row.value} inline>
-                            {row.value}
-                        </ExternalLink>
-                    ),
-                    order: 9,
-                },
-            ];
-    }
-};
 
 const Reports = () => {
     const txt = locale.components.adminDashboard.tabs.reports;
@@ -133,9 +70,9 @@ const Reports = () => {
 
     const columns = React.useMemo(() => {
         if (!!actionState.displayReport) {
-            return getColumns(txt, actionState.displayReport.value);
+            return getDisplayReportColumns(txt, actionState.displayReport.value);
         } else if (!!adminDashboardDisplayReportDataType) {
-            return getColumns(txt, adminDashboardDisplayReportDataType);
+            return getDisplayReportColumns(txt, adminDashboardDisplayReportDataType);
         }
         return [];
         // eslint-disable-next-line react-hooks/exhaustive-deps

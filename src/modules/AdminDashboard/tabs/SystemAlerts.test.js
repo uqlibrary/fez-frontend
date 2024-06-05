@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import Immutable from 'immutable';
 
@@ -39,7 +38,7 @@ describe('SystemAlerts tab', () => {
         jest.clearAllMocks();
     });
     it('should render loading state', async () => {
-        const { getAllByTestId, getByText, getByTestId, queryByTestId } = setup();
+        const { getByText, getByTestId } = setup();
         expect(getByTestId('admin-dashboard-systemalerts-skeleton')).toBeInTheDocument();
         expect(getByText('system alerts')).toBeInTheDocument();
     });
@@ -126,7 +125,7 @@ describe('SystemAlerts tab', () => {
         const loadAdminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'loadAdminDashboardSystemAlerts');
         const adminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'adminDashboardSystemAlerts');
 
-        const { getByTestId, getByText, getByRole, getAllByRole, getByTitle } = setup();
+        const { getByTestId, getByRole } = setup();
         expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalled();
         await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
 
