@@ -15,6 +15,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
+const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -50,7 +51,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
 
     return (
         !!row && (
-            <Drawer anchor="right" open={open} onClose={handleCloseDrawer} id="system-alert-detail">
+            <Drawer anchor="right" open={open} onClose={handleCloseDrawer} id={rootId} data-testid={rootId}>
                 <Box
                     sx={{ width: [320, 500] }}
                     role="presentation"
@@ -63,11 +64,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <Typography fontSize={'1.45rem'} fontWeight={500}>
                         {row.sat_title}
                     </Typography>
-                    <ExternalLink
-                        id={'system-alert-detail-link'}
-                        data-testid={'system-alert-detail-link'}
-                        href={row.sat_link}
-                    >
+                    <ExternalLink id={rootId} data-testid={rootId} href={row.sat_link}>
                         {row.sat_link}
                     </ExternalLink>
                     <StyledDivider />
@@ -89,7 +86,8 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <Typography>{row.sat_content}</Typography>
                     <StyledDivider />
                     <Autocomplete
-                        id="alert-detail-user"
+                        id={`${rootId}-assignee`}
+                        data-testid={`${rootId}-assignee`}
                         fullWidth
                         variant="standard"
                         renderInput={params => (
@@ -133,6 +131,8 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                     !!row.sat_resolved_by
                                 }
                                 onClick={handleResolveButtonClick}
+                                id={`${rootId}-action-button`}
+                                data-testid={`${rootId}-action-button`}
                             >
                                 {buttonLabel}
                             </Button>

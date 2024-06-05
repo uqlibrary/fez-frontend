@@ -2,15 +2,12 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import moment from 'moment';
-
 import locale from 'locale/components';
 
 import * as actions from 'actions';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Chip from '@mui/material/Chip';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
 import { DataGrid } from '@mui/x-data-grid';
@@ -18,43 +15,11 @@ import { DataGrid } from '@mui/x-data-grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { DEFAULT_DATE_FORMAT } from '../config';
+import { getSystemAlertColumns } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
 import { useSystemAlertDrawer, useAlertStatus } from '../hooks';
 
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
-
-const columns = (locale, users) => {
-    const alertStatus = locale.alertStatus;
-    const alertStatusOption = Object.values(alertStatus);
-    return [
-        {
-            field: 'sat_created_date',
-            headerName: locale.columns.createdDate,
-            width: 150,
-            valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
-        },
-        { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
-        {
-            field: 'status',
-            headerName: locale.columns.status,
-            width: 160,
-            valueGetter: (_, row) =>
-                !!row.sat_assigned_to
-                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
-                    : alertStatus.UNASSIGNED,
-            renderCell: params => (
-                <Chip
-                    data-testid={`alert-status-${params.id}`}
-                    label={params.value}
-                    variant="outlined"
-                    size="small"
-                    color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
-                />
-            ),
-        },
-    ];
-};
 
 const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.tabs.systemalerts;
@@ -82,6 +47,11 @@ const SystemAlerts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const columns = React.useMemo(() => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users), [
+        adminDashboardConfigData.admin_users,
+        txt,
+    ]);
+
     const handleRowClick = params => {
         openDrawer(params.row);
     };
@@ -102,7 +72,7 @@ const SystemAlerts = () => {
     return (
         <StandardCard noHeader>
             <Typography fontSize={'1.25rem'} fontWeight={'300'}>
-                {txt.title(adminDashboardSystemAlertsData?.length ?? '')}
+                {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
                 {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
                     <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                 )}
@@ -113,7 +83,7 @@ const SystemAlerts = () => {
                     <Alert
                         type="error_outline"
                         title={txt.error.title}
-                        message={adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general}
+                        message={!!adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general}
                         {...(!!adminDashboardSystemAlertsUpdateFailed
                             ? {
                                   allowDismiss: true,
@@ -140,7 +110,7 @@ const SystemAlerts = () => {
                         <>
                             <DataGrid
                                 rows={adminDashboardSystemAlertsData ?? []}
-                                columns={columns(txt, adminDashboardConfigData.admin_users)}
+                                columns={columns}
                                 initialState={{
                                     pagination: {
                                         paginationModel: { page: 0, pageSize: 10 },

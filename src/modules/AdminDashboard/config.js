@@ -1,4 +1,7 @@
 import React from 'react';
+import moment from 'moment';
+
+import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
@@ -49,3 +52,35 @@ export const optionDoubleRowRender = (props, option) => (
         </Typography>
     </li>
 );
+
+export const getSystemAlertColumns = (locale, users) => {
+    const alertStatus = locale.alertStatus;
+    const alertStatusOption = Object.values(alertStatus);
+    return [
+        {
+            field: 'sat_created_date',
+            headerName: locale.columns.createdDate,
+            width: 150,
+            valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+        },
+        { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
+        {
+            field: 'status',
+            headerName: locale.columns.status,
+            width: 160,
+            valueGetter: (_, row) =>
+                !!row.sat_assigned_to
+                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
+                    : alertStatus.UNASSIGNED,
+            renderCell: params => (
+                <Chip
+                    data-testid={`alert-status-${params.id}`}
+                    label={params.value}
+                    variant="outlined"
+                    size="small"
+                    color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
+                />
+            ),
+        },
+    ];
+};
