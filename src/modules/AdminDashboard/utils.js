@@ -74,16 +74,16 @@ export const filterObjectProps = (data, propsToKeep) => {
     return obj;
 };
 
-export const exportReportToExcel = (fname, sheetName, headers, data, testing = false) => {
+export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data, testing = false }) => {
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
-    !!headers &&
-        XLSX.utils.sheet_add_aoa(worksheet, [headers], {
+    !!colHeaders &&
+        XLSX.utils.sheet_add_aoa(worksheet, [colHeaders], {
             origin: 'A1',
         });
-    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetLabel);
     if (!testing) {
-        XLSX.writeFileXLSX(workbook, fname);
+        XLSX.writeFileXLSX(workbook, filename);
     }
     return true;
 };

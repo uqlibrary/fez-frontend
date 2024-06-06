@@ -144,13 +144,28 @@ describe('utils', () => {
     describe('exportReportToExcel', () => {
         const TEST_MODE = true; // neccessary to prevent file being written
         it('should return error result', () => {
-            expect(() => exportReportToExcel()).toThrow("Cannot read properties of undefined (reading 'length')");
+            expect(() => exportReportToExcel({})).toThrow("Cannot read properties of undefined (reading 'length')");
         });
         it('should return true result for partial params', async () => {
-            expect(exportReportToExcel('test.xslx', 'test', null, [{ id: 1 }], TEST_MODE)).toBe(true);
+            expect(
+                exportReportToExcel({
+                    filename: 'test.xslx',
+                    sheetLabel: 'test',
+                    data: [{ id: 1 }],
+                    testing: TEST_MODE,
+                }),
+            ).toBe(true);
         });
         it('should return true result for all params', () => {
-            expect(exportReportToExcel('test.xslx', 'test', ['id'], [{ id: 1 }], TEST_MODE)).toBe(true);
+            expect(
+                exportReportToExcel({
+                    filename: 'test.xslx',
+                    sheetLabel: 'test',
+                    colHeaders: ['id'],
+                    data: [{ id: 1 }],
+                    testing: TEST_MODE,
+                }),
+            ).toBe(true);
         });
     });
 

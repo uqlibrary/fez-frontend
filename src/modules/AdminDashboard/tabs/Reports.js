@@ -98,7 +98,7 @@ const Reports = () => {
         const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
         const sheetLabel = actionState.displayReport.label;
 
-        exportReportToExcel(fname, sheetLabel, colHeaders, adminDashboardDisplayReportData);
+        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
     };
 
     const handleDisplayReportClick = () => {
@@ -136,6 +136,7 @@ const Reports = () => {
                                 dismissAction={() => {
                                     hideExportAlert();
                                 }}
+                                alertId={`alert-${reportExportOnlyId}`}
                             />
                         </Grid>
                     )}
@@ -213,6 +214,7 @@ const Reports = () => {
                                     dismissAction={() => {
                                         hideDisplayAlert();
                                     }}
+                                    alertId={`alert-${reportDisplayExportId}`}
                                 />
                             </Grid>
                         )}
@@ -249,92 +251,104 @@ const Reports = () => {
                                 onChange={(_, value) => handleDisplayReportChange(value)}
                             />
                             {actionState.displayReport?.value === 'systemalertlog' && (
-                                <TextField
-                                    label={txt.label.systemId}
-                                    variant="standard"
-                                    fullWidth
-                                    inputProps={{
-                                        id: 'report-display-system-alert-id-input',
-                                        'data-analyticsid': 'report-display-system-alert-id-input',
-                                        'data-testid': 'report-display-system-alert-id-input',
-                                    }}
-                                    InputLabelProps={{
-                                        'data-testid': 'report-display-system-alert-id-label',
-                                    }}
-                                    sx={{ mt: 1 }}
-                                    onChange={props =>
-                                        // eslint-disable-next-line react/prop-types
-                                        actionDispatch({ type: 'systemAlertId', value: props.target.value })
-                                    }
-                                    value={actionState.systemAlertId}
-                                    helperText={systemAlertError}
-                                    error={!!systemAlertError}
-                                />
+                                <Box data-testid="report-display-system-alert-id">
+                                    <TextField
+                                        label={txt.label.systemId}
+                                        variant="standard"
+                                        fullWidth
+                                        inputProps={{
+                                            id: 'report-display-system-alert-id-input',
+                                            'data-analyticsid': 'report-display-system-alert-id-input',
+                                            'data-testid': 'report-display-system-alert-id-input',
+                                        }}
+                                        InputLabelProps={{
+                                            'data-testid': 'report-display-system-alert-id-label',
+                                        }}
+                                        sx={{ mt: 1 }}
+                                        onChange={props =>
+                                            // eslint-disable-next-line react/prop-types
+                                            actionDispatch({ type: 'systemAlertId', value: props.target.value })
+                                        }
+                                        value={actionState.systemAlertId}
+                                        helperText={systemAlertError}
+                                        error={!!systemAlertError}
+                                    />
+                                </Box>
                             )}
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <DatePicker
-                                inputProps={{
-                                    id: 'report-display-date-from-input',
-                                    'data-testid': 'report-display-date-from-input',
-                                    label: txt.label.dateFrom,
-                                    'aria-label': txt.label.dateFrom,
-                                    'aria-labelledby': 'report-display-date-from-label',
-                                    'data-analyticsid': 'report-display-date-from-input',
-                                }}
-                                label={txt.label.dateFrom}
-                                value={actionState.fromDate}
-                                renderInput={params => (
-                                    <TextField
-                                        {...params}
-                                        variant="standard"
-                                        fullWidth
-                                        error={!!fromDateError}
-                                        required={!!fromDateError}
-                                        helperText={fromDateError}
-                                    />
-                                )}
-                                // eslint-disable-next-line react/prop-types
-                                onChange={props =>
-                                    actionDispatch({ type: 'fromDate', value: !!props ? moment(props).format() : null })
-                                }
-                                defaultValue=""
-                                disableFuture
-                                maxDate={actionState.toDate}
-                                disabled={!!!actionState.displayReport}
-                            />
+                            <Box data-testid="report-display-date-from">
+                                <DatePicker
+                                    inputProps={{
+                                        id: 'report-display-date-from-input',
+                                        'data-testid': 'report-display-date-from-input',
+                                        label: txt.label.dateFrom,
+                                        'aria-label': txt.label.dateFrom,
+                                        'aria-labelledby': `${reportDisplayExportId}-input`,
+                                        'data-analyticsid': 'report-display-date-from-input',
+                                    }}
+                                    label={txt.label.dateFrom}
+                                    value={actionState.fromDate}
+                                    renderInput={params => (
+                                        <TextField
+                                            {...params}
+                                            variant="standard"
+                                            fullWidth
+                                            error={!!fromDateError}
+                                            required={!!fromDateError}
+                                            helperText={fromDateError}
+                                        />
+                                    )}
+                                    // eslint-disable-next-line react/prop-types
+                                    onChange={props =>
+                                        actionDispatch({
+                                            type: 'fromDate',
+                                            value: !!props ? moment(props).format() : null,
+                                        })
+                                    }
+                                    defaultValue=""
+                                    disableFuture
+                                    maxDate={actionState.toDate}
+                                    disabled={!!!actionState.displayReport}
+                                />
+                            </Box>
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <DatePicker
-                                inputProps={{
-                                    id: 'report-display-date-to-input',
-                                    'data-testid': 'report-display-date-to-input',
-                                    label: txt.label.dateTo,
-                                    'aria-label': txt.label.dateTo,
-                                    'aria-labelledby': 'report-display-date-to-label',
-                                    'data-analyticsid': 'report-display-date-to-input',
-                                }}
-                                label={txt.label.dateTo}
-                                value={actionState.toDate}
-                                renderInput={params => (
-                                    <TextField
-                                        {...params}
-                                        variant="standard"
-                                        fullWidth
-                                        error={!!toDateError}
-                                        required={!!actionState.fromDate}
-                                        helperText={toDateError}
-                                    />
-                                )}
-                                // eslint-disable-next-line react/prop-types
-                                onChange={props =>
-                                    actionDispatch({ type: 'toDate', value: !!props ? moment(props).format() : null })
-                                }
-                                defaultValue=""
-                                disableFuture
-                                minDate={actionState.fromDate}
-                                disabled={!!!actionState.displayReport}
-                            />
+                            <Box data-testid="report-display-date-to">
+                                <DatePicker
+                                    inputProps={{
+                                        id: 'report-display-date-to-input',
+                                        'data-testid': 'report-display-date-to-input',
+                                        label: txt.label.dateTo,
+                                        'aria-label': txt.label.dateTo,
+                                        'aria-labelledby': 'report-display-date-to-label',
+                                        'data-analyticsid': 'report-display-date-to-input',
+                                    }}
+                                    label={txt.label.dateTo}
+                                    value={actionState.toDate}
+                                    renderInput={params => (
+                                        <TextField
+                                            {...params}
+                                            variant="standard"
+                                            fullWidth
+                                            error={!!toDateError}
+                                            required={!!actionState.fromDate}
+                                            helperText={toDateError}
+                                        />
+                                    )}
+                                    // eslint-disable-next-line react/prop-types
+                                    onChange={props =>
+                                        actionDispatch({
+                                            type: 'toDate',
+                                            value: !!props ? moment(props).format() : null,
+                                        })
+                                    }
+                                    defaultValue=""
+                                    disableFuture
+                                    minDate={actionState.fromDate}
+                                    disabled={!!!actionState.displayReport}
+                                />
+                            </Box>
                         </Grid>
                         <Grid item xs={12}>
                             <Button
@@ -401,6 +415,7 @@ const Reports = () => {
                                             py: 1,
                                         },
                                     }}
+                                    forwardedProps={{ 'data-testid': 'report-display-data-grid' }}
                                 />
                             </Grid>
                         </Grid>
