@@ -39,15 +39,15 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
             if (
                 displayReport === 'systemalertlog' &&
                 systemAlertId.trim() !== '' &&
-                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0)
+                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0 || systemAlertId.includes('.'))
             ) {
                 setSystemAlertError(locale.systemAlertId);
                 return false;
             }
-
             if (!!!fromDate && !!!toDate) return true;
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
+
             if (mFrom.isValid() && !mTo.isValid()) {
                 setToDateError(locale.required);
                 return false;
@@ -72,6 +72,7 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
 export const useAlertStatus = ({ message, hideAction }) => {
     const dispatch = useDispatch();
     const [alertIsVisible, showAlert, _hideAlert] = useConfirmationState();
+
     const hideAlert = () => {
         dispatch(hideAction());
         _hideAlert();
