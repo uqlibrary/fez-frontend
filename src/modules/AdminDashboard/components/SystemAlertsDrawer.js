@@ -23,6 +23,7 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
     const txt = locale.drawer;
+
     const users = useSelector(
         state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ?? [],
     );
@@ -61,64 +62,86 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     flex={1}
                     flexDirection={'column'}
                 >
-                    <Typography fontSize={'1.45rem'} fontWeight={500}>
+                    <Typography component={'h2'} fontSize={'1.45rem'} fontWeight={500} data-testid={`${rootId}-title`}>
                         {row.sat_title}
                     </Typography>
-                    <ExternalLink id={rootId} data-testid={rootId} href={row.sat_link}>
+                    <ExternalLink id={rootId} href={row.sat_link}>
                         {row.sat_link}
                     </ExternalLink>
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400}>{txt.alertId}</Typography>
+                            <Typography fontWeight={400} data-testid={`${rootId}-id-label`}>
+                                {txt.alertId}
+                            </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.sat_id}
+                            <Typography fontWeight={'normal'} data-testid={`${rootId}-id`}>
+                                {row.sat_id}
+                            </Typography>
                         </Grid>
                         <Grid item xs={4}>
-                            <Typography fontWeight={400}>{txt.received}</Typography>
+                            <Typography fontWeight={400} data-testid={`${rootId}-date-created-label`}>
+                                {txt.received}
+                            </Typography>
                         </Grid>
                         <Grid item xs={8}>
-                            {row.sat_created_date}
+                            <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
+                                {row.sat_created_date}
+                            </Typography>
                         </Grid>
                     </Grid>
                     <StyledDivider />
-                    <Typography>{row.sat_content}</Typography>
+                    <Typography data-testid={`${rootId}-description`}>{row.sat_content}</Typography>
                     <StyledDivider />
-                    <Autocomplete
-                        id={`${rootId}-assignee`}
-                        data-testid={`${rootId}-assignee`}
-                        fullWidth
-                        variant="standard"
-                        renderInput={params => (
-                            <TextField
-                                {...params}
-                                label={txt.status}
-                                helperText={txt.statusHelpText}
-                                variant="standard"
-                                InputProps={{
-                                    ...params.InputProps,
-                                    endAdornment: (
-                                        <React.Fragment>
-                                            {adminDashboardSystemAlertsUpdating ? (
-                                                <CircularProgress color="inherit" size={20} />
-                                            ) : null}
-                                            {params.InputProps.endAdornment}
-                                        </React.Fragment>
-                                    ),
-                                }}
-                            />
-                        )}
-                        options={adminUsers}
-                        getOptionLabel={option => option.name}
-                        value={
-                            !!row.sat_assigned_to
-                                ? adminUsers.find(user => user.id === row.sat_assigned_to)
-                                : adminUsers[0]
-                        }
-                        onChange={handleAssignedChange}
-                        disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
-                    />
+                    <Box id={`${rootId}-assignee`} data-testid={`${rootId}-assignee`}>
+                        <Autocomplete
+                            fullWidth
+                            variant="standard"
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    label={txt.status}
+                                    helperText={txt.statusHelpText}
+                                    variant="standard"
+                                    InputProps={{
+                                        ...params.InputProps,
+                                        endAdornment: (
+                                            <React.Fragment>
+                                                {adminDashboardSystemAlertsUpdating ? (
+                                                    <CircularProgress color="inherit" size={20} />
+                                                ) : null}
+                                                {params.InputProps.endAdornment}
+                                            </React.Fragment>
+                                        ),
+                                    }}
+                                    inputProps={{
+                                        ...params.inputProps,
+                                        id: `${rootId}-assignee-input`,
+                                        'data-analyticsid': `${rootId}-assignee-input`,
+                                        'data-testid': `${rootId}-assignee-input`,
+                                    }}
+                                    InputLabelProps={{
+                                        'data-testid': `${rootId}-assignee-label`,
+                                    }}
+                                />
+                            )}
+                            ListboxProps={{
+                                id: `${rootId}-options`,
+                                'data-analyticsid': `${rootId}-options`,
+                                'data-testid': `${rootId}-options`,
+                            }}
+                            options={adminUsers}
+                            getOptionLabel={option => option.name}
+                            value={
+                                !!row.sat_assigned_to
+                                    ? adminUsers.find(user => user.id === row.sat_assigned_to)
+                                    : adminUsers[0]
+                            }
+                            onChange={handleAssignedChange}
+                            disabled={adminDashboardSystemAlertsUpdating || !!row.sat_resolved_by}
+                        />
+                    </Box>
                     {!!buttonLabel && (
                         <Box display={'flex'} flex={1} flexDirection={'column'} justifyContent={'flex-end'}>
                             <Button
@@ -147,9 +170,9 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
 SystemAlertsDrawer.propTypes = {
     locale: PropTypes.object.isRequired,
     row: PropTypes.object,
-    open: PropTypes.bool.isRequired,
-    onCloseDrawer: PropTypes.func.isRequired,
-    onSystemAlertUpdate: PropTypes.func.isRequired,
+    open: PropTypes.bool,
+    onCloseDrawer: PropTypes.func,
+    onSystemAlertUpdate: PropTypes.func,
 };
 
 export default React.memo(SystemAlertsDrawer);

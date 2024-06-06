@@ -120,6 +120,7 @@ const SystemAlerts = () => {
                                 onRowClick={handleRowClick}
                                 autoHeight
                                 getRowId={row => row.sat_id}
+                                disableColumnMenu
                             />
                             <SystemAlertsDrawer
                                 open={open}
