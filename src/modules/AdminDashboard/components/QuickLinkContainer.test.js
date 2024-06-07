@@ -145,8 +145,8 @@ describe('QuickLinkContainer', () => {
         await userEvent.click(getByRole('button', { name: 'Save' }));
         expect(adminDashboardQuickLinkFn).not.toHaveBeenCalled();
 
-        await userEvent.type(getByTestId('qlk_title'), 'Test title');
-        await userEvent.type(getByTestId('qlk_link'), 'Test link');
+        await userEvent.type(getByTestId('qlk_title-input'), 'Test title');
+        await userEvent.type(getByTestId('qlk_link-input'), 'Test link');
 
         await userEvent.click(getByRole('button', { name: 'Save' }));
         expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(
@@ -182,8 +182,8 @@ describe('QuickLinkContainer', () => {
 
         expect(getByText('Edit')).toBeInTheDocument();
 
-        await userEvent.type(getByTestId('qlk_title'), ' Updated');
-        await userEvent.type(getByTestId('qlk_link'), ' Updated');
+        await userEvent.type(getByTestId('qlk_title-input'), ' Updated');
+        await userEvent.type(getByTestId('qlk_link-input'), ' Updated');
 
         await userEvent.click(getByRole('button', { name: 'Save' }));
         expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(
@@ -218,8 +218,8 @@ describe('QuickLinkContainer', () => {
 
         await waitFor(() => getByTestId('quicklinks-admin-form'));
         expect(getByText('DELETE')).toBeInTheDocument();
-        expect(getByTestId('qlk_title')).toHaveAttribute('disabled');
-        expect(getByTestId('qlk_link')).toHaveAttribute('disabled');
+        expect(getByTestId('qlk_title-input')).toHaveAttribute('disabled');
+        expect(getByTestId('qlk_link-input')).toHaveAttribute('disabled');
 
         await userEvent.click(getByRole('button', { name: 'Delete' }));
         expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(
@@ -274,7 +274,7 @@ describe('QuickLinkContainer', () => {
         const moveUpExpected = [
             {
                 qlk_id: 3,
-                qlk_order: 3,
+                qlk_order: 0,
             },
             {
                 qlk_id: 1,
@@ -297,15 +297,15 @@ describe('QuickLinkContainer', () => {
         const moveDownExpected = [
             {
                 qlk_id: 3,
-                qlk_order: 3,
+                qlk_order: 0,
             },
             {
                 qlk_id: 2,
-                qlk_order: 2,
+                qlk_order: 1,
             },
             {
                 qlk_id: 1,
-                qlk_order: 1,
+                qlk_order: 2,
             },
         ];
 
@@ -323,15 +323,15 @@ describe('QuickLinkContainer', () => {
         const moveTopExpected = [
             {
                 qlk_id: 2,
-                qlk_order: 2,
+                qlk_order: 0,
             },
             {
                 qlk_id: 3,
-                qlk_order: 3,
+                qlk_order: 1,
             },
             {
                 qlk_id: 1,
-                qlk_order: 1,
+                qlk_order: 2,
             },
         ];
 
@@ -348,7 +348,7 @@ describe('QuickLinkContainer', () => {
         const moveBottomExpected = [
             {
                 qlk_id: 3,
-                qlk_order: 3,
+                qlk_order: 0,
             },
             {
                 qlk_id: 1,
@@ -404,7 +404,7 @@ describe('QuickLinkContainer reordering', () => {
         const expected = [
             {
                 qlk_id: 3,
-                qlk_order: 3,
+                qlk_order: 0,
             },
             {
                 qlk_id: 1,
@@ -417,7 +417,7 @@ describe('QuickLinkContainer reordering', () => {
         ];
 
         await userEvent.click(getByRole('menuitem', { name: 'Move up' }));
-        expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(expected, 'REORDER');
+        expect(adminDashboardQuickLinkFn).toHaveBeenLastCalledWith(expected, 'REORDER');
         expect(getByTestId('quick-link-0-link')).toHaveTextContent('Link 2');
         expect(getByTestId('quick-link-1-link')).toHaveTextContent('Link 1');
         expect(getByTestId('quick-link-2-link')).toHaveTextContent('Link 3');

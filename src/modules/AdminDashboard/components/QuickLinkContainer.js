@@ -52,7 +52,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
 
         dispatch(actions.adminDashboardQuickLink(request, 'REORDER'))
             .then(() => {
-                clear();
+                // clear();
             })
             .catch(error => {
                 console.error(error);
@@ -189,20 +189,22 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                             {!!data && adminDashboardQuickLinksSuccess && (
                                 <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
                                     <Stack spacing={2} marginBlockStart={2}>
-                                        {data.map((link, index) => (
-                                            <QuickLink
-                                                key={link.qlk_id}
-                                                index={index}
-                                                locale={locale.link}
-                                                itemCount={data.length}
-                                                link={link}
-                                                onMenuItemClick={onMenuItemClick(index)}
-                                                sx={{
-                                                    ...initialViewProps,
-                                                    animation: animationTemplate(index, 200, 100),
-                                                }}
-                                            />
-                                        ))}
+                                        {data
+                                            .sort((a, b) => a < b)
+                                            .map((link, index) => (
+                                                <QuickLink
+                                                    key={link.qlk_id}
+                                                    index={index}
+                                                    locale={locale.link}
+                                                    itemCount={data.length}
+                                                    link={link}
+                                                    onMenuItemClick={onMenuItemClick(index)}
+                                                    sx={{
+                                                        ...initialViewProps,
+                                                        animation: animationTemplate(index, 200, 100),
+                                                    }}
+                                                />
+                                            ))}
                                     </Stack>
                                 </Box>
                             )}

@@ -61,8 +61,7 @@ export const arrayMove = (data, fromIndex, toIndex) => {
 
 export const reorderArray = (data, fromIndex, toIndex) => {
     const arr = arrayMove(data, fromIndex, toIndex);
-    arr.forEach((item, index) => (item.order = index));
-
+    arr.forEach((item, index) => (item.qlk_order = index));
     return arr;
 };
 
