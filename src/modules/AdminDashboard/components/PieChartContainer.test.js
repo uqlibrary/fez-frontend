@@ -5,7 +5,7 @@ import { render } from 'test-utils';
 import PieChartContainer from './PieChartContainer';
 
 const setup = (props = {}, renderer = render) => {
-    return renderer(<PieChartContainer {...props} />);
+    return renderer(<PieChartContainer id="test" {...props} />);
 };
 
 describe('PieChartContainer', () => {

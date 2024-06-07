@@ -60,6 +60,7 @@ const Today = () => {
                                     locale={txt.systemalerts}
                                     colours={COLOURS}
                                     label={txt.systemalerts.title}
+                                    id="system-alerts"
                                 >
                                     <VisualisationSystemAlerts
                                         today={adminDashboardTodayData.systemalerts.today}
@@ -84,8 +85,8 @@ const Today = () => {
                                     label={txt.works.unprocessed}
                                     subtext={
                                         <ExternalLink
-                                            id={'unprocessed-link'}
-                                            data-testid={'unprocessed-link'}
+                                            id={'unprocessed'}
+                                            data-testid={'unprocessed'}
                                             href={LINK_UNPROCESSED_WORKS}
                                         >
                                             <Typography
@@ -98,8 +99,10 @@ const Today = () => {
                                             </Typography>
                                         </ExternalLink>
                                     }
+                                    id="unprocessed-works"
                                 >
                                     <VisualisationWorks
+                                        id="unprocessed-works"
                                         text={`${adminDashboardTodayData.works.unprocessed}`}
                                         amount={adminDashboardTodayData.works.unprocessed}
                                     />
@@ -124,8 +127,10 @@ const Today = () => {
                                             {txt.works.processedSubText}
                                         </Typography>
                                     }
+                                    id="processed-works"
                                 >
                                     <VisualisationWorks
+                                        id="processed-works"
                                         text={`${adminDashboardTodayData.works.processed}`}
                                         amount={adminDashboardTodayData.works.processed}
                                         colour="#35A9A5"
@@ -150,6 +155,7 @@ const Today = () => {
                                             {txt.openaccess.researchOutput.subText}
                                         </Typography>
                                     }
+                                    id="open-access"
                                 >
                                     <VisualisationOpenAccess
                                         text={txt.openaccess.researchOutput.chart.text(

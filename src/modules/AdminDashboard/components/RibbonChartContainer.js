@@ -12,14 +12,14 @@ import TableRow from '@mui/material/TableRow';
 
 import SectionTitle from './SectionTitle';
 
-const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest }) => {
+const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...rest }) => {
     const theme = useTheme();
 
     return (
         <React.Fragment>
-            <SectionTitle>{label}</SectionTitle>
+            <SectionTitle data-testid={`${id}-title`}>{label}</SectionTitle>
             {!!data && (
-                <TableContainer {...rest}>
+                <TableContainer data-testid={`${id}-table`} {...rest}>
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
@@ -73,6 +73,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
     );
 };
 RibbonChartContainer.propTypes = {
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     data: PropTypes.object,
     locale: PropTypes.object,

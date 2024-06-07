@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Box from '@mui/material/Box';
 import { GaugeContainer, GaugeValueArc, GaugeReferenceArc, useGaugeState, GaugeValueText } from '@mui/x-charts';
 
 const GaugePointer = () => {
@@ -28,43 +29,47 @@ const VisualisationOpenAccess = ({
     subText,
     amount,
     maxAmount,
+    id = 'open-access',
     colourValue = '#35A9A5',
     colourReference = 'rgba(0, 0, 0, 0.12)',
 }) => {
     const chartVal = Math.round((amount / maxAmount) * 100);
     return (
-        <GaugeContainer
-            startAngle={-110}
-            endAngle={110}
-            height={160}
-            value={chartVal}
-            sx={{
-                '& [class$="MuiGauge-referenceArc"]': {
-                    fill: colourReference,
-                    '&:last-of-type': { fill: colourValue },
-                },
-            }}
-        >
-            <GaugeReferenceArc />
-            <GaugeValueArc />
-            <GaugePointer />
-            <GaugeValueText
-                text={text}
-                y="85%"
-                fontFamily="Roboto, Helvetica, sans-serif"
-                fontSize="18"
-                fontWeight={400}
-            />
-            {subText && (
-                <GaugeValueText text={subText} y="96%" fontFamily="Roboto, Helvetica, sans-serif" fontSize="16" />
-            )}
-        </GaugeContainer>
+        <Box data-testid={`chart-container-${id}`}>
+            <GaugeContainer
+                startAngle={-110}
+                endAngle={110}
+                height={160}
+                value={chartVal}
+                sx={{
+                    '& [class$="MuiGauge-referenceArc"]': {
+                        fill: colourReference,
+                        '&:last-of-type': { fill: colourValue },
+                    },
+                }}
+            >
+                <GaugeReferenceArc />
+                <GaugeValueArc />
+                <GaugePointer />
+                <GaugeValueText
+                    text={text}
+                    y="85%"
+                    fontFamily="Roboto, Helvetica, sans-serif"
+                    fontSize="18"
+                    fontWeight={400}
+                />
+                {subText && (
+                    <GaugeValueText text={subText} y="96%" fontFamily="Roboto, Helvetica, sans-serif" fontSize="16" />
+                )}
+            </GaugeContainer>
+        </Box>
     );
 };
 VisualisationOpenAccess.propTypes = {
     amount: PropTypes.number.isRequired,
     maxAmount: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
+    id: PropTypes.string,
     subText: PropTypes.string,
     colourValue: PropTypes.string,
     colourReference: PropTypes.string,

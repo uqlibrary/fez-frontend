@@ -24,6 +24,7 @@ const locale = {
 const setup = (props = {}, renderer = render) => {
     const testProps = {
         locale,
+        id: 'test',
         ...props,
     };
     return renderer(<RibbonChartContainer {...testProps} />);

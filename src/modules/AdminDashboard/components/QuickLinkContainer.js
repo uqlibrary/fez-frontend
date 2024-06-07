@@ -188,12 +188,13 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
 
                             {!!data && adminDashboardQuickLinksSuccess && (
                                 <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
-                                    <Stack spacing={2} marginBlockStart={2}>
+                                    <Stack spacing={2} marginBlockStart={2} role="list">
                                         {data
                                             .sort((a, b) => a < b)
                                             .map((link, index) => (
                                                 <QuickLink
                                                     key={link.qlk_id}
+                                                    data-testid={`quick-link-item-${link.qlk_id}`}
                                                     index={index}
                                                     locale={locale.link}
                                                     itemCount={data.length}

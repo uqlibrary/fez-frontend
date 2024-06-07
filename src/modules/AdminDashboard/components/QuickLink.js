@@ -62,7 +62,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
     };
 
     return (
-        <Card {...rest}>
+        <Card role="listitem" {...rest}>
             <CardHeader
                 avatar={
                     <Box

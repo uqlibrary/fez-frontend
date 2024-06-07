@@ -5,12 +5,13 @@ import { render } from 'test-utils';
 import GaugeChartContainer from './GaugeChartContainer';
 
 const setup = (props = {}, renderer = render) => {
-    return renderer(<GaugeChartContainer {...props} />);
+    return renderer(<GaugeChartContainer id="test" {...props} />);
 };
 
 describe('GaugeChartContainer', () => {
     const label = 'Test label';
     const subtext = 'Test subtext';
+
     const children = <div data-testid="test-child">Test child</div>;
 
     it('should render title and child only', () => {
