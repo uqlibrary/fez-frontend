@@ -120,6 +120,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                                         handleClose();
                                     }}
                                     disabled={option.disabled}
+                                    data-testid={`admin-actions-menu-option-${mIndex}`}
                                 >
                                     {option.label}
                                 </MenuItem>
