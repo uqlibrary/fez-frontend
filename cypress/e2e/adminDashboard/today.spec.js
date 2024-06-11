@@ -32,6 +32,10 @@ context('Admin Dashboard - Today tab', () => {
             .last()
             .click();
         cy.data('standard-card-content').contains('Export-only reports');
+        cy.get('[role=tab]')
+            .first()
+            .click();
+        cy.data('standard-card-content').contains('System Alerts');
     });
 
     it('renders charts and quick links as expected', () => {
