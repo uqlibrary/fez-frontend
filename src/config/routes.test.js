@@ -40,9 +40,9 @@ describe('Routes getMenuConfig method', () => {
         expect(testRoutes.length).toEqual(8);
     });
 
-    it('should return a list of menus for user who has admin (uqstaff)', () => {
+    it('should return a list of menus for user who has admin (uqstaff) and full masquerade access', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -53,7 +53,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(31);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -88,7 +88,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -99,16 +99,25 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(31);
     });
 
-    it('should return a list of menus for user who can masquerade', () => {
+    it('should return a list of menus for user who can readonly masquerade', () => {
         const testRoutes = routes.getMenuConfig(
             accounts.uqmasquerade,
             currentAuthor.uqmasquerade.data,
             authorDetails.uqmasquerade,
         );
         expect(testRoutes.length).toEqual(17);
+    });
+
+    it('should return a list of menus for user who can fully masquerade', () => {
+        const testRoutes = routes.getMenuConfig(
+            { ...accounts.uqmasquerade, canMasqueradeType: 'full' },
+            currentAuthor.uqmasquerade.data,
+            authorDetails.uqmasquerade,
+        );
+        expect(testRoutes.length).toEqual(18);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
