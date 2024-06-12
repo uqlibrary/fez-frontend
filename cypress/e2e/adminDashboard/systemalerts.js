@@ -33,7 +33,7 @@ context('Admin Dashboard - System Alerts tab', () => {
     beforeEach(() => {
         cy.loadAdminDashboard();
         cy.get('[role=tab]')
-            .eq(1)
+            .contains('SYSTEM ALERTS')
             .click()
             .should('have.attr', 'aria-selected', 'true');
 
@@ -108,11 +108,11 @@ context('Admin Dashboard - System Alerts tab', () => {
         cy.data('system-alert-detail-action-button')
             .contains('Mark as resolved')
             .click();
-        cy.data('system-alert-detail-action-button').should('have.attr', 'disabled');
+        cy.data('system-alert-detail-action-button').should('be.disabled');
         cy.data('system-alert-detail-action-button').contains('Updating...');
 
         cy.data('system-alert-detail-assignee').within(() => {
-            cy.data('system-alert-detail-assignee-input').should('have.attr', 'disabled');
+            cy.data('system-alert-detail-assignee-input').should('be.disabled');
             cy.get('[role=progressbar]').should('be.visible');
         });
     });

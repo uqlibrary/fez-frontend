@@ -17,7 +17,7 @@ context('Admin Dashboard - Today tab', () => {
         cy.get('[role=tab]')
             .eq(1)
             .within(() => {
-                cy.get('[data-testid^=tab-counter]').contains('8');
+                cy.dataStartsWith('tab-counter').contains('8');
             });
         cy.get('[role=tab]')
             .last()
@@ -118,7 +118,7 @@ context('Admin Dashboard - Today tab', () => {
                 .eq(0)
                 .contains('2021+ Imported Records with an Author ID and Research Subtypes Only');
             cy.data('admin-actions-button-1').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move up')
                 .click();
             cy.get('[role=listitem]')
@@ -128,21 +128,21 @@ context('Admin Dashboard - Today tab', () => {
                 .eq(0)
                 .contains('UQ Library');
             cy.data('admin-actions-button-0').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move down')
                 .click();
             cy.get('[role=listitem]')
                 .eq(1)
                 .contains('UQ Library');
             cy.data('admin-actions-button-1').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move to bottom')
                 .click();
             cy.get('[role=listitem]')
                 .last()
                 .contains('UQ Library');
             cy.data('admin-actions-button-6').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move to top')
                 .click();
             cy.get('[role=listitem]')
@@ -156,16 +156,16 @@ context('Admin Dashboard - Today tab', () => {
                 .eq(1)
                 .contains('UQ Library');
             cy.data('admin-actions-button-1').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Delete')
                 .click();
             cy.data('standard-card-content').contains('DELETE UQ Library');
             cy.data('qlk_title-input')
                 .should('have.value', 'UQ Library')
-                .should('have.attr', 'disabled');
+                .should('be.disabled');
             cy.data('qlk_link-input')
                 .should('have.value', 'https://www.library.uq.edu.au')
-                .should('have.attr', 'disabled');
+                .should('be.disabled');
             cy.get('button')
                 .contains('Delete')
                 .click();
@@ -180,19 +180,19 @@ context('Admin Dashboard - Today tab', () => {
                 .eq(1)
                 .contains('UQ Library');
             cy.data('admin-actions-button-1').click();
-            cy.get('[data-testid^=admin-actions-menu-option-]')
+            cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Edit')
                 .click();
             cy.data('standard-card-content').contains('Edit UQ Library');
             cy.data('qlk_title-input')
                 .should('have.value', 'UQ Library')
-                .should('not.have.attr', 'disabled');
+                .should('not.be.disabled');
             cy.data('qlk_title-input').type(' updated');
             cy.data('qlk_title-input').should('have.value', 'UQ Library updated');
 
             cy.data('qlk_link-input')
                 .should('have.value', 'https://www.library.uq.edu.au')
-                .should('not.have.attr', 'disabled');
+                .should('not.be.disabled');
             cy.data('qlk_link-input').type(' updated');
             cy.data('qlk_link-input').should('have.value', 'https://www.library.uq.edu.au updated');
 
@@ -252,14 +252,14 @@ context('Admin Dashboard - Today tab', () => {
 
             cy.data('qlk_title-input')
                 .should('have.value', '')
-                .should('not.have.attr', 'disabled');
+                .should('not.be.disabled');
 
             cy.data('qlk_title-input').type('New title');
             cy.data('qlk_title-input').should('have.value', 'New title');
 
             cy.data('qlk_link-input')
                 .should('have.value', '')
-                .should('not.have.attr', 'disabled');
+                .should('not.be.disabled');
             cy.data('qlk_link-input').type('New link');
             cy.data('qlk_link-input').should('have.value', 'New link');
 
