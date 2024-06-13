@@ -125,10 +125,11 @@ describe('QuickLinkContainer', () => {
                 },
             },
         );
+
         await waitFor(() => getByTestId('quick-link-0-link'));
         expect(getByText('Quick Links')).toBeInTheDocument();
         expect(getByTestId('add-quick-link')).toBeInTheDocument();
-        expect(container.querySelectorAll('[data-testid^=quick-link-]').length).toBe(3);
+        expect(container.querySelectorAll('[data-testid^=quick-link-item-]').length).toBe(3);
     });
 
     it('should show the admin interface for ADD and fire expected events', async () => {

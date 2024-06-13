@@ -53,62 +53,62 @@ describe('utils', () => {
         it('should reorder elements within the array', () => {
             // Test case 1: Move an element from index 1 to index 3
             expect(reorderArray([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }], 1, 3)).toEqual([
-                { id: 1, order: 0 },
-                { id: 3, order: 1 },
-                { id: 4, order: 2 },
-                { id: 2, order: 3 },
-                { id: 5, order: 4 },
+                { id: 1, qlk_order: 0 },
+                { id: 3, qlk_order: 1 },
+                { id: 4, qlk_order: 2 },
+                { id: 2, qlk_order: 3 },
+                { id: 5, qlk_order: 4 },
             ]);
 
             // Test case 2: Move an element from index 0 to the end
             expect(
                 reorderArray(
                     [
-                        { id: 1, order: 1 },
-                        { id: 2, order: 0 },
-                        { id: 3, order: 2 },
+                        { id: 1, qlk_order: 1 },
+                        { id: 2, qlk_order: 0 },
+                        { id: 3, qlk_order: 2 },
                     ],
                     0,
                     2,
                 ),
             ).toEqual([
-                { id: 2, order: 0 },
-                { id: 3, order: 1 },
-                { id: 1, order: 2 },
+                { id: 2, qlk_order: 0 },
+                { id: 3, qlk_order: 1 },
+                { id: 1, qlk_order: 2 },
             ]);
 
             // Test case 3: Move an element from the end to index 1
             expect(
                 reorderArray(
                     [
-                        { id: 1, order: 1 },
-                        { id: 2, order: 0 },
-                        { id: 3, order: 2 },
+                        { id: 1, qlk_order: 1 },
+                        { id: 2, qlk_order: 0 },
+                        { id: 3, qlk_order: 2 },
                     ],
                     2,
                     1,
                 ),
             ).toEqual([
-                { id: 1, order: 0 },
-                { id: 3, order: 1 },
-                { id: 2, order: 2 },
+                { id: 1, qlk_order: 0 },
+                { id: 3, qlk_order: 1 },
+                { id: 2, qlk_order: 2 },
             ]);
 
             // Test case 4: Move an element within the array (same indices)
             expect(
                 reorderArray(
                     [
-                        { id: 1, order: 1 },
-                        { id: 2, order: 0 },
-                        { id: 3, order: 2 },
+                        { id: 1, qlk_order: 1 },
+                        { id: 2, qlk_order: 0 },
+                        { id: 3, qlk_order: 2 },
                     ],
                     1,
                     1,
                 ),
             ).toEqual([
-                { id: 1, order: 0 },
-                { id: 2, order: 1 },
-                { id: 3, order: 2 },
+                { id: 1, qlk_order: 0 },
+                { id: 2, qlk_order: 1 },
+                { id: 3, qlk_order: 2 },
             ]);
         });
     });
