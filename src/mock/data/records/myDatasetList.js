@@ -26,9 +26,6 @@ export default {
                 "rek_access_conditions": "453619",
                 "rek_access_conditions_lookup": "Open Access"
             },
-            "fez_record_search_key_additional_notes": {
-                "rek_additional_notes": "From: Matt Dillon (AIRAH) [mailto:matt@airah.org.au] Sent: Monday, 16 January 2017 10:56 PM To: Eric Peterson Subject: RE: [ASHRAE-TC4.2] FW: TC 4.2 might be interested Hi Eric, It’s fine for you to put online on your site. Thanks for asking. Matt Matthew Dillon Communications Manager AIRAH – National office Level 3/1 Elizabeth St Melbourne Vic 3000 T: (03) 8623 3000 D: (03) 8623 3009 www.airah.org.au matt@airah.org.au"
-            },
             "fez_record_search_key_ands_collection_type": {
                 "rek_ands_collection_type": "453616",
                 "rek_ands_collection_type_lookup": "Dataset"

@@ -1,5 +1,6 @@
 import globalLocale from 'locale/global';
 import moment from 'moment';
+import { prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 
 export const viewJournalConfig = {
@@ -362,7 +363,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -484,7 +485,7 @@ export const viewJournalConfig = {
                     staticData: true,
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: () => 'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+                        href: () => prefixByUrlResolver('https://jcr.clarivate.com'),
                         text: () => 'Go to JCR website',
                         title: 'Open JCR website in a new tab',
                     },
@@ -587,8 +588,7 @@ export const viewJournalConfig = {
                     ],
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item =>
-                            `https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/${item}`,
+                        href: item => prefixByUrlResolver(`https://www.scopus.com/sourceid/${item}`),
                         title: 'Open CiteScore record in a new tab',
                         text: () => 'Go to record in CiteScore',
                     },

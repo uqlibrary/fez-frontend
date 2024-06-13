@@ -507,8 +507,8 @@ export const getRoutesConfig = ({
         ...publicPages,
         {
             path: '*',
-            element: <components.NotFound />,
-            pageTitle: locale.pages.notFound.title,
+            element: <components.PageNotFound />,
+            pageTitle: locale.pages.pageNotFound.title,
         },
     ];
 };

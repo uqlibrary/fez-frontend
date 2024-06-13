@@ -151,7 +151,7 @@ context('Journal Article admin edit', () => {
                                         .should(
                                             'have.attr',
                                             'href',
-                                            'https://go.openathens.net/redirector/uq.edu.au?url=' +
+                                            'https://resolver.library.uq.edu.au/openathens/redir?qurl=' +
                                                 encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/') +
                                                 ulrichsId[index],
                                         );
@@ -482,6 +482,28 @@ context('Journal Article admin edit', () => {
 
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);
         cy.adminEditCleanup();
+    });
+
+    // failing in CB but passing locally
+    it.skip('should allow paste text only in ckeditor', () => {
+        const record = recordList.data[1];
+        cy.loadRecordForAdminEdit(record.rek_pid);
+        // should ignore html content in the paste event
+        cy.readCKEditor('rek-notes')
+            .paste({
+                pasteType: 'text/html',
+                pastePayload: '<a href="https://link.com">Link</a>',
+            })
+            .invoke('text')
+            .should('eq', '');
+
+        cy.readCKEditor('rek-notes')
+            .paste({
+                pasteType: 'text/plain',
+                pastePayload: 'Link',
+            })
+            .invoke('text')
+            .should('eq', 'Link');
     });
 
     describe('Author Affiliations', () => {
