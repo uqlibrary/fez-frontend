@@ -1,5 +1,3 @@
-// import React from 'react';
-
 import * as XLSX from 'xlsx';
 
 export const stringToColour = string => {

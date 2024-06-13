@@ -128,7 +128,9 @@ describe('SystemAlerts tab', () => {
             .reply(200, { data: [...adminDashboardReportWorksData] });
 
         const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
-        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel');
+        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
+            return true;
+        });
 
         const { getAllByRole, getByRole, getByTestId } = setup();
 
@@ -179,8 +181,9 @@ describe('SystemAlerts tab', () => {
             .reply(200, { data: [...adminDashboardReportSystemAlertsData] });
 
         const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
-        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel');
-
+        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
+            return true;
+        });
         const { getAllByRole, getByRole, getByTestId } = setup();
 
         await userEvent.click(getByTestId('report-display-export-input'));
