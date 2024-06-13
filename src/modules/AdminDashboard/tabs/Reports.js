@@ -158,16 +158,18 @@ const Reports = () => {
                                         id: `${reportExportOnlyId}-input`,
                                         'data-analyticsid': `${reportExportOnlyId}-input`,
                                         'data-testid': `${reportExportOnlyId}-input`,
+                                        'aria-describedby': `${reportExportOnlyId}-label`,
                                     }}
                                     InputLabelProps={{
                                         'data-testid': `${reportExportOnlyId}-label`,
+                                        for: `${reportExportOnlyId}-input`,
                                     }}
                                 />
                             )}
                             ListboxProps={{
-                                id: `${reportExportOnlyId}-options`,
-                                'data-analyticsid': `${reportExportOnlyId}-options`,
-                                'data-testid': `${reportExportOnlyId}-options`,
+                                id: `${reportExportOnlyId}-listbox`,
+                                'data-analyticsid': `${reportExportOnlyId}-listbox`,
+                                'data-testid': `${reportExportOnlyId}-listbox`,
                             }}
                             value={actionState.exportReport}
                             onChange={(_, value) => actionDispatch({ type: 'exportReport', value })}
@@ -239,42 +241,18 @@ const Reports = () => {
                                         }}
                                         InputLabelProps={{
                                             'data-testid': `${reportDisplayExportId}-label`,
+                                            for: `${reportDisplayExportId}-input`,
                                         }}
                                     />
                                 )}
                                 ListboxProps={{
-                                    id: `${reportDisplayExportId}-options`,
-                                    'data-analyticsid': `${reportDisplayExportId}-options`,
-                                    'data-testid': `${reportDisplayExportId}-options`,
+                                    id: `${reportDisplayExportId}-listbox`,
+                                    'data-analyticsid': `${reportDisplayExportId}-listbox`,
+                                    'data-testid': `${reportDisplayExportId}-listbox`,
                                 }}
                                 value={actionState.displayReport}
                                 onChange={(_, value) => handleDisplayReportChange(value)}
                             />
-                            {actionState.displayReport?.value === 'systemalertlog' && (
-                                <Box data-testid="report-display-system-alert-id">
-                                    <TextField
-                                        label={txt.label.systemId}
-                                        variant="standard"
-                                        fullWidth
-                                        inputProps={{
-                                            id: 'report-display-system-alert-id-input',
-                                            'data-analyticsid': 'report-display-system-alert-id-input',
-                                            'data-testid': 'report-display-system-alert-id-input',
-                                        }}
-                                        InputLabelProps={{
-                                            'data-testid': 'report-display-system-alert-id-label',
-                                        }}
-                                        sx={{ mt: 1 }}
-                                        onChange={props =>
-                                            // eslint-disable-next-line react/prop-types
-                                            actionDispatch({ type: 'systemAlertId', value: props.target.value })
-                                        }
-                                        value={actionState.systemAlertId}
-                                        helperText={systemAlertError}
-                                        error={!!systemAlertError}
-                                    />
-                                </Box>
-                            )}
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Box data-testid="report-display-date-from">
@@ -350,6 +328,34 @@ const Reports = () => {
                                 />
                             </Box>
                         </Grid>
+                        {actionState.displayReport?.value === 'systemalertlog' && (
+                            <Grid item xs={12} sm={4}>
+                                <Box data-testid="report-display-system-alert-id">
+                                    <TextField
+                                        label={txt.label.systemId}
+                                        variant="standard"
+                                        fullWidth
+                                        inputProps={{
+                                            id: 'report-display-system-alert-id-input',
+                                            'data-analyticsid': 'report-display-system-alert-id-input',
+                                            'data-testid': 'report-display-system-alert-id-input',
+                                        }}
+                                        InputLabelProps={{
+                                            'data-testid': 'report-display-system-alert-id-label',
+                                            for: 'report-display-system-alert-id-input',
+                                        }}
+                                        sx={{ mt: 1 }}
+                                        onChange={props =>
+                                            // eslint-disable-next-line react/prop-types
+                                            actionDispatch({ type: 'systemAlertId', value: props.target.value })
+                                        }
+                                        value={actionState.systemAlertId}
+                                        helperText={systemAlertError}
+                                        error={!!systemAlertError}
+                                    />
+                                </Box>
+                            </Grid>
+                        )}
                         <Grid item xs={12}>
                             <Button
                                 id="report-display-button"

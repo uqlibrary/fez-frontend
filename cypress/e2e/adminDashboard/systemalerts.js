@@ -32,20 +32,30 @@ context('Admin Dashboard - System Alerts tab', () => {
 
     beforeEach(() => {
         cy.loadAdminDashboard();
+
         cy.get('[role=tab]')
             .contains('SYSTEM ALERTS')
             .click()
             .should('have.attr', 'aria-selected', 'true');
 
         cy.data('standard-card-content').contains('8 system alerts');
-        // cy.injectAxe();
     });
 
     it('renders table as expected', () => {
+        cy.injectAxe();
         // no need to check every row, just check
         // a couple that have a different status
         cy.get('[role=row]').should('have.length', 9); // +1 for header row
-
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'aria-required-children': { enabled: false }, // TODO see: https://github.com/dequelabs/axe-core/issues/4419
+                },
+            },
+            violations => console.log(violations),
+        );
         getRow(1).within(() => {
             getCell(1).contains('My Works - Claimed Work - UQ:8efd126 - uqwtomas');
             getCell(2).within(() => {
@@ -76,8 +86,15 @@ context('Admin Dashboard - System Alerts tab', () => {
         };
 
         getRow(1).click(); // click first row of results
-
+        cy.injectAxe();
         assertDetailDrawer(data);
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
 
         cy.get('.MuiBackdrop-root').click(); // test drawer can be closed
         cy.get('.MuiBackdrop-root').should('not.exist');

@@ -23,7 +23,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...r
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
-                                <TableCell size="small" width={200} />
+                                <TableCell size="small" width={200} aria-hidden="true" />
                                 {Object.keys(locale)
                                     .filter(item => locale[item].hasOwnProperty('label'))
                                     .map(key => {

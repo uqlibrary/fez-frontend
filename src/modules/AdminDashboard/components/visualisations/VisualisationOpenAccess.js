@@ -47,6 +47,8 @@ const VisualisationOpenAccess = ({
                         '&:last-of-type': { fill: colourValue },
                     },
                 }}
+                title="Gauge visualisation"
+                aria-label="Gauge visualisation"
             >
                 <GaugeReferenceArc />
                 <GaugeValueArc />

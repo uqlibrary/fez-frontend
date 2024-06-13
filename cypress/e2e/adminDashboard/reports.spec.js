@@ -7,11 +7,21 @@ context('Admin Dashboard - Reports tab', () => {
             .should('have.attr', 'aria-selected', 'true');
 
         cy.data('standard-card-content').contains('Export-only reports');
-        // cy.injectAxe();
+        cy.injectAxe();
     });
 
     it('renders page as expected', () => {
         cy.data('report-export-button').should('be.disabled');
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
         cy.data('report-export-only-input')
             .should('have.value', '')
             .click();
@@ -71,6 +81,16 @@ context('Admin Dashboard - Reports tab', () => {
         cy.data('report-export-only-input')
             .should('have.value', '')
             .click();
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
         cy.get('[role=option]')
             .eq(0)
             .click();
@@ -90,6 +110,16 @@ context('Admin Dashboard - Reports tab', () => {
         // works history
         cy.data('report-display-export-input').click();
         cy.get('[role=option]').should('have.length', 2);
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
         cy.get('[role=option]')
             .contains('Works history')
             .click();
@@ -99,6 +129,17 @@ context('Admin Dashboard - Reports tab', () => {
             cy.get('[role=columnheader]').should('have.length', 5);
             cy.get('[role=row]').should('have.length', 7); // +1 for header
         });
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                    'aria-required-children': { enabled: false }, // TODO see: https://github.com/dequelabs/axe-core/issues/4419
+                },
+            },
+            violations => console.log(violations),
+        );
 
         cy.task('downloads', Cypress.config('downloadsFolder')).then(before => {
             cy.data('report-display-export-button')
@@ -121,6 +162,17 @@ context('Admin Dashboard - Reports tab', () => {
             cy.get('[role=columnheader]').should('have.length', 8);
             cy.get('[role=row]').should('have.length', 8); // +1 for header
         });
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                    'aria-required-children': { enabled: false }, // TODO see: https://github.com/dequelabs/axe-core/issues/4419
+                },
+            },
+            violations => console.log(violations),
+        );
 
         cy.task('downloads', Cypress.config('downloadsFolder')).then(before => {
             cy.data('report-display-export-button')
@@ -132,7 +184,7 @@ context('Admin Dashboard - Reports tab', () => {
         });
     });
 
-    it('validates the filters', () => {
+    it.only('validates the filters', () => {
         // use system alerts report as it includes
         // an additional field, but otherwise the
         // validation is the same
@@ -191,6 +243,17 @@ context('Admin Dashboard - Reports tab', () => {
             .parent()
             .should('have.class', 'Mui-error');
 
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
+
         cy.data('report-display-button').should('be.disabled');
         cy.data('report-display-date-from-input')
             .clear()
@@ -203,6 +266,18 @@ context('Admin Dashboard - Reports tab', () => {
             .should('have.class', 'Mui-error');
         cy.data('report-display-system-alert-id').contains('Must be a positive whole number');
         cy.data('report-display-button').should('be.disabled');
+
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
+
         cy.data('report-display-system-alert-id-input').clear();
 
         cy.data('report-display-system-alert-id-input').type('-1');

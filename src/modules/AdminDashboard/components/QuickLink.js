@@ -76,7 +76,6 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                             textShadow: '0px 0px 2px rgba(0,0,0,0.87)',
                             ...(!link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
                         }}
-                        aria-label="count"
                     >
                         {link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? (
                             abbreviateNumber(link.qlk_amount, 1)

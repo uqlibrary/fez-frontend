@@ -1,10 +1,11 @@
 context('Admin Dashboard - Today tab', () => {
     beforeEach(() => {
         cy.loadAdminDashboard();
-        // cy.injectAxe();
     });
 
     it('renders tabs as expected', () => {
+        cy.injectAxe();
+
         cy.get('[role=tab]').should('have.length', 3);
         cy.get('[role=tab]')
             .first()
@@ -36,6 +37,13 @@ context('Admin Dashboard - Today tab', () => {
             .first()
             .click();
         cy.data('standard-card-content').contains('System Alerts');
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
     });
 
     it('renders charts and quick links as expected', () => {
@@ -155,11 +163,24 @@ context('Admin Dashboard - Today tab', () => {
             cy.get('[role=listitem]')
                 .eq(1)
                 .contains('UQ Library');
+
             cy.data('admin-actions-button-1').click();
+
             cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Delete')
                 .click();
+            cy.injectAxe();
             cy.data('standard-card-content').contains('DELETE UQ Library');
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
             cy.data('qlk_title-input')
                 .should('have.value', 'UQ Library')
                 .should('be.disabled');
@@ -179,11 +200,24 @@ context('Admin Dashboard - Today tab', () => {
             cy.get('[role=listitem]')
                 .eq(1)
                 .contains('UQ Library');
+
             cy.data('admin-actions-button-1').click();
+
             cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Edit')
                 .click();
+            cy.injectAxe();
             cy.data('standard-card-content').contains('Edit UQ Library');
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
             cy.data('qlk_title-input')
                 .should('have.value', 'UQ Library')
                 .should('not.be.disabled');
@@ -235,7 +269,7 @@ context('Admin Dashboard - Today tab', () => {
             cy.data('add-quick-link').click();
 
             cy.data('standard-card-content').contains('Add new quick link');
-
+            cy.injectAxe();
             cy.data('qlk_title-input')
                 .parent()
                 .should('have.class', 'Mui-error');
@@ -249,6 +283,18 @@ context('Admin Dashboard - Today tab', () => {
 
             cy.data('qlk_title').contains('Required');
             cy.data('qlk_link').contains('Required');
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
 
             cy.data('qlk_title-input')
                 .should('have.value', '')
