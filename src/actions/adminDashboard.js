@@ -211,6 +211,7 @@ export function loadAdminDashboardExportReport(request) {
                 return Promise.resolve();
             })
             .catch(error => {
+                console.error(error);
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_FAILED,
                     payload: {
