@@ -9,7 +9,7 @@ import debounce from 'debounce-promise';
 const SINGLE_CHAR_WIDTH = 29;
 const MAX_ELEMENT_WIDTH = 214;
 
-const VisualisationWorks = ({ text, amount, id = 'works', colour = '#B60DCE' }) => {
+const VisualisationWorks = ({ text, amount, id, colour = '#B60DCE' }) => {
     const [elementWidth, setElementWidth] = React.useState(0);
     const _ref = React.useRef();
 
@@ -62,7 +62,7 @@ const VisualisationWorks = ({ text, amount, id = 'works', colour = '#B60DCE' }) 
 };
 VisualisationWorks.propTypes = {
     text: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     colour: PropTypes.string,
 };

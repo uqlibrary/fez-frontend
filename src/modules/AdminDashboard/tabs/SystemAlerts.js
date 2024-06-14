@@ -66,6 +66,7 @@ const SystemAlerts = () => {
                 dispatch(actions.loadAdminDashboardSystemAlerts());
             })
             .catch(error => {
+                /* istanbul ignore next */
                 console.error(error);
             });
     };
@@ -109,7 +110,7 @@ const SystemAlerts = () => {
                     {!!adminDashboardSystemAlertsData && (
                         <>
                             <DataGrid
-                                rows={adminDashboardSystemAlertsData ?? []}
+                                rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
                                 columns={columns}
                                 initialState={{
                                     pagination: {

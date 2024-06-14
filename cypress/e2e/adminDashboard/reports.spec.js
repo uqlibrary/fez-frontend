@@ -184,7 +184,46 @@ context('Admin Dashboard - Reports tab', () => {
         });
     });
 
-    it.only('validates the filters', () => {
+    it('displays a report even if user navs away and back', () => {
+        // works history
+        cy.data('report-display-export-input').click();
+        cy.get('[role=option]').should('have.length', 2);
+
+        cy.get('[role=option]')
+            .contains('Works history')
+            .click();
+        cy.data('report-display-button').click();
+        cy.data('report-display-data-grid').should('exist');
+        cy.data('report-display-data-grid').within(() => {
+            cy.get('[role=columnheader]').should('have.length', 5);
+            cy.get('[role=row]').should('have.length', 7); // +1 for header
+        });
+
+        // nav away
+        cy.get('[role=tab]')
+            .contains('TODAY')
+            .click()
+            .should('have.attr', 'aria-selected', 'true');
+
+        cy.data('standard-card-content').contains('System Alerts');
+
+        // nav back
+        cy.get('[role=tab]')
+            .contains('REPORTS')
+            .click()
+            .should('have.attr', 'aria-selected', 'true');
+
+        cy.data('standard-card-content').contains('Export-only reports');
+
+        // results should still be visible
+        cy.data('report-display-data-grid').should('exist');
+        cy.data('report-display-data-grid').within(() => {
+            cy.get('[role=columnheader]').should('have.length', 5);
+            cy.get('[role=row]').should('have.length', 7); // +1 for header
+        });
+    });
+
+    it('validates the filters', () => {
         // use system alerts report as it includes
         // an additional field, but otherwise the
         // validation is the same

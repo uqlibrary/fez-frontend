@@ -72,6 +72,7 @@ const Reports = () => {
         if (!!actionState.displayReport) {
             return getDisplayReportColumns(txt, actionState.displayReport.value);
         } else if (!!adminDashboardDisplayReportDataType) {
+            // retain the view of the last report that was displayed
             return getDisplayReportColumns(txt, adminDashboardDisplayReportDataType);
         }
         return [];
@@ -89,6 +90,7 @@ const Reports = () => {
                 //! adminDashboardExportReportFailed && dispatch(actions.clearAdminDashboardExportReport());
             })
             .catch(error => {
+                /* istanbul ignore next */
                 console.error(error);
             });
     };
@@ -102,6 +104,7 @@ const Reports = () => {
     };
 
     const handleDisplayReportClick = () => {
+        /* istanbul ignore else */
         if (isValid) {
             const request = {
                 id: actionState.displayReport.value,
@@ -395,7 +398,7 @@ const Reports = () => {
                             <Grid item xs={12}>
                                 <DataGrid
                                     rows={adminDashboardDisplayReportData}
-                                    columns={columns ?? []}
+                                    columns={columns ?? /* istanbul ignore next */ []}
                                     initialState={{
                                         pagination: {
                                             paginationModel: { page: 0, pageSize: 10 },

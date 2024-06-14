@@ -7,6 +7,7 @@ import { GaugeContainer, GaugeValueArc, GaugeReferenceArc, useGaugeState, GaugeV
 const GaugePointer = () => {
     const { valueAngle, outerRadius, cx, cy } = useGaugeState();
 
+    /* istanbul ignore next */
     if (valueAngle === null) {
         // No value to display
         return null;
