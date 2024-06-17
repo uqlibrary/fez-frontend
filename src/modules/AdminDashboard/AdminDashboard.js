@@ -9,35 +9,17 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/components';
+import { tabConfig, tabProps } from 'config/adminDashboard';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
-import Today from './tabs/Today';
-import SystemAlerts from './tabs/SystemAlerts';
-import Reports from './tabs/Reports';
-import Chip from '@mui/material/Chip';
-
-export const tabProps = [
-    {
-        id: 1,
-        render: count => {
-            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
-        },
-    },
-];
-
-export const tabsConfig = [
-    { id: 0, title: 'TODAY', component: <Today /> },
-    { id: 1, title: 'SYSTEM ALERTS', component: <SystemAlerts /> },
-    { id: 2, title: 'REPORTS', component: <Reports /> },
-];
-
-const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
+export const CustomTabPanel = ({ children, value, index, ...rest } = {}) => (
     <div
         role="tabpanel"
         hidden={value !== index}
         id={`admin-dashboard-tabs-${index}`}
+        data-testid={`admin-dashboard-tabs-${index}`}
         aria-labelledby={`admin-dashboard-tab-${index}`}
         {...rest}
     >
@@ -56,6 +38,7 @@ const a11yProps = index => ({
 });
 
 const AdminDashboard = () => {
+    const txt = locale.components.adminDashboard;
     const dispatch = useDispatch();
     const [activeTab, setActiveTab] = React.useState(0);
     const {
@@ -65,25 +48,23 @@ const AdminDashboard = () => {
         adminDashboardConfigError,
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
-    React.useEffect(() => {
-        if (!adminDashboardConfigError && !adminDashboardConfigSuccess && !adminDashboardConfigLoading) {
-            dispatch(actions.loadAdminDashboardConfig())
-                .then(() => {
-                    dispatch(actions.loadAdminDashboardToday());
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        }
-    }, [adminDashboardConfigError, adminDashboardConfigLoading, adminDashboardConfigSuccess, dispatch]);
-
+    if (!adminDashboardConfigError && !adminDashboardConfigSuccess && !adminDashboardConfigLoading) {
+        dispatch(actions.loadAdminDashboardConfig())
+            .then(() => {
+                dispatch(actions.loadAdminDashboardToday());
+            })
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */ console.error(error);
+                },
+            );
+    }
     const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardTodayReducer'));
 
     const handleChange = (event, newActiveTab) => {
         setActiveTab(newActiveTab);
     };
 
-    const txt = locale.components.adminDashboard;
     return (
         <StandardPage title={txt.title}>
             {adminDashboardConfigLoading && <InlineLoader message={txt.loading.config} />}
@@ -98,23 +79,21 @@ const AdminDashboard = () => {
             {!!adminDashboardConfigData && (
                 <>
                     <Tabs value={activeTab} onChange={handleChange} aria-label="admin dashboard tabbed interface">
-                        {tabsConfig.map(tab => {
+                        {tabConfig.map(tab => {
                             return (
                                 <Tab
                                     key={tab.title}
                                     label={tab.title}
                                     sx={{ minHeight: 'auto' }}
                                     {...a11yProps(tab.id)}
-                                    {...tabProps
-                                        .find(_tab => _tab.id === tab.id)
-                                        ?.render(adminDashboardTodayData?.systemalerts?.mine)}
+                                    {...tabProps.find(_tab => _tab.id === tab.id)?.render(adminDashboardTodayData)}
                                 />
                             );
                         })}
                     </Tabs>
-                    {tabsConfig.map(tab => (
+                    {tabConfig.map(tab => (
                         <CustomTabPanel key={tab.id} value={activeTab} index={tab.id}>
-                            {tab.component}
+                            <tab.component />
                         </CustomTabPanel>
                     ))}
                 </>

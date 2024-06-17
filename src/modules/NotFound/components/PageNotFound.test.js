@@ -1,5 +1,5 @@
 import React from 'react';
-import NotFound from './NotFound';
+import PageNotFound from './PageNotFound';
 
 import { pathConfig } from 'config/pathConfig';
 
@@ -23,20 +23,18 @@ function setup(state = {}, renderer = render) {
     return renderer(
         <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
-                <NotFound />
+                <PageNotFound />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('NotFound page component', () => {
-    let useLocationHook;
     let useAccountContext;
     let getFavouriteSearchAlias;
 
     beforeEach(() => {
         useLocation.mockClear();
-        // useLocationHook = jest.spyOn(ReactRouterHooks, 'useLocation');
         useAccountContext = jest.spyOn(Context, 'useAccountContext');
         getFavouriteSearchAlias = jest.spyOn(FavouriteSearchAction, 'getFavouriteSearchAlias');
     });

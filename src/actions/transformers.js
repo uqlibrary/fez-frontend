@@ -1521,10 +1521,7 @@ export const getNotesSectionSearchKeys = (data = {}) => {
 
     return {
         ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
-            ? {
-                  fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText },
-                  fez_record_search_key_additional_notes: { rek_additional_notes: additionalNotes.htmlText },
-              }
+            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
             : {}),
         ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }

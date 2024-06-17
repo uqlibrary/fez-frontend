@@ -27,6 +27,7 @@ import { pathConfig, validation } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { withNavigate } from 'helpers/withNavigate';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 export class FixRecord extends PureComponent {
     static propTypes = {
@@ -130,6 +131,10 @@ export class FixRecord extends PureComponent {
     };
 
     render() {
+        if (!this.props.loadingRecordToFix && !this.props.recordToFix) {
+            return <WorkNotFound />;
+        }
+
         // if author is not linked to this record, abandon form
         if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
             this.props.navigate(-1);

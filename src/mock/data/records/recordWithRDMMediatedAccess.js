@@ -61,12 +61,6 @@ export default {
         "rek_access_conditions": "453618",
         "rek_access_conditions_lookup": "Mediated Access"
     },
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 10504,
-        "rek_additional_notes_pid": "UQ:92b978e",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "GRDC funded project: UOQ2203-006RTX\nIn collaboration with the Grains Orana Alliance (GOA)"
-    },
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_ands_collection_type": {
         "rek_ands_collection_type_id": 5177,

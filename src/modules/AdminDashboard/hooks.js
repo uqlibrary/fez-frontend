@@ -1,6 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 
+import { useDispatch } from 'react-redux';
+import { useConfirmationState } from 'hooks';
+import { isEmptyStr } from './utils';
+
 export const useSystemAlertDrawer = () => {
     const [_open, _setOpen] = React.useState(false);
     const [_row, _setRow] = React.useState({});
@@ -35,15 +39,15 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
             if (
                 displayReport === 'systemalertlog' &&
                 systemAlertId.trim() !== '' &&
-                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0)
+                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0 || systemAlertId.includes('.'))
             ) {
                 setSystemAlertError(locale.systemAlertId);
                 return false;
             }
-
             if (!!!fromDate && !!!toDate) return true;
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
+
             if (mFrom.isValid() && !mTo.isValid()) {
                 setToDateError(locale.required);
                 return false;
@@ -63,4 +67,22 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
     }, [displayReport, fromDate, toDate, systemAlertId]);
 
     return { isValid, fromDateError, toDateError, systemAlertError };
+};
+
+export const useAlertStatus = ({ message, hideAction }) => {
+    const dispatch = useDispatch();
+    const [alertIsVisible, showAlert, _hideAlert] = useConfirmationState();
+
+    const hideAlert = () => {
+        dispatch(hideAction());
+        _hideAlert();
+    };
+
+    React.useEffect(() => {
+        if (!alertIsVisible) {
+            if (!isEmptyStr(message)) showAlert();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [alertIsVisible, message]);
+    return [alertIsVisible, hideAlert];
 };

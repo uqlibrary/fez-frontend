@@ -5,7 +5,7 @@ export const initialState = {
     adminDashboardDisplayReportDataType: null,
     adminDashboardDisplayReportLoading: false,
     adminDashboardDisplayReportSuccess: null,
-    adminDashboardDisplayReportError: null,
+    adminDashboardDisplayReportFailed: null,
 };
 
 const handlers = {
@@ -23,7 +23,7 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_FAILED]: (_, action) => ({
         ...initialState,
         adminDashboardDisplayReportLoading: false,
-        adminDashboardDisplayReportError: action.payload,
+        adminDashboardDisplayReportFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_CLEAR]: () => ({ ...initialState }),
 };

@@ -13,14 +13,14 @@ import * as actions from 'actions';
 
 import { animationTemplate, VIEWMODES, MENUACTIONS, VIEWADMINPANELMODES } from '../config';
 import { reorderArray } from '../utils';
-import { transformQuickLinkReorderRequest } from '../transformers';
+import { transformQuickLinkUpdateRequest, transformQuickLinkReorderRequest } from '../transformers';
 import { emptyQuickLinksActionState as emptyActionState, quickLinksActionReducer as actionReducer } from '../reducers';
 
 import SectionTitle from './SectionTitle';
 import QuickLink from './QuickLink';
 import QuickLinkAdmin from './QuickLinkAdmin';
 
-const QuickLinkContainer = ({ locale }) => {
+const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
     const dispatch = useDispatch();
     const [data, setData] = React.useState([]);
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
@@ -49,9 +49,10 @@ const QuickLinkContainer = ({ locale }) => {
 
     const handleReordering = data => {
         const request = transformQuickLinkReorderRequest(data);
+
         dispatch(actions.adminDashboardQuickLink(request, 'REORDER'))
             .then(() => {
-                clear();
+                // clear();
             })
             .catch(error => {
                 console.error(error);
@@ -93,22 +94,24 @@ const QuickLinkContainer = ({ locale }) => {
                 setData(dataDown);
                 handleReordering(dataDown);
                 break;
-            default:
+            /* istanbul ignore next */ default:
                 console.log('action not handled', action);
         }
     };
 
     const handleAdminSubmitClick = item => {
-        const request = structuredClone(item);
-
+        const request = transformQuickLinkUpdateRequest(item);
         dispatch(actions.adminDashboardQuickLink(request, actionState.action))
             .then(() => {
                 clear();
                 dispatch(actions.loadAdminDashboardQuickLinks());
             })
-            .catch(error => {
-                console.error(error);
-            });
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */
+                    console.error(error);
+                },
+            );
     };
 
     const handleAdminCancelClick = () => {
@@ -137,9 +140,14 @@ const QuickLinkContainer = ({ locale }) => {
             <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
                 {locale.title}
                 {!!adminDashboardQuickLinksLoading && (
-                    <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
+                    <CircularProgress
+                        color="inherit"
+                        size={20}
+                        sx={{ marginInlineStart: 1 }}
+                        data-testid={'quick-link-progressor'}
+                    />
                 )}
-                {actionState.action === VIEWMODES.VIEW && (
+                {actionState.action === VIEWMODES.VIEW && !adminDashboardQuickLinksLoading && (
                     <Button
                         id={'add-quick-link'}
                         data-testid={'add-quick-link'}
@@ -160,7 +168,6 @@ const QuickLinkContainer = ({ locale }) => {
                         animation="wave"
                         height={50}
                         width={'100%'}
-                        id={'admin-dashboard-quicklinks-skeleton'}
                         data-testid={'admin-dashboard-quicklinks-skeleton'}
                     />
                 ))}
@@ -169,33 +176,40 @@ const QuickLinkContainer = ({ locale }) => {
                 <>
                     {actionState.action === VIEWMODES.VIEW && (
                         <>
-                            {(!!!data || (data?.length ?? 0) === 0) && adminDashboardQuickLinksSuccess && (
-                                <Typography
-                                    fontSize={'0.8rem'}
-                                    fontWeight={300}
-                                    textAlign={'center'}
-                                    mt={1}
-                                    flex={1}
-                                    alignContent={'center'}
-                                >
-                                    {locale.loading.nodata}
-                                </Typography>
-                            )}
+                            {(!!!data || (data?.length ?? /* istanbul ignore next */ 0) === 0) &&
+                                adminDashboardQuickLinksSuccess && (
+                                    <Typography
+                                        fontSize={'0.8rem'}
+                                        fontWeight={300}
+                                        textAlign={'center'}
+                                        mt={1}
+                                        flex={1}
+                                        alignContent={'center'}
+                                    >
+                                        {locale.loading.nodata}
+                                    </Typography>
+                                )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
                                 <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
-                                    <Stack spacing={2} marginBlockStart={2}>
-                                        {data.map((link, index) => (
-                                            <QuickLink
-                                                key={link.id}
-                                                index={index}
-                                                locale={locale.link}
-                                                itemCount={data.length}
-                                                link={link}
-                                                onMenuItemClick={onMenuItemClick(index)}
-                                                sx={{ opacity: 0, animation: animationTemplate(index, 200, 100) }}
-                                            />
-                                        ))}
+                                    <Stack spacing={2} marginBlockStart={2} role="list">
+                                        {data
+                                            .sort((a, b) => a < b)
+                                            .map((link, index) => (
+                                                <QuickLink
+                                                    key={link.qlk_id}
+                                                    data-testid={`quick-link-item-${link.qlk_id}`}
+                                                    index={index}
+                                                    locale={locale.link}
+                                                    itemCount={data.length}
+                                                    link={link}
+                                                    onMenuItemClick={onMenuItemClick(index)}
+                                                    sx={{
+                                                        ...initialViewProps,
+                                                        animation: animationTemplate(index, 200, 100),
+                                                    }}
+                                                />
+                                            ))}
                                     </Stack>
                                 </Box>
                             )}
@@ -203,7 +217,10 @@ const QuickLinkContainer = ({ locale }) => {
                     )}
 
                     {VIEWADMINPANELMODES.includes(actionState.action) && (
-                        <Box paddingBlockStart={2} sx={{ opacity: 0, animation: animationTemplate(1, 200, 100) }}>
+                        <Box
+                            paddingBlockStart={2}
+                            sx={{ ...initialViewProps, animation: animationTemplate(1, 200, 100) }}
+                        >
                             {actionState.action === VIEWMODES.ADD && locale.admin.add.title}
                             {(actionState.action === VIEWMODES.EDIT || actionState.action === VIEWMODES.DELETE) && (
                                 <>
@@ -211,7 +228,7 @@ const QuickLinkContainer = ({ locale }) => {
                                         ? locale.admin.edit.title
                                         : locale.admin.delete.title}
                                     <Typography fontWeight={500} variant="span">
-                                        {actionState.item.title}
+                                        {actionState.item.qlk_title}
                                     </Typography>
                                 </>
                             )}
@@ -233,6 +250,7 @@ const QuickLinkContainer = ({ locale }) => {
 
 QuickLinkContainer.propTypes = {
     locale: PropTypes.object.isRequired,
+    initialViewProps: PropTypes.object,
 };
 
 export default React.memo(QuickLinkContainer);
