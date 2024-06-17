@@ -63,9 +63,19 @@ const Today = () => {
                                     id="system-alerts"
                                 >
                                     <VisualisationSystemAlerts
-                                        today={adminDashboardTodayData.systemalerts.today}
-                                        assigned={adminDashboardTodayData.systemalerts.assigned}
+                                        assigned={
+                                            adminDashboardTodayData.systemalerts.assigned +
+                                                adminDashboardTodayData.systemalerts.unassigned ===
+                                            0
+                                                ? /* istanbul ignore next */ 1
+                                                : adminDashboardTodayData.systemalerts.assigned
+                                        }
                                         remaining={adminDashboardTodayData.systemalerts.unassigned}
+                                        {...(adminDashboardTodayData.systemalerts.assigned +
+                                            adminDashboardTodayData.systemalerts.unassigned ===
+                                        0
+                                            ? /* istanbul ignore next */ { colours: { assigned: '#e0e0e0' } }
+                                            : {})}
                                     />
                                 </RibbonChartContainer>
                             )}
@@ -104,7 +114,11 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="unprocessed-works"
                                         text={`${adminDashboardTodayData.works.unprocessed}`}
-                                        amount={adminDashboardTodayData.works.unprocessed}
+                                        amount={
+                                            adminDashboardTodayData.works.unprocessed === 0
+                                                ? /* istanbul ignore next */ 100
+                                                : adminDashboardTodayData.works.unprocessed
+                                        }
                                     />
                                 </PieChartContainer>
                             )}
@@ -132,7 +146,11 @@ const Today = () => {
                                     <VisualisationWorks
                                         id="processed-works"
                                         text={`${adminDashboardTodayData.works.processed}`}
-                                        amount={adminDashboardTodayData.works.processed}
+                                        amount={
+                                            adminDashboardTodayData.works.processed === 0
+                                                ? /* istanbul ignore next */ 100
+                                                : adminDashboardTodayData.works.processed
+                                        }
                                         colour="#35A9A5"
                                     />
                                 </PieChartContainer>

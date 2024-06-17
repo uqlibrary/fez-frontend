@@ -38,7 +38,7 @@ const VisualisationSystemAlerts = ({
                     bottom: 10,
                 }}
                 disableAxisListener
-                sx={{ '& [class$="-MuiBarElement-root"]': { height: '20px !important' } }}
+                sx={{ '> rect': { height: '20px !important' } }}
             >
                 <BarPlot />
             </ResponsiveChartContainer>
@@ -52,7 +52,7 @@ VisualisationSystemAlerts.propTypes = {
     remaining: PropTypes.number.isRequired,
     colours: PropTypes.shape({
         assigned: PropTypes.string.isRequired,
-        remaining: PropTypes.string.isRequired,
+        remaining: PropTypes.string,
     }),
 };
 

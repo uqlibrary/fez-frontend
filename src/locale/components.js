@@ -52,7 +52,8 @@ export default {
                             title: 'OA Status',
                             subText: 'of research output',
                             chart: {
-                                text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
+                                text: (current, total) =>
+                                    `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
                                 subtext: total => `of ${total} records`,
                             },
                         },

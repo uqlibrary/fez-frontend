@@ -89,7 +89,6 @@ context('Admin Dashboard - Today tab', () => {
             cy.get('[role=listitem]').should('have.length', 7);
         });
     });
-
     it('follows unprocessed works link', () => {
         cy.data('system-alerts-title').contains('System Alerts');
         cy.data('unprocessed-link')

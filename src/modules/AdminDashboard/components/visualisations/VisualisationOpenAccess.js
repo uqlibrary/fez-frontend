@@ -34,7 +34,7 @@ const VisualisationOpenAccess = ({
     colourValue = '#35A9A5',
     colourReference = 'rgba(0, 0, 0, 0.12)',
 }) => {
-    const chartVal = Math.round((amount / maxAmount) * 100);
+    const chartVal = maxAmount > 0 ? Math.round((amount / maxAmount) * 100) : /* istanbul ignore next */ 0;
     return (
         <Box data-testid={`chart-container-${id}`}>
             <GaugeContainer
