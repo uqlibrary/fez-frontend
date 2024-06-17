@@ -29,6 +29,9 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
     <span
       class="citationPublisher empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -66,6 +69,9 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
     <span
       class="citationPublisher empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -99,6 +105,9 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
     <span
       class="citationPublisher empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -119,6 +128,9 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
     />
     <span
       class="citationPublisher empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

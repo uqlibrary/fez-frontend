@@ -37,6 +37,9 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
       SEG Special Publication Video Series
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -57,6 +60,9 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationSeries empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

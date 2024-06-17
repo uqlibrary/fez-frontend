@@ -25,6 +25,9 @@ export default class SeminarPaperCitation extends Component {
             orgName: this.props.publication.fez_record_search_key_org_name
                 ? this.props.publication.fez_record_search_key_org_name.rek_org_name
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Seminar Paper
@@ -51,6 +54,9 @@ export default class SeminarPaperCitation extends Component {
 
                 {/* {Institution| |.} - fez_record_search_key_org_name.rek_org_name */}
                 <Partials.CitationView className="citationOrgName" value={record.orgName} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

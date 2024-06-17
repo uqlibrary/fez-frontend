@@ -59,6 +59,9 @@ exports[`PatentCitation renders  component with a mock espace record 1`] = `
       JP2008189575
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -79,6 +82,9 @@ exports[`PatentCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationPatentNumber empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>
