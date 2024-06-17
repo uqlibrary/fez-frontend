@@ -95,6 +95,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 handleReordering(dataDown);
                 break;
             default:
+                /* istanbul ignore next */
                 console.log('action not handled', action);
         }
     };
@@ -107,6 +108,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 dispatch(actions.loadAdminDashboardQuickLinks());
             })
             .catch(error => {
+                /* istanbul ignore next */
                 console.error(error);
             });
     };

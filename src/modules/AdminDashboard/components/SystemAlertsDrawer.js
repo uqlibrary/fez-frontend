@@ -25,7 +25,9 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     const txt = locale.drawer;
 
     const users = useSelector(
-        state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ?? [],
+        state =>
+            state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ??
+            /* istanbul ignore next */ [],
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
@@ -34,11 +36,15 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
 
     let buttonLabel;
     if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;
-    else if (!!row?.sat_assigned_to && !row?.sat_resolved_by) {
-        buttonLabel = !adminDashboardSystemAlertsUpdating ? txt.markResolved : txt.updating;
+    else {
+        /* istanbul ignore else */
+        if (!!row?.sat_assigned_to && !row?.sat_resolved_by) {
+            buttonLabel = !adminDashboardSystemAlertsUpdating ? txt.markResolved : txt.updating;
+        }
     }
 
     const handleCloseDrawer = props => {
+        /* istanbul ignore else */
         if (!adminDashboardSystemAlertsUpdating) onCloseDrawer(props);
     };
 

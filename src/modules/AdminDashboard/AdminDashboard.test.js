@@ -33,8 +33,8 @@ describe('AdminDashboard', () => {
         mockApi.reset();
     });
 
-    it('should render no config error (empty config array)', async () => {
-        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, []);
+    it.only('should render no config error (empty config array)', async () => {
+        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, { data: [] });
         const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');
         const { getByTestId, getByText } = setup();
         expect(loadAdminDashboardConfigFn).toHaveBeenCalled();

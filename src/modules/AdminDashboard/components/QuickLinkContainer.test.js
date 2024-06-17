@@ -375,25 +375,22 @@ describe('QuickLinkContainer', () => {
 describe('QuickLinkContainer reordering', () => {
     beforeEach(() => {
         mockApi = setupMockAdapter();
-        mockApi.onAny().reply(422, {});
+
+        mockApi.onGet().reply(200, { data: listData });
+        mockApi.onPut().reply(422, {});
     });
 
     afterEach(() => {
         mockApi.reset();
     });
+
     it('should handle reordering error', async () => {
         const adminDashboardQuickLinkFn = jest.spyOn(DashboardActions, 'adminDashboardQuickLink');
         const loadAdminDashboardQuickLinksFn = jest.spyOn(DashboardActions, 'loadAdminDashboardQuickLinks');
 
-        const { getByRole, findByRole, getByTestId } = setup(
-            {},
-            {
-                adminDashboardQuickLinksReducer: {
-                    adminDashboardQuickLinksData: listData,
-                    adminDashboardQuickLinksSuccess: true,
-                },
-            },
-        );
+        const { getByText, getByRole, findByRole, getByTestId } = setup({});
+        expect(getByText('Quick Links')).toBeInTheDocument();
+
         await waitFor(() => getByTestId('quick-link-1-link'));
 
         userEvent.click(getByTestId('admin-actions-button-1'));
@@ -425,6 +422,6 @@ describe('QuickLinkContainer reordering', () => {
 
         // on failure to update, the API should be pinged for the current
         // quicklink list to ensure the UI is in sync
-        await waitFor(() => expect(loadAdminDashboardQuickLinksFn).toHaveBeenCalled());
+        await waitFor(() => expect(loadAdminDashboardQuickLinksFn).toHaveBeenCalledTimes(3));
     });
 });
