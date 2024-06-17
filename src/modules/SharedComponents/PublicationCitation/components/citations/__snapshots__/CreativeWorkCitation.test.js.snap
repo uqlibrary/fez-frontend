@@ -44,6 +44,9 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
       School of Architecture, The University of Queensland
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -67,6 +70,9 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationPublisher empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

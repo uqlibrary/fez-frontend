@@ -40,6 +40,9 @@ exports[`DesignCitation renders  component with a mock espace record 1`] = `
     <span
       class="citationSource empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -84,6 +87,9 @@ exports[`DesignCitation renders  component with an empty source 1`] = `
     <span
       class="citationSource empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -104,6 +110,9 @@ exports[`DesignCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationSource empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

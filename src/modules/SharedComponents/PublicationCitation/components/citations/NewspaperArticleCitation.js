@@ -25,6 +25,9 @@ export default class NewspaperArticleCitation extends Component {
             endPage: this.props.publication.fez_record_search_key_end_page
                 ? this.props.publication.fez_record_search_key_end_page.rek_end_page
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Newspaper Article
@@ -52,6 +55,9 @@ export default class NewspaperArticleCitation extends Component {
 
                 {/* {End page|-|} */}
                 <Partials.CitationView className="citationEndPage" value={record.endPage} prefix="-" />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

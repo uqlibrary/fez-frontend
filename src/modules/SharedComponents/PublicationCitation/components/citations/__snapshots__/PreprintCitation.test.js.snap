@@ -45,6 +45,9 @@ exports[`PreprintCitation renders  component with a mock espace record 1`] = `
       Heavy Tails, Importance Sampling and Cross-Entropy
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -62,6 +65,9 @@ exports[`PreprintCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationTitle empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

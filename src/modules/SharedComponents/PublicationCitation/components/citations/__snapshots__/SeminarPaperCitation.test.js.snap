@@ -51,6 +51,9 @@ exports[`SeminarPaperCitation renders  component with a mock espace record 1`] =
       James Cook University
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -77,6 +80,9 @@ exports[`SeminarPaperCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationOrgName empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

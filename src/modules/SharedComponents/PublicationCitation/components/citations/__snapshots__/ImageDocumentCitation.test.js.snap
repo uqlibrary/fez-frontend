@@ -29,6 +29,9 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
       Fryer Library University of Queensland Photograph Collection, UQFL466, Box 8, AG/P/108
       .
     </span>
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -49,6 +52,9 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationSource empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>
