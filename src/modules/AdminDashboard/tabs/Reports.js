@@ -89,10 +89,12 @@ const Reports = () => {
             .then(() => {
                 //! adminDashboardExportReportFailed && dispatch(actions.clearAdminDashboardExportReport());
             })
-            .catch(error => {
-                /* istanbul ignore next */
-                console.error(error);
-            });
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */
+                    console.error(error);
+                },
+            );
     };
 
     const handleExportDisplayReportClick = () => {

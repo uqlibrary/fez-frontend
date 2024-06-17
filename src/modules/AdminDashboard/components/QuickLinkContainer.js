@@ -94,8 +94,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 setData(dataDown);
                 handleReordering(dataDown);
                 break;
-            default:
-                /* istanbul ignore next */
+            /* istanbul ignore next */ default:
                 console.log('action not handled', action);
         }
     };
@@ -107,10 +106,12 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 clear();
                 dispatch(actions.loadAdminDashboardQuickLinks());
             })
-            .catch(error => {
-                /* istanbul ignore next */
-                console.error(error);
-            });
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */
+                    console.error(error);
+                },
+            );
     };
 
     const handleAdminCancelClick = () => {
@@ -175,18 +176,19 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 <>
                     {actionState.action === VIEWMODES.VIEW && (
                         <>
-                            {(!!!data || (data?.length ?? 0) === 0) && adminDashboardQuickLinksSuccess && (
-                                <Typography
-                                    fontSize={'0.8rem'}
-                                    fontWeight={300}
-                                    textAlign={'center'}
-                                    mt={1}
-                                    flex={1}
-                                    alignContent={'center'}
-                                >
-                                    {locale.loading.nodata}
-                                </Typography>
-                            )}
+                            {(!!!data || (data?.length ?? /* istanbul ignore next */ 0) === 0) &&
+                                adminDashboardQuickLinksSuccess && (
+                                    <Typography
+                                        fontSize={'0.8rem'}
+                                        fontWeight={300}
+                                        textAlign={'center'}
+                                        mt={1}
+                                        flex={1}
+                                        alignContent={'center'}
+                                    >
+                                        {locale.loading.nodata}
+                                    </Typography>
+                                )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
                                 <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>

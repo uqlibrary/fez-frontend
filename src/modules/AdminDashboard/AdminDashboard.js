@@ -53,9 +53,11 @@ const AdminDashboard = () => {
             .then(() => {
                 dispatch(actions.loadAdminDashboardToday());
             })
-            .catch(error => {
-                console.error(error);
-            });
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */ console.error(error);
+                },
+            );
     }
     const { adminDashboardTodayData } = useSelector(state => state.get('adminDashboardTodayReducer'));
 

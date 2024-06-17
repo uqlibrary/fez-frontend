@@ -89,6 +89,7 @@ describe('QuickLinkContainer', () => {
 
     afterEach(() => {
         mockApi.reset();
+        jest.clearAllMocks();
     });
 
     it('should render loader', () => {

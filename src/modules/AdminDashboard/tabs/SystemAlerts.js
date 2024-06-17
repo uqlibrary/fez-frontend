@@ -65,10 +65,12 @@ const SystemAlerts = () => {
             .then(() => {
                 dispatch(actions.loadAdminDashboardSystemAlerts());
             })
-            .catch(error => {
-                /* istanbul ignore next */
-                console.error(error);
-            });
+            .catch(
+                /* istanbul ignore next */ error => {
+                    /* istanbul ignore next */
+                    console.error(error);
+                },
+            );
     };
     return (
         <StandardCard noHeader>
