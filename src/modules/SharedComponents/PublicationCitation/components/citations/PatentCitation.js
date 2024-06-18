@@ -19,6 +19,9 @@ export default class PatentCitation extends Component {
             patentNumber: this.props.publication.fez_record_search_key_patent_number
                 ? this.props.publication.fez_record_search_key_patent_number.rek_patent_number
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Patent
@@ -44,6 +47,9 @@ export default class PatentCitation extends Component {
                     prefix=" "
                     suffix="."
                 />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

@@ -22,6 +22,9 @@ export default class CreativeWorkCitation extends Component {
             publisher: this.props.publication.fez_record_search_key_publisher
                 ? this.props.publication.fez_record_search_key_publisher.rek_publisher
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Creative Work
@@ -49,6 +52,9 @@ export default class CreativeWorkCitation extends Component {
 
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }
