@@ -3,17 +3,11 @@ import PropTypes from 'prop-types';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { styled } from '@mui/material/styles';
-import {
-    APP_URL,
-    AUTH_URL_LOGIN,
-    AUTH_URL_LOGOUT,
-    pathConfig,
-    routes,
-    SESSION_COOKIE_NAME,
-    SESSION_USER_GROUP_COOKIE_NAME,
-} from 'config';
+import { pathConfig, routes, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
+import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
+import { useQueryRedirector } from 'hooks/useQueryRedirector';
 
 // application components
 import { AppLoader, ContentLoader, InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -84,6 +78,7 @@ const AppClass = ({
     isSessionExpired,
     actions,
     incompleteRecordList,
+    customRedirectors,
 }) => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -127,18 +122,18 @@ const AppClass = ({
         }
     }, [accountAuthorLoading, actions, author?.aut_id]);
 
+    const { customRedirect } = useQueryRedirector({ account, rules: customRedirectors });
+
+    // If there's an expected querystring redirection tag in the URL,
+    // redirect to the new location as returned by the useQueryRedirector hook
+    useEffect(() => {
+        customRedirect &&
+            location.pathname !== customRedirect.url &&
+            navigate(customRedirect.url, customRedirect.options ?? {});
+    }, [customRedirect, location.pathname, navigate]);
+
     const toggleDrawer = () => {
         setMenuDrawerOpen(!menuDrawerOpen);
-    };
-
-    const redirectUserToLogin = (isAuthorizedUser = false, redirectToCurrentLocation = false) => () => {
-        /* istanbul ignore next */
-        if (process.env.USE_MOCK) {
-            return;
-        }
-        const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-        const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-        window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
     };
 
     const redirectToOrcid = () => {
@@ -340,6 +335,7 @@ const AppClass = ({
                                     onClick={redirectUserToLogin(
                                         isAuthorizedUser,
                                         isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
+                                        'adrd=1',
                                     )}
                                     signInTooltipText={locale.global.authentication.signInText}
                                     signOutTooltipText={
@@ -440,6 +436,7 @@ AppClass.propTypes = {
     isSessionExpired: PropTypes.bool,
     actions: PropTypes.object,
     incompleteRecordList: PropTypes.object,
+    customRedirectors: PropTypes.object,
 };
 
 export default AppClass;
