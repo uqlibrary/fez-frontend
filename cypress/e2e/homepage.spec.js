@@ -52,6 +52,17 @@ context('Homepage', () => {
         checkMenuItemCount(29);
     });
 
+    it('Redirects to admin dashboard for admin with full masquerade and URL switch present', () => {
+        cy.visit('/?user=uqstaff&adrd=1');
+        cy.waitUntil(() => cy.location('pathname').should('contain', '/admin/dashboard'));
+    });
+
+    it('Should not redirect for readonly masquerade user even if URL switch present', () => {
+        cy.visit('/?user=uqmasquerade&adrd=1');
+        checkMenuItemCount(15);
+        cy.location('pathname').should('not.contain', '/admin/dashboard');
+    });
+
     it('Has expected menu items for a student without an author account', () => {
         cy.visit('/?user=s3333333');
         checkMenuItemCount(6);
