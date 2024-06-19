@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const customRedirector = ({ account, rules, location }) => {
+export const customRedirector = ({ account = {}, rules = [], location = '' } = {}) => {
     const customKeys = Object.keys(rules);
     const urlParams = new URLSearchParams(location.search);
 

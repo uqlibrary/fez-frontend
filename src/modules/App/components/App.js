@@ -123,13 +123,12 @@ const AppClass = ({
     }, [accountAuthorLoading, actions, author?.aut_id]);
 
     const { customRedirect } = useQueryRedirector({ account, rules: customRedirectors });
-
     // If there's an expected querystring redirection tag in the URL,
     // redirect to the new location as returned by the useQueryRedirector hook
     useEffect(() => {
         customRedirect &&
             location.pathname !== customRedirect.url &&
-            navigate(customRedirect.url, customRedirect.options ?? {});
+            navigate(customRedirect.url, customRedirect.options ?? /* istanbul ignore next */ {});
     }, [customRedirect, location.pathname, navigate]);
 
     const toggleDrawer = () => {
@@ -335,7 +334,7 @@ const AppClass = ({
                                     onClick={redirectUserToLogin(
                                         isAuthorizedUser,
                                         isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
-                                        'adrd=1',
+                                        isAuthorizedUser ? '' : 'adrd=1', // flag redirect to admin dashboard
                                     )}
                                     signInTooltipText={locale.global.authentication.signInText}
                                     signOutTooltipText={

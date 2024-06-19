@@ -1,5 +1,6 @@
 import React from 'react';
 import App, { StrictModeConditional } from './App';
+import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
@@ -165,6 +166,18 @@ describe('Application component', () => {
             account: null,
         });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should redirect to admin dashboard page if authorised and with full masquerade rights', () => {
+        mockUseLocation.pathname = '/';
+        mockUseLocation.search = '?adrd=1';
+        setup({
+            account: accounts.uqstaff,
+            author: author,
+            customRedirectors,
+        });
+
+        expect(mockUseNavigate).toBeCalledWith('/admin/dashboard', { replace: true });
     });
 
     it('should redirect to logout page', () => {
