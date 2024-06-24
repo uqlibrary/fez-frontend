@@ -7,7 +7,6 @@ module.exports = defineConfig({
     numTestsKeptInMemory: 50,
     pageLoadTimeout: 30000,
     projectId: 'mvfnrv',
-    video: true,
     retries: {
         openMode: 0,
         runMode: 2,
