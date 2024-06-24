@@ -19,6 +19,9 @@ export default class DigilibImageCitation extends Component {
             datePhotoTaken: this.props.publication.fez_record_search_key_date_photo_taken
                 ? this.props.publication.fez_record_search_key_date_photo_taken.rek_date_photo_taken
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Digilib Image
@@ -37,6 +40,9 @@ export default class DigilibImageCitation extends Component {
 
                 {/* <i>{Title| |.}</i> */}
                 <Partials.CitationTitleView className="citationTitle" value={record.title} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

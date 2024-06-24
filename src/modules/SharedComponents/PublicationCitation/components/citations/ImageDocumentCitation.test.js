@@ -21,4 +21,14 @@ describe('ImageDocumentCitation renders ', () => {
         const { container } = setup({ publication: imageDocument });
         expect(container).toMatchSnapshot();
     });
+
+    it('component with a doi view', () => {
+        const { container } = setup({
+            publication: {
+                ...imageDocument,
+                fez_record_search_key_doi: { rek_doi: '10.1111/1111' },
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
 });

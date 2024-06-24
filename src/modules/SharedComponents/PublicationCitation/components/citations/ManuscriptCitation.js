@@ -19,6 +19,9 @@ export default class ManuscriptCitation extends Component {
             source: this.props.publication.fez_record_search_key_source
                 ? this.props.publication.fez_record_search_key_source.rek_source
                 : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Manuscript
@@ -40,6 +43,9 @@ export default class ManuscriptCitation extends Component {
 
                 {/* {Source| |.} */}
                 <Partials.CitationView className="citationSource" value={record.source} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

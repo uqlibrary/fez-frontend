@@ -1712,10 +1712,6 @@ export default {
                     order: 3,
                 },
                 {
-                    field: 'fez_record_search_key_doi',
-                    order: 3.5,
-                },
-                {
                     field: 'fez_record_search_key_construction_date',
                     order: 4,
                 },
@@ -1726,6 +1722,10 @@ export default {
                 {
                     field: 'fez_record_search_key_date_scanned',
                     order: 6,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 6.5,
                 },
                 {
                     field: 'fez_record_search_key_publisher',

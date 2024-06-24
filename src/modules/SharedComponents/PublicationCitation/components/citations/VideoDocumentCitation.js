@@ -16,6 +16,9 @@ export default class VideoDocumentCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
             series: this.props.publication.fez_record_search_key_series
                 ? this.props.publication.fez_record_search_key_series.rek_series
                 : null,
@@ -39,6 +42,9 @@ export default class VideoDocumentCitation extends Component {
 
                 {/* {Series| |.} */}
                 <Partials.CitationView className="citationSeries" value={record.series} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }
