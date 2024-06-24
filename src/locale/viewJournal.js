@@ -1,4 +1,5 @@
 import { APP_URL } from 'config/general';
+import React from 'react';
 
 export default {
     viewJournal: {
@@ -26,6 +27,20 @@ export default {
                 linkText: 'Check current status',
                 externalUrl: 'https://caul.libguides.com/read-and-publish/home',
             },
+        },
+        notFound: {
+            title: 'Journal not found',
+            message: (
+                <div>
+                    <p>The journal you are attempting to access does not appear in our system.</p>
+                    <p>
+                        If you believe this is in error, please{' '}
+                        <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/contact-us">
+                            contact the eSpace team.
+                        </a>
+                    </p>
+                </div>
+            ),
         },
     },
 };

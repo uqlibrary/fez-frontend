@@ -19,6 +19,9 @@ export default class GenericDocumentCitation extends Component {
                 ? this.props.publication.fez_record_search_key_publisher.rek_publisher
                 : null,
             title: this.props.publication.rek_title ? this.props.publication.rek_title : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Generic article
@@ -39,6 +42,9 @@ export default class GenericDocumentCitation extends Component {
 
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
+
+                {/* {doi| doi:|}*/}
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

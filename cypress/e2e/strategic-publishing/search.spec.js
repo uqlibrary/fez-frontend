@@ -618,17 +618,16 @@ context('Strategic Publishing - Search', () => {
             );
         });
 
-        // Migrated from jest but looks like a bug
         it('should handle invalid keywords when browser history changes', () => {
             cy.visit('/journals/search/?keywords=invalid-keyword');
             cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-            cy.get('[data-testid="journal-search-item-addable-keyword-biochemistry-0"]').click();
+            cy.get('[data-testid="journal-search-item-addable-subject-06-biological-sciences-1"]').click();
             cy.get('[data-testid="journal-search-button"]').click();
             cy.get('[data-testid="journal-list"]').should('be.visible');
-            cy.go('back');
-            cy.go('back');
-            cy.go('back');
-            cy.get('[data-testid="journal-search-chip-keyword-biochemistry"]').should('exist');
+            cy.go('back'); // search page with empty search input
+            cy.go('back'); // back to the original search result page
+            cy.get('[data-testid="journal-search-chip-title-glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-title-biological"]').should('exist');
         });
     });
 

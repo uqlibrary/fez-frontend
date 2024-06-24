@@ -258,19 +258,27 @@ describe('Component DeleteRecord', () => {
         expect(handleSubmitMock).toBeCalled();
     });
 
-    /* it('should load record if record is not loaded', () => {
+    it('should load record if record is not loaded', () => {
+        mockParams = { pid: 'UQ:1001' };
         const actionFunction = jest.fn();
         setup({
             loadingRecordToDelete: false,
             recordToDelete: null,
-            actions: { loadRecordToDelete: actionFunction },
-            match: { params: { pid: 'UQ:1001' } },
+            actions: { loadRecordToDelete: actionFunction, clearDeleteRecord: jest.fn() },
         });
 
         expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
     });
 
-    it('should clear record to delete when leaving the form', () => {
+    it('should render work not found page when record can not be loaded', () => {
+        mockParams = { pid: 'UQ:1001' };
+        const { getByText, rerender } = setup({ recordToDelete: null });
+        setup({ loadingRecordToDelete: false, recordToDelete: null }, rerender);
+
+        expect(getByText('Work not found')).toBeInTheDocument();
+    });
+
+    /* it('should clear record to delete when leaving the form', () => {
         const actionFunction = jest.fn();
         const wrapper = setup({ recordToDelete: mockRecordToDelete, actions: { clearDeleteRecord: actionFunction } });
         wrapper.instance().componentWillUnmount();

@@ -62,7 +62,7 @@ context('Book admin edit', () => {
     it('should render ISSN as expected', () => {
         const record = recordList.data[1];
         const ulrichsLinkPrefix =
-            'https://go.openathens.net/redirector/uq.edu.au?url=' +
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=' +
             encodeURIComponent('https://ulrichsweb.serialssolutions.com/title/');
 
         cy.loadRecordForAdminEdit(record.rek_pid);

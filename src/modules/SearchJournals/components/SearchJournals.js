@@ -11,7 +11,7 @@ import { clearJournalSearchKeywords, searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { useNavigationType, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -27,7 +27,6 @@ export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
 
 let lastRequest;
 export const SearchJournals = () => {
-    const navigationType = useNavigationType();
     const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
@@ -82,6 +81,7 @@ export const SearchJournals = () => {
      *  - Call load journal list action
      */
     const handleSearchJournalsClick = React.useCallback(() => {
+        dispatch(clearJournalSearchKeywords());
         setShowInputControls(false);
         setSelectedKeywords(selectedKeywords);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,19 +101,22 @@ export const SearchJournals = () => {
     }, []);
 
     /**
-     * Effect to Keep keywords update when the forward and back browser buttons are used
-     * once a given search is made and keywords are selected
+     * Update states based on the query url
+     *   - e.g. back/forward buttons click
      */
     React.useEffect(() => {
-        // in case it's not a browser back/forward button click
-        if (navigationType !== 'POP') {
-            return;
-        }
-
         // get current search query
         const searchQueryParams = deparam(location.search.substr(1));
         const keywordsFromUrl = filterNonValidKeywords(searchQueryParams?.keywords);
-        if (!Object.keys(keywordsFromUrl).length || !areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
+
+        // make sure selected keywords are cleared if previous page doesnt have any query params
+        if (!Object.keys(keywordsFromUrl).length) {
+            setSelectedKeywords({});
+            setShowInputControls(true);
+            return;
+        }
+
+        if (!areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
             return;
         }
 
@@ -122,7 +125,7 @@ export const SearchJournals = () => {
         setSelectedKeywords(searchQueryParams.keywords);
         setShowInputControls(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedKeywords, location]);
+    }, [location]);
 
     /**
      *  Hide search input controls if there aren't any selected keywords
@@ -138,6 +141,16 @@ export const SearchJournals = () => {
      * Run this effect whenever keywords are changed
      */
     React.useEffect(() => {
+        // preview back/forward/refresh to add new history
+        if (
+            !Object.keys(selectedKeywords).length &&
+            !fromHandleAllJournals.current &&
+            !fromHandleKeywordClear.current &&
+            !fromHandleKeywordDelete.current
+        ) {
+            return;
+        }
+
         // otherwise, update the query search
         handleSearch(
             {
