@@ -6,6 +6,17 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { render } from '@testing-library/react';
 import param from 'can-param';
+import Immutable from 'immutable';
+
+import * as actions from 'actions';
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    clearSearchQuery: jest.fn(() => jest.fn()),
+    exportEspacePublications: jest.fn(() => jest.fn()),
+    resetExportPublicationsStatus: jest.fn(() => jest.fn()),
+    searchEspacePublications: jest.fn(() => jest.fn()),
+}));
 
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};
@@ -34,69 +45,81 @@ const searchQuery = {
  * @type Object
  */
 const props = {
-    publicationsList: [
-        {
-            rek_title: 'Title 01',
-            rek_pid: 1,
-        },
-        {
-            rek_title: 'Title 02',
-            rek_pid: 2,
-        },
-    ],
-    publicationsListPagingData: {
-        from: 10,
-        to: 30,
-        total: 100,
-        per_page: 20,
-        current_page: 1,
-    },
     searchQuery,
-    publicationsListFacets: {
-        'Author (lookup)': {
-            doc_count_error_upper_bound: 0,
-            sum_other_doc_count: 185,
-            buckets: [
-                { key: 'Martin, Sally', doc_count: 68 },
-                { key: 'Parton, Robert G.', doc_count: 22 },
-                { key: 'Meunier, Frederic A.', doc_count: 13 },
-                { key: 'Andreas Papadopulos', doc_count: 9 },
-                { key: 'Rachel Sarah Gormal', doc_count: 8 },
-            ],
+};
+
+/**
+ * @type Object
+ */
+const defaultState = {
+    searchRecordsReducer: {
+        searchLoading: false,
+        publicationsList: [
+            {
+                rek_title: 'Title 01',
+                rek_pid: 1,
+            },
+            {
+                rek_title: 'Title 02',
+                rek_pid: 2,
+            },
+        ],
+        publicationsListPagingData: {
+            from: 10,
+            to: 30,
+            total: 100,
+            per_page: 20,
+            current_page: 1,
         },
-        Subject: {
-            doc_count_error_upper_bound: 0,
-            sum_other_doc_count: 66,
-            buckets: [
-                { key: 450009, doc_count: 19 },
-                { key: 453239, doc_count: 9 },
-                { key: 270104, doc_count: 8 },
-                { key: 450774, doc_count: 8 },
-                { key: 453253, doc_count: 7 },
-            ],
+        publicationsListFacets: {
+            'Author (lookup)': {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 185,
+                buckets: [
+                    { key: 'Martin, Sally', doc_count: 68 },
+                    { key: 'Parton, Robert G.', doc_count: 22 },
+                    { key: 'Meunier, Frederic A.', doc_count: 13 },
+                    { key: 'Andreas Papadopulos', doc_count: 9 },
+                    { key: 'Rachel Sarah Gormal', doc_count: 8 },
+                ],
+            },
+            Subject: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 66,
+                buckets: [
+                    { key: 450009, doc_count: 19 },
+                    { key: 453239, doc_count: 9 },
+                    { key: 270104, doc_count: 8 },
+                    { key: 450774, doc_count: 8 },
+                    { key: 453253, doc_count: 7 },
+                ],
+            },
+            Author: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 185,
+                buckets: [
+                    { key: 745, doc_count: 68 },
+                    { key: 824, doc_count: 22 },
+                    { key: 2746, doc_count: 13 },
+                    { key: 89985, doc_count: 9 },
+                    { key: 10992, doc_count: 8 },
+                ],
+            },
+            Subtype: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 2,
+                buckets: [
+                    { key: 'Article (original research)', doc_count: 50 },
+                    { key: 'Published abstract', doc_count: 9 },
+                    { key: 'Critical review of research, literature review, critical commentary', doc_count: 3 },
+                    { key: 'Fully published paper', doc_count: 2 },
+                    { key: 'Editorial', doc_count: 1 },
+                ],
+            },
         },
-        Author: {
-            doc_count_error_upper_bound: 0,
-            sum_other_doc_count: 185,
-            buckets: [
-                { key: 745, doc_count: 68 },
-                { key: 824, doc_count: 22 },
-                { key: 2746, doc_count: 13 },
-                { key: 89985, doc_count: 9 },
-                { key: 10992, doc_count: 8 },
-            ],
-        },
-        Subtype: {
-            doc_count_error_upper_bound: 0,
-            sum_other_doc_count: 2,
-            buckets: [
-                { key: 'Article (original research)', doc_count: 50 },
-                { key: 'Published abstract', doc_count: 9 },
-                { key: 'Critical review of research, literature review, critical commentary', doc_count: 3 },
-                { key: 'Fully published paper', doc_count: 2 },
-                { key: 'Editorial', doc_count: 1 },
-            ],
-        },
+    },
+    exportPublicationsReducer: {
+        exportPublicationsLoading: false,
     },
 };
 
@@ -105,24 +128,15 @@ const props = {
  * @param renderMethod
  * @return {*}
  */
-const setup = (props = {}, renderMethod = render) => {
+const setup = (props = {}, state = {}, renderMethod = render) => {
     const testProps = {
-        publicationsList: [],
-        searchLoading: false,
-        exportPublicationsLoading: false,
         isAdvancedSearch: false,
         isUnpublishedBufferPage: false,
         ...props,
-        actions: {
-            clearSearchQuery: jest.fn(),
-            exportEspacePublications: jest.fn(),
-            resetExportPublicationsStatus: jest.fn(),
-            searchEspacePublications: jest.fn(),
-            ...props.actions,
-        },
     };
+
     return renderMethod(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <SearchRecords {...testProps} />
             </WithRouter>
@@ -141,6 +155,7 @@ describe('SearchRecords page', () => {
 
     afterEach(() => {
         mockUseNavigate.mockClear();
+        jest.clearAllMocks();
     });
 
     it('should render placeholders', () => {
@@ -154,7 +169,9 @@ describe('SearchRecords page', () => {
     it('should render advanced search component', () => {
         mockUseLocation = { pathname: '/', search: '' };
         const { getByTestId, getByText } = setup({ isAdvancedSearch: true });
+
         expect(getByTestId('advanced-search-form')).toBeInTheDocument();
+
         expect(getByText('Advanced search')).toBeInTheDocument();
         expect(getByTestId('minimize-advanced-search')).toBeInTheDocument();
         expect(getByText('Select a field')).toBeInTheDocument();
@@ -162,24 +179,35 @@ describe('SearchRecords page', () => {
     });
 
     it('should render loading screen while loading search results', () => {
-        const { getAllByText } = setup({ searchLoading: true });
+        const { getAllByText } = setup(null, {
+            searchRecordsReducer: {
+                searchLoading: true,
+            },
+        });
         expect(getAllByText('Searching for works').length).toBe(3);
     });
 
     it('should render loading screen while loading publications while filtering', () => {
-        const { getAllByText } = setup({ publicationsList: [1, 2, 2], searchLoading: true });
+        const { getAllByText } = setup(null, {
+            searchRecordsReducer: {
+                publicationsList: [1, 2, 2],
+                searchLoading: true,
+            },
+        });
         expect(getAllByText('Searching for works').length).toBe(3);
     });
 
     it('should render loading screen while export publications loading', () => {
-        const { getByText } = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
+        const { getByText } = setup(null, {
+            searchRecordsReducer: { publicationsList: [1, 2, 2] },
+            exportPublicationsReducer: { exportPublicationsLoading: true },
+        });
         expect(getByText('Searching for works')).toBeInTheDocument();
         expect(getByText('Exporting search results')).toBeInTheDocument();
     });
 
     it('should render no results', () => {
         const { getByText } = setup({
-            publicationsList: [],
             searchQuery: {
                 title: 'this is test',
                 activeFacets: {
@@ -203,51 +231,57 @@ describe('SearchRecords page', () => {
     });
 
     it('should render when paging', () => {
-        const { getByText } = setup({
-            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
-            publicationsListPagingData: {
-                from: 10,
-                to: 20,
-                total: 100,
+        const { getByText } = setup(null, {
+            searchRecordsReducer: {
+                publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+                publicationsListPagingData: {
+                    from: 10,
+                    to: 20,
+                    total: 100,
+                },
             },
         });
         expect(getByText('Displaying works 10 to 20 of 100 total works.')).toBeInTheDocument();
     });
 
     it('should show facets even if there are no results', () => {
-        const { getByText } = setup({
-            publicationsListFacets: {
-                'Some Facet': {
-                    buckets: [{ key: 'example 1' }],
-                },
-                'Another Facet': {
-                    buckets: [{ key: 'example 2' }],
+        const { getByText } = setup(
+            {
+                searchQuery: {
+                    title: 'this is test',
                 },
             },
-            searchQuery: {
-                title: 'this is test',
+            {
+                searchRecordsReducer: {
+                    publicationsListFacets: {
+                        'Some Facet': {
+                            buckets: [{ key: 'example 1' }],
+                        },
+                        'Another Facet': {
+                            buckets: [{ key: 'example 2' }],
+                        },
+                    },
+                    publicationsList: [],
+                },
             },
-            publicationsList: [],
-        });
+        );
         expect(getByText('Some Facet')).toBeInTheDocument();
         expect(getByText('Another Facet')).toBeInTheDocument();
     });
 
     it('should update the queryString and make API call when page size is changed', () => {
-        const testAction = jest.fn();
-
-        const { getAllByRole, getByTestId } = setup({
-            ...props,
-            actions: {
-                searchEspacePublications: testAction,
+        const { getAllByRole, getByTestId } = setup(
+            {
+                ...props,
             },
-        });
+            { ...defaultState },
+        );
 
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(4);
         fireEvent.click(getAllByRole('option')[2]);
 
-        expect(testAction).toHaveBeenCalled();
+        expect(actions.searchEspacePublications).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=1&pageSize=50&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
@@ -255,18 +289,16 @@ describe('SearchRecords page', () => {
     });
 
     it('should update the queryString and make API call when page is changed', () => {
-        const testAction = jest.fn();
-
-        const { getByTestId } = setup({
-            ...props,
-            actions: {
-                searchEspacePublications: testAction,
+        const { getByTestId } = setup(
+            {
+                ...props,
             },
-        });
+            { ...defaultState },
+        );
 
         fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
 
-        expect(testAction).toHaveBeenCalled();
+        expect(actions.searchEspacePublications).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=2&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
@@ -274,20 +306,18 @@ describe('SearchRecords page', () => {
     });
 
     it('should update the queryString and make API call when sort direction is changed', () => {
-        const testAction = jest.fn();
-
-        const { getAllByRole, getByTestId } = setup({
-            ...props,
-            actions: {
-                searchEspacePublications: testAction,
+        const { getAllByRole, getByTestId } = setup(
+            {
+                ...props,
             },
-        });
+            { ...defaultState },
+        );
 
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(2); // Desc and Asc
         fireEvent.click(getAllByRole('option')[1]);
 
-        expect(testAction).toHaveBeenCalled();
+        expect(actions.searchEspacePublications).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Asc&searchQueryParams%5Ball%5D=test',
@@ -295,15 +325,13 @@ describe('SearchRecords page', () => {
     });
 
     it('should update the queryString and make API call when facet is changed', () => {
-        const testAction = jest.fn();
-
-        const { getByTestId, getByText } = setup({
-            ...props,
-            isAdvancedSearch: true,
-            actions: {
-                searchEspacePublications: testAction,
+        const { getByTestId, getByText } = setup(
+            {
+                ...props,
+                isAdvancedSearch: true,
             },
-        });
+            { ...defaultState },
+        );
 
         fireEvent.click(getByTestId('clickable-facet-category-author'));
         fireEvent.click(getByText('Martin, Sally (68)'));
@@ -317,20 +345,18 @@ describe('SearchRecords page', () => {
     });
 
     it('should not call the search API when clicking a works title', () => {
-        const testAction = jest.fn();
-
-        const { getByRole } = setup({
-            ...props,
-            actions: {
-                searchEspacePublications: testAction,
+        const { getByRole } = setup(
+            {
+                ...props,
             },
-        });
+            { ...defaultState },
+        );
 
         expect(getByRole('link', { name: 'Title 01' })).toHaveAttribute('href', '/view/1');
 
         // this is the initial call when the component loads,
         // without bug fix in #182603156 the "toHaveBeenCalledTimes" value here would be 2
-        expect(testAction).toHaveBeenCalledTimes(1);
+        expect(actions.searchEspacePublications).toHaveBeenCalledTimes(1);
     });
 
     it('should set history to unpublished path if pathname matches it', () => {
@@ -338,14 +364,16 @@ describe('SearchRecords page', () => {
         userIsAdmin.mockImplementation(() => true);
 
         mockUseLocation = { pathname: pathConfig.admin.unpublished, search: '' };
-        const { getAllByRole, getByTestId } = setup({
-            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
-            publicationsListPagingData: {
-                current_page: 1,
-                from: 10,
-                page_size: 20,
-                to: 20,
-                total: 100,
+        const { getAllByRole, getByTestId } = setup(null, {
+            searchRecordsReducer: {
+                publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+                publicationsListPagingData: {
+                    current_page: 1,
+                    from: 10,
+                    page_size: 20,
+                    to: 20,
+                    total: 100,
+                },
             },
         });
 
@@ -361,36 +389,34 @@ describe('SearchRecords page', () => {
     });
 
     it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
-        const testAction = jest.fn();
         setup({
             location: {
                 pathname: '/',
                 search: '?searchQueryParams=something%2Dinteresting',
             },
-            actions: {
-                searchEspacePublications: testAction,
-            },
         });
-        expect(testAction).toHaveBeenCalled();
+        expect(actions.searchEspacePublications).toHaveBeenCalled();
     });
 
     it('renders loading screen while export publications loading', () => {
-        const { getByText } = setup({
-            exportPublicationsLoading: true,
+        const { getByText } = setup(null, {
+            exportPublicationsReducer: {
+                exportPublicationsLoading: true,
+            },
         });
 
         expect(getByText('Searching for works')).toBeInTheDocument();
     });
 
     it('renders error alert if error occurs during search', () => {
-        const { getByTestId, getByText } = setup({ searchLoadingError: true });
+        const { getByTestId, getByText } = setup(null, { searchRecordsReducer: { searchLoadingError: true } });
         expect(getByTestId('alert-error')).toBeInTheDocument();
         expect(getByText('Error -')).toBeInTheDocument();
     });
 
     it('should handle export publications correctly', () => {
         const format = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
-        const testExportAction = jest.fn();
+
         const searchQuery = {
             page: 1,
             pageSize: 20,
@@ -414,23 +440,22 @@ describe('SearchRecords page', () => {
 
         mockUseLocation = { pathname: '/', search: queryString };
         const testProps = {
-            actions: {
-                exportEspacePublications: testExportAction,
-                searchEspacePublications: jest.fn(),
-            },
-            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
-            publicationsListPagingData: {
-                from: 10,
-                current_page: 1,
-                page_size: 20,
-                to: 20,
-                total: 100,
-            },
             canUseExport: true,
             searchQuery,
         };
-
-        const { getAllByRole, getByTestId, rerender } = setup(testProps);
+        const testState = {
+            searchRecordsReducer: {
+                publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+                publicationsListPagingData: {
+                    from: 10,
+                    current_page: 1,
+                    page_size: 20,
+                    to: 20,
+                    total: 100,
+                },
+            },
+        };
+        const { getAllByRole, getByTestId, rerender } = setup(testProps, testState);
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
 
         expect(getAllByRole('option').length).toBe(4);
@@ -442,13 +467,13 @@ describe('SearchRecords page', () => {
             search: queryString.replace('pageSize=20', `pageSize=${pageSizeOptionElement.textContent}`),
         };
 
-        setup({ ...testProps }, rerender);
+        setup({ ...testProps }, { ...testState }, rerender);
 
         fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
         expect(getAllByRole('option').length).toBe(3);
         fireEvent.click(getAllByRole('option')[1]);
 
-        expect(testExportAction).toHaveBeenCalledWith({
+        expect(actions.exportEspacePublications).toHaveBeenCalledWith({
             ...searchQuery,
             pageSize: 50,
             exportPublicationsFormat: format,
@@ -477,40 +502,41 @@ describe('SearchRecords page', () => {
             bulkExportSelected: false,
         };
 
-        const { getByTestId } = setup({
-            publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
-            publicationsListPagingData: {
-                current_page: 1,
-                from: 10,
-                page_size: 20,
-                to: 20,
-                total: 100,
+        const { getByTestId } = setup(
+            {
+                location: {
+                    pathname: '/',
+                    search:
+                        'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
+                        'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
+                        'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false',
+                },
+                canUseExport: true,
+                searchQuery,
+                isAdvancedSearch: true,
             },
-            location: {
-                pathname: '/',
-                search:
-                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
-                    'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
-                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false',
+            {
+                searchRecordsReducer: {
+                    publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+                    publicationsListPagingData: {
+                        current_page: 1,
+                        from: 10,
+                        page_size: 20,
+                        to: 20,
+                        total: 100,
+                    },
+                },
             },
-            canUseExport: true,
-            searchQuery,
-            isAdvancedSearch: true,
-        });
+        );
 
         expect(getByTestId('bulk-export-open')).toBeInTheDocument();
         userIsAdmin.mockRestore();
     });
 
     it('should call unmount component', () => {
-        const clearSearchQueryFn = jest.fn();
-        const { unmount } = setup({
-            actions: {
-                clearSearchQuery: clearSearchQueryFn,
-            },
-        });
+        const { unmount } = setup();
         unmount();
-        expect(clearSearchQueryFn).toHaveBeenCalled();
+        expect(actions.clearSearchQuery).toHaveBeenCalled();
     });
 
     describe('Image Gallery', () => {
@@ -537,8 +563,8 @@ describe('SearchRecords page', () => {
             };
             const oldParams = getParams();
             mockUseLocation = { pathname: '/', search: `?${param(oldParams)}` };
-            const { getByTestId, queryByTestId } = setup({
-                ...props, // this props pretends there is a bunch of search results
+            const { getByTestId, queryByTestId } = setup(null, {
+                ...defaultState, // this props pretends there is a bunch of search results
             });
 
             expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
@@ -558,8 +584,8 @@ describe('SearchRecords page', () => {
             const oldParams = getParams();
             mockUseLocation = { pathname: '/', search: `?${param(oldParams)}` };
 
-            const { getByTestId, queryByTestId } = setup({
-                ...props, // this props pretends there is a bunch of search results
+            const { getByTestId, queryByTestId } = setup(null, {
+                ...defaultState, // this props pretends there is a bunch of search results
             });
 
             expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
@@ -578,8 +604,8 @@ describe('SearchRecords page', () => {
             };
             const oldParams = getParams();
             mockUseLocation = { pathname: '/', search: `?${param(oldParams)}` };
-            const { getByTestId, queryByTestId } = setup({
-                ...props, // this props pretends there is a bunch of search results
+            const { getByTestId, queryByTestId } = setup(null, {
+                ...defaultState, // this props pretends there is a bunch of search results
             });
 
             expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
@@ -599,8 +625,8 @@ describe('SearchRecords page', () => {
             const oldParams = getParams();
 
             mockUseLocation = { pathname: '/', search: `?${param(oldParams)}` };
-            const { getByTestId, queryByTestId } = setup({
-                ...props, // this props pretends there is a bunch of search results
+            const { getByTestId, queryByTestId } = setup(null, {
+                ...defaultState, // this props pretends there is a bunch of search results
             });
 
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
