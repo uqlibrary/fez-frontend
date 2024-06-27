@@ -16,6 +16,7 @@ export default {
         email: 'Email address is not valid',
         url: 'URL is not valid',
         doi: 'DOI is not valid',
+        doiExists: 'DOI is assigned to another work already',
         researcherId: 'ResearcherId is not valid',
         pid: 'Please provide a valid PID (e.g. UQ:129af6)',
         forRequired: 'Field of research values are required',
@@ -77,6 +78,8 @@ export default {
         rek_journal_name: 'Journal name is required',
         rek_link: 'Link is invalid',
         rek_doi: 'DOI is invalid',
+        rek_doi_exists:
+            'There is a potential match for the DOI. Please search UQ eSpace https://espace.library.uq.edu.au/records/add/find or contact us for assistance <espace@library.uq.edu.au>',
         rek_newspaper: 'Newspaper name is required',
         rek_end_page: 'End page is required',
         rek_start_page: 'Start page is required',

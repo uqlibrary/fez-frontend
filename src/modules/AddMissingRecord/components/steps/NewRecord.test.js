@@ -1,6 +1,6 @@
 import React from 'react';
 import NewRecord from './NewRecord';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, within } from 'test-utils';
 import * as RecordActions from 'actions/records';
 import { NEW_RECORD_API } from 'repositories/routes';
 
@@ -46,7 +46,7 @@ describe('Add new record', () => {
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
-        const { getByTestId, getByRole, getByText } = setup({
+        const { debug, getByTestId, getByRole, getByText } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
             actions: { clearNewRecord: clearNewRecordFn },
             navigate: navigateFn,
@@ -58,13 +58,16 @@ describe('Add new record', () => {
         // required fields
         fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
         fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
-        fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: 'May' } });
+        // fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: '5' } });
+        fireEvent.mouseDown(getByTestId('rek-date-month-select'));
+        fireEvent.click(getByRole('option', { name: 'May' }));
         fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });
         fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
         fireEvent.click(getByRole('button', { name: 'Add author' }));
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
+        await waitFor(() => getByTestId('confirm-dialog-box'));
 
         expect(requestCreateNewRecord).toBeCalledWith({
             authors: [
@@ -84,11 +87,10 @@ describe('Add new record', () => {
                 },
             ],
             languages: ['eng'],
-            rek_date: '1911-01-01',
+            rek_date: '1911-05-01',
             rek_display_type: 183,
             rek_title: 'title',
         });
-        await waitFor(() => getByTestId('confirm-dialog-box'));
 
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));
         expect(clearNewRecordFn).toBeCalledTimes(1);

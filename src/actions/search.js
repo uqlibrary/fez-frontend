@@ -234,6 +234,10 @@ export function searchEspacePublications(searchParams) {
     };
 }
 
+export function doesDOIExist(doi) {
+    return get(SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { doi: doi, rek_object_type: 3 } }));
+}
+
 export function loadCollectionsList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({
