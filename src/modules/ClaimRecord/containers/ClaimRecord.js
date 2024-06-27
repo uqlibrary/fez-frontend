@@ -17,19 +17,12 @@ const onSubmit = (values, dispatch) => {
 
 let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
-    enableReinitialize: true,
     onSubmit,
 })(ClaimRecord);
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const reducerOutput = (!!state && state.get('claimPublicationReducer')) || {};
-    const contentIndicators =
-        (reducerOutput.fullPublicationToClaim &&
-            (reducerOutput.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
-                item => item.rek_content_indicator,
-            )) ||
-        [];
     return {
         fullPublicationToClaim: reducerOutput.fullPublicationToClaim || null,
         fullPublicationToClaimLoading: reducerOutput.fullPublicationToClaimLoading || false,
@@ -41,7 +34,6 @@ const mapStateToProps = state => {
         initialValues: {
             publication: reducerOutput.fullPublicationToClaim || reducerOutput.publicationToClaim || null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
-            contentIndicators,
         },
         redirectPath: state && state.get('appReducer') ? state.get('appReducer').redirectPath : null,
     };
