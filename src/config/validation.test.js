@@ -279,7 +279,7 @@ describe('getErrorAlertProps ', () => {
             {
                 parameters: {
                     dirty: true,
-                    formErrors: [{ rek_title: 'This field is required' }],
+                    formErrors: { rek_title: 'This field is required' },
                     alertLocale: { validationAlert: { title: 'validationFailed' } },
                 },
                 expected: 'validationFailed',
@@ -288,7 +288,7 @@ describe('getErrorAlertProps ', () => {
                 parameters: {
                     submitFailed: true,
                     dirty: true,
-                    formErrors: [{ rek_title: 'This field is required' }],
+                    formErrors: { rek_title: 'This field is required' },
                     alertLocale: { validationAlert: { title: 'validationFailed' } },
                 },
                 expected: 'validationFailed',
