@@ -1,7 +1,9 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { withTheme } from 'helpers/withTheme';
+import { useTheme } from '@mui/material/styles';
+import { useSelector } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { parseHtmlToJSX } from 'helpers/general';
 import { Link } from 'react-router-dom';
@@ -51,7 +53,6 @@ import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGallery
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
 import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
-import { withNavigate } from 'helpers/withNavigate';
 
 const StyledGridActionButtons = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
@@ -150,110 +151,90 @@ const classes = {
     }),
 };
 
-export class PublicationCitation extends PureComponent {
-    static propTypes = {
-        actions: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
-        className: PropTypes.string,
-        customActions: PropTypes.array,
-        hideCitationCounts: PropTypes.bool,
-        hideCitationText: PropTypes.bool,
-        hideContentIndicators: PropTypes.bool,
-        hideCountDiff: PropTypes.bool,
-        hideCountTotal: PropTypes.bool,
-        hideLinks: PropTypes.bool,
-        hideTitle: PropTypes.bool,
-        hideViewFullStatisticsLink: PropTypes.bool,
-        navigate: PropTypes.func.isRequired,
-        location: PropTypes.object,
-        publication: PropTypes.object.isRequired,
-        publicationsLoading: PropTypes.bool,
-        isPublicationDeleted: PropTypes.bool,
-        showAdminActions: PropTypes.bool,
-        showDefaultActions: PropTypes.bool,
-        showMetrics: PropTypes.bool,
-        showSourceCountIcon: PropTypes.bool,
-        showSources: PropTypes.bool,
-        showUnpublishedBufferFields: PropTypes.bool,
-        showImageThumbnails: PropTypes.bool,
-        security: PropTypes.object,
-        theme: PropTypes.any,
+export const PublicationCitation = ({
+    citationStyle,
+    customActions,
+    hideCitationCounts,
+    hideCitationText,
+    hideContentIndicators,
+    hideCountDiff,
+    hideCountTotal,
+    hideLinks,
+    hideTitle,
+    publication,
+    publicationsLoading,
+    isPublicationDeleted,
+    showAdminActions,
+    showDefaultActions,
+    showMetrics,
+    showSourceCountIcon,
+    showSources,
+    showUnpublishedBufferFields,
+    showImageThumbnails,
+    security,
+}) => {
+    const theme = useTheme();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { account } = useSelector(state => state.get('accountReducer') || {});
+
+    const hideViewFullStatisticsLink = !account;
+
+    const txt = locale.components.publicationCitation;
+    const recordValue = showMetrics && publication.metricData;
+
+    // keep a list of all available citations
+    const citationComponents = {
+        AudioDocumentCitation,
+        BookChapterCitation,
+        BookCitation,
+        ConferencePaperCitation,
+        ConferenceProceedingsCitation,
+        CreativeWorkCitation,
+        DataCollectionCitation,
+        DepartmentTechnicalReportCitation,
+        DesignCitation,
+        DigilibImageCitation,
+        GenericDocumentCitation,
+        ImageDocumentCitation,
+        JournalArticleCitation,
+        JournalCitation,
+        ManuscriptCitation,
+        NewspaperArticleCitation,
+        PatentCitation,
+        PreprintCitation,
+        ResearchReportCitation,
+        SeminarPaperCitation,
+        ThesisCitation,
+        VideoDocumentCitation,
+        WorkingPaperCitation,
     };
-    static defaultProps = {
-        citationStyle: 'notset',
-        className: '',
-        hideCitationCounts: false,
-        hideCitationText: false,
-        hideContentIndicators: false,
-        hideCountDiff: false,
-        hideCountTotal: false,
-        hideLinks: false,
-        hideTitle: false,
-        hideViewFullStatisticsLink: false,
-        showAdminActions: false,
-        showDefaultActions: false,
-        showSourceCountIcon: false,
-        showSources: false,
-        showUnpublishedBufferFields: false,
-        isPublicationDeleted: false,
-        showImageThumbnails: false,
-        security: { isAdmin: false, isAuthor: false },
-    };
 
-    constructor(props) {
-        super(props);
-        // keep a list of all available citations
-        this.citationComponents = {
-            AudioDocumentCitation,
-            BookChapterCitation,
-            BookCitation,
-            ConferencePaperCitation,
-            ConferenceProceedingsCitation,
-            CreativeWorkCitation,
-            DataCollectionCitation,
-            DepartmentTechnicalReportCitation,
-            DesignCitation,
-            DigilibImageCitation,
-            GenericDocumentCitation,
-            ImageDocumentCitation,
-            JournalArticleCitation,
-            JournalCitation,
-            ManuscriptCitation,
-            NewspaperArticleCitation,
-            PatentCitation,
-            PreprintCitation,
-            ResearchReportCitation,
-            SeminarPaperCitation,
-            ThesisCitation,
-            VideoDocumentCitation,
-            WorkingPaperCitation,
-        };
+    // get default actions from locale
+    const defaultActions = locale.components.publicationCitation.defaultActions;
 
-        // get default actions from locale
-        this.defaultActions = locale.components.publicationCitation.defaultActions;
-    }
-
-    _handleDefaultActions = action => {
-        const { navigate, publication } = this.props;
+    const _handleDefaultActions = action => {
         /* istanbul ignore else  */
         if (action === 'fixRecord') {
             navigate(pathConfig.records.fix(publication.rek_pid));
         }
     };
 
-    hasPublicationAdvisoryStatement = publication => {
+    const hasPublicationAdvisoryStatement = publication => {
         // eslint-disable-next-line camelcase
         return !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement;
     };
-    showPublicationImage = showImageThumbnails => {
-        const { publication } = this.props;
+
+    const showPublicationImage = showImageThumbnails => {
         return (
             showImageThumbnails &&
-            (getWhiteListed(publication, imageConfig) || this.hasPublicationAdvisoryStatement(publication))
+            (getWhiteListed(publication, imageConfig) || hasPublicationAdvisoryStatement(publication))
         );
     };
 
-    renderPublicationImage = (theme, publication, security) => {
+    const renderThumbnails = showPublicationImage(showImageThumbnails);
+
+    const renderPublicationImage = (theme, publication, security) => {
         return (
             <StyledPublicationImageWrapper
                 id={`publication-image-parent-${publication.rek_pid}`}
@@ -277,8 +258,7 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderTitle = () => {
-        const { publication, hideLinks } = this.props;
+    const renderTitle = () => {
         return publication.rek_pid && !hideLinks ? (
             <Link to={pathConfig.records.view(publication.rek_pid)}>{parseHtmlToJSX(publication.rek_title)}</Link>
         ) : (
@@ -286,10 +266,9 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderCitation = publicationTypeId => {
-        const { publication, hideLinks, citationStyle } = this.props;
+    const renderCitation = publicationTypeId => {
         const filteredPublicationType = publicationTypeId
-            ? publicationTypes(this.citationComponents)[publicationTypeId]
+            ? publicationTypes(citationComponents)[publicationTypeId]
             : null;
 
         return (filteredPublicationType || {}).citationComponent ? (
@@ -303,8 +282,7 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderActions = actions => {
-        const { publication, showDefaultActions, publicationsLoading } = this.props;
+    const renderActions = actions => {
         const pid = publication && publication.rek_pid && publication.rek_pid.replace(':', '');
         const primaryButtonDisabled =
             !publication.rek_pid &&
@@ -323,9 +301,7 @@ export class PublicationCitation extends PureComponent {
                       children: action.label,
                       className: `publicationAction buttonOrder${index}`,
                       onClick: () =>
-                          showDefaultActions
-                              ? this._handleDefaultActions(action.key)
-                              : action.handleAction(publication),
+                          showDefaultActions ? _handleDefaultActions(action.key) : action.handleAction(publication),
                   };
                   return (
                       <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
@@ -377,8 +353,7 @@ export class PublicationCitation extends PureComponent {
             : null;
     };
 
-    renderSources = () => {
-        const { publication } = this.props;
+    const renderSources = () => {
         return (
             <React.Fragment>
                 {locale.components.publicationCitation.publicationSourcesLabel}
@@ -403,200 +378,218 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    render() {
-        const {
-            customActions,
-            hideCitationCounts,
-            hideCitationText,
-            hideContentIndicators,
-            hideCountDiff,
-            hideCountTotal,
-            hideTitle,
-            hideViewFullStatisticsLink,
-            location,
-            publication,
-            showAdminActions,
-            showDefaultActions,
-            showMetrics,
-            showSourceCountIcon,
-            showSources,
-            showUnpublishedBufferFields,
-            isPublicationDeleted,
-            showImageThumbnails,
-            security,
-            theme,
-        } = this.props;
-        const txt = locale.components.publicationCitation;
-        const recordValue = showMetrics && publication.metricData;
-        const renderThumbnails = this.showPublicationImage(showImageThumbnails);
-        return (
-            <div className="publicationCitation">
-                {renderThumbnails && this.renderPublicationImage(theme, publication, security)}
-                <StyledCitationContainer
-                    id={`publication-citation-parent-${publication.rek_pid}`}
-                    data-testid={`publication-citation-parent-${publication.rek_pid}`}
-                    renderThumbnails={renderThumbnails}
-                >
-                    <Grid container spacing={0}>
-                        <Grid item xs>
-                            <Grid container spacing={0}>
-                                {!hideTitle ? (
-                                    <Grid item xs style={{ minWidth: 1 }}>
-                                        <Typography
-                                            variant="h6"
-                                            component="h6"
-                                            lineHeight={1}
-                                            letterSpacing={0}
-                                            mb={'6px'}
-                                            mr={'12px'}
-                                            sx={{
-                                                overflowWrap: 'break-word !important',
-                                            }}
-                                            className={'PublicationCitation-citationTitle'}
-                                        >
-                                            {this.renderTitle()}
-                                        </Typography>
-                                    </Grid>
-                                ) : (
-                                    <Grid item xs />
-                                )}
-                                {showMetrics && (
-                                    <Grid item xs={12} sm="auto" className="citationMetrics">
-                                        <ExternalLink
-                                            id={`my-trending-pubs-${recordValue.source}`}
-                                            href={recordValue.citation_url}
-                                            title={txt.linkWillOpenInNewWindow.replace(
-                                                '[destination]',
-                                                txt.myTrendingPublications.sourceTitles[recordValue.source],
-                                            )}
-                                            aria-label={txt.linkWillOpenInNewWindow.replace(
-                                                '[destination]',
-                                                txt.myTrendingPublications.sourceTitles[recordValue.source],
-                                            )}
-                                            openInNewIcon={false}
-                                        >
-                                            <Grid container>
-                                                {showSourceCountIcon && (
-                                                    <Grid item>
-                                                        <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                        <Typography variant="h6">{recordValue.count}</Typography>
-                                                    </Grid>
-                                                )}
-                                                {!showSourceCountIcon && !hideCountTotal && (
-                                                    <Grid item>
-                                                        <Typography variant="h6" color="inherit" className="count">
-                                                            {Math.round(recordValue.count)}
-                                                        </Typography>
-                                                    </Grid>
-                                                )}
-                                                {!hideCountDiff && (
-                                                    <Grid item>
-                                                        <Typography
-                                                            variant="h6"
-                                                            color="inherit"
-                                                            className="difference"
-                                                            title={
-                                                                txt.myTrendingPublications.trendDifferenceShares[
-                                                                    recordValue.source
-                                                                ]
-                                                            }
-                                                        >
-                                                            +{Math.round(recordValue.difference)}
-                                                        </Typography>
-                                                    </Grid>
-                                                )}
-                                            </Grid>
-                                        </ExternalLink>
-                                    </Grid>
-                                )}
-                                {!hideCitationText && (
-                                    <Grid
-                                        item
-                                        xs={12}
-                                        sx={theme => ({
-                                            ...theme.typography.caption,
-                                            color: theme.typography.body2.color,
-                                            marginBottom: '6px',
-                                        })}
+    return (
+        <div className="publicationCitation">
+            {renderThumbnails && renderPublicationImage(theme, publication, security)}
+            <StyledCitationContainer
+                id={`publication-citation-parent-${publication.rek_pid}`}
+                data-testid={`publication-citation-parent-${publication.rek_pid}`}
+                renderThumbnails={renderThumbnails}
+            >
+                <Grid container spacing={0}>
+                    <Grid item xs>
+                        <Grid container spacing={0}>
+                            {!hideTitle ? (
+                                <Grid item xs style={{ minWidth: 1 }}>
+                                    <Typography
+                                        variant="h6"
+                                        component="h6"
+                                        lineHeight={1}
+                                        letterSpacing={0}
+                                        mb={'6px'}
+                                        mr={'12px'}
+                                        sx={{
+                                            overflowWrap: 'break-word !important',
+                                        }}
+                                        className={'PublicationCitation-citationTitle'}
                                     >
-                                        {this.renderCitation(publication.rek_display_type)}
-                                    </Grid>
-                                )}
-                                {showUnpublishedBufferFields && (
-                                    <Grid item xs={12}>
-                                        <UnpublishedBufferCitationView publication={publication} />
-                                    </Grid>
-                                )}
-                                {(!hideCitationCounts || !!showAdminActions) && (
-                                    <Grid item xs={12}>
-                                        <Grid container alignItems="center">
-                                            {!hideCitationCounts && (
-                                                <Grid
-                                                    item
-                                                    xs="auto"
-                                                    sx={{ '&.MuiGrid-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
-                                                >
-                                                    <CitationCounts
-                                                        publication={publication}
-                                                        hideViewFullStatisticsLink={hideViewFullStatisticsLink}
-                                                    />
+                                        {renderTitle()}
+                                    </Typography>
+                                </Grid>
+                            ) : (
+                                <Grid item xs />
+                            )}
+                            {showMetrics && (
+                                <Grid item xs={12} sm="auto" className="citationMetrics">
+                                    <ExternalLink
+                                        id={`my-trending-pubs-${recordValue.source}`}
+                                        href={recordValue.citation_url}
+                                        title={txt.linkWillOpenInNewWindow.replace(
+                                            '[destination]',
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
+                                        )}
+                                        aria-label={txt.linkWillOpenInNewWindow.replace(
+                                            '[destination]',
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
+                                        )}
+                                        openInNewIcon={false}
+                                    >
+                                        <Grid container>
+                                            {showSourceCountIcon && (
+                                                <Grid item>
+                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`} />
+                                                    <Typography variant="h6">{recordValue.count}</Typography>
                                                 </Grid>
                                             )}
-                                            {!!showAdminActions && (
+                                            {!showSourceCountIcon && !hideCountTotal && (
                                                 <Grid item>
-                                                    <AdminActions
-                                                        publication={publication}
-                                                        isRecordDeleted={isPublicationDeleted}
-                                                        navigatedFrom={
-                                                            (location.hash && location.hash.replace('#', '')) ||
-                                                            `${location.pathname}${location.search}`
+                                                    <Typography variant="h6" color="inherit" className="count">
+                                                        {Math.round(recordValue.count)}
+                                                    </Typography>
+                                                </Grid>
+                                            )}
+                                            {!hideCountDiff && (
+                                                <Grid item>
+                                                    <Typography
+                                                        variant="h6"
+                                                        color="inherit"
+                                                        className="difference"
+                                                        title={
+                                                            txt.myTrendingPublications.trendDifferenceShares[
+                                                                recordValue.source
+                                                            ]
                                                         }
-                                                    />
+                                                    >
+                                                        +{Math.round(recordValue.difference)}
+                                                    </Typography>
                                                 </Grid>
                                             )}
                                         </Grid>
-                                    </Grid>
-                                )}
-                                {showSources && publication.sources && (
-                                    <Grid item xs={12}>
-                                        <Typography gutterBottom variant="caption">
-                                            {this.renderSources()}
-                                        </Typography>
-                                    </Grid>
-                                )}
-                            </Grid>
-                        </Grid>
-                        {!hideContentIndicators &&
-                            publication.fez_record_search_key_content_indicator &&
-                            publication.fez_record_search_key_content_indicator.length > 0 && (
+                                    </ExternalLink>
+                                </Grid>
+                            )}
+                            {!hideCitationText && (
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={theme => ({
+                                        ...theme.typography.caption,
+                                        color: theme.typography.body2.color,
+                                        marginBottom: '6px',
+                                    })}
+                                >
+                                    {renderCitation(publication.rek_display_type)}
+                                </Grid>
+                            )}
+                            {showUnpublishedBufferFields && (
                                 <Grid item xs={12}>
-                                    <Typography
-                                        variant="caption"
-                                        id="rek-content-indicator"
-                                        data-testid="rek-content-indicator"
-                                    >
-                                        <Box sx={{ fontWeight: 400, marginRight: '0.5px' }}>
-                                            {locale.components.contentIndicators.label}:
-                                        </Box>
-                                        {publication.fez_record_search_key_content_indicator
-                                            .map(item => item.rek_content_indicator_lookup)
-                                            .join(locale.components.contentIndicators.divider)}
+                                    <UnpublishedBufferCitationView publication={publication} />
+                                </Grid>
+                            )}
+                            {(!hideCitationCounts || !!showAdminActions) && (
+                                <Grid item xs={12}>
+                                    <Grid container alignItems="center">
+                                        {!hideCitationCounts && (
+                                            <Grid
+                                                item
+                                                xs="auto"
+                                                sx={{ '&.MuiGrid-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
+                                            >
+                                                <CitationCounts
+                                                    publication={publication}
+                                                    hideViewFullStatisticsLink={hideViewFullStatisticsLink}
+                                                />
+                                            </Grid>
+                                        )}
+
+                                        {!!showAdminActions && (
+                                            <Grid item>
+                                                <AdminActions
+                                                    publication={publication}
+                                                    isRecordDeleted={isPublicationDeleted}
+                                                    navigatedFrom={
+                                                        (location.hash && location.hash.replace('#', '')) ||
+                                                        `${location.pathname}${location.search}`
+                                                    }
+                                                />
+                                            </Grid>
+                                        )}
+                                    </Grid>
+                                </Grid>
+                            )}
+                            {showSources && publication.sources && (
+                                <Grid item xs={12}>
+                                    <Typography gutterBottom variant="caption">
+                                        {renderSources()}
                                     </Typography>
                                 </Grid>
                             )}
+                        </Grid>
                     </Grid>
-                    {(showDefaultActions || customActions) && (
-                        <StyledGridActionButtons container spacing={1}>
-                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                    {!hideContentIndicators &&
+                        publication.fez_record_search_key_content_indicator &&
+                        publication.fez_record_search_key_content_indicator.length > 0 && (
+                            <Grid item xs={12}>
+                                <Typography
+                                    variant="caption"
+                                    id="rek-content-indicator"
+                                    data-testid="rek-content-indicator"
+                                >
+                                    <Box sx={{ fontWeight: 400, marginRight: '0.5px' }}>
+                                        {locale.components.contentIndicators.label}:
+                                    </Box>
+                                    {publication.fez_record_search_key_content_indicator
+                                        .map(item => item.rek_content_indicator_lookup)
+                                        .join(locale.components.contentIndicators.divider)}
+                                </Typography>
+                            </Grid>
+                        )}
+                </Grid>
+                {(showDefaultActions || customActions) && (
+                    <StyledGridActionButtons container spacing={1}>
+                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
 
-                            {this.renderActions(showDefaultActions ? this.defaultActions : customActions)}
-                        </StyledGridActionButtons>
-                    )}
-                </StyledCitationContainer>
-                <Divider sx={{ marginBottom: '12px', marginTop: '12px', clear: 'both' }} />
-            </div>
-        );
-    }
-}
+                        {renderActions(showDefaultActions ? defaultActions : customActions)}
+                    </StyledGridActionButtons>
+                )}
+            </StyledCitationContainer>
+            <Divider sx={{ marginBottom: '12px', marginTop: '12px', clear: 'both' }} />
+        </div>
+    );
+};
 
-export default withNavigate()(withTheme()(PublicationCitation));
+PublicationCitation.propTypes = {
+    citationStyle: PropTypes.string,
+    customActions: PropTypes.array,
+    hideCitationCounts: PropTypes.bool,
+    hideCitationText: PropTypes.bool,
+    hideContentIndicators: PropTypes.bool,
+    hideCountDiff: PropTypes.bool,
+    hideCountTotal: PropTypes.bool,
+    hideLinks: PropTypes.bool,
+    hideTitle: PropTypes.bool,
+    hideViewFullStatisticsLink: PropTypes.bool,
+    publication: PropTypes.object.isRequired,
+    publicationsLoading: PropTypes.bool,
+    isPublicationDeleted: PropTypes.bool,
+    showAdminActions: PropTypes.bool,
+    showDefaultActions: PropTypes.bool,
+    showMetrics: PropTypes.bool,
+    showSourceCountIcon: PropTypes.bool,
+    showSources: PropTypes.bool,
+    showUnpublishedBufferFields: PropTypes.bool,
+    showImageThumbnails: PropTypes.bool,
+    security: PropTypes.object,
+};
+PublicationCitation.defaultProps = {
+    citationStyle: 'notset',
+    className: '',
+    hideCitationCounts: false,
+    hideCitationText: false,
+    hideContentIndicators: false,
+    hideCountDiff: false,
+    hideCountTotal: false,
+    hideLinks: false,
+    hideTitle: false,
+    hideViewFullStatisticsLink: false,
+    showAdminActions: false,
+    showDefaultActions: false,
+    showSourceCountIcon: false,
+    showSources: false,
+    showUnpublishedBufferFields: false,
+    isPublicationDeleted: false,
+    showImageThumbnails: false,
+    security: { isAdmin: false, isAuthor: false },
+};
+
+export default React.memo(PublicationCitation);
