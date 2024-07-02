@@ -1,79 +1,68 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class ConferencePaperCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool,
-        citationStyle: PropTypes.string,
+export const ConferencePaperCitation = ({ publication, hideDoiLink, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        name: publication.fez_record_search_key_conference_name
+            ? publication.fez_record_search_key_conference_name.rek_conference_name
+            : null,
+        location: publication.fez_record_search_key_conference_location
+            ? publication.fez_record_search_key_conference_location.rek_conference_location
+            : null,
+        dates: publication.fez_record_search_key_conference_dates
+            ? publication.fez_record_search_key_conference_dates.rek_conference_dates
+            : null,
+        placeOfPublication: publication.fez_record_search_key_place_of_publication
+            ? publication.fez_record_search_key_place_of_publication.rek_place_of_publication
+            : null,
+        publisher: publication.fez_record_search_key_publisher
+            ? publication.fez_record_search_key_publisher.rek_publisher
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for conference paper
+    return (
+        <div className="citationContent citationConferencePaper">
+            {/* {Author}*/}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            name: this.props.publication.fez_record_search_key_conference_name
-                ? this.props.publication.fez_record_search_key_conference_name.rek_conference_name
-                : null,
-            location: this.props.publication.fez_record_search_key_conference_location
-                ? this.props.publication.fez_record_search_key_conference_location.rek_conference_location
-                : null,
-            dates: this.props.publication.fez_record_search_key_conference_dates
-                ? this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates
-                : null,
-            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication
-                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication
-                : null,
-            publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-        };
+            {/* {Publication Year| (|).}*/}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for conference paper
-        return (
-            <div className="citationContent citationConferencePaper">
-                {/* {Author}*/}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i>*/}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Publication Year| (|).}*/}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Conference Name| |,}*/}
+            <Partials.CitationView className="citationConferenceName" value={record.name} suffix=", " />
+            {/* {Conference Location| |,}*/}
 
-                {/* <i>{Title| |.}</i>*/}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            <Partials.CitationView className="citationConferenceLocation" value={record.location} suffix=", " />
 
-                {/* {Conference Name| |,}*/}
-                <Partials.CitationView className="citationConferenceName" value={record.name} suffix=", " />
-                {/* {Conference Location| |,}*/}
+            {/* {Conference Date| |.}*/}
+            <Partials.CitationView className="citationConferenceDates" value={record.dates} />
 
-                <Partials.CitationView className="citationConferenceLocation" value={record.location} suffix=", " />
+            {/* {Place of Publication| |:} */}
+            <Partials.CitationView
+                className="citationPlaceOfPublication"
+                value={record.placeOfPublication}
+                suffix=":"
+            />
 
-                {/* {Conference Date| |.}*/}
-                <Partials.CitationView className="citationConferenceDates" value={record.dates} />
+            {/* {Publisher| |.} */}
+            <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* {Place of Publication| |:} */}
-                <Partials.CitationView
-                    className="citationPlaceOfPublication"
-                    value={record.placeOfPublication}
-                    suffix=":"
-                />
-
-                {/* {Publisher| |.} */}
-                <Partials.CitationView className="citationPublisher" value={record.publisher} />
-
-                {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|} */}
+            <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
+        </div>
+    );
+};
+ConferencePaperCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    hideDoiLink: PropTypes.bool,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(ConferencePaperCitation);
