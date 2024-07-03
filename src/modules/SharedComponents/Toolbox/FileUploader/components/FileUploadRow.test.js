@@ -1,8 +1,11 @@
 import React from 'react';
 import { FileUploadRow } from './FileUploadRow';
-import { render, WithReduxStore, fireEvent, within } from 'test-utils';
+import { render, WithReduxStore, fireEvent, within, preview } from 'test-utils';
 import moment from 'moment';
 
+import * as Hook from 'hooks/useWidth';
+
+const useWidth = jest.spyOn(Hook, 'useWidth');
 function setup(testProps = {}) {
     const props = {
         index: 0,
@@ -23,8 +26,12 @@ function setup(testProps = {}) {
 }
 
 describe('FileUploadRow', () => {
+    beforeEach(() => {
+        useWidth.mockImplementation(() => 'md');
+    });
     it('renders with uploaded file', () => {
         const { container } = setup();
+        preview.debug();
         expect(container).toMatchSnapshot();
     });
 
@@ -150,9 +157,9 @@ describe('FileUploadRow', () => {
     });
 
     it('should show confirmation and delete file', () => {
+        useWidth.mockImplementation(() => 'xs');
         const onDeleteFn = jest.fn();
         const { container, getByTestId } = setup({
-            width: 'xs',
             onDelete: onDeleteFn,
         });
         expect(container).toMatchSnapshot();

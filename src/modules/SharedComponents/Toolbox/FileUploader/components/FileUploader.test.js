@@ -10,7 +10,6 @@ import moment from 'moment';
 import { GENERIC_DATE_FORMAT } from '../../../../../config/general';
 
 const getProps = (testProps = {}) => ({
-    clearFileUpload: testProps.clearFileUpload || jest.fn(),
     filesInQueue: [],
     fileNameRestrictions: /.+/,
     ...testProps,
