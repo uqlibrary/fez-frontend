@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileUploader } from './FileUploader';
+import FileUploader from './FileUploader';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import FileUploaderContainer, { getErrorMessage } from './FileUploader';
 import locale from '../locale';
@@ -30,7 +30,13 @@ function setup(testProps = {}) {
     );
 }
 
+const useWidth = jest.spyOn(Hook, 'useWidth');
+
 describe('Component FileUploader', () => {
+    beforeEach(() => {
+        useWidth.mockImplementation(() => 'md');
+    });
+
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
@@ -78,7 +84,6 @@ describe('Component FileUploader', () => {
     });
 
     it('should render rows for uploaded files', async () => {
-        const useWidth = jest.spyOn(Hook, 'useWidth');
         useWidth.mockImplementation(() => 'sm');
 
         const { container } = setup();
@@ -174,7 +179,6 @@ describe('Component FileUploader', () => {
         fireEvent.change(within(getByTestId('dsi-embargo-date-1-input')).getByRole('textbox'), {
             target: { value: '02/02/2022' },
         });
-
         expect(container).toMatchSnapshot();
     });
 

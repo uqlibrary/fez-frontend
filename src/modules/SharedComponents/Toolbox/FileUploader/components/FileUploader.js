@@ -51,7 +51,8 @@ export const FileUploader = ({
     isAdmin,
 }) => {
     const dispatch = useDispatch();
-    const [state, _setState] = React.useState({
+
+    const [state, setState] = React.useState({
         filesInQueue: [],
         isTermsAndConditionsAccepted: false,
         errorMessage: '',
@@ -116,38 +117,35 @@ export const FileUploader = ({
         );
         return openAccess.length !== validEmbargoDates.length;
     };
+    React.useEffect(() => {
+        /**
+         * Check if entire file uploader is valid including access conditions and t&c
+         *
+         * @param filesInQueue
+         * @param isTermsAndConditionsAccepted
+         * @returns {boolean}
+         */
+        const isFileUploadValid = ({ filesInQueue, isTermsAndConditionsAccepted }) => {
+            return (
+                !requireOpenAccessStatus ||
+                (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
+                    filesInQueue.length &&
+                    ((isAnyOpenAccess(filesInQueue) &&
+                        !isAnyEmbargoDateInvalid(filesInQueue) &&
+                        isTermsAndConditionsAccepted) ||
+                        !isAnyOpenAccess(filesInQueue))) ||
+                (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY)).length ===
+                    filesInQueue.length &&
+                    ((isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
+                        !isAnySecurityPolicyPublic(filesInQueue)))
+            );
+        };
 
-    /**
-     * Check if entire file uploader is valid including access conditions and t&c
-     *
-     * @param filesInQueue
-     * @param isTermsAndConditionsAccepted
-     * @returns {boolean}
-     */
-    const isFileUploadValid = ({ filesInQueue, isTermsAndConditionsAccepted }) => {
-        return (
-            !requireOpenAccessStatus ||
-            (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
-                filesInQueue.length &&
-                ((isAnyOpenAccess(filesInQueue) &&
-                    !isAnyEmbargoDateInvalid(filesInQueue) &&
-                    isTermsAndConditionsAccepted) ||
-                    !isAnyOpenAccess(filesInQueue))) ||
-            (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY)).length ===
-                filesInQueue.length &&
-                ((isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
-                    !isAnySecurityPolicyPublic(filesInQueue)))
-        );
-    };
-
-    const setState = newState => {
-        const _newState = { ...state, ...newState };
-        _setState(_newState);
         onChange?.({
-            queue: _newState.filesInQueue,
-            isValid: isFileUploadValid(_newState),
+            queue: state.filesInQueue,
+            isValid: isFileUploadValid(state),
         });
-    };
+    }, [onChange, requireOpenAccessStatus, state]);
 
     React.useEffect(() => {
         return () => {
@@ -168,12 +166,21 @@ export const FileUploader = ({
      * @private
      */
     const replaceFile = (file, index) => {
-        const filesInQueue = [...state.filesInQueue.slice(0, index), file, ...state.filesInQueue.slice(index + 1)];
+        setState(prevState => {
+            const filesInQueue = [
+                ...prevState.filesInQueue.slice(0, index),
+                file,
+                ...prevState.filesInQueue.slice(index + 1),
+            ];
 
-        setState({
-            filesInQueue: filesInQueue,
-            errorMessage: '',
-            isTermsAndConditionsAccepted: state.isTermsAndConditionsAccepted && isAnyOpenAccess(filesInQueue),
+            const isTermsAndConditionsAccepted =
+                prevState.isTermsAndConditionsAccepted && isAnyOpenAccess(filesInQueue);
+            return {
+                ...prevState,
+                filesInQueue,
+                errorMessage: '',
+                isTermsAndConditionsAccepted,
+            };
         });
     };
 
@@ -185,12 +192,20 @@ export const FileUploader = ({
      * @private
      */
     const _deleteFile = (file, index) => {
-        const filesInQueue = [...state.filesInQueue.slice(0, index), ...state.filesInQueue.slice(index + 1)];
+        setState(prevState => {
+            const filesInQueue = [
+                ...prevState.filesInQueue.slice(0, index),
+                ...prevState.filesInQueue.slice(index + 1),
+            ];
+            const isTermsAndConditionsAccepted =
+                prevState.isTermsAndConditionsAccepted && isAnyOpenAccess(filesInQueue);
 
-        setState({
-            filesInQueue: filesInQueue,
-            errorMessage: '',
-            isTermsAndConditionsAccepted: state.isTermsAndConditionsAccepted && isAnyOpenAccess(filesInQueue),
+            return {
+                ...prevState,
+                filesInQueue,
+                errorMessage: '',
+                isTermsAndConditionsAccepted,
+            };
         });
     };
 
@@ -200,11 +215,12 @@ export const FileUploader = ({
      * @private
      */
     const _deleteAllFiles = () => {
-        setState({
+        setState(prev => ({
+            ...prev,
             filesInQueue: [],
             errorMessage: '',
             isTermsAndConditionsAccepted: false,
-        });
+        }));
     };
 
     /**
@@ -225,7 +241,6 @@ export const FileUploader = ({
         } else {
             file[config.FILE_META_KEY_EMBARGO_DATE] = null;
         }
-
         replaceFile(file, index);
     };
 
@@ -288,19 +303,22 @@ export const FileUploader = ({
         /* istanbul ignore else */
         if (index > 0) {
             const newOrder = shuffleFileOrder(filesToOrder, index, index - 1);
-            setState({
+            setState(prev => ({
+                ...prev,
                 filesInQueue: [...newOrder],
-            });
+            }));
         }
     };
+
     const _updateOrderDown = index => {
         const filesToOrder = [...state.filesInQueue];
         /* istanbul ignore else */
         if (index < filesToOrder.length - 1) {
             const newOrder = shuffleFileOrder(filesToOrder, index, index + 1);
-            setState({
+            setState(prev => ({
+                ...prev,
                 filesInQueue: [...newOrder],
-            });
+            }));
         }
     };
 
@@ -327,7 +345,10 @@ export const FileUploader = ({
      * @private
      */
     const _acceptTermsAndConditions = value => {
-        setState({ isTermsAndConditionsAccepted: value });
+        setState(prev => ({
+            ...prev,
+            isTermsAndConditionsAccepted: value,
+        }));
     };
 
     /**
@@ -343,13 +364,17 @@ export const FileUploader = ({
         const totalFiles = [...filesInQueue, ...uniqueFilesToQueue];
 
         // Set files to queue
-        setState({
+        setState(prev => ({
+            ...prev,
             filesInQueue: defaultQuickTemplateId
-                ? totalFiles.map(file => ({ ...file, [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId }))
+                ? totalFiles.map(file => ({
+                      ...file,
+                      [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId,
+                  }))
                 : totalFiles,
             focusOnIndex: filesInQueue.length,
             errorMessage: getErrorMessage(errorsFromDropzone, locale, fileRestrictionsConfig),
-        });
+        }));
     };
 
     const {

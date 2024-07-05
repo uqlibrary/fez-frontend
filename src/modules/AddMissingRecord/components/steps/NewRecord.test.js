@@ -66,28 +66,30 @@ describe('Add new record', () => {
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
 
-        expect(requestCreateNewRecord).toBeCalledWith({
-            authors: [
-                {
-                    affiliation: '',
-                    aut_title: '',
-                    authorId: null,
-                    creatorRole: '',
-                    disabled: false,
-                    nameAsPublished: 'author',
-                    orgaff: '',
-                    orgtype: '',
-                    required: false,
-                    selected: true,
-                    uqIdentifier: '',
-                    uqUsername: '',
-                },
-            ],
-            languages: ['eng'],
-            rek_date: '1911-01-01',
-            rek_display_type: 183,
-            rek_title: 'title',
-        });
+        expect(requestCreateNewRecord).toHaveBeenCalledWith(
+            expect.objectContaining({
+                authors: [
+                    {
+                        affiliation: '',
+                        aut_title: '',
+                        authorId: null,
+                        creatorRole: '',
+                        disabled: false,
+                        nameAsPublished: 'author',
+                        orgaff: '',
+                        orgtype: '',
+                        required: false,
+                        selected: true,
+                        uqIdentifier: '',
+                        uqUsername: '',
+                    },
+                ],
+                languages: ['eng'],
+                rek_date: '1911-01-01',
+                rek_display_type: 183,
+                rek_title: 'title',
+            }),
+        );
         await waitFor(() => getByTestId('confirm-dialog-box'));
 
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));

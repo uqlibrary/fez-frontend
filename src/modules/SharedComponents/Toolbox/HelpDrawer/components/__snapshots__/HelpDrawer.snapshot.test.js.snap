@@ -51,7 +51,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
@@ -123,7 +123,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
@@ -193,7 +193,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1e6k8p5-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
