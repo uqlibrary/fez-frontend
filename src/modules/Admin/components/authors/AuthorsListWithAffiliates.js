@@ -501,6 +501,7 @@ export const AuthorsListWithAffiliates = ({
     // );
 
     const [data, setData] = React.useState([]);
+
     React.useEffect(() => {
         const result = [];
         list.forEach((item, index) => {
@@ -510,6 +511,9 @@ export const AuthorsListWithAffiliates = ({
         });
         setData(result);
     }, [list]);
+
+    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
+
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
@@ -534,7 +538,7 @@ export const AuthorsListWithAffiliates = ({
             newList =
                 action === 'update'
                     ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                    : [...data, newData];
+                    : transformNewAuthorObject(newData);
         }
 
         onChange(newList);
