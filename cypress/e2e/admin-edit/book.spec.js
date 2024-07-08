@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBook';
+import { default as editedBookList } from '../../../src/mock/data/records/publicationTypeListBookEdited';
 import { sherpaRomeo as sherpaMocks } from '../../../src/mock/data/sherpaRomeo';
 
 context('Book admin edit', () => {
@@ -195,6 +196,36 @@ context('Book admin edit', () => {
                 checkIssnLinks(row, '6666-6666');
             });
         });
+
+        cy.adminEditCleanup();
+    });
+
+    it('should render authors and editors sections for edited book with no allow only one validation message', () => {
+        const record = editedBookList.data[1];
+        cy.loadRecordForAdminEdit(record.rek_pid);
+        cy.log('Author Details tab');
+        cy.get('[data-testid=authors-section-content]')
+            .as('authorDetailsTab')
+            .within(() => {
+                cy.get('h4').should('contain', 'Authors');
+                cy.get('h4').should('contain', 'Editors');
+            });
+
+        const authors = record.fez_record_search_key_author.map(item => item.rek_author);
+        cy.get('@authorDetailsTab').within(() => {
+            authors.forEach((author, index) => {
+                cy.get(`[data-testid=rek-author-list-row-${index}-name-as-published]`).should('have.text', author);
+            });
+        });
+
+        const editors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
+        cy.get('@authorDetailsTab').within(() => {
+            editors.forEach((editor, index) => {
+                cy.get(`[data-testid=rek-contributor-list-row-${index}-name-as-published]`).should('have.text', editor);
+            });
+        });
+
+        cy.get('[data-testid=alert-warning]').should('not.exist');
 
         cy.adminEditCleanup();
     });
