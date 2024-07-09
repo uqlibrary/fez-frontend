@@ -34,11 +34,13 @@ export default {
                         },
                         assigned: {
                             label: 'Assigned',
-                            suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
                         },
                         unassigned: {
                             label: 'Unassigned',
-                            suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
                         },
                     },
                     works: {
