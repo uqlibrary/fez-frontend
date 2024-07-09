@@ -96,9 +96,6 @@ export class ContributorsEditor extends PureComponent {
     }
     buildInitialScaleOfSignificance = props => {
         if (!props.isNtro) return [];
-        if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
-            return props.scaleOfSignificance;
-        }
 
         const ScaleOfSignificance = [];
         props.record?.fez_record_search_key_significance &&
