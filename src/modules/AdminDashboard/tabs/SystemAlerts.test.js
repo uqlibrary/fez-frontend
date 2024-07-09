@@ -120,7 +120,12 @@ describe('SystemAlerts tab', () => {
     });
 
     it('should open the admin drawer for a selected row', async () => {
-        const expectedUpdateRequest = { sat_id: 13 };
+        const expectedUpdateRequest = {
+            sat_id: 13,
+            sat_resolved_by: mockUserid,
+            sat_resolved_date: '2017-06-30 00:00',
+        };
+
         mockApi
             .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
             .reply(200, { data: [...adminDashboardSystemAlerts] });
@@ -129,6 +134,7 @@ describe('SystemAlerts tab', () => {
             .reply(200, {});
         const loadAdminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'loadAdminDashboardSystemAlerts');
         const adminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'adminDashboardSystemAlerts');
+        const loadAdminDashboardTodayFn = jest.spyOn(DashboardActions, 'loadAdminDashboardToday');
 
         const { getByTestId, getByRole } = setup();
         expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalled();
@@ -140,10 +146,13 @@ describe('SystemAlerts tab', () => {
 
         await userEvent.click(getByTestId('system-alert-detail-action-button'));
 
-        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith({
-            ...expectedUpdateRequest,
-            sat_resolved_by: mockUserid,
-            sat_resolved_date: '2017-06-30 00:00',
+        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith(expectedUpdateRequest);
+
+        await waitFor(() => {
+            expect(loadAdminDashboardTodayFn).toHaveBeenCalled();
+            expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalledTimes(2);
         });
+
+        await waitForElementToBeRemoved(getByTestId('system-alert-detail'));
     });
 });
