@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
+import { SYSTEM_ALERT_ACTION } from '../config';
+
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -49,11 +51,11 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     };
 
     const handleAssignedChange = (_, newValue) => {
-        onSystemAlertUpdate('assign', newValue);
+        onSystemAlertUpdate(SYSTEM_ALERT_ACTION.ASSIGN, { sat_id: row.sat_id, sat_assigned_to: newValue.id });
     };
 
     const handleResolveButtonClick = () => {
-        onSystemAlertUpdate('resolve', row);
+        onSystemAlertUpdate(SYSTEM_ALERT_ACTION.RESOLVE, row);
     };
 
     return (

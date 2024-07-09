@@ -4,22 +4,22 @@ import {
     transformQuickLinkReorderRequest,
 } from './transformers';
 
+import { SYSTEM_ALERT_ACTION } from './config';
+
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
+        const user = { id: 456 };
         it('should transform resolve action', () => {
             const row = {
                 sat_id: 123,
-                sat_resolved_date: '2024-05-28',
-                sat_resolved_by: 456,
                 sat_assigned_to: 'user@example.com',
             };
-            const action = 'resolve';
-
-            const transformedRequest = transformSystemAlertRequest(action, row);
+            const action = SYSTEM_ALERT_ACTION.RESOLVE;
+            const transformedRequest = transformSystemAlertRequest({ user, action, row });
 
             expect(transformedRequest).toEqual({
                 sat_id: 123,
-                sat_resolved_date: '2024-05-28',
+                sat_resolved_date: '2017-06-30 00:00',
                 sat_resolved_by: 456,
             });
         });
@@ -33,7 +33,7 @@ describe('transformers', () => {
             };
             const action = 'other';
 
-            const transformedRequest = transformSystemAlertRequest(action, row);
+            const transformedRequest = transformSystemAlertRequest({ user, action, row });
 
             expect(transformedRequest).toEqual({
                 sat_id: 123,

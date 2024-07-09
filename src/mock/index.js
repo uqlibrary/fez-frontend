@@ -881,7 +881,7 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     // .reply(422, { message: 'failed to save quicklink update' })
     .reply(201, {})
 
-    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({row: '.*'}).apiUrl)))
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
     .reply(201, {})
 
     .onAny()

@@ -5,9 +5,17 @@ import { useDispatch } from 'react-redux';
 import { useConfirmationState } from 'hooks';
 import { isEmptyStr } from './utils';
 
-export const useSystemAlertDrawer = () => {
+export const useSystemAlertDrawer = data => {
     const [_open, _setOpen] = React.useState(false);
     const [_row, _setRow] = React.useState({});
+
+    React.useEffect(() => {
+        if (_open) {
+            _setRow(data?.find(item => item.sat_id === _row.sat_id) || {});
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
+
     const openDrawer = row => {
         _setRow(row);
         _setOpen(true);

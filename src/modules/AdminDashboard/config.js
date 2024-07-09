@@ -36,6 +36,11 @@ export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, 
 
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 
+export const SYSTEM_ALERT_ACTION = {
+    ASSIGN: 'ASSIGN',
+    RESOLVE: 'RESOLVE',
+};
+
 export const optionDoubleRowRender = (props, option) => (
     <li
         {...props}

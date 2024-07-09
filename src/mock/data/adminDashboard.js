@@ -1,4 +1,7 @@
-export const adminDashboardConfig = {
+export const adminDashboardConfig = { 
+    logged_in_user: {
+        id: 2333, name: 'Lee Sibbald'
+    },
     admin_users: [
         {id: 123, name: 'Michael Feeney'},
         {id: 23, name: 'Another Staff'},

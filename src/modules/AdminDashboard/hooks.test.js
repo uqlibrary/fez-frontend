@@ -11,7 +11,7 @@ jest.mock('react-redux', () => ({
 describe('hooks', () => {
     describe('useSystemAlertDrawer', () => {
         it('returns default state', () => {
-            const { result } = renderHook(() => useSystemAlertDrawer());
+            const { result } = renderHook(useSystemAlertDrawer);
 
             expect(result.current.open).toBe(false);
             expect(result.current.row).toEqual({});
@@ -19,7 +19,7 @@ describe('hooks', () => {
             expect(typeof result.current.closeDrawer).toEqual('function');
         });
         it('handles open/close state', () => {
-            const { result } = renderHook(() => useSystemAlertDrawer());
+            const { result } = renderHook(useSystemAlertDrawer);
             act(() => {
                 result.current.openDrawer({ id: '123' });
             });
@@ -31,6 +31,18 @@ describe('hooks', () => {
             });
             expect(result.current.open).toBe(false);
             expect(result.current.row).toEqual({});
+        });
+        it('handled row data updating when drawer is open', () => {
+            const init = { id: '123', value: 1 };
+            const { result, rerender } = renderHook(useSystemAlertDrawer, { initialProps: init });
+            expect(result.current.row).toEqual({});
+            act(() => {
+                result.current.openDrawer(init);
+            });
+            expect(result.current.open).toBe(true);
+            expect(result.current.row).toEqual(init);
+            rerender([{ ...init, value: 100 }]);
+            expect(result.current.row).toEqual({ id: '123', value: 100 });
         });
     });
 

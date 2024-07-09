@@ -9,10 +9,15 @@ import * as repositories from 'repositories';
 import { adminDashboardSystemAlerts } from 'mock/data/testing/adminDashboard';
 import SystemAlerts from './SystemAlerts';
 
+const mockUserid = 2333;
 const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
         adminDashboardConfigReducer: {
             adminDashboardConfigData: {
+                logged_in_user: {
+                    id: mockUserid,
+                    name: 'Lee Sibbald',
+                },
                 admin_users: [
                     { id: 13, name: 'Staff' },
                     { id: 23, name: 'Another Staff' },
@@ -132,13 +137,13 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(getByRole('gridcell', { name: '6th May 2024' }));
 
         await waitFor(() => getByTestId('system-alert-detail'));
+
         await userEvent.click(getByTestId('system-alert-detail-action-button'));
 
-        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith(expectedUpdateRequest);
-        await waitFor(() => expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalledTimes(2));
-
-        expect(
-            within(getByTestId('standard-card-content')).getByRole('progressbar', { hidden: true }),
-        ).toBeInTheDocument();
+        expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith({
+            ...expectedUpdateRequest,
+            sat_resolved_by: mockUserid,
+            sat_resolved_date: '2017-06-30 00:00',
+        });
     });
 });
