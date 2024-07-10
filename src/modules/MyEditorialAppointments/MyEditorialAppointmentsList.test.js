@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within, preview } from 'test-utils';
+import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
@@ -160,7 +160,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.click(getByLabelText('Clear'));
-        preview.debug();
+
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });

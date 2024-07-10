@@ -2,7 +2,7 @@ import React from 'react';
 import Immutable from 'immutable';
 
 import FileUploadRowStatus from './FileUploadRowStatus';
-import { render, WithReduxStore, preview } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     name: 'progress',
@@ -40,7 +40,7 @@ describe('Component FileUploadRowStatus', () => {
                 isUploadInProgress: true,
             },
         );
-        preview.debug();
+
         expect(container).toMatchSnapshot();
     });
 

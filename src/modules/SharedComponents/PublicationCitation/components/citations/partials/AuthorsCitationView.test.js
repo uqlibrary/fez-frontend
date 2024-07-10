@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
-import { rtlRender, WithRouter, preview } from 'test-utils';
+import { rtlRender, WithRouter } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -703,7 +703,6 @@ describe('AuthorsCitationView', () => {
             },
             showLink: true,
         });
-        preview.debug();
         expect(container).toMatchSnapshot();
 
         expect(getByRole('link', { name: 'Fitzgerald, Lisa' })).toBeInTheDocument(); // ('rek-contributor-0-link')).toBeInTheDocument();

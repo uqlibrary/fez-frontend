@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileUploadRow } from './FileUploadRow';
-import { render, WithReduxStore, fireEvent, within, preview } from 'test-utils';
+import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 import moment from 'moment';
 
 import * as Hook from 'hooks/useWidth';
@@ -31,7 +31,7 @@ describe('FileUploadRow', () => {
     });
     it('renders with uploaded file', () => {
         const { container } = setup();
-        preview.debug();
+
         expect(container).toMatchSnapshot();
     });
 
