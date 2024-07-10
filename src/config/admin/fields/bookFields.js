@@ -125,10 +125,5 @@ export const validateBook = (
         }) ||
             {}),
     },
-    authorsSection: isAuthorOrEditorSelected(
-        as || {},
-        true,
-        ais.rek_subtype !== SUBTYPE_EDITED_BOOK,
-        ais.rek_subtype === SUBTYPE_EDITED_BOOK,
-    ),
+    authorsSection: isAuthorOrEditorSelected(as || {}, true, true, ais.rek_subtype === SUBTYPE_EDITED_BOOK),
 });
