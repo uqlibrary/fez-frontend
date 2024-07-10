@@ -69,6 +69,14 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
       {
         "groups": [
           [
+            "authors",
+          ],
+        ],
+        "title": "Authors",
+      },
+      {
+        "groups": [
+          [
             "editors",
           ],
         ],

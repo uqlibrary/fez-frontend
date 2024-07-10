@@ -19,6 +19,7 @@ import {
     NEW_DOCTYPES_OPTIONS,
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_DESIGN,
+    SUBTYPE_EDITED_BOOK,
 } from 'config/general';
 import moment from 'moment';
 
@@ -67,7 +68,16 @@ const validate = values => {
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
         case general.PUBLICATION_TYPE_VIDEO_DOCUMENT:
             // either author or editor should be selected and linked to a user
+            // Edited book only require editors
             if (
+                data.rek_subtype &&
+                data.rek_subtype === SUBTYPE_EDITED_BOOK &&
+                (!data.editors ||
+                    (data.editors && data.editors.length === 0) ||
+                    (data.editors || []).filter(item => item.selected).length === 0)
+            ) {
+                errors.editors = locale.validationErrors.editorRequired;
+            } else if (
                 (!data.authors && !data.editors) ||
                 (!data.authors && data.editors && data.editors.length === 0) ||
                 (!data.editors && data.authors && data.authors.length === 0) ||
