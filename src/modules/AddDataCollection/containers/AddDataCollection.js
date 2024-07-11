@@ -52,7 +52,7 @@ const asyncValidate = values => {
 
     if (isValidDOIValue(doi)) {
         return doesDOIExist(doi).then(response => {
-            if (response.total) {
+            if (response && response.total) {
                 // redux-form error structure for field names with dots
                 throw { fez_record_search_key_doi: { rek_doi: validationErrors.validationErrors.doiExists } };
             }
