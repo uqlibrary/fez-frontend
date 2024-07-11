@@ -46,7 +46,7 @@ describe('Add new record', () => {
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
-        const { debug, getByTestId, getByRole, getByText } = setup({
+        const { getByTestId, getByRole, getByText } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
             actions: { clearNewRecord: clearNewRecordFn },
             navigate: navigateFn,
@@ -58,7 +58,6 @@ describe('Add new record', () => {
         // required fields
         fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
         fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
-        // fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: '5' } });
         fireEvent.mouseDown(getByTestId('rek-date-month-select'));
         fireEvent.click(getByRole('option', { name: 'May' }));
         fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });

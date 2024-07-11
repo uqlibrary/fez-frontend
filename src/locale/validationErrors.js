@@ -78,8 +78,7 @@ export default {
         rek_journal_name: 'Journal name is required',
         rek_link: 'Link is invalid',
         rek_doi: 'DOI is invalid',
-        rek_doi_exists:
-            'There is a potential match for the DOI. Please search UQ eSpace https://espace.library.uq.edu.au/records/add/find or contact us for assistance <espace@library.uq.edu.au>',
+        rek_doi_exists: 'DOI is already assigned. Please search UQ eSpace or contact espace@library.uq.edu.au',
         rek_newspaper: 'Newspaper name is required',
         rek_end_page: 'End page is required',
         rek_start_page: 'Start page is required',
