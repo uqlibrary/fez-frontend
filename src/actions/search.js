@@ -235,7 +235,7 @@ export function searchEspacePublications(searchParams) {
 }
 
 export function doesDOIExist(doi) {
-    return get(SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { doi: doi, rek_object_type: 3 } }));
+    return get(SEARCH_KEY_LOOKUP_API({ searchKey: 'doi', searchQuery: doi }));
 }
 
 export function loadCollectionsList(searchKey, searchQuery) {

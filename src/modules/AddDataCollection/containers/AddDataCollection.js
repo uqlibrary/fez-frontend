@@ -1,13 +1,24 @@
 import { connect } from 'react-redux';
-import { reduxForm, getFormValues, SubmissionError, getFormSyncErrors, stopSubmit, reset } from 'redux-form/immutable';
+import {
+    reduxForm,
+    getFormValues,
+    SubmissionError,
+    getFormSyncErrors,
+    getFormAsyncErrors,
+    stopSubmit,
+    reset,
+} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
-import { createNewRecord } from 'actions';
+import { createNewRecord, doesDOIExist } from 'actions';
 import AddDataCollection from '../components/AddDataCollection';
 import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
+import { isValidDOIValue } from 'config/validation';
 import { locale } from 'locale';
 import moment from 'moment';
+import { defaultShouldAsyncValidate } from 'redux-form';
+import validationErrors from 'locale/validationErrors';
 
 const FORM_NAME = 'DataCollection';
 
@@ -33,6 +44,22 @@ const onSubmit = (values, dispatch, state) => {
         .catch(error => {
             throw new SubmissionError({ _error: error.message });
         });
+};
+
+const asyncValidate = values => {
+    const data = values.toJS();
+    const doi = data.fez_record_search_key_doi && data.fez_record_search_key_doi.rek_doi;
+
+    if (isValidDOIValue(doi)) {
+        return doesDOIExist(doi).then(response => {
+            if (response && response.total) {
+                // redux-form error structure for field names with dots
+                throw { fez_record_search_key_doi: { rek_doi: validationErrors.validationErrors.doiExists } };
+            }
+        });
+    }
+
+    return Promise.resolve();
 };
 
 const validate = values => {
@@ -69,10 +96,22 @@ const AddDataCollectionContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
+    asyncValidate,
+    asyncChangeFields: ['fez_record_search_key_doi.rek_doi'],
+    // https://github.com/redux-form/redux-form/issues/3944
+    shouldAsyncValidate: params => {
+        return defaultShouldAsyncValidate({ ...params, syncValidationPasses: true });
+    },
 })(AddDataCollection);
 
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formSyncErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formAsyncErrors = getFormAsyncErrors(FORM_NAME)(state) || Immutable.Map({});
+
+    const formErrors = {
+        ...(formSyncErrors instanceof Immutable.Map ? formSyncErrors.toJS() : formSyncErrors),
+        ...(formAsyncErrors.get('fez_record_search_key_doi') ? { rek_doi_exists: '' } : {}),
+    };
 
     const initialValues = {
         ...NEW_DATASET_DEFAULT_VALUES,
@@ -81,7 +120,7 @@ const mapStateToProps = state => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        disableSubmit: formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0,
         initialValues: initialValues,
         resetForm: () => reset(FORM_NAME),
     };
