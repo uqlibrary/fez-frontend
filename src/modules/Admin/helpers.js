@@ -102,7 +102,8 @@ export const bibliographicParams = (record, formValues) => ({
 });
 
 export const authorsParams = (record, isNtro) => {
-    const shouldHandleAffiliations = shouldHandleAuthorAffiliations(record);
+    console.log('Is this an NTRO?', isNtro);
+    const shouldHandleAffiliations = !isNtro && shouldHandleAuthorAffiliations(record);
     return {
         isNtro: isNtro,
         isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
