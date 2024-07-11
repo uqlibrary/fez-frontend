@@ -1,13 +1,19 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent,  } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
+
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         account: accounts.uqresearcher || testProps.account || {},
-        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return renderMethod(
@@ -26,6 +32,7 @@ describe('Search record results', () => {
 
     afterEach(() => {
         mockApi.reset();
+        jest.clearAllMocks();
     });
 
     it('should render stepper and no results', () => {
@@ -33,44 +40,34 @@ describe('Search record results', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render spinner', () => {
+    it('should render spinner', async () => {
         const { container } = setup({ searchLoading: true });
         expect(container).toMatchSnapshot();
     });
 
-    it(
-        'should call componentDidUpdate lifecycle method and focus on ' +
-            'create new record button if no publications found',
-        () => {
-            const navigateFn = jest.fn();
-            const { getByRole, rerender } = setup({
-                publicationList: [],
-                navigate: navigateFn,
-            });
-            setup({ publicationList: [], navigate: navigateFn }, rerender);
+    it('should call useffect method and focus on ' + 'create new record button if no publications found', () => {
+        const { getByRole, rerender } = setup({
+            publicationList: [],
+        });
+        setup({ publicationList: [] }, rerender);
 
-            expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
-            fireEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
+        expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
+        fireEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
 
-            expect(navigateFn).toHaveBeenCalled();
-        },
-    );
+        expect(mockUseNavigate).toHaveBeenCalled();
+    });
 
     it('should navigate to find on cancel workflow', () => {
-        const cancelWorkflow = jest.fn();
-        const { getByRole } = setup({
-            navigate: cancelWorkflow,
-        });
+        const { getByRole } = setup();
 
         fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
-        expect(cancelWorkflow).toBeCalled();
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
 
     it(
         'should render a single claimable item with no authors on the record ' +
             '(record should appear in publicationsList prop)',
         async () => {
-            const navigateToClaimPublication = jest.fn();
             const setClaimPublication = jest.fn();
             const setRedirectPath = jest.fn();
             const actions = {
@@ -168,7 +165,6 @@ describe('Search record results', () => {
             ];
 
             const { getByTestId, getByRole, container } = setup({
-                navigate: navigateToClaimPublication,
                 actions: actions,
                 publicationsList: publicationsList,
             });
@@ -177,9 +173,12 @@ describe('Search record results', () => {
 
             fireEvent.click(getByRole('button', { name: 'Claim this work' }));
 
-            expect(setClaimPublication).toBeCalledWith(publicationsList[0]);
-            expect(navigateToClaimPublication).toBeCalledWith('/records/claim');
-            expect(setRedirectPath).toBeCalledWith('/records/add/find');
+            expect(setClaimPublication).toHaveBeenCalledWith(publicationsList[0]);
+
+            expect(mockUseNavigate).toHaveBeenCalledWith('/records/claim');
+
+            expect(setRedirectPath).toHaveBeenCalledWith('/records/add/find');
+
             expect(container).toMatchSnapshot();
         },
     );
