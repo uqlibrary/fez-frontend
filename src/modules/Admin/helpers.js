@@ -102,7 +102,6 @@ export const bibliographicParams = (record, formValues) => ({
 });
 
 export const authorsParams = (record, isNtro) => {
-    console.log('Is this an NTRO?', isNtro);
     const shouldHandleAffiliations = !isNtro && shouldHandleAuthorAffiliations(record);
     return {
         isNtro: isNtro,
