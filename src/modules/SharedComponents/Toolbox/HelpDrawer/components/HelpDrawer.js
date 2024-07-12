@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { hide } from '../actions';
 
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
@@ -9,10 +10,12 @@ import Typography from '@mui/material/Typography';
 
 export const HelpDrawer = ({ buttonLabel }) => {
     const dispatch = useDispatch();
-    const { open = false, title = '', text = '' } = useSelector(state => state.get('helpDrawer'));
+
+    const helpDrawerState = useSelector(state => state.get('helpDrawer'));
+    const { open = false, title = '', text = '' } = helpDrawerState?.toJS?.() || helpDrawerState || {};
 
     let indexedText = null;
-    const hide = () => {
+    const _hide = () => {
         dispatch(hide());
     };
 
@@ -38,7 +41,7 @@ export const HelpDrawer = ({ buttonLabel }) => {
             }}
             open={open}
             anchor="right"
-            onClose={hide}
+            onClose={_hide}
         >
             <Grid container spacing={5} id="help-drawer">
                 <Grid item xs={12}>
@@ -69,7 +72,7 @@ export const HelpDrawer = ({ buttonLabel }) => {
                         color="primary"
                         data-analyticsid="help-drawer-close"
                         data-testid="help-drawer-close"
-                        onClick={hide}
+                        onClick={_hide}
                         variant="contained"
                     />
                 </Grid>

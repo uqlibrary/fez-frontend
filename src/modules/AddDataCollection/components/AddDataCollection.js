@@ -67,14 +67,13 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
     const navigate = useNavigate();
     const previous = usePrevious(props.submitSucceeded);
     const confirmationBoxRef = React.useRef();
-    const isInit = React.useRef(true);
 
     React.useEffect(() => {
-        if (!isInit.current && previous !== props.submitSucceeded) {
+        if (previous !== undefined && previous !== props.submitSucceeded) {
             confirmationBoxRef.current.showConfirmation();
         }
-        isInit.current = false;
-    }, [previous, props.submitSucceeded]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.submitSucceeded]);
 
     const setConfirmationRef = React.useCallback(node => {
         confirmationBoxRef.current = node; // TODO: Add check that this worked
@@ -651,4 +650,4 @@ AddDataCollection.propTypes = {
     resetForm: PropTypes.any,
 };
 
-export default React.memo(AddDataCollection);
+export default AddDataCollection;

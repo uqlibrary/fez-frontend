@@ -18,4 +18,4 @@ ScrollToTop.propTypes = {
     location: PropTypes.object,
 };
 
-export default React.memo(ScrollToTop);
+export default ScrollToTop;

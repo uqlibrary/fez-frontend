@@ -57,4 +57,4 @@ LookupForm.defaultProps = {
     required: false,
 };
 
-export default React.memo(LookupForm);
+export default LookupForm;
