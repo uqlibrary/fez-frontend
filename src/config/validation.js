@@ -376,9 +376,10 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
     return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
-export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
+export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, isEditorRequired = false) => {
     const authors = data.authors ?? data.authorsWithAffiliations;
     const errors = {};
+    // authors and editors are empty or no selected authors and editors for non-admin users
     if (
         (!authors && !data.editors) ||
         (!authors && data.editors && data.editors.length === 0) ||
@@ -388,16 +389,19 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
         (!isAdmin &&
             data.editors &&
             data.editors.length !== 0 &&
-            data.editors.filter(item => item.selected).length === 0)
+            data.editors.filter(item => item.selected).length === 0) ||
+        (isEditorRequired && data.editors && data.editors.length === 0)
     ) {
-        if (!allowOnlyEditor) {
+        if (!isEditorRequired) {
             errors.authors = isAdmin
                 ? locale.validationErrors.authorRequiredAdmin
                 : locale.validationErrors.authorRequired;
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
+        // authors or editors but not both
     } else if (allowOnlyOne && authors && authors.length > 0 && data.editors && data.editors.length > 0) {
         errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        // editor is required
     }
     return errors;
 };
