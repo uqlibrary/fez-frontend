@@ -4,7 +4,7 @@ import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 jest.dontMock('./DesignForm');
 
 import DesignForm from './DesignForm';
-import { render, WithReduxStore, within } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
