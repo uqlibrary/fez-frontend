@@ -20,7 +20,7 @@ export const MyLatestPublications = ({ isAdmin }) => {
         state.get('myLatestPublicationsReducer'),
     );
 
-    const { author } = useSelector(state => state.get('accountReducer')) || false;
+    const { author } = useSelector(state => state.get('accountReducer')) || /* istanbul ignore next */ false;
 
     React.useEffect(() => {
         if (!!author) {

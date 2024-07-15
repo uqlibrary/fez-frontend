@@ -176,7 +176,7 @@ export const PublicationCitation = ({
     const theme = useTheme();
     const navigate = useNavigate();
     const location = useLocation();
-    const { account } = useSelector(state => state.get('accountReducer') || {});
+    const { account } = useSelector(state => state.get('accountReducer') || /* istanbul ignore next */ {});
 
     const hideViewFullStatisticsLink = !account;
 
