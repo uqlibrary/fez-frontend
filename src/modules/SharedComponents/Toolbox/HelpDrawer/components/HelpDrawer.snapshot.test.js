@@ -11,7 +11,6 @@ function setup(testProps = {}, testState = {}) {
     };
     const state = {
         helpDrawer: {
-            open: true,
             ...testState,
         },
     };
@@ -24,6 +23,11 @@ function setup(testProps = {}, testState = {}) {
 }
 
 describe('HelpDrawer snapshots tests', () => {
+    it('renders no menu', () => {
+        const { baseElement } = setup();
+
+        expect(baseElement).toMatchSnapshot();
+    });
     it('renders menu', () => {
         const hdText = 'Integer mattis rutrum velit nec posuere. Quisque rhoncus quam elit.';
         const { baseElement } = setup(
@@ -31,6 +35,7 @@ describe('HelpDrawer snapshots tests', () => {
             {
                 title: 'HelpDrawer Title',
                 text: hdText,
+                open: true,
             },
         );
 
@@ -47,6 +52,7 @@ describe('HelpDrawer snapshots tests', () => {
                         <span>Test text</span>
                     </p>
                 ),
+                open: true,
             },
         );
         expect(baseElement).toMatchSnapshot();
@@ -58,6 +64,7 @@ describe('HelpDrawer snapshots tests', () => {
             {
                 title: 'HelpDrawer title',
                 text: <span>Test text</span>,
+                open: true,
             },
         );
         expect(baseElement).toMatchSnapshot();

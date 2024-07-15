@@ -195,7 +195,6 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">
                         <SearchComponent
                             activeFacets={searchParams.activeFacets}
-                            clearSearchQuery={() => dispatch(actions.clearSearchQuery)}
                             isAdmin={isAdmin}
                             isAdvancedSearch={isAdvancedSearch}
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
