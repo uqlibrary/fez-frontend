@@ -255,6 +255,7 @@ const AppClass = ({
         location.pathname?.startsWith('/admin') ||
         location.pathname?.startsWith('/batch-import') ||
         location.hash?.startsWith('#/admin') ||
+        location.pathname?.startsWith('/records/claim') ||
         false;
 
     return (

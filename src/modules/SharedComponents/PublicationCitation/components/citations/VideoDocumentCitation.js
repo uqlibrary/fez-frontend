@@ -1,51 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class VideoDocumentCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const VideoDocumentCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
+        series: publication.fez_record_search_key_series ? publication.fez_record_search_key_series.rek_series : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Video
+    // {Creator}{Year| (|).}<i>{Title| |.}</i>{Series| |.}
+    return (
+        <div className="citationContent citationVideo">
+            {/* {Creator}*/}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-            series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
-        };
+            {/* {Year| (|).} */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for Video
-        // {Creator}{Year| (|).}<i>{Title| |.}</i>{Series| |.}
-        return (
-            <div className="citationContent citationVideo">
-                {/* {Creator}*/}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Series| |.} */}
+            <Partials.CitationView className="citationSeries" value={record.series} />
 
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
-
-                {/* {Series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series} />
-
-                {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
+VideoDocumentCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(VideoDocumentCitation);

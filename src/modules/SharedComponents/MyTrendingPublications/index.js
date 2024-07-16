@@ -1,1 +1,1 @@
-export { default as MyTrendingPublications } from './containers/MyTrendingPublications';
+export { default as MyTrendingPublications } from './components/MyTrendingPublications';

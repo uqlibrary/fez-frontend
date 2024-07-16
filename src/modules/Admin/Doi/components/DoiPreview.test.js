@@ -1,7 +1,7 @@
 import React from 'react';
 import { DoiPreview } from './DoiPreview';
 import { PUBLICATION_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_RESEARCH_REPORT } from 'config/general';
-import { render, WithRouter, screen } from 'test-utils';
+import { render, WithRouter } from 'test-utils';
 
 const setup = (testProps = {}) => {
     const props = {

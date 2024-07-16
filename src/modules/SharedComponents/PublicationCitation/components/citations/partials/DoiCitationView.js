@@ -35,4 +35,4 @@ DoiCitationView.propTypes = {
     hideDoiLink: PropTypes.bool,
 };
 
-export default DoiCitationView;
+export default React.memo(DoiCitationView);

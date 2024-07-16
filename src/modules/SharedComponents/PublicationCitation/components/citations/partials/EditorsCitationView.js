@@ -46,4 +46,4 @@ EditorsCitationView.propTypes = {
     showLink: PropTypes.bool,
 };
 
-export default EditorsCitationView;
+export default React.memo(EditorsCitationView);

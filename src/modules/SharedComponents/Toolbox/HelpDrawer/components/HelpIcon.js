@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { show } from '../actions';
 
 // MUI 1
 import IconButton from '@mui/material/IconButton';
@@ -8,9 +10,10 @@ import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import { sanitiseId } from 'helpers/general';
 
-export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, onClick, IconComponent, testId }) => {
+export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, IconComponent, testId }) => {
+    const dispatch = useDispatch();
     const setDrawerContent = () => {
-        onClick(title, text, buttonLabel);
+        dispatch(show(title, text, buttonLabel));
     };
     const id = sanitiseId(`help-icon${!!testId ? `-${testId}` : ''}`);
 
@@ -45,7 +48,6 @@ HelpIcon.propTypes = {
     buttonLabel: PropTypes.string,
     IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.node, PropTypes.object]),
     iconSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    onClick: PropTypes.func,
     text: PropTypes.any.isRequired,
     testId: PropTypes.string,
     title: PropTypes.string,
@@ -58,4 +60,4 @@ HelpIcon.defaultProps = {
     IconComponent: HelpOutlineIcon,
 };
 
-export default HelpIcon;
+export default React.memo(HelpIcon);
