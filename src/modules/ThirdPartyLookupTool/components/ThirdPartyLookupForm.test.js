@@ -2,6 +2,12 @@ import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
 import { ThirdPartyLookupForm } from './ThirdPartyLookupForm';
 
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
+}));
+
 function setup(testProps) {
     const props = {
         ...testProps,

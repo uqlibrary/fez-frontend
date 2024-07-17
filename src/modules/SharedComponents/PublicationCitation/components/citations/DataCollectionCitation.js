@@ -1,58 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class DataCollectionCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool,
-        citationStyle: PropTypes.string,
+export const DataCollectionCitation = ({ publication, hideDoiLink, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        publisher: publication.fez_record_search_key_publisher
+            ? publication.fez_record_search_key_publisher.rek_publisher
+            : null,
+        collectionType: publication.rek_display_type_lookup || null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for DataCollection
+    // {Creator name}{Publication Year| (|).}<i>{Dataset Title| |.}</i>{Publisher| |.} Collection Type. {doi| doi:|}
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
-                : null,
-            collectionType: this.props.publication.rek_display_type_lookup || null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-        };
+    return (
+        <div className="citationContent citationDataCollection">
+            {/* {Creator} */}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} suffix="" />
 
-        // eSpace citation view for DataCollection
-        // {Creator name}{Publication Year| (|).}<i>{Dataset Title| |.}</i>{Publisher| |.} Collection Type. {doi| doi:|}
+            {/* {Publication Year| (|).} */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        return (
-            <div className="citationContent citationDataCollection">
-                {/* {Creator} */}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                    suffix=""
-                />
+            {/* <i>{Dataset Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Publisher| |.} */}
+            <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* <i>{Dataset Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            {/* {Collection Type| (|).} */}
+            <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
 
-                {/* {Publisher| |.} */}
-                <Partials.CitationView className="citationPublisher" value={record.publisher} />
-
-                {/* {Collection Type| (|).} */}
-                <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
-
-                {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|} */}
+            <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
+        </div>
+    );
+};
+DataCollectionCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    hideDoiLink: PropTypes.bool,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(DataCollectionCitation);

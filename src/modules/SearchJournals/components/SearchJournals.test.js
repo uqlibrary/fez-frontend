@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within, waitFor } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
 import Immutable from 'immutable';
 import * as actions from 'actions/journals.js';

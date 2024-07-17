@@ -4,6 +4,12 @@ import Immutable from 'immutable';
 import { render, WithReduxStore, fireEvent, act, waitForElementToBeRemoved } from 'test-utils';
 
 import BulkExport from './BulkExport';
+import * as actions from 'actions';
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    resetExportPublicationsStatus: jest.fn(() => jest.fn()),
+}));
 
 import pagesLocale from 'locale/pages';
 
@@ -14,10 +20,6 @@ const setup = (testProps = {}, initialState = {}) => {
         pageSize: 10,
         totalMatches: 40,
         ...testProps,
-        actions: {
-            resetExportPublicationsStatus: jest.fn(),
-            ...testProps.actions,
-        },
     };
     const state = {
         exportPublicationsReducer: {
@@ -41,10 +43,8 @@ describe('BulkExport component', () => {
     });
 
     it('should open and close dialog on button click', async () => {
-        const mock = jest.fn();
-        const { getByTestId, getByLabelText, queryByRole } = setup({
-            actions: { resetExportPublicationsStatus: mock },
-        });
+        const { getByTestId, getByLabelText, findByRole, queryByRole } = setup();
+
         expect(getByTestId('bulk-export')).toBeInTheDocument();
         expect(getByTestId('bulk-export-open')).toBeInTheDocument();
 
@@ -52,8 +52,8 @@ describe('BulkExport component', () => {
         act(() => {
             fireEvent.click(getByTestId('bulk-export-open'));
         });
-        expect(queryByRole('dialog')).toBeInTheDocument();
-        expect(mock).toHaveBeenCalledTimes(1);
+        await findByRole('dialog');
+        expect(actions.resetExportPublicationsStatus).toHaveBeenCalledTimes(1);
 
         expect(getByLabelText('close')).toBeInTheDocument();
         act(() => {
@@ -61,7 +61,7 @@ describe('BulkExport component', () => {
         });
         await waitForElementToBeRemoved(queryByRole('dialog'));
         expect(queryByRole('dialog')).toBeNull();
-        expect(mock).toHaveBeenCalledTimes(2);
+        expect(actions.resetExportPublicationsStatus).toHaveBeenCalledTimes(2);
     });
 
     it('should render buttons in different states', () => {

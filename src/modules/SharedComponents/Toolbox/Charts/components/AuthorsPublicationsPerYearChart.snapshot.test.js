@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthorsPublicationsPerYearChart from './AuthorsPublicationsPerYearChart';
+import AuthorsPublicationsPerYearChart, { labelFormatter } from './AuthorsPublicationsPerYearChart';
 import { rtlRender } from 'test-utils';
 // import currentAuthorStats from 'mock';
 
@@ -42,20 +42,19 @@ describe('AuthorsPublicationsPerYearChart ', () => {
     });
 
     it('labelFormatter', () => {
-        const comp = new AuthorsPublicationsPerYearChart(defaultProps);
-        expect(comp.state.options.legend.labelFormatter()).toEqual('');
+        expect(labelFormatter.apply()).toEqual('');
         const scope1 = {
             userOptions: {
                 name: 'test',
             },
         };
-        expect(comp.state.options.legend.labelFormatter.bind(scope1)()).toEqual('test');
+        expect(labelFormatter.apply(scope1)).toEqual('test');
         const scope2 = {
             userOptions: {
                 name: 'test',
                 extraInfoForLegend: 'a, b',
             },
         };
-        expect(comp.state.options.legend.labelFormatter.bind(scope2)()).toEqual('test (a, <br />b)');
+        expect(labelFormatter.apply(scope2)).toEqual('test (a, <br />b)');
     });
 });
