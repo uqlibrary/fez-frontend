@@ -1,6 +1,7 @@
 import React from 'react';
 import { CustomStepper } from './Stepper';
 import { rtlRender } from 'test-utils';
+import * as Hook from 'hooks/useWidth';
 
 function setup(testProps, renderMethod = rtlRender) {
     const props = {
@@ -12,6 +13,11 @@ function setup(testProps, renderMethod = rtlRender) {
 }
 
 describe('Add record stepper tests', () => {
+    beforeEach(() => {
+        const useWidth = jest.spyOn(Hook, 'useWidth');
+
+        useWidth.mockImplementation(() => 'sm');
+    });
     const steps = [{ label: 'Step 1' }, { label: 'Step 2' }, { label: 'Step 3' }];
 
     it('should render steps with specific active step', () => {

@@ -67,39 +67,29 @@ describe('Chart component', () => {
         const test = jest.fn();
         window.matchMedia = test;
         setup();
-        expect(test).toBeCalled();
+        expect(test).toHaveBeenCalled();
     });
 
-    it('componentDidMount', () => {
+    it('mounts', () => {
         const addListenerFn = jest.fn();
-        const printMediaMock = { addListener: addListenerFn, removeListener: jest.fn() };
+        const printMediaMock = { addEventListener: addListenerFn, removeEventListener: jest.fn() };
         window.matchMedia = jest.fn(() => printMediaMock);
         setup();
-        expect(addListenerFn).toBeCalled();
+        expect(addListenerFn).toHaveBeenCalled();
     });
 
-    it('componentDidUpdate', () => {
+    it('updates', () => {
         const { rerender, container } = setup();
         rerender(<Chart chartOptions={{ title: { text: 'test' } }} />);
         expect(container).toMatchSnapshot();
     });
 
-    it('componentWillUnmount', () => {
+    it('unmounts', () => {
         const removeListenerFn = jest.fn();
-        const printMediaMock = { addListener: jest.fn(), removeListener: removeListenerFn };
+        const printMediaMock = { addEventListener: jest.fn(), removeEventListener: removeListenerFn };
         window.matchMedia = jest.fn(() => printMediaMock);
         const { unmount } = setup();
         unmount();
-        expect(removeListenerFn).toBeCalled();
+        expect(removeListenerFn).toHaveBeenCalled();
     });
-    /*
-    it('reflowChart', () => {
-        const wrapper = setup();
-        const test = jest.fn();
-        wrapper.instance().chart = {
-            reflow: test,
-        };
-        wrapper.instance().reflowChart();
-        expect(test).toBeCalled();
-    });*/
 });

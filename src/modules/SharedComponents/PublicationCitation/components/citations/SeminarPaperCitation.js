@@ -1,63 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class SeminarPaperCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const SeminarPaperCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        series: publication.fez_record_search_key_series ? publication.fez_record_search_key_series.rek_series : null,
+        orgUnit: publication.fez_record_search_key_org_unit_name
+            ? publication.fez_record_search_key_org_unit_name.rek_org_unit_name
+            : null,
+        orgName: publication.fez_record_search_key_org_name
+            ? publication.fez_record_search_key_org_name.rek_org_name
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Seminar Paper
+    // {Author}{Year| (|).}<i>{Title| |.}</i>{Seminar series| |.}{School, Centre or Institute| |,}{Institution| |.}
+    return (
+        <div className="citationContent citationSeminarPaper">
+            {/* {Author}*/}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
-            orgUnit: this.props.publication.fez_record_search_key_org_unit_name
-                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name
-                : null,
-            orgName: this.props.publication.fez_record_search_key_org_name
-                ? this.props.publication.fez_record_search_key_org_name.rek_org_name
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-        };
+            {/* {Publication Year| (|).} */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for Seminar Paper
-        // {Author}{Year| (|).}<i>{Title| |.}</i>{Seminar series| |.}{School, Centre or Institute| |,}{Institution| |.}
-        return (
-            <div className="citationContent citationSeminarPaper">
-                {/* {Author}*/}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Seminar series| |.} */}
+            <Partials.CitationView className="citationSeries" value={record.series} />
 
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            {/* {School, Centre or Institute| |,}  - fez_record_search_key_org_unit_name.rek_org_unit_name */}
+            <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix="," />
 
-                {/* {Seminar series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series} />
+            {/* {Institution| |.} - fez_record_search_key_org_name.rek_org_name */}
+            <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
-                {/* {School, Centre or Institute| |,}  - fez_record_search_key_org_unit_name.rek_org_unit_name */}
-                <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix="," />
-
-                {/* {Institution| |.} - fez_record_search_key_org_name.rek_org_name */}
-                <Partials.CitationView className="citationOrgName" value={record.orgName} />
-
-                {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
+SeminarPaperCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(SeminarPaperCitation);

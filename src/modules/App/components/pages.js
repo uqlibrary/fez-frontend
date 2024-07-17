@@ -67,7 +67,7 @@ export const ThesisSubmission = lazy(() =>
     lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
 );
 export const ThirdPartyLookupTool = lazy(() =>
-    lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
+    lazyRetry(() => import('modules/ThirdPartyLookupTool/components/ThirdPartyLookupTool')),
 );
 
 // always load components

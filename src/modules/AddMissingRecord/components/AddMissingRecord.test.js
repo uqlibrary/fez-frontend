@@ -1,5 +1,8 @@
 import React from 'react';
+import Immutable from 'immutable';
+
 import AddMissingRecord from './AddMissingRecord';
+import { accounts } from 'mock/data/account';
 import { pathConfig } from 'config/pathConfig';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 
@@ -12,17 +15,27 @@ jest.mock('react-router-dom', () => ({
     useLocation: () => mockUseLocation,
 }));
 
-function setup(testProps = {}) {
+function setup(testProps = {}, testState = {}) {
     const props = {
         ...testProps,
 
         rawSearchQuery: testProps.rawSearchQuery || '',
         addRecordStep: testProps.addRecordStep || jest.fn(),
-        author: testProps.author || null,
-        actions: testProps.actions || {},
     };
+    const state = {
+        accountReducer: {
+            account: {
+                account: accounts.uqresearcher,
+            },
+            author: {
+                aut_id: 111,
+            },
+        },
+        ...testState,
+    };
+
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <AddMissingRecord {...props} />
             </WithRouter>
