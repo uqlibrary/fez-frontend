@@ -1,52 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class ImageDocumentCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const ImageDocumentCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        source: publication.fez_record_search_key_source ? publication.fez_record_search_key_source.rek_source : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Image Document
+    // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Source| |.}
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            source: this.props.publication.fez_record_search_key_source
-                ? this.props.publication.fez_record_search_key_source.rek_source
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-        };
+    return (
+        <div className="citationContent citationImageDocument">
+            {/* {Creator} */}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-        // eSpace citation view for Image Document
-        // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Source| |.}
+            {/* {Publication Year| (|).} */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        return (
-            <div className="citationContent citationImageDocument">
-                {/* {Creator} */}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Source| |.} */}
+            <Partials.CitationView className="citationSource" value={record.source} />
 
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
-
-                {/* {Source| |.} */}
-                <Partials.CitationView className="citationSource" value={record.source} />
-
-                {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
+ImageDocumentCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(ImageDocumentCitation);

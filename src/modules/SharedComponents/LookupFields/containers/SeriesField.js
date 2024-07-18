@@ -1,29 +1,43 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import { connect } from 'react-redux';
+
 import * as actions from 'actions';
 
 const category = 'series';
-const mapStateToProps = (state, props) => {
-    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
-        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
-    return {
-        autoCompleteAsynchronousFieldId: props.seriesFieldId || 'rek-series',
-        allowFreeText: true,
-        defaultValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
-        errorText: props.meta ? props.meta.error : null,
-        error: !!props.meta && !!props.meta.error,
-        filterOptions: options => options,
-        getOptionLabel: item => (!!item && String(item.value)) || '',
-        itemsList,
-        itemsLoading,
-        id: 'series-field-input',
-    };
+
+export const SeriesField = props => {
+    const dispatch = useDispatch();
+    const loadSuggestions = (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery));
+
+    const { itemsList, itemsLoading } = useSelector(
+        state => state.get('searchKeysReducer') && state.get('searchKeysReducer')[category],
+    ) || { itemsList: [], itemsLoading: false };
+
+    return (
+        <AutoCompleteAsynchronousField
+            {...props}
+            loadSuggestions={loadSuggestions}
+            autoCompleteAsynchronousFieldId={props.seriesFieldId || 'rek-series'}
+            allowFreeText
+            defaultValue={(!!props.input && !!props.input.value && { value: props.input.value }) || null}
+            errorText={props.meta ? props.meta.error : null}
+            error={!!props.meta && !!props.meta.error}
+            filterOptions={options => options}
+            getOptionLabel={item => (!!item && String(item.value)) || ''}
+            itemsList={itemsList}
+            itemsLoading={itemsLoading}
+            id={'series-field-input'}
+            onChange={item => props.input.onChange(item.value)}
+            onClear={() => props.input.onChange(null)}
+        />
+    );
 };
 
-const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
-    onChange: item => props.input.onChange(item.value),
-    onClear: () => props.input.onChange(null),
-});
-
-export const SeriesField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+SeriesField.propTypes = {
+    props: PropTypes.object,
+};
+export default React.memo(SeriesField);

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
@@ -6,30 +6,25 @@ import { PublicationSearchForm } from 'modules/SharedComponents/PublicationSearc
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 import { sanitizeDoi } from 'config/validation';
+import { useNavigate } from 'react-router-dom';
 
-export default class FindRecords extends PureComponent {
-    static propTypes = {
-        actions: PropTypes.object,
-        navigate: PropTypes.func.isRequired,
+export const FindRecords = ({ actions }) => {
+    const navigate = useNavigate();
+    const _performSearch = values => {
+        actions.searchPublications(sanitizeDoi(values.get('searchQuery')));
+        navigate(pathConfig.records.add.results);
     };
 
-    _performSearch = values => {
-        this.props.actions.searchPublications(sanitizeDoi(values.get('searchQuery')));
-        this.props.navigate(pathConfig.records.add.results);
+    const _handleSkipSearch = () => {
+        navigate(pathConfig.records.add.new);
     };
 
-    _handleSkipSearch = () => {
-        this.props.navigate(pathConfig.records.add.new);
-    };
+    const txt = locale.pages.addRecord;
+    return <PublicationSearchForm locale={txt.step1} onSubmit={_performSearch} onSkipSearch={_handleSkipSearch} />;
+};
 
-    render() {
-        const txt = locale.pages.addRecord;
-        return (
-            <PublicationSearchForm
-                locale={txt.step1}
-                onSubmit={this._performSearch}
-                onSkipSearch={this._handleSkipSearch}
-            />
-        );
-    }
-}
+FindRecords.propTypes = {
+    actions: PropTypes.object,
+};
+
+export default React.memo(FindRecords);

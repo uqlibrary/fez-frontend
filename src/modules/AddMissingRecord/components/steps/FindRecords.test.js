@@ -2,9 +2,15 @@ import React from 'react';
 import FindRecords from './FindRecords';
 import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}) {
     const props = {
-        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return render(
@@ -17,6 +23,9 @@ function setup(testProps = {}) {
 }
 
 describe('Search record', () => {
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
     it('should render stepper and a publication search form', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -24,10 +33,8 @@ describe('Search record', () => {
 
     it('should perform search and navigate to results page', () => {
         const searchPublications = jest.fn();
-        const navigateToResults = jest.fn();
 
         const { getByRole } = setup({
-            navigate: navigateToResults,
             actions: { searchPublications: searchPublications },
         });
 
@@ -37,17 +44,14 @@ describe('Search record', () => {
 
         fireEvent.click(getByRole('button', { name: 'Search' }));
 
-        expect(searchPublications).toBeCalled();
-        expect(navigateToResults).toBeCalled();
+        expect(searchPublications).toHaveBeenCalled();
+        expect(mockUseNavigate).toHaveBeenCalled();
     });
 
     it('should handle skip search', () => {
-        const navigateFn = jest.fn();
-        const { container, getByRole } = setup({
-            navigate: navigateFn,
-        });
+        const { container, getByRole } = setup();
         expect(container).toMatchSnapshot();
         fireEvent.click(getByRole('button', { name: 'Skip search' }));
-        expect(navigateFn).toHaveBeenCalledWith('/records/add/new');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/new');
     });
 });
