@@ -304,7 +304,7 @@ describe('Search action creators', () => {
     });
 
     it('should dispatch series of actions for anon user', async () => {
-        mockApi.onAny().reply(403);
+        mockApi.onAny().reply(401);
 
         const expectedActions = [
             actions.SEARCH_LOADING,
