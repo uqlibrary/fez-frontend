@@ -1,6 +1,6 @@
 import React from 'react';
 import NewRecord from './NewRecord';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, within } from 'test-utils';
 import * as RecordActions from 'actions/records';
 import { NEW_RECORD_API } from 'repositories/routes';
 
@@ -63,13 +63,15 @@ describe('Add new record', () => {
         // required fields
         fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
         fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
-        fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: 'May' } });
+        fireEvent.mouseDown(getByTestId('rek-date-month-select'));
+        fireEvent.click(getByRole('option', { name: 'May' }));
         fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });
         fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
         fireEvent.click(getByRole('button', { name: 'Add author' }));
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
+        await waitFor(() => getByTestId('confirm-dialog-box'));
 
         expect(requestCreateNewRecord).toHaveBeenCalledWith(
             expect.objectContaining({

@@ -119,6 +119,56 @@ context('Add missing record', () => {
         cy.contains('New Editor').click();
         cy.get('#submit-work').should('be.enabled');
     });
+
+    it('should display doi existed error', () => {
+        // Choose Book > Textbook
+        cy.get('[data-testid=rek-display-type-select]').click();
+        cy.get('[data-testid=rek-display-type-options]')
+            .find('li[role=option]')
+            .contains('Book')
+            .eq(0)
+            .click();
+        cy.get('[data-testid=rek-subtype-select]').click();
+        cy.get('[data-testid=rek-subtype-options]')
+            .find('li[role=option]')
+            .contains('Textbook')
+            .click();
+
+        // Submit button
+        cy.get('#submit-work').should('be.disabled');
+
+        // Validation errors
+        const invalidFieldNames = [
+            'Author/creator names',
+            'Editor/contributor names',
+            'Title',
+            'Place of publication',
+            'Publisher',
+            'Publication date',
+        ];
+        cy.get('[data-testid=alert] li')
+            .as('validationErrors')
+            .should('have.length', invalidFieldNames.length);
+        invalidFieldNames.forEach(invalidFieldName => {
+            cy.get('@validationErrors').contains(invalidFieldName);
+        });
+
+        cy.get('[data-testid=rek-title-input]').type('book title');
+        cy.get('[data-testid=rek-place-of-publication-input]').type('test place of publication');
+        cy.get('[data-testid=rek-publisher-input]').type('test publisher');
+        cy.get('[data-testid=rek-date-year-input]').type('2020');
+        cy.get('@validationErrors').should('have.length', 2);
+
+        cy.get('[data-testid=rek-author-input]').type('New Author');
+        cy.get('[data-testid=rek-author-add]').click();
+        cy.contains('New Author').click();
+        cy.get('#submit-work').should('be.enabled');
+
+        cy.get('[data-testid=rek-doi-input]').type('10.1426/12345');
+        cy.get('[data-testid=rek-doi-helper-text]').contains('DOI is assigned to another work');
+        cy.get('@validationErrors').should('have.length', 1);
+        cy.get('#submit-work').should('be.disabled');
+    });
 });
 
 // a NON RHD student is prompted in case they have a student account
