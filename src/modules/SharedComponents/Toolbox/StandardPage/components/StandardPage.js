@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -33,41 +33,38 @@ const StyledPageTitle = styled(Typography)(({ theme }) => ({
     },
 }));
 
-export class Page extends Component {
-    static propTypes = {
-        title: PropTypes.any,
-        help: PropTypes.object,
-        children: PropTypes.any,
-        standardPageId: PropTypes.string,
-    };
+export const StandardPage = ({ title, help, children, standardPageId }) => {
+    return (
+        <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
+            {title && (
+                <Grid item xs>
+                    <StyledPageTitle
+                        color="primary"
+                        component="h2"
+                        id="page-title"
+                        data-analyticsid="page-title"
+                        data-testid="page-title"
+                    >
+                        {title}
+                    </StyledPageTitle>
+                </Grid>
+            )}
+            {help && (
+                <Box sx={{ position: 'absolute', right: '30px' }}>
+                    <HelpIcon {...help} />
+                </Box>
+            )}
+            <Grid item xs={12} />
+            <StyledGrid item>{children}</StyledGrid>
+        </Grid>
+    );
+};
 
-    render() {
-        const { title, children, help, standardPageId } = this.props;
-        return (
-            <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
-                {title && (
-                    <Grid item xs>
-                        <StyledPageTitle
-                            color="primary"
-                            component="h2"
-                            id="page-title"
-                            data-analyticsid="page-title"
-                            data-testid="page-title"
-                        >
-                            {title}
-                        </StyledPageTitle>
-                    </Grid>
-                )}
-                {help && (
-                    <Box sx={{ position: 'absolute', right: '30px' }}>
-                        <HelpIcon {...help} />
-                    </Box>
-                )}
-                <Grid item xs={12} />
-                <StyledGrid item>{children}</StyledGrid>
-            </Grid>
-        );
-    }
-}
-const StandardPage = props => <Page {...props} />;
+StandardPage.propTypes = {
+    title: PropTypes.any,
+    help: PropTypes.object,
+    children: PropTypes.any,
+    standardPageId: PropTypes.string,
+};
+
 export default StandardPage;

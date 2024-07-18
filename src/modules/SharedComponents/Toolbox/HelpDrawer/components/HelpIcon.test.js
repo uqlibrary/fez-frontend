@@ -1,6 +1,8 @@
 import React from 'react';
 import HelpIcon from './HelpIcon';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
+
+import * as actions from '../actions';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,10 +12,13 @@ function setup(testProps = {}) {
         text: 'This is some text',
         buttonLabel: 'This is a button',
         tooltip: 'This is a tooltip',
-        onClick: jest.fn(),
         ...testProps,
     };
-    return rtlRender(<HelpIcon {...props} />);
+    return rtlRender(
+        <WithReduxStore>
+            <HelpIcon {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('HelpIcon snapshots tests', () => {
@@ -28,12 +33,10 @@ describe('HelpIcon snapshots tests', () => {
     });
 
     it('should set drawer content', () => {
-        const onClickFn = jest.fn();
-        const { getByTestId } = setup({
-            onClick: onClickFn,
-        });
+        const showFn = jest.spyOn(actions, 'show');
+        const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('help-icon'));
-        expect(onClickFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
+        expect(showFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
     });
 });
