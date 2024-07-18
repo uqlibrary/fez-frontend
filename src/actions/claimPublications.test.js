@@ -121,7 +121,7 @@ describe('Claim publication actions tests ', () => {
         it('dispatched expected actions to get a list of publications for anon user', async () => {
             const testParams = {};
 
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
@@ -221,7 +221,7 @@ describe('Claim publication actions tests ', () => {
                 .onGet(repositories.routes.POSSIBLE_RECORDS_API({ facets: {} }).apiUrl)
                 .reply(200, possibleUnclaimedList)
                 .onAny()
-                .reply(403, {});
+                .reply(401, {});
 
             const expectedActions = [
                 actions.HIDE_PUBLICATIONS_LOADING,
@@ -403,7 +403,7 @@ describe('Claim publication actions tests ', () => {
         });
 
         it('dispatched expected actions when claiming a publication for anon user', async () => {
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,

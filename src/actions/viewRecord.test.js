@@ -164,7 +164,7 @@ describe('View record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to view from API for anon user', async () => {
-            mockApi.onAny().reply(403);
+            mockApi.onAny().reply(401);
 
             const expectedActions = [
                 actions.VIEW_RECORD_LOADING,
@@ -177,7 +177,7 @@ describe('View record actions', () => {
             expect(result).toHaveDispatchedActions(expectedActions);
             expect(
                 result.filter(action => action.type === actions.VIEW_RECORD_LOAD_FAILED).pop().payload,
-            ).toHaveProperty('message', locale.global.errorMessages[403].message);
+            ).toHaveProperty('message', locale.global.errorMessages[401].message);
         });
 
         it('dispatches expected actions when loading a non-exist record to view from API', async () => {

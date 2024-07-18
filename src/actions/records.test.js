@@ -183,7 +183,7 @@ describe('Record action creators', () => {
                 files: [],
             };
 
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
@@ -1052,7 +1052,7 @@ describe('Record action creators', () => {
         });
 
         it('dispatches expected actions for anon user', async () => {
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.ADMIN_CREATE_RECORD_SAVING,
