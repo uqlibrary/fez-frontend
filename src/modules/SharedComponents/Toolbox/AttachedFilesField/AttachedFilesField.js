@@ -62,16 +62,15 @@ export const handleOnChange = (dataStreams, onChange) => {
     onChange(dataStreams);
 };
 
-export const AttachedFilesField = ({ input, ...props }) => {
+export const AttachedFilesField = ({ onChange, ...props }) => {
     const { formValues, onDeleteAttachedFile, onRenameAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(() => {
-        return !!formValues.fez_datastream_info
-            ? formValues.fez_datastream_info
+        return !!formValues?.fez_datastream_info
+            ? formValues?.fez_datastream_info
             : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
     });
 
-    const { onChange } = input;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
         ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
@@ -102,6 +101,6 @@ export const AttachedFilesField = ({ input, ...props }) => {
 };
 
 AttachedFilesField.propTypes = {
-    input: PropTypes.object,
+    onChange: PropTypes.func,
     meta: PropTypes.object,
 };

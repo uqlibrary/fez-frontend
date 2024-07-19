@@ -1,15 +1,16 @@
 /* istanbul ignore file */
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
-import Immutable from 'immutable';
 import { bindActionCreators } from 'redux';
 
-import { adminInterfaceConfig, validate, valueExtractor } from 'config/journalAdmin';
-import { ADMIN_JOURNAL } from 'config/general';
+import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
+import { viewRecordsConfig } from 'config';
+import { isFileValid } from 'config/validation';
+import { ADMIN_JOURNAL, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import JournalAdminContainer from '../components/JournalAdminContainer';
-import { FORM_NAME } from '../constants';
-import { onSubmit } from '../submitHandler';
+export const filesParams = record => ({
+    isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+});
 
 const getInitialValues = (journal, tab, tabParams = () => {}) => {
     return (adminInterfaceConfig[ADMIN_JOURNAL] || {})
@@ -25,10 +26,15 @@ const getInitialValues = (journal, tab, tabParams = () => {}) => {
 };
 
 const getInitialFormValues = journalToView => {
+    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(journalToView, 'files', filesParams);
+
+    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
+    console.log(validDataStreams);
     return {
         initialValues: {
             id: journalToView.jnl_jid,
             journal: journalToView,
+            filesSection: { fez_datastream_info: validDataStreams, ...rest },
             adminSection: getInitialValues(journalToView, 'admin'),
             bibliographicSection: getInitialValues(journalToView, 'bibliographic'),
             uqDataSection: getInitialValues(journalToView, 'uqData')?.uqData || {},
@@ -38,17 +44,7 @@ const getInitialFormValues = journalToView => {
     };
 };
 
-const PrototypeContainer = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-    validate,
-    destroyOnUnmount: false,
-})(JournalAdminContainer);
-
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
-
     let initialFormValues = {};
     let journalToView = {};
     let locked = false;
@@ -59,9 +55,6 @@ const mapStateToProps = state => {
     initialFormValues = (!!journalToView && journalToView.jnl_jid && getInitialFormValues(journalToView)) || {};
 
     return {
-        formValues,
-        formErrors,
-        disableSubmit: !!journalToView && formErrors && !(formErrors instanceof Immutable.Map),
         journalToViewLoading: state.get('viewJournalReducer').loadingJournalToView,
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
@@ -83,6 +76,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
+const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(JournalAdminContainer);
 
 export default AdminReduxFormContainer;

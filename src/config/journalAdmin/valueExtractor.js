@@ -1,3 +1,5 @@
+import { validation, viewRecordsConfig } from 'config';
+
 // export const deleteKey = (journal, searchKey) => {
 //     const skipDeleteForKeys = ['jnl_jid', 'jnl_title'];
 //     !skipDeleteForKeys.includes(searchKey) && delete (journal || {})[searchKey];
@@ -171,5 +173,13 @@ export default {
             scopus: !!getValueFromKey(journal, 'fez_journal_cite_score'),
             pubmed: !!getValueFromKey(journal, 'fez_journal_pubmed'),
         }),
+    },
+    fez_datastream_info: {
+        getValue: record => {
+            return (record.fez_datastream_info || []).filter(validation.isFileValid(viewRecordsConfig, true));
+        },
+    },
+    files: {
+        getValue: () => [],
     },
 };

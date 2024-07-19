@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { destroy, Field } from 'redux-form/immutable';
+
+import { useFormContext } from 'react-hook-form';
+
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
 import { styled } from '@mui/material/styles';
@@ -22,13 +24,11 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { FORM_NAME } from '../constants';
 
 import { useJournalContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
-import { useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const AdminTab = styled(Tab)({
@@ -67,17 +67,20 @@ const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activate
 
 export const JournalAdminInterface = ({
     authorDetails,
-    handleSubmit,
-    submitting,
-    submitSucceeded,
-    dirty,
     disableSubmit,
-    formErrors,
+    handleSubmit: onSubmit,
     locked,
     error,
     tabs,
+    dirty,
 }) => {
-    const dispatch = useDispatch();
+    console.log(dirty);
+    const methods = useFormContext();
+    const formErrors = methods.formState.errors;
+    const submitting = methods.formState.isSubmitting;
+    const submitSucceeded = methods.formState.isSubmitSuccessful;
+
+    // const dispatch = useDispatch();
     const { journalDetails: journal } = useJournalContext();
     const navigate = useNavigate();
     const location = useLocation();
@@ -96,7 +99,7 @@ export const JournalAdminInterface = ({
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
-        formErrors,
+        formErrors: Object.keys(formErrors).length === 0 ? null : formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
         error: translateFormErrorsToText(formErrors) ? null : errorMessage,
@@ -111,11 +114,11 @@ export const JournalAdminInterface = ({
     }, [tabbed]);
 
     // clear form state on unmount, so the form state from admin edit form wont show up in the add form
-    React.useEffect(() => {
-        return () => {
-            dispatch(destroy(FORM_NAME));
-        };
-    }, [dispatch]);
+    // React.useEffect(() => {
+    //     return () => {
+    //         dispatch(destroy(FORM_NAME));
+    //     };
+    // }, [dispatch]);
 
     React.useEffect(() => {
         if (!submitting && submitSucceeded && successConfirmationRef.current) {
@@ -176,23 +179,26 @@ export const JournalAdminInterface = ({
         navigate(pathConfig.journal.view(id));
     };
 
-    const renderTabContainer = tab => (
-        <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard
-                standardCardId={`${txt.current.sections[tab].title.toLowerCase().replace(/ /g, '-')}-section`}
-                title={txt.current.sections[tab].title}
-                primaryHeader
-                squareTop
-                smallTitle
-            >
-                <Field
-                    component={tabs[tab].component}
-                    disabled={submitting || (locked && journal.jnl_editing_user !== authorDetails.username)}
-                    name={`${tab}Section`}
-                />
-            </StandardCard>
-        </TabContainer>
-    );
+    const renderTabContainer = tab => {
+        const Field = tabs[tab].component;
+        console.log('tab container');
+        return (
+            <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
+                <StandardCard
+                    standardCardId={`${txt.current.sections[tab].title.toLowerCase().replace(/ /g, '-')}-section`}
+                    title={txt.current.sections[tab].title}
+                    primaryHeader
+                    squareTop
+                    smallTitle
+                >
+                    <Field
+                        disabled={submitting || (locked && journal.jnl_editing_user !== authorDetails.username)}
+                        name={`${tab}Section`}
+                    />
+                </StandardCard>
+            </TabContainer>
+        );
+    };
 
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
@@ -231,7 +237,7 @@ export const JournalAdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={handleSubmit}
+                    type="submit"
                 />
             </Grid>
         </React.Fragment>
@@ -250,7 +256,7 @@ export const JournalAdminInterface = ({
 
     return (
         <StandardPage>
-            <form>
+            <form onSubmit={methods.handleSubmit(onSubmit)}>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}

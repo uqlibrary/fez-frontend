@@ -77,6 +77,7 @@ export class FileUploader extends PureComponent {
     }
 
     componentDidUpdate() {
+        console.log(this.props);
         !!this.props.onChange &&
             this.props.onChange({
                 queue: this.state.filesInQueue,

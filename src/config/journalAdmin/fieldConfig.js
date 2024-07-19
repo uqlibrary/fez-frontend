@@ -6,6 +6,8 @@ import { IssnForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/L
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
 import { viewJournalConfig } from 'config/viewJournal';
@@ -160,6 +162,7 @@ export default {
                 name: 'uqdataSection',
                 sectionConfig: viewJournalConfig.uqData,
                 wrapped: false,
+                noRef: true,
             },
         },
         doaj: {
@@ -169,6 +172,7 @@ export default {
                 name: 'doajSection',
                 sectionConfig: viewJournalConfig.doaj,
                 wrapped: false,
+                noRef: true,
             },
         },
         indexed: {
@@ -178,6 +182,26 @@ export default {
                 name: 'indexedSection',
                 sectionConfig: viewJournalConfig.index,
                 wrapped: false,
+                noRef: true,
+            },
+        },
+        fez_datastream_info: {
+            component: AttachedFilesField,
+            componentProps: {
+                name: 'filesSection.fez_datastream_info',
+                locale: { ...locale.components.attachedFiles, title: 'Attached files' },
+                canEdit: true,
+                validate: [validation.validFileNames],
+                noRef: true,
+            },
+        },
+        files: {
+            component: FileUploadField,
+            componentProps: {
+                name: 'filesSection.files',
+                requireOpenAccessStatus: true,
+                isAdmin: true,
+                noRef: true,
             },
         },
     },

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilesSection component should render default view for Files on a Data Collection publication type 1`] = `
+<Section
+  cards={
+    [
+      {
+        "groups": [
+          [
+            "fez_datastream_info",
+          ],
+        ],
+      },
+      {
+        "groups": [
+          [
+            "files",
+          ],
+        ],
+        "title": "Files",
+      },
+      {
+        "groups": [
+          [
+            "advisoryStatement",
+          ],
+        ],
+        "title": "Advisory statement",
+      },
+      {
+        "groups": [
+          [
+            "sensitiveHandlingNote",
+          ],
+        ],
+        "title": "Sensitive Handling Note",
+      },
+      {
+        "groups": [
+          [
+            "rek_copyright",
+          ],
+        ],
+        "title": "Deposit agreement",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`FilesSection component should render default view for Files on a publication type that DOES show advisory statement 1`] = `
+<Section
+  cards={
+    [
+      {
+        "groups": [
+          [
+            "fez_datastream_info",
+          ],
+        ],
+      },
+      {
+        "groups": [
+          [
+            "files",
+          ],
+        ],
+        "title": "Files",
+      },
+      {
+        "groups": [
+          [
+            "advisoryStatement",
+          ],
+        ],
+        "title": "Advisory statement",
+      },
+      {
+        "groups": [
+          [
+            "sensitiveHandlingNote",
+          ],
+        ],
+        "title": "Sensitive Handling Note",
+      },
+      {
+        "groups": [
+          [
+            "rek_copyright",
+          ],
+        ],
+        "title": "Copyright agreement",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;

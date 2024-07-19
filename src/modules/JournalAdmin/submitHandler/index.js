@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { SubmissionError } from 'redux-form/immutable';
 import { adminJournalUpdate } from 'actions';
 import { detailedDiff } from 'deep-object-diff';
 
-export const onSubmit = (values, dispatch, { initialValues }) => {
-    const data = (values && values.toJS()) || null;
+export const onSubmit = (values, dispatch, { initialValues, methods }) => {
+    console.log(values, initialValues);
+    const data = values || null;
     let jnlValues = {};
 
-    const initialData = (initialValues && initialValues.toJS()) || null;
+    const initialData = initialValues || null;
     const changes = detailedDiff(initialData, data);
     jnlValues = { ...changes.updated };
 
@@ -16,10 +16,11 @@ export const onSubmit = (values, dispatch, { initialValues }) => {
         ...jnlValues,
         jnl_jid: data.journal.jnl_jid,
     };
-
+    console.log(requestObject, jnlValues);
     return dispatch(adminJournalUpdate({ ...requestObject }))
         .then(() => Promise.resolve())
         .catch(error => {
-            throw new SubmissionError({ _error: error });
+            console.log(error);
+            methods.setError('root.server', { type: 'server', message: error.message });
         });
 };
