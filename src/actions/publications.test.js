@@ -26,7 +26,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions for anon user', async () => {
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.LATEST_PUBLICATIONS_LOADING,
@@ -85,7 +85,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi.onAny().reply(403, {});
+                mockApi.onAny().reply(401, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -165,7 +165,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi.onAny().reply(403, {});
+                mockApi.onAny().reply(401, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
@@ -281,7 +281,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions for anon user', async () => {
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
