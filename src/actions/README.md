@@ -59,7 +59,7 @@ describe('[ACTIONS NAME] actions', () => {
     it('dispatches expected actions for anon user', async () => {
         mockApi
             .onGet(repositories.routes.[ROUTE_API]())
-            .reply(403, {});
+            .reply(401, {});
 
         const expectedActions = [
             actions.[ACTION_TYPE]_LOADING,
