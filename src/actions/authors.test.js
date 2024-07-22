@@ -44,7 +44,7 @@ describe('Action creators for authors', () => {
     it('dispatches expected actions while searching for authors by anon user', async () => {
         const testParam = 'abc';
 
-        mockApi.onAny().reply(403, mockData.authorsSearch);
+        mockApi.onAny().reply(401, mockData.authorsSearch);
 
         const expectedActions = [
             actions.AUTHORS_LOADING,
@@ -103,7 +103,7 @@ describe('Action creators for authors', () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
-        mockApi.onAny().reply(403);
+        mockApi.onAny().reply(401);
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
