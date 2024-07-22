@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,7 +12,7 @@ import { adminTheme } from 'config';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import JournalAdminInterface from './JournalAdminInterface';
 
-import FilesSection from './files/FilesSectionContainer';
+// import FilesSection from './files/FilesSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import UqDataSection from './uqData/UqDataSection';
@@ -24,7 +25,7 @@ import { useIsMobileView } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
 import { useParams } from 'react-router-dom';
 
-// import { validate } from 'config/journalAdmin';
+import { validate } from 'config/journalAdmin';
 import { useForm, FormProvider } from 'react-hook-form';
 import { onSubmit } from '../submitHandler';
 import { useDispatch } from 'react-redux';
@@ -60,11 +61,31 @@ export const JournalAdminContainer = ({
         unlockJournal,
         error,
     });
-    const methods = useForm({
+    const { watch, ...methods } = useForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'all',
     });
+    // const listener = watch();
+    // React.useEffect(() => {
+    //     console.log('watch updated', listener);
+    //     const errors = validate(listener);
+    //     console.log(errors);
+    //     Object.keys(errors).length > 0 && methods.setError('root', errors);
+    // }, [listener, methods]);
+    React.useEffect(() => {
+        const subscription = watch(values => {
+            console.log(values);
+            const errors = validate(values);
+            console.log(errors);
+            Object.keys(errors).length > 0 && methods.setError('root', errors);
+        });
+        return () => {
+            console.log('watch unsubscribe');
+            subscription.unsubscribe();
+        };
+    }, [methods, watch]);
+
     const data = methods.getValues();
     console.log(data);
     const handleSubmit = async (data, e) => {
@@ -78,7 +99,7 @@ export const JournalAdminContainer = ({
             methods.setError('root.server', { type: 'custom', message: e.message });
         }
     };
-
+    console.log(methods.formState);
     const formErrors = methods.formState.errors;
     const disableSubmit = !!journalToView && Object.keys(formErrors) > 0;
     const isMobileView = useIsMobileView();
@@ -174,11 +195,11 @@ export const JournalAdminContainer = ({
                                         numberOfErrors: tabErrors.current.indexedSection || null,
                                         activated: isActivated(),
                                     },
-                                    files: {
-                                        component: FilesSection,
-                                        activated: isActivated(),
-                                        numberOfErrors: tabErrors.current.filesSection || null,
-                                    },
+                                    // files: {
+                                    //     component: FilesSection,
+                                    //     activated: isActivated(),
+                                    //     numberOfErrors: tabErrors.current.filesSection || null,
+                                    // },
                                 }}
                             />
                         </FormProvider>
