@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useReducer } from 'react';
 // import PropTypes from 'prop-types';
 
@@ -28,6 +29,7 @@ import { getFileName } from 'actions/exportPublicationsDataTransformers';
 import { getDisplayReportColumns, optionDoubleRowRender } from '../config';
 import { useValidateReport, useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
+import { transformReportRequest } from '../transformers';
 
 import SectionTitle from '../components/SectionTitle';
 
@@ -36,6 +38,7 @@ const reportDisplayExportId = 'report-display-export';
 
 const Reports = () => {
     const txt = locale.components.adminDashboard.tabs.reports;
+    const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
     const dispatch = useDispatch();
 
@@ -70,10 +73,14 @@ const Reports = () => {
 
     const columns = React.useMemo(() => {
         if (!!actionState.displayReport) {
-            return getDisplayReportColumns(txt, actionState.displayReport.value);
+            return getDisplayReportColumns(txt, actionState.displayReport.value, adminDashboardConfigData.admin_users);
         } else if (!!adminDashboardDisplayReportDataType) {
             // retain the view of the last report that was displayed
-            return getDisplayReportColumns(txt, adminDashboardDisplayReportDataType);
+            return getDisplayReportColumns(
+                txt,
+                adminDashboardDisplayReportDataType,
+                adminDashboardConfigData.admin_users,
+            );
         }
         return [];
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -85,21 +92,21 @@ const Reports = () => {
                 id: actionState.exportReport.value,
                 export_to: 'excel',
             }),
-        )
-            .then(() => {
-                //! adminDashboardExportReportFailed && dispatch(actions.clearAdminDashboardExportReport());
-            })
-            .catch(
-                /* istanbul ignore next */ error => {
-                    /* istanbul ignore next */
-                    console.error(error);
-                },
-            );
+        ).catch(
+            /* istanbul ignore next */ error => {
+                /* istanbul ignore next */
+                console.error(error);
+            },
+        );
     };
 
     const handleExportDisplayReportClick = () => {
         const fname = getFileName('xlsx');
-        const colHeaders = columns.sort((a, b) => a.order > b.order).map(col => col.headerName);
+
+        const colHeaders = columns
+            .sort((a, b) => (a?.export_order ?? a.order) > (b?.export_order ?? b.order))
+            .map(col => col.headerName);
+
         const sheetLabel = actionState.displayReport.label;
 
         exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
@@ -108,14 +115,8 @@ const Reports = () => {
     const handleDisplayReportClick = () => {
         /* istanbul ignore else */
         if (isValid) {
-            const request = {
-                id: actionState.displayReport.value,
-                ...(!!actionState.fromDate ? { dateFrom: actionState.fromDate } : {}),
-                ...(!!actionState.toDate ? { dateTo: actionState.toDate } : {}),
-                ...(actionState.displayReport.value === 'systemalertlog' && !!actionState.systemAlertId
-                    ? { alertId: actionState.systemAlertId }
-                    : {}),
-            };
+            const request = transformReportRequest(actionState);
+            console.log(request);
             dispatch(actions.loadAdminDashboardDisplayReport(request));
         }
     };
@@ -399,6 +400,7 @@ const Reports = () => {
                         <Grid container mt={2}>
                             <Grid item xs={12}>
                                 <DataGrid
+                                    getRowId={row => row.sat_id}
                                     rows={adminDashboardDisplayReportData}
                                     columns={columns ?? /* istanbul ignore next */ []}
                                     initialState={{

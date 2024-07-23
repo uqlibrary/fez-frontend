@@ -41,6 +41,14 @@ export const SYSTEM_ALERT_ACTION = {
     RESOLVE: 'RESOLVE',
 };
 
+export const REPORT_TYPE = {
+    systemalertlog: 1,
+    workshistory: 2,
+    workiddupe: 3,
+    scopusiddupe: 4,
+    doidupe: 5,
+};
+
 export const optionDoubleRowRender = (props, option) => (
     <li
         {...props}
@@ -93,7 +101,7 @@ export const getSystemAlertColumns = (locale, users) => {
     ];
 };
 
-export const getDisplayReportColumns = (locale, report) => {
+export const getDisplayReportColumns = (locale, report, users) => {
     const txt = locale.columns[report];
     switch (report) {
         case 'workshistory':
@@ -110,37 +118,58 @@ export const getDisplayReportColumns = (locale, report) => {
                 { field: 'work_type', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
                 { field: 'user', headerName: txt.user, width: 150, order: 4 },
                 { field: 'topic', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
-            ];
+            ].sort((a, b) => a.order > b.order);
         default:
             return [
-                { field: 'id', order: 0 },
+                { field: 'sat_id', headerName: txt.id, order: 0 },
                 {
-                    field: 'date_created',
+                    field: 'sat_created_date',
                     headerName: txt.dateCreated,
                     width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 1,
                 },
-                { field: 'assigned_to', headerName: txt.assignedTo, width: 150, order: 2 },
                 {
-                    field: 'assigned_date',
+                    field: 'sat_assigned_to',
+                    headerName: txt.assignedTo,
+                    width: 150,
+                    order: 2,
+                    valueGetter: value => {
+                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
+                        else return '';
+                    },
+                },
+                {
+                    field: 'sat_assigned_date',
                     headerName: txt.assignedDate,
                     width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 3,
                 },
-                { field: 'title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
-                { field: 'resolved_by', headerName: txt.resolvedBy, width: 150, order: 4 },
+                { field: 'sat_title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
                 {
-                    field: 'resolved_date',
+                    field: 'sat_resolved_by',
+                    headerName: txt.resolvedBy,
+                    width: 150,
+                    order: 4,
+                    valueGetter: value => {
+                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
+                        else return '';
+                    },
+                },
+                {
+                    field: 'sat_resolved_date',
                     headerName: txt.resolvedDate,
                     width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 5,
                 },
-                { field: 'content', headerName: txt.content, minWidth: 400, flex: 1, order: 8 },
+                { field: 'sat_content', headerName: txt.content, minWidth: 400, flex: 1, order: 8, export_order: 9 },
                 {
-                    field: 'link',
+                    field: 'sat_link',
                     headerName: txt.link,
                     minWidth: 400,
                     flex: 1,
@@ -150,7 +179,8 @@ export const getDisplayReportColumns = (locale, report) => {
                         </ExternalLink>
                     ),
                     order: 9,
+                    export_order: 8,
                 },
-            ];
+            ].sort((a, b) => a.order > b.order);
     }
 };

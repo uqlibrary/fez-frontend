@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { SYSTEM_ALERT_ACTION } from './config';
+import { SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
 import { filterObjectProps } from './utils';
 
 export const transformSystemAlertRequest = ({ user, action, row }) => {
@@ -30,5 +30,20 @@ export const transformQuickLinkUpdateRequest = data => {
 export const transformQuickLinkReorderRequest = data => {
     const keys = ['qlk_id', 'qlk_order'];
     const request = data.map(row => filterObjectProps(row, keys));
+    return request;
+};
+
+export const transformReportRequest = data => {
+    const reportId = REPORT_TYPE?.[data.displayReport.value] ?? 0;
+    if (reportId === 0) return data;
+
+    const request = {
+        report_type: reportId,
+        ...(!!data.fromDate ? { date_from: moment(data.fromDate).format('YYYY-MM-DD') } : {}),
+        ...(!!data.toDate ? { date_to: moment(data.toDate).format('YYYY-MM-DD') } : {}),
+        ...(data.displayReport.value === 'systemalertlog' && !!data.systemAlertId
+            ? { record_id: data.systemAlertId }
+            : {}),
+    };
     return request;
 };

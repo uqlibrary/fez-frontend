@@ -170,6 +170,7 @@ export default {
                             action: 'Action',
                         },
                         systemalertlog: {
+                            id: 'ID',
                             dateCreated: 'Date created',
                             title: 'Title',
                             assignedTo: 'Assigned to',
