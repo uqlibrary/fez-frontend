@@ -7,11 +7,12 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
     const keys =
         action === SYSTEM_ALERT_ACTION.RESOLVE
             ? ['sat_id', 'sat_resolved_date', 'sat_resolved_by']
-            : ['sat_id', 'sat_assigned_to'];
+            : ['sat_id', 'sat_assigned_to', 'sat_assigned_date'];
 
     const request = filterObjectProps(row, keys);
     if (action === SYSTEM_ALERT_ACTION.ASSIGN) {
         if (request.sat_assigned_to === 0) request.sat_assigned_to = null;
+        request.sat_assigned_date = moment().format('YYYY-MM-DD HH:mm');
     }
     if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
         request.sat_resolved_by = user.id;
