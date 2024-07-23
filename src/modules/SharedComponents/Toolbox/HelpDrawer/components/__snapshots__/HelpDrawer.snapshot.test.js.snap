@@ -70,6 +70,12 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
 </body>
 `;
 
+exports[`HelpDrawer snapshots tests renders no menu 1`] = `
+<body>
+  <div />
+</body>
+`;
+
 exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
 <body
   style="padding-right: 1024px; overflow: hidden;"

@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`NewspaperArticleCitation renders  component with a doi view 1`] = `
+<div>
+  <div
+    class="citationContent citationNewspaperArticle"
+  >
+    <span
+      class="citationAuthors"
+    >
+      <span
+        class="citationAuthor"
+        data-testid="rek-author-0"
+      >
+        Wong, Kam Cheong
+      </span>
+      , 
+      <span
+        class="citationAuthor"
+        data-testid="rek-author-1"
+      >
+        Wong, Catherine
+      </span>
+      , 
+      <span
+        class="citationAuthor"
+        data-testid="rek-author-2"
+      >
+        Li, Stephen
+      </span>
+      , 
+      <span
+        class="citationAuthor"
+        data-testid="rek-author-3"
+      >
+        Woo, Kai Hui
+      </span>
+      , 
+       and 
+      <span
+        class="citationAuthor"
+        data-testid="rek-author-4"
+      >
+        Woo, Kai Zhi
+      </span>
+       
+    </span>
+    <span
+      class="citationDate"
+    >
+      (
+      2010, May 1
+      ).
+    </span>
+    <span
+      class="citationNewspaperArticleTitle"
+    >
+       
+      Improve Your Communication with Doctors
+      .
+    </span>
+    <span
+      class="citationNewspaper"
+    >
+       
+      Australian Chinese Daily News [Aozhou Xin Bao] (Australian Chinese Weekly Magazine)
+    </span>
+    <span
+      class="citationStartPage"
+    >
+      , 
+      1127: 66-67; 1128: 66-67; 1129: 65-67
+    </span>
+    <span
+      class="citationEndPage empty"
+    />
+    <span
+      data-testid="rek-doi"
+    >
+      <a
+        aria-label="Open this DOI in an new window"
+        class="citationDoiLink css-1oqhn84"
+        data-analyticsid="citation-doi-link"
+        data-testid="citation-doi-link"
+        href="https://doi.org/10.1111/1111"
+        id="citation-doi-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Open this DOI in an new window"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+          data-testid="OpenInNewIcon"
+          focusable="false"
+          id="citation-doi-link-new-window-icon"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+          />
+        </svg>
+        https://doi.org/10.1111/1111
+      </a>
+    </span>
+  </div>
+</div>
+`;
+
 exports[`NewspaperArticleCitation renders  component with a mock espace record 1`] = `
 <div>
   <div
@@ -73,6 +181,9 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
     </span>
     <span
       class="citationEndPage empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>
@@ -152,6 +263,9 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
     <span
       class="citationEndPage empty"
     />
+    <span
+      class="citationDOI empty"
+    />
   </div>
 </div>
 `;
@@ -178,6 +292,9 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
     />
     <span
       class="citationEndPage empty"
+    />
+    <span
+      class="citationDOI empty"
     />
   </div>
 </div>

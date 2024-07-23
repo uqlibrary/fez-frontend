@@ -103,12 +103,12 @@ describe('Account action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected actions if author returns 403', async () => {
+    it('should dispatch expected actions if author returns 401', async () => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqstaff)
             .onAny()
-            .reply(403, {});
+            .reply(401, {});
 
         const expectedActions = [
             actions.CURRENT_ACCOUNT_LOADING,
@@ -222,7 +222,7 @@ describe('Account action creators', () => {
     });
 
     it('should check session and dispatch session expired action', async () => {
-        mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(403, {});
+        mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(401, {});
 
         const expectedActions = [actions.CURRENT_ACCOUNT_SESSION_EXPIRED];
 

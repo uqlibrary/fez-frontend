@@ -442,6 +442,10 @@ export default {
                     order: 8,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
+                },
+                {
                     field: 'fez_record_search_key_location',
                     order: 9,
                 },
@@ -1208,6 +1212,10 @@ export default {
                     order: 8,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
+                },
+                {
                     field: 'fez_record_search_key_start_date',
                     order: 9,
                 },
@@ -1610,6 +1618,10 @@ export default {
                     order: 14,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 14.5,
+                },
+                {
                     field: 'fez_record_search_key_location',
                     order: 15,
                 },
@@ -1710,6 +1722,10 @@ export default {
                 {
                     field: 'fez_record_search_key_date_scanned',
                     order: 6,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 6.5,
                 },
                 {
                     field: 'fez_record_search_key_publisher',
@@ -1838,6 +1854,10 @@ export default {
                     order: 8,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
+                },
+                {
                     field: 'fez_record_search_key_subject',
                     order: 9,
                 },
@@ -1906,6 +1926,10 @@ export default {
                 {
                     field: 'rek_date',
                     order: 8,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
                 },
                 {
                     field: 'fez_record_search_key_date_available',
@@ -2254,6 +2278,10 @@ export default {
                     order: 5,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 5.5,
+                },
+                {
                     field: 'fez_record_search_key_date_available',
                     order: 6,
                 },
@@ -2360,6 +2388,10 @@ export default {
                     order: 8,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
+                },
+                {
                     field: 'fez_record_search_key_edition',
                     order: 9,
                 },
@@ -2460,6 +2492,10 @@ export default {
                 {
                     field: 'fez_record_search_key_date_available',
                     order: 8,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
                 },
                 {
                     field: 'fez_record_search_key_edition',
@@ -2671,6 +2707,10 @@ export default {
                     order: 5,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 5.5,
+                },
+                {
                     field: 'fez_record_search_key_oa_status',
                     order: 6,
                 },
@@ -2747,6 +2787,10 @@ export default {
                 {
                     field: 'rek_date',
                     order: 4,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 4.5,
                 },
                 {
                     field: 'fez_record_search_key_subject',
@@ -2845,6 +2889,10 @@ export default {
                 {
                     field: 'rek_date',
                     order: 8,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
                 },
                 {
                     field: 'fez_record_search_key_start_page',
@@ -3031,6 +3079,10 @@ export default {
                     order: 8,
                 },
                 {
+                    field: 'fez_record_search_key_doi',
+                    order: 8.5,
+                },
+                {
                     field: 'fez_record_search_key_contributor',
                     order: 9,
                 },
@@ -3088,7 +3140,7 @@ export default {
                 },
                 {
                     field: 'fez_record_search_key_sensitive_handling_note_other',
-                    order: 21.5,
+                    order: 22,
                 },
             ],
             'Working Paper': [

@@ -1,13 +1,13 @@
 import React from 'react';
-import GrantListEditorHeaderWithWidth, { GrantListEditorHeader } from './GrantListEditorHeader';
+import GrantListEditorHeader from './GrantListEditorHeader';
 import { rtlRender, fireEvent } from 'test-utils';
+
+import * as Hook from 'hooks/useWidth';
 
 function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
-        // locale: {},
         disabled: false,
-        width: '',
         hideType: false,
         ...testProps,
     };
@@ -15,28 +15,31 @@ function setup(testProps = {}) {
 }
 
 describe('GrantListEditorHeader', () => {
+    const useWidth = jest.spyOn(Hook, 'useWidth');
+    beforeEach(() => {
+        useWidth.mockImplementation(() => 'lg');
+    });
+
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should render default mobile view', () => {
-        const { container } = setup({ width: 'xs' });
+        useWidth.mockImplementation(() => 'xs');
+
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should render default mobile view', () => {
-        const { container } = setup({ width: 'sm' });
+        useWidth.mockImplementation(() => 'sm');
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should hide grant agency type input', () => {
         const { container } = setup({ hideType: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should use width hook', () => {
-        const { container } = rtlRender(<GrantListEditorHeaderWithWidth />);
         expect(container).toMatchSnapshot();
     });
 

@@ -1,58 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class NewspaperArticleCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const NewspaperArticleCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        newspaper: publication.fez_record_search_key_newspaper
+            ? publication.fez_record_search_key_newspaper.rek_newspaper
+            : null,
+        startPage: publication.fez_record_search_key_start_page
+            ? publication.fez_record_search_key_start_page.rek_start_page
+            : null,
+        endPage: publication.fez_record_search_key_end_page
+            ? publication.fez_record_search_key_end_page.rek_end_page
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Newspaper Article
+    // {Author}{Publication Date| (|).|y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page| , |}{End page|-|}
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            newspaper: this.props.publication.fez_record_search_key_newspaper
-                ? this.props.publication.fez_record_search_key_newspaper.rek_newspaper
-                : null,
-            startPage: this.props.publication.fez_record_search_key_start_page
-                ? this.props.publication.fez_record_search_key_start_page.rek_start_page
-                : null,
-            endPage: this.props.publication.fez_record_search_key_end_page
-                ? this.props.publication.fez_record_search_key_end_page.rek_end_page
-                : null,
-        };
+    return (
+        <div className="citationContent citationNewspaperArticle">
+            {/* {Author} */}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-        // eSpace citation view for Newspaper Article
-        // {Author}{Publication Date| (|).|y, m d}{Title| |.}<i>{Newspaper| |}</i>{Start page| , |}{End page|-|}
+            {/* {Publication Date| (|).|Y, m d} */}
+            <Partials.DateCitationView date={publication.rek_date} format="YYYY[,] MMMM D" />
 
-        return (
-            <div className="citationContent citationNewspaperArticle">
-                {/* {Author} */}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* {Title| |.} */}
+            <Partials.CitationTitleView className="citationNewspaperArticleTitle" value={record.title} />
 
-                {/* {Publication Date| (|).|Y, m d} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} format="YYYY[,] MMMM D" />
+            {/* <i>{Newspaper| |}</i> */}
+            <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix="" />
 
-                {/* {Title| |.} */}
-                <Partials.CitationTitleView className="citationNewspaperArticleTitle" value={record.title} />
+            {/* {Start page| , |} */}
+            <Partials.CitationView className="citationStartPage" value={record.startPage} prefix=", " suffix="" />
 
-                {/* <i>{Newspaper| |}</i> */}
-                <Partials.CitationView className="citationNewspaper" value={record.newspaper} suffix="" />
+            {/* {End page|-|} */}
+            <Partials.CitationView className="citationEndPage" value={record.endPage} prefix="-" />
 
-                {/* {Start page| , |} */}
-                <Partials.CitationView className="citationStartPage" value={record.startPage} prefix=", " suffix="" />
-
-                {/* {End page|-|} */}
-                <Partials.CitationView className="citationEndPage" value={record.endPage} prefix="-" />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
+NewspaperArticleCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(NewspaperArticleCitation);

@@ -29,7 +29,6 @@ import {
     PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
-    SUBTYPE_EDITED_BOOK,
     AUTHOR_AFFILIATIONS_ALLOWED_TYPES,
 } from 'config/general';
 
@@ -102,11 +101,10 @@ export const bibliographicParams = (record, formValues) => ({
 });
 
 export const authorsParams = (record, isNtro) => {
-    const shouldHandleAffiliations = shouldHandleAuthorAffiliations(record);
+    const shouldHandleAffiliations = !isNtro && shouldHandleAuthorAffiliations(record);
     return {
         isNtro: isNtro,
         isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-        onlyEditors: record.rek_display_type === PUBLICATION_TYPE_BOOK && record.rek_subtype === SUBTYPE_EDITED_BOOK,
         shouldHandleAffiliations,
     };
 };

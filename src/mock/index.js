@@ -74,7 +74,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock account response
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.accounts[user]) {
             return [200, mockData.accounts[user]];
         }
@@ -84,7 +84,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock current author details
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.authorDetails[user]) {
             return [200, mockData.authorDetails[user]];
         }
@@ -94,7 +94,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock current author details from fez
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.currentAuthor[user]) {
             return [200, mockData.currentAuthor[user]];
         }
