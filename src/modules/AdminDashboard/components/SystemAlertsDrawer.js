@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import { SYSTEM_ALERT_ACTION } from '../config';
+import { SYSTEM_ALERT_ACTION, isUrl } from '../config';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -73,9 +73,11 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     <Typography component={'h2'} fontSize={'1.45rem'} fontWeight={500} data-testid={`${rootId}-title`}>
                         {row.sat_title}
                     </Typography>
-                    <ExternalLink id={rootId} href={row.sat_link}>
-                        {row.sat_link}
-                    </ExternalLink>
+                    {isUrl(row.sat_link) && (
+                        <ExternalLink id={rootId} href={row.sat_link}>
+                            {row.sat_link}
+                        </ExternalLink>
+                    )}
                     <StyledDivider />
                     <Grid container spacing={1}>
                         <Grid item xs={4}>

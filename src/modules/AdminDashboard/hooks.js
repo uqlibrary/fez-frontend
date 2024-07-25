@@ -43,7 +43,7 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
             setToDateError('');
             setSystemAlertError('');
             const _systemAlertId = Number(systemAlertId);
-
+            if (displayReport === 'systemalertlog' && ((!!!fromDate && !!!toDate) || systemAlertId !== '')) return true;
             if (
                 displayReport === 'systemalertlog' &&
                 systemAlertId.trim() !== '' &&
@@ -52,9 +52,14 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
                 setSystemAlertError(locale.systemAlertId);
                 return false;
             }
-            if (!!!fromDate && !!!toDate) return true;
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
+
+            if (displayReport === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+                setFromDateError(locale.required);
+                setToDateError(locale.required);
+                return false;
+            }
 
             if (mFrom.isValid() && !mTo.isValid()) {
                 setToDateError(locale.required);

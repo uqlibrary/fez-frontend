@@ -49,6 +49,15 @@ export const REPORT_TYPE = {
     doidupe: 5,
 };
 
+export const isUrl = str => {
+    try {
+        const newUrl = new URL(str);
+        return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
+    } catch (err) {
+        return false;
+    }
+};
+
 export const optionDoubleRowRender = (props, option) => (
     <li
         {...props}
@@ -68,6 +77,8 @@ export const optionDoubleRowRender = (props, option) => (
         </Typography>
     </li>
 );
+
+export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 
 export const getSystemAlertColumns = (locale, users) => {
     const alertStatus = locale.alertStatus;
@@ -101,27 +112,29 @@ export const getSystemAlertColumns = (locale, users) => {
     ];
 };
 
-export const getDisplayReportColumns = (locale, report, users) => {
+export const getDisplayReportColumns = ({ locale, actionState, params }) => {
+    const report = actionState?.displayReport?.value || getReportTypeFromValue(params.report_type);
     const txt = locale.columns[report];
     switch (report) {
         case 'workshistory':
             return [
-                { field: 'id', order: 0 },
+                { field: 'pre_id', headerName: txt.id, order: 0 },
+                { field: 'pre_pid', headerName: txt.pid, width: 150, order: 1 },
                 {
-                    field: 'date_created',
+                    field: 'pre_date',
                     headerName: txt.dateCreated,
                     width: 150,
                     valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
                     order: 2,
                 },
-                { field: 'pid', headerName: txt.pid, width: 150, order: 1 },
-                { field: 'work_type', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
-                { field: 'user', headerName: txt.user, width: 150, order: 4 },
-                { field: 'topic', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
+                { field: 'rek_subtype', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
+                { field: 'usr_username', headerName: txt.user, width: 150, order: 4 },
+                { field: 'pre_detail', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
             ].sort((a, b) => a.order > b.order);
         default:
+            const systemIdParam = actionState?.systemAlertId || params?.record_id || '';
             return [
-                { field: 'sat_id', headerName: txt.id, order: 0 },
+                { field: 'sat_id', headerName: txt.id, order: 0, exportOrder: 0 },
                 {
                     field: 'sat_created_date',
                     headerName: txt.dateCreated,
@@ -129,16 +142,21 @@ export const getDisplayReportColumns = (locale, report, users) => {
                     valueGetter: value =>
                         (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 1,
+                    exportOrder: 1,
                 },
                 {
-                    field: 'sat_assigned_to',
+                    field: 'assigned_to_username',
+                    headerName: 'Assigned username',
+                    width: 150,
+                    exportOrder: 2,
+                    exportOnly: true,
+                },
+                {
+                    field: 'assigned_to_full_name',
                     headerName: txt.assignedTo,
                     width: 150,
+                    exportOrder: 3,
                     order: 2,
-                    valueGetter: value => {
-                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
-                        else return '';
-                    },
                 },
                 {
                     field: 'sat_assigned_date',
@@ -147,17 +165,21 @@ export const getDisplayReportColumns = (locale, report, users) => {
                     valueGetter: value =>
                         (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 3,
+                    exportOrder: 4,
                 },
-                { field: 'sat_title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
                 {
-                    field: 'sat_resolved_by',
+                    field: 'resolved_by_username',
+                    headerName: 'Resolved username',
+                    width: 150,
+                    exportOrder: 5,
+                    exportOnly: true,
+                },
+                {
+                    field: 'resolved_by_full_name',
                     headerName: txt.resolvedBy,
                     width: 150,
                     order: 4,
-                    valueGetter: value => {
-                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
-                        else return '';
-                    },
+                    exportOrder: 6,
                 },
                 {
                     field: 'sat_resolved_date',
@@ -166,21 +188,35 @@ export const getDisplayReportColumns = (locale, report, users) => {
                     valueGetter: value =>
                         (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
                     order: 5,
+                    exportOrder: 7,
                 },
-                { field: 'sat_content', headerName: txt.content, minWidth: 400, flex: 1, order: 8, export_order: 9 },
+                { field: 'sat_title', headerName: txt.title, minWidth: 400, flex: 1, order: 6, exportOrder: 8 },
+                ...(systemIdParam !== ''
+                    ? {
+                          field: 'sat_content',
+                          headerName: txt.content,
+                          minWidth: 1000,
+                          flex: 1,
+                          order: 7,
+                          exportOrder: 10,
+                      }
+                    : {}),
                 {
                     field: 'sat_link',
                     headerName: txt.link,
                     minWidth: 400,
                     flex: 1,
-                    renderCell: row => (
-                        <ExternalLink id={`link_${row.id}`} href={row.value} inline>
-                            {row.value}
-                        </ExternalLink>
-                    ),
-                    order: 9,
-                    export_order: 8,
+                    renderCell: row =>
+                        isUrl(row.value) ? (
+                            <ExternalLink id={`link_${row.id}`} href={row.value} inline>
+                                {row.value}
+                            </ExternalLink>
+                        ) : (
+                            row.value
+                        ),
+                    order: 8,
+                    exportOrder: 9,
                 },
-            ].sort((a, b) => a.order > b.order);
+            ].filter(item => Object.keys(item).length > 0);
     }
 };

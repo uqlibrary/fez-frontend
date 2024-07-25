@@ -233,7 +233,7 @@ export function loadAdminDashboardDisplayReport(request) {
     return dispatch => {
         dispatch({
             type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING,
-            value: request.report_id,
+            params: { ...request },
         });
         return get(ADMIN_DASHBOARD_DISPLAY_REPORT_API(request))
             .then(response => {

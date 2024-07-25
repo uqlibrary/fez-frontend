@@ -646,6 +646,6 @@ export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, dat
         .join('&');
 
     return {
-        apiUrl: `dashboard/reports?${query}&per_page=1000`,
+        apiUrl: `dashboard/reports?${query}`,
     };
 };
