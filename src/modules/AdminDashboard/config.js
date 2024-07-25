@@ -1,26 +1,10 @@
 import React from 'react';
+import moment from 'moment';
 
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 
-import Today from './tabs/Today';
-import SystemAlerts from './tabs/SystemAlerts';
-import Reports from './tabs/Reports';
-
-export const tabs = [
-    { id: 0, title: 'TODAY', component: <Today /> },
-    { id: 1, title: 'SYSTEM ALERTS', component: <SystemAlerts /> },
-    { id: 2, title: 'REPORTS', component: <Reports /> },
-];
-
-export const tabProps = [
-    {
-        id: 1,
-        render: count => {
-            return count ? { icon: <Chip color="error" label={count} size="small" />, iconPosition: 'end' } : {};
-        },
-    },
-];
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -52,6 +36,19 @@ export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, 
 
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 
+export const SYSTEM_ALERT_ACTION = {
+    ASSIGN: 'ASSIGN',
+    RESOLVE: 'RESOLVE',
+};
+
+export const REPORT_TYPE = {
+    systemalertlog: 1,
+    workshistory: 2,
+    workiddupe: 3,
+    scopusiddupe: 4,
+    doidupe: 5,
+};
+
 export const optionDoubleRowRender = (props, option) => (
     <li
         {...props}
@@ -61,6 +58,7 @@ export const optionDoubleRowRender = (props, option) => (
             alignItems: 'flex-start',
             fontWeight: 400,
         }}
+        data-testid={props.id}
     >
         <Typography variant="body1" color="textPrimary">
             {option.label}
@@ -70,3 +68,119 @@ export const optionDoubleRowRender = (props, option) => (
         </Typography>
     </li>
 );
+
+export const getSystemAlertColumns = (locale, users) => {
+    const alertStatus = locale.alertStatus;
+    const alertStatusOption = Object.values(alertStatus);
+    return [
+        {
+            field: 'sat_created_date',
+            headerName: locale.columns.createdDate,
+            width: 150,
+            valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+        },
+        { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
+        {
+            field: 'status',
+            headerName: locale.columns.status,
+            width: 160,
+            valueGetter: (_, row) =>
+                !!row.sat_assigned_to
+                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
+                    : alertStatus.UNASSIGNED,
+            renderCell: params => (
+                <Chip
+                    data-testid={`alert-status-${params.id}`}
+                    label={params.value}
+                    variant="outlined"
+                    size="small"
+                    color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
+                />
+            ),
+        },
+    ];
+};
+
+export const getDisplayReportColumns = (locale, report, users) => {
+    const txt = locale.columns[report];
+    switch (report) {
+        case 'workshistory':
+            return [
+                { field: 'id', order: 0 },
+                {
+                    field: 'date_created',
+                    headerName: txt.dateCreated,
+                    width: 150,
+                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
+                    order: 2,
+                },
+                { field: 'pid', headerName: txt.pid, width: 150, order: 1 },
+                { field: 'work_type', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
+                { field: 'user', headerName: txt.user, width: 150, order: 4 },
+                { field: 'topic', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
+            ].sort((a, b) => a.order > b.order);
+        default:
+            return [
+                { field: 'sat_id', headerName: txt.id, order: 0 },
+                {
+                    field: 'sat_created_date',
+                    headerName: txt.dateCreated,
+                    width: 150,
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                    order: 1,
+                },
+                {
+                    field: 'sat_assigned_to',
+                    headerName: txt.assignedTo,
+                    width: 150,
+                    order: 2,
+                    valueGetter: value => {
+                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
+                        else return '';
+                    },
+                },
+                {
+                    field: 'sat_assigned_date',
+                    headerName: txt.assignedDate,
+                    width: 150,
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                    order: 3,
+                },
+                { field: 'sat_title', headerName: txt.title, minWidth: 400, flex: 1, order: 6 },
+                {
+                    field: 'sat_resolved_by',
+                    headerName: txt.resolvedBy,
+                    width: 150,
+                    order: 4,
+                    valueGetter: value => {
+                        if (!!value) return users.find(user => user.id === value)?.name || 'Unknown';
+                        else return '';
+                    },
+                },
+                {
+                    field: 'sat_resolved_date',
+                    headerName: txt.resolvedDate,
+                    width: 150,
+                    valueGetter: value =>
+                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                    order: 5,
+                },
+                { field: 'sat_content', headerName: txt.content, minWidth: 400, flex: 1, order: 8, export_order: 9 },
+                {
+                    field: 'sat_link',
+                    headerName: txt.link,
+                    minWidth: 400,
+                    flex: 1,
+                    renderCell: row => (
+                        <ExternalLink id={`link_${row.id}`} href={row.value} inline>
+                            {row.value}
+                        </ExternalLink>
+                    ),
+                    order: 9,
+                    export_order: 8,
+                },
+            ].sort((a, b) => a.order > b.order);
+    }
+};

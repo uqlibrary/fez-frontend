@@ -60,7 +60,6 @@ export default {
         "rek_access_conditions": "453619",
         "rek_access_conditions_lookup": "Open Access"
     },
-    "fez_record_search_key_additional_notes": null,
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_ands_collection_type": {
         "rek_ands_collection_type_id": 4759,

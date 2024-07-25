@@ -1,9 +1,21 @@
 import React from 'react';
 import moment from 'moment';
 
-export const useSystemAlertDrawer = () => {
+import { useDispatch } from 'react-redux';
+import { useConfirmationState } from 'hooks';
+import { isEmptyStr } from './utils';
+
+export const useSystemAlertDrawer = data => {
     const [_open, _setOpen] = React.useState(false);
     const [_row, _setRow] = React.useState({});
+
+    React.useEffect(() => {
+        if (_open) {
+            _setRow(data?.find(item => item.sat_id === _row.sat_id) || {});
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
+
     const openDrawer = row => {
         _setRow(row);
         _setOpen(true);
@@ -35,15 +47,15 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
             if (
                 displayReport === 'systemalertlog' &&
                 systemAlertId.trim() !== '' &&
-                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0)
+                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0 || systemAlertId.includes('.'))
             ) {
                 setSystemAlertError(locale.systemAlertId);
                 return false;
             }
-
             if (!!!fromDate && !!!toDate) return true;
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
+
             if (mFrom.isValid() && !mTo.isValid()) {
                 setToDateError(locale.required);
                 return false;
@@ -63,4 +75,22 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
     }, [displayReport, fromDate, toDate, systemAlertId]);
 
     return { isValid, fromDateError, toDateError, systemAlertError };
+};
+
+export const useAlertStatus = ({ message, hideAction }) => {
+    const dispatch = useDispatch();
+    const [alertIsVisible, showAlert, _hideAlert] = useConfirmationState();
+
+    const hideAlert = () => {
+        dispatch(hideAction());
+        _hideAlert();
+    };
+
+    React.useEffect(() => {
+        if (!alertIsVisible) {
+            if (!isEmptyStr(message)) showAlert();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [alertIsVisible, message]);
+    return [alertIsVisible, hideAlert];
 };

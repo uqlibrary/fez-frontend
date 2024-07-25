@@ -86,7 +86,6 @@ export default {
     "rek_editing_user": null,
     "rek_editing_user_lookup": null,
     "rek_editing_start_date": null,
-    "fez_internal_notes": null,
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_country": [],
@@ -99,12 +98,6 @@ export default {
     "fez_record_search_key_grant_agency_type": [],
     "fez_record_search_key_quality_indicator": [],
     "fez_record_search_key_significance": [],
-    "fez_record_search_key_additional_notes": {
-        "rek_additional_notes_id": 1114227,
-        "rek_additional_notes_pid": "UQ:335214",
-        "rek_additional_notes_xsdmf_id": null,
-        "rek_additional_notes": "Test additional notes"
-    },
     "fez_record_search_key_notes": {
         "rek_notes_id": 1114227,
         "rek_notes_pid": "UQ:335214",

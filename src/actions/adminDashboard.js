@@ -24,7 +24,7 @@ export function loadAdminDashboardConfig() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_CONFIG_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
                 return Promise.resolve(response);
             })
@@ -52,7 +52,7 @@ export function loadAdminDashboardToday() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_TODAY_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -77,7 +77,7 @@ export function loadAdminDashboardQuickLinks() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_QUICKLINKS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -96,21 +96,16 @@ export function loadAdminDashboardQuickLinks() {
 export function adminDashboardQuickLink(request, action) {
     // eslint-disable-next-line no-nested-ternary
     const verb = action === 'DELETE' ? destroy : action === 'EDIT' || action === 'REORDER' ? put : post;
+
     return dispatch => {
         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
+
         return verb(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
+                    payload: response,
+                });
                 return Promise.resolve(response);
             })
             .catch(error => {
@@ -120,6 +115,14 @@ export function adminDashboardQuickLink(request, action) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminDashboardQuickLinkUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_CLEAR,
+        });
     };
 }
 
@@ -136,7 +139,7 @@ export function loadAdminDashboardSystemAlerts() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -157,17 +160,11 @@ export function adminDashboardSystemAlerts(request) {
         dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING });
         return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
+                    payload: response,
+                });
+
                 return Promise.resolve(response);
             })
             .catch(error => {
@@ -177,6 +174,14 @@ export function adminDashboardSystemAlerts(request) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminDashboardSystemAlertsUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR,
+        });
     };
 }
 
@@ -208,6 +213,7 @@ export function loadAdminDashboardExportReport(request) {
                 return Promise.resolve();
             })
             .catch(error => {
+                console.error(error);
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_FAILED,
                     payload: {
@@ -227,12 +233,13 @@ export function loadAdminDashboardDisplayReport(request) {
     return dispatch => {
         dispatch({
             type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING,
+            value: request.report_id,
         });
         return get(ADMIN_DASHBOARD_DISPLAY_REPORT_API(request))
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {

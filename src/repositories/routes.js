@@ -625,22 +625,27 @@ export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
 });
 
 export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
-    apiUrl: 'dashboard/systemalerts',
+    apiUrl: 'dashboard/alerts',
 });
 
-export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ id }) => {
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_id }) => {
     return {
-        apiUrl: `dashboard/legacyreport?id=${id}`,
+        // eslint-disable-next-line camelcase
+        apiUrl: `dashboard/reports?report_id=${report_id}`,
     };
 };
 
-export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ id, dateFrom, dateTo, alertId }) => {
-    const request = { id, dateFrom, dateTo, alertId };
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
+    // eslint-disable-next-line camelcase
+    const request = { report_type, date_from, date_to, record_id };
     const query = Object.keys(request)
+        .filter(key => request[key] !== '' && request[key] !== undefined)
         .map(key => key + '=' + encodeURIComponent(request[key]))
         .join('&');
 
     return {
-        apiUrl: `dashboard/report?${query}`,
+        apiUrl: `dashboard/reports?${query}&per_page=1000`,
     };
 };

@@ -51,7 +51,6 @@ export default {
     "rek_security_policy":1,
     "rek_datastream_policy":null,
     "fez_record_search_key_acknowledgements":null,
-    "fez_record_search_key_additional_notes":null,
     "fez_record_search_key_advisory_statement":null,
     "fez_record_search_key_article_number":null,
     "fez_record_search_key_assigned_group_id":[

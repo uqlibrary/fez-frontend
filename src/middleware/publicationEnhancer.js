@@ -95,7 +95,25 @@ export const enhancePublication = record => {
     const cleanTitleConfig = { ALLOWED_TAGS: ['sub', 'sup'] };
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const allowedHtmlConfig = {
-        ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
+        ALLOWED_TAGS: [
+            'p',
+            'strong',
+            'i',
+            'u',
+            's',
+            'strike',
+            'sup',
+            'sub',
+            'em',
+            'br',
+            'b',
+            'sup',
+            'sub',
+            'a',
+            'ol',
+            'ul',
+            'li',
+        ],
         ALLOWED_ATTR: [],
     };
 

@@ -2,18 +2,20 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     adminDashboardDisplayReportData: null,
+    adminDashboardDisplayReportDataType: null,
     adminDashboardDisplayReportLoading: false,
     adminDashboardDisplayReportSuccess: null,
-    adminDashboardDisplayReportError: null,
+    adminDashboardDisplayReportFailed: null,
 };
 
 const handlers = {
-    [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING]: () => ({
+    [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING]: (_, action) => ({
         ...initialState,
         adminDashboardDisplayReportLoading: true,
+        adminDashboardDisplayReportDataType: action.value,
     }),
-    [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS]: (_, action) => ({
-        ...initialState,
+    [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS]: (state, action) => ({
+        ...state,
         adminDashboardDisplayReportLoading: false,
         adminDashboardDisplayReportSuccess: true,
         adminDashboardDisplayReportData: action.payload.data,
@@ -21,7 +23,7 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_FAILED]: (_, action) => ({
         ...initialState,
         adminDashboardDisplayReportLoading: false,
-        adminDashboardDisplayReportError: action.payload,
+        adminDashboardDisplayReportFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_CLEAR]: () => ({ ...initialState }),
 };

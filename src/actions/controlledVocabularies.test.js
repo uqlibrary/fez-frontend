@@ -29,7 +29,7 @@ describe('Controlled Vocabularies actions', () => {
     });
 
     it('dispatches expected actions to load voabularies from API for anon user', async () => {
-        mockApi.onAny().reply(403);
+        mockApi.onAny().reply(401);
 
         const expectedActions = [
             `${actions.VOCABULARIES_LOADING}@${testId}`,

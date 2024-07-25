@@ -1,1 +1,1 @@
-export { default as PublicationCitation } from './containers/PublicationCitation';
+export { default as PublicationCitation } from './components/PublicationCitation';

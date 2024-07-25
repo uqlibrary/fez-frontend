@@ -29,8 +29,20 @@ const setup = () => {
 };
 
 describe('ViewJournal', () => {
-    it('should display error alert if journal is not loaded correctly', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(404);
+    it('should display journal not found page error on 404', async () => {
+        mockApi
+            .onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl))
+            .reply(404, { data: 'not found' });
+
+        const { getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByText('Journal not found')).toBeInTheDocument();
+    });
+
+    it('should display error alert if journal is not loaded correctly due to other errors', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(500);
 
         const { getByTestId, getByText } = setup();
 
@@ -111,11 +123,11 @@ describe('ViewJournal', () => {
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
         expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41698',
         );
         expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fulrichsweb.serialssolutions.com%2Ftitle%2F41699',
         );
 
         // **************************************************************
@@ -193,7 +205,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-scie-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
@@ -249,7 +261,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
         expect(getByTestId('jcr-home-page-ssci-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://jcr.clarivate.com',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fjcr.clarivate.com',
         );
 
         expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
@@ -285,7 +297,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
         expect(getByTestId('jnl-cite-score-source-id-lookup-link')).toHaveAttribute(
             'href',
-            'https://go.openathens.net/redirector/uq.edu.au?url=https://www.scopus.com/sourceid/19561',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Fsourceid%2F19561',
         );
 
         expect(getByTestId('jnl-cite-score-snip-header')).toHaveTextContent('SNIP');

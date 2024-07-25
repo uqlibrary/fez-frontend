@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within, waitFor } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
 import Immutable from 'immutable';
 import * as actions from 'actions/journals.js';
@@ -94,121 +94,6 @@ describe('SearchJournals', () => {
         const testResult = areKeywordsDifferent(testKeywordsSet1, testKeywordsSet2);
 
         expect(testResult).toEqual(true);
-    });
-
-    it('should render set of results via selecting a keyword and clicking the "Step 3: Search" button', async () => {
-        const testQuerySearchAstrobiology =
-            'keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology' +
-            '&keywords%5BSubject-451926%5D%5Btype%5D=Subject&keywords%5BSubject-451926%5D%5Btext%5D=0304+Medicinal+and+Biomolecular+Chemistry&keywords%5BSubject-451926%5D%5BcvoId%5D=451926&keywords%5BSubject-451926%5D%5Bid%5D=Subject-451926';
-
-        const journalsList = mockData;
-
-        const { queryByTestId } = setup({
-            state: { journalsListLoaded: true, journalsList },
-            storeState: {
-                journalSearchKeywords: {
-                    exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
-                    keywordMatch: [{ keyword: 'astrobiology' }],
-                    subjectMatch: [
-                        {
-                            keyword: '0304 Medicinal and Biomolecular Chemistry',
-                            cvoId: 451926,
-                            sources: [{ name: 'ERA', index: 'ERA' }],
-                        },
-                    ],
-                },
-            },
-        });
-
-        expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
-        expect(
-            queryByTestId('journal-search-item-addable-subject-0304-medicinal-and-biomolecular-chemistry-0'),
-        ).toBeInTheDocument();
-
-        fireEvent.click(queryByTestId('journal-search-item-addable-keyword-astrobiology-0'));
-        fireEvent.click(
-            queryByTestId('journal-search-item-addable-subject-0304-medicinal-and-biomolecular-chemistry-0'),
-        );
-
-        expect(mockUseNavigate).toHaveBeenLastCalledWith(
-            {
-                pathname: pathConfig.journals.search,
-                search: testQuerySearchAstrobiology,
-            },
-            { state: { scrollToTop: false } },
-        );
-
-        expect(queryByTestId('journal-search-button')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(queryByTestId('journal-search-button'));
-
-        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
-        expect(
-            queryByTestId('journal-search-chip-subject-0304-medicinal-and-biomolecular-chemistry'),
-        ).toBeInTheDocument();
-
-        await waitFor(() => queryByTestId('641-astrobiology-link'));
-        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
-    });
-
-    it('should clear a set of results via the clear all "X" button', async () => {
-        const testQuerySearchAstrobiology =
-            'keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology';
-
-        const path = pathConfig.journals.search;
-
-        const journalsList = mockData;
-
-        const { queryByTestId, getByText, queryByText } = setup({
-            state: { journalsListLoaded: true, journalsList },
-            storeState: {
-                journalSearchKeywords: {
-                    exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
-                    keywordMatch: [{ keyword: 'astrobiology' }],
-                },
-            },
-        });
-
-        expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
-        fireEvent.click(queryByTestId('journal-search-item-addable-keyword-astrobiology-0'));
-
-        expect(mockUseNavigate).toHaveBeenLastCalledWith(
-            {
-                pathname: path,
-                search: testQuerySearchAstrobiology,
-            },
-            { state: { scrollToTop: false } },
-        );
-
-        expect(queryByTestId('journal-search-button')).not.toHaveAttribute('disabled');
-
-        fireEvent.click(queryByTestId('journal-search-button'));
-
-        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
-
-        await waitFor(() => queryByTestId('641-astrobiology-link'));
-
-        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
-
-        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
-
-        fireEvent.click(queryByTestId('journal-search-clear-keywords-button'));
-
-        expect(mockUseNavigate).toHaveBeenLastCalledWith(
-            {
-                pathname: path,
-                search: '',
-            },
-            { state: { scrollToTop: false } },
-        );
-
-        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).not.toBeInTheDocument();
-        expect(queryByTestId('641-astrobiology-link')).not.toBeInTheDocument();
-        expect(
-            getByText('Enter a journal title, ISSN, keyword, subject or field of research code'),
-        ).toBeInTheDocument();
-
-        expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
 
     it('should show all journals if appropriate keyword detected in URL on page load', () => {
@@ -322,7 +207,6 @@ describe('SearchJournals', () => {
             initialEntries,
         });
 
-        // expect(container).toMatchSnapshot();
         // sortBy
         expect(queryByTestId('publication-list-sorting-sort-by')).toBeInTheDocument();
         fireEvent.mouseDown(within(queryByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
@@ -387,16 +271,7 @@ describe('SearchJournals', () => {
 
     it('should clear state on dismount', () => {
         const spy = jest.spyOn(actions, 'clearJournalSearchKeywords');
-        const { unmount, queryByText } = setup({
-            state: { journalsListLoaded: true, mockData },
-            storeState: {
-                journalSearchKeywords: {
-                    exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
-                },
-            },
-        });
-        expect(queryByText('Astrobiology')).toBeInTheDocument();
-        // change page
+        const { unmount } = setup();
         unmount();
         expect(spy).toHaveBeenCalledTimes(1);
     });

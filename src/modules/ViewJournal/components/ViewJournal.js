@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import * as actions from 'actions';
 
@@ -53,11 +54,21 @@ export const ViewJournal = () => {
     }
 
     if (journalLoadingError) {
-        return (
-            <StandardPage>
-                <Alert {...txt.loadFailureAlert} />
-            </StandardPage>
-        );
+        if (journalLoadingError.status === 404) {
+            return (
+                <WorkNotFound
+                    title={locale.viewJournal.notFound.title}
+                    message={locale.viewJournal.notFound.message}
+                    loadingError={journalLoadingError}
+                />
+            );
+        } else {
+            return (
+                <StandardPage>
+                    <Alert {...txt.loadFailureAlert} />
+                </StandardPage>
+            );
+        }
     }
 
     if (journalDetailsLength === 0) {

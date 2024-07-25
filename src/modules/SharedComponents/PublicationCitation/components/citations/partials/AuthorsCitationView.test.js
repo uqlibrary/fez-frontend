@@ -1,8 +1,7 @@
 import React from 'react';
 import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
-import { render, WithRouter } from 'test-utils';
-import { mui1theme } from 'config/theme';
+import { rtlRender, WithRouter } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -12,10 +11,9 @@ function setup(testProps = {}) {
         suffix: testProps.suffix,
         className: testProps.className || '',
         showLink: testProps.showLink || false,
-        theme: mui1theme,
         ...testProps,
     };
-    return render(
+    return rtlRender(
         <WithRouter>
             <AuthorsCitationView {...props} />
         </WithRouter>,
@@ -667,6 +665,8 @@ describe('AuthorsCitationView', () => {
     });
 
     it('should render component with link containing contributor id', () => {
+        // HERE - styles are failing because it looks like the wrong
+        // theme is being loaded - we want muitheme to load not the default
         const testObject = {
             fez_record_search_key_contributor: [
                 {

@@ -11,8 +11,6 @@ import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import JournalAdminInterface from './JournalAdminInterface';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 
 import AdminSection from './admin/AdminSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
@@ -21,7 +19,7 @@ import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
 
 import { JournalContext, TabbedContext } from 'context';
-import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { useIsMobileView } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
 import { useParams } from 'react-router-dom';
@@ -78,20 +76,7 @@ export const JournalAdminContainer = ({
     if (!!id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!!id && (!!!journalToView || journalLoadingError)) {
-        return (
-            <StandardPage className="viewJournal" title={locale.pages.viewRecord.notFound.title}>
-                <Grid container style={{ marginTop: -24 }}>
-                    <Grid item xs={12}>
-                        {locale.pages.viewRecord.notFound.message}
-                    </Grid>
-                </Grid>
-                {journalToViewError && (
-                    <Typography variant={'caption'} style={{ opacity: 0.5 }}>
-                        {`(${journalToViewError.status} - ${journalToViewError.message})`}
-                    </Typography>
-                )}
-            </StandardPage>
-        );
+        return <WorkNotFound loadingError={journalToViewError} />;
     } else if (!id && !journalToView) {
         return <div className="empty" />;
     }

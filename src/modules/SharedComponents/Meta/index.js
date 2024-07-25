@@ -1,1 +1,1 @@
-export { default as Meta } from './containers/Meta';
+export { default as Meta } from './components/Meta';
