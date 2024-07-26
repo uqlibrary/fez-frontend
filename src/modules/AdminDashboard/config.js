@@ -59,6 +59,8 @@ export const isUrl = str => {
     }
 };
 
+export const defaultLegacyReportOption = { value: 0, label: '', subtext: '' };
+
 export const optionDoubleRowRender = (props, option) => (
     <li
         {...props}

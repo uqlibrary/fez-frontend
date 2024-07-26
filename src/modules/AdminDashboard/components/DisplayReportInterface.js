@@ -38,192 +38,194 @@ const DisplayReportInterface = ({
     const isDisabled = !isValid || disabled;
 
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
-                <Autocomplete
-                    disablePortal
-                    id={id}
-                    fullWidth
-                    variant="standard"
-                    options={txt.options.display}
-                    isOptionEqualToValue={(option, value) => option.value === value.value}
-                    renderInput={params => (
-                        <TextField
-                            {...params}
-                            label={txt.label.report}
-                            variant="standard"
-                            inputProps={{
-                                ...params.inputProps,
-                                id: `${id}-input`,
-                                'data-analyticsid': `${id}-input`,
-                                'data-testid': `${id}-input`,
-                            }}
-                            InputLabelProps={{
-                                'data-testid': `${id}-label`,
-                                htmlFor: `${id}-input`,
-                            }}
-                        />
-                    )}
-                    ListboxProps={{
-                        id: `${id}-listbox`,
-                        'data-analyticsid': `${id}-listbox`,
-                        'data-testid': `${id}-listbox`,
-                    }}
-                    value={state.displayReport}
-                    onChange={(_, value) => {
-                        onChange({ type: 'displayReport', value });
-                    }}
-                />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-                <Box data-testid="report-display-date-from">
-                    <DatePicker
-                        inputProps={{
-                            id: 'report-display-date-from-input',
-                            'data-testid': 'report-display-date-from-input',
-                            label: txt.label.dateFrom,
-                            'aria-label': txt.label.dateFrom,
-                            'aria-labelledby': `${id}-input`,
-                            'data-analyticsid': 'report-display-date-from-input',
-                        }}
-                        label={txt.label.dateFrom}
-                        value={state.fromDate}
-                        renderInput={params => (
-                            <TextField
-                                {...params}
-                                variant="standard"
-                                fullWidth
-                                error={!!fromDateError}
-                                required={!!fromDateError || state.displayReport?.value === 'workshistory'}
-                                helperText={fromDateError}
-                            />
-                        )}
-                        // eslint-disable-next-line react/prop-types
-                        onChange={props =>
-                            onChange({
-                                type: 'fromDate',
-                                value: !!props ? moment(props).format() : null,
-                            })
-                        }
-                        defaultValue=""
-                        disableFuture
-                        maxDate={state.toDate}
-                        disabled={
-                            !!!state.displayReport ||
-                            (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
-                        }
-                    />
-                </Box>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-                <Box data-testid="report-display-date-to">
-                    <DatePicker
-                        inputProps={{
-                            id: 'report-display-date-to-input',
-                            'data-testid': 'report-display-date-to-input',
-                            label: txt.label.dateTo,
-                            'aria-label': txt.label.dateTo,
-                            'aria-labelledby': 'report-display-date-to-label',
-                            'data-analyticsid': 'report-display-date-to-input',
-                        }}
-                        label={txt.label.dateTo}
-                        value={state.toDate}
-                        renderInput={params => (
-                            <TextField
-                                {...params}
-                                variant="standard"
-                                fullWidth
-                                error={!!toDateError}
-                                required={!!state.fromDate || state.displayReport?.value === 'workshistory'}
-                                helperText={toDateError}
-                            />
-                        )}
-                        // eslint-disable-next-line react/prop-types
-                        onChange={props =>
-                            onChange({
-                                type: 'toDate',
-                                value: !!props ? moment(props).format() : null,
-                            })
-                        }
-                        defaultValue=""
-                        disableFuture
-                        minDate={state.fromDate}
-                        disabled={
-                            !!!state.displayReport ||
-                            (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
-                        }
-                    />
-                </Box>
-            </Grid>
-            {state.displayReport?.value === 'systemalertlog' && (
+        <Box id={id} data-testid={id}>
+            <Grid container spacing={2}>
                 <Grid item xs={12} sm={4}>
-                    <Box data-testid="report-display-system-alert-id">
-                        <TextField
-                            label={txt.label.systemId}
-                            variant="standard"
-                            fullWidth
+                    <Autocomplete
+                        disablePortal
+                        id={id}
+                        fullWidth
+                        variant="standard"
+                        options={txt.options.display}
+                        isOptionEqualToValue={(option, value) => option.value === value.value}
+                        renderInput={params => (
+                            <TextField
+                                {...params}
+                                label={txt.label.report}
+                                variant="standard"
+                                inputProps={{
+                                    ...params.inputProps,
+                                    id: `${id}-input`,
+                                    'data-analyticsid': `${id}-input`,
+                                    'data-testid': `${id}-input`,
+                                }}
+                                InputLabelProps={{
+                                    'data-testid': `${id}-label`,
+                                    htmlFor: `${id}-input`,
+                                }}
+                            />
+                        )}
+                        ListboxProps={{
+                            id: `${id}-listbox`,
+                            'data-analyticsid': `${id}-listbox`,
+                            'data-testid': `${id}-listbox`,
+                        }}
+                        value={state.displayReport}
+                        onChange={(_, value) => {
+                            onChange({ type: 'displayReport', value });
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <Box data-testid={`${id}-date-from`}>
+                        <DatePicker
                             inputProps={{
-                                id: 'report-display-system-alert-id-input',
-                                'data-analyticsid': 'report-display-system-alert-id-input',
-                                'data-testid': 'report-display-system-alert-id-input',
+                                id: `${id}-date-from-input`,
+                                'data-testid': `${id}-date-from-input`,
+                                label: txt.label.dateFrom,
+                                'aria-label': txt.label.dateFrom,
+                                'aria-labelledby': `${id}-input`,
+                                'data-analyticsid': `${id}-date-from-input`,
                             }}
-                            InputLabelProps={{
-                                'data-testid': 'report-display-system-alert-id-label',
-                                htmlFor: 'report-display-system-alert-id-input',
-                            }}
-                            sx={{ mt: 1 }}
+                            label={txt.label.dateFrom}
+                            value={state.fromDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!fromDateError}
+                                    required={!!fromDateError || state.displayReport?.value === 'workshistory'}
+                                    helperText={fromDateError}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
                             onChange={props =>
-                                // eslint-disable-next-line react/prop-types
-                                onChange({ type: 'systemAlertId', value: props.target.value })
+                                onChange({
+                                    type: 'fromDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
                             }
-                            value={state.systemAlertId}
-                            helperText={systemAlertError}
-                            error={!!systemAlertError}
+                            defaultValue=""
+                            disableFuture
+                            maxDate={state.toDate}
+                            disabled={
+                                !!!state.displayReport ||
+                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                            }
                         />
                     </Box>
                 </Grid>
-            )}
-            <Grid item xs={12}>
-                <Button
-                    id="report-display-button"
-                    data-testid="report-display-button"
-                    variant="contained"
-                    disabled={isDisabled}
-                    onClick={onReportClick}
-                >
-                    {loading && (
-                        <CircularProgress
-                            color="inherit"
-                            size={20}
-                            id={'display-report-progress'}
-                            data-testid={'display-report-progress'}
-                            sx={{ mr: 1 }}
+                <Grid item xs={12} sm={4}>
+                    <Box data-testid={`${id}-date-to`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-to-input`,
+                                'data-testid': `${id}-date-to-input`,
+                                label: txt.label.dateTo,
+                                'aria-label': txt.label.dateTo,
+                                'aria-labelledby': `${id}-date-to-label`,
+                                'data-analyticsid': `${id}-date-to-input`,
+                            }}
+                            label={txt.label.dateTo}
+                            value={state.toDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!toDateError}
+                                    required={!!state.fromDate || state.displayReport?.value === 'workshistory'}
+                                    helperText={toDateError}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
+                            onChange={props =>
+                                onChange({
+                                    type: 'toDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            minDate={state.fromDate}
+                            disabled={
+                                !!!state.displayReport ||
+                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                            }
                         />
-                    )}
-                    {txt.label.runReport}
-                </Button>
-                <Button
-                    id="report-display-export-button"
-                    data-testid="report-display-export-button"
-                    variant="contained"
-                    color="secondary"
-                    sx={{ marginInlineStart: 1 }}
-                    onClick={onExportClick}
-                    disabled={exportDisabled}
-                >
-                    {txt.label.export}
-                </Button>
+                    </Box>
+                </Grid>
+                {state.displayReport?.value === 'systemalertlog' && (
+                    <Grid item xs={12} sm={4}>
+                        <Box data-testid={`${id}-system-alert-id`}>
+                            <TextField
+                                label={txt.label.systemId}
+                                variant="standard"
+                                fullWidth
+                                inputProps={{
+                                    id: `${id}-system-alert-id-input`,
+                                    'data-analyticsid': `${id}-system-alert-id-input`,
+                                    'data-testid': `${id}-system-alert-id-input`,
+                                }}
+                                InputLabelProps={{
+                                    'data-testid': `${id}-system-alert-id-label`,
+                                    htmlFor: `${id}-system-alert-id-input`,
+                                }}
+                                sx={{ mt: 1 }}
+                                onChange={props =>
+                                    // eslint-disable-next-line react/prop-types
+                                    onChange({ type: 'systemAlertId', value: props.target.value })
+                                }
+                                value={state.systemAlertId}
+                                helperText={systemAlertError}
+                                error={!!systemAlertError}
+                            />
+                        </Box>
+                    </Grid>
+                )}
+                <Grid item xs={12}>
+                    <Button
+                        id={`${id}-button`}
+                        data-testid={`${id}-button`}
+                        variant="contained"
+                        disabled={isDisabled}
+                        onClick={onReportClick}
+                    >
+                        {loading && (
+                            <CircularProgress
+                                color="inherit"
+                                size={20}
+                                id={'display-report-progress'}
+                                data-testid={'display-report-progress'}
+                                sx={{ mr: 1 }}
+                            />
+                        )}
+                        {txt.label.runReport}
+                    </Button>
+                    <Button
+                        id={`${id}-export-button`}
+                        data-testid={`${id}-export-button`}
+                        variant="contained"
+                        color="secondary"
+                        sx={{ marginInlineStart: 1 }}
+                        onClick={onExportClick}
+                        disabled={exportDisabled}
+                    >
+                        {txt.label.export}
+                    </Button>
+                </Grid>
             </Grid>
-        </Grid>
+        </Box>
     );
 };
 
 DisplayReportInterface.propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    state: PropTypes.object.isRequired,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
     exportDisabled: PropTypes.bool,
-    state: PropTypes.object,
     onReportClick: PropTypes.func,
     onExportClick: PropTypes.func,
     onChange: PropTypes.func,

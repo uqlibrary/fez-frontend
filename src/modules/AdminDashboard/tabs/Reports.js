@@ -11,7 +11,7 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import { getDisplayReportColumns } from '../config';
+import { getDisplayReportColumns, defaultLegacyReportOption } from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 import { transformReportRequest } from '../transformers';
@@ -27,11 +27,8 @@ import DisplayReportInterface from '../components/DisplayReportInterface';
 const reportLegacyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
 
-const defaultLegacyReportOption = { value: 0, label: '', subtext: '' };
-
 const Reports = () => {
     const txt = locale.components.adminDashboard.tabs.reports;
-    const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
     const dispatch = useDispatch();
 
@@ -54,7 +51,6 @@ const Reports = () => {
             return getDisplayReportColumns({
                 locale: txt,
                 params: adminDashboardDisplayReportDataParams,
-                users: adminDashboardConfigData.admin_users,
             });
         }
         return null;
@@ -107,7 +103,6 @@ const Reports = () => {
         const newColumns = getDisplayReportColumns({
             locale: txt,
             actionState,
-            users: adminDashboardConfigData.admin_users,
         });
         !!newColumns && setColumns(newColumns);
 
@@ -116,6 +111,7 @@ const Reports = () => {
     };
 
     const handleDisplayReportChange = changes => {
+        console.log('change', changes);
         actionDispatch(changes);
     };
 
