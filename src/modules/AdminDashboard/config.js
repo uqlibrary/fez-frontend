@@ -35,6 +35,7 @@ export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DEL
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
+export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -118,19 +119,29 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
     switch (report) {
         case 'workshistory':
             return [
-                { field: 'pre_id', headerName: txt.id, order: 0 },
-                { field: 'pre_pid', headerName: txt.pid, width: 150, order: 1 },
+                { field: 'pre_id', headerName: txt.id, width: 150, exportOnly: true, exportOrder: 0 },
+                { field: 'pre_pid', headerName: txt.pid, width: 150, order: 0, exportOrder: 1 },
                 {
                     field: 'pre_date',
                     headerName: txt.dateCreated,
                     width: 150,
-                    valueGetter: value => moment(value, 'DD/MM/YYYY hh:mm').format(DEFAULT_DATE_FORMAT),
-                    order: 2,
+                    valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT),
+                    order: 1,
+                    exportOrder: 5,
                 },
-                { field: 'rek_subtype', headerName: txt.workType, minWidth: 300, flex: 1, order: 3 },
-                { field: 'usr_username', headerName: txt.user, width: 150, order: 4 },
-                { field: 'pre_detail', headerName: txt.action, minWidth: 400, flex: 1, order: 5 },
-            ].sort((a, b) => a.order > b.order);
+                {
+                    field: 'rek_date',
+                    headerName: txt.pubDate,
+                    width: 150,
+                    valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT),
+                    exportOnly: true,
+                    exportOrder: 4,
+                },
+                { field: 'rek_genre', headerName: txt.genre, minWidth: 300, flex: 1, order: 2, exportOrder: 2 },
+                { field: 'rek_subtype', headerName: txt.subtype, minWidth: 300, flex: 1, order: 3, exportOrder: 3 },
+                { field: 'usr_username', headerName: txt.user, width: 150, order: 4, exportOrder: 6 },
+                { field: 'pre_detail', headerName: txt.action, minWidth: 600, flex: 1, order: 5, exportOrder: 7 },
+            ];
         default:
             const systemIdParam = actionState?.systemAlertId || params?.record_id || '';
             return [
@@ -140,7 +151,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     headerName: txt.dateCreated,
                     width: 150,
                     valueGetter: value =>
-                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
                     order: 1,
                     exportOrder: 1,
                 },
@@ -163,7 +174,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     headerName: txt.assignedDate,
                     width: 150,
                     valueGetter: value =>
-                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
                     order: 3,
                     exportOrder: 4,
                 },
@@ -186,7 +197,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     headerName: txt.resolvedDate,
                     width: 150,
                     valueGetter: value =>
-                        (!!value && moment(value, 'YYYY-MM-DD hh:mm:ss').format(DEFAULT_DATE_FORMAT)) || '',
+                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
                     order: 5,
                     exportOrder: 7,
                 },

@@ -163,10 +163,13 @@ export default {
                     },
                     columns: {
                         workshistory: {
+                            id: 'ID',
                             dateCreated: 'Date created',
+                            pubDate: 'Date published',
                             pid: 'PID',
-                            workType: 'Work type',
-                            user: 'User',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
                             action: 'Action',
                         },
                         systemalertlog: {

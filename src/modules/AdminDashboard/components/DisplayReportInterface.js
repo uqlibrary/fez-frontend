@@ -72,7 +72,6 @@ const DisplayReportInterface = ({
                     value={state.displayReport}
                     onChange={(_, value) => {
                         onChange({ type: 'displayReport', value });
-                        if (value === 'workshistory') onChange({ type: 'systemAlertId', value: '' });
                     }}
                 />
             </Grid>
@@ -109,7 +108,10 @@ const DisplayReportInterface = ({
                         defaultValue=""
                         disableFuture
                         maxDate={state.toDate}
-                        disabled={!!!state.displayReport || state.systemAlertId !== ''}
+                        disabled={
+                            !!!state.displayReport ||
+                            (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                        }
                     />
                 </Box>
             </Grid>
@@ -146,7 +148,10 @@ const DisplayReportInterface = ({
                         defaultValue=""
                         disableFuture
                         minDate={state.fromDate}
-                        disabled={!!!state.displayReport || state.systemAlertId !== ''}
+                        disabled={
+                            !!!state.displayReport ||
+                            (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                        }
                     />
                 </Box>
             </Grid>

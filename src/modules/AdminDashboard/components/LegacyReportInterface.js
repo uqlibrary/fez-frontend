@@ -13,7 +13,6 @@ import { optionDoubleRowRender } from '../config';
 
 const LegacyReportInterface = ({ id, loading, disabled, exportReport, onReportChange, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
-    console.log({ id, loading, disabled, exportReport });
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>

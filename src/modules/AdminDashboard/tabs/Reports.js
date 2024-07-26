@@ -177,8 +177,7 @@ const Reports = () => {
                         onExportClick={handleExportDisplayReportClick}
                         onChange={handleDisplayReportChange}
                     />
-                    {/* HERE, FIX UP dates not undisabling whenc hanging from sys alert with id to work history
-                    then fix work history table display. then the export columns need to match the data */}
+
                     {!!adminDashboardDisplayReportData && (
                         <Grid container mt={2}>
                             <Grid item xs={12}>
