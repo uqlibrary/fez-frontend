@@ -12,12 +12,12 @@ import locale from 'locale/components';
 
 import { optionDoubleRowRender } from '../config';
 
-const LegacyReportInterface = ({ id, loading, disabled, exportReport, onReportChange, onExportClick }) => {
+const LegacyReportInterface = ({ id, loading, disabled, items, exportReport, onReportChange, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
     const handleExportReport = React.useCallback(() => {
-        onExportClick(exportReport.value);
-    }, [onExportClick, exportReport?.value]);
+        onExportClick(exportReport.sel_id);
+    }, [onExportClick, exportReport?.sel_id]);
 
     return (
         <Box id={id} data-testid={id}>
@@ -26,8 +26,10 @@ const LegacyReportInterface = ({ id, loading, disabled, exportReport, onReportCh
                     <Autocomplete
                         id={id}
                         disablePortal
-                        options={txt.options.export}
-                        isOptionEqualToValue={(option, value) => option.value === value.value}
+                        options={items}
+                        isOptionEqualToValue={(option, value) => option.sel_id === value.sel_id}
+                        getOptionKey={option => option.sel_id}
+                        getOptionLabel={option => option.sel_title}
                         renderOption={optionDoubleRowRender}
                         renderInput={params => (
                             <TextField
@@ -64,7 +66,7 @@ const LegacyReportInterface = ({ id, loading, disabled, exportReport, onReportCh
                         data-testid="report-export-button"
                         variant="contained"
                         onClick={handleExportReport}
-                        disabled={!!!exportReport || exportReport?.value === 0 || disabled || loading}
+                        disabled={!!!exportReport || exportReport?.sel_id === 0 || disabled || loading}
                     >
                         {loading && (
                             <CircularProgress
@@ -87,6 +89,7 @@ LegacyReportInterface.propTypes = {
     id: PropTypes.string.isRequired,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
+    items: PropTypes.array,
     exportReport: PropTypes.object,
     onReportChange: PropTypes.func,
     onExportClick: PropTypes.func,

@@ -4,12 +4,13 @@ import { render, userEvent } from 'test-utils';
 
 import * as repositories from 'repositories';
 import { defaultLegacyReportOption } from '../config';
-
+import { adminDashboardConfig } from 'mock/data/testing/adminDashboard';
 import LegacyReportInterface from './LegacyReportInterface';
 
 const setup = (props = {}, renderer = render) => {
     const testProps = {
         id: 'testForm',
+        items: adminDashboardConfig.legacy_reports,
         ...props,
     };
     return renderer(<LegacyReportInterface {...testProps} />);
@@ -35,7 +36,7 @@ describe('LegacyReportInterface', () => {
     it('should render with disabled fields when disabled flag set', async () => {
         const { getByTestId, getByRole } = setup({
             disabled: true,
-            exportReport: { ...defaultLegacyReportOption, value: 1 },
+            exportReport: { ...defaultLegacyReportOption, sel_id: 1, sel_title: 'Test' },
         });
 
         expect(getByTestId('testForm')).toBeInTheDocument();
@@ -85,7 +86,7 @@ describe('LegacyReportInterface', () => {
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: 1 }).apiUrl).reply(200, { data: {} });
 
         const { getByRole, getByTestId } = setup({
-            exportReport: { value: 1, label: 'Wok ID dups' },
+            exportReport: { sel_id: 1, sel_title: 'Wok ID dups' },
             onExportClick: onExportClickFn,
         });
 

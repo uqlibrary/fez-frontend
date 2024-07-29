@@ -59,27 +59,29 @@ export const isUrl = str => {
     }
 };
 
-export const defaultLegacyReportOption = { value: 0, label: '', subtext: '' };
+export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
-export const optionDoubleRowRender = (props, option) => (
-    <li
-        {...props}
-        style={{
-            flexDirection: 'column',
-            justifyContent: 'left',
-            alignItems: 'flex-start',
-            fontWeight: 400,
-        }}
-        data-testid={props.id}
-    >
-        <Typography variant="body1" color="textPrimary">
-            {option.label}
-        </Typography>
-        <Typography variant="body1" color="textSecondary">
-            {option.subtext}
-        </Typography>
-    </li>
-);
+export const optionDoubleRowRender = (props, option) => {
+    return (
+        <li
+            {...props}
+            style={{
+                flexDirection: 'column',
+                justifyContent: 'left',
+                alignItems: 'flex-start',
+                fontWeight: 400,
+            }}
+            data-testid={props.id}
+        >
+            <Typography variant="body1" color="textPrimary">
+                {option.sel_title}
+            </Typography>
+            <Typography variant="body1" color="textSecondary">
+                {option.sel_description}
+            </Typography>
+        </li>
+    );
+};
 
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 
@@ -117,6 +119,7 @@ export const getSystemAlertColumns = (locale, users) => {
 
 export const getDisplayReportColumns = ({ locale, actionState, params }) => {
     const report = actionState?.displayReport?.value || getReportTypeFromValue(params.report_type);
+
     const txt = locale.columns[report];
     switch (report) {
         case 'workshistory':
@@ -146,7 +149,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
             ];
         default:
             const systemIdParam = actionState?.systemAlertId || params?.record_id || '';
-            return [
+            const cols = [
                 { field: 'sat_id', headerName: txt.id, order: 0, exportOrder: 0 },
                 {
                     field: 'sat_created_date',
@@ -204,16 +207,6 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     exportOrder: 7,
                 },
                 { field: 'sat_title', headerName: txt.title, minWidth: 400, flex: 1, order: 6, exportOrder: 8 },
-                ...(systemIdParam !== ''
-                    ? {
-                          field: 'sat_content',
-                          headerName: txt.content,
-                          minWidth: 1000,
-                          flex: 1,
-                          order: 7,
-                          exportOrder: 10,
-                      }
-                    : {}),
                 {
                     field: 'sat_link',
                     headerName: txt.link,
@@ -230,6 +223,18 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     order: 8,
                     exportOrder: 9,
                 },
-            ].filter(item => Object.keys(item).length > 0);
+            ];
+
+            if (systemIdParam !== '') {
+                cols.push({
+                    field: 'sat_content',
+                    headerName: txt.content,
+                    minWidth: 1000,
+                    flex: 1,
+                    order: 7,
+                    exportOrder: 10,
+                });
+            }
+            return cols;
     }
 };

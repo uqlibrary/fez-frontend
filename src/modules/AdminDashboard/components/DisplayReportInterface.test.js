@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { within, render, userEvent, preview } from 'test-utils';
+import { within, render, userEvent } from 'test-utils';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
-import * as repositories from 'repositories';
-import { defaultLegacyReportOption } from '../config';
 import { emptyReportActionState as defaultState } from '../reducers';
 
 import DisplayReportInterface from './DisplayReportInterface';
@@ -69,6 +67,26 @@ describe('DisplayReportInterface', () => {
             expect(getByTestId('testForm-date-to-input').closest('div')).toHaveClass('Mui-error');
         });
 
+        it('should not disable date fields if system id provided', async () => {
+            const onChangeFn = jest.fn();
+            const { getByTestId } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'Works history',
+                        value: 'workshistory',
+                    },
+                    systemAlertId: '123',
+                },
+                onChange: onChangeFn,
+            });
+
+            expect(getByTestId('testForm-input')).toHaveValue('Works history');
+            expect(getByTestId('testForm-date-from-input')).not.toHaveAttribute('disabled');
+            expect(getByTestId('testForm-date-to-input')).not.toHaveAttribute('disabled');
+        });
+
         it('should fire the change function when selecting the work history report', async () => {
             const onChangeFn = jest.fn();
             const { getAllByRole, getByRole, getByTestId } = setup({ onChange: onChangeFn });
@@ -118,14 +136,49 @@ describe('DisplayReportInterface', () => {
                 }),
             );
         });
-        /*
-        type: 'none',
-    exportReport: null,
-    displayReport: null,
-    fromDate: null,
-    toDate: null,
-    systemAlertId: '',
-        */
+
+        it('should call the report function', async () => {
+            const onReportClickFn = jest.fn();
+            const { getByTestId, getByRole } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'Works history',
+                        value: 'workshistory',
+                    },
+                    toDate: '2023-04-02T00:00:00',
+                    fromDate: '2023-01-01T00:00:00',
+                },
+                exportDisabled: false,
+                onReportClick: onReportClickFn,
+            });
+
+            expect(getByTestId('testForm-input')).toHaveValue('Works history');
+            await userEvent.click(getByRole('button', { name: 'Run report' }));
+            expect(onReportClickFn).toHaveBeenCalled();
+        });
+
+        it('should call the export function', async () => {
+            const onExportClickFn = jest.fn();
+            const { getByTestId, getByRole } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'Works history',
+                        value: 'workshistory',
+                    },
+                },
+                exportDisabled: false,
+                onExportClick: onExportClickFn,
+            });
+
+            expect(getByTestId('testForm-input')).toHaveValue('Works history');
+            await userEvent.click(getByRole('button', { name: 'Export' }));
+            expect(onExportClickFn).toHaveBeenCalled();
+        });
+
         describe('validation', () => {
             it('date to should be required', async () => {
                 const onChangeFn = jest.fn();
@@ -144,7 +197,6 @@ describe('DisplayReportInterface', () => {
 
                 expect(getByTestId('testForm-input')).toHaveValue('Works history');
 
-                preview.debug();
                 expect(within(getByTestId('testForm-date-to')).getByText('Required')).toBeInTheDocument();
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
@@ -190,7 +242,6 @@ describe('DisplayReportInterface', () => {
 
                 expect(getByTestId('testForm-input')).toHaveValue('Works history');
 
-                preview.debug();
                 expect(
                     within(getByTestId('testForm-date-from')).getByText('Must not be after "to" date'),
                 ).toBeInTheDocument();
@@ -213,7 +264,7 @@ describe('DisplayReportInterface', () => {
                 },
                 onChange: onChangeFn,
             });
-            preview.debug();
+
             // in default state, all fields are optional
             expect(getByTestId('testForm-input')).toHaveValue('System alert log');
             expect(getByTestId('testForm-date-from')).not.toHaveTextContent('Required');
@@ -242,9 +293,28 @@ describe('DisplayReportInterface', () => {
             );
         });
 
-        it('should fire the change function when choosing dates', async () => {
-            // hERE, update the rest of the tests for system alert log.
-            // also need to add tests for firing the run report, export buttons
+        it('should fire the change function when entering a system id', async () => {
+            const onChangeFn = jest.fn();
+            const { getByTestId } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'System alert log',
+                        value: 'systemalertlog',
+                    },
+                },
+                onChange: onChangeFn,
+            });
+
+            await userEvent.type(getByTestId('testForm-system-alert-id-input'), '3');
+            expect(onChangeFn).toHaveBeenLastCalledWith({
+                type: 'systemAlertId',
+                value: '3',
+            });
+        });
+
+        it('should fire the change function when choosing dates and system id', async () => {
             const onChangeFn = jest.fn();
             const { getByTestId } = setup({
                 state: {
@@ -259,7 +329,6 @@ describe('DisplayReportInterface', () => {
             });
 
             await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
-
             expect(onChangeFn).toHaveBeenLastCalledWith(
                 expect.objectContaining({
                     type: 'fromDate',
@@ -268,7 +337,6 @@ describe('DisplayReportInterface', () => {
             );
 
             await userEvent.type(getByTestId('testForm-date-to-input'), '01/05/2023');
-
             expect(onChangeFn).toHaveBeenLastCalledWith(
                 expect.objectContaining({
                     type: 'toDate',
@@ -277,23 +345,133 @@ describe('DisplayReportInterface', () => {
             );
         });
 
+        it('should call the report function', async () => {
+            const onReportClickFn = jest.fn();
+            const { getByTestId, getByRole } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'System alert log',
+                        value: 'systemalertlog',
+                    },
+                },
+                onReportClick: onReportClickFn,
+            });
+
+            expect(getByTestId('testForm-input')).toHaveValue('System alert log');
+            await userEvent.click(getByRole('button', { name: 'Run report' }));
+            expect(onReportClickFn).toHaveBeenCalled();
+        });
+
+        it('should call the export function', async () => {
+            const onExportClickFn = jest.fn();
+            const { getByTestId, getByRole } = setup({
+                state: {
+                    ...defaultState,
+                    type: 'displayReport',
+                    displayReport: {
+                        label: 'System alert log',
+                        value: 'systemalertlog',
+                    },
+                },
+                exportDisabled: false,
+                onExportClick: onExportClickFn,
+            });
+
+            expect(getByTestId('testForm-input')).toHaveValue('System alert log');
+            await userEvent.click(getByRole('button', { name: 'Export' }));
+            expect(onExportClickFn).toHaveBeenCalled();
+        });
+
         describe('validation', () => {
-            it('should validate stuff', async () => {
+            it('should disable dates if system id defined', () => {
                 const onChangeFn = jest.fn();
-                const { getAllByRole, getByRole, getByTestId } = setup({ onChange: onChangeFn });
-
-                await userEvent.click(getByTestId('testForm-input'));
-                expect(getAllByRole('option').length).toBe(2);
-
-                await userEvent.click(getByRole('option', { name: 'Works history' }));
-                expect(getByTestId('testForm-input')).toHaveValue('Works history');
-
-                expect(onChangeFn).toHaveBeenCalledWith(
-                    expect.objectContaining({
+                const { getByTestId } = setup({
+                    state: {
+                        ...defaultState,
                         type: 'displayReport',
-                        value: expect.objectContaining({ value: 'workshistory' }),
-                    }),
-                );
+                        displayReport: {
+                            label: 'System alert log',
+                            value: 'systemalertlog',
+                        },
+                        systemAlertId: '123',
+                    },
+                    onChange: onChangeFn,
+                });
+
+                expect(getByTestId('testForm-system-alert-id-input')).not.toHaveAttribute('disabled');
+                expect(getByTestId('testForm-date-to-input')).toHaveAttribute('disabled');
+                expect(getByTestId('testForm-date-from-input')).toHaveAttribute('disabled');
+            });
+
+            it('date to should be required', async () => {
+                const onChangeFn = jest.fn();
+                const { getByRole, getByTestId } = setup({
+                    state: {
+                        ...defaultState,
+                        type: 'displayReport',
+                        displayReport: {
+                            label: 'System alert log',
+                            value: 'systemalertlog',
+                        },
+                        fromDate: '2023-04-02T00:00:00',
+                    },
+                    onChange: onChangeFn,
+                });
+
+                expect(getByTestId('testForm-input')).toHaveValue('System alert log');
+
+                expect(within(getByTestId('testForm-date-to')).getByText('Required')).toBeInTheDocument();
+
+                expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
+            });
+
+            it('date from should be required', async () => {
+                const onChangeFn = jest.fn();
+                const { getByRole, getByTestId } = setup({
+                    state: {
+                        ...defaultState,
+                        type: 'displayReport',
+                        displayReport: {
+                            label: 'System alert log',
+                            value: 'systemalertlog',
+                        },
+                        toDate: '2023-04-02T00:00:00',
+                    },
+                    onChange: onChangeFn,
+                });
+
+                expect(getByTestId('testForm-input')).toHaveValue('System alert log');
+
+                expect(within(getByTestId('testForm-date-from')).getByText('Required')).toBeInTheDocument();
+
+                expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
+            });
+
+            it('date to is after date from', async () => {
+                const onChangeFn = jest.fn();
+                const { getByRole, getByTestId } = setup({
+                    state: {
+                        ...defaultState,
+                        type: 'displayReport',
+                        displayReport: {
+                            label: 'System alert log',
+                            value: 'systemalertlog',
+                        },
+                        fromDate: '2023-04-02T00:00:00',
+                        toDate: '2023-01-01T00:00:00',
+                    },
+                    onChange: onChangeFn,
+                });
+
+                expect(getByTestId('testForm-input')).toHaveValue('System alert log');
+
+                expect(
+                    within(getByTestId('testForm-date-from')).getByText('Must not be after "to" date'),
+                ).toBeInTheDocument();
+
+                expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
             });
         });
     });

@@ -35,6 +35,11 @@ const Reports = () => {
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
+        // eslint-disable-next-line camelcase
+        adminDashboardConfigData: { legacy_reports: legacyReports },
+    } = useSelector(state => state.get('adminDashboardConfigReducer'));
+
+    const {
         adminDashboardDisplayReportData,
         adminDashboardDisplayReportDataParams,
         adminDashboardDisplayReportLoading,
@@ -104,6 +109,7 @@ const Reports = () => {
             locale: txt,
             actionState,
         });
+
         !!newColumns && setColumns(newColumns);
 
         const request = transformReportRequest(actionState);
@@ -111,7 +117,6 @@ const Reports = () => {
     };
 
     const handleDisplayReportChange = changes => {
-        console.log('change', changes);
         actionDispatch(changes);
     };
 
@@ -140,6 +145,7 @@ const Reports = () => {
                     exportReport={actionState.exportReport || defaultLegacyReportOption}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
+                    items={legacyReports || []}
                     onReportChange={handleExportReportChange}
                     onExportClick={handleExportReportClick}
                 />
