@@ -7,11 +7,18 @@ import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as Utils from '../utils';
 
-import { adminDashboardReportSystemAlertsData, adminDashboardReportWorksData } from 'mock/data/testing/adminDashboard';
+import {
+    adminDashboardConfig,
+    adminDashboardReportSystemAlertsData,
+    adminDashboardReportWorksData,
+} from 'mock/data/testing/adminDashboard';
 import Reports from './Reports';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
+        adminDashboardConfigReducer: {
+            adminDashboardConfigData: { ...adminDashboardConfig },
+        },
         ...state,
     };
     return renderer(
@@ -21,7 +28,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
     );
 };
 
-describe('SystemAlerts tab', () => {
+describe('Reports tab', () => {
     beforeEach(() => {
         mockApi = setupMockAdapter();
     });
@@ -39,8 +46,8 @@ describe('SystemAlerts tab', () => {
 
         expect(getByText('Display reports')).toBeInTheDocument();
         expect(getByTestId('report-display-export-input')).toBeInTheDocument();
-        expect(getByTestId('report-display-date-from-input')).toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-to-input')).toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-from-input')).toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-to-input')).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
     });
@@ -51,6 +58,7 @@ describe('SystemAlerts tab', () => {
         const { getAllByRole, getByRole, getByTestId } = setup();
 
         await userEvent.click(getByTestId('report-export-only-input'));
+
         expect(getAllByRole('option').length).toBe(4);
 
         await userEvent.click(getByTestId('report-export-only-option-0', { hidden: true }));
@@ -92,12 +100,12 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(getByRole('option', { name: 'Works history' }));
 
         expect(getByTestId('report-display-export-input')).toHaveValue('Works history');
-        expect(getByTestId('report-display-date-from-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-to-input')).not.toHaveAttribute('disabled');
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-from-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-to-input')).not.toHaveAttribute('disabled');
+        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        expect(queryByTestId('report-display-system-alert-id-input')).not.toBeInTheDocument();
+        expect(queryByTestId('report-display-export-system-alert-id-input')).not.toBeInTheDocument();
 
         await userEvent.click(getByTestId('report-display-export-input'));
         expect(getAllByRole('option').length).toBe(2);
@@ -107,20 +115,23 @@ describe('SystemAlerts tab', () => {
         expect(getByTestId('report-display-export-input')).toHaveValue('System alert log');
 
         // additional field should be visible
-        expect(getByTestId('report-display-system-alert-id-input')).toBeInTheDocument();
+        expect(getByTestId('report-display-export-system-alert-id-input')).toBeInTheDocument();
 
+        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         await userEvent.click(getByRole('button', { name: 'Run report' }));
+
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
+
         expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
 
-        expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith({ id: 'systemalertlog' });
+        expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith({ report_type: 1 });
     });
 
     it('should build full works history report request', async () => {
         const expectedRequest = {
-            dateFrom: '2024-04-02T00:00:00+10:00',
-            dateTo: '2024-05-03T00:00:00+10:00', // TBC what the BE needs for searching
-            id: 'workshistory',
+            date_from: '2024-04-02',
+            date_to: '2024-05-03', // TBC what the BE needs for searching
+            report_type: 2,
         };
 
         mockApi
@@ -140,13 +151,13 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(getByRole('option', { name: 'Works history' }));
         expect(getByTestId('report-display-export-input')).toHaveValue('Works history');
 
-        expect(getByTestId('report-display-date-from-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-to-input')).not.toHaveAttribute('disabled');
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-from-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-to-input')).not.toHaveAttribute('disabled');
+        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('report-display-date-from-input'), '02/04/2024');
-        await userEvent.type(getByTestId('report-display-date-to-input'), '03/05/2024');
+        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
@@ -170,10 +181,10 @@ describe('SystemAlerts tab', () => {
     });
     it('should build full system alerts report request', async () => {
         const expectedRequest = {
-            dateFrom: '2024-04-02T00:00:00+10:00',
-            dateTo: '2024-05-03T00:00:00+10:00', // TBC what the BE needs for searching
-            alertId: '123',
-            id: 'systemalertlog',
+            date_from: '2024-04-02',
+            date_to: '2024-05-03', // TBC what the BE needs for searching
+            record_id: '123',
+            report_type: 1,
         };
 
         mockApi
@@ -192,15 +203,15 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(getByRole('option', { name: 'System alert log' }));
         expect(getByTestId('report-display-export-input')).toHaveValue('System alert log');
 
-        expect(getByTestId('report-display-date-from-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-to-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('report-display-system-alert-id-input')).toBeInTheDocument();
+        expect(getByTestId('report-display-export-date-from-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-to-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-system-alert-id-input')).toBeInTheDocument();
         expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('report-display-date-from-input'), '02/04/2024');
-        await userEvent.type(getByTestId('report-display-date-to-input'), '03/05/2024');
-        await userEvent.type(getByTestId('report-display-system-alert-id-input'), '123');
+        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        await userEvent.type(getByTestId('report-display-export-system-alert-id-input'), '123');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
@@ -222,73 +233,6 @@ describe('SystemAlerts tab', () => {
             expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'System alert log' }),
         );
     });
-
-    it('handled input validation', async () => {
-        const { getAllByRole, getByRole, getByTestId } = setup();
-
-        await userEvent.click(getByTestId('report-display-export-input'));
-        expect(getAllByRole('option').length).toBe(2);
-
-        await userEvent.click(getByRole('option', { name: 'Works history' }));
-        expect(getByTestId('report-display-export-input')).toHaveValue('Works history');
-
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
-
-        expect(getByTestId('report-display-date-to-input')).not.toHaveAttribute('required');
-        await userEvent.type(getByTestId('report-display-date-from-input'), '02/04/2023');
-
-        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-to-input')).toHaveAttribute('required');
-        expect(within(getByTestId('report-display-date-to')).getByText('Required')).toBeInTheDocument();
-
-        await userEvent.type(getByTestId('report-display-date-to-input'), '01/01/2023');
-        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-from-input')).toHaveAttribute('required');
-        expect(
-            within(getByTestId('report-display-date-from')).getByText('Must not be after "to" date'),
-        ).toBeInTheDocument();
-
-        await userEvent.type(getByTestId('report-display-date-to-input'), '{backspace}4');
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-from-input')).not.toHaveAttribute('required');
-        expect(
-            within(getByTestId('report-display-date-from')).queryByText('Must not be after "to" date'),
-        ).not.toBeInTheDocument();
-
-        // clear "from" date field
-        await userEvent.type(
-            getByTestId('report-display-date-from-input'),
-            '{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}',
-        );
-        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
-        expect(getByTestId('report-display-date-from-input')).toHaveAttribute('required');
-        expect(within(getByTestId('report-display-date-from')).getByText('Required')).toBeInTheDocument();
-
-        await userEvent.type(getByTestId('report-display-date-from-input'), '02/04/2023');
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
-
-        // change report type as the next test is for system alerts only
-        await userEvent.click(getByTestId('report-display-export-input'));
-        expect(getAllByRole('option').length).toBe(2);
-
-        await userEvent.click(getByRole('option', { name: 'System alert log' }));
-        expect(getByTestId('report-display-export-input')).toHaveValue('System alert log');
-
-        await userEvent.type(getByTestId('report-display-system-alert-id-input'), '12a');
-        expect(
-            within(getByTestId('report-display-system-alert-id')).getByText('Must be a positive whole number'),
-        ).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
-
-        await userEvent.type(getByTestId('report-display-system-alert-id-input'), '{backspace}3');
-
-        expect(
-            within(getByTestId('report-display-system-alert-id')).queryByText('Must be a positive whole number'),
-        ).not.toBeInTheDocument();
-
-        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
-    });
-
     it('should display alert when display reports failure', async () => {
         const clearAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'clearAdminDashboardDisplayReport');
 

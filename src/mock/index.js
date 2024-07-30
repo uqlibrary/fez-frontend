@@ -683,11 +683,19 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }];
     }) 
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'workshistory', dateFrom: '.*', dateTo: '.*'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 2, date_from: '.*', date_to: '.*'}).apiUrl))
     )
     .reply(200, { data: [...mockData.adminDashboardReportWorksData] })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'systemalertlog', dateFrom: '.*', dateTo: '.*', alertId: '.*'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, date_from: '.*', date_to: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, record_id: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [{...mockData.adminDashboardReportSystemAlertsData[0]}]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1}).apiUrl))
     )
     .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]});
 

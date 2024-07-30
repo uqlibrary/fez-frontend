@@ -129,5 +129,9 @@ describe('AdminDashboard', () => {
             expect(getByTestId('admin-dashboard-tabs-2')).toBeInTheDocument();
             expect(queryByText('Test child')).not.toBeInTheDocument();
         });
+        it('should render nothing', () => {
+            const { getByTestId } = render(<CustomTabPanel />);
+            expect(getByTestId('admin-dashboard-tabs-undefined')).toBeInTheDocument();
+        });
     });
 });

@@ -163,10 +163,13 @@ export default {
                     },
                     columns: {
                         workshistory: {
+                            id: 'ID',
                             dateCreated: 'Date created',
+                            pubDate: 'Date published',
                             pid: 'PID',
-                            workType: 'Work type',
-                            user: 'User',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
                             action: 'Action',
                         },
                         systemalertlog: {
@@ -189,32 +192,6 @@ export default {
                         systemAlertId: 'Must be a positive whole number',
                     },
                     options: {
-                        export: [
-                            {
-                                value: 1,
-                                label: 'Wok ID dups',
-                                subtext:
-                                    'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
-                            },
-                            {
-                                value: 2,
-                                label: 'Scopus ID Dups',
-                                subtext:
-                                    'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
-                            },
-                            {
-                                value: 3,
-                                label: 'DOI Dups',
-                                subtext:
-                                    'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
-                            },
-                            {
-                                value: 4,
-                                label: 'UQ Incites Authors',
-                                subtext:
-                                    'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
-                            },
-                        ],
                         display: [
                             {
                                 value: 'workshistory',

@@ -67,6 +67,7 @@ const SystemAlerts = () => {
 
         dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
             .then(() => {
+                /* istanbul ignore else */
                 if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
                     closeDrawer();
                 }
