@@ -109,7 +109,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
             >
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                 data-analyticsid="submitMasquerade"
                 data-testid="submit-masquerade"
                 id="submitMasquerade"
@@ -236,7 +236,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
               class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
             >
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                 data-analyticsid="submitMasquerade"
                 data-testid="submit-masquerade"
                 id="submitMasquerade"

@@ -13,7 +13,7 @@ exports[`FormViewToggler component should render default view 1`] = `
       >
         <span
           aria-label="Switch to tabbed mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input
@@ -76,7 +76,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       >
         <span
           aria-label="Switch to full form mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input

@@ -659,7 +659,45 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, { ...mockData.collectionList });
+    .reply(200, { ...mockData.collectionList })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardConfig} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_TODAY_API().apiUrl))
+    )
+    .reply(200, { data: {...mockData.adminDashboardToday} })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardQuickLinks] })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({id: '.*'}).apiUrl)))
+    .reply(config => {
+        return [200, `Exported file contents for report ${config.url.split('=')[1]}`, {
+            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        }];
+    }) 
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 2, date_from: '.*', date_to: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardReportWorksData] })
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, date_from: '.*', date_to: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, record_id: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [{...mockData.adminDashboardReportSystemAlertsData[0]}]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1}).apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]});
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -805,7 +843,12 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             aut_id: 111,
             aut_display_name: 'Mock Test',
         },
-    });
+    })
+    .onPost(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [201, {}])
+    .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    .reply(() => [201, {}]);
+    
 // .networkErrorOnce();
 // .reply(409, { data: 'Server error' });
 
@@ -841,6 +884,13 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
 
     .onPut(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
     .reply(200, mockData.currentAuthor.uqstaff)
+
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
+    // .reply(422, { message: 'failed to save quicklink update' })
+    .reply(201, {})
+
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
+    .reply(201, {})
 
     .onAny()
     .reply(config => {
