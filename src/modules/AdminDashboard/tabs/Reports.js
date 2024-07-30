@@ -11,7 +11,7 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import { getDisplayReportColumns, defaultLegacyReportOption } from '../config';
+import { getDisplayReportColumns, defaultLegacyReportOption, getReportTypeFromValue } from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 import { transformReportRequest } from '../transformers';
@@ -120,6 +120,14 @@ const Reports = () => {
         actionDispatch(changes);
     };
 
+    const getRowId = row => {
+        const report =
+            actionState?.displayReport?.value ||
+            getReportTypeFromValue(adminDashboardDisplayReportDataParams?.report_type);
+
+        return report === 'workshistory' ? row.pre_id : row.sat_id;
+    };
+
     return (
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
             <StandardCard noHeader>
@@ -184,9 +192,7 @@ const Reports = () => {
                         <Grid container mt={2}>
                             <Grid item xs={12}>
                                 <DataGrid
-                                    getRowId={row =>
-                                        actionState?.displayReport?.value === 'workshistory' ? row.pre_id : row.sat_id
-                                    }
+                                    getRowId={getRowId}
                                     rows={adminDashboardDisplayReportData}
                                     columns={
                                         columns

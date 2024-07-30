@@ -37,21 +37,25 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
     const [toDateError, setToDateError] = React.useState('');
     const [systemAlertError, setSystemAlertError] = React.useState('');
 
+    const isValidNumber = value => {
+        const numValue = Number(value);
+        return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
+    };
     const isValid = React.useMemo(() => {
         if (!!displayReport) {
             setFromDateError('');
             setToDateError('');
             setSystemAlertError('');
-            const _systemAlertId = Number(systemAlertId);
-            if (displayReport === 'systemalertlog' && ((!!!fromDate && !!!toDate) || systemAlertId !== '')) return true;
-            if (
-                displayReport === 'systemalertlog' &&
-                systemAlertId.trim() !== '' &&
-                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0 || systemAlertId.includes('.'))
-            ) {
-                setSystemAlertError(locale.systemAlertId);
-                return false;
+
+            if (displayReport === 'systemalertlog') {
+                const validSystemId = isValidNumber(systemAlertId);
+                if (!!!fromDate && !!!toDate && validSystemId) return true;
+                else if (!validSystemId) {
+                    setSystemAlertError(locale.systemAlertId);
+                    return false;
+                }
             }
+
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
 

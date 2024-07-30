@@ -67,15 +67,17 @@ describe('hooks', () => {
         });
 
         it('return expected validation results', () => {
+            let displayReport = '';
             let systemAlertId = '';
             let fromDate = null;
             let toDate = null;
 
-            // no inputs = valid
+            // no inputs = invalid
             const { result, rerender } = renderHook(() =>
                 useValidateReport({ locale, displayReport, systemAlertId, fromDate, toDate }),
             );
-            expect(result.current.isValid).toBe(true);
+            expect(result.current.isValid).toBe(false);
+            displayReport = 'systemalertlog';
             systemAlertId = 'abc'; // invalid system id
             rerender();
             expect(result.current.isValid).toBe(false);
@@ -89,6 +91,16 @@ describe('hooks', () => {
             expect(result.current.isValid).toBe(false);
             expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
 
+            displayReport = 'workshistory';
+            systemAlertId = '123'; // should be ignored
+            toDate = null;
+            fromDate = null;
+            rerender(); // invalid, works history requires dates
+            expect(result.current.isValid).toBe(false);
+            expect(result.current.fromDateError).toEqual(locale.required);
+            expect(result.current.toDateError).toEqual(locale.required);
+
+            displayReport = 'systemalertlog';
             systemAlertId = '123'; // valid
             toDate = '12/12/2024'; // 'to' without 'from'
             rerender();
