@@ -629,10 +629,10 @@ export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
 });
 
 // eslint-disable-next-line camelcase
-export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_id }) => {
+export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ id }) => {
     return {
         // eslint-disable-next-line camelcase
-        apiUrl: `dashboard/reports?report_id=${report_id}`,
+        apiUrl: `dashboard/legacy-reports?sel_id=${id}`,
     };
 };
 

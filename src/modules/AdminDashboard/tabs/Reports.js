@@ -82,7 +82,7 @@ const Reports = () => {
             dispatch(
                 actions.loadAdminDashboardExportReport({
                     id: exportReportValue,
-                    export_to: 'excel',
+                    export_to: 'csv',
                 }),
             ).catch(
                 /* istanbul ignore next */ error => {

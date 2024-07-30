@@ -70,7 +70,7 @@ describe('Reports tab', () => {
         expect(within(getByRole('button', { name: 'Export report' })).getByRole('progressbar')).toBeInTheDocument();
         expect(getByRole('button', { name: 'Export report' })).toHaveAttribute('disabled');
 
-        expect(loadAdminDashboardExportReportFn).toHaveBeenCalledWith({ export_to: 'excel', id: 1 });
+        expect(loadAdminDashboardExportReportFn).toHaveBeenCalledWith({ export_to: 'csv', id: 1 });
     });
 
     it('should display alert when export-only reports failure', async () => {
