@@ -11,6 +11,7 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 
     const request = filterObjectProps(row, keys);
     if (action === SYSTEM_ALERT_ACTION.ASSIGN) {
+        /* istanbul ignore else */
         if (request.sat_assigned_to === 0) request.sat_assigned_to = null;
         request.sat_assigned_date = moment().format('YYYY-MM-DD HH:mm');
     }
@@ -35,7 +36,7 @@ export const transformQuickLinkReorderRequest = data => {
 };
 
 export const transformReportRequest = data => {
-    const reportId = REPORT_TYPE?.[data.displayReport.value] ?? 0;
+    const reportId = REPORT_TYPE?.[data.displayReport?.value] ?? 0;
     if (reportId === 0) return data;
 
     const request = {

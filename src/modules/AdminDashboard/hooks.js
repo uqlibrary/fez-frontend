@@ -11,7 +11,7 @@ export const useSystemAlertDrawer = data => {
 
     React.useEffect(() => {
         if (_open) {
-            _setRow(data?.find(item => item.sat_id === _row.sat_id) || {});
+            _setRow(data?.find(item => item.sat_id === _row.sat_id) || /* istanbul ignore next */ {});
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);

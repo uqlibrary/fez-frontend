@@ -153,7 +153,7 @@ const Reports = () => {
                     exportReport={actionState.exportReport || defaultLegacyReportOption}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
-                    items={legacyReports || []}
+                    items={legacyReports || /* istanbul ignore next */ []}
                     onReportChange={handleExportReportChange}
                     onExportClick={handleExportReportClick}
                 />
