@@ -13,6 +13,8 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const fs = require('fs');
+
 module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
     // `config` is the resolved Cypress config
@@ -21,5 +23,10 @@ module.exports = (on, config) => {
     // per https://github.com/cypress-io/code-coverage#instrument-unit-tests
     require('@cypress/code-coverage/task')(on, config);
     on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
+    on('task', {
+        downloads: downloadspath => {
+            return fs.readdirSync(downloadspath);
+        },
+    });
     return config;
 };

@@ -25,5 +25,6 @@ export * from './search';
 export * from './thirdPartyLookupTool';
 export * from './viewRecord';
 export * from './viewCommunitiesCollections';
-export * from './viewControlledVocab';
 export * from './adminScaleSignificance';
+export * from './viewControlledVocab';
+export * from './adminDashboard';

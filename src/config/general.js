@@ -610,6 +610,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    csv: 'csv',
 };
 
 export const ORG_UNITS_VOCAB_ID = 453703;
