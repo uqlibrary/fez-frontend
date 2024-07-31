@@ -1048,4 +1048,43 @@ describe('Backend routes method', () => {
     it('should construct url for CHILD_VOCAB_LIST_API', () => {
         expect(routes.CHILD_VOCAB_LIST_API(123).apiUrl).toMatch('vocabularies/admin/123');
     });
+
+    it('should construct url for ADMIN_DASHBOARD_EXPORT_REPORT_API', () => {
+        expect(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: 123 }).apiUrl).toMatch(
+            'dashboard/legacy-reports?sel_id=123',
+        );
+    });
+    it('should construct url for ADMIN_DASHBOARD_DISPLAY_REPORT_API', () => {
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+                date_to: '2024-01-10',
+                record_id: 123,
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01&date_to=2024-01-10&record_id=123');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+                date_to: '2024-01-10',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01&date_to=2024-01-10');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                date_from: '2024-01-01',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&date_from=2024-01-01');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1');
+
+        expect(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({}).apiUrl).toMatch('dashboard/reports?');
+    });
 });

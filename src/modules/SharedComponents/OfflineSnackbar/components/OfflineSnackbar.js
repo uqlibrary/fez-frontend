@@ -1,39 +1,29 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+
 import Snackbar from '@mui/material/Snackbar';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
 import locale from 'locale/global';
 
-export class OfflineSnackbar extends PureComponent {
-    static propTypes = {
-        classes: PropTypes.object,
-    };
+export const OfflineSnackbar = () => {
+    const [state, setState] = React.useState({ open: !navigator.onLine, online: navigator.onLine });
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            open: !navigator.onLine,
-            online: navigator.onLine,
+    React.useEffect(() => {
+        const updateOnlineState = () => {
+            setState({ open: true, online: navigator.onLine });
         };
-    }
 
-    componentDidMount() {
-        window.addEventListener('online', this.updateOnlineState);
-        window.addEventListener('offline', this.updateOnlineState);
-    }
+        window.addEventListener('online', updateOnlineState);
+        window.addEventListener('offline', updateOnlineState);
 
-    componentWillUnmount() {
-        window.removeEventListener('online', this.updateOnlineState);
-        window.removeEventListener('offline', this.updateOnlineState);
-    }
+        return () => {
+            window.removeEventListener('online', updateOnlineState);
+            window.removeEventListener('offline', updateOnlineState);
+        };
+    }, []);
 
-    updateOnlineState = () => {
-        this.setState({ open: true, online: navigator.onLine });
-    };
-
-    renderMessage = (message, icon) => {
+    const renderMessage = (message, icon) => {
         return (
             <Grid container alignItems={'center'} justifyContent={'center'} alignContent={'center'}>
                 <Grid item xs />
@@ -46,43 +36,41 @@ export class OfflineSnackbar extends PureComponent {
         );
     };
 
-    handleRequestClose = () => {
-        this.setState({ open: false });
+    const handleRequestClose = () => {
+        setState({ open: false });
     };
 
-    render() {
-        const txt = locale.global.offlineSnackbar;
-        const snackbarProps = this.state.online
-            ? {
-                  ...txt.online,
-                  message: this.renderMessage(txt.online.message, <Link sx={{ color: 'success.light' }} />),
-              }
-            : {
-                  ...txt.offline,
-                  message: this.renderMessage(txt.offline.message, <LinkOff sx={{ color: 'error.light' }} />),
-              };
+    const txt = locale.global.offlineSnackbar;
+    const snackbarProps = state.online
+        ? {
+              ...txt.online,
+              message: renderMessage(txt.online.message, <Link sx={{ color: 'success.light' }} />),
+          }
+        : {
+              ...txt.offline,
+              message: renderMessage(txt.offline.message, <LinkOff sx={{ color: 'error.light' }} />),
+          };
 
-        return (
-            <div className="offlineSnackbar">
-                <Snackbar
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    open={this.state.open}
-                    onClose={this.handleRequestClose}
-                    message={snackbarProps.message}
-                    autoHideDuration={snackbarProps.autoHideDuration}
-                    ClickAwayListenerProps={{
-                        onClickAway: /* istanbul ignore next */ () => {
-                            /* istanbul ignore next */
-                            return false;
-                        },
-                    }}
-                />
-            </div>
-        );
-    }
-}
+    return (
+        <div className="offlineSnackbar">
+            <Snackbar
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                open={state.open}
+                onClose={handleRequestClose}
+                message={snackbarProps.message}
+                autoHideDuration={snackbarProps.autoHideDuration}
+                ClickAwayListenerProps={{
+                    onClickAway: /* istanbul ignore next */ () => {
+                        /* istanbul ignore next */
+                        return false;
+                    },
+                }}
+            />
+        </div>
+    );
+};
 
-export default OfflineSnackbar;
+export default React.memo(OfflineSnackbar);

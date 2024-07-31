@@ -266,6 +266,16 @@ describe('isAuthorOrEditorSelected', () => {
         );
         expect(testMessage.onlyOneOfAuthorOrEditor).toEqual(locale.validationErrors.onlyOneOfAuthorOrEditor);
     });
+
+    it('should return editors required error message even when authors exist', () => {
+        const testMessage = validation.isAuthorOrEditorSelected(
+            { authors: ['author 1', 'author 2'], editors: [] },
+            true,
+            true,
+            true,
+        );
+        expect(testMessage.editors).toEqual(locale.validationErrors.editorRequiredAdmin);
+    });
 });
 
 describe('getErrorAlertProps ', () => {

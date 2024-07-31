@@ -1,1 +1,1 @@
-export { default as ThirdPartyLookupTool } from './containers/ThirdPartyLookupTool';
+export { default as ThirdPartyLookupTool } from './components/ThirdPartyLookupTool';

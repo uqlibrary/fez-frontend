@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     adminDashboardDisplayReportData: null,
-    adminDashboardDisplayReportDataType: null,
+    adminDashboardDisplayReportDataParams: null,
     adminDashboardDisplayReportLoading: false,
     adminDashboardDisplayReportSuccess: null,
     adminDashboardDisplayReportFailed: null,
@@ -12,7 +12,7 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING]: (_, action) => ({
         ...initialState,
         adminDashboardDisplayReportLoading: true,
-        adminDashboardDisplayReportDataType: action.value,
+        adminDashboardDisplayReportDataParams: action.params,
     }),
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS]: (state, action) => ({
         ...state,

@@ -796,5 +796,59 @@ context('Journal Article admin edit', () => {
             });
             cy.get('[data-testid^="contributor-errorIcon-80316"]').should('not.exist');
         });
+
+        it.only('coverage - does not lose edited affiliation information when moving between admin tabs', () => {
+            cy.adminEditTabbedView();
+
+            cy.get('[data-testid="authors-tab"]').click();
+
+            cy.get('[data-testid^=contributor-errorIcon-]').should('exist');
+
+            cy.get('[data-testid=expandPanelIcon-3223]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid=detailPanel-3223]').contains('[data-testid=orgChip-error]', '0%');
+            cy.get('[data-testid=detailPanel-3223]').contains('No affiliations have been added');
+            cy.get('[data-testid=alert]').contains(
+                'Author affiliation information is incomplete - Author requires at least one affiliation to be added',
+            );
+
+            cy.get('[data-testid^=affiliationEditBtn-]')
+                .should('exist')
+                .click();
+            cy.addAffiliationAndAssert('Aboriginal and Torres Strait Islander Studies Unit', 877, '100%');
+
+            cy.get('[data-testid=affiliationSaveBtn]')
+                .should('not.be.disabled')
+                .click();
+
+            cy.get('[data-testid=detailPanel-3223]').contains('[data-testid=orgChip-877]', '100%');
+            cy.get('[data-testid=detailPanel-3223]').contains('Aboriginal and Torres Strait Islander Studies Unit');
+
+            // add new author WITHOUT uq ID
+            cy.get('[data-testid=rek-author-add]').click();
+            cy.get('[data-testid=rek-author-input]')
+                .click()
+                .type('Test author');
+            cy.get('[data-testid=rek-author-add-save]').click();
+
+            // nav away
+            cy.get('[data-testid="admin-tab"]').click();
+            cy.get('h4').contains('Member of collections');
+            cy.get('[data-testid="notes-tab"]').click();
+            cy.get('h4').contains('Additional notes');
+
+            // now nav back and assert
+            cy.get('[data-testid="authors-tab"]').click();
+            // check affiliations are still there
+            cy.get('[data-testid=expandPanelIcon-3223]')
+                .should('exist')
+                .click();
+            cy.get('[data-testid=detailPanel-3223]').contains('[data-testid=orgChip-877]', '100%');
+            cy.get('[data-testid=detailPanel-3223]').contains('Aboriginal and Torres Strait Islander Studies Unit');
+            // ensure the Test author is also still here
+            cy.get('[data-testid=rek-author-list-row-2-name-as-published]').contains('Test author');
+        });
     });
 });

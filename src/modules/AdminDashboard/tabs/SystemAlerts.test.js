@@ -9,10 +9,15 @@ import * as repositories from 'repositories';
 import { adminDashboardSystemAlerts } from 'mock/data/testing/adminDashboard';
 import SystemAlerts from './SystemAlerts';
 
+const mockUserid = 2333;
 const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
         adminDashboardConfigReducer: {
             adminDashboardConfigData: {
+                logged_in_user: {
+                    id: mockUserid,
+                    name: 'Lee Sibbald',
+                },
                 admin_users: [
                     { id: 13, name: 'Staff' },
                     { id: 23, name: 'Another Staff' },
@@ -115,7 +120,12 @@ describe('SystemAlerts tab', () => {
     });
 
     it('should open the admin drawer for a selected row', async () => {
-        const expectedUpdateRequest = { sat_id: 13 };
+        const expectedUpdateRequest = {
+            sat_id: 13,
+            sat_resolved_by: mockUserid,
+            sat_resolved_date: '2017-06-30 00:00',
+        };
+
         mockApi
             .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
             .reply(200, { data: [...adminDashboardSystemAlerts] });
@@ -124,6 +134,7 @@ describe('SystemAlerts tab', () => {
             .reply(200, {});
         const loadAdminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'loadAdminDashboardSystemAlerts');
         const adminDashboardSystemAlertsFn = jest.spyOn(DashboardActions, 'adminDashboardSystemAlerts');
+        const loadAdminDashboardTodayFn = jest.spyOn(DashboardActions, 'loadAdminDashboardToday');
 
         const { getByTestId, getByRole } = setup();
         expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalled();
@@ -132,13 +143,16 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(getByRole('gridcell', { name: '6th May 2024' }));
 
         await waitFor(() => getByTestId('system-alert-detail'));
+
         await userEvent.click(getByTestId('system-alert-detail-action-button'));
 
         expect(adminDashboardSystemAlertsFn).toHaveBeenCalledWith(expectedUpdateRequest);
-        await waitFor(() => expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalledTimes(2));
 
-        expect(
-            within(getByTestId('standard-card-content')).getByRole('progressbar', { hidden: true }),
-        ).toBeInTheDocument();
+        await waitFor(() => {
+            expect(loadAdminDashboardTodayFn).toHaveBeenCalled();
+            expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalledTimes(2);
+        });
+
+        await waitForElementToBeRemoved(getByTestId('system-alert-detail'));
     });
 });

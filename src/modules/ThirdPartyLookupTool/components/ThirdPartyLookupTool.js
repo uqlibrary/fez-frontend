@@ -1,6 +1,9 @@
-import React, { Fragment, PureComponent } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
+
+import { useSelector } from 'react-redux';
+import * as actions from 'actions';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -23,71 +26,65 @@ import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
  *    "https://api.library.uq.edu.au/staging/tool/lookup/incites/A1979HY31900010,A1979HY31900068/[APIKEY]".
  * - and that should be all that is required (but do examine how the result is displayed...)
  */
-export class ThirdPartyLookupTool extends PureComponent {
-    static propTypes = {
-        actions: PropTypes.object,
-        lookupResults: PropTypes.array,
-        loadingResults: PropTypes.bool,
-    };
-    static defaultProps = {
-        lookupResults: [],
-        loadingResults: false,
-    };
+export const ThirdPartyLookupTool = () => {
+    const [state, setState] = React.useState({
+        primaryValue: '',
+        secondaryValue: '',
+        formDisplay: {},
+    });
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            primaryValue: '',
-            secondaryValue: '',
-            formDisplay: {},
-        };
-    }
+    const { loadingResults, lookupResults } = useSelector(state => state.get('thirdPartyLookupToolReducer'));
 
-    recordInputs = (primaryValue, secondaryValue, formDisplay) => {
-        this.state.primaryValue = primaryValue;
-        this.state.secondaryValue = secondaryValue;
-        this.state.formDisplay = formDisplay;
+    const recordInputs = (primaryValue, secondaryValue, formDisplay) => {
+        setState({ primaryValue, secondaryValue, formDisplay });
     };
 
-    render() {
-        const localeContent = locale.components.thirdPartyLookupTools.display;
-        return (
-            <StandardPage title={localeContent.title}>
-                {this.props.loadingResults && <InlineLoader message={localeContent.loadingMessage} />}
-                {// this still needs work because we have to pass the specific form details for display
-                // pass through with the results? or via sendInputsToResultComponent ?
-                !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 && (
-                    <ThirdPartyLookupFormResult
-                        lookupResults={this.props.lookupResults}
-                        actions={this.props.actions}
-                        formDisplay={this.state.formDisplay}
-                        primaryValue={this.state.primaryValue}
-                        secondaryValue={this.state.secondaryValue}
-                        locale={localeContent}
-                    />
+    const localeContent = locale.components.thirdPartyLookupTools.display;
+    return (
+        <StandardPage title={localeContent.title}>
+            {loadingResults && <InlineLoader message={localeContent.loadingMessage} />}
+            {// this still needs work because we have to pass the specific form details for display
+            // pass through with the results? or via sendInputsToResultComponent ?
+            !loadingResults && !!lookupResults && lookupResults.length > 0 && (
+                <ThirdPartyLookupFormResult
+                    lookupResults={lookupResults}
+                    actions={actions}
+                    formDisplay={state.formDisplay}
+                    primaryValue={state.primaryValue}
+                    secondaryValue={state.secondaryValue}
+                    locale={localeContent}
+                />
+            )}
+
+            {!loadingResults &&
+                !!lookupResults &&
+                lookupResults.length === 0 &&
+                !!locale.components.thirdPartyLookupTools.forms &&
+                locale.components.thirdPartyLookupTools.forms.length > 0 && (
+                    <Fragment>
+                        {locale.components.thirdPartyLookupTools.forms.map(form => (
+                            <ThirdPartyLookupForm
+                                key={form.apiType}
+                                locale={localeContent}
+                                localeform={form}
+                                actions={actions}
+                                sendInputsToResultComponent={recordInputs} // function
+                                isMinimised={!!form.isMinimised}
+                            />
+                        ))}
+                    </Fragment>
                 )}
+        </StandardPage>
+    );
+};
+ThirdPartyLookupTool.propTypes = {
+    actions: PropTypes.object,
+    lookupResults: PropTypes.array,
+    loadingResults: PropTypes.bool,
+};
+ThirdPartyLookupTool.defaultProps = {
+    lookupResults: [],
+    loadingResults: false,
+};
 
-                {!this.props.loadingResults &&
-                    !!this.props.lookupResults &&
-                    this.props.lookupResults.length === 0 &&
-                    !!locale.components.thirdPartyLookupTools.forms &&
-                    locale.components.thirdPartyLookupTools.forms.length > 0 && (
-                        <Fragment>
-                            {locale.components.thirdPartyLookupTools.forms.map(form => (
-                                <ThirdPartyLookupForm
-                                    key={form.apiType}
-                                    locale={localeContent}
-                                    localeform={form}
-                                    actions={this.props.actions}
-                                    sendInputsToResultComponent={this.recordInputs} // function
-                                    isMinimised={!!form.isMinimised}
-                                />
-                            ))}
-                        </Fragment>
-                    )}
-            </StandardPage>
-        );
-    }
-}
-
-export default ThirdPartyLookupTool;
+export default React.memo(ThirdPartyLookupTool);

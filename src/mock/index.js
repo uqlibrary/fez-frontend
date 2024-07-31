@@ -74,7 +74,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock account response
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.accounts[user]) {
             return [200, mockData.accounts[user]];
         }
@@ -84,7 +84,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock current author details
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.authorDetails[user]) {
             return [200, mockData.authorDetails[user]];
         }
@@ -94,7 +94,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock current author details from fez
         if (user === 'anon') {
-            return [403, {}];
+            return [401, {}];
         } else if (mockData.currentAuthor[user]) {
             return [200, mockData.currentAuthor[user]];
         }
@@ -683,11 +683,19 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }];
     }) 
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'workshistory', dateFrom: '.*', dateTo: '.*'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 2, date_from: '.*', date_to: '.*'}).apiUrl))
     )
     .reply(200, { data: [...mockData.adminDashboardReportWorksData] })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({id: 'systemalertlog', dateFrom: '.*', dateTo: '.*', alertId: '.*'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, date_from: '.*', date_to: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, record_id: '.*'}).apiUrl))
+    )
+    .reply(200, { data: [{...mockData.adminDashboardReportSystemAlertsData[0]}]})
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1}).apiUrl))
     )
     .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]});
 
@@ -881,7 +889,7 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     // .reply(422, { message: 'failed to save quicklink update' })
     .reply(201, {})
 
-    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({row: '.*'}).apiUrl)))
+    .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
     .reply(201, {})
 
     .onAny()

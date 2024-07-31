@@ -566,7 +566,9 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
 `;
 
 exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
-<div>
+<div
+  aria-hidden="true"
+>
   <div
     class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >

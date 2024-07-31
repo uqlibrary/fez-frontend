@@ -1,57 +1,72 @@
 import React from 'react';
+import Immutable from 'immutable';
+
 import { trendingPublications, trendingPublicationsWithNoSources } from 'mock/data/testing/trendingPublications';
 import { MyTrendingPublications } from './MyTrendingPublications';
 import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
-import mui1theme from 'config';
+
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 
-function setup(testProps = {}) {
-    const props = {
-        classes: {},
-        theme: mui1theme,
-        actions: {
-            searchTrendingPublications: jest.fn(),
+import * as actions from 'actions';
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    searchTrendingPublications: jest.fn(),
+}));
+
+function setup(testState = {}) {
+    const state = {
+        myTrendingPublicationsReducer: {
+            trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
         },
-        ...testProps,
+        accountReducer: {},
+        ...testState,
     };
+
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
-                <MyTrendingPublications {...props} />
+                <MyTrendingPublications />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Component MyTrendingPublications', () => {
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+
     it('should render trending publications', () => {
-        const { container } = setup({
-            trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
-        });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should not render trending publications when there are no matching source counts in the api response', () => {
         const { container } = setup({
-            trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources),
+            myTrendingPublicationsReducer: {
+                trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources),
+            },
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should render loading indicator', () => {
-        const { container } = setup({ loadingTrendingPublications: true });
+        const { container } = setup({ myTrendingPublicationsReducer: { loadingTrendingPublications: true } });
         expect(container).toMatchSnapshot();
     });
 
-    it('should fetch data if account author details is loaded', () => {
-        const testFn = jest.fn();
-        setup({ accountAuthorDetailsLoading: false, actions: { searchTrendingPublications: testFn } });
-        expect(testFn).toHaveBeenCalled();
+    it('should fetch data if account author details are loaded', () => {
+        setup({
+            accountReducer: {
+                author: {},
+            },
+        });
+        expect(actions.searchTrendingPublications).toHaveBeenCalled();
     });
 
     it('should not fetch data if account author details is still loading', () => {
-        const testFn = jest.fn();
-        setup({ accountAuthorDetailsLoading: true, actions: { searchTrendingPublications: testFn } });
-        expect(testFn).not.toBeCalled();
+        setup();
+        expect(actions.searchTrendingPublications).not.toHaveBeenCalled();
     });
 });

@@ -50,8 +50,8 @@ describe('Academic action creators', () => {
         },
     );
 
-    it('should dispatch 3 actions on error 403 while fetching current author stats data', async () => {
-        mockApi.onAny().reply(403);
+    it('should dispatch 3 actions on error 401 while fetching current author stats data', async () => {
+        mockApi.onAny().reply(401);
 
         const expectedActions = [
             actions.AUTHOR_PUBLICATIONS_STATS_LOADING,

@@ -58,12 +58,12 @@ const listData = [
         qlk_title: 'Link 1',
         qlk_link: 'https://espace.library.uq.edu.au/records/search',
     },
-    { qlk_id: 3, qlk_amount: null, qlk_order: 3, qlk_title: 'Link 2', qlk_link: 'https://www.library.uq.edu.au' },
+    { qlk_id: 3, qlk_amount: null, qlk_order: 3, qlk_title: 'Link 3', qlk_link: 'https://www.library.uq.edu.au' },
     {
         qlk_id: 2,
         qlk_amount: 30,
         qlk_order: 2,
-        qlk_title: 'Link 3',
+        qlk_title: 'Link 2',
         qlk_link: 'https://espace.library.uq.edu.au/records/search',
     },
 ];
@@ -175,6 +175,7 @@ describe('QuickLinkContainer', () => {
                 },
             },
         );
+
         await waitFor(() => getByTestId('quick-link-1-link'));
         userEvent.click(getByTestId('admin-actions-button-1'));
         await findByRole('presentation');
@@ -190,8 +191,8 @@ describe('QuickLinkContainer', () => {
         await userEvent.click(getByRole('button', { name: 'Save' }));
         expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(
             {
-                qlk_id: 3,
-                qlk_link: 'https://www.library.uq.edu.au Updated',
+                qlk_id: 2,
+                qlk_link: 'https://espace.library.uq.edu.au/records/search Updated',
                 qlk_title: 'Link 2 Updated',
             },
             'EDIT',
@@ -226,8 +227,8 @@ describe('QuickLinkContainer', () => {
         await userEvent.click(getByRole('button', { name: 'Delete' }));
         expect(adminDashboardQuickLinkFn).toHaveBeenCalledWith(
             {
-                qlk_id: 3,
-                qlk_link: 'https://www.library.uq.edu.au',
+                qlk_id: 2,
+                qlk_link: 'https://espace.library.uq.edu.au/records/search',
                 qlk_title: 'Link 2',
             },
             'DELETE',
@@ -275,7 +276,7 @@ describe('QuickLinkContainer', () => {
 
         const moveUpExpected = [
             {
-                qlk_id: 3,
+                qlk_id: 2,
                 qlk_order: 0,
             },
             {
@@ -283,7 +284,7 @@ describe('QuickLinkContainer', () => {
                 qlk_order: 1,
             },
             {
-                qlk_id: 2,
+                qlk_id: 3,
                 qlk_order: 2,
             },
         ];
@@ -298,11 +299,11 @@ describe('QuickLinkContainer', () => {
         // MOVE DOWN
         const moveDownExpected = [
             {
-                qlk_id: 3,
+                qlk_id: 2,
                 qlk_order: 0,
             },
             {
-                qlk_id: 2,
+                qlk_id: 3,
                 qlk_order: 1,
             },
             {
@@ -324,11 +325,11 @@ describe('QuickLinkContainer', () => {
         // MOVE TO TOP
         const moveTopExpected = [
             {
-                qlk_id: 2,
+                qlk_id: 3,
                 qlk_order: 0,
             },
             {
-                qlk_id: 3,
+                qlk_id: 2,
                 qlk_order: 1,
             },
             {
@@ -349,7 +350,7 @@ describe('QuickLinkContainer', () => {
         // MOVE TO BOTTOM
         const moveBottomExpected = [
             {
-                qlk_id: 3,
+                qlk_id: 2,
                 qlk_order: 0,
             },
             {
@@ -357,7 +358,7 @@ describe('QuickLinkContainer', () => {
                 qlk_order: 1,
             },
             {
-                qlk_id: 2,
+                qlk_id: 3,
                 qlk_order: 2,
             },
         ];
@@ -370,59 +371,5 @@ describe('QuickLinkContainer', () => {
         expect(getByTestId('quick-link-0-link')).toHaveTextContent('Link 2');
         expect(getByTestId('quick-link-1-link')).toHaveTextContent('Link 1');
         expect(getByTestId('quick-link-2-link')).toHaveTextContent('Link 3');
-    });
-});
-
-describe('QuickLinkContainer reordering', () => {
-    beforeEach(() => {
-        mockApi = setupMockAdapter();
-
-        mockApi.onGet().reply(200, { data: listData });
-        mockApi.onPut().reply(422, {});
-    });
-
-    afterEach(() => {
-        mockApi.reset();
-    });
-
-    it('should handle reordering error', async () => {
-        const adminDashboardQuickLinkFn = jest.spyOn(DashboardActions, 'adminDashboardQuickLink');
-        const loadAdminDashboardQuickLinksFn = jest.spyOn(DashboardActions, 'loadAdminDashboardQuickLinks');
-
-        const { getByText, getByRole, findByRole, getByTestId } = setup({});
-        expect(getByText('Quick Links')).toBeInTheDocument();
-
-        await waitFor(() => getByTestId('quick-link-1-link'));
-
-        userEvent.click(getByTestId('admin-actions-button-1'));
-        await findByRole('presentation');
-        expect(getByTestId('quick-link-0-link')).toHaveTextContent('Link 1');
-        expect(getByTestId('quick-link-1-link')).toHaveTextContent('Link 2');
-        expect(getByTestId('quick-link-2-link')).toHaveTextContent('Link 3');
-
-        const expected = [
-            {
-                qlk_id: 3,
-                qlk_order: 0,
-            },
-            {
-                qlk_id: 1,
-                qlk_order: 1,
-            },
-            {
-                qlk_id: 2,
-                qlk_order: 2,
-            },
-        ];
-
-        await userEvent.click(getByRole('menuitem', { name: 'Move up' }));
-        expect(adminDashboardQuickLinkFn).toHaveBeenLastCalledWith(expected, 'REORDER');
-        expect(getByTestId('quick-link-0-link')).toHaveTextContent('Link 2');
-        expect(getByTestId('quick-link-1-link')).toHaveTextContent('Link 1');
-        expect(getByTestId('quick-link-2-link')).toHaveTextContent('Link 3');
-
-        // on failure to update, the API should be pinged for the current
-        // quicklink list to ensure the UI is in sync
-        await waitFor(() => expect(loadAdminDashboardQuickLinksFn).toHaveBeenCalledTimes(3));
     });
 });

@@ -1,6 +1,8 @@
 import React from 'react';
-import GrantListEditorRowWithWidth, { GrantListEditorRow } from './GrantListEditorRow';
+import GrantListEditorRow from './GrantListEditorRow';
 import { rtlRender, fireEvent } from 'test-utils';
+
+import * as Hook from 'hooks/useWidth';
 
 function setup(testProps = {}) {
     const props = {
@@ -13,29 +15,29 @@ function setup(testProps = {}) {
         onDelete: jest.fn(),
         // locale: {},
         disabled: false,
-        width: 'md',
         ...testProps,
     };
     return rtlRender(<GrantListEditorRow {...props} />);
 }
 
 describe('GrantListEditorRow', () => {
+    const useWidth = jest.spyOn(Hook, 'useWidth');
+
     it('should render default view', () => {
+        useWidth.mockImplementation(() => 'lg');
         const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should render default mobile view', () => {
-        const { container } = setup({ width: 'xs' });
-        expect(container).toMatchSnapshot();
-    });
+        useWidth.mockImplementation(() => 'xs');
+        const { container } = setup();
 
-    it('should use width hook', () => {
-        const { container } = rtlRender(<GrantListEditorRowWithWidth index={0} grant={{}} />);
         expect(container).toMatchSnapshot();
     });
 
     it('should render given locale', () => {
+        useWidth.mockImplementation(() => 'lg');
         const { container } = setup({
             locale: {
                 deleteRecordConfirmation: {},

@@ -1,45 +1,46 @@
-import * as Component from './ScrollToTop';
+import ScrollToTop from './ScrollToTop';
 import React from 'react';
 import { fireEvent, render } from 'test-utils';
 
-jest.mock('react-router-dom');
+let mockUseLocation = { pathname: '/' };
 
-const getComponent = (location = { pathname: '/' }) => (
-    <Component.ScrollToTop
-        {...{
-            location,
-            children: (
-                <div id="content-container" data-testid="content-container">
-                    tests
-                </div>
-            ),
-        }}
-    />
-);
-const setup = location => {
-    return render(getComponent(location));
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: () => mockUseLocation,
+}));
+
+const setup = (location, renderer = render) => {
+    !!location && (mockUseLocation = location);
+
+    return renderer(
+        <ScrollToTop>
+            <div id="content-container" data-testid="content-container">
+                tests
+            </div>
+        </ScrollToTop>,
+    );
 };
 
 describe('ScrollToTop component', () => {
     it('should scroll to top on location change', () => {
         const yPosition = 100;
-        const wrapper = setup();
+        const { getByTestId, rerender } = setup();
 
-        fireEvent.scroll(wrapper.getByTestId('content-container'), { target: { scrollTop: yPosition } });
-        expect(wrapper.getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
+        fireEvent.scroll(getByTestId('content-container'), { target: { scrollTop: yPosition } });
+        expect(getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
 
-        wrapper.rerender(getComponent({ pathname: '/test' }));
-        expect(wrapper.getByTestId('content-container')).toHaveProperty('scrollTop', 0);
+        setup({ pathname: '/test' }, rerender);
+        expect(getByTestId('content-container')).toHaveProperty('scrollTop', 0);
     });
 
     it('should not scroll to top on location change when scrollToTop state flag is false', () => {
         const yPosition = 100;
-        const wrapper = setup();
+        const { getByTestId, rerender } = setup();
 
-        fireEvent.scroll(wrapper.getByTestId('content-container'), { target: { scrollTop: yPosition } });
-        expect(wrapper.getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
+        fireEvent.scroll(getByTestId('content-container'), { target: { scrollTop: yPosition } });
+        expect(getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
 
-        wrapper.rerender(getComponent({ pathname: '/test', state: { scrollToTop: false } }));
-        expect(wrapper.getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
+        setup({ pathname: '/test', state: { scrollToTop: false } }, rerender);
+        expect(getByTestId('content-container')).toHaveProperty('scrollTop', yPosition);
     });
 });

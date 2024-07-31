@@ -3,6 +3,7 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     topCitedPublicationsList: [],
     loadingTopCitedPublications: false,
+    loadedTopCitedPublications: false,
 };
 
 const handlers = {
@@ -29,6 +30,7 @@ const handlers = {
             ...state,
             topCitedPublicationsList,
             loadingTopCitedPublications: false,
+            loadedTopCitedPublications: true,
         };
     },
 
@@ -37,6 +39,7 @@ const handlers = {
             ...state,
             trendingPublicationsList: action.payload.data,
             loadingTopCitedPublications: false,
+            loadedTopCitedPublications: true,
         };
     },
 
@@ -45,6 +48,7 @@ const handlers = {
             ...state,
             trendingPublicationsList: [],
             loadingTopCitedPublications: false,
+            loadedTopCitedPublications: false,
         };
     },
 };

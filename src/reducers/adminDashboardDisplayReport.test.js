@@ -5,10 +5,10 @@ describe('admin dashboard display report reducer', () => {
     it('returns the correct state while admin dashboard display report is loading', () => {
         const test = adminDashboardDisplayReportReducer(initialState, {
             type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING,
-            value: 1,
+            params: 1,
         });
         expect(test.adminDashboardDisplayReportLoading).toEqual(true);
-        expect(test.adminDashboardDisplayReportDataType).toEqual(1);
+        expect(test.adminDashboardDisplayReportDataParams).toEqual(1);
     });
 
     it('returns the correct state when admin dashboard display report is loaded', () => {

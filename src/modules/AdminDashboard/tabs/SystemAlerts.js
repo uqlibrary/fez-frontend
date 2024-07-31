@@ -15,7 +15,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { getSystemAlertColumns } from '../config';
+import { getSystemAlertColumns, SYSTEM_ALERT_ACTION } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
 import { useSystemAlertDrawer, useAlertStatus } from '../hooks';
 
@@ -35,7 +35,7 @@ const SystemAlerts = () => {
 
     const dispatch = useDispatch();
 
-    const { open, row, openDrawer, closeDrawer } = useSystemAlertDrawer();
+    const { open, row, openDrawer, closeDrawer } = useSystemAlertDrawer(adminDashboardSystemAlertsData);
 
     const [alertIsVisible, hideAlert] = useAlertStatus({
         message: adminDashboardSystemAlertsFailed || adminDashboardSystemAlertsUpdateFailed,
@@ -59,11 +59,20 @@ const SystemAlerts = () => {
         closeDrawer();
     };
     const handleSystemAlertUpdate = (action, row) => {
-        const wrappedRequest = transformSystemAlertRequest(action, row);
+        const wrappedRequest = transformSystemAlertRequest({
+            user: adminDashboardConfigData.logged_in_user,
+            action,
+            row,
+        });
 
         dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
             .then(() => {
+                /* istanbul ignore else */
+                if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
+                    closeDrawer();
+                }
                 dispatch(actions.loadAdminDashboardSystemAlerts());
+                dispatch(actions.loadAdminDashboardToday());
             })
             .catch(
                 /* istanbul ignore next */ error => {

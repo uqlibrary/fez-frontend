@@ -5,6 +5,8 @@ import { render, WithReduxStore, waitFor, within } from 'test-utils';
 import SystemAlertsDrawer from './SystemAlertsDrawer';
 import userEvent from '@testing-library/user-event';
 
+import { SYSTEM_ALERT_ACTION } from '../config';
+
 const locale = {
     alertStatus: {
         UNASSIGNED: 'Unassigned',
@@ -106,7 +108,10 @@ describe('SystemAlertsDrawer', () => {
         await userEvent.click(getByTestId('system-alert-detail-assignee-input'));
         await waitFor(() => expect(getByRole('listbox')));
         await userEvent.click(getByRole('option', { name: 'Staff' }));
-        expect(onSystemAlertUpdateFn).toHaveBeenCalledWith('assign', { id: 13, name: 'Staff' });
+        expect(onSystemAlertUpdateFn).toHaveBeenCalledWith(SYSTEM_ALERT_ACTION.ASSIGN, {
+            sat_id: 1,
+            sat_assigned_to: 13,
+        });
         setup(
             {
                 row: testRowUnassigned,
@@ -150,7 +155,7 @@ describe('SystemAlertsDrawer', () => {
 
         expect(getByRole('button', { name: locale.drawer.markResolved })).toBeInTheDocument();
         await userEvent.click(getByRole('button', { name: locale.drawer.markResolved }));
-        expect(onSystemAlertUpdateFn).toHaveBeenLastCalledWith('resolve', testRowAssigned);
+        expect(onSystemAlertUpdateFn).toHaveBeenLastCalledWith(SYSTEM_ALERT_ACTION.RESOLVE, testRowAssigned);
         setup(
             {
                 row: testRowAssigned,

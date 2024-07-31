@@ -11,7 +11,7 @@ jest.mock('react-redux', () => ({
 describe('hooks', () => {
     describe('useSystemAlertDrawer', () => {
         it('returns default state', () => {
-            const { result } = renderHook(() => useSystemAlertDrawer());
+            const { result } = renderHook(useSystemAlertDrawer);
 
             expect(result.current.open).toBe(false);
             expect(result.current.row).toEqual({});
@@ -19,7 +19,7 @@ describe('hooks', () => {
             expect(typeof result.current.closeDrawer).toEqual('function');
         });
         it('handles open/close state', () => {
-            const { result } = renderHook(() => useSystemAlertDrawer());
+            const { result } = renderHook(useSystemAlertDrawer);
             act(() => {
                 result.current.openDrawer({ id: '123' });
             });
@@ -31,6 +31,18 @@ describe('hooks', () => {
             });
             expect(result.current.open).toBe(false);
             expect(result.current.row).toEqual({});
+        });
+        it('handled row data updating when drawer is open', () => {
+            const init = { id: '123', value: 1 };
+            const { result, rerender } = renderHook(useSystemAlertDrawer, { initialProps: init });
+            expect(result.current.row).toEqual({});
+            act(() => {
+                result.current.openDrawer(init);
+            });
+            expect(result.current.open).toBe(true);
+            expect(result.current.row).toEqual(init);
+            rerender([{ ...init, value: 100 }]);
+            expect(result.current.row).toEqual({ id: '123', value: 100 });
         });
     });
 
@@ -55,15 +67,17 @@ describe('hooks', () => {
         });
 
         it('return expected validation results', () => {
+            let displayReport = '';
             let systemAlertId = '';
             let fromDate = null;
             let toDate = null;
 
-            // no inputs = valid
+            // no inputs = invalid
             const { result, rerender } = renderHook(() =>
                 useValidateReport({ locale, displayReport, systemAlertId, fromDate, toDate }),
             );
-            expect(result.current.isValid).toBe(true);
+            expect(result.current.isValid).toBe(false);
+            displayReport = 'systemalertlog';
             systemAlertId = 'abc'; // invalid system id
             rerender();
             expect(result.current.isValid).toBe(false);
@@ -77,6 +91,16 @@ describe('hooks', () => {
             expect(result.current.isValid).toBe(false);
             expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
 
+            displayReport = 'workshistory';
+            systemAlertId = '123'; // should be ignored
+            toDate = null;
+            fromDate = null;
+            rerender(); // invalid, works history requires dates
+            expect(result.current.isValid).toBe(false);
+            expect(result.current.fromDateError).toEqual(locale.required);
+            expect(result.current.toDateError).toEqual(locale.required);
+
+            displayReport = 'systemalertlog';
             systemAlertId = '123'; // valid
             toDate = '12/12/2024'; // 'to' without 'from'
             rerender();

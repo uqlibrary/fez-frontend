@@ -1,57 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class AudioDocumentCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const AudioDocumentCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        publisher: publication.fez_record_search_key_publisher
+            ? publication.fez_record_search_key_publisher.rek_publisher
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
+        series: publication.fez_record_search_key_series ? publication.fez_record_search_key_series.rek_series : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Audio
+    // {Creator}{Publication Year| (|).} <i>{Title| |.}</i> {Publisher| |.}{Series| |.} {doi| doi:|}
+    return (
+        <div className="citationContent citationAudio">
+            {/* {Creator}*/}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-            series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
-        };
+            {/* {Publication Year| (|).} */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for Audio
-        // {Creator}{Publication Year| (|).} <i>{Title| |.}</i> {Publisher| |.}{Series| |.} {doi| doi:|}
-        return (
-            <div className="citationContent citationAudio">
-                {/* {Creator}*/}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* {Publisher| |.}*/}
+            <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            {/* {Series| |.} */}
+            <Partials.CitationView className="citationSeries" value={record.series} />
 
-                {/* {Publisher| |.}*/}
-                <Partials.CitationView className="citationPublisher" value={record.publisher} />
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
 
-                {/* {Series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series} />
+AudioDocumentCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
 
-                {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} />
-            </div>
-        );
-    }
-}
+export default React.memo(AudioDocumentCitation);

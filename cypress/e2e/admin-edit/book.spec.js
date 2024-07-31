@@ -1,4 +1,5 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBook';
+import { default as editedBookList } from '../../../src/mock/data/records/publicationTypeListBookEdited';
 import { sherpaRomeo as sherpaMocks } from '../../../src/mock/data/sherpaRomeo';
 
 context('Book admin edit', () => {

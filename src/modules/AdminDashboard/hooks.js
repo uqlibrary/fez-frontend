@@ -5,9 +5,17 @@ import { useDispatch } from 'react-redux';
 import { useConfirmationState } from 'hooks';
 import { isEmptyStr } from './utils';
 
-export const useSystemAlertDrawer = () => {
+export const useSystemAlertDrawer = data => {
     const [_open, _setOpen] = React.useState(false);
     const [_row, _setRow] = React.useState({});
+
+    React.useEffect(() => {
+        if (_open) {
+            _setRow(data?.find(item => item.sat_id === _row.sat_id) || /* istanbul ignore next */ {});
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
+
     const openDrawer = row => {
         _setRow(row);
         _setOpen(true);
@@ -29,24 +37,33 @@ export const useValidateReport = ({ locale, displayReport, fromDate, toDate, sys
     const [toDateError, setToDateError] = React.useState('');
     const [systemAlertError, setSystemAlertError] = React.useState('');
 
+    const isValidNumber = value => {
+        const numValue = Number(value);
+        return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
+    };
     const isValid = React.useMemo(() => {
         if (!!displayReport) {
             setFromDateError('');
             setToDateError('');
             setSystemAlertError('');
-            const _systemAlertId = Number(systemAlertId);
 
-            if (
-                displayReport === 'systemalertlog' &&
-                systemAlertId.trim() !== '' &&
-                (!Number.isFinite(_systemAlertId) || _systemAlertId <= 0 || systemAlertId.includes('.'))
-            ) {
-                setSystemAlertError(locale.systemAlertId);
-                return false;
+            if (displayReport === 'systemalertlog') {
+                const validSystemId = isValidNumber(systemAlertId);
+                if (!!!fromDate && !!!toDate && validSystemId) return true;
+                else if (!validSystemId) {
+                    setSystemAlertError(locale.systemAlertId);
+                    return false;
+                }
             }
-            if (!!!fromDate && !!!toDate) return true;
+
             const mFrom = moment(fromDate);
             const mTo = moment(toDate);
+
+            if (displayReport === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+                setFromDateError(locale.required);
+                setToDateError(locale.required);
+                return false;
+            }
 
             if (mFrom.isValid() && !mTo.isValid()) {
                 setToDateError(locale.required);

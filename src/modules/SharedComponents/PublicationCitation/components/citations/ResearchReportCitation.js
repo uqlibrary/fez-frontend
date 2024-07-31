@@ -1,67 +1,54 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class ResearchReportCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool,
-        citationStyle: PropTypes.string,
+export const ResearchReportCitation = ({ publication, hideDoiLink, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        publisher: publication.fez_record_search_key_publisher
+            ? publication.fez_record_search_key_publisher.rek_publisher
+            : null,
+        placeOfPublication: publication.fez_record_search_key_place_of_publication
+            ? publication.fez_record_search_key_place_of_publication.rek_place_of_publication
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
+        series: publication.fez_record_search_key_series ? publication.fez_record_search_key_series.rek_series : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for ResearchReport
+    return (
+        <div className="citationContent citationResearchReport">
+            {/* authors list */}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
-                : null,
-            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication
-                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication
-                : null,
-            doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
-            series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
-        };
+            {/* publication year */}
+            <Partials.DateCitationView date={publication.rek_date} />
 
-        // eSpace citation view for ResearchReport
-        return (
-            <div className="citationContent citationResearchReport">
-                {/* authors list */}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* research report title */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* publication year */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+            {/* series */}
+            <Partials.CitationView className="citationSeries" value={record.series} />
 
-                {/* research report title */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+            {/* place of publication */}
+            <Partials.CitationView
+                className="citationPlaceOfPublication"
+                suffix=":"
+                value={record.placeOfPublication}
+            />
 
-                {/* series */}
-                <Partials.CitationView className="citationSeries" value={record.series} />
+            {/* publisher */}
+            <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
-                {/* place of publication */}
-                <Partials.CitationView
-                    className="citationPlaceOfPublication"
-                    suffix=":"
-                    value={record.placeOfPublication}
-                />
-
-                {/* publisher */}
-                <Partials.CitationView className="citationPublisher" value={record.publisher} />
-
-                {/* doi */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
-            </div>
-        );
-    }
-}
+            {/* doi */}
+            <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
+        </div>
+    );
+};
+ResearchReportCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    hideDoiLink: PropTypes.bool,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(ResearchReportCitation);

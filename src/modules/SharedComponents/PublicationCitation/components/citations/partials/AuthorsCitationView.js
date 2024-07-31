@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router-dom';
-import { withTheme } from 'helpers/withTheme';
+import { useTheme } from '@mui/material/styles';
 
 const classes = {
     authorIdLink: theme => ({
@@ -12,74 +12,26 @@ const classes = {
     }),
 };
 
-export class AuthorsCitationView extends PureComponent {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        searchKey: PropTypes.object,
-        idSearchKey: PropTypes.object,
-        className: PropTypes.string,
-        prefix: PropTypes.string,
-        suffix: PropTypes.string,
-        separator: PropTypes.string,
-        showLink: PropTypes.bool,
-        getLink: PropTypes.func,
-        maxAuthorDisplayNumber: PropTypes.number,
-        citationStyle: PropTypes.string,
-        theme: PropTypes.any,
-    };
+export const AuthorsCitationView = ({
+    publication,
+    searchKey,
+    idSearchKey,
+    className,
+    prefix,
+    suffix,
+    separator,
+    showLink,
+    getLink,
+    maxAuthorDisplayNumber,
+    citationStyle,
+}) => {
+    const { key, totalCountKey, order, subkey } = searchKey;
+    const { idKey, idOrder, idSubkey } = idSearchKey;
 
-    static defaultProps = {
-        suffix: ' ',
-        separator: ', ',
-        searchKey: {
-            key: 'fez_record_search_key_author',
-            subkey: 'rek_author',
-            order: 'rek_author_order',
-            totalCountKey: 'fez_record_search_key_author_id',
-        },
-        idSearchKey: {
-            idKey: 'fez_record_search_key_author_id',
-            idSubkey: 'rek_author_id',
-            idOrder: 'rek_author_id_order',
-        },
-        className: 'citationAuthors',
-        showLink: false,
-        getLink: pathConfig.list.author,
-    };
-
-    constructor(props) {
-        super(props);
-
-        const {
-            publication,
-            searchKey: { key, totalCountKey, order, subkey },
-        } = props;
-
-        // copy authors to separate variable so sorting doesn't change original record
-        const publicationAuthors = publication && publication[key] && [...publication[key]];
-        this.state = {
-            authorsTotal:
-                publication &&
-                (publication?.[totalCountKey] ?? publication[key]) &&
-                (publication?.[totalCountKey]?.length ?? publication[key].length),
-            authors:
-                publicationAuthors && Array.isArray(publicationAuthors)
-                    ? publicationAuthors.map(author => ({
-                          id: this.getAuthorId(author[order]),
-                          value: author[subkey],
-                          order: author[order],
-                      }))
-                    : [],
-        };
-    }
-
-    getAuthorId = order => {
+    // copy authors to separate variable so sorting doesn't change original record
+    const publicationAuthors = publication && publication[key] && [...publication[key]];
+    const getAuthorId = order => {
         let id = 0;
-        const {
-            publication,
-            idSearchKey: { idKey, idOrder, idSubkey },
-            showLink,
-        } = this.props;
 
         if (showLink) {
             const authorIds = publication && publication[idKey] && [...publication[idKey]];
@@ -95,25 +47,35 @@ export class AuthorsCitationView extends PureComponent {
 
         return id;
     };
+    const theme = useTheme();
+    const [state] = React.useState({
+        authorsTotal:
+            publication &&
+            (publication?.[totalCountKey] ?? publication[key]) &&
+            (publication?.[totalCountKey]?.length ?? publication[key].length),
+        authors:
+            publicationAuthors && Array.isArray(publicationAuthors)
+                ? publicationAuthors.map(author => ({
+                      id: getAuthorId(author[order]),
+                      value: author[subkey],
+                      order: author[order],
+                  }))
+                : [],
+    });
 
-    renderAuthors = (
-        theme,
-        authors,
-        separator,
-        showLink,
-        getLink,
-        maxAuthorDisplayNumber,
-        citationStyle,
-        authorsTotal,
-    ) => {
-        let authorsList = authors;
+    const renderAuthors = React.useCallback(() => {
+        const _maxAuthorDisplayNumber = !!maxAuthorDisplayNumber
+            ? maxAuthorDisplayNumber
+            : locale.components.publicationCitation.citationAuthors.maxAuthorDisplayNumber;
+
+        let authorsList = state.authors;
         if (citationStyle === 'header' || citationStyle === 'list') {
-            authorsList = authorsList.slice(0, maxAuthorDisplayNumber);
+            authorsList = authorsList.slice(0, _maxAuthorDisplayNumber);
         }
-        if (citationStyle === 'header' && authors.length > maxAuthorDisplayNumber) {
-            authorsList.push(authors[authors.length - 1]);
+        if (citationStyle === 'header' && state.authors.length > _maxAuthorDisplayNumber) {
+            authorsList.push(state.authors[state.authors.length - 1]);
         }
-        const numAuthorsMore = authorsTotal - authorsList.length;
+        const numAuthorsMore = state.authorsTotal - authorsList.length;
 
         return authorsList.map((author, index) => {
             const isLastAuthor = index === authorsList.length - 1;
@@ -123,12 +85,12 @@ export class AuthorsCitationView extends PureComponent {
             let prefix = '';
             if (isLastAuthor && hasMultipleAuthors) {
                 if (citationStyle === 'header') {
-                    if (authorsList.length < authorsTotal) {
+                    if (authorsList.length < state.authorsTotal) {
                         prefix = ' ... ';
                     } else {
                         prefix = ' and ';
                     }
-                } else if (authorsTotal === authorsList.length && index !== 0) {
+                } else if (state.authorsTotal === authorsList.length && index !== 0) {
                     prefix = ' and ';
                 }
             }
@@ -141,7 +103,7 @@ export class AuthorsCitationView extends PureComponent {
             }
 
             const key = `citationAuthor_${index + 1}`;
-            const testId = this.props.searchKey.subkey.replace(/_/g, '-');
+            const testId = searchKey.subkey.replace(/_/g, '-');
             let element = (
                 <CitationView
                     className="citationAuthor"
@@ -175,34 +137,68 @@ export class AuthorsCitationView extends PureComponent {
                 </React.Fragment>
             );
         });
-    };
+    }, [
+        maxAuthorDisplayNumber,
+        state.authors,
+        state.authorsTotal,
+        citationStyle,
+        searchKey.subkey,
+        showLink,
+        separator,
+        getLink,
+        theme,
+    ]);
 
-    render() {
-        const maxAuthorDisplayNumber = !!this.props.maxAuthorDisplayNumber
-            ? this.props.maxAuthorDisplayNumber
-            : locale.components.publicationCitation.citationAuthors.maxAuthorDisplayNumber;
-        const { theme, className, prefix, suffix, separator, showLink, getLink, citationStyle } = this.props;
-        const { authors, authorsTotal } = this.state;
+    if (state.authors.length === 0) return <span className={`${className || ''} empty`} />;
 
-        if (authors.length === 0) return <span className={`${className || ''} empty`} />;
+    return (
+        <span className={className || ''}>
+            {prefix}
+            {renderAuthors(
+                state.authors,
+                separator,
+                showLink,
+                getLink,
+                maxAuthorDisplayNumber,
+                citationStyle,
+                state.authorsTotal,
+            )}
+            {suffix}
+        </span>
+    );
+};
 
-        return (
-            <span className={className || ''}>
-                {prefix}
-                {this.renderAuthors(
-                    theme,
-                    authors,
-                    separator,
-                    showLink,
-                    getLink,
-                    maxAuthorDisplayNumber,
-                    citationStyle,
-                    authorsTotal,
-                )}
-                {suffix}
-            </span>
-        );
-    }
-}
+AuthorsCitationView.propTypes = {
+    publication: PropTypes.object.isRequired,
+    searchKey: PropTypes.object,
+    idSearchKey: PropTypes.object,
+    className: PropTypes.string,
+    prefix: PropTypes.string,
+    suffix: PropTypes.string,
+    separator: PropTypes.string,
+    showLink: PropTypes.bool,
+    getLink: PropTypes.func,
+    maxAuthorDisplayNumber: PropTypes.number,
+    citationStyle: PropTypes.string,
+};
 
-export default withTheme()(AuthorsCitationView);
+AuthorsCitationView.defaultProps = {
+    suffix: ' ',
+    separator: ', ',
+    searchKey: {
+        key: 'fez_record_search_key_author',
+        subkey: 'rek_author',
+        order: 'rek_author_order',
+        totalCountKey: 'fez_record_search_key_author_id',
+    },
+    idSearchKey: {
+        idKey: 'fez_record_search_key_author_id',
+        idSubkey: 'rek_author_id',
+        idOrder: 'rek_author_id_order',
+    },
+    className: 'citationAuthors',
+    showLink: false,
+    getLink: pathConfig.list.author,
+};
+
+export default React.memo(AuthorsCitationView);
