@@ -194,7 +194,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                                 <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
                                     <Stack spacing={2} marginBlockStart={2} role="list">
                                         {data
-                                            .sort((a, b) => a.qlk_order > b.qlk_order)
+                                            .sort((a, b) => a.qlk_order - b.qlk_order)
                                             .map((link, index) => (
                                                 <QuickLink
                                                     key={link.qlk_id}
