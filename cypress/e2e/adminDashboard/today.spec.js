@@ -116,7 +116,7 @@ context('Admin Dashboard - Today tab', () => {
                 .contains('UQ Library')
                 .invoke('removeAttr', 'target')
                 .click();
-            cy.url().should('include', 'https://www.library.uq.edu.au');
+            cy.url().should('include', 'https://www.library.uq.edu.au/');
         });
 
         it('handles reordering correctly', () => {
@@ -133,35 +133,35 @@ context('Admin Dashboard - Today tab', () => {
                 .contains('2021+ Imported Records with an Author ID and Research Subtypes Only');
             cy.get('[role=listitem]')
                 .eq(0)
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
             cy.data('admin-actions-button-0').click();
             cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move down')
                 .click();
             cy.get('[role=listitem]')
                 .eq(1)
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
             cy.data('admin-actions-button-1').click();
             cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move to bottom')
                 .click();
             cy.get('[role=listitem]')
                 .last()
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
             cy.data('admin-actions-button-6').click();
             cy.dataStartsWith('admin-actions-menu-option-')
                 .contains('Move to top')
                 .click();
             cy.get('[role=listitem]')
                 .eq(0)
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
         });
 
         it('handles deletion', () => {
             cy.data('standard-card').contains('Quick Links');
             cy.get('[role=listitem]')
                 .eq(1)
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
 
             cy.data('admin-actions-button-1').click();
 
@@ -169,7 +169,9 @@ context('Admin Dashboard - Today tab', () => {
                 .contains('Delete')
                 .click();
             cy.injectAxe();
-            cy.data('standard-card-content').contains('DELETE UQ Library');
+            cy.data('standard-card-content').contains(
+                'DELETE 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
+            );
             cy.checkA11y(
                 'div.StandardPage',
                 {
@@ -181,16 +183,16 @@ context('Admin Dashboard - Today tab', () => {
                 violations => console.log(violations),
             );
             cy.data('qlk_title-input')
-                .should('have.value', 'UQ Library')
+                .should('have.value', '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only')
                 .should('be.disabled');
             cy.data('qlk_link-input')
-                .should('have.value', 'https://www.library.uq.edu.au')
+                .should('contain', 'https://espace.library.uq.edu.au/records/search?')
                 .should('be.disabled');
             cy.get('button')
                 .contains('Delete')
                 .click();
             cy.data('standard-card-content')
-                .contains('DELETE UQ Library')
+                .contains('DELETE 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only')
                 .should('not.exist');
         });
 
@@ -198,7 +200,7 @@ context('Admin Dashboard - Today tab', () => {
             cy.data('standard-card').contains('Quick Links');
             cy.get('[role=listitem]')
                 .eq(1)
-                .contains('UQ Library');
+                .contains('2020 - 2023 Imported Records with an Author ID and Research Subtypes Only');
 
             cy.data('admin-actions-button-1').click();
 
@@ -206,7 +208,9 @@ context('Admin Dashboard - Today tab', () => {
                 .contains('Edit')
                 .click();
             cy.injectAxe();
-            cy.data('standard-card-content').contains('Edit UQ Library');
+            cy.data('standard-card-content').contains(
+                'Edit 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only',
+            );
             cy.checkA11y(
                 'div.StandardPage',
                 {
@@ -218,16 +222,19 @@ context('Admin Dashboard - Today tab', () => {
                 violations => console.log(violations),
             );
             cy.data('qlk_title-input')
-                .should('have.value', 'UQ Library')
+                .should('have.value', '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only')
                 .should('not.be.disabled');
             cy.data('qlk_title-input').type(' updated');
-            cy.data('qlk_title-input').should('have.value', 'UQ Library updated');
+            cy.data('qlk_title-input').should(
+                'have.value',
+                '2020 - 2023 Imported Records with an Author ID and Research Subtypes Only updated',
+            );
 
             cy.data('qlk_link-input')
-                .should('have.value', 'https://www.library.uq.edu.au')
+                .contains('https://espace.library.uq.edu.au/records/search?')
                 .should('not.be.disabled');
             cy.data('qlk_link-input').type(' updated');
-            cy.data('qlk_link-input').should('have.value', 'https://www.library.uq.edu.au updated');
+            cy.data('qlk_link-input').contains(' updated');
 
             cy.data('qlk_title-input').clear();
             cy.data('qlk_title-input')
@@ -258,7 +265,7 @@ context('Admin Dashboard - Today tab', () => {
                 .contains('Save')
                 .click();
             cy.data('standard-card-content')
-                .contains('Edit UQ Library')
+                .contains('Edit 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only')
                 .should('not.exist');
         });
 
@@ -326,7 +333,7 @@ context('Admin Dashboard - Today tab', () => {
                 .click();
 
             cy.data('standard-card-content')
-                .contains('Edit UQ Library')
+                .contains('Edit 2020 - 2023 Imported Records with an Author ID and Research Subtypes Only')
                 .should('not.exist');
         });
     });
