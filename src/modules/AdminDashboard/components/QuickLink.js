@@ -9,6 +9,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import ScheduleIcon from '@mui/icons-material/Schedule';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -61,6 +62,14 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
         setAnchorEl(null);
     };
 
+    const avatar = React.useMemo(() => {
+        if (link.qlk_link.includes(INTERNAL_LINK_DOMAIN)) {
+            if (link.qlk_amount) {
+                return abbreviateNumber(link.qlk_amount, 1);
+            } else return <ScheduleIcon fontSize="small" />;
+        } else return <OpenInNew fontSize="small" />;
+    }, [link.qlk_link, link.qlk_amount]);
+
     return (
         <Card role="listitem" {...rest}>
             <CardHeader
@@ -77,11 +86,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                             ...(!link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
                         }}
                     >
-                        {link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? (
-                            abbreviateNumber(link.qlk_amount, 1)
-                        ) : (
-                            <OpenInNew fontSize="small" />
-                        )}
+                        {avatar}
                     </Box>
                 }
                 title={

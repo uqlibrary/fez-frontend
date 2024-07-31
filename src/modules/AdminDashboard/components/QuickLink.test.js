@@ -61,6 +61,21 @@ describe('QuickLink', () => {
         expect(getByTestId('MoreVertIcon')).toBeInTheDocument();
     });
 
+    it('should render internal link with null amount as expected', async () => {
+        const { getByTestId, queryByTestId, queryByText } = setup({
+            link: { ...linkInternal, qlk_title: 'Test internal title without amount', qlk_amount: null },
+            index: 1,
+            itemCount: 1,
+            'data-testid': 'test-id',
+        });
+
+        expect(getByTestId('test-id')).toBeInTheDocument();
+        expect(queryByText('100')).not.toBeInTheDocument();
+        expect(queryByTestId('ScheduleIcon')).toBeInTheDocument();
+        expect(getByTestId('quick-link-1-link')).toHaveTextContent('Test internal title without amount');
+        expect(getByTestId('MoreVertIcon')).toBeInTheDocument();
+    });
+
     it('should render external link as expected', async () => {
         const { getByTestId, queryByText } = setup({
             link: linkExternal,
