@@ -11,8 +11,15 @@ export const redirectUserToLogin = (
         return;
     }
     const redirectUrl = isAuthorizedUser ? AUTH_URL_LOGOUT : AUTH_URL_LOGIN;
-    const returnUrl = redirectToCurrentLocation || !isAuthorizedUser ? window.location.href : APP_URL;
-    window.location.assign(
-        `${redirectUrl}?url=${window.btoa(returnUrl)}${additionalParams ? `&${additionalParams}` : ''}`,
-    );
+    let withSearch = false;
+    let returnUrl = APP_URL;
+    if (redirectToCurrentLocation || !isAuthorizedUser) {
+        returnUrl = window.location.href;
+        withSearch = window.location.search !== '';
+    }
+    if (additionalParams) {
+        const conjoiner = withSearch ? '&' : '?';
+        returnUrl = `${returnUrl}${conjoiner}${additionalParams}`;
+    }
+    window.location.assign(`${redirectUrl}?url=${window.btoa(returnUrl)}`);
 };
