@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthorLinking from './AuthorLinking';
 
-export default function ContributorLinkingField(fieldProps) {
+export function ContributorLinkingField(fieldProps) {
     return (
         <AuthorLinking
             onChange={fieldProps.input.onChange}
@@ -15,3 +15,5 @@ export default function ContributorLinkingField(fieldProps) {
         />
     );
 }
+
+export default React.memo(ContributorLinkingField);

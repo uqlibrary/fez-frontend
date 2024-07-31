@@ -58,7 +58,7 @@ export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('module
 export const MyIncompleteRecord = lazy(() =>
     lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
 );
-export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/containers/Orcid')));
+export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
     lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
 );
@@ -67,7 +67,7 @@ export const ThesisSubmission = lazy(() =>
     lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
 );
 export const ThirdPartyLookupTool = lazy(() =>
-    lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
+    lazyRetry(() => import('modules/ThirdPartyLookupTool/components/ThirdPartyLookupTool')),
 );
 
 // always load components
@@ -75,8 +75,8 @@ export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from '
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
-export { default as NewViewRecord } from 'modules/ViewRecord/containers/NewViewRecord';
-export { NotFound } from 'modules/NotFound/components/NotFound';
+export { ViewRecord } from 'modules/ViewRecord/components/ViewRecord';
+export { PageNotFound } from 'modules/NotFound/components/PageNotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
 export { FavouriteJournals } from 'modules/FavouriteJournals';

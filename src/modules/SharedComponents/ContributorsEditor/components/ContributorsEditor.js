@@ -80,7 +80,6 @@ export class ContributorsEditor extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-
         this.props.onChange?.(this.state.contributors);
         const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
@@ -96,9 +95,7 @@ export class ContributorsEditor extends PureComponent {
         }
     }
     buildInitialScaleOfSignificance = props => {
-        if (!!props.scaleOfSignificance && props.scaleOfSignificance.length > 0) {
-            return props.scaleOfSignificance;
-        }
+        if (!props.isNtro) return [];
 
         const ScaleOfSignificance = [];
         props.record?.fez_record_search_key_significance &&
@@ -132,7 +129,30 @@ export class ContributorsEditor extends PureComponent {
                     };
                 }
             });
-
+        // create a default scale if there's no records in there.
+        (!props.record?.fez_record_search_key_significance ||
+            props.record?.fez_record_search_key_significance?.length === 0) &&
+            props.record?.fez_record_search_key_author?.map((item, index) => {
+                ScaleOfSignificance[index] = {};
+                ScaleOfSignificance[index].id = 0;
+                ScaleOfSignificance[index].key = 0;
+                ScaleOfSignificance[index].value = {
+                    plainText: 'Missing',
+                    htmlText: 'Missing',
+                };
+                ScaleOfSignificance[index].author = {
+                    rek_author_id:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_id ||
+                        /* istanbul ignore next */ 0,
+                    rek_author_pid:
+                        props.record?.fez_record_search_key_author[index]?.rek_author_pid ||
+                        /* istanbul ignore next */ null,
+                    rek_author:
+                        props.record?.fez_record_search_key_author[index]?.rek_author ||
+                        /* istanbul ignore next */ null,
+                    rek_author_order: index + 1,
+                };
+            });
         return ScaleOfSignificance;
     };
 
@@ -404,6 +424,7 @@ export class ContributorsEditor extends PureComponent {
                 const changedIndexes = [];
                 const scaleOfSignificance = [...this.state.scaleOfSignificance];
                 this.state.scaleOfSignificance.length > 0 &&
+                    newContribs.length === this.state.scaleOfSignificance.length &&
                     newContribs.map((contrib, index) => {
                         if (contrib.nameAsPublished !== this.state.scaleOfSignificance[index].author.rek_author) {
                             changedIndexes.push(index);

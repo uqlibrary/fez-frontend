@@ -142,6 +142,9 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                     <span
                       class="citationPublisher empty"
                     />
+                    <span
+                      class="citationDOI empty"
+                    />
                   </div>
                 </div>
                 <div

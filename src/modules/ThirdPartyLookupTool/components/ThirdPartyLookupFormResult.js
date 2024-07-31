@@ -1,81 +1,82 @@
-import React, { Fragment, PureComponent } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import { useDispatch } from 'react-redux';
 
-export class ThirdPartyLookupFormResult extends PureComponent {
-    static propTypes = {
-        actions: PropTypes.object,
-        lookupResults: PropTypes.array,
-        primaryValue: PropTypes.string.isRequired,
-        secondaryValue: PropTypes.string,
-        formDisplay: PropTypes.object,
-        // localeform: PropTypes.object.isRequired,
-        locale: PropTypes.object.isRequired,
+export const ThirdPartyLookupFormResult = ({
+    actions,
+    lookupResults,
+    primaryValue,
+    secondaryValue,
+    formDisplay,
+    locale,
+}) => {
+    const dispatch = useDispatch();
+    const _handleClear = () => {
+        actions?.clearThirdPartyLookup && dispatch(actions.clearThirdPartyLookup());
     };
 
-    static defaultProps = {
-        lookupResults: [],
+    const txt = {
+        thisForm: formDisplay,
     };
-
-    _handleClear = () => {
-        if (this.props.actions && this.props.actions.clearThirdPartyLookup) {
-            this.props.actions.clearThirdPartyLookup();
-        }
-    };
-
-    render() {
-        const txt = {
-            thisForm: this.props.formDisplay,
-        };
-        return (
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.thisForm.lookupLabel}>
-                        <p>
-                            {txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}
-                        </p>
-                        {// not all forms will have a second field; some of them shouldn't be reported
-                        !!txt.thisForm.secondaryFieldHeading &&
-                            !!txt.thisForm.reportSecondaryFieldInOutput &&
-                            this.props.secondaryValue && (
-                                <p>
-                                    {txt.thisForm.secondaryFieldHeading} - {this.props.secondaryValue}
-                                </p>
-                            )}
-                        <StandardCard
-                            title={this.props.locale.resultsLabel ? this.props.locale.resultsLabel : 'Results'}
-                        >
-                            {this.props.lookupResults.length > 0 && (
-                                <Fragment>
-                                    <pre>{JSON.stringify(this.props.lookupResults, null, 2)}</pre>
-                                </Fragment>
-                            )}
-                            {this.props.lookupResults.length === 0 && (
-                                <Grid item xs={12}>
-                                    <StandardCard>
-                                        {this.props.locale.noResultsFound && this.props.locale.noResultsFound.text
-                                            ? this.props.locale.noResultsFound.text
-                                            : 'No results found'}
-                                    </StandardCard>
-                                </Grid>
-                            )}
-                        </StandardCard>
-                        <Button
-                            children={
-                                this.props.locale.clearButtonLabel ? this.props.locale.clearButtonLabel : 'New Search'
-                            }
-                            variant="contained"
-                            color={'primary'}
-                            onClick={() => this._handleClear()}
-                            style={{ marginTop: 20 }}
-                        />
+    return (
+        <Grid container spacing={3}>
+            <Grid item xs={12}>
+                <StandardCard title={txt.thisForm.lookupLabel}>
+                    <p>
+                        {txt.thisForm.primaryFieldHeading} - {primaryValue}
+                    </p>
+                    {// not all forms will have a second field; some of them shouldn't be reported
+                    !!txt.thisForm.secondaryFieldHeading &&
+                        !!txt.thisForm.reportSecondaryFieldInOutput &&
+                        secondaryValue && (
+                            <p>
+                                {txt.thisForm.secondaryFieldHeading} - {secondaryValue}
+                            </p>
+                        )}
+                    <StandardCard title={locale.resultsLabel ? locale.resultsLabel : 'Results'}>
+                        {lookupResults.length > 0 && (
+                            <Fragment>
+                                <pre>{JSON.stringify(lookupResults, null, 2)}</pre>
+                            </Fragment>
+                        )}
+                        {lookupResults.length === 0 && (
+                            <Grid item xs={12}>
+                                <StandardCard>
+                                    {locale.noResultsFound && locale.noResultsFound.text
+                                        ? locale.noResultsFound.text
+                                        : 'No results found'}
+                                </StandardCard>
+                            </Grid>
+                        )}
                     </StandardCard>
-                </Grid>
+                    <Button
+                        children={locale.clearButtonLabel ? locale.clearButtonLabel : 'New Search'}
+                        variant="contained"
+                        color={'primary'}
+                        onClick={_handleClear}
+                        style={{ marginTop: 20 }}
+                    />
+                </StandardCard>
             </Grid>
-        );
-    }
-}
+        </Grid>
+    );
+};
+ThirdPartyLookupFormResult.propTypes = {
+    actions: PropTypes.object,
+    lookupResults: PropTypes.array,
+    primaryValue: PropTypes.string.isRequired,
+    secondaryValue: PropTypes.string,
+    formDisplay: PropTypes.object,
+    // localeform: PropTypes.object.isRequired,
+    locale: PropTypes.object.isRequired,
+};
+
+ThirdPartyLookupFormResult.defaultProps = {
+    lookupResults: [],
+};
+export default React.memo(ThirdPartyLookupFormResult);

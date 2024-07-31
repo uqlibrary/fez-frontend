@@ -52,8 +52,6 @@ const communitySearchList = {
             "rek_security_inherited": 1,
             "rek_copyright": "on",
             "rek_security_policy": 1,
-            "fez_record_search_key_additional_notes":
-                "Northern Territory Legislative Assembly elections 1968 campaign for independent? candidate George Winunguj. Leaflet authorised by Phllip Roberts, Rapid Creek, N.T.",
             "fez_record_search_key_advisory_statement":
                 "Aboriginal and Torres Strait Islander people are warned that this material may contain images or names of Aboriginal and Islander people now deceased.",
             "fez_record_search_key_author": [

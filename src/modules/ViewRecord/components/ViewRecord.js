@@ -1,14 +1,12 @@
 /* eslint-disable camelcase */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
@@ -42,6 +40,7 @@ import Links from './Links';
 import NtroDetails from './NtroDetails';
 import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -79,21 +78,24 @@ const StyledGridWithTopMargin = styled(Grid)(({ theme }) => ({
     },
 }));
 
-export const NewViewRecord = ({
-    account,
-    author,
-    isDeleted,
-    isDeletedVersion,
-    loadingRecordToView,
-    recordToViewError,
-    recordToView,
-}) => {
+export const ViewRecord = () => {
+    const isAdmin = userIsAdmin();
     const navigate = useNavigate();
-    const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
+
+    const { account, author } = useSelector(state => state.get('accountReducer'));
+
+    const { recordToView, loadingRecordToView, recordToViewError, isDeleted, isDeletedVersion } = useSelector(state =>
+        state.get('viewRecordReducer'),
+    );
+
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
+
+    const txt = locale.pages.viewRecord;
     const isNotFoundRoute = !!pid && (!new RegExp(pidRegExp, 'i').test(pid) || pid === notFound);
-    const isAdmin = userIsAdmin();
+
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
     const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();
     const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
@@ -101,9 +103,6 @@ export const NewViewRecord = ({
         isNtro &&
         !general.NTRO_RESEARCH_REPORT_SUBTYPES.includes(recordToView?.rek_subtype) &&
         belongsToAuthor(author, recordToView);
-
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [open, setOpen] = React.useState(false);
 
     const handleMobileDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -173,7 +172,9 @@ export const NewViewRecord = ({
             !isNotFoundRoute &&
             dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
-        return () => dispatch(actions.clearRecordToView());
+        return () => {
+            dispatch(actions.clearRecordToView());
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isNotFoundRoute, pid, version]);
 
@@ -199,27 +200,17 @@ export const NewViewRecord = ({
     if (!isNotFoundRoute && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
-        return (
-            <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <StyledGridWithTopMargin container id="notFoundGridContainer" data-testid="notFoundGridContainer">
-                    <Grid xs={12}>{locale.pages.viewRecord.notFound.message}</Grid>
-                </StyledGridWithTopMargin>
-                {recordToViewError && (
-                    <Typography variant={'caption'} style={{ opacity: 0.5 }}>
-                        {`(${recordToViewError.status} - ${recordToViewError.message})`}
-                    </Typography>
-                )}
-            </StandardPage>
-        );
+        return <WorkNotFound loadingError={recordToViewError} />;
     } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
                 <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
             </StandardPage>
         );
-    } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
+    } else if (!isNotFoundRoute && !loadingRecordToView && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
+
     return (
         <StyledContentWrapper open={open}>
             <StandardPage
@@ -332,17 +323,4 @@ export const NewViewRecord = ({
     );
 };
 
-NewViewRecord.propTypes = {
-    account: PropTypes.object,
-    author: PropTypes.object,
-    isDeleted: PropTypes.bool,
-    isDeletedVersion: PropTypes.bool,
-    loadingRecordToView: PropTypes.bool,
-    recordToView: PropTypes.object,
-    recordToViewError: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-};
-
-export default React.memo(
-    NewViewRecord,
-    (prevProps, nextProps) => prevProps.loadingRecordToView === nextProps.loadingRecordToView,
-);
+export default ViewRecord;

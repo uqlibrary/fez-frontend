@@ -160,6 +160,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.click(getByLabelText('Clear'));
+
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.change(getByTestId('eap-start-year-input'), { target: { value: '' } });

@@ -151,7 +151,7 @@ api.interceptors.response.use(
         let errorMessage = null;
         const errorStatus = error?.response?.status || -1;
         if (!handlesErrorsInternally) {
-            if (errorStatus === 403) {
+            if (errorStatus === 401) {
                 if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                     Cookies.remove(SESSION_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
                     Cookies.remove(SESSION_USER_GROUP_COOKIE_NAME, { path: '/', domain: '.library.uq.edu.au' });
@@ -190,7 +190,7 @@ api.interceptors.response.use(
 
         const shouldNotAppearInSentry =
             document.location.hostname === 'localhost' || // testing on AWS sometimes fires these
-            [401, 403].includes(errorStatus) || // login expired - no notice required
+            [401, 403, 404, 410].includes(errorStatus) || // login expired - no notice required
             errorStatus === 0 || // catch those "the network request was interrupted" we see so much
             errorStatus === '0' || // don't know what format it comes in
             errorStatus === 500 || // api should handle these

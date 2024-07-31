@@ -1,7 +1,7 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent, screen } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -85,6 +85,7 @@ describe('AddDataCollection test', () => {
 
     it('should render data set form', () => {
         const { container, getByRole } = setup();
+
         expect(container).toMatchSnapshot();
         expect(container.getElementsByTagName('field').length).toEqual(28);
         expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
@@ -106,11 +107,12 @@ describe('AddDataCollection test', () => {
         expect(getByRole('button', { name: 'Submit for approval' })).not.toBeDisabled();
     });
 
-    it('should redirect to cancel page', () => {
+    it('should redirect to cancel page', async () => {
         const { location } = window;
         delete window.location;
         window.location = { reload: jest.fn() };
         const { getByRole } = setup();
+
         fireEvent.click(getByRole('button', { name: 'Cancel' }));
         expect(window.location.reload).toHaveBeenCalled();
         window.location = location;
@@ -131,6 +133,8 @@ describe('AddDataCollection test', () => {
             },
             rerender,
         );
+        await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
+        preview.debug();
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
         expect(clearNewRecordFn).toHaveBeenCalled();

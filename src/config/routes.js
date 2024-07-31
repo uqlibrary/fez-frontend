@@ -96,7 +96,7 @@ export const getRoutesConfig = ({
         },
         {
             path: pathConfig.records.view(':pid'),
-            element: <components.NewViewRecord />,
+            element: <components.ViewRecord />,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
         },
@@ -123,7 +123,7 @@ export const getRoutesConfig = ({
             ? [
                   {
                       path: pathConfig.records.version(pid, version),
-                      element: <components.NewViewRecord />,
+                      element: <components.ViewRecord />,
                       access: [roles.admin],
                       exact: true,
                       pageTitle: locale.pages.viewRecord.version.title,
@@ -496,8 +496,8 @@ export const getRoutesConfig = ({
         ...publicPages,
         {
             path: '*',
-            element: <components.NotFound />,
-            pageTitle: locale.pages.notFound.title,
+            element: <components.PageNotFound />,
+            pageTitle: locale.pages.pageNotFound.title,
         },
     ];
 };

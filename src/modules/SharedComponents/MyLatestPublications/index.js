@@ -1,1 +1,1 @@
-export { default as MyLatestPublications } from './containers/MyLatestPublications';
+export { default as MyLatestPublications } from './components/MyLatestPublications';

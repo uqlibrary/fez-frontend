@@ -10,7 +10,7 @@ import { locale } from 'locale';
 import { flattedPathConfig, fileRegexConfig } from 'config/routes';
 import { getFavouriteSearchAlias } from 'actions';
 
-export const NotFound = () => {
+export const PageNotFound = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -53,10 +53,10 @@ export const NotFound = () => {
     }
 
     if (!!account.id && !isValidFileRoute && !isValidRoute && !existingAliasChecking) {
-        return <StandardPage standardPageId="not-found" {...locale.pages.notFound} />;
+        return <StandardPage standardPageId="not-found" {...locale.pages.pageNotFound} />;
     }
 
     return <div data-testid="empty" />;
 };
 
-export default React.memo(NotFound);
+export default React.memo(PageNotFound);

@@ -8,21 +8,25 @@ import {
     reset,
     formValueSelector,
     change,
+    getFormAsyncErrors,
 } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
-import { createNewRecord } from 'actions';
-import { general, publicationTypes } from 'config';
+import { createNewRecord, doesDOIExist } from 'actions';
+import { general, publicationTypes, validation } from 'config';
 import { locale } from 'locale';
 import {
     DOCTYPE_SUBTYPE_MAPPING,
     NEW_DOCTYPES_OPTIONS,
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_DESIGN,
+    SUBTYPE_EDITED_BOOK,
 } from 'config/general';
 import moment from 'moment';
 
 import * as recordForms from '../components/Forms';
+import { defaultShouldAsyncValidate } from 'redux-form';
+import validationErrors from 'locale/validationErrors';
 
 const FORM_NAME = 'PublicationForm';
 
@@ -53,6 +57,21 @@ const onSubmit = (values, dispatch, state) => {
         });
 };
 
+const asyncValidate = values => {
+    const data = values.toJS();
+    const doi = data.fez_record_search_key_doi && data.fez_record_search_key_doi.rek_doi;
+    if (validation.isValidDOIValue(doi)) {
+        return doesDOIExist(doi).then(response => {
+            if (response && response.total) {
+                // redux-form error structure for field names with dots
+                throw { fez_record_search_key_doi: { rek_doi: validationErrors.validationErrors.doiExists } };
+            }
+        });
+    }
+
+    return Promise.resolve();
+};
+
 const validate = values => {
     // add only multi field validations
     // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
@@ -67,7 +86,16 @@ const validate = values => {
         case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
         case general.PUBLICATION_TYPE_VIDEO_DOCUMENT:
             // either author or editor should be selected and linked to a user
+            // Edited book only require editors
             if (
+                data.rek_subtype &&
+                data.rek_subtype === SUBTYPE_EDITED_BOOK &&
+                (!data.editors ||
+                    (data.editors && data.editors.length === 0) ||
+                    (data.editors || []).filter(item => item.selected).length === 0)
+            ) {
+                errors.editors = locale.validationErrors.editorRequired;
+            } else if (
                 (!data.authors && !data.editors) ||
                 (!data.authors && data.editors && data.editors.length === 0) ||
                 (!data.editors && data.authors && data.authors.length === 0) ||
@@ -122,12 +150,22 @@ let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
     onSubmit,
+    asyncValidate,
+    asyncChangeFields: ['fez_record_search_key_doi.rek_doi'],
+    // https://github.com/redux-form/redux-form/issues/3944
+    shouldAsyncValidate: params => {
+        return defaultShouldAsyncValidate({ ...params, syncValidationPasses: true });
+    },
 })(PublicationForm);
 
 const selector = formValueSelector(FORM_NAME);
 
 const mapStateToProps = (state, props) => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    // Map when empty, JS object when it has values
+    const formSyncErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    // Always Map
+    const formAsyncErrors = getFormAsyncErrors(FORM_NAME)(state) || Immutable.Map({});
+
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
@@ -155,10 +193,16 @@ const mapStateToProps = (state, props) => {
         ? !!publicationSubtype && selectedPublicationType.formComponent
         : (selectedPublicationType || {}).formComponent || null;
 
+    // Merge Sync and Async errors as a JS object as getFormError doesnt seem to return anything
+    const formErrors = {
+        ...(formSyncErrors instanceof Immutable.Map ? formSyncErrors.toJS() : formSyncErrors),
+        ...(formAsyncErrors.get('fez_record_search_key_doi') ? { rek_doi_exists: '' } : {}),
+    };
+
     return {
         formValues: formValues,
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        disableSubmit: formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0,
         hasSubtypes: hasSubtypes,
         subtypes:
             (!!publicationSubtype &&

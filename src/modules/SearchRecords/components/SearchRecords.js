@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+
+import * as actions from 'actions';
+
 import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -40,25 +44,12 @@ export const normaliseDisplayLookup = raw => {
         COLLECTION_VIEW_TYPE[0].value
     );
 };
-const SearchRecords = ({
-    account,
-    author,
-    actions,
-    canUseExport,
-    exportPublicationsLoading,
-    isAdvancedSearch,
-    publicationsList,
-    publicationsListFacets,
-    publicationsListPagingData,
-    publicationsListDefaultView,
-    searchLoading,
-    searchLoadingError,
-    searchQuery,
-}) => {
+const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsListDefaultView, searchQuery }) => {
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
     const navigate = useNavigate();
     const location = useLocation();
+    const dispatch = useDispatch();
     const isUnpublishedBufferPage = location.pathname === pathConfig.admin.unpublished;
 
     const isResearcher = userIsResearcher();
@@ -70,6 +61,16 @@ const SearchRecords = ({
         canBulkExport,
         isUnpublishedBufferPage,
     );
+
+    const {
+        publicationsList,
+        publicationsListPagingData,
+        publicationsListFacets,
+        searchLoading,
+        searchLoadingError,
+    } = useSelector(state => state.get('searchRecordsReducer'));
+    const { exportPublicationsLoading } = useSelector(state => state.get('exportPublicationsReducer'));
+    const { account, author } = useSelector(state => state.get('accountReducer'));
 
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
@@ -112,7 +113,7 @@ const SearchRecords = ({
      */
     React.useEffect(() => {
         // actions.searchEspacePublications(queryParams);
-        return actions.clearSearchQuery();
+        return dispatch(actions.clearSearchQuery());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -135,9 +136,9 @@ const SearchRecords = ({
                 searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
             );
             setSearchParams({ ...queryParams });
-            actions.searchEspacePublications(queryParams);
-            actions.clearSearchQuery();
-            actions.resetExportPublicationsStatus();
+            dispatch(actions.searchEspacePublications(queryParams));
+            dispatch(actions.clearSearchQuery());
+            dispatch(actions.resetExportPublicationsStatus());
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
@@ -194,7 +195,6 @@ const SearchRecords = ({
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">
                         <SearchComponent
                             activeFacets={searchParams.activeFacets}
-                            clearSearchQuery={actions.clearSearchQuery}
                             isAdmin={isAdmin}
                             isAdvancedSearch={isAdvancedSearch}
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
@@ -344,18 +344,9 @@ const SearchRecords = ({
 };
 
 SearchRecords.propTypes = {
-    account: PropTypes.object,
-    author: PropTypes.object,
-    actions: PropTypes.object,
     canUseExport: PropTypes.bool,
-    exportPublicationsLoading: PropTypes.bool,
     isAdvancedSearch: PropTypes.bool,
-    publicationsList: PropTypes.array,
-    publicationsListFacets: PropTypes.object,
-    publicationsListPagingData: PropTypes.object,
     publicationsListDefaultView: PropTypes.object,
-    searchLoading: PropTypes.bool,
-    searchLoadingError: PropTypes.bool,
     searchQuery: PropTypes.object,
 };
 

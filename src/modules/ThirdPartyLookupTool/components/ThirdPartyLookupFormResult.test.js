@@ -1,6 +1,12 @@
 import React from 'react';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
 import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
+
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
+}));
 
 function setup(testProps) {
     const props = {
@@ -28,7 +34,11 @@ function setup(testProps) {
             clearButtonLabel: 'New Test Search',
         },
     };
-    return rtlRender(<ThirdPartyLookupFormResult {...props} />);
+    return rtlRender(
+        <WithReduxStore>
+            <ThirdPartyLookupFormResult {...props} />
+        </WithReduxStore>,
+    );
 }
 
 describe('Component ThirdPartyLookupFormResult', () => {

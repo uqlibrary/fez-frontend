@@ -686,7 +686,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       disabled="false"
                       is="mock"
                       label="Additional information"
-                      name="fez_record_search_key_additional_notes.rek_additional_notes"
+                      name="fez_record_search_key_notes.rek_notes"
                     />
                   </div>
                   <div
@@ -1473,7 +1473,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       disabled="false"
                       is="mock"
                       label="Additional information"
-                      name="fez_record_search_key_additional_notes.rek_additional_notes"
+                      name="fez_record_search_key_notes.rek_notes"
                     />
                   </div>
                   <div
@@ -2256,7 +2256,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       disabled="false"
                       is="mock"
                       label="Additional information"
-                      name="fez_record_search_key_additional_notes.rek_additional_notes"
+                      name="fez_record_search_key_notes.rek_notes"
                     />
                   </div>
                   <div
@@ -3039,7 +3039,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       disabled="false"
                       is="mock"
                       label="Additional information"
-                      name="fez_record_search_key_additional_notes.rek_additional_notes"
+                      name="fez_record_search_key_notes.rek_notes"
                     />
                   </div>
                   <div

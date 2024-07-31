@@ -2003,7 +2003,7 @@ export default {
                         type: 'TextField',
                         id: 'rek-title',
                         hint: 'Add a title',
-                        validation: ['required', 'spacelessMaxLength255Validator'],
+                        validation: ['required', 'maxLength255Validator'],
                         ariaLabel: 'Type a title to search for',
                     },
                     rek_book_title: {

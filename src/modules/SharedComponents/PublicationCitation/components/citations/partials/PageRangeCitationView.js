@@ -47,4 +47,4 @@ PageRangeCitationView.defaultProps = {
     suffix: '.',
 };
 
-export default PageRangeCitationView;
+export default React.memo(PageRangeCitationView);

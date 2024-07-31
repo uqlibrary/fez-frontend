@@ -1,5 +1,6 @@
 import React from 'react';
-import NewViewRecord from './NewViewRecord';
+import ViewRecord from './ViewRecord';
+import Immutable from 'immutable';
 import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -28,27 +29,39 @@ jest.mock('react-router-dom', () => ({
     useNavigate: jest.fn(() => jest.fn()),
 }));
 
-const setup = (testProps = {}, renderer = render) => {
-    const props = {
-        account: accounts.uqresearcher,
-        author: null,
-        isDeleted: false,
-        isDeletedVersion: false,
-        loadingRecordToView: false,
-        recordToViewError: null,
-        recordToView: null,
-        ...testProps,
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
+}));
+
+const setup = (state = {}, renderer = render) => {
+    const { accountReducer, viewRecordReducer } = state;
+    const initState = {
+        accountReducer: {
+            account: accounts.uqresearcher,
+            author: null,
+            ...accountReducer,
+        },
+        viewRecordReducer: {
+            isDeleted: false,
+            isDeletedVersion: false,
+            loadingRecordToView: false,
+            recordToViewError: null,
+            recordToView: null,
+            ...viewRecordReducer,
+        },
     };
     return renderer(
-        <WithRouter>
-            <WithReduxStore>
-                <NewViewRecord {...props} />
-            </WithReduxStore>
-        </WithRouter>,
+        <WithReduxStore initialState={Immutable.Map(initState)}>
+            <WithRouter>
+                <ViewRecord />
+            </WithRouter>
+        </WithReduxStore>,
     );
 };
 
-describe('NewViewRecord', () => {
+describe('ViewRecord', () => {
     beforeAll(() => {
         window.matchMedia = createMatchMedia(window.innerWidth);
     });
@@ -64,7 +77,6 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default empty view', () => {
-        // Checked OK
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
@@ -77,7 +89,9 @@ describe('NewViewRecord', () => {
 
     it('should not render components for empty record', () => {
         // Checked OK
-        const { asFragment } = setup({ recordToView: {} });
+        const { asFragment } = setup({
+            viewRecordReducer: { recordToView: {} },
+        });
         expect(asFragment()).toMatchInlineSnapshot(`
             <DocumentFragment>
               <div
@@ -90,7 +104,10 @@ describe('NewViewRecord', () => {
     it('should render default view with admin menu', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
-        const { getByTestId } = setup({ recordToView: record });
+        const { getByTestId } = setup({
+            viewRecordReducer: { recordToView: record },
+        });
+
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
@@ -139,21 +156,28 @@ describe('NewViewRecord', () => {
         };
         const recordwithIssues = { ...recordWithNoAffiliationIssues, ...affiliationIssues };
         userIsAdmin.mockImplementationOnce(() => true);
-        const { getByTestId } = setup({ recordToView: recordwithIssues });
+        const { getByTestId } = setup({
+            viewRecordReducer: { recordToView: recordwithIssues },
+        });
+
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
     it('should render default view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
-        const { getByTestId } = setup({ recordToView: recordWithNoAffiliationIssues });
+        const { getByTestId } = setup({
+            viewRecordReducer: { recordToView: recordWithNoAffiliationIssues },
+        });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
     it('should render internal notes view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({
-            recordToView: { ...recordWithNoAffiliationIssues, fez_internal_notes: { ain_detail: 'test' } },
+            viewRecordReducer: {
+                recordToView: { ...recordWithNoAffiliationIssues, fez_internal_notes: { ain_detail: 'test' } },
+            },
         });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
@@ -164,7 +188,7 @@ describe('NewViewRecord', () => {
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
         useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
-        const { getByTestId } = setup({ recordToView: recordVersionLegacy });
+        const { getByTestId } = setup({ viewRecordReducer: { recordToView: recordVersionLegacy } });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
@@ -176,14 +200,16 @@ describe('NewViewRecord', () => {
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
         useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
-        const { getByTestId } = setup({ recordToView: recordVersionLegacy, isDeletedVersion: true });
+        const { getByTestId } = setup({
+            viewRecordReducer: { recordToView: recordVersionLegacy, isDeletedVersion: true },
+        });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
     });
 
     it('should render deleted record correctly', () => {
-        const { getByText } = setup({ isDeleted: true, recordToView: record });
+        const { getByText } = setup({ viewRecordReducer: { isDeleted: true, recordToView: record } });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
         expect(
             getByText(
@@ -194,8 +220,10 @@ describe('NewViewRecord', () => {
 
     it('should render deleted data collection correctly', () => {
         const { getByText } = setup({
-            isDeleted: true,
-            recordToView: { ...record, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+            viewRecordReducer: {
+                isDeleted: true,
+                recordToView: { ...record, rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION },
+            },
         });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
         expect(
@@ -208,12 +236,14 @@ describe('NewViewRecord', () => {
     it('should render deleted data collection with new doi correctly', () => {
         const newDoi = '10.000/abc';
         const { getByText, container } = setup({
-            isDeleted: true,
-            recordToView: {
-                ...record,
-                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
-                fez_record_search_key_new_doi: {
-                    rek_new_doi: '10.000/abc',
+            viewRecordReducer: {
+                isDeleted: true,
+                recordToView: {
+                    ...record,
+                    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                    fez_record_search_key_new_doi: {
+                        rek_new_doi: '10.000/abc',
+                    },
                 },
             },
         });
@@ -232,15 +262,17 @@ describe('NewViewRecord', () => {
         const newDoi = '10.000/abc';
         const deletionNotes = 'notes test';
         const { getByText, container } = setup({
-            isDeleted: true,
-            recordToView: {
-                ...record,
-                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
-                fez_record_search_key_new_doi: {
-                    rek_new_doi: '10.000/abc',
-                },
-                fez_record_search_key_deletion_notes: {
-                    rek_deletion_notes: deletionNotes,
+            viewRecordReducer: {
+                isDeleted: true,
+                recordToView: {
+                    ...record,
+                    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                    fez_record_search_key_new_doi: {
+                        rek_new_doi: '10.000/abc',
+                    },
+                    fez_record_search_key_deletion_notes: {
+                        rek_deletion_notes: deletionNotes,
+                    },
                 },
             },
         });
@@ -259,12 +291,14 @@ describe('NewViewRecord', () => {
     it('should render deleted data collection with deletion notes correctly', () => {
         const deletionNotes = 'notes test';
         const { getByText, container } = setup({
-            isDeleted: true,
-            recordToView: {
-                ...record,
-                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
-                fez_record_search_key_deletion_notes: {
-                    rek_deletion_notes: deletionNotes,
+            viewRecordReducer: {
+                isDeleted: true,
+                recordToView: {
+                    ...record,
+                    rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                    fez_record_search_key_deletion_notes: {
+                        rek_deletion_notes: deletionNotes,
+                    },
                 },
             },
         });
@@ -278,7 +312,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render loader', () => {
-        const { getByText } = setup({ loadingRecordToView: true });
+        const { getByText } = setup({ viewRecordReducer: { loadingRecordToView: true } });
         expect(getByText('Loading work')).toBeInTheDocument();
     });
 
@@ -286,18 +320,22 @@ describe('NewViewRecord', () => {
         useParams.mockImplementationOnce(() => ({ pid: notFound }));
         const { container, queryByText } = setup();
         expect(container).toMatchSnapshot();
-        expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
+        expect(queryByText(locale.pages.workNotFound.title)).toBeInTheDocument();
         expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
     });
 
     it('should render error', () => {
-        const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 403 } });
+        const { getByText } = setup({
+            viewRecordReducer: { recordToViewError: { message: 'PID not found', status: 403 } },
+        });
         expect(getByText('You are not logged in -')).toBeInTheDocument();
         expect(getByText('Login to UQ eSpace for full search results and more services.')).toBeInTheDocument();
     });
 
     it('should render human readable message record not found', () => {
-        const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 404 } });
+        const { getByText } = setup({
+            viewRecordReducer: { recordToViewError: { message: 'PID not found', status: 404 } },
+        });
         expect(getByText('Work not found')).toBeInTheDocument();
         expect(getByText('(404 - PID not found)')).toBeInTheDocument();
     });
@@ -306,7 +344,7 @@ describe('NewViewRecord', () => {
         window.matchMedia = createMatchMedia(window.innerWidth);
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByText } = setup({
-            recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' },
+            viewRecordReducer: { recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' } },
         });
         expect(getByText('Unpublished')).toBeInTheDocument();
     });
@@ -320,26 +358,28 @@ describe('NewViewRecord', () => {
 
     it('should reset store when component is unmounted', () => {
         const clearRecordToViewFn = jest.spyOn(ViewRecordActions, 'clearRecordToView');
-        const { unmount } = setup({ recordToView: record });
+        const { unmount } = setup({ viewRecordReducer: { recordToView: record } });
         unmount();
         expect(clearRecordToViewFn).toHaveBeenCalled();
     });
 
     it('should render NTRO Details', () => {
         const { getAllByText } = setup({
-            recordToView: ntro,
-            account: {
-                canMasquerade: true,
+            viewRecordReducer: { recordToView: ntro },
+            accountReducer: {
+                account: {
+                    canMasquerade: true,
+                },
             },
         });
         expect(getAllByText('Scale/Significance of work').length).toBe(2);
     });
 
     it('should rerender component on props change', () => {
-        const { getByText, queryByText, rerender } = setup({ loadingRecordToView: true });
+        const { getByText, queryByText, rerender } = setup({ viewRecordReducer: { loadingRecordToView: true } });
         expect(getByText('Loading work')).toBeInTheDocument();
 
-        setup({ loadingRecordToView: false, recordToView: record }, rerender);
+        setup({ viewRecordReducer: { loadingRecordToView: false, recordToView: record } }, rerender);
         expect(queryByText('Loading work')).not.toBeInTheDocument();
     });
 
@@ -353,7 +393,7 @@ describe('NewViewRecord', () => {
         };
 
         const { getByTestId } = setup({
-            recordToViewError: { message: 'Your session has expired', status: 403 },
+            viewRecordReducer: { recordToViewError: { message: 'Your session has expired', status: 403 } },
         });
 
         fireEvent.click(getByTestId('action-button'));
@@ -365,8 +405,8 @@ describe('NewViewRecord', () => {
 
     it('should not render for researcher', () => {
         const { queryByTestId } = setup({
-            recordToView: record,
-            account: accounts.uqresearcher,
+            viewRecordReducer: { recordToView: record },
+            accountReducer: { account: accounts.uqresearcher },
         });
         expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
         expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
@@ -374,8 +414,8 @@ describe('NewViewRecord', () => {
     });
     it('should not render for student user', () => {
         const { queryByTestId } = setup({
-            recordToView: record,
-            account: accounts.s1111111,
+            viewRecordReducer: { recordToView: record },
+            accountReducer: { account: accounts.s1111111 },
         });
         expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
         expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
@@ -389,8 +429,8 @@ describe('NewViewRecord', () => {
 
         it('should render for Admin user', () => {
             const { getByTestId } = setup({
-                recordToView: record,
-                account: accounts.uqstaff,
+                viewRecordReducer: { recordToView: record },
+                accountReducer: { account: accounts.uqstaff },
             });
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
@@ -400,8 +440,8 @@ describe('NewViewRecord', () => {
 
         it('should open desktop admin drawer when button pressed', () => {
             const { getByTestId } = setup({
-                recordToView: recordWithNotes,
-                account: accounts.uqstaff,
+                viewRecordReducer: { recordToView: recordWithNotes },
+                accountReducer: { account: accounts.uqstaff },
             });
 
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
@@ -417,8 +457,8 @@ describe('NewViewRecord', () => {
             window.matchMedia = createMatchMedia(320);
 
             const { getByTestId } = setup({
-                recordToView: recordWithNotes,
-                account: accounts.uqstaff,
+                viewRecordReducer: { recordToView: recordWithNotes },
+                accountReducer: { account: accounts.uqstaff },
             });
 
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
@@ -432,8 +472,8 @@ describe('NewViewRecord', () => {
 
         it('should render data in both admin drawers', () => {
             const { getByTestId } = setup({
-                recordToView: recordWithAuthorAffiliates,
-                account: accounts.uqstaff,
+                viewRecordReducer: { recordToView: recordWithAuthorAffiliates },
+                accountReducer: { account: accounts.uqstaff },
             });
 
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
@@ -529,9 +569,8 @@ describe('NewViewRecord', () => {
 
         it("shouldn't show admin only attachments to authors", () => {
             const { queryByText } = setup({
-                recordToView: publication,
-                account: accounts.uqresearcher,
-                author: currentAuthor.uqresearcher.data,
+                viewRecordReducer: { recordToView: publication },
+                accountReducer: { account: accounts.uqresearcher, author: currentAuthor.uqresearcher.data },
             });
             expect(queryByText(filename)).not.toBeInTheDocument();
         });
@@ -539,9 +578,8 @@ describe('NewViewRecord', () => {
         it('should show admin only attachments to admin', () => {
             userIsAdmin.mockImplementation(() => true);
             const { queryByText } = setup({
-                recordToView: publication,
-                account: accounts.uqresearcher,
-                author: currentAuthor.uqresearcher.data,
+                viewRecordReducer: { recordToView: publication },
+                accountReducer: { account: accounts.uqresearcher, author: currentAuthor.uqresearcher.data },
             });
             expect(queryByText(filename)).toBeInTheDocument();
         });
@@ -556,18 +594,18 @@ describe('NewViewRecord', () => {
             it('should show admin only attachments to authors of NTROs (non research reports)', () => {
                 const filename = 'image.jpg';
                 const { queryByText } = setup({
-                    recordToView: ntroPublication,
-                    account: accounts.uqresearcher,
-                    author: currentAuthor.uqresearcher.data,
+                    viewRecordReducer: { recordToView: ntroPublication },
+                    accountReducer: { account: accounts.uqresearcher, author: currentAuthor.uqresearcher.data },
                 });
                 expect(queryByText(filename)).toBeInTheDocument();
             });
 
             it("shouldn't show admin only attachments to authors of NTROs research reports", () => {
                 const { queryByText } = setup({
-                    recordToView: { ...ntroPublication, rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR },
-                    account: accounts.uqresearcher,
-                    author: currentAuthor.uqresearcher.data,
+                    viewRecordReducer: {
+                        recordToView: { ...ntroPublication, rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR },
+                    },
+                    accountReducer: { account: accounts.uqresearcher, author: currentAuthor.uqresearcher.data },
                 });
                 expect(queryByText(filename)).not.toBeInTheDocument();
             });

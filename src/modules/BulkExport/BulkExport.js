@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { styled } from '@mui/material/styles';
+
+import * as actions from 'actions';
 
 import Button from '@mui/material/Button';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
@@ -51,19 +53,19 @@ const BulkExport = ({
     pageSize,
     totalMatches,
     disabled,
-    actions,
 }) => {
     const { loadingByPage, loadedByPage } = useSelector(state => state.get('exportPublicationsReducer'));
     const [open, setOpen] = React.useState(false);
     const [exportPages, setExportPages] = React.useState([]);
     const hasSuccess = React.useRef(false);
+    const dispatch = useDispatch();
 
     const openDialog = () => {
-        actions.resetExportPublicationsStatus();
+        dispatch(actions.resetExportPublicationsStatus());
         setOpen(true);
     };
     const closeDialog = () => {
-        actions.resetExportPublicationsStatus();
+        dispatch(actions.resetExportPublicationsStatus());
         setOpen(false);
     };
 
@@ -237,7 +239,6 @@ BulkExport.propTypes = {
     pageSize: PropTypes.number,
     totalMatches: PropTypes.number,
     disabled: PropTypes.bool,
-    actions: PropTypes.object,
 };
 
 export default BulkExport;

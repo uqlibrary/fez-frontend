@@ -266,6 +266,16 @@ describe('isAuthorOrEditorSelected', () => {
         );
         expect(testMessage.onlyOneOfAuthorOrEditor).toEqual(locale.validationErrors.onlyOneOfAuthorOrEditor);
     });
+
+    it('should return editors required error message even when authors exist', () => {
+        const testMessage = validation.isAuthorOrEditorSelected(
+            { authors: ['author 1', 'author 2'], editors: [] },
+            true,
+            true,
+            true,
+        );
+        expect(testMessage.editors).toEqual(locale.validationErrors.editorRequiredAdmin);
+    });
 });
 
 describe('getErrorAlertProps ', () => {
@@ -279,7 +289,7 @@ describe('getErrorAlertProps ', () => {
             {
                 parameters: {
                     dirty: true,
-                    formErrors: [{ rek_title: 'This field is required' }],
+                    formErrors: { rek_title: 'This field is required' },
                     alertLocale: { validationAlert: { title: 'validationFailed' } },
                 },
                 expected: 'validationFailed',
@@ -288,7 +298,7 @@ describe('getErrorAlertProps ', () => {
                 parameters: {
                     submitFailed: true,
                     dirty: true,
-                    formErrors: [{ rek_title: 'This field is required' }],
+                    formErrors: { rek_title: 'This field is required' },
                     alertLocale: { validationAlert: { title: 'validationFailed' } },
                 },
                 expected: 'validationFailed',

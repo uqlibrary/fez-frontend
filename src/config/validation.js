@@ -346,7 +346,7 @@ export const getErrorAlertProps = ({
                 ...alertLocale.errorAlert,
                 message: message,
             };
-        } else if (formErrors && formErrors.size === undefined) {
+        } else if (formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const keyPrefix = `validation-${alertLocale.validationAlert.type || 'warning'}`;
@@ -376,9 +376,10 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false, isAdminEd
     return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || (isAdmin && !isAdminEdit);
 };
 
-export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, allowOnlyEditor = false) => {
+export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = false, isEditorRequired = false) => {
     const authors = data.authors ?? data.authorsWithAffiliations;
     const errors = {};
+    // authors and editors are empty or no selected authors and editors for non-admin users
     if (
         (!authors && !data.editors) ||
         (!authors && data.editors && data.editors.length === 0) ||
@@ -388,16 +389,19 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
         (!isAdmin &&
             data.editors &&
             data.editors.length !== 0 &&
-            data.editors.filter(item => item.selected).length === 0)
+            data.editors.filter(item => item.selected).length === 0) ||
+        (isEditorRequired && data.editors && data.editors.length === 0)
     ) {
-        if (!allowOnlyEditor) {
+        if (!isEditorRequired) {
             errors.authors = isAdmin
                 ? locale.validationErrors.authorRequiredAdmin
                 : locale.validationErrors.authorRequired;
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
+        // authors or editors but not both
     } else if (allowOnlyOne && authors && authors.length > 0 && data.editors && data.editors.length > 0) {
         errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        // editor is required
     }
     return errors;
 };

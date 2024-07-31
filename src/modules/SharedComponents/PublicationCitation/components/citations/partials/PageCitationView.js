@@ -12,4 +12,4 @@ PageCitationView.propTypes = {
     className: PropTypes.string,
 };
 
-export default PageCitationView;
+export default React.memo(PageCitationView);
