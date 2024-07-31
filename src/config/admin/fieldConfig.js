@@ -106,6 +106,7 @@ export default {
                 required: true,
                 richEditorId: 'rek-title',
                 singleLine: true,
+                textOnlyOnPaste: false,
             },
         },
         internalNotes: {

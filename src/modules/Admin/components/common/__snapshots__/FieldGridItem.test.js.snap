@@ -14,6 +14,7 @@ exports[`FieldGridItem should render default view 1`] = `
     required={true}
     richEditorId="rek-title"
     singleLine={true}
+    textOnlyOnPaste={false}
     title="Formatted title"
     titleProps={
       {
@@ -133,6 +134,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
     required={true}
     richEditorId="rek-title"
     singleLine={true}
+    textOnlyOnPaste={false}
     title="Formatted title"
     titleProps={
       {
