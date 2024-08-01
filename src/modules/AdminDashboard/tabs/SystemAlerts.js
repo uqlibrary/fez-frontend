@@ -125,6 +125,7 @@ const SystemAlerts = () => {
                             <DataGrid
                                 rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
                                 columns={columns}
+                                sortingOrder={['asc', 'desc']}
                                 initialState={{
                                     pagination: {
                                         paginationModel: { page: 0, pageSize: 10 },
