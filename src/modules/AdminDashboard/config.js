@@ -50,6 +50,12 @@ export const REPORT_TYPE = {
     doidupe: 5,
 };
 
+export const DEFAULT_SORTING = {
+    alerts: [{ field: 'sat_created_date', sort: 'asc' }],
+    systemalertlog: [{ field: 'sat_created_date', sort: 'asc' }],
+    workshistory: [{ field: 'pre_date', sort: 'asc' }],
+};
+
 export const isUrl = str => {
     try {
         const newUrl = new URL(str);
@@ -84,6 +90,7 @@ export const optionDoubleRowRender = (props, option) => {
 };
 
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
+export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || [];
 
 export const getSystemAlertColumns = (locale, users) => {
     const alertStatus = locale.alertStatus;
@@ -93,7 +100,9 @@ export const getSystemAlertColumns = (locale, users) => {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
             width: 150,
-            valueGetter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+            type: 'date',
+            valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
+            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT),
         },
         { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
@@ -130,7 +139,12 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     field: 'pre_date',
                     headerName: txt.dateCreated,
                     width: 150,
-                    valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT),
+                    type: 'date',
+                    valueGetter: value => (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate()) || null,
+                    valueFormatter: value => {
+                        if (value === null || value === '') return '';
+                        return moment(value).format(DEFAULT_DATE_FORMAT);
+                    },
                     order: 1,
                     exportOrder: 5,
                 },
@@ -138,7 +152,9 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     field: 'rek_date',
                     headerName: txt.pubDate,
                     width: 150,
-                    valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT),
+                    type: 'date',
+                    valueGetter: value =>
+                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
                     exportOnly: true,
                     exportOrder: 4,
                 },
@@ -155,8 +171,12 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     field: 'sat_created_date',
                     headerName: txt.dateCreated,
                     width: 150,
-                    valueGetter: value =>
-                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
+                    type: 'date',
+                    valueGetter: value => (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate()) || null,
+                    valueFormatter: value => {
+                        if (value === null || value === '') return '';
+                        return moment(value).format(DEFAULT_DATE_FORMAT);
+                    },
                     order: 1,
                     exportOrder: 1,
                 },
@@ -178,8 +198,12 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     field: 'sat_assigned_date',
                     headerName: txt.assignedDate,
                     width: 150,
-                    valueGetter: value =>
-                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
+                    type: 'date',
+                    valueGetter: value => (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate()) || null,
+                    valueFormatter: value => {
+                        if (value === null || value === '') return '';
+                        return moment(value).format(DEFAULT_DATE_FORMAT);
+                    },
                     order: 3,
                     exportOrder: 4,
                 },
@@ -201,8 +225,12 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     field: 'sat_resolved_date',
                     headerName: txt.resolvedDate,
                     width: 150,
-                    valueGetter: value =>
-                        (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).format(DEFAULT_DATE_FORMAT)) || '',
+                    type: 'date',
+                    valueGetter: value => (!!value && moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate()) || null,
+                    valueFormatter: value => {
+                        if (value === null || value === '') return '';
+                        return moment(value).format(DEFAULT_DATE_FORMAT);
+                    },
                     order: 5,
                     exportOrder: 7,
                 },
