@@ -64,7 +64,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
 
     const avatar = React.useMemo(() => {
         if (link.qlk_link.includes(INTERNAL_LINK_DOMAIN)) {
-            if (link.qlk_amount) {
+            if (link.qlk_amount !== null) {
                 return abbreviateNumber(link.qlk_amount, 1);
             } else return <ScheduleIcon fontSize="small" />;
         } else return <OpenInNew fontSize="small" />;
