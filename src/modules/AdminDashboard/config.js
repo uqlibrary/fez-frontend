@@ -35,6 +35,7 @@ export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DEL
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
+export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
 export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
@@ -91,6 +92,13 @@ export const optionDoubleRowRender = (props, option) => {
 
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || [];
+
+export const getFormattedServerDate = (dateStr, withTime = false) =>
+    (dateStr &&
+        moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(
+            withTime ? DEFAULT_DATE_FORMAT_WITH_TIME : DEFAULT_DATE_FORMAT,
+        )) ||
+    '';
 
 export const getSystemAlertColumns = (locale, users) => {
     const alertStatus = locale.alertStatus;
