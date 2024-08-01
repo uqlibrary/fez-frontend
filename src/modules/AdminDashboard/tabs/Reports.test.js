@@ -28,6 +28,10 @@ const setup = (props = {}, state = {}, renderer = render) => {
     );
 };
 
+const assertSortedColumn = column => {
+    expect(within(column.closest('[role=presentation]')).getByTestId('ArrowUpwardIcon')).not.toHaveStyle('opacity: 0');
+};
+
 describe('Reports tab', () => {
     beforeEach(() => {
         mockApi = setupMockAdapter();
@@ -143,7 +147,7 @@ describe('Reports tab', () => {
             return true;
         });
 
-        const { getAllByRole, getByRole, getByTestId } = setup();
+        const { getAllByRole, getByRole, getByTestId, getByText } = setup();
 
         await userEvent.click(getByTestId('report-display-export-input'));
         expect(getAllByRole('option').length).toBe(2);
@@ -166,6 +170,8 @@ describe('Reports tab', () => {
         expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith(expectedRequest);
 
         await waitFor(() => getByTestId('report-display-data-grid'));
+
+        assertSortedColumn(getByText('Date created'));
 
         expect(within(getByTestId('report-display-data-grid')).getAllByRole('row').length).toBe(
             adminDashboardReportWorksData.length + 1,
@@ -195,7 +201,7 @@ describe('Reports tab', () => {
         const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
             return true;
         });
-        const { getAllByRole, getByRole, getByTestId } = setup();
+        const { getAllByRole, getByRole, getByTestId, getByText } = setup();
 
         await userEvent.click(getByTestId('report-display-export-input'));
         expect(getAllByRole('option').length).toBe(2);
@@ -220,6 +226,8 @@ describe('Reports tab', () => {
         expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith(expectedRequest);
 
         await waitFor(() => getByTestId('report-display-data-grid'));
+
+        assertSortedColumn(getByText('Date created'));
 
         expect(within(getByTestId('report-display-data-grid')).getAllByRole('row').length).toBe(
             adminDashboardReportSystemAlertsData.length + 1,

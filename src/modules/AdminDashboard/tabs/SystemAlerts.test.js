@@ -9,6 +9,10 @@ import * as repositories from 'repositories';
 import { adminDashboardSystemAlerts } from 'mock/data/testing/adminDashboard';
 import SystemAlerts from './SystemAlerts';
 
+const assertSortedColumn = column => {
+    expect(within(column.closest('[role=presentation]')).getByTestId('ArrowUpwardIcon')).not.toHaveStyle('opacity: 0');
+};
+
 const mockUserid = 2333;
 const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
@@ -65,6 +69,8 @@ describe('SystemAlerts tab', () => {
         expect(getByRole('columnheader', { name: 'Created' })).toBeInTheDocument();
         expect(getByRole('columnheader', { name: 'Topic' })).toBeInTheDocument();
         expect(getByRole('columnheader', { name: 'Status' })).toBeInTheDocument();
+
+        assertSortedColumn(getByText('Created'));
 
         // rows cells
         expect(getByRole('gridcell', { name: '4th March 2024' })).toBeInTheDocument();

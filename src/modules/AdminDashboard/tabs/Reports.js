@@ -11,7 +11,12 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import { getDisplayReportColumns, defaultLegacyReportOption, getReportTypeFromValue } from '../config';
+import {
+    getDisplayReportColumns,
+    defaultLegacyReportOption,
+    getReportTypeFromValue,
+    getDefaultSorting,
+} from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 import { transformReportRequest } from '../transformers';
@@ -120,13 +125,22 @@ const Reports = () => {
         actionDispatch(changes);
     };
 
-    const getRowId = row => {
-        const report =
+    const getRowId = React.useCallback(
+        row => {
+            const reportType =
+                actionState?.displayReport?.value ||
+                getReportTypeFromValue(adminDashboardDisplayReportDataParams?.report_type);
+            return reportType === 'workshistory' ? row.pre_id : row.sat_id;
+        },
+        [actionState?.displayReport?.value, adminDashboardDisplayReportDataParams?.report_type],
+    );
+
+    const defaultSorting = React.useMemo(() => {
+        const reportType =
             actionState?.displayReport?.value ||
             getReportTypeFromValue(adminDashboardDisplayReportDataParams?.report_type);
-
-        return report === 'workshistory' ? row.pre_id : row.sat_id;
-    };
+        return getDefaultSorting(reportType);
+    }, [actionState?.displayReport?.value, adminDashboardDisplayReportDataParams?.report_type]);
 
     return (
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
@@ -207,6 +221,9 @@ const Reports = () => {
                                             columnVisibilityModel: {
                                                 id: false,
                                             },
+                                        },
+                                        sorting: {
+                                            sortModel: defaultSorting,
                                         },
                                     }}
                                     pageSizeOptions={[10, 25, 50, 100]}
