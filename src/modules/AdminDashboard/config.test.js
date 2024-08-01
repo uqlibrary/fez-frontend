@@ -1,7 +1,14 @@
 import React from 'react';
 import { render } from 'test-utils';
 
-import { animationTemplate, isUrl, optionDoubleRowRender, getReportTypeFromValue, getDefaultSorting } from './config';
+import {
+    animationTemplate,
+    isUrl,
+    optionDoubleRowRender,
+    getReportTypeFromValue,
+    getDefaultSorting,
+    getFormattedServerDate,
+} from './config';
 
 describe('config', () => {
     it('animationTemplate', () => {
@@ -38,5 +45,12 @@ describe('config', () => {
         expect(getDefaultSorting('systemalertlog')).toEqual([{ field: 'sat_created_date', sort: 'asc' }]);
         expect(getDefaultSorting('workshistory')).toEqual([{ field: 'pre_date', sort: 'asc' }]);
         expect(getDefaultSorting('invalid')).toEqual([]);
+    });
+
+    it('getFormattedServerDate', () => {
+        expect(getFormattedServerDate('2023-03-04 12:00:00')).toEqual('4th March 2023');
+        expect(getFormattedServerDate('2023-03-04 12:00:00', true)).toEqual('4th March 2023 12:00');
+        expect(getFormattedServerDate()).toEqual('');
+        expect(getFormattedServerDate('')).toEqual('');
     });
 });
