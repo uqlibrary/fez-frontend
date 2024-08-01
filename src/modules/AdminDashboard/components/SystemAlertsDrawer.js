@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import { SYSTEM_ALERT_ACTION, isUrl } from '../config';
+import { SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -97,7 +97,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                         </Grid>
                         <Grid item xs={8}>
                             <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
-                                {row.sat_created_date}
+                                {getFormattedServerDate(row.sat_created_date, true)}
                             </Typography>
                         </Grid>
                     </Grid>

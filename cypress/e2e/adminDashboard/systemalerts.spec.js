@@ -57,9 +57,9 @@ context('Admin Dashboard - System Alerts tab', () => {
             violations => console.log(violations),
         );
         getRow(1).within(() => {
-            getCell(1).contains('My Works - Claimed Work - UQ:8efd126 - uqwtomas');
+            getCell(1).contains('Issues on record - UQ:34555c6');
             getCell(2).within(() => {
-                cy.data('alert-status-1').contains('Unassigned');
+                cy.data('alert-status-12').contains('Michael Feeney');
             });
         });
 
@@ -76,13 +76,13 @@ context('Admin Dashboard - System Alerts tab', () => {
 
     it('shows detail drawer when row is clicked', () => {
         const data = {
-            title: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas',
-            link: 'https://espace.library.uq.edu.au/view/UQ:efd126',
-            alertId: '1',
-            createdDate: '3/4/2024 15:55:00',
+            title: 'Issues on record - UQ:34555c6',
+            link: 'https://espace.library.uq.edu.au/view/UQ:34555c6',
+            alertId: '12',
+            createdDate: '4th March 2023 02:45',
             description:
-                'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that they are the author “Tomaszewski, Wojciech (Wojtek) (87054)” on this work.',
-            status: 'Unassigned',
+                'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
+            status: 'Michael Feeney',
         };
 
         getRow(1).click(); // click first row of results
@@ -105,12 +105,12 @@ context('Admin Dashboard - System Alerts tab', () => {
             title: 'Issues on record - UQ:34555c6',
             link: 'https://espace.library.uq.edu.au/view/UQ:34555c6',
             alertId: '12',
-            createdDate: '4/3/2023 14:45:00',
+            createdDate: '4th March 2023 02:45',
             description:
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
             status: 'Michael Feeney',
         };
-        getRow(2).click(); // click first row of results
+        getRow(1).click(); // click first row of results
 
         assertDetailDrawer(data);
 
