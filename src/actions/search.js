@@ -234,6 +234,10 @@ export function searchEspacePublications(searchParams) {
     };
 }
 
+export function doesDOIExist(doi) {
+    return get(SEARCH_KEY_LOOKUP_API({ searchKey: 'doi', searchQuery: doi }));
+}
+
 export function loadCollectionsList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({

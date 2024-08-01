@@ -63,39 +63,38 @@ describe('Add new record', () => {
         // required fields
         fireEvent.change(getByTestId('rek-title-input'), { target: { value: 'title' } });
         fireEvent.change(getByTestId('rek-date-day-input'), { target: { value: '1' } });
-        fireEvent.change(getByTestId('rek-date-month-input'), { target: { value: 'May' } });
+        fireEvent.mouseDown(getByTestId('rek-date-month-select'));
+        fireEvent.click(getByRole('option', { name: 'May' }));
         fireEvent.change(getByTestId('rek-date-year-input'), { target: { value: '1911' } });
         fireEvent.change(getByTestId('authors-input'), { target: { value: 'author' } });
         fireEvent.click(getByRole('button', { name: 'Add author' }));
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
-
-        expect(requestCreateNewRecord).toHaveBeenCalledWith(
-            expect.objectContaining({
-                authors: [
-                    {
-                        affiliation: '',
-                        aut_title: '',
-                        authorId: null,
-                        creatorRole: '',
-                        disabled: false,
-                        nameAsPublished: 'author',
-                        orgaff: '',
-                        orgtype: '',
-                        required: false,
-                        selected: true,
-                        uqIdentifier: '',
-                        uqUsername: '',
-                    },
-                ],
-                languages: ['eng'],
-                rek_date: '1911-01-01',
-                rek_display_type: 183,
-                rek_title: 'title',
-            }),
-        );
         await waitFor(() => getByTestId('confirm-dialog-box'));
+
+        expect(requestCreateNewRecord).toBeCalledWith({
+            authors: [
+                {
+                    affiliation: '',
+                    aut_title: '',
+                    authorId: null,
+                    creatorRole: '',
+                    disabled: false,
+                    nameAsPublished: 'author',
+                    orgaff: '',
+                    orgtype: '',
+                    required: false,
+                    selected: true,
+                    uqIdentifier: '',
+                    uqUsername: '',
+                },
+            ],
+            languages: ['eng'],
+            rek_date: '1911-05-01',
+            rek_display_type: 183,
+            rek_title: 'title',
+        });
 
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));
         expect(clearNewRecordFn).toHaveBeenCalledTimes(1);
