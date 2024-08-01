@@ -15,7 +15,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { getSystemAlertColumns, SYSTEM_ALERT_ACTION } from '../config';
+import { getSystemAlertColumns, getDefaultSorting, SYSTEM_ALERT_ACTION } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
 import { useSystemAlertDrawer, useAlertStatus } from '../hooks';
 
@@ -81,6 +81,8 @@ const SystemAlerts = () => {
                 },
             );
     };
+    const defaultSorting = getDefaultSorting('alerts');
+
     return (
         <StandardCard noHeader>
             <Typography fontSize={'1.25rem'} fontWeight={'300'}>
@@ -126,6 +128,9 @@ const SystemAlerts = () => {
                                 initialState={{
                                     pagination: {
                                         paginationModel: { page: 0, pageSize: 10 },
+                                    },
+                                    sorting: {
+                                        sortModel: defaultSorting,
                                     },
                                 }}
                                 pageSizeOptions={[10, 25, 50, 100]}
