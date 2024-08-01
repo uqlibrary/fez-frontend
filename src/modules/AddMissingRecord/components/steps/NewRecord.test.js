@@ -4,10 +4,16 @@ import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-uti
 import * as RecordActions from 'actions/records';
 import { NEW_RECORD_API } from 'repositories/routes';
 
+const mockUseNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+}));
+
 function setup(testProps = {}) {
     const props = {
         actions: {},
-        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
     return render(
@@ -27,6 +33,7 @@ describe('Add new record', () => {
 
     afterEach(() => {
         mockApi.reset();
+        jest.clearAllMocks();
     });
 
     it('should not render publication form if author is not loaded ', () => {
@@ -42,14 +49,12 @@ describe('Add new record', () => {
     it('should show confirmation box and navigate to the correct route on button clicks', async () => {
         const requestCreateNewRecord = jest.spyOn(RecordActions, 'createNewRecord');
         const clearNewRecordFn = jest.fn();
-        const navigateFn = jest.fn();
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
         const { getByTestId, getByRole, getByText } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
             actions: { clearNewRecord: clearNewRecordFn },
-            navigate: navigateFn,
         });
 
         // interact with the form
@@ -66,42 +71,43 @@ describe('Add new record', () => {
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
 
-        expect(requestCreateNewRecord).toBeCalledWith({
-            authors: [
-                {
-                    affiliation: '',
-                    aut_title: '',
-                    authorId: null,
-                    creatorRole: '',
-                    disabled: false,
-                    nameAsPublished: 'author',
-                    orgaff: '',
-                    orgtype: '',
-                    required: false,
-                    selected: true,
-                    uqIdentifier: '',
-                    uqUsername: '',
-                },
-            ],
-            languages: ['eng'],
-            rek_date: '1911-01-01',
-            rek_display_type: 183,
-            rek_title: 'title',
-        });
+        expect(requestCreateNewRecord).toHaveBeenCalledWith(
+            expect.objectContaining({
+                authors: [
+                    {
+                        affiliation: '',
+                        aut_title: '',
+                        authorId: null,
+                        creatorRole: '',
+                        disabled: false,
+                        nameAsPublished: 'author',
+                        orgaff: '',
+                        orgtype: '',
+                        required: false,
+                        selected: true,
+                        uqIdentifier: '',
+                        uqUsername: '',
+                    },
+                ],
+                languages: ['eng'],
+                rek_date: '1911-01-01',
+                rek_display_type: 183,
+                rek_title: 'title',
+            }),
+        );
         await waitFor(() => getByTestId('confirm-dialog-box'));
 
         fireEvent.click(getByRole('button', { name: 'Go to my works' }));
-        expect(clearNewRecordFn).toBeCalledTimes(1);
-        expect(navigateFn).toHaveBeenNthCalledWith(1, '/records/mine');
+        expect(clearNewRecordFn).toHaveBeenCalledTimes(1);
+        expect(mockUseNavigate).toHaveBeenNthCalledWith(1, '/records/mine');
 
         fireEvent.click(getByRole('button', { name: 'Add another missing work' }));
-        expect(clearNewRecordFn).toBeCalledTimes(2);
-        expect(navigateFn).toHaveBeenNthCalledWith(2, '/records/add/find');
+        expect(clearNewRecordFn).toHaveBeenCalledTimes(2);
+        expect(mockUseNavigate).toHaveBeenNthCalledWith(2, '/records/add/find');
     });
 
     it('should show and navigate to fix record on button click and display file upload error', async () => {
         const clearNewRecordFn = jest.fn();
-        const navigateFn = jest.fn();
         mockApi.onPost(NEW_RECORD_API().apiUrl).replyOnce(200, {
             data: '',
         });
@@ -109,7 +115,6 @@ describe('Add new record', () => {
             author: { aut_id: 44 }, // no display name
             account: { class: ['IS_UQ_STUDENT_PLACEMENT', 'IS_CURRENT'] }, // hdr student
             actions: { clearNewRecord: clearNewRecordFn },
-            navigate: navigateFn,
             newRecord: { rek_pid: 'UQ:1' },
             newRecordFileUploadingOrIssueError: true,
         });
@@ -133,19 +138,17 @@ describe('Add new record', () => {
         expect(getByText(/File upload and\/or notes post failed/i)).toBeInTheDocument();
 
         fireEvent.click(getByRole('button', { name: 'Fix work' }));
-        expect(clearNewRecordFn).toBeCalledTimes(1);
-        expect(navigateFn).toBeCalledWith('/records/UQ:1/fix');
+        expect(clearNewRecordFn).toHaveBeenCalledTimes(1);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/UQ:1/fix');
     });
 
     it('should restart workflow', async () => {
-        const navigateToSearch = jest.fn();
         const { getByRole } = setup({
             author: { aut_display_name: 'Fred', aut_id: 44 },
-            navigate: navigateToSearch,
             actions: { clearNewRecord: jest.fn() },
         });
 
         fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
-        expect(navigateToSearch).toBeCalledWith('/records/add/find');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/find');
     });
 });

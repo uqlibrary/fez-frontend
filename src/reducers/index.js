@@ -52,3 +52,5 @@ export { default as adminDashboardConfigReducer } from './adminDashboardConfig';
 export { default as adminDashboardTodayReducer } from './adminDashboardToday';
 export { default as adminDashboardQuickLinksReducer } from './adminDashboardQuickLinks';
 export { default as adminDashboardSystemAlertsReducer } from './adminDashboardSystemAlerts';
+export { default as adminDashboardDisplayReportReducer } from './adminDashboardDisplayReport';
+export { default as adminDashboardExportReportReducer } from './adminDashboardExportReport';

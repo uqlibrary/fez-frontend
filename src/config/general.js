@@ -5,6 +5,10 @@ const converter = require('number-to-words');
 
 const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
 
+export const RESOLVER_URL_PREFIX = 'https://resolver.library.uq.edu.au/openathens/redir?qurl=';
+
+export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
@@ -606,6 +610,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    csv: 'csv',
 };
 
 export const ORG_UNITS_VOCAB_ID = 453703;

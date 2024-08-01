@@ -44,7 +44,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
           class="MuiTypography-root MuiTypography-h5 css-1q4fwm5-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
-          This is a tst
+          This is a test
         </span>
       </div>
       <div

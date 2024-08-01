@@ -121,9 +121,10 @@
         "@material-table/core": "~6.1.13",
         "@mui/icons-material": "^5.10.3",
         "@mui/lab": "^5.0.0-alpha.98",
-        "@mui/material": "^5.11.4",
-        "@mui/system": "^5.14.8",
-        "@mui/x-charts": "^7.1.1",
+        "@mui/material": "^5.15.7",
+        "@mui/styled-engine": "^5.15.7",
+        "@mui/system": "^5.15.7",
+        "@mui/x-charts": "^7.6.2",
         "@mui/x-data-grid": "^7.3.0",
         "@mui/x-date-pickers": "^5.0.15",
         "@react-google-maps/api": "^2.19.2",
@@ -174,7 +175,8 @@
         "regenerator-runtime": "^0.13.9",
         "save": "^2.9.0",
         "throttle-debounce": "^5.0.0",
-        "timezones.json": "^1.2.1"
+        "timezones.json": "^1.2.1",
+        "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
     },
     "optionalDependencies": {
         "fsevents": "^2.3.0"

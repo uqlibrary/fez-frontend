@@ -48,7 +48,7 @@ describe('Delete record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to fix from API for anon user', async () => {
-            mockApi.onAny().reply(403);
+            mockApi.onAny().reply(401);
 
             const expectedActions = [
                 actions.DELETE_RECORD_LOADING,

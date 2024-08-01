@@ -9,6 +9,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import ScheduleIcon from '@mui/icons-material/Schedule';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -61,44 +62,51 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
         setAnchorEl(null);
     };
 
+    const avatar = React.useMemo(() => {
+        if (link.qlk_link.includes(INTERNAL_LINK_DOMAIN)) {
+            if (link.qlk_amount !== null) {
+                return abbreviateNumber(link.qlk_amount, 1);
+            } else return <ScheduleIcon fontSize="small" />;
+        } else return <OpenInNew fontSize="small" />;
+    }, [link.qlk_link, link.qlk_amount]);
+
     return (
-        <Card {...rest}>
+        <Card role="listitem" {...rest}>
             <CardHeader
                 avatar={
                     <Box
                         sx={{
-                            bgcolor: stringToColour(link.title),
+                            bgcolor: stringToColour(link.qlk_title),
                             fontWeight: 'bold',
                             fontSize: '1rem',
                             padding: 1,
                             borderRadius: 2,
                             color: 'white !important',
                             textShadow: '0px 0px 2px rgba(0,0,0,0.87)',
-                            ...(!link.target.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
+                            ...(!link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
                         }}
-                        aria-label="count"
                     >
-                        {link.target.includes(INTERNAL_LINK_DOMAIN) ? (
-                            abbreviateNumber(link.amount, 1)
-                        ) : (
-                            <OpenInNew fontSize="small" />
-                        )}
+                        {avatar}
                     </Box>
                 }
                 title={
                     <ExternalLink
                         id={`quick-link-${index}`}
                         data-testid={`quick-link-${index}`}
-                        href={link.target}
+                        href={link.qlk_link}
                         inline
                         openInNewIcon={false}
                     >
-                        {link.title}
+                        {link.qlk_title}
                     </ExternalLink>
                 }
                 action={
                     <React.Fragment>
-                        <IconButton aria-label="settings" onClick={handleOpen}>
+                        <IconButton
+                            aria-label="settings"
+                            onClick={handleOpen}
+                            data-testid={`admin-actions-button-${index}`}
+                        >
                             <MoreVertIcon />
                         </IconButton>
                         <Menu
@@ -116,6 +124,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                                         handleClose();
                                     }}
                                     disabled={option.disabled}
+                                    data-testid={`admin-actions-menu-option-${mIndex}`}
                                 >
                                     {option.label}
                                 </MenuItem>
@@ -131,9 +140,9 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
 
 QuickLink.propTypes = {
     link: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        target: PropTypes.string.isRequired,
-        amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        qlk_title: PropTypes.string.isRequired,
+        qlk_link: PropTypes.string.isRequired,
+        qlk_amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     }),
     index: PropTypes.number.isRequired,
     locale: PropTypes.object.isRequired,

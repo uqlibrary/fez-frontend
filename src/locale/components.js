@@ -23,110 +23,192 @@ export default {
     components: {
         adminDashboard: {
             title: 'Admin dashboard',
-            today: {
-                systemalerts: {
-                    title: 'System Alerts',
-                    total: { label: 'Total' },
-                    today: {
-                        label: 'New today',
-                    },
-                    assigned: {
-                        label: 'Assigned',
-                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
-                    },
-                    unassigned: {
-                        label: 'Unassigned',
-                        suffix: (total, value) => (!!total && !!value && ` (${(value / total) * 100}%)`) || '',
-                    },
-                },
-                works: {
-                    unprocessed: 'Unprocessed Works',
-                    unprocessedSubText: 'view',
-                    processed: 'Processed Works',
-                    processedSubText: 'this iteration',
-                },
-                openaccess: {
-                    researchOutput: {
-                        title: 'OA Status',
-                        subText: 'of research output',
-                        chart: {
-                            text: (current, total) => `${current} (${Math.round((current / total) * 100)}%)`,
-                            subtext: total => `of ${total} records`,
+            tabs: {
+                today: {
+                    tabLabel: 'TODAY',
+                    systemalerts: {
+                        title: 'System Alerts',
+                        total: { label: 'Total' },
+                        today: {
+                            label: 'New today',
+                        },
+                        assigned: {
+                            label: 'Assigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                        unassigned: {
+                            label: 'Unassigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
                         },
                     },
-                },
-                quicklinks: {
-                    title: 'Quick Links ',
-                    addLinkText: '+ add',
+                    works: {
+                        unprocessed: 'Unprocessed Works',
+                        unprocessedSubText: 'view',
+                        processed: 'Processed Works',
+                        processedSubText: 'this iteration',
+                    },
+                    openaccess: {
+                        researchOutput: {
+                            title: 'OA Status',
+                            subText: 'of research output',
+                            chart: {
+                                text: (current, total) =>
+                                    `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
+                                subtext: total => `of ${total} records`,
+                            },
+                        },
+                    },
+                    quicklinks: {
+                        title: 'Quick Links ',
+                        addLinkText: '+ add',
+                        loading: {
+                            message: 'Loading quick links...',
+                            nodata: 'Add your first quick link using the "add" button',
+                        },
+                        link: {
+                            menu: {
+                                editLabel: 'Edit',
+                                deleteLabel: 'Delete',
+                                moveUpLabel: 'Move up',
+                                moveTopLabel: 'Move to top',
+                                moveDownLabel: 'Move down',
+                                moveBottomLabel: 'Move to bottom',
+                            },
+                        },
+                        admin: {
+                            add: {
+                                title: 'Add new quick link',
+                            },
+                            edit: {
+                                title: 'Edit ',
+                            },
+                            delete: {
+                                title: 'DELETE ',
+                            },
+                            button: {
+                                delete: 'Delete',
+                                save: 'Save',
+                                deleteBusy: 'Deleting...',
+                                saveBusy: 'Saving...',
+                                cancel: 'Cancel',
+                            },
+                            fields: {
+                                title: 'Title',
+                                link: 'Link',
+                            },
+                        },
+                        error: {
+                            title: 'Error',
+                            updating: 'An error occurred updating the quick link data.',
+                        },
+                    },
                     loading: {
-                        message: 'Loading quick links...',
-                        nodata: 'Add your first quick link using the "add" button',
+                        message: 'Loading dashboard...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
                     },
-                    link: {
-                        menu: {
-                            editLabel: 'Edit',
-                            deleteLabel: 'Delete',
-                            moveUpLabel: 'Move up',
-                            moveTopLabel: 'Move to top',
-                            moveDownLabel: 'Move down',
-                            moveBottomLabel: 'Move to bottom',
-                        },
+                },
+                systemalerts: {
+                    tabLabel: 'SYSTEM ALERTS',
+                    title: count => `${count} system alerts`,
+                    loading: {
+                        message: 'Loading system alerts...',
+                        nodata: 'No alerts available',
+                        noconfig: 'No config available',
                     },
-                    admin: {
-                        add: {
-                            title: 'Add new quick link',
+                    updating: 'Updating...',
+                    columns: {
+                        createdDate: 'Created',
+                        topic: 'Topic',
+                        status: 'Status',
+                    },
+                    drawer: {
+                        markResolved: 'Mark as resolved',
+                        updating: 'Updating...',
+                        alertId: 'Alert ID',
+                        received: 'Received',
+                        status: 'Status',
+                        statusHelpText: 'Assign a staff member to this issue',
+                    },
+                    alertStatus: {
+                        UNASSIGNED: 'Unassigned',
+                        UNKNOWN: 'Unknown',
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving system alert data.',
+                        updateFailed: 'An error occurred updating the system alert data.',
+                    },
+                },
+                reports: {
+                    tabLabel: 'REPORTS',
+                    exportTitle: 'Export-only reports',
+                    displayTitle: 'Display reports',
+                    loading: {
+                        config: 'Loading config data...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                    label: {
+                        report: 'Report',
+                        systemId: 'System alert ID',
+                        dateFrom: 'From',
+                        dateTo: 'To',
+                        runReport: 'Run report',
+                        export: 'Export',
+                        exportReport: 'Export report',
+                        helperText: 'Report will download direct to your device',
+                    },
+                    columns: {
+                        workshistory: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            pubDate: 'Date published',
+                            pid: 'PID',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
+                            action: 'Action',
                         },
-                        edit: {
-                            title: 'Edit ',
-                        },
-                        delete: {
-                            title: 'DELETE ',
-                        },
-                        button: {
-                            delete: 'Delete',
-                            save: 'Save',
-                            deleteBusy: 'Deleting...',
-                            saveBusy: 'Saving...',
-                            cancel: 'Cancel',
-                        },
-                        fields: {
+                        systemalertlog: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
                             title: 'Title',
+                            assignedTo: 'Assigned to',
+                            assignedDate: 'Date assigned',
+                            resolvedBy: 'Resolved by',
+                            resolvedDate: 'Date resolved',
+                            content: 'Description',
                             link: 'Link',
                         },
                     },
-                },
-                loading: {
-                    message: 'Loading dashboard...',
-                    nodata: 'No data available',
-                    noconfig: 'No config available',
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving the report.',
+                        required: 'Required',
+                        dateNotAfter: 'Must not be after "to" date',
+                        systemAlertId: 'Must be a positive whole number',
+                    },
+                    options: {
+                        display: [
+                            {
+                                value: 'workshistory',
+                                label: 'Works history',
+                            },
+                            {
+                                value: 'systemalertlog',
+                                label: 'System alert log',
+                            },
+                        ],
+                    },
                 },
             },
-            systemalerts: {
-                title: count => `${count} system alerts`,
-                loading: {
-                    message: 'Loading system alerts...',
-                    nodata: 'No alerts available',
-                    noconfig: 'No config available',
-                },
-                updating: 'Updating...',
-                updateFailed: 'Failed to update list.',
-                columns: {
-                    createdDate: 'Created',
-                    topic: 'Topic',
-                    status: 'Status',
-                },
-                drawer: {
-                    markResolved: 'Mark as resolved',
-                    updating: 'Updating...',
-                    alertId: 'Alert ID',
-                    received: 'Received',
-                    status: 'Status',
-                    statusHelpText: 'Assign a staff member to this issue',
-                },
-                alertStatus: {
-                    UNASSIGNED: 'Unassigned',
-                    UNKNOWN: 'Unknown',
-                },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
             },
         },
         publicationsList: {
@@ -2112,7 +2194,7 @@ export default {
                         type: 'TextField',
                         id: 'rek-title',
                         hint: 'Add a title',
-                        validation: ['required', 'spacelessMaxLength255Validator'],
+                        validation: ['required', 'maxLength255Validator'],
                         ariaLabel: 'Type a title to search for',
                     },
                     rek_book_title: {

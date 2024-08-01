@@ -5002,9 +5002,6 @@ describe('transformers', () => {
                 fez_record_search_key_notes: {
                     rek_notes: '<p>This is test additional note</p>',
                 },
-                fez_record_search_key_additional_notes: {
-                    rek_additional_notes: '<p>This is test additional note</p>',
-                },
                 fez_internal_notes: null,
             };
 
@@ -5459,6 +5456,58 @@ describe('transformers', () => {
                 },
             ]);
         });
+
+        it('should reorder transform data', () => {
+            expect(
+                transformers.getCopyToCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 2 }],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:234' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [
+                        { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                        {
+                            rek_ismemberof: 'UQ:234',
+                            rek_ismemberof_order: 2,
+                        },
+                    ],
+                },
+            ]);
+        });
+
+        it('should not add duplicated collections', () => {
+            expect(
+                transformers.getCopyToCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 2 }],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:123' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [
+                        { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                    ],
+                },
+            ]);
+        });
     });
 
     describe('getCopyToCommunityData', () => {
@@ -5513,6 +5562,31 @@ describe('transformers', () => {
                 {
                     rek_pid: 'UQ:11111',
                     fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+                },
+            ]);
+        });
+
+        it('should correctly reorder transform data', () => {
+            expect(
+                transformers.getRemoveFromCollectionData(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [
+                                { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                                { rek_ismemberof: 'UQ:234', rek_ismemberof_order: 2 },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        collections: [{ rek_pid: 'UQ:123' }],
+                    },
+                ),
+            ).toEqual([
+                {
+                    rek_pid: 'UQ:11111',
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:234', rek_ismemberof_order: 1 }],
                 },
             ]);
         });

@@ -87,7 +87,6 @@ export function hydrateMock(truncatedData) {
             });
             updateKeyWith = result;
         } else if (key.startsWith('fez_record_search_key_')) {
-            // eg fez_record_search_key_additional_notes is a single object of entries
             if (!!field && field.hasOwnProperty(shortKey)) {
                 updateKeyWith = {
                     [`${shortKey}_id`]: 6753442, // any random number to mock db long unique id
@@ -225,7 +224,6 @@ export function hydrateMock(truncatedData) {
         fez_record_search_key_wok_doc_types: [],
         fez_record_search_key_access_conditions: null,
         fez_record_search_key_acknowledgements: null,
-        fez_record_search_key_additional_notes: null,
         fez_record_search_key_advisory_statement: null,
         fez_record_search_key_alternate_genre: [],
         fez_record_search_key_alternative_title: [],

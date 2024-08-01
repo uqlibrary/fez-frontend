@@ -1,43 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
-export default class DigilibImageCitation extends Component {
-    static propTypes = {
-        publication: PropTypes.object.isRequired,
-        citationStyle: PropTypes.string,
+export const DigilibImageCitation = ({ publication, citationStyle }) => {
+    const record = {
+        id: publication.rek_pid,
+        title: publication.rek_title,
+        datePhotoTaken: publication.fez_record_search_key_date_photo_taken
+            ? publication.fez_record_search_key_date_photo_taken.rek_date_photo_taken
+            : null,
+        doi: publication.fez_record_search_key_doi ? publication.fez_record_search_key_doi.rek_doi : null,
     };
 
-    constructor(props) {
-        super(props);
-    }
+    // eSpace citation view for Digilib Image
+    // {Photographer}{Date photo taken| (|).}<i>{Title| |.}</i>
 
-    render() {
-        const record = {
-            id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title,
-            datePhotoTaken: this.props.publication.fez_record_search_key_date_photo_taken
-                ? this.props.publication.fez_record_search_key_date_photo_taken.rek_date_photo_taken
-                : null,
-        };
+    return (
+        <div className="citationContent citationDesign">
+            {/* {Photographer} */}
+            <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
-        // eSpace citation view for Digilib Image
-        // {Photographer}{Date photo taken| (|).}<i>{Title| |.}</i>
+            {/* {Date photo taken| (|).} */}
+            <Partials.DateCitationView date={record.datePhotoTaken} />
 
-        return (
-            <div className="citationContent citationDesign">
-                {/* {Photographer} */}
-                <Partials.AuthorsCitationView
-                    citationStyle={this.props.citationStyle}
-                    publication={this.props.publication}
-                />
+            {/* <i>{Title| |.}</i> */}
+            <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
-                {/* {Date photo taken| (|).} */}
-                <Partials.DateCitationView date={record.datePhotoTaken} />
-
-                {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
-            </div>
-        );
-    }
-}
+            {/* {doi| doi:|}*/}
+            <Partials.DoiCitationView doi={record.doi} />
+        </div>
+    );
+};
+DigilibImageCitation.propTypes = {
+    publication: PropTypes.object.isRequired,
+    citationStyle: PropTypes.string,
+};
+export default React.memo(DigilibImageCitation);

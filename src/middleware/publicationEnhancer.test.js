@@ -661,7 +661,7 @@ describe('publication enhancer', () => {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
             rek_formatted_abstract:
-                '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>',
+                '<test>html</test><ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>',
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: { data: [publication] } });
@@ -674,7 +674,7 @@ describe('publication enhancer', () => {
                             rek_pid: 'UQ:1234',
                             rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
                             calculateOpenAccess: expect.any(Function),
-                            rek_formatted_abstract: 'onetowhello<p>good bye</p>',
+                            rek_formatted_abstract: 'html<ul><li>one</li><li>tow</li></ul>hello<p>good bye</p>',
                             rek_formatted_title: null,
                         },
                     ],

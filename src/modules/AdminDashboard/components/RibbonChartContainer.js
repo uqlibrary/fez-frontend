@@ -12,18 +12,18 @@ import TableRow from '@mui/material/TableRow';
 
 import SectionTitle from './SectionTitle';
 
-const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest }) => {
+const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...rest }) => {
     const theme = useTheme();
 
     return (
         <React.Fragment>
-            <SectionTitle>{label}</SectionTitle>
+            <SectionTitle data-testid={`${id}-title`}>{label}</SectionTitle>
             {!!data && (
-                <TableContainer {...rest}>
+                <TableContainer data-testid={`${id}-table`} {...rest}>
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
-                                <TableCell size="small" width={200} />
+                                <TableCell size="small" width={200} aria-hidden="true" />
                                 {Object.keys(locale)
                                     .filter(item => locale[item].hasOwnProperty('label'))
                                     .map(key => {
@@ -41,6 +41,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
                                                           }
                                                         : {}),
                                                 }}
+                                                role="columnheader"
                                             >
                                                 {column.label}
                                             </TableCell>
@@ -72,11 +73,12 @@ const RibbonChartContainer = ({ data, locale, colours, label, children, ...rest 
     );
 };
 RibbonChartContainer.propTypes = {
-    data: PropTypes.object.isRequired,
-    locale: PropTypes.object.isRequired,
-    colours: PropTypes.object.isRequired,
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
+    data: PropTypes.object,
+    locale: PropTypes.object,
+    colours: PropTypes.object,
+    children: PropTypes.node,
 };
 
 export default React.memo(RibbonChartContainer);

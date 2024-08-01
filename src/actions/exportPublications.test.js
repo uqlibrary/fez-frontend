@@ -81,7 +81,7 @@ describe('Export publications actions', () => {
         });
 
         it('dispatches expected actions for anon user', async () => {
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             const expectedActions = [
                 actions.EXPORT_PUBLICATIONS_LOADING,

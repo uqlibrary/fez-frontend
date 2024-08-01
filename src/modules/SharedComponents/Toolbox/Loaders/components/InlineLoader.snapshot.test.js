@@ -12,7 +12,7 @@ function setup(testProps = {}) {
 describe('Component InlineLoader', () => {
     it('should render as expected', () => {
         const props = {
-            message: 'This is a tst',
+            message: 'This is a test',
         };
         const { container } = setup({ ...props });
         expect(container).toMatchSnapshot();

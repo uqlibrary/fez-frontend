@@ -1,1 +1,1 @@
-export { default as SearchRecords } from './containers/SearchRecords';
+export { default as SearchRecords } from './components/SearchRecords';

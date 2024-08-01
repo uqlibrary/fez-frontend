@@ -27,8 +27,6 @@ const publicationTypeListManuscript = {
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_acknowledgements": "This project supported by the Queensland State Government.",
-            "fez_record_search_key_additional_notes":
-                "Written on letterhead from the Australian Branch B.R.C.S. [British Red Cross Society]. Letterhead at top of page bears the Red Cross emblem.",
             "fez_record_search_key_assigned_user_id": [3946],
             "fez_record_search_key_author": ["Fryer, John Denis, 1895-1923"],
             "fez_record_search_key_contributor": ["Fryer, Henry Hardy"],

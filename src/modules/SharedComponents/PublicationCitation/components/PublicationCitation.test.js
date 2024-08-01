@@ -1,25 +1,32 @@
 import React from 'react';
-import { mui1theme } from 'config/theme';
+import Immutable from 'immutable';
 
 import { PublicationCitation } from './PublicationCitation';
 import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 
-function setup(testProps = {}) {
+const mockUseNavigate = jest.fn();
+import { useLocation } from 'react-router-dom';
+
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
+    useLocation: jest.fn(() => ({ pathname: '/', search: '', state: {} })),
+}));
+
+function setup(testProps = {}, testState = {}) {
     const props = {
-        classes: {},
         publication: mockRecordToFix,
-        actions: testProps.actions || {
-            setRecordToView: jest.fn(),
-        },
         hideLinks: false,
         citationStyle: 'header',
-        theme: mui1theme,
-        navigate: testProps.navigate || jest.fn(),
         ...testProps,
     };
+    const state = {
+        accountReducer: { account: {} },
+        ...testState,
+    };
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <PublicationCitation {...props} />
             </WithRouter>
@@ -28,6 +35,13 @@ function setup(testProps = {}) {
 }
 
 describe('PublicationCitation ', () => {
+    beforeEach(() => {
+        // useLocation.mockClear();
+        // useLocation.mockImplementation(() => ({ pathname: '/', search: '', state: {} }));
+    });
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
     it('should render component with default item', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -202,14 +216,12 @@ describe('PublicationCitation ', () => {
     });
 
     it('should handle default actions', () => {
-        const mockUseNavigate2 = jest.fn();
         const { getByRole } = setup({
             showDefaultActions: true,
-            navigate: mockUseNavigate2,
         });
 
         fireEvent.click(getByRole('button', { name: 'Request Correction' }));
-        expect(mockUseNavigate2).toBeCalledWith('/records/UQ:41878/fix');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/UQ:41878/fix');
     });
 
     it('should render primary action button', () => {
@@ -272,47 +284,47 @@ describe('PublicationCitation ', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should set referral URL for admin edit links with or without url fragments', () => {
+    it('should set referral URL for admin edit links with url fragments', () => {
         const openFn = jest.spyOn(window, 'open');
         openFn.mockImplementation(jest.fn());
+
+        useLocation.mockImplementation(() => ({
+            pathname: '/espace/feature-example/',
+            search: '',
+            hash: '#/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
+        }));
 
         const expectedRefUrl =
             'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
         const { getByTestId, getByRole } = setup({
             showAdminActions: true,
             hideCitationCounts: true,
-            location: {
-                hash: '#/records/search?searchQueryParams%5Ball%5D=&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
-                search: '',
-                pathname: '/espace/feature-example/', // hosted feature branch
-            },
         });
 
         fireEvent.click(getByTestId('admin-actions-button'));
         fireEvent.click(getByRole('menuitem', { name: 'Edit selected record' }));
 
-        expect(openFn).toBeCalledWith(expectedRefUrl, '_self', null);
+        expect(openFn).toHaveBeenCalledWith(expectedRefUrl, '_self', null);
     });
 
     it('should set referral URL for admin edit links without url fragments', () => {
         const openFn = jest.spyOn(window, 'open');
         openFn.mockImplementation(jest.fn());
 
+        useLocation.mockImplementation(() => ({ pathname: '/espace/feature-example/', search: '' }));
+
         const expectedRefUrl =
-            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Frecords%2Fsearch%3FsearchQueryParams%255Ball%255D%3D%26page%3D1%26pageSize%3D20%26sortBy%3Dscore%26sortDirection%3DDesc';
+            'https://fez-staging.library.uq.edu.au/admin/edit/UQ:41878?navigatedFrom=%2Fespace%2Ffeature-example%2F';
+
         const { getByTestId, getByRole } = setup({
             showAdminActions: true,
             hideCitationCounts: true,
-            location: {
-                search: '',
-                pathname: '/espace/feature-example/', // hosted feature branch
-            },
         });
 
         fireEvent.click(getByTestId('admin-actions-button'));
         fireEvent.click(getByRole('menuitem', { name: 'Edit selected record' }));
 
-        expect(openFn).toBeCalledWith(expectedRefUrl, '_self', null);
+        expect(openFn).toHaveBeenLastCalledWith(expectedRefUrl, '_self', null);
     });
 
     it('should render component with content indicators', () => {

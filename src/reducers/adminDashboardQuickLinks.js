@@ -1,13 +1,17 @@
 import * as actions from 'actions/actionTypes';
 
+const initialDashboardQuickLinksUpdateState = {
+    adminDashboardQuickLinksUpdating: false,
+    adminDashboardQuickLinksUpdateSuccess: null,
+    adminDashboardQuickLinksUpdateFailed: null,
+};
+
 export const initialState = {
     adminDashboardQuickLinksData: null,
     adminDashboardQuickLinksLoading: false,
     adminDashboardQuickLinksSuccess: null,
     adminDashboardQuickLinksError: null,
-    adminDashboardQuickLinksUpdating: false,
-    adminDashboardQuickLinksUpdateSuccess: null,
-    adminDashboardQuickLinksUpdateError: null,
+    ...initialDashboardQuickLinksUpdateState,
 };
 
 const handlers = {
@@ -27,6 +31,7 @@ const handlers = {
         adminDashboardQuickLinksError: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING]: state => ({
+        ...initialState,
         ...state,
         adminDashboardQuickLinksUpdating: true,
     }),
@@ -38,13 +43,11 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED]: (state, action) => ({
         ...state,
         adminDashboardQuickLinksUpdating: false,
-        adminDashboardQuickLinksUpdateError: action.payload,
+        adminDashboardQuickLinksUpdateFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_CLEAR]: state => ({
         ...state,
-        adminDashboardQuickLinksUpdating: false,
-        adminDashboardQuickLinksUpdateSuccess: false,
-        adminDashboardQuickLinksUpdateError: null,
+        ...initialDashboardQuickLinksUpdateState,
     }),
     [actions.ADMIN_DASHBOARD_QUICKLINKS_CLEAR]: () => ({ ...initialState }),
 };

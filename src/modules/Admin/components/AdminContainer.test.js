@@ -91,14 +91,8 @@ describe('AdminContainer component', () => {
         });
         expect(container).toMatchSnapshot();
     });
-    it('should render component with tabbed interface', () => {
-        const { container } = setup({
-            loadingRecordToView: false,
-            recordToView: null,
-        });
-        expect(container).toMatchSnapshot();
-    });
-    it('should render empty div if record is not loaded', () => {
+
+    it('should render work not found if record is not loaded', () => {
         const { container } = setup({
             loadingRecordToView: false,
             recordToView: null,
