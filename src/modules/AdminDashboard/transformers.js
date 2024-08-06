@@ -41,8 +41,10 @@ export const transformReportRequest = data => {
 
     const request = {
         report_type: reportId,
-        ...(!!data.fromDate ? { date_from: moment(data.fromDate).format('YYYY-MM-DD') } : {}),
-        ...(!!data.toDate ? { date_to: moment(data.toDate).format('YYYY-MM-DD') } : {}),
+        ...(!!data.fromDate && data.systemAlertId === ''
+            ? { date_from: moment(data.fromDate).format('YYYY-MM-DD') }
+            : {}),
+        ...(!!data.toDate && data.systemAlertId === '' ? { date_to: moment(data.toDate).format('YYYY-MM-DD') } : {}),
         ...(data.displayReport.value === 'systemalertlog' && !!data.systemAlertId
             ? { record_id: data.systemAlertId }
             : {}),

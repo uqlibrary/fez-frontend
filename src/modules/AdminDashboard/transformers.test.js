@@ -108,11 +108,11 @@ describe('transformers', () => {
             const data = { ...emptyReportActionState, displayReport: { value: 'workshistory' } };
             expect(transformReportRequest(data)).toEqual({ report_type: 2 });
         });
-        it('should return minimum system alert log request', () => {
+        it('should return date only system alert log request', () => {
             const data = { ...emptyReportActionState, displayReport: { value: 'systemalertlog' } };
             expect(transformReportRequest(data)).toEqual({ report_type: 1 });
         });
-        it('should return maximum request', () => {
+        it('should return record ID only request', () => {
             const data = {
                 ...emptyReportActionState,
                 fromDate: '01/01/2024',
@@ -122,8 +122,6 @@ describe('transformers', () => {
             };
             expect(transformReportRequest(data)).toEqual({
                 report_type: 1,
-                date_from: '2024-01-01',
-                date_to: '2024-10-01',
                 record_id: 123,
             });
         });

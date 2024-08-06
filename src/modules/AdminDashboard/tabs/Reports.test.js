@@ -185,13 +185,14 @@ describe('Reports tab', () => {
             expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'Works history' }),
         );
     });
-    it('should build full system alerts report request', async () => {
+    it('should build system alerts report without date request', async () => {
         const expectedRequest = {
-            date_from: '2024-04-02',
-            date_to: '2024-05-03', // TBC what the BE needs for searching
             record_id: '123',
             report_type: 1,
         };
+        const expectedRequestNoDate = { ...expectedRequest };
+        delete expectedRequestNoDate.date_from;
+        delete expectedRequestNoDate.date_to;
 
         mockApi
             .onGet(repositories.routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ ...expectedRequest }).apiUrl)
@@ -223,6 +224,60 @@ describe('Reports tab', () => {
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
         expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
 
+        expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith(expectedRequestNoDate);
+
+        await waitFor(() => getByTestId('report-display-data-grid'));
+
+        assertSortedColumn(getByText('Date created'));
+
+        expect(within(getByTestId('report-display-data-grid')).getAllByRole('row').length).toBe(
+            adminDashboardReportSystemAlertsData.length + 1,
+        ); // +1 to include the header
+
+        expect(within(getByRole('button', { name: 'Run report' })).queryByRole('progressbar')).not.toBeInTheDocument();
+        expect(getByRole('button', { name: 'Export' })).not.toHaveAttribute('disabled');
+
+        await userEvent.click(getByRole('button', { name: 'Export' }));
+        expect(exportReportToExcelFn).toHaveBeenCalledWith(
+            expect.objectContaining({ filename: 'espace_export_20170630000000.xlsx', sheetLabel: 'System alert log' }),
+        );
+    });
+    it('should build system alerts report with only date request', async () => {
+        const expectedRequest = {
+            date_from: '2024-04-02',
+            date_to: '2024-05-03', // TBC what the BE needs for searching
+            report_type: 1,
+        };
+
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ ...expectedRequest }).apiUrl)
+            .reply(200, { data: [...adminDashboardReportSystemAlertsData] });
+
+        const loadAdminDashboardDisplayReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardDisplayReport');
+        const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
+            return true;
+        });
+        const { getAllByRole, getByRole, getByTestId, getByText } = setup();
+
+        await userEvent.click(getByTestId('report-display-export-input'));
+        expect(getAllByRole('option').length).toBe(2);
+
+        await userEvent.click(getByRole('option', { name: 'System alert log' }));
+        expect(getByTestId('report-display-export-input')).toHaveValue('System alert log');
+
+        expect(getByTestId('report-display-export-date-from-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-date-to-input')).not.toHaveAttribute('disabled');
+        expect(getByTestId('report-display-export-system-alert-id-input')).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
+        expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
+
+        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+
+        await userEvent.click(getByRole('button', { name: 'Run report' }));
+        expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
+
         expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith(expectedRequest);
 
         await waitFor(() => getByTestId('report-display-data-grid'));
@@ -248,8 +303,6 @@ describe('Reports tab', () => {
             .onGet(repositories.routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ id: 'systemalertlog' }).apiUrl)
             .reply(422, { message: 'Test error' });
         const { queryByTestId, getByTestId, getByRole } = setup();
-        // {},
-        // { adminDashboardExportReportReducer: { adminDashboardExportReportFailed: { errorMessage: 'Test error' } } },
 
         await userEvent.click(getByTestId('report-display-export-input'));
         await userEvent.click(getByRole('option', { name: 'System alert log' }));
