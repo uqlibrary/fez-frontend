@@ -90,9 +90,17 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
         pageChanged,
         sortByChanged,
         facetsChanged,
-        handleExport,
         displayRecordsAsChanged,
-    } = useSearchRecordsControls(queryParams, updateQueryString, actions);
+    } = useSearchRecordsControls(queryParams, updateQueryString);
+
+    const handleExport = exportFormat => {
+        dispatch(
+            actions.exportEspacePublications({
+                ...queryParams,
+                ...exportFormat,
+            }),
+        );
+    };
 
     /**
      * Handle the user changing the Display As view type via the UI.
