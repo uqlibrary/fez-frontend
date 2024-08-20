@@ -5,7 +5,22 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import Editor from '../../../../../custom_modules/ckeditor5-custom-build';
 import Typography from '@mui/material/Typography';
 
-const RichEditor = fieldProps => {
+const RichEditor = ({
+    richEditorId,
+    title,
+    description,
+    instructions,
+    maxValue,
+    className = '',
+    required = false,
+    singleLine = false,
+    textOnlyOnPaste = true,
+    value = {},
+    onChange,
+    input,
+    meta,
+    titleProps,
+}) => {
     const editorConfig = {
         toolbar: {
             items: [
@@ -15,7 +30,7 @@ const RichEditor = fieldProps => {
                 'strikethrough',
                 'subscript',
                 'superscript',
-                ...(!!fieldProps.singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
+                ...(!!singleLine ? [] : ['|', 'link', 'numberedList', 'bulletedList']),
                 '|',
                 'LetterCase',
                 'removeFormat',
@@ -37,34 +52,33 @@ const RichEditor = fieldProps => {
                       plainText: textValue,
                   }
                 : null;
-        fieldProps.onChange(newTypedValue);
+        onChange(newTypedValue);
     }
 
     function getContent() {
         let dataForEditor = '';
         /* istanbul ignore else */
-        if (fieldProps?.input?.value?.size > 0) {
-            dataForEditor = fieldProps.input.value.get('htmlText') || fieldProps.input.value.get('plainText') || '';
-        } else if (!!fieldProps && fieldProps.hasOwnProperty('value')) {
-            if (!!fieldProps.value.get && !!fieldProps.value.get('htmlText')) {
-                dataForEditor = fieldProps.value.get('htmlText');
-            } else if (!!fieldProps.value.htmlText) {
-                dataForEditor = fieldProps.value.htmlText;
-            } else if (typeof fieldProps.value === 'string' && fieldProps.value.length > 0) {
-                dataForEditor = fieldProps.value;
+        if (input?.value?.size > 0) {
+            dataForEditor = input.value.get('htmlText') || input.value.get('plainText') || '';
+        } else if (value) {
+            if (!!value.get && !!value.get('htmlText')) {
+                dataForEditor = value.get('htmlText');
+            } else if (!!value.htmlText) {
+                dataForEditor = value.htmlText;
+            } else if (typeof value === 'string' && value.length > 0) {
+                dataForEditor = value;
             }
         }
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
     }
 
     let error = null;
-    const inputLength =
-        (fieldProps.value && fieldProps.value.plainText && fieldProps.value.plainText.length) ||
-        fieldProps.value.length - 7; // default rich editor has "<p></p>"
-    if (fieldProps.meta && fieldProps.meta.error) {
+    // default rich editor has "<p></p>"
+    const inputLength = (value && value.plainText && value.plainText.length) || value.length - 7;
+    if (meta && meta.error) {
         error =
-            !!fieldProps.meta.error.props &&
-            React.Children.map(fieldProps.meta.error.props.children, (child, index) => {
+            !!meta.error.props &&
+            React.Children.map(meta.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, {
                         key: index,
@@ -77,31 +91,27 @@ const RichEditor = fieldProps => {
     // rendered content of empty CKEditor:
     // <p><br data-cke-filler="true"></p>
     return (
-        <div
-            id={fieldProps.richEditorId}
-            data-testid={fieldProps.richEditorId}
-            data-analyticsid={fieldProps.richEditorId}
-        >
+        <div id={richEditorId} data-testid={richEditorId} data-analyticsid={richEditorId}>
             <span>
-                {fieldProps.title && (
-                    <Typography color={fieldProps.meta && fieldProps.meta.error && 'error'} {...fieldProps.titleProps}>
-                        {fieldProps.title}
-                        {fieldProps.required && <span> *</span>}
+                {title && (
+                    <Typography color={meta && meta.error && 'error'} {...titleProps}>
+                        {title}
+                        {required && <span> *</span>}
                     </Typography>
                 )}
-                {fieldProps.description && (
-                    <Typography color={fieldProps.meta && fieldProps.meta.error && 'error'} variant={'caption'}>
-                        {fieldProps.description}
+                {description && (
+                    <Typography color={meta && meta.error && 'error'} variant={'caption'}>
+                        {description}
                     </Typography>
                 )}
             </span>
             <CKEditor
-                className={fieldProps.className}
+                className={className}
                 editor={Editor}
                 config={editorConfig}
                 data={getContent()}
                 onReady={editor => {
-                    if (fieldProps.textOnlyOnPaste) {
+                    if (textOnlyOnPaste) {
                         const documentView = editor.editing.view.document;
                         /* istanbul ignore next */
                         documentView.on('clipboardInput', (event, data) => {
@@ -113,7 +123,7 @@ const RichEditor = fieldProps => {
                     handleEditorDataChange(event, editor);
                 }}
             />
-            {fieldProps.meta && fieldProps.meta.error && (
+            {meta && meta.error && (
                 <Typography
                     color="error"
                     variant="caption"
@@ -122,28 +132,28 @@ const RichEditor = fieldProps => {
                         display: 'inline-block',
                     }}
                 >
-                    {error || fieldProps.meta.error}
-                    {fieldProps.maxValue && <span>&nbsp;-&nbsp;</span>}
+                    {error || meta.error}
+                    {maxValue && <span>&nbsp;-&nbsp;</span>}
                 </Typography>
             )}
-            {fieldProps.maxValue && (
+            {maxValue && (
                 <Typography
                     component={'span'}
                     style={{
                         display: 'inline-block',
                     }}
                     variant="caption"
-                    color={fieldProps.meta && fieldProps.meta.error && 'error'}
+                    color={meta && meta.error && 'error'}
                 >
-                    {inputLength > 0 ? inputLength : 0} characters of {fieldProps.maxValue}
-                    {fieldProps.instructions || ''}
+                    {inputLength > 0 ? inputLength : 0} characters of {maxValue}
+                    {instructions || ''}
                 </Typography>
             )}
         </div>
     );
 };
 
-RichEditor.prototypes = {
+RichEditor.propTypes = {
     className: PropTypes.string,
     input: PropTypes.object,
     inputRef: PropTypes.any,
@@ -155,17 +165,10 @@ RichEditor.prototypes = {
     required: PropTypes.bool,
     singleLine: PropTypes.bool,
     textOnlyOnPaste: PropTypes.bool,
+    description: PropTypes.string,
     title: PropTypes.string,
-    value: PropTypes.string,
-};
-
-RichEditor.defaultProps = {
-    className: '',
-    disabled: false,
-    required: false,
-    singleLine: false,
-    textOnlyOnPaste: true,
-    value: '',
+    value: PropTypes.object,
+    titleProps: PropTypes.object,
 };
 
 export default RichEditor;

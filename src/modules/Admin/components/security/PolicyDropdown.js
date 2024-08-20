@@ -11,11 +11,11 @@ import { MAXIMUM_SECURITY_PUBLIC, TOP_LEVEL_SECURITY_POLICIES } from 'config/gen
 export const PolicyDropdown = ({
     fieldName,
     disabled,
-    fieldLabel,
-    displayPrompt,
-    policyList,
+    fieldLabel = 'Work level policy to apply to this PID',
+    displayPrompt = false,
+    policyList = TOP_LEVEL_SECURITY_POLICIES,
     prompt,
-    inheritedSecurity,
+    inheritedSecurity = MAXIMUM_SECURITY_PUBLIC,
     policyDropdownId,
     ...props
 }) => (
@@ -50,11 +50,4 @@ PolicyDropdown.propTypes = {
     prompt: PropTypes.string,
     inheritedSecurity: PropTypes.number,
     policyDropdownId: PropTypes.string.isRequired,
-};
-
-PolicyDropdown.defaultProps = {
-    displayPrompt: false,
-    policyList: TOP_LEVEL_SECURITY_POLICIES,
-    fieldLabel: 'Work level policy to apply to this PID',
-    inheritedSecurity: MAXIMUM_SECURITY_PUBLIC,
 };

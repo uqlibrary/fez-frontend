@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdvancedSearchComponent should render with default props 1`] = `
+<div>
+  <form
+    data-testid="advanced-search-form"
+    id="advancedSearchForm"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-gpa0ei-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          style="flex-grow: 1; width: 1px;"
+        >
+          <h5
+            class="MuiTypography-root MuiTypography-h5 css-19cmg10-MuiTypography-root"
+          >
+            Advanced search
+          </h5>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+        >
+          <button
+            aria-label="Hide advanced search"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+            data-analyticsid="minimize-advanced-search"
+            data-testid="minimize-advanced-search"
+            id="minimize-advanced-search"
+            tabindex="0"
+            tooltip="Hide advanced search"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="KeyboardArrowUpIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item css-1vd9xel-MuiGrid-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                    id="field-type-select-label"
+                  >
+                    <div
+                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    >
+                      <div
+                        aria-controls=":r0:"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="field-type-select"
+                        class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        data-testid="field-type-select"
+                        id="field-type-select"
+                        role="combobox"
+                        tabindex="0"
+                      >
+                        Select a field
+                      </div>
+                      <input
+                        aria-hidden="true"
+                        aria-invalid="true"
+                        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                        name="field-type-select"
+                        tabindex="-1"
+                        value="0"
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                        data-testid="ArrowDropDownIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7 10l5 5 5-5z"
+                        />
+                      </svg>
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1d7hrfi-MuiFormHelperText-root"
+                    >
+                      Please select a field to search
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-hkkfo0-MuiTypography-root"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-18u5z5i-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qdqiw9-MuiGrid-root"
+                >
+                  <div
+                    aria-label="Select a field to search on"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                    data-testid="initial"
+                  >
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        autocomplete="search"
+                        class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="initial-input"
+                        data-testid="initial-input"
+                        disabled=""
+                        id="initial-input"
+                        name="search-field-initial"
+                        placeholder="Select a field to search on"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-qchv2j-MuiGrid-root"
+                >
+                  <hr
+                    class="MuiDivider-root MuiDivider-fullWidth css-48j91v-MuiDivider-root"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rw4ukj-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                >
+                  Work type
+                </label>
+                <div
+                  aria-label="Select work types to search on"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-up58gs-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  data-testid="document-type-selector"
+                >
+                  <div
+                    aria-controls=":r2:"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="document-type-selector"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    id="document-type-selector"
+                    role="combobox"
+                    tabindex="0"
+                  >
+                    <span
+                      class="notranslate"
+                    >
+                      ​
+                    </span>
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    aria-invalid="false"
+                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    name="document-type-selector"
+                    tabindex="-1"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
+                  >
+                    Published year range
+                  </span>
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
+                >
+                  <div
+                    aria-label="Enter a year to search from"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                  >
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-describedby="from-helper-text"
+                        aria-invalid="true"
+                        aria-labelledby="from-label"
+                        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                        data-testid="from"
+                        id="from"
+                        placeholder="Year from"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <p
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1d7hrfi-MuiFormHelperText-root"
+                      id="from-helper-text"
+                    >
+                      Invalid year range
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiTextField-root css-o3gf2k-MuiFormControl-root-MuiTextField-root"
+                  >
+                    <div
+                      aria-labelledby="combiner-label"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                        disabled=""
+                        id=":r4:"
+                        type="text"
+                        value=" to "
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
+                >
+                  <div
+                    aria-label="Enter a year to search to"
+                    aria-labelledby="to-label"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                  >
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="true"
+                        aria-labelledby="to-label"
+                        class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                        data-testid="to"
+                        id="to"
+                        placeholder="Year to"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <label
+                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              >
+                <span
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                >
+                  <input
+                    aria-label="Check to search for open access / full text works"
+                    class="PrivateSwitchBase-input css-1m9pwf3"
+                    data-analyticsid="advanced-search-open-access"
+                    data-indeterminate="false"
+                    data-testid="advanced-search-open-access"
+                    id="advanced-search-open-access"
+                    type="checkbox"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="CheckBoxOutlineBlankIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                >
+                  Open access
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+        style="margin-top: 24px;"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+        >
+          <button
+            aria-label="Click to add another advanced search field"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            data-analyticsid="advanced-search-row-add"
+            data-testid="advanced-search-row-add"
+            disabled=""
+            id="add-another-search-row"
+            tabindex="-1"
+            type="button"
+          >
+            Add another field
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+        >
+          <button
+            aria-label="Click to reset the advanced search"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
+            data-analyticsid="advanced-search-reset"
+            data-testid="advanced-search-reset"
+            id="reset-advanced-search"
+            tabindex="0"
+            type="button"
+          >
+            Reset
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+        >
+          <button
+            aria-label="Click to return to the simple search"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            data-analyticsid="toggle-to-simple-search"
+            data-testid="toggle-to-simple-search"
+            id="toggle-to-simple-search-mode"
+            tabindex="0"
+            type="button"
+          >
+            Back To Simple search
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item css-93yfmk-MuiGrid-root"
+          style="flex-grow: 1; width: 1px;"
+        />
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-megbyu-MuiGrid-root"
+        >
+          <button
+            aria-label="Click to search eSpace"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            data-analyticsid="advanced-search"
+            data-testid="advanced-search"
+            disabled=""
+            id="advanced-search"
+            tabindex="-1"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+          style="padding-top: 24px;"
+        >
+          <div
+            data-testid="advanced-search-caption"
+          >
+            <span
+              class="MuiBox-root css-1hg9omi"
+              data-testid="advanced-search-caption-container"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;

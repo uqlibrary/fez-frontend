@@ -82,9 +82,5 @@ ThirdPartyLookupTool.propTypes = {
     lookupResults: PropTypes.array,
     loadingResults: PropTypes.bool,
 };
-ThirdPartyLookupTool.defaultProps = {
-    lookupResults: [],
-    loadingResults: false,
-};
 
 export default React.memo(ThirdPartyLookupTool);
