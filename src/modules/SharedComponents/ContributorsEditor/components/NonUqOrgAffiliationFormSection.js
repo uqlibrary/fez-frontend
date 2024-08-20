@@ -14,7 +14,18 @@ export default function NonUqOrgAffiliationFormSection({
     orgType,
     onOrgAffiliationChange,
     onOrgTypeChange,
-    locale,
+    locale = {
+        fields: {
+            organisation: {
+                inputLabel: 'Organisation',
+                placeholder: 'Primary organisation affiliation',
+            },
+            organisationType: {
+                inputLabel: 'Organisation type',
+                placeholder: 'Select an affiliated organisation type',
+            },
+        },
+    },
     disableAffiliationEdit,
     disableOrgTypeEdit,
     orgAffiliationError,
@@ -88,19 +99,4 @@ NonUqOrgAffiliationFormSection.propTypes = {
     orgAffiliationError: PropTypes.bool,
     orgAffiliationTypeError: PropTypes.bool,
     fullWidthFields: PropTypes.bool,
-};
-
-NonUqOrgAffiliationFormSection.defaultProps = {
-    locale: {
-        fields: {
-            organisation: {
-                inputLabel: 'Organisation',
-                placeholder: 'Primary organisation affiliation',
-            },
-            organisationType: {
-                inputLabel: 'Organisation type',
-                placeholder: 'Select an affiliated organisation type',
-            },
-        },
-    },
 };

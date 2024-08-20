@@ -523,3 +523,5 @@ exports[`AttachedFiles component AV Check should render the proper av status ico
   },
 ]
 `;
+
+exports[`AttachedFiles component should render with default props 1`] = `<div />`;

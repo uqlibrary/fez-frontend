@@ -768,16 +768,9 @@ exports[`Community form should not ask when redirecting from form with data afte
             xs={12}
           >
             <Alert
-              allowDismiss={false}
-              customIcon={null}
-              customType={null}
-              disableAlertClick={false}
-              dismissTitle="Click to dismiss this alert"
               message="New work has been saved successfully."
-              showLoader={false}
               title="Success"
               type="done"
-              wiggle={null}
             />
           </ForwardRef(Grid)>
         </ForwardRef(Grid)>

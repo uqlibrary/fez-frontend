@@ -32,8 +32,8 @@ describe('Date range ', () => {
         expect(getByTestId('expand-more-facet-category-date-range')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('expand-more-facet-category-date-range'));
-        expect(getByTestId('from')).toHaveAttribute('value', '2007');
-        expect(getByTestId('to')).toHaveAttribute('value', '2022');
+        expect(getByTestId('from')).toHaveAttribute('value', '2010'); // 2020-10
+        expect(getByTestId('to')).toHaveAttribute('value', '2025'); // 2020+5
 
         expect(getByTestId('expand-less-facet-category-date-range')).toBeInTheDocument();
     });

@@ -12,7 +12,13 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
-export const ThirdPartyLookupForm = ({ actions, locale, localeform, sendInputsToResultComponent, isMinimised }) => {
+export const ThirdPartyLookupForm = ({
+    actions,
+    locale,
+    localeform,
+    sendInputsToResultComponent,
+    isMinimised = true,
+}) => {
     const [state, setState] = React.useState({
         isMinimised,
         primaryValue: '',
@@ -155,7 +161,5 @@ ThirdPartyLookupForm.propTypes = {
     sendInputsToResultComponent: PropTypes.func.isRequired,
     isMinimised: PropTypes.bool,
 };
-ThirdPartyLookupForm.defaultProps = {
-    isMinimised: true,
-};
+
 export default ThirdPartyLookupForm;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { parseHtmlToJSX } from 'helpers/general';
 
-export const CitationTitleView = ({ prefix, suffix, className, value }) => {
+export const CitationTitleView = ({ prefix = ' ', suffix = '.', className, value }) => {
     if (!value) {
         return <span className={`${className || ''} empty`} />;
     }
@@ -20,11 +20,6 @@ CitationTitleView.propTypes = {
     suffix: PropTypes.string,
     className: PropTypes.string,
     value: PropTypes.string,
-};
-
-CitationTitleView.defaultProps = {
-    prefix: ' ',
-    suffix: '.',
 };
 
 export default React.memo(CitationTitleView);

@@ -9,11 +9,14 @@ import { useWidth } from 'hooks';
 
 export const AuthorLinking = ({
     authorLinkingId,
-    authorList,
+    authorList = [],
     className,
-    disabled,
-    linkedAuthorIdList,
-    locale,
+    disabled = false,
+    linkedAuthorIdList = [],
+    locale = {
+        confirmation:
+            'I confirm and understand that I am claiming this work under the above name, and confirm this is me',
+    },
     loggedInAuthor,
     onChange,
     searchKey,
@@ -245,16 +248,6 @@ AuthorLinking.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     searchKey: PropTypes.object.isRequired,
-};
-
-AuthorLinking.defaultProps = {
-    disabled: false,
-    locale: {
-        confirmation:
-            'I confirm and understand that I am claiming this work under the above name, and confirm this is me',
-    },
-    authorList: [],
-    linkedAuthorIdList: [],
 };
 
 export default React.memo(AuthorLinking);
