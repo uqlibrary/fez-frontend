@@ -8,7 +8,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 
-const RelatedPublications = ({ publication, title, parentSearchKey, childrenSearchKey, showPublicationTitle }) => {
+const RelatedPublications = ({
+    publication,
+    title = locale.viewRecord.sections.relatedPublications.title,
+    parentSearchKey,
+    childrenSearchKey = {
+        key: 'fez_record_search_key_has_related_datasets',
+        pid: 'rek_has_related_datasets',
+        title: 'rek_has_related_datasets_lookup',
+        order: 'rek_has_related_datasets_order',
+    },
+    showPublicationTitle = false,
+}) => {
     const renderTitle = (item, searchKey) => {
         const pid = item[searchKey.pid];
         return <Link to={pathConfig.records.view(pid)}>{item[searchKey.title]}</Link>;
@@ -75,19 +86,8 @@ RelatedPublications.propTypes = {
     publication: PropTypes.object.isRequired,
     title: PropTypes.string,
     parentSearchKey: PropTypes.object,
-    childrenSearchKey: PropTypes.object.isRequired,
+    childrenSearchKey: PropTypes.object,
     showPublicationTitle: PropTypes.bool,
-};
-
-RelatedPublications.defaultProps = {
-    title: locale.viewRecord.sections.relatedPublications.title,
-    childrenSearchKey: {
-        key: 'fez_record_search_key_has_related_datasets',
-        pid: 'rek_has_related_datasets',
-        title: 'rek_has_related_datasets_lookup',
-        order: 'rek_has_related_datasets_order',
-    },
-    showPublicationTitle: false,
 };
 
 export default RelatedPublications;

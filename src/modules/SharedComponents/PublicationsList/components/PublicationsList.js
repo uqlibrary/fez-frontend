@@ -23,20 +23,20 @@ const StyledBulkActionContainer = styled(Grid)(({ theme }) => ({
 
 export const PublicationsList = ({
     publicationsList,
-    publicationsListSubset,
-    subsetCustomActions,
+    publicationsListSubset = [],
+    subsetCustomActions = [],
     customActions,
-    showAdminActions,
-    showDefaultActions,
-    showSources,
-    showMetrics,
-    showSourceCountIcon,
-    showUnpublishedBufferFields,
-    hideCountDiff,
+    showAdminActions = false,
+    showDefaultActions = false,
+    showSources = false,
+    showMetrics = false,
+    showSourceCountIcon = false,
+    showUnpublishedBufferFields = false,
+    hideCountDiff = false,
     hideCountTotal,
     publicationsLoading,
-    showImageThumbnails,
-    security,
+    showImageThumbnails = false,
+    security = { isAdmin: false, isAuthor: false },
 }) => {
     const {
         shouldRenderRecordsSelectors,
@@ -165,20 +165,6 @@ PublicationsList.propTypes = {
     publicationsLoading: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
     security: PropTypes.object,
-};
-
-PublicationsList.defaultProps = {
-    publicationsListSubset: [],
-    subsetCustomActions: [],
-    showAdminActions: false,
-    showSources: false,
-    showDefaultActions: false,
-    showSourceCountIcon: false,
-    showMetrics: false,
-    showUnpublishedBufferFields: false,
-    hideCountDiff: false,
-    security: { isAdmin: false, isAuthor: false },
-    showImageThumbnails: false,
 };
 
 export default React.memo(PublicationsList);

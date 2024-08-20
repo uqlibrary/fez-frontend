@@ -10,7 +10,27 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
-export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
+export const FileUploadRowHeader = ({
+    onDeleteAll,
+    locale = {
+        filenameColumn: 'File name',
+        fileAccessColumn: 'Access conditions',
+        fileDescriptionColumn: 'Description',
+        fileSecurityPolicyColumn: 'Security policy',
+        embargoDateColumn: 'Embargo release date',
+        deleteAllFiles: 'Remove all files from the upload queue',
+        deleteAllFilesConfirmation: {
+            confirmationTitle: 'Delete all',
+            confirmationMessage: 'Are you sure you want to delete all files?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+        requireOpenAccessStatus: true,
+    },
+    requireOpenAccessStatus,
+    disabled,
+    isAdmin,
+}) => {
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const {
         filenameColumn,
@@ -91,24 +111,6 @@ FileUploadRowHeader.propTypes = {
     requireOpenAccessStatus: PropTypes.bool,
     disabled: PropTypes.bool,
     isAdmin: PropTypes.bool,
-};
-
-FileUploadRowHeader.defaultProps = {
-    locale: {
-        filenameColumn: 'File name',
-        fileAccessColumn: 'Access conditions',
-        fileDescriptionColumn: 'Description',
-        fileSecurityPolicyColumn: 'Security policy',
-        embargoDateColumn: 'Embargo release date',
-        deleteAllFiles: 'Remove all files from the upload queue',
-        deleteAllFilesConfirmation: {
-            confirmationTitle: 'Delete all',
-            confirmationMessage: 'Are you sure you want to delete all files?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-        requireOpenAccessStatus: true,
-    },
 };
 
 export default React.memo(FileUploadRowHeader);

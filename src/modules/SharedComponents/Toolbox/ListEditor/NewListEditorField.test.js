@@ -2,6 +2,8 @@ import React from 'react';
 import NewListEditorField from './NewListEditorField';
 import { List } from 'immutable';
 import { rtlRender } from 'test-utils';
+import { GenericTemplate } from './components/GenericTemplate';
+import { FreeTextForm } from './components/FreeTextForm';
 
 describe('NewListEditorField component', () => {
     it('should render new list editor component with the given array', () => {
@@ -23,6 +25,8 @@ describe('NewListEditorField component', () => {
                 order: 'rek_keywords_order',
             },
             listEditorId: 'test',
+            ListEditorForm: FreeTextForm,
+            ListEditorItemTemplate: GenericTemplate,
         };
         const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();
@@ -47,6 +51,8 @@ describe('NewListEditorField component', () => {
                 order: 'rek_keywords_order',
             },
             listEditorId: 'test',
+            ListEditorForm: FreeTextForm,
+            ListEditorItemTemplate: GenericTemplate,
         };
         const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();
@@ -64,6 +70,8 @@ describe('NewListEditorField component', () => {
                 order: 'rek_keywords_order',
             },
             listEditorId: 'test',
+            ListEditorForm: FreeTextForm,
+            ListEditorItemTemplate: GenericTemplate,
         };
         const { asFragment } = rtlRender(<NewListEditorField {...props} />);
         expect(asFragment()).toMatchSnapshot();

@@ -17,7 +17,7 @@ export const AuthorItem = ({
     disabled,
     author,
     onAuthorSelected,
-    locale,
+    locale = { suffix: ' listed [type]' },
     index,
 }) => {
     const selectAuthor = () => {
@@ -84,12 +84,6 @@ AuthorItem.propTypes = {
     onAuthorSelected: PropTypes.func,
     locale: PropTypes.object,
     index: PropTypes.number,
-};
-
-AuthorItem.defaultProps = {
-    locale: {
-        suffix: ' listed [type]',
-    },
 };
 
 export default React.memo(AuthorItem);

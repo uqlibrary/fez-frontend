@@ -10,7 +10,16 @@ import Typography from '@mui/material/Typography';
 import Delete from '@mui/icons-material/Delete';
 import Done from '@mui/icons-material/Done';
 
-export const FileUploadRowStatus = ({ disabled, onDelete, locale, name, fileUploadRowStatusId }) => {
+export const FileUploadRowStatus = ({
+    disabled,
+    onDelete,
+    locale = {
+        deleteHint: 'Remove this file',
+        uploadInProgressText: 'Uploading...',
+    },
+    name,
+    fileUploadRowStatusId,
+}) => {
     const store = useSelector(state => state.get('fileUpload'));
 
     const progress = store[name] || 0;
@@ -58,13 +67,6 @@ FileUploadRowStatus.propTypes = {
     locale: PropTypes.object,
     fileUploadRowStatusId: PropTypes.string,
     name: PropTypes.string,
-};
-
-FileUploadRowStatus.defaultProps = {
-    locale: {
-        deleteHint: 'Remove this file',
-        uploadInProgressText: 'Uploading...',
-    },
 };
 
 export default React.memo(FileUploadRowStatus);

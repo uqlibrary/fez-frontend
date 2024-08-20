@@ -4,6 +4,14 @@ import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
+const renderComponent = (props = {}) => {
+    return render(
+        <WithReduxStore>
+            <ContributorForm {...props} />
+        </WithReduxStore>,
+    );
+};
+
 function setup(testProps = {}) {
     const props = {
         onSubmit: jest.fn(),
@@ -19,11 +27,7 @@ function setup(testProps = {}) {
         contributorFormId: 'rek-contributor',
         ...testProps,
     };
-    return render(
-        <WithReduxStore>
-            <ContributorForm {...props} />
-        </WithReduxStore>,
-    );
+    return renderComponent(props);
 }
 
 describe('Component ContributorForm', () => {
@@ -36,6 +40,11 @@ describe('Component ContributorForm', () => {
                 ownerDocument: document,
             },
         });
+    });
+
+    it('should render with default props', () => {
+        const { container } = renderComponent({ onSubmit: jest.fn() });
+        expect(container).toMatchSnapshot();
     });
 
     it('should render display name field only', () => {

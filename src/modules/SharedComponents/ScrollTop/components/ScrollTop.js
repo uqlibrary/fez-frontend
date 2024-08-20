@@ -9,7 +9,7 @@ const scrollWindowToTop = event => {
     document.getElementById('content-container').scrollTop = 0;
 };
 
-export const ScrollTop = ({ show, showAfter }) => {
+export const ScrollTop = ({ show = false, showAfter = 100 }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById('content-container');
     /* istanbul ignore next */
@@ -69,11 +69,6 @@ export const ScrollTop = ({ show, showAfter }) => {
 ScrollTop.propTypes = {
     show: PropTypes.bool,
     showAfter: PropTypes.number,
-};
-
-ScrollTop.defaultProps = {
-    show: false,
-    showAfter: 100,
 };
 
 export default ScrollTop;

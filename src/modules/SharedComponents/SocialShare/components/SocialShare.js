@@ -6,7 +6,7 @@ import { PrintIcon } from './Icons';
 import { EmailIcon } from 'react-share';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {
+export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services, round = true }) => {
     const printPage = () => window.print();
     const locale = {
         email: {
@@ -58,12 +58,4 @@ SocialShare.propTypes = {
     spaceBetween: PropTypes.number,
     services: PropTypes.array.isRequired,
     round: PropTypes.bool,
-};
-
-SocialShare.defaultProps = {
-    publication: {},
-    size: 24,
-    spaceBetween: 4,
-    services: [],
-    round: true,
 };

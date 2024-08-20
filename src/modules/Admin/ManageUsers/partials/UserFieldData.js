@@ -8,7 +8,7 @@ import ColumnTitle from '../partials/ColumnTitle';
 import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
 
-export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...props }) => {
+export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text', ...props }) => {
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -84,10 +84,6 @@ UserFieldData.propTypes = {
     InputProps: PropTypes.object,
     label: PropTypes.string,
     type: PropTypes.string,
-};
-
-UserFieldData.defaultProps = {
-    type: 'text',
 };
 
 export default React.memo(UserFieldData);

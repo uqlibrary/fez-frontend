@@ -8,32 +8,39 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
+const requiredProps = {
+    primaryValue: 'dummy UT',
+    formDisplay: {
+        apiType: 'apiType',
+        lookupLabel: 'Test Form',
+        primaryFieldHeading: 'primary heading',
+        secondaryFieldHeading: 'secondary heading',
+    },
+    locale: {
+        title: 'Test Tool Display',
+        loadingMessage: 'Loading test Form',
+        tooltip: {
+            show: 'Show test form for',
+            hide: 'Hide test form for',
+        },
+        resultsLabel: 'Test Results',
+        noResultsFound: {
+            text: 'No test results found',
+        },
+        clearButtonLabel: 'New Test Search',
+    },
+};
+
 function setup(testProps) {
     const props = {
         lookupResults: testProps.lookupResults || [{ IS_INTERNATIONAL_COLLAB: '0' }],
-        primaryValue: testProps.primaryValue || 'dummy UT',
+        primaryValue: testProps.primaryValue || requiredProps.primaryValue,
         secondaryValue: testProps.secondaryValue || '123456789',
-        formDisplay: testProps.formDisplay || {
-            apiType: 'apiType',
-            lookupLabel: 'Test Form',
-            primaryFieldHeading: 'primary heading',
-            secondaryFieldHeading: 'secondary heading',
-        },
+        formDisplay: testProps.formDisplay || requiredProps.formDisplay,
         actions: testProps.actions || {},
-        locale: testProps.locale || {
-            title: 'Test Tool Display',
-            loadingMessage: 'Loading test Form',
-            tooltip: {
-                show: 'Show test form for',
-                hide: 'Hide test form for',
-            },
-            resultsLabel: 'Test Results',
-            noResultsFound: {
-                text: 'No test results found',
-            },
-            clearButtonLabel: 'New Test Search',
-        },
+        locale: testProps.locale || requiredProps.locale,
     };
+
     return rtlRender(
         <WithReduxStore>
             <ThirdPartyLookupFormResult {...props} />
@@ -42,6 +49,15 @@ function setup(testProps) {
 }
 
 describe('Component ThirdPartyLookupFormResult', () => {
+    it('should renders with defaults', () => {
+        const { container } = rtlRender(
+            <WithReduxStore>
+                <ThirdPartyLookupFormResult {...requiredProps} />
+            </WithReduxStore>,
+        );
+        expect(container).toMatchSnapshot();
+    });
+
     it('renders api data', () => {
         const { container } = setup({});
         expect(container).toMatchSnapshot();

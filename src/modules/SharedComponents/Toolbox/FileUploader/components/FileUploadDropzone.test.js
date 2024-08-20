@@ -34,7 +34,8 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should render component with default props', () => {
-        const { container } = setup();
+        const props = { onDrop: jest.fn(), locale: {}, maxSize: 1000 };
+        const { container } = rtlRender(<FileUploadDropzone {...props} />);
         expect(container).toMatchSnapshot();
     });
 

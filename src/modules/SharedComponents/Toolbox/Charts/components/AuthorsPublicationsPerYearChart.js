@@ -11,7 +11,12 @@ export function labelFormatter() {
     return extras.join('').length ? `${name} (${extras.join(', <br />')})` : name;
 }
 
-const AuthorsPublicationsPerYearChart = ({ yAxisTitle, series, categories, className }) => {
+const AuthorsPublicationsPerYearChart = ({
+    yAxisTitle = 'Total publications',
+    series = [],
+    categories = [],
+    className,
+}) => {
     const options = {
         title: {
             text: null,
@@ -62,12 +67,6 @@ AuthorsPublicationsPerYearChart.propTypes = {
     series: PropTypes.array,
     categories: PropTypes.array,
     className: PropTypes.string,
-};
-
-AuthorsPublicationsPerYearChart.defaultProps = {
-    yAxisTitle: 'Total publications',
-    series: [],
-    categories: [],
 };
 
 export default React.memo(AuthorsPublicationsPerYearChart);

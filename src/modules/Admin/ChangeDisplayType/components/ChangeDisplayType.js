@@ -61,7 +61,7 @@ export const ChangeDisplayType = ({
     saveRequesting,
     saveUpdated,
     saveFailed,
-    submitting,
+    submitting = false,
 }) => {
     const { pid: pidParam } = useParams();
     /* istanbul ignore next */
@@ -268,10 +268,6 @@ ChangeDisplayType.propTypes = {
     saveRequesting: PropTypes.bool,
     saveUpdated: PropTypes.bool,
     submitting: PropTypes.bool,
-};
-
-ChangeDisplayType.defaultProps = {
-    submitting: false,
 };
 
 export default ChangeDisplayType;

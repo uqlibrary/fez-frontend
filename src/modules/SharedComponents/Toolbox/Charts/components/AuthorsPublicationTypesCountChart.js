@@ -2,7 +2,21 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import Chart from './Chart';
 
-const AuthorsPublicationTypesCountChart = ({ className, series }) => {
+const AuthorsPublicationTypesCountChart = ({
+    className,
+    series = [
+        {
+            name: 'Publications count by type',
+            data: [
+                ['Journal articles', 200],
+                ['Conference papers', 150],
+                ['Book chapters', 106],
+                ['Books', 30],
+                ['Other', 5],
+            ],
+        },
+    ],
+}) => {
     const options = {
         chart: {
             height: 320,
@@ -66,21 +80,6 @@ const AuthorsPublicationTypesCountChart = ({ className, series }) => {
 AuthorsPublicationTypesCountChart.propTypes = {
     className: PropTypes.string,
     series: PropTypes.array,
-};
-
-AuthorsPublicationTypesCountChart.defaultProps = {
-    series: [
-        {
-            name: 'Publications count by type',
-            data: [
-                ['Journal articles', 200],
-                ['Conference papers', 150],
-                ['Book chapters', 106],
-                ['Books', 30],
-                ['Other', 5],
-            ],
-        },
-    ],
 };
 
 export default React.memo(AuthorsPublicationTypesCountChart);

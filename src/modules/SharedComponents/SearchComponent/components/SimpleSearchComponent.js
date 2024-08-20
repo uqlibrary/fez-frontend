@@ -18,16 +18,16 @@ import { locale } from 'locale';
 import Fade from '@mui/material/Fade';
 
 export const SimpleSearchComponent = ({
-    searchText,
+    searchText = '',
     autoFocus,
-    isInHeader,
-    showMobileSearchButton,
-    showPrefixIcon,
-    onSearch,
+    isInHeader = false,
+    showMobileSearchButton = false,
+    showPrefixIcon = false,
+    onSearch = () => {},
     onSearchTextChange,
-    onToggleSearchMode,
-    onInvalidSearch,
-    classes,
+    onToggleSearchMode = () => {},
+    onInvalidSearch = () => {},
+    classes = {},
 }) => {
     const [state, _setState] = React.useState({
         showMobile: false,
@@ -333,20 +333,6 @@ SimpleSearchComponent.propTypes = {
     onToggleSearchMode: PropTypes.func,
     onInvalidSearch: PropTypes.func,
     classes: PropTypes.object,
-};
-SimpleSearchComponent.defaultProps = {
-    searchText: '',
-
-    isInHeader: false,
-    showSearchButton: false,
-    showMobileSearchButton: false,
-    showAdvancedSearchButton: false,
-    showPrefixIcon: false,
-
-    onSearch: () => {},
-    onToggleSearchMode: () => {},
-    onInvalidSearch: /* istanbul ignore next */ () => {},
-    classes: {},
 };
 
 export default React.memo(SimpleSearchComponent);

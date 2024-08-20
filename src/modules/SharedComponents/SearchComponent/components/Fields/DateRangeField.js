@@ -11,13 +11,13 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export const DateRangeField = ({
     id,
-    locale,
-    format,
+    locale = {},
+    format = GENERIC_DATE_FORMAT,
     from: initialFrom,
     to: initialTo,
     onChange,
-    disableFuture,
-    disabled,
+    disableFuture = false,
+    disabled = false,
 }) => {
     const [from, setFrom] = useState(initialFrom || null);
     const [to, setTo] = useState(initialTo || null);
@@ -133,12 +133,6 @@ DateRangeField.propTypes = {
     onChange: PropTypes.func.isRequired,
     disableFuture: PropTypes.bool,
     disabled: PropTypes.bool,
-};
-
-DateRangeField.defaultProps = {
-    disabled: false,
-    format: GENERIC_DATE_FORMAT,
-    disableFuture: false,
 };
 
 export default React.memo(DateRangeField);
