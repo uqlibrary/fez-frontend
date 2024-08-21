@@ -160,9 +160,4 @@ TopCitedPublications.propTypes = {
     showSourceCountIcon: PropTypes.bool,
 };
 
-TopCitedPublications.defaultProps = {
-    topCitedPublicationsList: [],
-    loadingTopCitedPublications: false,
-};
-
 export default React.memo(TopCitedPublications);

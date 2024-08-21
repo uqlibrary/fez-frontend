@@ -108,7 +108,7 @@ const Dashboard = ({
     orcidSyncStatus,
     requestingOrcidSync,
     orcidSyncEnabled,
-    loadOrcidSyncDelay,
+    loadOrcidSyncDelay = 5,
 }) => {
     const navigate = useNavigate();
     const isMobileView = useIsMobileView();
@@ -475,10 +475,6 @@ Dashboard.propTypes = {
     requestingOrcidSync: PropTypes.bool,
     orcidSyncEnabled: PropTypes.bool,
     loadOrcidSyncDelay: PropTypes.number,
-};
-
-Dashboard.defaultProps = {
-    loadOrcidSyncDelay: 5,
 };
 
 export default Dashboard;

@@ -14,7 +14,20 @@ export const FileUploadRow = ({
     fileUploadRowId,
     focusOnIndex,
     index,
-    locale,
+    locale = {
+        deleteHint: 'Remove this file',
+        deleteRecordConfirmation: {
+            confirmationTitle: 'Delete file',
+            confirmationMessage: 'Are you sure you want to remove this file from the uploaded queue?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+        filenameColumn: 'File name',
+        fileAccessColumn: 'File access',
+        embargoDateColumn: 'Embargo date',
+        embargoDateClosedAccess: 'No date required',
+        uploadInProgressText: 'Uploading...',
+    },
     onDelete,
     onAccessConditionChange,
     onEmbargoDateChange,
@@ -124,23 +137,6 @@ FileUploadRow.propTypes = {
     requireOpenAccessStatus: PropTypes.bool.isRequired,
     uploadedFile: PropTypes.object.isRequired,
     isAdmin: PropTypes.bool,
-};
-
-FileUploadRow.defaultProps = {
-    locale: {
-        deleteHint: 'Remove this file',
-        deleteRecordConfirmation: {
-            confirmationTitle: 'Delete file',
-            confirmationMessage: 'Are you sure you want to remove this file from the uploaded queue?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-        filenameColumn: 'File name',
-        fileAccessColumn: 'File access',
-        embargoDateColumn: 'Embargo date',
-        embargoDateClosedAccess: 'No date required',
-        uploadInProgressText: 'Uploading...',
-    },
 };
 
 export default React.memo(FileUploadRow);

@@ -130,6 +130,11 @@ describe('AttachedFiles component', () => {
         });
     });
 
+    it('should render with default props', () => {
+        const { container } = rtlRender(<AttachedFiles dataStreams={[]} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render default view', () => {
         const { getByText, queryByText } = setup({});
         expect(getByText('MyUQeSpace_Researcher_Guidelines_current.pdf')).toBeInTheDocument();

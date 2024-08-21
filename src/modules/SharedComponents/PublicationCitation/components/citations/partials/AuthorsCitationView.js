@@ -14,14 +14,23 @@ const classes = {
 
 export const AuthorsCitationView = ({
     publication,
-    searchKey,
-    idSearchKey,
-    className,
+    searchKey = {
+        key: 'fez_record_search_key_author',
+        subkey: 'rek_author',
+        order: 'rek_author_order',
+        totalCountKey: 'fez_record_search_key_author_id',
+    },
+    idSearchKey = {
+        idKey: 'fez_record_search_key_author_id',
+        idSubkey: 'rek_author_id',
+        idOrder: 'rek_author_id_order',
+    },
+    className = 'citationAuthors',
     prefix,
-    suffix,
-    separator,
-    showLink,
-    getLink,
+    suffix = ' ',
+    separator = ', ',
+    showLink = false,
+    getLink = pathConfig.list.author,
     maxAuthorDisplayNumber,
     citationStyle,
 }) => {
@@ -180,25 +189,6 @@ AuthorsCitationView.propTypes = {
     getLink: PropTypes.func,
     maxAuthorDisplayNumber: PropTypes.number,
     citationStyle: PropTypes.string,
-};
-
-AuthorsCitationView.defaultProps = {
-    suffix: ' ',
-    separator: ', ',
-    searchKey: {
-        key: 'fez_record_search_key_author',
-        subkey: 'rek_author',
-        order: 'rek_author_order',
-        totalCountKey: 'fez_record_search_key_author_id',
-    },
-    idSearchKey: {
-        idKey: 'fez_record_search_key_author_id',
-        idSubkey: 'rek_author_id',
-        idOrder: 'rek_author_id_order',
-    },
-    className: 'citationAuthors',
-    showLink: false,
-    getLink: pathConfig.list.author,
 };
 
 export default React.memo(AuthorsCitationView);

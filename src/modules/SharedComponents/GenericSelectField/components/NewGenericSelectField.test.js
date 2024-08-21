@@ -17,6 +17,11 @@ function setup(testProps = {}, render = rtlRender) {
 }
 
 describe('NewGenericSelectField', () => {
+    it('should render with default props', () => {
+        const { container } = rtlRender(<NewGenericSelectField genericSelectFieldId={'test'} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render select field', () => {
         const { getByTestId } = setup({
             itemsList: [

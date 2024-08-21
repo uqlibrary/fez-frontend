@@ -15,10 +15,10 @@ import Grid from '@mui/material/Grid';
 export const NewRecord = ({
     account,
     actions,
-    rawSearchQuery,
+    rawSearchQuery = '',
     newRecordFileUploadingOrIssueError,
     author,
-    newRecord,
+    newRecord = {},
 }) => {
     const navigate = useNavigate();
     const confirmationBoxRef = React.useRef();
@@ -111,11 +111,6 @@ NewRecord.propTypes = {
     newRecordFileUploadingOrIssueError: PropTypes.bool,
     author: PropTypes.object,
     newRecord: PropTypes.object,
-};
-
-NewRecord.defaultProps = {
-    rawSearchQuery: '',
-    newRecord: {},
 };
 
 export default React.memo(NewRecord);

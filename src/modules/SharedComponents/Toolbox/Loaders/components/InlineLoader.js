@@ -5,7 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const InlineLoader = ({ message, loaderId, ariaLabel }) => {
+export const InlineLoader = ({ message = 'Loading', loaderId, ariaLabel = 'Loading' }) => {
     return (
         <div style={{ padding: 8 }}>
             <Grid
@@ -37,11 +37,6 @@ InlineLoader.propTypes = {
     message: PropTypes.string,
     loaderId: PropTypes.string,
     ariaLabel: PropTypes.string,
-};
-
-InlineLoader.defaultProps = {
-    message: 'Loading',
-    ariaLabel: 'Loading',
 };
 
 export default React.memo(InlineLoader);
