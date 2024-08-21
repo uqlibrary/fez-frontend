@@ -125,7 +125,7 @@
         "@mui/x-date-pickers": "^5.0.15",
         "@react-google-maps/api": "^2.19.2",
         "@sentry/react": "^7.107.0",
-        "axios": "^1.6.8",
+        "axios": "^1.7.4",
         "axios-cache-interceptor": "^0.10.2",
         "can-deparam": "^1.1.1",
         "can-param": "^1.0.4",
