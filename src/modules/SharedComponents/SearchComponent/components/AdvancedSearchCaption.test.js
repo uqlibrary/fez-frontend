@@ -4,6 +4,16 @@ import { render, WithReduxStore, WithRouter } from 'test-utils';
 import moment from 'moment';
 import * as Hooks from 'hooks/userIsAdmin';
 
+const renderComponents = props => {
+    return render(
+        <WithRouter>
+            <WithReduxStore>
+                <AdvancedSearchCaption {...props} />
+            </WithReduxStore>
+        </WithRouter>,
+    );
+};
+
 function setup(testProps = {}) {
     const props = {
         fieldRows: [
@@ -18,16 +28,15 @@ function setup(testProps = {}) {
         InputForm: null,
         ...testProps,
     };
-    return render(
-        <WithRouter>
-            <WithReduxStore>
-                <AdvancedSearchCaption {...props} />
-            </WithReduxStore>
-        </WithRouter>,
-    );
+    return renderComponents(props);
 }
 
 describe('Component AdvancedSearchCaption', () => {
+    it('should render with default props', () => {
+        const { container } = renderComponents();
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render as expected with no props', () => {
         const { getByTestId } = setup();
 

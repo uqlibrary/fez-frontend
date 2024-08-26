@@ -18,7 +18,7 @@ describe('Component ScrollTop', () => {
     });
 
     it('should not render component', () => {
-        const { container } = setup({ show: false });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 });

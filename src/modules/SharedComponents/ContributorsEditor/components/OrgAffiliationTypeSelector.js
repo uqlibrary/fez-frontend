@@ -6,7 +6,20 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ } from 'config/general';
 
-export default function OrgAffilicationTypeSelector({ affiliation, onAffiliationChange, locale, error, disabled }) {
+export default function OrgAffilicationTypeSelector({
+    affiliation,
+    onAffiliationChange,
+    locale = {
+        inputLabel: 'Org affiliation',
+        placeholder: 'Organisational affiliation at time of publication',
+        options: [
+            { key: AFFILIATION_TYPE_UQ, value: 'UQ' },
+            { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' },
+        ],
+    },
+    error = false,
+    disabled,
+}) {
     return (
         <FormControl variant="standard" fullWidth error={error}>
             <InputLabel id="org-affiliation-label" data-testid="org-affiliation-label">
@@ -51,17 +64,4 @@ OrgAffilicationTypeSelector.propTypes = {
     error: PropTypes.bool,
     disabled: PropTypes.bool,
     helperText: PropTypes.any,
-};
-
-OrgAffilicationTypeSelector.defaultProps = {
-    locale: {
-        inputLabel: 'Org affiliation',
-        placeholder: 'Organisational affiliation at time of publication',
-        options: [
-            { key: AFFILIATION_TYPE_UQ, value: 'UQ' },
-            { key: AFFILIATION_TYPE_NOT_UQ, value: 'Not UQ' },
-        ],
-    },
-    error: false,
-    helperText: undefined,
 };

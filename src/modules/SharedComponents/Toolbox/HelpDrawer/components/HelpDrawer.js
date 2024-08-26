@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const HelpDrawer = ({ buttonLabel }) => {
+export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
     const dispatch = useDispatch();
 
     const helpDrawerState = useSelector(state => state.get('helpDrawer'));
@@ -84,9 +84,6 @@ export const HelpDrawer = ({ buttonLabel }) => {
 
 HelpDrawer.propTypes = {
     buttonLabel: PropTypes.string,
-};
-HelpDrawer.defaultProps = {
-    buttonLabel: 'CLOSE',
 };
 
 export default React.memo(HelpDrawer);

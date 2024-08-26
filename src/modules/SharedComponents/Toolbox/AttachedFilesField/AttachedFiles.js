@@ -219,7 +219,7 @@ export const getFilenameId = id => `file-name-${id}`;
 export const AttachedFiles = ({
     dataStreams,
     disabled,
-    deleteHint,
+    deleteHint = 'Remove this file',
     onDelete,
     onDateChange,
     onDescriptionChange,
@@ -227,10 +227,17 @@ export const AttachedFiles = ({
     onFilenameSave,
     onHandleFileIsValid,
     onOrderChange,
-    onEmbargoClearPromptText,
-    locale,
-    canEdit,
-    fileRestrictionsConfig,
+    onEmbargoClearPromptText = (
+        <span>
+            <b>Embargo date removed</b> - review security policy on Security tab
+        </span>
+    ),
+    locale = {},
+    canEdit = false,
+    fileRestrictionsConfig = {
+        fileUploadLimit: fileUploadConfig.DEFAULT_FILE_UPLOAD_LIMIT,
+        fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
+    },
 }) => {
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
     const [fileNameErrorMessage, setFileNameErrorMessage] = useState('');
@@ -675,20 +682,6 @@ AttachedFiles.propTypes = {
     locale: PropTypes.object,
     canEdit: PropTypes.bool,
     fileRestrictionsConfig: PropTypes.object,
-};
-
-AttachedFiles.defaultProps = {
-    deleteHint: 'Remove this file',
-    onEmbargoClearPromptText: (
-        <span>
-            <b>Embargo date removed</b> - review security policy on Security tab
-        </span>
-    ),
-    canEdit: false,
-    fileRestrictionsConfig: {
-        fileUploadLimit: fileUploadConfig.DEFAULT_FILE_UPLOAD_LIMIT,
-        fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
-    },
 };
 
 export default AttachedFiles;

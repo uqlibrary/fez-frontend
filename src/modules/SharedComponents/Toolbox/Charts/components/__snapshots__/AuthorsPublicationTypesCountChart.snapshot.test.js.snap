@@ -7,3 +7,11 @@ exports[`AuthorsPublicationTypesCountChart  should render empty chart component 
   />
 </div>
 `;
+
+exports[`AuthorsPublicationTypesCountChart  should render with default props chart component 1`] = `
+<div>
+  <div
+    class=" authors-publication-types-count-chart"
+  />
+</div>
+`;

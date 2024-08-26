@@ -26,6 +26,11 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('ConfirmationBox component', () => {
+    it('should render confirmation box with default props', () => {
+        const { container } = rtlRender(<ConfirmationBox confirmationBoxId="test" />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render confirmation box', () => {
         const { getByTestId, getByText } = setup({ isOpen: true });
         expect(getByText('Are you sure?')).toBeInTheDocument();

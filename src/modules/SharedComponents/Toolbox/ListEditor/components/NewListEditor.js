@@ -10,18 +10,18 @@ import GenericTemplate from './GenericTemplate';
 import FreeTextForm from './FreeTextForm';
 
 export const NewListEditor = ({
-    canAdd,
+    canAdd = true,
     canEdit,
     disabled,
     error,
     errorText,
     hideReorder,
     isValid,
-    inputNormalizer,
+    inputNormalizer = value => value,
     list,
     listEditorId,
-    ListEditorForm,
-    ListEditorItemTemplate,
+    ListEditorForm = FreeTextForm,
+    ListEditorItemTemplate = GenericTemplate,
     locale,
     maxCount,
     onChange,
@@ -29,7 +29,8 @@ export const NewListEditor = ({
     scrollList,
     scrollListHeight,
     searchKey,
-    transform,
+    transform = (list, searchKey) =>
+        list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 }) => {
     const [mode, setMode] = React.useState('add');
     const [indexToUpdate, setIndexToUpdate] = React.useState(null);
@@ -189,7 +190,7 @@ NewListEditor.propTypes = {
     list: PropTypes.array,
     listEditorId: PropTypes.string.isRequired,
     ListEditorForm: PropTypes.elementType.isRequired,
-    ListEditorItemTemplate: PropTypes.elementType.isRequired,
+    ListEditorItemTemplate: PropTypes.elementType,
     locale: PropTypes.object,
     maxCount: PropTypes.number,
     onChange: PropTypes.func,
@@ -198,15 +199,6 @@ NewListEditor.propTypes = {
     scrollListHeight: PropTypes.number,
     searchKey: PropTypes.object,
     transform: PropTypes.func,
-};
-
-NewListEditor.defaultProps = {
-    canAdd: true,
-    inputNormalizer: value => value,
-    ListEditorForm: FreeTextForm,
-    ListEditorItemTemplate: GenericTemplate,
-    transform: (list, searchKey) =>
-        list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 };
 
 export default React.memo(NewListEditor);

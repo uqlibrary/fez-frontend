@@ -34,7 +34,7 @@ const classes = {
 };
 
 export const GrantListEditorRow = ({
-    canEdit,
+    canEdit = false,
     index,
     grant,
     canMoveUp,
@@ -43,7 +43,20 @@ export const GrantListEditorRow = ({
     onMoveDown,
     onDelete,
     onEdit,
-    locale,
+    locale = {
+        suffix: ' grant',
+        moveUpHint: 'Move entry up the order',
+        moveDownHint: 'Move entry down the order',
+        deleteHint: 'Remove this entry',
+        editHint: 'Edit this entry',
+        editButtonId: 'edit-grant-info',
+        deleteRecordConfirmation: {
+            confirmationTitle: 'Delete entry',
+            confirmationMessage: 'Are you sure you want to delete this entry?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+    },
     disabled,
 }) => {
     const width = useWidth();
@@ -244,24 +257,6 @@ GrantListEditorRow.propTypes = {
     onEdit: PropTypes.func,
     locale: PropTypes.object,
     disabled: PropTypes.bool,
-};
-
-GrantListEditorRow.defaultProps = {
-    canEdit: false,
-    locale: {
-        suffix: ' grant',
-        moveUpHint: 'Move entry up the order',
-        moveDownHint: 'Move entry down the order',
-        deleteHint: 'Remove this entry',
-        editHint: 'Edit this entry',
-        editButtonId: 'edit-grant-info',
-        deleteRecordConfirmation: {
-            confirmationTitle: 'Delete entry',
-            confirmationMessage: 'Are you sure you want to delete this entry?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-    },
 };
 
 export default React.memo(GrantListEditorRow);

@@ -46,6 +46,16 @@ describe('Component ContributorRow', () => {
         window.matchMedia = createMatchMedia(window.innerWidth);
     });
 
+    it('should render with default props', () => {
+        const props = {
+            contributor: { nameAsPublished: 'A. Smith' },
+            contributorRowId: 'test-list-row',
+            index: 0,
+        };
+        const { container } = rtlRender(<ContributorRow {...props} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('a row with index and contributor set, renders only name and delete button', () => {
         const { container } = setup({
             index: 0,

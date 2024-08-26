@@ -12,7 +12,7 @@ import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
-export const MyLatestPublications = ({ isAdmin }) => {
+export const MyLatestPublications = ({ isAdmin = false }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -70,10 +70,6 @@ export const MyLatestPublications = ({ isAdmin }) => {
 
 MyLatestPublications.propTypes = {
     isAdmin: PropTypes.bool,
-};
-
-MyLatestPublications.defaultProps = {
-    isAdmin: false,
 };
 
 export default React.memo(MyLatestPublications);

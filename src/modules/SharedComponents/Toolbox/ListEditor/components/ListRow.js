@@ -15,13 +15,24 @@ export const ListRow = ({
     canEdit,
     canMoveDown,
     canMoveUp,
-    canDelete,
+    canDelete = true,
     disabled,
     hideReorder,
     index,
     item,
-    itemTemplate: ItemTemplate,
-    locale,
+    itemTemplate: ItemTemplate = GenericTemplate,
+    locale = {
+        moveUpHint: 'Move item up the order',
+        moveDownHint: 'Move item down the order',
+        deleteHint: 'Remove this item',
+        editHint: 'Edit this item',
+        deleteRecordConfirmation: {
+            confirmationTitle: 'Delete item',
+            confirmationMessage: 'Are you sure you want to delete this item?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+    },
     onDelete,
     onEdit,
     onMoveDown,
@@ -166,24 +177,6 @@ ListRow.propTypes = {
     onMoveDown: PropTypes.func,
     onMoveUp: PropTypes.func,
     listRowId: PropTypes.string.isRequired,
-};
-
-ListRow.defaultProps = {
-    locale: {
-        moveUpHint: 'Move item up the order',
-        moveDownHint: 'Move item down the order',
-        deleteHint: 'Remove this item',
-        editHint: 'Edit this item',
-        deleteRecordConfirmation: {
-            confirmationTitle: 'Delete item',
-            confirmationMessage: 'Are you sure you want to delete this item?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-    },
-    itemTemplate: GenericTemplate,
-    form: 'Form',
-    canDelete: true,
 };
 
 export default React.memo(ListRow);

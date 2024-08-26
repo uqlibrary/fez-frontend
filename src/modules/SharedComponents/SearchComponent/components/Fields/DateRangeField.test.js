@@ -19,6 +19,11 @@ function setup(testProps = {}) {
 }
 
 describe('DateRangeField component', () => {
+    it('should render with default props', () => {
+        const { container } = rtlRender(<DateRangeField onChange={jest.fn()} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render default view', () => {
         const { getByTestId } = setup({ id: 'test-date-range' });
         expect(getByTestId('test-date-range-from-date')).toBeInTheDocument();
