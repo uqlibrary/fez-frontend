@@ -2,6 +2,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
+import { prefixByUrlResolver } from 'config/general';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -78,6 +79,10 @@ export default {
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
                     title: 'Google scholar',
+                },
+                dimensions: {
+                    externalUrl: prefixByUrlResolver('https://app.dimensions.ai/details/publication/') + '[id]',
+                    title: 'Dimensions',
                 },
             },
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',

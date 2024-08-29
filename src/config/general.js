@@ -1,4 +1,3 @@
-import locale from 'locale/components';
 import moment from 'moment';
 
 const converter = require('number-to-words');
@@ -698,8 +697,8 @@ export const SBS_THESIS_DEFAULT_VALUES = {
 export const DEFAULT_QUERY_PARAMS = {
     page: 1,
     pageSize: 20,
-    sortBy: locale.components.sorting.sortBy[1].value,
-    sortDirection: locale.components.sorting.sortDirection[0],
+    sortBy: 'score',
+    sortDirection: 'Desc',
     activeFacets: {
         filters: {},
         ranges: {},
