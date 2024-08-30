@@ -63,7 +63,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
                     <div
-                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1x6bjyf-MuiAutocomplete-root"
+                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -104,7 +104,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                             value=""
                           />
                           <div
-                            class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                            class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
                           >
                             <button
                               aria-label="Open"
@@ -204,7 +204,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-tha848-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="cancel-work"
                           data-testid="cancel-work"
                           id="cancel-work"
@@ -218,7 +218,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
                           disabled=""

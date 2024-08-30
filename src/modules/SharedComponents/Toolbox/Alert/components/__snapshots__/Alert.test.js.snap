@@ -71,7 +71,7 @@ exports[`Alert should dismiss alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -183,7 +183,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -304,7 +304,7 @@ exports[`Alert should display loader 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           disabled=""
@@ -417,7 +417,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -627,7 +627,7 @@ exports[`Alert should render clickable action button 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -728,7 +728,7 @@ exports[`Alert should render custom alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -840,7 +840,7 @@ exports[`Alert should render default view 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -952,7 +952,7 @@ exports[`Alert should render done type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1064,7 +1064,7 @@ exports[`Alert should render error outline type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1176,7 +1176,7 @@ exports[`Alert should render error type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1288,7 +1288,7 @@ exports[`Alert should render error type of alert by default 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1400,7 +1400,7 @@ exports[`Alert should render help outline type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1512,7 +1512,7 @@ exports[`Alert should render help type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1624,7 +1624,7 @@ exports[`Alert should render info outline type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1736,7 +1736,7 @@ exports[`Alert should render info type of alert 1`] = `
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto css-1vayr8-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth action alert-button css-hf3h6t-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"

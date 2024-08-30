@@ -462,7 +462,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ678947-secondary"
               tabindex="0"
               type="button"
@@ -652,7 +652,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792104-secondary"
               tabindex="0"
               type="button"
@@ -816,7 +816,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792110-secondary"
               tabindex="0"
               type="button"
@@ -983,7 +983,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792111-secondary"
               tabindex="0"
               type="button"
@@ -1392,7 +1392,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth publicationAction buttonOrder0 css-hf3h6t-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ396321-secondary"
               tabindex="0"
               type="button"
@@ -1417,7 +1417,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary css-3x0jif-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-3x0jif-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >
