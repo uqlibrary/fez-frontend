@@ -47,7 +47,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -62,7 +62,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -124,7 +124,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -139,7 +139,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -263,7 +263,7 @@ exports[`SimpleSearchComponent should render with default onSearch callback 1`] 
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -278,7 +278,7 @@ exports[`SimpleSearchComponent should render with default onSearch callback 1`] 
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -340,7 +340,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -355,7 +355,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"

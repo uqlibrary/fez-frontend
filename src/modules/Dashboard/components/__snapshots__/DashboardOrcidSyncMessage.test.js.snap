@@ -57,7 +57,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
     >
       <button
         aria-label="Upload works to ORCID"
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="orcid-upload-start-button"
         data-testid="orcid-upload-start-button"
         tabindex="0"
@@ -75,7 +75,7 @@ exports[`DashboardOrcidSyncMessage should render as expected 1`] = `
     >
       <button
         aria-label="View works in ORCID"
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-mrzqee-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-mrzqee-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="orcid-view-works-button"
         data-testid="orcid-view-works-button"
         tabindex="0"

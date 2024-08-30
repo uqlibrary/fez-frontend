@@ -45,7 +45,7 @@ exports[`AdminContainer component should not render non-security errors for comm
                 >
                   <span
                     aria-label="Switch to full form mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
@@ -108,7 +108,7 @@ exports[`AdminContainer component should not render non-security errors for comm
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="admin-work-cancel-top"
                     data-testid="admin-work-cancel-top"
                     id="admin-work-cancel-top"
@@ -123,7 +123,7 @@ exports[`AdminContainer component should not render non-security errors for comm
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="submit-admin-top"
                     data-testid="submit-admin-top"
                     id="admin-work-submit-top"
@@ -224,7 +224,7 @@ exports[`AdminContainer component should not render non-security errors for comm
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="admin-work-cancel"
                   data-testid="admin-work-cancel"
                   id="admin-work-cancel"
@@ -239,7 +239,7 @@ exports[`AdminContainer component should not render non-security errors for comm
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="submit-admin"
                   data-testid="submit-admin"
                   id="admin-work-submit"
@@ -305,7 +305,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 >
                   <span
                     aria-label="Switch to tabbed mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
@@ -367,7 +367,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="admin-work-cancel-top"
                     data-testid="admin-work-cancel-top"
                     id="admin-work-cancel-top"
@@ -382,7 +382,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="unpublish-admin-top"
                     data-testid="unpublish-admin-top"
                     id="admin-work-unpublish-top"
@@ -396,7 +396,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="submit-admin-top"
                     data-testid="submit-admin-top"
                     id="admin-work-submit-top"
@@ -680,7 +680,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="admin-work-cancel"
                   data-testid="admin-work-cancel"
                   id="admin-work-cancel"
@@ -695,7 +695,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="unpublish-admin"
                   data-testid="unpublish-admin"
                   id="admin-work-unpublish"
@@ -709,7 +709,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="submit-admin"
                   data-testid="submit-admin"
                   id="admin-work-submit"
@@ -831,7 +831,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                 >
                   <span
                     aria-label="Switch to tabbed mode"
-                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-98t3qt-MuiButtonBase-root-MuiSwitch-switchBase"
+                    class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-vcrlc8-MuiButtonBase-root-MuiSwitch-switchBase"
                     data-mui-internal-clone-element="true"
                   >
                     <input
@@ -893,7 +893,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="admin-work-cancel-top"
                     data-testid="admin-work-cancel-top"
                     id="admin-work-cancel-top"
@@ -908,7 +908,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="unpublish-admin-top"
                     data-testid="unpublish-admin-top"
                     id="admin-work-unpublish-top"
@@ -922,7 +922,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                   class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="submit-admin-top"
                     data-testid="submit-admin-top"
                     id="admin-work-submit-top"
@@ -1206,7 +1206,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="admin-work-cancel"
                   data-testid="admin-work-cancel"
                   id="admin-work-cancel"
@@ -1221,7 +1221,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-19gm334-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="unpublish-admin"
                   data-testid="unpublish-admin"
                   id="admin-work-unpublish"
@@ -1235,7 +1235,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                 class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-37knz6-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="submit-admin"
                   data-testid="submit-admin"
                   id="admin-work-submit"

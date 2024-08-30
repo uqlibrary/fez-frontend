@@ -47,7 +47,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -62,7 +62,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -124,7 +124,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -139,7 +139,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -201,7 +201,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -216,7 +216,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -278,7 +278,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -293,7 +293,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -355,7 +355,7 @@ exports[`SearchComponent should render default view 1`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -370,7 +370,7 @@ exports[`SearchComponent should render default view 1`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -752,7 +752,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -768,7 +768,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -783,7 +783,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -802,7 +802,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -1202,7 +1202,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -1218,7 +1218,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -1233,7 +1233,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -1252,7 +1252,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -1800,7 +1800,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -1816,7 +1816,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -1831,7 +1831,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -1850,7 +1850,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -2321,7 +2321,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -2337,7 +2337,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -2352,7 +2352,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -2371,7 +2371,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -2474,7 +2474,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -2489,7 +2489,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -2870,7 +2870,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -2885,7 +2885,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -2900,7 +2900,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -2919,7 +2919,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -3345,7 +3345,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -3361,7 +3361,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -3376,7 +3376,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -3395,7 +3395,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -3475,7 +3475,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
       >
         <button
           aria-label="Click to search eSpace"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
           id="simple-search-button"
@@ -3490,7 +3490,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
       >
         <button
           aria-label="Click to switch to Advanced search"
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth advancedButton css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
           id="show-advanced-search"
@@ -3871,7 +3871,7 @@ exports[`SearchComponent should update advanced search row on search text change
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -3886,7 +3886,7 @@ exports[`SearchComponent should update advanced search row on search text change
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -3901,7 +3901,7 @@ exports[`SearchComponent should update advanced search row on search text change
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -3920,7 +3920,7 @@ exports[`SearchComponent should update advanced search row on search text change
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -4602,7 +4602,7 @@ exports[`SearchComponent should update date range filter 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -4617,7 +4617,7 @@ exports[`SearchComponent should update date range filter 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -4632,7 +4632,7 @@ exports[`SearchComponent should update date range filter 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -4651,7 +4651,7 @@ exports[`SearchComponent should update date range filter 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
@@ -5333,7 +5333,7 @@ exports[`SearchComponent should update date range filter 2`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1v9iutt-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             id="add-another-search-row"
@@ -5348,7 +5348,7 @@ exports[`SearchComponent should update date range filter 2`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1j7u7t2-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -5363,7 +5363,7 @@ exports[`SearchComponent should update date range filter 2`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-hf3h6t-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -5382,7 +5382,7 @@ exports[`SearchComponent should update date range filter 2`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             id="advanced-search"
