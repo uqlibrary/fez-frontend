@@ -65,7 +65,7 @@ export const CitationCounts = ({ publication, hideViewFullStatisticsLink }) => {
                     !!publication.fez_record_search_key_dimensions_id.rek_dimensions_id && (
                         <Partials.CitationCountView
                             source="dimensions"
-                            count={counts.dimensions}
+                            count={counts.dimensions || 0}
                             link={txt.dimensions.externalUrl.replace(
                                 '[id]',
                                 encodeURIComponent(publication.fez_record_search_key_dimensions_id.rek_dimensions_id),
