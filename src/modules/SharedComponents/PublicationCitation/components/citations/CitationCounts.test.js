@@ -66,6 +66,20 @@ describe('CitationCounts', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render null as 0', () => {
+        const publication = {
+            rek_created_date: '2019-12-25T00:00:00Z',
+            rek_pid: 'pid:111',
+            rek_title: 'This is test title',
+            rek_dimensions_citation_count: null,
+            fez_record_search_key_dimensions_id: {
+                rek_dimensions_id: 12345,
+            },
+        };
+        const { container } = setup({ publication });
+        expect(container).toMatchSnapshot();
+    });
+
     it('should not render View full statistics link on public pages for anonymous user', () => {
         const publication = {
             fez_record_search_key_oa_embargo_days: {
