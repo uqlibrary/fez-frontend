@@ -66,6 +66,4 @@ VoiceToText.propTypes = {
     sendHandler: PropTypes.func.isRequired,
 };
 
-VoiceToText.defaultProps = {};
-
 export default React.memo(VoiceToText);

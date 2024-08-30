@@ -31,12 +31,12 @@ export const getItemsPerRow = (itemsPerRow, sm, md) => {
 
 const ImageGallery = ({
     publicationsList,
-    classes,
-    lazyLoading,
-    itemWidth,
-    itemHeight,
+    classes = {},
+    lazyLoading = config.thumbnailImage.defaultLazyLoading,
+    itemWidth = config.thumbnailImage.defaultWidth,
+    itemHeight = config.thumbnailImage.defaultHeight,
     itemsPerRow,
-    security,
+    security = { isAdmin: false, isAuthor: false, author: {} },
     ...rest
 }) => {
     const theme = useTheme();
@@ -85,14 +85,6 @@ ImageGallery.propTypes = {
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,
     itemsPerRow: PropTypes.number,
-};
-
-ImageGallery.defaultProps = {
-    classes: {},
-    security: { isAdmin: false, isAuthor: false, author: {} },
-    lazyLoading: config.thumbnailImage.defaultLazyLoading,
-    itemWidth: config.thumbnailImage.defaultWidth,
-    itemHeight: config.thumbnailImage.defaultHeight,
 };
 
 export default React.memo(ImageGallery);

@@ -29,6 +29,11 @@ function setup(testProps = {}) {
 }
 
 describe('AuthorsPublicationsPerYearChart ', () => {
+    it('should render with default props', () => {
+        const { container } = rtlRender(<AuthorsPublicationsPerYearChart />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render empty chart component', () => {
         const { container } = setup({ series: [], categories: [], yAxisTitle: 'title' });
         expect(container).toMatchSnapshot();

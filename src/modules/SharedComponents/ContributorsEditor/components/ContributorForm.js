@@ -30,21 +30,39 @@ const initialContributorState = {
 };
 
 export const ContributorForm = ({
-    canEdit,
-    hideUqIDFields,
-    contributor: initialContributor,
+    canEdit = false,
+    hideUqIDFields = false,
+    contributor: initialContributor = initialContributorState,
     contributorFormId,
     disabled,
-    disableNameAsPublished,
-    displayCancel,
+    disableNameAsPublished = false,
+    displayCancel = false,
     isContributorAssigned,
     isNtro,
-    locale,
+    locale = {
+        nameAsPublishedLabel: 'Name as published',
+        nameAsPublishedHint: 'Please type the name exactly as published',
+        creatorRoleLabel: 'Creator role',
+        creatorRoleHint: 'Role of the creator in relation to the dataset',
+        identifierLabel: 'UQ identifier (if available)',
+        addButton: 'Add author',
+        descriptionStep1: (
+            <div>
+                <span className="authorSteps">Step 1 of 2</span>- Please <b>add to a list of contributors below</b>, in
+                the format and order that they are published.
+            </div>
+        ),
+        descriptionStep1NoStep2: (
+            <div>
+                Please <b>add to a list of contributors below</b>, in the format and order that they are published.
+            </div>
+        ),
+    },
     onSubmit,
-    required,
+    required = false,
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
-    showRoleInput,
+    showRoleInput = false,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
@@ -365,7 +383,6 @@ ContributorForm.propTypes = {
     disabled: PropTypes.bool,
     disableNameAsPublished: PropTypes.bool,
     displayCancel: PropTypes.bool,
-    enableUqIdentifierOnAffiliationChange: PropTypes.bool,
     isContributorAssigned: PropTypes.bool,
     isNtro: PropTypes.bool,
     locale: PropTypes.object,
@@ -374,37 +391,6 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
-};
-
-ContributorForm.defaultProps = {
-    canEdit: false,
-    hideUqIDFields: false,
-    contributor: initialContributorState,
-    displayCancel: false,
-    disableNameAsPublished: false,
-    enableUqIdentifierOnAffiliationChange: true,
-    locale: {
-        nameAsPublishedLabel: 'Name as published',
-        nameAsPublishedHint: 'Please type the name exactly as published',
-        creatorRoleLabel: 'Creator role',
-        creatorRoleHint: 'Role of the creator in relation to the dataset',
-        identifierLabel: 'UQ identifier (if available)',
-        addButton: 'Add author',
-        descriptionStep1: (
-            <div>
-                <span className="authorSteps">Step 1 of 2</span>- Please <b>add to a list of contributors below</b>, in
-                the format and order that they are published.
-            </div>
-        ),
-        descriptionStep1NoStep2: (
-            <div>
-                Please <b>add to a list of contributors below</b>, in the format and order that they are published.
-            </div>
-        ),
-    },
-    required: false,
-    showIdentifierLookup: false,
-    showRoleInput: false,
 };
 
 export default ContributorForm;

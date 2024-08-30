@@ -14,9 +14,23 @@ import People from '@mui/icons-material/People';
 export const ContributorRowHeader = ({
     classes,
     disabled,
-    hideDelete,
+    hideDelete = false,
     isInfinite,
-    locale,
+    locale = {
+        contributorAssignmentColumn: 'Select your name',
+        deleteAll: 'Remove all records',
+        deleteAllConfirmation: {
+            confirmationTitle: 'Delete all',
+            confirmationMessage: 'Are you sure you want to delete all records?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+        descriptionStep2: 'Step 2 - Select your name from the list below',
+        identifierColumn: 'UQ identifier / Organisation',
+        nameColumn: 'Name as published',
+        reorderColumn: 'Reorder records',
+        roleColumn: 'Role',
+    },
     onDeleteAll,
     showContributorAssignment,
     showIdentifierLookup,
@@ -130,26 +144,6 @@ ContributorRowHeader.propTypes = {
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
     canEdit: PropTypes.bool,
-};
-
-ContributorRowHeader.defaultProps = {
-    hideDelete: false,
-    hideReorder: false,
-    locale: {
-        contributorAssignmentColumn: 'Select your name',
-        deleteAll: 'Remove all records',
-        deleteAllConfirmation: {
-            confirmationTitle: 'Delete all',
-            confirmationMessage: 'Are you sure you want to delete all records?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-        descriptionStep2: 'Step 2 - Select your name from the list below',
-        identifierColumn: 'UQ identifier / Organisation',
-        nameColumn: 'Name as published',
-        reorderColumn: 'Reorder records',
-        roleColumn: 'Role',
-    },
 };
 
 export default React.memo(ContributorRowHeader);

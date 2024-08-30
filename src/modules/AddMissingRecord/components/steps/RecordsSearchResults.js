@@ -22,9 +22,9 @@ import { useNavigate } from 'react-router-dom';
 
 export const RecordsSearchResults = ({
     actions,
-    publicationsList,
+    publicationsList = [],
     searchLoading,
-    loadingPublicationSources,
+    loadingPublicationSources = [],
     rawSearchQuery,
 }) => {
     const navigate = useNavigate();
@@ -188,11 +188,6 @@ RecordsSearchResults.propTypes = {
     loadingPublicationSources: PropTypes.object,
     actions: PropTypes.object.isRequired,
     rawSearchQuery: PropTypes.string,
-};
-
-RecordsSearchResults.defaultProps = {
-    publicationsList: [],
-    loadingPublicationSources: {},
 };
 
 export default React.memo(RecordsSearchResults);

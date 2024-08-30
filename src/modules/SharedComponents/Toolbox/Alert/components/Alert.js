@@ -143,18 +143,18 @@ export const renderIcon = type => {
 export const Alert = ({
     action,
     actionButtonLabel,
-    allowDismiss,
-    customIcon,
-    customType,
-    disableAlertClick,
+    allowDismiss = false,
+    customIcon = null,
+    customType = null,
+    disableAlertClick = false,
     dismissAction,
-    dismissTitle,
-    message,
-    showLoader,
+    dismissTitle = 'Click to dismiss this alert',
+    message = 'Unexpected error',
+    showLoader = false,
     alertId,
     title,
-    type,
-    wiggle,
+    type = 'error',
+    wiggle = null,
 }) => {
     const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
     return (
@@ -303,18 +303,6 @@ Alert.propTypes = {
         'custom',
     ]),
     wiggle: PropTypes.bool,
-};
-
-Alert.defaultProps = {
-    allowDismiss: false,
-    customIcon: null,
-    customType: null,
-    disableAlertClick: false,
-    dismissTitle: 'Click to dismiss this alert',
-    message: 'Unexpected error',
-    showLoader: false,
-    type: 'error',
-    wiggle: null,
 };
 
 export default Alert;

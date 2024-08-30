@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AdvancedSearchCaption should render with default props 1`] = `
+<div>
+  <div
+    data-testid="advanced-search-caption"
+  >
+    <span
+      class="MuiBox-root css-1hg9omi"
+      data-testid="advanced-search-caption-container"
+    />
+  </div>
+</div>
+`;

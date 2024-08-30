@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FacetsFilter should render with default props 1`] = `
+<div>
+  <span
+    class="facetsFilter empty"
+    data-testid="empty-facet-filters"
+    id="empty-facet-filters"
+  />
+</div>
+`;

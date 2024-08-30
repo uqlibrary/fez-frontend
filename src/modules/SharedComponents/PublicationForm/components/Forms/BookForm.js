@@ -17,7 +17,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const BookForm = ({ submitting, formValues, subtype, isNtro, isAuthorSelected }) => {
+export const BookForm = ({ submitting, formValues, subtype = null, isNtro = false, isAuthorSelected = false }) => {
     const normalizeIssn = value => {
         const newValue = value.replace('-', '');
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
@@ -257,9 +257,4 @@ BookForm.propTypes = {
     isAuthorSelected: PropTypes.bool,
 };
 
-BookForm.defaultProps = {
-    isNtro: false,
-    subtype: null,
-    isAuthorSelected: false,
-};
 export default BookForm;

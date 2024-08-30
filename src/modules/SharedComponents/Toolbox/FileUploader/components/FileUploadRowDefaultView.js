@@ -28,7 +28,7 @@ export const FileUploadRowDefaultView = ({
     securityPolicy,
     requireOpenAccessStatus,
     disabled,
-    locale,
+    locale = { embargoDateClosedAccess: 'No date required' },
     onDelete,
     onEmbargoDateChange,
     onFileDescriptionChange,
@@ -218,12 +218,6 @@ FileUploadRowDefaultView.propTypes = {
     accessConditionLocale: PropTypes.object,
     fileUploadRowViewId: PropTypes.string,
     isAdmin: PropTypes.bool,
-};
-
-FileUploadRowDefaultView.defaultProps = {
-    locale: {
-        embargoDateClosedAccess: 'No date required',
-    },
 };
 
 export default React.memo(FileUploadRowDefaultView);

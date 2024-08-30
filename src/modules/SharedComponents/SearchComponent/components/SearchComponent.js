@@ -281,15 +281,6 @@ export class SearchComponent extends PureComponent {
         });
     };
 
-    // search button is disabled when search string over the max length allowed
-    /* istanbul ignore next */
-    _displaySnackbar = message => {
-        this.setState({
-            snackbarMessage: message,
-            snackbarOpen: true,
-        });
-    };
-
     /*
      *  ==============================
      *  Simple search handlers
@@ -528,7 +519,6 @@ export class SearchComponent extends PureComponent {
                         onToggleSearchMode={this._toggleSearchMode}
                         onSearchTextChange={this._handleSimpleSearchTextChange}
                         onSearch={this._handleSimpleSearch}
-                        onInvalidSearch={this._displaySnackbar}
                     />
                 )}
                 {this.state.isAdvancedSearch && !this.props.isInHeader && (

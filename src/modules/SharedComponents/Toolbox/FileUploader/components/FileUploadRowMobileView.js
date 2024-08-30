@@ -29,7 +29,12 @@ export const FileUploadRowMobileView = ({
     securityPolicy,
     requireOpenAccessStatus,
     disabled,
-    locale,
+    locale = {
+        filenameColumn: 'File name',
+        fileAccessColumn: 'File access',
+        embargoDateColumn: 'Embargo date',
+        embargoDateClosedAccess: 'No date required',
+    },
     onDelete,
     onEmbargoDateChange,
     onAccessConditionChange,
@@ -166,15 +171,6 @@ FileUploadRowMobileView.propTypes = {
     accessConditionLocale: PropTypes.object,
     fileUploadRowViewId: PropTypes.string,
     isAdmin: PropTypes.bool,
-};
-
-FileUploadRowMobileView.defaultProps = {
-    locale: {
-        filenameColumn: 'File name',
-        fileAccessColumn: 'File access',
-        embargoDateColumn: 'Embargo date',
-        embargoDateClosedAccess: 'No date required',
-    },
 };
 
 export default FileUploadRowMobileView;

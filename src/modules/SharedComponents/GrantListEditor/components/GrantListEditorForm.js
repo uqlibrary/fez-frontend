@@ -14,9 +14,25 @@ import validationLocale from 'locale/validationErrors';
 export const GrantListEditorForm = ({
     disabled,
     grantSelectedToEdit,
-    hideType,
+    hideType = false,
     isPopulated,
-    locale,
+    locale = {
+        grantAgencyNameLabel: 'Funder/Sponsor name',
+        grantAgencyNameHint: 'Funder/sponsor name for this work',
+        grantIdLabel: 'Grant ID',
+        grantIdHint: 'Grant number for this work',
+        grantAgencyTypeLabel: 'Funder/Sponsor type',
+        grantAgencyTypeHint: 'Funder/Sponsor type',
+        addButton: 'Add grant',
+        editButton: 'Edit grant',
+        description:
+            "Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list",
+        remindToAdd: (
+            <span>
+                &nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.
+            </span>
+        ),
+    },
     onAdd,
     required,
 }) => {
@@ -203,32 +219,10 @@ GrantListEditorForm.propTypes = {
     disabled: PropTypes.bool,
     grantSelectedToEdit: PropTypes.object,
     hideType: PropTypes.bool,
-    isPopulated: PropTypes.any,
+    isPopulated: PropTypes.func.isRequired,
     locale: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,
-};
-
-GrantListEditorForm.defaultProps = {
-    locale: {
-        grantAgencyNameLabel: 'Funder/Sponsor name',
-        grantAgencyNameHint: 'Funder/sponsor name for this work',
-        grantIdLabel: 'Grant ID',
-        grantIdHint: 'Grant number for this work',
-        grantAgencyTypeLabel: 'Funder/Sponsor type',
-        grantAgencyTypeHint: 'Funder/Sponsor type',
-        addButton: 'Add grant',
-        editButton: 'Edit grant',
-        description:
-            "Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list",
-        remindToAdd: (
-            <span>
-                &nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.
-            </span>
-        ),
-    },
-    hideType: false,
-    isPopulated: false,
 };
 
 export default React.memo(GrantListEditorForm);

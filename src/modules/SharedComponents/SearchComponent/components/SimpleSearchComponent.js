@@ -18,16 +18,15 @@ import { locale } from 'locale';
 import Fade from '@mui/material/Fade';
 
 export const SimpleSearchComponent = ({
-    searchText,
+    searchText = '',
     autoFocus,
-    isInHeader,
-    showMobileSearchButton,
-    showPrefixIcon,
-    onSearch,
+    isInHeader = false,
+    showMobileSearchButton = false,
+    showPrefixIcon = false,
+    onSearch = () => {},
     onSearchTextChange,
-    onToggleSearchMode,
-    onInvalidSearch,
-    classes,
+    onToggleSearchMode = () => {},
+    classes = {},
 }) => {
     const [state, _setState] = React.useState({
         showMobile: false,
@@ -73,12 +72,6 @@ export const SimpleSearchComponent = ({
         if (event && event.key && event.key !== 'Enter') return;
 
         if (state.searchTerm && state.searchTerm.trim().length === 0) return;
-        // search button is disabled when exceeds the max text length
-        /* istanbul ignore next */
-        if (searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-            onInvalidSearch(locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH));
-            return;
-        }
 
         // Hide the mobile search bar after performing a search
         setState({
@@ -331,22 +324,7 @@ SimpleSearchComponent.propTypes = {
     onSearch: PropTypes.func,
     onSearchTextChange: PropTypes.func.isRequired,
     onToggleSearchMode: PropTypes.func,
-    onInvalidSearch: PropTypes.func,
     classes: PropTypes.object,
-};
-SimpleSearchComponent.defaultProps = {
-    searchText: '',
-
-    isInHeader: false,
-    showSearchButton: false,
-    showMobileSearchButton: false,
-    showAdvancedSearchButton: false,
-    showPrefixIcon: false,
-
-    onSearch: () => {},
-    onToggleSearchMode: () => {},
-    onInvalidSearch: /* istanbul ignore next */ () => {},
-    classes: {},
 };
 
 export default React.memo(SimpleSearchComponent);

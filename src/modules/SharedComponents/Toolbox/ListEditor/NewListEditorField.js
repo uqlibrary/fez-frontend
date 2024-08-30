@@ -17,7 +17,14 @@ export const useItemsList = (input, normalize, searchKey) => {
 };
 
 export const NewListEditorField = props => {
-    const { normalize, searchKey } = props;
+    const {
+        normalize = (value, searchKey) => value.map(item => item[searchKey.value]),
+        searchKey = {
+            value: 'rek_value',
+            order: 'rek_order',
+        },
+    } = props;
+
     const [value, setValue] = useItemsList(props.input, normalize, searchKey);
 
     React.useEffect(() => {
@@ -33,17 +40,11 @@ export const NewListEditorField = props => {
             onChange={props.input.onChange}
             remindToAdd={props.remindToAdd}
             list={value}
+            searchKey={searchKey}
+            normalize={normalize}
             {...props}
         />
     );
-};
-
-NewListEditorField.defaultProps = {
-    searchKey: {
-        value: 'rek_value',
-        order: 'rek_order',
-    },
-    normalize: (value, searchKey) => value.map(item => item[searchKey.value]),
 };
 
 NewListEditorField.propTypes = {
