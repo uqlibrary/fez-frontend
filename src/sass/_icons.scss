@@ -23,6 +23,9 @@
   &.google::before, &.google_scholar::before {
     content: url(~/src/images/google_scholar_icon.svg);
   }
+  &.dimensions::before {
+    content: url(~/src/images/dimensions_icon.svg);
+  }
 
   &.cc-by::before {
     content: url(~/src/images/creativecommons/by.png);
