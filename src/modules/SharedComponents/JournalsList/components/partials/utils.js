@@ -51,7 +51,11 @@ export const getIndicator = ({ type, data, tooltipLocale }) => {
                 id={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 data-testid={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
                 key={`journal-indicator-${indicatorProps.type}-${data.jnl_jid}`}
-                tooltip={tooltipLocale[indicatorProps.type][indicatorProps.status]}
+                tooltip={
+                    tooltipLocale && tooltipLocale.hasOwnProperty(indicatorProps.type)
+                        ? tooltipLocale[indicatorProps.type][indicatorProps.status]
+                        : null
+                }
                 {...indicatorProps}
             />
         ),
