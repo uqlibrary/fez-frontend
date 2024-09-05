@@ -82,6 +82,14 @@ const setup = (props = {}, state = {}, renderer = render) => {
 };
 
 describe('QuickLinkContainer', () => {
+    const oldEnv = process.env.NODE_ENV;
+    beforeAll(() => {
+        process.env.NODE_ENV = 'production';
+    });
+    afterAll(() => {
+        process.env.NODE_ENV = oldEnv;
+    });
+
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi.onAny().reply(200, {});

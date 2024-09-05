@@ -13,12 +13,13 @@ import ScheduleIcon from '@mui/icons-material/Schedule';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-import { INTERNAL_LINK_DOMAIN, MENUACTIONS } from '../config';
-import { stringToColour, abbreviateNumber } from '../utils';
+import { MENUACTIONS } from '../config';
+import { stringToColour, abbreviateNumber, getPlatformUrl } from '../utils';
 
 const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+    const platform = getPlatformUrl(process.env.NODE_ENV);
 
     const menuOptions = [
         {
@@ -63,12 +64,12 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
     };
 
     const avatar = React.useMemo(() => {
-        if (link.qlk_link.includes(INTERNAL_LINK_DOMAIN)) {
+        if (link.qlk_link.includes(platform)) {
             if (link.qlk_amount !== null) {
                 return abbreviateNumber(link.qlk_amount, 1);
             } else return <ScheduleIcon fontSize="small" />;
         } else return <OpenInNew fontSize="small" />;
-    }, [link.qlk_link, link.qlk_amount]);
+    }, [link.qlk_link, link.qlk_amount, platform]);
 
     return (
         <Card role="listitem" {...rest}>
@@ -83,7 +84,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                             borderRadius: 2,
                             color: 'white !important',
                             textShadow: '0px 0px 2px rgba(0,0,0,0.87)',
-                            ...(!link.qlk_link.includes(INTERNAL_LINK_DOMAIN) ? { lineHeight: '0.5rem' } : {}),
+                            ...(!link.qlk_link.includes(platform) ? { lineHeight: '0.5rem' } : {}),
                         }}
                     >
                         {avatar}

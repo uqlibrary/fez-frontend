@@ -18,7 +18,7 @@ const linkInternal = {
     qlk_amount: 100,
     qlk_order: 1,
     qlk_title: 'Test internal title',
-    qlk_link: 'https://espace.library.uq.edu.au',
+    qlk_link: 'https://espace.library.uq.edu.au/test.html',
 };
 const linkExternal = {
     qlk_id: 1,
@@ -46,6 +46,14 @@ const setup = (props = {}, renderer = render) => {
 };
 
 describe('QuickLink', () => {
+    const oldEnv = process.env.NODE_ENV;
+    beforeAll(() => {
+        process.env.NODE_ENV = 'production';
+    });
+    afterAll(() => {
+        process.env.NODE_ENV = oldEnv;
+    });
+
     it('should render internal link as expected', async () => {
         const { getByTestId, queryByTestId, getByText } = setup({
             link: linkInternal,
