@@ -3,11 +3,14 @@ import {
     transformQuickLinkUpdateRequest,
     transformQuickLinkReorderRequest,
     transformReportRequest,
+    transformUrlToPlatform,
 } from './transformers';
 
 import { emptyReportActionState } from './reducers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
+
+import { PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
@@ -64,6 +67,11 @@ describe('transformers', () => {
     });
 
     describe('transformQuickLinkUpdateRequest', () => {
+        const oldEnv = process.env.NODE_ENV;
+        afterEach(() => {
+            process.env.NODE_ENV = oldEnv;
+        });
+
         it('should transform quick link reorder data', () => {
             const data = {
                 qlk_id: 1,
@@ -76,6 +84,67 @@ describe('transformers', () => {
             const transformedRequest = transformQuickLinkUpdateRequest(data);
 
             expect(transformedRequest).toEqual({ qlk_id: 1, qlk_title: 'Test title', qlk_link: 'Test link' });
+        });
+
+        it('should transform quick link reorder data', () => {
+            const data = {
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: 'Test link',
+                qlk_order: 3,
+                extra1: 'should delete',
+            };
+
+            const transformedRequest = transformQuickLinkUpdateRequest(data);
+
+            expect(transformedRequest).toEqual({ qlk_id: 1, qlk_title: 'Test title', qlk_link: 'Test link' });
+        });
+
+        it('should transform quick link urls', () => {
+            process.env.NODE_ENV = 'production';
+
+            const data = {
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${STAGING_URL}/test.html`,
+                qlk_order: 3,
+                extra1: 'should delete',
+            };
+
+            // should convert staging to prod
+            let transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${PRODUCTION_URL}/test.html`,
+            });
+
+            // should leave prod as-is
+            data.qlk_link = `${PRODUCTION_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${PRODUCTION_URL}/test.html`,
+            });
+
+            process.env.NODE_ENV = 'staging';
+            data.qlk_link = `${PRODUCTION_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${STAGING_URL}/test.html`,
+            });
+
+            // should leave prod as-is
+            data.qlk_link = `${STAGING_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${STAGING_URL}/test.html`,
+            });
         });
     });
 
@@ -124,6 +193,32 @@ describe('transformers', () => {
                 report_type: 1,
                 record_id: 123,
             });
+        });
+    });
+
+    describe('transformUrlToPlatform', () => {
+        const oldEnv = process.env.NODE_ENV;
+        afterEach(() => {
+            process.env.NODE_ENV = oldEnv;
+        });
+        it('should transform staging to prod links', () => {
+            process.env.NODE_ENV = 'production';
+            expect(transformUrlToPlatform(`${STAGING_URL}/test.html`)).toEqual(`${PRODUCTION_URL}/test.html`);
+            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test.html`)).toEqual(`${PRODUCTION_URL}/test.html`);
+            // if not staging or prod, nothing is transformed
+            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
+                'http://dev-espace.library.uq.edu.au/test.html',
+            );
+        });
+        it('should transform prod links to staging', () => {
+            process.env.NODE_ENV = 'staging';
+            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test.html`)).toEqual(`${STAGING_URL}/test.html`);
+            process.env.NODE_ENV = 'development';
+            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test2.html`)).toEqual(`${STAGING_URL}/test2.html`);
+            // if not staging or prod, nothing is transformed
+            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
+                'http://dev-espace.library.uq.edu.au/test.html',
+            );
         });
     });
 });
