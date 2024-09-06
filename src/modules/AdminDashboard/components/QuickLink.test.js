@@ -3,6 +3,8 @@ import React from 'react';
 import { render, userEvent, act } from 'test-utils';
 import QuickLink from './QuickLink';
 
+import * as General from 'config/general';
+
 const locale = {
     menu: {
         editLabel: 'Edit',
@@ -46,12 +48,12 @@ const setup = (props = {}, renderer = render) => {
 };
 
 describe('QuickLink', () => {
-    const oldEnv = process.env.NODE_ENV;
+    const oldVal = General.IS_PRODUCTION;
     beforeAll(() => {
-        process.env.NODE_ENV = 'production';
+        General.IS_PRODUCTION = true;
     });
     afterAll(() => {
-        process.env.NODE_ENV = oldEnv;
+        General.IS_PRODUCTION = oldVal;
     });
 
     it('should render internal link as expected', async () => {

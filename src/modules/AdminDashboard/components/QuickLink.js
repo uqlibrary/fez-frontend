@@ -19,7 +19,7 @@ import { stringToColour, abbreviateNumber, getPlatformUrl } from '../utils';
 const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-    const platform = getPlatformUrl(process.env.NODE_ENV);
+    const platform = getPlatformUrl();
 
     const menuOptions = [
         {

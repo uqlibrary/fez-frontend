@@ -5,6 +5,7 @@ import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, userEvent }
 import QuickLinkContainer from './QuickLinkContainer';
 
 import * as DashboardActions from 'actions/adminDashboard';
+import * as General from 'config/general';
 
 const locale = {
     title: 'Quick Links ',
@@ -82,12 +83,12 @@ const setup = (props = {}, state = {}, renderer = render) => {
 };
 
 describe('QuickLinkContainer', () => {
-    const oldEnv = process.env.NODE_ENV;
+    const oldVal = General.IS_PRODUCTION;
     beforeAll(() => {
-        process.env.NODE_ENV = 'production';
+        General.IS_PRODUCTION = true;
     });
     afterAll(() => {
-        process.env.NODE_ENV = oldEnv;
+        General.IS_PRODUCTION = oldVal;
     });
 
     beforeEach(() => {
