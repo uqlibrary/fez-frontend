@@ -1,5 +1,5 @@
 import * as Utils from './utils';
-import { PRODUCTION_URL, STAGING_URL } from 'config/general';
+import * as General from 'config/general';
 
 describe('utils', () => {
     describe('stringToColour', () => {
@@ -184,9 +184,12 @@ describe('utils', () => {
 
     describe('getPlatformUrl', () => {
         it('returns expected results', () => {
-            expect(Utils.getPlatformUrl('production')).toEqual(PRODUCTION_URL);
-            expect(Utils.getPlatformUrl('staging')).toEqual(STAGING_URL);
-            expect(Utils.getPlatformUrl('development')).toEqual(STAGING_URL);
+            const oldVal = General.IS_PRODUCTION;
+            General.IS_PRODUCTION = true;
+            expect(Utils.getPlatformUrl()).toEqual(General.PRODUCTION_URL);
+            General.IS_PRODUCTION = false;
+            expect(Utils.getPlatformUrl()).toEqual(General.STAGING_URL);
+            General.IS_PRODUCTION = oldVal;
         });
     });
 });

@@ -10,7 +10,7 @@ import { emptyReportActionState } from './reducers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
 
-import { PRODUCTION_URL, STAGING_URL } from 'config/general';
+import * as General from 'config/general';
 
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
@@ -101,12 +101,12 @@ describe('transformers', () => {
         });
 
         it('should transform quick link urls', () => {
-            process.env.NODE_ENV = 'production';
+            General.IS_PRODUCTION = true;
 
             const data = {
                 qlk_id: 1,
                 qlk_title: 'Test title',
-                qlk_link: `${STAGING_URL}/test.html`,
+                qlk_link: `${General.STAGING_URL}/test.html`,
                 qlk_order: 3,
                 extra1: 'should delete',
             };
@@ -116,34 +116,34 @@ describe('transformers', () => {
             expect(transformedRequest).toEqual({
                 qlk_id: 1,
                 qlk_title: 'Test title',
-                qlk_link: `${PRODUCTION_URL}/test.html`,
+                qlk_link: `${General.PRODUCTION_URL}/test.html`,
             });
 
             // should leave prod as-is
-            data.qlk_link = `${PRODUCTION_URL}/test.html`;
+            data.qlk_link = `${General.PRODUCTION_URL}/test.html`;
             transformedRequest = transformQuickLinkUpdateRequest(data);
             expect(transformedRequest).toEqual({
                 qlk_id: 1,
                 qlk_title: 'Test title',
-                qlk_link: `${PRODUCTION_URL}/test.html`,
+                qlk_link: `${General.PRODUCTION_URL}/test.html`,
             });
 
-            process.env.NODE_ENV = 'staging';
-            data.qlk_link = `${PRODUCTION_URL}/test.html`;
+            General.IS_PRODUCTION = false;
+            data.qlk_link = `${General.PRODUCTION_URL}/test.html`;
             transformedRequest = transformQuickLinkUpdateRequest(data);
             expect(transformedRequest).toEqual({
                 qlk_id: 1,
                 qlk_title: 'Test title',
-                qlk_link: `${STAGING_URL}/test.html`,
+                qlk_link: `${General.STAGING_URL}/test.html`,
             });
 
             // should leave prod as-is
-            data.qlk_link = `${STAGING_URL}/test.html`;
+            data.qlk_link = `${General.STAGING_URL}/test.html`;
             transformedRequest = transformQuickLinkUpdateRequest(data);
             expect(transformedRequest).toEqual({
                 qlk_id: 1,
                 qlk_title: 'Test title',
-                qlk_link: `${STAGING_URL}/test.html`,
+                qlk_link: `${General.STAGING_URL}/test.html`,
             });
         });
     });
@@ -197,24 +197,28 @@ describe('transformers', () => {
     });
 
     describe('transformUrlToPlatform', () => {
-        const oldEnv = process.env.NODE_ENV;
+        const oldVal = General.IS_PRODUCTION;
         afterEach(() => {
-            process.env.NODE_ENV = oldEnv;
+            General.IS_PRODUCTION = oldVal;
         });
         it('should transform staging to prod links', () => {
-            process.env.NODE_ENV = 'production';
-            expect(transformUrlToPlatform(`${STAGING_URL}/test.html`)).toEqual(`${PRODUCTION_URL}/test.html`);
-            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test.html`)).toEqual(`${PRODUCTION_URL}/test.html`);
+            General.IS_PRODUCTION = true;
+            expect(transformUrlToPlatform(`${General.STAGING_URL}/test.html`)).toEqual(
+                `${General.PRODUCTION_URL}/test.html`,
+            );
+            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
+                `${General.PRODUCTION_URL}/test.html`,
+            );
             // if not staging or prod, nothing is transformed
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',
             );
         });
         it('should transform prod links to staging', () => {
-            process.env.NODE_ENV = 'staging';
-            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test.html`)).toEqual(`${STAGING_URL}/test.html`);
-            process.env.NODE_ENV = 'development';
-            expect(transformUrlToPlatform(`${PRODUCTION_URL}/test2.html`)).toEqual(`${STAGING_URL}/test2.html`);
+            General.IS_PRODUCTION = false;
+            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
+                `${General.STAGING_URL}/test.html`,
+            );
             // if not staging or prod, nothing is transformed
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',

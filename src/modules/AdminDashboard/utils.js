@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx';
-import { PRODUCTION_URL, STAGING_URL } from 'config/general';
+import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const stringToColour = string => {
     let hash = 0;
@@ -82,4 +82,4 @@ export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) 
 export const isEmptyStr = str =>
     str === null || str === undefined || (typeof str === 'string' && !!!str.trim()) || typeof str !== 'string';
 
-export const getPlatformUrl = url => (url === 'production' ? PRODUCTION_URL : STAGING_URL);
+export const getPlatformUrl = () => (IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL);
