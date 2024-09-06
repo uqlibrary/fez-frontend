@@ -168,7 +168,8 @@ const Reports = () => {
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
                     items={legacyReports || /* istanbul ignore next */ []}
-                    onReportChange={handleExportReportChange}
+                    state={actionState}
+                    onChange={handleExportReportChange}
                     onExportClick={handleExportReportClick}
                 />
             </StandardCard>

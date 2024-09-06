@@ -3,6 +3,7 @@ import moment from 'moment';
 
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
@@ -69,23 +70,29 @@ export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_descrip
 
 export const optionDoubleRowRender = (props, option) => {
     return (
-        <li
+        <Box
+            component={'li'}
             {...props}
-            style={{
+            sx={{
                 flexDirection: 'column',
                 justifyContent: 'left',
-                alignItems: 'flex-start',
                 fontWeight: 400,
+                '&:not(:last-of-type)': {
+                    borderBottom: '1px solid #ccc',
+                },
+            }}
+            style={{
+                alignItems: 'flex-start',
             }}
             data-testid={props.id}
         >
-            <Typography variant="body1" color="textPrimary">
+            <Typography variant="body1" color="textPrimary" sx={{ fontWeight: 500 }}>
                 {option.sel_title}
             </Typography>
-            <Typography variant="body1" color="textSecondary">
+            <Typography variant="body1" color="textSecondary" sx={{ fontStyle: 'italic' }}>
                 {option.sel_description}
             </Typography>
-        </li>
+        </Box>
     );
 };
 
