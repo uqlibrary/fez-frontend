@@ -3,7 +3,7 @@ import moment from 'moment';
 import { SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
 import { filterObjectProps, getPlatformUrl } from './utils';
 
-import { PRODUCTION_URL, STAGING_URL } from 'config/general';
+import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const transformSystemAlertRequest = ({ user, action, row }) => {
     const keys =
@@ -26,15 +26,11 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 };
 
 export const transformUrlToPlatform = url => {
-    const platform = getPlatformUrl(process.env.NODE_ENV);
+    const platform = getPlatformUrl();
     if (url.includes(platform)) return url;
 
-    switch (process.env.NODE_ENV) {
-        case 'production':
-            return url.replace(STAGING_URL, PRODUCTION_URL);
-        default:
-            return url.replace(PRODUCTION_URL, STAGING_URL);
-    }
+    if (IS_PRODUCTION) return url.replace(STAGING_URL, PRODUCTION_URL);
+    else return url.replace(PRODUCTION_URL, STAGING_URL);
 };
 
 export const transformQuickLinkUpdateRequest = data => {
