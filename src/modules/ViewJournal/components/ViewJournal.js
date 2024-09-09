@@ -17,7 +17,9 @@ import Section from './Section';
 import { parseHtmlToJSX } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
-import { locale } from 'locale';
+import { default as globalLocale } from 'locale/global';
+import { default as pagesLocale } from 'locale/pages';
+import { default as viewJournalLocale } from 'locale/viewJournal';
 import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
@@ -30,7 +32,8 @@ export const ViewJournal = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     const isAdmin = userIsAdmin();
-    const txt = locale.pages.journal.view;
+    const txt = pagesLocale.pages.journal.view;
+    const viewJournalTxt = viewJournalLocale.viewJournal;
 
     const journalLoading = useSelector(state => state.get('viewJournalReducer').loadingJournalToView);
     const journalDetails = useSelector(state => state.get('viewJournalReducer').journalToView);
@@ -38,7 +41,7 @@ export const ViewJournal = () => {
     const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
     const alertProps = favouriteUpdateError && {
         ...txt.errorAlert,
-        message: txt.errorAlert.message(locale.global.errorMessages.generic),
+        message: txt.errorAlert.message(globalLocale.global.errorMessages.generic),
     };
 
     const journalDetailsLength = (!!journalDetails && Object.keys(journalDetails)?.length) || 0;
@@ -57,8 +60,8 @@ export const ViewJournal = () => {
         if (journalLoadingError.status === 404) {
             return (
                 <WorkNotFound
-                    title={locale.viewJournal.notFound.title}
-                    message={locale.viewJournal.notFound.message}
+                    title={viewJournalTxt.notFound.title}
+                    message={viewJournalTxt.notFound.message}
                     loadingError={journalLoadingError}
                 />
             );
@@ -128,15 +131,15 @@ export const ViewJournal = () => {
                             <Grid item xs={12}>
                                 <Alert
                                     type={'warning'}
-                                    title={txt.readAndPublish.title}
+                                    title={viewJournalTxt.readAndPublish.alert.title}
                                     message={
                                         <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
                                             {(journalDetails.fez_journal_read_and_publish
                                                 .jnl_read_and_publish_is_capped === 'Approaching' &&
-                                                txt.readAndPublish.approaching) ||
+                                                viewJournalTxt.readAndPublish.alert.approaching) ||
                                                 (journalDetails.fez_journal_read_and_publish
                                                     .jnl_read_and_publish_is_capped === 'Exceeded' &&
-                                                    txt.readAndPublish.exceeded)}
+                                                    viewJournalTxt.readAndPublish.alert.exceeded)}
                                         </Box>
                                     }
                                 />
