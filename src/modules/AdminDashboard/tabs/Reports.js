@@ -37,7 +37,7 @@ const Reports = () => {
 
     const dispatch = useDispatch();
 
-    const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
+    const [actionStateDisplayReport, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
         // eslint-disable-next-line camelcase
@@ -104,7 +104,7 @@ const Reports = () => {
 
         const colHeaders = columns.sort((a, b) => a.exportOrder > b.exportOrder).map(col => col.headerName);
 
-        const sheetLabel = actionState.displayReport.label;
+        const sheetLabel = actionStateDisplayReport.displayReport.label;
 
         exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
     };
@@ -112,35 +112,18 @@ const Reports = () => {
     const handleDisplayReportClick = () => {
         const newColumns = getDisplayReportColumns({
             locale: txt,
-            actionState,
+            actionState: actionStateDisplayReport,
         });
 
         !!newColumns && setColumns(newColumns);
 
-        const request = transformReportRequest(actionState);
+        const request = transformReportRequest(actionStateDisplayReport);
         dispatch(actions.loadAdminDashboardDisplayReport(request));
     };
 
     const handleDisplayReportChange = changes => {
         actionDispatch(changes);
     };
-
-    const getRowId = React.useCallback(
-        row => {
-            const reportType =
-                actionState?.displayReport?.value ||
-                getReportTypeFromValue(adminDashboardDisplayReportDataParams?.report_type);
-            return reportType === 'workshistory' ? row.pre_id : row.sat_id;
-        },
-        [actionState?.displayReport?.value, adminDashboardDisplayReportDataParams?.report_type],
-    );
-
-    const defaultSorting = React.useMemo(() => {
-        const reportType =
-            actionState?.displayReport?.value ||
-            getReportTypeFromValue(adminDashboardDisplayReportDataParams?.report_type);
-        return getDefaultSorting(reportType);
-    }, [actionState?.displayReport?.value, adminDashboardDisplayReportDataParams?.report_type]);
 
     return (
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
@@ -164,11 +147,11 @@ const Reports = () => {
                 </Grid>
                 <LegacyReportInterface
                     id={reportLegacyId}
-                    exportReport={actionState.exportReport || defaultLegacyReportOption}
+                    exportReport={actionStateDisplayReport.exportReport || defaultLegacyReportOption}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
                     items={legacyReports || /* istanbul ignore next */ []}
-                    state={actionState}
+                    state={actionStateDisplayReport}
                     onChange={handleExportReportChange}
                     onExportClick={handleExportReportClick}
                 />
@@ -197,7 +180,7 @@ const Reports = () => {
                         disabled={adminDashboardDisplayReportLoading || adminDashboardExportReportLoading}
                         exportDisabled={!!!adminDashboardDisplayReportData}
                         loading={adminDashboardDisplayReportLoading}
-                        state={actionState}
+                        state={actionStateDisplayReport}
                         onReportClick={handleDisplayReportClick}
                         onExportClick={handleExportDisplayReportClick}
                         onChange={handleDisplayReportChange}
@@ -207,7 +190,7 @@ const Reports = () => {
                         <Grid container mt={2}>
                             <Grid item xs={12}>
                                 <DataGrid
-                                    getRowId={getRowId}
+                                    getRowId={row => row.pre_id || row.sat_id || ''}
                                     rows={adminDashboardDisplayReportData}
                                     columns={
                                         columns
@@ -225,7 +208,11 @@ const Reports = () => {
                                             },
                                         },
                                         sorting: {
-                                            sortModel: defaultSorting,
+                                            sortModel: getDefaultSorting(
+                                                getReportTypeFromValue(
+                                                    adminDashboardDisplayReportDataParams?.report_type,
+                                                ),
+                                            ),
                                         },
                                     }}
                                     pageSizeOptions={[10, 25, 50, 100]}

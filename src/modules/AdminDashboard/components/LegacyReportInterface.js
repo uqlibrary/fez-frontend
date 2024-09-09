@@ -13,13 +13,13 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
-import { useValidateReport } from '../hooks';
+import { useValidateDisplayReport } from '../hooks';
 import { DEFAULT_DATEPICKER_INPUT_FORMAT, optionDoubleRowRender } from '../config';
 
 const LegacyReportInterface = ({ id, loading, disabled, items, state, exportReport, onChange, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
-    const { isValid, fromDateError, toDateError } = useValidateReport({
+    const { isValid, fromDateError, toDateError } = useValidateDisplayReport({
         locale: txt.error,
         displayReport: state.displayReport?.value,
         fromDate: state.fromDate,

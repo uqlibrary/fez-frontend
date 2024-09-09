@@ -32,7 +32,7 @@ export const useSystemAlertDrawer = data => {
     };
 };
 
-export const useValidateReport = ({ locale, displayReport, fromDate, toDate, systemAlertId }) => {
+export const useValidateDisplayReport = ({ locale, displayReport, fromDate, toDate, systemAlertId }) => {
     const [fromDateError, setFromDateError] = React.useState('');
     const [toDateError, setToDateError] = React.useState('');
     const [systemAlertError, setSystemAlertError] = React.useState('');

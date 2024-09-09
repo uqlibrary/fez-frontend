@@ -160,7 +160,7 @@ export default {
                         runReport: 'Run report',
                         export: 'Export',
                         exportReport: 'Export report',
-                        helperText: 'Report will download direct to your device',
+                        helperText: 'Report will download to your device or be emailed directly to you',
                     },
                     columns: {
                         workshistory: {

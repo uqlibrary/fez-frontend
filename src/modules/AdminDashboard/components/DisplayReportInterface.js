@@ -13,8 +13,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
-import { useValidateReport } from '../hooks';
 import { DEFAULT_DATEPICKER_INPUT_FORMAT } from '../config';
+import { isEmptyStr } from '../utils';
 
 const DisplayReportInterface = ({
     id,
@@ -28,13 +28,61 @@ const DisplayReportInterface = ({
 }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
-    const { isValid, fromDateError, toDateError, systemAlertError } = useValidateReport({
-        locale: txt.error,
-        displayReport: state.displayReport?.value,
-        fromDate: state.fromDate,
-        toDate: state.toDate,
-        systemAlertId: state.systemAlertId,
-    });
+    const { isValid, fromDateError, toDateError, systemAlertError } = React.useMemo(() => {
+        const locale = txt.error;
+        const displayReport = state.displayReport?.value;
+        const fromDate = state.fromDate;
+        const toDate = state.toDate;
+        const systemAlertId = state.systemAlertId;
+        let fromDateError = '';
+        let toDateError = '';
+        let systemAlertError = '';
+        let isValid = false;
+
+        const isValidNumber = value => {
+            const numValue = Number(value);
+            return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
+        };
+
+        if (!!displayReport) {
+            fromDateError = '';
+            toDateError = '';
+            systemAlertError = '';
+
+            if (displayReport === 'systemalertlog') {
+                const validSystemId = isValidNumber(systemAlertId);
+                if (!!!fromDate && !!!toDate && validSystemId) return true;
+                else if (!validSystemId) {
+                    systemAlertError = locale.systemAlertId;
+                    isValid = false;
+                }
+            }
+
+            const mFrom = moment(fromDate);
+            const mTo = moment(toDate);
+
+            if (displayReport === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+                fromDateError = locale.required;
+                toDateError = locale.required;
+                isValid = false;
+            }
+
+            if (mFrom.isValid() && !mTo.isValid()) {
+                toDateError = locale.required;
+                isValid = false;
+            } else if (mTo.isValid() && !mFrom.isValid()) {
+                fromDateError = locale.required;
+                isValid = false;
+            } else if (mFrom.isValid() && mTo.isValid()) {
+                if (!mFrom.isSameOrBefore(mTo)) {
+                    fromDateError = locale.dateNotAfter;
+                    isValid = false;
+                } else isValid = true;
+            }
+        }
+
+        return { isValid, fromDateError, toDateError, systemAlertError };
+    }, [txt.error, state]);
 
     const isDisabled = !isValid || disabled;
 

@@ -46,9 +46,6 @@ export const SYSTEM_ALERT_ACTION = {
 export const REPORT_TYPE = {
     systemalertlog: 1,
     workshistory: 2,
-    workiddupe: 3,
-    scopusiddupe: 4,
-    doidupe: 5,
 };
 
 export const DEFAULT_SORTING = {
@@ -69,6 +66,9 @@ export const isUrl = str => {
 export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
 export const optionDoubleRowRender = (props, option) => {
+    const bindings = !!option?.sel_bindings ? option.sel_bindings.split(',') : [];
+    const hasBindings = bindings.length > 0;
+
     return (
         <Box
             component={'li'}
@@ -87,7 +87,8 @@ export const optionDoubleRowRender = (props, option) => {
             data-testid={props.id}
         >
             <Typography variant="body1" color="textPrimary" sx={{ fontWeight: 500 }}>
-                {option.sel_title}
+                {option.sel_title}{' '}
+                {hasBindings && <Chip variant="outlined" color="info" label={'filters'} size="small" />}
             </Typography>
             <Typography variant="body1" color="textSecondary" sx={{ fontStyle: 'italic' }}>
                 {option.sel_description}
