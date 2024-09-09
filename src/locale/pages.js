@@ -1322,6 +1322,21 @@ export default {
                 advisoryStatement: {
                     title: 'Advisory statement',
                 },
+                readAndPublish: {
+                    title: 'Read and Publish Agreement',
+                    approaching: (
+                        <p>
+                            The available cap for this title is projected to run out shortly. Please{' '}
+                            <a href="https://caul.libguides.com/read-and-publish/home">check the current status</a>.
+                        </p>
+                    ),
+                    exceeded: (
+                        <p>
+                            The available cap for this title has been exceeded. For the remainder of the year open
+                            access publishing in this title will no longer be fully covered through the agreement.
+                        </p>
+                    ),
+                },
             },
         },
         authors: {

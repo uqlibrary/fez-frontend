@@ -121,6 +121,27 @@ export const ViewJournal = () => {
                             />
                         </Grid>
                     )}
+                    {journalDetails.fez_journal_read_and_publish &&
+                        (journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped === 'Approaching' ||
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped ===
+                                'Exceeded') && (
+                            <Grid item xs={12}>
+                                <Alert
+                                    type={'warning'}
+                                    title={txt.readAndPublish.title}
+                                    message={
+                                        <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
+                                            {(journalDetails.fez_journal_read_and_publish
+                                                .jnl_read_and_publish_is_capped === 'Approaching' &&
+                                                txt.readAndPublish.approaching) ||
+                                                (journalDetails.fez_journal_read_and_publish
+                                                    .jnl_read_and_publish_is_capped === 'Exceeded' &&
+                                                    txt.readAndPublish.exceeded)}
+                                        </Box>
+                                    }
+                                />
+                            </Grid>
+                        )}
                     {Object.entries(viewJournalConfig)
                         // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
