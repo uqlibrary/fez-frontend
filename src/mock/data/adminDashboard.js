@@ -8,7 +8,7 @@ export const adminDashboardConfig = {
         {id: 444, name: 'Elizabeth Alvey'},
         {id: 2333, name: 'Lee Sibbald'},
     ],
-    legacy_reports: [
+    export_reports: [
         {
             sel_id: 1,
             sel_title: 'Wok ID dups',
@@ -50,7 +50,7 @@ export const adminDashboardConfig = {
             sel_bindings: ':date_from',
         },
         {
-            sel_id: 5,
+            sel_id: 6,
             sel_title: 'Queued report two bindings',
             sel_description:
             'Query that has two bindings, which should be provided by the user',

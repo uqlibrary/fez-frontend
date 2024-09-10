@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
@@ -15,25 +15,32 @@ import locale from 'locale/components';
 
 import { DEFAULT_DATEPICKER_INPUT_FORMAT } from '../config';
 import { isEmptyStr } from '../utils';
+import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 
-const DisplayReportInterface = ({
-    id,
-    loading,
-    disabled,
-    exportDisabled,
-    state,
-    onReportClick,
-    onExportClick,
-    onChange,
-}) => {
+const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onReportClick, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
+
+    const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
+
+    const handleExportDisplayReportClick = React.useCallback(() => {
+        onExportClick?.(actionState);
+    }, [onExportClick, actionState]);
+
+    const handleDisplayReportChange = changes => {
+        console.log(changes);
+        actionDispatch(changes);
+    };
+
+    const handleDisplayReportClick = () => {
+        onReportClick?.(actionState);
+    };
 
     const { isValid, fromDateError, toDateError, systemAlertError } = React.useMemo(() => {
         const locale = txt.error;
-        const displayReport = state.displayReport?.value;
-        const fromDate = state.fromDate;
-        const toDate = state.toDate;
-        const systemAlertId = state.systemAlertId;
+        const displayReport = actionState.displayReport?.value;
+        const fromDate = actionState.fromDate;
+        const toDate = actionState.toDate;
+        const systemAlertId = actionState.systemAlertId;
         let fromDateError = '';
         let toDateError = '';
         let systemAlertError = '';
@@ -82,7 +89,7 @@ const DisplayReportInterface = ({
         }
 
         return { isValid, fromDateError, toDateError, systemAlertError };
-    }, [txt.error, state]);
+    }, [txt.error, actionState]);
 
     const isDisabled = !isValid || disabled;
 
@@ -119,9 +126,9 @@ const DisplayReportInterface = ({
                             'data-analyticsid': `${id}-listbox`,
                             'data-testid': `${id}-listbox`,
                         }}
-                        value={state.displayReport}
+                        value={actionState.displayReport}
                         onChange={(_, value) => {
-                            onChange({ type: 'displayReport', value });
+                            handleDisplayReportChange({ type: 'displayReport', value });
                         }}
                     />
                 </Grid>
@@ -137,30 +144,31 @@ const DisplayReportInterface = ({
                                 'data-analyticsid': `${id}-date-from-input`,
                             }}
                             label={txt.label.dateFrom}
-                            value={state.fromDate}
+                            value={actionState.fromDate}
                             renderInput={params => (
                                 <TextField
                                     {...params}
                                     variant="standard"
                                     fullWidth
                                     error={!!fromDateError}
-                                    required={!!fromDateError || state.displayReport?.value === 'workshistory'}
+                                    required={!!fromDateError || actionState.displayReport?.value === 'workshistory'}
                                     helperText={fromDateError}
                                 />
                             )}
                             // eslint-disable-next-line react/prop-types
                             onChange={props =>
-                                onChange({
+                                handleDisplayReportChange({
                                     type: 'fromDate',
                                     value: !!props ? moment(props).format() : null,
                                 })
                             }
                             defaultValue=""
                             disableFuture
-                            maxDate={state.toDate}
+                            maxDate={actionState.toDate}
                             disabled={
-                                !!!state.displayReport ||
-                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                                !!!actionState.displayReport ||
+                                (actionState.displayReport?.value === 'systemalertlog' &&
+                                    actionState.systemAlertId !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
@@ -178,36 +186,39 @@ const DisplayReportInterface = ({
                                 'data-analyticsid': `${id}-date-to-input`,
                             }}
                             label={txt.label.dateTo}
-                            value={state.toDate}
+                            value={actionState.toDate}
                             renderInput={params => (
                                 <TextField
                                     {...params}
                                     variant="standard"
                                     fullWidth
                                     error={!!toDateError}
-                                    required={!!state.fromDate || state.displayReport?.value === 'workshistory'}
+                                    required={
+                                        !!actionState.fromDate || actionState.displayReport?.value === 'workshistory'
+                                    }
                                     helperText={toDateError}
                                 />
                             )}
                             // eslint-disable-next-line react/prop-types
                             onChange={props =>
-                                onChange({
+                                handleDisplayReportChange({
                                     type: 'toDate',
                                     value: !!props ? moment(props).format() : null,
                                 })
                             }
                             defaultValue=""
                             disableFuture
-                            minDate={state.fromDate}
+                            minDate={actionState.fromDate}
                             disabled={
-                                !!!state.displayReport ||
-                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
+                                !!!actionState.displayReport ||
+                                (actionState.displayReport?.value === 'systemalertlog' &&
+                                    actionState.systemAlertId !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
-                {state.displayReport?.value === 'systemalertlog' && (
+                {actionState.displayReport?.value === 'systemalertlog' && (
                     <Grid item xs={12} sm={4}>
                         <Box data-testid={`${id}-system-alert-id`}>
                             <TextField
@@ -226,9 +237,9 @@ const DisplayReportInterface = ({
                                 sx={{ mt: 1 }}
                                 onChange={props =>
                                     // eslint-disable-next-line react/prop-types
-                                    onChange({ type: 'systemAlertId', value: props.target.value })
+                                    handleDisplayReportChange({ type: 'systemAlertId', value: props.target.value })
                                 }
-                                value={state.systemAlertId}
+                                value={actionState.systemAlertId}
                                 helperText={systemAlertError}
                                 error={!!systemAlertError}
                             />
@@ -241,7 +252,7 @@ const DisplayReportInterface = ({
                         data-testid={`${id}-button`}
                         variant="contained"
                         disabled={isDisabled}
-                        onClick={onReportClick}
+                        onClick={handleDisplayReportClick}
                     >
                         {loading && (
                             <CircularProgress
@@ -260,7 +271,7 @@ const DisplayReportInterface = ({
                         variant="contained"
                         color="secondary"
                         sx={{ marginInlineStart: 1 }}
-                        onClick={onExportClick}
+                        onClick={handleExportDisplayReportClick}
                         disabled={exportDisabled}
                     >
                         {txt.label.export}
@@ -273,13 +284,11 @@ const DisplayReportInterface = ({
 
 DisplayReportInterface.propTypes = {
     id: PropTypes.string.isRequired,
-    state: PropTypes.object.isRequired,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
     exportDisabled: PropTypes.bool,
     onReportClick: PropTypes.func,
     onExportClick: PropTypes.func,
-    onChange: PropTypes.func,
 };
 
 export default React.memo(DisplayReportInterface);

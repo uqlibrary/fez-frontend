@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
@@ -13,20 +13,162 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
-import { useValidateDisplayReport } from '../hooks';
-import { DEFAULT_DATEPICKER_INPUT_FORMAT, optionDoubleRowRender } from '../config';
+import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
+import { DEFAULT_DATEPICKER_INPUT_FORMAT, optionDoubleRowRender, defaultLegacyReportOption } from '../config';
 
-const LegacyReportInterface = ({ id, loading, disabled, items, state, exportReport, onChange, onExportClick }) => {
+const filters = {
+    date_from: {
+        component: ({ state, id, errorMessage, onChange }) => {
+            const txt = locale.components.adminDashboard.tabs.reports;
+            const hasBinding = state.exportReport?.sel_bindings?.includes('date_from');
+            return (
+                <Grid item xs={12} sm={4}>
+                    <Box data-testid={`${id}-date-from`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-from-input`,
+                                'data-testid': `${id}-date-from-input`,
+                                label: txt.label.dateFrom,
+                                'aria-label': txt.label.dateFrom,
+                                'aria-labelledby': `${id}-input`,
+                                'data-analyticsid': `${id}-date-from-input`,
+                            }}
+                            label={txt.label.dateFrom}
+                            value={state.fromDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage}
+                                    required={hasBinding}
+                                    helperText={errorMessage}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
+                            onChange={props =>
+                                onChange?.({
+                                    type: 'fromDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            maxDate={state.toDate}
+                            disabled={!!!state.exportReport || !hasBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: state => {
+            return moment(state.fromDate).isValid();
+        },
+    },
+    date_to: {
+        component: ({ state, id, errorMessage, onChange }) => {
+            const txt = locale.components.adminDashboard.tabs.reports;
+            const hasBinding = state.exportReport?.sel_bindings?.includes('date_to');
+            return (
+                <Grid item xs={12} sm={4}>
+                    <Box data-testid={`${id}-date-to`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-to-input`,
+                                'data-testid': `${id}-date-to-input`,
+                                label: txt.label.dateTo,
+                                'aria-label': txt.label.dateTo,
+                                'aria-labelledby': `${id}-date-to-label`,
+                                'data-analyticsid': `${id}-date-to-input`,
+                            }}
+                            label={txt.label.dateTo}
+                            value={state.toDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage}
+                                    required={hasBinding}
+                                    helperText={errorMessage}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
+                            onChange={props =>
+                                onChange?.({
+                                    type: 'toDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            minDate={state.fromDate}
+                            disabled={!!!state.exportReport || !hasBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: state => {
+            return !!state;
+        },
+    },
+};
+
+const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
-    const { isValid, fromDateError, toDateError } = useValidateDisplayReport({
-        locale: txt.error,
-        displayReport: state.displayReport?.value,
-        fromDate: state.fromDate,
-        toDate: state.toDate,
-    });
+    const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
+
+    const exportReport = actionState.exportReport || defaultLegacyReportOption;
+
+    const { isValid, fromDateError, toDateError } = React.useMemo(() => {
+        const locale = txt.error;
+
+        const exportReport = actionState.exportReport;
+        const fromDate = actionState.fromDate;
+        const toDate = actionState.toDate;
+        let fromDateError = '';
+        let toDateError = '';
+        let isValid = false;
+
+        if (!!exportReport) {
+            if (!!exportReport.sel_bindings) {
+                fromDateError = '';
+                toDateError = '';
+
+                const mFrom = moment(fromDate);
+                const mTo = moment(toDate);
+
+                if (mFrom.isValid() && !mTo.isValid()) {
+                    toDateError = locale.required;
+                    isValid = false;
+                } else if (mTo.isValid() && !mFrom.isValid()) {
+                    fromDateError = locale.required;
+                    isValid = false;
+                } else if (mFrom.isValid() && mTo.isValid()) {
+                    if (!mFrom.isSameOrBefore(mTo)) {
+                        fromDateError = locale.dateNotAfter;
+                        isValid = false;
+                    } else isValid = true;
+                }
+            } else isValid = true;
+        }
+        return { isValid, fromDateError, toDateError };
+    }, [txt.error, actionState]);
 
     const isDisabled = !isValid || disabled;
+
+    const handleFilterChange = React.useCallback(value => {
+        console.log(value);
+        actionDispatch(value);
+    }, []);
+
+    const handleExportReportChange = React.useCallback((_, value) => {
+        actionDispatch({ type: 'exportReport', value });
+    }, []);
 
     const handleExportReport = React.useCallback(() => {
         onExportClick(exportReport.sel_id);
@@ -69,92 +211,20 @@ const LegacyReportInterface = ({ id, loading, disabled, items, state, exportRepo
                             'data-testid': `${id}-listbox`,
                         }}
                         value={exportReport}
-                        onChange={onChange}
+                        onChange={handleExportReportChange}
                         disabled={loading || disabled}
                     />
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Box data-testid={`${id}-date-from`}>
-                        <DatePicker
-                            inputProps={{
-                                id: `${id}-date-from-input`,
-                                'data-testid': `${id}-date-from-input`,
-                                label: txt.label.dateFrom,
-                                'aria-label': txt.label.dateFrom,
-                                'aria-labelledby': `${id}-input`,
-                                'data-analyticsid': `${id}-date-from-input`,
-                            }}
-                            label={txt.label.dateFrom}
-                            value={state.fromDate}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!fromDateError}
-                                    required={!!fromDateError || state.displayReport?.value === 'workshistory'}
-                                    helperText={fromDateError}
-                                />
-                            )}
-                            // eslint-disable-next-line react/prop-types
-                            onChange={props =>
-                                onChange({
-                                    type: 'fromDate',
-                                    value: !!props ? moment(props).format() : null,
-                                })
-                            }
-                            defaultValue=""
-                            disableFuture
-                            maxDate={state.toDate}
-                            disabled={
-                                !!!state.displayReport ||
-                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
-                            }
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
-                        />
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Box data-testid={`${id}-date-to`}>
-                        <DatePicker
-                            inputProps={{
-                                id: `${id}-date-to-input`,
-                                'data-testid': `${id}-date-to-input`,
-                                label: txt.label.dateTo,
-                                'aria-label': txt.label.dateTo,
-                                'aria-labelledby': `${id}-date-to-label`,
-                                'data-analyticsid': `${id}-date-to-input`,
-                            }}
-                            label={txt.label.dateTo}
-                            value={state.toDate}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!toDateError}
-                                    required={!!state.fromDate || state.displayReport?.value === 'workshistory'}
-                                    helperText={toDateError}
-                                />
-                            )}
-                            // eslint-disable-next-line react/prop-types
-                            onChange={props =>
-                                onChange({
-                                    type: 'toDate',
-                                    value: !!props ? moment(props).format() : null,
-                                })
-                            }
-                            defaultValue=""
-                            disableFuture
-                            minDate={state.fromDate}
-                            disabled={
-                                !!!state.displayReport ||
-                                (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
-                            }
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
-                        />
-                    </Box>
-                </Grid>
+
+                {Object.keys(filters).map(key =>
+                    filters[key].component({
+                        state: actionState,
+                        id,
+                        errorMessage: fromDateError || toDateError,
+                        onChange: handleFilterChange,
+                    }),
+                )}
+
                 <Grid item xs={12}>
                     <Button
                         id="report-export-button"

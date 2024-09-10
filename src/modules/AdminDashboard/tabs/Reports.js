@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -11,16 +11,10 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { getFileName } from 'actions/exportPublicationsDataTransformers';
 
-import {
-    getDisplayReportColumns,
-    defaultLegacyReportOption,
-    getReportTypeFromValue,
-    getDefaultSorting,
-} from '../config';
+import { getDisplayReportColumns, getReportTypeFromValue, getDefaultSorting } from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
 import { transformReportRequest } from '../transformers';
-import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -37,11 +31,9 @@ const Reports = () => {
 
     const dispatch = useDispatch();
 
-    const [actionStateDisplayReport, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
-
     const {
         // eslint-disable-next-line camelcase
-        adminDashboardConfigData: { legacy_reports: legacyReports },
+        adminDashboardConfigData: { export_reports: legacyReports },
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
     const {
@@ -78,10 +70,6 @@ const Reports = () => {
         hideAction: actions.clearAdminDashboardDisplayReport,
     });
 
-    const handleExportReportChange = React.useCallback((_, value) => {
-        actionDispatch({ type: 'exportReport', value });
-    }, []);
-
     const handleExportReportClick = React.useCallback(
         exportReportValue => {
             dispatch(
@@ -99,30 +87,26 @@ const Reports = () => {
         [dispatch],
     );
 
-    const handleExportDisplayReportClick = () => {
+    const handleExportDisplayReportClick = actionState => {
         const fname = getFileName('xlsx');
 
         const colHeaders = columns.sort((a, b) => a.exportOrder > b.exportOrder).map(col => col.headerName);
 
-        const sheetLabel = actionStateDisplayReport.displayReport.label;
+        const sheetLabel = actionState.displayReport.label;
 
         exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
     };
 
-    const handleDisplayReportClick = () => {
+    const handleDisplayReportClick = actionState => {
         const newColumns = getDisplayReportColumns({
             locale: txt,
-            actionState: actionStateDisplayReport,
+            actionState: actionState,
         });
 
         !!newColumns && setColumns(newColumns);
 
-        const request = transformReportRequest(actionStateDisplayReport);
+        const request = transformReportRequest(actionState);
         dispatch(actions.loadAdminDashboardDisplayReport(request));
-    };
-
-    const handleDisplayReportChange = changes => {
-        actionDispatch(changes);
     };
 
     return (
@@ -147,12 +131,9 @@ const Reports = () => {
                 </Grid>
                 <LegacyReportInterface
                     id={reportLegacyId}
-                    exportReport={actionStateDisplayReport.exportReport || defaultLegacyReportOption}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
                     items={legacyReports || /* istanbul ignore next */ []}
-                    state={actionStateDisplayReport}
-                    onChange={handleExportReportChange}
                     onExportClick={handleExportReportClick}
                 />
             </StandardCard>
@@ -180,10 +161,8 @@ const Reports = () => {
                         disabled={adminDashboardDisplayReportLoading || adminDashboardExportReportLoading}
                         exportDisabled={!!!adminDashboardDisplayReportData}
                         loading={adminDashboardDisplayReportLoading}
-                        state={actionStateDisplayReport}
                         onReportClick={handleDisplayReportClick}
                         onExportClick={handleExportDisplayReportClick}
-                        onChange={handleDisplayReportChange}
                     />
 
                     {!!adminDashboardDisplayReportData && (
