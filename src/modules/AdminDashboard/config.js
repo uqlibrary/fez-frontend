@@ -5,8 +5,12 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { isEmptyStr } from './utils';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -67,8 +71,7 @@ export const isUrl = str => {
 export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
 export const optionDoubleRowRender = (props, option) => {
-    const bindings = !!option?.sel_bindings ? option.sel_bindings.split(',') : [];
-    const hasBindings = bindings.length > 0;
+    const hasBindings = option.sel_bindings?.length > 0 || false;
 
     return (
         <Box
@@ -94,7 +97,7 @@ export const optionDoubleRowRender = (props, option) => {
                         <Typography variant="body2" color="textPrimary" fontWeight={500}>
                             Requires:{' '}
                         </Typography>
-                        {bindings.map((binding, index) => (
+                        {option.sel_bindings.map((binding, index) => (
                             <Chip
                                 key={`${binding}-${index}`}
                                 variant="outlined"
@@ -296,4 +299,123 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
             }
             return cols;
     }
+};
+
+export const exportReportFilters = {
+    date_from: {
+        component: ({ state, id, errorMessage, onChange, locale }) => {
+            const hasBinding = !!state.exportReport?.sel_bindings?.includes(':date_from');
+            return (
+                <Grid item xs={12} sm={4} key={`${id}-date-from`}>
+                    <Box data-testid={`${id}-date-from`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-from-input`,
+                                'data-testid': `${id}-date-from-input`,
+                                label: locale.label.dateFrom,
+                                'aria-label': locale.label.dateFrom,
+                                'aria-labelledby': `${id}-input`,
+                                'data-analyticsid': `${id}-date-from-input`,
+                            }}
+                            label={locale.label.dateFrom}
+                            value={state.fromDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage?.date_from}
+                                    required={hasBinding}
+                                    helperText={errorMessage?.date_from}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
+                            onChange={props =>
+                                onChange?.({
+                                    type: 'fromDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            maxDate={state.toDate}
+                            disabled={!!!state.exportReport || !hasBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: ({ state, locale }) => {
+            if (!state.exportReport?.sel_bindings?.includes(':date_from')) return {};
+            if (isEmptyStr(state.fromDate)) return { date_from: locale.error.required };
+
+            const mFrom = moment(state.fromDate);
+            if (!mFrom.isValid()) return { date_from: locale.error.invalidDate };
+
+            // other field dependancies
+            if (!state.exportReport?.sel_bindings?.includes(':date_to')) return {};
+            const mTo = moment(state.toDate);
+            if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.error.dateNotAfter };
+            return {};
+        },
+    },
+    date_to: {
+        component: ({ state, id, errorMessage, onChange, locale }) => {
+            const hasBinding = !!state.exportReport?.sel_bindings?.includes(':date_to');
+            return (
+                <Grid item xs={12} sm={4} key={`${id}-date-to`}>
+                    <Box data-testid={`${id}-date-to`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-to-input`,
+                                'data-testid': `${id}-date-to-input`,
+                                label: locale.label.dateTo,
+                                'aria-label': locale.label.dateTo,
+                                'aria-labelledby': `${id}-date-to-label`,
+                                'data-analyticsid': `${id}-date-to-input`,
+                            }}
+                            label={locale.label.dateTo}
+                            value={state.toDate}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage?.date_to}
+                                    required={hasBinding}
+                                    helperText={errorMessage?.date_to}
+                                />
+                            )}
+                            // eslint-disable-next-line react/prop-types
+                            onChange={props =>
+                                onChange?.({
+                                    type: 'toDate',
+                                    value: !!props ? moment(props).format() : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            minDate={state.fromDate}
+                            disabled={!!!state.exportReport || !hasBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: ({ state, locale }) => {
+            if (!state.exportReport?.sel_bindings?.includes(':date_to')) return {};
+            if (isEmptyStr(state.toDate)) return { date_to: locale.error.required };
+
+            const mTo = moment(state.toDate);
+            if (!mTo.isValid()) return { date_to: locale.error.required };
+
+            // other field dependancies
+            if (!state.exportReport?.sel_bindings?.includes(':date_from')) return {};
+            const mFrom = moment(state.fromDate);
+            if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.error.dateNotBefore };
+            return {};
+        },
+    },
 };

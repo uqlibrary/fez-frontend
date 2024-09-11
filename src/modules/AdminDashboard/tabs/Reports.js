@@ -33,7 +33,7 @@ const Reports = () => {
 
     const {
         // eslint-disable-next-line camelcase
-        adminDashboardConfigData: { export_reports: legacyReports },
+        adminDashboardConfigData: { export_reports: exportReports },
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
 
     const {
@@ -133,7 +133,7 @@ const Reports = () => {
                     id={reportLegacyId}
                     loading={adminDashboardExportReportLoading}
                     disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
-                    items={legacyReports || /* istanbul ignore next */ []}
+                    items={exportReports || /* istanbul ignore next */ []}
                     onExportClick={handleExportReportClick}
                 />
             </StandardCard>
