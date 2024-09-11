@@ -14,7 +14,7 @@ import { getFileName } from 'actions/exportPublicationsDataTransformers';
 import { getDisplayReportColumns, getReportTypeFromValue, getDefaultSorting } from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
-import { transformReportRequest } from '../transformers';
+import { transformExportReportRequest, transformDisplayReportRequest } from '../transformers';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -71,12 +71,14 @@ const Reports = () => {
     });
 
     const handleExportReportClick = React.useCallback(
-        exportReportValue => {
+        actionState => {
+            const request = transformExportReportRequest(actionState);
             dispatch(
-                actions.loadAdminDashboardExportReport({
-                    id: exportReportValue,
-                    export_to: 'csv',
-                }),
+                actions.loadAdminDashboardExportReport(request),
+                // actions.loadAdminDashboardExportReport({
+                //     id: actionState.report.sel_id,
+                //     export_to: 'csv',
+                // }),
             ).catch(
                 /* istanbul ignore next */ error => {
                     /* istanbul ignore next */
@@ -92,7 +94,7 @@ const Reports = () => {
 
         const colHeaders = columns.sort((a, b) => a.exportOrder > b.exportOrder).map(col => col.headerName);
 
-        const sheetLabel = actionState.displayReport.label;
+        const sheetLabel = actionState.report.label;
 
         exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
     };
@@ -100,12 +102,12 @@ const Reports = () => {
     const handleDisplayReportClick = actionState => {
         const newColumns = getDisplayReportColumns({
             locale: txt,
-            actionState: actionState,
+            actionState,
         });
 
         !!newColumns && setColumns(newColumns);
 
-        const request = transformReportRequest(actionState);
+        const request = transformDisplayReportRequest(actionState);
         dispatch(actions.loadAdminDashboardDisplayReport(request));
     };
 

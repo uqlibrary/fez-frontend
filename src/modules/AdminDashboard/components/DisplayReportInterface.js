@@ -37,10 +37,8 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
 
     const { isValid, fromDateError, toDateError, systemAlertError } = React.useMemo(() => {
         const locale = txt.error;
-        const displayReport = actionState.displayReport?.value;
-        const fromDate = actionState.fromDate;
-        const toDate = actionState.toDate;
-        const systemAlertId = actionState.systemAlertId;
+        const report = actionState.report?.value;
+        const systemAlertId = actionState.filters.systemAlertId;
         let fromDateError = '';
         let toDateError = '';
         let systemAlertError = '';
@@ -51,24 +49,24 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
             return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
         };
 
-        if (!!displayReport) {
+        if (!!report) {
             fromDateError = '';
             toDateError = '';
             systemAlertError = '';
 
-            if (displayReport === 'systemalertlog') {
+            if (report === 'systemalertlog') {
                 const validSystemId = isValidNumber(systemAlertId);
-                if (!!!fromDate && !!!toDate && validSystemId) return true;
+                if (!!!actionState.filters.date_from && !!!actionState.filters.date_to && validSystemId) return true;
                 else if (!validSystemId) {
                     systemAlertError = locale.systemAlertId;
                     isValid = false;
                 }
             }
 
-            const mFrom = moment(fromDate);
-            const mTo = moment(toDate);
+            const mFrom = moment(actionState.filters.date_from);
+            const mTo = moment(actionState.filters.date_to);
 
-            if (displayReport === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+            if (report === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
                 fromDateError = locale.required;
                 toDateError = locale.required;
                 isValid = false;
@@ -126,7 +124,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             'data-analyticsid': `${id}-listbox`,
                             'data-testid': `${id}-listbox`,
                         }}
-                        value={actionState.displayReport}
+                        value={actionState.report}
                         onChange={(_, value) => {
                             handleDisplayReportChange({ type: 'displayReport', value });
                         }}
@@ -144,14 +142,14 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 'data-analyticsid': `${id}-date-from-input`,
                             }}
                             label={txt.label.dateFrom}
-                            value={actionState.fromDate}
+                            value={actionState.filters.date_from}
                             renderInput={params => (
                                 <TextField
                                     {...params}
                                     variant="standard"
                                     fullWidth
                                     error={!!fromDateError}
-                                    required={!!fromDateError || actionState.displayReport?.value === 'workshistory'}
+                                    required={!!fromDateError || actionState.report?.value === 'workshistory'}
                                     helperText={fromDateError}
                                 />
                             )}
@@ -164,11 +162,11 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             }
                             defaultValue=""
                             disableFuture
-                            maxDate={actionState.toDate}
+                            maxDate={actionState.filters.date_to}
                             disabled={
-                                !!!actionState.displayReport ||
-                                (actionState.displayReport?.value === 'systemalertlog' &&
-                                    actionState.systemAlertId !== '')
+                                !!!actionState.report ||
+                                (actionState.report?.value === 'systemalertlog' &&
+                                    actionState.filters.systemAlertId !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
@@ -186,7 +184,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 'data-analyticsid': `${id}-date-to-input`,
                             }}
                             label={txt.label.dateTo}
-                            value={actionState.toDate}
+                            value={actionState.filters.date_to}
                             renderInput={params => (
                                 <TextField
                                     {...params}
@@ -194,7 +192,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     fullWidth
                                     error={!!toDateError}
                                     required={
-                                        !!actionState.fromDate || actionState.displayReport?.value === 'workshistory'
+                                        !!actionState.filters.date_from || actionState.report?.value === 'workshistory'
                                     }
                                     helperText={toDateError}
                                 />
@@ -208,17 +206,17 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             }
                             defaultValue=""
                             disableFuture
-                            minDate={actionState.fromDate}
+                            minDate={actionState.filters.date_from}
                             disabled={
-                                !!!actionState.displayReport ||
-                                (actionState.displayReport?.value === 'systemalertlog' &&
-                                    actionState.systemAlertId !== '')
+                                !!!actionState.report ||
+                                (actionState.report?.value === 'systemalertlog' &&
+                                    actionState.filters.systemAlertId !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
-                {actionState.displayReport?.value === 'systemalertlog' && (
+                {actionState.report?.value === 'systemalertlog' && (
                     <Grid item xs={12} sm={4}>
                         <Box data-testid={`${id}-system-alert-id`}>
                             <TextField
@@ -239,7 +237,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     // eslint-disable-next-line react/prop-types
                                     handleDisplayReportChange({ type: 'systemAlertId', value: props.target.value })
                                 }
-                                value={actionState.systemAlertId}
+                                value={actionState.filters.systemAlertId}
                                 helperText={systemAlertError}
                                 error={!!systemAlertError}
                             />

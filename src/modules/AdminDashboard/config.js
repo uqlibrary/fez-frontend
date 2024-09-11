@@ -72,7 +72,6 @@ export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_descrip
 
 export const optionDoubleRowRender = (props, option) => {
     const hasBindings = option.sel_bindings?.length > 0 || false;
-
     return (
         <Box
             component={'li'}
@@ -161,7 +160,7 @@ export const getSystemAlertColumns = (locale, users) => {
 };
 
 export const getDisplayReportColumns = ({ locale, actionState, params }) => {
-    const report = actionState?.displayReport?.value || getReportTypeFromValue(params.report_type);
+    const report = actionState?.report?.value || getReportTypeFromValue(params.report_type);
 
     const txt = locale.columns[report];
     switch (report) {
@@ -198,7 +197,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                 { field: 'pre_detail', headerName: txt.action, minWidth: 600, flex: 1, order: 5, exportOrder: 7 },
             ];
         default:
-            const systemIdParam = actionState?.systemAlertId || params?.record_id || '';
+            const systemIdParam = actionState?.filters.systemAlertId || params?.record_id || '';
             const cols = [
                 { field: 'sat_id', headerName: txt.id, order: 0, exportOrder: 0 },
                 {
@@ -304,7 +303,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
 export const exportReportFilters = {
     date_from: {
         component: ({ state, id, errorMessage, onChange, locale }) => {
-            const hasBinding = !!state.exportReport?.sel_bindings?.includes(':date_from');
+            const hasBinding = !!state.report?.sel_bindings?.includes(':date_from');
             return (
                 <Grid item xs={12} sm={4} key={`${id}-date-from`}>
                     <Box data-testid={`${id}-date-from`}>
@@ -318,7 +317,7 @@ export const exportReportFilters = {
                                 'data-analyticsid': `${id}-date-from-input`,
                             }}
                             label={locale.label.dateFrom}
-                            value={state.fromDate}
+                            value={state.filters.date_from}
                             renderInput={params => (
                                 <TextField
                                     {...params}
@@ -338,8 +337,8 @@ export const exportReportFilters = {
                             }
                             defaultValue=""
                             disableFuture
-                            maxDate={state.toDate}
-                            disabled={!!!state.exportReport || !hasBinding}
+                            maxDate={state.filters.date_to}
+                            disabled={!!!state.report || !hasBinding}
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
@@ -347,22 +346,22 @@ export const exportReportFilters = {
             );
         },
         validator: ({ state, locale }) => {
-            if (!state.exportReport?.sel_bindings?.includes(':date_from')) return {};
-            if (isEmptyStr(state.fromDate)) return { date_from: locale.error.required };
+            if (!state.report?.sel_bindings?.includes(':date_from')) return {};
+            if (isEmptyStr(state.filters.date_from)) return { date_from: locale.error.required };
 
-            const mFrom = moment(state.fromDate);
+            const mFrom = moment(state.filters.date_from);
             if (!mFrom.isValid()) return { date_from: locale.error.invalidDate };
 
             // other field dependancies
-            if (!state.exportReport?.sel_bindings?.includes(':date_to')) return {};
-            const mTo = moment(state.toDate);
+            if (!state.report?.sel_bindings?.includes(':date_to')) return {};
+            const mTo = moment(state.filters.date_to);
             if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.error.dateNotAfter };
             return {};
         },
     },
     date_to: {
         component: ({ state, id, errorMessage, onChange, locale }) => {
-            const hasBinding = !!state.exportReport?.sel_bindings?.includes(':date_to');
+            const hasBinding = !!state.report?.sel_bindings?.includes(':date_to');
             return (
                 <Grid item xs={12} sm={4} key={`${id}-date-to`}>
                     <Box data-testid={`${id}-date-to`}>
@@ -376,7 +375,7 @@ export const exportReportFilters = {
                                 'data-analyticsid': `${id}-date-to-input`,
                             }}
                             label={locale.label.dateTo}
-                            value={state.toDate}
+                            value={state.filters.date_to}
                             renderInput={params => (
                                 <TextField
                                     {...params}
@@ -396,8 +395,8 @@ export const exportReportFilters = {
                             }
                             defaultValue=""
                             disableFuture
-                            minDate={state.fromDate}
-                            disabled={!!!state.exportReport || !hasBinding}
+                            minDate={state.filters.date_from}
+                            disabled={!!!state.report || !hasBinding}
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
@@ -405,15 +404,15 @@ export const exportReportFilters = {
             );
         },
         validator: ({ state, locale }) => {
-            if (!state.exportReport?.sel_bindings?.includes(':date_to')) return {};
-            if (isEmptyStr(state.toDate)) return { date_to: locale.error.required };
+            if (!state.report?.sel_bindings?.includes(':date_to')) return {};
+            if (isEmptyStr(state.filters.date_to)) return { date_to: locale.error.required };
 
-            const mTo = moment(state.toDate);
+            const mTo = moment(state.filters.date_to);
             if (!mTo.isValid()) return { date_to: locale.error.required };
 
             // other field dependancies
-            if (!state.exportReport?.sel_bindings?.includes(':date_from')) return {};
-            const mFrom = moment(state.fromDate);
+            if (!state.report?.sel_bindings?.includes(':date_from')) return {};
+            const mFrom = moment(state.filters.date_from);
             if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.error.dateNotBefore };
             return {};
         },

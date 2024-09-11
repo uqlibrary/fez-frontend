@@ -17,33 +17,31 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
     const txt = locale.components.adminDashboard.tabs.reports;
 
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
+    const exportReport = actionState.report || defaultLegacyReportOption;
 
-    const exportReport = actionState.exportReport || defaultLegacyReportOption;
-
-    const { isValid, ...validationErrors } = React.useMemo(() => {
-        const exportReport = actionState.exportReport;
+    const { isValid, validationErrors } = React.useMemo(() => {
+        const exportReport = actionState.report;
         let isValid = false;
-        let validationResults = {};
+        let validationErrors = {};
 
         if (!!exportReport) {
             if (!!exportReport.sel_bindings) {
-                validationResults = Object.keys(exportReportFilters).reduce(
+                validationErrors = Object.keys(exportReportFilters).reduce(
                     (current, key) => ({
                         ...current,
                         ...(exportReportFilters[key]?.validator({ state: actionState, locale: txt }) || {}),
                     }),
                     {},
                 );
-                isValid = Object.keys(validationResults).length === 0;
+                isValid = Object.keys(validationErrors).length === 0;
             } else isValid = true;
         }
-        return { isValid, ...validationResults };
+        return { isValid, validationErrors };
     }, [txt, actionState]);
 
     const isDisabled = !isValid || disabled;
 
     const handleFilterChange = React.useCallback(value => {
-        console.log(value);
         actionDispatch(value);
     }, []);
 
@@ -52,8 +50,8 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
     }, []);
 
     const handleExportReport = React.useCallback(() => {
-        onExportClick(exportReport.sel_id);
-    }, [onExportClick, exportReport?.sel_id]);
+        onExportClick(actionState);
+    }, [actionState, onExportClick]);
 
     return (
         <Box id={id} data-testid={id}>
