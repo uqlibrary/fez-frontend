@@ -678,6 +678,7 @@ export default {
                 multiline: true,
                 floatingLabelText: 'Series',
                 showClear: true,
+                clearOnInputClear: true,
             },
         },
         fez_record_search_key_chapter_number: {
