@@ -77,7 +77,7 @@ describe('DisplayReportInterface', () => {
                         label: 'Works history',
                         value: 'workshistory',
                     },
-                    systemAlertId: '123',
+                    record_id: '123',
                 },
                 onChange: onChangeFn,
             });
@@ -309,7 +309,7 @@ describe('DisplayReportInterface', () => {
 
             await userEvent.type(getByTestId('testForm-system-alert-id-input'), '3');
             expect(onChangeFn).toHaveBeenLastCalledWith({
-                type: 'systemAlertId',
+                type: 'record_id',
                 value: '3',
             });
         });
@@ -395,7 +395,7 @@ describe('DisplayReportInterface', () => {
                             label: 'System alert log',
                             value: 'systemalertlog',
                         },
-                        systemAlertId: '123',
+                        record_id: '123',
                     },
                     onChange: onChangeFn,
                 });

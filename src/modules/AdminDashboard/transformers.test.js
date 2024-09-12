@@ -187,7 +187,7 @@ describe('transformers', () => {
                 fromDate: '01/01/2024',
                 toDate: '10/01/2024',
                 displayReport: { value: 'systemalertlog' },
-                systemAlertId: 123,
+                record_id: 123,
             };
             expect(transformReportRequest(data)).toEqual({
                 report_type: 1,

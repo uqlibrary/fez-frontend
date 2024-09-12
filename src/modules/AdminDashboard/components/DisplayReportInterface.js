@@ -13,7 +13,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import locale from 'locale/components';
 
-import { DEFAULT_DATEPICKER_INPUT_FORMAT } from '../config';
+import { DEFAULT_DATEPICKER_INPUT_FORMAT, DEFAULT_SERVER_DATE_FORMAT_NO_TIME } from '../config';
 import { isEmptyStr } from '../utils';
 import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 
@@ -27,7 +27,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
     }, [onExportClick, actionState]);
 
     const handleDisplayReportChange = changes => {
-        console.log(changes);
         actionDispatch(changes);
     };
 
@@ -35,13 +34,13 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
         onReportClick?.(actionState);
     };
 
-    const { isValid, fromDateError, toDateError, systemAlertError } = React.useMemo(() => {
+    const { isValid, fromDateError, toDateError, reportIdError } = React.useMemo(() => {
         const locale = txt.error;
         const report = actionState.report?.value;
-        const systemAlertId = actionState.filters.systemAlertId;
+        const recordId = actionState.filters.record_id;
         let fromDateError = '';
         let toDateError = '';
-        let systemAlertError = '';
+        let reportIdError = '';
         let isValid = false;
 
         const isValidNumber = value => {
@@ -52,13 +51,13 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
         if (!!report) {
             fromDateError = '';
             toDateError = '';
-            systemAlertError = '';
+            reportIdError = '';
 
             if (report === 'systemalertlog') {
-                const validSystemId = isValidNumber(systemAlertId);
+                const validSystemId = isValidNumber(recordId);
                 if (!!!actionState.filters.date_from && !!!actionState.filters.date_to && validSystemId) return true;
                 else if (!validSystemId) {
-                    systemAlertError = locale.systemAlertId;
+                    reportIdError = locale.recordId;
                     isValid = false;
                 }
             }
@@ -86,7 +85,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
             }
         }
 
-        return { isValid, fromDateError, toDateError, systemAlertError };
+        return { isValid, fromDateError, toDateError, reportIdError };
     }, [txt.error, actionState]);
 
     const isDisabled = !isValid || disabled;
@@ -157,7 +156,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             onChange={props =>
                                 handleDisplayReportChange({
                                     type: 'fromDate',
-                                    value: !!props ? moment(props).format() : null,
+                                    value: !!props ? moment(props).format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME) : null,
                                 })
                             }
                             defaultValue=""
@@ -165,8 +164,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             maxDate={actionState.filters.date_to}
                             disabled={
                                 !!!actionState.report ||
-                                (actionState.report?.value === 'systemalertlog' &&
-                                    actionState.filters.systemAlertId !== '')
+                                (actionState.report?.value === 'systemalertlog' && actionState.filters.record_id !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
@@ -201,7 +199,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             onChange={props =>
                                 handleDisplayReportChange({
                                     type: 'toDate',
-                                    value: !!props ? moment(props).format() : null,
+                                    value: !!props ? moment(props).format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME) : null,
                                 })
                             }
                             defaultValue=""
@@ -209,8 +207,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                             minDate={actionState.filters.date_from}
                             disabled={
                                 !!!actionState.report ||
-                                (actionState.report?.value === 'systemalertlog' &&
-                                    actionState.filters.systemAlertId !== '')
+                                (actionState.report?.value === 'systemalertlog' && actionState.filters.record_id !== '')
                             }
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
@@ -235,11 +232,11 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 sx={{ mt: 1 }}
                                 onChange={props =>
                                     // eslint-disable-next-line react/prop-types
-                                    handleDisplayReportChange({ type: 'systemAlertId', value: props.target.value })
+                                    handleDisplayReportChange({ type: 'record_id', value: props.target.value })
                                 }
-                                value={actionState.filters.systemAlertId}
-                                helperText={systemAlertError}
-                                error={!!systemAlertError}
+                                value={actionState.filters.record_id}
+                                helperText={reportIdError}
+                                error={!!reportIdError}
                             />
                         </Box>
                     </Grid>

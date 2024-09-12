@@ -48,7 +48,7 @@ describe('hooks', () => {
 
     describe('useValidateReport', () => {
         const locale = {
-            systemAlertId: 'invalid',
+            recordId: 'invalid',
             required: 'is required',
             dateNotAfter: 'invalid',
         };
@@ -61,38 +61,38 @@ describe('hooks', () => {
         });
 
         it('returns default state for supported reported types with no inputs', () => {
-            const { result } = renderHook(() => useValidateReport({ locale, displayReport, systemAlertId: '' }));
+            const { result } = renderHook(() => useValidateReport({ locale, displayReport, record_id: '' }));
 
             expect(result.current.isValid).toBe(true);
         });
 
         it('return expected validation results', () => {
             let displayReport = '';
-            let systemAlertId = '';
+            let recordId = '';
             let fromDate = null;
             let toDate = null;
 
             // no inputs = invalid
             const { result, rerender } = renderHook(() =>
-                useValidateReport({ locale, displayReport, systemAlertId, fromDate, toDate }),
+                useValidateReport({ locale, displayReport, recordId, fromDate, toDate }),
             );
             expect(result.current.isValid).toBe(false);
             displayReport = 'systemalertlog';
-            systemAlertId = 'abc'; // invalid system id
+            recordId = 'abc'; // invalid system id
             rerender();
             expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
-            systemAlertId = '-1'; // invalid system id
+            expect(result.current.systemAlertError).toEqual(locale.recordId);
+            recordId = '-1'; // invalid system id
             rerender();
             expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
-            systemAlertId = '1.1'; // invalid system id
+            expect(result.current.systemAlertError).toEqual(locale.recordId);
+            recordId = '1.1'; // invalid system id
             rerender();
             expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
+            expect(result.current.systemAlertError).toEqual(locale.recordId);
 
             displayReport = 'workshistory';
-            systemAlertId = '123'; // should be ignored
+            recordId = '123'; // should be ignored
             toDate = null;
             fromDate = null;
             rerender(); // invalid, works history requires dates
@@ -101,7 +101,7 @@ describe('hooks', () => {
             expect(result.current.toDateError).toEqual(locale.required);
 
             displayReport = 'systemalertlog';
-            systemAlertId = '123'; // valid
+            recordId = '123'; // valid
             toDate = '12/12/2024'; // 'to' without 'from'
             rerender();
             expect(result.current.isValid).toBe(false);

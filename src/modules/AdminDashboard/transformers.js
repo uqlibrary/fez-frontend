@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
 import { filterObjectProps, getPlatformUrl } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
@@ -49,11 +49,13 @@ export const transformQuickLinkReorderRequest = data => {
 export const transformExportReportRequest = data => {
     const allowedFilters = ['date_from', 'date_to'];
     const filters = filterObjectProps(data.filters, allowedFilters);
+
     const request = {
         report_type: data.report.sel_id,
-        ...filters,
-        ...(!!filters.from_date ? { date_from: `${moment(filters.from_date).format('YYYY-MM-DD')} 00:00:00` } : {}),
-        ...(!!filters.date_to ? { date_to: `${moment(filters.date_to).format('YYYY-MM-DD')} 23:59:59` } : {}),
+        ...Object.keys(filters).reduce(
+            (current, filter) => ({ ...current, ...(!!filters[filter] ? { [filter]: filters[filter] } : {}) }),
+            {},
+        ),
     };
     return request;
 };
@@ -64,15 +66,24 @@ export const transformDisplayReportRequest = data => {
 
     const request = {
         report_type: reportId,
-        ...(!!data.filters.from_date && data.filters.systemAlertId === ''
-            ? { date_from: moment(data.filters.from_date).format('YYYY-MM-DD') }
+        ...(!!data.filters.date_from && data.filters.record_id === ''
+            ? {
+                  date_from: moment(data.filters.date_from)
+                      .startOf('day')
+                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+              }
             : {}),
-        ...(!!data.filters.date_to && data.filters.systemAlertId === ''
-            ? { date_to: moment(data.filters.date_to).format('YYYY-MM-DD') }
+        ...(!!data.filters.date_to && data.filters.record_id === ''
+            ? {
+                  date_to: moment(data.filters.date_to)
+                      .endOf('day')
+                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+              }
             : {}),
-        ...(data.report.value === 'systemalertlog' && !!data.filters.systemAlertId
-            ? { record_id: data.filters.systemAlertId }
+        ...(data.report.value === 'systemalertlog' && !!data.filters.record_id
+            ? { record_id: data.filters.record_id }
             : {}),
     };
+
     return request;
 };

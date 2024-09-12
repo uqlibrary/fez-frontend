@@ -192,7 +192,23 @@ export default {
                         invalidDate: 'Invalid date',
                         dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
-                        systemAlertId: 'Must be a positive whole number',
+                        recordId: 'Must be a positive whole number',
+                    },
+                    alert: {
+                        noResults: reportName => ({
+                            title: 'Nothing to export',
+                            message: `No results were returned by the report '${reportName}'`,
+                            type: 'info',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                        jobQueued: reportName => ({
+                            title: 'Report queued',
+                            message: `Your report '${reportName}' has been added to the queue. Exported data will be emailed to you directly.`,
+                            type: 'done',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
                     },
                     options: {
                         display: [

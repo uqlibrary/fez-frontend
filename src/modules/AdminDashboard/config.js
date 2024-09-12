@@ -41,7 +41,8 @@ export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, 
 export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
-export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss';
+export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+export const DEFAULT_SERVER_DATE_FORMAT_NO_TIME = 'YYYY-MM-DD';
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -57,6 +58,10 @@ export const DEFAULT_SORTING = {
     alerts: [{ field: 'sat_created_date', sort: 'asc' }],
     systemalertlog: [{ field: 'sat_created_date', sort: 'asc' }],
     workshistory: [{ field: 'pre_date', sort: 'asc' }],
+};
+
+export const EXPORT_REPORT_JOBS = {
+    ExportReportEmailSqlQueryJob: { queued: true },
 };
 
 export const isUrl = str => {
@@ -197,7 +202,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                 { field: 'pre_detail', headerName: txt.action, minWidth: 600, flex: 1, order: 5, exportOrder: 7 },
             ];
         default:
-            const systemIdParam = actionState?.filters.systemAlertId || params?.record_id || '';
+            const systemIdParam = actionState?.filters.record_id || params?.record_id || '';
             const cols = [
                 { field: 'sat_id', headerName: txt.id, order: 0, exportOrder: 0 },
                 {
@@ -332,7 +337,11 @@ export const exportReportFilters = {
                             onChange={props =>
                                 onChange?.({
                                     type: 'fromDate',
-                                    value: !!props ? moment(props).format() : null,
+                                    value: !!props
+                                        ? moment(props)
+                                              .startOf('day')
+                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        : null,
                                 })
                             }
                             defaultValue=""
@@ -390,7 +399,11 @@ export const exportReportFilters = {
                             onChange={props =>
                                 onChange?.({
                                     type: 'toDate',
-                                    value: !!props ? moment(props).format() : null,
+                                    value: !!props
+                                        ? moment(props)
+                                              .startOf('day')
+                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        : null,
                                 })
                             }
                             defaultValue=""

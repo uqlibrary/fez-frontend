@@ -60,6 +60,13 @@ const Reports = () => {
 
     const [columns, setColumns] = React.useState(initColumns);
 
+    const [
+        exportReportAlertIsVisible,
+        hideExportReportAlert,
+        showExportReportAlert,
+        exportReportAlertProps,
+    ] = useAlertStatus({});
+
     const [exportAlertIsVisible, hideExportAlert] = useAlertStatus({
         message: adminDashboardExportReportFailed?.errorMessage,
         hideAction: actions.clearAdminDashboardExportReport,
@@ -73,20 +80,32 @@ const Reports = () => {
     const handleExportReportClick = React.useCallback(
         actionState => {
             const request = transformExportReportRequest(actionState);
+
             dispatch(
-                actions.loadAdminDashboardExportReport(request),
-                // actions.loadAdminDashboardExportReport({
-                //     id: actionState.report.sel_id,
-                //     export_to: 'csv',
-                // }),
-            ).catch(
-                /* istanbul ignore next */ error => {
-                    /* istanbul ignore next */
-                    console.error(error);
-                },
-            );
+                actions.loadAdminDashboardExportReport(request, { export_to: 'csv', job: actionState.report?.sel_job }),
+            )
+                .then(response => {
+                    if (typeof response === 'object') {
+                        const action =
+                            response.data.success === true
+                                ? txt.alert.jobQueued(actionState.report?.sel_title)
+                                : txt.alert.noResults(actionState.report?.sel_title);
+
+                        action.dismissAction = () => {
+                            hideExportReportAlert();
+                        };
+                        showExportReportAlert(action);
+                    }
+                })
+                .catch(
+                    /* istanbul ignore next */ error => {
+                        /* istanbul ignore next */
+                        console.error(error);
+                    },
+                );
         },
-        [dispatch],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [dispatch, showExportReportAlert],
     );
 
     const handleExportDisplayReportClick = actionState => {
@@ -115,7 +134,7 @@ const Reports = () => {
         <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
             <StandardCard noHeader>
                 <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} mb={2}>
                     {exportAlertIsVisible && (
                         <Grid item xs={12}>
                             <Alert
@@ -130,6 +149,11 @@ const Reports = () => {
                             />
                         </Grid>
                     )}
+                    {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
+                        <Grid item xs={12}>
+                            <Alert {...exportReportAlertProps} />
+                        </Grid>
+                    )}
                 </Grid>
                 <LegacyReportInterface
                     id={reportLegacyId}
@@ -142,7 +166,7 @@ const Reports = () => {
             <Box mt={2}>
                 <StandardCard noHeader>
                     <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} mb={2}>
                         {displayAlertIsVisible && (
                             <Grid item xs={12}>
                                 <Alert

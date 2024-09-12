@@ -103,10 +103,10 @@ describe('reducers', () => {
             });
         });
 
-        it('should handle systemAlertId action', () => {
+        it('should handle record_id action', () => {
             const initialState = { ...emptyReportActionState };
             const action = {
-                type: 'systemAlertId',
+                type: 'record_id',
                 value: 'some export data',
             };
 
@@ -114,7 +114,7 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                systemAlertId: 'some export data',
+                record_id: 'some export data',
             });
         });
 
