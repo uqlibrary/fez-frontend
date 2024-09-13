@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-import { render, WithReduxStore, within, waitFor, userEvent } from 'test-utils';
+import { render, WithReduxStore, within, waitFor, userEvent, preview } from 'test-utils';
 
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
@@ -15,9 +15,14 @@ import {
 import Reports from './Reports';
 
 const setup = (props = {}, state = {}, renderer = render) => {
+    const data = { ...adminDashboardConfig };
+    data.export_reports = data.export_reports.map(report => ({
+        ...report,
+        sel_bindings: report.sel_bindings && report.sel_bindings.split(','),
+    }));
     const testState = {
         adminDashboardConfigReducer: {
-            adminDashboardConfigData: { ...adminDashboardConfig },
+            adminDashboardConfigData: { ...data },
         },
         ...state,
     };
@@ -63,8 +68,8 @@ describe('Reports tab', () => {
 
         await userEvent.click(getByTestId('report-export-only-input'));
 
-        expect(getAllByRole('option').length).toBe(4);
-
+        expect(getAllByRole('option').length).toBe(6);
+        preview.debug();
         await userEvent.click(getByTestId('report-export-only-option-0', { hidden: true }));
 
         expect(getByTestId('report-export-only-input')).toHaveValue('Wok ID dups');

@@ -11,8 +11,6 @@ import {
 
 import { promptForDownload } from './exportPublicationsDataTransformers';
 
-import { EXPORT_REPORT_JOBS } from 'modules/AdminDashboard/config';
-
 /**
  * Fetches the config data for admin dashboard
  * @returns {function(*)}
@@ -202,13 +200,10 @@ export function loadAdminDashboardExportReport(request, options) {
             type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_LOADING,
         });
 
-        const isQueuedJob = EXPORT_REPORT_JOBS?.[options.job]?.queued || false;
-        const requestHeaders = !isQueuedJob ? { responseType: 'blob' } : {};
-
-        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API(request), { ...requestHeaders })
+        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API(request))
             .then(response => {
                 // only try to export to csv if we get a text response
-                if (!isQueuedJob && typeof response === 'string') {
+                if (typeof response === 'string') {
                     promptForDownload(exportConfig.format, response);
                 }
 

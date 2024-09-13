@@ -1051,7 +1051,7 @@ describe('Backend routes method', () => {
 
     it('should construct url for ADMIN_DASHBOARD_EXPORT_REPORT_API', () => {
         expect(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: 123 }).apiUrl).toMatch(
-            'dashboard/legacy-reports?sel_id=123',
+            'dashboard/export-reports?sel_id=123',
         );
     });
     it('should construct url for ADMIN_DASHBOARD_DISPLAY_REPORT_API', () => {

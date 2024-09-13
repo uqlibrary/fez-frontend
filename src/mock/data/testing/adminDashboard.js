@@ -8,30 +8,54 @@ export const adminDashboardConfig = {
         {id: 444, name: 'Elizabeth Alvey'},
         {id: 2333, name: 'Lee Sibbald'},
     ],
-    legacy_reports: [
+    export_reports: [
         {
             sel_id: 1,
             sel_title: 'Wok ID dups',
             sel_description:
                 'List of records with matching ISI Loc with publication after 2007 where neither are in the dups collection',
+            sel_job: null,
+            sel_bindings: null,
         },
         {
             sel_id: 2,
             sel_title: 'Scopus ID Dups',
             sel_description:
                 'List of records with matching Scopus Id with publication after 2007 where neither are in the dups collection',
+            sel_job: null,
+            sel_bindings: null,
         },
         {
             sel_id: 3,
             sel_title: 'DOI Dups',
             sel_description:
                 'List of records with matching DOI’s with publication after 2007 where neither are in the dups collection',
+            sel_job: null,
+            sel_bindings: null,
         },
         {
             sel_id: 4,
             sel_title: 'UQ Incites Authors',
             sel_description:
                 'Data to be uploaded to incites each quarter. Resave csv as xls before uploading.',
+            sel_job: null,
+            sel_bindings: null,
+        },
+        {
+            sel_id: 5,
+            sel_title: 'Queued report one binding',
+            sel_description:
+                'Query that has a single binding, which should be provided by the user',
+            sel_job: 'ExportReportEmailSqlQueryJob',
+            sel_bindings: ':date_from',
+        },
+        {
+            sel_id: 6,
+            sel_title: 'Queued report two bindings',
+            sel_description:
+            'Query that has two bindings, which should be provided by the user',
+            sel_job: 'ExportReportEmailSqlQueryJob',
+            sel_bindings: ':date_from,:date_to',
         },
     ],
 };
