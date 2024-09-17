@@ -13,31 +13,36 @@ import locale from 'locale/components';
 import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 import { optionDoubleRowRender, defaultLegacyReportOption, exportReportFilters } from '../config';
 
+export const validator = ({ locale, actionState }) => {
+    const exportReport = actionState.report;
+    let isValid = false;
+    let validationErrors = {};
+
+    if (!!exportReport) {
+        if (!!exportReport.sel_bindings) {
+            validationErrors = Object.keys(exportReportFilters).reduce(
+                (current, key) => ({
+                    ...current,
+                    ...(exportReportFilters[key]?.validator({ state: actionState, locale }) || {}),
+                }),
+                {},
+            );
+            isValid = Object.keys(validationErrors).length === 0;
+        } else isValid = true;
+    }
+    return { isValid, validationErrors };
+};
+
 const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
     const exportReport = actionState.report || defaultLegacyReportOption;
 
-    const { isValid, validationErrors } = React.useMemo(() => {
-        const exportReport = actionState.report;
-        let isValid = false;
-        let validationErrors = {};
-
-        if (!!exportReport) {
-            if (!!exportReport.sel_bindings) {
-                validationErrors = Object.keys(exportReportFilters).reduce(
-                    (current, key) => ({
-                        ...current,
-                        ...(exportReportFilters[key]?.validator({ state: actionState, locale: txt }) || {}),
-                    }),
-                    {},
-                );
-                isValid = Object.keys(validationErrors).length === 0;
-            } else isValid = true;
-        }
-        return { isValid, validationErrors };
-    }, [txt, actionState]);
+    const { isValid, validationErrors } = React.useMemo(() => validator({ locale: txt.error, actionState }), [
+        txt.error,
+        actionState,
+    ]);
 
     const isDisabled = !isValid || disabled;
 

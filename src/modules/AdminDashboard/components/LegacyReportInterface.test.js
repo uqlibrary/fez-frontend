@@ -25,6 +25,7 @@ describe('LegacyReportInterface', () => {
         mockApi.reset();
         jest.clearAllMocks();
     });
+
     it('should render', async () => {
         const { getByTestId, getByRole } = setup();
 

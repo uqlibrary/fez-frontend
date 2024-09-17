@@ -4,9 +4,10 @@ import { within, render, userEvent } from 'test-utils';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import { emptyReportActionState as defaultState } from '../reducers';
+import { emptyReportActionState as actionState } from '../reducers';
 
-import DisplayReportInterface from './DisplayReportInterface';
+import locale from 'locale/components';
+import DisplayReportInterface, { validator } from './DisplayReportInterface';
 
 const setup = (props = {}, renderer = render) => {
     const testProps = {
@@ -160,7 +161,7 @@ describe('DisplayReportInterface', () => {
             const onChangeFn = jest.fn();
             const { getByTestId } = setup({
                 state: {
-                    ...defaultState,
+                    ...actionState,
                     type: 'displayReport',
                     report: {
                         label: 'System alert log',
@@ -269,6 +270,69 @@ describe('DisplayReportInterface', () => {
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
             });
+        });
+    });
+    describe('validator', () => {
+        const txt = locale.components.adminDashboard.tabs.reports.error;
+        it('should return data if default state provided', () => {
+            expect(validator({ actionState })).toEqual({
+                fromDateError: '',
+                isValid: false,
+                reportIdError: '',
+                toDateError: '',
+            });
+        });
+
+        it('should return invalid work history dates', () => {
+            const data = { ...actionState, report: { value: 'workshistory' } };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    fromDateError: 'Required',
+                    isValid: false,
+                    toDateError: 'Required',
+                }),
+            );
+        });
+
+        it('should return valid system alert request with empty input', () => {
+            const data = { ...actionState, report: { value: 'systemalertlog' } };
+
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: true,
+                }),
+            );
+        });
+
+        it('should return valid system alert request with full input and valid record id', () => {
+            const data = {
+                ...actionState,
+                fromDate: '01/01/2024',
+                toDate: '10/01/2024',
+                report: { value: 'systemalertlog' },
+                filters: { record_id: 123 },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: true,
+                }),
+            );
+        });
+
+        it('should return invalid system alert request with full input and invalid record id', () => {
+            const data = {
+                ...actionState,
+                fromDate: '01/01/2024',
+                toDate: '10/01/2024',
+                report: { value: 'systemalertlog' },
+                filters: { record_id: 'abc' },
+            };
+            expect(validator({ locale: txt, actionState: data })).toEqual(
+                expect.objectContaining({
+                    isValid: false,
+                    reportIdError: 'Must be a positive whole number',
+                }),
+            );
         });
     });
 });

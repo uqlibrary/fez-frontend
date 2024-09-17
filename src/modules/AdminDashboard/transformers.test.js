@@ -2,11 +2,8 @@ import {
     transformSystemAlertRequest,
     transformQuickLinkUpdateRequest,
     transformQuickLinkReorderRequest,
-    transformReportRequest,
     transformUrlToPlatform,
 } from './transformers';
-
-import { emptyReportActionState } from './reducers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
 
@@ -163,36 +160,6 @@ describe('transformers', () => {
                 { qlk_id: 2, qlk_order: 1 },
                 { qlk_id: 3, qlk_order: 2 },
             ]);
-        });
-    });
-
-    describe('transformReportRequest', () => {
-        it('should return data if no data provided or displayReport value defined', () => {
-            const data = { ...emptyReportActionState };
-            expect(transformReportRequest({})).toEqual({});
-            expect(transformReportRequest(data)).toEqual(data);
-        });
-
-        it('should return minimum work history request', () => {
-            const data = { ...emptyReportActionState, displayReport: { value: 'workshistory' } };
-            expect(transformReportRequest(data)).toEqual({ report_type: 2 });
-        });
-        it('should return date only system alert log request', () => {
-            const data = { ...emptyReportActionState, displayReport: { value: 'systemalertlog' } };
-            expect(transformReportRequest(data)).toEqual({ report_type: 1 });
-        });
-        it('should return record ID only request', () => {
-            const data = {
-                ...emptyReportActionState,
-                fromDate: '01/01/2024',
-                toDate: '10/01/2024',
-                displayReport: { value: 'systemalertlog' },
-                record_id: 123,
-            };
-            expect(transformReportRequest(data)).toEqual({
-                report_type: 1,
-                record_id: 123,
-            });
         });
     });
 

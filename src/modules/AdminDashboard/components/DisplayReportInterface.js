@@ -17,6 +17,61 @@ import { DEFAULT_DATEPICKER_INPUT_FORMAT, DEFAULT_SERVER_DATE_FORMAT_NO_TIME } f
 import { isEmptyStr } from '../utils';
 import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 
+export const validator = ({ locale, actionState }) => {
+    const report = actionState.report?.value;
+    const recordId = actionState.filters.record_id;
+    let fromDateError = '';
+    let toDateError = '';
+    let reportIdError = '';
+    let isValid = false;
+
+    const isValidNumber = value => {
+        const numValue = Number(value);
+        return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
+    };
+
+    if (!!report) {
+        fromDateError = '';
+        toDateError = '';
+        reportIdError = '';
+
+        if (report === 'systemalertlog') {
+            const validSystemId = isValidNumber(recordId);
+
+            if (!!!actionState.filters.date_from && !!!actionState.filters.date_to && validSystemId) {
+                return { isValid: true, fromDateError, toDateError, reportIdError };
+            } else if (!validSystemId) {
+                reportIdError = locale.recordId;
+                isValid = false;
+            }
+        }
+
+        const mFrom = moment(actionState.filters.date_from);
+        const mTo = moment(actionState.filters.date_to);
+
+        if (report === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
+            fromDateError = locale.required;
+            toDateError = locale.required;
+            isValid = false;
+        }
+
+        if (mFrom.isValid() && !mTo.isValid()) {
+            toDateError = locale.required;
+            isValid = false;
+        } else if (mTo.isValid() && !mFrom.isValid()) {
+            fromDateError = locale.required;
+            isValid = false;
+        } else if (mFrom.isValid() && mTo.isValid()) {
+            if (!mFrom.isSameOrBefore(mTo)) {
+                fromDateError = locale.dateNotAfter;
+                isValid = false;
+            } else isValid = isEmptyStr(reportIdError);
+        }
+    }
+
+    return { isValid, fromDateError, toDateError, reportIdError };
+};
+
 const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onReportClick, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
@@ -34,59 +89,10 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
         onReportClick?.(actionState);
     };
 
-    const { isValid, fromDateError, toDateError, reportIdError } = React.useMemo(() => {
-        const locale = txt.error;
-        const report = actionState.report?.value;
-        const recordId = actionState.filters.record_id;
-        let fromDateError = '';
-        let toDateError = '';
-        let reportIdError = '';
-        let isValid = false;
-
-        const isValidNumber = value => {
-            const numValue = Number(value);
-            return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
-        };
-
-        if (!!report) {
-            fromDateError = '';
-            toDateError = '';
-            reportIdError = '';
-
-            if (report === 'systemalertlog') {
-                const validSystemId = isValidNumber(recordId);
-                if (!!!actionState.filters.date_from && !!!actionState.filters.date_to && validSystemId) return true;
-                else if (!validSystemId) {
-                    reportIdError = locale.recordId;
-                    isValid = false;
-                }
-            }
-
-            const mFrom = moment(actionState.filters.date_from);
-            const mTo = moment(actionState.filters.date_to);
-
-            if (report === 'workshistory' && !mFrom.isValid() && !mTo.isValid()) {
-                fromDateError = locale.required;
-                toDateError = locale.required;
-                isValid = false;
-            }
-
-            if (mFrom.isValid() && !mTo.isValid()) {
-                toDateError = locale.required;
-                isValid = false;
-            } else if (mTo.isValid() && !mFrom.isValid()) {
-                fromDateError = locale.required;
-                isValid = false;
-            } else if (mFrom.isValid() && mTo.isValid()) {
-                if (!mFrom.isSameOrBefore(mTo)) {
-                    fromDateError = locale.dateNotAfter;
-                    isValid = false;
-                } else isValid = true;
-            }
-        }
-
-        return { isValid, fromDateError, toDateError, reportIdError };
-    }, [txt.error, actionState]);
+    const { isValid, fromDateError, toDateError, reportIdError } = React.useMemo(
+        () => validator({ locale: txt.error, actionState }),
+        [txt.error, actionState],
+    );
 
     const isDisabled = !isValid || disabled;
 
