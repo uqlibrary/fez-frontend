@@ -1,7 +1,10 @@
+import React from 'react';
 import globalLocale from 'locale/global';
 import moment from 'moment';
 import { prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
+import { getIndicator, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
+import componentLocale from 'locale/components';
 
 export const viewJournalConfig = {
     basic: {
@@ -74,6 +77,32 @@ export const viewJournalConfig = {
                         },
                     ],
                     template: 'DefaultTemplate',
+                },
+            ],
+            [
+                {
+                    heading: 'Open Access',
+                    fieldId: 'jnl-open-access',
+                    getData: journalDetails =>
+                        [
+                            getIndicator({ type: types.published, data: journalDetails }),
+                            getIndicator({ type: types.accepted, data: journalDetails }),
+                        ].filter(item => item.element),
+                    template: 'MultiValueTemplate',
+                    templateProps: {
+                        getData: item => (
+                            <>
+                                <span>{item.element}</span>
+                                <span>
+                                    {`${
+                                        componentLocale.components.searchJournals.openAccessIndicators.tooltips[
+                                            item.type
+                                        ][item.status]
+                                    } (${item.type.charAt(0).toUpperCase() + item.type.slice(1)} Version)`}
+                                </span>
+                            </>
+                        ),
+                    },
                 },
             ],
             [
