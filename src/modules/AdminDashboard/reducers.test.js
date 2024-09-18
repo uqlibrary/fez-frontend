@@ -54,7 +54,8 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                exportReport: 'some export data',
+                report: 'some export data',
+                type: 'exportReport',
             });
         });
 
@@ -69,7 +70,8 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                displayReport: 'some export data',
+                report: 'some export data',
+                type: 'displayReport',
             });
         });
 
@@ -84,7 +86,7 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                fromDate: 'some export data',
+                filters: { ...initialState.filters, date_from: 'some export data' },
             });
         });
 
@@ -99,7 +101,7 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                toDate: 'some export data',
+                filters: { ...initialState.filters, date_to: 'some export data' },
             });
         });
 
@@ -114,7 +116,7 @@ describe('reducers', () => {
 
             expect(newState).toEqual({
                 ...initialState,
-                record_id: 'some export data',
+                filters: { ...initialState.filters, record_id: 'some export data' },
             });
         });
 

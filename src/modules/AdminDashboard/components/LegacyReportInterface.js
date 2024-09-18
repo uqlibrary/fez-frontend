@@ -23,7 +23,8 @@ export const validator = ({ locale, actionState }) => {
             validationErrors = Object.keys(exportReportFilters).reduce(
                 (current, key) => ({
                     ...current,
-                    ...(exportReportFilters[key]?.validator({ state: actionState, locale }) || {}),
+                    ...(exportReportFilters[key]?.validator({ state: actionState, locale }) ||
+                        /* istanbul ignore next */ {}),
                 }),
                 {},
             );
@@ -140,8 +141,6 @@ LegacyReportInterface.propTypes = {
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
     items: PropTypes.array,
-    exportReport: PropTypes.object,
-    onChange: PropTypes.func,
     onExportClick: PropTypes.func,
 };
 

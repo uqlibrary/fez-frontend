@@ -3,6 +3,8 @@ import {
     transformQuickLinkUpdateRequest,
     transformQuickLinkReorderRequest,
     transformUrlToPlatform,
+    transformExportReportRequest,
+    transformDisplayReportRequest,
 } from './transformers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
@@ -190,6 +192,79 @@ describe('transformers', () => {
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',
             );
+        });
+    });
+
+    describe('transformExportReportRequest', () => {
+        it('returns object without filters key when non-existent bindings provided', () => {
+            expect(
+                transformExportReportRequest({
+                    report: { sel_id: 1 },
+                    filters: { doesnt_exist: 'should be deleted' },
+                }),
+            ).toEqual({
+                report_type: 1,
+            });
+        });
+        it('returns object with invalid filters removed', () => {
+            expect(
+                transformExportReportRequest({
+                    report: { sel_id: 1 },
+                    filters: { doesnt_exist: 'should be deleted', date_from: 'some date' },
+                }),
+            ).toEqual({
+                report_type: 1,
+                date_from: 'some date',
+            });
+        });
+        it('returns object with valid filters removed when they have no value assigned', () => {
+            expect(
+                transformExportReportRequest({
+                    report: { sel_id: 1 },
+                    filters: { date_from: null, date_to: 'some date' },
+                }),
+            ).toEqual({
+                report_type: 1,
+                date_to: 'some date',
+            });
+        });
+    });
+
+    describe('transformDisplayReportRequest', () => {
+        it('returns inputted object when non-existent bindings are provided', () => {
+            const data = { report: { value: 99 } };
+            expect(transformDisplayReportRequest(data)).toEqual(data);
+        });
+
+        it('returns object with report type only if nothing else provided', () => {
+            expect(transformDisplayReportRequest({ report: { value: 'systemalertlog' } })).toEqual({ report_type: 1 });
+        });
+
+        it('returns object with dates when no record id provided', () => {
+            expect(
+                transformDisplayReportRequest({
+                    report: { value: 'systemalertlog' },
+                    filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '' },
+                }),
+            ).toEqual({ report_type: 1, date_from: '2024-01-01', date_to: '2024-01-10' });
+        });
+
+        it('returns object without dates when record id provided and report is system logs', () => {
+            expect(
+                transformDisplayReportRequest({
+                    report: { value: 'systemalertlog' },
+                    filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '123' },
+                }),
+            ).toEqual({ report_type: 1, record_id: '123' });
+        });
+
+        it('returns object with report type only when dates and record id provided but report is works history', () => {
+            expect(
+                transformDisplayReportRequest({
+                    report: { value: 'workshistory' },
+                    filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '123' },
+                }),
+            ).toEqual({ report_type: 2 });
         });
     });
 });

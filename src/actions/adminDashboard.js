@@ -204,7 +204,8 @@ export function loadAdminDashboardExportReport(request, options) {
             .then(response => {
                 // only try to export to csv if we get a text response
                 if (typeof response === 'string') {
-                    promptForDownload(exportConfig.format, response);
+                    const blobResponse = new Blob([response], { type: 'text/csv' });
+                    promptForDownload(exportConfig.format, blobResponse);
                 }
 
                 dispatch({

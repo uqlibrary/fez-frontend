@@ -34,6 +34,7 @@ export const useSystemAlertDrawer = data => {
 export const useAlertStatus = ({ message, hideAction }) => {
     const dispatch = useDispatch();
     const [alertIsVisible, _showAlert, _hideAlert] = useConfirmationState();
+
     const [_message, setMessage] = React.useState(message);
 
     const showAlert = message => {
@@ -52,5 +53,6 @@ export const useAlertStatus = ({ message, hideAction }) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [alertIsVisible, message]);
+
     return [alertIsVisible, hideAlert, showAlert, _message];
 };

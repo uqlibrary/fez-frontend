@@ -1,6 +1,11 @@
 import moment from 'moment';
 
-import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import {
+    DEFAULT_SERVER_DATE_FORMAT_NO_TIME,
+    DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME,
+    SYSTEM_ALERT_ACTION,
+    REPORT_TYPE,
+} from './config';
 import { filterObjectProps, getPlatformUrl } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
@@ -66,21 +71,21 @@ export const transformDisplayReportRequest = data => {
 
     const request = {
         report_type: reportId,
-        ...(!!data.filters.date_from && data.filters.record_id === ''
+        ...(!!data.filters?.date_from && data.filters?.record_id === ''
             ? {
-                  date_from: moment(data.filters.date_from)
+                  date_from: moment(data.filters.date_from, DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME)
                       .startOf('day')
                       .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
               }
             : {}),
-        ...(!!data.filters.date_to && data.filters.record_id === ''
+        ...(!!data.filters?.date_to && data.filters?.record_id === ''
             ? {
-                  date_to: moment(data.filters.date_to)
+                  date_to: moment(data.filters.date_to, DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME)
                       .endOf('day')
                       .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
               }
             : {}),
-        ...(data.report.value === 'systemalertlog' && !!data.filters.record_id
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
             ? { record_id: data.filters.record_id }
             : {}),
     };

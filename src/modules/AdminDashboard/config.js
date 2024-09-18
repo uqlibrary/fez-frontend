@@ -39,6 +39,7 @@ export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DEL
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
 export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
+export const DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME = 'DD/MM/YYYY HH:mm:ss';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
 export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
@@ -356,15 +357,15 @@ export const exportReportFilters = {
         },
         validator: ({ state, locale }) => {
             if (!state.report?.sel_bindings?.includes(':date_from')) return {};
-            if (isEmptyStr(state.filters.date_from)) return { date_from: locale.error.required };
+            if (isEmptyStr(state.filters.date_from)) return { date_from: locale.required };
 
             const mFrom = moment(state.filters.date_from);
-            if (!mFrom.isValid()) return { date_from: locale.error.invalidDate };
+            if (!mFrom.isValid()) return { date_from: locale.invalidDate };
 
             // other field dependancies
             if (!state.report?.sel_bindings?.includes(':date_to')) return {};
             const mTo = moment(state.filters.date_to);
-            if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.error.dateNotAfter };
+            if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.dateNotAfter };
             return {};
         },
     },
@@ -401,7 +402,7 @@ export const exportReportFilters = {
                                     type: 'toDate',
                                     value: !!props
                                         ? moment(props)
-                                              .startOf('day')
+                                              .endOf('day')
                                               .format(DEFAULT_SERVER_DATE_FORMAT)
                                         : null,
                                 })
@@ -418,15 +419,15 @@ export const exportReportFilters = {
         },
         validator: ({ state, locale }) => {
             if (!state.report?.sel_bindings?.includes(':date_to')) return {};
-            if (isEmptyStr(state.filters.date_to)) return { date_to: locale.error.required };
+            if (isEmptyStr(state.filters.date_to)) return { date_to: locale.required };
 
             const mTo = moment(state.filters.date_to);
-            if (!mTo.isValid()) return { date_to: locale.error.required };
+            if (!mTo.isValid()) return { date_to: locale.invalidDate };
 
             // other field dependancies
             if (!state.report?.sel_bindings?.includes(':date_from')) return {};
             const mFrom = moment(state.filters.date_from);
-            if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.error.dateNotBefore };
+            if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.dateNotBefore };
             return {};
         },
     },

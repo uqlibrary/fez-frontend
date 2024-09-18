@@ -20,6 +20,7 @@ const handlers = {
             ...report,
             sel_bindings: report.sel_bindings && report.sel_bindings.split(','),
         }));
+
         return {
             ...initialState,
             adminDashboardConfigLoading: false,

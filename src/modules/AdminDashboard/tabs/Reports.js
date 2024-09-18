@@ -195,7 +195,7 @@ const Reports = () => {
                         <Grid container mt={2}>
                             <Grid item xs={12}>
                                 <DataGrid
-                                    getRowId={row => row.pre_id || row.sat_id || ''}
+                                    getRowId={row => row.pre_id || row.sat_id || /* istanbul ignore next */ ''}
                                     rows={adminDashboardDisplayReportData}
                                     columns={
                                         columns
