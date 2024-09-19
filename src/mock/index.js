@@ -678,16 +678,18 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
     .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: 5, date_from: '.*'}).apiUrl)))
     .reply(200, { data: {success: true} })
-    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: 6, date_from: '2024-04-02 00:00:00', date_to: '2024-05-03 23:59:59'}).apiUrl)))
-    .reply(200, { data: {success: true} })
     .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: 6, date_from: '.*', date_to: '.*'}).apiUrl)))
     .reply(200, { data: {success: true} })
     .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: 3}).apiUrl)))
     .reply(200, { data: {success: false, message: 'No records found'} })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: 1}).apiUrl)))
+    .reply(config => {
+        return [200, `Exported file contents for report ${config.url.split('=')[1]}`];
+    }) 
     .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({report_type: '.*'}).apiUrl)))
     .reply(config => {
         return [200, `Exported file contents for report ${config.url.split('=')[1]}`, {
-            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'content-type': 'text/csv',
         }];
     }) 
     .onGet(

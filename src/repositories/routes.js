@@ -637,8 +637,6 @@ export const simpleQueryEncode = request =>
 // eslint-disable-next-line camelcase
 export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date_to }) => {
     // eslint-disable-next-line camelcase
-    console.log({ report_type, date_from, date_to });
-    // eslint-disable-next-line camelcase
     const request = { sel_id: report_type, date_from, date_to };
     const query = simpleQueryEncode(request);
 

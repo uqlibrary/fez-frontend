@@ -240,11 +240,11 @@ describe('transformers', () => {
             expect(transformDisplayReportRequest({ report: { value: 'systemalertlog' } })).toEqual({ report_type: 1 });
         });
 
-        it('returns object with dates when no record id provided', () => {
+        it('returns object with formatted dates when no record id provided', () => {
             expect(
                 transformDisplayReportRequest({
                     report: { value: 'systemalertlog' },
-                    filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '' },
+                    filters: { date_from: '2024-01-01 00:00:00', date_to: '2024-01-10 23:59:59', record_id: '' },
                 }),
             ).toEqual({ report_type: 1, date_from: '2024-01-01', date_to: '2024-01-10' });
         });

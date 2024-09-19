@@ -76,7 +76,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
     const txt = locale.components.adminDashboard.tabs.reports;
 
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
-
     const handleExportDisplayReportClick = React.useCallback(() => {
         onExportClick?.(actionState);
     }, [onExportClick, actionState]);

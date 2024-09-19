@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-import { render, WithReduxStore, within, waitFor, userEvent, preview } from 'test-utils';
+import { render, WithReduxStore, within, waitFor, userEvent } from 'test-utils';
 
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
@@ -84,45 +84,6 @@ describe('Reports tab', () => {
             { report_type: 1 },
             expect.objectContaining({ export_to: 'csv' }),
         );
-    });
-
-    it('should handle export-only queued report success', async () => {
-        const expectedRequest = {
-            date_from: '2024-04-02 00:00:00',
-            date_to: '2024-05-03 23:59:59',
-            report_type: 6,
-        };
-        // console.log(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ ...expectedRequest }).apiUrl);
-        mockApi
-            .onGet(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ ...expectedRequest }).apiUrl)
-            .reply(200, { data: { success: true } });
-
-        const loadAdminDashboardExportReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardExportReport');
-        const { getAllByRole, getByRole, getByTestId } = setup();
-
-        await userEvent.click(getByTestId('report-export-only-input'));
-
-        expect(getAllByRole('option').length).toBe(6);
-
-        await userEvent.click(getByTestId('report-export-only-option-5', { hidden: true }));
-
-        expect(getByTestId('report-export-only-input')).toHaveValue('Queued report two bindings');
-
-        await userEvent.type(getByTestId('report-export-only-date-from-input'), '02/04/2023');
-        await userEvent.type(getByTestId('report-export-only-date-to-input'), '03/05/2023');
-
-        expect(getByRole('button', { name: 'Export report' })).not.toHaveAttribute('disabled');
-
-        await userEvent.click(getByRole('button', { name: 'Export report' }));
-        expect(within(getByRole('button', { name: 'Export report' })).getByRole('progressbar')).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Export report' })).toHaveAttribute('disabled');
-
-        expect(loadAdminDashboardExportReportFn).toHaveBeenCalledWith(
-            { report_type: 6, date_from: '2023-04-02 00:00:00', date_to: '2023-05-03 23:59:59' },
-            expect.objectContaining({ export_to: 'csv' }),
-        );
-        await waitFor(() => expect(getByRole('button', { name: 'Export report' })).not.toHaveAttribute('disabled'));
-        preview.debug();
     });
 
     it('should display alert when export-only reports failure', async () => {

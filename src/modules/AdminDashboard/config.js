@@ -424,7 +424,7 @@ export const exportReportFilters = {
             const mTo = moment(state.filters.date_to);
             if (!mTo.isValid()) return { date_to: locale.invalidDate };
 
-            // other field dependancies
+            // other field dependencies
             if (!state.report?.sel_bindings?.includes(':date_from')) return {};
             const mFrom = moment(state.filters.date_from);
             if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.dateNotBefore };

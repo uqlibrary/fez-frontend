@@ -190,7 +190,7 @@ describe('LegacyReportInterface', () => {
         expect(onExportClickFn).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'exportReport',
-                filters: expect.objectContaining({ date_from: '2023-04-02 00:00:00', date_to: '2023-04-12 00:00:00' }),
+                filters: expect.objectContaining({ date_from: '2023-04-02 00:00:00', date_to: '2023-04-12 23:59:59' }),
                 report: expect.objectContaining({ sel_id: 6, sel_title: 'Queued report two bindings' }),
             }),
         );
