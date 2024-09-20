@@ -285,9 +285,8 @@ export default class NtroFields extends React.PureComponent {
                                             fullWidth
                                             title={metadata.fields.abstract.label}
                                             description={metadata.fields.abstract.placeholder}
-                                            maxValue={800}
                                             disabled={this.props.submitting}
-                                            validate={[validation.required, validation.maxListEditorTextLength800]}
+                                            validate={[validation.required]}
                                             richEditorId="rek-description"
                                         />
                                     )}
