@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 
 export const LookupForm = ({
     onAdd,
-    locale,
+    locale = {
+        inputFieldLabel: 'Item name',
+        inputFieldHint: 'Please type the item name, then select from the list',
+    },
     disabled,
     inputField: InputField,
     error,
     errorText,
     category,
-    required,
+    required = false,
     itemSelectedToEdit,
 }) => {
     const [defaultValue, setDefaultValue] = React.useState('');
@@ -47,14 +50,6 @@ LookupForm.propTypes = {
     category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     required: PropTypes.bool,
     itemSelectedToEdit: PropTypes.object,
-};
-
-LookupForm.defaultProps = {
-    locale: {
-        inputFieldLabel: 'Item name',
-        inputFieldHint: 'Please type the item name, then select from the list',
-    },
-    required: false,
 };
 
 export default LookupForm;

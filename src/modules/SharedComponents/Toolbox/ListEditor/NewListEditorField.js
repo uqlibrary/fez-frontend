@@ -16,9 +16,15 @@ export const useItemsList = (input, normalize, searchKey) => {
     return [value, setValue];
 };
 
-// eslint-disable-next-line no-unused-vars
-export const NewListEditorField = React.forwardRef((props, ref) => {
-    const { normalize, searchKey } = props;
+export const NewListEditorField = props => {
+    const {
+        normalize = (value, searchKey) => value.map(item => item[searchKey.value]),
+        searchKey = {
+            value: 'rek_value',
+            order: 'rek_order',
+        },
+    } = props;
+
     const [value, setValue] = useItemsList(props, normalize, searchKey);
 
     React.useEffect(() => {
@@ -34,23 +40,16 @@ export const NewListEditorField = React.forwardRef((props, ref) => {
             onChange={props.onChange}
             remindToAdd={props.remindToAdd}
             list={value}
+            searchKey={searchKey}
+            normalize={normalize}
             {...props}
         />
     );
 });
 
-NewListEditorField.defaultProps = {
-    searchKey: {
-        value: 'rek_value',
-        order: 'rek_order',
-    },
-    normalize: (value, searchKey) => value.map(item => item[searchKey.value]),
-};
-
 NewListEditorField.propTypes = {
     searchKey: PropTypes.object,
     normalize: PropTypes.func,
-    onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.object,

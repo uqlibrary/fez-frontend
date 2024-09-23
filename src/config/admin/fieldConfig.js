@@ -106,6 +106,7 @@ export default {
                 required: true,
                 richEditorId: 'rek-title',
                 singleLine: true,
+                textOnlyOnPaste: false,
             },
         },
         internalNotes: {
@@ -677,6 +678,7 @@ export default {
                 multiline: true,
                 floatingLabelText: 'Series',
                 showClear: true,
+                clearOnInputClear: true,
             },
         },
         fez_record_search_key_chapter_number: {

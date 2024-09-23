@@ -11,7 +11,24 @@ import DeleteForever from '@mui/icons-material/DeleteForever';
 import Grid from '@mui/material/Grid';
 import { useWidth } from 'hooks';
 
-export const GrantListEditorHeader = ({ onDeleteAll, locale, disabled, hideType }) => {
+export const GrantListEditorHeader = ({
+    onDeleteAll,
+    locale = {
+        GrantAgencyName: 'Grant name',
+        GrantID: 'Funder/sponsor ID',
+        GrantAgencyType: 'Funder/sponsor type',
+        reorderColumn: 'Reorder entries',
+        deleteAll: 'Remove all entries',
+        deleteAllConfirmation: {
+            confirmationTitle: 'Delete all',
+            confirmationMessage: 'Are you sure you want to delete all entries?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+    },
+    disabled,
+    hideType = false,
+}) => {
     const width = useWidth();
     const [confirmationBox, setConfirmationBox] = React.useState();
 
@@ -109,20 +126,4 @@ GrantListEditorHeader.propTypes = {
     hideType: PropTypes.bool,
 };
 
-GrantListEditorHeader.defaultProps = {
-    locale: {
-        GrantAgencyName: 'Grant name',
-        GrantID: 'Funder/sponsor ID',
-        GrantAgencyType: 'Funder/sponsor type',
-        reorderColumn: 'Reorder entries',
-        deleteAll: 'Remove all entries',
-        deleteAllConfirmation: {
-            confirmationTitle: 'Delete all',
-            confirmationMessage: 'Are you sure you want to delete all entries?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-    },
-    hideType: false,
-};
 export default React.memo(GrantListEditorHeader);

@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 
 export const ThirdPartyLookupFormResult = ({
     actions,
-    lookupResults,
+    lookupResults = [],
     primaryValue,
     secondaryValue,
     formDisplay,
@@ -71,12 +71,9 @@ ThirdPartyLookupFormResult.propTypes = {
     lookupResults: PropTypes.array,
     primaryValue: PropTypes.string.isRequired,
     secondaryValue: PropTypes.string,
-    formDisplay: PropTypes.object,
+    formDisplay: PropTypes.object.isRequired,
     // localeform: PropTypes.object.isRequired,
     locale: PropTypes.object.isRequired,
 };
 
-ThirdPartyLookupFormResult.defaultProps = {
-    lookupResults: [],
-};
 export default React.memo(ThirdPartyLookupFormResult);

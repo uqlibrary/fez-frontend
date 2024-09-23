@@ -11,7 +11,7 @@ import InputLabel from '@mui/material/InputLabel';
  * allow the user to select MULTIPLE document types
  * (see DocumentTypeSingleField for selecting SINGLE document type)
  */
-export const DocumentTypeMultipleField = ({ docTypes, updateDocTypeValues, disabled }) => {
+export const DocumentTypeMultipleField = ({ docTypes, updateDocTypeValues, disabled = false }) => {
     const _publicationTypes = Object.values(publicationTypes());
 
     const _handleDocTypeChange = event => {
@@ -58,16 +58,11 @@ export const DocumentTypeMultipleField = ({ docTypes, updateDocTypeValues, disab
         </FormControl>
     );
 };
+
 DocumentTypeMultipleField.propTypes = {
     docTypes: PropTypes.array,
     updateDocTypeValues: PropTypes.func,
-    className: PropTypes.string,
     disabled: PropTypes.bool,
 };
 
-DocumentTypeMultipleField.defaultProps = {
-    value: [],
-    disabled: false,
-    className: 'displaytype menuitem',
-};
 export default React.memo(DocumentTypeMultipleField);

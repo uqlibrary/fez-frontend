@@ -12,19 +12,25 @@ export const ConfirmationBox = ({
     actionButtonColor,
     actionButtonVariant,
     cancelButtonColor,
-    classes,
+    classes = {},
     confirmationBoxId,
     InputForm,
-    hideActionButton,
-    hideCancelButton,
-    isOpen,
-    locale,
+    hideActionButton = false,
+    hideCancelButton = false,
+    isOpen = false,
+    locale = {
+        confirmationTitle: 'Confirmation',
+        confirmationMessage: 'Are you sure?',
+        cancelButtonLabel: 'No',
+        confirmButtonLabel: 'Yes',
+        alternateActionButtonLabel: 'Cancel',
+    },
     onAction,
     onAlternateAction,
     onCancelAction,
     onClose,
-    showAlternateActionButton,
-    showInputForm,
+    showAlternateActionButton = false,
+    showInputForm = false,
 }) => {
     const _onAction = () => {
         onClose();
@@ -131,22 +137,6 @@ ConfirmationBox.propTypes = {
     onClose: PropTypes.func,
     showAlternateActionButton: PropTypes.bool,
     showInputForm: PropTypes.bool,
-};
-
-ConfirmationBox.defaultProps = {
-    classes: {},
-    hideActionButton: false,
-    hideCancelButton: false,
-    isOpen: false,
-    locale: {
-        confirmationTitle: 'Confirmation',
-        confirmationMessage: 'Are you sure?',
-        cancelButtonLabel: 'No',
-        confirmButtonLabel: 'Yes',
-        alternateActionButtonLabel: 'Cancel',
-    },
-    showAlternateActionButton: false,
-    showInputForm: false,
 };
 
 export default React.memo(ConfirmationBox);

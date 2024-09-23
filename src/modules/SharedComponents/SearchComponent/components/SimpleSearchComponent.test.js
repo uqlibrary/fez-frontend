@@ -10,8 +10,6 @@ jest.mock('config/general', () => ({
 function setup(testProps = {}) {
     const props = {
         onSearchTextChange: jest.fn(),
-        classes: {},
-
         ...testProps,
     };
 

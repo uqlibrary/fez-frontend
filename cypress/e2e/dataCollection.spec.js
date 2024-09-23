@@ -70,7 +70,7 @@ context('Data Collection form', () => {
                 delay: 30,
             },
         );
-        submitButtonCorrect();
+        submitButtonCorrect(1);
 
         // Publisher
         cy.get('[data-testid=rek-publisher-input]').type('A publisher');

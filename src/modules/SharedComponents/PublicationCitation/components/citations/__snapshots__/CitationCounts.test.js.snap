@@ -286,6 +286,27 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         </span>
       </a>
       <a
+        aria-label="Full citation in Dimensions will open in a new window"
+        class="dimensionsCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in Dimensions will open in a new window"
+      >
+        <span
+          class="fez-icon dimensions large"
+        />
+        <span
+          class="MuiBox-root css-19k1sqg"
+        >
+          33
+        </span>
+      </a>
+      <a
         aria-label="Full citation in Google scholar will open in a new window"
         class="googleCitationCount css-pi8u"
         data-analyticsid="citation-count-link"
@@ -355,6 +376,66 @@ exports[`CitationCounts should render component with no metrics 1`] = `
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
     >
+      <span
+        class="noOaIcon"
+        data-testid="oa-n/a-icon"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`CitationCounts should render null as 0 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
+    >
+      <a
+        aria-label="Full citation in Dimensions will open in a new window"
+        class="dimensionsCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in Dimensions will open in a new window"
+      >
+        <span
+          class="fez-icon dimensions large"
+        />
+        <span
+          class="MuiBox-root css-19k1sqg"
+        >
+          0
+        </span>
+      </a>
+      <a
+        aria-label="Full citation in Google scholar will open in a new window"
+        class="googleCitationCount css-pi8u"
+        data-analyticsid="citation-count-link"
+        data-testid="citation-count-link"
+        href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
+        id="citation-count-link"
+        rel="noopener noreferrer"
+        tabindex="0"
+        target="_blank"
+        title="Full citation in Google scholar will open in a new window"
+      >
+        <span
+          class="fez-icon google large"
+        />
+      </a>
       <span
         class="noOaIcon"
         data-testid="oa-n/a-icon"

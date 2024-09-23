@@ -131,7 +131,7 @@ export const useQueryStringParams = (
  * @param actions
  * @return Object
  */
-export const useSearchRecordsControls = (queryParams, updateQueryString, actions) => {
+export const useSearchRecordsControls = (queryParams, updateQueryString) => {
     const pageSizeChanged = pageSize => {
         updateQueryString({
             ...queryParams,
@@ -163,12 +163,6 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
         });
     };
 
-    const handleExport = exportFormat =>
-        actions.exportEspacePublications({
-            ...queryParams,
-            ...exportFormat,
-        });
-
     const displayRecordsAsChanged = displayRecordsAs => {
         updateQueryString({
             ...queryParams,
@@ -181,7 +175,6 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
         pageChanged,
         sortByChanged,
         facetsChanged,
-        handleExport,
         displayRecordsAsChanged,
     };
 };

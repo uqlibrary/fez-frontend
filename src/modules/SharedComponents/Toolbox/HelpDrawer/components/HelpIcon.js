@@ -10,7 +10,16 @@ import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
 import { sanitiseId } from 'helpers/general';
 
-export const HelpIcon = ({ title, text, buttonLabel, iconSize, style, tooltip, IconComponent, testId }) => {
+export const HelpIcon = ({
+    title,
+    text,
+    buttonLabel,
+    iconSize,
+    style,
+    tooltip = 'Click for more information',
+    IconComponent = HelpOutlineIcon,
+    testId,
+}) => {
     const dispatch = useDispatch();
     const setDrawerContent = () => {
         dispatch(show(title, text, buttonLabel));
@@ -53,11 +62,6 @@ HelpIcon.propTypes = {
     title: PropTypes.string,
     tooltip: PropTypes.string,
     style: PropTypes.object,
-};
-
-HelpIcon.defaultProps = {
-    tooltip: 'Click for more information',
-    IconComponent: HelpOutlineIcon,
 };
 
 export default React.memo(HelpIcon);

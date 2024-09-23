@@ -67,7 +67,22 @@ DateRangeForm.propTypes = {
     locale: PropTypes.object,
 };
 
-export const DateRange = ({ disabled, value, locale, onChange, isActive, category }) => {
+export const DateRange = ({
+    disabled,
+    value = {
+        from: new Date().getFullYear() - 10,
+        to: new Date().getFullYear() + 5,
+    },
+    locale = {
+        fromFieldLabel: 'From',
+        toFieldLabel: 'To',
+        rangeSubmitButtonLabel: 'Go',
+        displayTitle: 'Date range',
+    },
+    onChange,
+    isActive = false,
+    category,
+}) => {
     const [range, setRange] = useState(value);
 
     const handleChange = event => {
@@ -135,20 +150,6 @@ DateRange.propTypes = {
     isActive: PropTypes.bool,
     locale: PropTypes.object,
     category: PropTypes.string,
-};
-
-DateRange.defaultProps = {
-    value: {
-        from: new Date().getFullYear() - 10,
-        to: new Date().getFullYear() + 5,
-    },
-    locale: {
-        fromFieldLabel: 'From',
-        toFieldLabel: 'To',
-        rangeSubmitButtonLabel: 'Go',
-        displayTitle: 'Date range',
-    },
-    isActive: false,
 };
 
 export default React.memo(DateRange);

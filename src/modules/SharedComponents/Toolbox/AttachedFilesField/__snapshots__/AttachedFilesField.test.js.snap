@@ -2,26 +2,10 @@
 
 exports[`AttachedFilesField component should render default view 1`] = `
 <AttachedFiles
-  canEdit={false}
   dataStreams={[]}
-  deleteHint="Remove this file"
-  fileRestrictionsConfig={
-    {
-      "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
-      "fileUploadLimit": 10,
-    }
-  }
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
-  onEmbargoClearPromptText={
-    <span>
-      <b>
-        Embargo date removed
-      </b>
-       - review security policy on Security tab
-    </span>
-  }
   onFilenameChange={[Function]}
   onFilenameSave={[Function]}
   onHandleFileIsValid={[Function]}
@@ -31,7 +15,6 @@ exports[`AttachedFilesField component should render default view 1`] = `
 
 exports[`AttachedFilesField component should render with initial data 1`] = `
 <AttachedFiles
-  canEdit={false}
   dataStreams={
     [
       {
@@ -50,13 +33,6 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
         "dsi_state": "A",
       },
     ]
-  }
-  deleteHint="Remove this file"
-  fileRestrictionsConfig={
-    {
-      "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
-      "fileUploadLimit": 10,
-    }
   }
   meta={
     {
@@ -82,14 +58,6 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
-  onEmbargoClearPromptText={
-    <span>
-      <b>
-        Embargo date removed
-      </b>
-       - review security policy on Security tab
-    </span>
-  }
   onFilenameChange={[Function]}
   onFilenameSave={[Function]}
   onHandleFileIsValid={[Function]}
