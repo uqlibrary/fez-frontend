@@ -45,11 +45,12 @@ export const NewListEditorField = props => {
             {...props}
         />
     );
-});
+};
 
 NewListEditorField.propTypes = {
     searchKey: PropTypes.object,
     normalize: PropTypes.func,
+    onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.object,
