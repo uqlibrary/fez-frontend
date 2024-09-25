@@ -88,7 +88,6 @@ export const viewRecordsConfig = {
     htmlFields: [
         'rek_transcript',
         'rek_notes',
-        'rek_additional_notes',
         'rek_project_description',
         'rek_acknowledgements',
         'rek_advisory_statement',

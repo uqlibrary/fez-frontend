@@ -1,4 +1,5 @@
-// import React from 'react';
+import * as XLSX from 'xlsx';
+import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const stringToColour = string => {
     let hash = 0;
@@ -31,19 +32,12 @@ export const abbreviateNumber = (number, decPlaces) => {
 
         if (size <= _number) {
             _number = Math.round((_number * _decPlaces) / size) / _decPlaces;
-
-            if (_number === 1000 && i < abbrev.length - 1) {
-                _number = 1;
-                i++;
-            }
-
             _number += abbrev[i];
-
             break;
         }
     }
 
-    return _number;
+    return `${_number}`;
 };
 
 export const arrayMove = (data, fromIndex, toIndex) => {
@@ -59,8 +53,7 @@ export const arrayMove = (data, fromIndex, toIndex) => {
 
 export const reorderArray = (data, fromIndex, toIndex) => {
     const arr = arrayMove(data, fromIndex, toIndex);
-    arr.forEach((item, index) => (item.order = index));
-
+    arr.forEach((item, index) => (item.qlk_order = index));
     return arr;
 };
 
@@ -71,3 +64,22 @@ export const filterObjectProps = (data, propsToKeep) => {
     });
     return obj;
 };
+
+export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) => {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    !!colHeaders &&
+        XLSX.utils.sheet_add_aoa(worksheet, [colHeaders], {
+            origin: 'A1',
+        });
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetLabel);
+
+    XLSX.writeFileXLSX(workbook, filename);
+
+    return true;
+};
+
+export const isEmptyStr = str =>
+    str === null || str === undefined || (typeof str === 'string' && !!!str.trim()) || typeof str !== 'string';
+
+export const getPlatformUrl = () => (IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL);

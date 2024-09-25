@@ -1,60 +1,55 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class LookupForm extends Component {
-    static propTypes = {
-        onAdd: PropTypes.func.isRequired,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
-        inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
-        error: PropTypes.bool,
-        errorText: PropTypes.string,
-        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        required: PropTypes.bool,
-        itemSelectedToEdit: PropTypes.object,
-    };
+export const LookupForm = ({
+    onAdd,
+    locale = {
+        inputFieldLabel: 'Item name',
+        inputFieldHint: 'Please type the item name, then select from the list',
+    },
+    disabled,
+    inputField: InputField,
+    error,
+    errorText,
+    category,
+    required = false,
+    itemSelectedToEdit,
+}) => {
+    const [defaultValue, setDefaultValue] = React.useState('');
 
-    static defaultProps = {
-        locale: {
-            inputFieldLabel: 'Item name',
-            inputFieldHint: 'Please type the item name, then select from the list',
-        },
-        required: false,
-    };
+    React.useEffect(() => {
+        setDefaultValue((itemSelectedToEdit && itemSelectedToEdit.value) ?? null);
+    }, [itemSelectedToEdit]);
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            defaultValue: '',
-        };
-    }
+    return (
+        <React.Fragment>
+            {InputField && (
+                <InputField
+                    key={defaultValue}
+                    input={{ onChange: onAdd, value: defaultValue }}
+                    floatingLabelText={locale.inputFieldLabel}
+                    hintText={locale.inputFieldHint}
+                    disabled={disabled}
+                    error={error}
+                    errorText={errorText}
+                    category={category}
+                    required={required}
+                />
+            )}
+        </React.Fragment>
+    );
+};
 
-    static getDerivedStateFromProps(props) {
-        return !!props.itemSelectedToEdit ? { defaultValue: props.itemSelectedToEdit.value } : null;
-    }
+LookupForm.propTypes = {
+    onAdd: PropTypes.func.isRequired,
+    locale: PropTypes.object,
+    disabled: PropTypes.bool,
+    inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+    error: PropTypes.bool,
+    errorText: PropTypes.string,
+    category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    required: PropTypes.bool,
+    itemSelectedToEdit: PropTypes.object,
+};
 
-    /* istanbul ignore next */
-    addKeyValueItem = item => {
-        this.props.onAdd(item);
-    };
-
-    render() {
-        return (
-            <React.Fragment>
-                {this.props.inputField && (
-                    <this.props.inputField
-                        key={this.state.defaultValue}
-                        input={{ onChange: this.props.onAdd, value: this.state.defaultValue }}
-                        floatingLabelText={this.props.locale.inputFieldLabel}
-                        hintText={this.props.locale.inputFieldHint}
-                        disabled={this.props.disabled}
-                        error={this.props.error}
-                        errorText={this.props.errorText}
-                        category={this.props.category}
-                        required={this.props.required}
-                    />
-                )}
-            </React.Fragment>
-        );
-    }
-}
+export default LookupForm;

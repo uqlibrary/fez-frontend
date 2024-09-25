@@ -48,7 +48,7 @@ describe('Fix record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to fix from API for anon user', async () => {
-            mockApi.onAny().reply(403);
+            mockApi.onAny().reply(401);
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
@@ -303,7 +303,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_FAILED,
             ];
 
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -458,7 +458,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_FAILED,
             ];
 
-            mockApi.onAny().reply(403, {});
+            mockApi.onAny().reply(401, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));

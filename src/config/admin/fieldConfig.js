@@ -106,6 +106,7 @@ export default {
                 required: true,
                 richEditorId: 'rek-title',
                 singleLine: true,
+                textOnlyOnPaste: false,
             },
         },
         internalNotes: {
@@ -216,6 +217,7 @@ export default {
                 height: 100,
                 format: value => Immutable.Map(value),
                 richEditorId: 'rek-description',
+                textOnlyOnPaste: false,
             },
         },
         rek_date: {

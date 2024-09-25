@@ -1,1 +1,1 @@
-export { default as BulkExport } from './containers/BulkExport';
+export { default as BulkExport } from './BulkExport';

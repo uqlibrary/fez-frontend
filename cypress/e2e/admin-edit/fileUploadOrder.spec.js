@@ -15,7 +15,9 @@ context('File Upload Order', () => {
 
     it('should allow up and down ordering for newly attached files', () => {
         cy.get('[data-testid=fez-datastream-info-input]').attachFile('test.jpg', { subjectType: 'drag-n-drop' });
+        cy.get('[data-testid="fez-datastream-info-list-row-0"]').should('contain', 'test.jpg');
         cy.get('[data-testid=fez-datastream-info-input]').attachFile('test_two.jpg', { subjectType: 'drag-n-drop' });
+        cy.get('[data-testid="fez-datastream-info-list-row-1"]').should('contain', 'test_two.jpg');
         cy.get('[data-testid="new-file-upload-down-0"]').click();
         cy.get('[data-testid="fez-datastream-info-list-row-0"]').should('contain', 'test_two.jpg');
         cy.get('[data-testid="new-file-upload-up-1"]').click();

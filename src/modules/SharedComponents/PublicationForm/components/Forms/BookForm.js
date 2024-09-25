@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
@@ -17,255 +17,244 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export default class BookForm extends Component {
-    static propTypes = {
-        submitting: PropTypes.bool,
-        formValues: PropTypes.object,
-        subtype: PropTypes.string,
-        isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool,
-    };
-
-    static defaultProps = {
-        isNtro: false,
-        subtype: null,
-        isAuthorSelected: false,
-    };
-
-    constructor(props) {
-        super(props);
-    }
-
-    normalizeIssn = value => {
+export const BookForm = ({ submitting, formValues, subtype = null, isNtro = false, isAuthorSelected = false }) => {
+    const normalizeIssn = value => {
         const newValue = value.replace('-', '');
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
     };
 
-    transformIssn = (searchKey, item, index) => ({
+    const transformIssn = (searchKey, item, index) => ({
         [searchKey.value]: item.key,
         [searchKey.order]: index + 1,
     });
 
-    render() {
-        const txt = formLocale.book;
-        const editors = this.props.formValues && this.props.formValues.get('editors');
-        const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
-        const authors = this.props.formValues && this.props.formValues.get('authors');
-        const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
-        return (
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    autoFocus={!this.props.isNtro}
-                                    disabled={this.props.submitting}
-                                    id="rek-title"
-                                    textFieldId="rek-title"
-                                    name="rek_title"
-                                    required
-                                    type="text"
-                                    fullWidth
-                                    multiline
-                                    rows={3}
-                                    label={txt.information.fieldLabels.bookTitle}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={!this.props.isNtro ? 4 : 6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    id="rek-place-of-publication"
-                                    textFieldId="rek-place-of-publication"
-                                    name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-                                    type="text"
-                                    required
-                                    fullWidth
-                                    label={txt.information.fieldLabels.publicationPlace}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={!this.props.isNtro ? 4 : 6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    id="rek-publisher"
-                                    textFieldId="rek-publisher"
-                                    name="fez_record_search_key_publisher.rek_publisher"
-                                    type="text"
-                                    required
-                                    fullWidth
-                                    label={txt.information.fieldLabels.publisher}
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
-                            {!this.props.isNtro && (
-                                <Grid item xs={12} sm={4}>
-                                    <Field
-                                        component={TextField}
-                                        name="fez_record_search_key_total_pages.rek_total_pages"
-                                        textFieldId="rek-total-pages"
-                                        type="text"
-                                        fullWidth
-                                        disabled={this.props.submitting}
-                                        label={txt.information.fieldLabels.extent.label}
-                                        placeholder={txt.information.fieldLabels.extent.placeholder}
-                                    />
-                                </Grid>
-                            )}
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_doi.rek_doi"
-                                    textFieldId="rek-doi"
-                                    type="text"
-                                    fullWidth
-                                    validate={[validation.doi]}
-                                    {...txt.information.fieldLabels.doi}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    partialDateFieldId="rek-date"
-                                    disabled={this.props.submitting}
-                                    name="rek_date"
-                                    allowPartial
-                                    required
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired
-                                />
-                            </Grid>
-                        </Grid>
-                    </StandardCard>
-                </Grid>
-                {this.props.subtype !== SUBTYPE_EDITED_BOOK && (!editors || editors.length === 0) && (
-                    <Grid item xs={12}>
-                        <StandardCard title={txt.authors.title} help={txt.authors.help}>
+    const txt = formLocale.book;
+    const editors = formValues && formValues.get('editors');
+    const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
+    const authors = formValues && formValues.get('authors');
+    const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
+    return (
+        <Grid container spacing={3}>
+            <Grid item xs={12}>
+                <StandardCard title={txt.information.title} help={txt.information.help}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
                             <Field
-                                component={ContributorsEditorField}
-                                canEdit
-                                forceSelectable
-                                hideUqIDFields
-                                maintainSelected
-                                contributorEditorId="rek-author"
-                                name="authors"
-                                locale={txt.authors.field}
-                                showContributorAssignment={!editorSelected}
+                                component={TextField}
+                                autoFocus={!isNtro}
+                                disabled={submitting}
+                                id="rek-title"
+                                textFieldId="rek-title"
+                                name="rek_title"
                                 required
-                                disabled={this.props.submitting}
-                                isNtro={this.props.isNtro}
+                                type="text"
+                                fullWidth
+                                multiline
+                                rows={3}
+                                label={txt.information.fieldLabels.bookTitle}
+                                validate={[validation.required]}
                             />
-                        </StandardCard>
-                    </Grid>
-                )}
-                {(!authors || authors.length === 0) && (
-                    <Grid item xs={12}>
-                        <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                            <Field
-                                component={ContributorsEditorField}
-                                canEdit
-                                forceSelectable
-                                hideUqIDFields
-                                maintainSelected
-                                contributorEditorId="rek-contributor"
-                                showContributorAssignment={!authorSelected}
-                                id="editors-name-as-published-field"
-                                name="editors"
-                                locale={txt.editors.field}
-                                disabled={this.props.submitting}
-                            />
-                        </StandardCard>
-                    </Grid>
-                )}
-                {this.props.isNtro && (
-                    <NtroFields
-                        canEdit
-                        submitting={this.props.submitting}
-                        showContributionStatement={this.props.isAuthorSelected}
-                        hideIsmn={this.props.subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
-                        hideIsrc
-                        hideVolume
-                        hideIssue
-                        hideSeries
-                        hideStartPage
-                        hideEndPage
-                        hideOriginalFormat
-                        hideAudienceSize
-                    />
-                )}
-                <Grid item xs={12}>
-                    <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
-                        <Typography>{locale.components.isbnForm.text}</Typography>
-                        <Field
-                            component={ListEditorField}
-                            remindToAdd
-                            name="fez_record_search_key_isbn"
-                            isValid={validation.isValidIsbn}
-                            maxCount={5}
-                            searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
-                            listEditorId="isbn"
-                            locale={locale.components.isbnForm.field}
-                            disabled={this.props.submitting}
-                        />
-                    </StandardCard>
-                </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
-                        <Typography>{locale.components.issnForm.text}</Typography>
-                        <Field
-                            component={IssnListEditorField}
-                            remindToAdd
-                            isValid={validation.isValidIssn}
-                            name="fez_record_search_key_issn"
-                            maxCount={5}
-                            locale={locale.components.issnForm.field}
-                            listEditorId="issn"
-                            searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
-                            disabled={this.props.submitting}
-                            inputNormalizer={this.normalizeIssn}
-                            rowItemTemplate={IssnRowItemTemplate}
-                            transformFunction={this.transformIssn}
-                        />
-                    </StandardCard>
-                </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.optional.title} help={txt.optional.help}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    name="comments"
-                                    textFieldId="comments"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    multiline
-                                    label={txt.optional.fieldLabels.notes}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    name="rek_link"
-                                    textFieldId="rek-link"
-                                    type="text"
-                                    disabled={this.props.submitting}
-                                    fullWidth
-                                    label={txt.optional.fieldLabels.url}
-                                    validate={[validation.url]}
-                                />
-                            </Grid>
                         </Grid>
+                        <Grid item xs={12} sm={!isNtro ? 4 : 6}>
+                            <Field
+                                component={TextField}
+                                disabled={submitting}
+                                id="rek-place-of-publication"
+                                textFieldId="rek-place-of-publication"
+                                name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                type="text"
+                                required
+                                fullWidth
+                                label={txt.information.fieldLabels.publicationPlace}
+                                validate={[validation.required]}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={!isNtro ? 4 : 6}>
+                            <Field
+                                component={TextField}
+                                disabled={submitting}
+                                id="rek-publisher"
+                                textFieldId="rek-publisher"
+                                name="fez_record_search_key_publisher.rek_publisher"
+                                type="text"
+                                required
+                                fullWidth
+                                label={txt.information.fieldLabels.publisher}
+                                validate={[validation.required]}
+                            />
+                        </Grid>
+                        {!isNtro && (
+                            <Grid item xs={12} sm={4}>
+                                <Field
+                                    component={TextField}
+                                    name="fez_record_search_key_total_pages.rek_total_pages"
+                                    textFieldId="rek-total-pages"
+                                    type="text"
+                                    fullWidth
+                                    disabled={submitting}
+                                    label={txt.information.fieldLabels.extent.label}
+                                    placeholder={txt.information.fieldLabels.extent.placeholder}
+                                />
+                            </Grid>
+                        )}
+                        <Grid item xs={12} sm={6}>
+                            <Field
+                                component={TextField}
+                                disabled={submitting}
+                                name="fez_record_search_key_doi.rek_doi"
+                                textFieldId="rek-doi"
+                                type="text"
+                                fullWidth
+                                validate={[validation.doi]}
+                                {...txt.information.fieldLabels.doi}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <Field
+                                component={PartialDateField}
+                                partialDateFieldId="rek-date"
+                                disabled={submitting}
+                                name="rek_date"
+                                allowPartial
+                                required
+                                className="requiredHintField"
+                                validate={[validation.required]}
+                                floatingTitle={txt.information.fieldLabels.date.title}
+                                floatingTitleRequired
+                            />
+                        </Grid>
+                    </Grid>
+                </StandardCard>
+            </Grid>
+            {subtype !== SUBTYPE_EDITED_BOOK && (!editors || editors.length === 0) && (
+                <Grid item xs={12}>
+                    <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                        <Field
+                            component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
+                            contributorEditorId="rek-author"
+                            name="authors"
+                            locale={txt.authors.field}
+                            showContributorAssignment={!editorSelected}
+                            required
+                            disabled={submitting}
+                            isNtro={isNtro}
+                        />
                     </StandardCard>
                 </Grid>
+            )}
+            {(!authors || authors.length === 0) && (
+                <Grid item xs={12}>
+                    <StandardCard title={txt.editors.title} help={txt.editors.help}>
+                        <Field
+                            component={ContributorsEditorField}
+                            canEdit
+                            forceSelectable
+                            hideUqIDFields
+                            maintainSelected
+                            contributorEditorId="rek-contributor"
+                            showContributorAssignment={!authorSelected}
+                            id="editors-name-as-published-field"
+                            name="editors"
+                            locale={txt.editors.field}
+                            disabled={submitting}
+                        />
+                    </StandardCard>
+                </Grid>
+            )}
+            {isNtro && (
+                <NtroFields
+                    canEdit
+                    submitting={submitting}
+                    showContributionStatement={isAuthorSelected}
+                    hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                    hideIsrc
+                    hideVolume
+                    hideIssue
+                    hideSeries
+                    hideStartPage
+                    hideEndPage
+                    hideOriginalFormat
+                    hideAudienceSize
+                />
+            )}
+            <Grid item xs={12}>
+                <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
+                    <Typography>{locale.components.isbnForm.text}</Typography>
+                    <Field
+                        component={ListEditorField}
+                        remindToAdd
+                        name="fez_record_search_key_isbn"
+                        isValid={validation.isValidIsbn}
+                        maxCount={5}
+                        searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
+                        listEditorId="isbn"
+                        locale={locale.components.isbnForm.field}
+                        disabled={submitting}
+                    />
+                </StandardCard>
             </Grid>
-        );
-    }
-}
+            <Grid item xs={12}>
+                <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
+                    <Typography>{locale.components.issnForm.text}</Typography>
+                    <Field
+                        component={IssnListEditorField}
+                        remindToAdd
+                        isValid={validation.isValidIssn}
+                        name="fez_record_search_key_issn"
+                        maxCount={5}
+                        locale={locale.components.issnForm.field}
+                        listEditorId="issn"
+                        searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
+                        disabled={submitting}
+                        inputNormalizer={normalizeIssn}
+                        rowItemTemplate={IssnRowItemTemplate}
+                        transformFunction={transformIssn}
+                    />
+                </StandardCard>
+            </Grid>
+            <Grid item xs={12}>
+                <StandardCard title={txt.optional.title} help={txt.optional.help}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <Field
+                                component={TextField}
+                                name="comments"
+                                textFieldId="comments"
+                                type="text"
+                                disabled={submitting}
+                                fullWidth
+                                multiline
+                                label={txt.optional.fieldLabels.notes}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Field
+                                component={TextField}
+                                name="rek_link"
+                                textFieldId="rek-link"
+                                type="text"
+                                disabled={submitting}
+                                fullWidth
+                                label={txt.optional.fieldLabels.url}
+                                validate={[validation.url]}
+                            />
+                        </Grid>
+                    </Grid>
+                </StandardCard>
+            </Grid>
+        </Grid>
+    );
+};
+BookForm.propTypes = {
+    submitting: PropTypes.bool,
+    formValues: PropTypes.object,
+    subtype: PropTypes.string,
+    isNtro: PropTypes.bool,
+    isAuthorSelected: PropTypes.bool,
+};
+
+export default BookForm;

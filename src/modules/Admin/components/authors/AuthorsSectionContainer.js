@@ -7,8 +7,8 @@ import { getFormValues } from 'redux-form/immutable';
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
 import AuthorsSection from './AuthorsSection';
-import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
-
+// import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
+import { NTRO_SUBTYPES } from 'config/general';
 export const AuthorsSectionContainer = ({ disabled, formValues, isNtro = false }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: { ...formValues.toJS(), isNtro } }}>
@@ -30,7 +30,7 @@ export const mapStateToProps = (state, ownProps) => {
     return {
         disabled: ownProps.disabled,
         formValues: formValues.get('authorsSection') || Immutable.Map({}),
-        isNtro: NTRO_SUBTYPES.includes(subtype) && subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+        isNtro: NTRO_SUBTYPES.includes(subtype), // && subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     };
 };
 

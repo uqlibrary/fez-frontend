@@ -17,6 +17,7 @@ const getProps = (testProps = {}) => ({
     onDelete: jest.fn(),
     onEmbargoDateChange: jest.fn(),
     onAccessConditionChange: jest.fn(),
+    onSecurityPolicyChange: jest.fn(),
     ...testProps,
 });
 

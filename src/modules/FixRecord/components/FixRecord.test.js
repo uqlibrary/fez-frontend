@@ -119,6 +119,12 @@ describe('Component FixRecord', () => {
         expect(mockUseNavigate).toHaveBeenCalled();
     });
 
+    it('should render work not found page if record can not be loaded', () => {
+        const { getByText, rerender } = setup({ recordToFix: null });
+        setup({ loadingRecordToFix: false, recordToFix: null }, rerender);
+        expect(getByText('Work not found')).toBeInTheDocument();
+    });
+
     it('should render record citation, two actions in select field and a cancel button', () => {
         const { container } = setup({ recordToFix: mockRecordToFix });
         expect(container).toMatchSnapshot();

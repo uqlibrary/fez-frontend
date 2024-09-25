@@ -116,7 +116,7 @@ export const filterOutNonActiveFacets = facets =>
 
 export const resetFacetFiltersButtonId = 'reset-facet-filters';
 
-export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabled, onFacetsChanged }) => {
+export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, disabled, onFacetsChanged }) => {
     const { journalSearchQueryParams } = useJournalSearch();
     const activeFiltersQuerystringPart = JSON.stringify(journalSearchQueryParams.activeFacets?.filters);
     const prevActiveFiltersQuerystringPart = useRef(activeFiltersQuerystringPart);
@@ -259,11 +259,6 @@ JournalSearchFacetsFilter.propTypes = {
     disabled: PropTypes.bool,
     showFavouritedFilter: PropTypes.bool,
     onFacetsChanged: PropTypes.func,
-};
-
-JournalSearchFacetsFilter.defaultProps = {
-    renameFacetsList: {},
-    showFavouritedFilter: false,
 };
 
 export default React.memo(JournalSearchFacetsFilter);

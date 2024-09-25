@@ -1,13 +1,17 @@
 import * as actions from 'actions/actionTypes';
 
+const initialSystemAlertUpdateState = {
+    adminDashboardSystemAlertsUpdating: false,
+    adminDashboardSystemAlertsUpdateSuccess: null,
+    adminDashboardSystemAlertsUpdateFailed: null,
+};
+
 export const initialState = {
     adminDashboardSystemAlertsData: null,
     adminDashboardSystemAlertsLoading: false,
     adminDashboardSystemAlertsSuccess: null,
-    adminDashboardSystemAlertsError: null,
-    adminDashboardSystemAlertsUpdating: false,
-    adminDashboardSystemAlertsUpdateSuccess: null,
-    adminDashboardSystemAlertsUpdateError: null,
+    adminDashboardSystemAlertsFailed: null,
+    ...initialSystemAlertUpdateState,
 };
 
 const handlers = {
@@ -25,7 +29,7 @@ const handlers = {
         ...initialState,
         ...state,
         adminDashboardSystemAlertsLoading: false,
-        adminDashboardSystemAlertsError: action.payload,
+        adminDashboardSystemAlertsFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING]: state => ({
         ...state,
@@ -39,9 +43,10 @@ const handlers = {
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED]: (state, action) => ({
         ...state,
         adminDashboardSystemAlertsUpdating: false,
-        adminDashboardSystemAlertsUpdateError: action.payload,
+        adminDashboardSystemAlertsUpdateFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_CLEAR]: () => ({ ...initialState }),
+    [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR]: state => ({ ...state, ...initialSystemAlertUpdateState }),
 };
 
 export default function adminDashboardSystemAlertsReducer(state = { ...initialState }, action) {

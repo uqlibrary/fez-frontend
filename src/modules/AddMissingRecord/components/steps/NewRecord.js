@@ -1,113 +1,116 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
+import { useNavigate } from 'react-router-dom';
+
 // forms & custom components
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
 import Grid from '@mui/material/Grid';
 
-export default class NewRecord extends PureComponent {
-    static propTypes = {
-        account: PropTypes.object,
-        actions: PropTypes.object.isRequired,
-        navigate: PropTypes.func.isRequired,
-        rawSearchQuery: PropTypes.string,
-        newRecordFileUploadingOrIssueError: PropTypes.bool,
-        author: PropTypes.object,
-        newRecord: PropTypes.object,
-    };
+export const NewRecord = ({
+    account,
+    actions,
+    rawSearchQuery = '',
+    newRecordFileUploadingOrIssueError,
+    author,
+    newRecord = {},
+}) => {
+    const navigate = useNavigate();
+    const confirmationBoxRef = React.useRef();
 
-    static defaultProps = {
-        rawSearchQuery: '',
-        newRecord: {},
-    };
+    const setConfirmationRef = React.useCallback(node => {
+        confirmationBoxRef.current = node; // TODO: Add check that this worked
+    }, []);
 
-    _recordSaved = () => {
+    const _recordSaved = () => {
         // show record save successfully confirmation box
-        this.confirmationBox.showConfirmation();
+        confirmationBoxRef.current.showConfirmation();
     };
 
-    _restartWorkflow = () => {
-        this.props.actions.clearNewRecord();
-        this.props.navigate(pathConfig.records.add.find);
+    const _restartWorkflow = () => {
+        actions.clearNewRecord();
+        navigate(pathConfig.records.add.find);
     };
 
-    _navigateToMyResearch = () => {
-        this.props.actions.clearNewRecord();
-        this.props.navigate(pathConfig.records.mine);
+    const _navigateToMyResearch = () => {
+        actions.clearNewRecord();
+        navigate(pathConfig.records.mine);
     };
 
-    _navigateToFixRecord = () => {
-        this.props.actions.clearNewRecord();
-        this.props.navigate(pathConfig.records.fix(this.props.newRecord.rek_pid));
+    const _navigateToFixRecord = () => {
+        actions.clearNewRecord();
+        navigate(pathConfig.records.fix(newRecord.rek_pid));
     };
 
-    render() {
-        // wait for author to load before rendering
-        // eslint-disable-next-line camelcase
-        if (!this.props.author?.aut_id) {
-            return <span />;
-        }
-
-        const txt = locale.pages.addRecord;
-        const { rawSearchQuery } = this.props;
-
-        // set initial value only if it's a title (not pubmed/DOI)
-        const initialValues = {
-            currentAuthor: [
-                {
-                    nameAsPublished: this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
-                    // eslint-disable-next-line camelcase
-                    authorId: this.props.author?.aut_id,
-                },
-            ],
-            rek_title: rawSearchQuery || '',
-            isHdrStudent:
-                !!this.props.account &&
-                this.props.account.class &&
-                this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
-                this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0,
-        };
-
-        const isPID = /UQ:(.*)/;
-        const showAlternateActionButton =
-            this.props.newRecord &&
-            this.props.newRecord.rek_pid &&
-            isPID.test(this.props.newRecord.rek_pid) &&
-            this.props.newRecordFileUploadingOrIssueError;
-
-        // set confirmation message depending on file upload status
-        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
-        saveConfirmationLocale.confirmationMessage = (
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    {this.props.newRecordFileUploadingOrIssueError && (
-                        <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
-                    )}
-                    {saveConfirmationLocale.recordSuccessConfirmationMessage}
-                </Grid>
-            </Grid>
-        );
-        return (
-            <React.Fragment>
-                <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._navigateToMyResearch}
-                    onCancelAction={this._restartWorkflow}
-                    showAlternateActionButton={showAlternateActionButton}
-                    onAlternateAction={this._navigateToFixRecord}
-                    locale={saveConfirmationLocale}
-                />
-                <PublicationForm
-                    onFormSubmitSuccess={this._recordSaved}
-                    onFormCancel={this._restartWorkflow}
-                    initialValues={initialValues}
-                />
-            </React.Fragment>
-        );
+    // wait for author to load before rendering
+    // eslint-disable-next-line camelcase
+    if (!author?.aut_id) {
+        return <span />;
     }
-}
+
+    const txt = locale.pages.addRecord;
+
+    // set initial value only if it's a title (not pubmed/DOI)
+    const initialValues = {
+        currentAuthor: [
+            {
+                nameAsPublished: author.aut_display_name ? author.aut_display_name : '',
+                // eslint-disable-next-line camelcase
+                authorId: author?.aut_id,
+            },
+        ],
+        rek_title: rawSearchQuery || '',
+        isHdrStudent:
+            !!account &&
+            account.class &&
+            account.class.indexOf('IS_CURRENT') >= 0 &&
+            account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0,
+    };
+
+    const isPID = /UQ:(.*)/;
+    const showAlternateActionButton =
+        newRecord && newRecord.rek_pid && isPID.test(newRecord.rek_pid) && newRecordFileUploadingOrIssueError;
+
+    // set confirmation message depending on file upload status
+    const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
+    saveConfirmationLocale.confirmationMessage = (
+        <Grid container spacing={3}>
+            <Grid item xs={12}>
+                {newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.recordSuccessConfirmationMessage}
+            </Grid>
+        </Grid>
+    );
+    return (
+        <React.Fragment>
+            <ConfirmDialogBox
+                onRef={setConfirmationRef}
+                onAction={_navigateToMyResearch}
+                onCancelAction={_restartWorkflow}
+                showAlternateActionButton={showAlternateActionButton}
+                onAlternateAction={_navigateToFixRecord}
+                locale={saveConfirmationLocale}
+            />
+            <PublicationForm
+                onFormSubmitSuccess={_recordSaved}
+                onFormCancel={_restartWorkflow}
+                initialValues={initialValues}
+            />
+        </React.Fragment>
+    );
+};
+NewRecord.propTypes = {
+    account: PropTypes.object,
+    actions: PropTypes.object.isRequired,
+    rawSearchQuery: PropTypes.string,
+    newRecordFileUploadingOrIssueError: PropTypes.bool,
+    author: PropTypes.object,
+    newRecord: PropTypes.object,
+};
+
+export default React.memo(NewRecord);

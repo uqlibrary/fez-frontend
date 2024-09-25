@@ -8,7 +8,23 @@ import DeleteForever from '@mui/icons-material/DeleteForever';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
-export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, listEditorId }) => {
+export const ListRowHeader = ({
+    onDeleteAll,
+    locale = {
+        nameColumn: 'Name',
+        reorderColumn: 'Reorder items',
+        deleteAll: 'Remove all items',
+        deleteAllConfirmation: {
+            confirmationTitle: 'Delete all',
+            confirmationMessage: 'Are you sure you want to delete all items?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
+    },
+    disabled,
+    hideReorder,
+    listEditorId,
+}) => {
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const { nameColumn, reorderColumn, deleteAll, deleteAllConfirmation } = locale;
 
@@ -57,20 +73,6 @@ ListRowHeader.propTypes = {
     disabled: PropTypes.bool,
     hideReorder: PropTypes.bool,
     listEditorId: PropTypes.string,
-};
-
-ListRowHeader.defaultProps = {
-    locale: {
-        nameColumn: 'Name',
-        reorderColumn: 'Reorder items',
-        deleteAll: 'Remove all items',
-        deleteAllConfirmation: {
-            confirmationTitle: 'Delete all',
-            confirmationMessage: 'Are you sure you want to delete all items?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-    },
 };
 
 export default React.memo(ListRowHeader);

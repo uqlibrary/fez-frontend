@@ -341,7 +341,7 @@ export const getRoutesConfig = ({
                   },
               ]
             : []),
-        ...(authorDetails && isAdmin(authorDetails)
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
             ? [
                   {
                       path: pathConfig.admin.dashboard,
@@ -350,6 +350,10 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       pageTitle: locale.pages.adminDashboard.title,
                   },
+              ]
+            : []),
+        ...(authorDetails && isAdmin(authorDetails)
+            ? [
                   {
                       path: pathConfig.admin.add,
                       element: <components.Admin createMode />,
@@ -503,8 +507,8 @@ export const getRoutesConfig = ({
         ...publicPages,
         {
             path: '*',
-            element: <components.NotFound />,
-            pageTitle: locale.pages.notFound.title,
+            element: <components.PageNotFound />,
+            pageTitle: locale.pages.pageNotFound.title,
         },
     ];
 };
@@ -582,6 +586,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
 
     return [
         ...homePage,
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+            ? [
+                  {
+                      linkTo: pathConfig.admin.dashboard,
+                      ...locale.menu.adminDashboard,
+                  },
+              ]
+            : []),
         ...(account && isAuthor
             ? [
                   {

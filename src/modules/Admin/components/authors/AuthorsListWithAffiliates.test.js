@@ -130,8 +130,8 @@ describe('AuthorsListWithAffiliates', () => {
         });
 
         expect(getByTestId('rek-author-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('rek-author-list-row-4')).toBeInTheDocument();
-        expect(queryByTestId('rek-author-list-row-5')).not.toBeInTheDocument();
+        expect(getByTestId('rek-author-list-row-9')).toBeInTheDocument();
+        expect(queryByTestId('rek-author-list-row-10')).not.toBeInTheDocument();
     });
 
     it('should render disabled row', () => {

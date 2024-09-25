@@ -501,6 +501,7 @@ export const AuthorsListWithAffiliates = ({
     // );
 
     const [data, setData] = React.useState([]);
+
     React.useEffect(() => {
         const result = [];
         list.forEach((item, index) => {
@@ -510,6 +511,9 @@ export const AuthorsListWithAffiliates = ({
         });
         setData(result);
     }, [list]);
+
+    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
+
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
@@ -534,7 +538,7 @@ export const AuthorsListWithAffiliates = ({
             newList =
                 action === 'update'
                     ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                    : [...data, newData];
+                    : transformNewAuthorObject(newData);
         }
 
         onChange(newList);
@@ -765,11 +769,11 @@ export const AuthorsListWithAffiliates = ({
                     draggable: false,
                     addRowPosition: 'first',
                     search: data.length > 10,
-                    emptyRowsWhenPaging: true,
-                    ...(data.length > 10 ? { maxBodyHeight: 550 } : {}),
+                    emptyRowsWhenPaging: false,
+                    ...(data.length > 10 ? { maxBodyHeight: 600 } : {}),
                     ...(data.length > 10 ? { paging: true } : { paging: false }),
-                    .../* istanbul ignore next */ (data.length > 100 ? { pageSize: data.length > 100 ? 50 : 5 } : {}),
-                    pageSizeOptions: [5, 50, 100, 200, 500],
+                    ...{ pageSize: /* istanbul ignore next */ data.length > 100 ? 50 : 10 },
+                    pageSizeOptions: [10, 50, 100, 200, 500],
                     padding: 'dense',
                     rowStyle: rowData => {
                         if (!!rowData.aut_id) {

@@ -1,9 +1,12 @@
-import locale from 'locale/components';
 import moment from 'moment';
 
 const converter = require('number-to-words');
 
 const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
+
+export const RESOLVER_URL_PREFIX = 'https://resolver.library.uq.edu.au/openathens/redir?qurl=';
+
+export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
@@ -19,6 +22,7 @@ export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
+export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
@@ -606,6 +610,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    csv: 'csv',
 };
 
 export const ORG_UNITS_VOCAB_ID = 453703;
@@ -694,8 +699,8 @@ export const SBS_THESIS_DEFAULT_VALUES = {
 export const DEFAULT_QUERY_PARAMS = {
     page: 1,
     pageSize: 20,
-    sortBy: locale.components.sorting.sortBy[1].value,
-    sortDirection: locale.components.sorting.sortDirection[0],
+    sortBy: 'score',
+    sortDirection: 'Desc',
     activeFacets: {
         filters: {},
         ranges: {},

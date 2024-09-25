@@ -320,7 +320,7 @@ describe('ViewRecord', () => {
         useParams.mockImplementationOnce(() => ({ pid: notFound }));
         const { container, queryByText } = setup();
         expect(container).toMatchSnapshot();
-        expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
+        expect(queryByText(locale.pages.workNotFound.title)).toBeInTheDocument();
         expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
     });
 

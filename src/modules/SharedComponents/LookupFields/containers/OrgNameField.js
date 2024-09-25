@@ -1,44 +1,54 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import { connect } from 'react-redux';
+
 import * as actions from 'actions';
 
 const category = 'org_name';
-const mapStateToProps = (state, props) => {
-    const { itemsList, itemsLoading } = (state.get('searchKeysReducer') &&
-        state.get('searchKeysReducer')[category]) || { itemsList: [], itemsLoading: false };
-    return {
-        autoCompleteAsynchronousFieldId: props.orgNameFieldId || 'rek-org-name',
-        category: category,
-        itemsList,
-        itemsLoading,
-        allowFreeText: true,
-        getOptionLabel: item => (!!item && String(item.value)) || '',
-        filterOptions: options => options,
-        ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
-            ? {
-                  defaultValue: (!!props.input.value && { value: props.input.value }) || null,
-                  error: !!props.meta.error,
-                  errorText: props.meta.error || '',
-              }
-            : {
-                  defaultValue: (!!props.value && { value: props.value }) || '',
-                  error: props.error,
-                  errorText: props.errorText || '',
-              }),
-    };
+
+export const OrgNameField = props => {
+    const dispatch = useDispatch();
+    const loadSuggestions = (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery));
+
+    const { itemsList, itemsLoading } = useSelector(
+        state => state.get('searchKeysReducer') && state.get('searchKeysReducer')[category],
+    ) || { itemsList: [], itemsLoading: false };
+
+    return (
+        <AutoCompleteAsynchronousField
+            {...props}
+            autoCompleteAsynchronousFieldId={props.orgNameFieldId || 'rek-org-name'}
+            category={category}
+            itemsList={itemsList}
+            itemsLoading={itemsLoading}
+            allowFreeText
+            getOptionLabel={item => (!!item && String(item.value)) || ''}
+            filterOptions={options => options}
+            // If form key is set in props.meta object then it's a redux-form Field
+            {...(!!((props || {}).meta || {}).form
+                ? {
+                      defaultValue: (!!props.input.value && { value: props.input.value }) || null,
+                      error: !!props.meta.error,
+                      errorText: props.meta.error || '',
+                      onChange: item => props.input.onChange(item.value),
+                      onClear: () => props.input.onChange(null),
+                  }
+                : {
+                      defaultValue: (!!props.value && { value: props.value }) || '',
+                      error: props.error,
+                      errorText: props.errorText || '',
+                      onChange: item => props.onChange(item),
+                      onClear: () => props.onChange({ value: null }),
+                  })}
+            loadSuggestions={loadSuggestions}
+        />
+    );
 };
 
-const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: (searchQuery = ' ') => dispatch(actions.loadSearchKeyList(category, searchQuery)),
-    ...(!!((props || {}).meta || {}).form // If form key is set in props.meta object then it's a redux-form Field
-        ? {
-              onChange: item => props.input.onChange(item.value),
-              onClear: () => props.input.onChange(null),
-          }
-        : {
-              onChange: item => props.onChange(item),
-              onClear: () => props.onChange({ value: null }),
-          }),
-});
-
-export const OrgNameField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsynchronousField);
+OrgNameField.propTypes = {
+    props: PropTypes.object,
+};
+export default React.memo(OrgNameField);

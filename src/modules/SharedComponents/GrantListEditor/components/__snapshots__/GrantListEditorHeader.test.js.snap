@@ -482,10 +482,8 @@ exports[`GrantListEditorHeader should render default view 1`] = `
 </div>
 `;
 
-exports[`GrantListEditorHeader should show confirmation box 1`] = `
-<div
-  aria-hidden="true"
->
+exports[`GrantListEditorHeader should render with default props 1`] = `
+<div>
   <span
     class="MuiBox-root css-0"
     data-testid="confirmDialogBox"
@@ -608,8 +606,10 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
 </div>
 `;
 
-exports[`GrantListEditorHeader should use width hook 1`] = `
-<div>
+exports[`GrantListEditorHeader should show confirmation box 1`] = `
+<div
+  aria-hidden="true"
+>
   <span
     class="MuiBox-root css-0"
     data-testid="confirmDialogBox"
@@ -695,7 +695,7 @@ exports[`GrantListEditorHeader should use width hook 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 css-gj1fbr-MuiGrid-root"
               style="text-align: right;"
             >
               <div

@@ -22,7 +22,7 @@ const getCleanValue = item => {
     }
 };
 
-const getSearchFieldData = fieldRows => {
+const getSearchFieldData = (fieldRows = []) => {
     const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
     const rows = fieldRows
         .filter(item => item.searchField !== 'rek_display_type')
@@ -41,7 +41,7 @@ const getSearchFieldData = fieldRows => {
     return rows;
 };
 
-const getDocTypeData = docTypes => {
+const getDocTypeData = (docTypes = []) => {
     const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
     const converteddocTypes = docTypes.map(item => DOCUMENT_TYPES_LOOKUP[item]);
     const lastItem = converteddocTypes.pop();
@@ -59,7 +59,7 @@ const getOpenAccessData = isOpenAccess => {
     return isOpenAccess ? { field: 'open_access', title: '', combiner: txt.combiner, value: txt.captionText } : null;
 };
 
-const getYearFilterData = yearFilter => {
+const getYearFilterData = (yearFilter = {}) => {
     const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
     return yearFilter.from && yearFilter.to
         ? {
@@ -80,11 +80,12 @@ const updateStateData = ({ fieldRows, docTypes, isOpenAccess, yearFilter }) => {
     ];
 };
 
-export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenAccess }) => {
+export const AdvancedSearchCaption = ({ fieldRows, docTypes, yearFilter, isOpenAccess = false }) => {
     const isUserAdmin = userIsAdmin();
     const [captionData, setCaptionData] = React.useState(
         updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }),
     );
+
     React.useEffect(() => {
         setCaptionData(updateStateData({ fieldRows, docTypes, yearFilter, isOpenAccess }));
     }, [fieldRows, docTypes, yearFilter, isOpenAccess]);
@@ -161,22 +162,6 @@ AdvancedSearchCaption.propTypes = {
     docTypes: PropTypes.array,
     yearFilter: PropTypes.object,
     isOpenAccess: PropTypes.bool,
-};
-
-AdvancedSearchCaption.defaultProps = {
-    fieldRows: [
-        {
-            searchField: '0',
-            value: '',
-            label: '',
-        },
-    ],
-    yearFilter: {
-        from: null,
-        to: null,
-        invalid: true,
-    },
-    isOpenAccess: false,
 };
 
 export default React.memo(AdvancedSearchCaption);

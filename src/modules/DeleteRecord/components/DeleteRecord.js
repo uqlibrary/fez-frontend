@@ -28,6 +28,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { withNavigate } from 'helpers/withNavigate';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 export class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -121,6 +122,10 @@ export class DeleteRecord extends PureComponent {
     };
 
     render() {
+        if (!this.props.loadingRecordToDelete && !this.props.recordToDelete) {
+            return <WorkNotFound />;
+        }
+
         const txt = pagesLocale.pages.deleteRecord;
         const formTxt = formsLocale.forms.deleteRecordForm;
 

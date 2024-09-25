@@ -5,7 +5,11 @@ import {
     ADMIN_DASHBOARD_TODAY_API,
     ADMIN_DASHBOARD_QUICKLINKS_API,
     ADMIN_DASHBOARD_SYSTEM_ALERTS_API,
+    ADMIN_DASHBOARD_DISPLAY_REPORT_API,
+    ADMIN_DASHBOARD_EXPORT_REPORT_API,
 } from 'repositories/routes';
+
+import { promptForDownload } from './exportPublicationsDataTransformers';
 
 /**
  * Fetches the config data for admin dashboard
@@ -20,11 +24,12 @@ export function loadAdminDashboardConfig() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_CONFIG_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
                 return Promise.resolve(response);
             })
             .catch(error => {
+                console.error(error.message);
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_CONFIG_FAILED,
                     payload: error.message,
@@ -47,7 +52,7 @@ export function loadAdminDashboardToday() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_TODAY_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -72,7 +77,7 @@ export function loadAdminDashboardQuickLinks() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_QUICKLINKS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -91,21 +96,16 @@ export function loadAdminDashboardQuickLinks() {
 export function adminDashboardQuickLink(request, action) {
     // eslint-disable-next-line no-nested-ternary
     const verb = action === 'DELETE' ? destroy : action === 'EDIT' || action === 'REORDER' ? put : post;
+
     return dispatch => {
         dispatch({ type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATING });
+
         return verb(ADMIN_DASHBOARD_QUICKLINKS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_SUCCESS,
+                    payload: response,
+                });
                 return Promise.resolve(response);
             })
             .catch(error => {
@@ -115,6 +115,14 @@ export function adminDashboardQuickLink(request, action) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminDashboardQuickLinkUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_QUICKLINKS_UPDATE_CLEAR,
+        });
     };
 }
 
@@ -131,7 +139,7 @@ export function loadAdminDashboardSystemAlerts() {
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_SUCCESS,
-                    payload: response.data,
+                    payload: response,
                 });
             })
             .catch(error => {
@@ -152,17 +160,11 @@ export function adminDashboardSystemAlerts(request) {
         dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING });
         return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API(), request)
             .then(response => {
-                if (response?.status?.toLowerCase() === 'ok') {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
-                        payload: response,
-                    });
-                } else {
-                    dispatch({
-                        type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_FAILED,
-                        payload: response.message,
-                    });
-                }
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,
+                    payload: response,
+                });
+
                 return Promise.resolve(response);
             })
             .catch(error => {
@@ -172,5 +174,97 @@ export function adminDashboardSystemAlerts(request) {
                 });
                 return Promise.reject(error);
             });
+    };
+}
+
+export function adminDashboardSystemAlertsUpdateClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR,
+        });
+    };
+}
+
+/**
+ * Fetches export (legacy) report data as a file attachment
+ * @returns {function(*)}
+ */
+export function loadAdminDashboardExportReport(request) {
+    return dispatch => {
+        const exportConfig = {
+            format: request.export_to,
+        };
+
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_LOADING,
+        });
+
+        const getOptions = { responseType: 'blob' };
+
+        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: request.id }), { ...getOptions })
+            .then(response => {
+                promptForDownload(exportConfig.format, response);
+
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_SUCCESS,
+                    payload: exportConfig,
+                });
+
+                return Promise.resolve();
+            })
+            .catch(error => {
+                console.error(error);
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_FAILED,
+                    payload: {
+                        ...exportConfig,
+                        errorMessage: error.message,
+                    },
+                });
+            });
+    };
+}
+
+/**
+ * Fetches display report data
+ * @returns {function(*)}
+ */
+export function loadAdminDashboardDisplayReport(request) {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_LOADING,
+            params: { ...request },
+        });
+        return get(ADMIN_DASHBOARD_DISPLAY_REPORT_API(request))
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_SUCCESS,
+                    payload: response,
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_FAILED,
+                    payload: {
+                        errorMessage: error.message,
+                    },
+                });
+            });
+    };
+}
+
+export function clearAdminDashboardDisplayReport() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_DISPLAY_REPORT_CLEAR,
+        });
+    };
+}
+
+export function clearAdminDashboardExportReport() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_CLEAR,
+        });
     };
 }

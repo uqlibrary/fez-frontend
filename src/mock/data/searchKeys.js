@@ -179,5 +179,8 @@ export const searchKeyList = {
             "aut_title": "Dr"
         }],
         "filters": []
-    }
+    },
+    doi: {"total":1,"data":[
+        {"value": "10.1111/111111"}
+    ]},
 };

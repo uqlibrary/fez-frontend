@@ -13,7 +13,7 @@ import InputLabel from '@mui/material/InputLabel';
  */
 
 export const NewGenericSelectField = ({
-    canUnselect,
+    canUnselect = false,
     disabled,
     displayEmpty,
     error,
@@ -22,16 +22,16 @@ export const NewGenericSelectField = ({
     genericSelectFieldId,
     hideLabel,
     input,
-    itemsList,
+    itemsList = [],
     itemsLoading,
     label,
     loadItemsList,
-    loadingHint,
+    loadingHint = 'Loading items...',
     meta,
-    multiple,
+    multiple = false,
     onChange,
     required,
-    selectPrompt,
+    selectPrompt = 'Please select an option',
     selectProps,
     style,
     value,
@@ -221,14 +221,6 @@ NewGenericSelectField.propTypes = {
     style: PropTypes.object,
     value: PropTypes.any,
     selectProps: PropTypes.object,
-};
-
-NewGenericSelectField.defaultProps = {
-    itemsList: [],
-    canUnselect: false,
-    multiple: false,
-    selectPrompt: 'Please select an option',
-    loadingHint: 'Loading items...',
 };
 
 NewGenericSelectField.displayName = 'NewGenericSelectField';
