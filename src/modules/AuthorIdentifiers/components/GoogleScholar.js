@@ -76,7 +76,7 @@ export const GoogleScholarForm = ({ author }) => {
 
     const onSubmit = data =>
         dispatch(updateCurrentAuthor(author.aut_id, data)).catch(error => {
-            // set form in case of exception - it will be handled and displayed below
+            // set form error in case of exceptions - it will be handled and displayed below
             setError('serverError', {
                 message: error.message,
             });
