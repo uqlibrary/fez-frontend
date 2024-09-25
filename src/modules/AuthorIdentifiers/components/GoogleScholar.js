@@ -191,4 +191,4 @@ export const GoogleScholar = () => {
     return <GoogleScholarForm author={author} />;
 };
 
-export default GoogleScholar;
+export default React.memo(GoogleScholar);
