@@ -103,10 +103,10 @@ export const getSystemAlertColumns = (locale, users) => {
         {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
-            width: 150,
+            width: 200,
             type: 'date',
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
-            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME),
         },
         { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
@@ -121,7 +121,7 @@ export const getSystemAlertColumns = (locale, users) => {
                 <Chip
                     data-testid={`alert-status-${params.id}`}
                     label={params.value}
-                    variant="outlined"
+                    variant="filled"
                     size="small"
                     color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
                 />
