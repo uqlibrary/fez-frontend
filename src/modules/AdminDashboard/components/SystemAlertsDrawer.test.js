@@ -38,6 +38,14 @@ const testRowAssigned = {
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test assigned title',
 };
+const testHtmlRow = {
+    sat_assigned_date: null,
+    sat_content: '<p>Test assigned content</p>',
+    sat_created_date: '2024-04-03 15:55:00',
+    sat_id: 13,
+    sat_link: 'https://espace.library.uq.edu.au',
+    sat_title: 'Test assigned title',
+};
 
 const setup = (props = {}, state = {}, renderer = render) => {
     const testProps = {
@@ -144,9 +152,31 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
             getFormattedServerDate(testRowAssigned.sat_created_date, true),
         );
-        expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowAssigned.sat_content);
+        expect(within(getByTestId('system-alert-detail-description'))).toHaveTextContent(testRowAssigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue('Staff');
         expect(getByTestId('system-alert-detail-action-button')).toBeInTheDocument();
+    });
+
+    it('should render drawer for alert with html content ', () => {
+        const { getByTestId, queryByTestId } = setup({
+            row: testHtmlRow,
+            open: true,
+            onCloseDrawer: onCloseDrawerFn,
+            onSystemAlertUpdate: onSystemAlertUpdateFn,
+        });
+
+        expect(getByTestId('system-alert-detail')).toBeInTheDocument();
+        expect(getByTestId('system-alert-detail-title')).toHaveTextContent(testHtmlRow.sat_title);
+        expect(getByTestId('system-alert-detail-link')).toHaveTextContent(testHtmlRow.sat_link);
+        expect(getByTestId('system-alert-detail-id')).toHaveTextContent(testHtmlRow.sat_id);
+        expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
+            getFormattedServerDate(testHtmlRow.sat_created_date, true),
+        );
+        expect(
+            within(getByTestId('system-alert-detail-description')).getByTestId('system-alert-detail-iframe-content'),
+        ).toBeInTheDocument();
+        expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue('Unassigned');
+        expect(queryByTestId('system-alert-detail-action-button')).not.toBeInTheDocument();
     });
 
     it('should call function when alert is resolved', async () => {

@@ -61,7 +61,6 @@ describe('SystemAlerts tab', () => {
         expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalled();
         await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
 
-        // await waitForElementToBeRemoved(getByRole('progressbar'));
         expect(getByText('3 system alerts')).toBeInTheDocument();
         expect(getAllByRole('row').length).toBe(4); // header & 3 'body' rows
 
@@ -73,9 +72,9 @@ describe('SystemAlerts tab', () => {
         assertSortedColumn(getByText('Created'));
 
         // rows cells
-        expect(getByRole('gridcell', { name: '4th March 2024' })).toBeInTheDocument();
-        expect(getByRole('gridcell', { name: '5th April 2024' })).toBeInTheDocument();
-        expect(getByRole('gridcell', { name: '6th May 2024' })).toBeInTheDocument();
+        expect(getByRole('gridcell', { name: '4th March 2024 03:55' })).toBeInTheDocument();
+        expect(getByRole('gridcell', { name: '5th April 2024 03:55' })).toBeInTheDocument();
+        expect(getByRole('gridcell', { name: '6th May 2024 03:55' })).toBeInTheDocument();
 
         expect(getByRole('gridcell', { name: 'My Works - Claimed Work - UQ:8efd126 - uqwtomas' })).toBeInTheDocument();
         expect(getByRole('gridcell', { name: 'Issues on record - UQ:34555c6' })).toBeInTheDocument();
@@ -146,7 +145,7 @@ describe('SystemAlerts tab', () => {
         expect(loadAdminDashboardSystemAlertsFn).toHaveBeenCalled();
         await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
 
-        await userEvent.click(getByRole('gridcell', { name: '6th May 2024' }));
+        await userEvent.click(getByRole('gridcell', { name: '6th May 2024 03:55' }));
 
         await waitFor(() => getByTestId('system-alert-detail'));
 
