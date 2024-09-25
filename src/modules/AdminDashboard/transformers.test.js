@@ -3,11 +3,14 @@ import {
     transformQuickLinkUpdateRequest,
     transformQuickLinkReorderRequest,
     transformReportRequest,
+    transformUrlToPlatform,
 } from './transformers';
 
 import { emptyReportActionState } from './reducers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
+
+import * as General from 'config/general';
 
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
@@ -64,6 +67,11 @@ describe('transformers', () => {
     });
 
     describe('transformQuickLinkUpdateRequest', () => {
+        const oldEnv = process.env.NODE_ENV;
+        afterEach(() => {
+            process.env.NODE_ENV = oldEnv;
+        });
+
         it('should transform quick link reorder data', () => {
             const data = {
                 qlk_id: 1,
@@ -76,6 +84,67 @@ describe('transformers', () => {
             const transformedRequest = transformQuickLinkUpdateRequest(data);
 
             expect(transformedRequest).toEqual({ qlk_id: 1, qlk_title: 'Test title', qlk_link: 'Test link' });
+        });
+
+        it('should transform quick link reorder data', () => {
+            const data = {
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: 'Test link',
+                qlk_order: 3,
+                extra1: 'should delete',
+            };
+
+            const transformedRequest = transformQuickLinkUpdateRequest(data);
+
+            expect(transformedRequest).toEqual({ qlk_id: 1, qlk_title: 'Test title', qlk_link: 'Test link' });
+        });
+
+        it('should transform quick link urls', () => {
+            General.IS_PRODUCTION = true;
+
+            const data = {
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${General.STAGING_URL}/test.html`,
+                qlk_order: 3,
+                extra1: 'should delete',
+            };
+
+            // should convert staging to prod
+            let transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${General.PRODUCTION_URL}/test.html`,
+            });
+
+            // should leave prod as-is
+            data.qlk_link = `${General.PRODUCTION_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${General.PRODUCTION_URL}/test.html`,
+            });
+
+            General.IS_PRODUCTION = false;
+            data.qlk_link = `${General.PRODUCTION_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${General.STAGING_URL}/test.html`,
+            });
+
+            // should leave prod as-is
+            data.qlk_link = `${General.STAGING_URL}/test.html`;
+            transformedRequest = transformQuickLinkUpdateRequest(data);
+            expect(transformedRequest).toEqual({
+                qlk_id: 1,
+                qlk_title: 'Test title',
+                qlk_link: `${General.STAGING_URL}/test.html`,
+            });
         });
     });
 
@@ -108,11 +177,11 @@ describe('transformers', () => {
             const data = { ...emptyReportActionState, displayReport: { value: 'workshistory' } };
             expect(transformReportRequest(data)).toEqual({ report_type: 2 });
         });
-        it('should return minimum system alert log request', () => {
+        it('should return date only system alert log request', () => {
             const data = { ...emptyReportActionState, displayReport: { value: 'systemalertlog' } };
             expect(transformReportRequest(data)).toEqual({ report_type: 1 });
         });
-        it('should return maximum request', () => {
+        it('should return record ID only request', () => {
             const data = {
                 ...emptyReportActionState,
                 fromDate: '01/01/2024',
@@ -122,10 +191,38 @@ describe('transformers', () => {
             };
             expect(transformReportRequest(data)).toEqual({
                 report_type: 1,
-                date_from: '2024-01-01',
-                date_to: '2024-10-01',
                 record_id: 123,
             });
+        });
+    });
+
+    describe('transformUrlToPlatform', () => {
+        const oldVal = General.IS_PRODUCTION;
+        afterEach(() => {
+            General.IS_PRODUCTION = oldVal;
+        });
+        it('should transform staging to prod links', () => {
+            General.IS_PRODUCTION = true;
+            expect(transformUrlToPlatform(`${General.STAGING_URL}/test.html`)).toEqual(
+                `${General.PRODUCTION_URL}/test.html`,
+            );
+            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
+                `${General.PRODUCTION_URL}/test.html`,
+            );
+            // if not staging or prod, nothing is transformed
+            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
+                'http://dev-espace.library.uq.edu.au/test.html',
+            );
+        });
+        it('should transform prod links to staging', () => {
+            General.IS_PRODUCTION = false;
+            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
+                `${General.STAGING_URL}/test.html`,
+            );
+            // if not staging or prod, nothing is transformed
+            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
+                'http://dev-espace.library.uq.edu.au/test.html',
+            );
         });
     });
 });

@@ -213,6 +213,7 @@ const Reports = () => {
                                             .filter(column => !!!column.exportOnly)
                                             .sort((a, b) => a.order > b.order) ?? /* istanbul ignore next */ []
                                     }
+                                    sortingOrder={['asc', 'desc']}
                                     initialState={{
                                         pagination: {
                                             paginationModel: { page: 0, pageSize: 10 },

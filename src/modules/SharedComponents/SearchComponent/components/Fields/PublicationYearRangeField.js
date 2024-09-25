@@ -5,7 +5,16 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 
-export const PublicationYearRangeField = ({ yearFilter, updateYearRangeFilter, disabled, invalid }) => {
+export const PublicationYearRangeField = ({
+    yearFilter = {
+        from: null,
+        to: null,
+        valid: true,
+    },
+    updateYearRangeFilter,
+    disabled = false,
+    invalid,
+}) => {
     const isInvalidYear = values => {
         const from = values.from;
         const to = values.to;
@@ -86,6 +95,7 @@ export const PublicationYearRangeField = ({ yearFilter, updateYearRangeFilter, d
         </React.Fragment>
     );
 };
+
 PublicationYearRangeField.propTypes = {
     yearFilter: PropTypes.object,
     updateYearRangeFilter: PropTypes.func.isRequired,
@@ -93,12 +103,4 @@ PublicationYearRangeField.propTypes = {
     invalid: PropTypes.bool,
 };
 
-PublicationYearRangeField.defaultProps = {
-    yearFilter: {
-        from: null,
-        to: null,
-        valid: true,
-    },
-    disabled: false,
-};
 export default React.memo(PublicationYearRangeField);

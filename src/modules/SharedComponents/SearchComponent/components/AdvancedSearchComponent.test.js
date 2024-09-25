@@ -3,6 +3,16 @@ import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act, within } from 'test-utils';
 
+const renderComponent = props => {
+    return render(
+        <WithRouter>
+            <WithReduxStore>
+                <AdvancedSearchComponent {...props} />
+            </WithReduxStore>
+        </WithRouter>,
+    );
+};
+
 function setup(testProps = {}) {
     const props = {
         isLoading: false,
@@ -18,16 +28,19 @@ function setup(testProps = {}) {
         onAdvancedSearchRowChange: jest.fn(),
         ...testProps,
     };
-    return render(
-        <WithRouter>
-            <WithReduxStore>
-                <AdvancedSearchComponent {...props} />
-            </WithReduxStore>
-        </WithRouter>,
-    );
+    return renderComponent(props);
 }
 
 describe('AdvancedSearchComponent', () => {
+    it('should render with default props', () => {
+        const { container } = renderComponent({
+            onAdvancedSearchRowChange: jest.fn(),
+            updateYearRangeFilter: jest.fn(),
+            onSearch: jest.fn(),
+        });
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render default view', () => {
         const { getByTestId, getByText } = setup();
         expect(getByText(/advanced search/i)).toBeInTheDocument();

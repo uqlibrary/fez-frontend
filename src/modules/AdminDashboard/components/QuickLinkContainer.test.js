@@ -5,6 +5,7 @@ import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, userEvent }
 import QuickLinkContainer from './QuickLinkContainer';
 
 import * as DashboardActions from 'actions/adminDashboard';
+import * as General from 'config/general';
 
 const locale = {
     title: 'Quick Links ',
@@ -82,6 +83,14 @@ const setup = (props = {}, state = {}, renderer = render) => {
 };
 
 describe('QuickLinkContainer', () => {
+    const oldVal = General.IS_PRODUCTION;
+    beforeAll(() => {
+        General.IS_PRODUCTION = true;
+    });
+    afterAll(() => {
+        General.IS_PRODUCTION = oldVal;
+    });
+
     beforeEach(() => {
         mockApi = setupMockAdapter();
         mockApi.onAny().reply(200, {});

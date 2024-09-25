@@ -82,14 +82,14 @@ export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
 
 const ImageGalleryItem = ({
     item,
-    withTitle,
-    withAlert,
+    withTitle = true,
+    withAlert = true,
     url,
-    classes,
-    lazyLoading,
-    itemWidth,
-    itemHeight,
-    security,
+    classes = {},
+    lazyLoading = config.thumbnailImage.defaultLazyLoading,
+    itemWidth = config.thumbnailImage.defaultWidth,
+    itemHeight = config.thumbnailImage.defaultHeight,
+    security = { isAdmin: false, isAuthor: false, author: {} },
     ...rest
 }) => {
     const [restricted, setRestricted] = React.useState(false);
@@ -214,16 +214,6 @@ ImageGalleryItem.propTypes = {
     lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,
-};
-
-ImageGalleryItem.defaultProps = {
-    withTitle: true,
-    withAlert: true,
-    classes: {},
-    security: { isAdmin: false, isAuthor: false, author: {} },
-    lazyLoading: config.thumbnailImage.defaultLazyLoading,
-    itemWidth: config.thumbnailImage.defaultWidth,
-    itemHeight: config.thumbnailImage.defaultHeight,
 };
 
 export default React.memo(ImageGalleryItem);

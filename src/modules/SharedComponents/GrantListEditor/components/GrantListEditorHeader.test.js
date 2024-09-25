@@ -20,6 +20,11 @@ describe('GrantListEditorHeader', () => {
         useWidth.mockImplementation(() => 'lg');
     });
 
+    it('should render with default props', () => {
+        const { container } = rtlRender(<GrantListEditorHeader onDeleteAll={jest.fn()} />);
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();

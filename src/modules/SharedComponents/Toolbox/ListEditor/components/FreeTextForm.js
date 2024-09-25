@@ -15,15 +15,20 @@ const onItemChangeCallback = (setItem, normalize) => {
 
 export const FreeTextForm = ({
     onAdd,
-    isValid,
-    locale,
+    isValid = isValidKeyword(2000),
+    locale = {
+        id: 'free-text-input',
+        inputFieldLabel: 'Item name',
+        inputFieldHint: 'Please type the item name',
+        addButtonLabel: 'Add',
+    },
     disabled,
     error,
-    remindToAdd,
-    mode,
+    remindToAdd = false,
+    mode = 'add',
     normalize,
-    required,
-    itemSelectedToEdit,
+    required = false,
+    itemSelectedToEdit = '',
     listEditorFormId,
     listEditorId,
     onSubmit,
@@ -126,20 +131,6 @@ FreeTextForm.propTypes = {
     listEditorFormId: PropTypes.string,
     listEditorId: PropTypes.string,
     onSubmit: PropTypes.func,
-};
-
-FreeTextForm.defaultProps = {
-    isValid: isValidKeyword(2000),
-    remindToAdd: false,
-    locale: {
-        id: 'free-text-input',
-        inputFieldLabel: 'Item name',
-        inputFieldHint: 'Please type the item name',
-        addButtonLabel: 'Add',
-    },
-    required: false,
-    itemSelectedToEdit: '',
-    mode: 'add',
 };
 
 export default React.memo(FreeTextForm);

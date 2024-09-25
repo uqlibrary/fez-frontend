@@ -11,8 +11,6 @@ export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 export const LINK_UNPROCESSED_WORKS =
     'https://espace.library.uq.edu.au/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=ismemberof%3A+UQ%3A218198&searchQueryParams%5Ball%5D%5Blabel%5D=&searchMode=advanced';
 
-export const INTERNAL_LINK_DOMAIN = 'espace.library.uq.edu.au';
-
 export const animationTemplate = (i, duration, delay) =>
     `animateFadeIn ${duration}ms ease-out ${delay * (i + 1)}ms forwards`;
 
@@ -34,6 +32,7 @@ export const VIEWMODES = {
 export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DELETE];
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
+export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
 export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss';

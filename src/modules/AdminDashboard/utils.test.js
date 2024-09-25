@@ -1,4 +1,5 @@
 import * as Utils from './utils';
+import * as General from 'config/general';
 
 describe('utils', () => {
     describe('stringToColour', () => {
@@ -178,6 +179,17 @@ describe('utils', () => {
             expect(Utils.isEmptyStr({})).toEqual(true);
             expect(Utils.isEmptyStr(['a'])).toEqual(true);
             expect(Utils.isEmptyStr({ a: 'a' })).toEqual(true);
+        });
+    });
+
+    describe('getPlatformUrl', () => {
+        it('returns expected results', () => {
+            const oldVal = General.IS_PRODUCTION;
+            General.IS_PRODUCTION = true;
+            expect(Utils.getPlatformUrl()).toEqual(General.PRODUCTION_URL);
+            General.IS_PRODUCTION = false;
+            expect(Utils.getPlatformUrl()).toEqual(General.STAGING_URL);
+            General.IS_PRODUCTION = oldVal;
         });
     });
 });

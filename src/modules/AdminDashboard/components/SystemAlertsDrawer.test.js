@@ -5,7 +5,7 @@ import { render, WithReduxStore, waitFor, within } from 'test-utils';
 import SystemAlertsDrawer from './SystemAlertsDrawer';
 import userEvent from '@testing-library/user-event';
 
-import { SYSTEM_ALERT_ACTION } from '../config';
+import { SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
 
 const locale = {
     alertStatus: {
@@ -24,7 +24,7 @@ const locale = {
 const testRowUnassigned = {
     sat_assigned_date: null,
     sat_content: 'Test unassigned content',
-    sat_created_date: '3/4/2024 15:55:00',
+    sat_created_date: '2024-04-03 15:55:00',
     sat_id: 1,
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test unassigned title',
@@ -33,7 +33,7 @@ const testRowAssigned = {
     sat_assigned_date: null,
     sat_assigned_to: 13,
     sat_content: 'Test assigned content',
-    sat_created_date: '3/4/2024 15:55:00',
+    sat_created_date: '2024-04-03 15:55:00',
     sat_id: 12,
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test assigned title',
@@ -91,7 +91,9 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-title')).toHaveTextContent(testRowUnassigned.sat_title);
         expect(getByTestId('system-alert-detail-link')).toHaveTextContent(testRowUnassigned.sat_link);
         expect(getByTestId('system-alert-detail-id')).toHaveTextContent(testRowUnassigned.sat_id);
-        expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(testRowUnassigned.sat_created_date);
+        expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
+            getFormattedServerDate(testRowUnassigned.sat_created_date, true),
+        );
         expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowUnassigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue(locale.alertStatus.UNASSIGNED);
         expect(queryByTestId('system-alert-detail-action-button')).not.toBeInTheDocument();
@@ -139,7 +141,9 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-title')).toHaveTextContent(testRowAssigned.sat_title);
         expect(getByTestId('system-alert-detail-link')).toHaveTextContent(testRowAssigned.sat_link);
         expect(getByTestId('system-alert-detail-id')).toHaveTextContent(testRowAssigned.sat_id);
-        expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(testRowAssigned.sat_created_date);
+        expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
+            getFormattedServerDate(testRowAssigned.sat_created_date, true),
+        );
         expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowAssigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue('Staff');
         expect(getByTestId('system-alert-detail-action-button')).toBeInTheDocument();

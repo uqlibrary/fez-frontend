@@ -26,10 +26,10 @@ export const FileUploadDropzone = ({
     onDrop,
     maxSize,
     locale,
-    fileNameRestrictions,
-    mimeTypeWhitelist,
-    filesInQueue,
-    fileUploadLimit,
+    fileNameRestrictions = FILE_NAME_RESTRICTION,
+    mimeTypeWhitelist = MIME_TYPE_WHITELIST,
+    filesInQueue = [],
+    fileUploadLimit = 10,
     disabled,
 }) => {
     const formValues = useContext(FormValuesContext);
@@ -290,18 +290,11 @@ FileUploadDropzone.propTypes = {
     onDrop: PropTypes.func.isRequired,
     maxSize: PropTypes.number.isRequired,
     locale: PropTypes.object.isRequired,
-    fileNameRestrictions: PropTypes.instanceOf(RegExp).isRequired,
-    mimeTypeWhitelist: PropTypes.object.isRequired,
+    fileNameRestrictions: PropTypes.instanceOf(RegExp),
+    mimeTypeWhitelist: PropTypes.object,
     filesInQueue: PropTypes.array,
     fileUploadLimit: PropTypes.number,
     disabled: PropTypes.bool,
-};
-
-FileUploadDropzone.defaultProps = {
-    fileUploadLimit: 10,
-    filesInQueue: [],
-    fileNameRestrictions: FILE_NAME_RESTRICTION,
-    mimeTypeWhitelist: MIME_TYPE_WHITELIST,
 };
 
 export default FileUploadDropzone;

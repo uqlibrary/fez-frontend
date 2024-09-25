@@ -101,23 +101,23 @@ const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges, showOpenAc
     !!showOpenAccessOnly;
 
 export const FacetsFilter = ({
-    facetsData,
-    activeFacets,
+    facetsData = {},
+    activeFacets = {},
     initialFacets,
-    excludeFacetsList,
-    renameFacetsList,
-    lookupFacetsList,
+    excludeFacetsList = [],
+    renameFacetsList = {},
+    lookupFacetsList = {},
     disabled,
-    showOpenAccessFilter,
+    showOpenAccessFilter = false,
     onFacetsChanged,
 }) => {
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({
-        ...activeFacets.filters,
+        ...(activeFacets.filters || {}),
         ...((initialFacets || {}).filters || {}),
     });
 
     const [activeFacetsRanges, setActiveFacetsRanges] = useState({
-        ...activeFacets.ranges,
+        ...(activeFacets.ranges || {}),
     });
 
     const [showOpenAccessOnly, setShowOpenAccessOnly] = useState(!!activeFacets.showOpenAccessOnly);
@@ -293,13 +293,6 @@ FacetsFilter.propTypes = {
     disabled: PropTypes.bool,
     showOpenAccessFilter: PropTypes.bool,
     onFacetsChanged: PropTypes.func,
-};
-
-FacetsFilter.defaultProps = {
-    excludeFacetsList: [],
-    renameFacetsList: {},
-    lookupFacetsList: {},
-    showOpenAccessFilter: false,
 };
 
 export default React.memo(FacetsFilter);

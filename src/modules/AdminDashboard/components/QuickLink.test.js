@@ -3,6 +3,8 @@ import React from 'react';
 import { render, userEvent, act } from 'test-utils';
 import QuickLink from './QuickLink';
 
+import * as General from 'config/general';
+
 const locale = {
     menu: {
         editLabel: 'Edit',
@@ -18,7 +20,7 @@ const linkInternal = {
     qlk_amount: 100,
     qlk_order: 1,
     qlk_title: 'Test internal title',
-    qlk_link: 'https://espace.library.uq.edu.au',
+    qlk_link: 'https://espace.library.uq.edu.au/test.html',
 };
 const linkExternal = {
     qlk_id: 1,
@@ -46,6 +48,14 @@ const setup = (props = {}, renderer = render) => {
 };
 
 describe('QuickLink', () => {
+    const oldVal = General.IS_PRODUCTION;
+    beforeAll(() => {
+        General.IS_PRODUCTION = true;
+    });
+    afterAll(() => {
+        General.IS_PRODUCTION = oldVal;
+    });
+
     it('should render internal link as expected', async () => {
         const { getByTestId, queryByTestId, getByText } = setup({
             link: linkInternal,

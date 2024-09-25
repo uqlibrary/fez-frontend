@@ -14,6 +14,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import locale from 'locale/components';
 
 import { useValidateReport } from '../hooks';
+import { DEFAULT_DATEPICKER_INPUT_FORMAT } from '../config';
 
 const DisplayReportInterface = ({
     id,
@@ -113,6 +114,7 @@ const DisplayReportInterface = ({
                                 !!!state.displayReport ||
                                 (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
                             }
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
@@ -153,6 +155,7 @@ const DisplayReportInterface = ({
                                 !!!state.displayReport ||
                                 (state.displayReport?.value === 'systemalertlog' && state.systemAlertId !== '')
                             }
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
