@@ -138,7 +138,10 @@ const Today = () => {
                                     label={txt.works.processed}
                                     subtext={
                                         <Typography fontSize={'0.875rem'} variant="span" fontWeight={200}>
-                                            {txt.works.processedSubText}
+                                            {txt.works.processedSubText(
+                                                adminDashboardTodayData.works.iteration.from,
+                                                adminDashboardTodayData.works.iteration.to,
+                                            )}
                                         </Typography>
                                     }
                                     id="processed-works"

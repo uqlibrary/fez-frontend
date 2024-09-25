@@ -5,6 +5,10 @@ import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
 
+import HelpIcon from '@mui/icons-material/Help';
+import Tooltip from '@mui/material/Tooltip';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, getFormattedServerDate } from 'modules/AdminDashboard/config';
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -48,7 +52,18 @@ export default {
                         unprocessed: 'Unprocessed Works',
                         unprocessedSubText: 'view',
                         processed: 'Processed Works',
-                        processedSubText: 'this iteration',
+                        processedSubText: (dateFrom, dateTo) => {
+                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H);
+                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H);
+                            return (
+                                <>
+                                    this iteration{' '}
+                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
+                                        <HelpIcon fontSize="small" />
+                                    </Tooltip>
+                                </>
+                            );
+                        },
                     },
                     openaccess: {
                         researchOutput: {
