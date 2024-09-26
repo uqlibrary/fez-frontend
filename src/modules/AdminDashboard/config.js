@@ -35,7 +35,8 @@ export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, 
 export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
-export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss';
+export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm:ss';
+export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -92,12 +93,8 @@ export const optionDoubleRowRender = (props, option) => {
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || [];
 
-export const getFormattedServerDate = (dateStr, withTime = false) =>
-    (dateStr &&
-        moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(
-            withTime ? DEFAULT_DATE_FORMAT_WITH_TIME : DEFAULT_DATE_FORMAT,
-        )) ||
-    '';
+export const getFormattedServerDate = (dateStr, format = DEFAULT_DATE_FORMAT) =>
+    (dateStr && moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(format)) || '';
 
 export const getSystemAlertColumns = (locale, users) => {
     const alertStatus = locale.alertStatus;
@@ -106,10 +103,10 @@ export const getSystemAlertColumns = (locale, users) => {
         {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
-            width: 150,
+            width: 200,
             type: 'date',
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
-            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME),
         },
         { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
@@ -124,7 +121,7 @@ export const getSystemAlertColumns = (locale, users) => {
                 <Chip
                     data-testid={`alert-status-${params.id}`}
                     label={params.value}
-                    variant="outlined"
+                    variant="filled"
                     size="small"
                     color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
                 />

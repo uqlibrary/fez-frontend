@@ -47,6 +47,10 @@ export const adminDashboardToday = {
     works: {
         processed: 82,
         unprocessed: 15,
+        iteration: {
+            from: '2024-09-23 00:00:00',
+            to: '2024-09-25 23:59:59'
+        },
     },
     oa: {
         current: 256,

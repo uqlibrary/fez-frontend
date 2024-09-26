@@ -191,7 +191,7 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                                 )}
 
                             {!!data && adminDashboardQuickLinksSuccess && (
-                                <Box paddingInlineEnd={2} maxHeight={800} overflow={'auto'}>
+                                <Box paddingInlineEnd={2} maxHeight={500} overflow={'auto'}>
                                     <Stack spacing={2} marginBlockStart={2} role="list">
                                         {data
                                             .sort((a, b) => a.qlk_order - b.qlk_order)
