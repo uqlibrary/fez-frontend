@@ -153,6 +153,7 @@ export default {
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
                 required: false,
+                noRef: true,
             },
         },
         uqData: {

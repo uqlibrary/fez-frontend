@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
-import { useFormContext } from 'react-hook-form';
+import { useFormContext, useWatch } from 'react-hook-form';
 
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
@@ -30,6 +31,7 @@ import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { validate } from 'config/journalAdmin';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,
@@ -51,32 +53,33 @@ export const getQueryStringValue = (location, varName, initialValue) => {
 
 export const navigateToSearchResult = (authorDetails, navigate /* , location*/) => {
     navigate(pathConfig.journals.search);
-    // const navigatedFrom = getQueryStringValue(location, 'navigatedFrom', null);
-    // if (
-    //     authorDetails &&
-    //     (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1) &&
-    //     !!navigatedFrom
-    // ) {
-    //     history.push(decodeURIComponent(navigatedFrom));
-    // } else {
-    //     history.push(pathConfig.journals.search);
-    // }
 };
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
+const useFormValues = () => {
+    const { getValues, setError } = useFormContext();
+    // setError('root', validate(getValues()));
+    return {
+        ...useWatch(), // subscribe to form value updates
+        ...getValues(), // always merge with latest form values
+    };
+};
 
 export const JournalAdminInterface = ({
     authorDetails,
     disableSubmit,
     handleSubmit: onSubmit,
     locked,
-    error,
     tabs,
+    error,
     dirty,
 }) => {
     console.log(dirty);
+
     const methods = useFormContext();
-    const formErrors = methods.formState.errors;
+    const values = useFormValues();
+    const formErrors = methods.formState.errors ?? {};
+    console.log(values, methods.formState.errors);
     const submitting = methods.formState.isSubmitting;
     const submitSucceeded = methods.formState.isSubmitSuccessful;
 

@@ -24,7 +24,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
     };
 
     const Field = fieldConfig.default[field].component;
-
+    const error = methods.getFieldState(componentProps.name).error;
     return (
         <Grid item xs={12} md={12 / group.length}>
             <Controller
@@ -36,6 +36,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
                             {...componentProps}
                             {...(!!componentProps.noRef ? { ref: null } : {})}
                             value={methods.getValues(componentProps.name)}
+                            {...(!!error ? { error: true, errorText: error, helperText: error } : {})}
                         />
                     );
                 }}

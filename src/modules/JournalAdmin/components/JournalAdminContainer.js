@@ -26,9 +26,19 @@ import { ADMIN_JOURNAL } from 'config/general';
 import { useParams } from 'react-router-dom';
 
 import { validate } from 'config/journalAdmin';
-import { useForm, FormProvider } from 'react-hook-form';
+import { useForm, FormProvider, useWatch } from 'react-hook-form';
 import { onSubmit } from '../submitHandler';
 import { useDispatch } from 'react-redux';
+
+const validateResolver = async data => {
+    const errors = validate(data);
+    console.log('validate', data, errors);
+    const hasErrors = Object.keys(errors).length > 0;
+    return {
+        values: hasErrors ? {} : data,
+        errors: hasErrors ? { ...errors } : {},
+    };
+};
 
 export const JournalAdminContainer = ({
     authorDetails,
@@ -61,36 +71,18 @@ export const JournalAdminContainer = ({
         unlockJournal,
         error,
     });
-    const { watch, ...methods } = useForm({
+    const methods = useForm({
         values: { ...initialValues },
         shouldUnregister: false,
-        mode: 'all',
+        mode: 'onChange',
+        resolver: validateResolver,
     });
-    // const listener = watch();
+
     // React.useEffect(() => {
-    //     console.log('watch updated', listener);
-    //     const errors = validate(listener);
-    //     console.log(errors);
-    //     Object.keys(errors).length > 0 && methods.setError('root', errors);
-    // }, [listener, methods]);
-    React.useEffect(() => {
-        const subscription = watch(values => {
-            console.log(values);
-            const errors = validate(values);
-            console.log(errors);
-            Object.keys(errors).length > 0 && methods.setError('root', errors);
-        });
-        return () => {
-            console.log('watch unsubscribe');
-            subscription.unsubscribe();
-        };
-    }, [methods, watch]);
 
     const data = methods.getValues();
-    console.log(data);
     const handleSubmit = async (data, e) => {
         e.preventDefault();
-        console.log('handleSubmit', e, data);
         try {
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
@@ -99,18 +91,16 @@ export const JournalAdminContainer = ({
             methods.setError('root.server', { type: 'custom', message: e.message });
         }
     };
-    console.log(methods.formState);
-    const formErrors = methods.formState.errors;
+    const formErrors = methods.formState.errors ?? {};
     const disableSubmit = !!journalToView && Object.keys(formErrors) > 0;
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(formErrors || {}).reduce(
-        (numberOfErrors, [key, errorObject]) => ({
+    tabErrors.current = Object.entries(formErrors || {}).reduce((numberOfErrors, [key, errorObject]) => {
+        return {
             ...numberOfErrors,
-            [key]: Object.values(errorObject).length,
-        }),
-        {},
-    );
+            ...(!!errorObject ? { [key]: Object.values(errorObject).length } : {}),
+        };
+    }, {});
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
@@ -160,7 +150,7 @@ export const JournalAdminContainer = ({
                                 submitting={methods.formState.isSubmitting}
                                 submitSucceeded={methods.formState.isSubmitSuccessful}
                                 clearJournalToView={clearJournalToView}
-                                dirty={methods.formState.isDirty}
+                                dirty={methods.formState.touchedFields?.length > 0}
                                 disableSubmit={disableSubmit}
                                 formErrors={formErrors}
                                 destroy={destroy}
