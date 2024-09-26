@@ -58,14 +58,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
         onSystemAlertUpdate(SYSTEM_ALERT_ACTION.RESOLVE, row);
     };
 
-    const text = row?.sat_content ?? '';
-    const isHtml = text.includes('</');
-    const content = !isHtml
-        ? text
-        : text
-              .split('<head>')
-              .toSpliced(1, 0, ['<head><base target="_blank">'])
-              .join('');
+    const content = row?.sat_content ?? '';
 
     return (
         !!row && (
@@ -112,26 +105,17 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     </Grid>
                     <StyledDivider />
 
-                    <Box data-testid={`${rootId}-description`} height={!isHtml ? 'auto' : '50vh'}>
-                        {!!row?.sat_content && isHtml ? (
-                            <iframe
-                                srcDoc={content}
-                                width="100%"
-                                height="100%"
-                                data-testid={`${rootId}-iframe-content`}
-                            />
-                        ) : (
-                            <Box
-                                component={'pre'}
-                                sx={{
-                                    whiteSpace: 'pre-wrap',
-                                    wordWrap: 'break-word',
-                                }}
-                                data-testid={`${rootId}-pre-content`}
-                            >
-                                {content}
-                            </Box>
-                        )}
+                    <Box data-testid={`${rootId}-description`}>
+                        <Box
+                            component={'pre'}
+                            sx={{
+                                whiteSpace: 'pre-wrap',
+                                wordWrap: 'break-word',
+                            }}
+                            data-testid={`${rootId}-pre-content`}
+                        >
+                            {content}
+                        </Box>
                     </Box>
                     <StyledDivider />
                     <Box id={`${rootId}-assignee`} data-testid={`${rootId}-assignee`}>
