@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
-import { viewRecordsConfig } from 'config';
-import { isFileValid } from 'config/validation';
 import { ADMIN_JOURNAL, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import JournalAdminContainer from '../components/JournalAdminContainer';
 export const filesParams = record => ({
@@ -26,15 +24,10 @@ const getInitialValues = (journal, tab, tabParams = () => {}) => {
 };
 
 const getInitialFormValues = journalToView => {
-    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(journalToView, 'files', filesParams);
-
-    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
-
     return {
         initialValues: {
             id: journalToView.jnl_jid,
             journal: journalToView,
-            filesSection: { fez_datastream_info: validDataStreams, ...rest },
             adminSection: getInitialValues(journalToView, 'admin'),
             bibliographicSection: getInitialValues(journalToView, 'bibliographic'),
             uqDataSection: getInitialValues(journalToView, 'uqData')?.uqData || {},

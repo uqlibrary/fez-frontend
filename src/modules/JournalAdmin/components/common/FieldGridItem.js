@@ -35,7 +35,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
                             disabled={disabled}
                             {...componentProps}
                             {...(!!componentProps.noRef ? { ref: null } : {})}
-                            value={methods.getValues(componentProps.name)}
+                            value={methods.getValues(componentProps.name) ?? ''}
                             {...(!!error ? { error: true, errorText: error, helperText: error } : {})}
                         />
                     );

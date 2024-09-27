@@ -36,15 +36,6 @@ export default {
             groups: [['indexed']],
         },
     ],
-    files: () => [
-        {
-            groups: [['fez_datastream_info']],
-        },
-        {
-            title: 'Files',
-            groups: [['files']],
-        },
-    ],
 };
 
 export const validateAdminJournal = () => ({});

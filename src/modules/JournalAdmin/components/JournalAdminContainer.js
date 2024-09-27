@@ -17,7 +17,7 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import { JournalContext, TabbedContext } from 'context';
 import { useIsMobileView } from 'hooks';
-import { ADMIN_JOURNAL } from 'config/general';
+import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
 import { validate } from 'config/journalAdmin';
 import { onSubmit } from '../submitHandler';
 
@@ -52,6 +52,7 @@ export const JournalAdminContainer = ({
     unlockJournal,
     error,
 }) => {
+    console.log('HERE 1');
     const dispatch = useDispatch();
     const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(
@@ -87,8 +88,7 @@ export const JournalAdminContainer = ({
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
             console.log(e);
-            // this is being set, but how do we use it?
-            methods.setError('server', { type: 'custom', message: e.message });
+            methods.setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
         }
     };
     const formErrors = methods.formState.errors ?? {};
@@ -112,14 +112,18 @@ export const JournalAdminContainer = ({
     }, [loadJournalToView, clearJournalToView, id]);
 
     const txt = locale.pages.edit;
-
+    console.log('HERE 4');
     if (!!id && journalToViewLoading) {
+        console.log('HERE 4a');
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!!id && (!!!journalToView || journalLoadingError)) {
+        console.log('HERE 4b', journalToViewError);
         return <WorkNotFound loadingError={journalToViewError} />;
-    } else if (!id && !journalToView) {
+    } else if (!!!id || !!!journalToView) {
+        console.log('NO JOURNAL');
         return <div className="empty" />;
     }
+    console.log('HERE 5');
 
     const isActivated = () => {
         // this is here for potential future use
@@ -144,7 +148,6 @@ export const JournalAdminContainer = ({
                     <ThemeProvider theme={adminTheme}>
                         <FormProvider {...methods}>
                             <JournalAdminInterface
-                                journal={journalToView}
                                 authorDetails={authorDetails}
                                 handleSubmit={handleSubmit}
                                 clearJournalToView={clearJournalToView}

@@ -57,8 +57,7 @@ export const navigateToSearchResult = (authorDetails, navigate /* , location*/) 
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
 const useFormValues = () => {
-    const { getValues, setError } = useFormContext();
-    // setError('root', validate(getValues()));
+    const { getValues } = useFormContext();
     return {
         ...useWatch(), // subscribe to form value updates
         ...getValues(), // always merge with latest form values
@@ -72,7 +71,8 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
         handleSubmit,
         formState: { errors, isSubmitting, isSubmitSuccessful, isDirty },
     } = useFormContext();
-    const numErrors = Object.keys(errors).length;
+
+    const numErrors = Object.keys(errors || {}).length;
     const disableSubmit = React.useMemo(() => {
         console.log(numErrors);
         return !!journal && numErrors > 0;
@@ -80,8 +80,6 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     const values = useFormValues();
     const formErrors = errors ?? {};
     console.log(values, errors);
-    const submitting = isSubmitting;
-    const submitSucceeded = isSubmitSuccessful;
 
     // const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -99,12 +97,12 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     const errorMessage = error && typeof error === 'object' ? ' ' : null;
 
     alertProps.current = validation.getErrorAlertProps({
-        submitting,
-        submitSucceeded,
+        isSubmitting,
+        isSubmitSuccessful,
         formErrors: Object.keys(formErrors).length === 0 ? null : formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: translateFormErrorsToText(formErrors) ? null : errorMessage,
+        error: translateFormErrorsToText(formErrors?.server || {}) ? null : errorMessage,
     });
 
     React.useEffect(() => {
@@ -123,10 +121,10 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     // }, [dispatch]);
 
     React.useEffect(() => {
-        if (!submitting && submitSucceeded && successConfirmationRef.current) {
+        if (!isSubmitting && isSubmitSuccessful && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }
-    }, [submitting, submitSucceeded]);
+    }, [isSubmitting, isSubmitSuccessful]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
@@ -182,8 +180,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     };
 
     const renderTabContainer = tab => {
-        const Field = tabs[tab].component;
-        console.log('tab container');
+        const TabComponent = tabs[tab].component;
         return (
             <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
                 <StandardCard
@@ -193,8 +190,8 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
                     squareTop
                     smallTitle
                 >
-                    <Field
-                        disabled={submitting || (locked && journal.jnl_editing_user !== authorDetails.username)}
+                    <TabComponent
+                        disabled={isSubmitting || (locked && journal.jnl_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
                 </StandardCard>
@@ -231,7 +228,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
                     data-testid={`submit-admin${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     disabled={
-                        !!submitting ||
+                        !!isSubmitting ||
                         !!disableSubmit ||
                         (locked && journal.jnl_editing_user !== authorDetails.username)
                     }
@@ -314,7 +311,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
                         )}
                     </Grid>
                 </Grid>
-                <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={submitSucceeded}>
+                <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                     <Grid container spacing={0}>
                         {!tabbed ? activeTabNames.current.map(renderTabContainer) : renderTabContainer(currentTabValue)}
                     </Grid>
@@ -333,18 +330,13 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
 };
 
 JournalAdminInterface.propTypes = {
-    journal: PropTypes.object,
     authorDetails: PropTypes.object,
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isJobCreated: PropTypes.bool,
-    dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
-    formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
     locked: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
     tabs: PropTypes.object,
     error: PropTypes.object,
 };

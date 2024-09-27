@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { adminJournalUpdate } from 'actions';
 import { detailedDiff } from 'deep-object-diff';
+import { SERVER_ERROR_KEY } from 'config/general';
 
 export const onSubmit = (values, dispatch, { initialValues, methods }) => {
     console.log(values, initialValues);
@@ -21,6 +22,6 @@ export const onSubmit = (values, dispatch, { initialValues, methods }) => {
         .then(() => Promise.resolve())
         .catch(error => {
             console.log(error);
-            methods.setError('root.server', { type: 'server', message: error.message });
+            methods.setError(SERVER_ERROR_KEY, { type: 'custom', message: error.message });
         });
 };
