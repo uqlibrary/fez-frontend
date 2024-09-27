@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useForm, FormProvider, useWatch } from 'react-hook-form';
+import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 
 import { ThemeProvider } from '@mui/material/styles';
@@ -16,7 +16,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import { JournalContext, TabbedContext } from 'context';
-import { useIsMobileView } from 'hooks';
+import { useIsMobileView, useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
 import { validate } from 'config/journalAdmin';
 import { onSubmit } from '../submitHandler';
@@ -71,7 +71,7 @@ export const JournalAdminContainer = ({
         unlockJournal,
         error,
     });
-    const methods = useForm({
+    const methods = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
