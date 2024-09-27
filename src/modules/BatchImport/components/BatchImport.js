@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { useForm, useWatch, Controller } from 'react-hook-form';
+import { useWatch } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
 import Grid from '@mui/material/Grid';
@@ -25,6 +25,8 @@ import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 import { useNavigate } from 'react-router-dom';
+import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { useValidatedForm } from '../../../hooks';
 
 const csvIngestDoctypesList = Object.values(publicationTypes(false))
     .filter(item => CSV_INGEST_DOCUMENT_TYPES.includes(item.id))
@@ -46,8 +48,8 @@ export const BatchImport = () => {
         handleSubmit,
         resetField,
         setError,
-        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful, isValid },
-    } = useForm({
+        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
+    } = useValidatedForm({
         mode: 'onChange',
         defaultValues: {
             is_bulk_file_ingest: false,
@@ -67,16 +69,6 @@ export const BatchImport = () => {
             setError('root.remote', { message: error.message });
         }
     };
-
-    // trigger validation on render in order to validation display errors prior to user interaction
-    useLayoutEffect(() => {
-        if (isValid && !hasErrors) {
-            return;
-        }
-
-        (async () => await trigger())();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isValid, hasErrors]);
 
     // display validation error for collection field when changing community
     useLayoutEffect(() => {
@@ -157,11 +149,9 @@ export const BatchImport = () => {
                                                 name="communityID"
                                                 control={control}
                                                 rules={{ validate: validation.required }}
-                                                defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
-                                                render={({ field, fieldState: { error } }) => (
+                                                render={({ field }) => (
                                                     <CommunitySelectField
-                                                        input={{ ...field }}
-                                                        meta={{ error: error?.message }}
+                                                        {...field}
                                                         genericSelectFieldId="community-pid"
                                                         disabled={isSubmitting}
                                                         id="communityPID"
@@ -178,11 +168,9 @@ export const BatchImport = () => {
                                                 name="collection_pid"
                                                 control={control}
                                                 rules={{ validate: validation.required }}
-                                                defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
-                                                render={({ field, fieldState: { error } }) => (
+                                                render={({ field }) => (
                                                     <CollectionSelectField
-                                                        input={{ ...field }}
-                                                        meta={{ error: error?.message }}
+                                                        {...field}
                                                         disabled={isSubmitting}
                                                         id="collectionPID"
                                                         genericSelectFieldId="collection-pid"
@@ -200,12 +188,10 @@ export const BatchImport = () => {
                                                 name="doc_type_id"
                                                 control={control}
                                                 rules={{ validate: validation.required }}
-                                                defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
-                                                render={({ field, fieldState: { error } }) => {
+                                                render={({ field }) => {
                                                     return (
                                                         <DocumentTypeSingleField
-                                                            input={{ ...field }}
-                                                            meta={{ error: error?.message }}
+                                                            {...field}
                                                             disabled={isSubmitting}
                                                             id="doctypeID"
                                                             required
@@ -224,11 +210,9 @@ export const BatchImport = () => {
                                             rules={{
                                                 validate: validation.required,
                                             }}
-                                            defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
-                                            render={({ field, fieldState: { error } }) => (
+                                            render={({ field }) => (
                                                 <DirectorySelectField
-                                                    input={{ ...field }}
-                                                    meta={{ error: error?.message }}
+                                                    {...field}
                                                     genericSelectFieldId="directory"
                                                     disabled={isSubmitting}
                                                     id="directory"
