@@ -4,31 +4,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useForm, FormProvider, useWatch } from 'react-hook-form';
 import locale from 'locale/pages';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import JournalAdminInterface from './JournalAdminInterface';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
+import { JournalContext, TabbedContext } from 'context';
+import { useIsMobileView } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
+import { validate } from 'config/journalAdmin';
+import { onSubmit } from '../submitHandler';
+
+import JournalAdminInterface from './JournalAdminInterface';
 // import FilesSection from './files/FilesSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
-
-import { JournalContext, TabbedContext } from 'context';
-import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
-import { useIsMobileView } from 'hooks';
-import { ADMIN_JOURNAL } from 'config/general';
-import { useParams } from 'react-router-dom';
-
-import { validate } from 'config/journalAdmin';
-import { useForm, FormProvider, useWatch } from 'react-hook-form';
-import { onSubmit } from '../submitHandler';
-import { useDispatch } from 'react-redux';
 
 const validateResolver = async data => {
     const errors = validate(data);
@@ -84,15 +83,15 @@ export const JournalAdminContainer = ({
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
+            console.log(data, { initialValues, methods });
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
             console.log(e);
             // this is being set, but how do we use it?
-            methods.setError('root.server', { type: 'custom', message: e.message });
+            methods.setError('server', { type: 'custom', message: e.message });
         }
     };
     const formErrors = methods.formState.errors ?? {};
-    const disableSubmit = !!journalToView && Object.keys(formErrors) > 0;
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
     tabErrors.current = Object.entries(formErrors || {}).reduce((numberOfErrors, [key, errorObject]) => {
@@ -145,14 +144,10 @@ export const JournalAdminContainer = ({
                     <ThemeProvider theme={adminTheme}>
                         <FormProvider {...methods}>
                             <JournalAdminInterface
+                                journal={journalToView}
                                 authorDetails={authorDetails}
                                 handleSubmit={handleSubmit}
-                                submitting={methods.formState.isSubmitting}
-                                submitSucceeded={methods.formState.isSubmitSuccessful}
                                 clearJournalToView={clearJournalToView}
-                                dirty={methods.formState.touchedFields?.length > 0}
-                                disableSubmit={disableSubmit}
-                                formErrors={formErrors}
                                 destroy={destroy}
                                 locked={locked}
                                 disabled

@@ -65,26 +65,25 @@ const useFormValues = () => {
     };
 };
 
-export const JournalAdminInterface = ({
-    authorDetails,
-    disableSubmit,
-    handleSubmit: onSubmit,
-    locked,
-    tabs,
-    error,
-    dirty,
-}) => {
-    console.log(dirty);
+export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, locked, tabs, error }) => {
+    const { journalDetails: journal } = useJournalContext();
 
-    const methods = useFormContext();
+    const {
+        handleSubmit,
+        formState: { errors, isSubmitting, isSubmitSuccessful, isDirty },
+    } = useFormContext();
+    const numErrors = Object.keys(errors).length;
+    const disableSubmit = React.useMemo(() => {
+        console.log(numErrors);
+        return !!journal && numErrors > 0;
+    }, [journal, numErrors]);
     const values = useFormValues();
-    const formErrors = methods.formState.errors ?? {};
-    console.log(values, methods.formState.errors);
-    const submitting = methods.formState.isSubmitting;
-    const submitSucceeded = methods.formState.isSubmitSuccessful;
+    const formErrors = errors ?? {};
+    console.log(values, errors);
+    const submitting = isSubmitting;
+    const submitSucceeded = isSubmitSuccessful;
 
     // const dispatch = useDispatch();
-    const { journalDetails: journal } = useJournalContext();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -259,7 +258,7 @@ export const JournalAdminInterface = ({
 
     return (
         <StandardPage>
-            <form onSubmit={methods.handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
@@ -315,7 +314,7 @@ export const JournalAdminInterface = ({
                         )}
                     </Grid>
                 </Grid>
-                <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={submitSucceeded}>
                     <Grid container spacing={0}>
                         {!tabbed ? activeTabNames.current.map(renderTabContainer) : renderTabContainer(currentTabValue)}
                     </Grid>
@@ -334,6 +333,7 @@ export const JournalAdminInterface = ({
 };
 
 JournalAdminInterface.propTypes = {
+    journal: PropTypes.object,
     authorDetails: PropTypes.object,
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,

@@ -29,7 +29,7 @@ const getInitialFormValues = journalToView => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(journalToView, 'files', filesParams);
 
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
-    console.log(validDataStreams);
+
     return {
         initialValues: {
             id: journalToView.jnl_jid,
