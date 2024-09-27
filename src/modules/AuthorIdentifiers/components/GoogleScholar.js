@@ -13,7 +13,8 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import locale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAuthor } from 'actions';
-import { useForm, Controller } from 'react-hook-form';
+import { useValidatedForm } from '../../../hooks';
+import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 
 /**
  * Function to redirect user to Dashboard page
@@ -35,12 +36,11 @@ export const GoogleScholarForm = ({ author }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
-        trigger,
         setError,
         control,
         handleSubmit,
         formState: { errors, isSubmitSuccessful, isSubmitting },
-    } = useForm({
+    } = useValidatedForm({
         mode: 'onChange',
         defaultValues: {
             aut_id: author?.aut_id,
@@ -66,12 +66,6 @@ export const GoogleScholarForm = ({ author }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [isSubmitSuccessful],
     );
-
-    // trigger validation on render in order to validation display errors prior to user interaction
-    React.useEffect(() => {
-        (async () => await trigger())();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
 
     const onSubmit = data =>
         dispatch(updateCurrentAuthor(author.aut_id, data)).catch(error => {
@@ -112,17 +106,13 @@ export const GoogleScholarForm = ({ author }) => {
                                             validate: value =>
                                                 validation.required(value) || validation.isValidGoogleScholarId(value),
                                         }}
-                                        defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
                                         render={({ field }) => (
                                             <TextField
                                                 {...field}
-                                                // disabled={submitting}
                                                 textFieldId="aut-google-scholar-id"
                                                 fullWidth
                                                 disabled={isSubmitting}
                                                 {...txt.labels.googleScholarIdField}
-                                                errorText={errors.aut_google_scholar_id?.message}
-                                                error={!!errors.aut_google_scholar_id?.message}
                                             />
                                         )}
                                     />
