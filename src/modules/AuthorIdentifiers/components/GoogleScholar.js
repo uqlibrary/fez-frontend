@@ -76,17 +76,17 @@ export const GoogleScholarForm = ({ author }) => {
     const onSubmit = data =>
         dispatch(updateCurrentAuthor(author.aut_id, data)).catch(error => {
             // set form error in case of exceptions - it will be handled and displayed below
-            setError('serverError', {
+            setError('root.remote', {
                 message: error.message,
             });
         });
 
     const getAlert = () => {
         let alertProps = null;
-        if (!isSubmitting && errors.serverError) {
+        if (!isSubmitting && errors.root?.remote) {
             alertProps = {
                 ...txt.errorAlert,
-                message: errors.serverError?.message,
+                message: errors.root?.remote?.message,
             };
         } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };
@@ -98,7 +98,7 @@ export const GoogleScholarForm = ({ author }) => {
 
     return (
         <StandardPage title={txt.title}>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={cardLocale.title} help={txt.help}>
@@ -130,7 +130,6 @@ export const GoogleScholarForm = ({ author }) => {
                             </Grid>
                         </StandardCard>
                     </Grid>
-
                     {
                         <Grid item xs={12}>
                             {getAlert()}
@@ -153,6 +152,7 @@ export const GoogleScholarForm = ({ author }) => {
                     </Grid>
                     <Grid item xs={12} sm={'auto'}>
                         <Button
+                            type="submit"
                             id="submit-aut-google-scholar-id"
                             data-testid="submit-aut-google-scholar-id"
                             variant={'contained'}
@@ -160,7 +160,6 @@ export const GoogleScholarForm = ({ author }) => {
                             fullWidth
                             disabled={isSubmitting}
                             children={txt.labels.submit}
-                            onClick={handleSubmit(onSubmit)}
                         />
                     </Grid>
                 </Grid>
