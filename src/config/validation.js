@@ -71,6 +71,7 @@ export const maxListEditorTextLength = max => value =>
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
+export const maxListEditorTextLength65k = maxListEditorTextLength(65535);
 
 const doiRegexps = [
     /10\.\d{4,9}\/[-._;()\/:A-Z0-9]+/i,
