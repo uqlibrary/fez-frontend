@@ -13,7 +13,9 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import locale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAuthor } from 'actions';
-import { useForm, Controller } from 'react-hook-form';
+import { useValidatedForm } from '../../../hooks';
+import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { SERVER_ERROR_KEY } from '../../../config/general';
 
 /**
  * Function to redirect user to Dashboard page
@@ -35,12 +37,11 @@ export const GoogleScholarForm = ({ author }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
-        trigger,
         setError,
         control,
         handleSubmit,
         formState: { errors, isSubmitSuccessful, isSubmitting },
-    } = useForm({
+    } = useValidatedForm({
         mode: 'onChange',
         defaultValues: {
             aut_id: author?.aut_id,
@@ -67,26 +68,18 @@ export const GoogleScholarForm = ({ author }) => {
         [isSubmitSuccessful],
     );
 
-    // trigger validation on render in order to validation display errors prior to user interaction
-    React.useEffect(() => {
-        (async () => await trigger())();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     const onSubmit = data =>
-        dispatch(updateCurrentAuthor(author.aut_id, data)).catch(error => {
+        dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => {
             // set form error in case of exceptions - it will be handled and displayed below
-            setError('root.remote', {
-                message: error.message,
-            });
+            setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
         });
 
     const getAlert = () => {
         let alertProps = null;
-        if (!isSubmitting && errors.root?.remote) {
+        if (!isSubmitting && errors[SERVER_ERROR_KEY]) {
             alertProps = {
                 ...txt.errorAlert,
-                message: errors.root?.remote?.message,
+                message: errors[SERVER_ERROR_KEY]?.message,
             };
         } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };
@@ -112,17 +105,13 @@ export const GoogleScholarForm = ({ author }) => {
                                             validate: value =>
                                                 validation.required(value) || validation.isValidGoogleScholarId(value),
                                         }}
-                                        defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
                                         render={({ field }) => (
                                             <TextField
                                                 {...field}
-                                                // disabled={submitting}
                                                 textFieldId="aut-google-scholar-id"
                                                 fullWidth
                                                 disabled={isSubmitting}
                                                 {...txt.labels.googleScholarIdField}
-                                                errorText={errors.aut_google_scholar_id?.message}
-                                                error={!!errors.aut_google_scholar_id?.message}
                                             />
                                         )}
                                     />
