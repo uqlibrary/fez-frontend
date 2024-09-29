@@ -125,7 +125,6 @@ export const BatchImport = () => {
                                         <Controller
                                             name="is_bulk_file_ingest"
                                             control={control}
-                                            defaultValue="" /* required to avoid "A component is changing an uncontrolled input to be controlled" warns */
                                             render={({ field }) => (
                                                 <FormControlLabel
                                                     control={
