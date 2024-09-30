@@ -93,7 +93,7 @@ describe('Search action creators', () => {
             const expectedActions = [
                 actions.VIEW_JOURNAL_LOADING,
                 actions.APP_ALERT_SHOW,
-                actions.VIEW_JOURNAL_LOAD_FAILED
+                actions.VIEW_JOURNAL_LOAD_FAILED,
             ];
 
             await mockActionsStore.dispatch(journalActions.loadJournal(1));

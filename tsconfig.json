@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5", // Transpile to ECMAScript 5 for compatibility with older browsers.
+        "module": "commonjs", // Use the CommonJS module system (Node.js-style `require`/`module.exports`).
+        "jsx": "react", // If you're using React 17+ with the new JSX transform, converts JSX to `React.createElement`.
+        "moduleResolution": "node", // Mimics Node.js module resolution algorithm for locating modules.
+        "esModuleInterop": true, // Allows default imports from CommonJS modules, making imports easier.
+        "skipLibCheck": true, // Skip type checking of declaration files (.d.ts) to speed up compilation.
+        "strict": true, // Enables strict type-checking, including `strictNullChecks` and other flags.
+        "allowJs": true, // Allow compiling JavaScript files in addition to TypeScript files.
+        "resolveJsonModule": true, // Enable importing JSON files as modules.
+        "isolatedModules": true, // Treat each file as a separate module; required when using Babel or Webpack.
+        "noEmit": false, // Emit compiled JavaScript files; set to false to generate output files.
+        "noEmitOnError": true, // Prevent emitting output if there are type errors.
+        "forceConsistentCasingInFileNames": true // Enforce consistent casing in file names in imports across all platforms.
+    },
+    "include": ["src/**/*.tsx", "src/**/*.ts"],
+    "exclude": ["node_modules", "custom_modules", "mocks/", "mock/", "dist"],
+}

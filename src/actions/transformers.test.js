@@ -5502,9 +5502,7 @@ describe('transformers', () => {
             ).toEqual([
                 {
                     rek_pid: 'UQ:11111',
-                    fez_record_search_key_ismemberof: [
-                        { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
-                    ],
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
                 },
             ]);
         });
