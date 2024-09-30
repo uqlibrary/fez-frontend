@@ -30,6 +30,11 @@ const handlers = {
         journalToViewError: action.payload,
     }),
 
+    [actions.ADMIN_UPDATE_JOURNAL_FAILED]: (state, action) => ({
+        ...state,
+        error: action.payload,
+    }),
+
     [actions.ADMIN_JOURNAL_CLEAR]: () => ({
         ...initialState,
         isJournalLocked: false,

@@ -74,12 +74,10 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
 
     const numErrors = Object.keys(errors || {}).length;
     const disableSubmit = React.useMemo(() => {
-        console.log(numErrors);
         return !!journal && numErrors > 0;
     }, [journal, numErrors]);
     const values = useFormValues();
     const formErrors = errors ?? {};
-    console.log(values, errors);
 
     // const dispatch = useDispatch();
     const navigate = useNavigate();

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 
@@ -31,7 +31,6 @@ import IndexedSection from './indexed/IndexedSection';
 
 const validateResolver = async data => {
     const errors = validate(data);
-    console.log('validate', data, errors);
     const hasErrors = Object.keys(errors).length > 0;
     return {
         values: hasErrors ? {} : data,
@@ -50,27 +49,15 @@ export const JournalAdminContainer = ({
     journalToViewError,
     journalLoadingError,
     unlockJournal,
-    error,
 }) => {
-    console.log('HERE 1');
+    const { error } = useSelector(state => state.get('viewJournalReducer'));
+
     const dispatch = useDispatch();
     const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
-    console.log({
-        authorDetails,
-        clearJournalToView,
-        initialValues,
-        journalToViewLoading,
-        loadJournalToView,
-        locked,
-        journalToView,
-        journalToViewError,
-        journalLoadingError,
-        unlockJournal,
-        error,
-    });
+
     const methods = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
@@ -84,7 +71,6 @@ export const JournalAdminContainer = ({
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
-            console.log(data, { initialValues, methods });
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
             console.log(e);
@@ -106,24 +92,18 @@ export const JournalAdminContainer = ({
     React.useEffect(() => {
         !!id && !!loadJournalToView && loadJournalToView(id, true);
         return () => {
-            console.log('unmount');
             clearJournalToView();
         };
     }, [loadJournalToView, clearJournalToView, id]);
 
     const txt = locale.pages.edit;
-    console.log('HERE 4');
     if (!!id && journalToViewLoading) {
-        console.log('HERE 4a');
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!!id && (!!!journalToView || journalLoadingError)) {
-        console.log('HERE 4b', journalToViewError);
         return <WorkNotFound loadingError={journalToViewError} />;
     } else if (!!!id || !!!journalToView) {
-        console.log('NO JOURNAL');
         return <div className="empty" />;
     }
-    console.log('HERE 5');
 
     const isActivated = () => {
         // this is here for potential future use
@@ -210,7 +190,6 @@ JournalAdminContainer.propTypes = {
     locked: PropTypes.bool,
     journalToView: PropTypes.object,
     unlockJournal: PropTypes.func,
-    error: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {

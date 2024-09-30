@@ -6,7 +6,6 @@ import AdminCard from '../AdminCard/components/AdminCard';
 import { FieldGridItem } from './FieldGridItem';
 
 export const GroupsWithoutCard = React.memo(({ groups, disabled }) => {
-    console.log({ groups, disabled });
     return groups.reduce(
         (fields, group) => [
             ...fields,
@@ -22,7 +21,6 @@ GroupsWithoutCard.propTypes = {
 };
 
 export const GroupsWithinCard = React.memo(({ title, groups, disabled }) => {
-    console.log({ title, groups, disabled });
     return (
         <Grid item xs={12} key={title}>
             <AdminCard title={`${title}`} accentHeader>
@@ -41,7 +39,6 @@ GroupsWithinCard.propTypes = {
 };
 
 export const Section = ({ disabled, cards }) => {
-    console.log({ disabled, cards });
     return (
         <Grid container spacing={1}>
             {cards.map((card, index) =>

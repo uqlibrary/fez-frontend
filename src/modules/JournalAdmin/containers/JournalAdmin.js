@@ -46,7 +46,6 @@ const mapStateToProps = state => {
 
     locked = state.get('viewJournalReducer').isJournalLocked;
     initialFormValues = (!!journalToView && journalToView.jnl_jid && getInitialFormValues(journalToView)) || {};
-
     return {
         journalToViewLoading: state.get('viewJournalReducer').loadingJournalToView,
         authorDetails: state.get('accountReducer').authorDetails || null,
@@ -56,7 +55,6 @@ const mapStateToProps = state => {
         journalLoadingError: state.get('viewJournalReducer').journalLoadingError,
         ...initialFormValues,
         locked,
-        error: state.get('journalReducer').error,
     };
 };
 

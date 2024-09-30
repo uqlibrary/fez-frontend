@@ -4,7 +4,6 @@ import { detailedDiff } from 'deep-object-diff';
 import { SERVER_ERROR_KEY } from 'config/general';
 
 export const onSubmit = (values, dispatch, { initialValues, methods }) => {
-    console.log(values, initialValues);
     const data = values || null;
     let jnlValues = {};
 
@@ -25,6 +24,6 @@ export const onSubmit = (values, dispatch, { initialValues, methods }) => {
         .then(() => Promise.resolve())
         .catch(error => {
             console.log(error);
-            methods.setError(SERVER_ERROR_KEY, { type: 'custom', message: error.message });
+            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: error.message });
         });
 };
