@@ -12,6 +12,7 @@ import {
     createMatchMedia,
 } from 'test-utils';
 import ViewJournal, { getAdvisoryStatement } from './ViewJournal';
+import { getAllByTestId } from '@testing-library/react';
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -824,6 +825,25 @@ describe('ViewJournal', () => {
         expect(getByTestId('page-title')).toHaveTextContent('American Journal of Public Health');
 
         expect(getByText('Test advisory statement')).toBeInTheDocument();
+    });
+
+    it('should display read and publish warning banner', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_read_and_publish: {
+                    jnl_read_and_publish_is_capped: 'Approaching',
+                    jnl_read_and_publish_is_discounted: false,
+                },
+            },
+        });
+
+        const { getAllByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        const alerts = getAllByTestId('alert');
+        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
     });
 
     describe('getAdvisoryStatement', () => {

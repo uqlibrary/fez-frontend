@@ -56,13 +56,23 @@ describe('utils', () => {
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open });
 
         // published capped
-        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = true;
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Y';
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.cap });
+
+        // published capped
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Approaching';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.cap });
 
         // published fee
-        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = false;
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'N';
         dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted = true;
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
+
+        // published fee
+        dataItem3.fez_journal_read_and_publish.jnl_read_and_publish_is_capped = 'Exceeded';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem3 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.fee });
 
