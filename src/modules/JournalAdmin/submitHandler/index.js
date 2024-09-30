@@ -17,7 +17,10 @@ export const onSubmit = (values, dispatch, { initialValues, methods }) => {
         ...jnlValues,
         jnl_jid: data.journal.jnl_jid,
     };
-    console.log(requestObject, jnlValues);
+    delete requestObject.doajSection;
+    delete requestObject.indexedSection;
+    delete requestObject.uqDataSection;
+
     return dispatch(adminJournalUpdate({ ...requestObject }))
         .then(() => Promise.resolve())
         .catch(error => {

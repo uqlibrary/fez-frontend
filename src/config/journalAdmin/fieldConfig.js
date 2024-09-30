@@ -158,7 +158,7 @@ export default {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'uqData',
-                name: 'uqdataSection',
+                name: 'uqDataSection',
                 sectionConfig: viewJournalConfig.uqData,
                 wrapped: false,
                 noRef: true,
