@@ -10,7 +10,7 @@ import LegacyReportInterface from './LegacyReportInterface';
 const setup = (props = {}, renderer = render) => {
     const testProps = {
         id: 'testForm',
-        items: adminDashboardConfig.legacy_reports,
+        items: adminDashboardConfig.export_reports,
         ...props,
     };
     return renderer(<LegacyReportInterface {...testProps} />);
