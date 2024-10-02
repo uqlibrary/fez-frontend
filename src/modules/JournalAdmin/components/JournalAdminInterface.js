@@ -178,6 +178,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     };
 
     const renderTabContainer = tab => {
+        console.log(tab);
         const TabComponent = tabs[tab].component;
         return (
             <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>

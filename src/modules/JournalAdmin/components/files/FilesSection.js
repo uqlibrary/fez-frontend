@@ -8,6 +8,7 @@ import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 export const FilesSection = ({ disabled = false }) => {
     const { jnlDisplayType } = useJournalContext();
+    console.log(jnlDisplayType);
     const cards = useRef(
         adminInterfaceConfig[jnlDisplayType]?.files({
             isDataset: jnlDisplayType === PUBLICATION_TYPE_DATA_COLLECTION,

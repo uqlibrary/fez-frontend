@@ -11,6 +11,7 @@ import { useJournalContext } from 'context';
 import { fieldConfig } from 'config/journalAdmin';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
+    console.log(field, group);
     const { jnlDisplayType } = useJournalContext();
     const methods = useFormContext();
 

@@ -62,7 +62,7 @@ export const handleOnChange = (dataStreams, onChange) => {
     onChange(dataStreams);
 };
 
-export const AttachedFilesField = ({ onChange, ...props }) => {
+export const AttachedFilesField = props => {
     const { formValues, onDeleteAttachedFile, onRenameAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(() => {
@@ -81,7 +81,7 @@ export const AttachedFilesField = ({ onChange, ...props }) => {
 
     useEffect(() => {
         // Called when attachment is deleted in the UI
-        return handleOnChange(dataStreams, onChange);
+        return handleOnChange(dataStreams, props?.onChange || props.input?.onChange);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dataStreams]);
 
@@ -102,5 +102,6 @@ export const AttachedFilesField = ({ onChange, ...props }) => {
 
 AttachedFilesField.propTypes = {
     onChange: PropTypes.func,
+    input: PropTypes.object,
     meta: PropTypes.object,
 };

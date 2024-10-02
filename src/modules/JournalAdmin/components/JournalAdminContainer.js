@@ -22,7 +22,7 @@ import { validate } from 'config/journalAdmin';
 import { onSubmit } from '../submitHandler';
 
 import JournalAdminInterface from './JournalAdminInterface';
-// import FilesSection from './files/FilesSectionContainer';
+import FilesSection from './files/FilesSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import UqDataSection from './uqData/UqDataSection';
@@ -163,11 +163,11 @@ export const JournalAdminContainer = ({
                                         numberOfErrors: tabErrors.current.indexedSection || null,
                                         activated: isActivated(),
                                     },
-                                    // files: {
-                                    //     component: FilesSection,
-                                    //     activated: isActivated(),
-                                    //     numberOfErrors: tabErrors.current.filesSection || null,
-                                    // },
+                                    files: {
+                                        component: FilesSection,
+                                        activated: isActivated(),
+                                        numberOfErrors: tabErrors.current.filesSection || null,
+                                    },
                                 }}
                             />
                         </FormProvider>
