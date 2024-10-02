@@ -289,6 +289,18 @@ const JournalFieldsMap = [
                     quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
                 });
             }
+
+            if (data.fez_journal_jcr_esci && data.fez_journal_jcr_esci.fez_journal_jcr_esci_category.length > 0) {
+                data.fez_journal_jcr_esci.fez_journal_jcr_esci_category.map(item => {
+                    quartileList.push(parseInt(item.jnl_jcr_esci_category_quartile.replace('Q', ''), 10));
+                });
+            }
+
+            if (data.fez_journal_jcr_ahci && data.fez_journal_jcr_ahci.fez_journal_jcr_ahci_category.length > 0) {
+                data.fez_journal_jcr_ahci.fez_journal_jcr_ahci_category.map(item => {
+                    quartileList.push(parseInt(item.jnl_jcr_ahci_category_quartile.replace('Q', ''), 10));
+                });
+            }
             return quartileList.length > 0 ? Array.min(quartileList) : null;
         },
     },
