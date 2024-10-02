@@ -8,7 +8,7 @@ export const adminDashboardConfig = {
         {id: 444, name: 'Elizabeth Alvey'},
         {id: 2333, name: 'Lee Sibbald'},
     ],
-    legacy_reports: [
+    export_reports: [
         {
             sel_id: 1,
             sel_title: 'Wok ID dups',
