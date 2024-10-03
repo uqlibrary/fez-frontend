@@ -118,7 +118,7 @@ context('Admin Dashboard - System Alerts tab', () => {
         cy.data('system-alert-detail-options').within(() => {
             cy.get('[role=option]').should('have.length', 5);
             cy.get('[role=option]')
-                .eq(1)
+                .eq(2)
                 .should('have.attr', 'aria-selected', 'true');
         });
 
