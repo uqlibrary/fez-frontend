@@ -33,8 +33,10 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    users.sort((a, b) => a.preferred_name.toUpperCase() > b.preferred_name.toUpperCase());
+
     const adminUsers = React.useMemo(() => [{ id: 0, preferred_name: locale.alertStatus.UNASSIGNED }, ...users], [
+        locale.alertStatus.UNASSIGNED,
         users,
     ]);
 
