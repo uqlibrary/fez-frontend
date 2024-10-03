@@ -115,7 +115,7 @@ export const getSystemAlertColumns = (locale, users) => {
             width: 160,
             valueGetter: (_, row) =>
                 !!row.sat_assigned_to
-                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
+                    ? users.find(user => user.id === row.sat_assigned_to)?.preferred_name ?? alertStatus.UNKNOWN
                     : alertStatus.UNASSIGNED,
             renderCell: params => (
                 <Chip

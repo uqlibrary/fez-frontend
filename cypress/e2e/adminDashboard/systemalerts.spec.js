@@ -59,14 +59,14 @@ context('Admin Dashboard - System Alerts tab', () => {
         getRow(1).within(() => {
             getCell(1).contains('Issues on record - UQ:34555c6');
             getCell(2).within(() => {
-                cy.data('alert-status-12').contains('Michael Feeney');
+                cy.data('alert-status-12').contains('Feeney, Michael');
             });
         });
 
         getRow(3).within(() => {
             getCell(1).contains('My Works - Claimed Work - UQ:1494946 - uqmdeben');
             getCell(2).within(() => {
-                cy.data('alert-status-13').contains('Another Staff');
+                cy.data('alert-status-13').contains('Staff, Another');
             });
         });
 
@@ -82,7 +82,7 @@ context('Admin Dashboard - System Alerts tab', () => {
             createdDate: '4th March 2023 02:45',
             description:
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
-            status: 'Michael Feeney',
+            status: 'Feeney, Michael',
         };
 
         getRow(1).click(); // click first row of results
@@ -108,7 +108,7 @@ context('Admin Dashboard - System Alerts tab', () => {
             createdDate: '4th March 2023 02:45',
             description:
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
-            status: 'Michael Feeney',
+            status: 'Feeney, Michael',
         };
         getRow(1).click(); // click first row of results
 
