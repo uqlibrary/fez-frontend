@@ -41,7 +41,7 @@ export const ControlledVocabularies = lazy(() =>
 );
 
 export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
-export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
+export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/components/DeleteRecord')));
 export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containers/Doi')));
 export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
