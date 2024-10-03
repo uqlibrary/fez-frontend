@@ -23,8 +23,8 @@ const setup = (props = {}, state = {}, renderer = render) => {
                     name: 'Lee Sibbald',
                 },
                 admin_users: [
-                    { id: 13, name: 'Staff' },
-                    { id: 23, name: 'Another Staff' },
+                    { id: 13, preferred_name: 'Staff' },
+                    { id: 23, preferred_name: 'Staff, Another' },
                 ],
             },
         },
@@ -82,7 +82,7 @@ describe('SystemAlerts tab', () => {
 
         expect(getByTestId('alert-status-1')).toHaveTextContent('Unassigned');
         expect(getByTestId('alert-status-12')).toHaveTextContent('Unknown');
-        expect(getByTestId('alert-status-13')).toHaveTextContent('Another Staff');
+        expect(getByTestId('alert-status-13')).toHaveTextContent('Staff, Another');
 
         // pagination buttons
         expect(getByTitle('Go to previous page')).toHaveAttribute('disabled');
