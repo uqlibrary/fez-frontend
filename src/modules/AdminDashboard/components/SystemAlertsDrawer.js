@@ -33,7 +33,20 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
-    users.sort((a, b) => a.preferred_name.toUpperCase() > b.preferred_name.toUpperCase());
+    // Sort user's names alphabetically
+    /* istanbul ignore next */
+    users.sort((a, b) => {
+        const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+
+        return 0;
+    });
 
     const adminUsers = React.useMemo(() => [{ id: 0, preferred_name: locale.alertStatus.UNASSIGNED }, ...users], [
         locale.alertStatus.UNASSIGNED,
