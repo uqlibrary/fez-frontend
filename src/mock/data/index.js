@@ -66,6 +66,7 @@ export {
     recordWithIncorrectAffiliation,
     recordWithOrphanedAffiliation,
     recordThatFailsDeletion,
+    deleteRecord
 } from './records';
 
 export { vocabulariesList } from './vocabularies';

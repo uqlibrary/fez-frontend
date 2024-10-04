@@ -397,6 +397,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(config => {
         return [200, { data: { ...mockData.recordWithRDMMediatedAccess } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: mockData.deleteRecord.rek_pid }).apiUrl)))
+    .reply(config => {
+        return [410, { data: { ...mockData.deleteRecord } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
     .reply(config => {
         return [200, { data: [...mockData.organisationalUnits] }];
