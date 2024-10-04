@@ -47,7 +47,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
         adminDashboardConfigReducer: {
             adminDashboardConfigData: {
-                admin_users: [{ id: 13, name: 'Staff' }],
+                admin_users: [{ id: 13, preferred_name: 'Staff' }],
             },
         },
         ...state,

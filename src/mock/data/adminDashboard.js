@@ -3,10 +3,10 @@ export const adminDashboardConfig = {
         id: 2333, name: 'Lee Sibbald'
     },
     admin_users: [
-        {id: 123, name: 'Michael Feeney'},
-        {id: 23, name: 'Another Staff'},
-        {id: 444, name: 'Elizabeth Alvey'},
-        {id: 2333, name: 'Lee Sibbald'},
+        {id: 123, given_names: "Michael", family_name: "Feeney", name: 'Feeney, Mr Michael'},
+        {id: 23, given_names: "Another", family_name: "Staff", name: 'Staff, Ms Another'},
+        {id: 444, given_names: "Elizabeth", family_name: "Alvey", name: 'Alvey, Mrs Elizabeth'},
+        {id: 2333, given_names: "Lee", family_name: "Sibbald", name: 'Sibbald, Mr Lee'},
     ],
     export_reports: [
         {

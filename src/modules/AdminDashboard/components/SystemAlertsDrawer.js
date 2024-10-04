@@ -33,8 +33,25 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const adminUsers = React.useMemo(() => [{ id: 0, name: locale.alertStatus.UNASSIGNED }, ...users], [users]);
+    // Sort user's names alphabetically
+    /* istanbul ignore next */
+    users.sort((a, b) => {
+        const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+
+        return 0;
+    });
+
+    const adminUsers = React.useMemo(() => [{ id: 0, preferred_name: locale.alertStatus.UNASSIGNED }, ...users], [
+        locale.alertStatus.UNASSIGNED,
+        users,
+    ]);
 
     let buttonLabel;
     if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;
@@ -156,7 +173,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 'data-testid': `${rootId}-options`,
                             }}
                             options={adminUsers}
-                            getOptionLabel={option => option.name}
+                            getOptionLabel={option => option.preferred_name}
                             value={
                                 !!row.sat_assigned_to
                                     ? adminUsers.find(user => user.id === row.sat_assigned_to)
