@@ -9,7 +9,6 @@ import { deleteAttachedFile, renameAttachedFile } from 'actions/records';
 import FilesSection from './FilesSection';
 
 export const FilesSectionContainer = props => {
-    console.log(props);
     const { disabled } = props;
     const dispatch = useDispatch();
     const methods = useFormContext();

@@ -34,12 +34,12 @@ const getInitialFormValues = journalToView => {
         initialValues: {
             id: journalToView.jnl_jid,
             journal: journalToView,
-            filesSection: { fez_datastream_info: validDataStreams, ...rest },
             adminSection: getInitialValues(journalToView, 'admin'),
             bibliographicSection: getInitialValues(journalToView, 'bibliographic'),
             uqDataSection: getInitialValues(journalToView, 'uqData')?.uqData || {},
             doajSection: getInitialValues(journalToView, 'doaj')?.doaj || {},
             indexedSection: getInitialValues(journalToView, 'indexed')?.indexed || {},
+            filesSection: { fez_datastream_info: validDataStreams, ...rest },
         },
     };
 };

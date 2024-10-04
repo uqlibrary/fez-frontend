@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
+import { useFormContext } from 'react-hook-form';
 
 export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
     const callback = key => {
@@ -64,12 +65,21 @@ export const handleOnChange = (dataStreams, onChange) => {
 
 export const AttachedFilesField = props => {
     const { formValues, onDeleteAttachedFile, onRenameAttachedFile } = useFormValuesContext();
+    const { getValues } = useFormContext();
+    const rhfFormValues = (!!getValues && getValues()) ?? undefined;
+    const ds = React.useMemo(
+        () =>
+            !!formValues?.fez_datastream_info || !!rhfFormValues.filesSection?.fez_datastream_info
+                ? formValues?.fez_datastream_info ?? rhfFormValues.filesSection?.fez_datastream_info
+                : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) ?? [],
+        [formValues?.fez_datastream_info, props.meta, rhfFormValues.filesSection?.fez_datastream_info],
+    );
 
-    const [dataStreams, setDataStreams] = useState(() => {
-        return !!formValues?.fez_datastream_info
-            ? formValues?.fez_datastream_info
-            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
-    });
+    const [dataStreams, setDataStreams] = useState(ds);
+
+    React.useEffect(() => {
+        setDataStreams(ds);
+    }, [ds]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(

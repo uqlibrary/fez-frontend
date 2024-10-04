@@ -51,7 +51,6 @@ export const JournalAdminContainer = ({
     unlockJournal,
 }) => {
     const { error } = useSelector(state => state.get('viewJournalReducer'));
-
     const dispatch = useDispatch();
     const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(

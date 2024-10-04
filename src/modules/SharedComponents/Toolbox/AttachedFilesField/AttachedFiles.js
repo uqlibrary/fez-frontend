@@ -239,6 +239,7 @@ export const AttachedFiles = ({
         fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
     },
 }) => {
+    console.log('fds', dataStreams);
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
     const [fileNameErrorMessage, setFileNameErrorMessage] = useState('');
     const [embargoDateErrorMessage, setEmbargoDateErrorMessage] = useState('');

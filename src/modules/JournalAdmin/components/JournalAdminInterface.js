@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
-import { useFormContext, useWatch } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
@@ -31,7 +30,6 @@ import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { validate } from 'config/journalAdmin';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,
@@ -56,13 +54,6 @@ export const navigateToSearchResult = (authorDetails, navigate /* , location*/) 
 };
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
-const useFormValues = () => {
-    const { getValues } = useFormContext();
-    return {
-        ...useWatch(), // subscribe to form value updates
-        ...getValues(), // always merge with latest form values
-    };
-};
 
 export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, locked, tabs, error }) => {
     const { journalDetails: journal } = useJournalContext();
@@ -76,10 +67,9 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     const disableSubmit = React.useMemo(() => {
         return !!journal && numErrors > 0;
     }, [journal, numErrors]);
-    const values = useFormValues();
+
     const formErrors = errors ?? {};
 
-    // const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -178,7 +168,6 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     };
 
     const renderTabContainer = tab => {
-        console.log(tab);
         const TabComponent = tabs[tab].component;
         return (
             <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>

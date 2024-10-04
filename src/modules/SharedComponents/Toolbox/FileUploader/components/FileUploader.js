@@ -77,12 +77,13 @@ export class FileUploader extends PureComponent {
     }
 
     componentDidUpdate() {
-        console.log(this.props);
-        !!this.props.onChange &&
-            this.props.onChange({
-                queue: this.state.filesInQueue,
-                isValid: this.isFileUploadValid(this.state),
-            });
+        console.log(this.props, this.state);
+        // causes endless rerender
+
+        // this.props?.onChange?.({
+        //     queue: this.state.filesInQueue,
+        //     isValid: this.isFileUploadValid(this.state),
+        // });
     }
 
     componentWillUnmount() {
