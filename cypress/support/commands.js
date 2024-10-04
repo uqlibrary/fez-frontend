@@ -151,3 +151,29 @@ Cypress.Commands.add('axeViolationParser', errors => {
         console.log(`${error.impact} : ${error.description}`, elements);
     });
 });
+
+/**
+ * Check if a given element (input) lacks disable attribute
+ */
+Cypress.Commands.add('assertEnabled', selector => cy.get(selector).should('not.be.disabled'));
+
+/**
+ * Check if a given element (input) has disabled attribute
+ */
+Cypress.Commands.add('assertDisabled', selector => cy.get(selector).should('be.disabled'));
+
+/**
+ * Check if a given enabled element (input) is disabled after a given callback is executed
+ */
+Cypress.Commands.add('assertTriggersDisabled', (selector, callback) => {
+    cy.assertEnabled(selector);
+    callback();
+    cy.assertDisabled(selector);
+});
+
+/**
+ * Fill input with given value, n times
+ */
+Cypress.Commands.add('fillInput', (selector, value, times = 1) =>
+    cy.get(selector).type(String(value).repeat(times), { delay: 0 }),
+);

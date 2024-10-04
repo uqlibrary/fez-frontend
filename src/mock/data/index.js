@@ -65,6 +65,7 @@ export {
     UQ339703,
     recordWithIncorrectAffiliation,
     recordWithOrphanedAffiliation,
+    recordThatFailsDeletion,
 } from './records';
 
 export { vocabulariesList } from './vocabularies';

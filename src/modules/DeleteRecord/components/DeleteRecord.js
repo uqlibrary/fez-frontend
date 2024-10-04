@@ -41,7 +41,7 @@ const DeleteRecord = () => {
     // route params
     const { pid } = useParams();
     // app's global state
-    const accountAuthorLoading = useSelector(state => state.get('accountReducer').accountAuthorLoading);
+    const { accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
     const { recordToDelete, loadingRecordToDelete } = useSelector(state => state.get('deleteRecordReducer'));
     // to allow confirmDialogBox control
     const confirmDialogBoxRef = useRef();
@@ -117,7 +117,7 @@ const DeleteRecord = () => {
     };
 
     useEffect(() => {
-        if (actions && !recordToDelete?.pid && pid) {
+        if (actions && pid) {
             dispatch(actions.loadRecordToDelete(pid));
         }
 
@@ -125,7 +125,7 @@ const DeleteRecord = () => {
             // clear previously selected recordToDelete for a delete
             dispatch(actions.clearDeleteRecord());
         };
-    }, [dispatch, recordToDelete?.pid, pid]);
+    }, [dispatch, pid]);
 
     useEffect(() => {
         if (isSubmitSuccessful) {

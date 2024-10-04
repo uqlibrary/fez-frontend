@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
-import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
+import { PUB_LIST_BULK_EXPORT_SIZES, } from 'config/general';
 import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
@@ -455,6 +455,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.unpublishedSearchList.data,
             ...mockData.UQ353708.data,
             ...mockData.UQ339703,
+            ...mockData.recordThatFailsDeletion,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
@@ -663,16 +664,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(() => {
-        // if (uploadTryCount < 3) {
-        //     console.log(`Failing try ${uploadTryCount}`);
-        //     uploadTryCount++;
-        //     return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
-        // }
-        // console.log('Successful upload');
-        return [200, { data: {} }];
-        // return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
-    })
+    .reply(() => [200, { data: {} }])
     .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.favouriteSearchItem } }];
@@ -692,14 +684,6 @@ mock.onDelete(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiU
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
-    // .reply(() => {
-    //     if (retried) {
-    //         return [200, ['s3-ap-southeast-2.amazonaws.com']];
-    //     } else {
-    //         retried = true;
-    //         return [500, { message: ['error - failed FILE_UPLOAD_API'] }];
-    //     }
-    // })
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
@@ -806,12 +790,20 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
             aut_display_name: 'Mock Test',
         },
     });
-// .networkErrorOnce();
-// .reply(409, { data: 'Server error' });
 
-mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
-    data: 'Record deleted',
-});
+mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+    .reply((request) => {
+        if (request?.url.match(new RegExp(mockData.collectionRecord.rek_pid))) {
+            return [409, {"data":"Can't delete a record that has child records"}];
+        }
+        if (request?.url.match(new RegExp(mockData.recordThatFailsDeletion.rek_pid))) {
+            return [500, {}];
+        }
+
+        return [200, {
+            data: 'Record deleted',
+        }];
+    });
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,
