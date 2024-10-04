@@ -5,10 +5,13 @@ import {
     recordWithRDM,
     collectionRecord,
     recordThatFailsDeletion,
+    deleteRecord,
 } from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
 const recordWithDataCiteDoi = recordWithRDM;
+
+const baseUrl = Cypress.config('baseUrl');
 
 const selectors = {
     reasonInput: '[data-testid=reason-input]',
@@ -33,8 +36,7 @@ const submit = () => {
     cy.contains('button', deleteFormLocale.successWorkflowConfirmation.confirmButtonLabel).click();
 };
 
-const assertPageChangeOnSuccessfulFormSubmission = record => {
-    const baseUrl = Cypress.config('baseUrl');
+const assertNavigatedToViewPage = record => {
     cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
 };
 
@@ -61,34 +63,40 @@ context('Delete work form', () => {
     });
 
     context('form submission', () => {
-        it('can submit the form for a record without DOI', () => {
+        it('should submit the form for a record without DOI', () => {
             loadPage(record);
             submit();
-            assertPageChangeOnSuccessfulFormSubmission(record);
+            assertNavigatedToViewPage(record);
         });
-        assertPageChangeOnSuccessfulFormSubmission;
-        it('can enter reason and submit the form for a record without DOI', () => {
+
+        it('should submit form for a deleted record without DOI', () => {
+            loadPage(deleteRecord);
+            submit();
+            assertNavigatedToViewPage(deleteRecord);
+        });
+
+        it('should allow enter reason and submit the form for a record without DOI', () => {
             loadPage(record);
             cy.get(selectors.reasonInput).type('reason');
             submit();
-            assertPageChangeOnSuccessfulFormSubmission(record);
+            assertNavigatedToViewPage(record);
         });
 
-        it('can enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
+        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
             loadPage(recordWithCrossrefDoi);
             cy.get(selectors.reasonInput).type('reason');
             cy.get('[data-testid=rek-doi-resolution-url-input]').type('https://web.library.uq.edu.au/test');
             submit();
-            assertPageChangeOnSuccessfulFormSubmission(recordWithCrossrefDoi);
+            assertNavigatedToViewPage(recordWithCrossrefDoi);
         });
 
-        it('can enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
+        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
             loadPage(recordWithDataCiteDoi);
             cy.get(selectors.reasonInput).type('reason');
             cy.get('[data-testid=rek-new-doi-input]').type('10.1234/uql5678');
             cy.typeCKEditor('rek-deletion-notes', 'deletion notes');
             submit();
-            assertPageChangeOnSuccessfulFormSubmission(recordWithDataCiteDoi);
+            assertNavigatedToViewPage(recordWithDataCiteDoi);
         });
     });
 
@@ -110,7 +118,7 @@ context('Delete work form', () => {
                 });
             });
 
-            it('can enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
+            it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
                 loadPage(recordWithDataCiteDoi);
                 cy.assertTriggersDisabled(selectors.submitButton, () => {
                     triggerReasonFieldValidationError();
@@ -150,7 +158,14 @@ context('Delete work form', () => {
         it('should navigate to view record on cancel', () => {
             loadPage(record);
             cy.assertEnabled(selectors.cancelButton).click();
-            assertPageChangeOnSuccessfulFormSubmission(record);
+            assertNavigatedToViewPage(record);
+        });
+
+        it('should allow navigating to search records after form submission', () => {
+            loadPage(record);
+            cy.assertEnabled(selectors.submitButton).click();
+            cy.contains('button', deleteFormLocale.successWorkflowConfirmation.cancelButtonLabel).click();
+            cy.url().should('equal', `${baseUrl}/records/search`);
         });
 
         it('should show nav dialog when exit the form with reason entered', () => {
@@ -160,4 +175,3 @@ context('Delete work form', () => {
         });
     });
 });
-assertPageChangeOnSuccessfulFormSubmission;
