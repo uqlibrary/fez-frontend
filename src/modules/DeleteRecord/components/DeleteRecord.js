@@ -11,7 +11,6 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
-import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { pathConfig, validation } from 'config';
@@ -171,10 +170,6 @@ const DeleteRecord = () => {
                                 />
                             </StandardCard>
                         </Grid>
-                        <NavigationDialogBox
-                            when={!!isDirt && !isSubmitSuccessful}
-                            txt={formTxt.cancelWorkflowConfirmation}
-                        />
                         <ConfirmDialogBox
                             onRef={setConfirmDialogBoxRef}
                             onAction={navigateToViewPage}
