@@ -1,8 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
+
+import HelpIcon from '@mui/icons-material/Help';
+import Tooltip from '@mui/material/Tooltip';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,6 +26,207 @@ export const loremIpsum =
 
 export default {
     components: {
+        adminDashboard: {
+            title: 'Admin dashboard',
+            tabs: {
+                today: {
+                    tabLabel: 'TODAY',
+                    systemalerts: {
+                        title: 'System Alerts',
+                        total: { label: 'Total' },
+                        today: {
+                            label: 'New today',
+                        },
+                        assigned: {
+                            label: 'Assigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                        unassigned: {
+                            label: 'Unassigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                    },
+                    works: {
+                        unprocessed: 'Unprocessed Works',
+                        unprocessedSubText: 'view',
+                        processed: 'Processed Works',
+                        processedSubText: (dateFrom, dateTo) => {
+                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H);
+                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H);
+                            return (
+                                <>
+                                    this iteration{' '}
+                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
+                                        <HelpIcon fontSize="small" />
+                                    </Tooltip>
+                                </>
+                            );
+                        },
+                    },
+                    openaccess: {
+                        researchOutput: {
+                            title: 'OA Status',
+                            subText: 'of research output',
+                            chart: {
+                                text: (current, total) =>
+                                    `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
+                                subtext: total => `of ${total} records`,
+                            },
+                        },
+                    },
+                    quicklinks: {
+                        title: 'Quick Links ',
+                        addLinkText: '+ add',
+                        loading: {
+                            message: 'Loading quick links...',
+                            nodata: 'Add your first quick link using the "add" button',
+                        },
+                        link: {
+                            menu: {
+                                editLabel: 'Edit',
+                                deleteLabel: 'Delete',
+                                moveUpLabel: 'Move up',
+                                moveTopLabel: 'Move to top',
+                                moveDownLabel: 'Move down',
+                                moveBottomLabel: 'Move to bottom',
+                            },
+                        },
+                        admin: {
+                            add: {
+                                title: 'Add new quick link',
+                            },
+                            edit: {
+                                title: 'Edit ',
+                            },
+                            delete: {
+                                title: 'DELETE ',
+                            },
+                            button: {
+                                delete: 'Delete',
+                                save: 'Save',
+                                deleteBusy: 'Deleting...',
+                                saveBusy: 'Saving...',
+                                cancel: 'Cancel',
+                            },
+                            fields: {
+                                title: 'Title',
+                                link: 'Link',
+                            },
+                        },
+                        error: {
+                            title: 'Error',
+                            updating: 'An error occurred updating the quick link data.',
+                        },
+                    },
+                    loading: {
+                        message: 'Loading dashboard...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                },
+                systemalerts: {
+                    tabLabel: 'SYSTEM ALERTS',
+                    title: count => `${count} system alerts`,
+                    loading: {
+                        message: 'Loading system alerts...',
+                        nodata: 'No alerts available',
+                        noconfig: 'No config available',
+                    },
+                    updating: 'Updating...',
+                    columns: {
+                        createdDate: 'Created',
+                        topic: 'Topic',
+                        status: 'Status',
+                    },
+                    drawer: {
+                        markResolved: 'Mark as resolved',
+                        updating: 'Updating...',
+                        alertId: 'Alert ID',
+                        received: 'Received',
+                        status: 'Status',
+                        statusHelpText: 'Assign a staff member to this issue',
+                    },
+                    alertStatus: {
+                        UNASSIGNED: 'Unassigned',
+                        UNKNOWN: 'Unknown',
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving system alert data.',
+                        updateFailed: 'An error occurred updating the system alert data.',
+                    },
+                },
+                reports: {
+                    tabLabel: 'REPORTS',
+                    exportTitle: 'Export-only reports',
+                    displayTitle: 'Display reports',
+                    loading: {
+                        config: 'Loading config data...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                    label: {
+                        report: 'Report',
+                        systemId: 'System alert ID',
+                        dateFrom: 'From',
+                        dateTo: 'To',
+                        runReport: 'Run report',
+                        export: 'Export',
+                        exportReport: 'Export report',
+                        helperText: 'Report will download direct to your device',
+                    },
+                    columns: {
+                        workshistory: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            pubDate: 'Date published',
+                            pid: 'PID',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
+                            action: 'Action',
+                        },
+                        systemalertlog: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            title: 'Title',
+                            assignedTo: 'Assigned to',
+                            assignedDate: 'Date assigned',
+                            resolvedBy: 'Resolved by',
+                            resolvedDate: 'Date resolved',
+                            content: 'Description',
+                            link: 'Link',
+                        },
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving the report.',
+                        required: 'Required',
+                        dateNotAfter: 'Must not be after "to" date',
+                        systemAlertId: 'Must be a positive whole number',
+                    },
+                    options: {
+                        display: [
+                            {
+                                value: 'workshistory',
+                                label: 'Works history',
+                            },
+                            {
+                                value: 'systemalertlog',
+                                label: 'System alert log',
+                            },
+                        ],
+                    },
+                },
+            },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
+            },
+        },
         publicationsList: {
             selectAllText: 'Select all',
         },
