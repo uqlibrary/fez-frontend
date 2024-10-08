@@ -34,7 +34,7 @@ function setup(props = {}, renderMethod = render) {
     );
 }
 
-// node: most of the testing has been done in deleteRecord.spec.js
+// note: most of the testing has been done in deleteRecord.spec.js, as Cypress tests
 describe('Component DeleteRecord', () => {
     afterEach(() => {
         mockUseNavigate.mockClear();
