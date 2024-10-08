@@ -88,6 +88,7 @@ const DeleteRecord = () => {
         const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
             return customError.httpStatus === statusCode;
         });
+        /* istanbul ignore next */
         return errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
     };
 

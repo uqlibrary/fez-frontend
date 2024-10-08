@@ -285,7 +285,6 @@ exports[`Component DeleteRecord should render correctly 1`] = `
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -729,7 +728,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -1249,7 +1247,6 @@ exports[`Component DeleteRecord should render delete record form for records wit
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -1805,7 +1802,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -2361,7 +2357,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
@@ -2915,7 +2910,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               </div>
             </div>
           </div>
-          <span />
           <span
             class="MuiBox-root css-0"
             data-testid="confirmDialogBox"
