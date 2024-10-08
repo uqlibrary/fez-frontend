@@ -1,9 +1,9 @@
 import HTMLReactParser from 'html-react-parser';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
-global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
-global.dc = (...args) => args.forEach(arg => console.log(arg));
-global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
+global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
+global.dc = (...args) => args.forEach(arg => console.log.bind(console)(arg));
+global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
 /* istanbul ignore next */
 const tryCatch = (callback, _default = undefined) => {

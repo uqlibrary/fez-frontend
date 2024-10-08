@@ -38,3 +38,7 @@ export const A11YOptions = {
 Cypress.on('uncaught:exception', () => {
     return false;
 });
+
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 0,
+});

@@ -1,1 +1,1 @@
-export { default as DeleteRecord } from './containers/DeleteRecord';
+export { default as DeleteRecord } from './components/DeleteRecord';
