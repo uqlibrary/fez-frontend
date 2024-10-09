@@ -35,7 +35,8 @@ export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, 
 export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
-export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm:ss';
+export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm';
+export const DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS = 'Do MMMM YYYY HH:mm:ss';
 export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
@@ -106,7 +107,7 @@ export const getSystemAlertColumns = (locale, users) => {
             width: 200,
             type: 'date',
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
-            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME),
+            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         },
         { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
