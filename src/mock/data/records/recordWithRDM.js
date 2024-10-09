@@ -166,7 +166,7 @@ export default {
         "rek_doi_id": 1885929,
         "rek_doi_pid": "UQ:0ff5a8a",
         "rek_doi_xsdmf_id": null,
-        "rek_doi": "10.48610/0ff5a8a",
+        "rek_doi": "10.23643/0ff5a8a",
         "fez_altmetric": null
     },
     "fez_record_search_key_embargo_to": null,
