@@ -40,6 +40,11 @@ const validateResolver = async data => {
 };
 
 const useWatcher = methods => {
+    // Consider if this should go lower level, in to AttachFilesField and the onRenameAttachedFile function,
+    // (and same for delete and change)
+    // or should this all go in to the submit handler instead if possible?
+    // Note I did not attempt to handle the ADMIN_DELETE_ATTACHED_FILE or CHANGE actions inside
+    // src/reducers/formReducerPlugins.js, or the resetValue() method in the same file.
     const files = useWatch({ control: methods.control, name: 'filesSection.fez_datastream_info' });
     if (!!files) {
         const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
@@ -62,7 +67,7 @@ const useWatcher = methods => {
         });
         if (updated) {
             methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments, {
-                shouldValidate: false,
+                shouldValidate: false, // should this be true? does it matter?
                 shouldDirty: true,
             });
         }
