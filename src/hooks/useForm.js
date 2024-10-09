@@ -15,7 +15,7 @@ export const getServerError = errors => errors[SERVER_ERROR_KEY];
  * @return {function(*): function(*): void}
  */
 export const clearServerErrorAndHandleSubmit = attributes => handler => e => {
-    // this is to prevent this method of being triggered twice when triggered by the form onSubmit handler
+    // this is to prevent this method of being triggered twice when triggered by the form onSubmit event hook
     e.preventDefault();
     if (attributes.formState?.server?.error?.has) {
         attributes.formState?.server?.clear();
