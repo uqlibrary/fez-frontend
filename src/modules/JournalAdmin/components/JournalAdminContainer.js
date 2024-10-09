@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { FormProvider } from 'react-hook-form';
+import { FormProvider, useWatch } from 'react-hook-form';
 import locale from 'locale/pages';
 
 import { ThemeProvider } from '@mui/material/styles';
@@ -30,12 +30,43 @@ import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
 
 const validateResolver = async data => {
+    console.log(data);
     const errors = validate(data);
     const hasErrors = Object.keys(errors).length > 0;
     return {
         values: hasErrors ? {} : data,
         errors: hasErrors ? { ...errors } : {},
     };
+};
+
+const useWatcher = methods => {
+    const files = useWatch({ control: methods.control, name: 'filesSection.fez_datastream_info' });
+    if (!!files) {
+        const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
+        let updated = false;
+        files.forEach(file => {
+            if (!!file.dsi_dsid_new) {
+                const oldFileName = file.dsi_dsid_new;
+                const newFileName = file.dsi_dsid;
+
+                const originalFileAttachmentIndex = attachments.findIndex(file => {
+                    return file.rek_file_attachment_name === oldFileName;
+                });
+
+                if (originalFileAttachmentIndex > -1) {
+                    updated = true;
+                    // will be -1 if we've already done this operation before
+                    attachments[originalFileAttachmentIndex].rek_file_attachment_name = newFileName;
+                }
+            }
+        });
+        if (updated) {
+            methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments, {
+                shouldValidate: false,
+                shouldDirty: true,
+            });
+        }
+    }
 };
 
 export const JournalAdminContainer = ({
@@ -64,7 +95,7 @@ export const JournalAdminContainer = ({
         resolver: validateResolver,
     });
 
-    // React.useEffect(() => {
+    useWatcher(methods);
 
     const data = methods.getValues();
     const handleSubmit = async (data, e) => {
