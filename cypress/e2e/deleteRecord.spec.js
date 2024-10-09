@@ -90,7 +90,7 @@ context('Delete work form', () => {
             assertNavigatedToViewPage(recordWithCrossrefDoi);
         });
 
-        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
+        it('should allow enter reason, new doi resolution URL and submit form for a record with DataCite DOI', () => {
             loadPage(recordWithDataCiteDoi);
             cy.get(selectors.reasonInput).type('reason');
             cy.get('[data-testid=rek-new-doi-input]').type('10.1234/uql5678');
@@ -118,7 +118,7 @@ context('Delete work form', () => {
                 });
             });
 
-            it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
+            it('should validate fields for a record with DataCite DOI', () => {
                 loadPage(recordWithDataCiteDoi);
                 cy.assertTriggersDisabled(selectors.submitButton, () => {
                     triggerReasonFieldValidationError();
