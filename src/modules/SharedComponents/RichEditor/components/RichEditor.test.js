@@ -124,4 +124,9 @@ describe('RichEditor', () => {
         const { container } = setup({ value: 'test' });
         expect(container).toMatchSnapshot();
     });
+
+    it('should handle null value', () => {
+        const { container } = setup({ value: null });
+        expect(container).toMatchSnapshot();
+    });
 });
