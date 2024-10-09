@@ -104,3 +104,6 @@ export { default as myEditorialAppointmentItem } from './myEditorialAppointments
 export { userList } from './testing/usersList';
 export { organisationalUnits } from './organisationalUnits';
 export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';
+
+
+export { adminDashboardConfig, adminDashboardToday, adminDashboardQuickLinks, adminDashboardSystemAlerts, adminDashboardReportWorksData, adminDashboardReportSystemAlertsData } from './adminDashboard';
