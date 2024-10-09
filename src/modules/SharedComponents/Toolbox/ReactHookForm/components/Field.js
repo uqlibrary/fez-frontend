@@ -10,19 +10,19 @@ import Controller from './Controller';
  * @param validate
  * @return {string|null}
  */
-const validateHandler = (value, validators) => {
-    if (!validators instanceof Array) {
+export const validateHandler = (value, validators) => {
+    if (!(validators instanceof Array)) {
         return null;
     }
 
     for (let i = 0; i < validators.length; i++) {
-        if (!validators instanceof Function) {
+        if (!(validators[i] instanceof Function)) {
             continue;
         }
 
         let result = validators[i](value);
         if (!result?.trim) {
-            return null;
+            continue;
         }
 
         result = result.trim();
@@ -54,7 +54,9 @@ const Field = ({ name, control, validate, component: Component, ...childProps })
         <Controller
             name={name}
             control={control}
-            rules={{ validate: value => validateHandler(value, validate) }}
+            rules={{
+                validate: /* istanbul ignore next */ value => validateHandler(value, validate),
+            }}
             render={({ field }) => <Component {...field} {...childProps} />}
         />
     );
