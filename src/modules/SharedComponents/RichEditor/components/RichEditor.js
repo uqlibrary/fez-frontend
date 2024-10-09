@@ -74,7 +74,7 @@ const RichEditor = ({
 
     let error = null;
     // default rich editor has "<p></p>"
-    const inputLength = (value && value.plainText && value.plainText.length) || value.length - 7;
+    const inputLength = value?.plainText?.length || value?.length - 7;
     if (meta && meta.error) {
         error =
             !!meta.error.props &&
