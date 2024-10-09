@@ -179,7 +179,7 @@ Cypress.Commands.add('assertEnabled', selector => cy.get(selector).should('not.b
 Cypress.Commands.add('assertDisabled', selector => cy.get(selector).should('be.disabled'));
 
 /**
- * Check if a given enabled element (input) is disabled after a given callback is executed
+ * Check if a given enabled element (input) is enabled before and disabled after a given callback is executed
  */
 Cypress.Commands.add('assertTriggersDisabled', (selector, callback) => {
     cy.assertEnabled(selector);
