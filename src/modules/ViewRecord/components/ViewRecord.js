@@ -14,7 +14,7 @@ import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import Button from '@mui/material/Button';
 
 import { belongsToAuthor, userIsAdmin } from 'hooks';
-import { AUTH_URL_LOGIN, general } from 'config';
+import { general } from 'config';
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from 'config/general';
 import { notFound, pidRegExp } from 'config/routes';
 import locale from 'locale/pages';
@@ -41,10 +41,7 @@ import NtroDetails from './NtroDetails';
 import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
-
-export function redirectUserToLogin() {
-    window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
-}
+import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
 const contentStyles = theme => ({
     transition: theme.transitions.create('margin', {
@@ -204,7 +201,7 @@ export const ViewRecord = () => {
     } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
-                <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
+                <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin()} />
             </StandardPage>
         );
     } else if (!isNotFoundRoute && !loadingRecordToView && (!recordToView || !recordToView.rek_pid)) {

@@ -159,6 +159,7 @@ export const pathConfig = {
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
+        dashboard: '/admin/dashboard',
         add: '/admin/add',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',

@@ -3,6 +3,9 @@ export default {
         index: {
             primaryText: 'Home',
         },
+        adminDashboard: {
+            primaryText: 'Admin dashboard',
+        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email

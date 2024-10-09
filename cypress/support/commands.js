@@ -26,6 +26,22 @@
 
 import moment from 'moment';
 
+import { DATA_ATTRIBUTE, CSS_SELECTOR_STARTSWITH } from './constants';
+
+Cypress.Commands.add('data', id => {
+    return cy.get(`[${DATA_ATTRIBUTE}\=${id}]`);
+});
+
+/* Convenience command for selectors starting with a string (^=) */
+Cypress.Commands.add('dataStartsWith', (id, ...args) => {
+    return cy.get(`[${DATA_ATTRIBUTE}${CSS_SELECTOR_STARTSWITH}${id}]${args}`);
+});
+
+/* Convenience command for specific elements with selectors starting with a string (^=) */
+Cypress.Commands.add('dataByElementStartsWith', (el, id, ...args) => {
+    return cy.get(`${el}[${DATA_ATTRIBUTE}${CSS_SELECTOR_STARTSWITH}${id}]${args}`);
+});
+
 /**
  * Simulates a paste event.
  * Modified from https://gist.github.com/nickytonline/bcdef8ef00211b0faf7c7c0e7777aaf6

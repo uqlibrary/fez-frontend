@@ -21,6 +21,7 @@ import 'cypress-wait-until';
 import 'cypress-axe';
 
 // Custom
+import './adminDashboard';
 import './adminEdit';
 import './ckeditor';
 import './commands';

@@ -1,7 +1,7 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
-import { render, WithReduxStore, WithRouter, waitFor, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, userEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
 const mockUseNavigate = jest.fn();
@@ -14,6 +14,7 @@ jest.mock('react-router-dom', () => ({
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         account: accounts.uqresearcher || testProps.account || {},
+        actions: {},
         ...testProps,
     };
     return renderMethod(
@@ -40,27 +41,27 @@ describe('Search record results', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render spinner', async () => {
+    it('should render spinner', () => {
         const { container } = setup({ searchLoading: true });
         expect(container).toMatchSnapshot();
     });
 
-    it('should call useffect method and focus on ' + 'create new record button if no publications found', () => {
+    it('should call useffect method and focus on ' + 'create new record button if no publications found', async () => {
         const { getByRole, rerender } = setup({
             publicationList: [],
         });
         setup({ publicationList: [] }, rerender);
 
         expect(getByRole('button', { name: 'Create a new eSpace work' })).toHaveFocus();
-        fireEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
+        await userEvent.click(getByRole('button', { name: 'Create a new eSpace work' }));
 
         expect(mockUseNavigate).toHaveBeenCalled();
     });
 
-    it('should navigate to find on cancel workflow', () => {
+    it('should navigate to find on cancel workflow', async () => {
         const { getByRole } = setup();
 
-        fireEvent.click(getByRole('button', { name: 'Abandon and search again' }));
+        await userEvent.click(getByRole('button', { name: 'Abandon and search again' }));
         expect(mockUseNavigate).toHaveBeenCalled();
     });
 
@@ -171,7 +172,7 @@ describe('Search record results', () => {
 
             await waitFor(() => getByTestId('publication-citation-parent-UQ:795469'), { timeout: 2000, delay: 1000 });
 
-            fireEvent.click(getByRole('button', { name: 'Claim this work' }));
+            await userEvent.click(getByRole('button', { name: 'Claim this work' }));
 
             expect(setClaimPublication).toHaveBeenCalledWith(publicationsList[0]);
 

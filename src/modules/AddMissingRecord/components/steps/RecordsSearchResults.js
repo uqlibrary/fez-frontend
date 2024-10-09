@@ -186,7 +186,7 @@ RecordsSearchResults.propTypes = {
     publicationsList: PropTypes.array,
     searchLoading: PropTypes.bool,
     loadingPublicationSources: PropTypes.object,
-    actions: PropTypes.object.required,
+    actions: PropTypes.object.isRequired,
     rawSearchQuery: PropTypes.string,
 };
 
