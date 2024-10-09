@@ -8,7 +8,7 @@ import {
     getReportTypeFromValue,
     getDefaultSorting,
     getFormattedServerDate,
-    DEFAULT_DATE_FORMAT_WITH_TIME_24H,
+    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
 } from './config';
 
 describe('config', () => {
@@ -50,7 +50,7 @@ describe('config', () => {
 
     it('getFormattedServerDate', () => {
         expect(getFormattedServerDate('2023-03-04 12:00:00')).toEqual('4th March 2023');
-        expect(getFormattedServerDate('2023-03-04 12:00:00', DEFAULT_DATE_FORMAT_WITH_TIME_24H)).toEqual(
+        expect(getFormattedServerDate('2023-03-04 12:00:00', DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS)).toEqual(
             '4th March 2023 12:00:00',
         );
         expect(getFormattedServerDate()).toEqual('');

@@ -79,7 +79,7 @@ context('Admin Dashboard - System Alerts tab', () => {
             title: 'Issues on record - UQ:34555c6',
             link: 'https://espace.library.uq.edu.au/view/UQ:34555c6',
             alertId: '12',
-            createdDate: '4th March 2023 02:45',
+            createdDate: '4th March 2023 14:45',
             description:
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
             status: 'Feeney, Michael',
@@ -105,7 +105,7 @@ context('Admin Dashboard - System Alerts tab', () => {
             title: 'Issues on record - UQ:34555c6',
             link: 'https://espace.library.uq.edu.au/view/UQ:34555c6',
             alertId: '12',
-            createdDate: '4th March 2023 02:45',
+            createdDate: '4th March 2023 14:45',
             description:
                 'User “Tomaszewski, Wojciech (Wojtek) (uqwtomas)” has indicated that there are issues on record - UQ:34555c6.',
             status: 'Feeney, Michael',
