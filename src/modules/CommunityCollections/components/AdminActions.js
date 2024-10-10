@@ -30,14 +30,6 @@ export const AdminActions = ({
             options: null,
             isRecordEdit: true,
         },
-        {
-            label: 'More options',
-            url: pid => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}&href=%2Fbrowse`,
-            inApp: false,
-            showInDeleted: true,
-            options: null,
-            isRecordEdit: false,
-        },
     ],
     record,
 }) => {
