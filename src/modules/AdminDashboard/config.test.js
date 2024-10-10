@@ -35,10 +35,7 @@ describe('config', () => {
     it('getReportTypeFromValue', () => {
         expect(getReportTypeFromValue(1)).toEqual('systemalertlog');
         expect(getReportTypeFromValue(2)).toEqual('workshistory');
-        expect(getReportTypeFromValue(3)).toEqual('workiddupe');
-        expect(getReportTypeFromValue(4)).toEqual('scopusiddupe');
-        expect(getReportTypeFromValue(5)).toEqual('doidupe');
-        expect(getReportTypeFromValue(6)).toBeUndefined();
+        expect(getReportTypeFromValue(3)).toBeUndefined();
     });
 
     it('getDefaultSorting', () => {
