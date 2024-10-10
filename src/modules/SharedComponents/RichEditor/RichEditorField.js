@@ -1,13 +1,13 @@
 import React from 'react';
 import RichEditor from './components/RichEditor';
 
-export default function RichEditorField(fieldProps) {
+export default React.forwardRef((fieldProps, ref) => {
     return (
         <RichEditor
-            onChange={fieldProps.input.onChange}
-            value={fieldProps.input.value}
+            onChange={fieldProps?.input?.onChange ?? fieldProps?.onChange}
+            value={fieldProps.value}
             {...fieldProps}
-            inputRef={React.createRef()}
+            inputRef={ref}
         />
     );
-}
+});

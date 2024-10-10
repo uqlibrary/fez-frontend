@@ -1,15 +1,13 @@
 /* istanbul ignore file */
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
-import Immutable from 'immutable';
 import { bindActionCreators } from 'redux';
 
-import { adminInterfaceConfig, validate, valueExtractor } from 'config/journalAdmin';
-import { ADMIN_JOURNAL } from 'config/general';
+import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
+import { viewRecordsConfig } from 'config';
+import { isFileValid } from 'config/validation';
+import { ADMIN_JOURNAL, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import JournalAdminContainer from '../components/JournalAdminContainer';
-import { FORM_NAME } from '../constants';
-import { onSubmit } from '../submitHandler';
 
 const getInitialValues = (journal, tab, tabParams = () => {}) => {
     return (adminInterfaceConfig[ADMIN_JOURNAL] || {})
@@ -38,17 +36,7 @@ const getInitialFormValues = journalToView => {
     };
 };
 
-const PrototypeContainer = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-    validate,
-    destroyOnUnmount: false,
-})(JournalAdminContainer);
-
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
-
     let initialFormValues = {};
     let journalToView = {};
     let locked = false;
@@ -57,11 +45,7 @@ const mapStateToProps = state => {
 
     locked = state.get('viewJournalReducer').isJournalLocked;
     initialFormValues = (!!journalToView && journalToView.jnl_jid && getInitialFormValues(journalToView)) || {};
-
     return {
-        formValues,
-        formErrors,
-        disableSubmit: !!journalToView && formErrors && !(formErrors instanceof Immutable.Map),
         journalToViewLoading: state.get('viewJournalReducer').loadingJournalToView,
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,
@@ -70,7 +54,6 @@ const mapStateToProps = state => {
         journalLoadingError: state.get('viewJournalReducer').journalLoadingError,
         ...initialFormValues,
         locked,
-        error: state.get('journalReducer').error,
     };
 };
 
@@ -83,6 +66,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
+const AdminReduxFormContainer = connect(mapStateToProps, mapDispatchToProps)(JournalAdminContainer);
 
 export default AdminReduxFormContainer;

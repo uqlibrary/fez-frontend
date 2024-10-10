@@ -25,19 +25,19 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const [value, setValue] = useItemsList(props.input, normalize, searchKey);
+    const [value, setValue] = useItemsList(props, normalize, searchKey);
 
     React.useEffect(() => {
-        setValue(getValue(props.input, normalize, searchKey));
+        setValue(getValue(props, normalize, searchKey));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.input]);
+    }, [props]);
 
     return (
         <NewListEditor
             key={value.length}
             errorText={props.meta ? props.meta.error : null}
             error={props.meta && !!props.meta.error}
-            onChange={props.input.onChange}
+            onChange={props?.onChange ?? props?.input?.onChange}
             remindToAdd={props.remindToAdd}
             list={value}
             searchKey={searchKey}
@@ -50,6 +50,7 @@ export const NewListEditorField = props => {
 NewListEditorField.propTypes = {
     searchKey: PropTypes.object,
     normalize: PropTypes.func,
+    onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.object,

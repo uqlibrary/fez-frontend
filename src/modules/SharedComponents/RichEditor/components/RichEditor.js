@@ -167,7 +167,7 @@ RichEditor.propTypes = {
     textOnlyOnPaste: PropTypes.bool,
     description: PropTypes.string,
     title: PropTypes.string,
-    value: PropTypes.object,
+    value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     titleProps: PropTypes.object,
 };
 

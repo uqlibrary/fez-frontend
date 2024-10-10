@@ -1,66 +1,91 @@
+/* eslint-disable no-unused-vars */
 /* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import Immutable from 'immutable';
 
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { FormProvider, useWatch } from 'react-hook-form';
 import locale from 'locale/pages';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import JournalAdminInterface from './JournalAdminInterface';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
+import { JournalContext, TabbedContext } from 'context';
+import { useIsMobileView, useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
+import { validate } from 'config/journalAdmin';
+import { onSubmit } from '../submitHandler';
+
+import JournalAdminInterface from './JournalAdminInterface';
 import AdminSection from './admin/AdminSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
 
-import { JournalContext, TabbedContext } from 'context';
-import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
-import { useIsMobileView } from 'hooks';
-import { ADMIN_JOURNAL } from 'config/general';
-import { useParams } from 'react-router-dom';
+const validateResolver = async data => {
+    console.log(data);
+    const errors = validate(data);
+    const hasErrors = Object.keys(errors).length > 0;
+    return {
+        values: hasErrors ? {} : data,
+        errors: hasErrors ? { ...errors } : {},
+    };
+};
+
 
 export const JournalAdminContainer = ({
     authorDetails,
     clearJournalToView,
-    destroy,
-    dirty,
-    disableSubmit,
-    formErrors,
-    // eslint-disable-next-line no-unused-vars
-    formValues,
-    handleSubmit,
+    initialValues,
     journalToViewLoading,
     loadJournalToView,
     locked,
     journalToView,
     journalToViewError,
     journalLoadingError,
-    submitSucceeded,
-    submitting,
     unlockJournal,
-    error,
 }) => {
+    const { error } = useSelector(state => state.get('viewJournalReducer'));
+    const dispatch = useDispatch();
     const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
 
+    const methods = useValidatedForm({
+        values: { ...initialValues },
+        shouldUnregister: false,
+        mode: 'onChange',
+        resolver: validateResolver,
+    });
+
+    useWatcher(methods);
+
+    const data = methods.getValues();
+    const handleSubmit = async (data, e) => {
+        e.preventDefault();
+        try {
+            await onSubmit(data, dispatch, { initialValues, methods });
+        } catch (e) {
+            console.log(e);
+            methods.setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
+        }
+    };
+    const formErrors = methods.formState.errors ?? {};
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(
-        (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
-    ).reduce(
-        (numberOfErrors, [key, errorObject]) => ({
+    tabErrors.current = Object.entries(formErrors || {}).reduce((numberOfErrors, [key, errorObject]) => {
+        return {
             ...numberOfErrors,
-            [key]: Object.values(errorObject).length,
-        }),
-        {},
-    );
+            ...(!!errorObject ? { [key]: Object.values(errorObject).length } : {}),
+        };
+    }, {});
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
@@ -72,12 +97,11 @@ export const JournalAdminContainer = ({
     }, [loadJournalToView, clearJournalToView, id]);
 
     const txt = locale.pages.edit;
-
     if (!!id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!!id && (!!!journalToView || journalLoadingError)) {
         return <WorkNotFound loadingError={journalToViewError} />;
-    } else if (!id && !journalToView) {
+    } else if (!!!id || !!!journalToView) {
         return <div className="empty" />;
     }
 
@@ -85,6 +109,7 @@ export const JournalAdminContainer = ({
         // this is here for potential future use
         return true;
     };
+    const destroy = () => {};
 
     return (
         <React.Fragment>
@@ -101,49 +126,46 @@ export const JournalAdminContainer = ({
                     }}
                 >
                     <ThemeProvider theme={adminTheme}>
-                        <JournalAdminInterface
-                            authorDetails={authorDetails}
-                            handleSubmit={handleSubmit}
-                            submitting={submitting}
-                            submitSucceeded={submitSucceeded}
-                            clearJournalToView={clearJournalToView}
-                            dirty={dirty}
-                            disableSubmit={disableSubmit}
-                            formErrors={formErrors}
-                            destroy={destroy}
-                            locked={locked}
-                            disabled
-                            unlockJournal={unlockJournal}
-                            error={error}
-                            tabs={{
-                                admin: {
-                                    component: AdminSection,
-                                    numberOfErrors: tabErrors.current.adminSection || null,
-                                    activated: isActivated(),
-                                },
-                                /* it would go here or something */
-                                bibliographic: {
-                                    component: BibliographicSection,
-                                    numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                    activated: isActivated(),
-                                },
-                                uqData: {
-                                    component: UqDataSection,
-                                    numberOfErrors: tabErrors.current.uqDataSection || null,
-                                    activated: isActivated(),
-                                },
-                                doaj: {
-                                    component: DoajSection,
-                                    numberOfErrors: tabErrors.current.doajSection || null,
-                                    activated: isActivated(),
-                                },
-                                indexed: {
-                                    component: IndexedSection,
-                                    numberOfErrors: tabErrors.current.indexedSection || null,
-                                    activated: isActivated(),
-                                },
-                            }}
-                        />
+                        <FormProvider {...methods}>
+                            <JournalAdminInterface
+                                authorDetails={authorDetails}
+                                handleSubmit={handleSubmit}
+                                clearJournalToView={clearJournalToView}
+                                destroy={destroy}
+                                locked={locked}
+                                disabled
+                                unlockJournal={unlockJournal}
+                                error={error}
+                                tabs={{
+                                    admin: {
+                                        component: AdminSection,
+                                        numberOfErrors: tabErrors.current.adminSection || null,
+                                        activated: isActivated(),
+                                    },
+
+                                    bibliographic: {
+                                        component: BibliographicSection,
+                                        numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                        activated: isActivated(),
+                                    },
+                                    uqData: {
+                                        component: UqDataSection,
+                                        numberOfErrors: tabErrors.current.uqDataSection || null,
+                                        activated: isActivated(),
+                                    },
+                                    doaj: {
+                                        component: DoajSection,
+                                        numberOfErrors: tabErrors.current.doajSection || null,
+                                        activated: isActivated(),
+                                    },
+                                    indexed: {
+                                        component: IndexedSection,
+                                        numberOfErrors: tabErrors.current.indexedSection || null,
+                                        activated: isActivated(),
+                                    },
+                                }}
+                            />
+                        </FormProvider>
                     </ThemeProvider>
                 </JournalContext.Provider>
             </TabbedContext.Provider>
@@ -154,33 +176,21 @@ export const JournalAdminContainer = ({
 JournalAdminContainer.propTypes = {
     actions: PropTypes.object,
     authorDetails: PropTypes.object,
+    initialValues: PropTypes.object,
     clearJournalToView: PropTypes.func,
-    destroy: PropTypes.func,
-    dirty: PropTypes.bool,
-    disableSubmit: PropTypes.any,
-    formErrors: PropTypes.object,
-    formValues: PropTypes.object,
-    handleSubmit: PropTypes.func,
     journalToViewLoading: PropTypes.bool,
     journalLoadingError: PropTypes.bool,
     loadJournalToView: PropTypes.func,
     journalToViewError: PropTypes.object,
     locked: PropTypes.bool,
     journalToView: PropTypes.object,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.any,
     unlockJournal: PropTypes.func,
-    error: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {
     return (
-        prevProps.disableSubmit === nextProps.disableSubmit &&
-        prevProps.submitting === nextProps.submitting &&
-        prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.journalToView || {}).jnl_jid === (nextProps.journalToView || {}).jnl_jid &&
         prevProps.journalToViewLoading === nextProps.journalToViewLoading &&
-        prevProps.formErrors === nextProps.formErrors &&
         prevProps.locked === nextProps.locked
     );
 }
