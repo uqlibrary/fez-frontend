@@ -117,7 +117,8 @@ export default class NtroFields extends React.PureComponent {
                                 Abstract/Description* <span style={{ fontWeight: 700 }}>(for public view)</span>
                             </span>
                         ),
-                        placeholder: 'Enter a brief description of the work',
+                        placeholder:
+                            'Enter a brief description of the work - 800 character limit is no longer applicable',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -279,17 +280,18 @@ export default class NtroFields extends React.PureComponent {
                             <Grid container spacing={2}>
                                 <Grid xs={12}>
                                     {!this.props.hideAbstract && (
-                                        <Field
-                                            component={RichEditorField}
-                                            name="ntroAbstract"
-                                            fullWidth
-                                            title={metadata.fields.abstract.label}
-                                            description={metadata.fields.abstract.placeholder}
-                                            maxValue={800}
-                                            disabled={this.props.submitting}
-                                            validate={[validation.required, validation.maxListEditorTextLength800]}
-                                            richEditorId="rek-description"
-                                        />
+                                        <>
+                                            <Field
+                                                component={RichEditorField}
+                                                name="ntroAbstract"
+                                                fullWidth
+                                                title={metadata.fields.abstract.label}
+                                                description={metadata.fields.abstract.placeholder}
+                                                disabled={this.props.submitting}
+                                                validate={[validation.required, validation.maxListEditorTextLength65k]}
+                                                richEditorId="rek-description"
+                                            />
+                                        </>
                                     )}
                                 </Grid>
                                 {!this.props.hideIsmn && (

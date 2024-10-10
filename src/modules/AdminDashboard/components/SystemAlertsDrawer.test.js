@@ -5,7 +5,7 @@ import { render, WithReduxStore, waitFor, within } from 'test-utils';
 import SystemAlertsDrawer from './SystemAlertsDrawer';
 import userEvent from '@testing-library/user-event';
 
-import { SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
 
 const locale = {
     alertStatus: {
@@ -47,7 +47,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
         adminDashboardConfigReducer: {
             adminDashboardConfigData: {
-                admin_users: [{ id: 13, name: 'Staff' }],
+                admin_users: [{ id: 13, preferred_name: 'Staff' }],
             },
         },
         ...state,
@@ -92,7 +92,7 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-link')).toHaveTextContent(testRowUnassigned.sat_link);
         expect(getByTestId('system-alert-detail-id')).toHaveTextContent(testRowUnassigned.sat_id);
         expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
-            getFormattedServerDate(testRowUnassigned.sat_created_date, true),
+            getFormattedServerDate(testRowUnassigned.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         );
         expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowUnassigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue(locale.alertStatus.UNASSIGNED);
@@ -142,9 +142,11 @@ describe('SystemAlertsDrawer', () => {
         expect(getByTestId('system-alert-detail-link')).toHaveTextContent(testRowAssigned.sat_link);
         expect(getByTestId('system-alert-detail-id')).toHaveTextContent(testRowAssigned.sat_id);
         expect(getByTestId('system-alert-detail-date-created')).toHaveTextContent(
-            getFormattedServerDate(testRowAssigned.sat_created_date, true),
+            getFormattedServerDate(testRowAssigned.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         );
-        expect(getByTestId('system-alert-detail-description')).toHaveTextContent(testRowAssigned.sat_content);
+        expect(
+            within(getByTestId('system-alert-detail-description')).getByTestId('system-alert-detail-pre-content'),
+        ).toHaveTextContent(testRowAssigned.sat_content);
         expect(getByTestId('system-alert-detail-assignee-input')).toHaveValue('Staff');
         expect(getByTestId('system-alert-detail-action-button')).toBeInTheDocument();
     });

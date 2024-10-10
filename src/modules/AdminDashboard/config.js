@@ -44,6 +44,8 @@ export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
 export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 export const DEFAULT_SERVER_DATE_FORMAT_NO_TIME = 'YYYY-MM-DD';
+export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm';
+export const DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS = 'Do MMMM YYYY HH:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -124,12 +126,8 @@ export const optionDoubleRowRender = (props, option) => {
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || [];
 
-export const getFormattedServerDate = (dateStr, withTime = false) =>
-    (dateStr &&
-        moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(
-            withTime ? DEFAULT_DATE_FORMAT_WITH_TIME : DEFAULT_DATE_FORMAT,
-        )) ||
-    '';
+export const getFormattedServerDate = (dateStr, format = DEFAULT_DATE_FORMAT) =>
+    (dateStr && moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(format)) || '';
 
 export const getSystemAlertColumns = (locale, users) => {
     const alertStatus = locale.alertStatus;
@@ -138,10 +136,10 @@ export const getSystemAlertColumns = (locale, users) => {
         {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
-            width: 150,
+            width: 200,
             type: 'date',
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
-            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT),
+            valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         },
         { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
         {
@@ -150,13 +148,13 @@ export const getSystemAlertColumns = (locale, users) => {
             width: 160,
             valueGetter: (_, row) =>
                 !!row.sat_assigned_to
-                    ? users.find(user => user.id === row.sat_assigned_to)?.name ?? alertStatus.UNKNOWN
+                    ? users.find(user => user.id === row.sat_assigned_to)?.preferred_name ?? alertStatus.UNKNOWN
                     : alertStatus.UNASSIGNED,
             renderCell: params => (
                 <Chip
                     data-testid={`alert-status-${params.id}`}
                     label={params.value}
-                    variant="outlined"
+                    variant="filled"
                     size="small"
                     color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
                 />

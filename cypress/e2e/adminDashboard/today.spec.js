@@ -73,6 +73,13 @@ context('Admin Dashboard - Today tab', () => {
         });
         cy.data('processed-works-title').contains('Processed Works');
         cy.data('processed-works-subtitle').contains('this iteration');
+        cy.get('[role=tooltip]').should('not.exist');
+        cy.data('processed-works-subtitle').within(() => {
+            cy.data('HelpIcon').trigger('mouseover');
+        });
+        cy.get('[role=tooltip]')
+            .should('be.visible')
+            .contains('23rd September 2024 00:00:00 to 25th September 2024 23:59:59');
         cy.data('chart-container-processed-works').within(() => {
             cy.get('svg > text').contains('82');
             cy.get('svg path').should('have.length', 1);

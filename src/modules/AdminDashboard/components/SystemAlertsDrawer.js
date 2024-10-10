@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import { SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -33,8 +33,25 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     );
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const adminUsers = React.useMemo(() => [{ id: 0, name: locale.alertStatus.UNASSIGNED }, ...users], [users]);
+    // Sort user's names alphabetically
+    /* istanbul ignore next */
+    users.sort((a, b) => {
+        const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+
+        return 0;
+    });
+
+    const adminUsers = React.useMemo(() => [{ id: 0, preferred_name: locale.alertStatus.UNASSIGNED }, ...users], [
+        locale.alertStatus.UNASSIGNED,
+        users,
+    ]);
 
     let buttonLabel;
     if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;
@@ -57,6 +74,8 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
     const handleResolveButtonClick = () => {
         onSystemAlertUpdate(SYSTEM_ALERT_ACTION.RESOLVE, row);
     };
+
+    const content = row?.sat_content ?? '';
 
     return (
         !!row && (
@@ -97,12 +116,24 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                         </Grid>
                         <Grid item xs={8}>
                             <Typography fontWeight={'normal'} data-testid={`${rootId}-date-created`}>
-                                {getFormattedServerDate(row.sat_created_date, true)}
+                                {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
                             </Typography>
                         </Grid>
                     </Grid>
                     <StyledDivider />
-                    <Typography data-testid={`${rootId}-description`}>{row.sat_content}</Typography>
+
+                    <Box data-testid={`${rootId}-description`}>
+                        <Box
+                            component={'pre'}
+                            sx={{
+                                whiteSpace: 'pre-wrap',
+                                wordWrap: 'break-word',
+                            }}
+                            data-testid={`${rootId}-pre-content`}
+                        >
+                            {content}
+                        </Box>
+                    </Box>
                     <StyledDivider />
                     <Box id={`${rootId}-assignee`} data-testid={`${rootId}-assignee`}>
                         <Autocomplete
@@ -142,7 +173,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 'data-testid': `${rootId}-options`,
                             }}
                             options={adminUsers}
-                            getOptionLabel={option => option.name}
+                            getOptionLabel={option => option.preferred_name}
                             value={
                                 !!row.sat_assigned_to
                                     ? adminUsers.find(user => user.id === row.sat_assigned_to)
