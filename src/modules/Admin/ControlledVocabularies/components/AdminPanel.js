@@ -92,8 +92,7 @@ const AdminPanel = ({
                                 <Grid container padding={0} spacing={2}>
                                     <Grid item xs={12}>
                                         <label htmlFor="cvo_title">{locale.form.title}</label>
-                                        <Field
-                                            component={TextField}
+                                        <TextField
                                             variant="standard"
                                             required
                                             inputProps={{ maxLength: 255 }}
@@ -105,8 +104,7 @@ const AdminPanel = ({
                                     </Grid>
                                     <Grid item xs={12}>
                                         <label htmlFor="cvo_desc">{locale.form.description}</label>
-                                        <Field
-                                            component={TextField}
+                                        <TextField
                                             variant="standard"
                                             inputProps={{ maxLength: 255 }}
                                             fullWidth
@@ -121,8 +119,7 @@ const AdminPanel = ({
                                         <label htmlFor="cvo_external_id" style={{ display: 'block' }}>
                                             {locale.form.externalId}
                                         </label>
-                                        <Field
-                                            component={TextField}
+                                        <TextField
                                             variant="standard"
                                             textFieldId="cvo-external-id"
                                             inputProps={{ maxLength: 10 }}
