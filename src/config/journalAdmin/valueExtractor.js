@@ -112,6 +112,7 @@ export default {
                         hasPreload: true,
                     },
                 }));
+            delete journal.fez_journal_issn;
             return returnValue;
         },
     },

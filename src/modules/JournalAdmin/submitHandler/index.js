@@ -4,20 +4,17 @@ import { SERVER_ERROR_KEY } from 'config/general';
 
 export const onSubmit = (values, dispatch, { initialValues, methods }) => {
     const data = values || null;
-    let jnlValues = {};
 
     const initialData = initialValues || null;
+
     const changes = detailedDiff(initialData, data);
-    jnlValues = { ...changes.updated };
 
     const requestObject = {
-        ...data,
-        ...jnlValues,
+        adminSection: { ...data.adminSection },
+        bibliographicSection: { ...data.bibliographicSection },
+        ...changes,
         jnl_jid: data.journal.jnl_jid,
     };
-    delete requestObject.doajSection;
-    delete requestObject.indexedSection;
-    delete requestObject.uqDataSection;
 
     return dispatch(adminJournalUpdate({ ...requestObject }))
         .then(() => Promise.resolve())
