@@ -5,7 +5,7 @@ export default React.forwardRef((fieldProps, ref) => {
     return (
         <RichEditor
             onChange={fieldProps?.input?.onChange ?? fieldProps?.onChange}
-            value={fieldProps.value}
+            value={fieldProps.input?.value ?? fieldProps.value}
             {...fieldProps}
             inputRef={ref}
         />

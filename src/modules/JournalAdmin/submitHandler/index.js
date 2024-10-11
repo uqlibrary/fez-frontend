@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { adminJournalUpdate } from 'actions';
 import { detailedDiff } from 'deep-object-diff';
 import { SERVER_ERROR_KEY } from 'config/general';

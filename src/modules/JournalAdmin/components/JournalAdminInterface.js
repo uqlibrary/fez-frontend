@@ -53,8 +53,6 @@ export const navigateToSearchResult = (authorDetails, navigate /* , location*/) 
     navigate(pathConfig.journals.search);
 };
 
-const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
-
 export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, locked, tabs, error }) => {
     const { journalDetails: journal } = useJournalContext();
 
@@ -77,7 +75,7 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     const defaultTab = 'admin';
     const [currentTabValue, setCurrentTabValue] = React.useState(getQueryStringValue(location, 'tab', defaultTab));
 
-    const activeTabNames = React.useRef(getActiveTabs(tabs));
+    const activeTabNames = React.useRef(Object.keys(tabs));
     const successConfirmationRef = React.useRef();
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
@@ -94,19 +92,8 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     });
 
     React.useEffect(() => {
-        activeTabNames.current = getActiveTabs(tabs);
-    }, [tabs]);
-
-    React.useEffect(() => {
         Cookies.set('adminJournalFormTabbed', tabbed ? 'tabbed' : 'fullform');
     }, [tabbed]);
-
-    // clear form state on unmount, so the form state from admin edit form wont show up in the add form
-    // React.useEffect(() => {
-    //     return () => {
-    //         dispatch(destroy(FORM_NAME));
-    //     };
-    // }, [dispatch]);
 
     React.useEffect(() => {
         if (!isSubmitting && isSubmitSuccessful && successConfirmationRef.current) {

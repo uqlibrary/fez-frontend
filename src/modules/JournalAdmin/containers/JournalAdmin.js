@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
-import { viewRecordsConfig } from 'config';
-import { isFileValid } from 'config/validation';
-import { ADMIN_JOURNAL, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
+import { ADMIN_JOURNAL } from 'config/general';
 import JournalAdminContainer from '../components/JournalAdminContainer';
 
 const getInitialValues = (journal, tab, tabParams = () => {}) => {
