@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Field, propTypes } from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -18,9 +18,31 @@ import { ACTION } from '../ControlledVocabularyContext';
 
 const rootId = 'update_dialog';
 
-const renderCheckbox = ({ input, label, ...props }) => (
-    <Checkbox label={label} checked={input.value ? true : false} onChange={input.onChange} {...props} />
-);
+const RenderCheckbox = ({ label, inputProps, disabled, ...props }) => {
+    const [checked, setChecked] = useState(false);
+
+    const handleChange = event => {
+        setChecked(event.target.checked);
+    };
+
+    return (
+        <Checkbox
+            label={label}
+            checked={checked}
+            onChange={handleChange}
+            disabled={disabled}
+            inputProps={inputProps}
+            {...props}
+        />
+    );
+};
+
+// Define prop types for validation
+RenderCheckbox.propTypes = {
+    label: PropTypes.string,
+    inputProps: PropTypes.object,
+    disabled: PropTypes.bool,
+};
 
 const AdminPanel = ({
     action,
@@ -131,9 +153,7 @@ const AdminPanel = ({
                                         <label htmlFor="cvo_hide" style={{ display: 'block' }}>
                                             {locale.form.inactive}
                                         </label>
-                                        <Field
-                                            component={renderCheckbox}
-                                            variant="standard"
+                                        <RenderCheckbox
                                             id="cvo-hide"
                                             inputProps={{
                                                 id: 'cvo-hide-input',
@@ -142,7 +162,6 @@ const AdminPanel = ({
                                             }}
                                             name="cvo_hide"
                                             type="checkbox"
-                                            disabled={submitting}
                                         />
                                     </Grid>
                                 </Grid>
