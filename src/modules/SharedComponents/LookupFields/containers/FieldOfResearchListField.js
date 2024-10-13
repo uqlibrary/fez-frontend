@@ -9,7 +9,7 @@ export const FieldOfResearchListField = fieldProps => {
             inputField={FieldOfResearchField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            onChange={fieldProps.input.onChange}
+            onChange={fieldProps.input?.onChange}
             {...fieldProps}
         />
     );
@@ -22,7 +22,7 @@ export const FilteredFieldOfResearchListField = fieldProps => {
             inputField={FilteredFieldOfResearchField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            onChange={fieldProps.input.onChange}
+            onChange={fieldProps.input?.onChange}
             {...fieldProps}
         />
     );

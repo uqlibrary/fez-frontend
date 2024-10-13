@@ -5,7 +5,7 @@ import deepmerge from 'deepmerge';
 export const hasErrors = errors => Object.keys(errors).length > 0;
 
 export const setServerError = (setError, e) =>
-    setError(SERVER_ERROR_KEY, { type: 'server', message: e.message, status: e.status });
+    setError(SERVER_ERROR_KEY, { type: 'server', message: e.message, status: e.status, original: e });
 
 export const getServerError = errors => errors[SERVER_ERROR_KEY];
 
