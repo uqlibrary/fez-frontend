@@ -43,10 +43,11 @@ export const getAlertProps = (
     errors,
     isSubmitting,
     isSubmitSuccessful,
+    isSubmitFailure,
     serverError,
 ) => {
     const txt = locale.forms.claimPublicationForm;
-    if (serverError) {
+    if (!publication.rek_pid && isSubmitFailure) {
         return validation.getErrorAlertProps({
             submitting: isSubmitting,
             submitSucceeded: isSubmitSuccessful,
@@ -66,7 +67,8 @@ export const getAlertProps = (
         submitSucceeded: isSubmitSuccessful,
         dirty: true,
         alertLocale: txt,
-        formErrors,
+        ...(serverError ? { error: serverError.message } : {}),
+        ...(!serverError ? { formErrors } : {}),
     });
 };
 
@@ -107,11 +109,11 @@ const ClaimRecord = () => {
         control,
         getMergedValues,
         clearServerErrorAndHandleSubmit,
-        formState: { server, isDirty, errors, isSubmitSuccessful, isSubmitting, hasError },
+        formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError },
     } = useValidatedForm({ defaultValues: { contentIndicators } });
 
     useEffect(() => {
-        if (!author?.aut_id || !publication?.rek_pid) {
+        if (!author?.aut_id || !publication) {
             navigate(-1);
         }
 
@@ -156,9 +158,13 @@ const ClaimRecord = () => {
     const navigateToMyResearch = () => navigate(pathConfig.records.mine);
     const navigateToFixRecord = () => navigate(pathConfig.records.fix(publication.rek_pid));
     const claimAnother = () => {
-        navigate(redirectPath || -1);
-        dispatch(actions.clearNewRecord());
-        if (redirectPath) dispatch(actions.clearRedirectPath());
+        if (!!redirectPath) {
+            navigate(redirectPath);
+            dispatch(actions.clearNewRecord());
+            dispatch(actions.clearRedirectPath());
+        } else {
+            navigate(-1);
+        }
     };
     const cancelClaim = () => {
         dispatch(actions.clearNewRecord());
@@ -175,12 +181,8 @@ const ClaimRecord = () => {
         : 'requiredField';
 
     // dialog & alert
-    const fromAddRecord = !!publication.sources;
-    // set confirmation message depending on file upload status and publication fromAddRecord
+    // set confirmation message depending on file upload status
     const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
-    saveConfirmationLocale.cancelButtonLabel = fromAddRecord
-        ? txt.successWorkflowConfirmation.addRecordButtonLabel
-        : txt.successWorkflowConfirmation.cancelButtonLabel;
     saveConfirmationLocale.confirmationMessage = (
         <React.Fragment>
             {publicationToClaimFileUploadingError && (
@@ -200,6 +202,7 @@ const ClaimRecord = () => {
         errors,
         isSubmitting,
         isSubmitSuccessful,
+        isSubmitFailure,
         server.error.get(),
     );
 
