@@ -1,13 +1,19 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
+import { rtlRender, preview } from 'test-utils';
 import DoajSection from './DoajSection';
+import { FormProvider } from 'react-hook-form';
 
 jest.mock('../../../../context');
-import { useJournalContext, useFormValuesContext } from 'context';
+import { useJournalContext } from 'context';
 import { journalDoaj } from 'mock/data';
-import { reduxForm } from 'redux-form';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
-const WithReduxForm = reduxForm({ form: 'testForm' })(DoajSection);
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -15,27 +21,23 @@ function setup(testProps = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper>
+            <DoajSection {...props} />
+        </FormProviderWrapper>,
     );
 }
 
 describe('DoajSection component', () => {
     it('should render default view', () => {
         useJournalContext.mockImplementation(() => ({
+            jnlDisplayType: ADMIN_JOURNAL,
             journalDetails: {
                 ...journalDoaj.data,
-            },
-            jnlDisplayType: 'adminjournal',
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
             },
         }));
 
         const { getByTestId } = setup();
+        preview.debug();
 
         expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
         expect(getByTestId('ulr-open-access-value')).toHaveTextContent('No');

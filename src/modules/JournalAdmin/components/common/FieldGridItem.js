@@ -12,7 +12,6 @@ import { fieldConfig } from 'config/journalAdmin';
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { jnlDisplayType } = useJournalContext();
     const methods = useFormContext();
-
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -32,7 +31,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
                 component={fieldConfig.default[field].component}
                 disabled={disabled}
                 {...componentProps}
-                {...(!!error ? { error: true, errorText: error, helperText: error } : {})}
+                {...(!!error ? { error: true, errorText: error } : {})}
                 value={methods.getValues(componentProps.name) ?? ''}
             />
         </Grid>
