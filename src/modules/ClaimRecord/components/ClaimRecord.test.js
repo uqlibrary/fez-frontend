@@ -1,13 +1,20 @@
 import ClaimRecord, { getAlertProps } from './ClaimRecord';
 import Immutable from 'immutable';
-import { dataCollection, journalArticle, mockRecordToDelete } from 'mock/data/testing/records';
+import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
-import { CLAIM_PRE_CHECK, EXISTING_RECORD_API, FILE_UPLOAD_API } from 'repositories/routes';
+import { CLAIM_PRE_CHECK, EXISTING_RECORD_API, FILE_UPLOAD_API, NEW_RECORD_API } from 'repositories/routes';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent, preview, waitForElementToBeRemoved } from 'test-utils';
-import * as hooks from '../../../hooks';
-import { waitFor } from '@testing-library/dom';
-import * as repositories from '../../../repositories';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    preview,
+    waitFor,
+    waitForElementToBeRemoved,
+    addFilesToFileUploader,
+    setFileUploaderFilesToClosedAccess,
+} from 'test-utils';
 import locale from 'locale/forms';
 
 const mockUseNavigate = jest.fn();
@@ -32,17 +39,43 @@ jest.mock('actions', () => ({
 }));
 
 function setup(props = {}, renderMethod = render) {
+    const defaultRecord = {
+        ...journalArticle,
+        fez_record_search_key_content_indicator: [
+            {
+                rek_content_indicator_id: 1,
+                rek_content_indicator_pid: 'UQ:41878',
+                rek_content_indicator: 454079,
+                rek_content_indicator_order: 1,
+                rek_content_indicator_lookup: 'Scholarship of Teaching and Learning',
+            },
+            {
+                rek_content_indicator_id: 2,
+                rek_content_indicator_pid: 'UQ:41878',
+                rek_content_indicator: 454080,
+                rek_content_indicator_order: 2,
+                rek_content_indicator_lookup: 'Protocol',
+            },
+        ],
+    };
+    const pid = (props.publication || defaultRecord).rek_pid;
     const state = Immutable.Map({
+        appReducer: {
+            redirectPath: props.redirectPath,
+        },
         accountReducer: {
             author: props.hasOwnProperty('author') ? props.author : { aut_id: 410 },
         },
         claimPublicationReducer: {
-            publicationToClaim: props.publication || journalArticle,
-            fullPublicationToClaim: props.fullPublicationToClaim || false,
+            publicationToClaim: { rek_pid: pid },
+            fullPublicationToClaim: props.publication || defaultRecord,
             fullPublicationToClaimLoading: props.fullPublicationToClaimLoading || false,
+            publicationsClaimedInProgress: props.publicationsClaimedInProgress || [],
             publicationToClaimFileUploadingError: props.publicationToClaimFileUploadingError || false,
         },
     });
+
+    mockApi.onGet(EXISTING_RECORD_API({ pid: pid }).apiUrl).reply(200, { data: props.publication || defaultRecord });
 
     return renderMethod(
         <WithReduxStore initialState={state}>
@@ -53,9 +86,15 @@ function setup(props = {}, renderMethod = render) {
     );
 }
 
+const fileMock = ['myTestImage.png'];
+
 describe('Component ClaimRecord ', () => {
     beforeEach(() => {
-        jest.resetAllMocks();
+        mockUseNavigate.mockReset();
+        mockClearNewRecord.mockReset();
+        mockClearRedirectPath.mockReset();
+        mockLoadFullRecordToClaim.mockReset();
+        mockClearClaimPublication.mockReset();
     });
 
     it('should render claim publication form', () => {
@@ -344,74 +383,98 @@ describe('Component ClaimRecord ', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render default server error message', () => {
-        const testArticle = {
-            ...journalArticle,
-            rek_pid: null,
-        };
+    it('should render server error', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
 
-        const { getByText } = setup({
-            publication: testArticle,
+        const { queryByText, getByTestId, getByText } = setup();
+
+        // fill up form
+        fireEvent.click(getByTestId('rek-author-id-1'));
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+        // submit it
+        fireEvent.click(getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message));
+
+        await waitFor(() =>
+            queryByText(
+                locale.forms.claimPublicationForm.errorAlert.message(
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                ),
+            ),
+        );
+    });
+
+    it('should render incomplete data error message when trying to claim an incomplete external (non-eSpace) record', async () => {
+        mockApi
+            .onPost(CLAIM_PRE_CHECK().apiUrl)
+            .reply(200, { data: '' })
+            .onPost(NEW_RECORD_API().apiUrl)
+            .reply(422);
+
+        const { queryByText, getByTestId, getByText } = setup({
+            publication: {
+                ...journalArticle,
+                rek_pid: null,
+            },
         });
+
+        // fill up form
+        fireEvent.click(getByTestId('rek-author-id-1'));
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+        // submit it
+        fireEvent.click(getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message));
 
         expect(getByText(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBeInTheDocument();
     });
 
-    it('should render custom error message when the pre check request failed', () => {
-        const customErrorMessage = 'custom error message';
-        const props = {
+    it('should render custom error message when the pre check request failed', async () => {
+        const customErrorMessage = 'Unexpected field rek_pid : UQ:123456';
+        mockApi.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
+            return [
+                500,
+                {
+                    data: customErrorMessage,
+                    request: {
+                        responseURL: 'https://api.library.uq.edu.au/staging/external/records/claim/pre-check',
+                    },
+                },
+            ];
+        });
+
+        const { queryByText, getByTestId, getByText } = setup({
             publication: {
                 ...journalArticle,
-                rek_pid: undefined,
-                fez_record_search_key_author_id: [
-                    {
-                        rek_author_id: 0,
-                        rek_author_id_order: 1,
-                    },
-                ],
-                fez_record_search_key_author: [
-                    {
-                        rek_author_id: null,
-                        rek_author_pid: 'UQ:111111',
-                        rek_author: 'Smith, A',
-                        rek_author_order: 1,
-                    },
-                ],
+                rek_pid: null,
             },
-        };
+        });
 
-        const { getByText } = setup({ ...props });
+        // fill up form
+        fireEvent.click(getByTestId('rek-author-id-1'));
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+        // submit it
+        fireEvent.click(getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message), {
+            timeout: 12000000,
+        });
+
         expect(getByText(customErrorMessage)).toBeInTheDocument();
     });
 
-    it('should render when claiming from "Add missing record" page', () => {
-        const { getByTestId, rerender } = setup();
-
-        setup(
-            {
-                // submitSucceeded: true,
-            },
-            rerender,
-        );
-
-        expect(getByTestId('cancel-dialog-box')).toHaveTextContent(
-            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
-        );
-    });
-
-    it('should display confirmation box after successful submission', () => {
-        const { getByTestId, rerender } = setup();
-        const mockClearNewRecord = jest.fn();
-        const mockClearRedirectPath = jest.fn();
-
-        setup(
-            {
-                submitSucceeded: true,
-                redirectPath: '/test',
-            },
-            rerender,
-        );
-
+    it('should display confirmation box after successful submission', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
+            data: journalArticle,
+        });
+        const { getByTestId, queryByText } = setup({
+            redirectPath: '/test',
+        });
+        // fill up form
+        fireEvent.click(getByTestId('rek-author-id-1'));
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+        // submit it
+        fireEvent.click(getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message));
+        preview.debug();
         fireEvent.click(getByTestId('confirm-dialog-box'));
         expect(mockUseNavigate).toBeCalledWith('/records/mine');
         fireEvent.click(getByTestId('cancel-dialog-box'));
@@ -420,15 +483,18 @@ describe('Component ClaimRecord ', () => {
         expect(mockClearRedirectPath).toBeCalled();
     });
 
-    it('should display confirmation box after successful submission and go back to previous page', () => {
-        const { getByTestId, rerender } = setup();
+    it('should display confirmation box after successful submission and go back to previous page', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
+            data: journalArticle,
+        });
+        const { getByTestId, queryByText } = setup();
 
-        setup(
-            {
-                submitSucceeded: true,
-            },
-            rerender,
-        );
+        // fill up form
+        fireEvent.click(getByTestId('rek-author-id-1'));
+        fireEvent.click(getByTestId('author-accept-declaration-input'));
+        // submit it
+        fireEvent.click(getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message));
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(mockUseNavigate).toBeCalledWith(-1);
@@ -436,31 +502,31 @@ describe('Component ClaimRecord ', () => {
 
     it('should render the confirm dialog with an alert due to a file upload error', async () => {
         mockApi
-            .onGet(repositories.routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)
+            .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
             .replyOnce(200, {
                 data: journalArticle,
             })
             .onPost(FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500, {
-                message: locale.forms.claimPublicationForm.errorAlert.fileUploadError,
-            });
+            .reply(500);
 
-        const { getByTestId, getByText, queryByText, rerender } = setup({ publicationToClaimFileUploadingError: true });
+        const { container, getByText, getByTestId, queryByText, queryByTestId } = setup();
 
+        // fill up form
         fireEvent.click(getByTestId('rek-author-id-1'));
         fireEvent.click(getByTestId('author-accept-declaration-input'));
+        addFilesToFileUploader(fileMock);
+        await setFileUploaderFilesToClosedAccess(fileMock);
+        await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+        // submit it
         fireEvent.click(getByTestId('claim-record-submit'));
         await waitForElementToBeRemoved(() => queryByText(locale.forms.claimPublicationForm.progressAlert.message));
-        // setup({ publicationToClaimFileUploadingError: true }, rerender);
-        //
-        // dd(debug(null, 10000000));
-        // await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
-        preview.debug();
-        // waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
-        // fireEvent.click(getByTestId('alternate-dialog-box'));
-        //
-        // expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
-        // expect(container).toMatchSnapshot();
+        // assert a file upload error
+        await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
+        // navigate to fix page
+        fireEvent.click(getByTestId('alternate-dialog-box'));
+        expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
+
+        expect(container).toMatchSnapshot();
     });
 
     it('should go back to previous page on cancel', () => {
