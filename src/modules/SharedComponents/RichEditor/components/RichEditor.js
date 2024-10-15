@@ -156,7 +156,6 @@ const RichEditor = ({
 RichEditor.propTypes = {
     className: PropTypes.string,
     input: PropTypes.object,
-    inputRef: PropTypes.any,
     instructions: PropTypes.any,
     maxValue: PropTypes.number,
     meta: PropTypes.any,
