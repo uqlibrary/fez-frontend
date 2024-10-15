@@ -1,19 +1,23 @@
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import Immutable from 'immutable';
+
+import * as actions from 'actions/viewControlledVocab';
 import AdminPanel from './AdminPanel';
-import PropTypes from 'prop-types';
-import React from 'react';
 
-const AdminPanelContainer = props => {
-    const onSubmit = data => {
-        props.onAction(props.parentId ?? null)(data);
+const mapStateToProps = (state, props) => {
+    const formValues = state?.get('vocabAdminReducer')?.vocab || Immutable.Map({});
+    const formErrors = {}; // Add validation logic here, if needed
+    return {
+        onAction: props.onAction(props.parentId ?? null, props.rootVocabId),
+        formValues: formValues,
+        formErrors: formErrors,
+        initialValues: formValues,
     };
-
-    return <AdminPanel onSubmit={onSubmit} initialValues={props.initialValues} {...props} />;
 };
 
-AdminPanelContainer.propTypes = {
-    onAction: PropTypes.func,
-    parentId: PropTypes.string,
-    initialValues: PropTypes.object,
-};
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(actions, dispatch),
+});
 
-export default AdminPanelContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(AdminPanel);
