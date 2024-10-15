@@ -161,6 +161,9 @@ export const createMatchMedia = width => {
     });
 };
 
+export const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
+export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -176,4 +179,6 @@ module.exports = {
     createMatchMedia,
     preview,
     userEvent,
+    assertEnabled,
+    assertDisabled,
 };

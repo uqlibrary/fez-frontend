@@ -228,10 +228,10 @@ describe('Validation method', () => {
     });
 
     it('should validate google scholar id', () => {
-        expect(validation.isValidGoogleScholarId('231234252345')).toEqual('');
-        expect(validation.isValidGoogleScholarId('rtgtwDFRjuHn')).toEqual('');
-        expect(validation.isValidGoogleScholarId('-31234252345')).toEqual('');
-        expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toEqual('');
+        expect(validation.isValidGoogleScholarId('231234252345')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('rtgtwDFRjuHn')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('-31234252345')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toBeUndefined();
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 

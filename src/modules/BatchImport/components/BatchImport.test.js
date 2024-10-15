@@ -53,7 +53,7 @@ describe('BatchImport Component', () => {
 
         mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(200, { data: {} });
 
-        const { getByTestId, getByText } = setup();
+        const { queryByText, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
 
@@ -71,6 +71,7 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
+        await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('action-button'));
@@ -107,7 +108,7 @@ describe('BatchImport Component', () => {
 
         mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(500, { data: {} });
 
-        const { getByTestId, getByText } = setup();
+        const { queryByText, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
 
@@ -125,6 +126,7 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
+        await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('alert-error-batch-import'));
