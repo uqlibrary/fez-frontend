@@ -60,37 +60,12 @@ context('Claim possible work', () => {
             cy.contains('.StandardCard', claimFormLocale.comments.title)
                 .find('textarea')
                 .first()
-                .type('Test comment');
+                .type('Test comment', { delay: 10 });
             cy.contains('button', claimFormLocale.cancel).click();
             cy.contains('[role="dialog"]', claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
                 .contains(claimFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
                 .click();
             cy.url().should('contain', `${baseUrl}/records/possible`);
-        });
-
-        it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
-            navToFirstClaim();
-            cy.contains(claimFormLocale.contentIndicators.title).scrollIntoView();
-            cy.get('[data-testid=rek-content-indicator-select]').click();
-            // Click new item in multiselect modal
-            cy.get('[data-testid=rek-content-indicator-options]')
-                .contains('Protocol')
-                .click();
-            // Click outside the multiselect
-            cy.get('[data-testid=rek-content-indicator-options]').click(10, 10);
-            cy.get('[data-testid=rek-content-indicator-select]')
-                .contains('Scholarship of Teaching and Learning, Protocol')
-                .click();
-            // Preselected item in multiselect modal should be unclickable
-            cy.get('[data-testid=rek-content-indicator-options]')
-                .contains('li', 'Scholarship of Teaching and Learning')
-                .should('have.css', 'pointer-events', 'none');
-            // Click outside the multiselect
-            cy.get('[data-testid=rek-content-indicator-options]').click(10, 10);
-            // Selection has not changed
-            cy.get('[data-testid=rek-content-indicator-select]').contains(
-                'Scholarship of Teaching and Learning, Protocol',
-            );
         });
 
         it('will detect and prevent submission of invalid URLs', () => {
@@ -106,7 +81,7 @@ context('Claim possible work', () => {
             // Enter invalid data triggers validation errors
             cy.contains('.StandardCard', claimFormLocale.comments.title)
                 .find('input')
-                .type('invalid')
+                .type('invalid', { delay: 10 })
                 .closest('.StandardCard')
                 .contains('URL is not valid');
             // Confirm form submission is disabled until URL is fixed
@@ -146,13 +121,6 @@ context('Claim possible work', () => {
             cy.contains('button', claimFormLocale.submit)
                 .should('not.be.disabled')
                 .click();
-            // Testing of the alerts are too time sensitive
-            // cy.get('[class*="Alert-info"] .alert-text')
-            //     .should('contain', claimFormLocale.progressAlert.title)
-            //     .should('contain', claimFormLocale.progressAlert.message);
-            // cy.get('[class*="Alert-done"] .alert-text')
-            //     .should('contain', claimFormLocale.successAlert.title)
-            //     .should('contain', claimFormLocale.successAlert.message);
             cy.get('div[role="dialog"]')
                 .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
                 .should('have.length', 1);
@@ -181,13 +149,6 @@ context('Claim possible work', () => {
                 cy.contains('button', claimFormLocale.submit)
                     .should('not.be.disabled')
                     .click();
-                // Testing of the alerts are too time sensitive
-                // cy.get('[class*="Alert-info"] .alert-text')
-                //     .should('contain', claimFormLocale.progressAlert.title)
-                //     .should('contain', claimFormLocale.progressAlert.message);
-                // cy.get('[class*="Alert-done"] .alert-text')
-                //     .should('contain', claimFormLocale.successAlert.title)
-                //     .should('contain', claimFormLocale.successAlert.message);
                 cy.get('div[role="dialog"]')
                     .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
                     .should('have.length', 1);

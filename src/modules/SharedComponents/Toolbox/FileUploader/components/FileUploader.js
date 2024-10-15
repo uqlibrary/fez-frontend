@@ -76,12 +76,18 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    componentDidUpdate() {
-        !!this.props.onChange &&
+    componentDidUpdate(prevProps, prevState) {
+        // only call onChange if filesInQueue or isTermsAndConditionsAccepted has changed
+        if (
+            !!this.props.onChange &&
+            (JSON.stringify(prevState.filesInQueue) !== JSON.stringify(this.state.filesInQueue) ||
+                prevState.isTermsAndConditionsAccepted !== this.state.isTermsAndConditionsAccepted)
+        ) {
             this.props.onChange({
                 queue: this.state.filesInQueue,
                 isValid: this.isFileUploadValid(this.state),
             });
+        }
     }
 
     componentWillUnmount() {
