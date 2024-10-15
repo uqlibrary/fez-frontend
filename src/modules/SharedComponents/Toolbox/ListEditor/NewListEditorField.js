@@ -25,12 +25,7 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const [value, setValue] = useItemsList(props, normalize, searchKey);
-
-    React.useEffect(() => {
-        setValue(getValue(props, normalize, searchKey));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props]);
+    const [value] = useItemsList(props.input, normalize, searchKey);
 
     return (
         <NewListEditor

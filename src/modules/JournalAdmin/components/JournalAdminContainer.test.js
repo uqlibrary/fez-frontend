@@ -1,11 +1,12 @@
 import React from 'react';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
-import JournalAdminContainer, { isSame } from './JournalAdminContainer';
-import { journalDoaj } from 'mock/data';
-import Immutable from 'immutable';
-import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
+
+import { accounts } from 'mock/data/account';
+import { journalDoaj } from 'mock/data';
+import JournalAdminContainer, { isSame } from './JournalAdminContainer';
+import { useJournal } from '../hooks';
 
 class ResizeObserver {
     observe() {}
@@ -31,34 +32,34 @@ jest.mock('react-router-dom', () => ({
     useParams: jest.fn(),
 }));
 
-const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
-    JournalAdminContainer,
-);
-
-function setup(testProps = {}) {
-    const props = {
-        authorDetails: {
-            username: 'uqstaff',
+function setup(testState = {}) {
+    const state = {
+        accountReducer: {
+            account: {
+                account: accounts.uqresearcher,
+            },
+            author: {
+                aut_id: 111,
+            },
         },
-        loadJournalToView: jest.fn(),
-        journalLoadingError: false,
-        journalToView: journalDoaj.data,
-        handleSubmit: jest.fn(),
-        clearJournalToView: jest.fn(),
-        ...testProps,
+        ...testState,
     };
 
     return render(
         <WithRouter>
-            <WithReduxStore>
-                <WithReduxForm {...props} />,
+            <WithReduxStore initialState={Immutable.Map(state)}>
+                >
+                <JournalAdminContainer />
             </WithReduxStore>
-            ,
         </WithRouter>,
     );
 }
 
 describe('JournalAdminContainer component', () => {
+    // HERE, this test will need to mock viewJournalReducer in redux state,
+    // as the useJournal hook uses it to populate required values.
+    // Will need to manipulate for each test as the container no
+    // longer accepts props
     describe('Fullform view', () => {
         beforeAll(() => {
             Cookies.get = jest.fn().mockImplementation(() => 'fullform');
@@ -101,18 +102,6 @@ describe('JournalAdminContainer component', () => {
             });
             const div = document.querySelector('.empty');
             expect(div).not.toBeNull();
-        });
-
-        it('should render when form errors are present', () => {
-            const { getByTestId } = setup({
-                formErrors: {
-                    adminSection: {
-                        jnl_title: 'Title is required',
-                    },
-                },
-            });
-            expect(getByTestId('alert')).toBeInTheDocument();
-            expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
         });
 
         it('should render not found message when no journal is provided', () => {
