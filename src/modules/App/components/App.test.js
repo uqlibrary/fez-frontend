@@ -151,7 +151,7 @@ describe('Application component', () => {
         window.location = { assign: assignFn };
         mockUseLocation.pathname = '/rhdsubmission';
         setup({ account: null });
-        expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
+        expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login?url=dW5kZWZpbmVk');
     });
 
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
