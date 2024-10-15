@@ -64,7 +64,7 @@ const ControlledVocabularies = () => {
     };
 
     const handleDialogClickSave = (parentId, rootVocabId) => values => {
-        const data = { ...values.toJS() };
+        const data = { ...values };
         const wrappedRequest = transformAdminRequest({
             request: data,
             parentId,
