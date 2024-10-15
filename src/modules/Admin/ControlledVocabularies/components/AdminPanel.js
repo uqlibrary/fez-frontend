@@ -30,19 +30,10 @@ const AdminPanel = ({
     onClose,
     noMinContentWidth,
     error,
+    submitting,
     parentId,
     ...props
 }) => {
-    const {
-        control,
-        handleSubmit,
-        formState: { isSubmitting, isValid },
-        reset,
-    } = useForm({
-        defaultValues: props.initialValues,
-        mode: 'onChange', // Enables validation to update on input change
-    });
-
     const componentId = `${rootId}-${id}`;
 
     const theme = useTheme();
@@ -65,11 +56,26 @@ const AdminPanel = ({
         };
     }
 
+    const {
+        handleSubmit,
+        control,
+        formState: { isDirty, isValid },
+        setValue,
+    } = useForm({
+        defaultValues: props.initialValues,
+        mode: 'onChange',
+    });
+
     const _onCancelAction = () => {
         onClose?.();
         onCancelAction?.();
-        reset(); // Resets the form when cancel is clicked
     };
+
+    React.useEffect(() => {
+        if (!props.initialized) {
+            Object.entries(props.initialValues).forEach(([key, value]) => setValue(key, value));
+        }
+    }, [props.initialized, props.initialValues, setValue]);
 
     return (
         <>
@@ -82,7 +88,7 @@ const AdminPanel = ({
                     data-testid={`${componentId}-container`}
                 >
                     <StandardCard title={title} standardCardId={`${componentId}`} subCard>
-                        <form onSubmit={handleSubmit(props.onSubmit)}>
+                        <form onSubmit={handleSubmit(props.onAction)}>
                             <Box
                                 id={`${componentId}-vc-content`}
                                 data-testid={`${componentId}-vc-content`}
@@ -100,9 +106,10 @@ const AdminPanel = ({
                                                     {...field}
                                                     variant="standard"
                                                     required
-                                                    fullWidth
                                                     inputProps={{ maxLength: 255 }}
-                                                    disabled={isSubmitting}
+                                                    fullWidth
+                                                    textFieldId="cvo-title"
+                                                    disabled={submitting}
                                                 />
                                             )}
                                         />
@@ -116,17 +123,20 @@ const AdminPanel = ({
                                                 <TextField
                                                     {...field}
                                                     variant="standard"
+                                                    inputProps={{ maxLength: 255 }}
                                                     fullWidth
+                                                    textFieldId="cvo-desc"
                                                     multiline
                                                     minRows={2}
-                                                    inputProps={{ maxLength: 255 }}
-                                                    disabled={isSubmitting}
+                                                    disabled={submitting}
                                                 />
                                             )}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_external_id">{locale.form.externalId}</label>
+                                        <label htmlFor="cvo_external_id" style={{ display: 'block' }}>
+                                            {locale.form.externalId}
+                                        </label>
                                         <Controller
                                             name="cvo_external_id"
                                             control={control}
@@ -134,40 +144,17 @@ const AdminPanel = ({
                                                 <TextField
                                                     {...field}
                                                     variant="standard"
+                                                    textFieldId="cvo-external-id"
                                                     inputProps={{ maxLength: 10 }}
-                                                    disabled={isSubmitting}
+                                                    disabled={submitting}
                                                 />
                                             )}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <label htmlFor="cvo_image_filename">{locale.form.filename}</label>
-                                        <Controller
-                                            name="cvo_image_filename"
-                                            control={control}
-                                            render={({ field }) => (
-                                                <TextField
-                                                    {...field}
-                                                    variant="standard"
-                                                    fullWidth
-                                                    inputProps={{ maxLength: 64 }}
-                                                    disabled={isSubmitting}
-                                                />
-                                            )}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <label htmlFor="cvo_order">{locale.form.order}</label>
-                                        <Controller
-                                            name="cvo_order"
-                                            control={control}
-                                            render={({ field }) => (
-                                                <TextField {...field} variant="standard" disabled={isSubmitting} />
-                                            )}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <label htmlFor="cvo_hide">{locale.form.inactive}</label>
+                                        <label htmlFor="cvo_hide" style={{ display: 'block' }}>
+                                            {locale.form.inactive}
+                                        </label>
                                         <Controller
                                             name="cvo_hide"
                                             control={control}
@@ -176,7 +163,10 @@ const AdminPanel = ({
                                                     {...field}
                                                     checked={field.value}
                                                     onChange={field.onChange}
-                                                    disabled={isSubmitting}
+                                                    id="cvo-hide-input"
+                                                    data-analyticsid="cvo-hide-input"
+                                                    data-testid="cvo-hide-input"
+                                                    disabled={submitting}
                                                 />
                                             )}
                                         />
@@ -184,14 +174,21 @@ const AdminPanel = ({
                                 </Grid>
                             </Box>
                             {(!hideCancelButton || !hideActionButton) && (
-                                <Grid container sx={{ marginTop: 2 }}>
+                                <Grid
+                                    container
+                                    id={`${rootId}-actions`}
+                                    data-testid={`${rootId}-actions`}
+                                    sx={{ marginTop: 2 }}
+                                >
                                     <Grid item xs={12} justifyContent="flex-end" display={'flex'}>
                                         {!hideCancelButton && (
                                             <Button
-                                                variant="outlined"
+                                                variant={'outlined'}
                                                 onClick={_onCancelAction}
-                                                disabled={isSubmitting}
+                                                id={`${rootId}-cancel-button`}
+                                                data-testid={`${rootId}-cancel-button`}
                                                 fullWidth={isMobileView}
+                                                disabled={submitting}
                                                 sx={{ marginInlineEnd: 2 }}
                                             >
                                                 {locale.cancelButtonLabel}
@@ -200,13 +197,21 @@ const AdminPanel = ({
                                         {!hideActionButton && (
                                             <Button
                                                 variant="contained"
-                                                type="submit"
-                                                color="primary"
-                                                disabled={!isValid || isSubmitting}
+                                                autoFocus
+                                                color={'primary'}
+                                                type={'submit'}
+                                                id={`${rootId}-action-button`}
+                                                data-testid={`${rootId}-action-button`}
                                                 fullWidth={isMobileView}
+                                                disabled={!isDirty || submitting || !isValid}
                                             >
-                                                {isSubmitting ? (
-                                                    <CircularProgress size={25} />
+                                                {submitting ? (
+                                                    <CircularProgress
+                                                        color="inherit"
+                                                        size={25}
+                                                        id={`${rootId}-progress`}
+                                                        data-testid={`${rootId}-progress`}
+                                                    />
                                                 ) : (
                                                     locale.confirmButtonLabel
                                                 )}
@@ -215,7 +220,7 @@ const AdminPanel = ({
                                     </Grid>
                                 </Grid>
                             )}
-                            {error && (
+                            {!!error && (
                                 <Grid container>
                                     <Grid item xs={12}>
                                         <Alert
@@ -240,17 +245,20 @@ AdminPanel.propTypes = {
     locale: PropTypes.object.isRequired,
     id: PropTypes.string.isRequired,
     title: PropTypes.string,
+    row: PropTypes.object,
     isOpen: PropTypes.bool,
     noMinContentWidth: PropTypes.bool,
     hideActionButton: PropTypes.bool,
     hideCancelButton: PropTypes.bool,
-    onAction: PropTypes.func,
+    onAction: PropTypes.func.isRequired,
     onCancelAction: PropTypes.func,
     onClose: PropTypes.func,
+    props: PropTypes.object,
     error: PropTypes.object,
-    initialValues: PropTypes.object,
+    submitting: PropTypes.bool,
     parentId: PropTypes.string,
-    onSubmit: PropTypes.func,
+    initialValues: PropTypes.object,
+    initialized: PropTypes.bool,
 };
 
 export default React.memo(AdminPanel);
