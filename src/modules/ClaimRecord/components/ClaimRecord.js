@@ -27,6 +27,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as actions from 'actions';
 import { useValidatedForm } from '../../../hooks';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 
 const isClaimPreCheckResponse = errors => errors?.original?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
 const getCustomErrorMessageIfAvailable = (serverError, defaultMessage) => {
@@ -47,6 +48,9 @@ export const getAlertProps = (
     serverError,
 ) => {
     const txt = locale.forms.claimPublicationForm;
+    // When trying to claim a record from an external source, the available
+    // data might not be sufficient for creating a new record. This scenario
+    // would be handled up by the code block below.
     if (!publication.rek_pid && isSubmitFailure) {
         return validation.getErrorAlertProps({
             submitting: isSubmitting,
@@ -77,12 +81,6 @@ const ClaimRecord = () => {
     const navigate = useNavigate();
     // to allow confirmDialogBox control
     const confirmDialogBoxRef = useRef();
-    const setConfirmDialogBoxRef = React.useCallback(
-        ref => {
-            confirmDialogBoxRef.current = ref;
-        },
-        [confirmDialogBoxRef],
-    );
     // constants
     const txt = locale.forms.claimPublicationForm;
     // app's global state
@@ -171,16 +169,21 @@ const ClaimRecord = () => {
         navigate(-1);
     };
 
+    // dialog & alert
     const authorLinked = publication?.fez_record_search_key_author_id?.some(id => id.rek_author_id === author.aut_id);
     const contributorLinked = publication?.fez_record_search_key_contributor_id?.some(
         id => id.rek_contributor_id === author.aut_id,
     );
-
-    const contributorClassName = publication?.fez_record_search_key_author?.length
-        ? 'contributorsField'
-        : 'requiredField';
-
-    // dialog & alert
+    const alertProps = getAlertProps(
+        publication,
+        authorLinked,
+        contributorLinked,
+        errors,
+        isSubmitting,
+        isSubmitSuccessful,
+        isSubmitFailure,
+        server.error.get(),
+    );
     // set confirmation message depending on file upload status
     const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
     saveConfirmationLocale.confirmationMessage = (
@@ -195,16 +198,9 @@ const ClaimRecord = () => {
             {txt.successWorkflowConfirmation.successConfirmationMessage}
         </React.Fragment>
     );
-    const alertProps = getAlertProps(
-        publication,
-        authorLinked,
-        contributorLinked,
-        errors,
-        isSubmitting,
-        isSubmitSuccessful,
-        isSubmitFailure,
-        server.error.get(),
-    );
+    const contributorClassName = publication?.fez_record_search_key_author?.length
+        ? 'contributorsField'
+        : 'requiredField';
 
     return (
         <StandardPage title={txt.title}>
@@ -220,7 +216,7 @@ const ClaimRecord = () => {
                             <>
                                 <ConfirmDialogBox
                                     locale={saveConfirmationLocale}
-                                    onRef={setConfirmDialogBoxRef}
+                                    onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
                                     onAction={navigateToMyResearch}
                                     onAlternateAction={navigateToFixRecord}
                                     onCancelAction={claimAnother}
@@ -230,28 +226,30 @@ const ClaimRecord = () => {
                                     when={isDirty && !isSubmitSuccessful}
                                     txt={txt.cancelWorkflowConfirmation}
                                 />
-                                {publication.fez_record_search_key_author && !authorLinked && (
-                                    <Grid xs={12}>
-                                        <StandardCard
-                                            title={txt.authorLinking.title}
-                                            help={txt.authorLinking.help}
-                                            className="requiredField"
-                                        >
-                                            <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                            <Field
-                                                control={control}
-                                                name="authorLinking"
-                                                component={AuthorLinkingField}
-                                                loggedInAuthor={author}
-                                                authorList={publication.fez_record_search_key_author}
-                                                linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                                disabled={isSubmitting}
+                                {publication.fez_record_search_key_author &&
+                                    publication.fez_record_search_key_author.length > 0 &&
+                                    !authorLinked && (
+                                        <Grid xs={12}>
+                                            <StandardCard
+                                                title={txt.authorLinking.title}
+                                                help={txt.authorLinking.help}
                                                 className="requiredField"
-                                                validate={[validation.required, validation.isValidAuthorLink]}
-                                            />
-                                        </StandardCard>
-                                    </Grid>
-                                )}
+                                            >
+                                                <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                                <Field
+                                                    control={control}
+                                                    name="authorLinking"
+                                                    component={AuthorLinkingField}
+                                                    loggedInAuthor={author}
+                                                    authorList={publication.fez_record_search_key_author}
+                                                    linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                                    disabled={isSubmitting}
+                                                    className="requiredField"
+                                                    validate={[validation.required, validation.isValidAuthorLink]}
+                                                />
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
                                 {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
                                     publication.fez_record_search_key_contributor &&
                                     publication.fez_record_search_key_contributor.length > 0 &&
