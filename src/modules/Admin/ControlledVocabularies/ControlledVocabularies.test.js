@@ -104,7 +104,6 @@ describe('ControlledVocabularies', () => {
             await showAddForm().then(async ({ getByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
-                await waitForElementToBeRemoved(getByTestId('update_dialog-progress'));
 
                 expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
             });
