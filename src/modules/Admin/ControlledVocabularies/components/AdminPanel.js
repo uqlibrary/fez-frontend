@@ -59,11 +59,11 @@ const AdminPanel = ({
     const {
         handleSubmit,
         control,
-        formState: { isDirty, isValid },
+        formState: { isDirty, isValid, errors },
         setValue,
     } = useForm({
         defaultValues: props.initialValues,
-        mode: 'onChange',
+        mode: 'onBlur',
     });
 
     const _onCancelAction = () => {
@@ -102,15 +102,20 @@ const AdminPanel = ({
                                             control={control}
                                             rules={{ required: 'Required' }}
                                             render={({ field }) => (
-                                                <TextField
-                                                    {...field}
-                                                    variant="standard"
-                                                    required
-                                                    inputProps={{ maxLength: 255 }}
-                                                    fullWidth
-                                                    textFieldId="cvo-title"
-                                                    disabled={submitting}
-                                                />
+                                                <>
+                                                    <TextField
+                                                        {...field}
+                                                        variant="standard"
+                                                        required
+                                                        inputProps={{ maxLength: 255 }}
+                                                        fullWidth
+                                                        textFieldId="cvo-title"
+                                                        disabled={submitting}
+                                                    />
+                                                    {errors.cvo_title && (
+                                                        <p style={{ color: 'red' }}>{errors.cvo_title.message}</p>
+                                                    )}
+                                                </>
                                             )}
                                         />
                                     </Grid>
