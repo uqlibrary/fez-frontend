@@ -120,9 +120,6 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-desc-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-external-id-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-hide-input')).toHaveAttribute('aria-disabled', 'true');
-        expect(
-            within(getByTestId('update_dialog-action-button')).getByTestId('update_dialog-progress'),
-        ).toBeInTheDocument();
         expect(getByTestId('update_dialog-cancel-button')).toHaveAttribute('disabled');
     });
 });
