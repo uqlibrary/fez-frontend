@@ -20,11 +20,12 @@ const setup = (props = {}, state = {}, renderer = render) => {
             adminDashboardConfigData: {
                 logged_in_user: {
                     id: mockUserid,
-                    name: 'Lee Sibbald',
+                    name: 'Sibbald,',
                 },
                 admin_users: [
                     { id: 13, preferred_name: 'Staff' },
-                    { id: 23, preferred_name: 'Staff, Another' },
+                    { id: 23, preferred_name: 'Another Staff' },
+                    { id: mockUserid, preferred_name: 'Lee Sibbald' },
                 ],
             },
         },
@@ -82,7 +83,7 @@ describe('SystemAlerts tab', () => {
 
         expect(getByTestId('alert-status-1')).toHaveTextContent('Unassigned');
         expect(getByTestId('alert-status-12')).toHaveTextContent('Unknown');
-        expect(getByTestId('alert-status-13')).toHaveTextContent('Staff, Another');
+        expect(getByTestId('alert-status-13')).toHaveTextContent('Another Staff');
 
         // pagination buttons
         expect(getByTitle('Go to previous page')).toHaveAttribute('disabled');
