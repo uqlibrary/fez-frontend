@@ -56,7 +56,7 @@ describe('AdminPanelContainer', () => {
     });
 });
 
-describe('AdminPanel with Redux-Form', () => {
+describe('AdminPanel with React-Hook-Form', () => {
     const setup = (testProps = {}, renderer = render) => {
         const props = { isOpen: true, action: 'add', id: 'test', onAction: jest.fn(), ...testProps };
 
