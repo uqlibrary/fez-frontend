@@ -2511,6 +2511,19 @@ export default {
                 </span>
             ),
         },
+        genAiTermsOfUse: {
+            title: 'Restrictions on Use',
+            text: (
+                <span>
+                    You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s
+                    commercial licences with resource providers. You may not share, re-publish, copy or enter into AI
+                    technologies any part of an object accessed from our digital collections, unless expressly permitted
+                    in the licence terms for that digital object. Data/text mining, distribution, systematic copying and
+                    downloading of objects may also be prohibited. More information may be available in the rights
+                    statement located in an item's record.
+                </span>
+            ),
+        },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
         },
