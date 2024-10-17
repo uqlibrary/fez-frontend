@@ -18,7 +18,7 @@ import { ACTION } from '../ControlledVocabularyContext';
 
 const rootId = 'update_dialog';
 
-const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose, submitting, parentId, ...props }) => {
+const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose, parentId, ...props }) => {
     const componentId = `${rootId}-${id}`;
 
     const theme = useTheme();
@@ -44,24 +44,18 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
     const {
         handleSubmit,
         control,
-        formState: { isDirty, isValid, errors },
-        setValue,
+        formState: { isDirty, isValid, isSubmitting, errors },
     } = useForm({
         defaultValues: props.initialValues,
         mode: 'onBlur',
     });
     const [apiError, setApiError] = React.useState('');
+    // const [isSubmitting, setIsSubmitting] = React.useState(false);
 
     const _onCancelAction = () => {
         onClose?.();
         onCancelAction?.();
     };
-
-    React.useEffect(() => {
-        if (!props.initialized) {
-            Object.entries(props.initialValues).forEach(([key, value]) => setValue(key, value));
-        }
-    }, [props.initialized, props.initialValues, setValue]);
 
     return (
         <>
@@ -108,7 +102,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                                         inputProps={{ maxLength: 255 }}
                                                         fullWidth
                                                         textFieldId="cvo-title"
-                                                        disabled={submitting}
+                                                        disabled={isSubmitting}
                                                     />
                                                     {errors.cvo_title && (
                                                         <p data-testid="title-require-error" style={{ color: 'red' }}>
@@ -133,7 +127,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                                     textFieldId="cvo-desc"
                                                     multiline
                                                     minRows={2}
-                                                    disabled={submitting}
+                                                    disabled={isSubmitting}
                                                 />
                                             )}
                                         />
@@ -151,7 +145,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                                     variant="standard"
                                                     textFieldId="cvo-external-id"
                                                     inputProps={{ maxLength: 10 }}
-                                                    disabled={submitting}
+                                                    disabled={isSubmitting}
                                                 />
                                             )}
                                         />
@@ -171,7 +165,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                                     id="cvo-hide-input"
                                                     data-analyticsid="cvo-hide-input"
                                                     data-testid="cvo-hide-input"
-                                                    disabled={submitting}
+                                                    disabled={isSubmitting}
                                                 />
                                             )}
                                         />
@@ -191,7 +185,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                         id={`${rootId}-cancel-button`}
                                         data-testid={`${rootId}-cancel-button`}
                                         fullWidth={isMobileView}
-                                        disabled={submitting}
+                                        disabled={isSubmitting}
                                         sx={{ marginInlineEnd: 2 }}
                                     >
                                         {locale.cancelButtonLabel}
@@ -204,9 +198,9 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                         id={`${rootId}-action-button`}
                                         data-testid={`${rootId}-action-button`}
                                         fullWidth={isMobileView}
-                                        disabled={!isDirty || submitting || !isValid}
+                                        disabled={!isDirty || isSubmitting || !isValid}
                                     >
-                                        {submitting ? (
+                                        {isSubmitting ? (
                                             <CircularProgress
                                                 color="inherit"
                                                 size={25}
@@ -250,10 +244,8 @@ AdminPanel.propTypes = {
     onCancelAction: PropTypes.func,
     onClose: PropTypes.func,
     props: PropTypes.object,
-    submitting: PropTypes.bool,
     parentId: PropTypes.number,
     initialValues: PropTypes.object,
-    initialized: PropTypes.bool,
 };
 
 export default React.memo(AdminPanel);
