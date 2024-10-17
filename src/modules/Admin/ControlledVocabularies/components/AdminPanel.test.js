@@ -123,8 +123,8 @@ describe('AdminPanel', () => {
             },
         });
 
-        let titleInput = getByTestId('cvo-title-input');
-        let submitButton = getByTestId('update_dialog-action-button');
+        const titleInput = getByTestId('cvo-title-input');
+        const submitButton = getByTestId('update_dialog-action-button');
         fireEvent.focus(titleInput);
         await userEvent.type(titleInput, 'Valid Title');
         fireEvent.blur(titleInput);
@@ -139,7 +139,7 @@ describe('AdminPanel', () => {
 
     it('should show Required', async () => {
         const { getByTestId } = setup({});
-        let titleInput = getByTestId('cvo-title-input');
+        const titleInput = getByTestId('cvo-title-input');
         fireEvent.focus(titleInput);
         fireEvent.change(titleInput, { target: { value: 'new value' } });
         fireEvent.change(titleInput, { target: { value: '' } });
