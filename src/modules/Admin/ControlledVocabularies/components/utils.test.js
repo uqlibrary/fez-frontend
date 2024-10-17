@@ -55,6 +55,14 @@ describe('transformAdminRequest', () => {
         expect(transformedRequest).toHaveProperty('cvo_hide', 1);
     });
 
+    // test cvo_hide property not set
+    test('should not have cvo_hide property', () => {
+        let req = structuredClone(mockRequest);
+        delete req['cvo_hide'];
+        const transformedRequest = transformAdminRequest({ request: req });
+        expect(transformedRequest).not.toHaveProperty('cvo_hide');
+    });
+
     // test that the function converts the cvo_order property to a number
     test('should convert the cvo_order property to a number', () => {
         const transformedRequest = transformAdminRequest({ request: mockRequest });
