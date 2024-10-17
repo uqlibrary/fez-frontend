@@ -18,21 +18,7 @@ import { ACTION } from '../ControlledVocabularyContext';
 
 const rootId = 'update_dialog';
 
-const AdminPanel = ({
-    action,
-    locale,
-    isOpen,
-    title,
-    id,
-    hideActionButton = false,
-    hideCancelButton = false,
-    onCancelAction,
-    onClose,
-    noMinContentWidth,
-    submitting,
-    parentId,
-    ...props
-}) => {
+const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose, submitting, parentId, ...props }) => {
     const componentId = `${rootId}-${id}`;
 
     const theme = useTheme();
@@ -94,14 +80,17 @@ const AdminPanel = ({
                                     setApiError('');
                                     await props.onAction(data);
                                 } catch (error) {
-                                    setApiError(error.message || 'An error occurred');
+                                    setApiError(error.message);
                                 }
                             })}
                         >
                             <Box
                                 id={`${componentId}-vc-content`}
                                 data-testid={`${componentId}-vc-content`}
-                                sx={{ minWidth: !noMinContentWidth ? 300 : 'auto', padding: 2 }}
+                                sx={{
+                                    minWidth: 300,
+                                    padding: 2,
+                                }}
                             >
                                 <Grid container padding={0} spacing={2}>
                                     <Grid item xs={12}>
@@ -122,7 +111,9 @@ const AdminPanel = ({
                                                         disabled={submitting}
                                                     />
                                                     {errors.cvo_title && (
-                                                        <p style={{ color: 'red' }}>{errors.cvo_title.message}</p>
+                                                        <p data-testid="title-require-error" style={{ color: 'red' }}>
+                                                            {errors.cvo_title.message}
+                                                        </p>
                                                     )}
                                                 </>
                                             )}
@@ -187,53 +178,47 @@ const AdminPanel = ({
                                     </Grid>
                                 </Grid>
                             </Box>
-                            {(!hideCancelButton || !hideActionButton) && (
-                                <Grid
-                                    container
-                                    id={`${rootId}-actions`}
-                                    data-testid={`${rootId}-actions`}
-                                    sx={{ marginTop: 2 }}
-                                >
-                                    <Grid item xs={12} justifyContent="flex-end" display={'flex'}>
-                                        {!hideCancelButton && (
-                                            <Button
-                                                variant={'outlined'}
-                                                onClick={_onCancelAction}
-                                                id={`${rootId}-cancel-button`}
-                                                data-testid={`${rootId}-cancel-button`}
-                                                fullWidth={isMobileView}
-                                                disabled={submitting}
-                                                sx={{ marginInlineEnd: 2 }}
-                                            >
-                                                {locale.cancelButtonLabel}
-                                            </Button>
+                            <Grid
+                                container
+                                id={`${rootId}-actions`}
+                                data-testid={`${rootId}-actions`}
+                                sx={{ marginTop: 2 }}
+                            >
+                                <Grid item xs={12} justifyContent="flex-end" display={'flex'}>
+                                    <Button
+                                        variant={'outlined'}
+                                        onClick={_onCancelAction}
+                                        id={`${rootId}-cancel-button`}
+                                        data-testid={`${rootId}-cancel-button`}
+                                        fullWidth={isMobileView}
+                                        disabled={submitting}
+                                        sx={{ marginInlineEnd: 2 }}
+                                    >
+                                        {locale.cancelButtonLabel}
+                                    </Button>
+                                    <Button
+                                        variant="contained"
+                                        autoFocus
+                                        color={'primary'}
+                                        type={'submit'}
+                                        id={`${rootId}-action-button`}
+                                        data-testid={`${rootId}-action-button`}
+                                        fullWidth={isMobileView}
+                                        disabled={!isDirty || submitting || !isValid}
+                                    >
+                                        {submitting ? (
+                                            <CircularProgress
+                                                color="inherit"
+                                                size={25}
+                                                id={`${rootId}-progress`}
+                                                data-testid={`${rootId}-progress`}
+                                            />
+                                        ) : (
+                                            locale.confirmButtonLabel
                                         )}
-                                        {!hideActionButton && (
-                                            <Button
-                                                variant="contained"
-                                                autoFocus
-                                                color={'primary'}
-                                                type={'submit'}
-                                                id={`${rootId}-action-button`}
-                                                data-testid={`${rootId}-action-button`}
-                                                fullWidth={isMobileView}
-                                                disabled={!isDirty || submitting || !isValid}
-                                            >
-                                                {submitting ? (
-                                                    <CircularProgress
-                                                        color="inherit"
-                                                        size={25}
-                                                        id={`${rootId}-progress`}
-                                                        data-testid={`${rootId}-progress`}
-                                                    />
-                                                ) : (
-                                                    locale.confirmButtonLabel
-                                                )}
-                                            </Button>
-                                        )}
-                                    </Grid>
+                                    </Button>
                                 </Grid>
-                            )}
+                            </Grid>
                             {!!apiError && (
                                 <Grid container>
                                     <Grid item xs={12}>
@@ -261,9 +246,6 @@ AdminPanel.propTypes = {
     title: PropTypes.string,
     row: PropTypes.object,
     isOpen: PropTypes.bool,
-    noMinContentWidth: PropTypes.bool,
-    hideActionButton: PropTypes.bool,
-    hideCancelButton: PropTypes.bool,
     onAction: PropTypes.func,
     onCancelAction: PropTypes.func,
     onClose: PropTypes.func,
