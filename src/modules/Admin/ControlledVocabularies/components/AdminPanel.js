@@ -47,7 +47,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
         formState: { isDirty, isSubmitting, errors },
     } = useForm({
         defaultValues: props.initialValues,
-        mode: 'onBlur',
+        mode: 'onChange',
     });
     const [apiError, setApiError] = React.useState('');
 

@@ -141,7 +141,8 @@ describe('AdminPanel', () => {
         const { getByTestId } = setup({});
         let titleInput = getByTestId('cvo-title-input');
         fireEvent.focus(titleInput);
-        fireEvent.blur(titleInput);
+        fireEvent.change(titleInput, { target: { value: 'new value' } });
+        fireEvent.change(titleInput, { target: { value: '' } });
         await waitFor(() => {
             expect(getByTestId('title-require-error')).toBeInTheDocument();
         });
