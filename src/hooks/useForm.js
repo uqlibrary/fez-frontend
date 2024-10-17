@@ -29,6 +29,18 @@ export const clearServerErrorAndHandleSubmit = attributes => handler => e => {
 };
 
 /**
+ * Get flatten errors to a `field` => `error` object
+ *
+ * @param errors
+ * @param otherAlreadyFlattenedErrors {{}}
+ * @return {*|{}}
+ */
+export const flattenErrors = (errors, ...otherAlreadyFlattenedErrors) => ({
+    ...Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {}),
+    ...otherAlreadyFlattenedErrors.reduce((acc, error) => ({ ...acc, ...error }), {}),
+});
+
+/**
  * Get a subset of an object for a given set of keys
  * Returns a new object without given keys. Use inclusive=true for the opposite.
  * @param object
@@ -36,7 +48,7 @@ export const clearServerErrorAndHandleSubmit = attributes => handler => e => {
  * @param inclusive
  * @return {{}}
  */
-const derived = (object, keys, inclusive = false) =>
+const filterObjectKeys = (object, keys, inclusive = false) =>
     Object.keys(object).reduce((acc, key) => {
         if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
             acc[key] = object[key];
@@ -56,11 +68,13 @@ export const useForm = props => {
     // add hasError attribute to formState, as isValid alone doesn't seem to take in account raised validation errors
     attributes.formState.hasError = hasErrors(attributes.formState.errors);
     // add hasValidationError attribute to formState - excludes server errors
-    attributes.formState.hasValidationError = hasErrors(derived(attributes.formState.errors, [SERVER_ERROR_KEY]));
+    attributes.formState.hasValidationError = hasErrors(
+        filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY]),
+    );
     // add "server" namespace to formState object for managing server errors
     attributes.formState.server = {
         error: {
-            has: hasErrors(derived(attributes.formState.errors, [SERVER_ERROR_KEY], true)),
+            has: hasErrors(filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY], true)),
             set: e => setServerError(attributes.setError, e),
             get: () => getServerError(attributes.formState.errors),
             clear: () => attributes.clearErrors(SERVER_ERROR_KEY),
