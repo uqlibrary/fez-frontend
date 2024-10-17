@@ -57,7 +57,7 @@ export const JournalAdminContainer = () => {
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
             console.log(e);
-            methods.setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
+            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: e.message });
         }
     };
     const formErrors = methods.formState.errors ?? {};
