@@ -31,7 +31,7 @@ export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdate
 export const ChangeDisplayType = lazy(() =>
     lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),
 );
-export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/containers/ClaimRecord')));
+export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CollectionForm/containers/CollectionForm')),
 );
@@ -44,7 +44,7 @@ export const ControlledVocabularies = lazy(() =>
 );
 
 export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
-export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
+export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/components/DeleteRecord')));
 export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containers/Doi')));
 export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
