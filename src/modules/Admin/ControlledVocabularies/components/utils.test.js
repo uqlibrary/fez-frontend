@@ -57,8 +57,8 @@ describe('transformAdminRequest', () => {
 
     // test cvo_hide property not set
     test('should not have cvo_hide property', () => {
-        let req = structuredClone(mockRequest);
-        delete req['cvo_hide'];
+        const req = structuredClone(mockRequest);
+        delete req.cvo_hide;
         const transformedRequest = transformAdminRequest({ request: req });
         expect(transformedRequest).not.toHaveProperty('cvo_hide');
     });
@@ -81,7 +81,7 @@ describe('calculateEnd', () => {
     test('Should return perPage when records are bigger than that the page can show', () => {
         expect(calculateEnd(0, 10, 15, 0)).toEqual(10);
     });
-    test('Should return remaing records when remaining records are smaller than that the page can show', () => {
+    test('Should return records when remaining records are smaller than that the page can show', () => {
         expect(calculateEnd(0, 10, 15, 1)).toEqual(5);
     });
 });
