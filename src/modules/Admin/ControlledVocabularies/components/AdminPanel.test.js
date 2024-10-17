@@ -117,17 +117,24 @@ describe('AdminPanel', () => {
     it('should disable controls when submitting', async () => {
         const { getByTestId } = setup({
             initialValues: {
-                cvo_title: 'Valid Title', // Empty initially, making the form invalid
+                cvo_title: '', // Start with an empty title
                 cvo_desc: '',
                 cvo_external_id: '',
             },
         });
 
-        expect(getByTestId('update_dialog-action-button')).toBeEnabled();
-        await userEvent.type(getByTestId('cvo-title'), 'Valid Title');
-        await waitFor(() => expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled'));
-        await userEvent.click(getByTestId('update_dialog-action-button'));
-        await waitFor(() => expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled'));
+        let titleInput = getByTestId('cvo-title-input');
+        let submitButton = getByTestId('update_dialog-action-button');
+        fireEvent.focus(titleInput);
+        await userEvent.type(titleInput, 'Valid Title');
+        fireEvent.blur(titleInput);
+
+        await waitFor(async () => {
+            expect(submitButton).toBeEnabled();
+        });
+        userEvent.click(submitButton);
+        await waitFor(() => expect(submitButton).toBeDisabled());
+        await waitFor(() => expect(submitButton).toBeEnabled());
     });
 
     it('should show Required', async () => {
