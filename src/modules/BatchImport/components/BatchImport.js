@@ -27,6 +27,7 @@ import { default as publicationLocale } from 'locale/publicationForm';
 import { useNavigate } from 'react-router-dom';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from '../../../hooks';
+import { reorderObjectKeys } from '../../../helpers/general';
 
 const csvIngestDoctypesList = Object.values(publicationTypes(false))
     .filter(item => CSV_INGEST_DOCUMENT_TYPES.includes(item.id))
@@ -40,6 +41,13 @@ export const BatchImport = () => {
     const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const dispatch = useDispatch();
+    const defaultValues = {
+        is_bulk_file_ingest: false,
+        communityID: '',
+        collection_pid: '',
+        doc_type_id: '',
+        directory: '',
+    };
 
     const {
         reset,
@@ -51,24 +59,32 @@ export const BatchImport = () => {
         formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
     } = useValidatedForm({
         mode: 'onChange',
-        defaultValues: {
-            is_bulk_file_ingest: false,
-            communityID: '',
-            collection_pid: '',
-            doc_type_id: '',
-            directory: '',
-        },
+        defaultValues,
     });
     const [isBulkFileIngest, communityID] = useWatch({ control, name: ['is_bulk_file_ingest', 'communityID'] });
     const hasErrors = Object.keys(errors).length > 0;
 
     const onSubmit = async data => {
         try {
-            await dispatch(createBatchImport(data));
+            let payload = data;
+            // remove unnecessary fields from payload when "bulk file/edit ingest" mode is on
+            if (data.is_bulk_file_ingest) {
+                payload = {
+                    is_bulk_file_ingest: data.is_bulk_file_ingest,
+                    directory: data.directory,
+                };
+            }
+            await dispatch(createBatchImport(payload));
         } catch (error) {
             setError(SERVER_ERROR_KEY, { message: error.message });
         }
     };
+
+    // re-validate the form upon toggling "bulk file/edit ingest" option, to make sure that the
+    // alert box (at the bottom of the form) displays a summary of errors for visible form fields only
+    useLayoutEffect(() => {
+        (async () => await trigger())();
+    }, [trigger, isBulkFileIngest]);
 
     // display validation error for collection field when changing community
     useLayoutEffect(() => {
@@ -78,7 +94,10 @@ export const BatchImport = () => {
     }, [communityID]);
 
     useEffect(() => {
-        const formErrors = Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {});
+        const formErrors = reorderObjectKeys(
+            Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {}),
+            Object.keys(defaultValues),
+        );
         const alertProps = validation.getErrorAlertProps({
             alertLocale: {
                 validationAlert: { ...publicationLocale.validationAlert },
@@ -109,7 +128,7 @@ export const BatchImport = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(errors), isSubmitSuccessful, isSubmitting]);
 
-    const _abandonImport = () => {
+    const abandonImport = () => {
         navigate(pathConfig.index);
     };
 
@@ -239,7 +258,7 @@ export const BatchImport = () => {
                                 disabled={isSubmitting}
                                 fullWidth
                                 id="cancelBatchImport"
-                                onClick={_abandonImport}
+                                onClick={abandonImport}
                                 variant="contained"
                                 color={'default'}
                             />
