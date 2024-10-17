@@ -2,8 +2,7 @@ import React from 'react';
 import { render, WithRouter, userEvent, within, createMatchMedia } from 'test-utils';
 import AdminPanel from './AdminPanel';
 import locale from 'locale/components';
-import { waitFor } from '@testing-library/react';
-import { preview } from 'test-utils';
+import { waitFor, fireEvent } from '@testing-library/react';
 
 const setup = (testProps = {}, renderer = render) => {
     const props = {
@@ -121,5 +120,15 @@ describe('AdminPanel', () => {
         expect(getByTestId('cvo-external-id-input')).toHaveAttribute('disabled');
         expect(getByTestId('cvo-hide-input')).toHaveAttribute('aria-disabled', 'true');
         expect(getByTestId('update_dialog-cancel-button')).toHaveAttribute('disabled');
+    });
+
+    it('should show Required', async () => {
+        const { getByTestId } = setup({});
+        let titleInput = getByTestId('cvo-title-input');
+        fireEvent.focus(titleInput);
+        fireEvent.blur(titleInput);
+        await waitFor(() => {
+            expect(getByTestId('title-require-error')).toBeInTheDocument();
+        });
     });
 });
