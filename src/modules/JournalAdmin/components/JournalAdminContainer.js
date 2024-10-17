@@ -107,7 +107,6 @@ export const JournalAdminContainer = () => {
                             <JournalAdminInterface
                                 authorDetails={authorDetails}
                                 handleSubmit={handleSubmit}
-                                clearJournalToView={() => dispatch(actions.adminJournalClear())}
                                 locked={locked}
                                 disabled
                                 unlockJournal={() => dispatch(actions.adminUnlockJournal())}

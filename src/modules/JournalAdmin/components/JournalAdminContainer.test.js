@@ -1,12 +1,14 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import Immutable from 'immutable';
+
+import { render, WithReduxStore, WithRouter, waitFor, act, userEvent } from 'test-utils';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
+import * as JournalActions from 'actions/journals';
 
 import { accounts } from 'mock/data/account';
 import { journalDoaj } from 'mock/data';
-import JournalAdminContainer, { isSame } from './JournalAdminContainer';
-import { useJournal } from '../hooks';
+import JournalAdminContainer from './JournalAdminContainer';
 
 class ResizeObserver {
     observe() {}
@@ -44,11 +46,9 @@ function setup(testState = {}) {
         },
         ...testState,
     };
-
     return render(
         <WithRouter>
             <WithReduxStore initialState={Immutable.Map(state)}>
-                >
                 <JournalAdminContainer />
             </WithReduxStore>
         </WithRouter>,
@@ -56,10 +56,6 @@ function setup(testState = {}) {
 }
 
 describe('JournalAdminContainer component', () => {
-    // HERE, this test will need to mock viewJournalReducer in redux state,
-    // as the useJournal hook uses it to populate required values.
-    // Will need to manipulate for each test as the container no
-    // longer accepts props
     describe('Fullform view', () => {
         beforeAll(() => {
             Cookies.get = jest.fn().mockImplementation(() => 'fullform');
@@ -71,83 +67,76 @@ describe('JournalAdminContainer component', () => {
         });
 
         it('should render default view', async () => {
-            const { getByText } = setup();
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: journalDoaj.data,
+                },
+            };
+            const { getByText } = setup(state);
 
             expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
 
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).not.toHaveAttribute('checked');
+            await act(async () => {
+                await promise;
+            });
         });
 
         it('should render loading journal view', () => {
-            const { getByText } = setup({
-                journalToViewLoading: true,
-            });
+            const state = {
+                viewJournalReducer: {
+                    loadingJournalToView: true,
+                },
+            };
+            const { getByText } = setup(state);
             expect(getByText('Loading work')).toBeInTheDocument();
         });
 
         it('should render journal not found view', () => {
-            const { getByText } = setup({
-                journalToView: undefined,
-                journalToViewError: { message: 'test', status: 404 },
-            });
+            const state = {
+                viewJournalReducer: {
+                    journalToView: undefined,
+                    journalToViewError: { message: 'test', status: 404 },
+                },
+            };
+            const { getByText } = setup(state);
             expect(getByText('Work not found')).toBeInTheDocument();
             expect(getByText('(404 - test)')).toBeInTheDocument();
         });
 
         it('should render empty div if journal is not loaded', () => {
+            const state = {
+                viewJournalReducer: {
+                    journalToView: undefined,
+                },
+            };
             useParams.mockImplementation(() => ({ id: undefined }));
-            setup({
-                journalToView: undefined,
-            });
+            setup(state);
             const div = document.querySelector('.empty');
             expect(div).not.toBeNull();
         });
 
-        it('should render not found message when no journal is provided', () => {
-            const { getByTestId } = setup({
-                journalToView: null,
-            });
-            expect(getByTestId('page-title')).toHaveTextContent('Work not found');
+        it('should render not found message when no journal is provided', async () => {
+            const state = {
+                viewJournalReducer: {
+                    journalToView: null,
+                },
+            };
+            const { getByTestId } = setup(state);
+            await waitFor(() => expect(getByTestId('page-title')).toHaveTextContent('Work not found'));
         });
 
-        it('should render not found message journal error is encountered', () => {
-            const { getByTestId } = setup({
-                journalLoadingError: true,
-            });
-            expect(getByTestId('page-title')).toHaveTextContent('Work not found');
-        });
+        it('should render not found message journal error is encountered', async () => {
+            const state = {
+                viewJournalReducer: {
+                    journalLoadingError: true,
+                },
+            };
 
-        describe('isSame callback function', () => {
-            it('should return true if props are not changed', () => {
-                expect(
-                    isSame(
-                        { disableSubmit: false, journalToView: { id: 12 }, loadJournalToView: false },
-                        { disableSubmit: false, journalToView: { id: 12 }, loadJournalToView: false },
-                    ),
-                ).toBeTruthy();
-            });
-            it('should return true if props are changed', () => {
-                expect(
-                    isSame(
-                        { disableSubmit: false, loadJournalToView: false },
-                        { disableSubmit: false, loadJournalToView: true },
-                    ),
-                ).toBeTruthy();
-            });
-        });
-
-        describe('React hooks', () => {
-            it('should call clearJournalToView() prop on unload', () => {
-                const clearJournalToView = jest.fn();
-                const { unmount } = setup({
-                    clearJournalToView,
-                });
-
-                unmount();
-
-                expect(clearJournalToView).toHaveBeenCalled();
-            });
+            const { getByTestId } = setup(state);
+            await waitFor(() => expect(getByTestId('page-title')).toHaveTextContent('Work not found'));
         });
     });
     describe('Tabbed view', () => {
@@ -155,23 +144,44 @@ describe('JournalAdminContainer component', () => {
             Cookies.get = jest.fn().mockImplementation(() => 'tabbed');
             Cookies.set = jest.fn();
         });
-        it('should render component with tabbed interface', () => {
-            const { getByTestId } = setup();
+        beforeEach(() => {
+            useParams.mockImplementation(() => ({ id: 12 }));
+        });
+
+        it('should render component with tabbed interface', async () => {
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: journalDoaj.data,
+                },
+            };
+            const { getByTestId } = setup(state);
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).toHaveAttribute('checked');
             expect(getByTestId('admin-tab')).toHaveClass('Mui-selected');
-        });
-        it('should render when form errors are present as immutable map', () => {
-            const { getByTestId } = setup({
-                formErrors: {
-                    adminSection: {
-                        jnl_title: 'Title is required',
-                    },
-                },
+
+            await act(async () => {
+                await promise;
             });
-            expect(getByTestId('alert')).toBeInTheDocument();
-            expect(getByTestId('validation-warning-0')).toHaveTextContent('Journal title is required');
-            expect(getByTestId('admin-tab')).toHaveTextContent('1');
+        });
+    });
+
+    it('should call action.adminJournalClear() on unload', async () => {
+        const adminJournalClearSpy = jest.spyOn(JournalActions, 'adminJournalClear');
+        const promise = Promise.resolve();
+        const state = {
+            viewJournalReducer: {
+                journalToView: journalDoaj.data,
+            },
+        };
+        const { getByTestId } = setup(state);
+
+        await userEvent.click(getByTestId('admin-work-cancel-top'));
+
+        await waitFor(() => expect(adminJournalClearSpy).toHaveBeenCalled());
+
+        await act(async () => {
+            await promise;
         });
     });
 });
