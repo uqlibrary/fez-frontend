@@ -105,7 +105,9 @@ describe('ControlledVocabularies', () => {
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
-                expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
+                await waitFor(() => {
+                    expect(getByTestId('update_dialog-alert')).toHaveTextContent(message);
+                });
             });
         });
 

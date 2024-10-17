@@ -29,7 +29,6 @@ const AdminPanel = ({
     onCancelAction,
     onClose,
     noMinContentWidth,
-    error,
     submitting,
     parentId,
     ...props
@@ -65,6 +64,7 @@ const AdminPanel = ({
         defaultValues: props.initialValues,
         mode: 'onBlur',
     });
+    const [apiError, setApiError] = React.useState('');
 
     const _onCancelAction = () => {
         onClose?.();
@@ -88,7 +88,16 @@ const AdminPanel = ({
                     data-testid={`${componentId}-container`}
                 >
                     <StandardCard title={title} standardCardId={`${componentId}`} subCard>
-                        <form onSubmit={handleSubmit(props.onAction)}>
+                        <form
+                            onSubmit={handleSubmit(async data => {
+                                try {
+                                    setApiError('');
+                                    await props.onAction(data);
+                                } catch (error) {
+                                    setApiError(error.message || 'An error occurred');
+                                }
+                            })}
+                        >
                             <Box
                                 id={`${componentId}-vc-content`}
                                 data-testid={`${componentId}-vc-content`}
@@ -225,14 +234,14 @@ const AdminPanel = ({
                                     </Grid>
                                 </Grid>
                             )}
-                            {!!error && (
+                            {!!apiError && (
                                 <Grid container>
                                     <Grid item xs={12}>
                                         <Alert
                                             alertId={`${rootId}-alert`}
                                             title={locale.form.error.title}
                                             type="error_outline"
-                                            message={error.message}
+                                            message={apiError}
                                         />
                                     </Grid>
                                 </Grid>
@@ -259,7 +268,6 @@ AdminPanel.propTypes = {
     onCancelAction: PropTypes.func,
     onClose: PropTypes.func,
     props: PropTypes.object,
-    error: PropTypes.object,
     submitting: PropTypes.bool,
     parentId: PropTypes.number,
     initialValues: PropTypes.object,
