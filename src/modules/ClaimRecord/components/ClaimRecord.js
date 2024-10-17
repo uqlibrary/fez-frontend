@@ -330,6 +330,7 @@ const ClaimRecord = () => {
                                                         disabled={isSubmitting}
                                                         id="content-indicators"
                                                         name="contentIndicators"
+                                                        label={txt.contentIndicators.label}
                                                         multiple
                                                         fullWidth
                                                     />
@@ -371,7 +372,7 @@ const ClaimRecord = () => {
                             />
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
-                            !(!publication.rek_pid && hasError) && (
+                            !(!publication.rek_pid && isSubmitFailure) && (
                                 <Grid xs={12} sm="auto">
                                     <Button
                                         type="submit"
