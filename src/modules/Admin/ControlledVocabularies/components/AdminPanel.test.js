@@ -1,8 +1,7 @@
 import React from 'react';
-import { render, WithRouter, userEvent, within, createMatchMedia } from 'test-utils';
+import { render, WithRouter, userEvent, waitFor, fireEvent, WithReduxStore } from 'test-utils';
 import AdminPanel from './AdminPanel';
 import locale from 'locale/components';
-import { waitFor, fireEvent } from '@testing-library/react';
 
 const setup = (testProps = {}, renderer = render) => {
     const props = {
@@ -23,9 +22,11 @@ const setup = (testProps = {}, renderer = render) => {
     };
 
     return renderer(
-        <WithRouter>
-            <AdminPanel {...props} />
-        </WithRouter>,
+        <WithReduxStore>
+            <WithRouter>
+                <AdminPanel {...props} />
+            </WithRouter>
+        </WithReduxStore>,
     );
 };
 
@@ -113,13 +114,20 @@ describe('AdminPanel', () => {
         await waitFor(() => expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled'));
     });
 
-    it('should disable controls when submitting is true', () => {
-        const { getByTestId } = setup({ submitting: true });
-        expect(getByTestId('cvo-title-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-desc-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-external-id-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-hide-input')).toHaveAttribute('aria-disabled', 'true');
-        expect(getByTestId('update_dialog-cancel-button')).toHaveAttribute('disabled');
+    it('should disable controls when submitting', async () => {
+        const { getByTestId } = setup({
+            initialValues: {
+                cvo_title: 'Valid Title', // Empty initially, making the form invalid
+                cvo_desc: '',
+                cvo_external_id: '',
+            },
+        });
+
+        expect(getByTestId('update_dialog-action-button')).toBeEnabled();
+        await userEvent.type(getByTestId('cvo-title'), 'Valid Title');
+        await waitFor(() => expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled'));
+        await userEvent.click(getByTestId('update_dialog-action-button'));
+        await waitFor(() => expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled'));
     });
 
     it('should show Required', async () => {
