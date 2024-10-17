@@ -27,6 +27,5 @@ export function promptForDownload(format, response) {
     if (!(format in EXPORT_FORMAT_TO_EXTENSION)) {
         throw new Error(getExceptionMessage(format));
     }
-
     FileSaver.saveAs(response, getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
 }

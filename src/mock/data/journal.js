@@ -8,6 +8,7 @@ export const journalDetails = {
         'jnl_updated_date': '2021-01-21 03:33:04',
         'jnl_era_source_id': '13400',
         'uq_author_id_count': 200,
+        'jnl_advisory_statement': 'Test statement',
         'fez_journal_abdc': {
             'jnl_abdc_rating': 'A*',
             'jnl_abdc_for_code': 452815,
@@ -377,7 +378,7 @@ export const journalDetails = {
             'jnl_read_and_publish_source_date': '2021-01-28',
             'jnl_read_and_publish_publisher': 'Publisher',
             'jnl_read_and_publish_title': 'American journal of public health',
-            'jnl_read_and_publish_is_capped': false,
+            'jnl_read_and_publish_is_capped': 'Exceeded',
             'jnl_read_and_publish_issn': '0090-0036',
         },
         'fez_journal_wos_category': [{
