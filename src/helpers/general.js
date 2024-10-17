@@ -400,3 +400,17 @@ export const handleKeyboardPressActivate = (key, callbackFn) => {
 
     callbackFn();
 };
+
+/**
+ * Re-order a given object for a given set of keys, ignoring unexisting keys.
+ * @param object
+ * @param keys
+ * @return {*}
+ */
+export const reorderObjectKeys = (object, keys) =>
+    keys.reduce((newObject, key) => {
+        if (object.hasOwnProperty(key)) {
+            newObject[key] = object[key];
+        }
+        return newObject;
+    }, {});
