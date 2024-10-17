@@ -44,13 +44,12 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
     const {
         handleSubmit,
         control,
-        formState: { isDirty, isValid, isSubmitting, errors },
+        formState: { isDirty, isSubmitting, errors },
     } = useForm({
         defaultValues: props.initialValues,
         mode: 'onBlur',
     });
     const [apiError, setApiError] = React.useState('');
-    // const [isSubmitting, setIsSubmitting] = React.useState(false);
 
     const _onCancelAction = () => {
         onClose?.();
@@ -198,7 +197,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                         id={`${rootId}-action-button`}
                                         data-testid={`${rootId}-action-button`}
                                         fullWidth={isMobileView}
-                                        disabled={!isDirty || isSubmitting || !isValid}
+                                        disabled={!isDirty || isSubmitting || JSON.stringify(errors) !== '{}'}
                                     >
                                         {isSubmitting ? (
                                             <CircularProgress
