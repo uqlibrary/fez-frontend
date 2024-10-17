@@ -4,6 +4,7 @@ import { TopCitedPublications } from 'modules/TopCitedPublications';
 import { CulturalAdvice, CulturalNotice } from 'modules/SharedComponents/CulturalAdvice';
 import Grid from '@mui/material/Grid';
 import { AcknowledgementOfCountry } from '../../SharedComponents/AcknowledgementOfCountry';
+import { GenAiTermsOfUse } from '../../SharedComponents/GenAiTermsOfUse';
 
 class IndexComponent extends PureComponent {
     render() {
@@ -17,6 +18,9 @@ class IndexComponent extends PureComponent {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <AcknowledgementOfCountry />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <GenAiTermsOfUse />
                             </Grid>
                             <Grid item xs={12}>
                                 <CulturalAdvice />
