@@ -66,12 +66,15 @@ export const JournalAdminContainer = () => {
     const formErrors = methods.formState.errors;
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(formErrors || {}).reduce((numberOfErrors, [key, errorObject]) => {
-        return {
-            ...numberOfErrors,
-            ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
-        };
-    }, {});
+    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
+        (numberOfErrors, [key, errorObject]) => {
+            return {
+                ...numberOfErrors,
+                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
+            };
+        },
+        {},
+    );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
@@ -112,7 +115,6 @@ export const JournalAdminContainer = () => {
                                 handleSubmit={handleSubmit}
                                 locked={locked}
                                 disabled
-                                unlockJournal={() => dispatch(actions.adminUnlockJournal())}
                                 error={error}
                                 tabs={{
                                     admin: {

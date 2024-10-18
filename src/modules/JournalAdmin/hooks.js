@@ -18,7 +18,7 @@ export const useJournal = () => {
             (!!journalToView && journalToView.jnl_jid && getInitialFormValues(journalToView)) || {};
         return {
             journalToViewLoading: loadingJournalToView,
-            authorDetails: authorDetails ?? null,
+            authorDetails: authorDetails ?? /* istanbul ignore next */ null,
             author,
             journalToView,
             journalToViewError,

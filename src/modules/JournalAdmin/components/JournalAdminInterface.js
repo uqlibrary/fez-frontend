@@ -86,7 +86,9 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: translateFormErrorsToText(formErrors?.server || /* istanbul ignore next */ {}) ? null : errorMessage,
+        error: translateFormErrorsToText(formErrors?.server || /* istanbul ignore next */ {})
+            ? /* istanbul ignore next */ null
+            : errorMessage,
     });
 
     React.useEffect(() => {

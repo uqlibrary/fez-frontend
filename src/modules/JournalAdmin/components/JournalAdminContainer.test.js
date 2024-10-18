@@ -159,24 +159,6 @@ describe('JournalAdminContainer component', () => {
             const { getByTestId } = setup(state);
             await waitFor(() => expect(getByTestId('page-title')).toHaveTextContent('Work not found'));
         });
-        it('should render locked message and response to dismissal', async () => {
-            const adminJournalUnlockSpy = jest.spyOn(JournalActions, 'adminUnlockJournal');
-            const promise = Promise.resolve();
-            const state = {
-                viewJournalReducer: {
-                    journalToView: { ...journalDoaj.data, jnl_editing_user: 'Test user' },
-                    isJournalLocked: true,
-                },
-            };
-
-            const { getByTestId, getByRole } = setup(state);
-            expect(getByTestId('alert-error')).toHaveTextContent('THIS WORK IS LOCKED');
-            await userEvent.click(getByRole('button', { name: 'IGNORE LOCK' }));
-            expect(adminJournalUnlockSpy).toHaveBeenCalled();
-            await act(async () => {
-                await promise;
-            });
-        });
     });
     describe('Tabbed view', () => {
         beforeAll(() => {
