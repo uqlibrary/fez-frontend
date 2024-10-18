@@ -24,7 +24,7 @@ export const useJournal = () => {
             journalToViewError,
             journalLoadingError,
             ...initialFormValues,
-            isJournalLocked,
+            locked: isJournalLocked,
             error,
         };
     }, [

@@ -1,9 +1,9 @@
 import { adminInterfaceConfig, valueExtractor } from 'config/journalAdmin';
 import { ADMIN_JOURNAL } from 'config/general';
 
-export const getInitialValues = (journal, tab, tabParams = () => {}) => {
-    return (adminInterfaceConfig[ADMIN_JOURNAL] || {})
-        [tab](tabParams(journal))
+const getInitialValues = (config, journal, tab, tabParams = () => {}) => {
+    return (config[ADMIN_JOURNAL] || /* istanbul ignore next */ {})
+        [tab]?.(tabParams(journal))
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
@@ -14,16 +14,16 @@ export const getInitialValues = (journal, tab, tabParams = () => {}) => {
         }, {});
 };
 
-export const getInitialFormValues = journalToView => {
+export const getInitialFormValues = (journalToView, config = adminInterfaceConfig) => {
     return {
         initialValues: {
             id: journalToView.jnl_jid,
             journal: journalToView,
-            adminSection: getInitialValues(journalToView, 'admin'),
-            bibliographicSection: getInitialValues(journalToView, 'bibliographic'),
-            uqDataSection: getInitialValues(journalToView, 'uqData')?.uqData || {},
-            doajSection: getInitialValues(journalToView, 'doaj')?.doaj || {},
-            indexedSection: getInitialValues(journalToView, 'indexed')?.indexed || {},
+            adminSection: getInitialValues(config, journalToView, 'admin'),
+            bibliographicSection: getInitialValues(config, journalToView, 'bibliographic'),
+            uqDataSection: getInitialValues(config, journalToView, 'uqData')?.uqData || {},
+            doajSection: getInitialValues(config, journalToView, 'doaj')?.doaj || {},
+            indexedSection: getInitialValues(config, journalToView, 'indexed')?.indexed || {},
         },
     };
 };

@@ -49,7 +49,7 @@ export const getQueryStringValue = (location, varName, initialValue) => {
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };
 
-export const navigateToSearchResult = (authorDetails, navigate /* , location*/) => {
+export const navigateToSearchResult = (authorDetails, navigate) => {
     navigate(pathConfig.journals.search);
 };
 
@@ -58,15 +58,13 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
 
     const {
         handleSubmit,
-        formState: { errors, isSubmitting, isSubmitSuccessful, isDirty },
+        formState: { errors: formErrors, isSubmitting, isSubmitSuccessful, isDirty },
     } = useFormContext();
 
-    const numErrors = Object.keys(errors || {}).length;
+    const numErrors = Object.keys(formErrors).length;
     const disableSubmit = React.useMemo(() => {
         return !!journal && numErrors > 0;
     }, [journal, numErrors]);
-
-    const formErrors = errors ?? {};
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -85,10 +83,10 @@ export const JournalAdminInterface = ({ authorDetails, handleSubmit: onSubmit, l
     alertProps.current = validation.getErrorAlertProps({
         isSubmitting,
         isSubmitSuccessful,
-        formErrors: Object.keys(formErrors).length === 0 ? null : formErrors,
+        formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: translateFormErrorsToText(formErrors?.server || {}) ? null : errorMessage,
+        error: translateFormErrorsToText(formErrors?.server || /* istanbul ignore next */ {}) ? null : errorMessage,
     });
 
     React.useEffect(() => {

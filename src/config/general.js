@@ -14,7 +14,7 @@ export const numberToWords = value => {
 };
 
 // DEFAULT SERVER ERROR KEY
-export const SERVER_ERROR_KEY = 'root.server';
+export const SERVER_ERROR_KEY = 'server';
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';

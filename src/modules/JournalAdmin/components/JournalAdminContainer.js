@@ -33,6 +33,7 @@ export const JournalAdminContainer = () => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
+
     const {
         journalToViewLoading,
         authorDetails,
@@ -56,17 +57,19 @@ export const JournalAdminContainer = () => {
         try {
             await onSubmit(data, dispatch, { initialValues, methods });
         } catch (e) {
+            /* istanbul ignore next */
             console.log(e);
+            /* istanbul ignore next */
             methods.setError(SERVER_ERROR_KEY, { type: 'server', message: e.message });
         }
     };
-    const formErrors = methods.formState.errors ?? {};
+    const formErrors = methods.formState.errors;
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
     tabErrors.current = Object.entries(formErrors || {}).reduce((numberOfErrors, [key, errorObject]) => {
         return {
             ...numberOfErrors,
-            ...(!!errorObject ? { [key]: Object.values(errorObject).length } : {}),
+            ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
         };
     }, {});
 

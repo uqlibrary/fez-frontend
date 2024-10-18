@@ -123,7 +123,6 @@ describe('JournalAdminInterface component', () => {
         it('should call method to show submit confirmation', async () => {
             const handleSubmitFn = jest.fn();
             const { getByTestId } = setup({ handleSubmit: handleSubmitFn });
-
             await userEvent.click(getByTestId('submit-admin'));
             expect(handleSubmitFn).toHaveBeenCalled();
         });
@@ -271,6 +270,32 @@ describe('JournalAdminInterface component', () => {
             await userEvent.click(getByTestId('bibliographic-tab'));
             expect(getByTestId('bibliographic-tab').getAttribute('aria-selected')).toBe('true');
             expect(getByTestId('admin-tab').getAttribute('aria-selected')).toBe('false');
+        });
+
+        it('should render a badge if a tab has errors', () => {
+            useJournalContext.mockImplementation(() => ({
+                jnlDisplayType: ADMIN_JOURNAL,
+                journalDetails: {
+                    jnl_jid: 12,
+                    jnl_editing_user: 'uqstaff',
+                    jnl_editing_user_lookup: 'Test User',
+                },
+            }));
+            const { getByTestId } = setup({
+                authorDetails: {
+                    username: 'uqstaff',
+                },
+                tabs: {
+                    admin: {
+                        component: () => 'AdminSectionComponent',
+                        numberOfErrors: 5,
+                    },
+                    bibliographic: {
+                        component: () => 'BibliographySectionComponent',
+                    },
+                },
+            });
+            expect(getByTestId('admin-tab')).toHaveTextContent('Admin5');
         });
     });
 

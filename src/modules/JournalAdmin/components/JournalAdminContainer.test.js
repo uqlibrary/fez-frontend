@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-import { render, WithReduxStore, WithRouter, waitFor, act, userEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, createMatchMedia, waitFor, act, userEvent } from 'test-utils';
 import Cookies from 'js-cookie';
 import { useParams } from 'react-router-dom';
 import * as JournalActions from 'actions/journals';
@@ -34,7 +34,7 @@ jest.mock('react-router-dom', () => ({
     useParams: jest.fn(),
 }));
 
-function setup(testState = {}) {
+function setup(testState = {}, renderer = render) {
     const state = {
         accountReducer: {
             account: {
@@ -43,10 +43,13 @@ function setup(testState = {}) {
             author: {
                 aut_id: 111,
             },
+            authorDetails: {
+                username: 'Test User',
+            },
         },
         ...testState,
     };
-    return render(
+    return renderer(
         <WithRouter>
             <WithReduxStore initialState={Immutable.Map(state)}>
                 <JournalAdminContainer />
@@ -79,6 +82,24 @@ describe('JournalAdminContainer component', () => {
 
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).not.toHaveAttribute('checked');
+            await act(async () => {
+                await promise;
+            });
+        });
+
+        it('should submit as expected', async () => {
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: journalDoaj.data,
+                },
+            };
+            const { getByText, getAllByRole, getByTestId } = setup(state);
+
+            expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
+            await userEvent.click(getAllByRole('button', { name: 'Save' })[0]);
+            expect(getByTestId('message-title')).toHaveTextContent('Work has been updated');
+
             await act(async () => {
                 await promise;
             });
@@ -138,6 +159,24 @@ describe('JournalAdminContainer component', () => {
             const { getByTestId } = setup(state);
             await waitFor(() => expect(getByTestId('page-title')).toHaveTextContent('Work not found'));
         });
+        it('should render locked message and response to dismissal', async () => {
+            const adminJournalUnlockSpy = jest.spyOn(JournalActions, 'adminUnlockJournal');
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: { ...journalDoaj.data, jnl_editing_user: 'Test user' },
+                    isJournalLocked: true,
+                },
+            };
+
+            const { getByTestId, getByRole } = setup(state);
+            expect(getByTestId('alert-error')).toHaveTextContent('THIS WORK IS LOCKED');
+            await userEvent.click(getByRole('button', { name: 'IGNORE LOCK' }));
+            expect(adminJournalUnlockSpy).toHaveBeenCalled();
+            await act(async () => {
+                await promise;
+            });
+        });
     });
     describe('Tabbed view', () => {
         beforeAll(() => {
@@ -159,6 +198,38 @@ describe('JournalAdminContainer component', () => {
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).toHaveAttribute('checked');
             expect(getByTestId('admin-tab')).toHaveClass('Mui-selected');
+
+            await act(async () => {
+                await promise;
+            });
+        });
+        it('should render component without tabbed interface when toggled', async () => {
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: journalDoaj.data,
+                },
+            };
+            const { getByText, getByTestId, queryByTestId } = setup(state);
+            expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
+            expect(getByTestId('bibliographic-tab')).toBeInTheDocument();
+            await userEvent.click(document.querySelector('input.MuiSwitch-input'));
+            expect(queryByTestId('bibliographic-tab')).not.toBeInTheDocument();
+            await act(async () => {
+                await promise;
+            });
+        });
+        it('should not be tabbed in mobile view', async () => {
+            window.matchMedia = createMatchMedia(512);
+            const promise = Promise.resolve();
+            const state = {
+                viewJournalReducer: {
+                    journalToView: journalDoaj.data,
+                },
+            };
+            setup(state);
+            const switcher = document.querySelector('input.MuiSwitch-input');
+            expect(switcher).not.toHaveAttribute('checked');
 
             await act(async () => {
                 await promise;
