@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleScholar from './GoogleScholar';
 import Immutable from 'immutable';
-import { render, fireEvent, WithReduxStore, waitFor } from 'test-utils';
+import { render, fireEvent, WithReduxStore, waitFor, assertEnabled, assertDisabled } from 'test-utils';
 import * as repositories from 'repositories';
 import * as AuthorAction from 'actions/authors';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
@@ -38,15 +38,28 @@ describe('GoogleScholar form', () => {
         });
 
         expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
-
         expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
-        expect(getByText('This field is required')).toBeInTheDocument();
+        assertEnabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
+
+        await waitFor(() => expect(getByText('This field is required')).toBeInTheDocument());
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
-        expect(queryByText('This field is required')).toBeNull();
+        await waitFor(() => expect(queryByText('This field is required')).toBeNull());
 
         fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
+
+        assertDisabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
 
         await waitFor(() => getByText('Dashboard'));
 
@@ -70,13 +83,27 @@ describe('GoogleScholar form', () => {
 
         expect(getByText('Add your Google Scholar identifier')).toBeInTheDocument();
         expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
-        expect(getByText('This field is required')).toBeInTheDocument();
+        assertEnabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
+
+        await waitFor(() => expect(getByText('This field is required')).toBeInTheDocument());
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
-        expect(queryByText('This field is required')).toBeNull();
+        await waitFor(() => expect(queryByText('This field is required')).toBeNull());
 
-        fireEvent.keyDown(getByTestId('submit-aut-google-scholar-id'), { key: 'Enter', code: 'Enter' });
+        fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
+
+        assertDisabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
 
         expect(getByText('Saving -')).toBeInTheDocument();
 
@@ -104,13 +131,25 @@ describe('GoogleScholar form', () => {
         });
 
         expect(getByText('Update your Google Scholar identifier')).toBeInTheDocument();
-
         expect(getByTestId('aut-google-scholar-id-input')).toBeInTheDocument();
         expect(getByTestId('aut-google-scholar-id-input')).toHaveAttribute('value', '111122223333');
+        assertEnabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
 
         fireEvent.change(getByTestId('aut-google-scholar-id-input'), { target: { value: 'abcd1234efgh' } });
 
         fireEvent.click(getByTestId('submit-aut-google-scholar-id'));
+
+        assertDisabled(
+            getByTestId,
+            'aut-google-scholar-id-input',
+            'cancel-aut-google-scholar-id',
+            'submit-aut-google-scholar-id',
+        );
 
         await waitFor(() => getByText('Dashboard'));
 
