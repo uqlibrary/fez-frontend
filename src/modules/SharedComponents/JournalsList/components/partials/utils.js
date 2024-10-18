@@ -30,8 +30,12 @@ export const getIndicatorProps = ({ type, data }) => {
     } else {
         if (data.fez_journal_read_and_publish) {
             const entry = data.fez_journal_read_and_publish;
-            if (!!entry.jnl_read_and_publish_is_capped) indicatorProps.status = status.cap;
-            else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
+            if (
+                entry.jnl_read_and_publish_is_capped === 'Y' ||
+                entry.jnl_read_and_publish_is_capped === 'Approaching'
+            ) {
+                indicatorProps.status = status.cap;
+            } else if (!!entry.jnl_read_and_publish_is_discounted) indicatorProps.status = status.fee;
             else indicatorProps.status = status.open;
         } else {
             /* istanbul ignore else */

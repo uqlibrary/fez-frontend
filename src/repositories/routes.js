@@ -611,3 +611,41 @@ export const ORGANISATIONAL_UNITS = () => ({
 export const SUGGESTED_ORGANISATIONAL_UNITS = ({ authorId }) => ({
     apiUrl: `organisations/suggest?authorId=${authorId}`,
 });
+
+export const ADMIN_DASHBOARD_CONFIG_API = () => ({
+    apiUrl: 'dashboard/config',
+});
+
+export const ADMIN_DASHBOARD_TODAY_API = () => ({
+    apiUrl: 'dashboard/today',
+});
+
+export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
+    apiUrl: 'dashboard/quicklinks',
+});
+
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
+    apiUrl: 'dashboard/alerts',
+});
+
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ id }) => {
+    return {
+        // eslint-disable-next-line camelcase
+        apiUrl: `dashboard/export-reports?sel_id=${id}`,
+    };
+};
+
+// eslint-disable-next-line camelcase
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
+    // eslint-disable-next-line camelcase
+    const request = { report_type, date_from, date_to, record_id };
+    const query = Object.keys(request)
+        .filter(key => request[key] !== '' && request[key] !== undefined)
+        .map(key => key + '=' + encodeURIComponent(request[key]))
+        .join('&');
+
+    return {
+        apiUrl: `dashboard/reports?${query}`,
+    };
+};

@@ -1,5 +1,6 @@
 import React from 'react';
 import App, { StrictModeConditional } from './App';
+import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
@@ -150,7 +151,7 @@ describe('Application component', () => {
         window.location = { assign: assignFn };
         mockUseLocation.pathname = '/rhdsubmission';
         setup({ account: null });
-        expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
+        expect(assignFn).toBeCalledWith('https://fez-staging.library.uq.edu.au/login?url=dW5kZWZpbmVk');
     });
 
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
@@ -165,6 +166,18 @@ describe('Application component', () => {
             account: null,
         });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should redirect to admin dashboard page if authorised and with full masquerade rights', () => {
+        mockUseLocation.pathname = '/';
+        mockUseLocation.search = '?adrd=1';
+        setup({
+            account: accounts.uqstaff,
+            author: author,
+            customRedirectors,
+        });
+
+        expect(mockUseNavigate).toBeCalledWith('/admin/dashboard', { replace: true });
     });
 
     it('should redirect to logout page', () => {
