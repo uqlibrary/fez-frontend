@@ -59,7 +59,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.js$/,
                 include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, /mocks?/],
                 use: {
@@ -75,7 +75,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.tsx?$/,
+                test: /\.ts(x)?$/,
                 use: 'ts-loader',
                 exclude: [/node_modules/, /custom_modules/, /mocks?/],
             },

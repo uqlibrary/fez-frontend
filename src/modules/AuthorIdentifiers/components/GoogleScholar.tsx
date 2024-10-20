@@ -1,7 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -16,24 +15,26 @@ import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAut
 import { useValidatedForm } from '../../../hooks';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { SERVER_ERROR_KEY } from '../../../config/general';
+import { AppState } from '../../../reducer';
+import { FieldValues } from 'react-hook-form';
+import { FezAuthor } from '../../../reducers/account';
+
+// Pick desired FezAuthor's attributes as optional
+type FormValues = Pick<Partial<FezAuthor>, 'aut_id' | 'aut_google_scholar_id'>;
 
 /**
  * Function to redirect user to Dashboard page
  *
  * @param {function} navigate function from react-router-dom
  */
-export const navigateToDashboard = navigate => {
+export const navigateToDashboard = (navigate: NavigateFunction) => {
     navigate(pathConfig.dashboard);
 };
 
 /**
  * A submit handler for the Google Scholar ID form
- *
- * @param {object} values Values from redux form
- * @param {function} dispatch Dispatch function from redux store
- * @param {object} props All the props passed from the component
  */
-export const GoogleScholarForm = ({ author }) => {
+export const GoogleScholarForm: React.FC<{ author: FezAuthor | null }> = ({ author }: { author: FezAuthor | null }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
@@ -68,18 +69,21 @@ export const GoogleScholarForm = ({ author }) => {
         [isSubmitSuccessful],
     );
 
-    const onSubmit = data =>
-        dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => {
-            // set form error in case of exceptions - it will be handled and displayed below
-            setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
-        });
+    const onSubmit = async (data: FormValues) =>
+        author?.aut_id &&
+        dispatch(await updateCurrentAuthor(author.aut_id, data))
+            // @ts-ignore
+            .catch(e => {
+                // set form error in case of exceptions - it will be handled and displayed below
+                setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
+            });
 
     const getAlert = () => {
         let alertProps = null;
         if (!isSubmitting && errors[SERVER_ERROR_KEY]) {
             alertProps = {
                 ...txt.errorAlert,
-                message: errors[SERVER_ERROR_KEY]?.message,
+                message: errors[SERVER_ERROR_KEY]?.message as string | undefined,
             };
         } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };
@@ -102,12 +106,13 @@ export const GoogleScholarForm = ({ author }) => {
                                         name="aut_google_scholar_id"
                                         control={control}
                                         rules={{
-                                            validate: value =>
+                                            validate: (value: string) =>
                                                 validation.required(value) || validation.isValidGoogleScholarId(value),
                                         }}
-                                        render={({ field }) => (
+                                        render={({ field }: { field: FieldValues }) => (
                                             <TextField
                                                 {...field}
+                                                // @ts-ignore
                                                 textFieldId="aut-google-scholar-id"
                                                 fullWidth
                                                 disabled={isSubmitting}
@@ -157,15 +162,13 @@ export const GoogleScholarForm = ({ author }) => {
     );
 };
 
-GoogleScholarForm.propTypes = {
-    author: PropTypes.object,
-};
-
 export const GoogleScholar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const author = useSelector(state => state.get('accountReducer').author);
-    const accountAuthorLoading = useSelector(state => state.get('accountReducer').accountAuthorLoading);
+    const author: FezAuthor | null = useSelector((state: AppState) => state.get('accountReducer').author);
+    const accountAuthorLoading: boolean = useSelector(
+        (state: AppState) => state.get('accountReducer').accountAuthorLoading,
+    );
 
     React.useEffect(function callback() {
         if (!accountAuthorLoading && !author) {

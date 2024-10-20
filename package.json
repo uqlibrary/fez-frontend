@@ -236,7 +236,8 @@
         "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
         "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
-        "test:unit:watch": "npm run test:unit -- --watch --onlyChanged"
+        "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
+        "tsc": "./node_modules/typescript/bin/tsc"
     },
     "engines": {
         "npm": ">=10.2.3",
@@ -245,13 +246,15 @@
     "babel": {
         "presets": [
             "@babel/env",
-            "@babel/react"
+            "@babel/react",
+            "@babel/preset-typescript"
         ],
         "env": {
             "development": {
                 "presets": [
                     "@babel/env",
-                    "@babel/react"
+                    "@babel/react",
+                    "@babel/preset-typescript"
                 ]
             },
             "production": {
@@ -281,7 +284,8 @@
             "test": {
                 "presets": [
                     "@babel/env",
-                    "@babel/react"
+                    "@babel/react",
+                    "@babel/preset-typescript"
                 ],
                 "plugins": [
                     [
@@ -304,7 +308,8 @@
             "cc": {
                 "presets": [
                     "@babel/env",
-                    "@babel/react"
+                    "@babel/react",
+                    "@babel/preset-typescript"
                 ],
                 "plugins": [
                     [
@@ -339,7 +344,9 @@
         "moduleFileExtensions": [
             "js",
             "json",
-            "es6"
+            "es6",
+            "tsx",
+            "ts"
         ],
         "unmockedModulePathPatterns": [
             "react"
@@ -347,6 +354,7 @@
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
+            "src/modules/**/*.{ts,tsx}",
             "!src/**/*.test.{js,jsx}",
             "!src/modules/App/components/pages.js",
             "!src/**/{index,locale,config}.js",
