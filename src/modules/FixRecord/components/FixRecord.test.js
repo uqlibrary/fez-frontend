@@ -2,271 +2,230 @@ import React from 'react';
 import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { act, render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
-}));
+import { render, WithReduxStore, WithRouter, fireEvent, screen, assertEnabled, assertDisabled } from 'test-utils';
+import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
+import validationErrors from '../../../locale/validationErrors';
+import forms from '../../../locale/forms';
 
 const mockUseNavigate = jest.fn();
-let mockParams = {};
-
+let mockParams;
+/* eslint-disable react/prop-types */
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
     useParams: () => mockParams,
 }));
 
-function setup(testProps, renderMethod = render) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        pristine: true,
-        submitAsSideEffect: false,
-        submitting: false,
-        invalid: false,
-        submitSucceeded: false,
-        recordToFix: testProps.recordToFix,
-        loadingRecordToFix: testProps.loadingRecordToFix || false,
+let mockFixRecord = jest.fn();
+const mockUnclaimRecord = jest.fn();
+const mockClearFixRecord = jest.fn();
+const mockLoadRecordToFix = jest.fn();
 
-        accountAuthorLoading: testProps.accountAuthorLoading || false,
-        author: testProps.author || { aut_id: 410 },
+/* eslint-disable react/prop-types */
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
 
-        handleSubmit: testProps.handleSubmit || jest.fn(),
-        initialValues:
-            testProps.initialValues ||
-            Immutable.Map({
-                publication: Immutable.Map(testProps.recordToFix || mockRecordToFix),
-                author: Immutable.Map(testProps.author || { aut_id: 410 }),
-            }),
-        actions: testProps.actions || { clearFixRecord: jest.fn() },
+    fixRecord: () => mockFixRecord,
+    unclaimRecord: () => mockUnclaimRecord,
+    clearFixRecord: () => mockClearFixRecord,
+    loadRecordToFix: () => mockLoadRecordToFix,
+}));
 
-        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
-        ...testProps,
-    };
-    return renderMethod(
-        <WithReduxStore>
+function setup(props = {}) {
+    props.publication = props.publication || null;
+    props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 410 };
+    const state = Immutable.Map({
+        fixRecordReducer: {
+            recordToFix: props.publication,
+            loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
+                ? props.loadingRecordToFix
+                : !props.publication,
+        },
+        accountReducer: {
+            author: props.author,
+            accountAuthorLoading: props.hasOwnProperty('accountAuthorLoading')
+                ? props.accountAuthorLoading
+                : !props.author,
+        },
+    });
+
+    return render(
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <FixRecord {...props} />
+                <FixRecord />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Component FixRecord', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    let mockOnChange;
+    const switchToUnclaimMode = () => {
+        fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
+        fireEvent.click(screen.getByText(/I am not the author/i));
+    };
+    const switchToFixMode = () => {
+        fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
+        fireEvent.click(screen.getByText(/I am the author/i));
+    };
+
+    const assertValidationErrorSummary = async () => {
+        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message));
+    };
+
+    const assertNoValidationErrorSummary = async () => {
+        await waitForElementToBeRemoved(() => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message));
+        assertEnabled(screen.getByTestId('fix-submit'));
+    };
+
+    const assertFixedRecordConfirmationMessage = async () => {
+        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.successAlert.message));
+    };
+
+    const submitForm = async () => {
+        assertEnabled(screen.getByTestId('fix-submit'));
+        fireEvent.click(screen.getByTestId('fix-submit'));
+        await waitForElementToBeRemoved(() => screen.getByText(forms.forms.fixPublicationForm.progressAlert.message));
+    };
+
     beforeEach(() => {
-        ReduxFormMock.Field.mockImplementation(
-            ({ name, title, required, disable, label, floatingLabelText, onChange }) => {
-                mockOnChange = onChange;
-
-                return (
-                    <field
-                        is="mock"
-                        name={name}
-                        title={title}
-                        required={required}
-                        disabled={disable}
-                        label={label || floatingLabelText}
-                    />
-                );
-            },
-        );
-    });
-
-    afterEach(() => {
-        mockOnChange = undefined;
-        mockUseNavigate.mockClear();
-        mockParams = {};
+        mockUseNavigate.mockReset();
+        mockParams = { pid: mockRecordToFix.rek_pid };
+        mockFixRecord.mockReset();
+        mockUnclaimRecord.mockReset();
+        mockClearFixRecord.mockReset();
+        mockLoadRecordToFix.mockReset();
     });
 
     it('should render loader when author is loading', () => {
-        const { container } = setup({ recordToFix: mockRecordToFix, accountAuthorLoading: true });
+        const { container } = setup({ author: null });
         expect(container).toMatchSnapshot();
     });
 
     it('should render loader when record is loading', () => {
-        const { container } = setup({ recordToFix: mockRecordToFix, loadingRecordToFix: true });
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
     it('should redirect if author not linked', () => {
-        setup({ author: { aut_id: 1001 }, recordToFix: mockRecordToFix });
+        setup({ publication: mockRecordToFix, author: { aut_id: 1001 } });
         expect(mockUseNavigate).toHaveBeenCalled();
     });
 
-    it('should render work not found page if record can not be loaded', () => {
-        const { getByText, rerender } = setup({ recordToFix: null });
-        setup({ loadingRecordToFix: false, recordToFix: null }, rerender);
+    it('should render work not found page if record can not be loaded', async () => {
+        const { getByText } = setup({ loadingRecordToFix: false });
         expect(getByText('Work not found')).toBeInTheDocument();
     });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
-        const { container } = setup({ recordToFix: mockRecordToFix });
+        const { container } = setup({ publication: mockRecordToFix });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should render fix record form', () => {
-        const { container } = setup({ recordToFix: mockRecordToFix });
-        act(() => mockOnChange(undefined, 'fix'));
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(5);
-    });
-
-    it('should render unclaim form', () => {
-        const { container } = setup({ recordToFix: mockRecordToFix });
-        act(() => mockOnChange(undefined, 'unclaim'));
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
-    });
-
-    it('should display confirmation box after successful submission', () => {
-        const { getByText } = setup({ recordToFix: mockRecordToFix, dirty: true, submitSucceeded: true });
-        expect(getByText(/Fix work request has been submitted successfully/i)).toBeInTheDocument();
     });
 
     it('should load record if record is not loaded', () => {
-        mockParams = { pid: 'UQ:1001' };
-        const actionFunction = jest.fn();
-        setup({
-            loadingRecordToFix: false,
-            recordToFix: null,
-            actions: { loadRecordToFix: actionFunction, clearFixRecord: jest.fn() },
-        });
-
-        expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
+        setup();
+        expect(mockLoadRecordToFix).toBeCalled();
     });
 
-    it('should display confirmation box after successful unclaim and go to my works', () => {
-        const { getByText, getByTestId, rerender } = setup({
-            recordToFix: mockRecordToFix,
-        });
-        act(() => mockOnChange(undefined, 'unclaim'));
+    it('should render fix record form', () => {
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
+    });
 
-        setup(
-            {
-                recordToFix: mockRecordToFix,
-                submitSucceeded: true,
-            },
-            rerender,
-        );
+    it('should render unclaim form', async () => {
+        const { container } = setup({ publication: mockRecordToFix });
 
-        expect(getByText(/You have unclaimed this work successfully/i)).toBeInTheDocument();
+        await assertValidationErrorSummary();
+        switchToUnclaimMode();
+        await assertNoValidationErrorSummary();
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should display confirmation box after successful unclaim and go back to previous page', async () => {
+        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+
+        await assertValidationErrorSummary();
+        switchToUnclaimMode();
+        await assertNoValidationErrorSummary();
+        await submitForm();
+
+        fireEvent.click(getByTestId('cancel-dialog-box'));
+        expect(mockUnclaimRecord).toBeCalledTimes(1);
+        expect(mockFixRecord).toBeCalledTimes(0);
+        expect(mockUseNavigate).toBeCalledTimes(1);
+    });
+
+    it('should display confirmation box after successful unclaim and go to my works', async () => {
+        const { getByTestId } = setup({ publication: mockRecordToFix });
+
+        await assertValidationErrorSummary();
+        switchToUnclaimMode();
+        await assertNoValidationErrorSummary();
+        await submitForm();
+
         fireEvent.click(getByTestId('confirm-dialog-box'));
+        expect(mockUnclaimRecord).toBeCalledTimes(1);
+        expect(mockFixRecord).toBeCalledTimes(0);
         expect(mockUseNavigate).toBeCalledWith('/records/mine');
         expect(mockUseNavigate).toBeCalledTimes(1);
     });
 
-    it('should display confirmation box after successful unclaim and go back to previous page', () => {
-        const { getByTestId, rerender } = setup({
-            recordToFix: mockRecordToFix,
-        });
-        act(() => mockOnChange(undefined, 'unclaim'));
+    it('should display confirmation box after successful submission', async () => {
+        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
-        setup(
-            {
-                recordToFix: mockRecordToFix,
-                submitSucceeded: true,
-            },
-            rerender,
-        );
+        await assertValidationErrorSummary();
+        switchToFixMode();
 
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalled();
-        expect(mockUseNavigate).toBeCalledTimes(1);
+        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+        assertDisabled(getByTestId('fix-submit'));
+
+        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+        await assertNoValidationErrorSummary();
+
+        await submitForm();
+        await assertFixedRecordConfirmationMessage();
+
+        expect(mockUnclaimRecord).toBeCalledTimes(0);
+        expect(mockFixRecord).toBeCalledTimes(1);
     });
 
-    it('should display confirmation box after successful submission and go to dashboard', () => {
-        const { getByTestId, rerender } = setup({
-            recordToFix: mockRecordToFix,
-        });
-        act(() => mockOnChange(undefined, 'fix'));
+    it('should display confirmation box after successful submission and go to dashboard', async () => {
+        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
-        setup(
-            {
-                recordToFix: mockRecordToFix,
-                submitSucceeded: true,
-            },
-            rerender,
-        );
+        await assertValidationErrorSummary();
+        switchToFixMode();
+
+        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+        assertDisabled(getByTestId('fix-submit'));
+
+        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+        await assertNoValidationErrorSummary();
+
+        await submitForm();
+        await assertFixedRecordConfirmationMessage();
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
+
+        expect(mockUnclaimRecord).toBeCalledTimes(0);
+        expect(mockFixRecord).toBeCalledTimes(1);
         expect(mockUseNavigate).toBeCalledWith('/dashboard');
     });
 
-    it('should render the confirm dialog box with an alert due to a file upload failure', () => {
-        const { getByText, rerender } = setup({
-            recordToFix: mockRecordToFix,
-        });
-        act(() => mockOnChange(undefined, 'fix'));
+    it('should display server error', async () => {
+        const serverError = 'Custom Server Error!';
+        mockFixRecord = () => Promise.reject({ status: 500, message: serverError });
+        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
-        setup(
-            {
-                recordToFix: mockRecordToFix,
-                submitSucceeded: true,
-                publicationToFixFileUploadingError: true,
-            },
-            rerender,
-        );
+        await assertValidationErrorSummary();
+        switchToFixMode();
 
-        expect(getByText(/File upload failed/i)).toBeInTheDocument();
+        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+        assertDisabled(getByTestId('fix-submit'));
+
+        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+        await assertNoValidationErrorSummary();
+
+        await submitForm();
+        await waitFor(() => getByText(new RegExp(serverError, 'i')));
     });
-
-    /*
-    it('should clear record to fix when leaving the form', () => {
-        const actionFunction = jest.fn();
-        const wrapper = setup({ recordToFix: mockRecordToFix, actions: { clearFixRecord: actionFunction } });
-        wrapper.instance().componentWillUnmount();
-        expect(actionFunction).toHaveBeenCalled();
-    });
-
-    it('_handleDefaultSubmit()', () => {
-        const wrapper = setup({ recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false });
-        const testFN = jest.fn();
-        const event = { preventDefault: testFN };
-        wrapper.instance()._handleDefaultSubmit(event);
-        expect(testFN).toHaveBeenCalled();
-    });
-
-    it('_handleDefaultSubmit()', () => {
-        const wrapper = setup({ recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false });
-        wrapper.instance()._handleDefaultSubmit();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('componentWillUnmount()', () => {
-        const testFN = jest.fn();
-        const wrapper = setup({
-            actions: { clearFixRecord: testFN },
-            submitSucceeded: true,
-            recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false,
-        });
-        wrapper.instance().componentWillUnmount();
-        expect(testFN).toHaveBeenCalled();
-    });*/
 });

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -145,26 +145,17 @@ const FixRecord = () => {
         control,
     });
     // load record to fix based pid, extracted from URL
-    useLayoutEffect(() => {
-        if (actions && pid && !recordToFix) {
+    useEffect(() => {
+        if (actions && pid && !recordToFix?.rek_pid) {
             dispatch(actions.loadRecordToFix(pid));
         }
         return () => actions.clearFixRecord();
-    }, [dispatch, pid, recordToFix]);
+    }, [dispatch, pid, recordToFix?.rek_pid]);
     // display successful submission dialog
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (isSubmitSuccessful) confirmDialogBoxRef.current.showConfirmation();
     }, [isSubmitSuccessful]);
 
-    if (!loadingRecordToFix && !recordToFix) {
-        return <WorkNotFound />;
-    }
-
-    // if author is not linked to this record, abandon form
-    if (recordToFix && !isAuthorLinked(author, recordToFix)) {
-        navigate(-1);
-        return <div />;
-    }
     // loading
     if (accountAuthorLoading || loadingRecordToFix) {
         return (
@@ -172,6 +163,15 @@ const FixRecord = () => {
                 <InlineLoader message={txt.loadingMessage} />
             </React.Fragment>
         );
+    }
+    // record not found
+    if (!loadingRecordToFix && !recordToFix) {
+        return <WorkNotFound />;
+    }
+    // if author is not linked to this record, abandon form
+    if (recordToFix && !isAuthorLinked(author, recordToFix)) {
+        navigate(-1);
+        return <div />;
     }
 
     // navigation
@@ -195,17 +195,19 @@ const FixRecord = () => {
         ...(serverError ? { error: serverError.message } : {}),
         ...(!serverError ? { formErrors: flattenErrors(errors, formLevelError) } : {}),
     });
-    saveConfirmationLocale.confirmationMessage = (
-        <React.Fragment>
-            {serverError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
-            {saveConfirmationLocale.confirmationMessage}
-        </React.Fragment>
-    );
+    // saveConfirmationLocale.confirmationMessage = (
+    //     <React.Fragment>
+    //         {serverError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+    //         {saveConfirmationLocale.confirmationMessage}
+    //     </React.Fragment>
+    // );
 
     const onSubmit = async () => {
         try {
             const data = getMergedValues({ author, publication });
-            await dispatch(data.fixAction === 'unclaim' ? actions.unclaimRecord(data) : actions.fixRecord(data));
+            await dispatch(
+                data.fixAction === RECORD_ACTION_UNCLAIM ? actions.unclaimRecord(data) : actions.fixRecord(data),
+            );
         } catch (e) {
             server.error.set(e);
         }
@@ -228,6 +230,7 @@ const FixRecord = () => {
                                     validate={[validation.required]}
                                     required
                                     selectFieldId="fix-action"
+                                    data-testid="fix-action"
                                 >
                                     {fixOptions}
                                 </Field>
