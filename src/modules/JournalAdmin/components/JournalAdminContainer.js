@@ -1,90 +1,98 @@
-/* istanbul ignore file */
 import React from 'react';
-import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import Immutable from 'immutable';
 
+import * as actions from 'actions';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import JournalAdminInterface from './JournalAdminInterface';
+import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
-import AdminSection from './admin/AdminSectionContainer';
-import BibliographicSection from './bibliographic/BibliographicSectionContainer';
+import { JournalContext, TabbedContext } from 'context';
+import { useIsMobileView, useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
+import { onSubmit } from '../submitHandler';
+import { validateResolver } from '../validators';
+
+import JournalAdminInterface from './JournalAdminInterface';
+import AdminSection from './admin/AdminSection';
+import BibliographicSection from './bibliographic/BibliographicSection';
 import UqDataSection from './uqData/UqDataSection';
 import DoajSection from './doaj/DoajSection';
 import IndexedSection from './indexed/IndexedSection';
+import { useJournal } from '../hooks';
 
-import { JournalContext, TabbedContext } from 'context';
-import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
-import { useIsMobileView } from 'hooks';
-import { ADMIN_JOURNAL } from 'config/general';
-import { useParams } from 'react-router-dom';
-
-export const JournalAdminContainer = ({
-    authorDetails,
-    clearJournalToView,
-    destroy,
-    dirty,
-    disableSubmit,
-    formErrors,
-    // eslint-disable-next-line no-unused-vars
-    formValues,
-    handleSubmit,
-    journalToViewLoading,
-    loadJournalToView,
-    locked,
-    journalToView,
-    journalToViewError,
-    journalLoadingError,
-    submitSucceeded,
-    submitting,
-    unlockJournal,
-    error,
-}) => {
+export const JournalAdminContainer = () => {
+    const dispatch = useDispatch();
     const { id } = useParams();
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
 
+    const {
+        journalToViewLoading,
+        authorDetails,
+        journalToView,
+        journalToViewError,
+        journalLoadingError,
+        initialValues,
+        locked,
+        error,
+    } = useJournal();
+
+    const methods = useValidatedForm({
+        values: { ...initialValues },
+        shouldUnregister: false,
+        mode: 'onChange',
+        resolver: validateResolver,
+    });
+
+    const handleSubmit = async (data, e) => {
+        e.preventDefault();
+        try {
+            await onSubmit(data, dispatch, { initialValues, methods });
+        } catch (e) {
+            /* istanbul ignore next */
+            console.log(e);
+            /* istanbul ignore next */
+            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: e.message });
+        }
+    };
+    const formErrors = methods.formState.errors;
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(
-        (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
-    ).reduce(
-        (numberOfErrors, [key, errorObject]) => ({
-            ...numberOfErrors,
-            [key]: Object.values(errorObject).length,
-        }),
+    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
+        (numberOfErrors, [key, errorObject]) => {
+            return {
+                ...numberOfErrors,
+                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
+            };
+        },
         {},
     );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
     React.useEffect(() => {
-        !!id && !!loadJournalToView && loadJournalToView(id, true);
+        !!id && dispatch(actions.loadJournal(id, true));
         return () => {
-            clearJournalToView();
+            dispatch(actions.adminJournalClear());
         };
-    }, [loadJournalToView, clearJournalToView, id]);
+    }, [dispatch, id]);
 
     const txt = locale.pages.edit;
-
     if (!!id && journalToViewLoading) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (!!id && (!!!journalToView || journalLoadingError)) {
         return <WorkNotFound loadingError={journalToViewError} />;
-    } else if (!id && !journalToView) {
+    } else if (!!!id || !!!journalToView) {
         return <div className="empty" />;
     }
-
-    const isActivated = () => {
-        // this is here for potential future use
-        return true;
-    };
 
     return (
         <React.Fragment>
@@ -101,49 +109,38 @@ export const JournalAdminContainer = ({
                     }}
                 >
                     <ThemeProvider theme={adminTheme}>
-                        <JournalAdminInterface
-                            authorDetails={authorDetails}
-                            handleSubmit={handleSubmit}
-                            submitting={submitting}
-                            submitSucceeded={submitSucceeded}
-                            clearJournalToView={clearJournalToView}
-                            dirty={dirty}
-                            disableSubmit={disableSubmit}
-                            formErrors={formErrors}
-                            destroy={destroy}
-                            locked={locked}
-                            disabled
-                            unlockJournal={unlockJournal}
-                            error={error}
-                            tabs={{
-                                admin: {
-                                    component: AdminSection,
-                                    numberOfErrors: tabErrors.current.adminSection || null,
-                                    activated: isActivated(),
-                                },
-                                /* it would go here or something */
-                                bibliographic: {
-                                    component: BibliographicSection,
-                                    numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                    activated: isActivated(),
-                                },
-                                uqData: {
-                                    component: UqDataSection,
-                                    numberOfErrors: tabErrors.current.uqDataSection || null,
-                                    activated: isActivated(),
-                                },
-                                doaj: {
-                                    component: DoajSection,
-                                    numberOfErrors: tabErrors.current.doajSection || null,
-                                    activated: isActivated(),
-                                },
-                                indexed: {
-                                    component: IndexedSection,
-                                    numberOfErrors: tabErrors.current.indexedSection || null,
-                                    activated: isActivated(),
-                                },
-                            }}
-                        />
+                        <FormProvider {...methods}>
+                            <JournalAdminInterface
+                                authorDetails={authorDetails}
+                                handleSubmit={handleSubmit}
+                                locked={locked}
+                                disabled
+                                error={error}
+                                tabs={{
+                                    admin: {
+                                        component: AdminSection,
+                                        numberOfErrors: tabErrors.current.adminSection || null,
+                                    },
+
+                                    bibliographic: {
+                                        component: BibliographicSection,
+                                        numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                    },
+                                    uqData: {
+                                        component: UqDataSection,
+                                        numberOfErrors: tabErrors.current.uqDataSection || null,
+                                    },
+                                    doaj: {
+                                        component: DoajSection,
+                                        numberOfErrors: tabErrors.current.doajSection || null,
+                                    },
+                                    indexed: {
+                                        component: IndexedSection,
+                                        numberOfErrors: tabErrors.current.indexedSection || null,
+                                    },
+                                }}
+                            />
+                        </FormProvider>
                     </ThemeProvider>
                 </JournalContext.Provider>
             </TabbedContext.Provider>
@@ -151,38 +148,4 @@ export const JournalAdminContainer = ({
     );
 };
 
-JournalAdminContainer.propTypes = {
-    actions: PropTypes.object,
-    authorDetails: PropTypes.object,
-    clearJournalToView: PropTypes.func,
-    destroy: PropTypes.func,
-    dirty: PropTypes.bool,
-    disableSubmit: PropTypes.any,
-    formErrors: PropTypes.object,
-    formValues: PropTypes.object,
-    handleSubmit: PropTypes.func,
-    journalToViewLoading: PropTypes.bool,
-    journalLoadingError: PropTypes.bool,
-    loadJournalToView: PropTypes.func,
-    journalToViewError: PropTypes.object,
-    locked: PropTypes.bool,
-    journalToView: PropTypes.object,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.any,
-    unlockJournal: PropTypes.func,
-    error: PropTypes.object,
-};
-
-export function isSame(prevProps, nextProps) {
-    return (
-        prevProps.disableSubmit === nextProps.disableSubmit &&
-        prevProps.submitting === nextProps.submitting &&
-        prevProps.submitSucceeded === nextProps.submitSucceeded &&
-        (prevProps.journalToView || {}).jnl_jid === (nextProps.journalToView || {}).jnl_jid &&
-        prevProps.journalToViewLoading === nextProps.journalToViewLoading &&
-        prevProps.formErrors === nextProps.formErrors &&
-        prevProps.locked === nextProps.locked
-    );
-}
-
-export default React.memo(JournalAdminContainer, isSame);
+export default React.memo(JournalAdminContainer);

@@ -23,7 +23,9 @@ export const AddDataCollection = lazy(() =>
 );
 export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
 export const AdminDashboard = lazy(() => lazyRetry(() => import('modules/AdminDashboard/AdminDashboard')));
-export const JournalAdmin = lazy(() => lazyRetry(() => import('modules/JournalAdmin/containers/JournalAdmin')));
+export const JournalAdmin = lazy(() =>
+    lazyRetry(() => import('modules/JournalAdmin/components/JournalAdminContainer')),
+);
 export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
 export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
 export const ChangeDisplayType = lazy(() =>

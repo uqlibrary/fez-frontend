@@ -274,7 +274,7 @@ export function adminJournalUpdate(data) {
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
-                    payload: error.message,
+                    payload: error.errors,
                 });
                 return Promise.reject(error);
             });
