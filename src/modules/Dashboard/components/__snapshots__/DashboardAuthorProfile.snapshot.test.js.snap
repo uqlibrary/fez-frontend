@@ -13,7 +13,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
       >
         <div
           aria-label="Photograph of  Professor J Researcher"
-          class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
           title="Professor J Researcher"
         >
           <img
@@ -215,7 +215,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
       >
         <div
           aria-label="Photograph of    "
-          class="MuiAvatar-root MuiAvatar-circular css-n6cucx-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular css-12cmxzt-MuiAvatar-root"
           title="  "
         >
           <img
