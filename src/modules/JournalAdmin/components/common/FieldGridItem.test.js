@@ -14,13 +14,17 @@ global.console = {
 };
 
 // eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
+const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
 };
 
 const setup = (testProps = {}, renderer = rtlRender) => {
-    const { values = {}, ...rest } = testProps;
+    const { values = {}, methods = {}, ...rest } = testProps;
     const props = {
         ...rest,
         group: [1],
@@ -31,6 +35,7 @@ const setup = (testProps = {}, renderer = rtlRender) => {
             values={{
                 ...values,
             }}
+            methods={methods}
         >
             <FieldGridItem {...props} />
         </FormProviderWrapper>,
@@ -59,6 +64,21 @@ describe('FieldGridItem', () => {
             },
         });
         expect(getByTestId('jnl_title-input')).toHaveValue('This is a test title');
+    });
+
+    it('should render error', () => {
+        const { getByTestId } = setup({
+            field: 'jnl_title',
+            values: {
+                adminSection: {
+                    jnl_jid: 12,
+                    jnl_title: 'This is a test title',
+                },
+            },
+            methods: { getFieldState: jest.fn(() => ({ error: 'Test error message' })) },
+        });
+        expect(getByTestId('jnl_title-input')).toHaveValue('This is a test title');
+        expect(getByTestId('jnl_title-helper-text')).toHaveTextContent('Test error message');
     });
 
     it('should handle missing field config', () => {
