@@ -500,7 +500,9 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
-                      />
+                      >
+                        Add any relevant indicator(s).
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -2020,7 +2022,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
-                      />
+                      >
+                        Add any relevant indicator(s).
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -3904,7 +3908,9 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
-                      />
+                      >
+                        Add any relevant indicator(s).
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -5214,7 +5220,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                         data-shrink="true"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
-                      />
+                      >
+                        Add any relevant indicator(s).
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -6956,7 +6964,9 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                         data-shrink="true"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
-                      />
+                      >
+                        Add any relevant indicator(s).
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
