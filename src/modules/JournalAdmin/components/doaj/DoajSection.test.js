@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, preview } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import DoajSection from './DoajSection';
 import { FormProvider } from 'react-hook-form';
 
@@ -37,7 +37,6 @@ describe('DoajSection component', () => {
         }));
 
         const { getByTestId } = setup();
-        preview.debug();
 
         expect(getByTestId('ulr-open-access-header')).toHaveTextContent('Open access');
         expect(getByTestId('ulr-open-access-value')).toHaveTextContent('No');
