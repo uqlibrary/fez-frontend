@@ -47,7 +47,7 @@ export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containe
 export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
 );
-export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/containers/FixRecord')));
+export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/components/FixRecord')));
 export const GoogleScholar = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/GoogleScholar')));
 export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
 export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));

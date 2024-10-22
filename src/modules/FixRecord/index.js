@@ -1,1 +1,1 @@
-export { default as FixRecord } from './containers/FixRecord';
+export { default as FixRecord } from './components/FixRecord';

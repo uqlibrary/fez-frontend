@@ -1,7 +1,23 @@
 import React from 'react';
 import { Controller as Base } from 'react-hook-form';
 
-// TODO convert to TSX
+/**
+ * Decorate the original `field` object with additional attributes required to make
+ * RHF's HOC <Controller/> compatible with our custom field components.
+ * @param field object
+ * @param fieldState object
+ * @return {*}
+ */
+const getDecoratedField = (field, fieldState) => {
+    const decoratedField = field;
+    decoratedField.meta = { error: fieldState.error?.message };
+    // required to make it compatible with SelectFieldWrapper,
+    decoratedField.input = decoratedField;
+    // to avoid `ref` & forwardRef() errors
+    decoratedField.ref = null; // TODO make it conditional if required
+    return decoratedField;
+};
+
 // eslint-disable-next-line react/prop-types
 const Controller = ({ render, ...props }) => {
     return (
@@ -12,11 +28,7 @@ const Controller = ({ render, ...props }) => {
             defaultValue={props.defaultValue || ''}
             render={({ field, fieldState, ...props }) =>
                 render({
-                    field: {
-                        ...field,
-                        // required for making it compatible custom component fields. e.g. CommunitySelectField,
-                        meta: { error: fieldState.error?.message },
-                    },
+                    field: getDecoratedField(field, fieldState),
                     fieldState,
                     ...props,
                 })
