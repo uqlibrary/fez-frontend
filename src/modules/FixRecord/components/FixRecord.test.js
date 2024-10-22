@@ -141,9 +141,7 @@ describe('Component FixRecord', () => {
         mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
         mockApi.onPost(HIDE_POSSIBLE_RECORD_API().apiUrl).replyOnce(200);
 
-        const { getByTestId } = setup({
-            publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
-        });
+        const { getByTestId } = setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
         switchToUnclaimMode();
@@ -207,7 +205,9 @@ describe('Component FixRecord', () => {
         mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
         mockApi.onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
 
-        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+        const { getByTestId, getByText } = setup({
+            publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
+        });
 
         await assertValidationErrorSummary();
         switchToFixMode();
