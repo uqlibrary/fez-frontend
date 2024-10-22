@@ -17,16 +17,6 @@ jest.mock('react-router-dom', () => ({
     useParams: () => mockParams,
 }));
 
-const mockClearFixRecord = jest.fn();
-const mockLoadRecordToFix = jest.fn();
-
-/* eslint-disable react/prop-types */
-jest.mock('actions', () => ({
-    ...jest.requireActual('actions'),
-    clearFixRecord: () => mockClearFixRecord,
-    loadRecordToFix: () => mockLoadRecordToFix,
-}));
-
 function setup(props = {}) {
     props.publication = props.publication || null;
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 410 };
@@ -55,17 +45,13 @@ function setup(props = {}) {
 }
 
 /**
- * Given the complex nature of the action methods that handles the submitted form data,
+ * Given the complex nature of the action that handles the data submitted by the form being tested,
  * the tests below takes a functional approach, relying on real action methods instead of mocks.
- * This is minimise changes of false test positives, ensure payload correctness among other integration benefits.
+ * This is to minimise false test positives, ensure payload correctness, etc.
  */
 describe('Component FixRecord', () => {
     const isDebugging = false;
-    const waitForOptions = isDebugging
-        ? {
-              timeout: 10000,
-          }
-        : {};
+    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
     const switchToUnclaimMode = () => {
         fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
         fireEvent.click(screen.getByText(/I am not the author/i));
@@ -87,11 +73,13 @@ describe('Component FixRecord', () => {
     };
 
     const assertFixedRecordConfirmationMessage = async () =>
-        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.successAlert.message));
+        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.successAlert.message), waitForOptions);
 
     const assertServerErrorMessage = async () =>
-        await waitFor(() =>
-            screen.getByText(new RegExp('Error has occurred during request and request cannot be processed.', 'i')),
+        await waitFor(
+            () =>
+                screen.getByText(new RegExp('Error has occurred during request and request cannot be processed.', 'i')),
+            waitForOptions,
         );
 
     const submitForm = async () => {
@@ -106,8 +94,6 @@ describe('Component FixRecord', () => {
     beforeEach(() => {
         mockUseNavigate.mockReset();
         mockParams = { pid: mockRecordToFix.rek_pid };
-        mockClearFixRecord.mockReset();
-        mockLoadRecordToFix.mockReset();
     });
 
     it('should render loader when author is loading', () => {
@@ -126,8 +112,9 @@ describe('Component FixRecord', () => {
     });
 
     it('should render work not found page if record can not be loaded', async () => {
-        const { getByText } = setup({ loadingRecordToFix: false });
-        expect(getByText('Work not found')).toBeInTheDocument();
+        mockApi.onGet(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(404);
+        const { getByText } = setup();
+        await waitFor(() => getByText('Work not found'), waitForOptions);
     });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
@@ -135,13 +122,8 @@ describe('Component FixRecord', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should load record if record is not loaded', () => {
-        setup();
-        expect(mockLoadRecordToFix).toBeCalled();
-    });
-
     it('should render fix record form', () => {
-        const { container } = setup();
+        const { container } = setup({ publication: mockRecordToFix });
         expect(container).toMatchSnapshot();
     });
 
