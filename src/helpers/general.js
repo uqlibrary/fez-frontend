@@ -414,3 +414,9 @@ export const reorderObjectKeys = (object, keys) =>
         }
         return newObject;
     }, {});
+
+/**
+ * @param object
+ * @return {boolean}
+ */
+export const isEmptyObject = object => Object.keys(object).length === 0;

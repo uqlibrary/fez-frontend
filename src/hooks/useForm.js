@@ -1,8 +1,7 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
 import { SERVER_ERROR_KEY } from '../config/general';
 import deepmerge from 'deepmerge';
-
-export const hasErrors = errors => Object.keys(errors).length > 0;
+import { isEmptyObject } from '../helpers/general';
 
 export const setServerError = (setError, e) =>
     setError(SERVER_ERROR_KEY, {
@@ -23,7 +22,7 @@ export const clearServerErrorAndHandleSubmit = attributes => handler => e => {
     // this is to prevent this method of being triggered twice when triggered by the form onSubmit event hook
     e.preventDefault();
     if (attributes.formState?.server?.error?.has) {
-        attributes.formState?.server?.clear();
+        attributes.formState.server.error.clear();
     }
     attributes.handleSubmit(handler)();
 };
@@ -66,15 +65,15 @@ export const useForm = props => {
     // add isSubmitFailed attribute to formState
     attributes.formState.isSubmitFailure = attributes.formState.isSubmitted && !attributes.formState.isSubmitSuccessful;
     // add hasError attribute to formState, as isValid alone doesn't seem to take in account raised validation errors
-    attributes.formState.hasError = hasErrors(attributes.formState.errors);
+    attributes.formState.hasError = !isEmptyObject(attributes.formState.errors);
     // add hasValidationError attribute to formState - excludes server errors
-    attributes.formState.hasValidationError = hasErrors(
+    attributes.formState.hasValidationError = !isEmptyObject(
         filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY]),
     );
     // add "server" namespace to formState object for managing server errors
     attributes.formState.server = {
         error: {
-            has: hasErrors(filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY], true)),
+            has: !isEmptyObject(filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY], true)),
             set: e => setServerError(attributes.setError, e),
             get: () => getServerError(attributes.formState.errors),
             clear: () => attributes.clearErrors(SERVER_ERROR_KEY),

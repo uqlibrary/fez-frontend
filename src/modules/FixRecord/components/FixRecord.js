@@ -35,6 +35,7 @@ import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { flattenErrors } from '../../../hooks/useForm';
 import { useWatch } from 'react-hook-form';
 import validationErrors from '../../../locale/validationErrors';
+import { isEmptyObject } from '../../../helpers/general';
 
 // constants
 const RECORD_ACTION_FIX = 'fix';
@@ -133,7 +134,7 @@ const FixRecord = () => {
         control,
         getMergedValues,
         clearServerErrorAndHandleSubmit,
-        formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, hasError },
+        formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
         defaultValues: { fixAction: '', comments: '', rek_link: '', contentIndicators: '', files: '' },
     });
@@ -185,7 +186,6 @@ const FixRecord = () => {
 
     // dialog & alert
     const formLevelError = getFormLevelError({ publication, fixAction, ...data });
-    const hasFormLevelError = !!Object.keys(formLevelError).length || hasError;
     const alertProps = validation.getErrorAlertProps({
         submitting: isSubmitting,
         submitSucceeded: isSubmitSuccessful,
@@ -356,7 +356,7 @@ const FixRecord = () => {
                                     color={'primary'}
                                     fullWidth
                                     children={txt.submit}
-                                    disabled={isSubmitting || hasError || hasFormLevelError}
+                                    disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
                                     id="fixSubmit"
                                     data-testid="fix-submit"
                                     data-analyticsid="fixSubmit"
