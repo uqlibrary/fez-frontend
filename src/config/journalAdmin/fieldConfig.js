@@ -129,6 +129,7 @@ export default {
                 richEditorId: 'jnl-advisory-statement',
                 canEdit: true,
                 required: false,
+                noRef: true,
             },
         },
         issns: {
