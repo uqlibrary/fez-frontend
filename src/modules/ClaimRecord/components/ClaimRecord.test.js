@@ -26,16 +26,14 @@ jest.mock('react-router-dom', () => ({
 
 const mockClearNewRecord = jest.fn();
 const mockClearRedirectPath = jest.fn();
-const mockLoadFullRecordToClaim = jest.fn();
-const mockClearClaimPublication = jest.fn();
 
 /* eslint-disable react/prop-types */
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
     clearNewRecord: () => mockClearNewRecord,
     clearRedirectPath: () => mockClearRedirectPath,
-    clearClaimPublication: () => mockClearClaimPublication,
-    loadFullRecordToClaim: () => mockLoadFullRecordToClaim,
+    clearClaimPublication: () => jest.fn(),
+    loadFullRecordToClaim: () => jest.fn(),
 }));
 
 let mockContributorValidation;
@@ -53,7 +51,7 @@ jest.mock('../../SharedComponents/Toolbox/ReactHookForm/components/Field', () =>
     };
 });
 
-function setup(props = {}, renderMethod = render) {
+function setup(props = {}) {
     const defaultRecord = {
         ...journalArticle,
         fez_record_search_key_content_indicator: [
@@ -90,8 +88,7 @@ function setup(props = {}, renderMethod = render) {
         },
     });
 
-    mockApi.onGet(EXISTING_RECORD_API({ pid: pid }).apiUrl).reply(200, { data: props.publication || defaultRecord });
-    return renderMethod(
+    return render(
         <WithReduxStore initialState={state}>
             <WithRouter>
                 <ClaimRecord />
@@ -115,8 +112,6 @@ describe('Component ClaimRecord ', () => {
         mockUseNavigate.mockReset();
         mockClearNewRecord.mockReset();
         mockClearRedirectPath.mockReset();
-        mockLoadFullRecordToClaim.mockReset();
-        mockClearClaimPublication.mockReset();
     });
 
     it('should render claim publication form', () => {
@@ -331,7 +326,7 @@ describe('Component ClaimRecord ', () => {
     it('should render server error', async () => {
         mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
 
-        const { queryByText, getByTestId, getByText } = setup();
+        const { queryByText } = setup();
 
         selectAuthor();
         await submitForm();
