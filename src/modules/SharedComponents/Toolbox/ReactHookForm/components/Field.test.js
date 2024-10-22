@@ -68,6 +68,16 @@ describe('Field component', () => {
             ).toBe('second validator executed');
         });
 
+        it('should ignore non function validators', () => {
+            expect(
+                validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
+                    value => (value !== 'test' ? 'fist validator executed' : null),
+                    'invalid-validator',
+                    value => (value === 'test' ? 'third validator executed' : null),
+                ]),
+            ).toBe('third validator executed');
+        });
+
         it('should ignore empty error messages', () => {
             expect(
                 validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
