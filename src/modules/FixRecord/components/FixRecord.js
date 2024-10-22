@@ -85,6 +85,10 @@ const isAuthorLinked = (author, recordToFix) => {
  * @return {{}|{formError: string}}
  */
 const getFormLevelError = data => {
+    if (data.fixAction !== RECORD_ACTION_FIX) {
+        return {};
+    }
+
     const originalContentIndicators =
         data.publication?.fez_record_search_key_content_indicator?.map(item => item.rek_content_indicator) || [];
 
@@ -92,13 +96,7 @@ const getFormLevelError = data => {
         data.contentIndicators &&
         data.contentIndicators.some(indicator => originalContentIndicators.indexOf(indicator) === -1);
 
-    if (
-        data.fixAction === 'fix' &&
-        !hasAddedContentIndicators &&
-        !data.comments &&
-        !data.rek_link &&
-        !data.files?.queue?.length
-    ) {
+    if (!hasAddedContentIndicators && !data.comments && !data.rek_link && !data.files?.queue?.length) {
         return {
             fixRecordAnyField: validationErrors.validationErrorsSummary.fixRecordAnyField,
         };

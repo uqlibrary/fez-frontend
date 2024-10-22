@@ -45,9 +45,9 @@ function setup(props = {}) {
 }
 
 /**
- * Given the complex nature of the action that handles the data submitted by the form being tested,
- * the tests below takes a functional approach, relying on real action methods instead of mocks.
- * This is to minimise false test positives, ensure payload correctness, etc.
+ * Given the complex nature of the actions that handle the data that get submitted by the form
+ * being tested, the tests below takes a functional approach, relying on real action methods
+ * instead of mocks. This is to minimise false test positives, ensure payload correctness, etc.
  */
 describe('Component FixRecord', () => {
     const isDebugging = false;
