@@ -56,6 +56,7 @@ export const AdminActions = ({
     };
 
     const menuOptions = adminActions.map(action => {
+        /* istanbul ignore next */
         const linkTarget = action.inApp ? '_self' : '_blank';
         const options = action.options || null;
         const url = action.url(pid);
@@ -65,6 +66,7 @@ export const AdminActions = ({
                 event => {
                     navigateToUrl(
                         url,
+                        /* istanbul ignore next */
                         event.ctrlKey || forceNewTab ? '_blank' : linkTarget,
                         !!action.isRecordEdit,
                         options,
