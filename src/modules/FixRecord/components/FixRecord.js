@@ -195,12 +195,6 @@ const FixRecord = () => {
         ...(serverError ? { error: serverError.message } : {}),
         ...(!serverError ? { formErrors: flattenErrors(errors, formLevelError) } : {}),
     });
-    // saveConfirmationLocale.confirmationMessage = (
-    //     <React.Fragment>
-    //         {serverError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
-    //         {saveConfirmationLocale.confirmationMessage}
-    //     </React.Fragment>
-    // );
 
     const onSubmit = async () => {
         try {

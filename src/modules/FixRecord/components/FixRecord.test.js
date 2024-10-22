@@ -6,6 +6,7 @@ import { render, WithReduxStore, WithRouter, fireEvent, screen, assertEnabled, a
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import validationErrors from '../../../locale/validationErrors';
 import forms from '../../../locale/forms';
+import { EXISTING_RECORD_API, HIDE_POSSIBLE_RECORD_API, RECORDS_ISSUES_API } from '../../../repositories/routes';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
@@ -16,17 +17,12 @@ jest.mock('react-router-dom', () => ({
     useParams: () => mockParams,
 }));
 
-let mockFixRecord = jest.fn();
-const mockUnclaimRecord = jest.fn();
 const mockClearFixRecord = jest.fn();
 const mockLoadRecordToFix = jest.fn();
 
 /* eslint-disable react/prop-types */
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
-
-    fixRecord: () => mockFixRecord,
-    unclaimRecord: () => mockUnclaimRecord,
     clearFixRecord: () => mockClearFixRecord,
     loadRecordToFix: () => mockLoadRecordToFix,
 }));
@@ -58,7 +54,18 @@ function setup(props = {}) {
     );
 }
 
+/**
+ * Given the complex nature of the action methods that handles the submitted form data,
+ * the tests below takes a functional approach, relying on real action methods instead of mocks.
+ * This is minimise changes of false test positives, ensure payload correctness among other integration benefits.
+ */
 describe('Component FixRecord', () => {
+    const isDebugging = false;
+    const waitForOptions = isDebugging
+        ? {
+              timeout: 10000,
+          }
+        : {};
     const switchToUnclaimMode = () => {
         fireEvent.mouseDown(screen.getByTestId('fix-action-select'));
         fireEvent.click(screen.getByText(/I am not the author/i));
@@ -68,30 +75,37 @@ describe('Component FixRecord', () => {
         fireEvent.click(screen.getByText(/I am the author/i));
     };
 
-    const assertValidationErrorSummary = async () => {
-        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message));
-    };
+    const assertValidationErrorSummary = async () =>
+        await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message), waitForOptions);
 
     const assertNoValidationErrorSummary = async () => {
-        await waitForElementToBeRemoved(() => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message));
+        await waitForElementToBeRemoved(
+            () => screen.getByText(forms.forms.fixPublicationForm.validationAlert.message),
+            waitForOptions,
+        );
         assertEnabled(screen.getByTestId('fix-submit'));
     };
 
-    const assertFixedRecordConfirmationMessage = async () => {
+    const assertFixedRecordConfirmationMessage = async () =>
         await waitFor(() => screen.getByText(forms.forms.fixPublicationForm.successAlert.message));
-    };
+
+    const assertServerErrorMessage = async () =>
+        await waitFor(() =>
+            screen.getByText(new RegExp('Error has occurred during request and request cannot be processed.', 'i')),
+        );
 
     const submitForm = async () => {
         assertEnabled(screen.getByTestId('fix-submit'));
         fireEvent.click(screen.getByTestId('fix-submit'));
-        await waitForElementToBeRemoved(() => screen.getByText(forms.forms.fixPublicationForm.progressAlert.message));
+        await waitForElementToBeRemoved(
+            () => screen.getByText(forms.forms.fixPublicationForm.progressAlert.message),
+            waitForOptions,
+        );
     };
 
     beforeEach(() => {
         mockUseNavigate.mockReset();
         mockParams = { pid: mockRecordToFix.rek_pid };
-        mockFixRecord.mockReset();
-        mockUnclaimRecord.mockReset();
         mockClearFixRecord.mockReset();
         mockLoadRecordToFix.mockReset();
     });
@@ -142,7 +156,12 @@ describe('Component FixRecord', () => {
     });
 
     it('should display confirmation box after successful unclaim and go back to previous page', async () => {
-        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+        mockApi.onPost(HIDE_POSSIBLE_RECORD_API().apiUrl).replyOnce(200);
+
+        const { getByTestId } = setup({
+            publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
+        });
 
         await assertValidationErrorSummary();
         switchToUnclaimMode();
@@ -150,12 +169,13 @@ describe('Component FixRecord', () => {
         await submitForm();
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUnclaimRecord).toBeCalledTimes(1);
-        expect(mockFixRecord).toBeCalledTimes(0);
         expect(mockUseNavigate).toBeCalledTimes(1);
     });
 
     it('should display confirmation box after successful unclaim and go to my works', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+        mockApi.onPost(HIDE_POSSIBLE_RECORD_API().apiUrl).replyOnce(200);
+
         const { getByTestId } = setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
@@ -164,13 +184,26 @@ describe('Component FixRecord', () => {
         await submitForm();
 
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUnclaimRecord).toBeCalledTimes(1);
-        expect(mockFixRecord).toBeCalledTimes(0);
         expect(mockUseNavigate).toBeCalledWith('/records/mine');
         expect(mockUseNavigate).toBeCalledTimes(1);
     });
 
+    it('should handle server error when unclaiming record', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
+
+        setup({ publication: mockRecordToFix });
+
+        await assertValidationErrorSummary();
+        switchToUnclaimMode();
+        await assertNoValidationErrorSummary();
+        await submitForm();
+        await assertServerErrorMessage();
+    });
+
     it('should display confirmation box after successful submission', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+        mockApi.onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+
         const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
@@ -180,16 +213,18 @@ describe('Component FixRecord', () => {
         assertDisabled(getByTestId('fix-submit'));
 
         fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+        fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
+        fireEvent.click(getByText('Protocol'));
         await assertNoValidationErrorSummary();
 
         await submitForm();
         await assertFixedRecordConfirmationMessage();
-
-        expect(mockUnclaimRecord).toBeCalledTimes(0);
-        expect(mockFixRecord).toBeCalledTimes(1);
     });
 
     it('should display confirmation box after successful submission and go to dashboard', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+        mockApi.onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(200);
+
         const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
@@ -206,14 +241,12 @@ describe('Component FixRecord', () => {
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
 
-        expect(mockUnclaimRecord).toBeCalledTimes(0);
-        expect(mockFixRecord).toBeCalledTimes(1);
         expect(mockUseNavigate).toBeCalledWith('/dashboard');
     });
 
-    it('should display server error', async () => {
-        const serverError = 'Custom Server Error!';
-        mockFixRecord = () => Promise.reject({ status: 500, message: serverError });
+    it('should handle server error when fixing record', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
+
         const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
@@ -226,6 +259,6 @@ describe('Component FixRecord', () => {
         await assertNoValidationErrorSummary();
 
         await submitForm();
-        await waitFor(() => getByText(new RegExp(serverError, 'i')));
+        await assertServerErrorMessage();
     });
 });
