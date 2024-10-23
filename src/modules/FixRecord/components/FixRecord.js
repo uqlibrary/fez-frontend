@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -126,17 +126,28 @@ const FixRecord = () => {
     // app's global state
     const { author, accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
     const { recordToFix, loadingRecordToFix } = useSelector(state => state.get('fixRecordReducer'));
-    const originalContentIndicators =
-        recordToFix?.fez_record_search_key_content_indicator?.map?.(item => item.rek_content_indicator) || [];
-    const publication = { ...recordToFix, originalContentIndicators };
+    const contentIndicators = useMemo(
+        () => recordToFix?.fez_record_search_key_content_indicator?.map?.(item => item.rek_content_indicator) || [],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [JSON.stringify(recordToFix?.fez_record_search_key_content_indicator)],
+    );
+    const publication = { ...recordToFix, contentIndicators };
     // form
     const {
         control,
         getMergedValues,
         clearServerErrorAndHandleSubmit,
+        resetField,
         formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
-        defaultValues: { fixAction: '', comments: '', rek_link: '', contentIndicators: '', files: '' },
+        // use values instead of defaultValues, as the first triggers a re-render upon updates
+        values: {
+            fixAction: '',
+            comments: '',
+            rek_link: '',
+            contentIndicators,
+            files: '',
+        },
     });
     const serverError = server.error.get();
     // watch for changes on all fields, as we have to perform a form level validation below
@@ -150,6 +161,12 @@ const FixRecord = () => {
         }
         return () => actions.clearFixRecord();
     }, [dispatch, pid, recordToFix?.rek_pid]);
+    // Update contentIndicators field's default value once the record is loaded.
+    // This is required to properly render the field with already selected
+    // content indicators as disabled options.
+    useLayoutEffect(() => {
+        resetField('contentIndicators', { defaultValue: contentIndicators });
+    }, [resetField, contentIndicators]);
     // display successful submission dialog
     useEffect(() => {
         if (isSubmitSuccessful) confirmDialogBoxRef.current.showConfirmation();

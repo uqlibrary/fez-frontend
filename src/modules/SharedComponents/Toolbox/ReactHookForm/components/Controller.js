@@ -8,9 +8,13 @@ import { Controller as Base } from 'react-hook-form';
  * @param fieldState object
  * @return {*}
  */
-const getDecoratedField = (field, fieldState) => {
+const getDecoratedField = (field, fieldState, formState) => {
     const decoratedField = field;
-    decoratedField.meta = { error: fieldState.error?.message };
+    decoratedField.meta = {
+        error: fieldState.error?.message,
+        // required to make it compatible with ContentIndicatorsField,
+        initial: { toJS: () => formState.defaultValues[field.name] },
+    };
     // required to make it compatible with SelectFieldWrapper,
     decoratedField.input = decoratedField;
     // to avoid `ref` & forwardRef() errors
@@ -26,11 +30,11 @@ const Controller = ({ render, ...props }) => {
             // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
             /* eslint-disable-next-line react/prop-types */
             defaultValue={props.defaultValue || ''}
-            render={({ field, fieldState, ...props }) =>
+            render={({ field, fieldState, formState }) =>
                 render({
-                    field: getDecoratedField(field, fieldState),
+                    field: getDecoratedField(field, fieldState, formState),
                     fieldState,
-                    ...props,
+                    formState,
                 })
             }
         />
