@@ -1,7 +1,7 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
 import { SERVER_ERROR_KEY } from '../config/general';
 import deepmerge from 'deepmerge';
-import { isEmptyObject } from '../helpers/general';
+import { isEmptyObject, filterObjectKeys } from '../helpers/general';
 
 export const setServerError = (setError, e) =>
     setError(SERVER_ERROR_KEY, {
@@ -38,22 +38,6 @@ export const flattenErrors = (errors, ...otherAlreadyFlattenedErrors) => ({
     ...Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {}),
     ...otherAlreadyFlattenedErrors.reduce((acc, error) => ({ ...acc, ...error }), {}),
 });
-
-/**
- * Get a subset of an object for a given set of keys
- * Returns a new object without given keys. Use inclusive=true for the opposite.
- * @param object
- * @param keys
- * @param inclusive
- * @return {{}}
- */
-const filterObjectKeys = (object, keys, inclusive = false) =>
-    Object.keys(object).reduce((acc, key) => {
-        if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
-            acc[key] = object[key];
-        }
-        return acc;
-    }, {});
 
 /**
  * @param props

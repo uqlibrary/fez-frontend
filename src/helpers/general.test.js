@@ -7,6 +7,7 @@ import {
     handleKeyboardPressActivate,
     reorderObjectKeys,
     isEmptyObject,
+    filterObjectKeys,
 } from './general';
 
 describe('general helpers', () => {
@@ -301,6 +302,32 @@ describe('general helpers', () => {
             expect(isEmptyObject({ a: '' })).toEqual(false);
             expect(isEmptyObject({ a: null })).toEqual(false);
             expect(isEmptyObject({ a: undefined })).toEqual(false);
+        });
+    });
+
+    describe('filterObjectKeys', () => {
+        it('should return object with selected keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'])).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'])).toEqual({ a: 1, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'])).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'])).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'])).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'])).toEqual({ b: 2 });
+        });
+
+        it('should ignore non-existing keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, [])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['d'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'd'])).toEqual({ b: 2, c: 3 });
+        });
+
+        it('should keep object with selected keys when inclusive=true', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'], true)).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'], true)).toEqual({ b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'], true)).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'], true)).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'], true)).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'], true)).toEqual({ a: 1, c: 3 });
         });
     });
 });
