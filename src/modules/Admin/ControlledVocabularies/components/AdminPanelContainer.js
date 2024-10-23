@@ -1,7 +1,4 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import * as actions from 'actions/viewControlledVocab';
 import AdminPanel from './AdminPanel';
 
 const mapStateToProps = (state, props) => {
@@ -14,8 +11,4 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(actions, dispatch),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(AdminPanel);
+export default connect(mapStateToProps)(AdminPanel);
