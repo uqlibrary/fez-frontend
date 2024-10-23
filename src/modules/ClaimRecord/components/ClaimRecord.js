@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -93,9 +93,14 @@ const ClaimRecord = () => {
     const { author } = useSelector(state => state.get('accountReducer'));
     const { redirectPath } = useSelector(state => state.get('appReducer'));
 
-    const contentIndicators =
-        fullPublicationToClaim?.fez_record_search_key_content_indicator?.map?.(item => item.rek_content_indicator) ||
-        [];
+    const contentIndicators = useMemo(
+        () =>
+            fullPublicationToClaim?.fez_record_search_key_content_indicator?.map?.(
+                item => item.rek_content_indicator,
+            ) || [],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [JSON.stringify(fullPublicationToClaim?.fez_record_search_key_content_indicator)],
+    );
 
     const publication = {
         ...publicationToClaim,
@@ -105,10 +110,12 @@ const ClaimRecord = () => {
 
     const {
         control,
+        setValue,
+        resetField,
         getMergedValues,
         clearServerErrorAndHandleSubmit,
         formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError },
-    } = useValidatedForm({ defaultValues: { contentIndicators } });
+    } = useValidatedForm({ values: { contentIndicators } });
 
     useEffect(() => {
         if (!author?.aut_id || !publication) {
@@ -122,6 +129,15 @@ const ClaimRecord = () => {
         return () => dispatch(actions.clearClaimPublication());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [author?.aut_id, publication?.rek_pid, navigate]);
+
+    // Update contentIndicators field's default value once the record is loaded.
+    // This is required to properly render the field with already selected
+    // content indicators as disabled options.
+    useEffect(() => {
+        resetField('contentIndicators', { defaultValue: contentIndicators });
+        // force validation error
+        setValue('authorLinking', '', { shouldValidate: true });
+    }, [setValue, resetField, contentIndicators]);
 
     useEffect(() => {
         if (isSubmitSuccessful) confirmDialogBoxRef.current.showConfirmation();
