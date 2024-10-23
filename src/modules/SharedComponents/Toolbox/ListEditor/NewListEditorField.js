@@ -2,17 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
-const getValue = (input, normalize, searchKey) =>
-    normalize(
-        (!!input && !!input.value && !!input.value.toJS && input.value.toJS()) ||
-            (!!input && !!input.value && input.value) ||
-            [],
-        searchKey,
-    );
+const getValue = (props, normalize, searchKey) =>
+    normalize(props?.input?.value?.toJS?.() || props?.input?.value || props.value || [], searchKey);
 
-export const useItemsList = (input, normalize, searchKey) => {
-    const [value, setValue] = React.useState(getValue(input, normalize, searchKey));
-
+export const useItemsList = (props, normalize, searchKey) => {
+    const [value, setValue] = React.useState(getValue(props, normalize, searchKey));
     return [value, setValue];
 };
 
@@ -25,7 +19,12 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const [value] = useItemsList(props.input, normalize, searchKey);
+    const [value, setValue] = useItemsList(props, normalize, searchKey);
+
+    React.useEffect(() => {
+        setValue(getValue(props, normalize, searchKey));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props]);
 
     return (
         <NewListEditor

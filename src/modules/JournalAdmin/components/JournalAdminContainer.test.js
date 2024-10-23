@@ -69,19 +69,32 @@ describe('JournalAdminContainer component', () => {
             useParams.mockImplementation(() => ({ id: 12 }));
         });
 
-        it('should render default view', async () => {
+        it('should render default view and accept input', async () => {
             const promise = Promise.resolve();
             const state = {
                 viewJournalReducer: {
                     journalToView: journalDoaj.data,
                 },
             };
-            const { getByText } = setup(state);
+            const { getByText, getByTestId } = setup(state);
 
             expect(getByText('Edit journal - Advanced Nonlinear Studies')).toBeInTheDocument();
+            await userEvent.type(getByTestId('jnl_title-input'), ' UPDATED');
+            expect(getByTestId('jnl_title-input')).toHaveValue('Advanced Nonlinear Studies UPDATED');
+            await userEvent.type(getByTestId('jnl_publisher-input'), ' UPDATED');
+            expect(getByTestId('jnl_publisher-input')).toHaveValue('Walter de Gruyter GmbH UPDATED');
+            expect(getByTestId('jnl_issn_jid-list-row-0')).toHaveTextContent('0388-0001');
+            expect(getByTestId('jnl_issn_jid-list-row-1')).toHaveTextContent('2169-0375');
+            await userEvent.type(getByTestId('jnl_issn_jid-input'), '11111111{enter}');
+
+            expect(getByTestId('jnl_issn_jid-list-row-2')).toHaveTextContent('1111-1111');
+            expect(getByTestId('uq-espace-section-content')).toBeInTheDocument();
+            expect(getByTestId('open-access-(directory-of-open-access-journals---doaj)-section')).toBeInTheDocument();
+            expect(getByTestId('indexed-in-section')).toBeInTheDocument();
 
             const switcher = document.querySelector('input.MuiSwitch-input');
             expect(switcher).not.toHaveAttribute('checked');
+
             await act(async () => {
                 await promise;
             });

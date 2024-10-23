@@ -68,8 +68,8 @@ export const GoogleScholarForm = ({ author }) => {
         [isSubmitSuccessful],
     );
 
-    const onSubmit = data =>
-        dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => {
+    const onSubmit = async data =>
+        await dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => {
             // set form error in case of exceptions - it will be handled and displayed below
             setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
         });
