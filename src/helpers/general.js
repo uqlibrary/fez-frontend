@@ -430,9 +430,11 @@ export const isEmptyObject = object => Object.keys(object).length === 0;
  * @return {{}}
  */
 export const filterObjectKeys = (object, keys, inclusive = false) =>
-    Object.keys(object).reduce((acc, key) => {
-        if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
-            acc[key] = object[key];
-        }
-        return acc;
-    }, {});
+    !object || typeof object !== 'object'
+        ? {}
+        : Object.keys(object).reduce((acc, key) => {
+              if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
+                  acc[key] = object[key];
+              }
+              return acc;
+          }, {});

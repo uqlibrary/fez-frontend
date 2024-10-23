@@ -306,6 +306,16 @@ describe('general helpers', () => {
     });
 
     describe('filterObjectKeys', () => {
+        it('should return empty object for given non-object', () => {
+            expect(filterObjectKeys(null, ['a'])).toEqual({});
+            expect(filterObjectKeys(undefined, ['a'])).toEqual({});
+            expect(filterObjectKeys(1, ['a'])).toEqual({});
+            expect(filterObjectKeys(false, ['a'])).toEqual({});
+            expect(filterObjectKeys('abcdef', ['a'])).toEqual({});
+            expect(filterObjectKeys([], ['a'])).toEqual({});
+            expect(filterObjectKeys(new Error('error'), ['a'])).toEqual({});
+        });
+
         it('should return object with selected keys', () => {
             expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'])).toEqual({ b: 2, c: 3 });
             expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'])).toEqual({ a: 1, c: 3 });

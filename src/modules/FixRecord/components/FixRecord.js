@@ -136,7 +136,7 @@ const FixRecord = () => {
     const {
         control,
         getMergedValues,
-        clearServerErrorAndHandleSubmit,
+        handleSubmit,
         resetField,
         formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
@@ -225,7 +225,7 @@ const FixRecord = () => {
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
-                <form onSubmit={clearServerErrorAndHandleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={3}>
                         <Grid xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>

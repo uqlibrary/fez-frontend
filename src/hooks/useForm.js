@@ -1,31 +1,19 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
-import { SERVER_ERROR_KEY } from '../config/general';
 import deepmerge from 'deepmerge';
 import { isEmptyObject, filterObjectKeys } from '../helpers/general';
 
+export const SERVER_ERROR_NAMESPACE = 'root';
+export const SERVER_ERROR_KEY = 'serverError';
+
 export const setServerError = (setError, e) =>
-    setError(SERVER_ERROR_KEY, {
-        type: 'server',
+    setError(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`, {
+        type: 'custom',
         message: e.message,
         status: e.status,
         original: e.original || e,
     });
 
-export const getServerError = errors => errors[SERVER_ERROR_KEY];
-
-/**
- * Prevent given event default behaviour, clear server error (if any) and handles a given submit handler
- * @param attributes
- * @return {function(*): function(*): void}
- */
-export const clearServerErrorAndHandleSubmit = attributes => handler => e => {
-    // this is to prevent this method of being triggered twice when triggered by the form onSubmit event hook
-    e.preventDefault();
-    if (attributes.formState?.server?.error?.has) {
-        attributes.formState.server.error.clear();
-    }
-    attributes.handleSubmit(handler)();
-};
+export const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_KEY];
 
 /**
  * Get flatten errors to a `field` => `error` object
@@ -52,22 +40,19 @@ export const useForm = props => {
     attributes.formState.hasError = !isEmptyObject(attributes.formState.errors);
     // add hasValidationError attribute to formState - excludes server errors
     attributes.formState.hasValidationError = !isEmptyObject(
-        filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY]),
+        filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_NAMESPACE]),
     );
     // add "server" namespace to formState object for managing server errors
     attributes.formState.server = {
         error: {
-            has: !isEmptyObject(filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_KEY], true)),
+            has: !isEmptyObject(
+                filterObjectKeys(attributes.formState.errors[SERVER_ERROR_NAMESPACE], [SERVER_ERROR_KEY], true),
+            ),
             set: e => setServerError(attributes.setError, e),
             get: () => getServerError(attributes.formState.errors),
             clear: () => attributes.clearErrors(SERVER_ERROR_KEY),
         },
     };
-
-    // Because we store server errors in formState using setError() - to leverage RHF's state management,
-    // we have to expose an alternative method to handleSubmit() that will clear these type of errors before a
-    // submit retry. This is required as handleSubmit() won't trigger the submit handler if server errors are still set.
-    attributes.clearServerErrorAndHandleSubmit = clearServerErrorAndHandleSubmit(attributes);
 
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
