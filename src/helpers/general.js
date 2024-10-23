@@ -414,3 +414,27 @@ export const reorderObjectKeys = (object, keys) =>
         }
         return newObject;
     }, {});
+
+/**
+ * @param object
+ * @return {boolean}
+ */
+export const isEmptyObject = object => Object.keys(object).length === 0;
+
+/**
+ * Get a subset of an object for a given set of keys
+ * Returns a new object without given keys. Use inclusive=true for the opposite.
+ * @param object
+ * @param keys {string[]}
+ * @param inclusive {boolean}
+ * @return {{}}
+ */
+export const filterObjectKeys = (object, keys, inclusive = false) =>
+    !object || typeof object !== 'object'
+        ? {}
+        : Object.keys(object).reduce((acc, key) => {
+              if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
+                  acc[key] = object[key];
+              }
+              return acc;
+          }, {});

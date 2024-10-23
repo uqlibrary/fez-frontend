@@ -54,7 +54,7 @@ const DeleteRecord = () => {
     const {
         control,
         getMergedValues,
-        clearServerErrorAndHandleSubmit,
+        handleSubmit,
         formState: { server, hasValidationError, isDirt, isSubmitting, isSubmitSuccessful },
     } = useForm();
 
@@ -160,7 +160,7 @@ const DeleteRecord = () => {
     return (
         <StandardPage title={txt.title(isDeleted)}>
             <ConfirmDiscardFormChanges dirty={isDirt} isSubmitSuccessful={isSubmitSuccessful}>
-                <form onSubmit={clearServerErrorAndHandleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>
