@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithRouter, userEvent, waitFor, fireEvent, WithReduxStore } from 'test-utils';
+import { render, WithRouter, userEvent, waitFor, fireEvent, WithReduxStore, createMatchMedia } from 'test-utils';
 import AdminPanel from './AdminPanel';
 import locale from 'locale/components';
 
@@ -93,6 +93,34 @@ describe('AdminPanel', () => {
 
         // Assert that the submit function was called
         expect(mockSubmitFn).toHaveBeenCalled();
+    });
+
+    it('should render buttons in desktop size when above phone breakpoint', () => {
+        window.matchMedia = createMatchMedia(800);
+        const { getByTestId } = setup({});
+        expect(getByTestId('update_dialog-cancel-button')).not.toHaveClass('MuiButton-fullWidth');
+        expect(getByTestId('update_dialog-action-button')).not.toHaveClass('MuiButton-fullWidth');
+    });
+    it('should render buttons in mobile size when in phone breakpoint', () => {
+        window.matchMedia = createMatchMedia(420);
+        const { getByTestId } = setup({});
+        expect(getByTestId('update_dialog-cancel-button')).toHaveClass('MuiButton-fullWidth');
+        expect(getByTestId('update_dialog-action-button')).toHaveClass('MuiButton-fullWidth');
+    });
+
+    it('should render form without parent styles', () => {
+        const { getByTestId } = setup({ parentId: 1 });
+
+        assertFields(getByTestId);
+        expect(getByTestId('update_dialog-cancel-button')).not.toHaveAttribute('disabled');
+        expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
+
+        expect(getByTestId('update_dialog-test-container')).not.toHaveStyle({
+            'margin-block-end': '16px',
+            'background-color': '#eee',
+            padding: '20px',
+            'box-shadow': 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
+        });
     });
 
     it('should disable submit when form is invalid', async () => {

@@ -71,4 +71,55 @@ describe('AdminPanel with React-Hook-Form', () => {
         expect(mockCloseFn).toHaveBeenCalled();
         expect(mockCancelFn).toHaveBeenCalled();
     });
+
+    it('should render EDIT form with values and call submit function', async () => {
+        const mockActionFn = jest.fn(() => jest.fn());
+        const expected = {
+            cvo_title: 'Test title',
+            cvo_desc: 'Test dec',
+            cvo_external_id: 'Test id',
+            cvo_image_filename: 'Test filename',
+            cvo_order: '1',
+            cvo_hide: true,
+        };
+        const { getByTestId } = setup({ onAction: mockActionFn });
+
+        expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
+
+        await userEvent.type(getByTestId('cvo-title-input'), expected.cvo_title);
+        await userEvent.type(getByTestId('cvo-desc-input'), expected.cvo_desc);
+        await userEvent.type(getByTestId('cvo-external-id-input'), expected.cvo_external_id);
+        await userEvent.click(getByTestId('cvo-hide-input').querySelector('input[type=checkbox]'));
+
+        assertFieldValues(getByTestId, expected);
+
+        expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled');
+        await userEvent.click(getByTestId('update_dialog-action-button'));
+        expect(mockActionFn).toHaveBeenCalled();
+    });
+
+    it('should render EDIT form with values and call submit function with ID', async () => {
+        const mockActionFn = jest.fn(() => jest.fn());
+        const expected = {
+            cvo_title: 'Test title',
+            cvo_desc: 'Test dec',
+            cvo_external_id: 'Test id',
+            cvo_image_filename: 'Test filename',
+            cvo_order: '1',
+            cvo_hide: true,
+        };
+        const parentId = 1234;
+        const rootVocabId = 567;
+        const { getByTestId } = setup({ onAction: mockActionFn, parentId, rootVocabId });
+
+        expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
+
+        await userEvent.type(getByTestId('cvo-title-input'), expected.cvo_title);
+        await userEvent.type(getByTestId('cvo-desc-input'), expected.cvo_desc);
+        await userEvent.type(getByTestId('cvo-external-id-input'), expected.cvo_external_id);
+        await userEvent.click(getByTestId('cvo-hide-input'));
+
+        await userEvent.click(getByTestId('update_dialog-action-button'));
+        expect(mockActionFn).toHaveBeenCalledWith(parentId, rootVocabId);
+    });
 });
