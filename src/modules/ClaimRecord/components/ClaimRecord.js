@@ -135,8 +135,6 @@ const ClaimRecord = () => {
     // content indicators as disabled options.
     useEffect(() => {
         resetField('contentIndicators', { defaultValue: contentIndicators });
-        // force validation error
-        setValue('authorLinking', '', { shouldValidate: true });
     }, [setValue, resetField, contentIndicators]);
 
     useEffect(() => {
