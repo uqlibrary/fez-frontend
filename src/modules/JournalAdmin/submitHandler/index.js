@@ -1,19 +1,12 @@
 import { adminJournalUpdate } from 'actions';
-import { detailedDiff } from 'deep-object-diff';
 import { SERVER_ERROR_KEY } from 'config/general';
 
-export const onSubmit = (values, dispatch, { initialValues, methods }) => {
-    const data = values || null;
-
-    const initialData = initialValues || null;
-
-    const changes = detailedDiff(initialData, data);
-
+export const onSubmit = (values, dispatch, { methods }) => {
     const requestObject = {
-        adminSection: { ...data.adminSection },
-        bibliographicSection: { ...data.bibliographicSection },
-        ...changes,
-        jnl_jid: data.journal.jnl_jid,
+        adminSection: { ...values.adminSection },
+        bibliographicSection: { ...values.bibliographicSection },
+        jnl_jid: values.journal.jnl_jid,
+        journal: { ...values.journal },
     };
 
     return dispatch(adminJournalUpdate({ ...requestObject }))

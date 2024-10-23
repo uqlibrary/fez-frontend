@@ -15,7 +15,7 @@ export const NewListEditorField = props => {
         normalize = (value, searchKey) => value.map(item => item[searchKey.value]),
         searchKey = {
             value: 'rek_value',
-            order: 'rek_order ',
+            order: 'rek_order',
         },
     } = props;
 

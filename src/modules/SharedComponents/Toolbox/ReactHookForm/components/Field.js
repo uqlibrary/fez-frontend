@@ -60,7 +60,7 @@ const Field = ({ name, control, validate, component: Component, ...childProps })
             render={({ field }) => {
                 // eslint-disable-next-line react/prop-types
                 if (!!childProps.noRef) delete field.ref;
-                return <Component {...field} {...childProps} />;
+                return <Component {...childProps} {...field} />;
             }}
         />
     );
