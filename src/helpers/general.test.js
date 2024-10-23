@@ -5,6 +5,8 @@ import {
     sanitiseId,
     formatUrlTextWithWbrTags,
     handleKeyboardPressActivate,
+    reorderObjectKeys,
+    isEmptyObject,
 } from './general';
 
 describe('general helpers', () => {
@@ -272,6 +274,33 @@ describe('general helpers', () => {
             const mockKey = { code: 'A', preventDefault: jest.fn() };
             handleKeyboardPressActivate(mockKey, testFn);
             expect(testFn).not.toHaveBeenCalled();
+        });
+    });
+
+    describe('reorderObjectKeys', () => {
+        it('should return new object with keys in given order', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b', 'c'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c', 'a'])).toEqual({ b: 2, c: 3, a: 1 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['c', 'a', 'b'])).toEqual({ c: 3, a: 1, b: 2 });
+        });
+
+        it('should return new object with keys in given order, ignoring unexisting keys', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'e', 'c'])).toEqual({ a: 1, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e', 'b'])).toEqual({ b: 2 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e'])).toEqual({});
+        });
+    });
+
+    describe('isEmptyObject', () => {
+        it('should return true for empty object', () => {
+            expect(isEmptyObject({})).toEqual(true);
+        });
+
+        it('should return false for non-empty objects', () => {
+            expect(isEmptyObject({ a: 0 })).toEqual(false);
+            expect(isEmptyObject({ a: '' })).toEqual(false);
+            expect(isEmptyObject({ a: null })).toEqual(false);
+            expect(isEmptyObject({ a: undefined })).toEqual(false);
         });
     });
 });
