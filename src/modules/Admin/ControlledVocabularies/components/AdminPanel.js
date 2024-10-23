@@ -159,7 +159,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                             render={({ field }) => (
                                                 <Checkbox
                                                     {...field}
-                                                    checked={field.value}
+                                                    checked={!!field.value}
                                                     onChange={field.onChange}
                                                     id="cvo-hide-input"
                                                     data-analyticsid="cvo-hide-input"
