@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 
-import { CSV_INGEST_DOCUMENT_TYPES, SERVER_ERROR_KEY } from 'config/general';
+import { CSV_INGEST_DOCUMENT_TYPES } from 'config/general';
 import { createBatchImport } from 'actions';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -55,8 +55,7 @@ export const BatchImport = () => {
         control,
         handleSubmit,
         resetField,
-        setError,
-        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
+        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful, server },
     } = useValidatedForm({
         mode: 'onChange',
         defaultValues,
@@ -75,8 +74,8 @@ export const BatchImport = () => {
                 };
             }
             await dispatch(createBatchImport(payload));
-        } catch (error) {
-            setError(SERVER_ERROR_KEY, { message: error.message });
+        } catch (e) {
+            server.error.set(e);
         }
     };
 
@@ -105,7 +104,7 @@ export const BatchImport = () => {
                 successAlert: { ...batchImportTxt.submitSuccessAlert },
                 errorAlert: { ...batchImportTxt.submitFailureAlert },
             },
-            error: errors[SERVER_ERROR_KEY],
+            error: server.error.has && server.error.get()?.message,
             formErrors: formErrors,
             submitSucceeded: isSubmitSuccessful,
             submitting: isSubmitting,

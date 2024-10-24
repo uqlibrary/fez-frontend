@@ -15,7 +15,7 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import { JournalContext, TabbedContext } from 'context';
 import { useIsMobileView, useValidatedForm } from 'hooks';
-import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
+import { ADMIN_JOURNAL } from 'config/general';
 import { onSubmit } from '../submitHandler';
 import { validateResolver } from '../validators';
 
@@ -45,7 +45,7 @@ export const JournalAdminContainer = () => {
         error,
     } = useJournal();
 
-    const methods = useValidatedForm({
+    const attributes = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
@@ -55,18 +55,18 @@ export const JournalAdminContainer = () => {
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
-            await onSubmit(data, dispatch, { initialValues, methods });
+            await onSubmit(data, dispatch, { server: attributes.formState.server });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: e.message });
+            attributes.formState.server.error.set(e);
         }
     };
-    const formErrors = methods.formState.errors;
+
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(attributes.formState || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
@@ -109,7 +109,7 @@ export const JournalAdminContainer = () => {
                     }}
                 >
                     <ThemeProvider theme={adminTheme}>
-                        <FormProvider {...methods}>
+                        <FormProvider {...attributes}>
                             <JournalAdminInterface
                                 authorDetails={authorDetails}
                                 handleSubmit={handleSubmit}

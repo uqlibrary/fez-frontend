@@ -158,7 +158,7 @@
         "react-dom": "^18.3.1",
         "react-dropzone": "^14.2.3",
         "react-helmet-async": "^1.2.3",
-        "react-hook-form": "^7.53.0",
+        "react-hook-form": "^7.51.3",
         "react-image": "^4.1.0",
         "react-jss": "^8.6.1",
         "react-lazy-load-image-component": "^1.5.4",
@@ -351,7 +351,9 @@
             "src/helpers/*.{js,jsx}",
             "src/middleware/*.{js,jsx}",
             "src/reducers/*.{js,jsx}",
-            "src/repositories/routes.js"
+            "src/repositories/routes.js",
+            "src/hooks/useForm.js",
+            "src/hooks/useValidatedForm.js"
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [

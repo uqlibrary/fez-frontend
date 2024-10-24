@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react';
+import { renderHook } from 'test-utils';
 import { useValidatedForm } from './useValidatedForm';
 
 const mockTrigger = jest.fn();

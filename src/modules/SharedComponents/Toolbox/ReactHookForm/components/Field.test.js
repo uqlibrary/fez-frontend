@@ -60,16 +60,27 @@ describe('Field component', () => {
 
         it('should validate value using validator in "left to right" order', () => {
             expect(
-                validateHandler('test', [
+                validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
                     value => (value !== 'test' ? 'fist validator executed' : null),
-                    value => (value === 'test' ? ' second validator executed ' : null),
+                    (value, formValues) =>
+                        value === 'test' && formValues.fieldA === 'test' ? ' second validator executed ' : null,
                 ]),
             ).toBe('second validator executed');
         });
 
+        it('should ignore non function validators', () => {
+            expect(
+                validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
+                    value => (value !== 'test' ? 'fist validator executed' : null),
+                    'invalid-validator',
+                    value => (value === 'test' ? 'third validator executed' : null),
+                ]),
+            ).toBe('third validator executed');
+        });
+
         it('should ignore empty error messages', () => {
             expect(
-                validateHandler('test', [
+                validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
                     value => (value !== 'test' ? 'fist validator executed' : null),
                     value => (value === 'test' ? ' ' : null),
                 ]),
@@ -78,7 +89,7 @@ describe('Field component', () => {
 
         it('should return null if all validators passes', () => {
             expect(
-                validateHandler('test', [
+                validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
                     value => (value === 1 ? 'fist validator executed' : null),
                     value => (value === 2 ? 'second validator executed' : null),
                 ]),
