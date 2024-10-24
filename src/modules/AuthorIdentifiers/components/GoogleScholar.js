@@ -15,7 +15,6 @@ import { pathConfig, validation } from 'config';
 import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAuthor } from 'actions';
 import { useValidatedForm } from '../../../hooks';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
-import { SERVER_ERROR_KEY } from '../../../config/general';
 
 /**
  * Function to redirect user to Dashboard page
@@ -37,10 +36,9 @@ export const GoogleScholarForm = ({ author }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
-        setError,
         control,
         handleSubmit,
-        formState: { errors, isSubmitSuccessful, isSubmitting },
+        formState: { isSubmitSuccessful, isSubmitting, server },
     } = useValidatedForm({
         mode: 'onChange',
         defaultValues: {
@@ -69,17 +67,14 @@ export const GoogleScholarForm = ({ author }) => {
     );
 
     const onSubmit = async data =>
-        await dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => {
-            // set form error in case of exceptions - it will be handled and displayed below
-            setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
-        });
+        await dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => server.error.set(e));
 
     const getAlert = () => {
         let alertProps = null;
-        if (!isSubmitting && errors[SERVER_ERROR_KEY]) {
+        if (!isSubmitting && server.error.has) {
             alertProps = {
                 ...txt.errorAlert,
-                message: errors[SERVER_ERROR_KEY]?.message,
+                message: server.error.get()?.message,
             };
         } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };

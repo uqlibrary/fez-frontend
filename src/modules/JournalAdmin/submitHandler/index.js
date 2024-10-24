@@ -1,7 +1,6 @@
 import { adminJournalUpdate } from 'actions';
-import { SERVER_ERROR_KEY } from 'config/general';
 
-export const onSubmit = (values, dispatch, { methods }) => {
+export const onSubmit = (values, dispatch, { server }) => {
     const requestObject = {
         adminSection: { ...values.adminSection },
         bibliographicSection: { ...values.bibliographicSection },
@@ -11,8 +10,8 @@ export const onSubmit = (values, dispatch, { methods }) => {
 
     return dispatch(adminJournalUpdate({ ...requestObject }))
         .then(() => Promise.resolve())
-        .catch(error => {
-            console.log(error);
-            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: error.message });
+        .catch(e => {
+            console.log(e);
+            server.error.set(e);
         });
 };

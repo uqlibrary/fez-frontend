@@ -113,7 +113,7 @@ const ClaimRecord = () => {
         setValue,
         resetField,
         getMergedValues,
-        clearServerErrorAndHandleSubmit,
+        handleSubmit,
         formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError },
     } = useValidatedForm({ values: { contentIndicators } });
 
@@ -219,7 +219,7 @@ const ClaimRecord = () => {
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-                <form onSubmit={clearServerErrorAndHandleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <Grid container spacing={3}>
                         <Grid xs={12}>
                             <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
