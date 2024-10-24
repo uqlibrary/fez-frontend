@@ -351,7 +351,9 @@
             "src/helpers/*.{js,jsx}",
             "src/middleware/*.{js,jsx}",
             "src/reducers/*.{js,jsx}",
-            "src/repositories/routes.js"
+            "src/repositories/routes.js",
+            "src/hooks/useForm.js",
+            "src/hooks/useValidatedForm.js"
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [
