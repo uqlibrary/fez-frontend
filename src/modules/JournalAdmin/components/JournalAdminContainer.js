@@ -15,7 +15,7 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 import { JournalContext, TabbedContext } from 'context';
 import { useIsMobileView, useValidatedForm } from 'hooks';
-import { ADMIN_JOURNAL, SERVER_ERROR_KEY } from 'config/general';
+import { ADMIN_JOURNAL } from 'config/general';
 import { onSubmit } from '../submitHandler';
 import { validateResolver } from '../validators';
 
@@ -45,7 +45,10 @@ export const JournalAdminContainer = () => {
         error,
     } = useJournal();
 
-    const methods = useValidatedForm({
+    const {
+        methods,
+        formState: { server },
+    } = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
@@ -60,7 +63,7 @@ export const JournalAdminContainer = () => {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            methods.setError(SERVER_ERROR_KEY, { type: 'server', message: e.message });
+            server.error.set(e);
         }
     };
     const formErrors = methods.formState.errors;
