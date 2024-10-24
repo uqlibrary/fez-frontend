@@ -30,6 +30,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useForm } from '../../../hooks';
+import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 
 const DeleteRecord = () => {
     const dispatch = useDispatch();
@@ -44,12 +45,6 @@ const DeleteRecord = () => {
     const { recordToDelete, loadingRecordToDelete } = useSelector(state => state.get('deleteRecordReducer'));
     // to allow confirmDialogBox control
     const confirmDialogBoxRef = useRef();
-    const setConfirmDialogBoxRef = React.useCallback(
-        ref => {
-            confirmDialogBoxRef.current = ref;
-        },
-        [confirmDialogBoxRef],
-    );
 
     const {
         control,
@@ -168,7 +163,7 @@ const DeleteRecord = () => {
                             </StandardCard>
                         </Grid>
                         <ConfirmDialogBox
-                            onRef={setConfirmDialogBoxRef}
+                            onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
                             onAction={navigateToViewPage}
                             onCancelAction={navigateToSearchPage}
                             locale={saveConfirmationLocale}

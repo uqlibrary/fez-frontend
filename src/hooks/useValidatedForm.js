@@ -9,16 +9,16 @@ export const useValidatedForm = props => {
     const attributes = useForm(props);
     const {
         trigger,
-        formState: { isValid, hasErrors },
+        formState: { isValid, hasValidationError },
     } = attributes;
 
     // trigger validation prior to rendering in order to display errors (to match redux form behaviour)
     useLayoutEffect(() => {
-        if (isValid && !hasErrors) {
+        if (isValid && !hasValidationError) {
             return;
         }
         (async () => await trigger())();
-    }, [isValid, hasErrors, trigger]);
+    }, [isValid, hasValidationError, trigger]);
 
     return attributes;
 };
