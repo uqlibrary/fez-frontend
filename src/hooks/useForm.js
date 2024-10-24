@@ -50,7 +50,7 @@ export const useForm = props => {
             ),
             set: e => setServerError(attributes.setError, e),
             get: () => getServerError(attributes.formState.errors),
-            clear: () => attributes.clearErrors(SERVER_ERROR_KEY),
+            clear: () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`),
         },
     };
 
