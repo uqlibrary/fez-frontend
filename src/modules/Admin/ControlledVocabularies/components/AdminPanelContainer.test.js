@@ -1,12 +1,9 @@
 import React from 'react';
-
-import Immutable from 'immutable';
 import locale from 'locale/components';
 
-import { render, WithReduxStore, WithRouter, userEvent } from 'test-utils';
+import { render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 
-import AdminPanelContainer, { validate } from './AdminPanelContainer';
-import { preview } from 'test-utils';
+import AdminPanelContainer from './AdminPanelContainer';
 
 describe('AdminPanel with React-Hook-Form', () => {
     const setup = (testProps = {}, renderer = render) => {
