@@ -41,7 +41,7 @@ export const getAlertProps = (
     publication,
     authorLinked,
     contributorLinked,
-    errors,
+    getAlertErrorProps,
     isSubmitting,
     isSubmitSuccessful,
     isSubmitFailure,
@@ -65,14 +65,12 @@ export const getAlertProps = (
         return { ...txt.alreadyClaimedAlert };
     }
 
-    const formErrors = Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {});
     return validation.getErrorAlertProps({
         submitting: isSubmitting,
         submitSucceeded: isSubmitSuccessful,
         dirty: true,
         alertLocale: txt,
-        ...(serverError ? { error: serverError.message } : {}),
-        ...(!serverError ? { formErrors } : {}),
+        ...getAlertErrorProps(),
     });
 };
 
@@ -112,10 +110,13 @@ const ClaimRecord = () => {
         control,
         setValue,
         resetField,
-        getMergedValues,
-        handleSubmit,
-        formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError },
-    } = useValidatedForm({ values: { contentIndicators } });
+        safelyHandleSubmit,
+        getAlertErrorProps,
+        mergeWithFormValues,
+        formState: { isDirty, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError, serverError },
+    } = useValidatedForm({
+        values: { authorLinking: '', contributorLinking: '', comments: '', rek_link: '', contentIndicators, files: [] },
+    });
 
     useEffect(() => {
         if (!author?.aut_id || !publication) {
@@ -154,13 +155,9 @@ const ClaimRecord = () => {
         );
     }
 
-    const onSubmit = async () => {
-        try {
-            await dispatch(actions.claimPublication(getMergedValues({ author, publication })));
-        } catch (e) {
-            server.error.set(e);
-        }
-    };
+    const onSubmit = safelyHandleSubmit(
+        async () => await dispatch(actions.claimPublication(mergeWithFormValues({ author, publication }))),
+    );
     // validation
     const contributorValidation = link => {
         const hasAuthors = !!publication?.fez_record_search_key_author?.length;
@@ -192,11 +189,11 @@ const ClaimRecord = () => {
         publication,
         authorLinked,
         contributorLinked,
-        errors,
+        getAlertErrorProps,
         isSubmitting,
         isSubmitSuccessful,
         isSubmitFailure,
-        server.error.get(),
+        serverError,
     );
     // set confirmation message depending on file upload status
     const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
@@ -219,7 +216,7 @@ const ClaimRecord = () => {
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
                         <Grid xs={12}>
                             <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
