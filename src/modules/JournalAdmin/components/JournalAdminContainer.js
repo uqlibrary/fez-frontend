@@ -45,10 +45,7 @@ export const JournalAdminContainer = () => {
         error,
     } = useJournal();
 
-    const {
-        methods,
-        formState: { server },
-    } = useValidatedForm({
+    const attributes = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
@@ -58,18 +55,18 @@ export const JournalAdminContainer = () => {
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
-            await onSubmit(data, dispatch, { initialValues, methods });
+            await onSubmit(data, dispatch, { server: attributes.formState.server });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            server.error.set(e);
+            attributes.formState.server.error.set(e);
         }
     };
-    const formErrors = methods.formState.errors;
+
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(attributes.formState || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
@@ -112,7 +109,7 @@ export const JournalAdminContainer = () => {
                     }}
                 >
                     <ThemeProvider theme={adminTheme}>
-                        <FormProvider {...methods}>
+                        <FormProvider {...attributes}>
                             <JournalAdminInterface
                                 authorDetails={authorDetails}
                                 handleSubmit={handleSubmit}

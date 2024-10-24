@@ -1,6 +1,6 @@
 import { adminJournalUpdate } from 'actions';
 
-export const onSubmit = (values, dispatch, { formState: { server } }) => {
+export const onSubmit = (values, dispatch, { server }) => {
     const requestObject = {
         adminSection: { ...values.adminSection },
         bibliographicSection: { ...values.bibliographicSection },
