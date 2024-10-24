@@ -29,10 +29,10 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
         containerStyles = !!parentId
             ? {}
             : {
-                backgroundColor: '#eee',
-                padding: '20px',
-                boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
-            };
+                  backgroundColor: '#eee',
+                  padding: '20px',
+                  boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
+              };
     } else if (action === ACTION.EDIT) {
         containerStyles = {
             backgroundColor: '#eee',
