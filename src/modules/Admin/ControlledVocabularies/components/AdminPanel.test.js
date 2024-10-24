@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithRouter, userEvent, waitFor, fireEvent, WithReduxStore, createMatchMedia } from 'test-utils';
+import { createMatchMedia, fireEvent, render, userEvent, waitFor, WithReduxStore, WithRouter } from 'test-utils';
 import AdminPanel from './AdminPanel';
 import locale from 'locale/components';
 

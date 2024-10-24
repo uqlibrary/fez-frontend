@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useForm, Controller } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -29,10 +29,10 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
         containerStyles = !!parentId
             ? {}
             : {
-                  backgroundColor: '#eee',
-                  padding: '20px',
-                  boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
-              };
+                backgroundColor: '#eee',
+                padding: '20px',
+                boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
+            };
     } else if (action === ACTION.EDIT) {
         containerStyles = {
             backgroundColor: '#eee',
