@@ -282,8 +282,10 @@ export function adminJournalUpdate(data) {
 }
 
 export function adminUnlockJournal() {
-    return {
-        type: actions.ADMIN_JOURNAL_UNLOCK,
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_UNLOCK,
+        });
     };
 }
 
