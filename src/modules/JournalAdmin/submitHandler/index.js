@@ -1,6 +1,6 @@
 import { adminJournalUpdate } from 'actions';
 
-export const onSubmit = (values, dispatch, { server }) => {
+export const onSubmit = (values, dispatch, { setServerError }) => {
     const requestObject = {
         adminSection: { ...values.adminSection },
         bibliographicSection: { ...values.bibliographicSection },
@@ -12,6 +12,6 @@ export const onSubmit = (values, dispatch, { server }) => {
         .then(() => Promise.resolve())
         .catch(e => {
             console.log(e);
-            server.error.set(e);
+            setServerError(e);
         });
 };

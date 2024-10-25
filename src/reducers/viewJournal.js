@@ -15,10 +15,13 @@ const handlers = {
     }),
 
     [actions.VIEW_JOURNAL_LOADED]: (state, action) => {
+        const journalToView = action.payload;
+        Array.isArray(journalToView?.fez_journal_issn || undefined) &&
+            journalToView.fez_journal_issn.sort((a, b) => a.jnl_issn_order > b.jnl_issn_order);
         return {
             ...initialState,
             loadingJournalToView: false,
-            journalToView: action.payload,
+            journalToView,
             isJournalLocked: !!action.payload && !!action.payload.jnl_editing_user,
         };
     },
