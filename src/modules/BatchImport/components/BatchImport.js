@@ -27,7 +27,6 @@ import { default as publicationLocale } from 'locale/publicationForm';
 import { useNavigate } from 'react-router-dom';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from '../../../hooks';
-import { reorderObjectKeys } from '../../../helpers/general';
 
 const csvIngestDoctypesList = Object.values(publicationTypes(false))
     .filter(item => CSV_INGEST_DOCUMENT_TYPES.includes(item.id))
@@ -53,9 +52,10 @@ export const BatchImport = () => {
         reset,
         trigger,
         control,
-        handleSubmit,
         resetField,
-        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful, server },
+        getAlertErrorProps,
+        safelyHandleSubmit,
+        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
     } = useValidatedForm({
         mode: 'onChange',
         defaultValues,
@@ -63,21 +63,17 @@ export const BatchImport = () => {
     const [isBulkFileIngest, communityID] = useWatch({ control, name: ['is_bulk_file_ingest', 'communityID'] });
     const hasErrors = Object.keys(errors).length > 0;
 
-    const onSubmit = async data => {
-        try {
-            let payload = data;
-            // remove unnecessary fields from payload when "bulk file/edit ingest" mode is on
-            if (data.is_bulk_file_ingest) {
-                payload = {
-                    is_bulk_file_ingest: data.is_bulk_file_ingest,
-                    directory: data.directory,
-                };
-            }
-            await dispatch(createBatchImport(payload));
-        } catch (e) {
-            server.error.set(e);
+    const onSubmit = safelyHandleSubmit(async data => {
+        let payload = data;
+        // remove unnecessary fields from payload when "bulk file/edit ingest" mode is on
+        if (data.is_bulk_file_ingest) {
+            payload = {
+                is_bulk_file_ingest: data.is_bulk_file_ingest,
+                directory: data.directory,
+            };
         }
-    };
+        await dispatch(createBatchImport(payload));
+    });
 
     // re-validate the form upon toggling "bulk file/edit ingest" option, to make sure that the
     // alert box (at the bottom of the form) displays a summary of errors for visible form fields only
@@ -93,10 +89,6 @@ export const BatchImport = () => {
     }, [communityID]);
 
     useEffect(() => {
-        const formErrors = reorderObjectKeys(
-            Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {}),
-            Object.keys(defaultValues),
-        );
         const alertProps = validation.getErrorAlertProps({
             alertLocale: {
                 validationAlert: { ...publicationLocale.validationAlert },
@@ -104,8 +96,7 @@ export const BatchImport = () => {
                 successAlert: { ...batchImportTxt.submitSuccessAlert },
                 errorAlert: { ...batchImportTxt.submitFailureAlert },
             },
-            error: server.error.has && server.error.get()?.message,
-            formErrors: formErrors,
+            ...getAlertErrorProps(),
             submitSucceeded: isSubmitSuccessful,
             submitting: isSubmitting,
         });
@@ -134,7 +125,7 @@ export const BatchImport = () => {
     return (
         <StandardPage title={batchImportTxt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={onSubmit}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <StandardCard help={batchImportTxt.help}>

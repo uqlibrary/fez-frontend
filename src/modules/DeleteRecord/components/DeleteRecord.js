@@ -48,28 +48,24 @@ const DeleteRecord = () => {
 
     const {
         control,
-        getMergedValues,
-        handleSubmit,
-        formState: { server, hasValidationError, isDirt, isSubmitting, isSubmitSuccessful },
+        safelyHandleSubmit,
+        mergeWithFormValues,
+        formState: { hasValidationError, isDirt, isSubmitting, isSubmitSuccessful, serverError },
     } = useForm();
 
-    const onSubmit = async () => {
-        const payload = getMergedValues({ publication: { ...recordToDelete } });
+    const onSubmit = safelyHandleSubmit(async () => {
+        const payload = mergeWithFormValues({ publication: { ...recordToDelete } });
         if (payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
             payload.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
                 payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;
         }
 
-        try {
-            await dispatch(
-                payload.publication.rek_status === DELETED
-                    ? actions.deleteUpdatePartial({ ...payload })
-                    : actions.deleteRecord({ ...payload }),
-            );
-        } catch (e) {
-            server.error.set(e);
-        }
-    };
+        await dispatch(
+            payload.publication.rek_status === DELETED
+                ? actions.deleteUpdatePartial({ ...payload })
+                : actions.deleteRecord({ ...payload }),
+        );
+    });
 
     const navigateToSearchPage = () => {
         navigate(pathConfig.records.search);
@@ -145,7 +141,7 @@ const DeleteRecord = () => {
     const hasDataCiteDoi = recordToDelete?.fez_record_search_key_doi?.rek_doi?.startsWith(DOI_DATACITE_PREFIX);
 
     const saveConfirmationLocale = { ...formTxt.successWorkflowConfirmation };
-    const errorAlertProps = getErrorAlertProps(recordToDelete?.rek_display_type_lookup, server.error.get());
+    const errorAlertProps = getErrorAlertProps(recordToDelete?.rek_display_type_lookup, serverError);
     const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
     const hideCitationText = doesListContainItem(
         PUBLICATION_EXCLUDE_CITATION_TEXT_LIST,
@@ -155,7 +151,7 @@ const DeleteRecord = () => {
     return (
         <StandardPage title={txt.title(isDeleted)}>
             <ConfirmDiscardFormChanges dirty={isDirt} isSubmitSuccessful={isSubmitSuccessful}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.subTitle(isDeleted)} help={txt.help}>

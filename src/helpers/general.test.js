@@ -8,6 +8,7 @@ import {
     reorderObjectKeys,
     isEmptyObject,
     filterObjectKeys,
+    combineObjects,
 } from './general';
 
 describe('general helpers', () => {
@@ -300,8 +301,19 @@ describe('general helpers', () => {
         it('should return false for non-empty objects', () => {
             expect(isEmptyObject({ a: 0 })).toEqual(false);
             expect(isEmptyObject({ a: '' })).toEqual(false);
+            expect(isEmptyObject({ a: false })).toEqual(false);
+            expect(isEmptyObject({ a: true })).toEqual(false);
             expect(isEmptyObject({ a: null })).toEqual(false);
             expect(isEmptyObject({ a: undefined })).toEqual(false);
+        });
+
+        it('should return false for non-objects', () => {
+            expect(isEmptyObject(0)).toEqual(false);
+            expect(isEmptyObject('')).toEqual(false);
+            expect(isEmptyObject(false)).toEqual(false);
+            expect(isEmptyObject(true)).toEqual(false);
+            expect(isEmptyObject(null)).toEqual(false);
+            expect(isEmptyObject(undefined)).toEqual(false);
         });
     });
 
@@ -338,6 +350,39 @@ describe('general helpers', () => {
             expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'], true)).toEqual({ a: 1, b: 2 });
             expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'], true)).toEqual({ b: 2, c: 3 });
             expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'], true)).toEqual({ a: 1, c: 3 });
+        });
+    });
+
+    describe('combineObjects', () => {
+        it('should return empty object for empty object list', () => {
+            expect(combineObjects({})).toEqual({});
+            expect(combineObjects({}, {})).toEqual({});
+        });
+
+        it('should return a single object from given objects', () => {
+            expect(combineObjects({ a: 1 }, { b: 2 }, { c: 3 })).toEqual({ a: 1, b: 2, c: 3 });
+        });
+
+        it('should ignore non-object and undefined object keys', () => {
+            expect(
+                combineObjects(
+                    { a: 1 },
+                    { b: null },
+                    null,
+                    undefined,
+                    1,
+                    'a',
+                    'abc',
+                    true,
+                    false,
+                    { c: 3 },
+                    { d: undefined },
+                ),
+            ).toEqual({
+                a: 1,
+                b: null,
+                c: 3,
+            });
         });
     });
 });

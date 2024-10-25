@@ -419,7 +419,8 @@ export const reorderObjectKeys = (object, keys) =>
  * @param object
  * @return {boolean}
  */
-export const isEmptyObject = object => Object.keys(object).length === 0;
+export const isEmptyObject = object =>
+    object && typeof object === 'object' ? Object.keys(object)?.length === 0 : false;
 
 /**
  * Get a subset of an object for a given set of keys
@@ -438,3 +439,11 @@ export const filterObjectKeys = (object, keys, inclusive = false) =>
               }
               return acc;
           }, {});
+
+/**
+ * Reduce an array of object into a single object.
+ * @param objects
+ * @return {*}
+ */
+export const combineObjects = (...objects) =>
+    objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});

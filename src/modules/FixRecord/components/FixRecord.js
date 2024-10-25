@@ -32,7 +32,6 @@ import * as actions from 'actions';
 import { useValidatedForm } from '../../../hooks';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
-import { flattenErrors } from '../../../hooks/useForm';
 import { useWatch } from 'react-hook-form';
 import validationErrors from '../../../locale/validationErrors';
 import { isEmptyObject } from '../../../helpers/general';
@@ -135,10 +134,11 @@ const FixRecord = () => {
     // form
     const {
         control,
-        getMergedValues,
-        handleSubmit,
         resetField,
-        formState: { server, isDirty, errors, isSubmitting, isSubmitSuccessful, hasValidationError },
+        getAlertErrorProps,
+        mergeWithFormValues,
+        safelyHandleSubmit,
+        formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {
@@ -149,7 +149,6 @@ const FixRecord = () => {
             files: '',
         },
     });
-    const serverError = server.error.get();
     // watch for changes on all fields, as we have to perform a form level validation below
     const { fixAction, ...data } = useWatch({
         control,
@@ -207,25 +206,20 @@ const FixRecord = () => {
         submitting: isSubmitting,
         submitSucceeded: isSubmitSuccessful,
         alertLocale: txtFixForm,
-        ...(serverError ? { error: serverError.message } : {}),
-        ...(!serverError ? { formErrors: flattenErrors(errors, formLevelError) } : {}),
+        ...getAlertErrorProps(formLevelError),
     });
 
-    const onSubmit = async () => {
-        try {
-            const data = getMergedValues({ author, publication });
-            await dispatch(
-                data.fixAction === RECORD_ACTION_UNCLAIM ? actions.unclaimRecord(data) : actions.fixRecord(data),
-            );
-        } catch (e) {
-            server.error.set(e);
-        }
-    };
+    const onSubmit = safelyHandleSubmit(async () => {
+        const data = mergeWithFormValues({ author, publication });
+        await dispatch(
+            data.fixAction === RECORD_ACTION_UNCLAIM ? actions.unclaimRecord(data) : actions.fixRecord(data),
+        );
+    });
 
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
                         <Grid xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
