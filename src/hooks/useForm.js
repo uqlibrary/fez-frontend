@@ -1,31 +1,90 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
 import deepmerge from 'deepmerge';
-import { isEmptyObject, filterObjectKeys } from '../helpers/general';
+import { isEmptyObject, filterObjectKeys, reorderObjectKeys, combineObjects } from '../helpers/general';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
 export const SERVER_ERROR_KEY = 'serverError';
 
-export const setServerError = (setError, e) =>
+/**
+ * @param setError
+ * @param e
+ */
+export const setServerError = (setError, e) => {
     setError(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`, {
         type: 'custom',
         message: e.message,
         status: e.status,
         original: e.original || e,
     });
+};
 
-export const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_KEY];
+/**
+ * @param errors
+ * @return {*}
+ */
+const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_KEY];
 
 /**
  * Get flatten errors to a `field` => `error` object
  *
  * @param errors
- * @param otherAlreadyFlattenedErrors {{}}
+ * @param otherFlattenedErrorList {{}}
  * @return {*|{}}
  */
-export const flattenErrors = (errors, ...otherAlreadyFlattenedErrors) => ({
-    ...Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {}),
-    ...otherAlreadyFlattenedErrors.reduce((acc, error) => ({ ...acc, ...error }), {}),
-});
+export const flattenErrors = (errors, ...otherFlattenedErrorList) => {
+    return {
+        ...(errors && typeof errors === 'object'
+            ? Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {})
+            : {}),
+        ...combineObjects(...otherFlattenedErrorList),
+    };
+};
+
+/**
+ * Create a handle submit handler that handles server errors if any
+ * @param attributes
+ * @return {function(*): *}
+ */
+const safelyHandleSubmit = attributes => callback =>
+    attributes.handleSubmit(async data => {
+        try {
+            await callback(data);
+        } catch (e) {
+            attributes.setServerError(e);
+        }
+    });
+
+/**
+ * @param attributes
+ * @return {(function(...[*]): ({error: *}))|*}
+ */
+const getAlertErrorProps = attributes => (...additionalValidationErrors) => {
+    if (attributes.formState.hasServerError) {
+        return {
+            error: attributes.formState.serverError?.message,
+        };
+    }
+
+    if (!attributes.formState.hasValidationError && !additionalValidationErrors.length) {
+        return {};
+    }
+
+    // if defaultValues or values props are set, its keys will be used to order the returned error object below
+    // Note: any fields that are not defined in those props when they are defined, will not be added to the ordered
+    // error object - to fix this, make sure to add all forms fields to defaultValues or values props
+    const errorKeyOrder = Object.keys(attributes.formState.defaultValues || attributes.formState.values || {});
+    return {
+        formErrors: {
+            // order errors if possible
+            ...(!!errorKeyOrder.length
+                ? {
+                      ...reorderObjectKeys(flattenErrors(attributes.formState.validationErrors), errorKeyOrder),
+                      ...combineObjects(...additionalValidationErrors),
+                  }
+                : flattenErrors(attributes.formState.validationErrors, ...additionalValidationErrors)),
+        },
+    };
+};
 
 /**
  * @param props
@@ -34,29 +93,28 @@ export const flattenErrors = (errors, ...otherAlreadyFlattenedErrors) => ({
 export const useForm = props => {
     const attributes = useReactHookForm({ mode: 'onChange', ...props });
 
-    // add isSubmitFailed attribute to formState
+    // add additional errors related attributes
     attributes.formState.isSubmitFailure = attributes.formState.isSubmitted && !attributes.formState.isSubmitSuccessful;
-    // add hasError attribute to formState, as isValid alone doesn't seem to take in account raised validation errors
     attributes.formState.hasError = !isEmptyObject(attributes.formState.errors);
-    // add hasValidationError attribute to formState - excludes server errors
-    attributes.formState.hasValidationError = !isEmptyObject(
-        filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_NAMESPACE]),
-    );
-    // add "server" namespace to formState object for managing server errors
-    attributes.formState.server = {
-        error: {
-            has: !isEmptyObject(
-                filterObjectKeys(attributes.formState.errors[SERVER_ERROR_NAMESPACE], [SERVER_ERROR_KEY], true),
-            ),
-            set: e => setServerError(attributes.setError, e),
-            get: () => getServerError(attributes.formState.errors),
-            clear: () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`),
-        },
-    };
+    attributes.formState.validationErrors = filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_NAMESPACE]);
+    attributes.formState.hasValidationError = !isEmptyObject(attributes.formState.validationErrors);
 
+    // add server error related attributes & helpers
+    attributes.formState.hasServerError = !isEmptyObject(
+        filterObjectKeys(attributes.formState.errors[SERVER_ERROR_NAMESPACE], [SERVER_ERROR_KEY], true),
+    );
+    attributes.formState.serverError = getServerError(attributes.formState.errors);
+    attributes.setServerError = e => setServerError(attributes.setError, e);
+    attributes.resetServerError = () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
+
+    // form submission helpers
+    attributes.safelyHandleSubmit = safelyHandleSubmit(attributes);
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
-    attributes.getMergedValues = defaults => deepmerge(defaults, attributes.getValues());
+    attributes.mergeWithFormValues = defaults => deepmerge(defaults, attributes.getValues());
+
+    // alert component helpers
+    attributes.getAlertErrorProps = getAlertErrorProps(attributes);
 
     return attributes;
 };
