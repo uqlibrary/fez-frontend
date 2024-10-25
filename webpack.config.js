@@ -59,9 +59,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
-                exclude: [/node_modules/, /custom_modules/, /mocks?/],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -75,13 +75,13 @@ module.exports = {
                 },
             },
             {
-                test: /\.ts(x)?$/,
-                use: 'ts-loader',
-                exclude: [/node_modules/, /custom_modules/, /mocks?/],
+                test: /\.tsx?$/,
+                use: 'ts-loader?configFile=tsconfig.webpack.json',
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
             },
             {
                 test: /\.json$/,
-                exclude: [/node_modules/, /custom_modules/, /mocks?/],
+                exclude: [/node_modules/, /custom_modules/],
                 use: ['json-loader'],
             },
             {
