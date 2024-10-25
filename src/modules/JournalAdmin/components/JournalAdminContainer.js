@@ -55,12 +55,12 @@ export const JournalAdminContainer = () => {
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
-            await onSubmit(data, dispatch, { server: attributes.formState.server });
+            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            attributes.formState.server.error.set(e);
+            attributes.setServerError(e);
         }
     };
 
