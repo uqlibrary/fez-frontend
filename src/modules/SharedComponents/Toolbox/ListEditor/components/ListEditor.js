@@ -5,6 +5,7 @@ import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
 import FormHelperText from '@mui/material/FormHelperText';
+import { isEqualArray } from '../../../../../helpers/general';
 
 export default class ListEditor extends Component {
     static propTypes = {
@@ -89,9 +90,9 @@ export default class ListEditor extends Component {
         this.editItem = this.editItem.bind(this);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        if (this.props.onChange) {
+        if (this.props.onChange && !isEqualArray(prevState.itemList, this.state.itemList)) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
     }
