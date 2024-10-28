@@ -37,8 +37,8 @@ export const GoogleScholarForm = ({ author }) => {
     const navigate = useNavigate();
     const {
         control,
-        handleSubmit,
-        formState: { isSubmitSuccessful, isSubmitting, server },
+        safelyHandleSubmit,
+        formState: { isSubmitSuccessful, isSubmitting, hasServerError, serverError },
     } = useValidatedForm({
         mode: 'onChange',
         defaultValues: {
@@ -66,15 +66,14 @@ export const GoogleScholarForm = ({ author }) => {
         [isSubmitSuccessful],
     );
 
-    const onSubmit = async data =>
-        await dispatch(updateCurrentAuthor(author.aut_id, data)).catch(e => server.error.set(e));
+    const onSubmit = safelyHandleSubmit(async data => await dispatch(updateCurrentAuthor(author.aut_id, data)));
 
     const getAlert = () => {
         let alertProps = null;
-        if (!isSubmitting && server.error.has) {
+        if (!isSubmitting && hasServerError) {
             alertProps = {
                 ...txt.errorAlert,
-                message: server.error.get()?.message,
+                message: serverError?.message,
             };
         } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };
@@ -86,7 +85,7 @@ export const GoogleScholarForm = ({ author }) => {
 
     return (
         <StandardPage title={txt.title}>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={onSubmit}>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={cardLocale.title} help={txt.help}>
