@@ -1,4 +1,5 @@
 import HTMLReactParser from 'html-react-parser';
+import { diff } from 'deep-object-diff';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
 global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
@@ -447,3 +448,23 @@ export const filterObjectKeys = (object, keys, inclusive = false) =>
  */
 export const combineObjects = (...objects) =>
     objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});
+
+/**
+ * @param array
+ * @param anotherArray
+ * @return {boolean}
+ */
+export const isEqualArray = (array, anotherArray) => {
+    if (
+        !array ||
+        !anotherArray ||
+        !Array.isArray(array) ||
+        !Array.isArray(anotherArray) ||
+        array.length !== anotherArray.length
+    ) {
+        return false;
+    }
+
+    dd(diff(array, anotherArray));
+    return Object.keys(diff(array, anotherArray)).length === 0;
+};

@@ -9,6 +9,7 @@ import {
     isEmptyObject,
     filterObjectKeys,
     combineObjects,
+    isEqualArray,
 } from './general';
 
 describe('general helpers', () => {
@@ -382,6 +383,35 @@ describe('general helpers', () => {
                 a: 1,
                 b: null,
                 c: 3,
+            });
+        });
+
+        describe('isEqualArray', () => {
+            it('should return true for equal arrays', () => {
+                expect(isEqualArray([], [])).toBeTruthy();
+                expect(isEqualArray([1], [1])).toBeTruthy();
+                expect(isEqualArray([1, 2], [1, 2])).toBeTruthy();
+                expect(isEqualArray([0.1], [0.1])).toBeTruthy();
+                expect(isEqualArray([undefined], [undefined])).toBeTruthy();
+                expect(isEqualArray([null], [null])).toBeTruthy();
+                expect(isEqualArray([false], [false])).toBeTruthy();
+                expect(isEqualArray([''], [''])).toBeTruthy();
+                expect(isEqualArray(['str'], ['str'])).toBeTruthy();
+                expect(isEqualArray([{}], [{}])).toBeTruthy();
+                expect(isEqualArray([{ a: 1 }], [{ a: 1 }])).toBeTruthy();
+                expect(isEqualArray([{ a: 1, b: 2 }], [{ a: 1, b: 2 }])).toBeTruthy();
+            });
+
+            it('should return false for non-equal arrays', () => {
+                expect(isEqualArray([1], [])).toBeFalsy();
+                expect(isEqualArray([1], [1, 2])).toBeFalsy();
+                expect(isEqualArray([0.1], [0.2])).toBeFalsy();
+                expect(isEqualArray([undefined], [null])).toBeFalsy();
+                expect(isEqualArray([true], [false])).toBeFalsy();
+                expect(isEqualArray([''], ['a'])).toBeFalsy();
+                expect(isEqualArray(['string'], ['str'])).toBeFalsy();
+                expect(isEqualArray([{ a: 1 }], [{}])).toBeFalsy();
+                expect(isEqualArray([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
             });
         });
     });
