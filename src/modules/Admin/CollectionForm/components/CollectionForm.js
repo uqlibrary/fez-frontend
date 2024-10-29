@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { propTypes } from 'redux-form/immutable';
 import { Field } from 'redux-form/immutable';
+// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -254,4 +255,5 @@ CollectionForm.propTypes = {
     newCollectionError: PropTypes.bool,
     newRecord: PropTypes.object,
 };
+// console.log('CollectionForm.propTypes=', JSON.stringify(CollectionForm.propTypes));
 export default CollectionForm;
