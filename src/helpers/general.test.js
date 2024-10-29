@@ -9,7 +9,8 @@ import {
     isEmptyObject,
     filterObjectKeys,
     combineObjects,
-    isEqualArray,
+    isArrayDeeplyEqual,
+    arrayDeepDiff,
 } from './general';
 
 describe('general helpers', () => {
@@ -386,32 +387,95 @@ describe('general helpers', () => {
             });
         });
 
-        describe('isEqualArray', () => {
+        describe('arrayDeepDiff', () => {
+            it('should return no differences for equal arrays', () => {
+                expect(arrayDeepDiff(undefined, [])).toEqual([]);
+                expect(arrayDeepDiff([], undefined)).toEqual([]);
+                expect(arrayDeepDiff([], [])).toEqual([]);
+                expect(arrayDeepDiff([0], [0])).toEqual([]);
+                expect(arrayDeepDiff([0, 1], [0, 1])).toEqual([]);
+                expect(arrayDeepDiff([0.1], [0.1])).toEqual([]);
+                expect(arrayDeepDiff([undefined], [undefined])).toEqual([]);
+                expect(arrayDeepDiff([null], [null])).toEqual([]);
+                expect(arrayDeepDiff(['s'], ['s'])).toEqual([]);
+                expect(arrayDeepDiff(['str'], ['str'])).toEqual([]);
+                expect(arrayDeepDiff(['str', 'ing'], ['str', 'ing'])).toEqual([]);
+                expect(arrayDeepDiff([[], []], [[], []])).toEqual([]);
+                expect(arrayDeepDiff([[1], [2]], [[1], [2]])).toEqual([]);
+                expect(arrayDeepDiff([{ a: 1 }, {}], [{ a: 1 }, {}])).toEqual([]);
+                expect(arrayDeepDiff([{ a: 1 }, { b: [{ c: 3 }] }], [{ a: 1 }, { b: [{ c: 3 }] }])).toEqual([]);
+            });
+
+            it('should return values that are only present in the first array', () => {
+                expect(arrayDeepDiff([0], [])).toEqual([0]);
+                expect(arrayDeepDiff([0, 1], [0])).toEqual([1]);
+                expect(arrayDeepDiff([0.1, 0.2], [0.1])).toEqual([0.2]);
+                expect(arrayDeepDiff([undefined], [])).toEqual([undefined]);
+                expect(arrayDeepDiff([null], [])).toEqual([null]);
+                expect(arrayDeepDiff(['s'], [])).toEqual(['s']);
+                expect(arrayDeepDiff(['str'], [])).toEqual(['str']);
+                expect(arrayDeepDiff(['str', 'ing'], ['str'])).toEqual(['ing']);
+                expect(arrayDeepDiff([[1], [2]], [[1]])).toEqual([[2]]);
+                expect(arrayDeepDiff([{ a: 1 }, {}], [{ a: 1 }])).toEqual([{}]);
+                expect(arrayDeepDiff([{ a: 1 }, { b: [{ c: 3 }] }], [{ a: 1 }])).toEqual([
+                    {
+                        b: [
+                            {
+                                c: 3,
+                            },
+                        ],
+                    },
+                ]);
+            });
+
+            it('should return the previous version updated values', () => {
+                expect(arrayDeepDiff([0], [1])).toEqual([0]);
+                expect(arrayDeepDiff([0, 1], [0, 2])).toEqual([1]);
+                expect(arrayDeepDiff([0.1], [0.2])).toEqual([0.1]);
+                expect(arrayDeepDiff([undefined], [null])).toEqual([undefined]);
+                expect(arrayDeepDiff([null], [undefined])).toEqual([null]);
+                expect(arrayDeepDiff(['s'], [])).toEqual(['s']);
+                expect(arrayDeepDiff(['str'], ['string'])).toEqual(['str']);
+                expect(arrayDeepDiff(['str', 'ing'], ['str', 'ings'])).toEqual(['ing']);
+                expect(arrayDeepDiff([[1], [2]], [[1], [3]])).toEqual([2]);
+                expect(arrayDeepDiff([{ a: 1 }, { b: 2 }], [{ a: 1 }, { b: 3 }])).toEqual([2]);
+                expect(arrayDeepDiff([{ a: 1 }, { b: [{ c: 3 }] }], [{ a: 1 }, { b: undefined }])).toEqual([
+                    [
+                        {
+                            c: 3,
+                        },
+                    ],
+                ]);
+            });
+        });
+
+        describe('isArrayDeeplyEqual', () => {
             it('should return true for equal arrays', () => {
-                expect(isEqualArray([], [])).toBeTruthy();
-                expect(isEqualArray([1], [1])).toBeTruthy();
-                expect(isEqualArray([1, 2], [1, 2])).toBeTruthy();
-                expect(isEqualArray([0.1], [0.1])).toBeTruthy();
-                expect(isEqualArray([undefined], [undefined])).toBeTruthy();
-                expect(isEqualArray([null], [null])).toBeTruthy();
-                expect(isEqualArray([false], [false])).toBeTruthy();
-                expect(isEqualArray([''], [''])).toBeTruthy();
-                expect(isEqualArray(['str'], ['str'])).toBeTruthy();
-                expect(isEqualArray([{}], [{}])).toBeTruthy();
-                expect(isEqualArray([{ a: 1 }], [{ a: 1 }])).toBeTruthy();
-                expect(isEqualArray([{ a: 1, b: 2 }], [{ a: 1, b: 2 }])).toBeTruthy();
+                expect(isArrayDeeplyEqual([], [])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1], [1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1, 2], [1, 2])).toBeTruthy();
+                expect(isArrayDeeplyEqual([0.1], [0.1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([undefined], [undefined])).toBeTruthy();
+                expect(isArrayDeeplyEqual([null], [null])).toBeTruthy();
+                expect(isArrayDeeplyEqual([false], [false])).toBeTruthy();
+                expect(isArrayDeeplyEqual([''], [''])).toBeTruthy();
+                expect(isArrayDeeplyEqual(['str'], ['str'])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{}], [{}])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{ a: 1 }])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ a: 1, b: 2 }])).toBeTruthy();
             });
 
             it('should return false for non-equal arrays', () => {
-                expect(isEqualArray([1], [])).toBeFalsy();
-                expect(isEqualArray([1], [1, 2])).toBeFalsy();
-                expect(isEqualArray([0.1], [0.2])).toBeFalsy();
-                expect(isEqualArray([undefined], [null])).toBeFalsy();
-                expect(isEqualArray([true], [false])).toBeFalsy();
-                expect(isEqualArray([''], ['a'])).toBeFalsy();
-                expect(isEqualArray(['string'], ['str'])).toBeFalsy();
-                expect(isEqualArray([{ a: 1 }], [{}])).toBeFalsy();
-                expect(isEqualArray([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1], [])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1], [1, 2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1, 2], [2, 1])).toBeFalsy();
+                expect(isArrayDeeplyEqual([0.1], [0.2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([undefined], [null])).toBeFalsy();
+                expect(isArrayDeeplyEqual([true], [false])).toBeFalsy();
+                expect(isArrayDeeplyEqual([''], ['a'])).toBeFalsy();
+                expect(isArrayDeeplyEqual(['string'], ['str'])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{}])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
             });
         });
     });
