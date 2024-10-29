@@ -37,8 +37,8 @@ if (user && !mockData.accounts[user]) {
 }
 
 // default user is researcher if user is not defined
-user = user || 'uqresearcher';
-// user = user || 'uqstaff';
+// user = user || 'uqresearcher';
+user = user || 'uqstaff';
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
