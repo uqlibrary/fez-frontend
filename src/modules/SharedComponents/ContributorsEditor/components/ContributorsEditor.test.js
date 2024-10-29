@@ -550,7 +550,7 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should call given onChange callback should be called only when `contributors` change', () => {
+    it('should call given onChange only when `contributors` change', () => {
         const onChangeFn = jest.fn();
         const { getByTestId, getByRole, rerender } = setup({
             onChange: onChangeFn,
