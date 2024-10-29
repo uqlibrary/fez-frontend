@@ -102,18 +102,18 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
         values: {
-            thesisTitle: 'test',
+            thesisTitle: '',
             currentAuthor: [
                 {
-                    nameAsPublished: author?.aut_display_name || '',
-                    authorId: author?.aut_id || '',
+                    nameAsPublished: author?.aut_display_name,
+                    authorId: author?.aut_id,
                 },
             ],
-            rek_genre_type: 'Thesis',
             fez_record_search_key_org_unit_name: {
-                rek_org_unit_name: 'The University of Queensland',
+                rek_org_unit_name: '',
             },
-            thesisAbstract: 'test',
+            rek_genre_type: '',
+            thesisAbstract: '',
             supervisors: '',
             fieldOfResearch: '',
             fez_record_search_key_keywords: '',
@@ -216,10 +216,13 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
     const onSubmit = safelyHandleSubmit(async () => {
         const today = new Date();
         const data = mergeWithFormValues({
-            author,
-            isHdrThesis,
+            ...(isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES),
             rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+            isHdrThesis,
         });
+        // fix org unit name
+        data.fez_record_search_key_org_unit_name.rek_org_unit_name =
+            data.fez_record_search_key_org_unit_name.rek_org_unit_name.value;
         await dispatch(submitThesis(data, {}, FORM_NAME));
     });
 
