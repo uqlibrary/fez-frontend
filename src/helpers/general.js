@@ -450,36 +450,6 @@ export const combineObjects = (...objects) =>
     objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});
 
 /**
- * Return values that are present in the first given array, but not in the second.
- * It uses microdiff.js for the comparison, which ignores nested object key ordering.
- *
- * @param array
- * @param anotherArray
- * @return []
- * @constructor
- */
-export const arrayDeepDiff = (array, anotherArray) => {
-    if (!array) {
-        return anotherArray;
-    }
-    if (!anotherArray) {
-        return array;
-    }
-
-    const result = [];
-    diff(array, anotherArray).forEach(diff => {
-        if (diff.type === 'REMOVE') {
-            result.push(diff.oldValue);
-            return;
-        }
-        if (diff.type === 'CHANGE') {
-            result.push(diff.oldValue);
-        }
-    });
-    return result;
-};
-
-/**
  * Uses microdiff.js, which is fast but ignores nested object key ordering.
  * To fix this issue, it uses also JSON.stringify.
  *
@@ -489,8 +459,8 @@ export const arrayDeepDiff = (array, anotherArray) => {
  */
 export const isArrayDeeplyEqual = (array, anotherArray) => {
     return (
-        arrayDeepDiff(array, anotherArray).length === 0 &&
-        arrayDeepDiff(anotherArray, array).length === 0 &&
+        diff(array, anotherArray).length === 0 &&
+        diff(anotherArray, array).length === 0 &&
         JSON.stringify(array) === JSON.stringify(anotherArray)
     );
 };
