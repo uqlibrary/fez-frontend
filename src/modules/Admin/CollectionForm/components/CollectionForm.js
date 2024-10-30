@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from 'hooks';
+import { useDispatch } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -23,6 +24,9 @@ import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
 import queryString from 'query-string';
+import { getNotesSectionSearchKeys } from '../../../../actions/transformers';
+import { createCollection } from '../../../../actions';
+// import { SubmissionError } from 'redux-form/immutable';
 // import { Propane } from '@mui/icons-material';
 
 export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
@@ -31,6 +35,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         handleSubmit,
         watch,
         control,
+        setError,
         formState: { isSubmitting, isSubmitSuccessful, isDirty },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
@@ -44,6 +49,32 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     });
     const formValues = watch();
     console.log('formValues', formValues, 'formValues', Object.keys(formValues).length);
+
+    const dispatch = useDispatch();
+    const onSubmit = values => {
+        const data = { ...values, ...getNotesSectionSearchKeys(values) };
+        console.log('data=', data);
+
+        delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
+
+        const currentAuthor = props.author || null;
+        const queryStringObject = queryString.parse(
+            location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+            { ignoreQueryPrefix: true },
+        );
+
+        let parentPID = {};
+
+        if (!!queryStringObject.pid) {
+            parentPID = {
+                fez_record_search_key_ismemberof: queryStringObject.pid,
+            };
+        }
+        // eslint-disable-next-line camelcase
+        return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
+            setError('apiError', { type: 'manual', message: error.message });
+        });
+    };
 
     const cancelSubmit = () => {
         window.location.assign(pathConfig.index);
@@ -245,7 +276,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                 variant="contained"
                                 color="primary"
                                 fullWidth
-                                onClick={handleSubmit}
+                                onClick={handleSubmit(onSubmit)}
                                 disabled={isSubmitting || disableSubmit}
                             >
                                 {txt.submit}
