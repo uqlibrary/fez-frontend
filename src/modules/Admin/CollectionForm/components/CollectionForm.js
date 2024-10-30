@@ -25,10 +25,11 @@ import { pathConfig } from 'config/pathConfig';
 import queryString from 'query-string';
 // import { Propane } from '@mui/icons-material';
 
-export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props }) => {
+export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     // form
     const {
         handleSubmit,
+        watch,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty },
     } = useValidatedForm({
@@ -41,6 +42,8 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
             internalNotes: '',
         },
     });
+    const formValues = watch();
+    console.log('formValues', formValues, 'formValues', Object.keys(formValues).length);
 
     const cancelSubmit = () => {
         window.location.assign(pathConfig.index);
@@ -145,8 +148,8 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                             </Grid>
                         )}
                         {(!!hasParams ||
-                            (formValues.get('fez_record_search_key_ismemberof') &&
-                                formValues.get('fez_record_search_key_ismemberof').length > 0)) && (
+                            (formValues.fez_record_search_key_ismemberof &&
+                                formValues.fez_record_search_key_ismemberof?.length > 0)) && (
                             <Grid xs={12}>
                                 <StandardCard title={detailsTitle} help={txt.details.help}>
                                     <Grid container spacing={3} padding={0}>
@@ -267,7 +270,6 @@ CollectionForm.propTypes = {
     fileAccessId: PropTypes.number,
     actions: PropTypes.object,
     isSessionValid: PropTypes.bool,
-    formValues: PropTypes.object,
     formErrors: PropTypes.object,
 
     newCollectionSaving: PropTypes.bool,
