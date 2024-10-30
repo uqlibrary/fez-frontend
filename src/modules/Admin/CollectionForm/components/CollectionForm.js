@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
-// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+// import { propTypes } from 'redux-form/immutable';
+// import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -22,6 +22,7 @@ import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
 import queryString from 'query-string';
+// import { Propane } from '@mui/icons-material';
 
 export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props }) => {
     const cancelSubmit = () => {
@@ -241,7 +242,6 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
     );
 };
 CollectionForm.propTypes = {
-    ...propTypes, // all redux-form props
     author: PropTypes.object,
     account: PropTypes.bool,
     disableSubmit: PropTypes.bool,
@@ -254,6 +254,11 @@ CollectionForm.propTypes = {
     newCollectionSaving: PropTypes.bool,
     newCollectionError: PropTypes.bool,
     newRecord: PropTypes.object,
+
+    submitSucceeded: PropTypes.bool,
+    dirty: PropTypes.bool,
+    submitting: PropTypes.bool,
+    handleSubmit: PropTypes.func,
 };
-// console.log('CollectionForm.propTypes=', JSON.stringify(CollectionForm.propTypes));
+
 export default CollectionForm;
