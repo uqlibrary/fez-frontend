@@ -31,7 +31,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
 import AddSection from './add/AddSection';
-import AdminSection from './admin/AdminSectionContainer';
+import AdminSection from './admin/AdminSection';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
@@ -49,15 +49,15 @@ const useFormOnChangeHook = methods => {
     // or should this all go in to the submit handler instead if possible?
     // Note I did not attempt to handle the ADMIN_DELETE_ATTACHED_FILE or CHANGE actions inside
     // src/reducers/formReducerPlugins.js, or the resetValue() method in the same file.
-    const changes = useWatch({
+    const [displayType, files] = useWatch({
         control: methods.control,
         name: ['rek_display_type', 'filesSection.fez_datastream_info'],
     });
 
-    if (!!changes.files) {
+    if (!!files) {
         const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
         let updated = false;
-        changes.files.forEach(file => {
+        files.forEach(file => {
             if (!!file.dsi_dsid_new) {
                 const oldFileName = file.dsi_dsid_new;
                 const newFileName = file.dsi_dsid;
@@ -81,7 +81,7 @@ const useFormOnChangeHook = methods => {
         }
     }
     if (
-        changes.rek_display_type === PUBLICATION_TYPE_THESIS &&
+        displayType === PUBLICATION_TYPE_THESIS &&
         !!methods.getValues('adminSection.rek_subtype') &&
         !!!methods.getValues('bibliographicSection.rek_genre_type')
     ) {
@@ -139,6 +139,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     useFormOnChangeHook(attributes);
     const recordToView = useRecordToView(record, createMode, attributes);
+    console.log(recordToView);
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
@@ -197,9 +198,7 @@ export const AdminContainer = ({ createMode = false }) => {
     return (
         <React.Fragment>
             <FormProvider {...attributes}>
-                {createMode && showAddForm && (
-                    <AddSection onCreate={handleAddFormDisplay} createMode={createMode} attributes={attributes} />
-                )}
+                {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
                 {!showAddForm && (
                     <TabbedContext.Provider
                         value={{

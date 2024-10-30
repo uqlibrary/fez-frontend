@@ -72,7 +72,7 @@ export const useRecord = (displayType, subType, createMode) => {
 
 export const useRecordToView = (recordToView, createMode, methods) => {
     const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : undefined));
-    console.log(createMode, newRecord);
+
     if (!createMode) return recordToView;
 
     const displayType = methods.getValues('rek_display_type');

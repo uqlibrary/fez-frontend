@@ -23,7 +23,7 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
-export const AddSection = ({ onCreate, disabled }) => {
+export const AddSection = ({ onCreate, disabled = false }) => {
     const navigate = useNavigate();
     const attributes = useFormContext();
     const displayType = attributes.getValues('rek_display_type');
@@ -74,6 +74,7 @@ export const AddSection = ({ onCreate, disabled }) => {
         event.preventDefault();
         navigate(pathConfig.index);
     };
+
     return (
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
@@ -95,6 +96,12 @@ export const AddSection = ({ onCreate, disabled }) => {
                                         validate={[validation.requiredList]}
                                         fullWidth
                                         collectionFieldId="rek-ismemberof"
+                                        {...(!!attributes.getFieldState('adminSection.collections').error
+                                            ? {
+                                                  error: true,
+                                                  errorText: attributes.getFieldState('adminSection.collections').error,
+                                              }
+                                            : {})}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -109,6 +116,12 @@ export const AddSection = ({ onCreate, disabled }) => {
                                         selectFieldId="rek-display-type"
                                         validate={[validation.required]}
                                         value={selectedPublicationType}
+                                        {...(!!attributes.getFieldState('rek_display_type').error
+                                            ? {
+                                                  error: true,
+                                                  errorText: attributes.getFieldState('rek_display_type').error,
+                                              }
+                                            : {})}
                                     >
                                         {publicationTypeItems}
                                     </Field>
@@ -128,6 +141,14 @@ export const AddSection = ({ onCreate, disabled }) => {
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
                                                 selectFieldId="rek-subtype"
+                                                {...(!!attributes.getFieldState('adminSection.rek_subtype').error
+                                                    ? {
+                                                          error: true,
+                                                          errorText: attributes.getFieldState(
+                                                              'adminSection.rek_subtype',
+                                                          ).error,
+                                                      }
+                                                    : {})}
                                             >
                                                 {publicationSubtypeItems}
                                             </Field>
