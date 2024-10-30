@@ -111,15 +111,9 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
 
     return (
         <StandardPage title={txt.title}>
-            <ConfirmDiscardFormChanges
-                dirty={isDirty && (!!!hasParams || (!!hasParams && formValues.size > 1))}
-                submitSucceeded={isSubmitSuccessful}
-            >
+            <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
-                    <NavigationDialogBox
-                        when={isDirty && !isSubmitSuccessful && (!!!hasParams || (!!hasParams && formValues.size > 1))}
-                        txt={txt.cancelWorkflowConfirmation}
-                    />
+                    <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3} padding={0}>
                         {!!!hasParams && (
                             <Grid xs={12}>
