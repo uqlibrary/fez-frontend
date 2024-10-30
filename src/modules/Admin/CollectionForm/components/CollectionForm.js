@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // import { propTypes } from 'redux-form/immutable';
 // import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { useValidatedForm } from 'hooks';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -25,6 +26,22 @@ import queryString from 'query-string';
 // import { Propane } from '@mui/icons-material';
 
 export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props }) => {
+    // form
+    const {
+        handleSubmit,
+        control,
+        formState: { isSubmitting, isSubmitSuccessful, isDirty },
+    } = useValidatedForm({
+        // use values instead of defaultValues, as the first triggers a re-render upon updates
+        values: {
+            fez_record_search_key_ismemberof: '',
+            rek_title: '',
+            rek_description: '',
+            fez_record_search_key_keywords: '',
+            internalNotes: '',
+        },
+    });
+
     const cancelSubmit = () => {
         window.location.assign(pathConfig.index);
     };
@@ -49,7 +66,7 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
     }
     const txt = formLocale.addACollection;
     const detailsTitle = !!hasParams ? `New collection in community '${queryStringObject.name}'` : txt.details.title;
-    if (props.submitSucceeded && newRecord) {
+    if (isSubmitSuccessful && newRecord) {
         return (
             <StandardPage title={txt.title}>
                 <Grid container spacing={3}>
@@ -88,19 +105,16 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
             },
         },
     });
+
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges
-                dirty={props.dirty && (!!!hasParams || (!!hasParams && formValues.size > 1))}
-                submitSucceeded={props.submitSucceeded}
+                dirty={isDirty && (!!!hasParams || (!!hasParams && formValues.size > 1))}
+                submitSucceeded={isSubmitSuccessful}
             >
                 <form>
                     <NavigationDialogBox
-                        when={
-                            props.dirty &&
-                            !props.submitSucceeded &&
-                            (!!!hasParams || (!!hasParams && formValues.size > 1))
-                        }
+                        when={isDirty && !isSubmitSuccessful && (!!!hasParams || (!!hasParams && formValues.size > 1))}
                         txt={txt.cancelWorkflowConfirmation}
                     />
                     <Grid container spacing={3} padding={0}>
@@ -116,8 +130,9 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                     >
                                         <Grid xs={12}>
                                             <Field
+                                                control={control}
                                                 component={CommunitySelectField}
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 genericSelectFieldId="rek-ismemberof"
                                                 name="fez_record_search_key_ismemberof"
                                                 required
@@ -137,9 +152,10 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                     <Grid container spacing={3} padding={0}>
                                         <Grid xs={12}>
                                             <Field
+                                                control={control}
                                                 component={TextField}
                                                 textFieldId="rek-title"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 autoFocus
                                                 name="rek_title"
                                                 type="text"
@@ -152,9 +168,10 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
 
                                         <Grid xs={12}>
                                             <Field
+                                                control={control}
                                                 component={TextField}
                                                 textFieldId="rek-description"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 name="rek_description"
                                                 fullWidth
                                                 multiline
@@ -168,6 +185,7 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                         <Grid xs={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
+                                                control={control}
                                                 component={NewListEditorField}
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
@@ -180,16 +198,17 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                                 // isValid={validation.isValidKeyword(111)}
                                                 listEditorId="rek-keywords"
                                                 locale={txt.formLabels.keywords.field}
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                             />
                                         </Grid>
 
                                         <Grid xs={12}>
                                             <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                             <Field
+                                                control={control}
                                                 component={RichEditorField}
                                                 richEditorId="internalNotes"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 name="internalNotes"
                                                 fullWidth
                                                 multiline
@@ -215,7 +234,7 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                 data-testid="cancel-collection"
                                 variant="contained"
                                 fullWidth
-                                disabled={props.submitting}
+                                disabled={isSubmitting}
                                 onClick={cancelSubmit}
                                 color={'default'}
                             >
@@ -229,8 +248,8 @@ export const CollectionForm = ({ disableSubmit, formValues, newRecord, ...props 
                                 variant="contained"
                                 color="primary"
                                 fullWidth
-                                onClick={props.handleSubmit}
-                                disabled={props.submitting || disableSubmit}
+                                onClick={handleSubmit}
+                                disabled={isSubmitting || disableSubmit}
                             >
                                 {txt.submit}
                             </Button>
