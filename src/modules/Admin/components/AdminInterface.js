@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { destroy, Field } from 'redux-form/immutable';
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
 import { styled } from '@mui/material/styles';
+import * as actions from 'actions';
+import { useDispatch } from 'react-redux';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useFormContext } from 'react-hook-form';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -19,29 +22,28 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
+import {
+    DOCUMENT_TYPES_LOOKUP,
+    RECORD_TYPE_RECORD,
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_COLLECTION,
+    PUBLISHED,
+    RETRACTED,
+    UNPUBLISHED,
+} from 'config/general';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
 import { onSubmit } from '../submitHandler';
-import { FORM_NAME } from '../constants';
 
 import { useRecordContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, publicationTypes, validation } from 'config';
-import {
-    PUBLISHED,
-    RECORD_TYPE_RECORD,
-    RECORD_TYPE_COMMUNITY,
-    RECORD_TYPE_COLLECTION,
-    RETRACTED,
-    UNPUBLISHED,
-} from 'config/general';
+
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from 'config/validation';
-import { useDispatch } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,
@@ -79,24 +81,26 @@ export const navigateToSearchResult = (createMode, authorDetails, navigate, loca
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
 
-export const AdminInterface = ({
-    authorDetails,
-    createMode,
-    isDeleted,
-    isJobCreated,
-    dirty,
-    disableSubmit,
-    formErrors,
-    handleSubmit,
-    locked,
-    submitSucceeded,
-    submitting,
-    tabs,
-    unlockRecord,
-    error,
-}) => {
+export const AdminInterface = ({ authorDetails, createMode, isDeleted, isJobCreated, locked, tabs, error }) => {
     const dispatch = useDispatch();
     const { record } = useRecordContext();
+
+    const {
+        handleSubmit,
+        reset,
+        formState: { errors: formErrors, isSubmitting, isSubmitSuccessful, isDirty },
+    } = useFormContext();
+
+    const numErrors = Object.keys(formErrors).length;
+    const disableSubmit = React.useMemo(() => {
+        return (
+            !!record &&
+            !!record.rek_display_type &&
+            typeof DOCUMENT_TYPES_LOOKUP[record.rek_display_type] !== 'undefined' &&
+            numErrors > 0
+        );
+    }, [numErrors, record]);
+
     const { tabbed, toggleTabbed } = useTabbedContext();
     const isSuperAdmin = useIsUserSuperAdmin();
     const navigate = useNavigate();
@@ -112,8 +116,8 @@ export const AdminInterface = ({
 
     const errorMessage = error && typeof error === 'object' ? ' ' : null;
     alertProps.current = validation.getErrorAlertProps({
-        submitting,
-        submitSucceeded,
+        isSubmitting,
+        isSubmitSuccessful,
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
@@ -131,15 +135,15 @@ export const AdminInterface = ({
     // clear form state on unmount, so the form state from admin edit form wont show up in the add form
     React.useEffect(() => {
         return () => {
-            dispatch(destroy(FORM_NAME));
+            reset();
         };
-    }, [dispatch]);
+    }, [reset]);
 
     React.useEffect(() => {
-        if (!submitting && submitSucceeded && successConfirmationRef.current) {
+        if (!isSubmitting && isSubmitSuccessful && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }
-    }, [submitting, submitSucceeded]);
+    }, [isSubmitting, isSubmitSuccessful]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
 
@@ -176,7 +180,7 @@ export const AdminInterface = ({
         if (!!record.rek_pid) {
             /* istanbul ignore next */
             record.rek_editing_user === authorDetails.username
-                ? unlockRecord(record.rek_pid, navigateToViewPage)
+                ? dispatch(actions.unlockRecord(record.rek_pid, navigateToViewPage))
                 : navigateToViewPage();
         } else {
             // Else this is a new record, so just go to the homepage
@@ -211,41 +215,45 @@ export const AdminInterface = ({
         );
     }
 
-    const renderTabContainer = tab => (
-        <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard
-                standardCardId={`${txt.current.sections[tab].title.toLowerCase().replace(/ /g, '-')}-section`}
-                title={txt.current.sections[tab].title}
-                primaryHeader
-                squareTop
-                smallTitle
-            >
-                <Field
-                    component={tabs[tab].component}
-                    disabled={submitting || (locked && record.rek_editing_user !== authorDetails.username)}
-                    name={`${tab}Section`}
-                />
-            </StandardCard>
-            {tabs[tab].subComponent?.component && (
+    const renderTabContainer = tab => {
+        const TabComponent = tabs[tab].component;
+        return (
+            <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
                 <StandardCard
-                    standardCardId={`${tabs[tab].subComponent.title.toLowerCase().replace(/ /g, '-')}-section`}
-                    title={tabs[tab].subComponent.title}
+                    standardCardId={`${txt.current.sections[tab].title.toLowerCase().replace(/ /g, '-')}-section`}
+                    title={txt.current.sections[tab].title}
                     primaryHeader
                     squareTop
                     smallTitle
                 >
-                    <Field
-                        component={tabs[tab].subComponent.component}
-                        disabled={
-                            submitting ||
-                            (locked && /* istanbul ignore next */ record.rek_editing_user !== authorDetails.username)
-                        }
+                    <TabComponent
+                        component={tabs[tab].component}
+                        disabled={isSubmitting || (locked && record.rek_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
                 </StandardCard>
-            )}
-        </TabContainer>
-    );
+                {tabs[tab].subComponent?.component && (
+                    <StandardCard
+                        standardCardId={`${tabs[tab].subComponent.title.toLowerCase().replace(/ /g, '-')}-section`}
+                        title={tabs[tab].subComponent.title}
+                        primaryHeader
+                        squareTop
+                        smallTitle
+                    >
+                        <TabComponent
+                            component={tabs[tab].subComponent.component}
+                            disabled={
+                                isSubmitting ||
+                                (locked &&
+                                    /* istanbul ignore next */ record.rek_editing_user !== authorDetails.username)
+                            }
+                            name={`${tab}Section`}
+                        />
+                    </StandardCard>
+                )}
+            </TabContainer>
+        );
+    };
 
     const saveConfirmationLocale = createMode
         ? txt.current.successAddWorkflowConfirmation
@@ -285,7 +293,7 @@ export const AdminInterface = ({
                             id={`admin-work-retract${placement}`}
                             data-analyticsid={`retract-admin${placement}`}
                             data-testid={`retract-admin${placement}`}
-                            disabled={!!submitting || !!disableSubmit}
+                            disabled={!!isSubmitting || !!disableSubmit}
                             variant="contained"
                             color="secondary"
                             fullWidth
@@ -301,7 +309,7 @@ export const AdminInterface = ({
                         data-analyticsid={`publish-admin${placement}`}
                         data-testid={`publish-admin${placement}`}
                         disabled={
-                            !!submitting ||
+                            !!isSubmitting ||
                             !!disableSubmit ||
                             (locked && record.rek_editing_user !== authorDetails.username)
                         }
@@ -320,7 +328,7 @@ export const AdminInterface = ({
                         data-analyticsid={`unpublish-admin${placement}`}
                         data-testid={`unpublish-admin${placement}`}
                         disabled={
-                            !!submitting ||
+                            !!isSubmitting ||
                             !!disableSubmit ||
                             (locked && record.rek_editing_user !== authorDetails.username)
                         }
@@ -339,7 +347,7 @@ export const AdminInterface = ({
                     data-testid={`submit-admin${placement}`}
                     style={{ whiteSpace: 'nowrap' }}
                     disabled={
-                        !!submitting ||
+                        !!isSubmitting ||
                         !!disableSubmit ||
                         (locked && record.rek_editing_user !== authorDetails.username)
                     }
@@ -439,7 +447,7 @@ export const AdminInterface = ({
                         )}
                     </Grid>
                 </Grid>
-                <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+                <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                     <Grid container spacing={0}>
                         {!tabbed ? activeTabNames.current.map(renderTabContainer) : renderTabContainer(currentTabValue)}
                     </Grid>
@@ -462,15 +470,10 @@ AdminInterface.propTypes = {
     createMode: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isJobCreated: PropTypes.bool,
-    dirty: PropTypes.bool,
     disableSubmit: PropTypes.bool,
-    formErrors: PropTypes.object,
     handleSubmit: PropTypes.func,
     locked: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
     tabs: PropTypes.object,
-    unlockRecord: PropTypes.func,
     error: PropTypes.object,
 };
 

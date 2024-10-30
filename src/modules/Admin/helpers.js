@@ -1,4 +1,11 @@
+import { adminInterfaceConfig, valueExtractor } from 'config/admin';
+import { viewRecordsConfig } from 'config';
+import { isFileValid } from 'config/validation';
 import {
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    RECORD_TYPE_RECORD,
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_COLLECTION,
     NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
     NTRO_SUBTYPE_CPEE_FESTIVAL,
     NTRO_SUBTYPE_CPEE_OTHER,
@@ -106,5 +113,84 @@ export const authorsParams = (record, isNtro) => {
         isNtro: isNtro,
         isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         shouldHandleAffiliations,
+    };
+};
+
+export const filesParams = record => ({
+    isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+});
+
+const getInitialValues = (record, tab, tabParams = () => {}) => {
+    if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
+        return false;
+    }
+    return (adminInterfaceConfig[record.rek_display_type] || {})
+        [tab](tabParams(record))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+};
+
+export const getInitialFormValues = (recordToView, recordType) => {
+    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
+    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
+    return {
+        initialValues: {
+            pid: recordToView.rek_pid,
+            publication: recordToView,
+            rek_requires_attribution: false,
+            rek_display_type: recordToView.rek_display_type,
+            rek_date: recordToView.rek_date || recordToView.rek_created_date,
+            identifiersSection:
+                (recordType === RECORD_TYPE_RECORD &&
+                    getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
+                {},
+            securitySection: {
+                rek_security_policy: recordToView.rek_security_policy,
+                ...(recordType === RECORD_TYPE_COLLECTION || recordType === RECORD_TYPE_COMMUNITY
+                    ? {
+                          rek_datastream_policy: recordToView.rek_datastream_policy,
+                      }
+                    : {}),
+                ...(recordType === RECORD_TYPE_RECORD
+                    ? {
+                          rek_security_inherited: recordToView.rek_security_inherited,
+                          dataStreams: validDataStreams,
+                      }
+                    : []),
+            },
+            bibliographicSection:
+                ((recordType === RECORD_TYPE_RECORD ||
+                    recordType === RECORD_TYPE_COMMUNITY ||
+                    recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
+                {},
+            authorsSection:
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
+            adminSection:
+                ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'admin')) ||
+                {},
+            ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
+            grantInformationSection:
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
+            filesSection:
+                (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
+            notesSection:
+                ((recordType === RECORD_TYPE_RECORD ||
+                    recordType === RECORD_TYPE_COMMUNITY ||
+                    recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'notes')) ||
+                {},
+            reasonSection:
+                ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'reason')) ||
+                {},
+        },
     };
 };

@@ -21,7 +21,7 @@ const lazyRetry = (importFn, retries = 3, interval = 500) => {
 export const AddDataCollection = lazy(() =>
     lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
 );
-export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
+export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/components/AdminContainer')));
 export const AdminDashboard = lazy(() => lazyRetry(() => import('modules/AdminDashboard/AdminDashboard')));
 export const JournalAdmin = lazy(() =>
     lazyRetry(() => import('modules/JournalAdmin/components/JournalAdminContainer')),

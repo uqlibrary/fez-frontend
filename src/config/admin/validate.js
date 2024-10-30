@@ -61,7 +61,7 @@ import {
 import deepmerge from 'deepmerge';
 
 export default values => {
-    const data = values.toJS();
+    const data = values;
     const summary = locale.validationErrorsSummary;
     let errors = {
         bibliographicSection: {},

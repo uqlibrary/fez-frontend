@@ -1,8 +1,11 @@
-/* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import Immutable from 'immutable';
+
+import * as actions from 'actions';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { FormProvider, useWatch } from 'react-hook-form';
 
 import locale from 'locale/pages';
 import {
@@ -18,10 +21,16 @@ import {
 import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
+import { onSubmit } from '../submitHandler';
+import { validateResolver } from '../validators';
+import { useRecord, useRecordToView } from '../hooks';
+import { RecordContext, TabbedContext } from 'context';
+import { useIsMobileView, useValidatedForm } from '../../../hooks';
+
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
-import AddSection from './add/AddSectionContainer';
+import AddSection from './add/AddSection';
 import AdminSection from './admin/AdminSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
@@ -33,10 +42,55 @@ import ReasonSection from './reason/ReasonSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
-import { RecordContext, TabbedContext } from 'context';
-import { useIsMobileView } from '../../../hooks';
 
-export const AdminContainer = ({
+const useFormOnChangeHook = methods => {
+    // Consider if this should go lower level, in to AttachFilesField and the onRenameAttachedFile function,
+    // (and same for delete and change)
+    // or should this all go in to the submit handler instead if possible?
+    // Note I did not attempt to handle the ADMIN_DELETE_ATTACHED_FILE or CHANGE actions inside
+    // src/reducers/formReducerPlugins.js, or the resetValue() method in the same file.
+    const changes = useWatch({
+        control: methods.control,
+        name: ['rek_display_type', 'filesSection.fez_datastream_info'],
+    });
+
+    if (!!changes.files) {
+        const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
+        let updated = false;
+        changes.files.forEach(file => {
+            if (!!file.dsi_dsid_new) {
+                const oldFileName = file.dsi_dsid_new;
+                const newFileName = file.dsi_dsid;
+
+                const originalFileAttachmentIndex = attachments.findIndex(file => {
+                    return file.rek_file_attachment_name === oldFileName;
+                });
+
+                if (originalFileAttachmentIndex > -1) {
+                    updated = true;
+                    // will be -1 if we've already done this operation before
+                    attachments[originalFileAttachmentIndex].rek_file_attachment_name = newFileName;
+                }
+            }
+        });
+        if (updated) {
+            methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments, {
+                shouldValidate: false, // should this be true? does it matter?
+                shouldDirty: true,
+            });
+        }
+    }
+    if (
+        changes.rek_display_type === PUBLICATION_TYPE_THESIS &&
+        !!methods.getValues('adminSection.rek_subtype') &&
+        !!!methods.getValues('bibliographicSection.rek_genre_type')
+    ) {
+        methods.setValue('bibliographicSection.rek_genre_type', methods.getValues('adminSection.rek_subtype'));
+    }
+};
+
+/*
+{
     authorDetails,
     clearRecordToView,
     createMode,
@@ -58,8 +112,46 @@ export const AdminContainer = ({
     unlockRecord,
     params,
     error,
-}) => {
-    const { pid } = params;
+}
+    */
+export const AdminContainer = ({ createMode = false }) => {
+    const dispatch = useDispatch();
+    const { pid } = useParams();
+
+    const {
+        loadingRecordToView,
+        authorDetails,
+        recordToView: record,
+        isDeleted,
+        isJobCreated,
+        recordToViewError,
+        initialValues,
+        locked,
+        error,
+    } = useRecord(createMode);
+
+    const attributes = useValidatedForm({
+        values: { ...initialValues },
+        shouldUnregister: false,
+        mode: 'onChange',
+        resolver: validateResolver,
+    });
+
+    useFormOnChangeHook(attributes);
+    const recordToView = useRecordToView(record, createMode, attributes);
+
+    const handleSubmit = async (data, e) => {
+        e.preventDefault();
+        try {
+            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError });
+        } catch (e) {
+            /* istanbul ignore next */
+            console.log(e);
+            /* istanbul ignore next */
+            attributes.setServerError(e);
+        }
+    };
+
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
     );
@@ -67,25 +159,26 @@ export const AdminContainer = ({
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(
-        (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
-    ).reduce(
-        (numberOfErrors, [key, errorObject]) => ({
-            ...numberOfErrors,
-            [key]: Object.values(errorObject).length,
-        }),
+    tabErrors.current = Object.entries(attributes.formState || /* istanbul ignore next */ {}).reduce(
+        (numberOfErrors, [key, errorObject]) => {
+            return {
+                ...numberOfErrors,
+                ...(!!errorObject ? { [key]: Object.values(errorObject).length } : /* istanbul ignore next */ {}),
+            };
+        },
         {},
     );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
+    const destroy = () => attributes.reset();
 
     React.useEffect(() => {
-        !!pid && !!loadRecordToView && loadRecordToView(pid, true);
+        !!pid && dispatch(actions.loadRecordToView(pid, true));
         return () => {
-            clearRecordToView();
+            dispatch(actions.clearRecordToView());
         };
-    }, [loadRecordToView, clearRecordToView, pid]);
+    }, [dispatch, pid]);
 
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {
@@ -103,171 +196,144 @@ export const AdminContainer = ({
 
     return (
         <React.Fragment>
-            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
-            {!showAddForm && (
-                <TabbedContext.Provider
-                    value={{
-                        tabbed: isMobileView ? false : tabbed,
-                        toggleTabbed: handleToggle,
-                    }}
-                >
-                    <RecordContext.Provider
+            <FormProvider {...attributes}>
+                {createMode && showAddForm && (
+                    <AddSection onCreate={handleAddFormDisplay} createMode={createMode} attributes={attributes} />
+                )}
+                {!showAddForm && (
+                    <TabbedContext.Provider
                         value={{
-                            record: recordToView,
+                            tabbed: isMobileView ? false : tabbed,
+                            toggleTabbed: handleToggle,
                         }}
                     >
-                        <ThemeProvider theme={adminTheme}>
-                            <AdminInterface
-                                authorDetails={authorDetails}
-                                handleSubmit={handleSubmit}
-                                submitting={submitting}
-                                submitSucceeded={submitSucceeded}
-                                dirty={dirty}
-                                disableSubmit={disableSubmit}
-                                createMode={createMode}
-                                isDeleted={isDeleted}
-                                isJobCreated={isJobCreated}
-                                formErrors={formErrors}
-                                destroy={destroy}
-                                locked={locked}
-                                disabled
-                                unlockRecord={unlockRecord}
-                                error={error}
-                                tabs={{
-                                    admin: {
-                                        component: AdminSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                        numberOfErrors: tabErrors.current.adminSection || null,
-                                    },
-                                    /* it would go here or something */
-                                    bibliographic: {
-                                        component: BibliographicSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                        numberOfErrors: tabErrors.current.bibliographicSection || null,
-                                    },
-                                    authors: {
-                                        component: AuthorsSection,
-                                        activated: isActivated(),
-                                        numberOfErrors: tabErrors.current.authorsSection || null,
-                                        subComponent: {
-                                            title: 'NTRO',
-                                            component: NTRO_SUBTYPES.includes(
-                                                !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
-                                            )
-                                                ? NtroSection
-                                                : null,
+                        <RecordContext.Provider
+                            value={{
+                                record: recordToView,
+                            }}
+                        >
+                            <ThemeProvider theme={adminTheme}>
+                                <AdminInterface
+                                    authorDetails={authorDetails}
+                                    handleSubmit={handleSubmit}
+                                    createMode={createMode}
+                                    isDeleted={isDeleted}
+                                    isJobCreated={isJobCreated}
+                                    destroy={destroy}
+                                    locked={locked}
+                                    disabled
+                                    error={error}
+                                    tabs={{
+                                        admin: {
+                                            component: AdminSection,
+                                            activated:
+                                                isActivated() ||
+                                                [RECORD_TYPE_COLLECTION].includes(
+                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                                ),
+                                            numberOfErrors: tabErrors.current.adminSection || null,
                                         },
-                                    },
-                                    identifiers: {
-                                        component: IdentifiersSection,
-                                        activated: isActivated(),
-                                    },
-                                    // ntro: {
-                                    //     component: NtroSection,
-                                    //     activated:
-                                    //         isActivated() &&
-                                    //         NTRO_SUBTYPES.includes(
-                                    //             !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
-                                    //         ),
-                                    // },
-                                    grants: {
-                                        component: GrantInformationSection,
-                                        activated:
-                                            isActivated() &&
-                                            // Blacklist types without grant info
-                                            !(
-                                                [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                    recordToView && recordToView.rek_display_type,
-                                                ) ||
-                                                [SUBTYPE_NON_NTRO].includes(
-                                                    !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
+                                        bibliographic: {
+                                            component: BibliographicSection,
+                                            activated:
+                                                isActivated() ||
+                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                                ),
+                                            numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                        },
+                                        authors: {
+                                            component: AuthorsSection,
+                                            activated: isActivated(),
+                                            numberOfErrors: tabErrors.current.authorsSection || null,
+                                            subComponent: {
+                                                title: 'NTRO',
+                                                component: NTRO_SUBTYPES.includes(
+                                                    attributes.getValues('adminSection.rek_subtype'),
                                                 )
-                                            ),
-                                    },
-                                    notes: {
-                                        component: NotesSection,
-                                        activated:
-                                            isActivated() ||
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                    },
-                                    files: {
-                                        component: FilesSection,
-                                        activated: isActivated(),
-                                        numberOfErrors: tabErrors.current.filesSection || null,
-                                    },
-                                    security: {
-                                        component: SecuritySection,
-                                        activated: !createMode, // true,
-                                    },
+                                                    ? NtroSection
+                                                    : null,
+                                            },
+                                        },
+                                        identifiers: {
+                                            component: IdentifiersSection,
+                                            activated: isActivated(),
+                                        },
+                                        grants: {
+                                            component: GrantInformationSection,
+                                            activated:
+                                                isActivated() &&
+                                                // Blacklist types without grant info
+                                                !(
+                                                    [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                                        recordToView && recordToView.rek_display_type,
+                                                    ) ||
+                                                    [SUBTYPE_NON_NTRO].includes(
+                                                        attributes.getValues('adminSection.rek_subtype'),
+                                                    )
+                                                ),
+                                        },
+                                        notes: {
+                                            component: NotesSection,
+                                            activated:
+                                                isActivated() ||
+                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                                ),
+                                        },
+                                        files: {
+                                            component: FilesSection,
+                                            activated: isActivated(),
+                                            numberOfErrors: tabErrors.current.filesSection || null,
+                                        },
+                                        security: {
+                                            component: SecuritySection,
+                                            activated: !createMode, // true,
+                                        },
 
-                                    reason: {
-                                        component: ReasonSection,
-                                        activated:
-                                            !createMode &&
-                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
-                                            ),
-                                    },
-                                }}
-                            />
-                        </ThemeProvider>
-                    </RecordContext.Provider>
-                </TabbedContext.Provider>
-            )}
+                                        reason: {
+                                            component: ReasonSection,
+                                            activated:
+                                                !createMode &&
+                                                [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                    recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                                ),
+                                        },
+                                    }}
+                                />
+                            </ThemeProvider>
+                        </RecordContext.Provider>
+                    </TabbedContext.Provider>
+                )}
+            </FormProvider>
         </React.Fragment>
     );
 };
 
 AdminContainer.propTypes = {
-    actions: PropTypes.object,
-    authorDetails: PropTypes.object,
-    clearRecordToView: PropTypes.func,
+    // actions: PropTypes.object,
+    // authorDetails: PropTypes.object,
+    // clearRecordToView: PropTypes.func,
     createMode: PropTypes.bool,
-    destroy: PropTypes.func,
-    dirty: PropTypes.bool,
-    disableSubmit: PropTypes.any,
-    formErrors: PropTypes.object,
-    formValues: PropTypes.object,
-    handleSubmit: PropTypes.func,
-    loadingRecordToView: PropTypes.bool,
-    loadRecordToView: PropTypes.func,
-    recordToViewError: PropTypes.object,
-    locked: PropTypes.bool,
-    recordToView: PropTypes.object,
-    isDeleted: PropTypes.bool,
-    isJobCreated: PropTypes.bool,
-    showAddForm: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.any,
-    unlockRecord: PropTypes.func,
-    params: PropTypes.object,
-    error: PropTypes.object,
+    // destroy: PropTypes.func,
+    // dirty: PropTypes.bool,
+    // disableSubmit: PropTypes.any,
+    // formErrors: PropTypes.object,
+    // formValues: PropTypes.object,
+    // handleSubmit: PropTypes.func,
+    // loadingRecordToView: PropTypes.bool,
+    // loadRecordToView: PropTypes.func,
+    // recordToViewError: PropTypes.object,
+    // locked: PropTypes.bool,
+    // recordToView: PropTypes.object,
+    // isDeleted: PropTypes.bool,
+    // isJobCreated: PropTypes.bool,
+    // showAddForm: PropTypes.bool,
+    // submitSucceeded: PropTypes.bool,
+    // submitting: PropTypes.any,
+    // unlockRecord: PropTypes.func,
+    // params: PropTypes.object,
+    // error: PropTypes.object,
 };
 
-export function isSame(prevProps, nextProps) {
-    return (
-        prevProps.disableSubmit === nextProps.disableSubmit &&
-        prevProps.submitting === nextProps.submitting &&
-        prevProps.submitSucceeded === nextProps.submitSucceeded &&
-        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-        (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
-        ((prevProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype ===
-            ((nextProps.formValues || Immutable.Map({})).toJS().adminSection || {}).rek_subtype &&
-        prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
-        prevProps.showAddForm === nextProps.showAddForm &&
-        prevProps.formErrors === nextProps.formErrors &&
-        prevProps.locked === nextProps.locked
-    );
-}
-
-export default React.memo(AdminContainer, isSame);
+export default React.memo(AdminContainer);
