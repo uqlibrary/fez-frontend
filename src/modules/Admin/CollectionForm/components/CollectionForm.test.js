@@ -2,6 +2,7 @@ import React from 'react';
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { preview } from 'test-utils';
 
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
@@ -22,44 +23,7 @@ jest.mock('redux-form/immutable', () => ({
 
 function setup(testProps) {
     const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitAsSideEffect: false,
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        actions: {
-            logout: jest.fn(),
-            checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn(),
-        },
+        disableSubmit: false,
         ...testProps,
     };
 
@@ -74,22 +38,22 @@ function setup(testProps) {
 
 describe('Collection form', () => {
     it('should render form with only the community dropdown', () => {
-        const { container, getAllByRole } = setup({});
+        const { container, getAllByRole, getByTestId } = setup({});
         expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
+        expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
         expect(getAllByRole('button').length).toEqual(2);
     });
 
     it('should render the full form', () => {
-        const { container, getAllByRole } = setup({
-            formValues: {
-                get: () => {
-                    return [1, 2, 3];
-                },
-            },
-        });
+        const { container, getAllByRole, getByTestId } = setup({ newRecord: null });
+
         expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(5);
+        preview.debug();
+        expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
+        expect(getByTestId('rek-title-input')).toBeInTheDocument();
+        expect(getByTestId('rek-description-input')).toBeInTheDocument();
+        expect(getByTestId('rek-keywords-input')).toBeInTheDocument();
+        expect(getByTestId('internalNotes')).toBeInTheDocument();
         expect(getAllByRole('button').length).toEqual(2);
     });
 
