@@ -25,10 +25,8 @@ import { useAccountContext } from 'context';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import { submitThesis } from '../../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useValidatedForm } from '../../../hooks';
-import PropTypes from 'prop-types';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import * as actions from 'actions';
@@ -72,7 +70,7 @@ export const getFormSubmitAlertProps = props =>
         },
     });
 
-export const ThesisSubmission = ({ isHdrThesis }) => {
+export const ThesisSubmission = () => {
     const dispatch = useDispatch();
     const [retries, setRetries] = React.useState(0);
     const { account } = useAccountContext();
@@ -88,10 +86,8 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
     const txtSupervisors = locale.components.thesisSubmissionSupervisors;
     const thesisLocale = formLocale.thesisSubmission;
     const userIsAllowed = TRANSITION_COHORT.includes(account.id);
-    const pageTitle = isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
-    const fileAccessId = isHdrThesis
-        ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId
-        : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId;
+    const pageTitle = thesisLocale.hdrTitle;
+    const fileAccessId = general.HDR_THESIS_DEFAULT_VALUES.fileAccessId;
 
     // form
     const {
@@ -109,9 +105,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                     authorId: author?.aut_id,
                 },
             ],
-            fez_record_search_key_org_unit_name: {
-                rek_org_unit_name: '',
-            },
+            rek_org_unit_name: '',
             rek_genre_type: '',
             thesisAbstract: '',
             supervisors: '',
@@ -121,9 +115,9 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
         },
     });
 
-    const retryUpload = () => {
+    const retryUpload = async () => {
         setRetries(retries + 1);
-        dispatch(submitThesis(mergeWithFormValues(), newRecord, FORM_NAME, fullyUploadedFiles))
+        dispatch(actions.submitThesis(mergeWithFormValues(), newRecord, FORM_NAME, fullyUploadedFiles))
             .then(() => {
                 dispatch({
                     type: 'CREATE_RECORD_SUCCESS',
@@ -216,14 +210,15 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
     const onSubmit = safelyHandleSubmit(async () => {
         const today = new Date();
         const data = mergeWithFormValues({
-            ...(isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES),
+            ...general.HDR_THESIS_DEFAULT_VALUES,
             rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
-            isHdrThesis,
+            isHdrThesis: true,
         });
         // fix org unit name
-        data.fez_record_search_key_org_unit_name.rek_org_unit_name =
-            data.fez_record_search_key_org_unit_name.rek_org_unit_name.value;
-        await dispatch(submitThesis(data, {}, FORM_NAME));
+        data.fez_record_search_key_org_unit_name = {
+            rek_org_unit_name: data.rek_org_unit_name.value,
+        };
+        await dispatch(actions.submitThesis(data, {}, FORM_NAME));
     });
 
     return (
@@ -290,7 +285,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                         <Field
                                             control={control}
                                             component={OrgUnitNameField}
-                                            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                                            name="rek_org_unit_name"
                                             disabled={isSubmitting}
                                             validate={[validation.required]}
                                             required
@@ -419,10 +414,6 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
             </ConfirmDiscardFormChanges>
         </StandardPage>
     );
-};
-
-ThesisSubmission.propTypes = {
-    isHdrThesis: PropTypes.bool,
 };
 
 export default ThesisSubmission;

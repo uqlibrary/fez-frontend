@@ -1,189 +1,304 @@
 import React from 'react';
-import ThesisSubmission, { afterSubmit, cancelSubmit, getFormSubmitAlertProps } from './ThesisSubmission';
 import { default as formLocale } from 'locale/publicationForm';
 import * as config from 'config/general';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-import Immutable from 'immutable';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    screen,
+    assertEnabled,
+    assertDisabled,
+    userEvent,
+    mockUseValidatedForm,
+    addFilesToFileUploader,
+    waitForTextToBeRemoved,
+    waitForText,
+} from 'test-utils';
 import { useAccountContext } from 'context';
+import Immutable from 'immutable';
+import { waitFor } from '@testing-library/dom';
+import { FIELD_OF_RESEARCH_VOCAB_ID } from 'config/general';
+import { vocabulariesList } from '../../../mock/data';
+import * as repositories from '../../../repositories';
 
 jest.mock('../../../context');
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disable}
-                label={props.label || props.floatingLabelText}
-            />
-        );
-    },
-}));
+import ThesisSubmission, { afterSubmit, cancelSubmit } from './ThesisSubmission';
 
+const mockUseNavigate = jest.fn();
+/* eslint-disable react/prop-types */
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({ pathname: '/', search: '' }),
+    useNavigate: () => mockUseNavigate,
 }));
 
-function setup(testProps, renderMethod = render) {
-    const props = {
-        dirty: testProps.dirty || false,
-        isSessionValid: testProps.isSessionValid || true,
-        actions: testProps.actions || {
-            logout: jest.fn(),
-            checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn(),
-        },
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        isHdrThesis: testProps.isHdrThesis || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        ...testProps,
-    };
+const defaultAuthor = { aut_display_name: 'Brown, James', aut_org_student_id: 's2222222' };
 
-    return renderMethod(
-        <WithReduxStore>
+function setup(props = {}) {
+    props.author = props.author || defaultAuthor;
+    useAccountContext.mockImplementation(() => ({
+        account: {
+            id: props.author.aut_org_student_id,
+        },
+    }));
+
+    const state = Immutable.Map({
+        accountReducer: {
+            author: props.author,
+            isSessionExpired: props.isSessionExpired,
+        },
+        createRecordReducer: {
+            newRecord: props.publication,
+            newRecordFileUploadingOrIssueError: props.newRecordFileUploadingOrIssueError,
+        },
+        fileUploadReducer: {
+            fullyUploadedFiles: props.fullyUploadedFiles,
+            isUploadInProgress: props.isUploadInProgress,
+        },
+    });
+
+    return render(
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <ThesisSubmission {...props} />
+                <ThesisSubmission />
             </WithRouter>
         </WithReduxStore>,
     );
 }
 
 describe('ThesisSubmission', () => {
-    let mockUseRef;
+    const fileMock = ['myTestImage.png'];
+    const isDebugging = false;
+    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
 
-    beforeEach(() => {
-        mockUseRef = jest.spyOn(React, 'useRef');
-        mockUseRef.mockImplementation(() => ({ current: { showConfirmation: jest.fn() } }));
-
-        useAccountContext.mockImplementation(() => ({
-            account: {
-                id: 's2222222',
-            },
-        }));
-        config.THESIS_UPLOAD_RETRIES = 1;
-    });
-
-    it('should render sbs thesis submission form', () => {
-        const { container, getByTestId } = setup({ isHdrThesis: false });
-
-        // buttons
-        expect(getByTestId('cancel-deposit-thesis')).toBeInTheDocument();
-        expect(getByTestId('deposit-thesis')).toBeInTheDocument();
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render sbs thesis submission acknowledgement', () => {
-        const { container } = setup({ isHdrThesis: false, submitSucceeded: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render hdr thesis submission form', () => {
-        const { container } = setup({ isHdrThesis: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render hdr thesis submission acknowledgement', () => {
-        const { container } = setup({ isHdrThesis: true, submitSucceeded: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render component with buttons disabled on submitting', async () => {
-        const { container, getByTestId } = setup({ isHdrThesis: true, submitting: true });
-        expect(getByTestId('cancel-deposit-thesis')).toBeDisabled();
-        expect(getByTestId('deposit-thesis')).toBeDisabled();
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should disable submit button if invalid form data before submit', () => {
-        const { getByTestId } = setup({ disableSubmit: true });
-        expect(getByTestId('deposit-thesis')).toBeDisabled();
-    });
-
-    it('should display successfull submission screen', () => {
-        const { container } = setup({ submitSucceeded: true });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should display confirmation box before submission', () => {
-        const checkSessionMock = jest.fn();
-        const { getByTestId, getByText } = setup({
-            dirty: true,
-            actions: { checkSession: checkSessionMock, clearSessionExpiredFlag: jest.fn() },
+    const mockRichEditorFieldValues = values => {
+        mockUseValidatedForm((props, original) => {
+            props.values.thesisTitle = values?.thesisTitle || 'thesis title';
+            props.values.thesisAbstract = values?.thesisAbstract || 'thesis abstract';
+            return original(props);
         });
+    };
 
-        fireEvent.click(getByTestId('deposit-thesis'));
-        expect(
-            getByText(/You are about to deposit your thesis with attached files. Are you sure you want to proceed/i),
-        ).toBeInTheDocument();
-        expect(checkSessionMock).toBeCalled();
-    });
+    const assertValidationErrorSummary = async () => {
+        await waitForText(formLocale.validationAlert.message, waitForOptions);
+        assertDisabled(screen.getByTestId('cancel-deposit-thesis'));
+        assertDisabled(screen.getByTestId('deposit-thesis'));
+    };
 
-    it('should show the file upload failure alert', () => {
-        const { container } = setup({
-            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
-            newRecordFileUploadingOrIssueError: true,
-            submitSucceeded: true,
-        });
-        expect(container).toMatchSnapshot();
-    });
+    const assertNoValidationErrorSummary = async () => {
+        await waitForTextToBeRemoved(formLocale.validationAlert.message, waitForOptions);
+        assertEnabled(screen.getByTestId('cancel-deposit-thesis'));
+        assertEnabled(screen.getByTestId('deposit-thesis'));
+    };
 
-    it('should show file upload retry failure alert', () => {
-        const retryUploadFn = jest.fn();
-        const { getByRole, getByText, container } = setup({
-            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
-            newRecordFileUploadingOrIssueError: true,
-            submitSucceeded: true,
-            retryUpload: retryUploadFn,
-        });
-        fireEvent.click(getByRole('button', { name: 'Retry upload' }));
+    const fillUpForm = async () => {
+        expect(defaultAuthor.aut_display_name.length).toBeGreaterThan(0);
+        expect(screen.getByTestId('rek-author-input')).toHaveValue(defaultAuthor.aut_display_name);
+        await userEvent.click(screen.getByTestId('rek-genre-type-select'));
+        await userEvent.click(screen.getByText('PhD Thesis'));
+        await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
+        await userEvent.type(screen.getByTestId('rek-supervisor-input'), 'J.Smith');
+        await userEvent.click(screen.getByRole('button', { name: 'Add supervisor' }));
+        await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
+        await waitForText('0101 Pure Mathematics');
+        await userEvent.click(screen.getByText('0101 Pure Mathematics'));
+        await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
+        await userEvent.click(screen.getByTestId('rek-keywords-add'));
+        addFilesToFileUploader(fileMock);
+        await assertNoValidationErrorSummary();
+    };
 
-        expect(retryUploadFn).toBeCalled();
-        expect(getByText(/FILE UPLOAD ERROR/i)).toBeInTheDocument();
-        expect(container).toMatchSnapshot();
-    });
+    const submitForm = async () => fireEvent.click(await screen.getByTestId('deposit-thesis'));
 
-    it('should show file upload retry success alert', () => {
-        const { getByRole, getByText, rerender } = setup({
-            author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
-            newRecordFileUploadingOrIssueError: true,
-            submitSucceeded: true,
-            retryUpload: jest.fn(),
-        });
-
-        fireEvent.click(getByRole('button', { name: 'Retry upload' }));
-
-        setup(
-            {
-                author: { aut_fname: 'First', aut_lname: 'Last', aut_org_student_id: '1234567' },
-                newRecordFileUploadingOrIssueError: false,
-                submitSucceeded: true,
-            },
-            rerender,
+    const assertConfirmationMessage = async () =>
+        await waitFor(
+            () => screen.getByText(formLocale.thesisSubmission.depositConfirmation.confirmationMessage),
+            waitForOptions,
         );
 
-        expect(getByText(/File upload retry succeeded/i)).toBeInTheDocument();
+    const confirmDeposit = async () => {
+        await assertConfirmationMessage();
+        await userEvent.click(screen.getByText(formLocale.thesisSubmission.depositConfirmation.confirmButtonLabel));
+    };
+
+    const retryUpload = async () => {
+        await waitFor(
+            () => screen.getByText(new RegExp(formLocale.thesisSubmission.fileUpload.failedAlertLocale.title, 'i')),
+            waitForOptions,
+        );
+        await userEvent.click(
+            screen.getByText(formLocale.thesisSubmission.fileUpload.failedAlertLocale.actionButtonLabel),
+        );
+    };
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        mockSessionApi.resetHandlers();
+        mockApi.resetHandlers();
+
+        config.THESIS_UPLOAD_RETRIES = 1;
+        mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(200);
+        mockApi
+            .onGet(repositories.routes.VOCABULARIES_API({ id: FIELD_OF_RESEARCH_VOCAB_ID }).apiUrl)
+            .reply(200, vocabulariesList[FIELD_OF_RESEARCH_VOCAB_ID]);
     });
 
-    it('should have a helper to generate alert props', () => {
-        expect(getFormSubmitAlertProps({ error: true })).toMatchSnapshot();
+    afterEach(() => {
+        jest.clearAllMocks();
+
+        mockSessionApi.resetHandlers();
+        mockApi.resetHandlers();
+    });
+
+    it('should display error summary according to invalid fields', async () => {
+        const { getByTestId, queryByText } = setup();
+        await assertValidationErrorSummary();
+
+        await waitForText('Thesis title is required');
+        await waitForText('Enrolling unit is required');
+        await waitForText('Thesis type is required');
+        await waitForText('Thesis abstract is required');
+        await waitForText('Supervisor names are required');
+        await waitForText('Field of research (FoR) codes are required');
+        await waitForText('Keywords are required');
+        await waitForText('File submission to be completed');
+
+        await userEvent.click(getByTestId('rek-genre-type-select'));
+        await userEvent.click(queryByText('PhD Thesis'));
+        await waitForTextToBeRemoved('Thesis type is required');
+
+        await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
+        await waitForTextToBeRemoved('Enrolling unit is required');
+
+        await userEvent.type(screen.getByTestId('rek-supervisor-input'), 'J.Smith');
+        await userEvent.click(screen.getByRole('button', { name: 'Add supervisor' }));
+        await waitForTextToBeRemoved('Supervisor names are required');
+
+        await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
+        await waitForText('0101 Pure Mathematics');
+        await userEvent.click(screen.queryByText('0101 Pure Mathematics'));
+        await waitForTextToBeRemoved('Field of research (FoR) codes are required');
+
+        await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
+        await userEvent.click(screen.getByTestId('rek-keywords-add'));
+        await waitForTextToBeRemoved('Keywords are required');
+
+        addFilesToFileUploader(fileMock);
+        await waitForTextToBeRemoved('File submission to be completed');
+    });
+
+    it('should display error summary according to invalid rich editor fields', async () => {
+        mockRichEditorFieldValues({ thesisTitle: 'abc' });
+        const { queryByText } = setup();
+        await assertValidationErrorSummary();
+
+        expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
+    });
+
+    it('should display error summary according to invalid rich editor fields', async () => {
+        mockRichEditorFieldValues({ thesisAbstract: 'abc' });
+        const { queryByText } = setup();
+        await assertValidationErrorSummary();
+
+        expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
     });
 
     it('should show alert message not the thesis submission form to students not in the transition cohort', () => {
-        useAccountContext.mockImplementation(() => ({
-            account: { id: 's333333' },
-        }));
-        const { getByText } = setup({});
+        const { getByText } = setup({ author: { aut_org_student_id: 's333333' } });
         expect(getByText(/HDR theses are now submitted via the UQ Research Data Manager/i)).toBeInTheDocument();
+    });
+
+    it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
+        mockApi
+            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+            .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+            .onPut('s3-ap-southeast-2.amazonaws.com')
+            .replyOnce(200, {});
+
+        mockRichEditorFieldValues();
+        setup();
+        await assertValidationErrorSummary();
+        await fillUpForm();
+        await submitForm();
+        await confirmDeposit();
+
+        await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
+    });
+
+    it('should display file upload error and successfully upload after a retry', async () => {
+        const pid = 'UQ:123456';
+        mockApi
+            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+            .replyOnce(200, { data: { rek_pid: pid } })
+            // file upload failure
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            // automatic retry
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+            .replyOnce(200, { data: {} })
+            // manual file upload retry
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+            .onPut('s3-ap-southeast-2.amazonaws.com')
+            .replyOnce(200, {});
+
+        mockRichEditorFieldValues();
+        setup();
+        await assertValidationErrorSummary();
+        await fillUpForm();
+        await submitForm();
+        await confirmDeposit();
+        await retryUpload();
+
+        await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
+    });
+
+    it('should display file upload error and show error message after failed retry', async () => {
+        const pid = 'UQ:123456';
+        mockApi
+            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+            .replyOnce(200, { data: { rek_pid: pid } })
+            // file upload failure
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+            .replyOnce(200, { data: {} });
+
+        mockRichEditorFieldValues();
+        const { getByText } = setup();
+        await assertValidationErrorSummary();
+        await fillUpForm();
+        await submitForm();
+        await confirmDeposit();
+        await retryUpload();
+
+        // assert error message
+        await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
+    });
+
+    it('should show server error while trying to create the thesis', async () => {
+        mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
+
+        mockRichEditorFieldValues();
+        setup();
+        await assertValidationErrorSummary();
+        await fillUpForm();
+        await submitForm();
+        await confirmDeposit();
+
+        await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
+        assertEnabled('deposit-thesis');
     });
 });
 

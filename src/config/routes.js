@@ -147,7 +147,7 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.hdrSubmission,
                       element: isHdrStudent ? (
-                          <components.ThesisSubmission isHdrThesis />
+                          <components.ThesisSubmission />
                       ) : (
                           <components.StandardPage {...locale.pages.thesisSubmissionDenied} />
                       ),

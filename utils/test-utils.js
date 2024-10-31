@@ -21,8 +21,9 @@ const mime = require('mime-types');
 
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { waitFor } from '@testing-library/dom';
+import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview from 'jest-preview';
+import * as useValidatedForm from 'hooks/useValidatedForm';
 
 export const AllTheProviders = props => {
     return (
@@ -161,10 +162,9 @@ export const createMatchMedia = width => {
     });
 };
 
-export const getFilenameExtension = filename => filename.split('.').pop();
-export const getFilenameBasename = filename =>
-    filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-export const addFilesToFileUploader = files => {
+const getFilenameExtension = filename => filename.split('.').pop();
+const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
+const addFilesToFileUploader = files => {
     const { screen, fireEvent } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
@@ -183,7 +183,7 @@ export const addFilesToFileUploader = files => {
         },
     });
 };
-export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
     const { fireEvent } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
@@ -194,8 +194,18 @@ export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) =
     }
 };
 
-export const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
-export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
+const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
+const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
+const waitForText = async (text, options) => await waitFor(() => screen.getByText(text), options);
+const waitForTextToBeRemoved = async (text, options) =>
+    !!screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+const originalUseValidatedForm = useValidatedForm.useValidatedForm;
+const mockUseValidatedForm = implementation => {
+    return jest.spyOn(useValidatedForm, 'useValidatedForm').mockImplementation(props => {
+        return implementation(props, originalUseValidatedForm);
+    });
+};
 
 module.exports = {
     ...domTestingLib,
@@ -214,6 +224,9 @@ module.exports = {
     userEvent,
     assertEnabled,
     assertDisabled,
+    waitForText,
+    waitForTextToBeRemoved,
+    mockUseValidatedForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
