@@ -44,20 +44,12 @@ import SecuritySection from './security/SecuritySectionContainer';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 const useFormOnChangeHook = methods => {
-    // Consider if this should go lower level, in to AttachFilesField and the onRenameAttachedFile function,
-    // (and same for delete and change)
-    // or should this all go in to the submit handler instead if possible?
-    // Note I did not attempt to handle the ADMIN_DELETE_ATTACHED_FILE or CHANGE actions inside
-    // src/reducers/formReducerPlugins.js, or the resetValue() method in the same file.
-    const [displayType, files] = useWatch({
-        control: methods.control,
-        name: ['rek_display_type', 'filesSection.fez_datastream_info'],
-    });
+    const formValues = { ...useWatch({ control: methods.control }), ...methods.getValues() };
 
-    if (!!files) {
+    if (!!formValues.filesSection?.fez_datastream_info) {
         const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
         let updated = false;
-        files.forEach(file => {
+        formValues.filesSection.fez_datastream_info.forEach(file => {
             if (!!file.dsi_dsid_new) {
                 const oldFileName = file.dsi_dsid_new;
                 const newFileName = file.dsi_dsid;
@@ -74,18 +66,15 @@ const useFormOnChangeHook = methods => {
             }
         });
         if (updated) {
-            methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments, {
-                shouldValidate: false, // should this be true? does it matter?
-                shouldDirty: true,
-            });
+            methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments);
         }
     }
     if (
-        displayType === PUBLICATION_TYPE_THESIS &&
-        !!methods.getValues('adminSection.rek_subtype') &&
-        !!!methods.getValues('bibliographicSection.rek_genre_type')
+        formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
+        !!formValues.adminSection?.rek_subtype &&
+        !!!formValues.bibliographicSection?.rek_genre_type
     ) {
-        methods.setValue('bibliographicSection.rek_genre_type', methods.getValues('adminSection.rek_subtype'));
+        methods.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
     }
 };
 
@@ -139,7 +128,6 @@ export const AdminContainer = ({ createMode = false }) => {
 
     useFormOnChangeHook(attributes);
     const recordToView = useRecordToView(record, createMode, attributes);
-    console.log(recordToView);
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();

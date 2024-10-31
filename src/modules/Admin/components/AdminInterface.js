@@ -35,7 +35,6 @@ import {
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import LockedAlert from './LockedAlert';
-import { onSubmit } from '../submitHandler';
 
 import { useRecordContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
@@ -81,7 +80,16 @@ export const navigateToSearchResult = (createMode, authorDetails, navigate, loca
 
 const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activated);
 
-export const AdminInterface = ({ authorDetails, createMode, isDeleted, isJobCreated, locked, tabs, error }) => {
+export const AdminInterface = ({
+    authorDetails,
+    handleSubmit: onSubmit,
+    createMode,
+    isDeleted,
+    isJobCreated,
+    locked,
+    tabs,
+    error,
+}) => {
     const dispatch = useDispatch();
     const { record } = useRecordContext();
 
@@ -374,7 +382,7 @@ export const AdminInterface = ({ authorDetails, createMode, isDeleted, isJobCrea
 
     return (
         <StandardPage>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}

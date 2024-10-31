@@ -84,10 +84,11 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <Field
+                                        name="adminSection.collections"
+                                        collectionFieldId="rek-ismemberof"
                                         control={attributes.control}
                                         component={CollectionField}
                                         disabled={disabled}
-                                        name="adminSection.collections"
                                         floatingLabelText={
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
@@ -95,7 +96,6 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         required
                                         validate={[validation.requiredList]}
                                         fullWidth
-                                        collectionFieldId="rek-ismemberof"
                                         {...(!!attributes.getFieldState('adminSection.collections').error
                                             ? {
                                                   error: true,
@@ -106,14 +106,14 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
+                                        name="rek_display_type"
+                                        selectFieldId="rek-display-type"
                                         control={attributes.control}
                                         component={SelectField}
                                         disabled={disabled}
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
-                                        name="rek_display_type"
                                         placeholder={locale.pages.adminAdd.formLabels.rek_display_type.hintText}
                                         required
-                                        selectFieldId="rek-display-type"
                                         validate={[validation.required]}
                                         value={selectedPublicationType}
                                         {...(!!attributes.getFieldState('rek_display_type').error
@@ -130,17 +130,17 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                     {(hasSubtypes || hasDefaultDocTypeSubType) && (
                                         <Grid item xs={12}>
                                             <Field
+                                                id="rek-subtype"
+                                                name="adminSection.rek_subtype"
+                                                selectFieldId="rek-subtype"
                                                 control={attributes.control}
                                                 component={SelectField}
                                                 disabled={disabled}
-                                                id="rek-subtype"
-                                                name="adminSection.rek_subtype"
                                                 value={publicationSubtype}
                                                 label={locale.pages.adminAdd.formLabels.rek_subtype.inputLabelText}
                                                 required
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
-                                                selectFieldId="rek-subtype"
                                                 {...(!!attributes.getFieldState('adminSection.rek_subtype').error
                                                     ? {
                                                           error: true,
