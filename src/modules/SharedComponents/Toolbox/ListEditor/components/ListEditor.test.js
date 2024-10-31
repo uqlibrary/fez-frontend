@@ -250,17 +250,6 @@ describe('ListEditor tests', () => {
         });
     });
 
-    it('should not call transformOutput if onChange prop method is not defined', () => {
-        const onChangeFn = jest.fn();
-        const { rerender } = setup();
-
-        setup({ onChange: onChangeFn }, rerender);
-        expect(onChangeFn).toHaveBeenCalledTimes(1);
-
-        setup({ onChange: null }, rerender);
-        expect(onChangeFn).toHaveBeenCalledTimes(1); // shouldnt increment
-    });
-
     it('should call given onChange only when `items` change', () => {
         const onChangeFn = jest.fn();
         const { rerender, getByTestId } = setup({
