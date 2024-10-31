@@ -71,7 +71,7 @@ export const useRecord = (displayType, subType, createMode) => {
 };
 
 export const useRecordToView = (recordToView, createMode, methods) => {
-    const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : undefined));
+    const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : {}));
 
     if (!createMode) return recordToView;
 
@@ -79,7 +79,7 @@ export const useRecordToView = (recordToView, createMode, methods) => {
     const selectedSubType = methods.getValues('adminSection.rek_subtype');
 
     return {
-        rek_pid: (!!newRecord && newRecord.rek_pid) || null,
+        rek_pid: newRecord?.rek_pid ?? null,
         rek_display_type: displayType,
         rek_subtype: selectedSubType,
         rek_object_type_lookup: RECORD_TYPE_RECORD,

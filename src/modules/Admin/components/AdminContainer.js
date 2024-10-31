@@ -32,8 +32,8 @@ import AdminInterface from './AdminInterface';
 
 import AddSection from './add/AddSection';
 import AdminSection from './admin/AdminSection';
-import AuthorsSection from './authors/AuthorsSectionContainer';
-import BibliographicSection from './bibliographic/BibliographicSectionContainer';
+import AuthorsSection from './authors/AuthorsSection';
+import BibliographicSection from './bibliographic/BibliographicSection';
 import FilesSection from './files/FilesSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
