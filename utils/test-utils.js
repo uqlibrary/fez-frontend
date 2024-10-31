@@ -5,6 +5,8 @@ import { render } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
+import { FormProvider } from 'react-hook-form';
+import { useValidatedForm } from 'hooks';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -197,6 +199,16 @@ export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) =
 export const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
 export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
 
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -218,4 +230,5 @@ module.exports = {
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    FormProviderWrapper,
 };

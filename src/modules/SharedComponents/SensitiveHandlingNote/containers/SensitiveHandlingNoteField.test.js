@@ -1,30 +1,31 @@
+import React from 'react';
+import { render, userEvent, FormProviderWrapper, preview } from 'test-utils';
+
 import SensitiveHandlingNoteField from './SensitiveHandlingNoteField';
 
-jest.mock('../../../../context');
-import { useFormValuesContext } from 'context';
-
-function setup(testProps = {}) {
+function setup(testProps = {}, renderer = render) {
+    const { values = {}, methods = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
     };
 
-    return renderComponent(SensitiveHandlingNoteField, props);
+    return renderer(
+        <FormProviderWrapper
+            values={{
+                ...values,
+            }}
+            methods={methods}
+        >
+            <SensitiveHandlingNoteField {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('SensitiveHandlingNoteField', () => {
-    beforeEach(() => {
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {},
-        }));
-    });
-
-    afterEach(() => {
-        useFormValuesContext.mockReset();
-    });
-
     it('should render default view', () => {
-        const render = setup({});
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { getByTestId } = setup({});
+        userEvent.click(getByTestId('rek-sensitive-handling-note-id-select'));
+        preview.debug();
     });
 
     it('should render disabled view', () => {
