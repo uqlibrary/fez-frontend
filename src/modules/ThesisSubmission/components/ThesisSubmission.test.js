@@ -156,8 +156,8 @@ describe('ThesisSubmission', () => {
         await assertValidationErrorSummary();
 
         await waitForText('Thesis title is required');
-        await waitForText('Enrolling unit is required');
         await waitForText('Thesis type is required');
+        await waitForText('Enrolling unit is required');
         await waitForText('Thesis abstract is required');
         await waitForText('Supervisor names are required');
         await waitForText('Field of research (FoR) codes are required');
