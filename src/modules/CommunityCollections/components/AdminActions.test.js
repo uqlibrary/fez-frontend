@@ -20,14 +20,6 @@ const testActions = [
         options: null,
         isRecordEdit: false,
     },
-    {
-        label: 'More options',
-        url: pid => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}&href=%2Fbrowse`,
-        inApp: false,
-        showInDeleted: true,
-        options: null,
-        isRecordEdit: false,
-    },
 ];
 
 const testProps = {
@@ -100,19 +92,5 @@ describe('AdminActions component', () => {
             );
             windowOpenSpy.mockClear();
         });
-    });
-    it('should handle alternate click events', () => {
-        const { getByTestId, getByText } = setup({ record: 'UQ:12345' });
-        fireEvent.click(getByTestId('admin-actions-button-UQ:12345'));
-
-        const menu = getByTestId('admin-actions-menu-UQ:12345');
-
-        fireEvent.contextMenu(getByText(/More options/i, menu));
-        expect(global.window.open).toHaveBeenCalledTimes(1);
-        expect(global.window.open).toHaveBeenCalledWith(
-            'https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=UQ:12345&href=%2Fbrowse',
-            '_blank',
-            null,
-        );
     });
 });

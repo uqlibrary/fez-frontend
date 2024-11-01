@@ -172,7 +172,6 @@ export const pathConfig = {
         editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
         favouriteSearch: '/admin/favourite-search',
-        legacyEspace: `${fullPath}/my_upo_tools.php`,
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',

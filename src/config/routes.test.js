@@ -42,7 +42,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff) and full masquerade access', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -53,7 +53,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -78,17 +78,9 @@ describe('Routes getMenuConfig method', () => {
         expect(testRoutes.length).toEqual(18);
     });
 
-    it('should not return Switch to old interface menu item for public view page', () => {
-        const testMenuItems = routes.getMenuConfig(null, null, false, true);
-        expect(testMenuItems.length).toEqual(5);
-
-        const contactMenuItem = testMenuItems.pop();
-        expect(contactMenuItem.primaryText).toEqual('About');
-    });
-
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -99,7 +91,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus for user who can readonly masquerade', () => {
@@ -129,25 +121,6 @@ describe('Routes getMenuConfig method', () => {
             true,
         );
         expect(testRoutes.length).toEqual(18);
-    });
-
-    it('should not return Switch to old interface menu item for public view page', () => {
-        const testMenuItems = routes.getMenuConfig(null, null, false, true);
-        expect(testMenuItems.length).toEqual(5);
-
-        const contactMenuItem = testMenuItems.pop();
-        expect(contactMenuItem.primaryText).toEqual('About');
-    });
-
-    it('should return Switch to old interface menu item for logged in user on view page', () => {
-        const testMenuItems = routes.getMenuConfig(
-            accounts.uqresearcher,
-            currentAuthor.uqresearcher.data,
-            authorDetails.uqresearcher,
-            false,
-            true,
-        );
-        expect(testMenuItems.length).toEqual(16);
     });
 
     it('should return list of menus for a student with an author account', () => {

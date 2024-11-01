@@ -49,7 +49,7 @@ context('Homepage', () => {
 
     it('Has expected menu items for an admin with full masquerade', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(29);
+        checkMenuItemCount(28);
     });
 
     it('Redirects to admin dashboard for admin with full masquerade and URL switch present', () => {

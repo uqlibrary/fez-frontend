@@ -1351,13 +1351,6 @@ export const RECORD_ACTION_URLS = [
         options: null,
         isChangeDisplayMenu: true,
     },
-    {
-        label: 'More options',
-        url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
-        inApp: true,
-        showInDeleted: true,
-        options: null,
-    },
 ];
 export const JOURNAL_ACTION_URLS = [
     {
