@@ -78,6 +78,8 @@ export class PartialDateForm extends PureComponent {
     constructor(props) {
         super(props);
         const dateValue =
+            // eslint-disable-next-line react/prop-types
+            (props.value && moment(props.input.value)) ||
             (props.input && props.input.value && moment(props.input.value)) ||
             (props.meta && props.meta.initial && moment(props.meta.initial)) ||
             null;
