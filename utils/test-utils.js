@@ -200,7 +200,7 @@ export const assertEnabled = (resolver, ...items) => items.forEach(item => expec
 export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
 
 // eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, methods, ...props }) => {
+export const FormProviderWrapper = ({ children, methods, ...props }) => {
     const attributes = useValidatedForm(props);
     return (
         <FormProvider {...attributes} {...methods}>

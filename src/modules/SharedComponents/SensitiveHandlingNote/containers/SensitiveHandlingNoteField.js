@@ -15,9 +15,13 @@ export const SensitiveHandlingNoteField = props => {
     const formValues = methods.getValues('filesSection');
 
     const [isOther, setIsOther] = useState(isSensitiveHandlingNoteTypeOther(formValues?.sensitiveHandlingNote?.id));
-    const handleSensitiveHandlingNoteIdChange = value => setIsOther(isSensitiveHandlingNoteTypeOther(value));
+    const handleSensitiveHandlingNoteIdChange = value => {
+        const isSensitive = isSensitiveHandlingNoteTypeOther(value);
+        setIsOther(isSensitive);
+    };
     const idError = methods.getFieldState('filesSection.sensitiveHandlingNote.id').error;
     const otherError = methods.getFieldState('filesSection.sensitiveHandlingNote.other').error;
+
     return (
         <>
             <Field
@@ -31,7 +35,6 @@ export const SensitiveHandlingNoteField = props => {
                 onChange={handleSensitiveHandlingNoteIdChange}
                 {...selectFields.sensitiveHandlingNoteType}
                 {...(!!idError ? { error: true, errorText: idError } : {})}
-                value={methods.getValues('filesSection.sensitiveHandlingNote.id') ?? ''}
             />
             {isOther && (
                 <Field
@@ -45,9 +48,8 @@ export const SensitiveHandlingNoteField = props => {
                     minRows={6}
                     maxRows={6}
                     inputProps={{ maxLength: 65535 }}
-                    validate={value => isOther && validation.required(value)}
+                    validate={[validation.required]}
                     {...(!!otherError ? { error: true, errorText: otherError } : {})}
-                    value={methods.getValues('filesSection.sensitiveHandlingNote.other') ?? ''}
                 />
             )}
         </>
