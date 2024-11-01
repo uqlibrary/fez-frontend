@@ -180,4 +180,33 @@ context('Thesis', () => {
         // Ready to submit
         cy.get('button#submit-thesis').should('not.have.attr', 'disabled');
     });
+
+    it('Should display session expired dialog', () => {
+        cy.visit(`${baseUrl}/rhdsubmission?user=s5555555`);
+
+        // title
+        cy.typeCKEditor('rek-title', 'a');
+        // subtype
+        cy.get('[data-testid=rek-genre-type-select]').click();
+        cy.get('li[data-value="MPhil Thesis"]').click();
+        // abstract
+        cy.typeCKEditor('rek-description', 'a');
+        // unit
+        cy.get('[data-testid=rek-org-unit-name-input]').type('a');
+        cy.clickAutoSuggestion('rek-org-unit-name', 0);
+        // supervisors
+        cy.get('[data-testid=rek-supervisor-input]').type('a{enter}', { delay: 30 });
+        // FoR
+        cy.get('[data-testid=rek-subject-input]').type('a');
+        cy.clickAutoSuggestion('rek-subject', 0);
+        // keywords
+        cy.get('[data-testid=rek-keywords-input]').type('a{enter}', {
+            delay: 30,
+        });
+        // files
+        cy.get('[data-testid="fez-datastream-info-input"]').attachFile('test.jpg', { subjectType: 'drag-n-drop' });
+
+        cy.get('[data-testid="deposit-thesis"]').click();
+        cy.get('H2').contains('Session Expired');
+    });
 });

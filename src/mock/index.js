@@ -40,13 +40,18 @@ if (user && !mockData.accounts[user]) {
 user = user || 'uqresearcher';
 // user = user || 'uqstaff';
 
+// used to ensure s5555555 only gets a 200 for the first req.
+let hasSessionExpireTestReqBeenMade = true;
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
  * for thesis submissions for now
  */
 mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
+    const isSessionExpireTestUser = user === 's5555555';
     // mock account response
-    if (['s2222222', 's3333333'].indexOf(user) > -1) {
+    if (['s2222222', 's3333333'].indexOf(user) > -1 ||
+        (isSessionExpireTestUser && !hasSessionExpireTestReqBeenMade)) {
+        if (isSessionExpireTestUser) hasSessionExpireTestReqBeenMade = true;
         return [200, mockData.accounts[user]];
     } else if (mockData.accounts[user]) {
         return [403, {}];
