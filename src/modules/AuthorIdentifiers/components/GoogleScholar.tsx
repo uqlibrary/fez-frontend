@@ -71,12 +71,10 @@ export const GoogleScholarForm: React.FC<{ author: FezAuthor | null }> = ({ auth
 
     const onSubmit = async (data: FormValues) =>
         author?.aut_id &&
-        dispatch(await updateCurrentAuthor(author.aut_id, data))
-            // @ts-ignore
-            .catch(e => {
-                // set form error in case of exceptions - it will be handled and displayed below
-                setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
-            });
+        dispatch(await updateCurrentAuthor(author.aut_id, data)).catch((e: Error) => {
+            // set form error in case of exceptions - it will be handled and displayed below
+            setError(SERVER_ERROR_KEY, { type: 'custom', message: e.message });
+        });
 
     const getAlert = () => {
         let alertProps = null;
