@@ -1,6 +1,14 @@
 context('Thesis', () => {
     const baseUrl = Cypress.config('baseUrl');
 
+    const ensureErrorCount = count => {
+        cy.get('@validationAlerts').should('have.length', count);
+    };
+
+    const uploadFile = fileName => {
+        cy.get('[data-testid="fez-datastream-info-input"]').attachFile(fileName, { subjectType: 'drag-n-drop' });
+    };
+
     afterEach(() => {
         cy.killWindowUnloadHandler();
     });
@@ -21,10 +29,6 @@ context('Thesis', () => {
         cy.visit(`${baseUrl}/rhdsubmission?user=s2222222`);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('[data-testid="thesis-submission-validation"] li').as('validationAlerts');
-
-        const ensureErrorCount = count => {
-            cy.get('@validationAlerts').should('have.length', count);
-        };
         ensureErrorCount(8);
 
         // Title
@@ -151,10 +155,6 @@ context('Thesis', () => {
             .should('have.length', 4);
 
         // Files?
-        const uploadFile = fileName => {
-            cy.get('[data-testid="fez-datastream-info-input"]').attachFile(fileName, { subjectType: 'drag-n-drop' });
-        };
-
         uploadFile('test.jpg');
 
         cy.get('[data-testid="dsi-dsid-0-delete"]').click();
@@ -181,7 +181,9 @@ context('Thesis', () => {
         cy.get('button#submit-thesis').should('not.have.attr', 'disabled');
     });
 
-    it('Should display session expired dialog', () => {
+    // this can't be simply tested via a jest test, as the session expired dialog is
+    // controlled up higher in the component tree
+    it.only('Should display session expired dialog', () => {
         cy.visit(`${baseUrl}/rhdsubmission?user=s5555555`);
 
         // title
@@ -204,9 +206,21 @@ context('Thesis', () => {
             delay: 30,
         });
         // files
-        cy.get('[data-testid="fez-datastream-info-input"]').attachFile('test.jpg', { subjectType: 'drag-n-drop' });
+        uploadFile('test.jpg');
 
-        cy.get('[data-testid="deposit-thesis"]').click();
-        cy.get('H2').contains('Session Expired');
+        // rhf validation is async
+        cy.waitUntil(
+            () =>
+                cy
+                    .get('[data-testid="deposit-thesis"]')
+                    .should('not.have.attr', 'disabled')
+                    .then(() => {
+                        cy.get('[data-testid="deposit-thesis"]').click();
+                        cy.get('H2').contains('Session Expired');
+                    }),
+            {
+                timeout: 2000,
+            },
+        );
     });
 });
