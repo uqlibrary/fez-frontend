@@ -27,7 +27,7 @@ export const OrgUnitNameField = props => {
             allowFreeText
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={options => options}
-            defaultValue={(!!props.input?.value && { value: props.input.value }) || null}
+            defaultValue={(!!props.input.value && { value: props.input.value }) || null}
             error={!!props.meta.error}
             errorText={props.meta.error || ''}
             onChange={item => props.input?.onChange(item.value)}
