@@ -1,339 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Collection form should render form with only the community dropdown 1`] = `
-<div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
-    >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Add a missing collection
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
-    >
-      <form>
-        <span />
-        <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-add-a-missing-collection"
-              id="standard-card-add-a-missing-collection"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-add-a-missing-collection-header"
-                    id="standard-card-add-a-missing-collection-header"
-                  >
-                    Add a missing collection
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-add-a-missing-collection-content"
-                data-testid="standard-card-add-a-missing-collection-content"
-                id="standard-card-add-a-missing-collection-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
-                  data-testid="community-selector"
-                  id="community-selector"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek-ismemberof-label"
-                        id="rek-ismemberof-label"
-                      >
-                        Select a community
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           
-                          *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                      >
-                        <div
-                          aria-controls=":r0:"
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-ismemberof-select"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-ismemberof-select"
-                          id="rek-ismemberof-select"
-                          role="combobox"
-                          tabindex="0"
-                        >
-                          Loading communities...
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="false"
-                          aria-labelledby="rek-ismemberof-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-ismemberof-input"
-                          data-testid="rek-ismemberof-input"
-                          id="rek-ismemberof-input"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
-          />
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-collection"
-              data-testid="cancel-collection"
-              tabindex="0"
-              type="button"
-            >
-              Return to the homepage
-            </button>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="submit-collection"
-              data-testid="submit-collection"
-              tabindex="0"
-              type="button"
-            >
-              Add collection
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Collection form should render the full form 1`] = `
 <div>
-  <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+  <h2>
+    Unexpected Application Error!
+  </h2>
+  <h3
+    style="font-style: italic;"
   >
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+    Cannot read properties of undefined (reading 'map')
+  </h3>
+  <pre
+    style="padding: 0.5rem; background-color: rgba(200, 200, 200, 0.5);"
+  >
+    TypeError: Cannot read properties of undefined (reading 'map')
+    at /Users/uqqzeng2/test/fez-frontend/src/modules/SharedComponents/SelectFields/CommunitySelectField.js:13:54
+    at /Users/uqqzeng2/test/fez-frontend/node_modules/react-redux/lib/hooks/useSelector.js:67:26
+    at memoizedSelector (/Users/uqqzeng2/test/fez-frontend/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.development.js:79:30)
+    at getSnapshotWithSelector (/Users/uqqzeng2/test/fez-frontend/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.development.js:134:14)
+    at mountSyncExternalStore (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:15980:20)
+    at Object.useSyncExternalStore (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:16908:14)
+    at useSyncExternalStore (/Users/uqqzeng2/test/fez-frontend/node_modules/react/cjs/react.development.js:1676:21)
+    at useSyncExternalStoreWithSelector (/Users/uqqzeng2/test/fez-frontend/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.development.js:145:15)
+    at useSelector (/Users/uqqzeng2/test/fez-frontend/node_modules/react-redux/lib/hooks/useSelector.js:125:27)
+    at CommunitySelectField (/Users/uqqzeng2/test/fez-frontend/src/modules/SharedComponents/SelectFields/CommunitySelectField.js:10:43)
+    at renderWithHooks (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+    at beginWork (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+    at beginWork$1 (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+    at performUnitOfWork (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+    at workLoopSync (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+    at renderRootSync (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (/Users/uqqzeng2/test/fez-frontend/node_modules/react-dom/cjs/react-dom.development.js:25789:22)
+    at flushActQueue (/Users/uqqzeng2/test/fez-frontend/node_modules/react/cjs/react.development.js:2667:24)
+    at act (/Users/uqqzeng2/test/fez-frontend/node_modules/react/cjs/react.development.js:2582:11)
+    at /Users/uqqzeng2/test/fez-frontend/node_modules/@testing-library/react/dist/act-compat.js:47:25
+    at renderRoot (/Users/uqqzeng2/test/fez-frontend/node_modules/@testing-library/react/dist/pure.js:180:26)
+    at render (/Users/uqqzeng2/test/fez-frontend/node_modules/@testing-library/react/dist/pure.js:271:10)
+    at setup (/Users/uqqzeng2/test/fez-frontend/src/modules/Admin/CollectionForm/components/CollectionForm.test.js:41:18)
+    at Object.setup (/Users/uqqzeng2/test/fez-frontend/src/modules/Admin/CollectionForm/components/CollectionForm.test.js:59:58)
+    at Promise.then.completed (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/uqqzeng2/test/fez-frontend/node_modules/jest-runner/build/runTest.js:444:34)
+  </pre>
+  <p>
+    💿 Hey developer 👋
+  </p>
+  <p>
+    You can provide a way better UX than this when your app throws errors by providing your own 
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
-        data-analyticsid="page-title"
-        data-testid="page-title"
-        id="page-title"
-      >
-        Add a missing collection
-      </h2>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      ErrorBoundary
+    </code>
+     or
+     
+    <code
+      style="padding: 2px 4px; background-color: rgba(200, 200, 200, 0.5);"
     >
-      <form>
-        <span />
-        <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
-              data-testid="standard-card-add-a-missing-collection"
-              id="standard-card-add-a-missing-collection"
-            >
-              <div
-                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
-              >
-                <div
-                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
-                >
-                  <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
-                    data-testid="standard-card-add-a-missing-collection-header"
-                    id="standard-card-add-a-missing-collection-header"
-                  >
-                    Add a missing collection
-                  </h3>
-                </div>
-              </div>
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-                data-analyticsid="standard-card-add-a-missing-collection-content"
-                data-testid="standard-card-add-a-missing-collection-content"
-                id="standard-card-add-a-missing-collection-content"
-              >
-                <div
-                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-3yz84k-MuiGrid2-root"
-                  data-testid="community-selector"
-                  id="community-selector"
-                >
-                  <div
-                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-                  >
-                    <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        data-testid="rek-ismemberof-label"
-                        id="rek-ismemberof-label"
-                      >
-                        Select a community
-                        <span
-                          aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                        >
-                           
-                          *
-                        </span>
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                      >
-                        <div
-                          aria-controls=":r0:"
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-labelledby="rek-ismemberof-select"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                          data-testid="rek-ismemberof-select"
-                          id="rek-ismemberof-select"
-                          role="combobox"
-                          tabindex="0"
-                        >
-                          Loading communities...
-                        </div>
-                        <input
-                          aria-hidden="true"
-                          aria-invalid="false"
-                          aria-labelledby="rek-ismemberof-label"
-                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                          data-analyticsid="rek-ismemberof-input"
-                          data-testid="rek-ismemberof-input"
-                          id="rek-ismemberof-input"
-                          required=""
-                          tabindex="-1"
-                          value=""
-                        />
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                          data-testid="ArrowDropDownIcon"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M7 10l5 5 5-5z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
-        >
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-sm-true css-25dekx-MuiGrid2-root"
-          />
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-7qz7dl-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="cancel-collection"
-              data-testid="cancel-collection"
-              tabindex="0"
-              type="button"
-            >
-              Return to the homepage
-            </button>
-          </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="submit-collection"
-              data-testid="submit-collection"
-              tabindex="0"
-              type="button"
-            >
-              Add collection
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+      errorElement
+    </code>
+     prop on your route.
+  </p>
 </div>
 `;

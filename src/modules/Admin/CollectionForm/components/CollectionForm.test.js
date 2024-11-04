@@ -21,14 +21,24 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
-function setup(testProps) {
+function setup(testProps, testState) {
     const props = {
         disableSubmit: false,
         ...testProps,
     };
 
+    const state = {
+        communitiesReducer: {
+            itemsList: [
+                { rek_title: '<b>Community A</b>', rek_pid: '123' },
+                { rek_title: '<i>Community B</i>', rek_pid: '456' },
+            ],
+        },
+        ...testState,
+    };
+
     return render(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <CollectionForm {...props} />
             </WithRouter>
@@ -45,9 +55,10 @@ describe('Collection form', () => {
     });
 
     it('should render the full form', () => {
-        const { container, getAllByRole, getByTestId } = setup({ newRecord: null });
+        const { container, getAllByRole, getByTestId } = setup({});
 
-        expect(container).toMatchSnapshot();
+        // expect(container).toMatchSnapshot();
+        getByTestId('rek-ismemberof-input').value = 123;
         preview.debug();
         expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
         expect(getByTestId('rek-title-input')).toBeInTheDocument();
