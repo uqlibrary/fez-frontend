@@ -550,15 +550,20 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update component', () => {
+    it('should call given onChange only when `contributors` change', () => {
         const onChangeFn = jest.fn();
-        const { rerender } = setup({
+        const { getByTestId, getByRole, rerender } = setup({
             onChange: onChangeFn,
         });
+        expect(onChangeFn).toHaveBeenCalledTimes(1);
 
-        setup({ onChange: onChangeFn, contributors: [{ displayName: 'test 1' }, { displayName: 'test 2' }] }, rerender);
+        fireEvent.change(getByTestId('test-input'), { target: { value: 'J.Smith' } });
+        fireEvent.click(getByRole('button', { name: 'Add contributor' }));
+        expect(getByTestId('test-list-row-0-name-as-published')).toHaveTextContent('J.Smith');
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
 
-        expect(onChangeFn).toHaveBeenCalled();
+        setup({ onChange: onChangeFn }, rerender);
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
     });
 
     it('should get contributors from props and input value set as an array', () => {

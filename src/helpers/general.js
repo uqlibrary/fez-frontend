@@ -1,4 +1,5 @@
 import HTMLReactParser from 'html-react-parser';
+import diff from 'microdiff';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
 global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
@@ -447,3 +448,19 @@ export const filterObjectKeys = (object, keys, inclusive = false) =>
  */
 export const combineObjects = (...objects) =>
     objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});
+
+/**
+ * Uses microdiff.js, which is fast but ignores nested object key ordering.
+ * To fix this issue, it uses also JSON.stringify.
+ *
+ * @param array
+ * @param anotherArray
+ * @return {boolean}
+ */
+export const isArrayDeeplyEqual = (array, anotherArray) => {
+    return (
+        diff(array, anotherArray).length === 0 &&
+        diff(anotherArray, array).length === 0 &&
+        JSON.stringify(array) === JSON.stringify(anotherArray)
+    );
+};

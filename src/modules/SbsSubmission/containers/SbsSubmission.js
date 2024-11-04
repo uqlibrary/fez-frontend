@@ -44,7 +44,6 @@ const mapStateToProps = (state, props) => {
     const today = new Date();
     const initialValues = {
         rek_date: moment(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`),
-        fez_record_search_key_org_name: { rek_org_name: 'The University of Queensland' },
         currentAuthor: [
             {
                 nameAsPublished: currentAuthor ? currentAuthor.aut_display_name : '',

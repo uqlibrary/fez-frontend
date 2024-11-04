@@ -9,6 +9,8 @@ import {
     isEmptyObject,
     filterObjectKeys,
     combineObjects,
+    isArrayDeeplyEqual,
+    arrayDiff,
 } from './general';
 
 describe('general helpers', () => {
@@ -382,6 +384,36 @@ describe('general helpers', () => {
                 a: 1,
                 b: null,
                 c: 3,
+            });
+        });
+
+        describe('isArrayDeeplyEqual', () => {
+            it('should return true for equal arrays', () => {
+                expect(isArrayDeeplyEqual([], [])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1], [1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1, 2], [1, 2])).toBeTruthy();
+                expect(isArrayDeeplyEqual([0.1], [0.1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([undefined], [undefined])).toBeTruthy();
+                expect(isArrayDeeplyEqual([null], [null])).toBeTruthy();
+                expect(isArrayDeeplyEqual([false], [false])).toBeTruthy();
+                expect(isArrayDeeplyEqual([''], [''])).toBeTruthy();
+                expect(isArrayDeeplyEqual(['str'], ['str'])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{}], [{}])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{ a: 1 }])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ a: 1, b: 2 }])).toBeTruthy();
+            });
+
+            it('should return false for non-equal arrays', () => {
+                expect(isArrayDeeplyEqual([1], [])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1], [1, 2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1, 2], [2, 1])).toBeFalsy();
+                expect(isArrayDeeplyEqual([0.1], [0.2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([undefined], [null])).toBeFalsy();
+                expect(isArrayDeeplyEqual([true], [false])).toBeFalsy();
+                expect(isArrayDeeplyEqual([''], ['a'])).toBeFalsy();
+                expect(isArrayDeeplyEqual(['string'], ['str'])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{}])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
             });
         });
     });
