@@ -106,9 +106,7 @@ export const ThesisSubmission = () => {
                 },
             ],
             rek_genre_type: '',
-            fez_record_search_key_org_unit_name: {
-                rek_org_unit_name: '',
-            },
+            rek_org_unit_name: '',
             thesisAbstract: '',
             supervisors: '',
             fieldOfResearch: '',
@@ -216,6 +214,10 @@ export const ThesisSubmission = () => {
             rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
             isHdrThesis: true,
         });
+        // fix org unit name
+        data.fez_record_search_key_org_unit_name = { rek_org_unit_name: data.rek_org_unit_name };
+        delete data.rek_org_unit_name;
+        dd(data);
         await dispatch(actions.submitThesis(data, {}, FORM_NAME));
     });
 
@@ -283,7 +285,7 @@ export const ThesisSubmission = () => {
                                         <Field
                                             control={control}
                                             component={OrgUnitNameField}
-                                            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                                            name="rek_org_unit_name"
                                             disabled={isSubmitting}
                                             validate={[validation.required]}
                                             required
