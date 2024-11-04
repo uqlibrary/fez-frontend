@@ -1,37 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { useFormContext } from 'react-hook-form';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+
 import { PolicyDropdown } from './PolicyDropdown';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, securitySelectorId }) => (
-    <Grid container spacing={1}>
-        {!!text.description && (
+export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, securitySelectorId }) => {
+    const methods = useFormContext();
+    return (
+        <Grid container spacing={1}>
+            {!!text.description && (
+                <Grid xs={12}>
+                    <Typography variant="body2" component="p">
+                        {text.description}
+                    </Typography>
+                </Grid>
+            )}
             <Grid xs={12}>
-                <Typography variant="body2" component="p">
-                    {text.description}
-                </Typography>
+                <Field
+                    control={methods.control}
+                    component={PolicyDropdown}
+                    name={fieldName}
+                    fieldLabel={text.fieldLabel}
+                    displayPrompt
+                    prompt={text.prompt}
+                    disabled={disabled}
+                    policyDropdownId={`${securitySelectorId}`}
+                />
             </Grid>
-        )}
-        <Grid xs={12}>
-            <Field
-                component={PolicyDropdown}
-                name={fieldName}
-                fieldLabel={text.fieldLabel}
-                displayPrompt
-                prompt={text.prompt}
-                disabled={disabled}
-                policyDropdownId={`${securitySelectorId}`}
-            />
+            {!!securityPolicy && (
+                <SelectedSecurityPolicyDescription title={text.selectedTitle} selectedPolicyKey={securityPolicy} />
+            )}
         </Grid>
-        {!!securityPolicy && (
-            <SelectedSecurityPolicyDescription title={text.selectedTitle} selectedPolicyKey={securityPolicy} />
-        )}
-    </Grid>
-);
+    );
+};
 
 SecuritySelector.propTypes = {
     disabled: PropTypes.bool,

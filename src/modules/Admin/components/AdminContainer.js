@@ -40,7 +40,7 @@ import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
 import NtroSection from './ntro/NtroSectionContainer';
-import SecuritySection from './security/SecuritySectionContainer';
+import SecuritySection from './security/SecurityCard';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
 const useFormOnChangeHook = methods => {
@@ -128,6 +128,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     useFormOnChangeHook(attributes);
     const recordToView = useRecordToView(record, createMode, attributes);
+    console.log(recordToView);
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();

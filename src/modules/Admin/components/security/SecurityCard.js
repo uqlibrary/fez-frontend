@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { useFormContext } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 
 import Grid from '@mui/material/Unstable_Grid2';
+
+import { useRecordContext } from 'context';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
+import { locale } from 'locale';
+import { publicationTypes } from 'config';
+
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 import OverrideSecurity from './OverrideSecurity';
 import InheritedSecurityDetails from './InheritedSecurityDetails';
 import DataStreamSecuritySelector from './DataStreamSecuritySelector';
 import SecuritySelector from './SecuritySelector';
-
-import { useRecordContext, useFormValuesContext } from 'context';
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
-import { locale } from 'locale';
-import { publicationTypes } from 'config';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 /**
  * Redux-form normalize callback
@@ -28,15 +31,20 @@ export const getRecordType = record =>
         ''
     ).toLowerCase() || null;
 
-export const SecurityCard = ({ disabled, isSuperAdmin }) => {
+export const SecurityCard = ({ disabled }) => {
+    const methods = useFormContext();
     const { record } = useRecordContext();
-    const { formValues } = useFormValuesContext();
-
+    const formValues = methods.getValues();
+    const isSuperAdmin = useSelector(state =>
+        Boolean(
+            ((state.get('accountReducer') /* istanbul ignore next */ || {}).authorDetails || {}).is_super_administrator,
+        ),
+    );
     const recordType = getRecordType(record);
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
-    const dataStreams = !!(formValues.dataStreams || {}).toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
+    const dataStreams = !!(formValues.dataStreams || {})?.toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
     const isOverrideSecurityChecked = formValues.rek_security_inherited === 0;
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
@@ -50,59 +58,63 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                     accentHeader
                     subCard
                 >
-                    <Grid container spacing={2} padding={0}>
-                        {recordType === RECORD_TYPE_RECORD && (
-                            <React.Fragment>
+                    {
+                        <Grid container spacing={2} padding={0}>
+                            {recordType === RECORD_TYPE_RECORD && (
+                                <React.Fragment>
+                                    <Grid xs={12}>
+                                        <InheritedSecurityDetails
+                                            title={text.inheritedPolicy.record.title}
+                                            collections={record.fez_record_search_key_ismemberof}
+                                            parentKey="rek_security_policy"
+                                        />
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={methods.control}
+                                            component={OverrideSecurity}
+                                            name="securitySection.rek_security_inherited"
+                                            label="Override inherited security (detailed below)"
+                                            normalize={overrideSecurityValueNormalizer}
+                                            disabled={disabled}
+                                            overrideSecurityId="rek-security-inherited"
+                                            value={methods.getValues('securitySection.rek_security_inherited') ?? ''}
+                                        />
+                                    </Grid>
+                                </React.Fragment>
+                            )}
+                            {(recordType === RECORD_TYPE_COMMUNITY ||
+                                recordType === RECORD_TYPE_COLLECTION ||
+                                (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
                                 <Grid xs={12}>
-                                    <InheritedSecurityDetails
-                                        title={text.inheritedPolicy.record.title}
-                                        collections={record.fez_record_search_key_ismemberof}
-                                        parentKey="rek_security_policy"
+                                    <SecuritySelector
+                                        disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
+                                        text={text}
+                                        fieldName="securitySection.rek_security_policy"
+                                        recordType={recordType}
+                                        securityPolicy={securityPolicy}
+                                        securitySelectorId="rek-security-policy"
                                     />
                                 </Grid>
+                            )}
+                            {recordType === RECORD_TYPE_COLLECTION && (
                                 <Grid xs={12}>
-                                    <Field
-                                        component={OverrideSecurity}
-                                        name="securitySection.rek_security_inherited"
-                                        label="Override inherited security (detailed below)"
-                                        normalize={overrideSecurityValueNormalizer}
-                                        disabled={disabled}
-                                        overrideSecurityId="rek-security-inherited"
+                                    <SecuritySelector
+                                        disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
+                                        text={{
+                                            prompt: text.prompt,
+                                            fieldLabel: text.dataStreamFieldLabel,
+                                            selectedTitle: text.dataStreamSelectedTitle,
+                                        }}
+                                        fieldName="securitySection.rek_datastream_policy"
+                                        recordType={recordType}
+                                        securityPolicy={dataStreamPolicy}
+                                        securitySelectorId="rek-datastream-policy"
                                     />
                                 </Grid>
-                            </React.Fragment>
-                        )}
-                        {(recordType === RECORD_TYPE_COMMUNITY ||
-                            recordType === RECORD_TYPE_COLLECTION ||
-                            (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
-                            <Grid xs={12}>
-                                <SecuritySelector
-                                    disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
-                                    text={text}
-                                    fieldName="securitySection.rek_security_policy"
-                                    recordType={recordType}
-                                    securityPolicy={securityPolicy}
-                                    securitySelectorId="rek-security-policy"
-                                />
-                            </Grid>
-                        )}
-                        {recordType === RECORD_TYPE_COLLECTION && (
-                            <Grid xs={12}>
-                                <SecuritySelector
-                                    disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
-                                    text={{
-                                        prompt: text.prompt,
-                                        fieldLabel: text.dataStreamFieldLabel,
-                                        selectedTitle: text.dataStreamSelectedTitle,
-                                    }}
-                                    fieldName="securitySection.rek_datastream_policy"
-                                    recordType={recordType}
-                                    securityPolicy={dataStreamPolicy}
-                                    securitySelectorId="rek-datastream-policy"
-                                />
-                            </Grid>
-                        )}
-                    </Grid>
+                            )}
+                        </Grid>
+                    }
                 </StandardCard>
             </Grid>
             {!!dataStreams && dataStreams.length > 0 && (
@@ -114,28 +126,32 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                             accentHeader
                             subCard
                         >
-                            <Grid container spacing={1} padding={0}>
-                                <Grid xs={12}>
-                                    <InheritedSecurityDetails
-                                        title={text.inheritedPolicy.dataStream.title}
-                                        collections={record.fez_record_search_key_ismemberof}
-                                        parentKey="rek_datastream_policy"
-                                    />
+                            {
+                                <Grid container spacing={1} padding={0}>
+                                    <Grid xs={12}>
+                                        <InheritedSecurityDetails
+                                            title={text.inheritedPolicy.dataStream.title}
+                                            collections={record.fez_record_search_key_ismemberof}
+                                            parentKey="rek_datastream_policy"
+                                        />
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={methods.control}
+                                            key={dataStreams.length}
+                                            component={DataStreamSecuritySelector}
+                                            name="securitySection.dataStreams"
+                                            attachedDataStreams={dataStreams}
+                                            {...{
+                                                disabled,
+                                                text: text.dataStream,
+                                            }}
+                                            collections={record.fez_record_search_key_ismemberof}
+                                            value={methods.getValues('securitySection.dataStreams') ?? ''}
+                                        />
+                                    </Grid>
                                 </Grid>
-                                <Grid xs={12}>
-                                    <Field
-                                        key={dataStreams.length}
-                                        component={DataStreamSecuritySelector}
-                                        name="securitySection.dataStreams"
-                                        attachedDataStreams={dataStreams}
-                                        {...{
-                                            disabled,
-                                            text: text.dataStream,
-                                        }}
-                                        collections={record.fez_record_search_key_ismemberof}
-                                    />
-                                </Grid>
-                            </Grid>
+                            }
                         </StandardCard>
                     </Grid>
                 </React.Fragment>
@@ -150,7 +166,7 @@ SecurityCard.propTypes = {
 };
 
 export function isSame(prevProps, nextProps) {
-    return prevProps.disabled === nextProps.disabled && prevProps.isSuperAdmin === nextProps.isSuperAdmin;
+    return prevProps.disabled === nextProps.disabled;
 }
 
 export default React.memo(SecurityCard, isSame);
