@@ -217,7 +217,6 @@ export const ThesisSubmission = () => {
         // fix org unit name
         data.fez_record_search_key_org_unit_name = { rek_org_unit_name: data.rek_org_unit_name };
         delete data.rek_org_unit_name;
-        dd(data);
         await dispatch(actions.submitThesis(data, {}, FORM_NAME));
     });
 
