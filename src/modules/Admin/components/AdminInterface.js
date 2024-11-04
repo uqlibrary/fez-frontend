@@ -5,6 +5,7 @@ import { destroy, Field } from 'redux-form/immutable';
 import { parseHtmlToJSX } from 'helpers/general';
 import queryString from 'query-string';
 import { styled } from '@mui/material/styles';
+import * as Sentry from '@sentry/react';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -110,7 +111,11 @@ export const AdminInterface = ({
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
 
-    const errorMessage = error && typeof error === 'object' ? ' ' : null;
+    const errorMessage = error?.message ?? '';
+    if (errorMessage) {
+        Sentry.captureMessage(`Error happened: ${errorMessage}`);
+    }
+
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
