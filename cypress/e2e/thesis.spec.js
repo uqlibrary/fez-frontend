@@ -187,13 +187,15 @@ context('Thesis', () => {
         it('should display session expired dialog', () => {
             cy.visit(`${baseUrl}/rhdsubmission?user=s5555555`);
 
-            // title
+            // Title
             cy.typeCKEditor('rek-title', 'a');
+            cy.typeCKEditor('rek-title', 'ab');
+            // Abstract
+            cy.typeCKEditor('rek-description', 'a');
+            cy.typeCKEditor('rek-description', 'ab');
             // subtype
             cy.get('[data-testid=rek-genre-type-select]').click();
             cy.get('li[data-value="MPhil Thesis"]').click();
-            // abstract
-            cy.typeCKEditor('rek-description', 'a');
             // unit
             cy.get('[data-testid=rek-org-unit-name-input]').type('a');
             cy.clickAutoSuggestion('rek-org-unit-name', 0);
@@ -208,21 +210,11 @@ context('Thesis', () => {
             });
             // files
             uploadFile('test.jpg');
+            uploadFile('test_two.jpg');
 
-            // rhf validation is async
-            cy.waitUntil(
-                () =>
-                    cy
-                        .get('[data-testid="deposit-thesis"]')
-                        .should('not.have.attr', 'disabled')
-                        .then(() => {
-                            cy.get('[data-testid="deposit-thesis"]').click();
-                            cy.get('H2').contains('Session Expired');
-                        }),
-                {
-                    timeout: 2000,
-                },
-            );
+            cy.get('[data-testid="thesis-submission-validation"]', { timeout: 5000 }).should('not.exist');
+            cy.get('[data-testid="deposit-thesis"]').click();
+            cy.get('H2', { timeout: 5000 }).contains('Session Expired');
         });
     });
 
@@ -270,8 +262,10 @@ context('Thesis', () => {
 
             // Title
             cy.typeCKEditor('rek-title', 'a');
+            cy.typeCKEditor('rek-title', 'ab');
             // Abstract
             cy.typeCKEditor('rek-description', 'a');
+            cy.typeCKEditor('rek-description', 'ab');
             // Enrolling unit
             cy.get('[data-testid=rek-org-unit-name-input]').type('a');
             cy.clickAutoSuggestion('rek-org-unit-name', 0);
@@ -282,21 +276,11 @@ context('Thesis', () => {
             cy.clickAutoSuggestion('rek-subject', 0);
             // Files
             uploadFile('test.jpg');
+            uploadFile('test_two.jpg');
 
-            // rhf validation is async
-            cy.waitUntil(
-                () =>
-                    cy
-                        .get('[data-testid="deposit-thesis"]')
-                        .should('not.have.attr', 'disabled')
-                        .then(() => {
-                            cy.get('[data-testid="deposit-thesis"]').click();
-                            cy.get('H2').contains('Session Expired');
-                        }),
-                {
-                    timeout: 2000,
-                },
-            );
+            cy.get('[data-testid="thesis-submission-validation"]', { timeout: 5000 }).should('not.exist');
+            cy.get('[data-testid="deposit-thesis"]').click();
+            cy.get('H2', { timeout: 5000 }).contains('Session Expired');
         });
     });
 });
