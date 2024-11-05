@@ -1,7 +1,7 @@
 import React from 'react';
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, act } from 'test-utils';
 import { preview } from 'test-utils';
 
 /* eslint-disable react/prop-types */
@@ -21,7 +21,7 @@ jest.mock('redux-form/immutable', () => ({
     },
 }));
 
-function setup(testProps, testState) {
+async function setup(testProps, testState) {
     const props = {
         disableSubmit: false,
         ...testProps,
@@ -37,13 +37,17 @@ function setup(testProps, testState) {
         ...testState,
     };
 
-    return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter>
-                <CollectionForm {...props} />
-            </WithRouter>
-        </WithReduxStore>,
-    );
+    let renderResult;
+    await act(async () => {
+        renderResult = render(
+            <WithReduxStore initialState={Immutable.Map(state)}>
+                <WithRouter>
+                    <CollectionForm {...props} />
+                </WithRouter>
+            </WithReduxStore>,
+        );
+    });
+    return renderResult;
 }
 
 describe('Collection form', () => {
@@ -131,9 +135,9 @@ describe('Collection form - redirections', () => {
 });
 
 describe('Collection form - autofill', () => {
-    it('should render without dropdown if params exist', () => {
+    it('should render without dropdown if params exist', async () => {
         window.history.pushState({}, 'Test Title', '?pid=10&name=test');
-        const { queryByTestId } = setup({});
+        const { queryByTestId } = await setup({});
         expect(queryByTestId('community-selector')).not.toBeInTheDocument();
     });
 });
