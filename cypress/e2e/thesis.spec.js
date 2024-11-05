@@ -183,7 +183,7 @@ context('Thesis', () => {
 
     // this can't be simply tested via a jest test, as the session expired dialog is
     // controlled up higher in the component tree
-    it.only('Should display session expired dialog', () => {
+    it('Should display session expired dialog', () => {
         cy.visit(`${baseUrl}/rhdsubmission?user=s5555555`);
 
         // title
