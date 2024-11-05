@@ -14,7 +14,6 @@ import {
     addFilesToFileUploader,
     waitForTextToBeRemoved,
     waitForText,
-    preview,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import Immutable from 'immutable';
@@ -130,7 +129,6 @@ describe('ThesisSubmission', () => {
             () => screen.getByText(new RegExp(formLocale.thesisSubmission.fileUpload.failedAlertLocale.title, 'i')),
             waitForOptions,
         );
-        preview.debug();
         await userEvent.click(
             screen.getByText(formLocale.thesisSubmission.fileUpload.failedAlertLocale.actionButtonLabel),
         );
