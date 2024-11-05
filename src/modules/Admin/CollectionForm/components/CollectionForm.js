@@ -44,16 +44,15 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
             rek_title: '',
             rek_description: '',
             fez_record_search_key_keywords: '',
-            internalNotes: '',
+            internalNotes: null,
         },
     });
     const formValues = watch();
-    console.log('formValues', formValues, 'formValues', Object.keys(formValues).length);
+    // console.log('formValues', formValues, 'formValues', Object.keys(formValues).length);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
         const data = { ...values, ...getNotesSectionSearchKeys(values) };
-        console.log('data=', data);
 
         delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
 
