@@ -189,16 +189,16 @@ context('Thesis', () => {
 
             // Title
             cy.typeCKEditor('rek-title', 'a');
-            cy.typeCKEditor('rek-title', 'ab');
-            // Abstract
-            cy.typeCKEditor('rek-description', 'a');
-            cy.typeCKEditor('rek-description', 'ab');
             // subtype
             cy.get('[data-testid=rek-genre-type-select]').click();
             cy.get('li[data-value="MPhil Thesis"]').click();
+            // Abstract
+            cy.typeCKEditor('rek-description', 'a');
             // unit
             cy.get('[data-testid=rek-org-unit-name-input]').type('a');
             cy.clickAutoSuggestion('rek-org-unit-name', 0);
+            // filling this field once doesn't aways clear validation errors in this context
+            cy.typeCKEditor('rek-title', 'ab');
             // supervisors
             cy.get('[data-testid=rek-supervisor-input]').type('a{enter}', { delay: 30 });
             // FoR
@@ -208,6 +208,7 @@ context('Thesis', () => {
             cy.get('[data-testid=rek-keywords-input]').type('a{enter}', {
                 delay: 30,
             });
+            cy.typeCKEditor('rek-description', 'ab');
             // files
             uploadFile('test.jpg');
             uploadFile('test_two.jpg');
@@ -262,18 +263,19 @@ context('Thesis', () => {
 
             // Title
             cy.typeCKEditor('rek-title', 'a');
-            cy.typeCKEditor('rek-title', 'ab');
             // Abstract
             cy.typeCKEditor('rek-description', 'a');
-            cy.typeCKEditor('rek-description', 'ab');
             // Enrolling unit
             cy.get('[data-testid=rek-org-unit-name-input]').type('a');
             cy.clickAutoSuggestion('rek-org-unit-name', 0);
+            // filling this field once doesn't aways clear validation errors in this context
+            cy.typeCKEditor('rek-title', 'ab');
             // Supervisors
             cy.get('[data-testid=rek-supervisor-input]').type('Ky Lane{enter}', { delay: 30 });
             // Field of Research
             cy.get('[data-testid=rek-subject-input]').type('a');
             cy.clickAutoSuggestion('rek-subject', 0);
+            cy.typeCKEditor('rek-description', 'ab');
             // Files
             uploadFile('test.jpg');
             uploadFile('test_two.jpg');
