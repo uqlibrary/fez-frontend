@@ -284,13 +284,6 @@ export const getRoutesConfig = ({
                         ]
                       : []),
                   {
-                      path: pathConfig.authorIdentifiers.googleScholar.link,
-                      element: <components.GoogleScholar />,
-                      access: [roles.researcher, roles.admin],
-                      exact: true,
-                      pageTitle: locale.pages.googleScholarLink.title,
-                  },
-                  {
                       path: pathConfig.editorialAppointments.list,
                       element: <components.MyEditorialAppointments />,
                       access: [roles.researcher, roles.admin],
