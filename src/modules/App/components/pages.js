@@ -48,7 +48,6 @@ export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
 );
 export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/containers/FixRecord')));
-export const GoogleScholar = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/GoogleScholar')));
 export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
 export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));
 export const ManageUsers = lazy(() => lazyRetry(() => import('modules/Admin/ManageUsers')));
