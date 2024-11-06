@@ -13,8 +13,6 @@ import {
 } from 'test-utils';
 import * as repositories from 'repositories';
 import * as SearchActions from 'actions/search';
-import { preview } from 'test-utils';
-import { screen } from '@testing-library/react';
 import { collectionRecord, communityRecord, record } from 'mock/data';
 
 async function setup(testProps, testState) {
@@ -44,7 +42,6 @@ describe('Collection form - autofill', () => {
         await waitFor(() => {
             expect(queryByTestId('community-selector')).not.toBeInTheDocument();
         });
-        preview.debug();
     });
 });
 

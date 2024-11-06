@@ -48,7 +48,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         },
     });
     const formValues = watch();
-    console.log('formValues', formValues, 'isSubmitSuccessful', isSubmitSuccessful, 'newRecord=', newRecord);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
