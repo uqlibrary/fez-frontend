@@ -1,7 +1,8 @@
 import React from 'react';
-import NewListEditorField from './NewListEditorField';
 import { List } from 'immutable';
 import { rtlRender } from 'test-utils';
+
+import NewListEditorField from './NewListEditorField';
 import { GenericTemplate } from './components/GenericTemplate';
 import { FreeTextForm } from './components/FreeTextForm';
 

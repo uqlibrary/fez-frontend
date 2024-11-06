@@ -1,1 +1,1 @@
-export { default as JournalAdmin } from './containers/JournalAdmin';
+export { default as JournalAdmin } from './components/JournalAdminContainer';
