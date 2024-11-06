@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
@@ -17,29 +19,9 @@ export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the fut
 
 export const MONTH_UNSELECTED = -1;
 
-export class PartialDateForm extends PureComponent {
-    static propTypes = {
-        locale: PropTypes.object,
-        onChange: PropTypes.func,
-        dateFormat: PropTypes.string,
-        allowPartial: PropTypes.bool,
-        disabled: PropTypes.bool,
-        months: PropTypes.array,
-        floatingTitle: PropTypes.string.isRequired,
-        floatingTitleRequired: PropTypes.bool,
-        required: PropTypes.bool,
-        hasError: PropTypes.string,
-        disableFuture: PropTypes.bool,
-        input: PropTypes.object,
-        meta: PropTypes.shape({
-            initial: PropTypes.string,
-        }),
-        partialDateFormId: PropTypes.string.isRequired,
-        clearable: PropTypes.bool,
-    };
-
-    static defaultProps = {
-        locale: {
+const PartialDateForm = ({
+        control,
+        locale= {
             dayLabel: 'Day',
             monthLabel: 'Month',
             yearLabel: 'Year',
@@ -54,7 +36,11 @@ export class PartialDateForm extends PureComponent {
             minNumberCharCode: 48,
             maxNumberCharCode: 57,
         },
-        months: [
+        onChange,
+        dateFormat= 'YYYY-MM-DD',
+        allowPartial,
+        disableFuture,
+        months= [
             'January',
             'February',
             'March',
@@ -68,15 +54,19 @@ export class PartialDateForm extends PureComponent {
             'November',
             'December',
         ],
-        dateFormat: 'YYYY-MM-DD',
-        allowPartial: false,
-        floatingTitle: 'Enter a date',
-        floatingTitleRequired: false,
-        disableFuture: false,
-    };
+        floatingTitle= 'Enter a date',
+        floatingTitleRequired,
+        required,
+        hasError,
+        disableFuture,
+        input,
+        meta,
+        partialDateFormId,
+        clearable,
+    }) => {
+        const { control } = useFormContext();
 
-    constructor(props) {
-        super(props);
+   
         const dateValue =
             // eslint-disable-next-line react/prop-types
             (props.value && moment(props.input.value)) ||
@@ -100,12 +90,12 @@ export class PartialDateForm extends PureComponent {
             };
         }
         this.errors = { day: '', month: '', year: '' };
-    }
+    
 
-    static getDerivedStateFromProps(props, state) {
-        props.onChange?.(state.setDate(state));
-        return { ...state };
-    }
+    // static getDerivedStateFromProps(props, state) {
+    //     props.onChange?.(state.setDate(state));
+    //     return { ...state };
+    // }
 
     /**
      * validate the entered date field
@@ -113,7 +103,7 @@ export class PartialDateForm extends PureComponent {
      * @returns {int} returns one of STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, defined above
      * @private
      */
-    _validate = state => {
+    const _validate = state => {
         const { day: dayActual, month: monthActual, year } = state;
         // moment validation doesn't recognise -1 or empty string as a valid date
         const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
@@ -165,7 +155,7 @@ export class PartialDateForm extends PureComponent {
         return validationStatus;
     };
 
-    _displayErrors = (state, validationStatus, allowPartial, isRequired = '') => {
+    const _displayErrors = (state, validationStatus, allowPartial, isRequired = '') => {
         const isRequiredHere = isRequired === '' ? this.props.required : isRequired;
 
         const { day, month, year } = state;
@@ -226,11 +216,11 @@ export class PartialDateForm extends PureComponent {
         }
     };
 
-    _isUnselected(month) {
+    const _isUnselected = (month) {
         return month === MONTH_UNSELECTED || month === null;
     }
 
-    _setDate = date => {
+    const _setDate = date => {
         const validationStatus = this._validate(date);
 
         this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
@@ -243,7 +233,7 @@ export class PartialDateForm extends PureComponent {
         return validationStatus === STATUS_VALID ? moment(momentDate).format(this.props.dateFormat) : '';
     };
 
-    _isNumber = event => {
+    const _isNumber = event => {
         if (
             event.charCode < this.props.locale.minNumberCharCode ||
             event.charCode > this.props.locale.maxNumberCharCode
@@ -252,7 +242,7 @@ export class PartialDateForm extends PureComponent {
         }
     };
 
-    _onDateChanged = key => {
+    const _onDateChanged = key => {
         return (event, index, value) => {
             if (event.target.value === '') {
                 // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
@@ -268,8 +258,7 @@ export class PartialDateForm extends PureComponent {
         };
     };
 
-    render() {
-        const { locale, months } = this.props;
+   
         const renderMonths = months.map((month, index) => (
             <MenuItem key={index} value={index}>
                 {month}
@@ -286,9 +275,10 @@ export class PartialDateForm extends PureComponent {
                 <Grid xs={12}>
                     <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
                         <Grid xs>
-                            <TextField
+                            <Field
+                                control={control}
+                                name={`${this.props.partialDateFormId}-day`}
                                 variant="standard"
-                                name="day"
                                 id={`${this.props.partialDateFormId}-day`}
                                 type="text"
                                 fullWidth
@@ -310,10 +300,12 @@ export class PartialDateForm extends PureComponent {
                             {isError && <FormHelperText error>{isError}</FormHelperText>}
                         </Grid>
                         <Grid xs>
-                            <Select
+                            <Field
+                                control={control}
+                                component={Select}
+                                name={`${this.props.partialDateFormId}-month`}
                                 variant="standard"
                                 id={`${this.props.partialDateFormId}-month`}
-                                name="month"
                                 fullWidth
                                 error={!!isError}
                                 disabled={this.props.disabled}
@@ -342,12 +334,14 @@ export class PartialDateForm extends PureComponent {
                                     Month
                                 </MenuItem>
                                 {renderMonths}
-                            </Select>
+                            </Field>
                         </Grid>
                         <Grid xs>
-                            <TextField
+                            <Field
+                                control={control}
+                                component={TextField}
+                                name={`${this.props.partialDateFormId}-day`}
                                 variant="standard"
-                                name="year"
                                 id={`${this.props.partialDateFormId}-year`}
                                 type="text"
                                 fullWidth
@@ -371,7 +365,28 @@ export class PartialDateForm extends PureComponent {
                 </Grid>
             </Grid>
         );
-    }
 }
+
+PartialDateForm.propTypes = {
+    control: PropTypes.any,
+    locale: PropTypes.object,
+    onChange: PropTypes.func,
+    dateFormat: PropTypes.string,
+    allowPartial: PropTypes.bool,
+    disabled: PropTypes.bool,
+    months: PropTypes.array,
+    floatingTitle: PropTypes.string.isRequired,
+    floatingTitleRequired: PropTypes.bool,
+    required: PropTypes.bool,
+    hasError: PropTypes.string,
+    disableFuture: PropTypes.bool,
+    input: PropTypes.object,
+    meta: PropTypes.shape({
+        initial: PropTypes.string,
+    }),
+    partialDateFormId: PropTypes.string.isRequired,
+    clearable: PropTypes.bool,
+};
+
 
 export default PartialDateForm;

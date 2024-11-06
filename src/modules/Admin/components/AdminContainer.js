@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
@@ -32,20 +33,20 @@ import AdminInterface from './AdminInterface';
 
 import AddSection from './add/AddSection';
 import AdminSection from './admin/AdminSection';
-import AuthorsSection from './authors/AuthorsSection';
 import BibliographicSection from './bibliographic/BibliographicSection';
-import FilesSection from './files/FilesSectionContainer';
-import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
-import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
+import FilesSection from './files/FilesSection';
+import IdentifiersSection from './identifiers/IdentifiersSection';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
-import NtroSection from './ntro/NtroSectionContainer';
-import SecuritySection from './security/SecuritySectionContainer';
+import SecuritySection from './security/SecurityCard';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
+
+import AuthorsSection from './authors/AuthorsSection';
+import GrantInformationSection from './grantInformation/GrantInformationSection';
+import NtroSection from './ntro/NtroSection';
 
 const useFormOnChangeHook = methods => {
     const formValues = { ...useWatch({ control: methods.control }), ...methods.getValues() };
-
     if (!!formValues.filesSection?.fez_datastream_info) {
         const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
         let updated = false;
@@ -53,11 +54,9 @@ const useFormOnChangeHook = methods => {
             if (!!file.dsi_dsid_new) {
                 const oldFileName = file.dsi_dsid_new;
                 const newFileName = file.dsi_dsid;
-
                 const originalFileAttachmentIndex = attachments.findIndex(file => {
                     return file.rek_file_attachment_name === oldFileName;
                 });
-
                 if (originalFileAttachmentIndex > -1) {
                     updated = true;
                     // will be -1 if we've already done this operation before
@@ -78,31 +77,6 @@ const useFormOnChangeHook = methods => {
     }
 };
 
-/*
-{
-    authorDetails,
-    clearRecordToView,
-    createMode,
-    destroy,
-    dirty,
-    disableSubmit,
-    formErrors,
-    formValues,
-    handleSubmit,
-    isDeleted,
-    isJobCreated,
-    loadingRecordToView,
-    loadRecordToView,
-    locked,
-    recordToView,
-    recordToViewError,
-    submitSucceeded,
-    submitting,
-    unlockRecord,
-    params,
-    error,
-}
-    */
 export const AdminContainer = ({ createMode = false }) => {
     const dispatch = useDispatch();
     const { pid } = useParams();
@@ -229,37 +203,37 @@ export const AdminContainer = ({ createMode = false }) => {
                                                 ),
                                             numberOfErrors: tabErrors.current.bibliographicSection || null,
                                         },
-                                        authors: {
-                                            component: AuthorsSection,
-                                            activated: isActivated(),
-                                            numberOfErrors: tabErrors.current.authorsSection || null,
-                                            subComponent: {
-                                                title: 'NTRO',
-                                                component: NTRO_SUBTYPES.includes(
-                                                    attributes.getValues('adminSection.rek_subtype'),
-                                                )
-                                                    ? NtroSection
-                                                    : null,
-                                            },
-                                        },
+                                        // authors: {
+                                        //     component: AuthorsSection,
+                                        //     activated: isActivated(),
+                                        //     numberOfErrors: tabErrors.current.authorsSection || null,
+                                        //     subComponent: {
+                                        //         title: 'NTRO',
+                                        //         component: NTRO_SUBTYPES.includes(
+                                        //             attributes.getValues('adminSection.rek_subtype'),
+                                        //         )
+                                        //             ? NtroSection
+                                        //             : null,
+                                        //     },
+                                        // },
                                         identifiers: {
                                             component: IdentifiersSection,
                                             activated: isActivated(),
                                         },
-                                        grants: {
-                                            component: GrantInformationSection,
-                                            activated:
-                                                isActivated() &&
-                                                // Blacklist types without grant info
-                                                !(
-                                                    [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                        recordToView && recordToView.rek_display_type,
-                                                    ) ||
-                                                    [SUBTYPE_NON_NTRO].includes(
-                                                        attributes.getValues('adminSection.rek_subtype'),
-                                                    )
-                                                ),
-                                        },
+                                        // grants: {
+                                        //     component: GrantInformationSection,
+                                        //     activated:
+                                        //         isActivated() &&
+                                        //         // Blacklist types without grant info
+                                        //         !(
+                                        //             [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                        //                 recordToView && recordToView.rek_display_type,
+                                        //             ) ||
+                                        //             [SUBTYPE_NON_NTRO].includes(
+                                        //                 attributes.getValues('adminSection.rek_subtype'),
+                                        //             )
+                                        //         ),
+                                        // },
                                         notes: {
                                             component: NotesSection,
                                             activated:

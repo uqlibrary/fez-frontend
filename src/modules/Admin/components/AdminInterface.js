@@ -235,7 +235,6 @@ export const AdminInterface = ({
                     smallTitle
                 >
                     <TabComponent
-                        component={tabs[tab].component}
                         disabled={isSubmitting || (locked && record.rek_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
@@ -249,7 +248,6 @@ export const AdminInterface = ({
                         smallTitle
                     >
                         <TabComponent
-                            component={tabs[tab].subComponent.component}
                             disabled={
                                 isSubmitting ||
                                 (locked &&

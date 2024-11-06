@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { useFormContext } from 'react-hook-form';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -10,7 +11,7 @@ import InheritedSecurityDetails from './InheritedSecurityDetails';
 import DataStreamSecuritySelector from './DataStreamSecuritySelector';
 import SecuritySelector from './SecuritySelector';
 
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useRecordContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { locale } from 'locale';
 import { publicationTypes } from 'config';
@@ -30,7 +31,8 @@ export const getRecordType = record =>
 
 export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { record } = useRecordContext();
-    const { formValues } = useFormValuesContext();
+    const { control, getValues } = useFormContext();
+    const formValues = getValues();
 
     const recordType = getRecordType(record);
     const { ...rest } = locale.components.securitySection;
@@ -62,6 +64,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                 </Grid>
                                 <Grid xs={12}>
                                     <Field
+                                        control={control}
                                         component={OverrideSecurity}
                                         name="securitySection.rek_security_inherited"
                                         label="Override inherited security (detailed below)"
@@ -124,6 +127,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                 </Grid>
                                 <Grid xs={12}>
                                     <Field
+                                        control={control}
                                         key={dataStreams.length}
                                         component={DataStreamSecuritySelector}
                                         name="securitySection.dataStreams"
