@@ -5,6 +5,19 @@ import { render, WithReduxStore, WithRouter, fireEvent, act } from 'test-utils';
 import { preview } from 'test-utils';
 import { screen } from '@testing-library/react';
 
+beforeAll(() => {
+    // Mock console.error to suppress the warning
+    jest.spyOn(console, 'warn').mockImplementation(message => {
+        if (
+            message.includes(
+                'Selector unknown returned a different result when called with the same parameters. This can lead to unnecessary rerenders',
+            )
+        )
+            return; // Ignore the specific warning message
+        console.error(message); // Otherwise, log the message
+    });
+});
+
 /* eslint-disable react/prop-types */
 jest.mock('redux-form/immutable', () => ({
     Field: props => {
@@ -27,7 +40,6 @@ async function setup(testProps, testState) {
         disableSubmit: false,
         ...testProps,
     };
-
     const state = {
         communitiesReducer: {
             itemsList: [
