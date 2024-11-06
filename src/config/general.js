@@ -24,6 +24,7 @@ export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
+export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
@@ -32,7 +33,7 @@ export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 export const IS_DEVELOPMENT_SERVER =
     APP_URL.indexOf('localhost') > -1 || (!process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1);
 
-export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
+export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'http://orcid.org';
@@ -611,6 +612,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    csv: 'csv',
 };
 
 export const ORG_UNITS_VOCAB_ID = 453703;
@@ -1348,13 +1350,6 @@ export const RECORD_ACTION_URLS = [
         showInDeleted: false,
         options: null,
         isChangeDisplayMenu: true,
-    },
-    {
-        label: 'More options',
-        url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
-        inApp: true,
-        showInDeleted: true,
-        options: null,
     },
 ];
 export const JOURNAL_ACTION_URLS = [

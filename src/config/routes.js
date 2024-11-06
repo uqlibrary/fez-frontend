@@ -341,6 +341,17 @@ export const getRoutesConfig = ({
                   },
               ]
             : []),
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+            ? [
+                  {
+                      path: pathConfig.admin.dashboard,
+                      element: <components.AdminDashboard />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.adminDashboard.title,
+                  },
+              ]
+            : []),
         ...(authorDetails && isAdmin(authorDetails)
             ? [
                   {
@@ -575,6 +586,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
 
     return [
         ...homePage,
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+            ? [
+                  {
+                      linkTo: pathConfig.admin.dashboard,
+                      ...locale.menu.adminDashboard,
+                  },
+              ]
+            : []),
         ...(account && isAuthor
             ? [
                   {
@@ -672,10 +691,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.admin.controlledVocabularies,
                       ...locale.menu.controlledVocabularies,
-                  },
-                  {
-                      linkTo: pathConfig.admin.legacyEspace,
-                      ...locale.menu.legacyEspace,
                   },
                   {
                       linkTo: pathConfig.digiteam.batchImport,

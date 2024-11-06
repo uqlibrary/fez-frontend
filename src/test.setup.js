@@ -19,6 +19,22 @@ import prettyFormat from 'pretty-format';
 import TestRenderer from 'react-test-renderer';
 import ShallowRenderer from 'react-test-renderer/shallow';
 
+jest.mock('@mui/x-charts', () => ({
+    ResponsiveChartContainer: jest.fn().mockImplementation(({ children }) => {
+        return children;
+    }),
+    BarChart: jest.fn().mockImplementation(({ children }) => {
+        return children;
+    }),
+    GaugeContainer: jest.fn().mockImplementation(({ children }) => children),
+    GaugeValueArc: jest.fn().mockImplementation(({ children }) => children),
+    GaugeReferenceArc: jest.fn().mockImplementation(({ children }) => children),
+    useGaugeState: jest.fn(),
+    GaugeValueText: jest.fn().mockImplementation(({ children }) => children),
+    ChartsText: jest.fn().mockImplementation(({ children }) => children),
+    PiePlot: jest.fn().mockImplementation(({ children }) => children),
+}));
+
 // jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
 // setup global fetch for navigate in jest
