@@ -1255,6 +1255,13 @@ export default {
         afterSubmit: undefined,
         fileUpload: {
             ...thesisSubmission.fileUpload,
+            failedAlertLocale: {
+                ...thesisSubmission.fileUpload.failedAlertLocale,
+                messageWithRetry:
+                    "There was an issue uploading your thesis files. You can try uploading again by clicking the 'Retry upload' button, but if you continue to have trouble uploading, please contact [linkStart]UQ eSpace[linkEnd].",
+                message: 'Not all files were uploaded. Please contact [linkStart]UQ eSpace[linkEnd] for assistance.',
+                emailRecipient: 'espace@library.uq.edu.au',
+            },
             locate: {
                 ...thesisSubmission.fileUpload.locale,
                 accessTermsAndConditions: undefined,

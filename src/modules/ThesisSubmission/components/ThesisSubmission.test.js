@@ -253,11 +253,14 @@ describe('ThesisSubmission', () => {
                     .replyOnce(200, {});
 
                 mockRichEditorFieldValues();
-                setup({ isHdrThesis: true });
+                const { queryByText, getByTestId } = setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
                 await fillUpForm();
                 await submitForm();
                 await confirmDeposit();
+
+                await waitFor(() => expect(getByTestId('alert-message')).toHaveTextContent('Graduate School'));
+                expect(queryByText('UQ eSpace')).not.toBeInTheDocument();
                 await retryUpload();
 
                 await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
@@ -431,11 +434,14 @@ describe('ThesisSubmission', () => {
                     .replyOnce(200, {});
 
                 mockRichEditorFieldValues();
-                setup();
+                const { getByTestId } = setup();
                 await assertValidationErrorSummary();
                 await fillUpSbsForm();
                 await submitForm();
                 await confirmDeposit();
+
+                await waitForText('UQ eSpace');
+                expect(getByTestId('alert-message')).not.toHaveTextContent('Graduate School');
                 await retryUpload();
 
                 await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
