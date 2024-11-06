@@ -48,7 +48,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         },
     });
     const formValues = watch();
-    // console.log('formValues', formValues, 'formValues', Object.keys(formValues).length);
+    console.log('formValues', formValues, 'isSubmitSuccessful', isSubmitSuccessful, 'newRecord=', newRecord);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
@@ -112,12 +112,18 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                 <Grid container spacing={2}>
                     <Grid xs />
                     <Grid>
-                        <Button variant="contained" fullWidth onClick={reloadForm}>
+                        <Button variant="contained" fullWidth onClick={reloadForm} data-testid="add-another-collection">
                             {txt.reloadFormButton}
                         </Button>
                     </Grid>
                     <Grid>
-                        <Button variant="contained" color="primary" fullWidth onClick={afterSubmit}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            onClick={afterSubmit}
+                            data-testid="return-home"
+                        >
                             {txt.afterSubmitButton}
                         </Button>
                     </Grid>
