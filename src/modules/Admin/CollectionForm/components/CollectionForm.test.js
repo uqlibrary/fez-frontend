@@ -21,11 +21,12 @@ beforeAll(() => {
     });
 
     delete window.location; // Delete location to redefine it
-    window.location = { reload: jest.fn() }; // Mock reload function
+    window.location = { reload: jest.fn(), assign: jest.fn() }; // Mock reload function
 });
 
 afterAll(() => {
     window.location.reload.mockRestore(); // Restore original reload after tests
+    window.location.assign.mockRestore(); // Restore original reload after tests
 });
 
 async function setup(testProps, testState) {
@@ -84,6 +85,9 @@ describe('Collection form', () => {
 
         fireEvent.click(getByTestId('add-another-collection'));
         expect(window.location.reload).toHaveBeenCalled();
+
+        fireEvent.click(getByTestId('return-home'));
+        expect(window.location.assign).toHaveBeenCalledWith('/');
     });
 
     it('should render success panel', async () => {
