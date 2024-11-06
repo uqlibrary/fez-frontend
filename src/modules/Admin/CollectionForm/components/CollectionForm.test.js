@@ -19,6 +19,13 @@ beforeAll(() => {
             return; // Ignore the specific warning message
         console.error(message); // Otherwise, log the message
     });
+
+    delete window.location; // Delete location to redefine it
+    window.location = { reload: jest.fn() }; // Mock reload function
+});
+
+afterAll(() => {
+    window.location.reload.mockRestore(); // Restore original reload after tests
 });
 
 async function setup(testProps, testState) {
@@ -74,6 +81,9 @@ describe('Collection form', () => {
         await userEvent.type(getByTestId('rek-description-input'), 'test');
         fireEvent.click(getByTestId('submit-collection'));
         await waitForElementToBeRemoved(() => getByTestId('rek-title-input'));
+
+        fireEvent.click(getByTestId('add-another-collection'));
+        expect(window.location.reload).toHaveBeenCalled();
     });
 
     it('should render success panel', async () => {
