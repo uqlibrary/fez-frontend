@@ -432,7 +432,6 @@
             "!src/modules/AuthorIdentifiers/components/**",
             "!src/modules/BulkUpdates/**",
             "!src/modules/MyEditorialAppointments/**",
-            "!src/modules/SbsSubmission/components/**",
             "!src/modules/SharedComponents/Toolbox/ScrollToSection/components/**",
             "!src/modules/SharedComponents/Toolbox/TabbedCard/components/**",
             "!src/modules/ThirdPartyLookupTool/components/**",

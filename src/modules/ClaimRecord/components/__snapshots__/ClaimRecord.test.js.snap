@@ -5816,13 +5816,17 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                       <b>
                         Error - 
                       </b>
-                      <span>
-                        This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
-                        <a
-                          href="mailto:espace@library.uq.edu.au"
-                        >
-                          espace@library.uq.edu.au
-                        </a>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                          <a
+                            href="mailto:espace@library.uq.edu.au"
+                          >
+                            espace@library.uq.edu.au
+                          </a>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -7194,7 +7198,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                               <b>
                                 Success - 
                               </b>
-                              Successfully added 1 file(s) to upload queue.
+                              <span
+                                data-testid="alert-message"
+                              >
+                                Successfully added 1 file(s) to upload queue.
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -7239,7 +7247,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                               <b>
                                 Notice - 
                               </b>
-                              During peak times, there may be a delay before newly uploaded files appear on the record.
+                              <span
+                                data-testid="alert-message"
+                              >
+                                During peak times, there may be a delay before newly uploaded files appear on the record.
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -7567,7 +7579,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       <b>
                         Success - 
                       </b>
-                      Publication claim has been submitted successfully.
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Publication claim has been submitted successfully.
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -8024,13 +8040,17 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                       <b>
                         Error - 
                       </b>
-                      <span>
-                        This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
-                        <a
-                          href="mailto:espace@library.uq.edu.au"
-                        >
-                          espace@library.uq.edu.au
-                        </a>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                          <a
+                            href="mailto:espace@library.uq.edu.au"
+                          >
+                            espace@library.uq.edu.au
+                          </a>
+                        </span>
                       </span>
                     </div>
                   </div>

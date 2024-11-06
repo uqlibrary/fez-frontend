@@ -24,7 +24,7 @@ import * as repositories from '../../../repositories';
 
 jest.mock('../../../context');
 
-import ThesisSubmission, { afterSubmit, cancelSubmit } from './ThesisSubmission';
+import ThesisSubmission, { getFormConstants } from './ThesisSubmission';
 
 const mockUseNavigate = jest.fn();
 /* eslint-disable react/prop-types */
@@ -61,7 +61,7 @@ function setup(props = {}) {
     return render(
         <WithReduxStore initialState={state}>
             <WithRouter>
-                <ThesisSubmission />
+                <ThesisSubmission isHdrThesis={!!props.isHdrThesis} />
             </WithRouter>
         </WithReduxStore>,
     );
@@ -74,8 +74,10 @@ describe('ThesisSubmission', () => {
 
     const mockRichEditorFieldValues = values => {
         mockUseValidatedForm((props, original) => {
-            props.values.thesisTitle = values?.thesisTitle || 'thesis title';
-            props.values.thesisAbstract = values?.thesisAbstract || 'thesis abstract';
+            props.values.thesisTitle = values?.hasOwnProperty('thesisTitle') ? values.thesisTitle : 'thesis title';
+            props.values.thesisAbstract = values?.hasOwnProperty('thesisAbstract')
+                ? values.thesisAbstract
+                : 'thesis thesisAbstract';
             return original(props);
         });
     };
@@ -151,183 +153,372 @@ describe('ThesisSubmission', () => {
         mockApi.resetHandlers();
     });
 
-    it('should display error summary according to invalid fields', async () => {
-        const { getByTestId, queryByText } = setup();
-        await assertValidationErrorSummary();
+    describe('HDR submission', () => {
+        describe('form', () => {
+            it('should display error summary according to invalid fields', async () => {
+                mockRichEditorFieldValues({ thesisTitle: undefined, thesisAbstract: undefined });
+                const { getByTestId, queryByText, getByRole } = setup({ isHdrThesis: true });
+                await assertValidationErrorSummary();
 
-        await waitForText('Thesis title is required');
-        await waitForText('Thesis type is required');
-        await waitForText('Enrolling unit is required');
-        await waitForText('Thesis abstract is required');
-        await waitForText('Supervisor names are required');
-        await waitForText('Field of research (FoR) codes are required');
-        await waitForText('Keywords are required');
-        await waitForText('File submission to be completed');
+                await waitForText('Thesis title is required');
+                await waitForText('Thesis type is required');
+                await waitForText('Enrolling unit is required');
+                await waitForText('Thesis abstract is required');
+                await waitForText('Supervisor names are required');
+                await waitForText('Field of research (FoR) codes are required');
+                await waitForText('Keywords are required');
+                await waitForText('File submission to be completed');
 
-        await userEvent.click(getByTestId('rek-genre-type-select'));
-        await userEvent.click(queryByText('PhD Thesis'));
-        await waitForTextToBeRemoved('Thesis type is required');
+                await userEvent.click(getByTestId('rek-genre-type-select'));
+                await userEvent.click(queryByText('PhD Thesis'));
+                await waitForTextToBeRemoved('Thesis type is required');
 
-        await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
-        await waitForTextToBeRemoved('Enrolling unit is required');
+                await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
+                await waitForTextToBeRemoved('Enrolling unit is required');
 
-        await userEvent.type(screen.getByTestId('rek-supervisor-input'), 'J.Smith');
-        await userEvent.click(screen.getByRole('button', { name: 'Add supervisor' }));
-        await waitForTextToBeRemoved('Supervisor names are required');
+                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
+                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await waitForTextToBeRemoved('Supervisor names are required');
 
-        await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
-        await waitForText('0101 Pure Mathematics');
-        await userEvent.click(screen.queryByText('0101 Pure Mathematics'));
-        await waitForTextToBeRemoved('Field of research (FoR) codes are required');
+                await userEvent.type(getByTestId('rek-subject-input'), '01');
+                await waitForText('0101 Pure Mathematics');
+                await userEvent.click(queryByText('0101 Pure Mathematics'));
+                await waitForTextToBeRemoved('Field of research (FoR) codes are required');
 
-        await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
-        await userEvent.click(screen.getByTestId('rek-keywords-add'));
-        await waitForTextToBeRemoved('Keywords are required');
+                await userEvent.type(getByTestId('rek-keywords-input'), 'keyword');
+                await userEvent.click(getByTestId('rek-keywords-add'));
+                await waitForTextToBeRemoved('Keywords are required');
 
-        addFilesToFileUploader(fileMock);
-        await waitForTextToBeRemoved('File submission to be completed');
+                addFilesToFileUploader(fileMock);
+                await waitForTextToBeRemoved('File submission to be completed');
+            });
+
+            it('should display error summary according to invalid rich editor fields', async () => {
+                mockRichEditorFieldValues({ thesisTitle: 'abc' });
+                const { queryByText } = setup();
+                await assertValidationErrorSummary();
+
+                expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
+            });
+
+            it('should display error summary according to invalid rich editor fields', async () => {
+                mockRichEditorFieldValues({ thesisAbstract: 'abc' });
+                const { queryByText } = setup();
+                await assertValidationErrorSummary();
+
+                expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
+            });
+
+            it('should show alert message not the thesis submission form to students not in the transition cohort', () => {
+                const { getByText } = setup({ author: { aut_org_student_id: 's333333' }, isHdrThesis: true });
+                expect(getByText(/HDR theses are now submitted via the UQ Research Data Manager/i)).toBeInTheDocument();
+            });
+
+            it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+                    .onPut('s3-ap-southeast-2.amazonaws.com')
+                    .replyOnce(200, {});
+
+                mockRichEditorFieldValues();
+                setup({ isHdrThesis: true });
+                await assertValidationErrorSummary();
+                await fillUpForm();
+                await submitForm();
+                await confirmDeposit();
+
+                await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
+            });
+
+            it('should display file upload error and successfully upload after a retry', async () => {
+                const pid = 'UQ:123456';
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: pid } })
+                    // file upload failure
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    // automatic retry
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+                    .replyOnce(200, { data: {} })
+                    // manual file upload retry
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+                    .onPut('s3-ap-southeast-2.amazonaws.com')
+                    .replyOnce(200, {});
+
+                mockRichEditorFieldValues();
+                const { queryByText, getByTestId } = setup({ isHdrThesis: true });
+                await assertValidationErrorSummary();
+                await fillUpForm();
+                await submitForm();
+                await confirmDeposit();
+
+                await waitFor(() => expect(getByTestId('alert-message')).toHaveTextContent('Graduate School'));
+                expect(queryByText('UQ eSpace')).not.toBeInTheDocument();
+                await retryUpload();
+
+                await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
+            });
+
+            it('should display file upload error and show error message after failed retry', async () => {
+                const pid = 'UQ:123456';
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: pid } })
+                    // file upload failure
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+                    .replyOnce(200, { data: {} });
+
+                mockRichEditorFieldValues();
+                const { getByText } = setup({ isHdrThesis: true });
+                await assertValidationErrorSummary();
+                await fillUpForm();
+                await submitForm();
+                await confirmDeposit();
+                await retryUpload();
+
+                // assert error message
+                await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
+            });
+
+            it('should show server error while trying to create the thesis', async () => {
+                mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
+
+                mockRichEditorFieldValues();
+                setup({ isHdrThesis: true });
+                await assertValidationErrorSummary();
+                await fillUpForm();
+                await submitForm();
+                await confirmDeposit();
+
+                await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
+                assertEnabled('deposit-thesis');
+            });
+        });
+
+        describe('redirections', () => {
+            const { location } = window;
+
+            beforeAll(() => {
+                delete window.location;
+                window.location = { assign: jest.fn(), reload: jest.fn() };
+            });
+
+            afterEach(() => {
+                window.location.assign.mockClear();
+                window.location.reload.mockClear();
+            });
+
+            afterAll(() => {
+                window.location = location;
+            });
+
+            it('should redirect to cancel page', () => {
+                const { cancelSubmit } = getFormConstants({}, {}, true);
+                cancelSubmit();
+                expect(window.location.assign).toBeCalledWith(
+                    expect.stringContaining(formLocale.thesisSubmission.cancelLink),
+                );
+            });
+
+            it('should redirect to after submit page', () => {
+                const { afterSubmit } = getFormConstants({}, {}, true);
+                afterSubmit();
+                expect(window.location.assign).toBeCalledWith(
+                    expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
+                );
+            });
+        });
     });
 
-    it('should display error summary according to invalid rich editor fields', async () => {
-        mockRichEditorFieldValues({ thesisTitle: 'abc' });
-        const { queryByText } = setup();
-        await assertValidationErrorSummary();
+    describe('SBS submission', () => {
+        const fillUpSbsForm = async () => {
+            await userEvent.type(screen.getByTestId('comments-input'), 'comments');
+            await fillUpForm();
+        };
+        describe('form', () => {
+            it('should display error summary according to invalid fields', async () => {
+                mockRichEditorFieldValues({ thesisTitle: undefined, thesisAbstract: undefined });
+                const { getByTestId, queryByText, getByRole } = setup();
+                await assertValidationErrorSummary();
 
-        expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
-    });
+                await waitForText('Thesis title is required');
+                await waitForText('Enrolling unit is required');
+                await waitForText('Thesis abstract is required');
+                await waitForText('Supervisor names are required');
+                await waitForText('Field of research (FoR) codes are required');
+                await waitForText('File submission to be completed');
 
-    it('should display error summary according to invalid rich editor fields', async () => {
-        mockRichEditorFieldValues({ thesisAbstract: 'abc' });
-        const { queryByText } = setup();
-        await assertValidationErrorSummary();
+                await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
+                await waitForTextToBeRemoved('Enrolling unit is required');
 
-        expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
-    });
+                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
+                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await waitForTextToBeRemoved('Supervisor names are required');
 
-    it('should show alert message not the thesis submission form to students not in the transition cohort', () => {
-        const { getByText } = setup({ author: { aut_org_student_id: 's333333' } });
-        expect(getByText(/HDR theses are now submitted via the UQ Research Data Manager/i)).toBeInTheDocument();
-    });
+                await userEvent.type(getByTestId('rek-subject-input'), '01');
+                await waitForText('0101 Pure Mathematics');
+                await userEvent.click(queryByText('0101 Pure Mathematics'));
+                await waitForTextToBeRemoved('Field of research (FoR) codes are required');
 
-    it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
-        mockApi
-            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-            .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-            .onPut('s3-ap-southeast-2.amazonaws.com')
-            .replyOnce(200, {});
+                addFilesToFileUploader(fileMock);
+                await waitForTextToBeRemoved('File submission to be completed');
+            });
 
-        mockRichEditorFieldValues();
-        setup();
-        await assertValidationErrorSummary();
-        await fillUpForm();
-        await submitForm();
-        await confirmDeposit();
+            it('should display error summary according to invalid rich editor fields', async () => {
+                mockRichEditorFieldValues({ thesisTitle: 'abc' });
+                const { queryByText } = setup();
+                await assertValidationErrorSummary();
 
-        await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
-    });
+                expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
+            });
 
-    it('should display file upload error and successfully upload after a retry', async () => {
-        const pid = 'UQ:123456';
-        mockApi
-            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-            .replyOnce(200, { data: { rek_pid: pid } })
-            // file upload failure
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            // automatic retry
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-            .replyOnce(200, { data: {} })
-            // manual file upload retry
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-            .onPut('s3-ap-southeast-2.amazonaws.com')
-            .replyOnce(200, {});
+            it('should display error summary according to invalid rich editor fields', async () => {
+                mockRichEditorFieldValues({ thesisAbstract: 'abc' });
+                const { queryByText } = setup();
+                await assertValidationErrorSummary();
 
-        mockRichEditorFieldValues();
-        setup();
-        await assertValidationErrorSummary();
-        await fillUpForm();
-        await submitForm();
-        await confirmDeposit();
-        await retryUpload();
+                expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
+            });
 
-        await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
-    });
+            it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+                    .onPut('s3-ap-southeast-2.amazonaws.com')
+                    .replyOnce(200, {});
 
-    it('should display file upload error and show error message after failed retry', async () => {
-        const pid = 'UQ:123456';
-        mockApi
-            .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-            .replyOnce(200, { data: { rek_pid: pid } })
-            // file upload failure
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-            .replyOnce(500)
-            .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-            .replyOnce(200, { data: {} });
+                mockRichEditorFieldValues();
+                setup();
+                await assertValidationErrorSummary();
+                await fillUpSbsForm();
+                await submitForm();
+                await confirmDeposit();
 
-        mockRichEditorFieldValues();
-        const { getByText } = setup();
-        await assertValidationErrorSummary();
-        await fillUpForm();
-        await submitForm();
-        await confirmDeposit();
-        await retryUpload();
+                await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
+            });
 
-        // assert error message
-        await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
-    });
+            it('should display file upload error and successfully upload after a retry', async () => {
+                const pid = 'UQ:123456';
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: pid } })
+                    // file upload failure
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    // automatic retry
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+                    .replyOnce(200, { data: {} })
+                    // manual file upload retry
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+                    .onPut('s3-ap-southeast-2.amazonaws.com')
+                    .replyOnce(200, {});
 
-    it('should show server error while trying to create the thesis', async () => {
-        mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
+                mockRichEditorFieldValues();
+                const { getByTestId } = setup();
+                await assertValidationErrorSummary();
+                await fillUpSbsForm();
+                await submitForm();
+                await confirmDeposit();
 
-        mockRichEditorFieldValues();
-        setup();
-        await assertValidationErrorSummary();
-        await fillUpForm();
-        await submitForm();
-        await confirmDeposit();
+                await waitForText('UQ eSpace');
+                expect(getByTestId('alert-message')).not.toHaveTextContent('Graduate School');
+                await retryUpload();
 
-        await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
-        assertEnabled('deposit-thesis');
-    });
-});
+                await waitForText(new RegExp('File upload retry succeeded', 'i'), waitForOptions);
+            });
 
-describe('ThesisSubmission form - redirections', () => {
-    const { location } = window;
+            it('should display file upload error and show error message after failed retry', async () => {
+                const pid = 'UQ:123456';
+                mockApi
+                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                    .replyOnce(200, { data: { rek_pid: pid } })
+                    // file upload failure
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(500)
+                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
+                    .replyOnce(200, { data: {} });
 
-    beforeAll(() => {
-        delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
-    });
+                mockRichEditorFieldValues();
+                const { getByText } = setup();
+                await assertValidationErrorSummary();
+                await fillUpSbsForm();
+                await submitForm();
+                await confirmDeposit();
+                await retryUpload();
 
-    afterEach(() => {
-        window.location.assign.mockClear();
-        window.location.reload.mockClear();
-    });
+                // assert error message
+                await waitFor(() => getByText(new RegExp('Not all files were uploaded', 'i')), waitForOptions);
+            });
 
-    afterAll(() => {
-        window.location = location;
-    });
+            it('should show server error while trying to create the thesis', async () => {
+                mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
 
-    it('should redirect to cancel page', () => {
-        cancelSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.cancelLink));
-    });
+                mockRichEditorFieldValues();
+                setup();
+                await assertValidationErrorSummary();
+                await fillUpSbsForm();
+                await submitForm();
+                await confirmDeposit();
 
-    it('should redirect to after submit page', () => {
-        afterSubmit();
-        expect(window.location.assign).toBeCalledWith(
-            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
-        );
+                await waitForText(formLocale.thesisSubmission.depositFailedMessage, waitForOptions);
+                assertEnabled('deposit-thesis');
+            });
+        });
+
+        describe('redirections', () => {
+            const { location } = window;
+
+            beforeAll(() => {
+                delete window.location;
+                window.location = { assign: jest.fn(), reload: jest.fn() };
+            });
+
+            afterEach(() => {
+                window.location.assign.mockClear();
+                window.location.reload.mockClear();
+            });
+
+            afterAll(() => {
+                window.location = location;
+            });
+
+            it('should reload after cancel', () => {
+                const { cancelSubmit } = getFormConstants({}, {});
+                cancelSubmit();
+                expect(window.location.reload).toBeCalled();
+            });
+
+            it('should reload after submit', () => {
+                const { afterSubmit } = getFormConstants({}, {});
+                afterSubmit();
+                expect(window.location.reload).toBeCalled();
+            });
+        });
     });
 });

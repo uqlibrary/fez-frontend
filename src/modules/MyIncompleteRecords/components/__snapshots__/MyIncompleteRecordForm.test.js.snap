@@ -249,7 +249,11 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
                       <b>
                         Missing data - 
                       </b>
-                      follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.
+                      <span
+                        data-testid="alert-message"
+                      >
+                        follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.
+                      </span>
                     </div>
                   </div>
                 </div>

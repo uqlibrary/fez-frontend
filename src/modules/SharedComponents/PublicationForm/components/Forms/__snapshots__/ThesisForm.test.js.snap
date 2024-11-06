@@ -76,41 +76,45 @@ exports[`ThesisForm  should render component 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                       >
                         <b />
-                        <p>
-                          Are you submitting a UQ Higher Degree by Research (HDR) thesis?
-                        </p>
-                        <ul>
-                          <li>
-                            If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please click 
-                            <a
-                              href="/rhdsubmission"
-                            >
-                              here
-                            </a>
-                            .
-                          </li>
-                          <li>
-                            If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
-                             
-                            <a
-                              href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
-                            >
-                              this process
-                            </a>
-                            . Please see the
-                             
-                            <a
-                              href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
-                            >
-                              UQRDM thesis submission guide
-                            </a>
-                             
-                            for more information.
-                          </li>
-                        </ul>
-                        <p>
-                          To deposit another thesis type, use the form below.
-                        </p>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          <p>
+                            Are you submitting a UQ Higher Degree by Research (HDR) thesis?
+                          </p>
+                          <ul>
+                            <li>
+                              If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please click 
+                              <a
+                                href="/rhdsubmission"
+                              >
+                                here
+                              </a>
+                              .
+                            </li>
+                            <li>
+                              If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                               
+                              <a
+                                href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
+                              >
+                                this process
+                              </a>
+                              . Please see the
+                               
+                              <a
+                                href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
+                              >
+                                UQRDM thesis submission guide
+                              </a>
+                               
+                              for more information.
+                            </li>
+                          </ul>
+                          <p>
+                            To deposit another thesis type, use the form below.
+                          </p>
+                        </span>
                       </div>
                     </div>
                   </div>

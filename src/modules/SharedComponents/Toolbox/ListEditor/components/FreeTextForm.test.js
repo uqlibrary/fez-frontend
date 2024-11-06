@@ -1,9 +1,14 @@
 import React from 'react';
 import FreeTextForm from './FreeTextForm';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, userEvent, screen } from 'test-utils';
 import { isValidIsbn, isValidKeyword } from 'config/validation';
 
 describe('FreeTextForm behaviour tests', () => {
+    const clearInput = async testId => {
+        await userEvent.clear(screen.getByTestId(testId));
+        expect(screen.getByTestId(testId)).toHaveValue('');
+    };
+
     it('should display input field with add button disabled and it should be enabled as soon as user has entered valid value in text field', () => {
         const { getByTestId } = rtlRender(
             <FreeTextForm
@@ -248,5 +253,41 @@ describe('FreeTextForm behaviour tests', () => {
         expect(getByTestId('test-input')).toHaveAttribute('aria-invalid', 'true');
         fireEvent.change(getByTestId('test-input'), { target: { value: 'test' } });
         expect(getByTestId('test-input')).toHaveAttribute('aria-invalid', 'false');
+    });
+
+    it('should only allow adding new items on enter key or by pressing add button for valid values', async () => {
+        const items = [];
+        const { getByTestId, getByText, queryByText } = rtlRender(
+            <FreeTextForm
+                onAdd={value => items.push(value)}
+                locale={{
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                }}
+                listEditorId="test"
+                isValid={isValidKeyword(5)}
+                normalize={jest.fn(value => value)}
+                mode="add"
+            />,
+        );
+
+        await userEvent.type(getByTestId('test-input'), 'testing{enter}');
+        expect(getByTestId('test-add')).toHaveAttribute('disabled');
+        expect(getByText('Limited to 5 characters')).toBeVisible();
+        expect(items).toHaveLength(0);
+
+        await clearInput('test-input');
+
+        await userEvent.type(getByTestId('test-input'), 'test{enter}');
+        expect(items).toEqual(['test']);
+
+        await clearInput('test-input');
+
+        await userEvent.type(getByTestId('test-input'), 'cats');
+        expect(getByTestId('test-add')).not.toHaveAttribute('disabled');
+        expect(queryByText('Limited to 5 characters')).not.toBeInTheDocument();
+        await userEvent.click(getByTestId('test-add'));
+        expect(items).toEqual(['test', 'cats']);
     });
 });
