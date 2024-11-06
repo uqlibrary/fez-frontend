@@ -1,9 +1,12 @@
 import React from 'react';
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent, act } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, act, waitForElementToBeRemoved, userEvent } from 'test-utils';
+import * as repositories from 'repositories';
+import * as SearchActions from 'actions/search';
 import { preview } from 'test-utils';
 import { screen } from '@testing-library/react';
+import { collectionRecord, communityRecord, record } from 'mock/data';
 
 beforeAll(() => {
     // Mock console.error to suppress the warning
@@ -18,42 +21,16 @@ beforeAll(() => {
     });
 });
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
-
 async function setup(testProps, testState) {
     const props = {
         disableSubmit: false,
         ...testProps,
     };
-    const state = {
-        communitiesReducer: {
-            itemsList: [
-                { rek_title: '<b>Community A</b>', rek_pid: '123' },
-                { rek_title: '<i>Community B</i>', rek_pid: '456' },
-            ],
-        },
-        ...testState,
-    };
 
     let renderResult;
     await act(async () => {
         renderResult = render(
-            <WithReduxStore initialState={Immutable.Map(state)}>
+            <WithReduxStore>
                 <WithRouter>
                     <CollectionForm {...props} />
                 </WithRouter>
@@ -69,6 +46,34 @@ describe('Collection form', () => {
         expect(container).toMatchSnapshot();
         expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
         expect(getAllByRole('button').length).toEqual(2);
+    });
+
+    it('should render the full form', async () => {
+        console.log('mock url=', repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl);
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl).reply(200, {
+            data: [
+                { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+            ],
+        });
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
+
+        const { getByText, getByTestId } = await setup({ newRecord: {} });
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+
+        fireEvent.mouseDown(getByTestId('rek-ismemberof-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        expect(getByTestId('rek-title-input')).toBeInTheDocument();
+        expect(getByTestId('rek-description-input')).toBeInTheDocument();
+        expect(getByTestId('rek-keywords-input')).toBeInTheDocument();
+        expect(getByTestId('internalNotes')).toBeInTheDocument();
+        expect(getByTestId('cancel-collection')).toBeInTheDocument();
+        expect(getByTestId('submit-collection')).toBeInTheDocument();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-title-input'));
     });
 
     it('should render success panel', async () => {
@@ -128,12 +133,5 @@ describe('Collection form - autofill', () => {
         window.history.pushState({}, 'Test Title', '?pid=10&name=test');
         const { queryByTestId, getByTestId } = await setup({});
         expect(queryByTestId('community-selector')).not.toBeInTheDocument();
-
-        expect(getByTestId('rek-title-input')).toBeInTheDocument();
-        expect(getByTestId('rek-description-input')).toBeInTheDocument();
-        expect(getByTestId('rek-keywords-input')).toBeInTheDocument();
-        expect(getByTestId('internalNotes')).toBeInTheDocument();
-        expect(getByTestId('cancel-collection')).toBeInTheDocument();
-        expect(getByTestId('submit-collection')).toBeInTheDocument();
     });
 });
