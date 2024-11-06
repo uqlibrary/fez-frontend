@@ -90,6 +90,10 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [perPage, currentPage, breadCrumbElements]);
 
+    React.useEffect(() => {
+        setCurrentPage(0);
+    }, [total]);
+
     return (
         <Box
             sx={{
