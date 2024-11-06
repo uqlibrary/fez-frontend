@@ -161,6 +161,42 @@ export const createMatchMedia = width => {
     });
 };
 
+export const getFilenameExtension = filename => filename.split('.').pop();
+export const getFilenameBasename = filename =>
+    filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
+export const addFilesToFileUploader = files => {
+    const { screen, fireEvent } = reactTestingLib;
+    // create a list of Files
+    const fileList = files.map(file => {
+        // if file it's a string, treat it as a filename
+        if (typeof file === 'string') {
+            return new File([getFilenameBasename(file)], file, { type: `image/${getFilenameExtension(file)}` });
+        }
+        // otherwise expect it to be a object with filename and mimeType keys
+        return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
+    });
+    // drag and drop files
+    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
+        dataTransfer: {
+            files: fileList,
+            types: ['Files'],
+        },
+    });
+};
+export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
+
+export const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
+export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -176,4 +212,10 @@ module.exports = {
     createMatchMedia,
     preview,
     userEvent,
+    assertEnabled,
+    assertDisabled,
+    getFilenameExtension,
+    getFilenameBasename,
+    addFilesToFileUploader,
+    setFileUploaderFilesToClosedAccess,
 };

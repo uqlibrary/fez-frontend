@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -14,8 +13,8 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import locale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { showAppAlert, dismissAppAlert, resetSavingAuthorState, updateCurrentAuthor } from 'actions';
-
-const FORM_NAME = 'GoogleScholar';
+import { useValidatedForm } from '../../../hooks';
+import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 
 /**
  * Function to redirect user to Dashboard page
@@ -33,22 +32,27 @@ export const navigateToDashboard = navigate => {
  * @param {function} dispatch Dispatch function from redux store
  * @param {object} props All the props passed from the component
  */
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(updateCurrentAuthor(props.author.aut_id, values.toJS())).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, submitSucceeded, submitting }) => {
+export const GoogleScholarForm = ({ author }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const {
+        control,
+        safelyHandleSubmit,
+        formState: { isSubmitSuccessful, isSubmitting, hasServerError, serverError },
+    } = useValidatedForm({
+        mode: 'onChange',
+        defaultValues: {
+            aut_id: author?.aut_id,
+            aut_google_scholar_id: author?.aut_google_scholar_id,
+        },
+    });
 
     const txt = locale.pages.googleScholarLink;
-    const cardLocale = !!author && !author.aut_google_scholar_id ? txt.add : txt.edit;
+    const cardLocale = !author?.aut_google_scholar_id ? txt.add : txt.edit;
 
     React.useEffect(
         () => {
-            if (submitSucceeded) {
+            if (isSubmitSuccessful) {
                 dispatch(
                     showAppAlert({
                         ...locale.pages.googleScholarLink.successAlert,
@@ -59,51 +63,56 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
             }
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [submitSucceeded],
+        [isSubmitSuccessful],
     );
 
-    const handleKeyboardFormSubmit = event => {
-        event.key === 'Enter' && handleSubmit();
-    };
-
-    const handleCancel = () => navigateToDashboard(navigate);
+    const onSubmit = safelyHandleSubmit(async data => await dispatch(updateCurrentAuthor(author.aut_id, data)));
 
     const getAlert = () => {
         let alertProps = null;
-        if (submitFailed && error) {
+        if (!isSubmitting && hasServerError) {
             alertProps = {
                 ...txt.errorAlert,
-                message: error,
+                message: serverError?.message,
             };
-        } else if (submitting) {
+        } else if (isSubmitting) {
             alertProps = { ...txt.progressAlert };
         }
         return alertProps ? <Alert {...alertProps} /> : null;
     };
 
+    const handleCancel = () => navigateToDashboard(navigate);
+
     return (
         <StandardPage title={txt.title}>
-            <form onKeyDown={handleKeyboardFormSubmit}>
+            <form onSubmit={onSubmit}>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <StandardCard title={cardLocale.title} help={txt.help}>
                             {cardLocale.description}
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                    <Field
-                                        component={TextField}
-                                        disabled={submitting}
-                                        textFieldId="aut-google-scholar-id"
+                                    <Controller
                                         name="aut_google_scholar_id"
-                                        fullWidth
-                                        validate={[validation.required, validation.isValidGoogleScholarId]}
-                                        {...txt.labels.googleScholarIdField}
+                                        control={control}
+                                        rules={{
+                                            validate: value =>
+                                                validation.required(value) || validation.isValidGoogleScholarId(value),
+                                        }}
+                                        render={({ field }) => (
+                                            <TextField
+                                                {...field}
+                                                textFieldId="aut-google-scholar-id"
+                                                fullWidth
+                                                disabled={isSubmitting}
+                                                {...txt.labels.googleScholarIdField}
+                                            />
+                                        )}
                                     />
                                 </Grid>
                             </Grid>
                         </StandardCard>
                     </Grid>
-
                     {
                         <Grid item xs={12}>
                             {getAlert()}
@@ -119,21 +128,21 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
                             variant={'contained'}
                             color={'primary'}
                             fullWidth
-                            disabled={submitting}
+                            disabled={isSubmitting}
                             children={txt.labels.cancel}
                             onClick={handleCancel}
                         />
                     </Grid>
                     <Grid item xs={12} sm={'auto'}>
                         <Button
+                            type="submit"
                             id="submit-aut-google-scholar-id"
                             data-testid="submit-aut-google-scholar-id"
                             variant={'contained'}
                             color={'secondary'}
                             fullWidth
-                            disabled={submitting}
+                            disabled={isSubmitting}
                             children={txt.labels.submit}
-                            onClick={handleSubmit}
                         />
                     </Grid>
                 </Grid>
@@ -144,17 +153,7 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
 
 GoogleScholarForm.propTypes = {
     author: PropTypes.object,
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
-    submitFailed: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
 };
-
-export const GoogleScholarReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(GoogleScholarForm);
 
 export const GoogleScholar = () => {
     const navigate = useNavigate();
@@ -171,17 +170,7 @@ export const GoogleScholar = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const initialValues = !!author
-        ? { aut_id: author.aut_id, aut_google_scholar_id: author.aut_google_scholar_id }
-        : null;
-
-    return (
-        <GoogleScholarReduxForm
-            initialValues={initialValues}
-            author={author}
-            accountAuthorLoading={accountAuthorLoading}
-        />
-    );
+    return <GoogleScholarForm author={author} />;
 };
 
 export default React.memo(GoogleScholar);
