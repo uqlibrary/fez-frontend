@@ -37,12 +37,20 @@ async function setup(testProps, testState) {
 
 describe('Collection form - autofill', () => {
     it('should render without dropdown if params exist', async () => {
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
+
         window.history.pushState({}, 'Test Title', '?pid=10&name=test');
         const { queryByTestId, getByTestId } = await setup({});
-        // expect(queryByTestId('community-selector')).not.toBeInTheDocument();
         await waitFor(() => {
             expect(queryByTestId('community-selector')).not.toBeInTheDocument();
         });
+
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(queryByTestId('add-collection-progress-bar')).not.toBeInTheDocument();
     });
 });
 
