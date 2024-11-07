@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { propTypes } from 'redux-form/immutable';
-// import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from 'hooks';
 import { useDispatch } from 'react-redux';
@@ -27,8 +25,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import queryString from 'query-string';
 import { getNotesSectionSearchKeys } from '../../../../actions/transformers';
 import { createCollection } from '../../../../actions';
-// import { SubmissionError } from 'redux-form/immutable';
-// import { Propane } from '@mui/icons-material';
 
 export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     // form
