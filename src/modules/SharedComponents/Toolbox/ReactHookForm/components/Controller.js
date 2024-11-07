@@ -19,6 +19,8 @@ const getDecoratedField = (field, fieldState, formState) => {
     decoratedField.input = decoratedField;
     // to avoid `ref` & forwardRef() errors
     decoratedField.ref = null; // TODO make it conditional if required
+    // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
+    decoratedField.value = decoratedField.value || '';
     return decoratedField;
 };
 
