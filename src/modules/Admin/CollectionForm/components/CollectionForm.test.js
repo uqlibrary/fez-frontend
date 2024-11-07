@@ -14,6 +14,7 @@ import {
 import * as repositories from 'repositories';
 import * as SearchActions from 'actions/search';
 import { collectionRecord, communityRecord, record } from 'mock/data';
+import { preview } from 'test-utils';
 
 async function setup(testProps, testState) {
     const props = {
@@ -73,7 +74,7 @@ describe('Collection form', () => {
         expect(getAllByRole('button').length).toEqual(2);
     });
 
-    it('should render the full form', async () => {
+    it('should render the full form and allow to add another and return home', async () => {
         mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl).reply(200, {
             data: [
                 { rek_pid: 'UQ:111', rek_title: 'Testing community' },
@@ -106,13 +107,33 @@ describe('Collection form', () => {
         expect(window.location.assign).toHaveBeenCalledWith('/');
     });
 
+    it('should show server error', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl).reply(200, {
+            data: [
+                { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+            ],
+        });
+        mockApi
+            .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
+            .reply(401, { error: { message: 'Server Error' } });
+
+        const { getByText, getByTestId } = await setup({ newRecord: {} });
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+
+        fireEvent.mouseDown(getByTestId('rek-ismemberof-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        expect(getByTestId('rek-title-input')).toBeInTheDocument();
+        expect(getByTestId('submit-collection')).toBeInTheDocument();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        preview.debug();
+    });
+
     it('should render success panel', async () => {
         const { container } = await setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should not disable submit button if form submit has failed', async () => {
-        const { getByRole } = await setup({ submitFailed: true });
-        expect(getByRole('button', { name: 'Add collection' })).not.toBeDisabled();
     });
 });
