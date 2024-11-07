@@ -78,11 +78,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         });
     };
 
-    const cancelSubmit = () => {
-        window.location.assign(pathConfig.index);
-    };
-
-    const afterSubmit = () => {
+    const returnHome = () => {
         window.location.assign(pathConfig.index);
     };
 
@@ -124,7 +120,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                             variant="contained"
                             color="primary"
                             fullWidth
-                            onClick={afterSubmit}
+                            onClick={returnHome}
                             data-testid="return-home"
                         >
                             {txt.afterSubmitButton}
@@ -257,7 +253,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                 variant="contained"
                                 fullWidth
                                 disabled={isSubmitting}
-                                onClick={cancelSubmit}
+                                onClick={returnHome}
                                 color={'default'}
                             >
                                 {txt.cancel}
