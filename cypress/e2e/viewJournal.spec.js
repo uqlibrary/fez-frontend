@@ -72,5 +72,58 @@ context('view Journal', () => {
                 });
             cy.url().should('equal', `${baseUrl}/admin/journal/edit/12?navigatedFrom=test`);
         });
+
+        describe('editing', () => {
+            it('should handle disabling lock without losing record details', () => {
+                cy.visit('/admin/journal/edit/12?user=uqstaff');
+                cy.data('alert').should('contain.text', 'THIS WORK IS LOCKED');
+                const store = {};
+                cy.data('jnl_title-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_title-input'] = text));
+                cy.data('jnl_jcr_scie_abbrev_title-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_jcr_scie_abbrev_title-input'] = text));
+                cy.data('jnl_publisher-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_publisher-input'] = text));
+                cy.data('jnl_refereed-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_refereed-input'] = text));
+                cy.data('jnl_publication_year-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_publication_year-input'] = text));
+                cy.data('jnl_publication_frequency-input')
+                    .invoke('val')
+                    .then(text => (store['jnl_publication_frequency-input'] = text));
+                cy.get('.ck-content')
+                    .invoke('text')
+                    .then(text => (store['ck-content'] = text));
+                cy.data('jnl_issn_jid-list-row-0').should('contain.text', '0388-0001');
+                cy.data('jnl_issn_jid-list-row-1').should('contain.text', '2169-0375');
+                cy.data('action-button').click();
+                cy.data('alert').should('not.exist');
+                cy.data('jnl_title-input')
+                    .invoke('val')
+                    .then(text => cy.wrap(text).should('eq', store['jnl_title-input']));
+                cy.data('jnl_jcr_scie_abbrev_title-input')
+                    .invoke('val')
+                    .then(text => cy.wrap(text).should('eq', store['jnl_jcr_scie_abbrev_title-input']));
+                cy.data('jnl_publisher-input')
+                    .invoke('val')
+                    .then(text => cy.wrap(text).should('eq', store['jnl_publisher-input']));
+                cy.data('jnl_refereed-input')
+                    .invoke('val')
+                    .then(text => cy.wrap(text).should('eq', store['jnl_refereed-input']));
+                cy.data('jnl_publication_year-input')
+                    .invoke('val')
+                    .then(text => cy.wrap(text).should('eq', store['jnl_publication_year-input']));
+                cy.get('.ck-content')
+                    .invoke('text')
+                    .then(text => cy.wrap(text).should('eq', store['ck-content']));
+                cy.data('jnl_issn_jid-list-row-0').should('contain.text', '0388-0001');
+                cy.data('jnl_issn_jid-list-row-1').should('contain.text', '2169-0375');
+            });
+        });
     });
 });

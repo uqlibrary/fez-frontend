@@ -3,9 +3,12 @@ import { getQueryStringValue, JournalAdminInterface, navigateToSearchResult } fr
 import { useAccountContext, useJournalContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { journalDoaj } from 'mock/data';
-
 import * as redux from 'react-redux';
-import { render, WithReduxStore, WithRouter, fireEvent, within, act } from 'test-utils';
+
+import { render, WithReduxStore, WithRouter, fireEvent, act, userEvent } from 'test-utils';
+import { FormProvider } from 'react-hook-form';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -16,28 +19,9 @@ jest.mock('js-cookie', () => ({
     get: jest.fn(),
     set: jest.fn(),
 }));
-
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: jest.fn(),
-}));
-
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    destroy: jest.fn(),
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
 }));
 
 const mockUseNavigate = jest.fn();
@@ -49,35 +33,45 @@ jest.mock('react-router-dom', () => ({
     useLocation: () => mockUseLocation,
 }));
 
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
+
 function setup(testProps = {}, renderMethod = render) {
+    const { values = {}, ...rest } = testProps;
     const props = {
         authorDetails: {
             is_administrator: 1,
             is_super_administrator: 1,
             username: 'test',
         },
-        submitting: false,
         handleSubmit: jest.fn(),
         tabs: {
             admin: {
-                activated: true,
                 component: () => 'AdminSectionComponent',
             },
             bibliographic: {
-                activated: true,
                 component: () => 'BibliographySectionComponent',
             },
         },
         unlockJournal: jest.fn(),
         locked: false,
         error: null,
-        ...testProps,
+        ...rest,
     };
 
     return renderMethod(
         <WithReduxStore>
             <WithRouter>
-                <JournalAdminInterface {...props} />
+                <FormProviderWrapper
+                    values={{
+                        values,
+                    }}
+                >
+                    <JournalAdminInterface {...props} />
+                </FormProviderWrapper>
             </WithRouter>
         </WithReduxStore>,
     );
@@ -85,7 +79,6 @@ function setup(testProps = {}, renderMethod = render) {
 
 describe('JournalAdminInterface component', () => {
     const useDispatchMock = redux.useDispatch;
-
     beforeEach(() => {
         useAccountContext.mockImplementation(() => ({
             account: {
@@ -93,6 +86,7 @@ describe('JournalAdminInterface component', () => {
             },
         }));
         useJournalContext.mockImplementation(() => ({
+            jnlDisplayType: ADMIN_JOURNAL,
             journalDetails: journalDoaj.data,
         }));
         useDispatchMock.mockImplementation(() => () => {});
@@ -126,57 +120,33 @@ describe('JournalAdminInterface component', () => {
             expect(getByTestId('submit-admin')).toBeInTheDocument();
         });
 
-        it('should render full form with activated sections', () => {
-            const { queryByTestId, queryByRole } = setup({
-                tabs: {
-                    admin: {
-                        activated: false,
-                        component: () => 'AdminSectionComponent',
-                    },
-                    bibliographic: {
-                        activated: true,
-                        component: () => 'BibliographySectionComponent',
-                    },
-                },
-            });
-
-            expect(queryByRole('tablist')).not.toBeInTheDocument();
-            expect(queryByTestId('bibliographic-section')).toBeInTheDocument();
-            expect(queryByTestId('admin-section')).not.toBeInTheDocument();
-        });
-
-        it('should call method to show submit confirmation', () => {
+        it('should call method to show submit confirmation', async () => {
             const handleSubmitFn = jest.fn();
             const { getByTestId } = setup({ handleSubmit: handleSubmitFn });
-
-            fireEvent.click(getByTestId('submit-admin'));
+            await userEvent.click(getByTestId('submit-admin'));
             expect(handleSubmitFn).toHaveBeenCalled();
         });
-        it('should call method to handle cancel of the form for existing record', () => {
+        it('should call method to handle cancel of the form for existing record', async () => {
             const { getByTestId } = setup();
 
-            fireEvent.click(getByTestId('admin-work-cancel-top'));
+            await userEvent.click(getByTestId('admin-work-cancel-top'));
             expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/12');
         });
-        it('should call method to handle cancel of the form for existing record and navigate to previous url', () => {
+        it('should call method to handle cancel of the form for existing record and navigate to previous url', async () => {
             mockUseLocation.search = '?navigatedFrom=%2Fjournal%2Fview%2F13';
             const { getByTestId } = setup();
 
-            fireEvent.click(getByTestId('admin-work-cancel-top'));
+            await userEvent.click(getByTestId('admin-work-cancel-top'));
             expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/13');
         });
 
-        it('should handle cancel action of submit confirmation for existing record', () => {
-            const { getByTestId, rerender } = setup();
+        it('should handle cancel action of submit confirmation for existing record', async () => {
+            const handleSubmitFn = jest.fn();
+            const { getByTestId } = setup({ handleSubmit: handleSubmitFn });
 
-            setup(
-                {
-                    submitSucceeded: true,
-                },
-                rerender,
-            );
-
-            fireEvent.click(getByTestId('cancel-dialog-box'));
+            await userEvent.click(getByTestId('submit-admin'));
+            expect(handleSubmitFn).toHaveBeenCalled();
+            await userEvent.click(getByTestId('cancel-dialog-box'));
             expect(mockUseNavigate).toHaveBeenCalledWith('/journal/view/12');
         });
 
@@ -189,7 +159,6 @@ describe('JournalAdminInterface component', () => {
                 error: { message: 'error' },
                 tabs: {
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
@@ -198,26 +167,6 @@ describe('JournalAdminInterface component', () => {
             expect(getByTestId('alert')).toHaveTextContent(
                 'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
             );
-        });
-
-        it('should prioritize formErrors', () => {
-            const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
-            useIsUserSuperAdmin.mockImplementationOnce(() => true);
-
-            const error = 'Title is required';
-            const { getByTestId } = setup({
-                handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
-                formErrors: { adminSection: { jnl_title: error } },
-                error: { message: 'error' },
-                tabs: {
-                    admin: {
-                        activated: true,
-                        component: () => 'AdminSectionComponent',
-                    },
-                },
-            });
-
-            expect(getByTestId('alert')).toHaveTextContent(/Journal title is required/);
         });
     });
 
@@ -228,6 +177,7 @@ describe('JournalAdminInterface component', () => {
 
         it('should render locked info alert', () => {
             useJournalContext.mockImplementation(() => ({
+                jnlDisplayType: ADMIN_JOURNAL,
                 journalDetails: {
                     jnl_jid: 12,
                     jnl_editing_user: 'uqstaff',
@@ -241,11 +191,9 @@ describe('JournalAdminInterface component', () => {
                 },
                 tabs: {
                     admin: {
-                        activated: true,
                         component: () => 'AdminSectionComponent',
                     },
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
@@ -257,95 +205,58 @@ describe('JournalAdminInterface component', () => {
         });
 
         it('should disabled button and render alert for form submitting', () => {
+            const handleSubmitFn = jest.fn();
+
             const { getByTestId } = setup({
-                submitting: true,
+                handleSubmit: handleSubmitFn,
                 authorDetails: {
                     username: 'uqstaff',
                 },
                 tabs: {
                     admin: {
-                        activated: true,
                         component: () => 'AdminSectionComponent',
                     },
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
             });
-            expect(getByTestId('alert-info')).toHaveTextContent('Saving - Request is being processed.');
+
+            act(() => {
+                fireEvent.click(getByTestId('submit-admin'));
+            });
+
             expect(getByTestId('submit-admin-top')).toHaveAttribute('disabled');
             expect(getByTestId('submit-admin')).toHaveAttribute('disabled');
         });
 
-        it('should display successful alert', () => {
-            const { getByTestId, getByRole, rerender } = setup({
+        it('should display successful alert', async () => {
+            const { getByTestId, getByRole } = setup({
                 authorDetails: {
                     username: 'uqstaff',
                 },
                 tabs: {
                     admin: {
-                        activated: true,
                         component: () => 'AdminSectionComponent',
                     },
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
             });
+            await userEvent.click(getByTestId('submit-admin'));
+            await userEvent.click(getByTestId('confirm-dialog-box'));
 
-            // should show the confirmation dialog
-            setup(
-                {
-                    submitSucceeded: true,
-                    authorDetails: {
-                        username: 'uqstaff',
-                    },
-                    tabs: {
-                        admin: {
-                            activated: true,
-                            component: () => 'AdminSectionComponent',
-                        },
-                        bibliographic: {
-                            activated: true,
-                            component: () => 'BibliographySectionComponent',
-                        },
-                    },
-                },
-                rerender,
-            );
-            fireEvent.click(getByTestId('confirm-dialog-box'));
             expect(getByRole('dialog')).toHaveTextContent('Work has been updated');
         });
 
-        it('should render activated tabs only', () => {
-            const { getByRole } = setup({
-                tabs: {
-                    admin: {
-                        activated: true,
-                        component: () => 'AdminSectionComponent',
-                    },
-                    bibliographic: {
-                        activated: false,
-                        component: () => 'BibliographySectionComponent',
-                    },
-                },
-            });
-
-            expect(getByRole('tablist')).toBeInTheDocument();
-            expect(within(getByRole('tablist')).getAllByRole('tab')).toHaveLength(1);
-        });
-
-        it('should switch the tab', () => {
+        it('should switch the tab', async () => {
             const { getByTestId } = setup({
                 tabs: {
                     admin: {
-                        activated: true,
                         component: () => 'AdminSectionComponent',
                     },
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
@@ -355,9 +266,36 @@ describe('JournalAdminInterface component', () => {
             });
 
             expect(getByTestId('admin-tab').getAttribute('aria-selected')).toBe('true');
-            fireEvent.click(getByTestId('bibliographic-tab'));
+            expect(getByTestId('bibliographic-tab').getAttribute('aria-selected')).toBe('false');
+            await userEvent.click(getByTestId('bibliographic-tab'));
             expect(getByTestId('bibliographic-tab').getAttribute('aria-selected')).toBe('true');
             expect(getByTestId('admin-tab').getAttribute('aria-selected')).toBe('false');
+        });
+
+        it('should render a badge if a tab has errors', () => {
+            useJournalContext.mockImplementation(() => ({
+                jnlDisplayType: ADMIN_JOURNAL,
+                journalDetails: {
+                    jnl_jid: 12,
+                    jnl_editing_user: 'uqstaff',
+                    jnl_editing_user_lookup: 'Test User',
+                },
+            }));
+            const { getByTestId } = setup({
+                authorDetails: {
+                    username: 'uqstaff',
+                },
+                tabs: {
+                    admin: {
+                        component: () => 'AdminSectionComponent',
+                        numberOfErrors: 5,
+                    },
+                    bibliographic: {
+                        component: () => 'BibliographySectionComponent',
+                    },
+                },
+            });
+            expect(getByTestId('admin-tab')).toHaveTextContent('Admin5');
         });
     });
 
@@ -377,11 +315,9 @@ describe('JournalAdminInterface component', () => {
             setup({
                 tabs: {
                     admin: {
-                        activated: true,
                         component: () => 'AdminSectionComponent',
                     },
                     bibliographic: {
-                        activated: true,
                         component: () => 'BibliographySectionComponent',
                     },
                 },
@@ -432,7 +368,6 @@ describe('JournalAdminInterface component', () => {
         setup({
             tabs: {
                 bibliographic: {
-                    activated: true,
                     component: () => 'BibliographySectionComponent',
                 },
             },
@@ -455,7 +390,7 @@ describe('JournalAdminInterface component', () => {
             useTabbedContext.mockReset();
         });
         it('should return an empty div if no journal provided', () => {
-            useJournalContext.mockImplementationOnce(() => ({
+            useJournalContext.mockImplementation(() => ({
                 journalDetails: null,
             }));
             setup({});

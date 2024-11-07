@@ -7,10 +7,10 @@ This document has been created in order to shed some light on certain parts of t
 
 ## Preamble
 
-The Admin Edit section is abstracted in to a hierarchy loosly fitting the below:
+The Admin Edit section is abstracted in to a hierarchy loosely fitting the below:
 
 - `src/modules/Admin/containers/Admin.js` - high level functions for loading record data and where form values are assigned
-- `src/modules/Admin/components/AdminContainer.js` - defines the overall JSX structure of an Admin page and the order of the Tabs therewithin and provides functions for moving around the UI
+- `src/modules/Admin/components/AdminContainer.js` - defines the overall JSX structure of an Admin page and the order of the Tabs within, and provides functions for moving around the UI
 - `src/modules/Admin/components/AdminInterface.js` - renders the tabbed interface component and handles UI updates for submission of the form and the resulting success/failure state
 
 ## Anatomy of an Admin Edit page
@@ -63,7 +63,7 @@ Here we see a config file for a collection of fields that will define the appear
 At the top we import `commonFields`. This file includes several sections of a typical admin page in a similar structure to the above, and is meant as a time saver for common UI functionality (NB: it is not necessary to _always_ include this file if it's not required - see `src/config/admin/fields/communityFields.js` for an example).
 
 After `commonFields` we define the specific sections we'd like to have on our page. It's important to note here that the tab names ("bibliographical", "notes", "admin") are keys and therefore have to match exactly what the system expects. There are more key sections beyond what is shown here as can be seen in `src/modules/Admin/components/AdminContainer.js` in the `AdminInterface` component's `tab` property.
-Also important to recognise is that each section is a function - code elsewhere will attmept to call each section as a function so this structure must be adhered to.
+Also important to recognise is that each section is a function - code elsewhere will attempt to call each section as a function so this structure must be adhered to.
 
 Within each tab section we define the order of fields/components to show in our page. Of particular note here is the `groups` property, whose values directly map to definitions in `src/config/admin/fieldConfig.js`. Thus, if you are creating a new field type, you must define the field in fieldConfig.js in order for it to be useable in a page config structure as shown above. See more on [groups](#groups) below.
 

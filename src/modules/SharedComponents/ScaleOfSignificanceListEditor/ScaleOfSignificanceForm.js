@@ -133,8 +133,6 @@ export const ScaleOfSignificanceForm = ({
         return contributionStatement.plainText === 'Missing' ? '' : contributionStatement;
     }
 
-    console.log('locale:', locale);
-
     return (
         <Grid
             container

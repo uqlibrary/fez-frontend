@@ -24,7 +24,7 @@ export const getIndicatorProps = ({ type, data }) => {
     }
 
     if (type === types.accepted) {
-        const entry = data.fez_journal_issn?.[0].fez_sherpa_romeo;
+        const entry = data.fez_journal_issn?.[0]?.fez_sherpa_romeo;
         if (entry?.srm_max_embargo_amount) indicatorProps.status = status.embargo;
         else indicatorProps.status = status.open;
     } else {

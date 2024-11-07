@@ -21,7 +21,6 @@ index.html
 stats.json
 cypress/videos
 cypress/screenshots
-cypress/downloads
 
 # Code Coverage checker temp dir
 .nyc_output

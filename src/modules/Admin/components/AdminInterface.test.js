@@ -931,7 +931,7 @@ describe('AdminInterface component', () => {
         });
 
         expect(getByTestId('alert')).toHaveTextContent(
-            'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
+            'Error - Error has occurred during request and request cannot be processed. error Please contact eSpace administrators or try again later',
         );
     });
 

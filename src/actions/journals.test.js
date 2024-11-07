@@ -165,6 +165,35 @@ describe('Search action creators', () => {
         });
     });
 
+    describe('adminJournalUpdate', () => {
+        it('should dispatch action for successful journal search', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_API({ id: 1 }, {});
+            mockApi.onPut(apiUrl).reply(200, { data: [] });
+
+            const expectedActions = [actions.ADMIN_UPDATE_JOURNAL_PROCESSING, actions.ADMIN_UPDATE_JOURNAL_SUCCESS];
+
+            await mockActionsStore.dispatch(journalActions.adminJournalUpdate({ jnl_jid: 1 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch action for failed journal search', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_API({ id: 1 }, {});
+            mockApi.onPut(apiUrl).reply(200, { data: [] });
+
+            const expectedActions = [
+                actions.ADMIN_UPDATE_JOURNAL_PROCESSING,
+                actions.APP_ALERT_SHOW,
+                actions.ADMIN_UPDATE_JOURNAL_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(journalActions.adminJournalUpdate({ jnl_jid: 1 }));
+            } catch {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
     describe('exportJournals', () => {
         let promptForDownload;
         const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];

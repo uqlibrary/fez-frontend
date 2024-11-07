@@ -18,7 +18,6 @@ const StyledStepper = styled(Stepper)(({ theme }) => ({
 
 export const CustomStepper = ({ activeStep, steps }) => {
     const width = useWidth();
-    console.log({ activeStep, steps, width });
     return (
         <StyledStepper activeStep={activeStep}>
             {steps.map((step, index) => {

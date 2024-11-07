@@ -1,93 +1,121 @@
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
-import locale from 'locale/forms';
 import validationErrors from 'locale/validationErrors';
-import { CLAIM_PRE_CHECK } from 'repositories/routes';
+import { CLAIM_PRE_CHECK, EXISTING_RECORD_API, FILE_UPLOAD_API, NEW_RECORD_API } from 'repositories/routes';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    waitFor,
+    waitForElementToBeRemoved,
+    addFilesToFileUploader,
+    setFileUploaderFilesToClosedAccess,
+    screen,
+} from 'test-utils';
+import locale from 'locale/forms';
 
+const mockUseNavigate = jest.fn();
 /* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockUseNavigate,
 }));
 
-function setup(testProps = {}, renderMethod = render) {
-    const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        navigate: testProps.navigate || jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        invalid: false,
-        submitFailed: false,
-        submitSucceeded: false,
-        valid: true,
-        pure: true,
-        submitAsSideEffect: false,
-        pristine: true,
-        submitting: false,
-        initialValues:
-            testProps.initialValues ||
-            Immutable.Map({
-                publication: Immutable.Map(journalArticle),
-                author: Immutable.Map({ aut_id: 410 }),
-            }),
-        handleSubmit: testProps.handleSubmit || jest.fn(),
-        actions: testProps.actions || { loadFullRecordToClaim: jest.fn(), clearClaimPublication: jest.fn() },
-        publicationToClaimFileUploadingError: testProps.publicationToClaimFileUploadingError || false,
-        ...testProps,
+const mockClearNewRecord = jest.fn();
+const mockClearRedirectPath = jest.fn();
+
+/* eslint-disable react/prop-types */
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    clearNewRecord: () => mockClearNewRecord,
+    clearRedirectPath: () => mockClearRedirectPath,
+    clearClaimPublication: () => jest.fn(),
+    loadFullRecordToClaim: () => jest.fn(),
+}));
+
+let mockContributorValidation;
+
+jest.mock('../../SharedComponents/Toolbox/ReactHookForm/components/Field', () => {
+    const OriginalField = jest.requireActual('../../SharedComponents/Toolbox/ReactHookForm/components/Field').default;
+
+    return function MockField({ name, validate = [], ...props }) {
+        // Capture the first validator when the name is 'contributorLinking'
+        if (name === 'contributorLinking' && validate.length > 0) {
+            mockContributorValidation = validate[0];
+        }
+        // Render the original Field component with the rest of the props
+        return <OriginalField name={name} validate={validate} {...props} />;
     };
-    return renderMethod(
-        <WithReduxStore>
+});
+
+function setup(props = {}) {
+    const defaultRecord = {
+        ...journalArticle,
+        fez_record_search_key_content_indicator: [
+            {
+                rek_content_indicator_id: 1,
+                rek_content_indicator_pid: 'UQ:41878',
+                rek_content_indicator: 454079,
+                rek_content_indicator_order: 1,
+                rek_content_indicator_lookup: 'Scholarship of Teaching and Learning',
+            },
+            {
+                rek_content_indicator_id: 2,
+                rek_content_indicator_pid: 'UQ:41878',
+                rek_content_indicator: 454080,
+                rek_content_indicator_order: 2,
+                rek_content_indicator_lookup: 'Protocol',
+            },
+        ],
+    };
+    const pid = (props.publication || defaultRecord).rek_pid;
+    const state = Immutable.Map({
+        appReducer: {
+            redirectPath: props.redirectPath,
+        },
+        accountReducer: {
+            author: props.hasOwnProperty('author') ? props.author : { aut_id: 410 },
+        },
+        claimPublicationReducer: {
+            publicationToClaim: { rek_pid: pid },
+            fullPublicationToClaim: props.publication || defaultRecord,
+            fullPublicationToClaimLoading: props.fullPublicationToClaimLoading || false,
+            publicationsClaimedInProgress: props.publicationsClaimedInProgress || [],
+            publicationToClaimFileUploadingError: props.publicationToClaimFileUploadingError || false,
+        },
+    });
+
+    return render(
+        <WithReduxStore initialState={state}>
             <WithRouter>
-                <ClaimRecord {...props} />
+                <ClaimRecord />
             </WithRouter>
         </WithReduxStore>,
     );
 }
-
 describe('Component ClaimRecord ', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    let contributorValidationMock;
-    beforeEach(() => {
-        ReduxFormMock.Field.mockImplementation(
-            ({ name, title, required, disable, label, floatingLabelText, validate }) => {
-                if (name === 'contributorLinking') contributorValidationMock = validate;
-                return (
-                    <field
-                        is="mock"
-                        name={name}
-                        title={title}
-                        required={required}
-                        disabled={disable}
-                        label={label || floatingLabelText}
-                    />
-                );
-            },
+    const fileMock = ['myTestImage.png'];
+    const selectAuthor = () => {
+        fireEvent.click(screen.getByTestId('rek-author-id-1'));
+        fireEvent.click(screen.getByTestId('author-accept-declaration-input'));
+    };
+    const submitForm = async () => {
+        fireEvent.click(screen.getByTestId('claim-record-submit'));
+        await waitForElementToBeRemoved(() =>
+            screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message),
         );
+    };
+    beforeEach(() => {
+        mockUseNavigate.mockReset();
+        mockClearNewRecord.mockReset();
+        mockClearRedirectPath.mockReset();
     });
 
     it('should render claim publication form', () => {
         const { container } = setup();
-        expect(container.getElementsByTagName('field').length).toEqual(5);
         expect(container).toMatchSnapshot();
     });
 
@@ -96,42 +124,36 @@ describe('Component ClaimRecord ', () => {
             'it was claimed by current author already',
         () => {
             const props = {
-                initialValues: Immutable.Map({
-                    author: Immutable.Map({ aut_id: 410 }),
-                    publication: Immutable.Map({
-                        ...journalArticle,
-                        fez_record_search_key_author_id: [
-                            {
-                                rek_author_id: 410,
-                                rek_author_id_order: 1,
-                            },
-                            {
-                                rek_author_id: 0,
-                                rek_author_id_order: 2,
-                            },
-                        ],
-                        fez_record_search_key_author: [
-                            {
-                                rek_author_id: null,
-                                rek_author_pid: 'UQ:111111',
-                                rek_author: 'Smith, A',
-                                rek_author_order: 1,
-                            },
-                            {
-                                rek_author_id: null,
-                                rek_author_pid: 'UQ:222222',
-                                rek_author: 'Smith, J',
-                                rek_author_order: 2,
-                            },
-                        ],
-                    }),
-                }),
+                publication: {
+                    ...journalArticle,
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: 410,
+                            rek_author_id_order: 1,
+                        },
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 2,
+                        },
+                    ],
+                    fez_record_search_key_author: [
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:111111',
+                            rek_author: 'Smith, A',
+                            rek_author_order: 1,
+                        },
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:222222',
+                            rek_author: 'Smith, J',
+                            rek_author_order: 2,
+                        },
+                    ],
+                },
             };
 
-            const { container } = setup({ ...props });
-            expect(container.getElementsByTagName('field').length).toEqual(0);
-            // // expect(wrapper.find('Alert').length).toEqual(1);
-            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            const { container } = setup(props);
             expect(container).toMatchSnapshot();
         },
     );
@@ -169,33 +191,15 @@ describe('Component ClaimRecord ', () => {
                 ],
             };
 
-            const { container } = setup({
-                initialValues: Immutable.Map({
-                    publication: Immutable.Map(testArticle),
-                    author: Immutable.Map({ aut_id: 410 }),
-                }),
-            });
-
-            expect(container.getElementsByTagName('field').length).toEqual(4);
-            // // expect(wrapper.find('Alert').length).toEqual(0);
-            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-
+            const { container } = setup({ publication: testArticle });
             expect(container).toMatchSnapshot();
         },
     );
 
     it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
         const { container } = setup({
-            initialValues: Immutable.Map({
-                publication: Immutable.Map(journalArticle),
-                author: Immutable.Map({ aut_id: 410 }),
-            }),
+            publication: journalArticle,
         });
-
-        expect(container.getElementsByTagName('field').length).toEqual(5);
-        // // expect(wrapper.find('Alert').length).toEqual(0);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-
         expect(container).toMatchSnapshot();
     });
 
@@ -218,15 +222,8 @@ describe('Component ClaimRecord ', () => {
             };
 
             const { container } = setup({
-                initialValues: Immutable.Map({
-                    publication: Immutable.Map(testArticle),
-                    author: Immutable.Map({ aut_id: 410 }),
-                }),
+                publication: testArticle,
             });
-
-            expect(container.getElementsByTagName('field').length).toEqual(5);
-            // // expect(wrapper.find('Alert').length).toEqual(0);
-            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(container).toMatchSnapshot();
         },
@@ -253,15 +250,8 @@ describe('Component ClaimRecord ', () => {
             };
 
             const { container } = setup({
-                initialValues: Immutable.Map({
-                    publication: Immutable.Map(testArticle),
-                    author: Immutable.Map({ aut_id: 410 }),
-                }),
+                publication: testArticle,
             });
-
-            expect(container.getElementsByTagName('field').length).toEqual(4);
-            // // expect(wrapper.find('Alert').length).toEqual(0);
-            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(container).toMatchSnapshot();
         },
@@ -295,15 +285,8 @@ describe('Component ClaimRecord ', () => {
             };
 
             const { container } = setup({
-                initialValues: Immutable.Map({
-                    publication: Immutable.Map(testArticle),
-                    author: Immutable.Map({ aut_id: 410 }),
-                }),
+                publication: testArticle,
             });
-
-            expect(container.getElementsByTagName('field').length).toEqual(5);
-            // expect(wrapper.find('Alert').length).toEqual(0);
-            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(container).toMatchSnapshot();
         },
@@ -311,296 +294,166 @@ describe('Component ClaimRecord ', () => {
 
     it('should show contributor as linked', () => {
         const props = {
-            initialValues: Immutable.Map({
-                author: Immutable.Map({ aut_id: 410 }),
-                publication: Immutable.Map({
-                    ...journalArticle,
-                    fez_record_search_key_contributor_id: [
-                        {
-                            rek_contributor_id: 410,
-                            rek_contributor_id_order: 1,
-                        },
-                        {
-                            rek_contributor_id: 0,
-                            rek_contributor_id_order: 2,
-                        },
-                    ],
-                }),
-            }),
+            publication: {
+                ...journalArticle,
+                fez_record_search_key_contributor_id: [
+                    {
+                        rek_contributor_id: 410,
+                        rek_contributor_id_order: 1,
+                    },
+                    {
+                        rek_contributor_id: 0,
+                        rek_contributor_id_order: 2,
+                    },
+                ],
+            },
         };
 
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
-    });
-
-    it('should return and render alert message depending on form status', () => {
-        const testCases = [
-            {
-                parameters: {
-                    submitting: true,
-                    alertLocale: {
-                        progressAlert: {
-                            title: 'submitting',
-                            message: 'submitting',
-                            type: 'info',
-                            showLoader: true,
-                        },
-                    },
-                },
-            },
-            {
-                parameters: {
-                    submitSucceeded: true,
-                    alertLocale: {
-                        successAlert: {
-                            title: 'submitSucceeded',
-                            message: 'submitSucceeded',
-                            type: 'done',
-                        },
-                    },
-                },
-            },
-            {
-                parameters: {
-                    submitFailed: true,
-                    error: 'This is an error',
-                    alertLocale: {
-                        errorAlert: {
-                            title: 'submitFailed',
-                            message: jest.fn(),
-                            type: 'error',
-                        },
-                    },
-                },
-            },
-            {
-                parameters: {
-                    dirty: true,
-                    invalid: true,
-                    error: null,
-                    formErrors: {
-                        rek_title: 'one',
-                        rek_date: 'two',
-                    },
-                    alertLocale: {
-                        validationAlert: {
-                            title: 'validationError',
-                            message: 'validationError',
-                            type: 'warning',
-                        },
-                    },
-                },
-            },
-            {
-                parameters: {
-                    error: 'The given data was invalid.',
-                    initialValues: Immutable.Map({
-                        publication: Immutable.Map({ rek_pid: null }),
-                        author: Immutable.Map({ aut_id: 410 }),
-                    }),
-                    alertLocale: {
-                        publicationFailedToClaimAlert: {
-                            title: 'External pub api error',
-                            message: 'External pub api error',
-                            type: 'error',
-                        },
-                    },
-                },
-            },
-        ];
-
-        testCases.forEach(testCase => {
-            const { container } = setup({ ...testCase.parameters });
-            expect(container).toMatchSnapshot();
-        });
     });
 
     it('should show the loader', () => {
         const props = {
+            publication: null,
             fullPublicationToClaimLoading: true,
-            actions: {
-                loadFullRecordToClaim: jest.fn(() => null),
-                clearClaimPublication: jest.fn(),
-            },
-            initialValues: Immutable.Map({
-                author: Immutable.Map({ aut_id: 410 }),
-                publication: null,
-            }),
         };
 
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
     });
 
-    it('should render default message error', () => {
-        const testArticle = {
-            ...journalArticle,
-            rek_pid: null,
-        };
+    it('should render server error', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
+
+        const { queryByText } = setup();
+
+        selectAuthor();
+        await submitForm();
+
+        await waitFor(() =>
+            queryByText(
+                locale.forms.claimPublicationForm.errorAlert.message(
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                ),
+            ),
+        );
+    });
+
+    it('should render incomplete data error message when trying to claim an incomplete external (non-eSpace) record', async () => {
+        mockApi
+            .onPost(CLAIM_PRE_CHECK().apiUrl)
+            .reply(200, { data: '' })
+            .onPost(NEW_RECORD_API().apiUrl)
+            .reply(422);
 
         const { getByText } = setup({
-            submitFailed: true,
-            initialValues: Immutable.Map({
-                publication: Immutable.Map(testArticle),
-                author: Immutable.Map({ aut_id: 410 }),
-            }),
-            error: { message: 'test' },
+            publication: {
+                ...journalArticle,
+                rek_pid: null,
+            },
         });
+
+        selectAuthor();
+        await submitForm();
 
         expect(getByText(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBeInTheDocument();
     });
 
-    it('should render custom error message when the pre check request failed', () => {
-        const customErrorMessage = 'custom error message';
-        const props = {
-            submitFailed: true,
-            error: {
-                message: 'test',
-                original: {
+    it('should render custom error message when the pre check request failed', async () => {
+        const customErrorMessage = 'Unexpected field rek_pid : UQ:123456';
+        mockApi.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
+            return [
+                500,
+                {
                     data: customErrorMessage,
+                    request: {
+                        responseURL: 'https://api.library.uq.edu.au/staging/external/records/claim/pre-check',
+                    },
                 },
-                request: {
-                    responseURL: CLAIM_PRE_CHECK().apiUrl,
-                },
-            },
-            initialValues: Immutable.Map({
-                author: Immutable.Map({ aut_id: 410 }),
-                publication: Immutable.Map({
-                    ...journalArticle,
-                    rek_pid: undefined,
-                    fez_record_search_key_author_id: [
-                        {
-                            rek_author_id: 0,
-                            rek_author_id_order: 1,
-                        },
-                    ],
-                    fez_record_search_key_author: [
-                        {
-                            rek_author_id: null,
-                            rek_author_pid: 'UQ:111111',
-                            rek_author: 'Smith, A',
-                            rek_author_order: 1,
-                        },
-                    ],
-                }),
-            }),
-        };
+            ];
+        });
 
-        const { getByText } = setup({ ...props });
-        expect(getByText(customErrorMessage)).toBeInTheDocument();
-    });
-
-    it('should render when claiming from "Add missing record" page', () => {
-        const { getByTestId, rerender } = setup({
-            initialValues: {
-                get: () => ({
-                    toJS: () => ({
-                        sources: {},
-                    }),
-                }),
+        const { getByText } = setup({
+            publication: {
+                ...journalArticle,
+                rek_pid: null,
             },
         });
 
-        setup(
-            {
-                submitSucceeded: true,
-                initialValues: {
-                    get: () => ({
-                        toJS: () => ({
-                            sources: {},
-                        }),
-                    }),
-                },
-            },
-            rerender,
-        );
+        selectAuthor();
+        await submitForm();
 
-        expect(getByTestId('cancel-dialog-box')).toHaveTextContent(
-            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
-        );
+        expect(getByText(customErrorMessage)).toBeInTheDocument();
     });
 
-    it('should display confirmation box after successful submission', () => {
-        const { getByTestId, rerender } = setup();
-        const clearNewRecordMock = jest.fn();
-        const clearRedirectPathMock = jest.fn();
-        const mockUseNavigate = jest.fn();
-        setup(
-            {
-                submitSucceeded: true,
-                redirectPath: '/test',
-                actions: {
-                    clearNewRecord: clearNewRecordMock,
-                    clearRedirectPath: clearRedirectPathMock,
-                    clearClaimPublication: jest.fn(),
-                },
-                navigate: mockUseNavigate,
-            },
-            rerender,
-        );
+    it('should display confirmation box after successful submission', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
+            data: journalArticle,
+        });
+        const { getByTestId } = setup({
+            redirectPath: '/test',
+        });
 
+        selectAuthor();
+        await submitForm();
         fireEvent.click(getByTestId('confirm-dialog-box'));
         expect(mockUseNavigate).toBeCalledWith('/records/mine');
         fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(mockUseNavigate).toBeCalledWith('/test');
-        expect(clearNewRecordMock).toBeCalled();
-        expect(clearRedirectPathMock).toBeCalled();
+        expect(mockClearNewRecord).toBeCalled();
+        expect(mockClearRedirectPath).toBeCalled();
     });
 
-    it('should display confirmation box after successful submission and go back to previous page', () => {
-        const { getByTestId, rerender } = setup();
-        const mockUseNavigate = jest.fn();
-        setup(
-            {
-                submitSucceeded: true,
-                navigate: mockUseNavigate,
-            },
-            rerender,
-        );
+    it('should display confirmation box after successful submission and go back to previous page', async () => {
+        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
+            data: journalArticle,
+        });
+        const { getByTestId } = setup();
+
+        selectAuthor();
+        await submitForm();
 
         fireEvent.click(getByTestId('cancel-dialog-box'));
         expect(mockUseNavigate).toBeCalledWith(-1);
     });
 
-    it('should render the confirm dialog with an alert due to a file upload error', () => {
-        const { container, getByTestId, getByText, rerender } = setup();
-        const mockUseNavigate = jest.fn();
-        setup(
-            {
-                submitSucceeded: true,
-                publicationToClaimFileUploadingError: true,
-                navigate: mockUseNavigate,
-            },
-            rerender,
-        );
+    it('should render the confirm dialog with an alert due to a file upload error', async () => {
+        mockApi
+            .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
+            .replyOnce(200, {
+                data: journalArticle,
+            })
+            .onPost(FILE_UPLOAD_API().apiUrl)
+            .reply(500);
 
-        expect(getByText(/File upload and\/or edits\/changes\/comments post failed/i)).toBeInTheDocument();
+        const { container, getByText, getByTestId, queryByTestId } = setup();
+
+        selectAuthor();
+        addFilesToFileUploader(fileMock);
+        await setFileUploaderFilesToClosedAccess(fileMock);
+        await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+        await submitForm();
+        // assert a file upload error
+        await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
+        // navigate to fix page
         fireEvent.click(getByTestId('alternate-dialog-box'));
-
         expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
+
         expect(container).toMatchSnapshot();
     });
 
     it('should go back to previous page on cancel', () => {
-        const clearNewRecordMock = jest.fn();
-        const mockUseNavigate = jest.fn();
-        const { getByText } = setup({
-            actions: {
-                loadFullRecordToClaim: jest.fn(),
-                clearNewRecord: clearNewRecordMock,
-                clearClaimPublication: jest.fn(),
-            },
-            navigate: mockUseNavigate,
-        });
+        const { getByText } = setup({});
 
         fireEvent.click(getByText('Cancel this claim'));
-        expect(clearNewRecordMock).toBeCalled();
+
+        expect(mockClearNewRecord).toBeCalled();
         expect(mockUseNavigate).toBeCalledWith(-1);
     });
 
     it('should redirect if no author or record set', () => {
-        const mockUseNavigate = jest.fn();
-        setup({ initialValues: Immutable.Map({ author: null }), navigate: mockUseNavigate });
+        setup({ author: null });
         expect(mockUseNavigate).toHaveBeenCalled();
     });
 
@@ -621,14 +474,11 @@ describe('Component ClaimRecord ', () => {
         };
 
         setup({
-            initialValues: Immutable.Map({
-                publication: Immutable.Map(testArticle),
-                author: Immutable.Map({ aut_id: 410 }),
-            }),
+            publication: testArticle,
         });
 
         const contributorLinking = { authors: [], valid: false };
-        expect(contributorValidationMock(contributorLinking)).toEqual(
+        expect(mockContributorValidation(contributorLinking)).toEqual(
             validationErrors.validationErrors.contributorLinking,
         );
     });
@@ -648,13 +498,10 @@ describe('Component ClaimRecord ', () => {
         };
 
         setup({
-            initialValues: Immutable.Map({
-                publication: Immutable.Map(testArticle),
-                author: Immutable.Map({ aut_id: 410 }),
-            }),
+            publication: testArticle,
         });
 
         const contributorLinking = { authors: [], valid: true };
-        expect(contributorValidationMock(contributorLinking)).toEqual('');
+        expect(mockContributorValidation(contributorLinking)).toEqual('');
     });
 });

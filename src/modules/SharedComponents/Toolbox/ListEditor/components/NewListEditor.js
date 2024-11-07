@@ -39,7 +39,9 @@ export const NewListEditor = ({
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleAdd = React.useCallback(item =>
-        setItemsList(itemsList => uniqWith([...itemsList, ...item], isEqual).slice(0, maxCount)),
+        setItemsList(itemsList =>
+            uniqWith([...itemsList, ...(Array.isArray(item) ? item : [item])], isEqual).slice(0, maxCount),
+        ),
     );
 
     /**

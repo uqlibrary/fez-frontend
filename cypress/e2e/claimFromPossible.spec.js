@@ -60,7 +60,7 @@ context('Claim possible work', () => {
             cy.contains('.StandardCard', claimFormLocale.comments.title)
                 .find('textarea')
                 .first()
-                .type('Test comment');
+                .type('Test comment', { delay: 10 });
             cy.contains('button', claimFormLocale.cancel).click();
             cy.contains('[role="dialog"]', claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
                 .contains(claimFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
@@ -106,7 +106,7 @@ context('Claim possible work', () => {
             // Enter invalid data triggers validation errors
             cy.contains('.StandardCard', claimFormLocale.comments.title)
                 .find('input')
-                .type('invalid')
+                .type('invalid', { delay: 10 })
                 .closest('.StandardCard')
                 .contains('URL is not valid');
             // Confirm form submission is disabled until URL is fixed
@@ -146,13 +146,6 @@ context('Claim possible work', () => {
             cy.contains('button', claimFormLocale.submit)
                 .should('not.be.disabled')
                 .click();
-            // Testing of the alerts are too time sensitive
-            // cy.get('[class*="Alert-info"] .alert-text')
-            //     .should('contain', claimFormLocale.progressAlert.title)
-            //     .should('contain', claimFormLocale.progressAlert.message);
-            // cy.get('[class*="Alert-done"] .alert-text')
-            //     .should('contain', claimFormLocale.successAlert.title)
-            //     .should('contain', claimFormLocale.successAlert.message);
             cy.get('div[role="dialog"]')
                 .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
                 .should('have.length', 1);
@@ -181,13 +174,6 @@ context('Claim possible work', () => {
                 cy.contains('button', claimFormLocale.submit)
                     .should('not.be.disabled')
                     .click();
-                // Testing of the alerts are too time sensitive
-                // cy.get('[class*="Alert-info"] .alert-text')
-                //     .should('contain', claimFormLocale.progressAlert.title)
-                //     .should('contain', claimFormLocale.progressAlert.message);
-                // cy.get('[class*="Alert-done"] .alert-text')
-                //     .should('contain', claimFormLocale.successAlert.title)
-                //     .should('contain', claimFormLocale.successAlert.message);
                 cy.get('div[role="dialog"]')
                     .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
                     .should('have.length', 1);

@@ -274,7 +274,7 @@ export function adminJournalUpdate(data) {
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
-                    payload: error.message,
+                    payload: error.errors,
                 });
                 return Promise.reject(error);
             });
@@ -282,8 +282,10 @@ export function adminJournalUpdate(data) {
 }
 
 export function adminUnlockJournal() {
-    return {
-        type: actions.ADMIN_JOURNAL_UNLOCK,
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_UNLOCK,
+        });
     };
 }
 

@@ -347,7 +347,7 @@ export const getErrorAlertProps = ({
                 ...alertLocale.errorAlert,
                 message: message,
             };
-        } else if (formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
+        } else if (!!formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const keyPrefix = `validation-${alertLocale.validationAlert.type || 'warning'}`;

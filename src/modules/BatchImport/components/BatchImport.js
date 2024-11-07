@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-
-import { Field, change, formValueSelector, reduxForm, SubmissionError, getFormSyncErrors } from 'redux-form/immutable';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { useWatch } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
 import Grid from '@mui/material/Grid';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -28,22 +25,8 @@ import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 import { useNavigate } from 'react-router-dom';
-
-export const FORM_NAME = 'BatchImport';
-const selector = formValueSelector(FORM_NAME);
-
-const onSubmit = (values, dispatch) => {
-    const data = { ...values.toJS() };
-    return dispatch(createBatchImport(data)).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-const onChange = (values, dispatch, props, prevValues) => {
-    if (values.get('communityID') !== prevValues.get('communityID')) {
-        dispatch(change(FORM_NAME, 'collection_pid', null));
-    }
-};
+import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { useValidatedForm } from '../../../hooks';
 
 const csvIngestDoctypesList = Object.values(publicationTypes(false))
     .filter(item => CSV_INGEST_DOCUMENT_TYPES.includes(item.id))
@@ -52,14 +35,58 @@ const csvIngestDoctypesList = Object.values(publicationTypes(false))
         text: item.name,
     }));
 
-export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded, submitting }) => {
+export const BatchImport = () => {
     const navigate = useNavigate();
     const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
-    const communityID = useSelector(state => selector(state, 'communityID'));
-    const isBulkFileIngest = useSelector(state => selector(state, 'is_bulk_file_ingest'));
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
+    const dispatch = useDispatch();
+    const defaultValues = {
+        is_bulk_file_ingest: false,
+        communityID: '',
+        collection_pid: '',
+        doc_type_id: '',
+        directory: '',
+    };
+
+    const {
+        reset,
+        trigger,
+        control,
+        resetField,
+        getAlertErrorProps,
+        safelyHandleSubmit,
+        formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
+    } = useValidatedForm({
+        mode: 'onChange',
+        defaultValues,
+    });
+    const [isBulkFileIngest, communityID] = useWatch({ control, name: ['is_bulk_file_ingest', 'communityID'] });
+    const hasErrors = Object.keys(errors).length > 0;
+
+    const onSubmit = safelyHandleSubmit(async data => {
+        let payload = data;
+        // remove unnecessary fields from payload when "bulk file/edit ingest" mode is on
+        if (data.is_bulk_file_ingest) {
+            payload = {
+                is_bulk_file_ingest: data.is_bulk_file_ingest,
+                directory: data.directory,
+            };
+        }
+        await dispatch(createBatchImport(payload));
+    });
+
+    // re-validate the form upon toggling "bulk file/edit ingest" option, to make sure that the
+    // alert box (at the bottom of the form) displays a summary of errors for visible form fields only
+    useLayoutEffect(() => {
+        (async () => await trigger())();
+    }, [trigger, isBulkFileIngest]);
+
+    // display validation error for collection field when changing community
+    useLayoutEffect(() => {
+        resetField('collection_pid', { defaultValue: '', keepDirty: false, keepError: true, keepTouched: false });
+        (async () => await trigger('collection_pid'))();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [communityID]);
 
     useEffect(() => {
         const alertProps = validation.getErrorAlertProps({
@@ -69,15 +96,14 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                 successAlert: { ...batchImportTxt.submitSuccessAlert },
                 errorAlert: { ...batchImportTxt.submitFailureAlert },
             },
-            error,
-            formErrors,
-            submitSucceeded,
-            submitting,
+            ...getAlertErrorProps(),
+            submitSucceeded: isSubmitSuccessful,
+            submitting: isSubmitting,
         });
-        const actionProps = submitSucceeded
+        const actionProps = isSubmitSuccessful
             ? {
                   actionButtonLabel: batchImportTxt.postSubmitPrompt.confirmButtonLabel,
-                  action: reset,
+                  action: () => reset(),
               }
             : {};
 
@@ -89,97 +115,119 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                   }
                 : null,
         );
-    }, [batchImportTxt, error, formErrors, reset, submitSucceeded, submitting]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(errors), isSubmitSuccessful, isSubmitting]);
 
-    const _abandonImport = () => {
+    const abandonImport = () => {
         navigate(pathConfig.index);
     };
 
     return (
         <StandardPage title={batchImportTxt.title}>
-            <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
-                <form>
+            <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
+                <form onSubmit={onSubmit}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <StandardCard help={batchImportTxt.help}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12}>
-                                        <Field
-                                            component={props => (
+                                        <Controller
+                                            name="is_bulk_file_ingest"
+                                            control={control}
+                                            render={({ field }) => (
                                                 <FormControlLabel
                                                     control={
                                                         <Switch
-                                                            {...props}
-                                                            name="checkedB"
-                                                            // eslint-disable-next-line react/prop-types
-                                                            checked={isBulkFileIngest}
-                                                            // eslint-disable-next-line react/prop-types
-                                                            onChange={props.input.onChange}
+                                                            {...field}
+                                                            checked={field.value}
+                                                            onChange={e => field.onChange(e.target.checked)}
                                                         />
                                                     }
+                                                    disabled={isSubmitting}
+                                                    id="is-bulk-file-ingest-input"
+                                                    data-testid="is-bulk-file-ingest-input"
                                                     {...batchImportTxt.formLabels.bulkFileIngest}
                                                 />
                                             )}
-                                            disabled={submitting}
-                                            id="is-bulk-file-ingest-input"
-                                            data-testid="is-bulk-file-ingest-input"
-                                            name="is_bulk_file_ingest"
-                                            required
                                         />
                                     </Grid>
                                     {!isBulkFileIngest && (
                                         <Grid item xs={12}>
-                                            <Field
-                                                component={CommunitySelectField}
-                                                genericSelectFieldId="community-pid"
-                                                disabled={submitting}
-                                                id="communityPID"
+                                            <Controller
                                                 name="communityID"
-                                                required
-                                                validate={[validation.required]}
-                                                {...batchImportTxt.formLabels.community}
+                                                control={control}
+                                                rules={{ validate: validation.required }}
+                                                render={({ field }) => (
+                                                    <CommunitySelectField
+                                                        {...field}
+                                                        genericSelectFieldId="community-pid"
+                                                        disabled={isSubmitting}
+                                                        id="communityPID"
+                                                        required
+                                                        {...batchImportTxt.formLabels.community}
+                                                    />
+                                                )}
                                             />
                                         </Grid>
                                     )}
                                     {!isBulkFileIngest && !!communityID && (
                                         <Grid item xs={12}>
-                                            <Field
-                                                component={CollectionSelectField}
-                                                disabled={submitting}
-                                                id="collectionPID"
+                                            <Controller
                                                 name="collection_pid"
-                                                genericSelectFieldId="collection-pid"
-                                                communityId={communityID}
-                                                required
-                                                validate={[validation.required]}
-                                                {...batchImportTxt.formLabels.collection}
+                                                control={control}
+                                                rules={{ validate: validation.required }}
+                                                render={({ field }) => (
+                                                    <CollectionSelectField
+                                                        {...field}
+                                                        disabled={isSubmitting}
+                                                        id="collectionPID"
+                                                        genericSelectFieldId="collection-pid"
+                                                        communityId={communityID}
+                                                        required
+                                                        {...batchImportTxt.formLabels.collection}
+                                                    />
+                                                )}
                                             />
                                         </Grid>
                                     )}
                                     {!isBulkFileIngest && (
                                         <Grid item xs={12}>
-                                            <Field
-                                                component={DocumentTypeSingleField}
-                                                disabled={submitting}
-                                                id="doctypeID"
+                                            <Controller
                                                 name="doc_type_id"
-                                                required
-                                                validate={[validation.required]}
-                                                itemsList={csvIngestDoctypesList}
-                                                {...batchImportTxt.formLabels.docType}
+                                                control={control}
+                                                rules={{ validate: validation.required }}
+                                                render={({ field }) => {
+                                                    return (
+                                                        <DocumentTypeSingleField
+                                                            {...field}
+                                                            disabled={isSubmitting}
+                                                            id="doctypeID"
+                                                            required
+                                                            itemsList={csvIngestDoctypesList}
+                                                            {...batchImportTxt.formLabels.docType}
+                                                        />
+                                                    );
+                                                }}
                                             />
                                         </Grid>
                                     )}
                                     <Grid item xs={12}>
-                                        <Field
-                                            component={DirectorySelectField}
-                                            genericSelectFieldId="directory"
-                                            disabled={submitting}
-                                            id="directory"
+                                        <Controller
                                             name="directory"
-                                            required
-                                            validate={[validation.required]}
-                                            {...batchImportTxt.formLabels.directory}
+                                            control={control}
+                                            rules={{
+                                                validate: validation.required,
+                                            }}
+                                            render={({ field }) => (
+                                                <DirectorySelectField
+                                                    {...field}
+                                                    genericSelectFieldId="directory"
+                                                    disabled={isSubmitting}
+                                                    id="directory"
+                                                    required
+                                                    {...batchImportTxt.formLabels.directory}
+                                                />
+                                            )}
                                         />
                                     </Grid>
                                 </Grid>
@@ -197,25 +245,25 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                 children={batchImportTxt.formLabels.cancelButtonLabel}
                                 data-analyticsid="batch-import-cancel"
                                 data-testid="batch-import-cancel"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 id="cancelBatchImport"
-                                onClick={_abandonImport}
+                                onClick={abandonImport}
                                 variant="contained"
                                 color={'default'}
                             />
                         </Grid>
                         <Grid item xs={12} sm="auto">
                             <Button
+                                type="submit"
                                 aria-label={batchImportTxt.formLabels.submitButtonLabel}
                                 children={batchImportTxt.formLabels.submitButtonLabel}
                                 color="primary"
                                 data-analyticsid="batch-import-submit"
                                 data-testid="batch-import-submit"
-                                disabled={submitting || submitSucceeded || disableSubmit}
+                                disabled={isSubmitting || isSubmitSuccessful || hasErrors}
                                 fullWidth
                                 id="submitBatchImport"
-                                onClick={handleSubmit}
                                 variant="contained"
                             />
                         </Grid>
@@ -226,19 +274,4 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
     );
 };
 
-BatchImport.propTypes = {
-    dirty: PropTypes.bool,
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
-    reset: PropTypes.func,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
-};
-
-const BatchImportReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-    onChange,
-})(BatchImport);
-
-export default React.memo(BatchImportReduxForm);
+export default React.memo(BatchImport);

@@ -134,7 +134,7 @@ describe('hooks', () => {
         });
     });
 
-    describe('useValidateReport', () => {
+    describe('useAlertStatus', () => {
         // afterEach(() => {
         //     jest.clearAllMocks();
         // });

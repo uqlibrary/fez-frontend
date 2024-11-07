@@ -14,29 +14,31 @@ describe('transformers', () => {
     afterEach(() => {
         mockApi.reset();
     });
-    it('should get all bibliographic section search keys', () => {
-        const data = {
-            issns: [
-                { rek_value: '1212-1212', rek_order: 1 },
-                { rek_value: '2323-2323', rek_order: 2 },
-            ],
-        };
+    describe('getBibliographicSectionSearchKeys', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                issns: [
+                    { rek_value: '1212-1212', rek_order: 1 },
+                    { rek_value: '2323-2323', rek_order: 2 },
+                ],
+            };
 
-        expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            fez_journal_issn: [
-                {
-                    jnl_issn: '1212-1212',
-                    jnl_issn_order: 1,
-                },
-                {
-                    jnl_issn: '2323-2323',
-                    jnl_issn_order: 2,
-                },
-            ],
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                fez_journal_issn: [
+                    {
+                        jnl_issn: '1212-1212',
+                        jnl_issn_order: 1,
+                    },
+                    {
+                        jnl_issn: '2323-2323',
+                        jnl_issn_order: 2,
+                    },
+                ],
+            });
         });
-    });
-    it('should handle no data for bibliographic section search keys', () => {
-        expect(transformers.getBibliographicSectionSearchKeys()).toEqual({});
+        it('should handle no data for bibliographic section search keys', () => {
+            expect(transformers.getBibliographicSectionSearchKeys()).toEqual({});
+        });
     });
 
     describe('getAdminSectionSearchKeys', () => {

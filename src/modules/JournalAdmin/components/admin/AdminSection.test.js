@@ -1,15 +1,15 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import AdminSection from './AdminSection';
 import { journalDoaj } from 'mock/data';
-import Immutable from 'immutable';
-import { reduxForm } from 'redux-form';
 import { fieldConfig } from 'config/journalAdmin';
 
-jest.mock('../../../../context');
-import { useJournalContext, useFormValuesContext } from 'context';
+import { FormProvider } from 'react-hook-form';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
-const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(AdminSection);
+jest.mock('../../../../context');
+import { useJournalContext } from 'context';
 
 class ResizeObserver {
     observe() {}
@@ -19,15 +19,26 @@ class ResizeObserver {
 
 window.ResizeObserver = ResizeObserver;
 
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
+
 function setup(testProps = {}, renderer = rtlRender) {
+    const { values = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper
+            values={{
+                ...values,
+            }}
+        >
+            <AdminSection {...props} />
+        </FormProviderWrapper>,
     );
 }
 
@@ -35,22 +46,18 @@ describe('AdminSection component', () => {
     let fieldIds;
     beforeEach(() => {
         useJournalContext.mockImplementation(() => ({
-            journalDetails: {
-                ...journalDoaj.data,
-            },
-            jnlDisplayType: 'adminjournal',
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
 
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: Immutable.Map({ ...journalDoaj.data }),
-        }));
         fieldIds = Object.values(fieldConfig.default)
             .filter(field => field.componentProps.name.includes('adminSection.'))
             .map(field => field.componentProps.textFieldId || field.componentProps.richEditorId);
     });
 
     it('should render default view', () => {
-        const { getByTestId } = setup();
+        const { getByTestId } = setup({
+            values: { journal: { ...journalDoaj.data } },
+        });
         fieldIds.forEach(id => {
             expect(getByTestId(id)).toBeInTheDocument();
         });
@@ -61,7 +68,7 @@ describe('AdminSection component', () => {
             .filter(field => field.componentProps.name.includes('adminSection.') && !!field.componentProps.textFieldId)
             .map(field => field.componentProps.textFieldId);
         // only test actual input fields
-        const { getByTestId } = setup({ disabled: true });
+        const { getByTestId } = setup({ values: { journal: { ...journalDoaj.data } }, disabled: true });
         fieldIds.forEach(id => {
             expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
         });

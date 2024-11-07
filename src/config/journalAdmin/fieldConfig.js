@@ -129,6 +129,7 @@ export default {
                 richEditorId: 'jnl-advisory-statement',
                 canEdit: true,
                 required: false,
+                noRef: true,
             },
         },
         issns: {
@@ -151,15 +152,17 @@ export default {
                 getItemSelectedToEdit: (list, index) =>
                     (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
                 required: false,
+                noRef: true,
             },
         },
         uqData: {
             component: InfoSection,
             componentProps: {
                 sectionKey: 'uqData',
-                name: 'uqdataSection',
+                name: 'uqDataSection',
                 sectionConfig: viewJournalConfig.uqData,
                 wrapped: false,
+                noRef: true,
             },
         },
         doaj: {
@@ -169,6 +172,7 @@ export default {
                 name: 'doajSection',
                 sectionConfig: viewJournalConfig.doaj,
                 wrapped: false,
+                noRef: true,
             },
         },
         indexed: {
@@ -178,6 +182,7 @@ export default {
                 name: 'indexedSection',
                 sectionConfig: viewJournalConfig.index,
                 wrapped: false,
+                noRef: true,
             },
         },
     },

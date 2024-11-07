@@ -1,63 +1,68 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import BibliographicSection from './BibliographicSection';
 
 jest.mock('../../../../context');
-import { useJournalContext, useFormValuesContext } from 'context';
-import Immutable from 'immutable';
-import { journalDoaj } from 'mock/data';
-import { reduxForm } from 'redux-form';
 
-const WithReduxForm = reduxForm({ form: 'testForm', formValues: Immutable.Map({ ...journalDoaj.data }) })(
-    BibliographicSection,
-);
+import { FormProvider } from 'react-hook-form';
+import { useJournalContext } from 'context';
+import { journalDoaj } from 'mock/data';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
+
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
 
 function setup(testProps = {}, renderer = rtlRender) {
+    const { values = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper
+            values={{
+                ...values,
+            }}
+        >
+            <BibliographicSection {...props} />
+        </FormProviderWrapper>,
     );
 }
 
 describe('BibliographicSection component', () => {
     it('should render default view', () => {
         useJournalContext.mockImplementation(() => ({
-            journalDetails: {
-                jnl_jid: 12,
-            },
-            jnlDisplayType: 'adminjournal',
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
-            },
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
 
-        const { getByTestId } = setup();
+        const { getByTestId } = setup({
+            values: {
+                journal: {
+                    ...journalDoaj.data,
+                },
+            },
+        });
         expect(document.querySelector('.AdminCard')).toHaveTextContent('ISSN');
         expect(getByTestId('jnl_issn_jid-input')).toBeInTheDocument();
     });
 
     it('should render disabled view', () => {
         useJournalContext.mockImplementation(() => ({
-            journalDetails: {
-                jnl_jid: 12,
-            },
-            jnlDisplayType: 'adminjournal',
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
 
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
+        const { getByTestId } = setup({
+            values: {
+                journal: {
+                    ...journalDoaj.data,
+                },
             },
-        }));
-
-        const { getByTestId } = setup({ disabled: true });
+            disabled: true,
+        });
         expect(getByTestId('jnl_issn_jid-input')).toHaveAttribute('disabled');
     });
 });

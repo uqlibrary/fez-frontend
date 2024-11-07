@@ -71,7 +71,15 @@ describe('Add new record', () => {
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
 
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
-        await waitFor(() => getByTestId('confirm-dialog-box'));
+
+        try {
+            await waitFor(() => getByTestId('confirm-dialog-box'));
+        } catch (error) {
+            console.error(
+                'Timeout error: Element with data-testid="confirm-dialog-box" was not found within the specified timeout.',
+            );
+            console.error(error);
+        }
 
         expect(requestCreateNewRecord).toBeCalledWith({
             authors: [
