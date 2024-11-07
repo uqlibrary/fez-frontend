@@ -49,12 +49,11 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     });
     const formValues = watch();
     const [apiError, setApiError] = React.useState('');
-    console.log('errors=', errors);
-    // useEffect(() => {
-    // }, []);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
+        setApiError('');
+
         const data = { ...values, ...getNotesSectionSearchKeys(values) };
 
         delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
@@ -74,7 +73,8 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         }
         // eslint-disable-next-line camelcase
         return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
-            setApiError(error.message);
+            console.log('setApiError called', error);
+            setApiError(error.message + ' ' + (error?.original?.error?.message || ''));
         });
     };
 
@@ -102,7 +102,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     }
     const txt = formLocale.addACollection;
     const detailsTitle = !!hasParams ? `New collection in community '${queryStringObject.name}'` : txt.details.title;
-    if (isSubmitSuccessful && newRecord) {
+    if (isSubmitSuccessful && newRecord && !!!apiError) {
         return (
             <StandardPage title={txt.title}>
                 <Grid container spacing={3}>
@@ -244,7 +244,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                         )}
                         {!!apiError && (
                             <Grid xs={12}>
-                                <Alert alertId={'alert'} type="error_outline" message={apiError} />
+                                <Alert alertId="api_error_alert" type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>

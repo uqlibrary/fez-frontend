@@ -114,9 +114,14 @@ describe('Collection form', () => {
                 { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
             ],
         });
-        mockApi
-            .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
-            .reply(401, { error: { message: 'Server Error' } });
+        // mockApi
+        //     .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
+        //     .reply(401, { error: { message: 'Server Error' } });
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(config => {
+            console.log('Mock API called: ', config.url);
+            return [401, { error: { message: 'Server Error' } }];
+        });
+        // mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
         const { getByText, getByTestId } = await setup({ newRecord: {} });
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
@@ -128,7 +133,14 @@ describe('Collection form', () => {
         expect(getByTestId('submit-collection')).toBeInTheDocument();
         await userEvent.type(getByTestId('rek-title-input'), 'test');
         await userEvent.type(getByTestId('rek-description-input'), 'test');
+
+        // await act(async () => {
+        //     fireEvent.click(getByTestId('submit-collection'));
+        // });
         fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(getByTestId('api_error_alert')).toBeInTheDocument();
         preview.debug();
     });
 
