@@ -70,10 +70,10 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
             parentPID = {
                 fez_record_search_key_ismemberof: queryStringObject.pid,
             };
+            console.log('parentPID=', parentPID);
         }
         // eslint-disable-next-line camelcase
         return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
-            console.log('setApiError called', error);
             let err = error.message;
             if (error?.original?.error?.message) {
                 err += ' ' + error?.original?.error?.message;
