@@ -1,6 +1,5 @@
 import React from 'react';
 import CollectionForm from './CollectionForm';
-import Immutable from 'immutable';
 import {
     render,
     WithReduxStore,
@@ -12,11 +11,9 @@ import {
     userEvent,
 } from 'test-utils';
 import * as repositories from 'repositories';
-import * as SearchActions from 'actions/search';
-import { collectionRecord, communityRecord, record } from 'mock/data';
-import { preview } from 'test-utils';
+import { record } from 'mock/data';
 
-async function setup(testProps, testState) {
+async function setup(testProps) {
     const props = {
         disableSubmit: false,
         ...testProps,
@@ -78,8 +75,9 @@ describe('Collection form', () => {
                 message.includes(
                     'Selector unknown returned a different result when called with the same parameters. This can lead to unnecessary rerenders',
                 )
-            )
+            ) {
                 return; // Ignore the specific warning message
+            }
             console.error(message); // Otherwise, log the message
         });
 
@@ -92,7 +90,7 @@ describe('Collection form', () => {
     });
 
     it('should render form with only the community dropdown', async () => {
-        const { container, getAllByRole, getByTestId } = await setup({});
+        const { getAllByRole, getByTestId } = await setup({});
         expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
         expect(getAllByRole('button').length).toEqual(2);
     });
@@ -137,14 +135,10 @@ describe('Collection form', () => {
                 { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
             ],
         });
-        // mockApi
-        //     .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
-        //     .reply(401, { error: { message: 'Server Error' } });
         mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(config => {
             console.log('Mock API called: ', config.url);
             return [401, { error: { message: 'Server Error' } }];
         });
-        // mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
         const { getByText, getByTestId } = await setup({ newRecord: {} });
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
@@ -157,14 +151,10 @@ describe('Collection form', () => {
         await userEvent.type(getByTestId('rek-title-input'), 'test');
         await userEvent.type(getByTestId('rek-description-input'), 'test');
 
-        // await act(async () => {
-        //     fireEvent.click(getByTestId('submit-collection'));
-        // });
         fireEvent.click(getByTestId('submit-collection'));
         expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
         await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
         expect(getByTestId('api_error_alert')).toBeInTheDocument();
-        preview.debug();
     });
 
     it('should render success panel', async () => {
