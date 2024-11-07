@@ -74,7 +74,11 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         // eslint-disable-next-line camelcase
         return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
             console.log('setApiError called', error);
-            setApiError(error.message + ' ' + (error?.original?.error?.message || ''));
+            let err = error.message;
+            if (error?.original?.error?.message) {
+                err += ' ' + error?.original?.error?.message;
+            }
+            setApiError(err);
         });
     };
 
