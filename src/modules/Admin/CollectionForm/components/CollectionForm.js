@@ -22,6 +22,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import queryString from 'query-string';
 import { getNotesSectionSearchKeys } from '../../../../actions/transformers';
@@ -35,8 +36,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         handleSubmit,
         watch,
         control,
-        setError,
-        formState: { isSubmitting, isSubmitSuccessful, isDirty },
+        formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {
@@ -48,6 +48,10 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         },
     });
     const formValues = watch();
+    const [apiError, setApiError] = React.useState('');
+    console.log('errors=', errors);
+    // useEffect(() => {
+    // }, []);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
@@ -70,7 +74,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
         }
         // eslint-disable-next-line camelcase
         return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
-            setError('apiError', { type: 'manual', message: error.message });
+            setApiError(error.message);
         });
     };
 
@@ -130,20 +134,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
             </StandardPage>
         );
     }
-    // customise error for thesis submission
-    const alertProps = validation.getErrorAlertProps({
-        ...props,
-        alertLocale: {
-            validationAlert: { ...formLocale.validationAlert },
-            progressAlert: { ...formLocale.progressAlert },
-            successAlert: { ...formLocale.successAlert },
-            errorAlert: {
-                ...formLocale.errorAlert,
-                message: formLocale.addACollection.addFailedMessage,
-            },
-        },
-    });
-
     return (
         <StandardPage title={txt.title}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
@@ -252,9 +242,9 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                 </StandardCard>
                             </Grid>
                         )}
-                        {alertProps && (
+                        {!!apiError && (
                             <Grid xs={12}>
-                                <Alert {...alertProps} />
+                                <Alert alertId={'alert'} type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>
@@ -281,9 +271,18 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                 color="primary"
                                 fullWidth
                                 onClick={handleSubmit(onSubmit)}
-                                disabled={isSubmitting || disableSubmit}
+                                disabled={isSubmitting || disableSubmit || JSON.stringify(errors) !== '{}'}
                             >
-                                {txt.submit}
+                                {isSubmitting ? (
+                                    <CircularProgress
+                                        color="inherit"
+                                        size={25}
+                                        id="add-collection-progress-bar"
+                                        data-testid="add-collection-progress-bar"
+                                    />
+                                ) : (
+                                    txt.submit
+                                )}
                             </Button>
                         </Grid>
                     </Grid>
