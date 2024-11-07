@@ -69,18 +69,6 @@ describe('Collection form - autofill', () => {
 
 describe('Collection form', () => {
     beforeAll(() => {
-        // Mock console.error to suppress the warning
-        jest.spyOn(console, 'warn').mockImplementation(message => {
-            if (
-                message.includes(
-                    'Selector unknown returned a different result when called with the same parameters. This can lead to unnecessary rerenders',
-                )
-            ) {
-                return; // Ignore the specific warning message
-            }
-            console.error(message); // Otherwise, log the message
-        });
-
         delete window.location;
         window.location = { reload: jest.fn(), assign: jest.fn() }; // Mock reload function
     });
