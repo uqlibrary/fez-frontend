@@ -189,10 +189,6 @@ export const pathConfig = {
             }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
-        googleScholar: {
-            link: '/author-identifiers/google-scholar/link',
-            // unlink: '/author-identifiers/google-scholar/link'
-        },
     },
     authorStatistics: {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
