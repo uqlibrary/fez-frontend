@@ -70,6 +70,7 @@ export const getFormConstants = (account, author, isHdrThesis) => {
             defaultValues: {
                 ...general.HDR_THESIS_DEFAULT_VALUES,
                 rek_date: rekDate,
+                isHdrThesis,
             },
         };
     }
@@ -103,6 +104,7 @@ export const getFormConstants = (account, author, isHdrThesis) => {
         },
         defaultValues: {
             ...general.SBS_THESIS_DEFAULT_VALUES,
+            isHdrThesis,
         },
     };
 };
