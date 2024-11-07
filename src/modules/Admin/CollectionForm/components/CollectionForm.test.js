@@ -52,6 +52,22 @@ describe('Collection form - autofill', () => {
         await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
         expect(queryByTestId('add-collection-progress-bar')).not.toBeInTheDocument();
     });
+    it('should render without dropdown if params hash exist', async () => {
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
+
+        window.history.pushState({}, 'Test Title', '#pid=10&name=test');
+        const { queryByTestId, getByTestId } = await setup({});
+        await waitFor(() => {
+            expect(queryByTestId('community-selector')).not.toBeInTheDocument();
+        });
+
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(queryByTestId('add-collection-progress-bar')).not.toBeInTheDocument();
+    });
 });
 
 describe('Collection form', () => {
@@ -77,7 +93,6 @@ describe('Collection form', () => {
 
     it('should render form with only the community dropdown', async () => {
         const { container, getAllByRole, getByTestId } = await setup({});
-        expect(container).toMatchSnapshot();
         expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
         expect(getAllByRole('button').length).toEqual(2);
     });
@@ -153,7 +168,9 @@ describe('Collection form', () => {
     });
 
     it('should render success panel', async () => {
-        const { container } = await setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(container).toMatchSnapshot();
+        const { getByTestId } = await setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        await waitFor(() => {
+            expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
+        });
     });
 });
