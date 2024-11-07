@@ -160,10 +160,11 @@ exports[`Collection form should render form with only the community dropdown 1`]
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="submit-collection"
               data-testid="submit-collection"
-              tabindex="0"
+              disabled=""
+              tabindex="-1"
               type="button"
             >
               Add collection
@@ -263,7 +264,7 @@ exports[`Collection form should render success panel 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r9:"
+                          aria-controls=":re:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-ismemberof-select"
@@ -312,51 +313,6 @@ exports[`Collection form should render success panel 1`] = `
               </div>
             </div>
           </div>
-          <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
-          >
-            <div
-              data-testid="alert"
-              style="margin-top: 5px;"
-            >
-              <div
-                class="MuiGrid-root MuiGrid-container css-1pzs6xa-MuiGrid-root"
-              >
-                <div
-                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
-                >
-                  <div
-                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
-                  >
-                    <div
-                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
-                        data-testid="DoneIcon"
-                        focusable="false"
-                        id="done-icon"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
-                    >
-                      <b>
-                        Success - 
-                      </b>
-                      New work has been saved successfully.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-ckkhel-MuiGrid2-root"
@@ -381,10 +337,11 @@ exports[`Collection form should render success panel 1`] = `
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="submit-collection"
               data-testid="submit-collection"
-              tabindex="0"
+              disabled=""
+              tabindex="-1"
               type="button"
             >
               Add collection
