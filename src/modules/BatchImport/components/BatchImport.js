@@ -53,7 +53,7 @@ export const BatchImport = () => {
         trigger,
         control,
         resetField,
-        getAlertErrorProps,
+        getPropsForAlert,
         safelyHandleSubmit,
         formState: { errors, isDirty, isSubmitting, isSubmitSuccessful },
     } = useValidatedForm({
@@ -96,7 +96,7 @@ export const BatchImport = () => {
                 successAlert: { ...batchImportTxt.submitSuccessAlert },
                 errorAlert: { ...batchImportTxt.submitFailureAlert },
             },
-            ...getAlertErrorProps(),
+            ...getPropsForAlert(),
             submitSucceeded: isSubmitSuccessful,
             submitting: isSubmitting,
         });

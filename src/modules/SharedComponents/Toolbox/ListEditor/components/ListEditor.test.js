@@ -250,15 +250,42 @@ describe('ListEditor tests', () => {
         });
     });
 
-    it('should not call transformOutput if onChange prop method is not defined', () => {
+    it('should call given onChange only when `items` change', () => {
         const onChangeFn = jest.fn();
-        const { rerender } = setup();
+        const { rerender, getByTestId } = setup({
+            maxCount: 5,
+            distinctOnly: true,
+            locale: {
+                row: {},
+                form: {},
+                header: {},
+            },
+            onChange: onChangeFn,
+            formComponent: props => (
+                <div>
+                    <Button
+                        data-testid="test-button"
+                        onClick={() =>
+                            props.onAdd({
+                                id: 'test',
+                                value: 'test',
+                            })
+                        }
+                    />
+                </div>
+            ),
+        });
+        expect(onChangeFn).toHaveBeenCalledTimes(0);
+
+        act(() => {
+            fireEvent.click(getByTestId('test-button'));
+        });
+        expect(document.querySelector('[data-testid=test-list]').childElementCount).toEqual(1);
+        expect(getByTestId('test-list-row-0')).toHaveTextContent('test');
+        expect(onChangeFn).toHaveBeenCalledTimes(1);
 
         setup({ onChange: onChangeFn }, rerender);
         expect(onChangeFn).toHaveBeenCalledTimes(1);
-
-        setup({ onChange: null }, rerender);
-        expect(onChangeFn).toHaveBeenCalledTimes(1); // shouldnt increment
     });
 
     it('Should render a list of many items in a scrollable HTML div', () => {

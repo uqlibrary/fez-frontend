@@ -135,7 +135,7 @@ const FixRecord = () => {
     const {
         control,
         resetField,
-        getAlertErrorProps,
+        getPropsForAlert,
         mergeWithFormValues,
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
@@ -206,7 +206,7 @@ const FixRecord = () => {
         submitting: isSubmitting,
         submitSucceeded: isSubmitSuccessful,
         alertLocale: txtFixForm,
-        ...getAlertErrorProps(formLevelError),
+        ...getPropsForAlert(formLevelError),
     });
 
     const onSubmit = safelyHandleSubmit(async () => {

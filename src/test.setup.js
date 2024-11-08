@@ -18,6 +18,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
 import TestRenderer from 'react-test-renderer';
 import ShallowRenderer from 'react-test-renderer/shallow';
+import * as ResizeObserverModule from 'resize-observer-polyfill';
 
 jest.mock('@mui/x-charts', () => ({
     ResponsiveChartContainer: jest.fn().mockImplementation(({ children }) => {
@@ -102,6 +103,9 @@ global.renderComponent = (component, props, args = {}) => {
         </Provider>,
     );
 };
+
+// required to avoid CKEditor errors during tests
+global.ResizeObserver = ResizeObserverModule.default;
 
 global.componentToString = component => {
     return prettyFormat(TestRenderer.create(component), {

@@ -1273,7 +1273,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                           <b>
                             WARNING - 
                           </b>
-                          You are about to remove this work from your eSpace profile.
+                          <span
+                            data-testid="alert-message"
+                          >
+                            You are about to remove this work from your eSpace profile.
+                          </span>
                         </div>
                       </div>
                     </div>

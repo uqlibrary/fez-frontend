@@ -442,7 +442,11 @@ exports[`Application component Should display mobile correctly 1`] = `
                     <b>
                       You are not logged in - 
                     </b>
-                    Login to UQ eSpace for full search results and more services.
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Login to UQ eSpace for full search results and more services.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -965,7 +969,11 @@ exports[`Application component should render alert if user is not fez author 1`]
                     <b>
                       You are not registered in UQ eSpace as an author - 
                     </b>
-                    Please contact the UQ eSpace administrator to resolve this.
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Please contact the UQ eSpace administrator to resolve this.
+                    </span>
                   </div>
                 </div>
               </div>

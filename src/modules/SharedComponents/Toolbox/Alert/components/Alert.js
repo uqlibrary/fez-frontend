@@ -213,7 +213,7 @@ export const Alert = ({
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             <b>{title && `${title} - `}</b>
-                            {message}
+                            <span data-testid="alert-message">{message}</span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
                             <StyledGridDismissButton item sx={{ display: { xs: 'block', sm: 'none' } }}>

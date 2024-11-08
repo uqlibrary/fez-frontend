@@ -522,7 +522,11 @@ exports[`Component TopCitedPublications should render top cited publications mod
             <b>
               There has been an error - 
             </b>
-            Trending works are temporarily unavailable
+            <span
+              data-testid="alert-message"
+            >
+              Trending works are temporarily unavailable
+            </span>
           </div>
         </div>
       </div>
