@@ -22,6 +22,10 @@ stats.json
 cypress/videos
 cypress/screenshots
 cypress/downloads/*
+# Ignore everything in cypress/downloads
+cypress/downloads/*
+# But do not ignore .gitkeep
+!cypress/downloads/.gitkeep
 
 # Code Coverage checker temp dir
 .nyc_output
