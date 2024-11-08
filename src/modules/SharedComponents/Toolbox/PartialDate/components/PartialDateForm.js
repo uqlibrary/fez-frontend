@@ -1,7 +1,5 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useFormContext } from 'react-hook-form';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
@@ -20,82 +18,78 @@ export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the fut
 export const MONTH_UNSELECTED = -1;
 
 const PartialDateForm = ({
-        control,
-        locale= {
-            dayLabel: 'Day',
-            monthLabel: 'Month',
-            yearLabel: 'Year',
-            validationMessage: {
-                date: 'Invalid date',
-                day: 'Invalid day',
-                month: 'Enter a month',
-                year: 'Invalid year',
-                yearRequired: 'Year required',
-                future: 'Date must be before now',
-            },
-            minNumberCharCode: 48,
-            maxNumberCharCode: 57,
+    locale = {
+        dayLabel: 'Day',
+        monthLabel: 'Month',
+        yearLabel: 'Year',
+        validationMessage: {
+            date: 'Invalid date',
+            day: 'Invalid day',
+            month: 'Enter a month',
+            year: 'Invalid year',
+            yearRequired: 'Year required',
+            future: 'Date must be before now',
         },
-        onChange,
-        dateFormat= 'YYYY-MM-DD',
-        allowPartial,
-        disableFuture,
-        months= [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December',
-        ],
-        floatingTitle= 'Enter a date',
-        floatingTitleRequired,
-        required,
-        hasError,
-        disableFuture,
-        input,
-        meta,
-        partialDateFormId,
-        clearable,
-    }) => {
-        const { control } = useFormContext();
-
-   
+        minNumberCharCode: 48,
+        maxNumberCharCode: 57,
+    },
+    onChange,
+    dateFormat = 'YYYY-MM-DD',
+    allowPartial,
+    disableFuture,
+    disabled,
+    months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ],
+    floatingTitle = 'Enter a date',
+    required,
+    hasError,
+    input,
+    meta,
+    partialDateFormId,
+    clearable,
+    value,
+}) => {
+    const initDate = () => {
         const dateValue =
             // eslint-disable-next-line react/prop-types
-            (props.value && moment(props.input.value)) ||
-            (props.input && props.input.value && moment(props.input.value)) ||
-            (props.meta && props.meta.initial && moment(props.meta.initial)) ||
+            (value && moment(value)) ||
+            (input && input.value && moment(input.value)) ||
+            (meta && meta.initial && moment(meta.initial)) ||
             null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
-            this.state = {
+            return {
                 day: dateValue.date(),
                 month: dateValue.month(),
                 year: dateValue.year(),
-                setDate: this._setDate,
             };
         } else {
-            this.state = {
+            return {
                 day: '',
                 month: -1,
                 year: '',
-                setDate: this._setDate,
             };
         }
-        this.errors = { day: '', month: '', year: '' };
-    
+    };
 
-    // static getDerivedStateFromProps(props, state) {
-    //     props.onChange?.(state.setDate(state));
-    //     return { ...state };
-    // }
+    const [state, setState] = React.useState(initDate);
+    const [errors, setErrors] = React.useState({ date: undefined, day: '', month: '', year: '' });
+
+    const _isUnselected = month => {
+        return month === MONTH_UNSELECTED || month === null;
+    };
 
     /**
      * validate the entered date field
@@ -104,16 +98,18 @@ const PartialDateForm = ({
      * @private
      */
     const _validate = state => {
-        const { day: dayActual, month: monthActual, year } = state;
+        const { day: dayActual, month: monthActual, year: yearActual } = state;
         // moment validation doesn't recognise -1 or empty string as a valid date
         const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
         const day = isNaN(dayActual) || !dayActual ? null : dayActual;
-        const hasRequired = !!year && (this.props.allowPartial || (!!day && month !== null));
-        const momentDate = { ...state, month, day };
+        const year = isNaN(yearActual) || !yearActual ? null : yearActual;
+        const hasRequired = !!year && (allowPartial || (!!day && month !== null));
+        const momentDate = { ...state, year, month, day };
         const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
+        console.log(state, day, month, year, hasRequired, momentDate, validationStatus);
 
-        if (validationStatus === STATUS_VALID && !!this.props.disableFuture) {
-            if (!!this.props.allowPartial) {
+        if (validationStatus === STATUS_VALID && !!disableFuture) {
+            if (!!allowPartial) {
                 const yearNow = moment().year();
                 if (year > yearNow) {
                     return STATUS_FUTURE_DATE;
@@ -126,7 +122,7 @@ const PartialDateForm = ({
             }
         }
 
-        if (!this.props.allowPartial && !!this.props.clearable) {
+        if (!allowPartial && !!clearable) {
             if (!year && !day && !month) {
                 return STATUS_VALID;
             }
@@ -154,26 +150,20 @@ const PartialDateForm = ({
         }
         return validationStatus;
     };
-
-    const _displayErrors = (state, validationStatus, allowPartial, isRequired = '') => {
-        const isRequiredHere = isRequired === '' ? this.props.required : isRequired;
-
+    const _displayErrors = (state, validationStatus, allowPartial, isRequired = false) => {
         const { day, month, year } = state;
-        const { locale } = this.props;
         const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
         /* istanbul ignore next */
-        this.errors.date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
+        setErrors(state => ({ ...state, date: (!!year && isNaN(year) && locale.validationMessage.year) || '' }));
+
+        let date = '';
 
         switch (validationStatus) {
             case STATUS_INVALID:
-                this.errors.date =
+                date =
                     // initial load of 'required' message for required date fields
                     /* istanbul ignore next */
-                    (allowPartial &&
-                        isRequiredHere &&
-                        !year &&
-                        !isNaN(year) &&
-                        locale.validationMessage.yearRequired) ||
+                    (allowPartial && isRequired && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
                     // initial load of 'required' message for required date fields
                     /* istanbul ignore next */
                     (isNaN(year) && locale.validationMessage.year) ||
@@ -181,202 +171,211 @@ const PartialDateForm = ({
                     // dont wait for date complete for the moment validation to kick in
                     ((isNaN(day) || (!!day && (day < 1 || day > 31))) && locale.validationMessage.day) ||
                     // // date fields initially blank // remove
-                    // (year === null && this._isUnselected(month) && day === null && '') || // remove
+                    // (year === null && _isUnselected(month) && day === null && '') || // remove
                     // they've entered a day
                     /* istanbul ignore next */
-                    (year === null && this._isUnselected(month) && !!day && '') ||
+                    (year === null && _isUnselected(month) && !!day && '') ||
                     // they've entered a day and a month
                     /* istanbul ignore next */
                     (year === null && validMonthIndices.includes(month) && !!day && '') ||
                     // encourage them to select a month if the year and day are selected
                     /* istanbul ignore next */
-                    (!!year && this._isUnselected(month) && !!day && locale.validationMessage.month) ||
+                    (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
                     locale.validationMessage.date;
                 break;
             case STATUS_VALID:
+                console.log(
+                    'defo here',
+                    validationStatus,
+                    allowPartial,
+                    isRequired,
+                    { day, month, year },
+                    allowPartial,
+                    !!year,
+                    _isUnselected(month),
+                    !day,
+                );
                 // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
                 if (!!year && validMonthIndices.includes(month) && !!day) {
                     // date complete for non-partial-entry
-                    this.errors.date = '';
-                } else if (allowPartial && !!year && this._isUnselected(month) && !day) {
+                    date = '';
+                } else if (allowPartial && !!year && _isUnselected(month) && !day) {
+                    console.log('should be here');
                     // partial entry means they can get away with just a year
-                    this.errors.date = '';
-                } else if (!allowPartial && !!this.props.clearable && !year && !day && month === MONTH_UNSELECTED) {
-                    this.errors.date = '';
+                    date = '';
+                } else if (!allowPartial && !!clearable && !year && !day && month === MONTH_UNSELECTED) {
+                    date = '';
                 } else {
-                    this.errors.date = locale.validationMessage.date;
+                    date = locale.validationMessage.date;
                 }
                 break;
             case STATUS_FUTURE_DATE:
-                this.errors.date = locale.validationMessage.future;
+                date = locale.validationMessage.future;
                 break;
             /* istanbul ignore next */
             default:
                 break;
         }
-    };
 
-    const _isUnselected = (month) {
-        return month === MONTH_UNSELECTED || month === null;
-    }
-
-    const _setDate = date => {
-        const validationStatus = this._validate(date);
-
-        this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
-
-        // moment validation doesn't recognise -1 as a valid date.
-        const month = date.month === MONTH_UNSELECTED ? null : date.month;
-        const day = isNaN(date.day) || !date.day ? null : date.day;
-        const momentDate = { ...date, month, day };
-
-        return validationStatus === STATUS_VALID ? moment(momentDate).format(this.props.dateFormat) : '';
+        setErrors(state => ({ ...state, date }));
     };
 
     const _isNumber = event => {
-        if (
-            event.charCode < this.props.locale.minNumberCharCode ||
-            event.charCode > this.props.locale.maxNumberCharCode
-        ) {
+        if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
             event.preventDefault();
         }
     };
 
     const _onDateChanged = key => {
         return (event, index, value) => {
-            if (event.target.value === '') {
-                // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
-                this.setState({ [key]: '' });
-            } else {
-                this.setState({
-                    [key]: parseInt(
-                        event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
-                        10,
-                    ),
-                });
+            let newDateField;
+            if (event.target.value !== '') {
+                newDateField = parseInt(
+                    event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                    10,
+                );
             }
+            const newState = { ...state, [key]: newDateField };
+            const validationStatus = _validate(newState);
+
+            _displayErrors(newState, validationStatus, allowPartial, required);
+
+            // moment validation doesn't recognise -1 as a valid date.
+            const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
+            const day = isNaN(newState.day) || !newState.day ? null : newState.day;
+            const momentDate = { ...state, month, day };
+            const fullDate = validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
+            setState(state => ({
+                ...state,
+                ...newState,
+            }));
+            onChange?.(fullDate) || input?.onChange?.(fullDate);
         };
     };
 
-   
-        const renderMonths = months.map((month, index) => (
-            <MenuItem key={index} value={index}>
-                {month}
-            </MenuItem>
-        ));
-        const isError = this.errors.date || this.props.hasError || '';
-        return (
-            <Grid container spacing={0} padding={0} id={this.props.partialDateFormId}>
-                <Grid xs={12}>
-                    <InputLabel error={!!isError} shrink required={this.props.required}>
-                        {this.props.floatingTitle}
-                    </InputLabel>
-                </Grid>
-                <Grid xs={12}>
-                    <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
-                        <Grid xs>
-                            <Field
-                                control={control}
-                                name={`${this.props.partialDateFormId}-day`}
-                                variant="standard"
-                                id={`${this.props.partialDateFormId}-day`}
-                                type="text"
-                                fullWidth
-                                disabled={this.props.disabled}
-                                error={!!isError}
-                                onKeyPress={this._isNumber}
-                                onChange={this._onDateChanged('day')}
-                                onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
-                                placeholder={locale.dayLabel}
-                                inputProps={{
-                                    label: 'day',
-                                    maxLength: 2,
-                                    id: `${this.props.partialDateFormId}-day-input`,
-                                    'data-analyticsid': `${this.props.partialDateFormId}-day-input`,
-                                    'data-testid': `${this.props.partialDateFormId}-day-input`,
-                                }}
-                                value={this.state.day}
-                            />
-                            {isError && <FormHelperText error>{isError}</FormHelperText>}
-                        </Grid>
-                        <Grid xs>
-                            <Field
-                                control={control}
-                                component={Select}
-                                name={`${this.props.partialDateFormId}-month`}
-                                variant="standard"
-                                id={`${this.props.partialDateFormId}-month`}
-                                fullWidth
-                                error={!!isError}
-                                disabled={this.props.disabled}
-                                value={this.state.month === null ? /* istanbul ignore next */ -1 : this.state.month}
-                                placeholder={locale.monthLabel}
-                                onChange={this._onDateChanged('month')}
-                                inputProps={{
-                                    label: 'month',
-                                    maxLength: 2,
-                                    'data-analyticsid': `${this.props.partialDateFormId}-month-input`,
-                                    'data-testid': `${this.props.partialDateFormId}-month-input`,
-                                    id: `${this.props.partialDateFormId}-month-input`,
-                                }}
-                                SelectDisplayProps={{
-                                    id: `${this.props.partialDateFormId}-month-select`,
-                                    'data-analyticsid': `${this.props.partialDateFormId}-month-select`,
-                                    'data-testid': `${this.props.partialDateFormId}-month-select`,
-                                }}
-                                MenuProps={{
-                                    id: `${this.props.partialDateFormId}-month-options`,
-                                    'data-analyticsid': `${this.props.partialDateFormId}-month-options`,
-                                    'data-testid': `${this.props.partialDateFormId}-month-options`,
-                                }}
-                            >
-                                <MenuItem key={-1} value={MONTH_UNSELECTED}>
-                                    Month
-                                </MenuItem>
-                                {renderMonths}
-                            </Field>
-                        </Grid>
-                        <Grid xs>
-                            <Field
-                                control={control}
-                                component={TextField}
-                                name={`${this.props.partialDateFormId}-day`}
-                                variant="standard"
-                                id={`${this.props.partialDateFormId}-year`}
-                                type="text"
-                                fullWidth
-                                disabled={this.props.disabled}
-                                placeholder={locale.yearLabel}
-                                error={!!isError}
-                                onKeyPress={this._isNumber}
-                                onChange={this._onDateChanged('year')}
-                                onBlur={this._onDateChanged('year')}
-                                inputProps={{
-                                    label: 'year',
-                                    maxLength: 4,
-                                    id: `${this.props.partialDateFormId}-year-input`,
-                                    'data-analyticsid': `${this.props.partialDateFormId}-year-input`,
-                                    'data-testid': `${this.props.partialDateFormId}-year-input`,
-                                }}
-                                value={this.state.year}
-                            />
-                        </Grid>
+    React.useEffect(() => {
+        if (!!required) {
+            console.log('effect firing');
+            const validationStatus = _validate(state);
+            _displayErrors(validationStatus, allowPartial, required);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const renderMonths = months.map((month, index) => (
+        <MenuItem key={index} value={index}>
+            {month}
+        </MenuItem>
+    ));
+    const isError = errors.date || hasError || '';
+    console.log(isError, errors, floatingTitle);
+    return (
+        <Grid container spacing={0} padding={0} id={partialDateFormId}>
+            <Grid xs={12}>
+                <InputLabel error={!!isError} shrink required={required}>
+                    {floatingTitle}
+                </InputLabel>
+            </Grid>
+            <Grid xs={12}>
+                <Grid container spacing={2} padding={0} style={{ marginTop: -12 }} flexWrap={'nowrap'}>
+                    <Grid xs>
+                        <TextField
+                            name="day"
+                            variant="standard"
+                            id={`${partialDateFormId}-day`}
+                            type="text"
+                            fullWidth
+                            disabled={disabled}
+                            error={!!isError}
+                            onKeyPress={_isNumber}
+                            onChange={_onDateChanged('day')}
+                            onBlur={!allowPartial ? _onDateChanged('day') : undefined}
+                            placeholder={locale.dayLabel}
+                            inputProps={{
+                                label: 'day',
+                                maxLength: 2,
+                                id: `${partialDateFormId}-day-input`,
+                                'data-analyticsid': `${partialDateFormId}-day-input`,
+                                'data-testid': `${partialDateFormId}-day-input`,
+                            }}
+                            value={state.day}
+                        />
+                        {isError && <FormHelperText error>{isError}</FormHelperText>}
+                    </Grid>
+                    <Grid xs>
+                        <Select
+                            name="month"
+                            variant="standard"
+                            id={`${partialDateFormId}-month`}
+                            fullWidth
+                            error={!!isError}
+                            disabled={disabled}
+                            value={state.month === null ? /* istanbul ignore next */ -1 : state.month}
+                            placeholder={locale.monthLabel}
+                            onChange={_onDateChanged('month')}
+                            inputProps={{
+                                label: 'month',
+                                maxLength: 2,
+                                'data-analyticsid': `${partialDateFormId}-month-input`,
+                                'data-testid': `${partialDateFormId}-month-input`,
+                                id: `${partialDateFormId}-month-input`,
+                            }}
+                            SelectDisplayProps={{
+                                id: `${partialDateFormId}-month-select`,
+                                'data-analyticsid': `${partialDateFormId}-month-select`,
+                                'data-testid': `${partialDateFormId}-month-select`,
+                            }}
+                            MenuProps={{
+                                id: `${partialDateFormId}-month-options`,
+                                'data-analyticsid': `${partialDateFormId}-month-options`,
+                                'data-testid': `${partialDateFormId}-month-options`,
+                            }}
+                        >
+                            <MenuItem key={-1} value={MONTH_UNSELECTED}>
+                                Month
+                            </MenuItem>
+                            {renderMonths}
+                        </Select>
+                    </Grid>
+                    <Grid xs>
+                        <TextField
+                            name="year"
+                            variant="standard"
+                            id={`${partialDateFormId}-year`}
+                            type="text"
+                            fullWidth
+                            disabled={disabled}
+                            placeholder={locale.yearLabel}
+                            error={!!isError}
+                            onKeyPress={_isNumber}
+                            onChange={_onDateChanged('year')}
+                            onBlur={_onDateChanged('year')}
+                            inputProps={{
+                                label: 'year',
+                                maxLength: 4,
+                                id: `${partialDateFormId}-year-input`,
+                                'data-analyticsid': `${partialDateFormId}-year-input`,
+                                'data-testid': `${partialDateFormId}-year-input`,
+                            }}
+                            value={state.year}
+                        />
                     </Grid>
                 </Grid>
             </Grid>
-        );
-}
+        </Grid>
+    );
+};
 
 PartialDateForm.propTypes = {
     control: PropTypes.any,
+    value: PropTypes.any,
     locale: PropTypes.object,
     onChange: PropTypes.func,
     dateFormat: PropTypes.string,
     allowPartial: PropTypes.bool,
     disabled: PropTypes.bool,
     months: PropTypes.array,
-    floatingTitle: PropTypes.string.isRequired,
-    floatingTitleRequired: PropTypes.bool,
+    floatingTitle: PropTypes.string,
     required: PropTypes.bool,
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
@@ -388,5 +387,4 @@ PartialDateForm.propTypes = {
     clearable: PropTypes.bool,
 };
 
-
-export default PartialDateForm;
+export default React.memo(PartialDateForm);
