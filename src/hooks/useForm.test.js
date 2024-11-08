@@ -1,5 +1,4 @@
 import { renderHook } from 'test-utils';
-import * as ReactHookForm from 'react-hook-form';
 import {
     useForm,
     SERVER_ERROR_NAMESPACE,
@@ -14,6 +13,7 @@ const setup = props => renderHook(() => useForm(props));
 
 describe('useForm hook', () => {
     let mockFormReturn;
+    let mockOriginalUseForm;
 
     beforeEach(() => {
         mockFormReturn = {
@@ -31,7 +31,7 @@ describe('useForm hook', () => {
             .fn()
             .mockImplementation(callback => () => callback(mockFormReturn.getValues()));
 
-        jest.spyOn(ReactHookForm, 'useForm').mockReturnValue(mockFormReturn);
+        mockOriginalUseForm = jest.spyOn(require('react-hook-form'), 'useForm').mockReturnValue(mockFormReturn);
     });
 
     afterEach(() => {
@@ -52,14 +52,14 @@ describe('useForm hook', () => {
         const props = { defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
+        expect(mockOriginalUseForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
     });
 
     it('should call original useForm() with "mode" override', () => {
         const props = { mode: 'all', defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith(props);
+        expect(mockOriginalUseForm).toHaveBeenCalledWith(props);
     });
 
     it('should set formState.isSubmitFailure to true when the form is not successfully submitted', () => {
