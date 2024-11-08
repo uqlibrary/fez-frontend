@@ -89,7 +89,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     let hasParams = false;
 
     const queryStringObject = queryString.parse(
-        /* istanbul ignore next */
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
