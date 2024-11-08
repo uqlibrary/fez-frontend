@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from 'hooks';
@@ -43,8 +43,17 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
             internalNotes: null,
         },
     });
-    const formValues = watch();
+
     const [apiError, setApiError] = React.useState('');
+    const [selectedCommunity, setSelectedCommunity] = React.useState(false);
+    const communityValue = watch('fez_record_search_key_ismemberof');
+    useEffect(() => {
+        if (communityValue) {
+            console.log('Community changed:', communityValue);
+            // Add your custom logic here
+            setSelectedCommunity(true);
+        }
+    }, [communityValue]);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
@@ -158,9 +167,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                 </StandardCard>
                             </Grid>
                         )}
-                        {(!!hasParams ||
-                            (formValues.fez_record_search_key_ismemberof &&
-                                formValues.fez_record_search_key_ismemberof?.length > 0)) && (
+                        {(!!hasParams || selectedCommunity) && (
                             <Grid xs={12}>
                                 <StandardCard title={detailsTitle} help={txt.details.help}>
                                     <Grid container spacing={3} padding={0}>
