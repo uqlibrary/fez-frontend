@@ -114,6 +114,15 @@ export const useSelectedJournals = ({ state = {}, available = {} }) => {
     };
 };
 
+/**
+ * @typedef {{[p: string]: string, activeFacets: {ranges: (*|{}), filters: (*|{})}}} JournalSearchQueryParams
+ * @param path
+ * @return {{
+ *   handleSearch: handleSearch,
+ *   locationKey: *,
+ *   journalSearchQueryParams: JournalSearchQueryParams
+ * }}
+ */
 export const useJournalSearch = (path = pathConfig.journals.search) => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -138,6 +147,20 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 };
 
+/**
+ *
+ * @param onSearch {(params: JournalSearchQueryParams) = >void}
+ * @param journalSearchQueryParams {JournalSearchQueryParams}
+ * @param favourites
+ * @param allJournals
+ * @return {{
+ *   pageChanged: pageChanged,
+ *   handleExport: handleExport,
+ *   facetsChanged: facetsChanged,
+ *   pageSizeChanged: pageSizeChanged,
+ *   sortByChanged: sortByChanged
+ * }}
+ */
 export const useJournalSearchControls = (onSearch, journalSearchQueryParams, favourites, allJournals = false) => {
     const dispatch = useDispatch();
     const updateSemaphore = React.useRef(false);
