@@ -67,13 +67,10 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                 fez_record_search_key_ismemberof: queryStringObject.pid,
             };
         }
-        // eslint-disable-next-line camelcase
         return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
             let err = error.message;
-            /* istanbul ignore else */
-            if (error?.original?.error?.message) {
-                err += ' ' + error?.original?.error?.message;
-            }
+            const originalMessage = error?.original?.error?.message;
+            err += originalMessage && ' ' + originalMessage;
             setApiError(err);
         });
     };
