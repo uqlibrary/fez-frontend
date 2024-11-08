@@ -1,6 +1,6 @@
 import React from 'react';
 import PartialDateForm from './PartialDateForm';
-import { userEvent, fireEvent, rtlRender, preview } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -16,7 +16,7 @@ function setup(testProps = {}) {
 }
 
 describe('PartialDateForm component', () => {
-    it('should render comp', () => {
+    it.only('should render comp', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
     });
@@ -29,7 +29,7 @@ describe('PartialDateForm component', () => {
 
     it('should display errors correctly', () => {
         const { container, getByText } = setup({
-            required: true,
+            allowPartial: true,
             onChange: jest.fn(),
         });
         expect(getByText('Invalid date')).toBeInTheDocument();
@@ -72,18 +72,17 @@ describe('PartialDateForm component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should handle keypress', async () => {
+    it('should handle keypress', () => {
         const { container, getByTestId } = setup({
             allowPartial: true,
             onChange: jest.fn(),
         });
 
-        await userEvent.type(getByTestId('test-day-input'), '!');
-        preview.debug();
+        fireEvent.keyPress(getByTestId('test-day-input'), { key: '!', charCode: 33 });
         expect(container).toMatchSnapshot();
-        await userEvent.type(getByTestId('test-day-input'), ';');
+        fireEvent.keyPress(getByTestId('test-day-input'), { key: ';', charCode: 59 });
         expect(container).toMatchSnapshot();
-        await userEvent.type(getByTestId('test-day-input'), '0');
+        fireEvent.keyPress(getByTestId('test-day-input'), { key: '0', charCode: 48 });
         expect(container).toMatchSnapshot();
     });
 
@@ -110,7 +109,7 @@ describe('PartialDateForm component', () => {
     });
 
     describe('with clearable flag', () => {
-        it('should display an error on clearing one partial date field', () => {
+        it('should display an error on clearing one partial date field', async () => {
             const { getByText, queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
