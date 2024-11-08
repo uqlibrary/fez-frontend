@@ -16,7 +16,7 @@ function setup(testProps = {}) {
 }
 
 describe('PartialDateForm component', () => {
-    it.only('should render comp', () => {
+    it('should render comp', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
     });

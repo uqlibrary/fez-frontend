@@ -105,7 +105,6 @@ const PartialDateForm = ({
         const hasRequired = !!year && (allowPartial || (!!day && month !== null));
         const momentDate = { ...state, month, day };
         const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
-        console.log(state, day, month, year, hasRequired, momentDate, validationStatus);
 
         if (validationStatus === STATUS_VALID && !!disableFuture) {
             if (!!allowPartial) {
@@ -157,7 +156,6 @@ const PartialDateForm = ({
 
         switch (validationStatus) {
             case STATUS_INVALID:
-                console.log('invalid', { day, month, year, validationStatus, allowPartial, isRequired });
                 date =
                     // initial load of 'required' message for required date fields
                     /* istanbul ignore next */
@@ -180,7 +178,6 @@ const PartialDateForm = ({
                     /* istanbul ignore next */
                     (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
                     locale.validationMessage.date;
-                console.log('INVALID', date);
                 break;
             case STATUS_VALID:
                 // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
@@ -188,7 +185,6 @@ const PartialDateForm = ({
                     // date complete for non-partial-entry
                     date = '';
                 } else if (allowPartial && !!year && _isUnselected(month) && !day) {
-                    console.log('should be here');
                     // partial entry means they can get away with just a year
                     date = '';
                 } else if (!allowPartial && !!clearable && !year && !day && month === MONTH_UNSELECTED) {
@@ -215,10 +211,23 @@ const PartialDateForm = ({
         }
     };
 
+    const validate = newState => {
+        const validationStatus = _validate(newState);
+
+        _displayErrors(newState, validationStatus, allowPartial, required);
+
+        // moment validation doesn't recognise -1 as a valid date.
+        const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
+        const day = isNaN(newState.day) || !newState.day ? null : newState.day;
+        const momentDate = { ...state, month, day };
+        const fullDate = validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
+
+        setState(newState);
+        return fullDate;
+    };
     const _onDateChanged = key => {
         return (event, index, value) => {
             let newDateField = '';
-            console.log('change', key, event?.target?.value, value);
             if (event.target.value !== '') {
                 newDateField = parseInt(
                     event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
@@ -226,28 +235,17 @@ const PartialDateForm = ({
                 );
             }
             const newState = { ...state, [key]: newDateField };
-            const validationStatus = _validate(newState);
+            const fullDate = validate(newState);
 
-            _displayErrors(newState, validationStatus, allowPartial, required);
-
-            // moment validation doesn't recognise -1 as a valid date.
-            const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
-            const day = isNaN(newState.day) || !newState.day ? null : newState.day;
-            const momentDate = { ...state, month, day };
-            const fullDate = validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
-
-            setState(newState);
             onChange?.(fullDate) || input?.onChange?.(fullDate);
         };
     };
 
     React.useEffect(() => {
-        const validationStatus = _validate(state);
-        console.log('effect firing');
-        _displayErrors(state, validationStatus, allowPartial, required);
+        !!onChange && validate(state);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [onChange]);
 
     const renderMonths = months.map((month, index) => (
         <MenuItem key={index} value={index}>
@@ -255,7 +253,7 @@ const PartialDateForm = ({
         </MenuItem>
     ));
     const isError = error || hasError || '';
-    console.log(state);
+
     return (
         <Grid container spacing={0} padding={0} id={partialDateFormId}>
             <Grid xs={12}>
