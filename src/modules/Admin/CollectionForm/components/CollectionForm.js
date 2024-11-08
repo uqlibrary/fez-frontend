@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from 'hooks';
@@ -30,7 +30,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     // form
     const {
         handleSubmit,
-        watch,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -46,14 +45,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
 
     const [apiError, setApiError] = React.useState('');
     const [selectedCommunity, setSelectedCommunity] = React.useState(false);
-    const communityValue = watch('fez_record_search_key_ismemberof');
-    useEffect(() => {
-        if (communityValue) {
-            console.log('Community changed:', communityValue);
-            // Add your custom logic here
-            setSelectedCommunity(true);
-        }
-    }, [communityValue]);
 
     const dispatch = useDispatch();
     const onSubmit = values => {
@@ -90,6 +81,10 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
 
     const reloadForm = () => {
         window.location.reload();
+    };
+
+    const handleCommunityChange = () => {
+        setSelectedCommunity(true);
     };
 
     let hasParams = false;
@@ -161,6 +156,7 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
                                                 required
                                                 validate={[validation.required]}
                                                 {...txt.formLabels.ismemberof}
+                                                onChange={handleCommunityChange}
                                             />
                                         </Grid>
                                     </Grid>
