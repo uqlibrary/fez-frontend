@@ -11,6 +11,9 @@ import {
 } from './general';
 
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
+/**
+ * @type {{[number]: {fields: {field: string, order: number}[]}}}
+ */
 export const doiFields = {
     [PUBLICATION_TYPE_BOOK_CHAPTER]: {
         fields: [

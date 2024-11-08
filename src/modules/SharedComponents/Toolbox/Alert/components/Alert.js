@@ -287,7 +287,7 @@ Alert.propTypes = {
     disableAlertClick: PropTypes.bool,
     dismissAction: PropTypes.func,
     dismissTitle: PropTypes.string,
-    message: PropTypes.any.isRequired,
+    message: PropTypes.string.isRequired,
     showLoader: PropTypes.bool,
     alertId: PropTypes.string,
     title: PropTypes.string,

@@ -321,6 +321,14 @@ export const translateFormErrorsToText = formErrors => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
+/**
+ * @param submitting {boolean}
+ * @param error {Object|undefined}
+ * @param formErrors {Object|undefined}
+ * @param submitSucceeded {boolean}
+ * @param alertLocale {Object}
+ * @return {Object}
+ */
 export const getErrorAlertProps = ({
     submitting = false,
     error,
