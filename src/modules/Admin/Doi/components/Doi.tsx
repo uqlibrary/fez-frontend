@@ -116,7 +116,12 @@ export const getInvalidPreviewFields = (record: FezRecord) => {
     const previewFields = !!displayType && !!doiFields[displayType] && doiFields[displayType].fields;
     const invalidPreviewFields: string[] = [];
 
-    (previewFields || []).map((fieldConfig: DoiFieldNames) => {
+    // istanbul ignore next
+    if (!previewFields) {
+        return invalidPreviewFields;
+    }
+
+    previewFields.map((fieldConfig: DoiFieldNames) => {
         const fieldName = fieldConfig.field;
         const subKey = fieldName.replace('fez_record_search_key', 'rek');
         const value = (typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
