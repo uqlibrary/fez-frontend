@@ -1,13 +1,19 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
-import IndexedSection from './IndexedSection';
+import { rtlRender } from 'test-utils';
 
 jest.mock('../../../../context');
-import { useJournalContext, useFormValuesContext } from 'context';
 import { journalDoaj } from 'mock/data';
-import { reduxForm } from 'redux-form';
+import { useJournalContext } from 'context';
+import { FormProvider } from 'react-hook-form';
+import IndexedSection from './IndexedSection';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
-const WithReduxForm = reduxForm({ form: 'testForm' })(IndexedSection);
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -15,9 +21,9 @@ function setup(testProps = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper>
+            <IndexedSection {...props} />
+        </FormProviderWrapper>,
     );
 }
 
@@ -27,12 +33,7 @@ describe('IndexedSection component', () => {
             journalDetails: {
                 ...journalDoaj.data,
             },
-            jnlDisplayType: 'adminjournal',
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
-            },
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
 
         const { getByTestId } = setup();

@@ -4,6 +4,7 @@ import {
     VIEW_JOURNAL_LOAD_FAILED,
     ADMIN_JOURNAL_CLEAR,
     ADMIN_JOURNAL_UNLOCK,
+    ADMIN_UPDATE_JOURNAL_FAILED,
 } from 'actions/actionTypes';
 
 import viewJournalReducer, { initialState } from './viewJournal';
@@ -60,6 +61,21 @@ describe('viewJournalReducer reducer', () => {
         };
         const test = viewJournalReducer(previousState, {
             type: VIEW_JOURNAL_LOAD_FAILED,
+            payload: 'Test error message',
+        });
+        expect(test).toEqual(expected);
+    });
+
+    it('sets update failed state', () => {
+        const previousState = {
+            ...initialState,
+        };
+        const expected = {
+            ...previousState,
+            error: 'Test error message',
+        };
+        const test = viewJournalReducer(previousState, {
+            type: ADMIN_UPDATE_JOURNAL_FAILED,
             payload: 'Test error message',
         });
         expect(test).toEqual(expected);

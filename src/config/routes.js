@@ -306,12 +306,12 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.journals.compare,
                       element: <components.JournalComparison />,
-                      pageTitle: locale.pages.journals.compare.title,
+                      pageTitle: locale.components.journalComparison.title,
                   },
                   {
                       path: pathConfig.journals.favourites,
                       element: <components.FavouriteJournals />,
-                      pageTitle: locale.pages.journals.favourites.title,
+                      pageTitle: locale.components.favouriteJournals.title,
                   },
               ]
             : []),

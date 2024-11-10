@@ -1,21 +1,24 @@
-import { useForm } from 'react-hook-form';
 import { useLayoutEffect } from 'react';
+import { useForm } from './useForm';
 
+/**
+ * @param props
+ * @return {UseFormReturn<FieldValues, *, undefined>}
+ */
 export const useValidatedForm = props => {
     const attributes = useForm(props);
     const {
         trigger,
-        formState: { isValid, errors },
+        formState: { isValid, hasValidationError },
     } = attributes;
 
-    const hasErrors = Object.keys(errors).length > 0;
     // trigger validation prior to rendering in order to display errors (to match redux form behaviour)
     useLayoutEffect(() => {
-        if (isValid && !hasErrors) {
+        if (isValid && !hasValidationError) {
             return;
         }
         (async () => await trigger())();
-    }, [isValid, hasErrors, trigger]);
+    }, [isValid, hasValidationError, trigger]);
 
     return attributes;
 };

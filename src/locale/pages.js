@@ -1237,20 +1237,6 @@ export default {
             title: 'Manage users',
             loadingMessage: 'Loading users',
         },
-        journals: {
-            search: {
-                title: 'Strategic publishing search',
-            },
-            results: {
-                title: 'Strategic publishing results',
-            },
-            compare: {
-                title: 'Strategic publishing compare',
-            },
-            favourites: {
-                title: 'Strategic publishing favourites',
-            },
-        },
         controlledVocabularies: {
             title: 'Controlled Vocabularies',
         },
