@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
 import { filterObjectProps, getPlatformUrl } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
@@ -46,19 +46,44 @@ export const transformQuickLinkReorderRequest = data => {
     return request;
 };
 
-export const transformReportRequest = data => {
-    const reportId = REPORT_TYPE?.[data.displayReport?.value] ?? 0;
+export const transformExportReportRequest = data => {
+    const allowedFilters = ['date_from', 'date_to'];
+    const filters = filterObjectProps(data.filters, allowedFilters);
+
+    const request = {
+        report_type: data.report.sel_id,
+        ...Object.keys(filters).reduce(
+            (current, filter) => ({ ...current, ...(!!filters[filter] ? { [filter]: filters[filter] } : {}) }),
+            {},
+        ),
+    };
+    return request;
+};
+
+export const transformDisplayReportRequest = data => {
+    const reportId = REPORT_TYPE?.[data.report?.value] ?? 0;
     if (reportId === 0) return data;
 
     const request = {
         report_type: reportId,
-        ...(!!data.fromDate && data.systemAlertId === ''
-            ? { date_from: moment(data.fromDate).format('YYYY-MM-DD') }
+        ...(!!data.filters?.date_from && data.filters?.record_id === ''
+            ? {
+                  date_from: moment(data.filters.date_from)
+                      .startOf('day')
+                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+              }
             : {}),
-        ...(!!data.toDate && data.systemAlertId === '' ? { date_to: moment(data.toDate).format('YYYY-MM-DD') } : {}),
-        ...(data.displayReport.value === 'systemalertlog' && !!data.systemAlertId
-            ? { record_id: data.systemAlertId }
+        ...(!!data.filters?.date_to && data.filters?.record_id === ''
+            ? {
+                  date_to: moment(data.filters.date_to)
+                      .endOf('day')
+                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+              }
+            : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
+            ? { record_id: data.filters.record_id }
             : {}),
     };
+
     return request;
 };
