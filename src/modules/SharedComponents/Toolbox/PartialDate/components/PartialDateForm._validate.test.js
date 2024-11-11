@@ -1,36 +1,36 @@
-import { PartialDateForm, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
+/* eslint-disable no-undef */
+import { _validate, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
 
-const partialAllowedDateForm = new PartialDateForm({ allowPartial: true });
-const partialNotAllowedDateForm = new PartialDateForm({ allowPartial: false });
-const futureAllowedDateForm = new PartialDateForm({ disableFuture: false });
-const futureNotAllowedDateForm = new PartialDateForm({ disableFuture: true });
-const partialFutureNotAllowedDateForm = new PartialDateForm({ allowPartial: true, disableFuture: true });
+const partialAllowedDateForm = (allowPartial = true) => ({ day, month, year }) =>
+    _validate({ state: { day, month, year }, allowPartial });
+// const partialNotAllowedDateForm = new PartialDateForm({ allowPartial: false });
+// const futureAllowedDateForm = new PartialDateForm({ disableFuture: false });
+// const futureNotAllowedDateForm = new PartialDateForm({ disableFuture: true });
+// const partialFutureNotAllowedDateForm = new PartialDateForm({ allowPartial: true, disableFuture: true });
 
 describe('PartialDateForm unit tests', () => {
     /**
      * Test _validate with allowPartial: true
      */
     it('should validate date on year supplied if allowed partial', () => {
-        expect(partialAllowedDateForm._validate({ day: null, month: null, year: 2015 })).toEqual(STATUS_VALID);
+        expect(partialAllowedDateForm()({ day: null, month: null, year: 2015 })).toEqual(STATUS_VALID);
     });
 
     it('should validate date on year supplied with unselected month if allowed partial', () => {
-        expect(partialAllowedDateForm._validate({ day: null, month: MONTH_UNSELECTED, year: 2015 })).toEqual(
-            STATUS_VALID,
-        );
+        expect(partialAllowedDateForm()({ day: null, month: MONTH_UNSELECTED, year: 2015 })).toEqual(STATUS_VALID);
     });
 
     it('should not validate date on day supplied but year is null if allowed partial', () => {
-        expect(partialAllowedDateForm._validate({ day: 25, month: null, year: null })).toEqual(STATUS_INVALID);
+        expect(partialAllowedDateForm()({ day: 25, month: null, year: null })).toEqual(STATUS_INVALID);
     });
 
     it('should not validate date on focus and blur on year field if allowed partial', () => {
-        expect(partialAllowedDateForm._validate({ day: 25, month: null, year: NaN })).toEqual(STATUS_INVALID);
+        expect(partialAllowedDateForm()({ day: 25, month: null, year: NaN })).toEqual(STATUS_INVALID);
     });
 
     it('should not validate a completely invalid date if allowed partial', () => {
         // month 3 is April in moment
-        expect(partialAllowedDateForm._validate({ day: 31, month: 3, year: 2017 })).toEqual(STATUS_INVALID);
+        expect(partialAllowedDateForm()({ day: 31, month: 3, year: 2017 })).toEqual(STATUS_INVALID);
     });
 
     /**

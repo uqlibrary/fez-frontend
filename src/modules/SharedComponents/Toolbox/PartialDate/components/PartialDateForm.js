@@ -17,6 +17,64 @@ export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the fut
 
 export const MONTH_UNSELECTED = -1;
 
+/**
+ * validate the entered date field
+ * @param state
+ * @returns {int} returns one of STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, defined above
+ * @private
+ */
+export const _validate = ({ state, allowPartial, disableFuture = false, clearable = false }) => {
+    const { day: dayActual, month: monthActual, year } = state;
+    // moment validation doesn't recognise -1 or empty string as a valid date
+    const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
+    const day = isNaN(dayActual) || !dayActual ? null : dayActual;
+    const hasRequired = !!year && (allowPartial || (!!day && month !== null));
+    const momentDate = { ...state, month, day };
+    const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
+
+    if (validationStatus === STATUS_VALID && !!disableFuture) {
+        if (!!allowPartial) {
+            const yearNow = moment().year();
+            if (year > yearNow) {
+                return STATUS_FUTURE_DATE;
+            }
+        } else {
+            const dateNow = moment();
+            if (!moment(momentDate).isSameOrBefore(dateNow)) {
+                return STATUS_FUTURE_DATE;
+            }
+        }
+    }
+
+    if (!allowPartial && !!clearable) {
+        if (!year && !day && !month) {
+            return STATUS_VALID;
+        }
+        if (
+            !!year &&
+            !!day &&
+            month !== MONTH_UNSELECTED &&
+            moment(momentDate).isValid() &&
+            moment(momentDate).isSameOrBefore()
+        ) {
+            return STATUS_VALID;
+        }
+        if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
+            return STATUS_INVALID;
+        }
+        if (
+            !!year &&
+            !!day &&
+            month !== MONTH_UNSELECTED &&
+            moment(momentDate).isValid() &&
+            moment(momentDate).isSameOrAfter()
+        ) {
+            return STATUS_INVALID;
+        }
+    }
+    return validationStatus;
+};
+
 const PartialDateForm = ({
     locale = {
         dayLabel: 'Day',
@@ -91,63 +149,6 @@ const PartialDateForm = ({
         return month === MONTH_UNSELECTED || month === null;
     };
 
-    /**
-     * validate the entered date field
-     * @param state
-     * @returns {int} returns one of STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, defined above
-     * @private
-     */
-    const _validate = state => {
-        const { day: dayActual, month: monthActual, year } = state;
-        // moment validation doesn't recognise -1 or empty string as a valid date
-        const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
-        const day = isNaN(dayActual) || !dayActual ? null : dayActual;
-        const hasRequired = !!year && (allowPartial || (!!day && month !== null));
-        const momentDate = { ...state, month, day };
-        const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
-
-        if (validationStatus === STATUS_VALID && !!disableFuture) {
-            if (!!allowPartial) {
-                const yearNow = moment().year();
-                if (year > yearNow) {
-                    return STATUS_FUTURE_DATE;
-                }
-            } else {
-                const dateNow = moment();
-                if (!moment(momentDate).isSameOrBefore(dateNow)) {
-                    return STATUS_FUTURE_DATE;
-                }
-            }
-        }
-
-        if (!allowPartial && !!clearable) {
-            if (!year && !day && !month) {
-                return STATUS_VALID;
-            }
-            if (
-                !!year &&
-                !!day &&
-                month !== MONTH_UNSELECTED &&
-                moment(momentDate).isValid() &&
-                moment(momentDate).isSameOrBefore()
-            ) {
-                return STATUS_VALID;
-            }
-            if (!!year && !!day && month !== MONTH_UNSELECTED && !moment(momentDate).isValid()) {
-                return STATUS_INVALID;
-            }
-            if (
-                !!year &&
-                !!day &&
-                month !== MONTH_UNSELECTED &&
-                moment(momentDate).isValid() &&
-                moment(momentDate).isSameOrAfter()
-            ) {
-                return STATUS_INVALID;
-            }
-        }
-        return validationStatus;
-    };
     const _displayErrors = (state, validationStatus, allowPartial, isRequired = false) => {
         const { day, month, year } = state;
         const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
@@ -205,14 +206,8 @@ const PartialDateForm = ({
         setError(date);
     };
 
-    const _isNumber = event => {
-        if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
-            event.preventDefault();
-        }
-    };
-
     const validate = newState => {
-        const validationStatus = _validate(newState);
+        const validationStatus = _validate({ state: newState, allowPartial, disableFuture, clearable });
 
         _displayErrors(newState, validationStatus, allowPartial, required);
 
@@ -225,6 +220,13 @@ const PartialDateForm = ({
         setState(newState);
         return fullDate;
     };
+
+    const _isNumber = event => {
+        if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
+            event.preventDefault();
+        }
+    };
+
     const _onDateChanged = key => {
         return (event, index, value) => {
             let newDateField = '';
