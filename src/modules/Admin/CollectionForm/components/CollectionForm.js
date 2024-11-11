@@ -51,7 +51,6 @@ export const CollectionForm = ({ disableSubmit }) => {
     const communityValue = watch('fez_record_search_key_ismemberof');
     useEffect(() => {
         if (communityValue) {
-            console.log('Community changed:', communityValue);
             // Add your custom logic here
             setSelectedCommunity(true);
         }
