@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from 'hooks';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -26,7 +26,10 @@ import queryString from 'query-string';
 import { getNotesSectionSearchKeys } from '../../../../actions/transformers';
 import { createCollection } from '../../../../actions';
 
-export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
+export const CollectionForm = ({ disableSubmit }) => {
+    const newRecord = useSelector(state => state?.createCollectionReducer?.newRecord || null);
+    const currentAuthor = useSelector(state => state?.accountReducer?.author || null);
+
     // form
     const {
         handleSubmit,
@@ -54,7 +57,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
 
         delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
 
-        const currentAuthor = props.author || null;
         const queryStringObject = queryString.parse(
             location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
             { ignoreQueryPrefix: true },
@@ -287,7 +289,6 @@ export const CollectionForm = ({ disableSubmit, newRecord, ...props }) => {
     );
 };
 CollectionForm.propTypes = {
-    author: PropTypes.object,
     account: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     fileAccessId: PropTypes.number,
@@ -297,7 +298,6 @@ CollectionForm.propTypes = {
 
     newCollectionSaving: PropTypes.bool,
     newCollectionError: PropTypes.bool,
-    newRecord: PropTypes.object,
 
     submitSucceeded: PropTypes.bool,
     dirty: PropTypes.bool,
