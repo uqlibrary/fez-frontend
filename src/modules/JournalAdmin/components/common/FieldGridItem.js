@@ -1,7 +1,8 @@
-/* istanbul ignore file */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+
+import { useFormContext } from 'react-hook-form';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 
@@ -10,7 +11,7 @@ import { fieldConfig } from 'config/journalAdmin';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { jnlDisplayType } = useJournalContext();
-
+    const methods = useFormContext();
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -20,10 +21,19 @@ export const FieldGridItem = ({ field, group, disabled }) => {
         ...fieldConfig.default[field].componentProps,
         ...(((fieldConfig.override[jnlDisplayType] || {})[field] || (() => {}))({}) || {}),
     };
+    const error = methods.getFieldState(componentProps.name).error;
 
     return (
         <Grid item xs={12} md={12 / group.length}>
-            <Field disabled={disabled} component={fieldConfig.default[field].component} {...componentProps} />
+            <Field
+                name={componentProps.name}
+                control={methods.control}
+                component={fieldConfig.default[field].component}
+                disabled={disabled}
+                {...componentProps}
+                {...(!!error ? { error: true, errorText: error } : {})}
+                value={methods.getValues(componentProps.name) ?? ''}
+            />
         </Grid>
     );
 };

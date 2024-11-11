@@ -63,7 +63,7 @@ export const FreeTextForm = ({
         ) {
             return;
         }
-
+        event.preventDefault();
         // pass on the selected item
         !!onAdd ? onAdd(item) : onSubmit(mode === 'add' ? [item] : item, indexOf);
         setItemSubmitted(true);
