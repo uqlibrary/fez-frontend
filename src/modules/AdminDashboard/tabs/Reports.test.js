@@ -15,9 +15,14 @@ import {
 import Reports from './Reports';
 
 const setup = (props = {}, state = {}, renderer = render) => {
+    const data = { ...adminDashboardConfig };
+    data.export_reports = data.export_reports.map(report => ({
+        ...report,
+        sel_bindings: report.sel_bindings && report.sel_bindings.split(','),
+    }));
     const testState = {
         adminDashboardConfigReducer: {
-            adminDashboardConfigData: { ...adminDashboardConfig },
+            adminDashboardConfigData: { ...data },
         },
         ...state,
     };
@@ -46,6 +51,8 @@ describe('Reports tab', () => {
 
         expect(getByText('Export-only reports')).toBeInTheDocument();
         expect(getByTestId('report-export-only-input')).toBeInTheDocument();
+        expect(getByTestId('report-export-only-date-from-input')).toHaveAttribute('disabled');
+        expect(getByTestId('report-export-only-date-to-input')).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export report' })).toHaveAttribute('disabled');
 
         expect(getByText('Display reports')).toBeInTheDocument();
@@ -57,13 +64,12 @@ describe('Reports tab', () => {
     });
 
     it('should handle export-only reports', async () => {
-        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: 1 }).apiUrl).reply(200, { data: {} });
         const loadAdminDashboardExportReportFn = jest.spyOn(DashboardActions, 'loadAdminDashboardExportReport');
         const { getAllByRole, getByRole, getByTestId } = setup();
 
         await userEvent.click(getByTestId('report-export-only-input'));
 
-        expect(getAllByRole('option').length).toBe(4);
+        expect(getAllByRole('option').length).toBe(6);
 
         await userEvent.click(getByTestId('report-export-only-option-0', { hidden: true }));
 
@@ -74,7 +80,10 @@ describe('Reports tab', () => {
         expect(within(getByRole('button', { name: 'Export report' })).getByRole('progressbar')).toBeInTheDocument();
         expect(getByRole('button', { name: 'Export report' })).toHaveAttribute('disabled');
 
-        expect(loadAdminDashboardExportReportFn).toHaveBeenCalledWith({ export_to: 'csv', id: 1 });
+        expect(loadAdminDashboardExportReportFn).toHaveBeenCalledWith(
+            { report_type: 1 },
+            expect.objectContaining({ export_to: 'csv' }),
+        );
     });
 
     it('should display alert when export-only reports failure', async () => {
@@ -121,6 +130,10 @@ describe('Reports tab', () => {
         // additional field should be visible
         expect(getByTestId('report-display-export-system-alert-id-input')).toBeInTheDocument();
 
+        // either dates or system id is required
+        // await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2023');
+        // await userEvent.type(getByTestId('report-display-export-date-to-input'), '12/04/2023');
+
         expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         await userEvent.click(getByRole('button', { name: 'Run report' }));
 
@@ -128,13 +141,17 @@ describe('Reports tab', () => {
 
         expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
 
-        expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith({ report_type: 1 });
+        expect(loadAdminDashboardDisplayReportFn).toHaveBeenCalledWith({
+            // date_from: '2023-04-02',
+            // date_to: '2023-04-12',
+            report_type: 1,
+        });
     });
 
     it('should build full works history report request', async () => {
         const expectedRequest = {
             date_from: '2024-04-02',
-            date_to: '2024-05-03', // TBC what the BE needs for searching
+            date_to: '2024-05-03',
             report_type: 2,
         };
 
@@ -218,6 +235,7 @@ describe('Reports tab', () => {
 
         await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
         await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        // defining a system alert should disable dates and only send system id in request
         await userEvent.type(getByTestId('report-display-export-system-alert-id-input'), '123');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
@@ -245,7 +263,7 @@ describe('Reports tab', () => {
     it('should build system alerts report with only date request', async () => {
         const expectedRequest = {
             date_from: '2024-04-02',
-            date_to: '2024-05-03', // TBC what the BE needs for searching
+            date_to: '2024-05-03',
             report_type: 1,
         };
 
@@ -306,6 +324,9 @@ describe('Reports tab', () => {
 
         await userEvent.click(getByTestId('report-display-export-input'));
         await userEvent.click(getByRole('option', { name: 'System alert log' }));
+
+        // await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        // await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
         await userEvent.click(getByRole('button', { name: 'Run report' }));
 
         await waitFor(() => expect(getByTestId('alert-report-display-export')).toBeInTheDocument());
