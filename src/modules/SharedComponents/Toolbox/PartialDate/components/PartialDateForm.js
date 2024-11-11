@@ -75,6 +75,90 @@ export const _validate = ({ state, allowPartial, disableFuture = false, clearabl
     return validationStatus;
 };
 
+export const _isNumber = locale => event => {
+    if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
+        event.preventDefault();
+    }
+};
+
+export const _isUnselected = month => {
+    return month === MONTH_UNSELECTED || month === null;
+};
+
+export const _displayErrors = ({
+    state,
+    setError,
+    validationStatus,
+    allowPartial,
+    locale,
+    clearable,
+    isRequired = false,
+}) => {
+    console.log({
+        state,
+        setError,
+        validationStatus,
+        allowPartial,
+        locale,
+        clearable,
+        isRequired,
+    });
+    const { day, month, year } = state;
+    const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+    let date = '';
+
+    switch (validationStatus) {
+        case STATUS_INVALID:
+            date =
+                // initial load of 'required' message for required date fields
+                /* istanbul ignore next */
+                (allowPartial && isRequired && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
+                // initial load of 'required' message for required date fields
+                /* istanbul ignore next */
+                (isNaN(year) && locale.validationMessage.year) ||
+                // they've just typed in a nonsense number
+                // dont wait for date complete for the moment validation to kick in
+                ((isNaN(day) || (!!day && (day < 1 || day > 31))) && locale.validationMessage.day) ||
+                // // date fields initially blank // remove
+                // (year === null && _isUnselected(month) && day === null && '') || // remove
+                // they've entered a day
+                /* istanbul ignore next */
+                (year === null && _isUnselected(month) && !!day && '') ||
+                // they've entered a day and a month
+                /* istanbul ignore next */
+                (year === null && validMonthIndices.includes(month) && !!day && '') ||
+                // encourage them to select a month if the year and day are selected
+                /* istanbul ignore next */
+                (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
+                locale.validationMessage.date;
+            break;
+        case STATUS_VALID:
+            // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
+            if (!!year && validMonthIndices.includes(month) && !!day) {
+                // date complete for non-partial-entry
+                date = '';
+            } else if (allowPartial && !!year && _isUnselected(month) && !day) {
+                // partial entry means they can get away with just a year
+                date = '';
+            } else if (!allowPartial && !!clearable && !year && !day && month === MONTH_UNSELECTED) {
+                date = '';
+            } else {
+                date = locale.validationMessage.date;
+            }
+            break;
+        case STATUS_FUTURE_DATE:
+            date = locale.validationMessage.future;
+            break;
+        /* istanbul ignore next */
+        default:
+            /* istanbul ignore next */
+            date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
+            break;
+    }
+    setError(date);
+};
+
 const PartialDateForm = ({
     locale = {
         dayLabel: 'Day',
@@ -121,7 +205,6 @@ const PartialDateForm = ({
 }) => {
     const initDate = () => {
         const dateValue =
-            // eslint-disable-next-line react/prop-types
             (value && moment(value)) ||
             (input && input.value && moment(input.value)) ||
             (meta && meta.initial && moment(meta.initial)) ||
@@ -145,71 +228,10 @@ const PartialDateForm = ({
     const [state, setState] = React.useState(initDate);
     const [error, setError] = React.useState();
 
-    const _isUnselected = month => {
-        return month === MONTH_UNSELECTED || month === null;
-    };
-
-    const _displayErrors = (state, validationStatus, allowPartial, isRequired = false) => {
-        const { day, month, year } = state;
-        const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-
-        let date = '';
-
-        switch (validationStatus) {
-            case STATUS_INVALID:
-                date =
-                    // initial load of 'required' message for required date fields
-                    /* istanbul ignore next */
-                    (allowPartial && isRequired && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
-                    // initial load of 'required' message for required date fields
-                    /* istanbul ignore next */
-                    (isNaN(year) && locale.validationMessage.year) ||
-                    // they've just typed in a nonsense number
-                    // dont wait for date complete for the moment validation to kick in
-                    ((isNaN(day) || (!!day && (day < 1 || day > 31))) && locale.validationMessage.day) ||
-                    // // date fields initially blank // remove
-                    // (year === null && _isUnselected(month) && day === null && '') || // remove
-                    // they've entered a day
-                    /* istanbul ignore next */
-                    (year === null && _isUnselected(month) && !!day && '') ||
-                    // they've entered a day and a month
-                    /* istanbul ignore next */
-                    (year === null && validMonthIndices.includes(month) && !!day && '') ||
-                    // encourage them to select a month if the year and day are selected
-                    /* istanbul ignore next */
-                    (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
-                    locale.validationMessage.date;
-                break;
-            case STATUS_VALID:
-                // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
-                if (!!year && validMonthIndices.includes(month) && !!day) {
-                    // date complete for non-partial-entry
-                    date = '';
-                } else if (allowPartial && !!year && _isUnselected(month) && !day) {
-                    // partial entry means they can get away with just a year
-                    date = '';
-                } else if (!allowPartial && !!clearable && !year && !day && month === MONTH_UNSELECTED) {
-                    date = '';
-                } else {
-                    date = locale.validationMessage.date;
-                }
-                break;
-            case STATUS_FUTURE_DATE:
-                date = locale.validationMessage.future;
-                break;
-            /* istanbul ignore next */
-            default:
-                /* istanbul ignore next */
-                date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
-                break;
-        }
-        setError(date);
-    };
-
     const validate = newState => {
         const validationStatus = _validate({ state: newState, allowPartial, disableFuture, clearable });
 
-        _displayErrors(newState, validationStatus, allowPartial, required);
+        _displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
 
         // moment validation doesn't recognise -1 as a valid date.
         const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
@@ -219,12 +241,6 @@ const PartialDateForm = ({
 
         setState(newState);
         return fullDate;
-    };
-
-    const _isNumber = event => {
-        if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
-            event.preventDefault();
-        }
     };
 
     const _onDateChanged = key => {
@@ -274,7 +290,7 @@ const PartialDateForm = ({
                             fullWidth
                             disabled={disabled}
                             error={!!isError}
-                            onKeyPress={_isNumber}
+                            onKeyPress={_isNumber(locale)}
                             onChange={_onDateChanged('day')}
                             onBlur={!allowPartial ? _onDateChanged('day') : undefined}
                             placeholder={locale.dayLabel}
@@ -334,7 +350,7 @@ const PartialDateForm = ({
                             disabled={disabled}
                             placeholder={locale.yearLabel}
                             error={!!isError}
-                            onKeyPress={_isNumber}
+                            onKeyPress={_isNumber(locale)}
                             onChange={_onDateChanged('year')}
                             onBlur={_onDateChanged('year')}
                             inputProps={{
