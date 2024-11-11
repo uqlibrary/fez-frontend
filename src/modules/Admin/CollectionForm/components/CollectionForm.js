@@ -93,10 +93,6 @@ export const CollectionForm = ({ disableSubmit }) => {
         window.location.reload();
     };
 
-    const handleCommunityChange = () => {
-        setSelectedCommunity(true);
-    };
-
     let hasParams = false;
 
     const queryStringObject = queryString.parse(
@@ -166,7 +162,6 @@ export const CollectionForm = ({ disableSubmit }) => {
                                                 required
                                                 validate={[validation.required]}
                                                 {...txt.formLabels.ismemberof}
-                                                onChange={handleCommunityChange}
                                             />
                                         </Grid>
                                     </Grid>
