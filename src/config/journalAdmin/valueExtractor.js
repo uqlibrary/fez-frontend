@@ -1,17 +1,10 @@
-// export const deleteKey = (journal, searchKey) => {
-//     const skipDeleteForKeys = ['jnl_jid', 'jnl_title'];
-//     !skipDeleteForKeys.includes(searchKey) && delete (journal || {})[searchKey];
-// };
-
 export const getValueSearchKeyObject = (journal, searchKey) => {
     const returnValue = { ...((journal || {})[searchKey] || {}) };
-    // deleteKey(journal, searchKey);
     return returnValue;
 };
 
 export const getValueSearchKeyArray = (journal, searchKey) => {
     const returnValue = [...((journal || {})[searchKey] || [])];
-    // deleteKey(journal, searchKey);
     return returnValue;
 };
 
@@ -28,16 +21,11 @@ export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextS
                 ((journal || {})?.[primaryKey] || {})?.[subKey] ||
                 '',
         };
-        // deleteKey(journal, primaryKey);
-        // deleteKey(journal, primaryHtmlKey);
     } else {
         returnValue = {
             plainText: (journal || {})[plainTextSearchKey] || '',
             htmlText: (journal || {})[htmlTextSearchKey] || (journal || {})[plainTextSearchKey] || '',
         };
-
-        // deleteKey(journal, plainTextSearchKey);
-        // deleteKey(journal, htmlTextSearchKey);
     }
 
     if (!returnValue.plainText && !!returnValue.htmlText) {
@@ -54,7 +42,6 @@ export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextS
 
 export const getValueFromKey = (journal, key) => {
     const returnValue = journal[key];
-    // deleteKey(journal, key);
     return returnValue;
 };
 
@@ -64,7 +51,6 @@ export const getValueFromSubKey = (journal, key) => {
     if (key.indexOf('.') >= 0) {
         const [primaryKey, subKey] = key.split('.');
         returnValue = ((journal || {})[primaryKey] || {})[subKey];
-        // deleteKey(journal, primaryKey);
     }
 
     return returnValue;
@@ -76,7 +62,6 @@ export const getValueSearchKeyValueList = (journal, searchKey) => {
         const [primaryKey, subKey] = searchKey.split('.');
 
         returnValue = (journal[primaryKey] || []).map(item => item[subKey]);
-        // deleteKey(journal, primaryKey);
     }
 
     return returnValue;
@@ -114,20 +99,17 @@ export default {
     },
     issns: {
         getValue: journal => {
-            const returnValue = (journal.fez_journal_issn || [])
-                .sort((a, b) => a.jnl_issn_order > b.jnl_issn_order)
-                .map(issn => ({
-                    rek_order: issn.jnl_issn_order,
-                    rek_value: {
-                        key: issn.jnl_issn,
-                        value: {
-                            fez_sherpa_romeo: issn.fez_sherpa_romeo,
-                            fez_ulrichs: issn.fez_ulrichs,
-                        },
-                        hasPreload: true,
+            const returnValue = (journal.fez_journal_issn || []).map(issn => ({
+                rek_order: issn.jnl_issn_order,
+                rek_value: {
+                    key: issn.jnl_issn,
+                    value: {
+                        fez_sherpa_romeo: issn.fez_sherpa_romeo,
+                        fez_ulrichs: issn.fez_ulrichs,
                     },
-                }));
-            delete journal.fez_journal_issn;
+                    hasPreload: true,
+                },
+            }));
             return returnValue;
         },
     },

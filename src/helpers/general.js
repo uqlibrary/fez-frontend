@@ -1,9 +1,9 @@
 import HTMLReactParser from 'html-react-parser';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
-global.dd = (...args) => args.forEach(arg => console.dir(arg, { depth: null }));
-global.dc = (...args) => args.forEach(arg => console.log(arg));
-global.dj = (...args) => args.forEach(arg => console.log(JSON.stringify(arg)));
+global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
+global.dc = (...args) => args.forEach(arg => console.log.bind(console)(arg));
+global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
 /* istanbul ignore next */
 const tryCatch = (callback, _default = undefined) => {
@@ -400,3 +400,50 @@ export const handleKeyboardPressActivate = (key, callbackFn) => {
 
     callbackFn();
 };
+
+/**
+ * Re-order a given object for a given set of keys, ignoring unexisting keys.
+ * @param object
+ * @param keys
+ * @return {*}
+ */
+export const reorderObjectKeys = (object, keys) =>
+    keys.reduce((newObject, key) => {
+        if (object.hasOwnProperty(key)) {
+            newObject[key] = object[key];
+        }
+        return newObject;
+    }, {});
+
+/**
+ * @param object
+ * @return {boolean}
+ */
+export const isEmptyObject = object =>
+    object && typeof object === 'object' ? Object.keys(object)?.length === 0 : false;
+
+/**
+ * Get a subset of an object for a given set of keys
+ * Returns a new object without given keys. Use inclusive=true for the opposite.
+ * @param object
+ * @param keys {string[]}
+ * @param inclusive {boolean}
+ * @return {{}}
+ */
+export const filterObjectKeys = (object, keys, inclusive = false) =>
+    !object || typeof object !== 'object'
+        ? {}
+        : Object.keys(object).reduce((acc, key) => {
+              if ((!inclusive && !keys.includes(key)) || (inclusive && keys.includes(key))) {
+                  acc[key] = object[key];
+              }
+              return acc;
+          }, {});
+
+/**
+ * Reduce an array of object into a single object.
+ * @param objects
+ * @return {*}
+ */
+export const combineObjects = (...objects) =>
+    objects.reduce((acc, object) => ({ ...acc, ...(object && typeof object === 'object' ? object : {}) }), {});

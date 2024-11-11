@@ -43,16 +43,33 @@ export const renderIcon = (title, className) => {
     );
 };
 
+const getUrl = (item, values, link) => (values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item]);
+
 export const renderButton = args => {
     const { item, index, navHandler, values, authenticated, txt, link } = args;
-    const isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
+    let isLinkedExternal = values[item] && link.linkedUrl[item].indexOf('http') !== -1;
     const isUnlinkedExternal = !values[item] && link.notLinkedUrl[item].indexOf('http') !== -1;
-    const isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
+    let isInternal = !values[item] && link.notLinkedUrl[item].indexOf('http') === -1;
 
-    const url = values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item];
-    const title = values[item]
+    let url = getUrl(item, values, link);
+    let title = values[item]
         ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item])
         : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item]);
+
+    // google scholar id is linked via ORCID
+    if (item === 'google_scholar' && !values[item]) {
+        url = getUrl('orcid', values, link);
+        if (values.orcid) {
+            isInternal = false;
+            isLinkedExternal = true;
+            title = title.replace('Click for more information', 'Click to review via ORCID');
+        } else {
+            isInternal = true;
+            isLinkedExternal = false;
+            title = title.replace('Click for more information', 'Click to link via ORCID');
+        }
+    }
+
     const externalIconClassName = `fez-icon ${item} ${values[item] && authenticated[item] ? 'ok' : 'error'}`;
     const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'}`;
 

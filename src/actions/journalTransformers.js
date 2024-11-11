@@ -1,8 +1,8 @@
 export const getBibliographicSectionSearchKeys = (data = {}) => {
-    const { issns } = data;
+    const { issns = [] } = data;
 
     return {
-        ...(!!issns
+        ...(issns.length > 0
             ? {
                   fez_journal_issn: issns.map(({ rek_value: value, rek_order: order }) => ({
                       jnl_issn: value.key || value,

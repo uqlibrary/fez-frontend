@@ -8,7 +8,7 @@ export default function IssnListEditorField(fieldProps) {
             formComponent={IssnForm}
             errorText={fieldProps.meta ? fieldProps.meta.error : null}
             error={fieldProps.meta && !!fieldProps.meta.error}
-            onChange={fieldProps.input.onChange}
+            onChange={fieldProps.input?.onChange}
             remindToAdd={fieldProps.remindToAdd}
             {...fieldProps}
         />

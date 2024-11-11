@@ -31,7 +31,7 @@ export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 export const IS_DEVELOPMENT_SERVER =
     APP_URL.indexOf('localhost') > -1 || (!process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1);
 
-export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
+export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'http://orcid.org';
@@ -1348,13 +1348,6 @@ export const RECORD_ACTION_URLS = [
         showInDeleted: false,
         options: null,
         isChangeDisplayMenu: true,
-    },
-    {
-        label: 'More options',
-        url: pid => `${APP_URL}${PATH_PREFIX}workflow/list_workflows2.php?pid=${pid}`,
-        inApp: true,
-        showInDeleted: true,
-        options: null,
     },
 ];
 export const JOURNAL_ACTION_URLS = [

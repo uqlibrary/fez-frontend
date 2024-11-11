@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RichEditor should handle null value 1`] = `
+<div>
+  <div
+    data-analyticsid="rek-test"
+    data-testid="rek-test"
+    id="rek-test"
+  >
+    <span />
+    <div />
+  </div>
+</div>
+`;
+
 exports[`RichEditor should render component 1`] = `
 <div>
   <div

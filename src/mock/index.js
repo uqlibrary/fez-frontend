@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
-import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
+import { PUB_LIST_BULK_EXPORT_SIZES, } from 'config/general';
 import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
@@ -397,6 +397,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(config => {
         return [200, { data: { ...mockData.recordWithRDMMediatedAccess } }];
     })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: mockData.deleteRecord.rek_pid }).apiUrl)))
+    .reply(config => {
+        return [410, { data: { ...mockData.deleteRecord } }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.ORGANISATIONAL_UNITS().apiUrl)))
     .reply(config => {
         return [200, { data: [...mockData.organisationalUnits] }];
@@ -455,6 +459,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.unpublishedSearchList.data,
             ...mockData.UQ353708.data,
             ...mockData.UQ339703,
+            ...mockData.recordThatFailsDeletion,
         ];
         // const mockedPids = mockRecords.map(record => record.rek_pid);
         // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
@@ -609,6 +614,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.journalDoaj })
     .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 12 }).apiUrl)))
     .reply(200, { ...mockData.journalDoaj })
+    .onPut(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 8508 }).apiUrl)))
+    .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 999 }).apiUrl)))
     .reply(404, { data: 'Not Found' })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
@@ -691,7 +698,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, `Exported file contents for report ${config.url.split('=')[1]}`, {
             'content-type': 'text/csv',
         }];
-    }) 
+    })
     .onGet(
         new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 2, date_from: '.*', date_to: '.*'}).apiUrl))
     )
@@ -711,16 +718,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(() => {
-        // if (uploadTryCount < 3) {
-        //     console.log(`Failing try ${uploadTryCount}`);
-        //     uploadTryCount++;
-        //     return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
-        // }
-        // console.log('Successful upload');
-        return [200, { data: {} }];
-        // return [500, { message: ['error - failed PUT FILE_UPLOAD_S3'] }];
-    })
+    .reply(() => [200, { data: {} }])
     .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.favouriteSearchItem } }];
@@ -740,14 +738,6 @@ mock.onDelete(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiU
 
 // let retried = false;
 mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
-    // .reply(() => {
-    //     if (retried) {
-    //         return [200, ['s3-ap-southeast-2.amazonaws.com']];
-    //     } else {
-    //         retried = true;
-    //         return [500, { message: ['error - failed FILE_UPLOAD_API'] }];
-    //     }
-    // })
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, { message: ['error - failed FILE_UPLOAD_API'] })
     .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
@@ -858,13 +848,20 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(() => [201, {}])
     .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
     .reply(() => [201, {}]);
-    
-// .networkErrorOnce();
-// .reply(409, { data: 'Server error' });
 
-mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(200, {
-    data: 'Record deleted',
-});
+mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+    .reply((request) => {
+        if (request?.url.match(new RegExp(mockData.collectionRecord.rek_pid))) {
+            return [409, {"data":"Can't delete a record that has child records"}];
+        }
+        if (request?.url.match(new RegExp(mockData.recordThatFailsDeletion.rek_pid))) {
+            return [500, {}];
+        }
+
+        return [200, {
+            data: 'Record deleted',
+        }];
+    });
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,

@@ -50,9 +50,6 @@ export default {
         thirdPartyLookupTools: {
             primaryText: 'Lookup tools',
         },
-        legacyEspace: {
-            primaryText: 'Switch to old interface',
-        },
         help: {
             primaryText: 'Help',
         },
