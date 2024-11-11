@@ -94,15 +94,6 @@ export const _displayErrors = ({
     clearable,
     isRequired = false,
 }) => {
-    console.log({
-        state,
-        setError,
-        validationStatus,
-        allowPartial,
-        locale,
-        clearable,
-        isRequired,
-    });
     const { day, month, year } = state;
     const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
@@ -119,15 +110,15 @@ export const _displayErrors = ({
                 (isNaN(year) && locale.validationMessage.year) ||
                 // they've just typed in a nonsense number
                 // dont wait for date complete for the moment validation to kick in
-                ((isNaN(day) || (!!day && (day < 1 || day > 31))) && locale.validationMessage.day) ||
+                ((isNaN(day) || (!!day && (day < 1 || day > 31) && !allowPartial)) && locale.validationMessage.day) ||
                 // // date fields initially blank // remove
                 // (year === null && _isUnselected(month) && day === null && '') || // remove
                 // they've entered a day
                 /* istanbul ignore next */
-                (year === null && _isUnselected(month) && !!day && '') ||
+                (year === null && _isUnselected(month) && !!day && allowPartial && ' ') ||
                 // they've entered a day and a month
                 /* istanbul ignore next */
-                (year === null && validMonthIndices.includes(month) && !!day && '') ||
+                (year === null && validMonthIndices.includes(month) && !!day && ' ') ||
                 // encourage them to select a month if the year and day are selected
                 /* istanbul ignore next */
                 (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
@@ -156,7 +147,7 @@ export const _displayErrors = ({
             date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
             break;
     }
-    setError(date);
+    setError(date.trim());
 };
 
 const PartialDateForm = ({
