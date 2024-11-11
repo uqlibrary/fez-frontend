@@ -38,11 +38,18 @@ export class GrantListEditor extends PureComponent {
         };
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+        if (!this.props.onChange) {
+            return;
+        }
+
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        if (this.state.grantFormPopulated && this.props.onChange) {
+        if (prevState.grantFormPopulated !== this.state.grantFormPopulated) {
             this.props.onChange(this.state.grantFormPopulated);
-        } else {
+            return;
+        }
+
+        if (prevState.grants !== this.state.grants) {
             this.props.onChange(this.state.grants);
         }
     }
