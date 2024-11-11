@@ -649,6 +649,7 @@ export const currentAuthor = {
             "aut_description": "",
             // "aut_orcid_id": null,
             "aut_orcid_id": "0000-0001-1111-1111",
+            // "aut_google_scholar_id": null,
             "aut_google_scholar_id": "kUemDfMAAAAJ",
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,

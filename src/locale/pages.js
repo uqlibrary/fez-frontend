@@ -271,9 +271,8 @@ export default {
                                 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
                             researcher:
                                 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
-                            google_scholar:
-                                'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile',
-                            // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
+                            // google scholar is linked via ORCID
+                            google_scholar: pathConfig.authorIdentifiers.orcid.link,
                             orcid: pathConfig.authorIdentifiers.orcid.link,
                         },
                     },
@@ -744,104 +743,6 @@ export default {
             labels: {
                 submit: 'Masquerade',
                 hint: 'Enter a UQ staff or student username (eg. uqjsmith1 or s123456)',
-            },
-        },
-        googleScholarLink: {
-            title: 'Google Scholar identifier',
-            help: {
-                title: 'About Google Scholar',
-                text: (
-                    <div>
-                        <Typography component="h4" variant="h6">
-                            How to create Google Scholar profile?
-                        </Typography>
-                        <ol>
-                            <li>Sign to your Google account, or create one if you don't have one.</li>
-                            <li>
-                                After you sign in, the Citations sign up form will ask you to confirm the spelling of
-                                your name, to enter your affiliation, etc.
-                            </li>
-                            <li>On the next page, you will see a list of articles. Add the articles that are yours.</li>
-                            <li>
-                                Once you're done with adding articles, it will ask you what to do when the article data
-                                changes in Google Scholar. You can either have the updates applied to your profile
-                                automatically or you can choose to review them beforehand.
-                            </li>
-                            <li>
-                                Finally, you will see your profile.Once you are satisfied with the results, make your
-                                profile public.
-                            </li>
-                        </ol>
-                    </div>
-                ),
-                buttonLabel: 'CLOSE',
-            },
-            labels: {
-                submit: 'Save Google Scholar ID',
-                cancel: 'Cancel',
-                googleScholarIdField: {
-                    label: 'Google Scholar ID',
-                    placeholder: 'Enter your Google Scholar ID',
-                },
-            },
-            add: {
-                title: 'Add your Google Scholar identifier',
-                description: (
-                    <div>
-                        <p>
-                            Creating your Google Scholar Citation profile will make sure that Google Scholar will easily
-                            and accurately group all the citations of your works into one pool. A profile generally
-                            lists your name, chosen keywords of research interest, generated citation metrics, and
-                            citations (including links to citing articles).
-                        </p>
-                        <p>In order to create a Google Scholar Citation profile, you need a Google Account.</p>
-                        <p>
-                            For more information see the{' '}
-                            <a
-                                href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
-                                target="_blank"
-                            >
-                                Google Scholar Citations help page.
-                            </a>
-                        </p>
-                    </div>
-                ),
-            },
-            edit: {
-                title: 'Update your Google Scholar identifier',
-                description: (
-                    <div>
-                        <p>Update your Google Scholar ID below.</p>
-                        <p>
-                            For more information see the{' '}
-                            <a
-                                href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
-                                target="_blank"
-                            >
-                                Google Scholar Citations help page.
-                            </a>
-                        </p>
-                    </div>
-                ),
-            },
-            errorAlert: {
-                type: 'error_outline',
-                alertId: 'alert-error',
-                title: 'Error',
-            },
-            progressAlert: {
-                type: 'info_outline',
-                alertId: 'alert-info',
-                title: 'Saving',
-                message: 'Request is being processed.',
-                showLoader: true,
-            },
-            successAlert: {
-                type: 'done',
-                alertId: 'alert-done',
-                title: 'Google Scholar ID updated',
-                message: 'Your Google Scholar ID has been updated in your eSpace profile.',
-                allowDismiss: true,
             },
         },
         orcidLink: {
