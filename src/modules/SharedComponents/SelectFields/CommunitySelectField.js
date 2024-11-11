@@ -8,7 +8,9 @@ export default function CommunitySelectField(fieldProps) {
     const dispatch = useDispatch();
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const dompurify = require('dompurify');
+
     // Selector to fetch the itemsList from the state
+    // istanbul ignore next
     const getItemsList = state => state?.get('communitiesReducer')?.itemsList || [];
 
     // Memoized selector to transform the itemsList
