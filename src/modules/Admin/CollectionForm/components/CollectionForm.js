@@ -27,9 +27,8 @@ import { getNotesSectionSearchKeys } from '../../../../actions/transformers';
 import { createCollection } from '../../../../actions';
 
 export const CollectionForm = ({ disableSubmit }) => {
-    const newRecord = useSelector(state => state?.createCollectionReducer?.newRecord || null);
-    const currentAuthor = useSelector(state => state?.accountReducer?.author || null);
-
+    const newRecord = useSelector(state => state?.get('createCollectionReducer')?.newRecord || null);
+    const currentAuthor = useSelector(state => state?.get('accountReducer')?.author || null);
     // form
     const {
         handleSubmit,
@@ -50,6 +49,7 @@ export const CollectionForm = ({ disableSubmit }) => {
     const [selectedCommunity, setSelectedCommunity] = React.useState(false);
 
     const dispatch = useDispatch();
+
     const onSubmit = values => {
         setApiError('');
 
