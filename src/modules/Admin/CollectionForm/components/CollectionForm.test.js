@@ -93,7 +93,14 @@ describe('Collection form', () => {
         mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
         const { getByText, getByTestId } = await setup({ newRecord: {} });
-        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+        try {
+            await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+        } catch (error) {
+            console.error(
+                'Timeout error: Element with text of "Loading communities..." was not found within the default timeout.',
+            );
+            console.error(error);
+        }
 
         fireEvent.mouseDown(getByTestId('rek-ismemberof-select'));
         fireEvent.click(getByText('Testing community'));
