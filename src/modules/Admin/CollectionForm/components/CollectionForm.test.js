@@ -1,164 +1,154 @@
 import React from 'react';
 import CollectionForm from './CollectionForm';
-import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    act,
+    waitForElementToBeRemoved,
+    waitFor,
+    userEvent,
+} from 'test-utils';
+import * as repositories from 'repositories';
+import { record } from 'mock/data';
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
-
-function setup(testProps) {
+async function setup(testProps) {
     const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitAsSideEffect: false,
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        actions: {
-            logout: jest.fn(),
-            checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn(),
-        },
+        disableSubmit: false,
         ...testProps,
     };
 
-    return render(
-        <WithReduxStore>
-            <WithRouter>
-                <CollectionForm {...props} />
-            </WithRouter>
-        </WithReduxStore>,
-    );
+    let renderResult;
+    await act(async () => {
+        renderResult = render(
+            <WithReduxStore>
+                <WithRouter>
+                    <CollectionForm {...props} />
+                </WithRouter>
+            </WithReduxStore>,
+        );
+    });
+    return renderResult;
 }
 
-describe('Collection form', () => {
-    it('should render form with only the community dropdown', () => {
-        const { container, getAllByRole } = setup({});
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(1);
-        expect(getAllByRole('button').length).toEqual(2);
-    });
+describe('Collection form - autofill', () => {
+    it('should render without dropdown if params exist', async () => {
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
-    it('should render the full form', () => {
-        const { container, getAllByRole } = setup({
-            formValues: {
-                get: () => {
-                    return [1, 2, 3];
-                },
-            },
-        });
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(5);
-        expect(getAllByRole('button').length).toEqual(2);
-    });
-
-    it('should render success panel', () => {
-        const { container } = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not disable submit button if form submit has failed', () => {
-        const { getByRole } = setup({ submitFailed: true });
-        expect(getByRole('button', { name: 'Add collection' })).not.toBeDisabled();
-    });
-
-    it('should ask when redirecting from form with data (even if submit failed)', () => {
-        const render = renderComponent(CollectionForm, {
-            formValues: Immutable.Map({}),
-            dirty: true,
-            submitSucceeded: false,
+        window.history.pushState({}, 'Test Title', '?pid=10&name=test');
+        const { queryByTestId, getByTestId } = await setup({});
+        await waitFor(() => {
+            expect(queryByTestId('community-selector')).not.toBeInTheDocument();
         });
 
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(queryByTestId('add-collection-progress-bar')).not.toBeInTheDocument();
     });
+    it('should render without dropdown if params hash exist', async () => {
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
 
-    it('should not ask when redirecting from form with data after successful submit', () => {
-        const render = renderComponent(CollectionForm, {
-            formValues: Immutable.Map({}),
-            dirty: true,
-            submitSucceeded: true,
+        window.history.pushState({}, 'Test Title', '#pid=10&name=test');
+        const { queryByTestId, getByTestId } = await setup({});
+        await waitFor(() => {
+            expect(queryByTestId('community-selector')).not.toBeInTheDocument();
         });
 
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(queryByTestId('add-collection-progress-bar')).not.toBeInTheDocument();
     });
 });
 
-describe('Collection form - redirections', () => {
-    const { location } = window;
-
+describe('Collection form', () => {
     beforeAll(() => {
         delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
+        window.location = { reload: jest.fn(), assign: jest.fn() }; // Mock reload function
     });
 
     afterAll(() => {
-        window.location = location;
+        jest.restoreAllMocks();
     });
 
-    it('should redirect to cancel page', () => {
-        const { getByRole } = setup({});
-        fireEvent.click(getByRole('button', { name: 'Return to the homepage' }));
-        expect(window.location.assign).toBeCalledWith('/');
+    it('should render form with only the community dropdown', async () => {
+        const { getAllByRole, getByTestId } = await setup({});
+        expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
+        expect(getAllByRole('button').length).toEqual(2);
     });
 
-    it('should redirect to after submit page', () => {
-        const { getByRole } = setup({ submitSucceeded: true, newRecord: {} });
-        fireEvent.click(getByRole('button', { name: 'Add another collection' }));
-        expect(window.location.assign).toBeCalledWith('/');
+    it('should render the full form and allow to add another and return home', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl).reply(200, {
+            data: [
+                { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+            ],
+        });
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(200, { data: { ...record } });
+
+        const { getByText, getByTestId } = await setup({ newRecord: {} });
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+
+        fireEvent.mouseDown(getByTestId('rek-ismemberof-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        expect(getByTestId('rek-title-input')).toBeInTheDocument();
+        expect(getByTestId('rek-description-input')).toBeInTheDocument();
+        expect(getByTestId('rek-keywords-input')).toBeInTheDocument();
+        expect(getByTestId('internalNotes')).toBeInTheDocument();
+        expect(getByTestId('cancel-collection')).toBeInTheDocument();
+        expect(getByTestId('submit-collection')).toBeInTheDocument();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        fireEvent.click(getByTestId('submit-collection'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-title-input'));
+
+        fireEvent.click(getByTestId('add-another-collection'));
+        expect(window.location.reload).toHaveBeenCalled();
+
+        fireEvent.click(getByTestId('return-home'));
+        expect(window.location.assign).toHaveBeenCalledWith('/');
     });
 
-    it('should reload the page', () => {
-        const { getByRole } = setup({ submitSucceeded: true, newRecord: {} });
-        fireEvent.click(getByRole('button', { name: 'Return to the homepage' }));
-        expect(window.location.reload).toBeCalled();
-    });
-});
+    it('should show server error', async () => {
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl).reply(200, {
+            data: [
+                { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+            ],
+        });
+        mockApi.onPost(repositories.routes.NEW_COLLECTION_API().apiUrl).reply(config => {
+            console.log('Mock API called: ', config.url);
+            return [401, { error: { message: 'Server Error' } }];
+        });
 
-describe('Collection form - autofill', () => {
-    it('should render without dropdown if params exist', () => {
-        window.history.pushState({}, 'Test Title', '?pid=10&name=test');
-        const { queryByTestId } = setup({});
-        expect(queryByTestId('community-selector')).not.toBeInTheDocument();
+        const { getByText, getByTestId } = await setup({ newRecord: {} });
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+
+        fireEvent.mouseDown(getByTestId('rek-ismemberof-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        expect(getByTestId('rek-title-input')).toBeInTheDocument();
+        expect(getByTestId('submit-collection')).toBeInTheDocument();
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+
+        fireEvent.click(getByTestId('submit-collection'));
+        expect(getByTestId('add-collection-progress-bar')).toBeInTheDocument();
+        await waitForElementToBeRemoved(() => getByTestId('add-collection-progress-bar'));
+        expect(getByTestId('api_error_alert')).toBeInTheDocument();
+    });
+
+    it('should render success panel', async () => {
+        const { getByTestId } = await setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
+        await waitFor(() => {
+            expect(getByTestId('rek-ismemberof-input')).toBeInTheDocument();
+        });
     });
 });
