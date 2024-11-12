@@ -59,8 +59,12 @@ export const getFormConstants = (account, author, isHdrThesis) => {
                         authorId: author?.aut_id,
                     },
                 ],
-                rek_genre_type: '',
-                rek_org_unit_name: '',
+                fez_record_search_key_genre_type: {
+                    rek_genre_type: '',
+                },
+                fez_record_search_key_org_unit_name: {
+                    rek_org_unit_name: '',
+                },
                 thesisAbstract: '',
                 supervisors: '',
                 fieldOfResearch: '',
@@ -92,9 +96,13 @@ export const getFormConstants = (account, author, isHdrThesis) => {
                     authorId: author?.aut_id,
                 },
             ],
-            rek_genre_type: 'Professional Doctorate',
-            rek_org_name: general.SBS_THESIS_DEFAULT_VALUES.fez_record_search_key_org_name.rek_org_name,
-            rek_org_unit_name: '',
+            fez_record_search_key_genre_type: {
+                rek_genre_type: 'Professional Doctorate',
+            },
+            fez_record_search_key_org_name: general.SBS_THESIS_DEFAULT_VALUES.fez_record_search_key_org_name,
+            fez_record_search_key_org_unit_name: {
+                rek_org_unit_name: '',
+            },
             rek_date: rekDate,
             thesisAbstract: '',
             supervisors: '',
@@ -107,19 +115,6 @@ export const getFormConstants = (account, author, isHdrThesis) => {
             isHdrThesis,
         },
     };
-};
-
-const fixFormData = (isHdrThesis, data) => {
-    // fix org name
-    if (!isHdrThesis) {
-        data.fez_record_search_key_org_name = { rek_org_name: data.rek_org_name };
-        delete data.rek_org_name;
-    }
-    // fix org unit name
-    data.fez_record_search_key_org_unit_name = { rek_org_unit_name: data.rek_org_unit_name };
-    delete data.rek_org_unit_name;
-
-    return data;
 };
 
 export const getFileUploadAlertProps = (locale, author, showRetries) => {
@@ -185,7 +180,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
         mergeWithFormValues,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm({
-        values: values,
+        values,
     });
 
     const retryUpload = async () => {
@@ -279,7 +274,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
     const alertProps = getFormSubmitAlertProps(getPropsForAlert());
     const onPreSubmit = async () => await dispatch(actions.checkSession());
     const onSubmit = safelyHandleSubmit(async () => {
-        const data = fixFormData(isHdrThesis, mergeWithFormValues(defaultValues));
+        const data = mergeWithFormValues(defaultValues);
         await dispatch(actions.submitThesis(data, {}, FORM_NAME));
     });
 
@@ -336,7 +331,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
-                                            name="rek_genre_type"
+                                            name="fez_record_search_key_genre_type.rek_genre_type"
                                             disabled={isSubmitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}
@@ -348,7 +343,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             <Field
                                                 control={control}
                                                 component={OrgNameField}
-                                                name="rek_org_name"
+                                                name="fez_record_search_key_org_name.rek_org_name"
                                                 disabled={isSubmitting}
                                                 validate={[validation.required]}
                                                 required
@@ -360,7 +355,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                         <Field
                                             control={control}
                                             component={OrgUnitNameField}
-                                            name="rek_org_unit_name"
+                                            name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                             disabled={isSubmitting}
                                             validate={[validation.required]}
                                             required

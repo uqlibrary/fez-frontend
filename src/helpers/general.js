@@ -464,3 +464,35 @@ export const isArrayDeeplyEqual = (array, anotherArray) => {
         JSON.stringify(array) === JSON.stringify(anotherArray)
     );
 };
+
+/**
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordRelationKey = key => !!key?.match?.(/^fez_record_search_key_[a-z_]+$/);
+
+/**
+ * @param relation {object}
+ * @return {boolean}
+ */
+export const hasAtLeastOneFezRecordField = relation =>
+    typeof relation === 'object' && !!Object.keys(relation).find(key => !!key?.match?.(/^rek_[a-z_]+$/));
+
+/**
+ * @param record {object}
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordOneToOneRelation = (record, key) =>
+    isFezRecordRelationKey(key) && hasAtLeastOneFezRecordField(record[key]);
+
+/**
+ * @param record {object}
+ * @param key {string}
+ * @return {boolean}
+ */
+export const isFezRecordOneToManyRelation = (record, key) =>
+    isFezRecordRelationKey(key) &&
+    record[key] instanceof Array &&
+    !!record[key].length &&
+    hasAtLeastOneFezRecordField(record[key][0]);

@@ -1,6 +1,14 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
 import deepmerge from 'deepmerge';
-import { isEmptyObject, filterObjectKeys, reorderObjectKeys, combineObjects, isDevEnv } from '../helpers/general';
+import {
+    isEmptyObject,
+    filterObjectKeys,
+    reorderObjectKeys,
+    combineObjects,
+    isDevEnv,
+    isFezRecordOneToOneRelation,
+    isFezRecordOneToManyRelation,
+} from '../helpers/general';
 import arrayDiff from 'locutus/php/array/array_diff';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
@@ -26,7 +34,7 @@ export const setServerError = (setError, e) => {
 const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_KEY];
 
 /**
- * Get flatten errors to a `field` => `error` object
+ * Flatten errors to a `field` => `error` object.
  * @param errors
  * @param otherFlattenedErrorList
  * @return {{[p: string]: *}}
@@ -34,10 +42,37 @@ const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_K
 export const flattenErrors = (errors, ...otherFlattenedErrorList) => {
     return {
         ...(errors && typeof errors === 'object'
-            ? Object.entries(errors).reduce((acc, [key, { message }]) => ({ ...acc, [key]: message }), {})
+            ? Object.entries(errors).reduce((acc, [key, { message }]) => {
+                  // recurse and merge errors
+                  if (isFezRecordOneToOneRelation(errors, key)) {
+                      return { ...acc, ...flattenErrors(errors[key]) };
+                  }
+                  // recurse and store the first error under the relation name, not the field name
+                  if (isFezRecordOneToManyRelation(errors, key)) {
+                      const nestedError = flattenErrors(errors[key][0]);
+                      return { ...acc, [key]: Object.values(nestedError)[0] };
+                  }
+                  return { ...acc, [key]: message };
+              }, {})
             : {}),
         ...combineObjects(...otherFlattenedErrorList),
     };
+};
+
+/**
+ * @param fields
+ * @return {string[]}
+ */
+export const flattenFormFieldKeys = fields => {
+    return fields && typeof fields === 'object'
+        ? Object.entries(fields).reduce((acc, [key]) => {
+              // recurse and merge keys
+              if (isFezRecordOneToOneRelation(fields, key)) {
+                  return [...acc, ...flattenFormFieldKeys(fields[key])];
+              }
+              return [...acc, key];
+          }, [])
+        : [];
 };
 
 /**
@@ -89,10 +124,12 @@ const getPropsForAlert = attributes => (...additionalValidationErrors) => {
     // Note: when using theses props, they must include all forms fields in the desired order.
     // Otherwise, the missing fields will not be present in the formErrors object. Unfortunately,
     // with the current RHF implementation, this is not possible to solved programmatically.
-    const formFields =
+    const formFields = flattenFormFieldKeys(
         attributes.values && !!Object.keys(attributes.values).length
-            ? Object.keys(attributes.values)
-            : Object.keys(attributes.formState?.defaultValues || {});
+            ? attributes.values
+            : attributes.formState?.defaultValues,
+    );
+
     if (formFields.length) {
         const { validationErrors } = attributes.formState;
         const orderedErrors = reorderObjectKeys(flattenErrors(validationErrors), formFields);
