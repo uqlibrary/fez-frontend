@@ -631,4 +631,27 @@ describe('ContributorsEditor', () => {
             record: null,
         });
     });
+
+    it('should update contributors state upon input prop changes', () => {
+        const authorName = 'Author 1';
+        const { rerender, queryByText } = setup();
+        expect(queryByText(authorName)).not.toBeInTheDocument();
+
+        setup(
+            {
+                input: {
+                    name: 'test',
+                    value: [
+                        {
+                            nameAsPublished: authorName,
+                            aut_id: 410,
+                            selected: true,
+                        },
+                    ],
+                },
+            },
+            rerender,
+        );
+        expect(queryByText(authorName)).toBeInTheDocument();
+    });
 });
