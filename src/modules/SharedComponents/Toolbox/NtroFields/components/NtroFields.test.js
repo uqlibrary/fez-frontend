@@ -162,4 +162,27 @@ describe('Component NtroFields', () => {
 
         expect(container).toMatchSnapshot();
     });
+
+    it('should accept a custom fieldWrapper', () => {
+        const fieldWrapperMock = jest.fn();
+        setup({
+            fieldWrapper: fieldWrapperMock,
+        });
+
+        // this test is not about asserting all calls to fieldWrapper, but at least one
+        expect(fieldWrapperMock).toHaveBeenNthCalledWith(
+            1,
+            expect.objectContaining({
+                name: 'ntroAbstract',
+                component: expect.any(Function),
+                description: expect.any(String),
+                disabled: expect.any(Boolean),
+                fullWidth: expect.any(Boolean),
+                richEditorId: expect.any(String),
+                title: expect.any(Object),
+                validate: expect.any(Array),
+            }),
+            {}, // empty 2nd arg
+        );
+    });
 });
