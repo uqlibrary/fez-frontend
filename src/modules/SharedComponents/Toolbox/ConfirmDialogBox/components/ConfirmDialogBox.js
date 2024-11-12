@@ -9,6 +9,10 @@ import DialogContent from '@mui/material/DialogContent';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
+export const createConfirmDialogBoxRefAssigner = refObject => ref => {
+    refObject.current = ref;
+};
+
 export class ConfirmDialogBox extends Component {
     static propTypes = {
         className: PropTypes.string,
