@@ -20,10 +20,10 @@ class IndexComponent extends PureComponent {
                                 <AcknowledgementOfCountry />
                             </Grid>
                             <Grid item xs={12}>
-                                <GenAiTermsOfUse />
+                                <CulturalAdvice />
                             </Grid>
                             <Grid item xs={12}>
-                                <CulturalAdvice />
+                                <GenAiTermsOfUse />
                             </Grid>
                             <Grid item xs={12}>
                                 <CulturalNotice />
