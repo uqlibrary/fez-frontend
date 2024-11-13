@@ -8,6 +8,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 export class GrantListEditor extends PureComponent {
     static propTypes = {
@@ -39,17 +40,16 @@ export class GrantListEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (!this.props.onChange) {
+        // update grants state upon input prop value change
+        if (!isArrayDeeplyEqual(prevProps.input?.value, this.props.input?.value)) {
+            this.setState({
+                grants: this.getGrantsFromProps(this.props),
+            });
             return;
         }
 
-        // notify parent component when local state has been updated, eg grants added/removed/reordered
-        if (prevState.grantFormPopulated !== this.state.grantFormPopulated) {
-            this.props.onChange(this.state.grantFormPopulated);
-            return;
-        }
-
-        if (prevState.grants !== this.state.grants) {
+        // trigger onChange prop if grants state has changed
+        if (this.props.onChange && !isArrayDeeplyEqual(prevState.grants, this.state.grants)) {
             this.props.onChange(this.state.grants);
         }
     }
@@ -140,7 +140,7 @@ export class GrantListEditor extends PureComponent {
         const { disabled, required, disableDeleteAllGrants, canEdit } = this.props;
         const { grants, errorMessage, grantIndexSelectedToEdit, grantSelectedToEdit } = this.state;
 
-        const renderGrantsRows = grants.map((grant, index) => (
+        const renderGrantsRows = grants?.map?.((grant, index) => (
             <GrantListEditorRow
                 key={`GrantListRow_${index}`}
                 index={index}
