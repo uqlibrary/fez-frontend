@@ -40,14 +40,9 @@ export class GrantListEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // update grants state upon input prop value change
-        if (!isArrayDeeplyEqual(prevProps.input?.value, this.props.input?.value)) {
-            this.setState({
-                grants: this.getGrantsFromProps(this.props),
-            });
-            return;
+        if (!prevState.grantFormPopulated && this.state.grantFormPopulated) {
+            this.props.onChange(this.state.grantFormPopulated);
         }
-
         // trigger onChange prop if grants state has changed
         if (this.props.onChange && !isArrayDeeplyEqual(prevState.grants, this.state.grants)) {
             this.props.onChange(this.state.grants);
