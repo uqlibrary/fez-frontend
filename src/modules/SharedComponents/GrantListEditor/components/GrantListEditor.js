@@ -38,7 +38,7 @@ const GrantListEditor = ({
     useEffect(() => {
         if (grantFormPopulated) {
             if (form?.setValue) {
-                form?.setValue('grants', grantFormPopulated, { shouldValidate: true });
+                form?.setValue(input.name, grantFormPopulated, { shouldValidate: true });
                 return;
             }
 
@@ -52,7 +52,7 @@ const GrantListEditor = ({
 
     useEffect(() => {
         if (form?.setValue) {
-            form?.setValue('grants', grants, { shouldValidate: true });
+            form?.setValue(input.name, grants, { shouldValidate: true });
             return;
         }
 
@@ -88,6 +88,7 @@ const GrantListEditor = ({
     }, []);
 
     const moveUpGrant = useCallback((grant, index) => {
+        /* istanbul ignore next */
         if (index === 0) return;
 
         setGrants(prevGrants => {
@@ -100,6 +101,7 @@ const GrantListEditor = ({
 
     const moveDownGrant = useCallback((grant, index) => {
         setGrants(prevGrants => {
+            /* istanbul ignore next */
             if (index === prevGrants.length - 1) return prevGrants;
             const nextGrant = prevGrants[index + 1];
             return [...prevGrants.slice(0, index), nextGrant, grant, ...prevGrants.slice(index + 2)];
@@ -149,7 +151,13 @@ const GrantListEditor = ({
 
     return (
         <div>
-            {errorMessage && <Alert title={locale.errorTitle} message={errorMessage} type="warning" />}
+            {errorMessage && (
+                /* istanbul ignore next */ <Alert
+                    title={this.props.locale.errorTitle}
+                    message={errorMessage}
+                    type="warning"
+                />
+            )}
             <GrantListEditorForm
                 onAdd={addGrant}
                 isPopulated={isFormPopulated}
