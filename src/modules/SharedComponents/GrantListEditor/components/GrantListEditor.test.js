@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrantListEditor } from './GrantListEditor';
+import GrantListEditor from './GrantListEditor';
 import Immutable from 'immutable';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
