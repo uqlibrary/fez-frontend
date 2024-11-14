@@ -20,7 +20,7 @@ import * as repositories from '../../../repositories';
 
 jest.mock('../../../context');
 
-import { MyIncompleteRecord } from './MyIncompleteRecord';
+import MyIncompleteRecord from './MyIncompleteRecord';
 
 const mockUseNavigate = jest.fn();
 /* eslint-disable react/prop-types */

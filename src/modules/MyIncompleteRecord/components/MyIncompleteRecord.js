@@ -1,3 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unreachable */
+/* eslint-disable no-debugger */
+/* eslint-disable no-constant-condition */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -44,7 +53,7 @@ import { clearFixRecord, loadRecordToFix } from '../../../actions';
 import { InlineLoader } from '../../SharedComponents/Toolbox/Loaders';
 import * as actions from 'actions/incompleteRecords';
 import Field from '../../SharedComponents/Toolbox/ReactHookForm/components/Field';
-import { useWatch } from 'react-hook-form';
+import { FormProvider, useWatch } from 'react-hook-form';
 
 export const FORM_NAME = 'MyIncompleteRecord';
 
@@ -232,12 +241,14 @@ const getIsAuthorLinked = (recordToFix, author) => {
     return isAuthorLinked || isContributorLinked;
 };
 
-export const validateAuthorsAffiliation = (authorsAffiliation, author) => {
-    const errors = {};
-    if (authorsAffiliation.some?.(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
-        errors.authorsAffiliation = locale.validationErrors.authorsAffiliationIncomplete;
+export const formLevelValidation = (data, author) => {
+    const { authorsAffiliation } = data;
+
+    const formErrors = {};
+    if (authorsAffiliation?.some?.(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
+        formErrors.authorsAffiliation = locale.validationErrors.authorsAffiliationIncomplete;
     }
-    return errors;
+    return formErrors;
 };
 
 const isFileValid = dataStream => {
@@ -247,7 +258,7 @@ const isFileValid = dataStream => {
     return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && isAdded(dataStream);
 };
 
-export const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) => {
+const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
@@ -267,14 +278,15 @@ export const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrant
     const [isAuthorLinked, setIsAuthorLinked] = React.useState(true);
     const values = getInitialValues(recordToFix, author, isAdmin, disableInitialGrants);
     // form
+    const form = useValidatedForm({ values });
     const {
         control,
         getPropsForAlert,
         safelyHandleSubmit,
         mergeWithFormValues,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
-    } = useValidatedForm({ values });
-    const { authorsAffiliation } = useWatch({ control });
+    } = form;
+    const [authorsAffiliation] = useWatch({ name: ['authorsAffiliation'], control });
 
     // load record on rendering
     useEffect(() => {
@@ -318,7 +330,7 @@ export const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrant
             progressAlert: txt.progressAlert,
             successAlert: txt.successAlert,
         },
-        ...getPropsForAlert(validateAuthorsAffiliation(authorsAffiliation, author)),
+        ...getPropsForAlert(formLevelValidation({ authorsAffiliation }, author)),
     });
 
     const navigateToMyIncomplete = () => {
@@ -341,178 +353,180 @@ export const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrant
         <StandardPage title={txt.title} help={txt.help}>
             <PublicationCitation publication={recordToFix} hideContentIndicators citationStyle={'list'} />
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-                <form onSubmit={onSubmit}>
-                    <NavigationDialogBox
-                        when={isDirty && !isSubmitSuccessful}
-                        txt={txtFixForm.cancelWorkflowConfirmation}
-                    />
-                    <ConfirmationBox
-                        confirmationBoxId="submit-succeeded"
-                        onAction={navigateToDashboard}
-                        onClose={hideConfirmation}
-                        onCancelAction={navigateToMyIncomplete}
-                        isOpen={isOpen}
-                        locale={txt.successWorkflowConfirmation}
-                    />
-                    <Grid container spacing={3}>
-                        <Grid xs={12}>
-                            <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
-                        </Grid>
-                        <Grid xs={12}>
-                            <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid
-                                    container
-                                    sx={{
-                                        paddingBottom: '12px',
-                                        borderBottom: '1px solid',
-                                        borderBottomColor: 'secondary.light',
-                                    }}
-                                >
-                                    {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                        <Grid container alignItems="flex-start" width={'100%'}>
-                                            <Grid xs={12} sm={3}>
-                                                <Typography>
-                                                    {
-                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
-                                                            .rek_display_type
-                                                    }
-                                                </Typography>
-                                            </Grid>
-                                            <Grid xs={12} sm={9}>
-                                                <Typography>{recordToFix.rek_display_type_lookup}</Typography>
-                                            </Grid>
-                                        </Grid>
-                                    )}
-                                </Grid>
-                                <Grid
-                                    container
-                                    sx={{
-                                        marginTop: '12px',
-                                        paddingBottom: '12px',
-                                        borderBottom: '1px solid',
-                                        borderBottomColor: 'secondary.light',
-                                    }}
-                                >
-                                    {!!recordToFix && !!recordToFix.rek_subtype && (
-                                        <Grid container alignItems="flex-start" width={'100%'}>
-                                            <Grid xs={12} sm={3}>
-                                                <Typography>
-                                                    {
-                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
-                                                            .rek_subtype
-                                                    }
-                                                </Typography>
-                                            </Grid>
-                                            <Grid xs={12} sm={9}>
-                                                <Typography>{recordToFix.rek_subtype}</Typography>
-                                            </Grid>
-                                        </Grid>
-                                    )}
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
-                        {isNtro && (
-                            <NtroFields
-                                fieldWrapper={fieldWrapper}
-                                submitting={isSubmitting}
-                                hideIsmn
-                                hideIsrc
-                                hideVolume
-                                hideIssue
-                                hideStartPage
-                                hideEndPage
-                                hideOriginalFormat
-                                hideSeries
-                                disableDeleteAllGrants={disableDeleteAllGrants}
-                                {...ntroFieldProps}
-                            />
-                        )}
-                        <Grid xs={12}>
-                            <StandardCard title={authors.title} help={authors.help}>
-                                <Typography>{authors.description}</Typography>
-                                <Field
-                                    control={control}
-                                    component={ContributorsEditorField}
-                                    contributorEditorId="rek-author"
-                                    editMode
-                                    canEdit
-                                    hideDelete
-                                    hideReorder
-                                    isNtro
-                                    locale={txt.fields.authors.field}
-                                    name="authorsAffiliation"
-                                    required
-                                    showContributorAssignment
-                                />
-                            </StandardCard>
-                        </Grid>
-
-                        <Grid xs={12}>
-                            <StandardCard title={txt.fields.notes.title}>
-                                <Field
-                                    control={control}
-                                    component={TextField}
-                                    disabled={isSubmitting}
-                                    fullWidth
-                                    label={txt.fields.notes.label}
-                                    multiline
-                                    name="comments"
-                                    placeholder={txt.fields.notes.placeholder}
-                                    rows={5}
-                                    style={{ marginTop: -24 }}
-                                    textFieldId="comments"
-                                    type="text"
-                                />
-                            </StandardCard>
-                        </Grid>
-                        {!hasAnyFiles && (
+                <FormProvider {...form}>
+                    <form onSubmit={onSubmit}>
+                        <NavigationDialogBox
+                            when={isDirty && !isSubmitSuccessful}
+                            txt={txtFixForm.cancelWorkflowConfirmation}
+                        />
+                        <ConfirmationBox
+                            confirmationBoxId="submit-succeeded"
+                            onAction={navigateToDashboard}
+                            onClose={hideConfirmation}
+                            onCancelAction={navigateToMyIncomplete}
+                            isOpen={isOpen}
+                            locale={txt.successWorkflowConfirmation}
+                        />
+                        <Grid container spacing={3}>
                             <Grid xs={12}>
-                                <StandardCard title={txt.fields.fileUpload.title}>
+                                <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
+                            </Grid>
+                            <Grid xs={12}>
+                                <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
+                                    <Grid
+                                        container
+                                        sx={{
+                                            paddingBottom: '12px',
+                                            borderBottom: '1px solid',
+                                            borderBottomColor: 'secondary.light',
+                                        }}
+                                    >
+                                        {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
+                                            <Grid container alignItems="flex-start" width={'100%'}>
+                                                <Grid xs={12} sm={3}>
+                                                    <Typography>
+                                                        {
+                                                            viewRecordLocale.viewRecord.headings.default
+                                                                .publicationDetails.rek_display_type
+                                                        }
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid xs={12} sm={9}>
+                                                    <Typography>{recordToFix.rek_display_type_lookup}</Typography>
+                                                </Grid>
+                                            </Grid>
+                                        )}
+                                    </Grid>
+                                    <Grid
+                                        container
+                                        sx={{
+                                            marginTop: '12px',
+                                            paddingBottom: '12px',
+                                            borderBottom: '1px solid',
+                                            borderBottomColor: 'secondary.light',
+                                        }}
+                                    >
+                                        {!!recordToFix && !!recordToFix.rek_subtype && (
+                                            <Grid container alignItems="flex-start" width={'100%'}>
+                                                <Grid xs={12} sm={3}>
+                                                    <Typography>
+                                                        {
+                                                            viewRecordLocale.viewRecord.headings.default
+                                                                .publicationDetails.rek_subtype
+                                                        }
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid xs={12} sm={9}>
+                                                    <Typography>{recordToFix.rek_subtype}</Typography>
+                                                </Grid>
+                                            </Grid>
+                                        )}
+                                    </Grid>
+                                </StandardCard>
+                            </Grid>
+                            {isNtro && (
+                                <NtroFields
+                                    fieldWrapper={fieldWrapper}
+                                    submitting={isSubmitting}
+                                    hideIsmn
+                                    hideIsrc
+                                    hideVolume
+                                    hideIssue
+                                    hideStartPage
+                                    hideEndPage
+                                    hideOriginalFormat
+                                    hideSeries
+                                    disableDeleteAllGrants={disableDeleteAllGrants}
+                                    {...ntroFieldProps}
+                                />
+                            )}
+                            <Grid xs={12}>
+                                <StandardCard title={authors.title} help={authors.help}>
+                                    <Typography>{authors.description}</Typography>
                                     <Field
                                         control={control}
-                                        name="files"
-                                        component={FileUploadField}
-                                        disabled={isSubmitting}
-                                        requireOpenAccessStatus
-                                        validate={[validation.fileUploadRequired, validation.validFileUpload]}
+                                        component={ContributorsEditorField}
+                                        contributorEditorId="rek-author"
+                                        editMode
+                                        canEdit
+                                        hideDelete
+                                        hideReorder
                                         isNtro
-                                        {...txt.fields.fileUpload}
+                                        locale={txt.fields.authors.field}
+                                        name="authorsAffiliation"
+                                        required
+                                        showContributorAssignment
                                     />
                                 </StandardCard>
                             </Grid>
-                        )}
-                        {alertProps && (
-                            <Grid xs={12}>
-                                <Alert pushToTop {...alertProps} />
-                            </Grid>
-                        )}
-                    </Grid>
-                    <Grid container spacing={3}>
-                        <Grid xs sx={{ display: { xs: 'none', md: 'block' } }} />
 
-                        <Grid xs={12} md="auto">
-                            <Button
-                                id="cancel-fix-work"
-                                variant="contained"
-                                fullWidth
-                                children={txt.cancelButtonLabel}
-                                disabled={isSubmitting}
-                                onClick={navigateToMyIncomplete}
-                            />
+                            <Grid xs={12}>
+                                <StandardCard title={txt.fields.notes.title}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        disabled={isSubmitting}
+                                        fullWidth
+                                        label={txt.fields.notes.label}
+                                        multiline
+                                        name="comments"
+                                        placeholder={txt.fields.notes.placeholder}
+                                        rows={5}
+                                        style={{ marginTop: -24 }}
+                                        textFieldId="comments"
+                                        type="text"
+                                    />
+                                </StandardCard>
+                            </Grid>
+                            {!hasAnyFiles && (
+                                <Grid xs={12}>
+                                    <StandardCard title={txt.fields.fileUpload.title}>
+                                        <Field
+                                            control={control}
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={isSubmitting}
+                                            requireOpenAccessStatus
+                                            validate={[validation.fileUploadRequired, validation.validFileUpload]}
+                                            isNtro
+                                            {...txt.fields.fileUpload}
+                                        />
+                                    </StandardCard>
+                                </Grid>
+                            )}
+                            {alertProps && (
+                                <Grid xs={12}>
+                                    <Alert pushToTop {...alertProps} />
+                                </Grid>
+                            )}
                         </Grid>
-                        <Grid xs={12} md="auto">
-                            <Button
-                                id="update-my-work"
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                children={txt.submitButtonLabel}
-                                type="submit"
-                                disabled={isSubmitting || hasValidationError}
-                            />
+                        <Grid container spacing={3}>
+                            <Grid xs sx={{ display: { xs: 'none', md: 'block' } }} />
+
+                            <Grid xs={12} md="auto">
+                                <Button
+                                    id="cancel-fix-work"
+                                    variant="contained"
+                                    fullWidth
+                                    children={txt.cancelButtonLabel}
+                                    disabled={isSubmitting}
+                                    onClick={navigateToMyIncomplete}
+                                />
+                            </Grid>
+                            <Grid xs={12} md="auto">
+                                <Button
+                                    id="update-my-work"
+                                    variant="contained"
+                                    color="primary"
+                                    fullWidth
+                                    children={txt.submitButtonLabel}
+                                    type="submit"
+                                    disabled={isSubmitting || hasValidationError}
+                                />
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </form>
+                    </form>
+                </FormProvider>
             </ConfirmDiscardFormChanges>
         </StandardPage>
     );

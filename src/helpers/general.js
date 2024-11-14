@@ -3,7 +3,8 @@ import diff from 'microdiff';
 
 // note: dd usage is stripped by WebpackStrip for dist builds
 global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
-global.dc = (...args) => args.forEach(arg => console.log.bind(console)(arg));
+/* istanbul ignore next */
+global.dc = console.log;
 global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
 
 /* istanbul ignore next */

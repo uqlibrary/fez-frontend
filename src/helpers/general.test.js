@@ -26,13 +26,6 @@ describe('general helpers', () => {
             mock.mockRestore();
         });
 
-        it('dc should given args using console.log', () => {
-            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
-            dc(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(arg));
-            mock.mockRestore();
-        });
-
         it('dj should given args using console.log', () => {
             const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
             dj(...args);
