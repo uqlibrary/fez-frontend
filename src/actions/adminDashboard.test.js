@@ -298,7 +298,8 @@ describe('Action creators for admin dashboard', () => {
     });
 
     it('dispatches expected actions while exporting reports', async () => {
-        const request = { id: 1, export_to: 'excel' };
+        const request = { id: 1 };
+        const options = { export_to: 'excel' };
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: request.id }).apiUrl).reply(200, {});
 
         const expectedActions = [
@@ -306,11 +307,12 @@ describe('Action creators for admin dashboard', () => {
             actions.ADMIN_DASHBOARD_EXPORT_REPORT_SUCCESS,
         ];
 
-        await mockActionsStore.dispatch(adminActions.loadAdminDashboardExportReport(request));
+        await mockActionsStore.dispatch(adminActions.loadAdminDashboardExportReport(request, options));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
     it('dispatches expected actions when exporting reports fails', async () => {
-        const request = { id: 1, export_to: 'excel' };
+        const request = { id: 1 };
+        const options = { export_to: 'excel' };
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: request.id }).apiUrl).reply(500);
 
         const expectedActions = [
@@ -320,7 +322,7 @@ describe('Action creators for admin dashboard', () => {
         ];
 
         try {
-            await mockActionsStore.dispatch(adminActions.loadAdminDashboardExportReport(request));
+            await mockActionsStore.dispatch(adminActions.loadAdminDashboardExportReport(request, options));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

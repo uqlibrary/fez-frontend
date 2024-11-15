@@ -11,13 +11,13 @@ describe('admin dashboard config reducer', () => {
         const test = adminDashboardConfigReducer(initialState, {
             type: actions.ADMIN_DASHBOARD_CONFIG_SUCCESS,
             payload: {
-                data: [{ id: 1 }],
+                data: { export_reports: [{ id: 1, sel_bindings: ':one, :two' }] },
             },
         });
 
         expect(test.adminDashboardConfigLoading).toEqual(false);
         expect(test.adminDashboardConfigSuccess).toEqual(true);
-        expect(test.adminDashboardConfigData).toEqual([{ id: 1 }]);
+        expect(test.adminDashboardConfigData).toEqual({ export_reports: [{ id: 1, sel_bindings: [':one', ' :two'] }] });
         expect(test.adminDashboardConfigError).toEqual(null);
     });
 

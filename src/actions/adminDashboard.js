@@ -187,30 +187,33 @@ export function adminDashboardSystemAlertsUpdateClear() {
 
 /**
  * Fetches export (legacy) report data as a file attachment
+ * or queues the request at the server.
  * @returns {function(*)}
  */
-export function loadAdminDashboardExportReport(request) {
+export function loadAdminDashboardExportReport(request, options) {
     return dispatch => {
         const exportConfig = {
-            format: request.export_to,
+            format: options.export_to,
         };
 
         dispatch({
             type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_LOADING,
         });
 
-        const getOptions = { responseType: 'blob' };
-
-        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API({ id: request.id }), { ...getOptions })
+        return get(ADMIN_DASHBOARD_EXPORT_REPORT_API(request))
             .then(response => {
-                promptForDownload(exportConfig.format, response);
+                // only try to export to csv if we get a text response
+                if (typeof response === 'string') {
+                    const blobResponse = new Blob([response], { type: 'text/csv' });
+                    promptForDownload(exportConfig.format, blobResponse);
+                }
 
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_EXPORT_REPORT_SUCCESS,
                     payload: exportConfig,
                 });
 
-                return Promise.resolve();
+                return Promise.resolve(response);
             })
             .catch(error => {
                 console.error(error);
