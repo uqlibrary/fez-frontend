@@ -217,7 +217,7 @@ const webpackConfig = {
             },
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader?configFile=tsconfig.webpack.json',
+                use: 'ts-loader?configFile=tsconfig.webpack-dist.json',
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
             },
             {
