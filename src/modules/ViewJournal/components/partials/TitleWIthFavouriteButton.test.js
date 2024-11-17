@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, waitForTextToBeRemoved, WithReduxStore, WithRouter } from 'test-utils';
 import * as actions from 'actions';
 
 import TitleWithFavouriteButton from './TitleWithFavouriteButton';
@@ -62,7 +62,7 @@ describe('TitleWithFavouriteButton', () => {
             await new Promise(r => setTimeout(r, 500));
         });
 
-        expect(queryByTestId('favourite-journal-notsaved')).not.toBeInTheDocument();
+        await waitForTextToBeRemoved(() => expect(queryByTestId('favourite-journal-notsaved')).not.toBeInTheDocument());
         expect(getByTestId('favourite-journal-saved')).toBeInTheDocument();
 
         await act(async () => {
@@ -72,7 +72,7 @@ describe('TitleWithFavouriteButton', () => {
             await new Promise(r => setTimeout(r, 500));
         });
 
-        expect(queryByTestId('favourite-journal-saved')).not.toBeInTheDocument();
+        await waitForTextToBeRemoved(() => expect(queryByTestId('favourite-journal-saved')).not.toBeInTheDocument());
         expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
     });
 
