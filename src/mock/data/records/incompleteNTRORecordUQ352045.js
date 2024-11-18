@@ -11,6 +11,7 @@ const incompleteNTRORecordUQ352045 = {
     'rek_updated_date': '2019-02-16T01:44:50Z',
     'rek_formatted_title': null,
     'rek_formatted_abstract': 'Curated and directed by Robert Davidson, this concert is a collaboration by London\'s Brodsky Quartet and the Australian quintet Topology, focusing on Davidson\'s rescoring of Elvis Costello\'s ballet "Il Sogno " and arrangements of Elvis Costello songs, along with new works by Robert Davidson, John Babbage, Andrew Ford and Bernard Hoey.<br \/><br \/> The collaboration was intensive and thoroughgoing, and was used as the basis of a study, published in Davidson, "Collaborating across musical style boundaries " in Barrett (ed), Collaborative Creative Thought and Practice in Music, Ashgate, 2014.<br \/>',
+    'rek_description': 'description',
     'rek_depositor_affiliation': 826,
     'rek_subtype': 'Live Performance of Creative Work - Music',
     'fez_record_search_key_author': [

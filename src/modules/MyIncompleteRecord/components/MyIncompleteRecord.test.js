@@ -180,6 +180,7 @@ describe('MyIncompleteRecord', () => {
         const { getByTestId } = setup({
             publication: {
                 ...mockRecordToFix,
+                // for cc
                 fez_record_search_key_author_affiliation_name: [
                     {
                         rek_author_affiliation_name: locale.global.orgTitle,
@@ -230,6 +231,59 @@ describe('MyIncompleteRecord', () => {
         await waitFor(() => getAllByText(validationErrors.validationErrorsSummary.grants)[0], waitForOptions);
     });
 
+    it('should hide Scale/Significance field for admins, if already set with a creator contribution statement that\'s different than "Missing"', async () => {
+        jest.spyOn(require('hooks/userIsAdmin'), 'userIsAdmin').mockReturnValue(true);
+        const { queryByText } = setup({
+            publication: {
+                ...mockRecordToFix,
+                rek_formatted_abstract: undefined,
+                fez_record_search_key_significance: [
+                    {
+                        rek_significance: 454026,
+                        rek_significance_lookup: 'Major',
+                        rek_significance_order: 1,
+                    },
+                ],
+                fez_record_search_key_creator_contribution_statement: [
+                    {
+                        rek_creator_contribution_statement: 'other',
+                        rek_creator_contribution_statement_order: 1,
+                    },
+                ],
+                // for cc
+                fez_record_search_key_grant_agency: [
+                    {
+                        rek_grant_agency: 'SERB, Department of Science and Technology, Government of India',
+                    },
+                    {
+                        rek_grant_agency: 'ARDC',
+                    },
+                ],
+                fez_record_search_key_grant_id: [
+                    {
+                        rek_grant_id: 'MC_UU_12013/4',
+                    },
+                    {
+                        rek_grant_id: null,
+                    },
+                ],
+                fez_record_search_key_grant_agency_type: [
+                    {
+                        rek_grant_agency_type: 454045,
+                    },
+                    {
+                        rek_grant_agency_type: null,
+                    },
+                ],
+                fez_datastream_info: [],
+                fez_record_search_key_file_attachment_name: [],
+            },
+        });
+        await assertValidationErrorSummary();
+
+        expect(queryByText('Scale/Significance of work is required')).not.toBeInTheDocument();
+    });
+
     it('should navigate to dashboard after form submission', async () => {
         const pid = mockRecordToFix.rek_pid;
         mockApi
@@ -237,10 +291,6 @@ describe('MyIncompleteRecord', () => {
             .replyOnce(200, { data: { rek_pid: pid } })
             .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
             .replyOnce(200, { data: { pid } });
-        // .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-        // .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-        // .onPut('s3-ap-southeast-2.amazonaws.com')
-        // .replyOnce(200, {});
 
         mockRichEditorFieldValues();
         const { getByTestId } = setup({ publication: mockRecordToFix });
