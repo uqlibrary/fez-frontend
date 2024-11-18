@@ -194,11 +194,26 @@ const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
     }
 };
 
-const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
-const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
-const waitForText = async (text, options) => await waitFor(() => screen.getByText(text), options);
+const assertEnabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+const assertDisabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+const waitToBeEnabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
+    );
+const waitToBeDisabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
+    );
+const waitForText = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    !screen.queryByText(text) &&
+    (await waitFor(() => screen.getByText(text), options));
 const waitForTextToBeRemoved = async (text, options) =>
-    !!screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    screen.queryByText(text) &&
+    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 
 const originalUseValidatedForm = useValidatedForm.useValidatedForm;
 const mockUseValidatedForm = implementation => {
@@ -224,6 +239,8 @@ module.exports = {
     userEvent,
     assertEnabled,
     assertDisabled,
+    waitToBeEnabled,
+    waitToBeDisabled,
     waitForText,
     waitForTextToBeRemoved,
     mockUseValidatedForm,

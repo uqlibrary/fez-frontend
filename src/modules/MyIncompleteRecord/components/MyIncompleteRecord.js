@@ -1,12 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unreachable */
-/* eslint-disable no-debugger */
-/* eslint-disable no-constant-condition */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -54,6 +45,7 @@ import { InlineLoader } from '../../SharedComponents/Toolbox/Loaders';
 import * as actions from 'actions/incompleteRecords';
 import Field from '../../SharedComponents/Toolbox/ReactHookForm/components/Field';
 import { FormProvider, useWatch } from 'react-hook-form';
+import { WorkNotFound } from '../../NotFound/components/WorkNotFound';
 
 export const FORM_NAME = 'MyIncompleteRecord';
 
@@ -104,20 +96,11 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
         return defaultValues;
     }
 
-    const grants = recordToFix.fez_record_search_key_grant_agency?.map((grantAgency, index) => ({
+    const grants = recordToFix.fez_record_search_key_grant_agency?.map?.((grantAgency, index) => ({
         grantAgencyName: grantAgency.rek_grant_agency,
-        grantId:
-            (recordToFix.fez_record_search_key_grant_id &&
-                recordToFix.fez_record_search_key_grant_id.length > 0 &&
-                recordToFix.fez_record_search_key_grant_id[index] &&
-                recordToFix.fez_record_search_key_grant_id[index].rek_grant_id) ||
-            '',
+        grantId: recordToFix.fez_record_search_key_grant_id?.[index]?.rek_grant_id || '',
         grantAgencyType:
-            (recordToFix.fez_record_search_key_grant_agency_type &&
-                recordToFix.fez_record_search_key_grant_agency_type.length > 0 &&
-                recordToFix.fez_record_search_key_grant_agency_type[index] &&
-                recordToFix.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type) ||
-            ORG_TYPE_NOT_SET,
+            recordToFix.fez_record_search_key_grant_agency_type?.[index]?.rek_grant_agency_type || ORG_TYPE_NOT_SET,
         disabled: disableInitialGrants,
     }));
 
@@ -163,10 +146,7 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
         }));
 
     const significance = isAdmin && recordToFix.fez_record_search_key_significance;
-
-    const languages = (recordToFix &&
-        (recordToFix.fez_record_search_key_language || []).length > 0 &&
-        recordToFix.fez_record_search_key_language.map(lang => lang.rek_language)) || ['eng'];
+    const languages = recordToFix.fez_record_search_key_language?.map?.(lang => lang.rek_language) || ['eng'];
 
     return {
         ...defaultValues,
@@ -178,31 +158,31 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
 };
 
 const getCurrentAuthorOrder = (recordToFix, author) => {
-    const currentAuthor =
-        recordToFix &&
-        recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id);
-    return !!currentAuthor && currentAuthor.length > 0 && currentAuthor[0].rek_author_id_order;
+    const currentAuthor = recordToFix.fez_record_search_key_author_id?.filter?.(
+        authorId => authorId.rek_author_id === author.aut_id,
+    );
+    return currentAuthor?.[0]?.rek_author_id_order;
 };
 
 const getNtroFieldFlags = (recordToFix, author) => {
     const currentAuthorOrder = getCurrentAuthorOrder(recordToFix, author);
-    const significance = (recordToFix.fez_record_search_key_significance || []).filter(
+    const significance = recordToFix.fez_record_search_key_significance?.filter?.(
         item => item.rek_significance_order === currentAuthorOrder,
     );
-    const contributionStatement = (recordToFix.fez_record_search_key_creator_contribution_statement || []).filter(
+    const contributionStatement = recordToFix.fez_record_search_key_creator_contribution_statement?.filter?.(
         item => item.rek_creator_contribution_statement_order === currentAuthorOrder,
     );
 
     return {
         hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
-        hideLanguage: (recordToFix.fez_record_search_key_language || []).length !== 0,
-        hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
+        hideLanguage: !!recordToFix.fez_record_search_key_language?.length,
+        hidePeerReviewActivity: !!recordToFix.fez_record_search_key_quality_indicator?.length,
         hideExtent:
             [DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE].includes(recordToFix.rek_display_type_lookup) ||
-            !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages,
+            !!recordToFix.fez_record_search_key_total_pages?.rek_total_pages,
         hideAudienceSize:
             ![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(recordToFix.rek_subtype) ||
-            !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size,
+            !!recordToFix.fez_record_search_key_audience_size?.rek_audience_size,
         showSignificance: significance.length === 0 || (significance.length > 0 && !significance[0].rek_significance),
         showContributionStatement:
             contributionStatement.length === 0 ||
@@ -214,17 +194,10 @@ const getNtroFieldFlags = (recordToFix, author) => {
     };
 };
 
-const isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-    return (
-        !!author &&
-        !!recordToFix &&
-        recordToFix[searchKey] &&
-        recordToFix[searchKey].length > 0 &&
-        recordToFix[searchKey].some(authorId => authorId[subkey] === author.aut_id)
-    );
-};
+const isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) =>
+    recordToFix?.[searchKey]?.some?.(authorId => authorId[subkey] === author?.aut_id);
 
-const getIsAuthorLinked = (recordToFix, author) => {
+const isAuthorLinked = (recordToFix, author) => {
     const isAuthorLinked = isLoggedInUserLinked(
         author,
         recordToFix,
@@ -271,13 +244,8 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
     // global state
     const { recordToFix, loadingRecordToFix } = useSelector(state => state.get('fixRecordReducer'));
     const { author, accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
-    // local state
-    const [ntroFieldProps, setNtroFieldProps] = React.useState({});
-    const [isNtro, setIsNtro] = React.useState(false);
-    const [hasAnyFiles, setHasAnyFiles] = React.useState(false);
-    const [isAuthorLinked, setIsAuthorLinked] = React.useState(true);
-    const values = getInitialValues(recordToFix, author, isAdmin, disableInitialGrants);
     // form
+    const values = getInitialValues(recordToFix, author, isAdmin, disableInitialGrants);
     const form = useValidatedForm({ values });
     const {
         control,
@@ -295,17 +263,6 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pid]);
 
-    // update state upon loading recordToFix
-    useEffect(() => {
-        if (!!recordToFix) {
-            setNtroFieldProps(getNtroFieldFlags(recordToFix, author));
-            setIsNtro(!!recordToFix.rek_subtype && !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype));
-            setHasAnyFiles(recordToFix.fez_datastream_info.filter(isFileValid).length > 0);
-            setIsAuthorLinked(getIsAuthorLinked(recordToFix, author));
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [recordToFix]);
-
     // show confirmation dialog upon successful form submission
     useEffect(() => {
         if (isSubmitSuccessful) showConfirmation();
@@ -317,9 +274,13 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
     if (accountAuthorLoading || loadingRecordToFix) {
         return <InlineLoader message={txt.loadingMessage} />;
     }
+    // record not found
+    if (!recordToFix) {
+        return <WorkNotFound />;
+    }
 
     // if author is not linked to this record, abandon form
-    if (!isAuthorLinked) {
+    if (!isAuthorLinked(recordToFix, author)) {
         navigate(-1);
         return <div id="author-not-linked" data-testid="author-not-linked" />;
     }
@@ -348,6 +309,10 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
         });
         dispatch(await actions.updateIncompleteRecord(data));
     });
+
+    const ntroFieldProps = getNtroFieldFlags(recordToFix, author);
+    const isNtro = !!recordToFix.rek_subtype && !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype);
+    const hasAnyFiles = !!recordToFix.fez_datastream_info.filter(isFileValid).length;
 
     return (
         <StandardPage title={txt.title} help={txt.help}>
@@ -506,6 +471,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             <Grid xs={12} md="auto">
                                 <Button
                                     id="cancel-fix-work"
+                                    data-testid="incomplete-record-button-cancel"
                                     variant="contained"
                                     fullWidth
                                     children={txt.cancelButtonLabel}
@@ -516,6 +482,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             <Grid xs={12} md="auto">
                                 <Button
                                     id="update-my-work"
+                                    data-testid="incomplete-record-button-update"
                                     variant="contained"
                                     color="primary"
                                     fullWidth

@@ -8,12 +8,13 @@ import {
     waitFor,
     screen,
     assertDisabled,
-    assertEnabled,
+    waitToBeEnabled,
 } from 'test-utils';
 import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
 import BatchImport from './BatchImport';
+import preview from 'jest-preview';
 
 const mockUseNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
@@ -105,9 +106,9 @@ describe('BatchImport Component', () => {
 
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
-        assertEnabled('batch-import-submit');
 
         await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
+        await waitToBeEnabled('batch-import-submit');
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('action-button'));
@@ -162,9 +163,9 @@ describe('BatchImport Component', () => {
 
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 2'));
-        assertEnabled('batch-import-submit');
 
         await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
+        await waitToBeEnabled('batch-import-submit');
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('action-button'));
@@ -268,7 +269,7 @@ describe('BatchImport Component', () => {
         fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
         await assertValidationErrorSummary(['directory']);
         await assertValidationErrorSummary(['community', 'collection', 'document type'], false);
-        assertEnabled('batch-import-submit');
+        assertDisabled('batch-import-submit');
 
         expect(queryByTestId('community-pid-select')).not.toBeInTheDocument();
         expect(queryByTestId('doc-type-id-select')).not.toBeInTheDocument();

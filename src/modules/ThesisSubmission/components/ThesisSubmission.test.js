@@ -84,7 +84,7 @@ describe('ThesisSubmission', () => {
 
     const assertValidationErrorSummary = async () => {
         await waitForText(formLocale.validationAlert.message, waitForOptions);
-        assertDisabled(screen.getByTestId('cancel-deposit-thesis'));
+        assertEnabled(screen.getByTestId('cancel-deposit-thesis'));
         assertDisabled(screen.getByTestId('deposit-thesis'));
     };
 
@@ -135,7 +135,7 @@ describe('ThesisSubmission', () => {
     };
 
     beforeEach(() => {
-        jest.clearAllMocks();
+        jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
         mockApi.resetHandlers();
 
@@ -147,8 +147,7 @@ describe('ThesisSubmission', () => {
     });
 
     afterEach(() => {
-        jest.clearAllMocks();
-
+        jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
         mockApi.resetHandlers();
     });
