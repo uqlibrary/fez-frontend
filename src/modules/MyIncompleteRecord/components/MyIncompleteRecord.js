@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import { useConfirmationState, userIsAdmin, useValidatedForm } from 'hooks';
+import { useConfirmationState, useValidatedForm } from 'hooks';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -91,7 +91,7 @@ const defaultValues = {
     files: '',
 };
 
-const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) => {
+const getInitialValues = (recordToFix, author, disableInitialGrants) => {
     if (!recordToFix) {
         return defaultValues;
     }
@@ -145,7 +145,6 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
             required: authorAffiliationRequired(authorAffiliation, author),
         }));
 
-    const significance = isAdmin && recordToFix.fez_record_search_key_significance;
     const languages = (!!recordToFix.fez_record_search_key_language.length &&
         recordToFix.fez_record_search_key_language?.map?.(lang => lang.rek_language)) || ['eng'];
 
@@ -154,7 +153,6 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
         authorsAffiliation,
         grants,
         languages,
-        significance,
     };
 };
 
@@ -236,7 +234,6 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const isAdmin = userIsAdmin();
     const { pid } = useParams();
     // constants
     const txt = pagesLocale;
@@ -246,7 +243,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
     const { recordToFix, loadingRecordToFix } = useSelector(state => state.get('fixRecordReducer'));
     const { author, accountAuthorLoading } = useSelector(state => state.get('accountReducer'));
     // form
-    const values = getInitialValues(recordToFix, author, isAdmin, disableInitialGrants);
+    const values = getInitialValues(recordToFix, author, disableInitialGrants);
     const form = useValidatedForm({ values });
     const {
         control,

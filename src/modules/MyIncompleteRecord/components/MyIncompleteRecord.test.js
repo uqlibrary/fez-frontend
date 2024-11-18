@@ -12,7 +12,6 @@ import {
     mockUseValidatedForm,
     waitForTextToBeRemoved,
     waitForText,
-    preview,
     waitToBeDisabled,
     waitToBeEnabled,
 } from 'test-utils';
@@ -231,8 +230,7 @@ describe('MyIncompleteRecord', () => {
         await waitFor(() => getAllByText(validationErrors.validationErrorsSummary.grants)[0], waitForOptions);
     });
 
-    it('should hide Scale/Significance field for admins, if already set with a creator contribution statement that\'s different than "Missing"', async () => {
-        jest.spyOn(require('hooks/userIsAdmin'), 'userIsAdmin').mockReturnValue(true);
+    it('should hide Scale/Significance field when already set together with creator contribution statement != "Missing"', async () => {
         const { queryByText } = setup({
             publication: {
                 ...mockRecordToFix,
