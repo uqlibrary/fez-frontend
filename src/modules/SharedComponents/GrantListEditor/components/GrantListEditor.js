@@ -43,6 +43,7 @@ const GrantListEditor = ({
             }
 
             // TODO remove upon removing redux-form
+            /* istanbul ignore else */
             if (onChange) {
                 onChange(grantFormPopulated);
             }
@@ -57,6 +58,7 @@ const GrantListEditor = ({
         }
 
         // TODO remove upon removing redux-form
+        /* istanbul ignore else */
         if (onChange) {
             onChange(grants);
         }
