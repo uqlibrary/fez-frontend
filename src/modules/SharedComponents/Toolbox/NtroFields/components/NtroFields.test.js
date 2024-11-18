@@ -84,7 +84,7 @@ describe('Component NtroFields', () => {
             hideStartPage: true,
             hideAudienceSize: true,
         };
-        const { container, rerender } = setup({});
+        const { container, rerender } = setup({ hideExtent: true });
         rerender(
             <WithReduxStore>
                 <NtroFields {...props} />
