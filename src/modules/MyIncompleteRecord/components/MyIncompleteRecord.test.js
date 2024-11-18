@@ -1,4 +1,5 @@
 import React from 'react';
+import { default as locale } from 'locale/global';
 import { default as pageLocale } from '../locale';
 import { default as alertLocale } from 'locale/publicationForm';
 import {
@@ -127,8 +128,18 @@ describe('MyIncompleteRecord', () => {
         mockParams = { pid: mockRecordToFix.rek_pid };
         mockRecordToFix = {
             ...incompleteNTRORecordUQ352045,
-            fez_record_search_key_author: [incompleteNTRORecordUQ352045.fez_record_search_key_author[1]],
-            fez_record_search_key_author_id: [incompleteNTRORecordUQ352045.fez_record_search_key_author_id[1]],
+            fez_record_search_key_author: [
+                {
+                    ...incompleteNTRORecordUQ352045.fez_record_search_key_author[1],
+                    rek_author_order: 1,
+                },
+            ],
+            fez_record_search_key_author_id: [
+                {
+                    ...incompleteNTRORecordUQ352045.fez_record_search_key_author_id[1],
+                    rek_author_id_order: 1,
+                },
+            ],
         };
 
         jest.restoreAllMocks();
@@ -166,7 +177,24 @@ describe('MyIncompleteRecord', () => {
     });
 
     it('should navigate to my incomplete records page', async () => {
-        const { getByTestId } = setup({ publication: mockRecordToFix });
+        const { getByTestId } = setup({
+            publication: {
+                ...mockRecordToFix,
+                fez_record_search_key_author_affiliation_name: [
+                    {
+                        rek_author_affiliation_name: locale.global.orgTitle,
+                        rek_author_affiliation_name_order: 1,
+                    },
+                ],
+                fez_record_search_key_author_affiliation_type: [
+                    {
+                        rek_author_affiliation_type: 453989,
+                        rek_author_affiliation_type_order: 1,
+                    },
+                ],
+                fez_record_search_key_language: [],
+            },
+        });
         await userEvent.click(getByTestId('incomplete-record-button-cancel'));
 
         expect(!!pathConfig.records.incomplete.length).toBeTruthy();
@@ -206,9 +234,9 @@ describe('MyIncompleteRecord', () => {
         const pid = mockRecordToFix.rek_pid;
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
-            .replyOnce(200, { data: { rek_pid: pid } });
-        // .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
-        // .replyOnce(200, { data: { pid } });
+            .replyOnce(200, { data: { rek_pid: pid } })
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
+            .replyOnce(200, { data: { pid } });
         // .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
         // .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
         // .onPut('s3-ap-southeast-2.amazonaws.com')

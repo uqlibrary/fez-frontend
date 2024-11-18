@@ -146,7 +146,8 @@ const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) =>
         }));
 
     const significance = isAdmin && recordToFix.fez_record_search_key_significance;
-    const languages = recordToFix.fez_record_search_key_language?.map?.(lang => lang.rek_language) || ['eng'];
+    const languages = (!!recordToFix.fez_record_search_key_language.length &&
+        recordToFix.fez_record_search_key_language?.map?.(lang => lang.rek_language)) || ['eng'];
 
     return {
         ...defaultValues,
