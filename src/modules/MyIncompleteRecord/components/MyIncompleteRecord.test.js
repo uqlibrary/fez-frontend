@@ -15,6 +15,8 @@ import {
     waitToBeDisabled,
     waitToBeEnabled,
     assertDisabled,
+    addFilesToFileUploader,
+    setFileUploaderFilesToClosedAccess,
 } from 'test-utils';
 import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
@@ -110,6 +112,11 @@ describe('MyIncompleteRecord', () => {
         waitForFieldErrorToBeCleared &&
             (await waitForTextToBeRemoved('Author affiliation rows marked with red are required'));
 
+        const mockFile = ['myTestImage.png'];
+        addFilesToFileUploader(mockFile);
+        await setFileUploaderFilesToClosedAccess(mockFile);
+        waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('File submission to be completed'));
+
         waitForValidationSummaryRemoval && (await assertNoValidationErrorSummary());
     };
 
@@ -142,6 +149,8 @@ describe('MyIncompleteRecord', () => {
                     rek_author_id_order: 1,
                 },
             ],
+            fez_datastream_info: [],
+            fez_record_search_key_file_attachment_name: [],
         };
 
         jest.restoreAllMocks();
@@ -276,8 +285,20 @@ describe('MyIncompleteRecord', () => {
                         rek_grant_agency_type: null,
                     },
                 ],
-                fez_datastream_info: [],
-                fez_record_search_key_file_attachment_name: [],
+                fez_datastream_info: [
+                    {
+                        dsi_dsid: 'test.mp3',
+                        dsi_mimetype: 'audio/mpeg',
+                        dsi_state: 'A',
+                        dsi_size: 21457982,
+                    },
+                ],
+                fez_record_search_key_file_attachment_name: [
+                    {
+                        rek_file_attachment_name: 'test.mp3',
+                        rek_file_attachment_name_order: 1,
+                    },
+                ],
             },
         });
         await assertValidationErrorSummary();
@@ -291,7 +312,11 @@ describe('MyIncompleteRecord', () => {
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
             .replyOnce(200, { data: { rek_pid: pid } })
             .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
-            .replyOnce(200, { data: { pid } });
+            .replyOnce(200, { data: { pid } })
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
+            .onPut('s3-ap-southeast-2.amazonaws.com')
+            .replyOnce(200, {});
 
         mockRichEditorFieldValues();
         const { getByTestId } = setup({ publication: mockRecordToFix });
@@ -308,11 +333,35 @@ describe('MyIncompleteRecord', () => {
         expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.dashboard);
     });
 
-    it('should display server error', async () => {
+    it('should display server error when it fails to save the record', async () => {
         const pid = mockRecordToFix.rek_pid;
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
             .replyOnce(500, { data: { rek_pid: pid } });
+
+        mockRichEditorFieldValues();
+        setup({ publication: mockRecordToFix });
+        await assertValidationErrorSummary();
+        await fillUpForm({ waitForValidationSummaryRemoval: true });
+        await submitForm();
+        assertDisabled(submitButtonId);
+
+        await waitForText(/Error has occurred/i, waitForOptions);
+        assertEnabled(submitButtonId);
+    });
+
+    it('should display server error when it fails to upload file', async () => {
+        const pid = mockRecordToFix.rek_pid;
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
+            .replyOnce(200, { data: { rek_pid: pid } })
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
+            .replyOnce(200, { data: { pid } })
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500)
+            // automatic retry
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+            .replyOnce(500);
 
         mockRichEditorFieldValues();
         setup({ publication: mockRecordToFix });
