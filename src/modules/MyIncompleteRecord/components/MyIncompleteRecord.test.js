@@ -14,6 +14,7 @@ import {
     waitForText,
     waitToBeDisabled,
     waitToBeEnabled,
+    assertDisabled,
 } from 'test-utils';
 import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
@@ -65,8 +66,10 @@ function setup(props = {}) {
 }
 
 describe('MyIncompleteRecord', () => {
-    const isDebugging = true;
+    const isDebugging = false;
     const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+    const cancelButtonId = 'incomplete-record-button-cancel';
+    const submitButtonId = 'incomplete-record-button-submit';
 
     const mockRichEditorFieldValues = impactStatement =>
         mockUseValidatedForm((props, original) => {
@@ -76,14 +79,14 @@ describe('MyIncompleteRecord', () => {
 
     const assertValidationErrorSummary = async () => {
         await waitForText(/Form cannot be submitted until all fields are valid/, waitForOptions);
-        assertEnabled('incomplete-record-button-cancel');
-        await waitToBeDisabled('incomplete-record-button-update');
+        assertEnabled(cancelButtonId);
+        await waitToBeDisabled(submitButtonId);
     };
 
     const assertNoValidationErrorSummary = async () => {
         await waitForTextToBeRemoved(alertLocale.validationAlert.message, waitForOptions);
-        assertEnabled('incomplete-record-button-cancel');
-        await waitToBeEnabled('incomplete-record-button-update');
+        assertEnabled(cancelButtonId);
+        await waitToBeEnabled(submitButtonId);
     };
 
     const fillUpForm = async ({ waitForFieldErrorToBeCleared, waitForValidationSummaryRemoval }) => {
@@ -110,7 +113,7 @@ describe('MyIncompleteRecord', () => {
         waitForValidationSummaryRemoval && (await assertNoValidationErrorSummary());
     };
 
-    const submitForm = async () => await userEvent.click(screen.getByTestId('incomplete-record-button-update'));
+    const submitForm = async () => await userEvent.click(screen.getByTestId(submitButtonId));
 
     const retryUpload = async () => {
         await waitFor(
@@ -195,7 +198,7 @@ describe('MyIncompleteRecord', () => {
                 fez_record_search_key_language: [],
             },
         });
-        await userEvent.click(getByTestId('incomplete-record-button-cancel'));
+        await userEvent.click(getByTestId(cancelButtonId));
 
         expect(!!pathConfig.records.incomplete.length).toBeTruthy();
         expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.records.incomplete);
@@ -296,11 +299,29 @@ describe('MyIncompleteRecord', () => {
         await fillUpForm({ waitForValidationSummaryRemoval: true });
         await userEvent.type(getByTestId('comments-input'), 'comments');
         await submitForm();
+        assertDisabled(submitButtonId);
 
         await waitForText(pageLocale.successWorkflowConfirmation.confirmationTitle, waitForOptions);
         await userEvent.click(getByTestId('confirm-submit-succeeded'));
 
         expect(!!pathConfig.dashboard.length).toBeTruthy();
         expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.dashboard);
+    });
+
+    it('should display server error', async () => {
+        const pid = mockRecordToFix.rek_pid;
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
+            .replyOnce(500, { data: { rek_pid: pid } });
+
+        mockRichEditorFieldValues();
+        setup({ publication: mockRecordToFix });
+        await assertValidationErrorSummary();
+        await fillUpForm({ waitForValidationSummaryRemoval: true });
+        await submitForm();
+        assertDisabled(submitButtonId);
+
+        await waitForText(/Error has occurred/i, waitForOptions);
+        assertEnabled(submitButtonId);
     });
 });

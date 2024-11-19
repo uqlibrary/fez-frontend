@@ -22,7 +22,7 @@ const mime = require('mime-types');
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
-import preview from 'jest-preview';
+import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
 
 export const AllTheProviders = props => {
@@ -222,6 +222,12 @@ const mockUseValidatedForm = implementation => {
     });
 };
 
+const turnOnJestPreviewOnTestFailure = (options = {}) =>
+    jestPreviewConfigure({
+        autoPreview: true,
+        ...options,
+    });
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -248,4 +254,5 @@ module.exports = {
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    turnOnJestPreviewOnTestFailure,
 };

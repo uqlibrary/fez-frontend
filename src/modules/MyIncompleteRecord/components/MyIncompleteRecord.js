@@ -305,7 +305,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
             publication: { ...recordToFix },
             author: { ...author },
         });
-        dispatch(await actions.updateIncompleteRecord(data));
+        await dispatch(actions.updateIncompleteRecord(data));
     });
 
     const ntroFieldProps = getNtroFieldFlags(recordToFix, author);
@@ -480,7 +480,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             <Grid xs={12} md="auto">
                                 <Button
                                     id="update-my-work"
-                                    data-testid="incomplete-record-button-update"
+                                    data-testid="incomplete-record-button-submit"
                                     variant="contained"
                                     color="primary"
                                     fullWidth
