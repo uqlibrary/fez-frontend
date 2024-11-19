@@ -14,7 +14,6 @@ import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
 import BatchImport from './BatchImport';
-import preview from 'jest-preview';
 
 const mockUseNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({

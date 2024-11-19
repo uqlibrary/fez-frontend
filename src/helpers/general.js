@@ -422,7 +422,7 @@ export const reorderObjectKeys = (object, keys) =>
  * @return {boolean}
  */
 export const isEmptyObject = object =>
-    object && typeof object === 'object' ? Object.keys(object)?.length === 0 : false;
+    object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
 
 /**
  * Get a subset of an object for a given set of keys
@@ -497,3 +497,45 @@ export const isFezRecordOneToManyRelation = (record, key) =>
     record[key] instanceof Array &&
     !!record[key].length &&
     hasAtLeastOneFezRecordField(record[key][0]);
+
+/**
+ * Remove object keys when its value do not pass a given filter, are empty objects or empty arrays.
+ *
+ * @param obj {Object}
+ * @param filter {function}
+ * @return {Object}
+ */
+export const filterObject = (obj, filter) => {
+    if (!obj || obj instanceof Array || typeof obj !== 'object' || typeof filter !== 'function') {
+        return obj;
+    }
+
+    return Object.entries(obj).reduce((acc, [key, value]) => {
+        // handle arrays
+        if (value instanceof Array) {
+            const filtered = value.map(item => filterObject(item, filter)).filter(item => !isEmptyObject(item));
+            // ignore empty arrays
+            if (!filtered.length) {
+                return acc;
+            }
+            acc[key] = filtered;
+            return acc;
+        }
+
+        // handle nested objects
+        if (typeof value === 'object') {
+            const filtered = filterObject(value, filter);
+            // ignore empty nested objects
+            if (isEmptyObject(filtered)) {
+                return acc;
+            }
+            acc[key] = filtered;
+            return acc;
+        }
+
+        if (filter(value, key)) {
+            acc[key] = value;
+        }
+        return acc;
+    }, {});
+};

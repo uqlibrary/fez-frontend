@@ -194,13 +194,27 @@ describe('useForm hook', () => {
         });
     });
 
-    it('mergeWithFormValues should merge form values with given values', () => {
-        const extra = { field1: 'defaultValue' };
-        mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue' });
+    describe('mergeWithFormValues', () => {
+        it('should merge form values with given values', () => {
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue' });
 
-        const { result } = setup();
-        const mergedValues = result.current.mergeWithFormValues(extra);
-        expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue' });
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra);
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue' });
+        });
+
+        it('should filter form values prior to merge using a given filter function', () => {
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue', field3: 'otherValue' });
+
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra, data => {
+                delete data.field2;
+                return data;
+            });
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field3: 'otherValue' });
+        });
     });
 
     describe('flattenErrors', () => {

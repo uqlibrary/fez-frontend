@@ -37,7 +37,7 @@ import {
     NTRO_SUBTYPES,
     ORG_TYPE_NOT_SET,
 } from '../../../config/general';
-import { leftJoin } from '../../../helpers/general';
+import { filterObject, leftJoin } from '../../../helpers/general';
 import { isAdded } from '../../../helpers/datastreams';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearFixRecord, loadRecordToFix } from '../../../actions';
@@ -53,28 +53,8 @@ const ntroFieldsDefaultValues = {
     significance: '',
     impactStatement: '',
     ntroAbstract: '',
-    fez_record_search_key_ismn: '',
-    fez_record_search_key_isrc: '',
-    fez_record_search_key_series: {
-        rek_series: '',
-    },
-    fez_record_search_key_volume_number: {
-        rek_volume_number: '',
-    },
-    fez_record_search_key_issue_number: {
-        rek_issue_number: '',
-    },
-    fez_record_search_key_start_page: {
-        rek_start_page: '',
-    },
-    fez_record_search_key_end_page: {
-        rek_end_page: '',
-    },
     fez_record_search_key_total_pages: {
         rek_total_pages: '',
-    },
-    fez_record_search_key_original_format: {
-        rek_original_format: '',
     },
     fez_record_search_key_audience_size: {
         rek_audience_size: '',
@@ -301,10 +281,14 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
     };
 
     const onSubmit = safelyHandleSubmit(async () => {
-        const data = mergeWithFormValues({
-            publication: { ...recordToFix },
-            author: { ...author },
-        });
+        const data = mergeWithFormValues(
+            {
+                publication: { ...recordToFix },
+                author: { ...author },
+            },
+            // remove object keys with empty string values from form data prior to merge
+            data => filterObject(data, value => value !== ''),
+        );
         await dispatch(actions.updateIncompleteRecord(data));
     });
 

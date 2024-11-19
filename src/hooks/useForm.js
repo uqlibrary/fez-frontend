@@ -182,7 +182,8 @@ export const useForm = props => {
     attributes.safelyHandleSubmit = safelyHandleSubmit(attributes);
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
-    attributes.mergeWithFormValues = defaults => deepmerge(defaults, attributes.getValues());
+    attributes.mergeWithFormValues = (defaults, filter) =>
+        deepmerge(defaults, typeof filter === 'function' ? filter(attributes.getValues()) : attributes.getValues());
 
     // alert component helpers
     attributes.getPropsForAlert = getPropsForAlert(attributes);

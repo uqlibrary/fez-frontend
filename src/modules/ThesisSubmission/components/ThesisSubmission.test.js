@@ -67,6 +67,11 @@ function setup(props = {}) {
     );
 }
 
+/**
+ * These tests are intentionally extensive, as they functional tests of the ThesisSubmission component — a critical
+ * feature of the application. This approach was deliberately chosen to ensure comprehensive coverage of the component's
+ * functionality.
+ */
 describe('ThesisSubmission', () => {
     const fileMock = ['myTestImage.png'];
     const isDebugging = false;

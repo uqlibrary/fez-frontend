@@ -14,6 +14,7 @@ import {
     hasAtLeastOneFezRecordField,
     isFezRecordOneToOneRelation,
     isFezRecordOneToManyRelation,
+    filterObject,
 } from './general';
 
 describe('general helpers', () => {
@@ -312,6 +313,7 @@ describe('general helpers', () => {
             expect(isEmptyObject(true)).toEqual(false);
             expect(isEmptyObject(null)).toEqual(false);
             expect(isEmptyObject(undefined)).toEqual(false);
+            expect(isEmptyObject([])).toEqual(false);
         });
     });
 
@@ -483,6 +485,37 @@ describe('general helpers', () => {
                         'fez_record_search_key_doi',
                     ),
                 ).toBeFalsy();
+            });
+        });
+
+        describe('filterObject', () => {
+            it('should return given object if any args are invalid', () => {
+                expect(filterObject(undefined, value => value === 1)).toEqual(undefined);
+                expect(filterObject([1, 2], value => value === 1)).toEqual([1, 2]);
+                expect(filterObject({ a: 1 }, true)).toEqual({ a: 1 });
+            });
+
+            it('should filter values according to given filter function', () => {
+                expect(
+                    filterObject(
+                        {
+                            a: 1,
+                            b: 2,
+                            c: { a: 1, b: 2, c: 3 },
+                            d: [
+                                { a: 1, b: 2 },
+                                { a: 1, b: 2, c: [{ a: 1 }] },
+                            ],
+                            e: { b: 2 },
+                            f: [{ b: 2 }, { c: 2 }, { d: { b: 2 } }],
+                        },
+                        value => value === 1,
+                    ),
+                ).toEqual({
+                    a: 1,
+                    c: { a: 1 },
+                    d: [{ a: 1 }, { a: 1, c: [{ a: 1 }] }],
+                });
             });
         });
     });
