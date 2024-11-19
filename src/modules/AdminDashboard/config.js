@@ -67,6 +67,9 @@ export const EXPORT_REPORT_JOBS = {
     ExportReportEmailSqlQueryJob: { queued: true },
 };
 
+export const maxDefaultDateRange = 52;
+export const defaultDateRangeUnit = 'weeks'; // must match expected date units e.g. Moment.js https://momentjs.com/docs/#/manipulating/subtract/
+
 export const isUrl = str => {
     try {
         const newUrl = new URL(str);
@@ -307,7 +310,8 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
 export const exportReportFilters = {
     date_from: {
         component: ({ state, id, errorMessage, onChange, locale }) => {
-            const hasBinding = !!state.report?.sel_bindings?.includes(':date_from');
+            const hasOwnBinding = !!state.report?.sel_bindings?.includes(':date_from');
+            const hasDependantBinding = !!state.report?.sel_bindings?.includes(':date_to');
             return (
                 <Grid item xs={12} sm={4} key={`${id}-date-from`}>
                     <Box data-testid={`${id}-date-from`}>
@@ -328,12 +332,11 @@ export const exportReportFilters = {
                                     variant="standard"
                                     fullWidth
                                     error={!!errorMessage?.date_from}
-                                    required={hasBinding}
+                                    required={hasOwnBinding}
                                     helperText={errorMessage?.date_from}
                                 />
                             )}
-                            // eslint-disable-next-line react/prop-types
-                            onChange={props =>
+                            onChange={props => {
                                 onChange?.({
                                     type: 'fromDate',
                                     value: !!props
@@ -341,12 +344,29 @@ export const exportReportFilters = {
                                               .startOf('day')
                                               .format(DEFAULT_SERVER_DATE_FORMAT)
                                         : null,
-                                })
-                            }
+                                });
+                                if (!hasDependantBinding) {
+                                    onChange?.({
+                                        type: 'toDate',
+                                        value: !!props
+                                            ? moment
+                                                  .min([
+                                                      moment(),
+                                                      moment(props)
+                                                          .endOf('day')
+                                                          .add(
+                                                              state.report.sel_maxDateRange ?? maxDefaultDateRange,
+                                                              defaultDateRangeUnit,
+                                                          ),
+                                                  ])
+                                                  .format(DEFAULT_SERVER_DATE_FORMAT)
+                                            : null,
+                                    });
+                                }
+                            }}
                             defaultValue=""
                             disableFuture
-                            maxDate={state.filters.date_to}
-                            disabled={!!!state.report || !hasBinding}
+                            disabled={!!!state.report || !hasOwnBinding}
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
@@ -360,16 +380,40 @@ export const exportReportFilters = {
             const mFrom = moment(state.filters.date_from);
             if (!mFrom.isValid()) return { date_from: locale.invalidDate };
 
-            // other field dependancies
+            // other field dependencies
             if (!state.report?.sel_bindings?.includes(':date_to')) return {};
             const mTo = moment(state.filters.date_to);
             if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.dateNotAfter };
+            const maxRange = state.report.sel_maxDateRange ?? maxDefaultDateRange;
+            let maxRangeDays = maxRange;
+            switch (defaultDateRangeUnit) {
+                case 'weeks':
+                    maxRangeDays *= 7;
+                    break;
+                case 'months':
+                    maxRangeDays *= 31;
+                    break;
+                case 'years':
+                    maxRangeDays *= 365;
+                    break;
+                default:
+                    break;
+            }
+            // compare by days for better accuracy
+            if (mTo.diff(mFrom, 'days') > maxRangeDays) {
+                return {
+                    date_to: `Must be within ${maxRange} ${
+                        maxRange > 1 ? defaultDateRangeUnit : defaultDateRangeUnit.slice(0, -1)
+                    } of 'from' date`,
+                };
+            }
             return {};
         },
     },
     date_to: {
         component: ({ state, id, errorMessage, onChange, locale }) => {
             const hasBinding = !!state.report?.sel_bindings?.includes(':date_to');
+            const exportReport = state.report || defaultLegacyReportOption;
             return (
                 <Grid item xs={12} sm={4} key={`${id}-date-to`}>
                     <Box data-testid={`${id}-date-to`}>
@@ -394,7 +438,6 @@ export const exportReportFilters = {
                                     helperText={errorMessage?.date_to}
                                 />
                             )}
-                            // eslint-disable-next-line react/prop-types
                             onChange={props =>
                                 onChange?.({
                                     type: 'toDate',
@@ -408,6 +451,10 @@ export const exportReportFilters = {
                             defaultValue=""
                             disableFuture
                             minDate={state.filters.date_from}
+                            maxDate={moment(state.filters.date_from ?? new Date()).add(
+                                exportReport.sel_maxDateRange ?? maxDefaultDateRange,
+                                defaultDateRangeUnit,
+                            )}
                             disabled={!!!state.report || !hasBinding}
                             inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />

@@ -48,6 +48,7 @@ export const adminDashboardConfig = {
                 'Query that has a single binding, which should be provided by the user',
             sel_job: 'ExportReportEmailSqlQueryJob',
             sel_bindings: ':date_from',
+            sel_maxDateRange: 52,
         },
         {
             sel_id: 6,
@@ -56,6 +57,7 @@ export const adminDashboardConfig = {
             'Query that has two bindings, which should be provided by the user',
             sel_job: 'ExportReportEmailSqlQueryJob',
             sel_bindings: ':date_from,:date_to',
+            sel_maxDateRange: 1,
         },
     ],
 };
