@@ -163,6 +163,24 @@ describe('ViewRecord', () => {
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
+    it('should render feedback button', () => {
+        const { getByRole } = setup({
+            viewRecordReducer: {
+                recordToView: { ...record, fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:774620b' }] },
+            },
+        });
+
+        expect(getByRole('button', { name: 'Tell Us More' })).toBeInTheDocument();
+    });
+
+    it('should not render feedback button', () => {
+        const { queryByTestId } = setup({
+            viewRecordReducer: { recordToView: record },
+        });
+
+        expect(queryByTestId('btnFeedback')).not.toBeInTheDocument();
+    });
+
     it('should render default view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);

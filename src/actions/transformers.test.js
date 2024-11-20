@@ -856,6 +856,44 @@ describe('transformers', () => {
         });
     });
 
+    describe('getFeedbackRequest test', () => {
+        const input = {
+            acknowledgedAs: 'private',
+            community: '',
+            consent: 'false',
+            contactNo: '',
+            cultureInfo: { other: 'other', otherText: 'other info', ceremonies: 'ceremonies' },
+            email: '',
+            firstName: 'first name',
+            icipHolder: 'true',
+            identityType: 'islander',
+            kinshipConnection: 'false',
+            lastName: 'last name',
+            shareDetails: { shareAnonymously: 'shareAnonymously' },
+            specialCare: { womenOnly: 'womenOnly', otherText: 'special care info' },
+        };
+
+        it('should create issue request', () => {
+            const expected = {
+                ror_pid: 'UQ:1',
+                ror_acknowledged_as: 'private',
+                ror_consent: 'false',
+                ror_culture_info: ['other', 'ceremonies'],
+                ror_culture_info_other_info: 'other info',
+                ror_first_name: 'first name',
+                ror_icip_holder: 'true',
+                ror_identity_type: 'islander',
+                ror_kinship_connection: 'false',
+                ror_last_name: 'last name',
+                ror_share_details: ['shareAnonymously'],
+                ror_special_care: ['womenOnly'],
+            };
+
+            const result = transformers.getFeedbackRecordData('UQ:1', input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordSubjectSearchKey test', () => {
         it('should return empty subject object', () => {
             expect(transformers.getRecordSubjectSearchKey()).toEqual({});
