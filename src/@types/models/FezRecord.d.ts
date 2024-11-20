@@ -1,19 +1,17 @@
-// this is similar to using Partial<...>, but it provides better type hinting
-type Optional<T> = {
-    [K in keyof T]: T[K]
-}
+import { Optional, PrimitiveValues } from '../general';
+import { FezAuthor } from './FezAuthor';
 
-export type Values = string | number | boolean | undefined | null
+/* The types below are a representation of eSpace FezRecordSearchKey model. */
 
 export interface CoreAttributes {
-    [key: `rek_${string}`]: Values
+    [key: `rek_${string}`]: PrimitiveValues
 }
 
 // Relations
-// use conditional typing to define that 'author' nested relation should only be typeof Values,
+// use conditional typing to define that 'author' nested relation should only be typeof PrimitiveValues,
 // otherwise typeof T - e.g FezRecord
 type INestedRelation<T> = {
-    [key in 'parent' | 'author']?: key extends 'parent' ? T : Record<string, Values> // TODO update last to FezAuthor once created
+    [key in 'parent' | 'author']?: key extends 'parent' ? T : FezAuthor
 }
 export type OneToOneRelation = CoreAttributes
 type IOneToManyRelation<T> = CoreAttributes & INestedRelation<T>
@@ -22,6 +20,7 @@ interface IRelations<T> {
 }
 
 type IAttributes<T> = keyof CoreAttributes & keyof IRelations<T>
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 export interface FezRecord extends Optional<CoreAttributes & IRelations<FezRecord>> {}
 

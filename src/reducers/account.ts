@@ -1,15 +1,10 @@
 import * as actions from 'actions/actionTypes';
-
-export interface FezAuthor {
-    aut_id: number;
-    aut_google_scholar_id?: string;
-    [key: string]: any;
-}
+import { FezAuthor } from '../@types/models/FezAuthor';
 
 export interface BaseState {
-    account: any;
+    account: object | null;
     author: FezAuthor | null;
-    authorDetails: any;
+    authorDetails: object | null;
     accountLoading: boolean;
     accountAuthorLoading: boolean;
     accountAuthorDetailsLoading: boolean;
@@ -18,14 +13,14 @@ export interface BaseState {
 
 export interface SavingState {
     accountAuthorSaving: boolean;
-    accountAuthorError: any;
+    accountAuthorError: object | null;
 }
 
 export type AccountState = BaseState | SavingState;
 
 export interface Action {
     type: string;
-    payload?: any;
+    payload: object | null;
 }
 
 export const initialState: BaseState = {
@@ -52,7 +47,7 @@ const handlers: Record<string, (state: AccountState, action?: Action) => Account
     [actions.CURRENT_ACCOUNT_LOADED]: (state, action) => ({
         ...state,
         accountLoading: false,
-        account: action?.payload,
+        account: action?.payload as object,
     }),
 
     [actions.CURRENT_ACCOUNT_ANONYMOUS]: () => ({
@@ -71,7 +66,7 @@ const handlers: Record<string, (state: AccountState, action?: Action) => Account
 
     [actions.CURRENT_AUTHOR_LOADED]: (state, action) => ({
         ...state,
-        author: action?.payload,
+        author: action?.payload as FezAuthor,
         accountAuthorLoading: false,
     }),
 
@@ -90,7 +85,7 @@ const handlers: Record<string, (state: AccountState, action?: Action) => Account
     [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state, action) => ({
         ...state,
         accountAuthorSaving: false,
-        accountAuthorError: action?.payload,
+        accountAuthorError: action?.payload as object,
     }),
 
     [actions.CURRENT_AUTHOR_SAVE_RESET]: state => ({
@@ -113,7 +108,7 @@ const handlers: Record<string, (state: AccountState, action?: Action) => Account
 
     [actions.CURRENT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
         ...state,
-        authorDetails: action?.payload,
+        authorDetails: action?.payload as object,
         accountAuthorDetailsLoading: false,
     }),
 

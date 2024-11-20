@@ -148,7 +148,6 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
 };
 
 /**
- *
  * @param onSearch {(params: JournalSearchQueryParams) = >void}
  * @param journalSearchQueryParams {JournalSearchQueryParams}
  * @param favourites
