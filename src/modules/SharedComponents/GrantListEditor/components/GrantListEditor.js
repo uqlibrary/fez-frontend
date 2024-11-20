@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import GrantListEditorHeader from './GrantListEditorHeader';
@@ -9,6 +9,13 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { useFormContext } from 'react-hook-form';
+
+const getGrantsFromProps = input => {
+    if (input?.name && input?.value) {
+        return input.value instanceof Immutable.List ? input.value.toJS() : input.value;
+    }
+    return [];
+};
 
 const GrantListEditor = ({
     canEdit = false,
@@ -21,20 +28,27 @@ const GrantListEditor = ({
     hideType = false,
     disableDeleteAllGrants = false,
 }) => {
-    const getGrantsFromProps = useCallback(input => {
-        if (input?.name && input?.value) {
-            return input.value instanceof Immutable.List ? input.value.toJS() : input.value;
-        }
-        return [];
-    }, []);
-
-    const [grants, setGrants] = useState(() => getGrantsFromProps(input));
+    const hasPropagatedInputValueChanges = useRef(null);
+    const [grants, setGrants] = useState([]);
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
     const [grantFormPopulated, setGrantFormPopulated] = useState(false);
     const form = useFormContext();
 
+    // propagate input changes to `grants`
+    useEffect(() => {
+        const updated = getGrantsFromProps(input);
+        // only update `grants` once, when input.value has been updated
+        if (!!grants.length || !updated.length || hasPropagatedInputValueChanges.current) {
+            return;
+        }
+        hasPropagatedInputValueChanges.current = true;
+        setGrants(updated);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(grants), input?.value, hasPropagatedInputValueChanges.current]);
+
+    // propagate `grantFormPopulated` changes to input
     useEffect(() => {
         if (grantFormPopulated) {
             if (form?.setValue) {
@@ -51,6 +65,7 @@ const GrantListEditor = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [grantFormPopulated, form?.setValue, onChange]);
 
+    // propagate `grants` changes to input
     useEffect(() => {
         if (form?.setValue) {
             form?.setValue(input.name, grants, { shouldValidate: true });
@@ -129,7 +144,7 @@ const GrantListEditor = ({
             index={index}
             disabled={disabled || (grant && grant.disabled)}
             grant={grant}
-            canMoveDown={index !== grants.length - 1}
+            canMoveDown={index !== grants?.length - 1}
             canMoveUp={index !== 0}
             canEdit={canEdit}
             onMoveUp={moveUpGrant}
@@ -171,7 +186,7 @@ const GrantListEditor = ({
                     ? { grantSelectedToEdit: grantSelectedToEdit }
                     : {})}
             />
-            {grants.length > 0 && (
+            {grants?.length > 0 && (
                 <Grid container spacing={1}>
                     <Grid item xs={12}>
                         <List>
@@ -189,7 +204,7 @@ const GrantListEditor = ({
                                 width: '100%',
                                 maxHeight: '200px',
                                 overflow: 'hidden',
-                                ...(grants.length > 3 && { overflowY: 'scroll' }),
+                                ...(grants?.length > 3 && { overflowY: 'scroll' }),
                             }}
                             data-testid="rek-grant-list"
                         >
@@ -219,4 +234,4 @@ GrantListEditor.propTypes = {
     disableDeleteAllGrants: PropTypes.bool,
 };
 
-export default GrantListEditor;
+export default React.memo(GrantListEditor);
