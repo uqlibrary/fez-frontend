@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 context('Admin Dashboard - Reports tab', () => {
     beforeEach(() => {
         cy.loadAdminDashboard();
@@ -275,6 +277,55 @@ context('Admin Dashboard - Reports tab', () => {
             cy.data('report-export-only-date-from-input')
                 .clear()
                 .type('01/01/2024');
+
+            cy.data('report-export-only-date-to').contains('Must be within 1 week of "from" date');
+            cy.data('report-export-only-date-to-input')
+                .clear()
+                .type('07/01/2024');
+            cy.data('report-export-only-date-to')
+                .contains('Must be within 1 week of "from" date')
+                .should('not.exist');
+            cy.data('report-export-button').should('not.be.disabled');
+
+            // test single binding with 52 week length
+            cy.data('report-export-only-input').click();
+            cy.get('[role=option]')
+                .contains('Queued report one binding')
+                .click();
+            cy.data('report-export-only-input').should('have.value', 'Queued report one binding');
+            cy.data('report-export-only-date-from-input').should('have.attr', 'required');
+            cy.data('report-export-only-date-from').contains('Required');
+            cy.data('report-export-only-date-from-input')
+                .parent()
+                .should('have.class', 'Mui-error');
+            cy.data('report-export-only-date-to-input').should('be.disabled');
+            cy.data('report-export-button').should('be.disabled');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('01/01/2015');
+            cy.data('report-export-only-date-to-input').should('have.value', '31/12/2015');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('30/10/2015');
+            cy.data('report-export-only-date-to-input').should('have.value', '28/10/2016');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('28/02/2017');
+            cy.data('report-export-only-date-to-input').should('have.value', '27/02/2018');
+
+            // test auto-cutoff, when selected 'from' date is less than maximum date range.
+            // Auto-cutoff makes the "to" date become the current date
+            // since it doesnt make sense to have "to" dates in the future.
+            // e.g. if max date range is 1 year, today's date is 20/11/2024, and
+            // 'from' date is set to 20/06/2024, then normally the 'to' date would
+            // become 20/06/2025, which is 6 months in the future. Instead, set 'to' date
+            // automatically to today's date, making the range 20/06/2024 - 20/11/2024
+            const today = moment();
+            const dateFrom = moment().subtract(6, 'months');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type(dateFrom.format('DD/MM/YYYY'));
+            cy.data('report-export-only-date-to-input').should('have.value', today.format('DD/MM/YYYY'));
         });
     });
 
