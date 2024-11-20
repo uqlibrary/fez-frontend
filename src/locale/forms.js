@@ -321,5 +321,143 @@ export default {
                 message: 'Work has been deleted',
             },
         },
+        feedbackRecord: {
+            feedbackTypes: {
+                title: 'I would like to',
+                options: [
+                    { label: 'Provide feedback / suggestion /information for this record', value: 'feedback' },
+                    { label: 'Share a story about this material', value: 'story' },
+                    { label: 'Advise of cultural sensitivity / make a takedown request', value: 'takedown' },
+                ],
+            },
+            details: {
+                title: 'Your Details',
+                firstName: 'First Name',
+                lastName: 'Last Name',
+                contactNo: 'Contact Number',
+                email: 'Email',
+                community: 'Community',
+                shareDetails: {
+                    options: [
+                        { label: 'I’d like to share my details with UQ Library', value: 'shareDetails' },
+                        { label: 'I’d like to share my feedback anonymously', value: 'shareAnonymously' },
+                    ],
+                },
+            },
+            identityTypes: {
+                title: 'Do you identify as an Aboriginal and / or Torres Strait Islander person?',
+                options: [
+                    { label: 'Yes, Aboriginal', value: 'aboriginal' },
+                    { label: 'Yes, Torres Strait Islander', value: 'islander' },
+                    { label: 'Both, Aboriginal and Torres Strait Islander', value: 'both' },
+                    { label: 'No', value: 'no' },
+                ],
+            },
+            kinshipConnection: {
+                title: 'Do you have a kinship connection to this item?',
+                options: [
+                    { label: 'Yes', value: true },
+                    { label: 'No', value: false },
+                ],
+            },
+            ICIPHolder: {
+                title: 'Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?',
+                options: [
+                    { label: 'Yes', value: true },
+                    { label: 'No', value: false },
+                ],
+            },
+            consent: {
+                title:
+                    'Do you consent to your name being included as a Community Participant in the UQ Library Aboriginal and Torres Strait Islander Community Feedback database?',
+                options: [
+                    { label: 'Yes', value: true },
+                    { label: 'No, I would like to remain anonymous', value: false },
+                ],
+            },
+            communityInfo: {
+                title: 'Do you have information we could add to this item?',
+                subTitle: 'This may include information on the Country, tribe/community or language found in the item.',
+            },
+            relatedPeople: {
+                title: 'Have you identified any people, language and/or place in this item?',
+                subTitle: 'If yes, please provide their name and any known information.',
+            },
+            story: {
+                title: 'Would you like to share a story or provide more context about this item?',
+            },
+            containCultureInfo: {
+                title: 'Does the item contain cultural information that is secret/sacred or sensitive?',
+                options: [
+                    { label: 'Mens Business', value: 'mensBusiness' },
+                    { label: 'Womens Business', value: 'womensBusiness' },
+                    { label: 'Sacred sites', value: 'sacredSites' },
+                    { label: 'Ceremonies', value: 'ceremonies' },
+                    { label: 'Other', value: 'other', appendTextField: true },
+                ],
+            },
+            requireSpecialCare: {
+                title: 'Does the item need to be managed with special care?',
+                options: [
+                    { label: 'No - The item does not contain sensitive material', value: 'no' },
+                    { label: 'Yes - A warning should be added', value: 'requireWarning' },
+                    { label: 'Yes - Only Men should view', value: 'menOnly' },
+                    { label: 'Yes - Only Women should view', value: 'womenOnly' },
+                    { label: 'Yes - Community must approve access to view this item', value: 'communityApproval' },
+                    { label: 'Other', value: 'other', appendTextField: true },
+                ],
+            },
+            acknowledgedAs: {
+                title: 'UQ Library is grateful for your assistance in caring for our collections',
+                subTitle: 'If attributing your contribution, how would you like to be acknowledged:',
+                options: [
+                    { label: 'Public Acknowledgement of my name on the record', value: 'public' },
+                    { label: 'Private Acknowledgement of my name in the Library’s records', value: 'private' },
+                    { label: 'Anonymous information provided by a guest', value: 'anonymous' },
+                ],
+                disclaimer:
+                    'The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). ',
+            },
+            validationAlert: {
+                type: 'warning',
+                title: 'Validation',
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+            },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message =>
+                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Request is being processed.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'Fix work request has been submitted successfully.',
+            },
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel request',
+                confirmationMessage: 'Are you sure you want to cancel this request?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your feedback has been submitted',
+                confirmationMessage: (
+                    <span style={{ display: 'block', margin: '1em 0' }}>
+                        Your feedback will be referred to a UQ eSpace staff member for review/action.
+                    </span>
+                ),
+                confirmButtonLabel: 'Go to my dashboard',
+                cancelButtonLabel: 'Go back to view page',
+            },
+            cancel: 'Cancel',
+            submit: 'Submit',
+        },
     },
 };

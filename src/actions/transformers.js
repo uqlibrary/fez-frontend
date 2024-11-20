@@ -1656,6 +1656,30 @@ export const getCopyToCollectionData = (records, data) => {
         };
     });
 };
+
+export const getFeedbackRecordData = (pid, data) => {
+    return Object.entries(data).reduce(
+        (map, [key, value]) => {
+            if (value) {
+                const newKey = `ror_${key.replace(/([A-Z])/g, '_$1').toLowerCase()}`;
+                // checkbox group values
+                if (typeof value === 'object') {
+                    const { otherText, ...values } = value;
+                    const newValues = Object.values(values);
+                    map[newKey] = newValues;
+                    if (newValues.includes('other')) {
+                        map[`${newKey}_other_info`] = otherText;
+                    }
+                } else {
+                    map[newKey] = value;
+                }
+            }
+            return map;
+        },
+        { ror_pid: pid },
+    );
+};
+
 export const getCopyToCommunityData = (records, data) => {
     return records.map(record => {
         const existingCommunityPids = record.fez_record_search_key_ismemberof.map(
