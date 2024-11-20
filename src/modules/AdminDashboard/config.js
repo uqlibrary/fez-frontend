@@ -373,7 +373,7 @@ export const exportReportFilters = {
                 </Grid>
             );
         },
-        validator: ({ state, locale }) => {
+        validator: ({ state, locale, maxDateRangeUnit = defaultDateRangeUnit }) => {
             if (!state.report?.sel_bindings?.includes(':date_from')) return {};
             if (isEmptyStr(state.filters.date_from)) return { date_from: locale.required };
 
@@ -386,7 +386,7 @@ export const exportReportFilters = {
             if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.dateNotAfter };
             const maxRange = state.report.sel_maxDateRange ?? maxDefaultDateRange;
             let maxRangeDays = maxRange;
-            switch (defaultDateRangeUnit) {
+            switch (maxDateRangeUnit) {
                 case 'weeks':
                     maxRangeDays *= 7;
                     break;
@@ -403,8 +403,8 @@ export const exportReportFilters = {
             if (mTo.diff(mFrom, 'days') > maxRangeDays) {
                 return {
                     date_to: `Must be within ${maxRange} ${
-                        maxRange > 1 ? defaultDateRangeUnit : defaultDateRangeUnit.slice(0, -1)
-                    } of 'from' date`,
+                        maxRange > 1 ? maxDateRangeUnit : maxDateRangeUnit.slice(0, -1)
+                    } of "from" date`,
                 };
             }
             return {};
