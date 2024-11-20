@@ -22,3 +22,5 @@ const rootReducer = () =>
     });
 
 export default rootReducer;
+
+export type AppState = Map<string, any>;

@@ -13,18 +13,19 @@ import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButto
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation } from 'react-router-dom';
+import { AppState } from '../../../reducer';
 
-export const FavouriteJournals = () => {
+export const FavouriteJournals: React.FC = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const txt = locale.components.favouriteJournals;
     // keep track of previous location, so we can go back to the search page correctly after re rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
 
-    const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
-    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
-    const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
-    const removing = useSelector(state => state.get?.('favouriteJournalsReducer').remove?.loading);
+    const response = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').response);
+    const loading = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').loading);
+    const error = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').error);
+    const removing = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').remove?.loading);
 
     const {
         selectedJournals,
@@ -55,7 +56,9 @@ export const FavouriteJournals = () => {
         dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, pageSize, sortBy, sortDirection]);
+
     return (
+        // @ts-ignore
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3} padding={0}>
                 <Grid xs>
@@ -99,6 +102,7 @@ export const FavouriteJournals = () => {
                                         )}
                                         <Grid xs={12} sm={6} md="auto">
                                             <BackToSearchButton
+                                                // @ts-ignore
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
                                                 prevLocation={prevLocation.current}
