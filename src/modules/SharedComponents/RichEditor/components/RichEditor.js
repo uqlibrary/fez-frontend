@@ -74,7 +74,7 @@ const RichEditor = ({
 
     let error = null;
     // default rich editor has "<p></p>"
-    const inputLength = (value && value.plainText && value.plainText.length) || value.length - 7;
+    const inputLength = value?.plainText?.length || value?.length - 7;
     if (meta && meta.error) {
         error =
             !!meta.error.props &&
@@ -156,7 +156,6 @@ const RichEditor = ({
 RichEditor.propTypes = {
     className: PropTypes.string,
     input: PropTypes.object,
-    inputRef: PropTypes.any,
     instructions: PropTypes.any,
     maxValue: PropTypes.number,
     meta: PropTypes.any,
@@ -167,7 +166,7 @@ RichEditor.propTypes = {
     textOnlyOnPaste: PropTypes.bool,
     description: PropTypes.string,
     title: PropTypes.string,
-    value: PropTypes.object,
+    value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     titleProps: PropTypes.object,
 };
 

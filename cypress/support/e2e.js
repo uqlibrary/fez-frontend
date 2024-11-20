@@ -39,3 +39,15 @@ export const A11YOptions = {
 Cypress.on('uncaught:exception', () => {
     return false;
 });
+
+/**
+ * Set the delay between each keystroke when simulating keyboard input to 0 for all tests.
+ * This improves overall test speed.
+ *
+ * For fixing issues with specific tests, please specify an alternative delay value using
+ * the options object given to the type() method.
+ * e.g. `cy.get('myInput').type('abc', { delay: 10 });`
+ */
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 0,
+});

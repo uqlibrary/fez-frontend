@@ -175,7 +175,7 @@ export default {
                         runReport: 'Run report',
                         export: 'Export',
                         exportReport: 'Export report',
-                        helperText: 'Report will download direct to your device',
+                        helperText: 'Report will download to your device or be emailed directly to you',
                     },
                     columns: {
                         workshistory: {
@@ -204,8 +204,26 @@ export default {
                         title: 'Error',
                         general: 'An error occurred while retrieving the report.',
                         required: 'Required',
+                        invalidDate: 'Invalid date',
+                        dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
-                        systemAlertId: 'Must be a positive whole number',
+                        recordId: 'Must be a positive whole number',
+                    },
+                    alert: {
+                        noResults: reportName => ({
+                            title: 'Nothing to export',
+                            message: `No results were returned by the report '${reportName}'`,
+                            type: 'info',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                        jobQueued: reportName => ({
+                            title: 'Report queued',
+                            message: `Your report '${reportName}' has been added to the queue. Exported data will be emailed to you directly.`,
+                            type: 'done',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
                     },
                     options: {
                         display: [
@@ -2508,6 +2526,19 @@ export default {
                     spiritual connections to Country. We recognise their valuable contributions to Australian and global
                     society, celebrating the unique knowledges, cultures, histories and languages that have been shared
                     and created for at least 65,000 years.
+                </span>
+            ),
+        },
+        genAiTermsOfUse: {
+            title: 'Restrictions on Use',
+            text: (
+                <span>
+                    You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s
+                    commercial licences with resource providers. You may not share, re-publish, copy or enter into AI
+                    technologies any part of an object accessed from our digital collections, unless expressly permitted
+                    in the licence terms for that digital object. Data/text mining, distribution, systematic copying and
+                    downloading of objects may also be prohibited. More information may be available in the rights
+                    statement located in an item's record.
                 </span>
             ),
         },

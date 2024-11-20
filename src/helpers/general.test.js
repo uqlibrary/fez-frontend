@@ -5,6 +5,10 @@ import {
     sanitiseId,
     formatUrlTextWithWbrTags,
     handleKeyboardPressActivate,
+    reorderObjectKeys,
+    isEmptyObject,
+    filterObjectKeys,
+    combineObjects,
 } from './general';
 
 describe('general helpers', () => {
@@ -272,6 +276,113 @@ describe('general helpers', () => {
             const mockKey = { code: 'A', preventDefault: jest.fn() };
             handleKeyboardPressActivate(mockKey, testFn);
             expect(testFn).not.toHaveBeenCalled();
+        });
+    });
+
+    describe('reorderObjectKeys', () => {
+        it('should return new object with keys in given order', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b', 'c'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c', 'a'])).toEqual({ b: 2, c: 3, a: 1 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['c', 'a', 'b'])).toEqual({ c: 3, a: 1, b: 2 });
+        });
+
+        it('should return new object with keys in given order, ignoring unexisting keys', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'e', 'c'])).toEqual({ a: 1, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e', 'b'])).toEqual({ b: 2 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e'])).toEqual({});
+        });
+    });
+
+    describe('isEmptyObject', () => {
+        it('should return true for empty object', () => {
+            expect(isEmptyObject({})).toEqual(true);
+        });
+
+        it('should return false for non-empty objects', () => {
+            expect(isEmptyObject({ a: 0 })).toEqual(false);
+            expect(isEmptyObject({ a: '' })).toEqual(false);
+            expect(isEmptyObject({ a: false })).toEqual(false);
+            expect(isEmptyObject({ a: true })).toEqual(false);
+            expect(isEmptyObject({ a: null })).toEqual(false);
+            expect(isEmptyObject({ a: undefined })).toEqual(false);
+        });
+
+        it('should return false for non-objects', () => {
+            expect(isEmptyObject(0)).toEqual(false);
+            expect(isEmptyObject('')).toEqual(false);
+            expect(isEmptyObject(false)).toEqual(false);
+            expect(isEmptyObject(true)).toEqual(false);
+            expect(isEmptyObject(null)).toEqual(false);
+            expect(isEmptyObject(undefined)).toEqual(false);
+        });
+    });
+
+    describe('filterObjectKeys', () => {
+        it('should return empty object for given non-object', () => {
+            expect(filterObjectKeys(null, ['a'])).toEqual({});
+            expect(filterObjectKeys(undefined, ['a'])).toEqual({});
+            expect(filterObjectKeys(1, ['a'])).toEqual({});
+            expect(filterObjectKeys(false, ['a'])).toEqual({});
+            expect(filterObjectKeys('abcdef', ['a'])).toEqual({});
+            expect(filterObjectKeys([], ['a'])).toEqual({});
+            expect(filterObjectKeys(new Error('error'), ['a'])).toEqual({});
+        });
+
+        it('should return object with selected keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'])).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'])).toEqual({ a: 1, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'])).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'])).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'])).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'])).toEqual({ b: 2 });
+        });
+
+        it('should ignore non-existing keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, [])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['d'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'd'])).toEqual({ b: 2, c: 3 });
+        });
+
+        it('should keep object with selected keys when inclusive=true', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'], true)).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'], true)).toEqual({ b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'], true)).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'], true)).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'], true)).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'], true)).toEqual({ a: 1, c: 3 });
+        });
+    });
+
+    describe('combineObjects', () => {
+        it('should return empty object for empty object list', () => {
+            expect(combineObjects({})).toEqual({});
+            expect(combineObjects({}, {})).toEqual({});
+        });
+
+        it('should return a single object from given objects', () => {
+            expect(combineObjects({ a: 1 }, { b: 2 }, { c: 3 })).toEqual({ a: 1, b: 2, c: 3 });
+        });
+
+        it('should ignore non-object and undefined object keys', () => {
+            expect(
+                combineObjects(
+                    { a: 1 },
+                    { b: null },
+                    null,
+                    undefined,
+                    1,
+                    'a',
+                    'abc',
+                    true,
+                    false,
+                    { c: 3 },
+                    { d: undefined },
+                ),
+            ).toEqual({
+                a: 1,
+                b: null,
+                c: 3,
+            });
         });
     });
 });
