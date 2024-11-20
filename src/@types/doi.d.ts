@@ -1,4 +1,4 @@
-// TODO remove upon converting doi.js to TS
+// TODO move to config/doi.ts upon converting it to TS
 export type DoiField<Keys> = {
     field: Keys;
     order: number;

@@ -34,7 +34,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import DoiPreview from './DoiPreview';
 import { AnyAction } from 'redux';
-import { DoiField, DoiFields } from '../../../../config/doi.types';
+import { DoiField, DoiFields } from '../../../../@types/doi';
 import {
     Attributes,
     CoreAttributes,
