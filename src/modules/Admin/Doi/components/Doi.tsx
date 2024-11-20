@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { parseHtmlToJSX } from 'helpers/general';
 import { useParams } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ import {
     UQ_FULL_NAME,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
-import { doiFields, rccDatasetCollection } from 'config/doi';
+import { doiFields as untypedDoiFields, rccDatasetCollection } from 'config/doi';
 import { validation } from 'config';
 
 import { useConfirmationState } from 'hooks';
@@ -34,13 +33,25 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import DoiPreview from './DoiPreview';
+import { AnyAction } from 'redux';
+import { DoiField, DoiFields } from '../../../../config/doi.types';
+import {
+    Attributes,
+    CoreAttributes,
+    FezRecord,
+    OneToManyRelation,
+    OneToOneRelation,
+} from '../../../../@types/models/FezRecord';
+
+const doiFields = untypedDoiFields as DoiFields<Attributes>;
+type DoiFieldNames = DoiField<Attributes>;
 
 const txt = {
     ...pagesLocale.pages.doi,
     headings: viewRecordLocale.viewRecord.headings,
 };
 
-const renderAlertText = (title, messages, type) => (
+const renderAlertText = (title: string, messages: string[], type: string) => (
     <span>
         <Typography variant="h3" style={{ fontSize: 20, marginTop: 6 }}>
             {title}
@@ -59,13 +70,15 @@ const renderAlertText = (title, messages, type) => (
     </span>
 );
 
-export const getWarningMessage = record => {
+export const getWarningMessage = (record: FezRecord) => {
     const alertTitle = txt.alertMessages.warningTitle;
     const alertType = 'warning';
     const warningMessages = [];
 
     // Warn if Edition is not purely numeric
-    const editionValue = !!record.fez_record_search_key_edition && record.fez_record_search_key_edition.rek_edition;
+    const editionValue =
+        !!record.fez_record_search_key_edition &&
+        ((record.fez_record_search_key_edition as OneToOneRelation)?.rek_edition as string);
     if (!!editionValue && !/^\d+$/.test(editionValue.trim())) {
         warningMessages.push(
             txt.alertMessages.invalidOptionalField
@@ -77,14 +90,18 @@ export const getWarningMessage = record => {
     return warningMessages.length ? renderAlertText(alertTitle, warningMessages, alertType) : '';
 };
 
-export const isArrayValid = (record, fieldConfig, testFunction) => {
+export const isArrayValid = (
+    record: FezRecord,
+    fieldConfig: DoiFieldNames,
+    testFunction: (value: string | undefined) => boolean,
+) => {
     let isValid = true;
     const searchKeyValue = record[fieldConfig.field];
-    const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
+    const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek') as keyof CoreAttributes;
 
     if (!!searchKeyValue && Array.isArray(searchKeyValue) && searchKeyValue.length > 0) {
         isValid = searchKeyValue.reduce(
-            (valid, entry) => !!valid && !!entry[subKey] && testFunction(entry[subKey]),
+            (valid, entry) => !!valid && !!entry[subKey] && testFunction(entry[subKey] as string),
             true,
         );
     } else {
@@ -94,22 +111,25 @@ export const isArrayValid = (record, fieldConfig, testFunction) => {
     return isValid;
 };
 
-export const getInvalidPreviewFields = record => {
-    const displayType = !!record && record.rek_display_type;
+export const getInvalidPreviewFields = (record: FezRecord) => {
+    const displayType = !!record && (record.rek_display_type as number);
     const previewFields = !!displayType && !!doiFields[displayType] && doiFields[displayType].fields;
-    const invalidPreviewFields = [];
+    const invalidPreviewFields: string[] = [];
 
-    previewFields.map(fieldConfig => {
-        const subKey = fieldConfig.field.replace('fez_record_search_key', 'rek');
-        const value =
-            !!record[fieldConfig.field] &&
-            typeof record[fieldConfig.field] === 'object' &&
-            !Array.isArray(record[fieldConfig.field])
-                ? record[fieldConfig.field][subKey]
-                : record[fieldConfig.field];
+    // istanbul ignore next
+    if (!previewFields) {
+        return invalidPreviewFields;
+    }
+
+    previewFields.map((fieldConfig: DoiFieldNames) => {
+        const fieldName = fieldConfig.field;
+        const subKey = fieldName.replace('fez_record_search_key', 'rek');
+        const value = (typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
+            ? record[fieldName]?.[subKey]
+            : record[fieldName]) as string;
 
         let isValid = true;
-        switch (fieldConfig.field) {
+        switch (fieldName as string) {
             case 'fez_record_search_key_issn':
                 isValid = isArrayValid(record, fieldConfig, value => validation.isValidIssn(value) === '');
                 break;
@@ -135,23 +155,23 @@ export const getInvalidPreviewFields = record => {
     return invalidPreviewFields;
 };
 
-export const addBookChaptersParentErrorMessage = (record, displayType, errorMessages) => {
+export const addBookChaptersParentErrorMessage = (record: FezRecord, displayType: number, errorMessages: string[]) => {
     if (displayType !== PUBLICATION_TYPE_BOOK_CHAPTER) {
         return;
     }
 
     if (
         !record.fez_record_search_key_isderivationof ||
-        !record.fez_record_search_key_isderivationof[0] ||
-        !record.fez_record_search_key_isderivationof[0].parent ||
-        !record.fez_record_search_key_isderivationof[0].parent.rek_pid
+        !(record.fez_record_search_key_isderivationof as OneToManyRelation[])?.[0] ||
+        !(record.fez_record_search_key_isderivationof as OneToManyRelation[])?.[0].parent ||
+        !(record.fez_record_search_key_isderivationof as OneToManyRelation[])?.[0]?.parent?.rek_pid
     ) {
         errorMessages.push(txt.alertMessages.bookChapter.parent.missing);
         return;
     }
 
-    const parent = record.fez_record_search_key_isderivationof[0].parent;
-    if (!parent.rek_subtype || parent.rek_subtype.toLowerCase() !== SUBTYPE_EDITED_BOOK.toLowerCase()) {
+    const parent = (record.fez_record_search_key_isderivationof as OneToManyRelation[])?.[0]?.parent as FezRecord;
+    if (!parent?.rek_subtype || (parent.rek_subtype as string).toLowerCase() !== SUBTYPE_EDITED_BOOK.toLowerCase()) {
         errorMessages.push(
             txt.alertMessages.wrongSubtype
                 .replace('[TYPE]', 'the parent Book')
@@ -161,16 +181,18 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
 
     if (
         !parent.fez_record_search_key_doi ||
-        !parent.fez_record_search_key_doi.rek_doi ||
-        parent.fez_record_search_key_doi.rek_doi.indexOf(DOI_CROSSREF_PREFIX) === -1
+        !(parent.fez_record_search_key_doi as OneToOneRelation)?.rek_doi ||
+        ((parent.fez_record_search_key_doi as OneToOneRelation)?.rek_doi as string).indexOf(DOI_CROSSREF_PREFIX) === -1
     ) {
         errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', 'The parent Book'));
     }
 
     if (
         !parent.fez_record_search_key_publisher ||
-        !parent.fez_record_search_key_publisher.rek_publisher ||
-        parent.fez_record_search_key_publisher.rek_publisher.indexOf(UQ_FULL_NAME) === -1
+        !(parent.fez_record_search_key_publisher as OneToOneRelation)?.rek_publisher ||
+        ((parent.fez_record_search_key_publisher as OneToOneRelation)?.rek_publisher as string).indexOf(
+            UQ_FULL_NAME,
+        ) === -1
     ) {
         errorMessages.push(
             txt.alertMessages.uqCheckMessage.replace(
@@ -181,16 +203,19 @@ export const addBookChaptersParentErrorMessage = (record, displayType, errorMess
     }
 };
 
-export const getErrorMessage = record => {
+export const getErrorMessage = (record: FezRecord) => {
     const alertTitle = txt.alertMessages.errorTitle;
     const alertType = 'error';
 
-    const displayType = !!record && record.rek_display_type;
-    const displayTypeLookup = !!record && record.rek_display_type_lookup;
-    const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-    const recordType = (!!record && record.rek_object_type_lookup) || '';
+    const displayType = !!record && (record.rek_display_type as number);
+    const displayTypeLookup = !!record && (record.rek_display_type_lookup as string);
+    const doi =
+        !!record &&
+        !!record.fez_record_search_key_doi &&
+        ((record?.fez_record_search_key_doi as OneToOneRelation)?.rek_doi as string);
+    const recordType = (!!record && (record?.rek_object_type_lookup as string)) || '';
 
-    const errorMessages = [];
+    const errorMessages: string[] = [];
     let unsupportedType = false;
 
     // Need to filter out community and collection record types
@@ -210,7 +235,7 @@ export const getErrorMessage = record => {
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
         if (!!supportedSubtypes) {
-            const subtype = !!record && record.rek_subtype;
+            const subtype = !!record && (record.rek_subtype as string);
             if (supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
@@ -226,8 +251,9 @@ export const getErrorMessage = record => {
         }
 
         if (
-            record.fez_record_search_key_ismemberof?.filter(parent => parent.rek_ismemberof === rccDatasetCollection)
-                .length
+            (record.fez_record_search_key_ismemberof as OneToManyRelation[])?.filter(
+                parent => parent.rek_ismemberof === rccDatasetCollection,
+            ).length
         ) {
             errorMessages.push(txt.alertMessages.rccDataset);
         }
@@ -235,13 +261,8 @@ export const getErrorMessage = record => {
         // Preview fields
         const invalidPreviewFields = !unsupportedDisplayType && getInvalidPreviewFields(record);
         if (invalidPreviewFields.length) {
-            // None of the fields with conditions have a type-specific heading, so commenting out that code path.
-            // const displayTypeHeadings =
-            //     displayTypeLookup && txt.headings[displayTypeLookup] ? txt.headings[displayTypeLookup] : [];
-
             invalidPreviewFields.forEach(field => {
-                // const fieldName = displayTypeHeadings[field]
-                // ? displayTypeHeadings[field] : txt.headings.default[field];
+                // @ts-ignore
                 const fieldName = txt.headings.default[field];
                 const errorTemplate = ['fez_record_search_key_org_name', 'fez_record_search_key_publisher'].includes(
                     field,
@@ -260,7 +281,7 @@ export const getErrorMessage = record => {
     };
 };
 
-const renderTitle = titlePieces => {
+const renderTitle = (titlePieces: Record<'doi' | 'displayTypeLookup' | 'title' | 'pid', string | boolean>) => {
     const titleTemplate = txt.pageTitle({ ...titlePieces, title: '[TITLE]' });
     const pieces = titleTemplate.split('[TITLE]');
     return (
@@ -272,7 +293,18 @@ const renderTitle = titlePieces => {
     );
 };
 
-export const Doi = ({
+interface Doi {
+    doiRequesting: boolean;
+    doiUpdated: boolean;
+    doiFailed: boolean;
+    handleSubmit: (record: object) => Promise<AnyAction>;
+    loadingRecordToView: boolean;
+    loadRecordToView: (pid: string) => Promise<AnyAction>;
+    record: FezRecord;
+    resetDoi: () => Promise<AnyAction>;
+}
+
+export const Doi: React.FC<Doi> = ({
     doiRequesting,
     doiUpdated,
     doiFailed,
@@ -305,15 +337,18 @@ export const Doi = ({
     }
 
     // Record not found
-    const pid = !!record && record.rek_pid;
+    const pid = record?.rek_pid as string;
     if (!!pidParam && !pid) {
         return <div className="empty" />;
     }
 
     // Get subkeys where present
-    const displayTypeLookup = !!record && record.rek_display_type_lookup;
-    const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-    const title = !!record && !!record.rek_title && record.rek_title;
+    const displayTypeLookup = !!record && (record.rek_display_type_lookup as string);
+    const doi =
+        !!record &&
+        !!record.fez_record_search_key_doi &&
+        ((record.fez_record_search_key_doi as OneToOneRelation)?.rek_doi as string);
+    const title = !!record && !!record.rek_title && (record.rek_title as string);
 
     // Look for possible issues
     const warningMessage = getWarningMessage(record);
@@ -336,6 +371,7 @@ export const Doi = ({
         confirmationTxt.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
     }
 
+    // @ts-ignore
     const alertProps = validation.getErrorAlertProps({
         alertLocale: alertTxt,
         error: doiFailed,
@@ -352,13 +388,26 @@ export const Doi = ({
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
-                        {(!!errorMessage && <Alert message={errorMessage} type="error" testId="rek-doi-error" />) ||
+                        {(!!errorMessage && (
+                            <Alert
+                                // @ts-ignore
+                                message={errorMessage}
+                                type="error"
+                                testId="rek-doi-error"
+                            />
+                        )) ||
                             (!!warningMessage && (
-                                <Alert message={warningMessage} type="warning" testId="rek-doi-warning" />
+                                <Alert
+                                    // @ts-ignore
+                                    message={warningMessage}
+                                    type="warning"
+                                    testId="rek-doi-warning"
+                                />
                             ))}
                     </Grid>
                     <Grid item xs={12}>
                         <ConfirmationBox
+                            // @ts-ignore
                             testId="rek-doi-confirmation-box"
                             confirmationBoxId="rek-doi"
                             hideCancelButton
@@ -411,17 +460,6 @@ export const Doi = ({
             )}
         </StandardPage>
     );
-};
-
-Doi.propTypes = {
-    doiFailed: PropTypes.bool,
-    doiRequesting: PropTypes.bool,
-    doiUpdated: PropTypes.bool,
-    handleSubmit: PropTypes.func,
-    loadingRecordToView: PropTypes.bool,
-    loadRecordToView: PropTypes.func,
-    record: PropTypes.object,
-    resetDoi: PropTypes.func,
 };
 
 export default Doi;
