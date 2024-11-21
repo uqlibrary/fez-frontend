@@ -181,8 +181,8 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             value={
                                 !!row.sat_assigned_to
                                     ? adminUsers.find(user => {
-                                          console.log(user, row);
-                                          return user.id === row.sat_assigned_to;
+                                          console.log(adminUsers, user, row);
+                                          return user?.id === row?.sat_assigned_to;
                                       })
                                     : adminUsers[0]
                             }
