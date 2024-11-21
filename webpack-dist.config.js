@@ -191,7 +191,7 @@ const webpackConfig = {
                 terserOptions: {
                     sourceMap: false,
                     compress: {
-                        drop_console: false,
+                        drop_console: true,
                     },
                 },
                 parallel: true,

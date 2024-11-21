@@ -50,7 +50,9 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
         const activeUser = users.find(user => user.id === currentUser?.id);
         const updatedUsers = users.filter(user => user.id !== activeUser?.id);
 
-        return [defaultOption, activeUser, ...updatedUsers];
+        // e2e tests can result in the activeUser object being unpopulated,
+        // so always filter out any element in the array that is undefined.
+        return [defaultOption, activeUser, ...updatedUsers].filter(item => !!item);
     };
     const [adminUsers] = React.useState(getAdminUserList);
 
@@ -180,10 +182,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             getOptionLabel={option => option.preferred_name}
                             value={
                                 !!row.sat_assigned_to
-                                    ? adminUsers.find(user => {
-                                          console.log(adminUsers, user, row);
-                                          return user?.id === row?.sat_assigned_to;
-                                      })
+                                    ? adminUsers.find(user => user.id === row.sat_assigned_to)
                                     : adminUsers[0]
                             }
                             onChange={handleAssignedChange}
