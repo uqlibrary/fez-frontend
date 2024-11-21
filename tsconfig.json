@@ -17,8 +17,9 @@
         "isolatedModules": true,
         "noEmit": true,
         "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
         // for MUI types
-        "lib": ["es6", "dom"],
+        "lib": ["es6", "dom"]
     },
     "include": ["src/**/*.tsx", "src/**/*.ts"],
     "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist" ]

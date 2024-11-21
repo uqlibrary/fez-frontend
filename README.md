@@ -189,6 +189,61 @@ Staging branch calls Reusable staging branch - all other branches call productio
 
 To use local reusable in your local dev, swap the value of reusablejs in webpack.config.js (and restart your npm sun start:mock)
 
+### TypeScript Integration
+
+TypeScript support has been added to enable a progressive migration from JavaScript, allowing both JavaScript and TypeScript code 
+to coexist and work seamlessly together from a DX perspective.
+
+To achieve this, the `ts-loader` Webpack plugin has been added and configured to validate TypeScript files exclusively, raising errors for 
+any issues before handing them over to the `babel-loader` Webpack plugin for transpilation. This approach is necessary because, 
+as of this date, `babel-loader` alone can only convert TypeScript to JavaScript without performing any checks.
+
+#### Tooling
+
+`@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` have been added and configured alongside `prettier` to enable 
+static type checking and consistent formatting for TypeScript files in IDEs.
+
+#### Migrating JavaScript Code to TypeScript
+
+The first step in migrating a JS file to TS is renaming its extension from `.js` to `.ts` or `.tsx` for 
+components. This triggers the configured linters to check for type errors. Generally, TypeScript is effective at detecting 
+and inferring types automatically when the code is correct. However, after renaming the file, you may encounter some type 
+errors.
+
+##### Fixing Type Errors
+
+If type errors appear after renaming a JS file, they are usually legitimate issues. However, exceptions may occur 
+if TypeScript fails to infer the correct type or due to misconfigured JSDoc blocks. Most of the time, resolving these errors 
+involves fixing or refining **JSDoc comments**, especially for imports where the imported files will not be converted to 
+TypeScript. In other cases, adding explicit type annotations will often highlight previously undetected issues in the code.
+
+Variables holding non-primitive values will typically require type definitions, which can be addressed by creating TypeScript 
+types or interfaces. As a rule of thumb, these should be defined at the start of the file. For shared or abstract types, 
+please place them in files under the `@types` folder in the project's root directory.
+
+##### Type Casting
+
+When TypeScript cannot infer a variable's type based on code or existing annotations, you can use **type casting** to enforce 
+the intended type. However, type casting should only be used when you are absolutely certain it won't introduce bugs.
+
+##### Ignoring Type Errors
+
+The project is configured to raise errors for implicit `any` types. This is intentional, as using `any` effectively disables 
+type checking and negates the benefits of TypeScript. We want to avoid this. In cases where resolving 
+a type error is too complex, you can temporarily suppress it using `// @ts-ignore` comments.
+
+##### Examples
+
+Examples of files migrated to TypeScript include `FavouriteJournals.tsx` and `Doi.tsx`. For the latter, new types representing 
+eSpace models have been added to the `@types` folder, providing type inference for variables holding eSpace API data.
+
+#### Code Coverage
+
+Code coverage for TypeScript files is generated in the same way as for JavaScript files from `jest` and `cypress` tests. However, 
+a known `nyc` [bug](https://github.com/istanbuljs/nyc/issues/1302#issuecomment-961455318) may cause issues during the merging 
+coverage report step of the deployment process. As a workaround, ensure full coverage is achieved by either `jest` or `cypress`
+tests and add the file to the ignore list for the other tool in `package.json`. See the example for the `reducers/actions.ts` file.
+
 ### Webpack
 
 #### version: 5
