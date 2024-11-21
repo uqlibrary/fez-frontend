@@ -207,8 +207,8 @@ static type checking and consistent formatting for TypeScript files in IDEs.
 
 The first step in migrating a JS file to TS is renaming its extension from `.js` to `.ts` or `.tsx` for 
 components. This triggers the configured linters to check for type errors. Generally, TypeScript is effective at detecting 
-and inferring types automatically when the code is correct. However, after renaming the file, you may encounter some type 
-errors.
+and inferring types automatically when the code and JSDoc blocks are correct. However, after renaming the file, it's likely 
+to encounter some type errors.
 
 ##### Fixing Type Errors
 
@@ -218,13 +218,14 @@ involves fixing or refining **JSDoc comments**, especially for imports where the
 TypeScript. In other cases, adding explicit type annotations will often highlight previously undetected issues in the code.
 
 Variables holding non-primitive values will typically require type definitions, which can be addressed by creating TypeScript 
-types or interfaces. As a rule of thumb, these should be defined at the start of the file. For shared or abstract types, 
+types or interfaces. As a rule of thumb, these should be defined at the start of the file. For shared or abstract types and interfaces, 
 please place them in files under the `@types` folder in the project's root directory.
 
 ##### Type Casting
 
 When TypeScript cannot infer a variable's type based on code or existing annotations, you can use **type casting** to enforce 
-the intended type. However, type casting should only be used when you are absolutely certain it won't introduce bugs.
+the intended type. However, type casting should only be used when you are absolutely certain that lacking proper type 
+checking or conversion won't introduce bugs.
 
 ##### Ignoring Type Errors
 
@@ -240,8 +241,8 @@ eSpace models have been added to the `@types` folder, providing type inference f
 #### Code Coverage
 
 Code coverage for TypeScript files is generated in the same way as for JavaScript files from `jest` and `cypress` tests. However, 
-a known `nyc` [bug](https://github.com/istanbuljs/nyc/issues/1302#issuecomment-961455318) may cause issues during the merging 
-coverage report step of the deployment process. As a workaround, ensure full coverage is achieved by either `jest` or `cypress`
+a known `nyc` [bug](https://github.com/istanbuljs/nyc/issues/1302#issuecomment-961455318) may cause issues during the  
+coverage report merging step of the deployment process. As a workaround, ensure full coverage is achieved by either `jest` or `cypress`
 tests and add the file to the ignore list for the other tool in `package.json`. See the example for the `reducers/actions.ts` file.
 
 ### Webpack
