@@ -180,7 +180,10 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                             getOptionLabel={option => option.preferred_name}
                             value={
                                 !!row.sat_assigned_to
-                                    ? adminUsers.find(user => user.id === row.sat_assigned_to)
+                                    ? adminUsers.find(user => {
+                                          console.log(user, user.id, row, row.sat_assigned_to);
+                                          return user.id === row.sat_assigned_to;
+                                      })
                                     : adminUsers[0]
                             }
                             onChange={handleAssignedChange}
