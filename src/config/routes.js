@@ -284,13 +284,6 @@ export const getRoutesConfig = ({
                         ]
                       : []),
                   {
-                      path: pathConfig.authorIdentifiers.googleScholar.link,
-                      element: <components.GoogleScholar />,
-                      access: [roles.researcher, roles.admin],
-                      exact: true,
-                      pageTitle: locale.pages.googleScholarLink.title,
-                  },
-                  {
                       path: pathConfig.editorialAppointments.list,
                       element: <components.MyEditorialAppointments />,
                       access: [roles.researcher, roles.admin],
@@ -313,12 +306,12 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.journals.compare,
                       element: <components.JournalComparison />,
-                      pageTitle: locale.pages.journals.compare.title,
+                      pageTitle: locale.components.journalComparison.title,
                   },
                   {
                       path: pathConfig.journals.favourites,
                       element: <components.FavouriteJournals />,
-                      pageTitle: locale.pages.journals.favourites.title,
+                      pageTitle: locale.components.favouriteJournals.title,
                   },
               ]
             : []),
@@ -691,10 +684,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.admin.controlledVocabularies,
                       ...locale.menu.controlledVocabularies,
-                  },
-                  {
-                      linkTo: pathConfig.admin.legacyEspace,
-                      ...locale.menu.legacyEspace,
                   },
                   {
                       linkTo: pathConfig.digiteam.batchImport,
