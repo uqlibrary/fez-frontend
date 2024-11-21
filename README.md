@@ -203,6 +203,8 @@ as of this date, `babel-loader` alone can only convert TypeScript to JavaScript 
 `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` have been added and configured alongside `prettier` to enable 
 static type checking and consistent formatting for TypeScript files in IDEs.
 
+Alternatively, the `npm run tsc` and `npm run tsc:watch` scripts can be used to validate TypeScript files from the command line.
+
 #### Migrating JavaScript Code to TypeScript
 
 The first step in migrating a JS file to TS is renaming its extension from `.js` to `.ts` or `.tsx` for 

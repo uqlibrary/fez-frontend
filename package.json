@@ -238,7 +238,8 @@
         "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
         "test:unit:update": "npm run test:unit -- --updateSnapshot",
         "test:unit:watch": "npm run test:unit -- --watch --onlyChanged",
-        "tsc": "./node_modules/typescript/bin/tsc"
+        "tsc": "./node_modules/typescript/bin/tsc",
+        "tsc:watch": "./node_modules/typescript/bin/tsc --watch"
     },
     "engines": {
         "npm": ">=10.2.3",
