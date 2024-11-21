@@ -48,7 +48,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
             return 0;
         });
         const activeUser = users.find(user => user.id === currentUser.id);
-        const updatedUsers = users.filter(user => user.id !== activeUser.id);
+        const updatedUsers = users.filter(user => user.id !== activeUser?.id);
 
         return [defaultOption, activeUser, ...updatedUsers];
     };
