@@ -23,7 +23,7 @@ export const MONTH_UNSELECTED = -1;
  * @returns {int} returns one of STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, defined above
  * @private
  */
-export const _validate = ({ state, allowPartial, disableFuture = false, clearable = false }) => {
+export const validate = ({ state, allowPartial, disableFuture = false, clearable = false }) => {
     const { day: dayActual, month: monthActual, year } = state;
     // moment validation doesn't recognise -1 or empty string as a valid date
     const month = monthActual === MONTH_UNSELECTED ? null : monthActual;
@@ -75,17 +75,17 @@ export const _validate = ({ state, allowPartial, disableFuture = false, clearabl
     return validationStatus;
 };
 
-export const _isNumber = locale => event => {
+export const isNumber = locale => event => {
     if (event.charCode < locale.minNumberCharCode || event.charCode > locale.maxNumberCharCode) {
         event.preventDefault();
     }
 };
 
-export const _isUnselected = month => {
+export const isUnselected = month => {
     return month === MONTH_UNSELECTED || month === null;
 };
 
-export const _displayErrors = ({
+export const displayErrors = ({
     state,
     setError,
     validationStatus,
@@ -112,17 +112,17 @@ export const _displayErrors = ({
                 // dont wait for date complete for the moment validation to kick in
                 ((isNaN(day) || (!!day && (day < 1 || day > 31) && !allowPartial)) && locale.validationMessage.day) ||
                 // // date fields initially blank // remove
-                // (year === null && _isUnselected(month) && day === null && '') || // remove
+                // (year === null && isUnselected(month) && day === null && '') || // remove
                 // they've entered a day
                 /* istanbul ignore next */
-                (year === null && _isUnselected(month) && !!day && allowPartial && ' ') ||
+                (year === null && isUnselected(month) && !!day && allowPartial && ' ') ||
                 // they've entered a day and a month
                 /* istanbul ignore next */
                 (year === null && validMonthIndices.includes(month) && !!day && !allowPartial && ' ') ||
                 // encourage them to select a month if the year and day are selected
                 /* istanbul ignore next */
-                (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
-                (!!year && _isUnselected(month) && !day && !allowPartial && ' ') ||
+                (!!year && isUnselected(month) && !!day && locale.validationMessage.month) ||
+                (!!year && isUnselected(month) && !day && !allowPartial && ' ') ||
                 locale.validationMessage.date;
             break;
         case STATUS_VALID:
@@ -130,7 +130,7 @@ export const _displayErrors = ({
             if (!!year && validMonthIndices.includes(month) && !!day) {
                 // date complete for non-partial-entry
                 date = '';
-            } else if (allowPartial && !!year && _isUnselected(month) && !day) {
+            } else if (allowPartial && !!year && isUnselected(month) && !day) {
                 // partial entry means they can get away with just a year
                 date = '';
             } else if (!allowPartial && !!clearable && !year && !day && month === MONTH_UNSELECTED) {
@@ -220,10 +220,10 @@ const PartialDateForm = ({
     const [state, setState] = React.useState(initDate);
     const [error, setError] = React.useState();
 
-    const validate = newState => {
-        const validationStatus = _validate({ state: newState, allowPartial, disableFuture, clearable });
+    const validateDate = newState => {
+        const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
 
-        _displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
+        displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
 
         // moment validation doesn't recognise -1 as a valid date.
         const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
@@ -245,14 +245,14 @@ const PartialDateForm = ({
                 );
             }
             const newState = { ...state, [key]: newDateField };
-            const fullDate = validate(newState);
+            const fullDate = validateDate(newState);
 
             onChange?.(fullDate) || input?.onChange?.(fullDate);
         };
     };
 
     React.useEffect(() => {
-        !!onChange && validate(state);
+        !!onChange && validateDate(state);
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [onChange]);
@@ -282,7 +282,7 @@ const PartialDateForm = ({
                             fullWidth
                             disabled={disabled}
                             error={!!isError}
-                            onKeyPress={_isNumber(locale)}
+                            onKeyPress={isNumber(locale)}
                             onChange={_onDateChanged('day')}
                             onBlur={!allowPartial ? _onDateChanged('day') : undefined}
                             placeholder={locale.dayLabel}
@@ -342,7 +342,7 @@ const PartialDateForm = ({
                             disabled={disabled}
                             placeholder={locale.yearLabel}
                             error={!!isError}
-                            onKeyPress={_isNumber(locale)}
+                            onKeyPress={isNumber(locale)}
                             onChange={_onDateChanged('year')}
                             onBlur={_onDateChanged('year')}
                             inputProps={{

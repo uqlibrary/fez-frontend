@@ -1,20 +1,20 @@
 /* eslint-disable no-undef */
-import { _validate, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
+import { validate, STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, MONTH_UNSELECTED } from './PartialDateForm';
 
 const partialAllowedDateForm = (allowPartial = true) => ({ day, month, year }) =>
-    _validate({ state: { day, month, year }, allowPartial });
+    validate({ state: { day, month, year }, allowPartial });
 const partialNotAllowedDateForm = (allowPartial = false) => ({ day, month, year }) =>
-    _validate({ state: { day, month, year }, allowPartial });
+    validate({ state: { day, month, year }, allowPartial });
 const futureAllowedDateForm = (disableFuture = false) => ({ day, month, year }) =>
-    _validate({ state: { day, month, year }, disableFuture });
+    validate({ state: { day, month, year }, disableFuture });
 const futureNotAllowedDateForm = (disableFuture = true) => ({ day, month, year }) =>
-    _validate({ state: { day, month, year }, disableFuture });
+    validate({ state: { day, month, year }, disableFuture });
 const partialFutureNotAllowedDateForm = (allowPartial = true, disableFuture = true) => ({ day, month, year }) =>
-    _validate({ state: { day, month, year }, allowPartial, disableFuture });
+    validate({ state: { day, month, year }, allowPartial, disableFuture });
 
 describe('PartialDateForm unit tests', () => {
     /**
-     * Test _validate with allowPartial: true
+     * Test validate with allowPartial: true
      */
     it('should validate date on year supplied if allowed partial', () => {
         expect(partialAllowedDateForm()({ day: null, month: null, year: 2015 })).toEqual(STATUS_VALID);
@@ -38,7 +38,7 @@ describe('PartialDateForm unit tests', () => {
     });
 
     /**
-     * Test _validate with allowPartial: false
+     * Test validate with allowPartial: false
      */
     it('should not validate date on year supplied if not allowed partial', () => {
         expect(partialNotAllowedDateForm()({ day: null, month: null, year: 2015 })).toEqual(STATUS_INVALID);
@@ -74,7 +74,7 @@ describe('PartialDateForm unit tests', () => {
     });
 
     /**
-     * Test _validate with disableFuture: true
+     * Test validate with disableFuture: true
      * current date is set to 2017 with MockDate.set('6/30/2017'); in test.setup.js
      */
     it('should block future date if not allowed future date', () => {
@@ -89,7 +89,7 @@ describe('PartialDateForm unit tests', () => {
     });
 
     /**
-     * Test _validate with disableFuture: false
+     * Test validate with disableFuture: false
      */
     it('should allow future date if allowed future date', () => {
         expect(futureAllowedDateForm()({ day: 10, month: 2, year: 2018 })).toEqual(STATUS_VALID);

@@ -1,11 +1,11 @@
-import { _isNumber } from './PartialDateForm';
+import { isNumber } from './PartialDateForm';
 
 const locale = {
     minNumberCharCode: 48,
     maxNumberCharCode: 57,
 };
 
-const partialDateForm = event => _isNumber(locale)(event);
+const partialDateForm = event => isNumber(locale)(event);
 
 describe('PartialDateForm unit tests', () => {
     it('should check if pressed key charCode 39 is numeric key or not and prevent default event', () => {
