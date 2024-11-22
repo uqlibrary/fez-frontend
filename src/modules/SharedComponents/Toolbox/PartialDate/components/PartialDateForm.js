@@ -118,10 +118,11 @@ export const _displayErrors = ({
                 (year === null && _isUnselected(month) && !!day && allowPartial && ' ') ||
                 // they've entered a day and a month
                 /* istanbul ignore next */
-                (year === null && validMonthIndices.includes(month) && !!day && ' ') ||
+                (year === null && validMonthIndices.includes(month) && !!day && !allowPartial && ' ') ||
                 // encourage them to select a month if the year and day are selected
                 /* istanbul ignore next */
                 (!!year && _isUnselected(month) && !!day && locale.validationMessage.month) ||
+                (!!year && _isUnselected(month) && !day && !allowPartial && ' ') ||
                 locale.validationMessage.date;
             break;
         case STATUS_VALID:
