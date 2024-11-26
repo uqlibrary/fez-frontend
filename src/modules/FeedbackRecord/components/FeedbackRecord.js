@@ -254,7 +254,7 @@ const FeedbackRecord = () => {
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="isICIPHolder"
+                                            name="isIcipHolder"
                                             radioGroupFieldId="is-icip-holder"
                                             data-testid="is-icip-holder"
                                             options={txtForm.isICIPHolder.options}

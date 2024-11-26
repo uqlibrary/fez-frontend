@@ -896,7 +896,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="1"
                             />
@@ -944,7 +944,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="0"
                             />
@@ -2637,7 +2637,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="1"
                             />
@@ -2685,7 +2685,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="0"
                             />
@@ -4145,7 +4145,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="1"
                             />
@@ -4193,7 +4193,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="0"
                             />
@@ -5777,7 +5777,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               data-analyticsid="is-icip-holder-1-option"
                               data-testid="is-icip-holder-1-option"
                               id="is-icip-holder-1-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="1"
                             />
@@ -5825,7 +5825,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               data-analyticsid="is-icip-holder-0-option"
                               data-testid="is-icip-holder-0-option"
                               id="is-icip-holder-0-option"
-                              name="isICIPHolder"
+                              name="isIcipHolder"
                               type="radio"
                               value="0"
                             />

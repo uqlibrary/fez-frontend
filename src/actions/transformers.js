@@ -1676,7 +1676,7 @@ export const getFeedbackRecordData = (pid, data) => {
             }
             return map;
         },
-        { ror_pid: pid },
+        { rfb_pid: pid },
     );
 };
 
