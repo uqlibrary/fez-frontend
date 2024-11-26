@@ -59,7 +59,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
@@ -73,6 +73,11 @@ module.exports = {
                         ].filter(Boolean),
                     },
                 },
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader?configFile=tsconfig.webpack.json',
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
             },
             {
                 test: /\.json$/,
@@ -152,13 +157,13 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        new ESLintPlugin({ exclude: ['node_modules', 'custom_modules'] }),
+        new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: ['.jsx', '.js', '.json'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
         fallback: {
             assert: require.resolve('assert'),
