@@ -6183,7 +6183,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     >
                       <label
                         class="MuiFormLabel-root MuiFormLabel-colorPrimary css-10oy98a-MuiFormLabel-root"
-                        id="culture-info-label"
+                        id="cultural-info-label"
                       />
                       <div
                         class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
@@ -6200,10 +6200,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <input
                                 class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="culture-info-mensBusiness-option"
+                                data-analyticsid="cultural-info-mensBusiness-option"
                                 data-indeterminate="false"
-                                data-testid="culture-info-mensBusiness-option"
-                                id="culture-info-mensBusiness-option"
+                                data-testid="cultural-info-mensBusiness-option"
+                                id="cultural-info-mensBusiness-option"
                                 type="checkbox"
                               />
                               <svg
@@ -6237,10 +6237,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <input
                                 class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="culture-info-womensBusiness-option"
+                                data-analyticsid="cultural-info-womensBusiness-option"
                                 data-indeterminate="false"
-                                data-testid="culture-info-womensBusiness-option"
-                                id="culture-info-womensBusiness-option"
+                                data-testid="cultural-info-womensBusiness-option"
+                                id="cultural-info-womensBusiness-option"
                                 type="checkbox"
                               />
                               <svg
@@ -6274,10 +6274,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <input
                                 class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="culture-info-sacredSites-option"
+                                data-analyticsid="cultural-info-sacredSites-option"
                                 data-indeterminate="false"
-                                data-testid="culture-info-sacredSites-option"
-                                id="culture-info-sacredSites-option"
+                                data-testid="cultural-info-sacredSites-option"
+                                id="cultural-info-sacredSites-option"
                                 type="checkbox"
                               />
                               <svg
@@ -6311,10 +6311,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <input
                                 class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="culture-info-ceremonies-option"
+                                data-analyticsid="cultural-info-ceremonies-option"
                                 data-indeterminate="false"
-                                data-testid="culture-info-ceremonies-option"
-                                id="culture-info-ceremonies-option"
+                                data-testid="cultural-info-ceremonies-option"
+                                id="cultural-info-ceremonies-option"
                                 type="checkbox"
                               />
                               <svg
@@ -6348,10 +6348,10 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             >
                               <input
                                 class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="culture-info-other-option"
+                                data-analyticsid="cultural-info-other-option"
                                 data-indeterminate="false"
-                                data-testid="culture-info-other-option"
-                                id="culture-info-other-option"
+                                data-testid="cultural-info-other-option"
+                                id="cultural-info-other-option"
                                 type="checkbox"
                               />
                               <svg
@@ -6381,9 +6381,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               <input
                                 aria-invalid="false"
                                 class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                                data-analyticsid="culture-info-other-option-text"
-                                data-testid="culture-info-other-option-text"
-                                id="culture-info-other-option-text"
+                                data-analyticsid="cultural-info-other-option-text"
+                                data-testid="cultural-info-other-option-text"
+                                id="cultural-info-other-option-text"
                                 name="other-text"
                                 type="text"
                                 value=""

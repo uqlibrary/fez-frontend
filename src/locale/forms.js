@@ -386,7 +386,7 @@ export default {
             story: {
                 title: 'Would you like to share a story or provide more context about this item?',
             },
-            cultureInfo: {
+            culturalInfo: {
                 title: 'Does the item contain cultural information that is secret/sacred or sensitive?',
                 options: [
                     { label: 'Mens Business', value: 'mensBusiness' },
