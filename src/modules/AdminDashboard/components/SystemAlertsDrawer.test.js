@@ -38,6 +38,11 @@ const testRowAssigned = {
     sat_link: 'https://espace.library.uq.edu.au',
     sat_title: 'Test assigned title',
 };
+const users = [
+    { id: 13, preferred_name: 'Staff' },
+    { id: 1, preferred_name: 'User Admin' },
+    { id: 21, preferred_name: 'Mr User' },
+];
 
 const setup = (props = {}, state = {}, renderer = render) => {
     const testProps = {
@@ -47,7 +52,8 @@ const setup = (props = {}, state = {}, renderer = render) => {
     const testState = {
         adminDashboardConfigReducer: {
             adminDashboardConfigData: {
-                admin_users: [{ id: 13, preferred_name: 'Staff' }],
+                logged_in_user: { id: 1, name: 'User, Admin' },
+                admin_users: users,
             },
         },
         ...state,
@@ -100,7 +106,7 @@ describe('SystemAlertsDrawer', () => {
     });
 
     it('should call function when assignee is changed', async () => {
-        const { getByTestId, getByRole, rerender } = setup({
+        const { getByTestId, getByRole, getAllByRole, rerender } = setup({
             row: testRowUnassigned,
             open: true,
             onCloseDrawer: onCloseDrawerFn,
@@ -109,6 +115,16 @@ describe('SystemAlertsDrawer', () => {
 
         await userEvent.click(getByTestId('system-alert-detail-assignee-input'));
         await waitFor(() => expect(getByRole('listbox')));
+
+        // check the user list has been correctly assembled.
+        // Should be in alphabetical order, with Unassigned as
+        // the first item, and the logged in user as the second.
+        expect(getAllByRole('option').length).toBe(4);
+        expect(getAllByRole('option')[0]).toHaveTextContent('Unassigned');
+        expect(getAllByRole('option')[1]).toHaveTextContent('User Admin');
+        expect(getAllByRole('option')[2]).toHaveTextContent('Mr User');
+        expect(getAllByRole('option')[3]).toHaveTextContent('Staff');
+
         await userEvent.click(getByRole('option', { name: 'Staff' }));
         expect(onSystemAlertUpdateFn).toHaveBeenCalledWith(SYSTEM_ALERT_ACTION.ASSIGN, {
             sat_id: 1,

@@ -106,7 +106,7 @@ const FeedbackRecord = () => {
     };
 
     const requiredConditionally = value => {
-        return data.shareDetails?.hasOwnProperty('shareAnonymously') || value.trim()
+        return data.shareDetails?.hasOwnProperty('anonymous') || value.trim()
             ? undefined
             : validationErrors.validationErrors.required;
     };
@@ -183,7 +183,7 @@ const FeedbackRecord = () => {
                                             name="lastName"
                                             label={txtForm.details.lastName}
                                             validate={[requiredConditionally]}
-                                            required={!data.shareDetails?.hasOwnProperty('shareAnonymously')}
+                                            required={!data.shareDetails?.hasOwnProperty('anonymous')}
                                             textFieldId="last-name"
                                             fullWidth
                                         />
@@ -196,7 +196,7 @@ const FeedbackRecord = () => {
                                             name="contactNo"
                                             label={txtForm.details.contactNo}
                                             validate={[requiredConditionally]}
-                                            required={!data.shareDetails?.hasOwnProperty('shareAnonymously')}
+                                            required={!data.shareDetails?.hasOwnProperty('anonymous')}
                                             textFieldId="contact-no"
                                             fullWidth
                                         />
@@ -225,51 +225,51 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.identityTypes.title}</Typography>
+                                        <Typography variant={'h6'}>{txtForm.indigenousIdentity.title}</Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="identityType"
-                                            radioGroupFieldId="identity-type"
-                                            data-testid="identity-type"
-                                            options={txtForm.identityTypes.options}
+                                            name="indigenousIdentity"
+                                            radioGroupFieldId="indigenous-identity"
+                                            data-testid="indigenous-identity"
+                                            options={txtForm.indigenousIdentity.options}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.kinshipConnection.title}</Typography>
+                                        <Typography variant={'h6'}>{txtForm.hasKinshipConnection.title}</Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="kinshipConnection"
-                                            radioGroupFieldId="kinship-connection"
-                                            data-testid="kinship-connection"
-                                            options={txtForm.kinshipConnection.options}
+                                            name="hasKinshipConnection"
+                                            radioGroupFieldId="has-kinship-connection"
+                                            data-testid="has-kinship-connection"
+                                            options={txtForm.hasKinshipConnection.options}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.ICIPHolder.title}</Typography>
+                                        <Typography variant={'h6'}>{txtForm.isICIPHolder.title}</Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="icipHolder"
-                                            radioGroupFieldId="icip-holder"
-                                            data-testid="icip-holder"
-                                            options={txtForm.ICIPHolder.options}
+                                            name="isICIPHolder"
+                                            radioGroupFieldId="is-icip-holder"
+                                            data-testid="is-icip-holder"
+                                            options={txtForm.isICIPHolder.options}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.consent.title}</Typography>
+                                        <Typography variant={'h6'}>{txtForm.communityParticipant.title}</Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="consent"
-                                            radioGroupFieldId="consent"
-                                            data-testid="consent"
-                                            options={txtForm.consent.options}
+                                            name="communityParticipant"
+                                            radioGroupFieldId="community-participant"
+                                            data-testid="community-participant"
+                                            options={txtForm.communityParticipant.options}
                                         />
                                     </Grid>
                                 </Grid>
@@ -349,7 +349,7 @@ const FeedbackRecord = () => {
                                 <StandardCard>
                                     <Grid container spacing={3} padding={0}>
                                         <Grid xs={12}>
-                                            <Typography variant={'h6'}>{txtForm.containCultureInfo.title}</Typography>
+                                            <Typography variant={'h6'}>{txtForm.cultureInfo.title}</Typography>
                                             <Field
                                                 control={control}
                                                 component={CheckboxGroup}
@@ -357,11 +357,11 @@ const FeedbackRecord = () => {
                                                 name="cultureInfo"
                                                 checkboxGroupId="culture-info"
                                                 data-testid="culture-info"
-                                                options={txtForm.containCultureInfo.options}
+                                                options={txtForm.cultureInfo.options}
                                             />
                                         </Grid>
                                         <Grid xs={12}>
-                                            <Typography variant={'h6'}>{txtForm.requireSpecialCare.title}</Typography>
+                                            <Typography variant={'h6'}>{txtForm.specialCare.title}</Typography>
                                             <Field
                                                 control={control}
                                                 component={CheckboxGroup}
@@ -369,7 +369,7 @@ const FeedbackRecord = () => {
                                                 name="specialCare"
                                                 checkboxGroupId="special-care"
                                                 data-testid="special-care"
-                                                options={txtForm.requireSpecialCare.options}
+                                                options={txtForm.specialCare.options}
                                             />
                                         </Grid>
                                     </Grid>
@@ -380,20 +380,20 @@ const FeedbackRecord = () => {
                             <StandardCard>
                                 <Grid container spacing={3}>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.acknowledgedAs.title}</Typography>
+                                        <Typography variant={'h6'}>{txtForm.acknowledgement.title}</Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
                                             disabled={isSubmitting}
-                                            name="acknowledgedAs"
-                                            radioGroupFieldId="acknowledged-as"
-                                            data-testid="acknowledged-as"
-                                            options={txtForm.acknowledgedAs.options}
+                                            name="acknowledgement"
+                                            radioGroupFieldId="acknowledgement"
+                                            data-testid="acknowledgement"
+                                            options={txtForm.acknowledgement.options}
                                         />
                                     </Grid>
                                     <Grid xs={12}>
                                         <Typography sx={{ fontStyle: 'italic' }} variant={'body1'}>
-                                            {txtForm.acknowledgedAs.disclaimer}
+                                            {txtForm.acknowledgement.disclaimer}
                                         </Typography>
                                     </Grid>
                                 </Grid>

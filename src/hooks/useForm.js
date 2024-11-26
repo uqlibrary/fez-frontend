@@ -26,10 +26,9 @@ const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_K
 
 /**
  * Get flatten errors to a `field` => `error` object
- *
  * @param errors
- * @param otherFlattenedErrorList {{}}
- * @return {*|{}}
+ * @param otherFlattenedErrorList
+ * @return {{[p: string]: *}}
  */
 export const flattenErrors = (errors, ...otherFlattenedErrorList) => {
     return {
