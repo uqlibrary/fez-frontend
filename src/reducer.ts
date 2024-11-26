@@ -23,4 +23,5 @@ const rootReducer = () =>
 
 export default rootReducer;
 
+// @ts-ignore
 export type AppState = Map<string, any>;
