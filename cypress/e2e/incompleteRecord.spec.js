@@ -183,6 +183,35 @@ context('Incomplete record form', () => {
             .should('not.contain', grantMessage);
     });
 
+    it("should allow going back to list using browser's back button", () => {
+        cy.visit('/records/incomplete');
+
+        // navigate to the first incomplete work form
+        cy.get('button')
+            .contains(/complete work/i)
+            .should('exist')
+            .first()
+            .click();
+
+        // verify that the work form is loaded
+        cy.get('h2')
+            .contains(/complete my work/i)
+            .should('exist');
+
+        // navigate back to the list
+        cy.go('back');
+        cy.get('button')
+            .contains(/yes/i)
+            .should('be.visible')
+            .click();
+
+        // ensure the list page is loaded
+        cy.url().should('contain', '/records/incomplete');
+        cy.get('button')
+            .contains(/complete work/i)
+            .should('have.length.gt', 0);
+    });
+
     context('author list', () => {
         beforeEach(() => {
             const pid = 'UQ:352045';
@@ -231,30 +260,5 @@ context('Incomplete record form', () => {
                     });
             });
         });
-    });
-
-    it.only("should allow going back list using browser's back button", () => {
-        cy.visit('/records/incomplete');
-
-        // navigate to first incomplete work form
-        cy.get('button')
-            .contains(/complete work/i)
-            .should('exist')
-            .first()
-            .click();
-        cy.get('H2')
-            .contains(/Complete my work/i)
-            .should('exist');
-
-        // navigate back to list
-        cy.go('back');
-        cy.get('button')
-            .contains(/yes/i)
-            .click();
-
-        // make sure list loads
-        cy.get('button')
-            .contains(/complete work/i)
-            .should('have.length.gt', 0);
     });
 });
