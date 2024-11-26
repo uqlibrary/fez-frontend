@@ -171,6 +171,7 @@ const FeedbackRecord = () => {
                                             disabled={isSubmitting}
                                             name="firstName"
                                             label={txtForm.details.firstName}
+                                            validate={[validation.maxLength255Validator]}
                                             textFieldId="first-name"
                                             fullWidth
                                         />
@@ -182,7 +183,7 @@ const FeedbackRecord = () => {
                                             disabled={isSubmitting}
                                             name="lastName"
                                             label={txtForm.details.lastName}
-                                            validate={[requiredConditionally]}
+                                            validate={[validation.maxLength255Validator, requiredConditionally]}
                                             required={!data.shareDetails?.hasOwnProperty('anonymous')}
                                             textFieldId="last-name"
                                             fullWidth
@@ -195,7 +196,7 @@ const FeedbackRecord = () => {
                                             disabled={isSubmitting}
                                             name="contactNo"
                                             label={txtForm.details.contactNo}
-                                            validate={[requiredConditionally]}
+                                            validate={[validation.maxLengthValidator(30), requiredConditionally]}
                                             required={!data.shareDetails?.hasOwnProperty('anonymous')}
                                             textFieldId="contact-no"
                                             fullWidth
@@ -208,7 +209,7 @@ const FeedbackRecord = () => {
                                             disabled={isSubmitting}
                                             name="email"
                                             label={txtForm.details.email}
-                                            validate={[validation.email]}
+                                            validate={[validation.maxLength255Validator, validation.email]}
                                             textFieldId="email"
                                             fullWidth
                                         />
@@ -220,6 +221,7 @@ const FeedbackRecord = () => {
                                             disabled={isSubmitting}
                                             name="community"
                                             label={txtForm.details.community}
+                                            validate={[validation.maxLength255Validator]}
                                             data-testid="community"
                                             fullWidth
                                         />
@@ -300,6 +302,7 @@ const FeedbackRecord = () => {
                                                 disabled={isSubmitting}
                                                 name="communityInfo"
                                                 label={txtForm.communityInfo.subTitle}
+                                                validate={[validation.maxLengthValidator(2000)]}
                                                 textFieldId="community-info"
                                                 variant={'outlined'}
                                                 multiline
@@ -315,6 +318,7 @@ const FeedbackRecord = () => {
                                                 disabled={isSubmitting}
                                                 name="relatedPeople"
                                                 label={txtForm.relatedPeople.subTitle}
+                                                validate={[validation.maxLengthValidator(2000)]}
                                                 textFieldId="related-people"
                                                 variant={'outlined'}
                                                 multiline
@@ -334,6 +338,7 @@ const FeedbackRecord = () => {
                                         control={control}
                                         component={TextField}
                                         disabled={isSubmitting}
+                                        validate={[validation.maxLengthValidator(2000)]}
                                         name="story"
                                         textFieldId="story"
                                         multiline
@@ -349,15 +354,15 @@ const FeedbackRecord = () => {
                                 <StandardCard>
                                     <Grid container spacing={3} padding={0}>
                                         <Grid xs={12}>
-                                            <Typography variant={'h6'}>{txtForm.cultureInfo.title}</Typography>
+                                            <Typography variant={'h6'}>{txtForm.culturalInfo.title}</Typography>
                                             <Field
                                                 control={control}
                                                 component={CheckboxGroup}
                                                 disabled={isSubmitting}
-                                                name="cultureInfo"
-                                                checkboxGroupId="culture-info"
-                                                data-testid="culture-info"
-                                                options={txtForm.cultureInfo.options}
+                                                name="culturalInfo"
+                                                checkboxGroupId="cultural-info"
+                                                data-testid="cultural-info"
+                                                options={txtForm.culturalInfo.options}
                                             />
                                         </Grid>
                                         <Grid xs={12}>
