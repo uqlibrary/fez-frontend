@@ -1661,14 +1661,14 @@ export const getFeedbackRecordData = (pid, data) => {
     return Object.entries(data).reduce(
         (map, [key, value]) => {
             if (value) {
-                const newKey = `ror_${key.replace(/([A-Z])/g, '_$1').toLowerCase()}`;
+                const newKey = `rfb_${key.replace(/([A-Z])/g, '_$1').toLowerCase()}`;
                 // checkbox group values
                 if (typeof value === 'object') {
                     const { otherText, ...values } = value;
                     const newValues = Object.values(values);
                     map[newKey] = newValues;
                     if (newValues.includes('other')) {
-                        map[`${newKey}_other_info`] = otherText;
+                        map[`${newKey}_other`] = otherText;
                     }
                 } else {
                     map[newKey] = value;

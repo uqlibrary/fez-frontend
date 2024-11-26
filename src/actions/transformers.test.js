@@ -869,24 +869,24 @@ describe('transformers', () => {
             identityType: 'islander',
             kinshipConnection: 'false',
             lastName: 'last name',
-            shareDetails: { shareAnonymously: 'shareAnonymously' },
+            shareDetails: { anonymously: 'anonymously' },
             specialCare: { womenOnly: 'womenOnly', otherText: 'special care info' },
         };
 
         it('should create issue request', () => {
             const expected = {
-                ror_pid: 'UQ:1',
-                ror_acknowledged_as: 'private',
-                ror_consent: 'false',
-                ror_culture_info: ['other', 'ceremonies'],
-                ror_culture_info_other_info: 'other info',
-                ror_first_name: 'first name',
-                ror_icip_holder: 'true',
-                ror_identity_type: 'islander',
-                ror_kinship_connection: 'false',
-                ror_last_name: 'last name',
-                ror_share_details: ['shareAnonymously'],
-                ror_special_care: ['womenOnly'],
+                rfb_pid: 'UQ:1',
+                rfb_acknowledged_as: 'private',
+                rfb_community_participant: 'false',
+                rfb_culture_info: ['other', 'ceremonies'],
+                rfb_culture_info_other: 'other info',
+                rfb_first_name: 'first name',
+                rfb_is_icip_holder: 'true',
+                rfb_indigenous_identity: 'islander',
+                rfb_has_kinship_connection: 'false',
+                rfb_last_name: 'last name',
+                rfb_share_details: ['anonymously'],
+                rfb_special_care: ['womenOnly'],
             };
 
             const result = transformers.getFeedbackRecordData('UQ:1', input);

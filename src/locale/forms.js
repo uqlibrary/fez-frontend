@@ -339,12 +339,12 @@ export default {
                 community: 'Community',
                 shareDetails: {
                     options: [
-                        { label: 'I’d like to share my details with UQ Library', value: 'shareDetails' },
-                        { label: 'I’d like to share my feedback anonymously', value: 'shareAnonymously' },
+                        { label: 'I’d like to share my details with UQ Library', value: 'withUQ' },
+                        { label: 'I’d like to share my feedback anonymously', value: 'anonymous' },
                     ],
                 },
             },
-            identityTypes: {
+            indigenousIdentity: {
                 title: 'Do you identify as an Aboriginal and / or Torres Strait Islander person?',
                 options: [
                     { label: 'Yes, Aboriginal', value: 'aboriginal' },
@@ -353,26 +353,26 @@ export default {
                     { label: 'No', value: 'no' },
                 ],
             },
-            kinshipConnection: {
+            hasKinshipConnection: {
                 title: 'Do you have a kinship connection to this item?',
                 options: [
-                    { label: 'Yes', value: true },
-                    { label: 'No', value: false },
+                    { label: 'Yes', value: '1' },
+                    { label: 'No', value: '0' },
                 ],
             },
-            ICIPHolder: {
+            isICIPHolder: {
                 title: 'Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?',
                 options: [
-                    { label: 'Yes', value: true },
-                    { label: 'No', value: false },
+                    { label: 'Yes', value: '1' },
+                    { label: 'No', value: '0' },
                 ],
             },
-            consent: {
+            communityParticipant: {
                 title:
                     'Do you consent to your name being included as a Community Participant in the UQ Library Aboriginal and Torres Strait Islander Community Feedback database?',
                 options: [
-                    { label: 'Yes', value: true },
-                    { label: 'No, I would like to remain anonymous', value: false },
+                    { label: 'Yes', value: '1' },
+                    { label: 'No, I would like to remain anonymous', value: '0' },
                 ],
             },
             communityInfo: {
@@ -386,7 +386,7 @@ export default {
             story: {
                 title: 'Would you like to share a story or provide more context about this item?',
             },
-            containCultureInfo: {
+            cultureInfo: {
                 title: 'Does the item contain cultural information that is secret/sacred or sensitive?',
                 options: [
                     { label: 'Mens Business', value: 'mensBusiness' },
@@ -396,7 +396,7 @@ export default {
                     { label: 'Other', value: 'other', appendTextField: true },
                 ],
             },
-            requireSpecialCare: {
+            specialCare: {
                 title: 'Does the item need to be managed with special care?',
                 options: [
                     { label: 'No - The item does not contain sensitive material', value: 'no' },
@@ -407,7 +407,7 @@ export default {
                     { label: 'Other', value: 'other', appendTextField: true },
                 ],
             },
-            acknowledgedAs: {
+            acknowledgement: {
                 title: 'UQ Library is grateful for your assistance in caring for our collections',
                 subTitle: 'If attributing your contribution, how would you like to be acknowledged:',
                 options: [
