@@ -858,16 +858,16 @@ describe('transformers', () => {
 
     describe('getFeedbackRequest test', () => {
         const input = {
-            acknowledgedAs: 'private',
+            acknowledgement: 'private',
             community: '',
-            consent: 'false',
+            communityParticipant: 'false',
             contactNo: '',
             cultureInfo: { other: 'other', otherText: 'other info', ceremonies: 'ceremonies' },
             email: '',
             firstName: 'first name',
-            icipHolder: 'true',
-            identityType: 'islander',
-            kinshipConnection: 'false',
+            isIcipHolder: 'true',
+            indigenousIdentity: 'islander',
+            hasKinshipConnection: 'false',
             lastName: 'last name',
             shareDetails: { anonymously: 'anonymously' },
             specialCare: { womenOnly: 'womenOnly', otherText: 'special care info' },
@@ -876,7 +876,7 @@ describe('transformers', () => {
         it('should create issue request', () => {
             const expected = {
                 rfb_pid: 'UQ:1',
-                rfb_acknowledged_as: 'private',
+                rfb_acknowledgement: 'private',
                 rfb_community_participant: 'false',
                 rfb_culture_info: ['other', 'ceremonies'],
                 rfb_culture_info_other: 'other info',
