@@ -150,7 +150,7 @@ describe('Routes getMenuConfig method', () => {
 describe('Routes getRoutesConfig method', () => {
     it('should return a list of routes for a non user', () => {
         const testRoutes = routes.getRoutesConfig({ components: pages, account: null });
-        expect(testRoutes.length).toEqual(8);
+        expect(testRoutes.length).toEqual(9);
     });
 
     it('should return a list of routes for researcher', () => {
@@ -159,7 +159,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(28);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -168,7 +168,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -177,7 +177,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(52);
+        expect(testRoutes.length).toEqual(53);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -187,7 +187,7 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: true,
             isHdrStudent: true,
         });
-        expect(testRoutes.length).toEqual(9);
+        expect(testRoutes.length).toEqual(10);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
@@ -198,7 +198,7 @@ describe('Routes getRoutesConfig method', () => {
             isHdrStudent: true,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(28);
+        expect(testRoutes.length).toEqual(29);
     });
 });
 
