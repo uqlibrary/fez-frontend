@@ -199,16 +199,12 @@ context('Incomplete record form', () => {
             .should('exist');
 
         // navigate back to the list
+        cy.wait(1000);
         cy.go('back');
         cy.get('button')
             .contains(/yes/i)
-            // TODO revisit upon deploying refactored MyIncompleteRecord component
-            // setting this as conditional, as it works locally but not in CB
-            .then($button => {
-                if ($button && $button.is(':visible')) {
-                    cy.wrap($button).click();
-                }
-            });
+            .should('be.visible')
+            .click();
 
         // ensure the list page is loaded
         cy.url().should('contain', '/records/incomplete');
