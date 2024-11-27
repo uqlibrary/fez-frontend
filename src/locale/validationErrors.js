@@ -103,7 +103,6 @@ export default {
         onlyOneOfAuthorOrEditor: 'Please provide either authors/creators or editors/contributors, not both',
         comments: 'Comments are required',
         fixRecordAnyField: 'Please provide additional information, corrections or upload file(s).',
-        feedbackRecordRequiredField: 'Please provide required information.',
         contactName: 'Contact name is required',
         contactNameId: 'ID for contact name is required',
         contactEmail: 'Contact email is required',

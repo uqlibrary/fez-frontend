@@ -18,7 +18,7 @@ const isSuperAdmin = authorDetails => {
     return authorDetails && !!authorDetails.is_super_administrator;
 };
 
-// a duplicate list of routes for not found page
+// a duplicate list of routes for
 export const flattedPathConfig = [
     '/admin/add',
     '/admin/authors',
@@ -99,11 +99,6 @@ export const getRoutesConfig = ({
             element: <components.ViewRecord />,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-        },
-        {
-            path: pathConfig.records.feedback(':pid'),
-            element: <components.FeedbackRecord />,
-            pageTitle: locale.pages.feedbackRecord.title,
         },
         {
             path: pathConfig.records.search,
