@@ -109,6 +109,9 @@ const webpackConfig = {
         },
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            process: 'process/browser.js',
+        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',

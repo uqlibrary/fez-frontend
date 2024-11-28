@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
-import { filterObjectProps, getPlatformUrl } from './utils';
+import { filterObjectProps, getPlatformUrl, trimTrailingSlash } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
@@ -26,7 +26,7 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 };
 
 export const transformUrlToPlatform = url => {
-    const platform = getPlatformUrl();
+    const platform = trimTrailingSlash(getPlatformUrl());
     if (url.includes(platform)) return url;
 
     if (IS_PRODUCTION) return url.replace(STAGING_URL, PRODUCTION_URL);
