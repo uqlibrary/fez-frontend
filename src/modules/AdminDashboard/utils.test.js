@@ -192,4 +192,22 @@ describe('utils', () => {
             General.IS_PRODUCTION = oldVal;
         });
     });
+
+    describe('trimTrailingSlash', () => {
+        it('returns expected results', () => {
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au/')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // will remove all trailing chars in case of >1
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au///')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // wont remove a char when not present
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // not just for urls
+            expect(Utils.trimTrailingSlash('/ Test / text /')).toEqual('/ Test / text ');
+        });
+    });
 });
