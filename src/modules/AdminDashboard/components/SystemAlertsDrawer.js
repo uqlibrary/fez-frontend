@@ -24,34 +24,40 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
 }));
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
-    const txt = locale.drawer;
-
-    const users = useSelector(
-        state =>
-            state.get('adminDashboardConfigReducer')?.adminDashboardConfigData?.admin_users ??
-            /* istanbul ignore next */ [],
+    const config = useSelector(
+        state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || /* istanbul ignore next */ {},
     );
+    const users = React.useMemo(() => config.admin_users ?? /* istanbul ignore next */ [], [config.admin_users]);
+
+    const getAdminUserList = () => {
+        const unassignedOptionLabel = locale.alertStatus.UNASSIGNED;
+        const currentUser = config.logged_in_user || /* istanbul ignore next */ {};
+        const defaultOption = { id: 0, preferred_name: unassignedOptionLabel };
+        // Sort user's names alphabetically
+        /* istanbul ignore next */
+        users.sort((a, b) => {
+            const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
+            const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+
+            return 0;
+        });
+        const activeUser = users.find(user => user.id === currentUser?.id);
+        const updatedUsers = users.filter(user => user.id !== activeUser?.id);
+
+        // e2e tests can result in the activeUser object being unpopulated,
+        // so always filter out any element in the array that is undefined.
+        return [defaultOption, activeUser, ...updatedUsers].filter(item => !!item);
+    };
+    const [adminUsers] = React.useState(getAdminUserList);
+
+    const txt = locale.drawer;
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
-
-    // Sort user's names alphabetically
-    /* istanbul ignore next */
-    users.sort((a, b) => {
-        const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
-        const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
-        if (nameA < nameB) {
-            return -1;
-        }
-        if (nameA > nameB) {
-            return 1;
-        }
-
-        return 0;
-    });
-
-    const adminUsers = React.useMemo(() => [{ id: 0, preferred_name: locale.alertStatus.UNASSIGNED }, ...users], [
-        locale.alertStatus.UNASSIGNED,
-        users,
-    ]);
 
     let buttonLabel;
     if (!!!row?.sat_assigned_to || !!row?.sat_resolved_by) buttonLabel = null;

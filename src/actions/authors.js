@@ -32,7 +32,7 @@ export function searchAuthors(query) {
 
 /**
  * Update current author record
- * @param {string} authorId
+ * @param {string|number} authorId
  * @param {object} patch request
  * @returns {Promise}
  */

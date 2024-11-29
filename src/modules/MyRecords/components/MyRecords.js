@@ -101,14 +101,14 @@ export default class MyRecords extends PureComponent {
         return null;
     }
 
-    componentDidMount() {
-        if (!this.props.accountLoading) {
+    componentDidMount(prevProps) {
+        if (prevProps?.accountLoading !== this.props?.accountLoading && !this.props?.accountLoading) {
             this.props.actions.loadAuthorPublications({ ...this.state });
         }
     }
 
-    componentDidUpdate() {
-        if (!!this.state.reloadPublications) {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.reloadPublications !== this.state.reloadPublications && !!this.state.reloadPublications) {
             this.props.actions.loadAuthorPublications({ ...this.state });
         }
     }
