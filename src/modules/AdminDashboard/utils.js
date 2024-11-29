@@ -82,6 +82,6 @@ export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) 
 export const isEmptyStr = str =>
     str === null || str === undefined || (typeof str === 'string' && !!!str.trim()) || typeof str !== 'string';
 
-export const getPlatformUrl = () => (trimTrailingSlash(IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL));
-
 export const trimTrailingSlash = text => text.replace(/\/+$/g, '');
+
+export const getPlatformUrl = () => trimTrailingSlash(IS_PRODUCTION ? PRODUCTION_URL : STAGING_URL);
