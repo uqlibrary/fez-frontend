@@ -27,10 +27,8 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 
 export const transformUrlToPlatform = url => {
     const platform = trimTrailingSlash(getPlatformUrl());
-    if (url.includes(platform)) return url;
-
-    if (IS_PRODUCTION) return url.replace(STAGING_URL, PRODUCTION_URL);
-    else return url.replace(PRODUCTION_URL, STAGING_URL);
+    const altPlatform = IS_PRODUCTION ? trimTrailingSlash(STAGING_URL) : trimTrailingSlash(PRODUCTION_URL);
+    return url.startsWith(altPlatform) ? url.replace(altPlatform, platform) : url;
 };
 
 export const transformQuickLinkUpdateRequest = data => {
