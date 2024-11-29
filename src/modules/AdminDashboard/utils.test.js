@@ -186,9 +186,9 @@ describe('utils', () => {
         it('returns expected results', () => {
             const oldVal = General.IS_PRODUCTION;
             General.IS_PRODUCTION = true;
-            expect(Utils.getPlatformUrl()).toEqual(General.PRODUCTION_URL);
+            expect(Utils.getPlatformUrl()).toEqual(Utils.trimTrailingSlash(General.PRODUCTION_URL));
             General.IS_PRODUCTION = false;
-            expect(Utils.getPlatformUrl()).toEqual(General.STAGING_URL);
+            expect(Utils.getPlatformUrl()).toEqual(Utils.trimTrailingSlash(General.STAGING_URL));
             General.IS_PRODUCTION = oldVal;
         });
     });

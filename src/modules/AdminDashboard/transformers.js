@@ -26,7 +26,7 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 };
 
 export const transformUrlToPlatform = url => {
-    const platform = trimTrailingSlash(getPlatformUrl());
+    const platform = getPlatformUrl();
     const altPlatform = IS_PRODUCTION ? trimTrailingSlash(STAGING_URL) : trimTrailingSlash(PRODUCTION_URL);
     return url.startsWith(altPlatform) ? url.replace(altPlatform, platform) : url;
 };
