@@ -11,6 +11,8 @@ import { SYSTEM_ALERT_ACTION } from './config';
 
 import * as General from 'config/general';
 
+import {trimTrailingSlash } from './utils';
+
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
         const user = { id: 456 };
@@ -170,28 +172,42 @@ describe('transformers', () => {
         afterEach(() => {
             General.IS_PRODUCTION = oldVal;
         });
-        it('should transform staging to prod links', () => {
-            General.IS_PRODUCTION = true;
-            expect(transformUrlToPlatform(`${General.STAGING_URL}/test.html`)).toEqual(
-                `${General.PRODUCTION_URL}/test.html`,
+        const testUrlByPlatform = () => {
+            const primaryPlatform = General.IS_PRODUCTION ? General.PRODUCTION_URL : General.STAGING_URL;
+            const altPlatform = General.IS_PRODUCTION ? General.STAGING_URL : General.PRODUCTION_URL;
+            
+            expect(transformUrlToPlatform(`${altPlatform}test.html`)).toEqual(
+                `${primaryPlatform}test.html`,
             );
-            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
-                `${General.PRODUCTION_URL}/test.html`,
+            expect(transformUrlToPlatform(`${primaryPlatform}test.html`)).toEqual(
+                `${primaryPlatform}test.html`,
+            );
+            expect(transformUrlToPlatform(altPlatform)).toEqual(
+                primaryPlatform,
+            );
+            expect(transformUrlToPlatform(primaryPlatform)).toEqual(
+                primaryPlatform,
+            );
+            const trimmedProdUrl = trimTrailingSlash(primaryPlatform);
+            expect(transformUrlToPlatform(trimmedProdUrl)).toEqual(
+                trimmedProdUrl,
+            );
+            const trimmedStageUrl = trimTrailingSlash(altPlatform);
+            expect(transformUrlToPlatform(trimmedStageUrl)).toEqual(
+                trimmedProdUrl,
             );
             // if not staging or prod, nothing is transformed
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',
             );
+        }
+        it('should transform staging to prod links', () => {
+            General.IS_PRODUCTION = true;
+            testUrlByPlatform();
         });
         it('should transform prod links to staging', () => {
             General.IS_PRODUCTION = false;
-            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
-                `${General.STAGING_URL}/test.html`,
-            );
-            // if not staging or prod, nothing is transformed
-            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
-                'http://dev-espace.library.uq.edu.au/test.html',
-            );
+            testUrlByPlatform();
         });
     });
 
