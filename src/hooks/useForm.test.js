@@ -190,15 +190,9 @@ describe('useForm hook', () => {
         const extra = { field1: 'defaultValue' };
         const files = {
             queue: [
-                {
-                    fileData: {
-                        path: 'test.png',
-                    },
-                    name: 'test.png',
-                    size: 8364,
-                    access_condition_id: 5,
-                    date: '2024-12-02T08:32:02+10:00',
-                },
+                new File([new Blob(['Hello World'], { type: 'text/plain' })], 'example.txt', {
+                    type: 'text/plain',
+                }),
             ],
             isValid: true,
         };
