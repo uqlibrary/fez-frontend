@@ -1,5 +1,4 @@
 import formsLocale from '../../src/locale/forms';
-// import { default as pagesLocale } from '../../src/locale/pages';
 import { myRecordsList } from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
 
@@ -7,7 +6,6 @@ context('Request correction form', () => {
     const baseUrl = Cypress.config('baseUrl');
     const fixFormLocale = formsLocale.forms.fixPublicationForm;
     const unfixFormLocale = formsLocale.forms.unclaimPublicationForm;
-    // const fixPageLocale = pagesLocale.pages.fixRecord;
 
     beforeEach(() => {
         cy.visit(`/records/${record.rek_pid}/fix`);
