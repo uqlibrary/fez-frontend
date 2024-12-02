@@ -2,9 +2,8 @@ import React from 'react';
 import FeedbackRecord from './FeedbackRecord';
 import { mockRecordToFeedback } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, userEvent, screen, assertEnabled, fireEvent } from 'test-utils';
-import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
-import validationErrors from 'locale/validationErrors';
+import { render, WithReduxStore, WithRouter, userEvent, screen, assertEnabled } from 'test-utils';
+import { waitFor } from '@testing-library/dom';
 import forms from 'locale/forms';
 import { EXISTING_RECORD_API, RECORDS_FEEDBACK_API } from '../../../repositories/routes';
 
@@ -60,10 +59,11 @@ describe('Component FeedbackRecord', () => {
     const submitForm = async () => {
         assertEnabled(screen.getByTestId('feedback-submit'));
         await userEvent.click(screen.getByTestId('feedback-submit'));
-        await waitForElementToBeRemoved(
-            () => screen.queryByText(forms.forms.feedbackRecord.progressAlert.message),
-            waitForOptions,
-        );
+        await waitFor(() => {
+            expect(screen.queryByText(forms.forms.feedbackRecord.progressAlert.message))
+                .not
+                .toBeInTheDocument();
+        }, waitForOptions);
     };
 
     beforeEach(() => {
