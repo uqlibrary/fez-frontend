@@ -74,16 +74,12 @@ describe('TitleWithFavouriteButton', () => {
         const { getByTestId } = setup({ handlers: { errorUpdatingFavourite: errorFn } });
         expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
 
-        await act(async () => {
-            fireEvent.click(getByTestId('favourite-journal-notsaved'));
+        fireEvent.click(getByTestId('favourite-journal-notsaved'));
 
-            // need some time to pass for the api call to return
-            await new Promise(r => setTimeout(r, 500));
+        await waitFor(() => {
+            // button should still be in view
+            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
+            expect(errorFn).toHaveBeenCalled();
         });
-
-        // button should still be in view
-        expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
-
-        expect(errorFn).toHaveBeenCalled();
     });
 });
