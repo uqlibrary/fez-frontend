@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, waitFor } from 'test-utils';
 import * as actions from 'actions';
 
 import TitleWithFavouriteButton from './TitleWithFavouriteButton';
@@ -55,25 +55,17 @@ describe('TitleWithFavouriteButton', () => {
         const { getByTestId, queryByTestId } = setup();
         expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
 
-        await act(async () => {
-            fireEvent.click(getByTestId('favourite-journal-notsaved'));
-
-            // need some time to pass for the api call to return
-            await new Promise(r => setTimeout(r, 500));
+        fireEvent.click(getByTestId('favourite-journal-notsaved'));
+        await waitFor(() => {
+            expect(queryByTestId('favourite-journal-notsaved')).not.toBeInTheDocument();
+            expect(getByTestId('favourite-journal-saved')).toBeInTheDocument();
         });
 
-        expect(queryByTestId('favourite-journal-notsaved')).not.toBeInTheDocument();
-        expect(getByTestId('favourite-journal-saved')).toBeInTheDocument();
-
-        await act(async () => {
-            fireEvent.click(getByTestId('favourite-journal-saved'));
-
-            // need some time to pass for the api call to return
-            await new Promise(r => setTimeout(r, 500));
+        fireEvent.click(getByTestId('favourite-journal-saved'));
+        await waitFor(() => {
+            expect(queryByTestId('favourite-journal-saved')).not.toBeInTheDocument();
+            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
         });
-
-        expect(queryByTestId('favourite-journal-saved')).not.toBeInTheDocument();
-        expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
     });
 
     it('should call supplied error function if the favourite API call fails', async () => {
