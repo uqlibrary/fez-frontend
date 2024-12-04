@@ -1,6 +1,6 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
-import deepmerge from 'deepmerge';
 import { isEmptyObject, filterObjectKeys, reorderObjectKeys, combineObjects } from '../helpers/general';
+import { merge } from 'lodash';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
 export const SERVER_ERROR_KEY = 'serverError';
@@ -26,10 +26,9 @@ const getServerError = errors => errors[SERVER_ERROR_NAMESPACE]?.[SERVER_ERROR_K
 
 /**
  * Get flatten errors to a `field` => `error` object
- *
  * @param errors
- * @param otherFlattenedErrorList {{}}
- * @return {*|{}}
+ * @param otherFlattenedErrorList
+ * @return {{[p: string]: *}}
  */
 export const flattenErrors = (errors, ...otherFlattenedErrorList) => {
     return {
@@ -111,7 +110,7 @@ export const useForm = props => {
     attributes.safelyHandleSubmit = safelyHandleSubmit(attributes);
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
-    attributes.mergeWithFormValues = defaults => deepmerge(defaults, attributes.getValues());
+    attributes.mergeWithFormValues = defaults => merge(defaults, attributes.getValues());
 
     // alert component helpers
     attributes.getAlertErrorProps = getAlertErrorProps(attributes);

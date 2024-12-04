@@ -33,7 +33,7 @@ export const ChangeDisplayType = lazy(() =>
 );
 export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CollectionForm/containers/CollectionForm')),
+    lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
