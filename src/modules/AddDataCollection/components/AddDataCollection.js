@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
+// import { propTypes } from 'redux-form/immutable';
 // import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
@@ -642,13 +642,22 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
         </StandardPage>
     );
 };
+// console.log('propTypes=', propTypes);
 AddDataCollection.propTypes = {
-    ...propTypes, // all redux-form props
+    // ...propTypes, // all redux-form props
     author: PropTypes.object,
     disableSubmit: PropTypes.bool,
     actions: PropTypes.object,
     isSessionValid: PropTypes.bool,
     resetForm: PropTypes.any,
+
+    // old redux-form props
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
+    formValues: PropTypes.object,
+    newRecordFileUploadingOrIssueError: PropTypes.bool,
+    dirty: PropTypes.bool,
+    handleSubmit: PropTypes.func,
 };
 
 export default AddDataCollection;
