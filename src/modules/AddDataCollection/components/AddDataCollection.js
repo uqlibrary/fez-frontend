@@ -427,6 +427,22 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                             </StandardCard>
                         </Grid>
                         <Grid xs={12}>
+                            <StandardCard
+                                title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}
+                            >
+                                <Field
+                                    control={control}
+                                    component={RelatedDatasetAndPublicationListField}
+                                    listEditorId="related-datasets"
+                                    name="fez_record_search_key_isdatasetof"
+                                    locale={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}
+                                    searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
+                                    disabled={isSubmitting}
+                                    height={50}
+                                />
+                            </StandardCard>
+                        </Grid>
+                        <Grid xs={12}>
                             <StandardCard title={txt.information.additionalNotes.title}>
                                 <Grid container spacing={2} padding={0}>
                                     <Grid xs={12}>
