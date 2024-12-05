@@ -187,22 +187,18 @@ describe('useForm hook', () => {
     });
 
     it('mergeWithFormValues should merge form values with given values', () => {
-        class MockFile {
-            constructor(blob, name, type) {
-                this.raw = blob;
-                this.name = name;
-                this.type = type;
-            }
-        }
-        const extra = { field1: 'defaultValue' };
+        const data = 'abc123';
         const files = {
             queue: [
-                new MockFile(['abc123'], 'example.txt', {
+                new File([data], 'example.txt', {
                     type: 'text/plain',
                 }),
             ],
             isValid: true,
         };
+        File.prototype.text = jest.fn().mockResolvedValueOnce(data);
+
+        const extra = { field1: 'defaultValue' };
         mockFormReturn.getValues.mockReturnValue({
             field2: 'currentValue',
             files,
