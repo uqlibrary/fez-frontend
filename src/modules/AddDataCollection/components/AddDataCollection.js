@@ -7,6 +7,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
 import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
+import * as actions from 'actions';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -66,7 +67,7 @@ const usePrevious = value => {
     return ref.current;
 };
 
-export const AddDataCollection = ({ author, disableSubmit, actions, isSessionValid, resetForm, ...props }) => {
+export const AddDataCollection = ({ author, disableSubmit, isSessionValid, resetForm, ...props }) => {
     // form
     const {
         handleSubmit,
@@ -680,7 +681,6 @@ AddDataCollection.propTypes = {
     // ...propTypes, // all redux-form props
     author: PropTypes.object,
     disableSubmit: PropTypes.bool,
-    actions: PropTypes.object,
     isSessionValid: PropTypes.bool,
     resetForm: PropTypes.any,
 
