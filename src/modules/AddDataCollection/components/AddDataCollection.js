@@ -67,7 +67,7 @@ const usePrevious = value => {
     return ref.current;
 };
 
-export const AddDataCollection = ({ author, disableSubmit, isSessionValid, resetForm, ...props }) => {
+export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     // form
     const {
         handleSubmit,
@@ -119,8 +119,6 @@ export const AddDataCollection = ({ author, disableSubmit, isSessionValid, reset
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
         ...props,
-        author,
-        isSessionValid,
         dirty: true,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
@@ -679,9 +677,7 @@ export const AddDataCollection = ({ author, disableSubmit, isSessionValid, reset
 // console.log('propTypes=', propTypes);
 AddDataCollection.propTypes = {
     // ...propTypes, // all redux-form props
-    author: PropTypes.object,
     disableSubmit: PropTypes.bool,
-    isSessionValid: PropTypes.bool,
     resetForm: PropTypes.any,
 
     // old redux-form props
