@@ -319,6 +319,18 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                 help={txtFoR.help}
                             >
                                 <Typography>{txt.information.fieldOfResearchCodes.text}</Typography>
+                                <Field
+                                    control={control}
+                                    component={FieldOfResearchListField}
+                                    name="fieldOfResearch"
+                                    listEditorId="field-of-research"
+                                    required
+                                    validate={[validation.forRequired]}
+                                    hideReorder
+                                    distinctOnly
+                                    disabled={isSubmitting}
+                                    locale={txt.information.fieldOfResearchCodes.field}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid xs={12}>
