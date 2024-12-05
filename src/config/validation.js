@@ -266,6 +266,7 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const dateRange = (value, values) => {
+    if (!values.toJS) return '';
     const lowerInRange =
         !!values.toJS().fez_record_search_key_start_date &&
         !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
