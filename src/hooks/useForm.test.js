@@ -187,10 +187,17 @@ describe('useForm hook', () => {
     });
 
     it('mergeWithFormValues should merge form values with given values', () => {
+        class MockFile {
+            constructor(blob, name, type) {
+                this.raw = blob;
+                this.name = name;
+                this.type = type;
+            }
+        }
         const extra = { field1: 'defaultValue' };
         const files = {
             queue: [
-                new File(['abc123'], 'example.txt', {
+                new MockFile(['abc123'], 'example.txt', {
                     type: 'text/plain',
                 }),
             ],
