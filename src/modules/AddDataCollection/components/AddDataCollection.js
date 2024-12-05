@@ -319,34 +319,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                 help={txtFoR.help}
                             >
                                 <Typography>{txt.information.fieldOfResearchCodes.text}</Typography>
-                                <Field
-                                    control={control}
-                                    component={FieldOfResearchListField}
-                                    name="fieldOfResearch"
-                                    listEditorId="field-of-research"
-                                    required
-                                    validate={[validation.forRequired]}
-                                    hideReorder
-                                    distinctOnly
-                                    disabled={isSubmitting}
-                                    locale={txt.information.fieldOfResearchCodes.field}
-                                />
-                            </StandardCard>
-                        </Grid>
-                        <Grid xs={12} className={'Creators'}>
-                            <StandardCard title={txt.information.creator.title}>
-                                <Field
-                                    control={control}
-                                    component={ContributorsEditorField}
-                                    name="authors"
-                                    contributorEditorId="rek-author"
-                                    showRoleInput
-                                    showIdentifierLookup
-                                    locale={txt.information.creator.field}
-                                    required
-                                    disabled={isSubmitting}
-                                    validate={[validation.requiredList]}
-                                />
                             </StandardCard>
                         </Grid>
                         <Grid xs={12}>
@@ -433,126 +405,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={NewListEditorField}
-                                            listEditorId="rek-grant-agency"
-                                            name="fez_record_search_key_grant_agency"
-                                            maxCount={10}
-                                            searchKey={{
-                                                value: 'rek_grant_agency',
-                                                order: 'rek_grant_agency_order',
-                                            }}
-                                            locale={locale.components.fundingBodyForm.field}
-                                            disabled={isSubmitting}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={NewListEditorField}
-                                            listEditorId="rek-grant-id"
-                                            name="fez_record_search_key_grant_id"
-                                            maxCount={10}
-                                            searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
-                                            locale={locale.components.grantIdForm.field}
-                                            disabled={isSubmitting}
-                                        />
-                                    </Grid>
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
-                        <Grid xs={12}>
-                            <StandardCard title={txt.information.optionalDatasetDetails.title}>
-                                <Grid container spacing={3} padding={0}>
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={NewListEditorField}
-                                            listEditorId="rek-type-of-data"
-                                            name="fez_record_search_key_type_of_data"
-                                            maxCount={10}
-                                            searchKey={{
-                                                value: 'rek_type_of_data',
-                                                order: 'rek_type_of_data_order',
-                                            }}
-                                            locale={locale.components.typeOfDataForm.fieldDataset}
-                                            disabled={isSubmitting}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
-                                        <Divider />
-                                    </Grid>
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={NewListEditorField}
-                                            listEditorId="rek-software-required"
-                                            name="fez_record_search_key_software_required"
-                                            maxCount={10}
-                                            searchKey={{
-                                                value: 'rek_software_required',
-                                                order: 'rek_software_required_order',
-                                            }}
-                                            locale={locale.components.softwareRequiredForm.field}
-                                            disabled={isSubmitting}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
-                                        <Divider />
-                                    </Grid>
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={NewListEditorField}
-                                            listEditorId="rek-keywords"
-                                            name="fez_record_search_key_keywords"
-                                            maxCount={10}
-                                            searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
-                                            locale={locale.components.keywordsForm.field}
-                                            disabled={isSubmitting}
-                                            ListEditorForm={KeywordsForm}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
-                                        <Divider />
-                                    </Grid>
-                                    <Grid xs={12} sm={6}>
-                                        <Field
-                                            control={control}
-                                            component={PartialDateField}
-                                            partialDateFieldId="rek-start-date"
-                                            disableFuture
-                                            autoOk
-                                            name="fez_record_search_key_start_date.rek_start_date"
-                                            id="rek_start_date"
-                                            floatingTitle={
-                                                txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
-                                            }
-                                            disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
-                                            hasError={dateError}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} sm={6}>
-                                        <Field
-                                            control={control}
-                                            component={PartialDateField}
-                                            partialDateFieldId="rek-end-date"
-                                            disableFuture
-                                            autoOk
-                                            floatingTitle={
-                                                txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label
-                                            }
-                                            name="fez_record_search_key_end_date.rek_end_date"
-                                            id="rek_end_date"
-                                            disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
-                                            hasError={dateError}
-                                        />
-                                    </Grid>
                                 </Grid>
                             </StandardCard>
                         </Grid>
@@ -571,22 +423,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                     component={GeoCoordinatesField}
                                     disabled={isSubmitting}
                                     name="geographicArea"
-                                />
-                            </StandardCard>
-                        </Grid>
-                        <Grid xs={12}>
-                            <StandardCard
-                                title={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets.title}
-                            >
-                                <Field
-                                    control={control}
-                                    component={RelatedDatasetAndPublicationListField}
-                                    listEditorId="related-datasets"
-                                    name="fez_record_search_key_isdatasetof"
-                                    locale={txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}
-                                    searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
-                                    disabled={isSubmitting}
-                                    height={50}
                                 />
                             </StandardCard>
                         </Grid>
