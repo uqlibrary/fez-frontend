@@ -6,6 +6,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
+import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -74,13 +75,7 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
-        values: {
-            fez_record_search_key_ismemberof: '',
-            rek_title: '',
-            rek_description: '',
-            fez_record_search_key_keywords: '',
-            internalNotes: null,
-        },
+        values: NEW_DATASET_DEFAULT_VALUES,
     });
     // const [apiError, setApiError] = React.useState('');
 
