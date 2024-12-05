@@ -109,8 +109,10 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    // const startDate = watch('fez_record_search_key_start_date.rek_start_date');
+    const startDate = watch('fez_record_search_key_start_date.rek_start_date');
     // const endDate = watch('fez_record_search_key_end_date.rek_end_date');
+    console.log('startDate=', startDate);
+    // console.log('endDate=', endDate);
     // const dateError =
     //     !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
     //         ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
