@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import moment from 'moment';
 
 import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
@@ -84,4 +85,15 @@ export const transformDisplayReportRequest = data => {
     };
 
     return request;
+};
+
+export const transformDisplayReportExportData = (columns, data) => {
+    const newData = data.map(row => {
+        const newRow = {};
+        columns.forEach(header => {
+            newRow[header.field] = row[header.field];
+        });
+        return newRow;
+    });
+    return newData;
 };

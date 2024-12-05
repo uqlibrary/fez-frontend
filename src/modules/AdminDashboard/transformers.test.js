@@ -5,13 +5,14 @@ import {
     transformUrlToPlatform,
     transformExportReportRequest,
     transformDisplayReportRequest,
+    transformDisplayReportExportData,
 } from './transformers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
 
 import * as General from 'config/general';
 
-import {trimTrailingSlash } from './utils';
+import { trimTrailingSlash } from './utils';
 
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
@@ -175,32 +176,20 @@ describe('transformers', () => {
         const testUrlByPlatform = () => {
             const primaryPlatform = General.IS_PRODUCTION ? General.PRODUCTION_URL : General.STAGING_URL;
             const altPlatform = General.IS_PRODUCTION ? General.STAGING_URL : General.PRODUCTION_URL;
-            
-            expect(transformUrlToPlatform(`${altPlatform}test.html`)).toEqual(
-                `${primaryPlatform}test.html`,
-            );
-            expect(transformUrlToPlatform(`${primaryPlatform}test.html`)).toEqual(
-                `${primaryPlatform}test.html`,
-            );
-            expect(transformUrlToPlatform(altPlatform)).toEqual(
-                primaryPlatform,
-            );
-            expect(transformUrlToPlatform(primaryPlatform)).toEqual(
-                primaryPlatform,
-            );
+
+            expect(transformUrlToPlatform(`${altPlatform}test.html`)).toEqual(`${primaryPlatform}test.html`);
+            expect(transformUrlToPlatform(`${primaryPlatform}test.html`)).toEqual(`${primaryPlatform}test.html`);
+            expect(transformUrlToPlatform(altPlatform)).toEqual(primaryPlatform);
+            expect(transformUrlToPlatform(primaryPlatform)).toEqual(primaryPlatform);
             const trimmedProdUrl = trimTrailingSlash(primaryPlatform);
-            expect(transformUrlToPlatform(trimmedProdUrl)).toEqual(
-                trimmedProdUrl,
-            );
+            expect(transformUrlToPlatform(trimmedProdUrl)).toEqual(trimmedProdUrl);
             const trimmedStageUrl = trimTrailingSlash(altPlatform);
-            expect(transformUrlToPlatform(trimmedStageUrl)).toEqual(
-                trimmedProdUrl,
-            );
+            expect(transformUrlToPlatform(trimmedStageUrl)).toEqual(trimmedProdUrl);
             // if not staging or prod, nothing is transformed
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',
             );
-        }
+        };
         it('should transform staging to prod links', () => {
             General.IS_PRODUCTION = true;
             testUrlByPlatform();
@@ -281,6 +270,23 @@ describe('transformers', () => {
                     filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '123' },
                 }),
             ).toEqual({ report_type: 2 });
+        });
+    });
+
+    describe('transformDisplayReportExportData', () => {
+        it('returns sorted data', () => {
+            const cols = [{ field: 'field3' }, { field: 'field2' }, { field: 'field1' }];
+            const originalData = [
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+            ];
+            const expectedData = [
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+            ];
+            expect(transformDisplayReportExportData(cols, originalData)).toEqual(expectedData);
         });
     });
 });
