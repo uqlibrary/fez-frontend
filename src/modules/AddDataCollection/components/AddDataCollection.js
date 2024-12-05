@@ -319,6 +319,22 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                 />
                             </StandardCard>
                         </Grid>
+                        <Grid xs={12} className={'Creators'}>
+                            <StandardCard title={txt.information.creator.title}>
+                                <Field
+                                    control={control}
+                                    component={ContributorsEditorField}
+                                    name="authors"
+                                    contributorEditorId="rek-author"
+                                    showRoleInput
+                                    showIdentifierLookup
+                                    locale={txt.information.creator.field}
+                                    required
+                                    disabled={isSubmitting}
+                                    validate={[validation.requiredList]}
+                                />
+                            </StandardCard>
+                        </Grid>
                         <Grid xs={12}>
                             <StandardCard
                                 title={txt.information.accessAndLicensing.title}
