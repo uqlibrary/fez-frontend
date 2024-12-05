@@ -296,6 +296,20 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             {...txt.information.dataset.fieldLabels.publisher}
                                         />
                                     </Grid>
+                                    <Grid xs={12} sm={6}>
+                                        <Field
+                                            control={control}
+                                            component={PartialDateField}
+                                            disabled={isSubmitting}
+                                            partialDateFieldId="rek-date"
+                                            name="rek_date"
+                                            allowPartial
+                                            required
+                                            validate={[validation.required]}
+                                            floatingTitle={txt.information.dataset.fieldLabels.date.title}
+                                            floatingTitleRequired
+                                        />
+                                    </Grid>
                                 </Grid>
                             </StandardCard>
                         </Grid>
@@ -504,6 +518,40 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                     </Grid>
                                     <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
+                                    </Grid>
+                                    <Grid xs={12} sm={6}>
+                                        <Field
+                                            control={control}
+                                            component={PartialDateField}
+                                            partialDateFieldId="rek-start-date"
+                                            disableFuture
+                                            autoOk
+                                            name="fez_record_search_key_start_date.rek_start_date"
+                                            id="rek_start_date"
+                                            floatingTitle={
+                                                txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
+                                            }
+                                            disabled={isSubmitting}
+                                            validate={[validation.dateRange]}
+                                            hasError={dateError}
+                                        />
+                                    </Grid>
+                                    <Grid xs={12} sm={6}>
+                                        <Field
+                                            control={control}
+                                            component={PartialDateField}
+                                            partialDateFieldId="rek-end-date"
+                                            disableFuture
+                                            autoOk
+                                            floatingTitle={
+                                                txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label
+                                            }
+                                            name="fez_record_search_key_end_date.rek_end_date"
+                                            id="rek_end_date"
+                                            disabled={isSubmitting}
+                                            validate={[validation.dateRange]}
+                                            hasError={dateError}
+                                        />
                                     </Grid>
                                 </Grid>
                             </StandardCard>
