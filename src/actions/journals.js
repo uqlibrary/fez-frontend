@@ -173,6 +173,10 @@ export const exportJournals = (searchQuery, favourites = false, allJournals = fa
     }
 };
 
+/**
+ * @param searchQuery
+ * @returns {AnyAction}
+ */
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
@@ -210,6 +214,10 @@ export const addToFavourites = ids => async dispatch => {
     );
 };
 
+/**
+ * @param ids: string[]
+ * @returns {AnyAction}
+ */
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);
@@ -274,7 +282,7 @@ export function adminJournalUpdate(data) {
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_JOURNAL_FAILED,
-                    payload: error.message,
+                    payload: error.errors,
                 });
                 return Promise.reject(error);
             });
@@ -282,8 +290,10 @@ export function adminJournalUpdate(data) {
 }
 
 export function adminUnlockJournal() {
-    return {
-        type: actions.ADMIN_JOURNAL_UNLOCK,
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_JOURNAL_UNLOCK,
+        });
     };
 }
 

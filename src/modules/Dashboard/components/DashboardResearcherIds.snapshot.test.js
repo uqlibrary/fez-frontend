@@ -123,4 +123,30 @@ describe('Dashboard Researcher IDs test', () => {
         );
         expect(container).toMatchSnapshot();
     });
+
+    it('Testing google scholar id without orcid caption', () => {
+        const testValues = {
+            values: {
+                ...props.values,
+                orcid: undefined,
+                google_scholar: undefined,
+            },
+            authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
+        };
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
+    });
+
+    it('Testing google scholar id with orcid caption', () => {
+        const testValues = {
+            ...props,
+            values: {
+                ...props.values,
+                google_scholar: undefined,
+            },
+            authenticated: { researcher: true, scopus: true, google_scholar: true, orcid: true },
+        };
+        const { container } = setup(testValues);
+        expect(container).toMatchSnapshot();
+    });
 });

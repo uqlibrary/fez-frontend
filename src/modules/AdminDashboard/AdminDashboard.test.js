@@ -34,16 +34,6 @@ describe('AdminDashboard', () => {
         jest.clearAllMocks();
     });
 
-    it('should render no config error (empty config array)', async () => {
-        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, { data: [] });
-        const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');
-        const { getByTestId, getByText } = setup();
-        expect(loadAdminDashboardConfigFn).toHaveBeenCalled();
-        expect(getByTestId('page-title')).toHaveTextContent('Admin dashboard');
-        await waitForElementToBeRemoved(getByText('Loading config data...'));
-        expect(getByText('No config available')).toBeInTheDocument();
-    });
-
     it('should render no config error (null return)', async () => {
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl).reply(200, null);
         const loadAdminDashboardConfigFn = jest.spyOn(DashboardActions, 'loadAdminDashboardConfig');

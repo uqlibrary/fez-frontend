@@ -1,62 +1,95 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import FieldGridItem from './FieldGridItem';
-import { reduxForm } from 'redux-form';
+import { FormProvider } from 'react-hook-form';
 
 jest.mock('../../../../context');
-import { useFormValuesContext, useJournalContext } from 'context';
+import { useJournalContext } from 'context';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
 
 global.console = {
     ...global.console,
     warn: jest.fn(),
 };
 
-const WithReduxForm = reduxForm({ form: 'testForm' })(FieldGridItem);
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
+};
 
 const setup = (testProps = {}, renderer = rtlRender) => {
+    const { values = {}, methods = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
         group: [1],
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper
+            values={{
+                ...values,
+            }}
+            methods={methods}
+        >
+            <FieldGridItem {...props} />
+        </FormProviderWrapper>,
     );
 };
 
 describe('FieldGridItem', () => {
     beforeEach(() => {
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                jnl_title: 'Test title',
-            },
-        }));
         useJournalContext.mockImplementation(() => ({
-            journalDetails: {
-                jnl_jid: 12,
-                jnl_title: 'This is a test title',
-            },
-            jnlDisplayType: 'adminjournal',
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
     });
 
     afterEach(() => {
-        useFormValuesContext.mockReset();
         useJournalContext.mockReset();
     });
 
     it('should render default view', () => {
         const { getByTestId } = setup({
             field: 'jnl_title',
+            values: {
+                adminSection: {
+                    jnl_jid: 12,
+                    jnl_title: 'This is a test title',
+                },
+            },
         });
-        expect(getByTestId('jnl_title-input')).toBeInTheDocument();
+        expect(getByTestId('jnl_title-input')).toHaveValue('This is a test title');
+    });
+
+    it('should render error', () => {
+        const { getByTestId } = setup({
+            field: 'jnl_title',
+            values: {
+                adminSection: {
+                    jnl_jid: 12,
+                    jnl_title: 'This is a test title',
+                },
+            },
+            methods: { getFieldState: jest.fn(() => ({ error: 'Test error message' })) },
+        });
+        expect(getByTestId('jnl_title-input')).toHaveValue('This is a test title');
+        expect(getByTestId('jnl_title-helper-text')).toHaveTextContent('Test error message');
     });
 
     it('should handle missing field config', () => {
         setup({
             field: 'fake_field',
+            values: {
+                adminSection: {
+                    jnl_jid: 12,
+                    jnl_title: 'This is a test title',
+                },
+            },
         });
         expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
     });
@@ -64,13 +97,8 @@ describe('FieldGridItem', () => {
 
 describe('FieldGridItem without record', () => {
     beforeEach(() => {
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                jnl_title: 'Test title',
-            },
-        }));
         useJournalContext.mockImplementation(() => ({
-            journalDetails: {},
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
     });
 
