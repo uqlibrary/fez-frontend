@@ -190,7 +190,7 @@ describe('useForm hook', () => {
         const extra = { field1: 'defaultValue' };
         const files = {
             queue: [
-                new File([new Blob(['Hello World'], { type: 'text/plain' })], 'example.txt', {
+                new File(['abc123'], 'example.txt', {
                     type: 'text/plain',
                 }),
             ],
