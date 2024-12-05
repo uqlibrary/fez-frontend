@@ -109,12 +109,13 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    const startDate = watch('fez_record_search_key_start_date.rek_start_date');
-    const endDate = watch('fez_record_search_key_end_date.rek_end_date');
-    const dateError =
-        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
-            : '';
+    // const startDate = watch('fez_record_search_key_start_date.rek_start_date');
+    // const endDate = watch('fez_record_search_key_end_date.rek_end_date');
+    // const dateError =
+    //     !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+    //         ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
+    //         : '';
+    const dateError = '';
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -532,7 +533,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
                                             disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
                                             hasError={dateError}
                                         />
                                     </Grid>
@@ -549,7 +549,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             name="fez_record_search_key_end_date.rek_end_date"
                                             id="rek_end_date"
                                             disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
                                             hasError={dateError}
                                         />
                                     </Grid>
