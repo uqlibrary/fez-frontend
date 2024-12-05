@@ -296,20 +296,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             {...txt.information.dataset.fieldLabels.publisher}
                                         />
                                     </Grid>
-                                    <Grid xs={12} sm={6}>
-                                        <Field
-                                            control={control}
-                                            component={PartialDateField}
-                                            disabled={isSubmitting}
-                                            partialDateFieldId="rek-date"
-                                            name="rek_date"
-                                            allowPartial
-                                            required
-                                            validate={[validation.required]}
-                                            floatingTitle={txt.information.dataset.fieldLabels.date.title}
-                                            floatingTitleRequired
-                                        />
-                                    </Grid>
                                 </Grid>
                             </StandardCard>
                         </Grid>
@@ -416,6 +402,92 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             {...txt.information.project.fieldLabels.projectDescription}
                                             validate={[validation.required]}
                                         />
+                                    </Grid>
+
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={NewListEditorField}
+                                            listEditorId="rek-grant-agency"
+                                            name="fez_record_search_key_grant_agency"
+                                            maxCount={10}
+                                            searchKey={{
+                                                value: 'rek_grant_agency',
+                                                order: 'rek_grant_agency_order',
+                                            }}
+                                            locale={locale.components.fundingBodyForm.field}
+                                            disabled={isSubmitting}
+                                        />
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={NewListEditorField}
+                                            listEditorId="rek-grant-id"
+                                            name="fez_record_search_key_grant_id"
+                                            maxCount={10}
+                                            searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
+                                            locale={locale.components.grantIdForm.field}
+                                            disabled={isSubmitting}
+                                        />
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        <Grid xs={12}>
+                            <StandardCard title={txt.information.optionalDatasetDetails.title}>
+                                <Grid container spacing={3} padding={0}>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={NewListEditorField}
+                                            listEditorId="rek-type-of-data"
+                                            name="fez_record_search_key_type_of_data"
+                                            maxCount={10}
+                                            searchKey={{
+                                                value: 'rek_type_of_data',
+                                                order: 'rek_type_of_data_order',
+                                            }}
+                                            locale={locale.components.typeOfDataForm.fieldDataset}
+                                            disabled={isSubmitting}
+                                        />
+                                    </Grid>
+                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Divider />
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={NewListEditorField}
+                                            listEditorId="rek-software-required"
+                                            name="fez_record_search_key_software_required"
+                                            maxCount={10}
+                                            searchKey={{
+                                                value: 'rek_software_required',
+                                                order: 'rek_software_required_order',
+                                            }}
+                                            locale={locale.components.softwareRequiredForm.field}
+                                            disabled={isSubmitting}
+                                        />
+                                    </Grid>
+                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Divider />
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Field
+                                            control={control}
+                                            component={NewListEditorField}
+                                            listEditorId="rek-keywords"
+                                            name="fez_record_search_key_keywords"
+                                            maxCount={10}
+                                            searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
+                                            locale={locale.components.keywordsForm.field}
+                                            disabled={isSubmitting}
+                                            ListEditorForm={KeywordsForm}
+                                        />
+                                    </Grid>
+                                    <Grid xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
+                                        <Divider />
                                     </Grid>
                                 </Grid>
                             </StandardCard>
