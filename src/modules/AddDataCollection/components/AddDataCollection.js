@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
-// import moment from 'moment';
+import moment from 'moment';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -69,7 +69,7 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
     // form
     const {
         handleSubmit,
-        // watch,
+        watch,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -113,20 +113,12 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    // const formValues = formValues && formValues.toJS();
-    // const startDate =
-    //     formValues &&
-    //     formValues.fez_record_search_key_start_date &&
-    //     formValues.fez_record_search_key_start_date.rek_start_date;
-    // const endDate =
-    //     formValues &&
-    //     formValues.fez_record_search_key_end_date &&
-    //     formValues.fez_record_search_key_end_date.rek_end_date;
-    // const dateError =
-    //     !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-    //         ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
-    //         : '';
-    const dateError = '';
+    const startDate = watch('fez_record_search_key_start_date.rek_start_date');
+    const endDate = watch('fez_record_search_key_end_date.rek_end_date');
+    const dateError =
+        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+            ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
+            : '';
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
