@@ -205,7 +205,6 @@ describe('useForm hook', () => {
             ],
             isValid: true,
         };
-        File.prototype.text = jest.fn().mockResolvedValueOnce(data);
 
         const extra = { field1: 'defaultValue' };
         mockFormReturn.getValues.mockReturnValue({
