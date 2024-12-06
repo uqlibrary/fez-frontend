@@ -85,6 +85,7 @@ describe('Add new record', () => {
             authors: [
                 {
                     affiliation: '',
+                    affiliations: [],
                     aut_title: '',
                     authorId: null,
                     creatorRole: '',

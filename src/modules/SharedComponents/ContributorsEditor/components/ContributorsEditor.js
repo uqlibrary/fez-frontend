@@ -80,6 +80,11 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        if (prevProps.input?.value !== this.props.input?.value) {
+            this.setState({
+                contributors: this.getContributorsWithAffiliationsFromProps(this.props),
+            });
+        }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
             this.props.onChange?.(this.state.contributors);

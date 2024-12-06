@@ -58,7 +58,7 @@ export const MasterJournalListIngest = lazy(() =>
 );
 export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('modules/MyEditorialAppointments')));
 export const MyIncompleteRecord = lazy(() =>
-    lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
+    lazyRetry(() => import('modules/MyIncompleteRecord/components/MyIncompleteRecord')),
 );
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>

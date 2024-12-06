@@ -1,5 +1,4 @@
 import { renderHook } from 'test-utils';
-import * as ReactHookForm from 'react-hook-form';
 import {
     useForm,
     SERVER_ERROR_NAMESPACE,
@@ -14,6 +13,7 @@ const setup = props => renderHook(() => useForm(props));
 
 describe('useForm hook', () => {
     let mockFormReturn;
+    let mockOriginalUseForm;
 
     beforeEach(() => {
         mockFormReturn = {
@@ -31,7 +31,7 @@ describe('useForm hook', () => {
             .fn()
             .mockImplementation(callback => () => callback(mockFormReturn.getValues()));
 
-        jest.spyOn(ReactHookForm, 'useForm').mockReturnValue(mockFormReturn);
+        mockOriginalUseForm = jest.spyOn(require('react-hook-form'), 'useForm').mockReturnValue(mockFormReturn);
     });
 
     afterEach(() => {
@@ -52,14 +52,14 @@ describe('useForm hook', () => {
         const props = { defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
+        expect(mockOriginalUseForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
     });
 
     it('should call original useForm() with "mode" override', () => {
         const props = { mode: 'all', defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith(props);
+        expect(mockOriginalUseForm).toHaveBeenCalledWith(props);
     });
 
     it('should set formState.isSubmitFailure to true when the form is not successfully submitted', () => {
@@ -194,30 +194,48 @@ describe('useForm hook', () => {
         });
     });
 
-    it('mergeWithFormValues should merge form values with given values', () => {
-        const extra = { field1: 'defaultValue' };
-        const files = {
-            queue: [
-                {
-                    fileData: {
-                        path: 'test.png',
+    describe('mergeWithFormValues', () => {
+        it('mergeWithFormValues should merge form values with given values', () => {
+            const files = {
+                // eslint-disable-next-line max-len
+                // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required for proper testing form value merging without a Cypress test
+                // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
+                queue: [
+                    {
+                        fileData: {
+                            path: 'test.txt',
+                        },
+                        name: 'test.txt',
+                        size: 8364,
+                        access_condition_id: 5,
+                        date: '2024-12-02T08:32:02+10:00',
                     },
-                    name: 'test.png',
-                    size: 8364,
-                    access_condition_id: 5,
-                    date: '2024-12-02T08:32:02+10:00',
-                },
-            ],
-            isValid: true,
-        };
-        mockFormReturn.getValues.mockReturnValue({
-            field2: 'currentValue',
-            files,
+                ],
+                isValid: true,
+            };
+
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({
+                field2: 'currentValue',
+                files,
+            });
+
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra);
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', files });
         });
 
-        const { result } = setup();
-        const mergedValues = result.current.mergeWithFormValues(extra);
-        expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', files });
+        it('should filter form values prior to merge using a given filter function', () => {
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue', field3: 'otherValue' });
+
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra, data => {
+                delete data.field2;
+                return data;
+            });
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field3: 'otherValue' });
+        });
     });
 
     describe('flattenErrors', () => {
@@ -372,25 +390,28 @@ describe('useForm hook', () => {
         it('getPropsForAlert should return validation errors in the correct order using defaultValues, ignoring some validation errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
-                fieldA: { message: 'required' },
+                fez_record_search_key_doi: { rek_doi: { message: 'required' } },
                 fieldC: { message: 'required' }, // this will be ignored as is not defined in defaultValues or values
             };
-            mockFormReturn.formState.defaultValues = { fieldA: '', fieldB: '' };
+            mockFormReturn.formState.defaultValues = { fez_record_search_key_doi: { rek_doi: '' }, fieldB: '' };
 
             const { result } = setup();
             expect(result.current.getPropsForAlert()).toEqual({
                 ...defaults,
-                formErrors: { fieldA: 'required', fieldB: 'required' },
+                formErrors: { rek_doi: 'required', fieldB: 'required' },
             });
         });
 
         it('getPropsForAlert should return validation errors in the correct order using values with additional errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
-                fieldA: { message: 'required' },
+                fez_record_search_key_keywords: [{ rek_keywords: { message: 'required' } }],
                 fieldC: { message: 'required' }, // this will be ignored as is not defined in defaultValues or values
             };
-            mockFormReturn.values = { fieldA: '', fieldB: '' };
+            mockFormReturn.values = {
+                fez_record_search_key_keywords: [{ rek_keywords: '', rek_keywords_order: 1 }],
+                fieldB: '',
+            };
 
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
@@ -399,7 +420,7 @@ describe('useForm hook', () => {
             expect(result.current.getPropsForAlert(formLevelErrorA, formLevelErrorB)).toEqual({
                 ...defaults,
                 formErrors: {
-                    fieldA: 'required',
+                    fez_record_search_key_keywords: 'required',
                     fieldB: 'required',
                     formLevelErrorA: 'form is invalid',
                     formLevelErrorB: 'form needs fixing',

@@ -10,7 +10,11 @@ import {
     filterObjectKeys,
     combineObjects,
     isArrayDeeplyEqual,
-    arrayDiff,
+    isFezRecordRelationKey,
+    hasAtLeastOneFezRecordField,
+    isFezRecordOneToOneRelation,
+    isFezRecordOneToManyRelation,
+    filterObject,
 } from './general';
 
 describe('general helpers', () => {
@@ -20,13 +24,6 @@ describe('general helpers', () => {
             const mock = jest.spyOn(console, 'dir').mockImplementation(() => {});
             dd(...args);
             args.forEach(arg => expect(mock).toBeCalledWith(arg, { depth: null }));
-            mock.mockRestore();
-        });
-
-        it('dc should given args using console.log', () => {
-            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
-            dc(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(arg));
             mock.mockRestore();
         });
 
@@ -316,6 +313,7 @@ describe('general helpers', () => {
             expect(isEmptyObject(true)).toEqual(false);
             expect(isEmptyObject(null)).toEqual(false);
             expect(isEmptyObject(undefined)).toEqual(false);
+            expect(isEmptyObject([])).toEqual(false);
         });
     });
 
@@ -414,6 +412,110 @@ describe('general helpers', () => {
                 expect(isArrayDeeplyEqual(['string'], ['str'])).toBeFalsy();
                 expect(isArrayDeeplyEqual([{ a: 1 }], [{}])).toBeFalsy();
                 expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordRelationKey', () => {
+            it('should return true for alike fez record relation keys', () => {
+                expect(isFezRecordRelationKey('fez_record_search_key_doi')).toBeTruthy();
+            });
+
+            it('should return false for non alike fez record relation keys', () => {
+                expect(isFezRecordRelationKey(undefined)).toBeFalsy();
+                expect(isFezRecordRelationKey('abc')).toBeFalsy();
+                expect(isFezRecordRelationKey('test_fez_record_search_key_doi')).toBeFalsy();
+                expect(isFezRecordRelationKey(' fez_record_search_key_doi')).toBeFalsy();
+                expect(isFezRecordRelationKey('fez_record_search_key_doi ')).toBeFalsy();
+                expect(isFezRecordRelationKey(' fez_record_search_key_doi ')).toBeFalsy();
+            });
+        });
+
+        describe('hasAtLeastOneFezRecordField', () => {
+            it('should return true for objects with at least one alike fez record field', () => {
+                expect(hasAtLeastOneFezRecordField({ rek_doi: '10.000/abc.def' })).toBeTruthy();
+                expect(hasAtLeastOneFezRecordField({ a: 1, rek_doi: '10.000/abc.def' })).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(hasAtLeastOneFezRecordField(undefined)).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField('abc')).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField({ a: '10.000/abc.def' })).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField({ 'rek_doi ': '10.000/abc.def' })).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordOneToOneRelation', () => {
+            it('should return true when given object has a fez record alike one-to-one relation', () => {
+                expect(
+                    isFezRecordOneToOneRelation(
+                        { fez_record_search_key_doi: { rek_doi: '10.000/abc.def' } },
+                        'fez_record_search_key_doi',
+                    ),
+                ).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(isFezRecordOneToOneRelation(undefined, undefined)).toBeFalsy();
+                expect(isFezRecordOneToOneRelation('abc', 'abc')).toBeFalsy();
+                expect(
+                    isFezRecordOneToOneRelation(
+                        { fez_record_search_key_author: [{ rek_author: 'author 1' }] },
+                        'fez_record_search_key_author',
+                    ),
+                ).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordOneToManyRelation', () => {
+            it('should return true when given object has a fez record alike one-to-one relation', () => {
+                expect(
+                    isFezRecordOneToManyRelation(
+                        { fez_record_search_key_author: [{ rek_author: 'author 1' }] },
+                        'fez_record_search_key_author',
+                    ),
+                ).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(isFezRecordOneToManyRelation(undefined, undefined)).toBeFalsy();
+                expect(isFezRecordOneToManyRelation('abc', 'abc')).toBeFalsy();
+                expect(
+                    isFezRecordOneToManyRelation(
+                        { fez_record_search_key_doi: { rek_doi: '10.000/abc.def' } },
+                        'fez_record_search_key_doi',
+                    ),
+                ).toBeFalsy();
+            });
+        });
+
+        describe('filterObject', () => {
+            it('should return given object if any args are invalid', () => {
+                expect(filterObject(undefined, value => value === 1)).toEqual(undefined);
+                expect(filterObject([1, 2], value => value === 1)).toEqual([1, 2]);
+                expect(filterObject({ a: 1 }, true)).toEqual({ a: 1 });
+            });
+
+            it('should filter values according to given filter function', () => {
+                expect(
+                    filterObject(
+                        {
+                            a: 1,
+                            b: 2,
+                            c: { a: 1, b: 2, c: 3 },
+                            d: [
+                                { a: 1, b: 2 },
+                                { a: 1, b: 2, c: [{ a: 1 }] },
+                            ],
+                            e: { b: 2 },
+                            f: [{ b: 2 }, { c: 2 }, { d: { b: 2 } }],
+                        },
+                        value => value === 1,
+                    ),
+                ).toEqual({
+                    a: 1,
+                    c: { a: 1 },
+                    d: [{ a: 1 }, { a: 1, c: [{ a: 1 }] }],
+                });
             });
         });
     });
