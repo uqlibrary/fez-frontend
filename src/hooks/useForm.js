@@ -1,5 +1,4 @@
 import { useForm as useReactHookForm } from 'react-hook-form';
-import deepmerge from 'deepmerge';
 import {
     isEmptyObject,
     filterObjectKeys,
@@ -10,6 +9,7 @@ import {
     isFezRecordOneToManyRelation,
 } from '../helpers/general';
 import arrayDiff from 'locutus/php/array/array_diff';
+import { merge } from 'lodash';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
 export const SERVER_ERROR_KEY = 'serverError';
@@ -183,7 +183,7 @@ export const useForm = props => {
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
     attributes.mergeWithFormValues = (defaults, filter) =>
-        deepmerge(defaults, typeof filter === 'function' ? filter(attributes.getValues()) : attributes.getValues());
+        merge(defaults, typeof filter === 'function' ? filter(attributes.getValues()) : attributes.getValues());
 
     // alert component helpers
     attributes.getPropsForAlert = getPropsForAlert(attributes);

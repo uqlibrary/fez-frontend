@@ -197,11 +197,28 @@ describe('useForm hook', () => {
     describe('mergeWithFormValues', () => {
         it('should merge form values with given values', () => {
             const extra = { field1: 'defaultValue' };
-            mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue' });
+            const files = {
+                queue: [
+                    {
+                        fileData: {
+                            path: 'test.png',
+                        },
+                        name: 'test.png',
+                        size: 8364,
+                        access_condition_id: 5,
+                        date: '2024-12-02T08:32:02+10:00',
+                    },
+                ],
+                isValid: true,
+            };
+            mockFormReturn.getValues.mockReturnValue({
+                field2: 'currentValue',
+                files,
+            });
 
             const { result } = setup();
             const mergedValues = result.current.mergeWithFormValues(extra);
-            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue' });
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', files });
         });
 
         it('should filter form values prior to merge using a given filter function', () => {

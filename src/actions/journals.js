@@ -173,6 +173,10 @@ export const exportJournals = (searchQuery, favourites = false, allJournals = fa
     }
 };
 
+/**
+ * @param searchQuery
+ * @returns {AnyAction}
+ */
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
@@ -210,6 +214,10 @@ export const addToFavourites = ids => async dispatch => {
     );
 };
 
+/**
+ * @param ids: string[]
+ * @returns {AnyAction}
+ */
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);

@@ -29,6 +29,9 @@ export const userIsAuthor = () => {
     return account && belongsToAuthor(account, record);
 };
 
+/**
+ * @return {[boolean,(function(): void),(function(): void)]}
+ */
 export const useConfirmationState = () => {
     const [isOpen, setIsOpen] = useState(false);
 
