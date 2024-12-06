@@ -266,15 +266,15 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const dateRange = (value, values) => {
-    if (!values.toJS) return '';
+    const valuesObj = values?.toJS?.() || values;
     const lowerInRange =
-        !!values.toJS().fez_record_search_key_start_date &&
-        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
-        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+        !!valuesObj.fez_record_search_key_start_date &&
+        !!valuesObj.fez_record_search_key_start_date.rek_start_date &&
+        moment(valuesObj.fez_record_search_key_start_date.rek_start_date);
     const higherInRange =
-        !!values.toJS().fez_record_search_key_end_date &&
-        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
-        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
+        !!valuesObj.fez_record_search_key_end_date &&
+        !!valuesObj.fez_record_search_key_end_date.rek_end_date &&
+        moment(valuesObj.fez_record_search_key_end_date.rek_end_date);
 
     if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
         return locale.validationErrors.collectionDateRange;
