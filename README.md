@@ -738,6 +738,3 @@ CKeditor says all the `@ckeditor/ckeditor5-` packages should have the same versi
 ### Known Issue with Cypress
 - https://github.com/ckeditor/ckeditor5/issues/12802
 
-
-Fri 06 Dec 2024 15:08:35 AEST
-
