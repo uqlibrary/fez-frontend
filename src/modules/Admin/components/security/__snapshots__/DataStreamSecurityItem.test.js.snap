@@ -41,7 +41,9 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       <div
         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
-        validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+        validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
       >
         <div
           aria-controls=":r0:"
@@ -127,7 +129,9 @@ exports[`DataStreamSecurityItem component should render default view with overri
       <div
         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
-        validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+        validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
       >
         <div
           aria-controls=":r1:"
@@ -213,7 +217,9 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       <div
         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
-        validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+        validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
       >
         <div
           aria-controls=":r4:"

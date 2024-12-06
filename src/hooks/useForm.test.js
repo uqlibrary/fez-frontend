@@ -190,7 +190,7 @@ describe('useForm hook', () => {
         const data = 'abc123';
         const files = {
             // eslint-disable-next-line max-len
-            // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required to testing form value merging without a Cypress test
+            // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required for proper testing form value merging without a Cypress test
             // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
             queue: [
                 {

@@ -8101,7 +8101,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1d:"
@@ -8304,7 +8306,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1h:"
@@ -8806,7 +8810,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1d:"
@@ -9004,7 +9010,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1h:"
@@ -9506,7 +9514,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1d:"
@@ -9704,7 +9714,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
-                validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
+                validation="function required(value) {
+  return value ? undefined : _validationErrors["default"].validationErrors.required;
+}"
               >
                 <div
                   aria-controls=":r1h:"
