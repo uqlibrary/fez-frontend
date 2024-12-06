@@ -208,6 +208,10 @@ context('Thesis', () => {
         // files
         uploadFile('test.jpg');
 
+        // fix flaky integration between Cypress and CKEditor
+        cy.typeCKEditor('rek-title', 'ab');
+        cy.typeCKEditor('rek-description', 'ab');
+
         // rhf validation is async
         cy.waitUntil(
             () =>
