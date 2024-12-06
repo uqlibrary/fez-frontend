@@ -38,7 +38,7 @@ if (user && !mockData.accounts[user]) {
 
 // default user is researcher if user is not defined
 user = user || 'uqresearcher';
-// user = user || 'uqstaff';
+// user = user || 'uqstaff'; //remember to change it back when testing other menu item as fixRecord.spec.js will fail
 
 // used to ensure s5555555 only gets a 200 for the first req.
 let hasSessionExpireTestReqBeenMade = true;

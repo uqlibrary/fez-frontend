@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { SubmissionError } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -64,7 +63,7 @@ const ControlledVocabularies = () => {
     };
 
     const handleDialogClickSave = (parentId, rootVocabId) => values => {
-        const data = { ...values.toJS() };
+        const data = { ...values };
         const wrappedRequest = transformAdminRequest({
             request: data,
             parentId,
@@ -84,7 +83,7 @@ const ControlledVocabularies = () => {
             })
             .catch(error => {
                 console.error(error);
-                throw new SubmissionError({ _error: error });
+                throw error;
             });
     };
 

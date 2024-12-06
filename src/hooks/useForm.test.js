@@ -195,14 +195,17 @@ describe('useForm hook', () => {
     });
 
     it('mergeWithFormValues should merge form values with given values', () => {
-        const extra = { field1: 'defaultValue' };
+        const data = 'abc123';
         const files = {
+            // eslint-disable-next-line max-len
+            // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required for proper testing form value merging without a Cypress test
+            // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
             queue: [
                 {
                     fileData: {
-                        path: 'test.png',
+                        path: 'test.txt',
                     },
-                    name: 'test.png',
+                    name: 'test.txt',
                     size: 8364,
                     access_condition_id: 5,
                     date: '2024-12-02T08:32:02+10:00',
@@ -210,6 +213,8 @@ describe('useForm hook', () => {
             ],
             isValid: true,
         };
+
+        const extra = { field1: 'defaultValue' };
         mockFormReturn.getValues.mockReturnValue({
             field2: 'currentValue',
             files,
