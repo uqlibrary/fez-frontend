@@ -131,6 +131,14 @@ MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
 
+//ResizeObserver is either not available or not correctly recognized in the test environment
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+window.ResizeObserver = window.ResizeObserver || ResizeObserver;
+
 // jsdom v20 is unable to parse CKEditor 5 v41 css files
 // suppressing the CSS parsing error messages as they dont really break the tests
 const originalConsoleError = console.error;

@@ -1,62 +1,11 @@
 import React from 'react';
-
-import Immutable from 'immutable';
 import locale from 'locale/components';
 
-import { render, WithReduxStore, WithRouter, userEvent } from 'test-utils';
+import { render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 
-import AdminPanelContainer, { validate } from './AdminPanelContainer';
+import AdminPanelContainer from './AdminPanelContainer';
 
-describe('AdminPanelContainer', () => {
-    it('validate function returns expected results', () => {
-        const input1 = Immutable.Map({
-            cvo_title: null,
-        });
-        expect(validate(input1)).toEqual({ cvo_title: 'Required' });
-
-        const input2 = Immutable.Map({
-            cvo_title: 'abc',
-        });
-        expect(validate(input2)).toEqual({});
-
-        const input3a = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: null,
-        });
-        expect(validate(input3a)).toEqual({});
-
-        const input3b = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: undefined,
-        });
-        expect(validate(input3b)).toEqual({});
-
-        const input3c = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: '',
-        });
-        expect(validate(input3c)).toEqual({});
-
-        const input4 = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: 'abc',
-        });
-        expect(validate(input4)).toEqual({ cvo_order: 'Must be a number' });
-
-        const input5a = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: -1,
-        });
-        expect(validate(input5a)).toEqual({ cvo_order: 'Must be a whole number above zero' });
-        const input5b = Immutable.Map({
-            cvo_title: 'abc',
-            cvo_order: 1.1,
-        });
-        expect(validate(input5b)).toEqual({ cvo_order: 'Must be a whole number above zero' });
-    });
-});
-
-describe('AdminPanel with Redux-Form', () => {
+describe('AdminPanel with React-Hook-Form', () => {
     const setup = (testProps = {}, renderer = render) => {
         const props = { isOpen: true, action: 'add', id: 'test', onAction: jest.fn(), ...testProps };
 
@@ -73,8 +22,13 @@ describe('AdminPanel with Redux-Form', () => {
         expect(getByTestId('cvo-title-input')).toHaveValue(values.cvo_title ?? '');
         expect(getByTestId('cvo-desc-input')).toHaveValue(values.cvo_desc ?? '');
         expect(getByTestId('cvo-external-id-input')).toHaveValue(values.cvo_external_id ?? '');
-        if (!!values.cvo_hide) expect(getByTestId('cvo-hide-input')).toBeChecked();
-        else expect(getByTestId('cvo-hide-input')).not.toBeChecked();
+
+        const checkbox = getByTestId('cvo-hide-input').querySelector('input[type="checkbox"]');
+        if (!!values.cvo_hide) {
+            expect(checkbox).toBeChecked();
+        } else {
+            expect(checkbox).not.toBeChecked();
+        }
     };
 
     it('should render an empty ADD form with expected fields', () => {
@@ -108,7 +62,7 @@ describe('AdminPanel with Redux-Form', () => {
     it('should fire expected Cancel button functions', async () => {
         const mockCloseFn = jest.fn();
         const mockCancelFn = jest.fn();
-        const { getByTestId } = setup({ onClose: mockCloseFn, onCancelAction: mockCancelFn });
+        const { getByTestId } = setup({ onClose: mockCloseFn, onCancelAction: mockCancelFn, onAction: jest.fn() });
         await userEvent.click(getByTestId('update_dialog-cancel-button'));
 
         expect(mockCloseFn).toHaveBeenCalled();
@@ -132,7 +86,7 @@ describe('AdminPanel with Redux-Form', () => {
         await userEvent.type(getByTestId('cvo-title-input'), expected.cvo_title);
         await userEvent.type(getByTestId('cvo-desc-input'), expected.cvo_desc);
         await userEvent.type(getByTestId('cvo-external-id-input'), expected.cvo_external_id);
-        await userEvent.click(getByTestId('cvo-hide-input'));
+        await userEvent.click(getByTestId('cvo-hide-input').querySelector('input[type=checkbox]'));
 
         assertFieldValues(getByTestId, expected);
 
