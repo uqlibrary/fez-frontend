@@ -504,9 +504,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
             <div
               class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-qie0cp-MuiInputBase-root-MuiInput-root-MuiSelect-root"
               required=""
-              validation="function required(value) {
-  return value ? undefined : _validationErrors["default"].validationErrors.required;
-}"
+              validation="value => value ? undefined : _validationErrors.default.validationErrors.required"
             >
               <div
                 aria-controls=":r2:"
