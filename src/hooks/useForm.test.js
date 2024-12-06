@@ -189,10 +189,19 @@ describe('useForm hook', () => {
     it('mergeWithFormValues should merge form values with given values', () => {
         const data = 'abc123';
         const files = {
+            // eslint-disable-next-line max-len
+            // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required to testing form value merging without a Cypress test
+            // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
             queue: [
-                new File([data], 'example.txt', {
-                    type: 'text/plain',
-                }),
+                {
+                    fileData: {
+                        path: 'test.txt',
+                    },
+                    name: 'test.txt',
+                    size: 8364,
+                    access_condition_id: 5,
+                    date: '2024-12-02T08:32:02+10:00',
+                },
             ],
             isValid: true,
         };

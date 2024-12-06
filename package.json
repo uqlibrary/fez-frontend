@@ -246,18 +246,18 @@
     },
     "babel": {
         "presets": [
-            ["@babel/env", {
-                "targets": {
-                    "node": "current"
-                },
-                "useBuiltIns": "usage",
-                "corejs": 3
-            }],
+            "@babel/env",
             "@babel/react",
             "@babel/preset-typescript"
         ],
         "env": {
-            "development": {},
+            "development": {
+                "presets": [
+                    "@babel/env",
+                    "@babel/react",
+                    "@babel/preset-typescript"
+                ]
+            },
             "production": {
                 "presets": [
                     [
@@ -283,6 +283,11 @@
                 ]
             },
             "test": {
+                "presets": [
+                    "@babel/env",
+                    "@babel/react",
+                    "@babel/preset-typescript"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -302,6 +307,11 @@
                 ]
             },
             "cc": {
+                "presets": [
+                    "@babel/env",
+                    "@babel/react",
+                    "@babel/preset-typescript"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -374,6 +384,9 @@
             "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
             "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
         },
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ],
         "reporters": [
             "default",
             [
