@@ -18,7 +18,7 @@ describe('BulkUpdatesList', () => {
     });
 
     it('should render rows for bulk updates', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     buj_created_at: '2020-09-03 00:30:08',
@@ -40,14 +40,14 @@ describe('BulkUpdatesList', () => {
             ],
         });
 
-        expect(getByTestId('bulk-updates-list-item-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
         // time is adjusted to local timezone, so for Brisbane the time is +10 hours
         expect(getByTestId('buj-created-at')).toHaveTextContent('2020-09-03 10:30:08');
         expect(getByTestId('buj-started-at')).toHaveTextContent('2020-09-03 10:30:05');
         expect(getByTestId('buj-finished-at')).toHaveTextContent('2020-09-03 10:30:11');
     });
     it('should render a dash if date field is null', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     buj_created_at: null,
@@ -69,7 +69,7 @@ describe('BulkUpdatesList', () => {
             ],
         });
 
-        expect(getByTestId('bulk-updates-list-item-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
         expect(getByTestId('buj-created-at')).toHaveTextContent('-');
         expect(getByTestId('buj-started-at')).toHaveTextContent('-');
         expect(getByTestId('buj-finished-at')).toHaveTextContent('-');
