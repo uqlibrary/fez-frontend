@@ -322,17 +322,14 @@ describe('ManageAuthorsList', () => {
             total: 2,
         });
 
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             onBulkRowDelete: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        const listItem0 = getByTestId('authors-list-row-0');
-        expect(listItem0).toBeInTheDocument();
-
-        const listItem1 = getByTestId('authors-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('select-author-0'));
         fireEvent.click(getByTestId('select-author-1'));
@@ -439,13 +436,15 @@ describe('ManageAuthorsList', () => {
             ],
             total: 1,
         });
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             onRowUpdate: jest.fn(() => Promise.reject({ code: 500 })),
         });
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('authors-list-row-0'));
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(1);
+        fireEvent.click(tableRows[0]);
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
