@@ -251,7 +251,7 @@ describe('transformers', () => {
                     report: { value: 'systemalertlog' },
                     filters: { date_from: '2024-01-01 00:00:00', date_to: '2024-01-10 23:59:59', record_id: '' },
                 }),
-            ).toEqual({ report_type: 1, date_from: '2024-01-01', date_to: '2024-01-10' });
+            ).toEqual({ report_type: 1, date_from: '2023-12-31 14:00:00', date_to: '2024-01-10 13:59:59' }); // UTC
         });
 
         it('returns object without dates when record id provided and report is system logs', () => {

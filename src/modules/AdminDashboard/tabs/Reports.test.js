@@ -150,8 +150,8 @@ describe('Reports tab', () => {
 
     it('should build full works history report request', async () => {
         const expectedRequest = {
-            date_from: '2024-04-02',
-            date_to: '2024-05-03',
+            date_from: '2024-04-01 14:00:00',
+            date_to: '2024-05-03 13:59:59',
             report_type: 2,
         };
 
@@ -262,8 +262,8 @@ describe('Reports tab', () => {
     });
     it('should build system alerts report with only date request', async () => {
         const expectedRequest = {
-            date_from: '2024-04-02',
-            date_to: '2024-05-03',
+            date_from: '2024-04-01 14:00:00',
+            date_to: '2024-05-03 13:59:59',
             report_type: 1,
         };
 
