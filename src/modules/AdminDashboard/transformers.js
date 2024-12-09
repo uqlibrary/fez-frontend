@@ -1,6 +1,6 @@
-import moment from 'moment';
+import moment from 'moment-timezone';
 
-import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import { DEFAULT_SERVER_DATE_FORMAT, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
 import { filterObjectProps, getPlatformUrl } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
@@ -68,16 +68,20 @@ export const transformDisplayReportRequest = data => {
         report_type: reportId,
         ...(!!data.filters?.date_from && data.filters?.record_id === ''
             ? {
-                  date_from: moment(data.filters.date_from)
+                  date_from: moment
+                      .tz(data.filters.date_from, 'Australia/Brisbane')
                       .startOf('day')
-                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+                      .tz('UTC')
+                      .format(DEFAULT_SERVER_DATE_FORMAT),
               }
             : {}),
         ...(!!data.filters?.date_to && data.filters?.record_id === ''
             ? {
                   date_to: moment(data.filters.date_to)
+                      .tz(data.filters.date_from, 'Australia/Brisbane')
                       .endOf('day')
-                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+                      .tz('UTC')
+                      .format(DEFAULT_SERVER_DATE_FORMAT),
               }
             : {}),
         ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
