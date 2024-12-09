@@ -6,7 +6,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
-import { NEW_DATASET_DEFAULT_VALUES } from 'config/general';
+import { CURRENT_LICENCES, NEW_DATASET_DEFAULT_VALUES } from 'config/general';
 import * as actions from 'actions';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -15,20 +15,21 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import {
+    AuthorIdField,
+    FieldOfResearchListField,
+    RelatedDatasetAndPublicationListField,
+} from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { KeywordsForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
-import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
-import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
 
-import { pathConfig, validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
-import { CURRENT_LICENCES } from 'config/general';
+import { DATASET_ACCESS_CONDITIONS_OPTIONS, pathConfig, validation } from 'config';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
@@ -109,15 +110,17 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    const startDate = watch('fez_record_search_key_start_date.rek_start_date');
-    // const endDate = watch('fez_record_search_key_end_date.rek_end_date');
+    const [startDate, endDate] = watch([
+        'fez_record_search_key_start_date.rek_start_date',
+        'fez_record_search_key_end_date.rek_end_date',
+    ]);
     console.log('startDate=', startDate);
-    // console.log('endDate=', endDate);
-    // const dateError =
-    //     !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-    //         ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
-    //         : '';
-    const dateError = '';
+    console.log('endDate=', endDate);
+    const dateError =
+        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+            ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
+            : '';
+    // const dateError = '';
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -534,6 +537,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             floatingTitle={
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
+                                            onInput={ev => console.log('onInput', ev)}
                                             disabled={isSubmitting}
                                             validate={[validation.dateRange]}
                                             hasError={dateError}
