@@ -86,14 +86,14 @@ export const isUnselected = month => {
 };
 
 export const displayErrors = ({
-                                  state,
-                                  setError,
-                                  validationStatus,
-                                  allowPartial,
-                                  locale,
-                                  clearable,
-                                  isRequired = false,
-                              }) => {
+    state,
+    setError,
+    validationStatus,
+    allowPartial,
+    locale,
+    clearable,
+    isRequired = false,
+}) => {
     const { day, month, year } = state;
     const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
@@ -152,49 +152,50 @@ export const displayErrors = ({
 };
 
 const PartialDateForm = ({
-                             locale = {
-                                 dayLabel: 'Day',
-                                 monthLabel: 'Month',
-                                 yearLabel: 'Year',
-                                 validationMessage: {
-                                     date: 'Invalid date',
-                                     day: 'Invalid day',
-                                     month: 'Enter a month',
-                                     year: 'Invalid year',
-                                     yearRequired: 'Year required',
-                                     future: 'Date must be before now',
-                                 },
-                                 minNumberCharCode: 48,
-                                 maxNumberCharCode: 57,
-                             },
-                             onChange,
-                             dateFormat = 'YYYY-MM-DD',
-                             allowPartial,
-                             disableFuture,
-                             disabled,
-                             months = [
-                                 'January',
-                                 'February',
-                                 'March',
-                                 'April',
-                                 'May',
-                                 'June',
-                                 'July',
-                                 'August',
-                                 'September',
-                                 'October',
-                                 'November',
-                                 'December',
-                             ],
-                             floatingTitle = 'Enter a date',
-                             required,
-                             hasError,
-                             input,
-                             meta,
-                             partialDateFormId,
-                             clearable,
-                             value,
-                         }) => {
+    locale = {
+        dayLabel: 'Day',
+        monthLabel: 'Month',
+        yearLabel: 'Year',
+        validationMessage: {
+            date: 'Invalid date',
+            day: 'Invalid day',
+            month: 'Enter a month',
+            year: 'Invalid year',
+            yearRequired: 'Year required',
+            future: 'Date must be before now',
+        },
+        minNumberCharCode: 48,
+        maxNumberCharCode: 57,
+    },
+    onChange,
+    dateFormat = 'YYYY-MM-DD',
+    allowPartial,
+    disableFuture,
+    disabled,
+    months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ],
+    floatingTitle = 'Enter a date',
+    required,
+    hasError,
+    input,
+    meta,
+    partialDateFormId,
+    clearable,
+    value,
+}) => {
+    console.log('value=', value);
     const getDateObject = () => {
         const dateValue =
             (value && moment(value)) ||
