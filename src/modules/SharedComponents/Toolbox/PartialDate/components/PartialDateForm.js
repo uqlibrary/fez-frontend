@@ -190,7 +190,6 @@ const PartialDateForm = ({
     required,
     hasError,
     input,
-    meta,
     partialDateFormId,
     clearable,
     value,
@@ -200,7 +199,6 @@ const PartialDateForm = ({
         const dateValue =
             (value && moment(value)) ||
             (input && input.value && moment(input.value)) ||
-            (meta && meta.initial && moment(meta.initial)) ||
             null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
@@ -385,9 +383,6 @@ PartialDateForm.propTypes = {
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
     input: PropTypes.object,
-    meta: PropTypes.shape({
-        initial: PropTypes.string,
-    }),
     partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };
