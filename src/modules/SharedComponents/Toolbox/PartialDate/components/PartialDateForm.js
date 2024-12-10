@@ -194,12 +194,8 @@ const PartialDateForm = ({
     clearable,
     value,
 }) => {
-    console.log('value=', value);
     const getDateObject = () => {
-        const dateValue =
-            (value && moment(value)) ||
-            (input && input.value && moment(input.value)) ||
-            null;
+        const dateValue = (value && moment(value)) || (input && input.value && moment(input.value)) || null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             return {
@@ -218,6 +214,8 @@ const PartialDateForm = ({
 
     const [state, setState] = React.useState();
     const [error, setError] = React.useState();
+    console.log('value=', value);
+    console.log('state=', state);
 
     const getFullDateFromState = newState => {
         const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
@@ -233,6 +231,9 @@ const PartialDateForm = ({
 
     const _onDateChanged = key => {
         return (event, index, value) => {
+            console.log('onChange key=', key);
+            console.log('value=', value);
+            console.log('event.target.value=', event.target.value);
             let newState = {};
             if (event.target.value === '') {
                 // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
@@ -246,6 +247,7 @@ const PartialDateForm = ({
                 };
             }
             const newDateObject = { ...state, ...newState };
+            console.log('newDateObject=', newDateObject);
             const fullDate = getFullDateFromState(newDateObject);
             setState(newDateObject);
             !!fullDate && (onChange?.(fullDate) || input?.onChange?.(fullDate));
@@ -313,7 +315,14 @@ const PartialDateForm = ({
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
-                            value={state?.month === null ? /* istanbul ignore next */ -1 : state?.month || ''}
+                            value={
+                                state?.month !== null &&
+                                state?.month !== undefined &&
+                                state?.month >= -1 &&
+                                state?.month <= 11
+                                    ? state?.month
+                                    : -1
+                            }
                             placeholder={locale.monthLabel}
                             onChange={_onDateChanged('month')}
                             inputProps={{
