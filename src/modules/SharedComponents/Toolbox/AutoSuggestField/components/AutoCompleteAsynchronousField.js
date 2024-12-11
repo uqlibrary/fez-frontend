@@ -50,10 +50,12 @@ export const AutoCompleteAsynchronousField = ({
                 setOpen(true);
             } else if (!!event && event.type === 'click' && reason === 'clear') {
                 onClear?.();
+                onChange?.(undefined);
             } else if (!!allowFreeText && !!newInputValue && reason === 'input') {
                 onChange?.({ value: newInputValue });
             } else if (!newInputValue && clearOnInputClear && reason === 'input') {
                 onClear?.();
+                onChange?.(undefined);
             }
         },
         [allowFreeText, prefilledSearch, onChange, onClear, clearOnInputClear],
