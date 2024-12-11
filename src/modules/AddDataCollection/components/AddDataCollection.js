@@ -8,6 +8,7 @@ import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
 import { CURRENT_LICENCES, NEW_DATASET_DEFAULT_VALUES } from 'config/general';
 import * as actions from 'actions';
+import { useDispatch } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -40,6 +41,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
+import { createNewRecord } from 'actions';
+import { SubmissionError } from 'redux-form/immutable';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -77,9 +80,11 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
-        values: NEW_DATASET_DEFAULT_VALUES,
+        values: {
+            ...NEW_DATASET_DEFAULT_VALUES,
+        },
     });
-    // const [apiError, setApiError] = React.useState('');
+    const [apiError, setApiError] = React.useState('');
 
     const navigate = useNavigate();
     const previous = usePrevious(isSubmitSuccessful);
@@ -113,14 +118,19 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const [startDate, endDate] = watch([
         'fez_record_search_key_start_date.rek_start_date',
         'fez_record_search_key_end_date.rek_end_date',
+        'contact.contactNameId',
     ]);
-    console.log('startDate=', startDate);
-    console.log('endDate=', endDate);
+    // console.log('startDate=', startDate);
+    // console.log('endDate=', endDate);
+    // const contactNameId = watch('contact.contactNameId');
+    // console.log('contactNameId=', contactNameId);
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
             ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
             : '';
+    console.log('dateError=', dateError);
     // const dateError = '';
+    console.log('errors=', errors);
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -172,6 +182,31 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             </div>
         );
         return template;
+    };
+
+    const dispatch = useDispatch();
+    const onSubmit = async (data) => {
+        setApiError('');
+        // Get the list of redux-form registered fields for the current form
+        const formFields = Object.keys(data);
+
+        // Delete the currentAuthor if there is no author field in the
+        //  form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
+        const cleanValues = { ...data };
+        if (!formFields.includes('authors') && !formFields.includes('currentAuthor.0.nameAsPublished')) {
+            delete cleanValues.currentAuthor;
+        }
+
+        // set default values for a new unapproved record and handle submission
+        try {
+            await dispatch(createNewRecord(cleanValues));
+            // Form submission successful
+        } catch (error) {
+            let err = error.message;
+            const originalMessage = error?.original?.error?.message;
+            err += originalMessage && ' ' + originalMessage;
+            setApiError(err);
+        }
     };
 
     return (
@@ -537,7 +572,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             floatingTitle={
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
-                                            onInput={ev => console.log('onInput', ev)}
                                             disabled={isSubmitting}
                                             validate={[validation.dateRange]}
                                             hasError={dateError}
@@ -648,6 +682,12 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                 <Alert {...alertProps} />
                             </Grid>
                         )}
+
+                        {!!apiError && (
+                            <Grid xs={12}>
+                                <Alert alertId="api_error_alert" type="error_outline" message={apiError} />
+                            </Grid>
+                        )}
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid xs={false} sm />
@@ -671,7 +711,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                 fullWidth
                                 children={formLocale.addDataset.submit}
                                 aria-label={formLocale.addDataset.submit}
-                                onClick={handleSubmit}
+                                onClick={handleSubmit(onSubmit)}
                                 disabled={isSubmitting || disableSubmit || JSON.stringify(errors) !== '{}'}
                             />
                         </Grid>
