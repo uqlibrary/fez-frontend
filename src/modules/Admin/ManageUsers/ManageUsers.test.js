@@ -369,12 +369,12 @@ describe('ManageUsers', () => {
                 current_page: 1,
             });
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText, getByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('users-list-row-19')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(20);
 
         fireEvent.mouseDown(getByText('20 rows'));
         fireEvent.click(getByText('50'));
@@ -402,7 +402,7 @@ describe('ManageUsers', () => {
                     usr_last_login_date: '2017-02-16T23:11:38Z',
                 },
             });
-        const { getByTestId } = setup();
+        const { getAllByTestId, getByTestId } = setup();
 
         fireEvent.click(getByTestId('users-add-new-user'));
 
@@ -413,7 +413,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('usr-administrator-input'));
         fireEvent.click(getByTestId('users-add-this-user-save'));
 
-        await waitFor(() => getByTestId('users-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test Name');
         expect(getByTestId('usr-last-login-date-0')).toHaveTextContent('Never');
@@ -484,7 +484,7 @@ describe('ManageUsers', () => {
                     usr_username: 'uqtname',
                 },
             });
-        const { getByTestId, getByText } = setup();
+        const { getAllByTestId, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -499,7 +499,7 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => getByTestId('users-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');
@@ -539,7 +539,7 @@ describe('ManageUsers', () => {
             })
             .onPut(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(500);
-        const { getByTestId, getByText } = setup({});
+        const { getAllByTestId, getByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -548,7 +548,7 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => getByTestId('users-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
@@ -613,15 +613,12 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getByTestId, getByText } = setup({});
+        const { getAllByTestId, getByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        const listItem0 = getByTestId('users-list-row-0');
-        expect(listItem0).toBeInTheDocument();
-
-        const listItem1 = getByTestId('users-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
         fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
@@ -693,15 +690,12 @@ describe('ManageUsers', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getByTestId, getByText } = setup({});
+        const { getAllByTestId, getByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        const listItem0 = getByTestId('users-list-row-0');
-        expect(listItem0).toBeInTheDocument();
-
-        const listItem1 = getByTestId('users-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('users-list-row-0-delete-this-user'));
         fireEvent.click(getByTestId('confirm-users-delete-this-user-confirmation'));
@@ -747,12 +741,12 @@ describe('ManageUsers', () => {
                 },
             });
 
-        const { getByText, getByTestId, queryByTestId } = setup({});
+        const { queryAllByTestId, getAllByTestId, getByText, getByTestId, queryByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(3);
 
         fireEvent.click(getByTestId('select-user-0'));
         fireEvent.click(getByTestId('select-user-1'));
@@ -761,8 +755,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
-            expect(queryByTestId('users-list-row-0')).not.toBeInTheDocument();
-            expect(queryByTestId('users-list-row-2')).not.toBeInTheDocument();
+            expect(queryAllByTestId('mtablebodyrow').length).toBe(0);
         });
     });
 
@@ -794,12 +787,12 @@ describe('ManageUsers', () => {
             .onPost('fez-users/delete-list')
             .replyOnce(500);
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText, getByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(3);
 
         fireEvent.click(getByTestId('select-user-0'));
         fireEvent.click(getByTestId('select-user-1'));
@@ -808,8 +801,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
-            expect(getByTestId('users-list-row-0')).toBeInTheDocument();
-            expect(getByTestId('users-list-row-2')).toBeInTheDocument();
+            expect( getAllByTestId('mtablebodyrow').length).toBe(3);
             expect(getByText('Add new user')).toBeInTheDocument();
         });
     });
@@ -866,13 +858,14 @@ describe('ManageUsers', () => {
             ],
             total: 2,
         });
-        const { getByTestId, getByText, queryByTestId, queryByText } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryByTestId, queryByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('users-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
-        fireEvent.click(getByTestId('users-list-row-0'));
+        fireEvent.click(tableRows[0]);
         fireEvent.keyDown(getByTestId('user-edit-row'), { key: 'Escape' });
 
         expect(queryByTestId('user-edit-row')).not.toBeInTheDocument();

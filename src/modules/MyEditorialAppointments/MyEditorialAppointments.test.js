@@ -96,14 +96,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId, getByRole } = setup({});
+        const { getAllByTestId, getByText, getByTestId, getByRole } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
 
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
@@ -138,14 +138,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
         expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).not.toHaveAttribute(
             'style',
             expect.stringContaining('display: block'),
@@ -182,14 +182,14 @@ describe('MyEditorialAppointments', () => {
             'loadMyEditorialAppointmentsList',
         );
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
         expect(loadMyEditorialAppointmentsListFn).toBeCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
         expect(document.querySelector('#my-editorial-appointments-list-row-0 td:first-of-type')).toHaveAttribute(
             'style',
             expect.stringContaining('display: block'),

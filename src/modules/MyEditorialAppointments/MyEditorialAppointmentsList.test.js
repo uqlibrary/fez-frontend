@@ -38,7 +38,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should render rows for editorial appointments', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -51,12 +51,11 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
     });
 
     it('should render rows with red indicator for expired editorial appointments', () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -69,14 +68,14 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
     });
 
     it('should validate inputs and render added info after adding', async () => {
-        const { getByTestId, getByText } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [],
         });
+
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
@@ -104,14 +103,15 @@ describe('MyEditorialAppointmentsList', () => {
             fireEvent.click(getByTestId('my-editorial-appointments-add-save'));
         });
 
-        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
+        const listItem = getByTestId('mtablebodyrow');
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
     });
 
     it('should render previous list on unsuccessful add operation', async () => {
-        const { getByTestId, getByText, queryByTestId } = setup({
+        const { queryAllByTestId, getByTestId, getByText, queryByTestId } = setup({
             list: [],
             handleRowAdd: jest.fn(() => Promise.reject()),
         });
@@ -130,7 +130,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await waitFor(() => getByText('No records to display'));
 
-        expect(queryByTestId('my-editorial-appointments-list-row-0')).not.toBeInTheDocument();
+        expect(queryAllByTestId('mtablebodyrow').length).toBe(0);
     });
 
     it('should validate inputs and render updated info after editing', async () => {
@@ -147,7 +147,7 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-        const listItem = getByTestId('my-editorial-appointments-list-row-0');
+        const listItem = getByTestId('mtablebodyrow');
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('test');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Guest Editor');
@@ -184,7 +184,7 @@ describe('MyEditorialAppointmentsList', () => {
             fireEvent.click(getByTestId('my-editorial-appointments-update-save'));
         });
 
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => getByTestId('mtablebodyrow'));
 
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0')).toHaveTextContent('2010');
@@ -224,7 +224,7 @@ describe('MyEditorialAppointmentsList', () => {
             fireEvent.click(getByTestId('my-editorial-appointments-update-save'));
         });
 
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => getByTestId('mtablebodyrow'));
 
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
     });
@@ -254,13 +254,13 @@ describe('MyEditorialAppointmentsList', () => {
             fireEvent.click(getByTestId('my-editorial-appointments-update-cancel'));
         });
 
-        await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        await waitFor(() => getByTestId('mtablebodyrow'));
 
         expect(getByTestId('eap-journal-name-0')).toHaveTextContent('test');
     });
 
     it('should delete my editorial appointment item', async () => {
-        const { getByTestId } = setup({
+        const { getAllByTestId, getByTestId } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -282,11 +282,8 @@ describe('MyEditorialAppointmentsList', () => {
                 },
             ],
         });
-        const listItem0 = getByTestId('my-editorial-appointments-list-row-0');
-        expect(listItem0).toBeInTheDocument();
 
-        const listItem1 = getByTestId('my-editorial-appointments-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        expect(getAllByTestId('mtablebodyrow').length).toBe(2);
 
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-delete-this-editorial-appointment'));
 
@@ -297,7 +294,7 @@ describe('MyEditorialAppointmentsList', () => {
             // coverage: allow time for the promise's timeout to update state
             await new Promise(res => setTimeout(res, 1100));
         });
-        const listItem = await waitFor(() => getByTestId('my-editorial-appointments-list-row-0'));
+        const listItem = await waitFor(() => getByTestId('mtablebodyrow'));
 
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-role-name-0', listItem)).toHaveTextContent('Editor');
@@ -319,7 +316,7 @@ describe('MyEditorialAppointmentsList', () => {
             ],
         });
 
-        expect(getByTestId('my-editorial-appointments-list-row-0')).toBeInTheDocument();
+        expect(getByTestId('mtablebodyrow')).toBeInTheDocument();
         expect(getByTestId('eap-end-year-0')).toHaveTextContent('Current');
     });
 
@@ -380,7 +377,7 @@ describe('MyEditorialAppointmentsList', () => {
                     },
                 ],
             });
-            const row = getByTestId('my-editorial-appointments-list-row-0');
+            const row = getByTestId('mtablebodyrow');
             expect(
                 within(row)
                     .getByText('test')

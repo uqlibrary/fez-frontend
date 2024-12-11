@@ -71,7 +71,7 @@ describe('ManageUsers', () => {
                     usr_username: 'uqtname',
                 },
             });
-        const { getByTestId, getByText } = setup();
+        const { getAllByTestId, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -102,7 +102,7 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        await waitFor(() => getByTestId('users-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test');
         expect(getByTestId('usr-email-0')).toHaveAttribute('value', 'test@uq.edu.au');
