@@ -59,9 +59,7 @@ export const getFormConstants = (account, author, isHdrThesis) => {
                         authorId: author?.aut_id,
                     },
                 ],
-                fez_record_search_key_genre_type: {
-                    rek_genre_type: '',
-                },
+                rek_genre_type: '',
                 fez_record_search_key_org_unit_name: {
                     rek_org_unit_name: '',
                 },
@@ -96,9 +94,7 @@ export const getFormConstants = (account, author, isHdrThesis) => {
                     authorId: author?.aut_id,
                 },
             ],
-            fez_record_search_key_genre_type: {
-                rek_genre_type: 'Professional Doctorate',
-            },
+            rek_genre_type: 'Professional Doctorate',
             fez_record_search_key_org_name: general.SBS_THESIS_DEFAULT_VALUES.fez_record_search_key_org_name,
             fez_record_search_key_org_unit_name: {
                 rek_org_unit_name: '',
@@ -331,7 +327,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
-                                            name="fez_record_search_key_genre_type.rek_genre_type"
+                                            name="rek_genre_type"
                                             disabled={isSubmitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}

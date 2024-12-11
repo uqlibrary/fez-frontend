@@ -511,9 +511,18 @@ export const filterObject = (obj, filter) => {
     }
 
     return Object.entries(obj).reduce((acc, [key, value]) => {
+        // ignore WebAPI File objects
+        if (value instanceof File) {
+            acc[key] = value;
+            return acc;
+        }
+
         // handle arrays
         if (value instanceof Array) {
-            const filtered = value.map(item => filterObject(item, filter)).filter(item => !isEmptyObject(item));
+            const filtered = value
+                // ignore WebAPI File objects
+                .map(item => (item instanceof File ? item : filterObject(item, filter)))
+                .filter(item => !isEmptyObject(item));
             // ignore empty arrays
             if (!filtered.length) {
                 return acc;

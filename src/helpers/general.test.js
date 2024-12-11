@@ -16,6 +16,7 @@ import {
     isFezRecordOneToManyRelation,
     filterObject,
 } from './general';
+import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
     describe('debugging helpers', () => {
@@ -496,6 +497,9 @@ describe('general helpers', () => {
             });
 
             it('should filter values according to given filter function', () => {
+                mockWebApiFile();
+                const mockFile = new File(['test'], 'test.jpg');
+
                 expect(
                     filterObject(
                         {
@@ -508,6 +512,10 @@ describe('general helpers', () => {
                             ],
                             e: { b: 2 },
                             f: [{ b: 2 }, { c: 2 }, { d: { b: 2 } }],
+                            g: mockFile,
+                            h: { a: mockFile },
+                            i: [mockFile],
+                            j: [{ b: mockFile }],
                         },
                         value => value === 1,
                     ),
@@ -515,6 +523,10 @@ describe('general helpers', () => {
                     a: 1,
                     c: { a: 1 },
                     d: [{ a: 1 }, { a: 1, c: [{ a: 1 }] }],
+                    g: mockFile,
+                    h: { a: mockFile },
+                    i: [mockFile],
+                    j: [{ b: mockFile }],
                 });
             });
         });
