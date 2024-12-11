@@ -214,8 +214,6 @@ const PartialDateForm = ({
 
     const [state, setState] = React.useState();
     const [error, setError] = React.useState();
-    console.log('value=', value);
-    console.log('state=', state);
 
     const getFullDateFromState = newState => {
         const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
