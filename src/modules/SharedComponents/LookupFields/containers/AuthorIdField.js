@@ -42,25 +42,8 @@ export const AuthorIdField = props => {
             }}
             OptionTemplate={GenericOptionTemplate}
             loadSuggestions={loadSuggestions}
-            // If form key is set in props.meta object then it's a redux-form Field
-            {...(!!((props || {}).meta || {}).form
-                ? {
-                      defaultValue:
-                          (!!props.input.value &&
-                              (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
-                          null,
-                      error: !!props.meta.error,
-                      errorText: props.meta.error || '',
-                      onChange: item => props.input.onChange(item),
-                      onClear: () => props.input.onChange(null),
-                  }
-                : {
-                      defaultValue: props.value || null,
-                      error: props.error,
-                      errorText: props.errorText || '',
-                      onChange: item => props.onChange(item),
-                      onClear: () => props.onChange(null),
-                  })}
+            error={!!props.meta.error}
+            errorText={props.meta.error}
         />
     );
 };
