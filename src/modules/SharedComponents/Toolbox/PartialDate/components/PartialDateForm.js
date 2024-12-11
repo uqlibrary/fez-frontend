@@ -229,9 +229,6 @@ const PartialDateForm = ({
 
     const _onDateChanged = key => {
         return (event, index, value) => {
-            console.log('onChange key=', key);
-            console.log('value=', value);
-            console.log('event.target.value=', event.target.value);
             let newState = {};
             if (event.target.value === '') {
                 // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
@@ -245,7 +242,6 @@ const PartialDateForm = ({
                 };
             }
             const newDateObject = { ...state, ...newState };
-            console.log('newDateObject=', newDateObject);
             const fullDate = getFullDateFromState(newDateObject);
             setState(newDateObject);
             !!fullDate && (onChange?.(fullDate) || input?.onChange?.(fullDate));
@@ -261,6 +257,24 @@ const PartialDateForm = ({
             state.year !== newDateObject.year
         ) {
             setState({ ...state, ...newDateObject });
+            // when required, validate for the initial value (possible empty)
+            if (required) {
+                const validationStatus = validate({
+                    state: newDateObject,
+                    allowPartial,
+                    disableFuture,
+                    clearable,
+                });
+                displayErrors({
+                    state: newDateObject,
+                    setError,
+                    validationStatus,
+                    allowPartial,
+                    required,
+                    clearable,
+                    locale,
+                });
+            }
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
