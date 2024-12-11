@@ -79,9 +79,10 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // Removed the below as it caused dead loop in AddDataCollection.js
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        // this.props.onChange?.(this.state.contributors);
+        if (this.state.contributors !== prevState.contributors) {
+            this.props.onChange?.(this.state.contributors);
+        }
         const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
             if (Object.keys(updated).length > 0) {
