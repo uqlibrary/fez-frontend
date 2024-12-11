@@ -10,7 +10,6 @@ import {
     filterObjectKeys,
     combineObjects,
     isArrayDeeplyEqual,
-    arrayDiff,
 } from './general';
 
 describe('general helpers', () => {
