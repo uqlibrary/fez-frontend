@@ -89,12 +89,11 @@ export default class ListEditor extends Component {
         this.editItem = this.editItem.bind(this);
     }
 
-    componentDidUpdate() {
-        // this caused dead loop in AddDataCollection.js
-        // // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        // if (this.props.onChange) {
-        //     this.props.onChange(this.transformOutput(this.state.itemList));
-        // }
+    componentDidUpdate(prevProps, prevState) {
+        // notify parent component when local state has been updated, eg itemList added/removed/reordered
+        if (prevState.itemList !== this.state.itemList && this.props.onChange) {
+            this.props.onChange(this.transformOutput(this.state.itemList));
+        }
     }
 
     transformOutput = items => {
