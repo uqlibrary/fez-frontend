@@ -228,6 +228,16 @@ const turnOnJestPreviewOnTestFailure = (options = {}) =>
         ...options,
     });
 
+const mockWebApiFile = () => {
+    global.File = class File extends Blob {
+        name;
+        constructor(parts, name) {
+            super(parts);
+            this.name = name;
+        }
+    };
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -255,4 +265,5 @@ module.exports = {
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     turnOnJestPreviewOnTestFailure,
+    mockWebApiFile,
 };

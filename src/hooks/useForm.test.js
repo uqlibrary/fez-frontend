@@ -1,4 +1,4 @@
-import { renderHook } from 'test-utils';
+import { mockWebApiFile, renderHook } from 'test-utils';
 import {
     useForm,
     SERVER_ERROR_NAMESPACE,
@@ -196,33 +196,21 @@ describe('useForm hook', () => {
 
     describe('mergeWithFormValues', () => {
         it('mergeWithFormValues should merge form values with given values', () => {
-            const files = {
-                // eslint-disable-next-line max-len
-                // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required for proper testing form value merging without a Cypress test
-                // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
-                queue: [
-                    {
-                        fileData: {
-                            path: 'test.txt',
-                        },
-                        name: 'test.txt',
-                        size: 8364,
-                        access_condition_id: 5,
-                        date: '2024-12-02T08:32:02+10:00',
-                    },
-                ],
+            mockWebApiFile();
+            const mockFiles = {
+                queue: [new File(['test'], 'test.jpg')],
                 isValid: true,
             };
 
             const extra = { field1: 'defaultValue' };
             mockFormReturn.getValues.mockReturnValue({
                 field2: 'currentValue',
-                files,
+                mockFiles,
             });
 
             const { result } = setup();
             const mergedValues = result.current.mergeWithFormValues(extra);
-            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', files });
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', mockFiles });
         });
 
         it('should filter form values prior to merge using a given filter function', () => {
