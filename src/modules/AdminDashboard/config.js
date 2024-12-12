@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import momentTz from 'moment-timezone';
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
@@ -477,3 +478,18 @@ export const exportReportFilters = {
         },
     },
 };
+export const convertToUtc = (date, dayTimeReset = 'start', format = DEFAULT_SERVER_DATE_FORMAT) => {
+    const localDate = momentTz.tz(date, 'Australia/Brisbane');
+    return (dayTimeReset === 'start' ? localDate.startOf('day') : localDate.endOf('day')).tz('UTC').format(format);
+};
+
+export const exportReportAllowedFilters = [
+    {
+        name: 'date_from',
+        formatter: convertToUtc,
+    },
+    {
+        name: 'date_to',
+        formatter: date => convertToUtc(date, 'end'),
+    },
+];
