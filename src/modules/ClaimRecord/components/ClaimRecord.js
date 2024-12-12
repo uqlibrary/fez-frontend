@@ -41,7 +41,7 @@ export const getAlertProps = (
     publication,
     authorLinked,
     contributorLinked,
-    getAlertErrorProps,
+    getPropsForAlert,
     isSubmitting,
     isSubmitSuccessful,
     isSubmitFailure,
@@ -70,7 +70,7 @@ export const getAlertProps = (
         submitSucceeded: isSubmitSuccessful,
         dirty: true,
         alertLocale: txt,
-        ...getAlertErrorProps(),
+        ...getPropsForAlert(),
     });
 };
 
@@ -111,7 +111,7 @@ const ClaimRecord = () => {
         setValue,
         resetField,
         safelyHandleSubmit,
-        getAlertErrorProps,
+        getPropsForAlert,
         mergeWithFormValues,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError, serverError },
     } = useValidatedForm({
@@ -189,7 +189,7 @@ const ClaimRecord = () => {
         publication,
         authorLinked,
         contributorLinked,
-        getAlertErrorProps,
+        getPropsForAlert,
         isSubmitting,
         isSubmitSuccessful,
         isSubmitFailure,

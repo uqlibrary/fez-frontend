@@ -107,7 +107,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
           >
             <field
               is="mock"
@@ -117,7 +117,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             />
           </div>
           <div
-            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-12 css-9tgihn-MuiGrid2-root"
           >
             <field
               is="mock"

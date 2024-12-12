@@ -678,6 +678,9 @@ export const HDR_THESIS_DEFAULT_VALUES = {
             rek_language_order: 1,
         },
     ],
+    fez_record_search_key_org_name: {
+        rek_org_name: 'The University of Queensland',
+    },
     fileAccessId: 2,
 };
 
@@ -693,6 +696,9 @@ export const SBS_THESIS_DEFAULT_VALUES = {
         },
     ],
     rek_genre_type: 'Professional Doctorate',
+    fez_record_search_key_org_name: {
+        rek_org_name: 'The University of Queensland',
+    },
     fileAccessId: 4,
 };
 

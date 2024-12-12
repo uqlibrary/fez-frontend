@@ -1,11 +1,19 @@
-import { renderHook } from 'test-utils';
-import * as ReactHookForm from 'react-hook-form';
-import { useForm, SERVER_ERROR_NAMESPACE, SERVER_ERROR_KEY, setServerError, flattenErrors } from './useForm';
+import { mockWebApiFile, renderHook } from 'test-utils';
+import {
+    useForm,
+    SERVER_ERROR_NAMESPACE,
+    SERVER_ERROR_KEY,
+    setServerError,
+    flattenErrors,
+    getPropsForAlertInconsistencyWarning,
+} from './useForm';
+import * as general from '../helpers/general';
 
 const setup = props => renderHook(() => useForm(props));
 
 describe('useForm hook', () => {
     let mockFormReturn;
+    let mockOriginalUseForm;
 
     beforeEach(() => {
         mockFormReturn = {
@@ -23,7 +31,7 @@ describe('useForm hook', () => {
             .fn()
             .mockImplementation(callback => () => callback(mockFormReturn.getValues()));
 
-        jest.spyOn(ReactHookForm, 'useForm').mockReturnValue(mockFormReturn);
+        mockOriginalUseForm = jest.spyOn(require('react-hook-form'), 'useForm').mockReturnValue(mockFormReturn);
     });
 
     afterEach(() => {
@@ -44,14 +52,14 @@ describe('useForm hook', () => {
         const props = { defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
+        expect(mockOriginalUseForm).toHaveBeenCalledWith({ mode: 'onChange', ...props });
     });
 
     it('should call original useForm() with "mode" override', () => {
         const props = { mode: 'all', defaultValues: { field1: 'value1' } };
 
         setup(props);
-        expect(ReactHookForm.useForm).toHaveBeenCalledWith(props);
+        expect(mockOriginalUseForm).toHaveBeenCalledWith(props);
     });
 
     it('should set formState.isSubmitFailure to true when the form is not successfully submitted', () => {
@@ -186,35 +194,36 @@ describe('useForm hook', () => {
         });
     });
 
-    it('mergeWithFormValues should merge form values with given values', () => {
-        const data = 'abc123';
-        const files = {
-            // eslint-disable-next-line max-len
-            // TODO config Jest & Babel to allow us to use a real instance of webAPI File class - required for proper testing form value merging without a Cypress test
-            // queue: [new File(['abc123'], 'example.txt', { type: 'text/plain' })],
-            queue: [
-                {
-                    fileData: {
-                        path: 'test.txt',
-                    },
-                    name: 'test.txt',
-                    size: 8364,
-                    access_condition_id: 5,
-                    date: '2024-12-02T08:32:02+10:00',
-                },
-            ],
-            isValid: true,
-        };
+    describe('mergeWithFormValues', () => {
+        it('mergeWithFormValues should merge form values with given values', () => {
+            mockWebApiFile();
+            const mockFiles = {
+                queue: [new File(['test'], 'test.jpg')],
+                isValid: true,
+            };
 
-        const extra = { field1: 'defaultValue' };
-        mockFormReturn.getValues.mockReturnValue({
-            field2: 'currentValue',
-            files,
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({
+                field2: 'currentValue',
+                mockFiles,
+            });
+
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra);
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', mockFiles });
         });
 
-        const { result } = setup();
-        const mergedValues = result.current.mergeWithFormValues(extra);
-        expect(mergedValues).toEqual({ field1: 'defaultValue', field2: 'currentValue', files });
+        it('should filter form values prior to merge using a given filter function', () => {
+            const extra = { field1: 'defaultValue' };
+            mockFormReturn.getValues.mockReturnValue({ field2: 'currentValue', field3: 'otherValue' });
+
+            const { result } = setup();
+            const mergedValues = result.current.mergeWithFormValues(extra, data => {
+                delete data.field2;
+                return data;
+            });
+            expect(mergedValues).toEqual({ field1: 'defaultValue', field3: 'otherValue' });
+        });
     });
 
     describe('flattenErrors', () => {
@@ -266,49 +275,87 @@ describe('useForm hook', () => {
         });
     });
 
-    describe('getAlertErrorProps', () => {
-        it('getAlertErrorProps should return empty object if no errors', () => {
+    describe('getPropsForAlert', () => {
+        const defaults = {
+            submitSucceeded: false,
+            submitting: false,
+        };
+
+        it('getPropsForAlert should return object default values', () => {
             const { result } = setup();
-            expect(result.current.getAlertErrorProps()).toEqual({});
+            expect(result.current.getPropsForAlert()).toEqual(defaults);
         });
 
-        it('getAlertErrorProps should return server error if any', () => {
+        it('getPropsForAlert should return object submitting=true when isSubmitting is true', () => {
+            mockFormReturn.formState.isSubmitting = true;
+            const { result } = setup();
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
+                submitting: true,
+            });
+        });
+
+        it('getPropsForAlert should return object submitSucceeded=true when isSubmitSuccessful is true', () => {
+            mockFormReturn.formState.isSubmitSuccessful = true;
+            const { result } = setup();
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
+                submitSucceeded: true,
+            });
+        });
+
+        it('getPropsForAlert should return object with submitting & submitSucceeded attrs reflecting isSubmitting & isSubmitSuccessful formState values', () => {
+            mockFormReturn.formState.isSubmitting = true;
+            mockFormReturn.formState.isSubmitSuccessful = true;
+            const { result } = setup();
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
+                submitting: true,
+                submitSucceeded: true,
+            });
+        });
+
+        it('getPropsForAlert should return server error if any', () => {
             const serverError = 'Server error';
             mockServerError(serverError);
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps()).toEqual({
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
                 error: serverError,
             });
         });
 
-        it('getAlertErrorProps should return server error only when there are validation errors too', () => {
+        it('getPropsForAlert should return server error only when there are validation errors too', () => {
             const serverError = 'Server error';
             mockServerError(serverError);
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps()).toEqual({
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
                 error: serverError,
             });
         });
 
-        it('getAlertErrorProps should return validation errors', () => {
+        it('getPropsForAlert should return validation errors', () => {
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps()).toEqual({
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
                 formErrors: { fieldA: 'required' },
             });
         });
 
-        it('getAlertErrorProps should return validation errors with additional errors', () => {
+        it('getPropsForAlert should return validation errors with additional errors', () => {
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps(formLevelErrorA, formLevelErrorB)).toEqual({
+            expect(result.current.getPropsForAlert(formLevelErrorA, formLevelErrorB)).toEqual({
+                ...defaults,
                 formErrors: {
                     fieldA: 'required',
                     formLevelErrorA: 'form is invalid',
@@ -317,50 +364,78 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getAlertErrorProps should return additional errors regardless of validation errors', () => {
+        it('getPropsForAlert should return additional errors regardless of validation errors', () => {
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps(formLevelErrorA, formLevelErrorB)).toEqual({
+            expect(result.current.getPropsForAlert(formLevelErrorA, formLevelErrorB)).toEqual({
+                ...defaults,
                 formErrors: { formLevelErrorA: 'form is invalid', formLevelErrorB: 'form needs fixing' },
             });
         });
 
-        it('getAlertErrorProps should return validation errors in the correct order using defaultValues, ignoring some validation errors', () => {
+        it('getPropsForAlert should return validation errors in the correct order using defaultValues, ignoring some validation errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
-                fieldA: { message: 'required' },
+                fez_record_search_key_doi: { rek_doi: { message: 'required' } },
                 fieldC: { message: 'required' }, // this will be ignored as is not defined in defaultValues or values
             };
-            mockFormReturn.formState.defaultValues = { fieldA: '', fieldB: '' };
+            mockFormReturn.formState.defaultValues = { fez_record_search_key_doi: { rek_doi: '' }, fieldB: '' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps()).toEqual({
-                formErrors: { fieldA: 'required', fieldB: 'required' },
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
+                formErrors: { rek_doi: 'required', fieldB: 'required' },
             });
         });
 
-        it('getAlertErrorProps should return validation errors in the correct order using values with additional errors', () => {
+        it('getPropsForAlert should return validation errors in the correct order using values with additional errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
-                fieldA: { message: 'required' },
+                fez_record_search_key_keywords: [{ rek_keywords: { message: 'required' } }],
                 fieldC: { message: 'required' }, // this will be ignored as is not defined in defaultValues or values
             };
-            mockFormReturn.formState.values = { fieldA: '', fieldB: '' };
+            mockFormReturn.values = {
+                fez_record_search_key_keywords: [{ rek_keywords: '', rek_keywords_order: 1 }],
+                fieldB: '',
+            };
 
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
 
             const { result } = setup();
-            expect(result.current.getAlertErrorProps(formLevelErrorA, formLevelErrorB)).toEqual({
+            expect(result.current.getPropsForAlert(formLevelErrorA, formLevelErrorB)).toEqual({
+                ...defaults,
                 formErrors: {
-                    fieldA: 'required',
+                    fez_record_search_key_keywords: 'required',
                     fieldB: 'required',
                     formLevelErrorA: 'form is invalid',
                     formLevelErrorB: 'form needs fixing',
                 },
             });
+        });
+
+        it('getPropsForAlert should warn devs when formErrors have missing errors', () => {
+            const spy = jest.spyOn(general, 'isDevEnv').mockReturnValue(true);
+            const mock = jest.spyOn(console, 'error').mockImplementation(() => {});
+            mockFormReturn.formState.errors = {
+                fieldB: { message: 'required' },
+                fieldA: { message: 'required' },
+                fieldC: { message: 'required' },
+            };
+            mockFormReturn.formState.defaultValues = { fieldA: '' };
+
+            const { result } = setup();
+            expect(result.current.getPropsForAlert()).toEqual({
+                ...defaults,
+                formErrors: {
+                    fieldA: 'required',
+                },
+            });
+            expect(mock).toBeCalledWith(getPropsForAlertInconsistencyWarning(['fieldB', 'fieldC']));
+            spy.mockRestore();
+            mock.mockRestore();
         });
     });
 
