@@ -249,8 +249,9 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         console.log('cleanValues=', cleanValues);
         // set default values for a new unapproved record and handle submission
         try {
-            await dispatch(createNewRecord(cleanValues));
+            const createdRecord = await dispatch(createNewRecord(cleanValues));
             // Form submission successful
+            console.log('createdRecord=', createdRecord);
         } catch (error) {
             console.log('Submitting error=', error);
             let err = error.message;
