@@ -92,7 +92,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
     React.useEffect(() => {
         if (previous !== undefined && previous !== isSubmitSuccessful) {
-            confirmationBoxRef.current.showConfirmation();
+            confirmationBoxRef?.current?.showConfirmation();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isSubmitSuccessful]);
@@ -205,12 +205,14 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         <StandardPage title={txt.pageTitle}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
-                    <ConfirmDialogBox
-                        onRef={setConfirmationRef}
-                        onAction={_navigateToMyDatasets}
-                        onCancelAction={_restartWorkflow}
-                        locale={saveConfirmationLocale}
-                    />
+                    {!!!apiError && (
+                        <ConfirmDialogBox
+                            onRef={setConfirmationRef}
+                            onAction={_navigateToMyDatasets}
+                            onCancelAction={_restartWorkflow}
+                            locale={saveConfirmationLocale}
+                        />
+                    )}
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3} className={'DataCollection'}>
                         <Grid xs={12}>
