@@ -179,21 +179,58 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const dispatch = useDispatch();
     const onSubmit = async data => {
         setApiError('');
+
+        // '' to []
+        const specialKeys = [
+            'fez_record_search_key_grant_agency',
+            'fez_record_search_key_grant_id',
+            'fez_record_search_key_keywords',
+            'fez_record_search_key_software_required',
+            'fez_record_search_key_type_of_data',
+        ];
+        let convertedData = Object.keys(data).reduce((acc, key) => {
+            acc[key] = specialKeys.includes(key) && data[key] === '' ? [] : data[key];
+            return acc;
+        }, {});
+        // unset empty value
+        const fieldsToUnset = [
+            // "fez_record_search_key_isdatasetof",
+            'fez_record_search_key_doi.rek_doi',
+            'fez_record_search_key_end_date.rek_end_date',
+            'fez_record_search_key_notes.rek_notes',
+            'fez_record_search_key_publisher.rek_publisher',
+        ];
+        convertedData.forEach(item => {
+            fieldsToUnset.forEach(field => {
+                const parts = field.split('.');
+                let current = item;
+
+                parts.forEach(part => {
+                    if (current[part] === '') {
+                        delete current[part];
+                    }
+                    current = current[part];
+                });
+            });
+        });
+
         // Get the list of redux-form registered fields for the current form
-        const formFields = Object.keys(data);
+        const formFields = Object.keys(convertedData);
 
         // Delete the currentAuthor if there is no author field in the
         //  form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
-        const cleanValues = { ...data };
+        const cleanValues = { ...convertedData };
         if (!formFields.includes('authors') && !formFields.includes('currentAuthor.0.nameAsPublished')) {
             delete cleanValues.currentAuthor;
         }
 
+        console.log('cleanValues=', cleanValues);
         // set default values for a new unapproved record and handle submission
         try {
             await dispatch(createNewRecord(cleanValues));
             // Form submission successful
         } catch (error) {
+            console.log('Submitting error=', error);
             let err = error.message;
             const originalMessage = error?.original?.error?.message;
             err += originalMessage && ' ' + originalMessage;
