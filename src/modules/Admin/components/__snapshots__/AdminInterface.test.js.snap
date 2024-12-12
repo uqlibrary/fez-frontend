@@ -288,7 +288,11 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       <b>
                         Saving - 
                       </b>
-                      Request is being processed.
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Request is being processed.
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -407,7 +411,11 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
                   >
                     <b />
-                    Editing of record is not yet supported.
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Editing of record is not yet supported.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -990,7 +998,11 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       <b>
                         Success - 
                       </b>
-                      Work has been saved successfully
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Work has been saved successfully
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1627,7 +1639,11 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       <b>
                         Success - 
                       </b>
-                      Work has been saved successfully
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Work has been saved successfully
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3016,7 +3032,11 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                         <b>
                           THIS WORK IS LOCKED - 
                         </b>
-                        This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                        <span
+                          data-testid="alert-message"
+                        >
+                          This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -3402,7 +3422,11 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                         <b>
                           THIS WORK IS LOCKED - 
                         </b>
-                        This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                        <span
+                          data-testid="alert-message"
+                        >
+                          This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                        </span>
                       </div>
                     </div>
                   </div>

@@ -27,8 +27,8 @@ export const OrgNameField = props => {
             allowFreeText
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={options => options}
-            // If form key is set in props.meta object then it's a redux-form Field
-            {...(!!((props || {}).meta || {}).form
+            // If props.meta is set then it's a redux-form Field
+            {...(props.meta
                 ? {
                       defaultValue: (!!props.input.value && { value: props.input.value }) || null,
                       error: !!props.meta.error,
