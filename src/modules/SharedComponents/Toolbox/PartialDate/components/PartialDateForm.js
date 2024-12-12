@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
@@ -31,6 +31,8 @@ export const validate = ({ state, allowPartial, disableFuture = false, clearable
     const hasRequired = !!year && (allowPartial || (!!day && month !== null));
     const momentDate = { ...state, month, day };
     const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
+    console.log({ state, allowPartial, disableFuture, clearable });
+    console.log({ dayActual, monthActual, year, month, day, hasRequired, momentDate, validationStatus });
 
     if (validationStatus === STATUS_VALID && !!disableFuture) {
         if (!!allowPartial) {
@@ -92,8 +94,17 @@ export const displayErrors = ({
     allowPartial,
     locale,
     clearable,
-    isRequired = false,
+    required = true,
 }) => {
+    console.log({
+        state,
+        setError,
+        validationStatus,
+        allowPartial,
+        locale,
+        clearable,
+        required,
+    });
     const { day, month, year } = state;
     const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
@@ -104,7 +115,7 @@ export const displayErrors = ({
             date =
                 // initial load of 'required' message for required date fields
                 /* istanbul ignore next */
-                (allowPartial && isRequired && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
+                (allowPartial && required && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
                 // initial load of 'required' message for required date fields
                 /* istanbul ignore next */
                 (isNaN(year) && locale.validationMessage.year) ||
@@ -195,7 +206,8 @@ const PartialDateForm = ({
     clearable,
     value,
 }) => {
-    const initDate = () => {
+    const hasInit = useRef(false);
+    const getDateObject = () => {
         const dateValue =
             (value && moment(value)) ||
             (input && input.value && moment(input.value)) ||
@@ -217,10 +229,10 @@ const PartialDateForm = ({
         }
     };
 
-    const [state, setState] = React.useState(initDate);
-    const [error, setError] = React.useState();
+    const [state, setState] = useState();
+    const [error, setError] = useState();
 
-    const validateDate = newState => {
+    const getFullDateFromState = newState => {
         const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
 
         displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
@@ -228,34 +240,54 @@ const PartialDateForm = ({
         // moment validation doesn't recognise -1 as a valid date.
         const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
         const day = isNaN(newState.day) || !newState.day ? null : newState.day;
-        const momentDate = { ...state, month, day };
-        const fullDate = validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
-
-        setState(newState);
-        return fullDate;
+        const momentDate = { ...newState, month, day };
+        console.log('getFullDateFromState', newState, validationStatus);
+        return validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
     };
 
     const _onDateChanged = key => {
         return (event, index, value) => {
-            let newDateField = '';
-            if (event.target.value !== '') {
-                newDateField = parseInt(
-                    event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
-                    10,
-                );
+            let newState = {};
+            if (event.target.value === '') {
+                // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
+                newState = { [key]: '' };
+            } else {
+                newState = {
+                    [key]: parseInt(
+                        event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                        10,
+                    ),
+                };
             }
-            const newState = { ...state, [key]: newDateField };
-            const fullDate = validateDate(newState);
-
+            const newDateObject = { ...state, ...newState };
+            const fullDate = getFullDateFromState(newDateObject);
+            setState(newDateObject);
+            console.log('onDateChange', newDateObject, fullDate);
             onChange?.(fullDate) || input?.onChange?.(fullDate);
         };
     };
 
-    React.useEffect(() => {
-        !!onChange && validateDate(state);
+    useEffect(() => {
+        const newDateObject = getDateObject();
+        console.log('useEffect firing', { state, newDateObject, hasInit: hasInit.current, value });
+        if (
+            !!!state ||
+            state.day !== newDateObject.day ||
+            state.month !== newDateObject.month ||
+            state.year !== newDateObject.year
+        ) {
+            console.log('prop change different date', hasInit.current);
+            //  if (hasInit.current !== true) {
+            console.log('prop update - updating state', { ...state, ...newDateObject });
+            //      hasInit.current = true;
+            const newState = { ...state, ...newDateObject };
+            (onChange || input?.onChange) && getFullDateFromState(newState);
+            setState(newState);
+            //  }
+        }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [onChange]);
+    }, [value]);
 
     const renderMonths = months.map((month, index) => (
         <MenuItem key={index} value={index}>
@@ -263,7 +295,7 @@ const PartialDateForm = ({
         </MenuItem>
     ));
     const isError = error || hasError || '';
-
+    console.log(value);
     return (
         <Grid container spacing={0} padding={0} id={partialDateFormId}>
             <Grid xs={12}>
@@ -293,7 +325,7 @@ const PartialDateForm = ({
                                 'data-analyticsid': `${partialDateFormId}-day-input`,
                                 'data-testid': `${partialDateFormId}-day-input`,
                             }}
-                            value={state.day}
+                            value={state?.day || ''}
                         />
                         {isError && <FormHelperText error>{isError}</FormHelperText>}
                     </Grid>
@@ -305,7 +337,7 @@ const PartialDateForm = ({
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
-                            value={state.month === null ? /* istanbul ignore next */ -1 : state.month}
+                            value={state?.month === null ? /* istanbul ignore next */ -1 : state?.month || ''}
                             placeholder={locale.monthLabel}
                             onChange={_onDateChanged('month')}
                             inputProps={{
@@ -352,7 +384,7 @@ const PartialDateForm = ({
                                 'data-analyticsid': `${partialDateFormId}-year-input`,
                                 'data-testid': `${partialDateFormId}-year-input`,
                             }}
-                            value={state.year}
+                            value={state?.year || ''}
                         />
                     </Grid>
                 </Grid>
@@ -382,4 +414,4 @@ PartialDateForm.propTypes = {
     clearable: PropTypes.bool,
 };
 
-export default React.memo(PartialDateForm);
+export default memo(PartialDateForm);
