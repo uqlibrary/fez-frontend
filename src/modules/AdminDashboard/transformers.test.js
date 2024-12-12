@@ -215,22 +215,50 @@ describe('transformers', () => {
             expect(
                 transformExportReportRequest({
                     report: { sel_id: 1 },
-                    filters: { doesnt_exist: 'should be deleted', date_from: 'some date' },
+                    filters: {
+                        doesnt_exist: 'should be deleted',
+                        date_from: '2024-01-01 00:00:00',
+                        date_to: '2024-01-01 23:59:59',
+                    },
                 }),
             ).toEqual({
                 report_type: 1,
-                date_from: 'some date',
+                date_from: '2023-12-31 14:00:00', // UTC
+                date_to: '2024-01-01 13:59:59', // UTC
             });
         });
         it('returns object with valid filters removed when they have no value assigned', () => {
             expect(
                 transformExportReportRequest({
                     report: { sel_id: 1 },
-                    filters: { date_from: null, date_to: 'some date' },
+                    filters: { date_from: null, date_to: '2024-01-01 23:59:59' },
                 }),
             ).toEqual({
                 report_type: 1,
-                date_to: 'some date',
+                date_to: '2024-01-01 13:59:59', // UTC
+            });
+        });
+        it('should return object value unmodified if it does not have a formatter function', () => {
+            expect(
+                transformExportReportRequest(
+                    {
+                        report: { sel_id: 1 },
+                        filters: { date_from: '2024-01-01 00:00:00', date_to: '2024-01-01 23:59:59' },
+                    },
+                    [
+                        {
+                            name: 'date_from',
+                        },
+                        {
+                            name: 'date_to',
+                            formatter: date => `${date} formatted`,
+                        },
+                    ],
+                ),
+            ).toEqual({
+                report_type: 1,
+                date_from: '2024-01-01 00:00:00', // will be returned untouched
+                date_to: '2024-01-01 23:59:59 formatted', // value has been through the formatter
             });
         });
     });

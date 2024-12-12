@@ -134,6 +134,23 @@ describe('utils', () => {
         });
     });
 
+    describe('filterObjectPropsByKey', () => {
+        it('should return expected results', () => {
+            const key = 'id';
+            const actual = { allowed1: 1, disallowed1: 2, allowed2: 3, disallowed2: 4 };
+            const propsToKeep = [
+                {
+                    id: 'allowed1',
+                },
+                {
+                    id: 'allowed2',
+                },
+            ];
+            const expected = { allowed1: 1, allowed2: 3 };
+            expect(Utils.filterObjectPropsByKey(key, actual, propsToKeep)).toEqual(expected);
+        });
+    });
+
     describe('exportReportToExcel', () => {
         it('should return error result', () => {
             expect(() => Utils.exportReportToExcel({})).toThrow(
