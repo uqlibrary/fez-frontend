@@ -118,19 +118,11 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const [startDate, endDate] = watch([
         'fez_record_search_key_start_date.rek_start_date',
         'fez_record_search_key_end_date.rek_end_date',
-        'contact.contactNameId',
     ]);
-    // console.log('startDate=', startDate);
-    // console.log('endDate=', endDate);
-    // const contactNameId = watch('contact.contactNameId');
-    // console.log('contactNameId=', contactNameId);
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
             ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
             : '';
-    console.log('dateError=', dateError);
-    // const dateError = '';
-    console.log('errors=', errors);
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
