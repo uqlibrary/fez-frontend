@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect, useRef } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
@@ -31,8 +31,6 @@ export const validate = ({ state, allowPartial, disableFuture = false, clearable
     const hasRequired = !!year && (allowPartial || (!!day && month !== null));
     const momentDate = { ...state, month, day };
     const validationStatus = hasRequired && moment(momentDate).isValid() ? STATUS_VALID : STATUS_INVALID;
-    console.log({ state, allowPartial, disableFuture, clearable });
-    console.log({ dayActual, monthActual, year, month, day, hasRequired, momentDate, validationStatus });
 
     if (validationStatus === STATUS_VALID && !!disableFuture) {
         if (!!allowPartial) {
@@ -94,17 +92,9 @@ export const displayErrors = ({
     allowPartial,
     locale,
     clearable,
-    required = true,
+    required = '',
 }) => {
-    console.log({
-        state,
-        setError,
-        validationStatus,
-        allowPartial,
-        locale,
-        clearable,
-        required,
-    });
+    const isRequiredHere = required === '' ? undefined : required;
     const { day, month, year } = state;
     const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
@@ -115,7 +105,7 @@ export const displayErrors = ({
             date =
                 // initial load of 'required' message for required date fields
                 /* istanbul ignore next */
-                (allowPartial && required && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
+                (allowPartial && isRequiredHere && !year && !isNaN(year) && locale.validationMessage.yearRequired) ||
                 // initial load of 'required' message for required date fields
                 /* istanbul ignore next */
                 (isNaN(year) && locale.validationMessage.year) ||
@@ -206,7 +196,6 @@ const PartialDateForm = ({
     clearable,
     value,
 }) => {
-    const hasInit = useRef(false);
     const getDateObject = () => {
         const dateValue =
             (value && moment(value)) ||
@@ -241,7 +230,6 @@ const PartialDateForm = ({
         const month = newState.month === MONTH_UNSELECTED ? null : newState.month;
         const day = isNaN(newState.day) || !newState.day ? null : newState.day;
         const momentDate = { ...newState, month, day };
-        console.log('getFullDateFromState', newState, validationStatus);
         return validationStatus === STATUS_VALID ? moment(momentDate).format(dateFormat) : '';
     };
 
@@ -262,28 +250,21 @@ const PartialDateForm = ({
             const newDateObject = { ...state, ...newState };
             const fullDate = getFullDateFromState(newDateObject);
             setState(newDateObject);
-            console.log('onDateChange', newDateObject, fullDate);
             onChange?.(fullDate) || input?.onChange?.(fullDate);
         };
     };
 
     useEffect(() => {
         const newDateObject = getDateObject();
-        console.log('useEffect firing', { state, newDateObject, hasInit: hasInit.current, value });
         if (
             !!!state ||
             state.day !== newDateObject.day ||
             state.month !== newDateObject.month ||
             state.year !== newDateObject.year
         ) {
-            console.log('prop change different date', hasInit.current);
-            //  if (hasInit.current !== true) {
-            console.log('prop update - updating state', { ...state, ...newDateObject });
-            //      hasInit.current = true;
             const newState = { ...state, ...newDateObject };
-            (onChange || input?.onChange) && getFullDateFromState(newState);
             setState(newState);
-            //  }
+            (onChange || input?.onChange) && getFullDateFromState(newState);
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -295,7 +276,7 @@ const PartialDateForm = ({
         </MenuItem>
     ));
     const isError = error || hasError || '';
-    console.log(value);
+
     return (
         <Grid container spacing={0} padding={0} id={partialDateFormId}>
             <Grid xs={12}>

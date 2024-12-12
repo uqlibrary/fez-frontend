@@ -1,6 +1,6 @@
 import React from 'react';
 import PartialDateForm from './PartialDateForm';
-import { fireEvent, rtlRender, preview } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -31,9 +31,8 @@ describe('PartialDateForm component', () => {
     it('should display errors correctly', () => {
         const { container, getByText } = setup({
             allowPartial: true,
-            onChange: jest.fn(data => console.log(data)),
+            onChange: jest.fn(),
         });
-        preview.debug();
         expect(getByText('Invalid date')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
@@ -60,7 +59,6 @@ describe('PartialDateForm component', () => {
 
         fireEvent.change(getByTestId('test-day-input'), { target: { value: '1' } });
         fireEvent.change(getByTestId('test-year-input'), { target: { value: '2010' } });
-        preview.debug();
         expect(container).toMatchSnapshot();
     });
 
