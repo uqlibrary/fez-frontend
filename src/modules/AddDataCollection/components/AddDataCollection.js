@@ -246,12 +246,10 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             delete cleanValues.currentAuthor;
         }
 
-        console.log('cleanValues=', cleanValues);
         // set default values for a new unapproved record and handle submission
         try {
-            const createdRecord = await dispatch(createNewRecord(cleanValues));
+            await dispatch(createNewRecord(cleanValues));
             // Form submission successful
-            console.log('createdRecord=', createdRecord);
         } catch (error) {
             console.log('Submitting error=', error);
             let err = error.message;
@@ -775,7 +773,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         </StandardPage>
     );
 };
-// console.log('propTypes=', propTypes);
 AddDataCollection.propTypes = {
     // ...propTypes, // all redux-form props
     disableSubmit: PropTypes.bool,
