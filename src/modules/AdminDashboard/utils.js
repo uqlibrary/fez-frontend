@@ -65,6 +65,15 @@ export const filterObjectProps = (data, propsToKeep) => {
     return obj;
 };
 
+export const filterObjectPropsByKey = (key, data, propsToKeep) => {
+    const obj = { ...data };
+    const keepProps = propsToKeep.reduce((keeping, next) => [...keeping, next[key]], []);
+    Object.keys(obj).forEach(mykey => {
+        if (!keepProps.includes(mykey)) delete obj[mykey];
+    });
+    return obj;
+};
+
 export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) => {
     const worksheet = XLSX.utils.json_to_sheet(data);
     const workbook = XLSX.utils.book_new();
