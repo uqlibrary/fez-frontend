@@ -177,7 +177,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     };
 
     const dispatch = useDispatch();
-    const onSubmit = async (data) => {
+    const onSubmit = async data => {
         setApiError('');
         // Get the list of redux-form registered fields for the current form
         const formFields = Object.keys(data);
