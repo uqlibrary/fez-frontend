@@ -188,7 +188,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             'fez_record_search_key_software_required',
             'fez_record_search_key_type_of_data',
         ];
-        let convertedData = Object.keys(data).reduce((acc, key) => {
+        const convertedData = Object.keys(data).reduce((acc, key) => {
             acc[key] = specialKeys.includes(key) && data[key] === '' ? [] : data[key];
             return acc;
         }, {});
@@ -199,21 +199,43 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             'fez_record_search_key_end_date.rek_end_date',
             'fez_record_search_key_notes.rek_notes',
             'fez_record_search_key_publisher.rek_publisher',
+            'fez_record_search_key_start_date.rek_start_date',
         ];
-        convertedData.forEach(item => {
-            fieldsToUnset.forEach(field => {
-                const parts = field.split('.');
-                let current = item;
+        fieldsToUnset.forEach(field => {
+            const parts = field.split('.');
+            let current = convertedData;
+            let parent = null;
+            let keyToDelete = null;
 
-                parts.forEach(part => {
-                    if (current[part] === '') {
-                        delete current[part];
+            parts.forEach((part, index) => {
+                if (index === parts.length - 1) {
+                    // If the final key's value is an empty string, mark it for deletion
+                    if (current && current[part] === '') {
+                        keyToDelete = part;
+                        parent = current;
                     }
+                } else {
+                    parent = current;
                     current = current[part];
-                });
+                }
             });
+
+            // Delete the key from its parent if needed
+            if (parent && keyToDelete) {
+                delete parent[keyToDelete];
+            }
         });
 
+        // Remove empty parent objects
+        Object.keys(convertedData).forEach(key => {
+            if (
+                typeof convertedData[key] === 'object' &&
+                convertedData[key] !== null &&
+                Object.keys(convertedData[key]).length === 0
+            ) {
+                delete convertedData[key];
+            }
+        });
         // Get the list of redux-form registered fields for the current form
         const formFields = Object.keys(convertedData);
 
