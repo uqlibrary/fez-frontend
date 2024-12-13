@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 // import Input from '@mui/material/Input';
@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import propFilter from '../../helpers/_filterProps';
 import InputLabel from '@mui/material/InputLabel';
 
-const SelectFieldWrapper = props => {
+const SelectFieldWrapper = forwardRef((props, ref) => {
     const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
     filteredProps.value = filteredProps.value ?? '';
     filteredProps.onChange = event => props.input.onChange(event.target.value);
@@ -26,6 +26,7 @@ const SelectFieldWrapper = props => {
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
                 {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
                 <Select
+                    ref={ref}
                     variant="standard"
                     inputProps={{
                         'aria-labelledby': `${props.selectFieldId}-label`,
@@ -49,7 +50,7 @@ const SelectFieldWrapper = props => {
             </FormControl>
         </React.Fragment>
     );
-};
+});
 
 SelectFieldWrapper.propTypes = {
     ...Select.propTypes,

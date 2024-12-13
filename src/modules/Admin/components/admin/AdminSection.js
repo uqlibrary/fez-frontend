@@ -9,11 +9,11 @@ import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 
 export const AdminSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const methods = useFormContext();
+    const { getValues } = useFormContext();
 
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].admin(
-            methods.getValues('adminSection.rek_subtype') === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            getValues('adminSection.rek_subtype') === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         ),
     );
 

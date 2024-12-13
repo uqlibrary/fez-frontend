@@ -1,23 +1,24 @@
 import React from 'react';
-import { PartialDateForm } from './PartialDateForm';
+import PartialDateForm from './PartialDateForm';
 import { fireEvent, rtlRender } from 'test-utils';
 
-function setup(testProps) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
-        ...testProps,
+        allowPartial: false,
         partialDateFormId: 'test',
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
         partialDateFieldId: 'test',
+        ...testProps,
     };
 
-    return rtlRender(<PartialDateForm {...props} required={testProps.required} />);
+    return renderer(<PartialDateForm {...props} required={testProps.required} />);
 }
 
 describe('PartialDateForm component', () => {
     it('should render comp', () => {
-        const { container } = setup({});
+        const { container } = setup();
         expect(container).toMatchSnapshot();
     });
 
@@ -29,18 +30,15 @@ describe('PartialDateForm component', () => {
 
     it('should display errors correctly', () => {
         const { container, getByText } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
         });
-
         expect(getByText('Invalid date')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
     it('should handle partial values', () => {
         const { container, getByTestId, getByRole } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
         });
@@ -55,7 +53,6 @@ describe('PartialDateForm component', () => {
 
     it('should handle partial values day and year only', () => {
         const { container, getByTestId } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
         });
@@ -67,7 +64,6 @@ describe('PartialDateForm component', () => {
 
     it('should handle partial values with year only', () => {
         const { container, getByTestId } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
         });
@@ -78,7 +74,6 @@ describe('PartialDateForm component', () => {
 
     it('should handle keypress', () => {
         const { container, getByTestId } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
         });
@@ -93,7 +88,6 @@ describe('PartialDateForm component', () => {
 
     it('should load existing values', () => {
         const { container } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
             meta: {
@@ -105,7 +99,6 @@ describe('PartialDateForm component', () => {
 
     it('should load existing values from input value', () => {
         const { container } = setup({
-            floatingTitleRequired: true,
             allowPartial: true,
             onChange: jest.fn(),
             input: {
@@ -116,9 +109,8 @@ describe('PartialDateForm component', () => {
     });
 
     describe('with clearable flag', () => {
-        it('should display an error on clearing one partial date field', () => {
+        it('should display an error on clearing one partial date field', async () => {
             const { getByText, queryByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
@@ -135,7 +127,6 @@ describe('PartialDateForm component', () => {
 
         it('should not display an error on clearing whole partial date field', () => {
             const { queryByText, getByRole, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
@@ -153,7 +144,6 @@ describe('PartialDateForm component', () => {
 
         it('should not display an error on entering valid date', () => {
             const { queryByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
@@ -170,7 +160,6 @@ describe('PartialDateForm component', () => {
 
         it('should display an error on entering future date', () => {
             const { getByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
@@ -186,7 +175,6 @@ describe('PartialDateForm component', () => {
 
         it('should display an future date error on entering future date', () => {
             const { getByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 disableFuture: true,
                 onChange: jest.fn(),
@@ -203,7 +191,6 @@ describe('PartialDateForm component', () => {
 
         it('should display an future date error on entering future date when allow partial', () => {
             const { getByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: true,
                 disableFuture: true,
                 onChange: jest.fn(),
@@ -220,7 +207,6 @@ describe('PartialDateForm component', () => {
 
         it('should display an error on entering invalid date', () => {
             const { getByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {
@@ -236,7 +222,6 @@ describe('PartialDateForm component', () => {
 
         it('should display an error on entering invalid day', () => {
             const { getByText, getByTestId } = setup({
-                floatingTitleRequired: true,
                 allowPartial: false,
                 onChange: jest.fn(),
                 meta: {

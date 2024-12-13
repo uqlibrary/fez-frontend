@@ -8,6 +8,7 @@ import * as actions from 'actions';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useFormContext } from 'react-hook-form';
+import * as Sentry from '@sentry/react';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -123,6 +124,9 @@ export const AdminInterface = ({
     const txt = React.useRef(pageLocale.pages.edit);
 
     const errorMessage = error && typeof error === 'object' ? ' ' : null;
+    if (errorMessage) {
+        Sentry.captureMessage(`Error happened: ${errorMessage}`);
+    }
     alertProps.current = validation.getErrorAlertProps({
         isSubmitting,
         isSubmitSuccessful,
@@ -235,7 +239,6 @@ export const AdminInterface = ({
                     smallTitle
                 >
                     <TabComponent
-                        component={tabs[tab].component}
                         disabled={isSubmitting || (locked && record.rek_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
@@ -249,7 +252,6 @@ export const AdminInterface = ({
                         smallTitle
                     >
                         <TabComponent
-                            component={tabs[tab].subComponent.component}
                             disabled={
                                 isSubmitting ||
                                 (locked &&

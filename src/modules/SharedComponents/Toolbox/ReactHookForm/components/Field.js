@@ -49,12 +49,13 @@ export const validateHandler = (value, formValues, validators) => {
  * @return {Element}
  * @constructor
  */
-const Field = ({ name, control, validate, component: Component, ...childProps }) => {
+const Field = ({ name, control, validate, rules, component: Component, ...childProps }) => {
     return (
         <Controller
             name={name}
             control={control}
             rules={{
+                ...rules,
                 validate: /* istanbul ignore next */ (value, formValues) =>
                     validateHandler(value, formValues, validate),
             }}
@@ -70,6 +71,7 @@ const Field = ({ name, control, validate, component: Component, ...childProps })
 Field.propTypes = {
     name: PropTypes.string.isRequired,
     control: PropTypes.object.isRequired,
+    rules: PropTypes.object,
     validate: PropTypes.array,
     component: PropTypes.elementType.isRequired,
 };

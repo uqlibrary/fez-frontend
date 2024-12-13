@@ -1,4 +1,5 @@
 import FileSaver from 'file-saver';
+
 import { exportSearchToExcel as exportSearchToExcelResponse } from 'mock/data/testing/searchRecords';
 import * as transformers from './exportPublicationsDataTransformers';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -10,19 +10,59 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import locale from 'locale/components';
 
-import { optionDoubleRowRender } from '../config';
+import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
+import { optionDoubleRowRender, defaultLegacyReportOption, exportReportFilters } from '../config';
 
-const LegacyReportInterface = ({ id, loading, disabled, items, exportReport, onReportChange, onExportClick }) => {
+export const validator = ({ locale, actionState }) => {
+    const exportReport = actionState.report;
+    let isValid = false;
+    let validationErrors = {};
+
+    if (!!exportReport) {
+        if (!!exportReport.sel_bindings) {
+            validationErrors = Object.keys(exportReportFilters).reduce(
+                (current, key) => ({
+                    ...current,
+                    ...(exportReportFilters[key]?.validator({ state: actionState, locale }) ||
+                        /* istanbul ignore next */ {}),
+                }),
+                {},
+            );
+            isValid = Object.keys(validationErrors).length === 0;
+        } else isValid = true;
+    }
+    return { isValid, validationErrors };
+};
+
+const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) => {
     const txt = locale.components.adminDashboard.tabs.reports;
 
+    const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
+    const exportReport = actionState.report || defaultLegacyReportOption;
+
+    const { isValid, validationErrors } = React.useMemo(() => validator({ locale: txt.error, actionState }), [
+        txt.error,
+        actionState,
+    ]);
+
+    const isDisabled = !isValid || disabled;
+
+    const handleFilterChange = React.useCallback(value => {
+        actionDispatch(value);
+    }, []);
+
+    const handleExportReportChange = React.useCallback((_, value) => {
+        actionDispatch({ type: 'exportReport', value });
+    }, []);
+
     const handleExportReport = React.useCallback(() => {
-        onExportClick(exportReport.sel_id);
-    }, [onExportClick, exportReport?.sel_id]);
+        onExportClick(actionState);
+    }, [actionState, onExportClick]);
 
     return (
         <Box id={id} data-testid={id}>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={4}>
                     <Autocomplete
                         id={id}
                         disablePortal
@@ -56,17 +96,28 @@ const LegacyReportInterface = ({ id, loading, disabled, items, exportReport, onR
                             'data-testid': `${id}-listbox`,
                         }}
                         value={exportReport}
-                        onChange={onReportChange}
+                        onChange={handleExportReportChange}
                         disabled={loading || disabled}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+
+                {Object.keys(exportReportFilters).map(key =>
+                    exportReportFilters[key].component({
+                        state: actionState,
+                        id,
+                        errorMessage: validationErrors,
+                        onChange: handleFilterChange,
+                        locale: txt,
+                    }),
+                )}
+
+                <Grid item xs={12}>
                     <Button
                         id="report-export-button"
                         data-testid="report-export-button"
                         variant="contained"
                         onClick={handleExportReport}
-                        disabled={!!!exportReport || exportReport?.sel_id === 0 || disabled || loading}
+                        disabled={isDisabled || loading}
                     >
                         {loading && (
                             <CircularProgress
@@ -90,8 +141,6 @@ LegacyReportInterface.propTypes = {
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
     items: PropTypes.array,
-    exportReport: PropTypes.object,
-    onReportChange: PropTypes.func,
     onExportClick: PropTypes.func,
 };
 
