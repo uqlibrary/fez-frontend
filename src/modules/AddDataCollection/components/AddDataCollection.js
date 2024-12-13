@@ -41,8 +41,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
-import { createNewRecord } from 'actions';
+import { createNewRecord, doesDOIExist } from 'actions';
 import { SubmissionError } from 'redux-form/immutable';
+import { isValidDOIValue } from '../../../config/validation';
+import validationErrors from '../../../locale/validationErrors';
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -76,6 +78,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const {
         handleSubmit,
         watch,
+        setError,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -115,14 +118,43 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    const [startDate, endDate] = watch([
+    const [startDate, endDate, watchedDoiField] = watch([
         'fez_record_search_key_start_date.rek_start_date',
         'fez_record_search_key_end_date.rek_end_date',
+        'fez_record_search_key_doi.rek_doi',
     ]);
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
             ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
             : '';
+
+    const validateDOI = async doi => {
+        if (isValidDOIValue(doi)) {
+            const response = await doesDOIExist(doi);
+            if (response && response.total) {
+                return validationErrors.validationErrors.doiExists; // Return the error message
+            }
+        } else {
+            return locale.validationErrors.doi;
+        }
+        return null; // Return null if no errors
+    };
+
+    // Trigger validation when the watched field changes
+    React.useEffect(() => {
+        if (watchedDoiField) {
+            (async () => {
+                const error = await validateDOI(watchedDoiField);
+                console.log('error=', error);
+                if (error) {
+                    setError('fez_record_search_key_doi.rek_doi', {
+                        type: 'async',
+                        message: error,
+                    });
+                }
+            })();
+        }
+    }, [watchedDoiField, setError]); // Include watchedDoiField in the dependency array
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
