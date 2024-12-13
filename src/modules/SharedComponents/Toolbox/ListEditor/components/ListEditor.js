@@ -8,6 +8,7 @@ import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
 import FormHelperText from '@mui/material/FormHelperText';
+// import { isArrayDeeplyEqual } from '../../../../../helpers/general';
 
 export const ListEditor = ({
     formComponent: FormComponent,
@@ -62,11 +63,13 @@ export const ListEditor = ({
     const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = React.useState(null);
 
     React.useEffect(() => {
-        const transformOutput = items => {
-            return items.map((item, index) => transformFunction(searchKey, item, index));
-        };
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        onChange?.(transformOutput(itemList));
+        if (onChange) {
+            const transformOutput = items => {
+                return items.map((item, index) => transformFunction(searchKey, item, index));
+            };
+            // notify parent component when local state has been updated, eg itemList added/removed/reordered
+            onChange(transformOutput(itemList));
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [itemList]);
 

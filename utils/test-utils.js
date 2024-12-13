@@ -23,8 +23,9 @@ const mime = require('mime-types');
 
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { waitFor } from '@testing-library/dom';
-import preview from 'jest-preview';
+import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
+import preview, { jestPreviewConfigure } from 'jest-preview';
+import * as useValidatedForm from 'hooks/useValidatedForm';
 
 export const AllTheProviders = props => {
     return (
@@ -163,10 +164,9 @@ export const createMatchMedia = width => {
     });
 };
 
-export const getFilenameExtension = filename => filename.split('.').pop();
-export const getFilenameBasename = filename =>
-    filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-export const addFilesToFileUploader = files => {
+const getFilenameExtension = filename => filename.split('.').pop();
+const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
+const addFilesToFileUploader = files => {
     const { screen, fireEvent } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
@@ -185,7 +185,7 @@ export const addFilesToFileUploader = files => {
         },
     });
 };
-export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
     const { fireEvent } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
@@ -196,8 +196,49 @@ export const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) =
     }
 };
 
-export const assertEnabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeEnabled());
-export const assertDisabled = (resolver, ...items) => items.forEach(item => expect(resolver(item)).toBeDisabled());
+const assertEnabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+const assertDisabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+const waitToBeEnabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
+    );
+const waitToBeDisabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
+    );
+const waitForText = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    !screen.queryByText(text) &&
+    (await waitFor(() => screen.getByText(text), options));
+const waitForTextToBeRemoved = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    screen.queryByText(text) &&
+    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+const originalUseValidatedForm = useValidatedForm.useValidatedForm;
+const mockUseValidatedForm = implementation => {
+    return jest.spyOn(useValidatedForm, 'useValidatedForm').mockImplementation(props => {
+        return implementation(props, originalUseValidatedForm);
+    });
+};
+
+const turnOnJestPreviewOnTestFailure = (options = {}) =>
+    jestPreviewConfigure({
+        autoPreview: true,
+        ...options,
+    });
+
+const mockWebApiFile = () => {
+    global.File = class File extends Blob {
+        name;
+        constructor(parts, name) {
+            super(parts);
+            this.name = name;
+        }
+    };
+};
 
 // eslint-disable-next-line react/prop-types
 export const FormProviderWrapper = ({ children, methods, ...props }) => {
@@ -226,9 +267,16 @@ module.exports = {
     userEvent,
     assertEnabled,
     assertDisabled,
+    waitToBeEnabled,
+    waitToBeDisabled,
+    waitForText,
+    waitForTextToBeRemoved,
+    mockUseValidatedForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     FormProviderWrapper,
+    turnOnJestPreviewOnTestFailure,
+    mockWebApiFile,
 };
