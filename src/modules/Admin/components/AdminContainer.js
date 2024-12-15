@@ -203,19 +203,19 @@ export const AdminContainer = ({ createMode = false }) => {
                                                 ),
                                             numberOfErrors: tabErrors.current.bibliographicSection || null,
                                         },
-                                        authors: {
-                                            component: AuthorsSection,
-                                            activated: isActivated(),
-                                            numberOfErrors: tabErrors.current.authorsSection || null,
-                                            subComponent: {
-                                                title: 'NTRO',
-                                                component: NTRO_SUBTYPES.includes(
-                                                    attributes.getValues('adminSection.rek_subtype'),
-                                                )
-                                                    ? NtroSection
-                                                    : null,
-                                            },
-                                        },
+                                        // authors: {
+                                        //     component: AuthorsSection,
+                                        //     activated: isActivated(),
+                                        //     numberOfErrors: tabErrors.current.authorsSection || null,
+                                        //     subComponent: {
+                                        //         title: 'NTRO',
+                                        //         component: NTRO_SUBTYPES.includes(
+                                        //             attributes.getValues('adminSection.rek_subtype'),
+                                        //         )
+                                        //             ? NtroSection
+                                        //             : null,
+                                        //     },
+                                        // },
                                         identifiers: {
                                             component: IdentifiersSection,
                                             activated: isActivated(),

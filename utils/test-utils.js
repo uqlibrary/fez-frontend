@@ -6,7 +6,6 @@ import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
-import { useValidatedForm } from 'hooks';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -242,7 +241,7 @@ const mockWebApiFile = () => {
 
 // eslint-disable-next-line react/prop-types
 export const FormProviderWrapper = ({ children, methods, ...props }) => {
-    const attributes = useValidatedForm(props);
+    const attributes = useValidatedForm.useValidatedForm(props);
     return (
         <FormProvider {...attributes} {...methods}>
             {children}
