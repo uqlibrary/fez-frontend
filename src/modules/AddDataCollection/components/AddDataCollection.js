@@ -42,7 +42,6 @@ import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
 import { createNewRecord, doesDOIExist } from 'actions';
-import { SubmissionError } from 'redux-form/immutable';
 import { isValidDOIValue } from '../../../config/validation';
 import validationErrors from '../../../locale/validationErrors';
 
