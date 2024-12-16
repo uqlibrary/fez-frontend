@@ -101,7 +101,7 @@ context('Admin Dashboard - Today tab', () => {
         cy.data('unprocessed-link')
             .invoke('removeAttr', 'target')
             .click();
-        cy.url().should('include', 'https://espace.library.uq.edu.au/records/search');
+        cy.url().should('include', 'https://fez-staging.library.uq.edu.au/records/search');
     });
 
     describe('Quick links', () => {
