@@ -12,7 +12,7 @@ import { sanitiseData } from './records';
  *      upload files,
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function updateIncompleteRecord(data) {
     if (!data.publication || !data.author) {

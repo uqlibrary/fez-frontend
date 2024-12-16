@@ -45,7 +45,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -58,7 +58,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 required
                                 fullWidth
                                 {...txt.information.fieldLabels.journalTitle}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -161,6 +161,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.optional.fieldLabels.volume}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={6} sm={3}>
@@ -172,6 +173,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.optional.fieldLabels.issue}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
 
@@ -184,6 +186,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.optional.fieldLabels.startPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={6} sm={3}>
@@ -195,6 +198,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.optional.fieldLabels.endPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -206,6 +210,7 @@ export const JournalArticleForm = ({ submitting, subtype, isNtro, isAuthorSelect
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.optional.fieldLabels.articleNumber}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>

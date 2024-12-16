@@ -36,7 +36,7 @@ export const ImageDocumentForm = ({ submitting }) => {
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                     </Grid>

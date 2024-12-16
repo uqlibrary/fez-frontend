@@ -59,15 +59,14 @@ export const MasterJournalListIngest = lazy(() =>
 );
 export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('modules/MyEditorialAppointments')));
 export const MyIncompleteRecord = lazy(() =>
-    lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
+    lazyRetry(() => import('modules/MyIncompleteRecord/components/MyIncompleteRecord')),
 );
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
     lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
 );
-export const SbsSubmission = lazy(() => lazyRetry(() => import('modules/SbsSubmission/containers/SbsSubmission')));
 export const ThesisSubmission = lazy(() =>
-    lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
+    lazyRetry(() => import('modules/ThesisSubmission/components/ThesisSubmission')),
 );
 export const ThirdPartyLookupTool = lazy(() =>
     lazyRetry(() => import('modules/ThirdPartyLookupTool/components/ThirdPartyLookupTool')),

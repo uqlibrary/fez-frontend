@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrantListEditor } from './GrantListEditor';
+import GrantListEditor from './GrantListEditor';
 import Immutable from 'immutable';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
@@ -18,6 +18,10 @@ function setup(testProps = {}) {
 }
 
 describe('GrantListEditor', () => {
+    beforeEach(() => {
+        jest.resetAllMocks();
+    });
+
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -365,5 +369,37 @@ describe('GrantListEditor', () => {
 
         grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
         expect(within(grantList[1]).getByText('Agency 2')).toBeInTheDocument();
+    });
+
+    it('should call setValue on state change', () => {
+        const mockOnChange = jest.fn();
+        const mockSetValue = jest.fn();
+        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setValue: mockSetValue });
+
+        const inputName = 'my-input';
+        const { getByRole } = setup({
+            onChange: mockOnChange,
+            input: { name: inputName },
+        });
+
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
+        expect(mockOnChange).not.toHaveBeenCalledWith(true);
+        expect(mockOnChange).not.toHaveBeenCalledWith([]);
+        expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
+        expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
+    });
+
+    describe('Legacy redux-form', () => {
+        it('should call onChange on state change', () => {
+            const mockOnChange = jest.fn();
+
+            const { getByRole } = setup({
+                onChange: mockOnChange,
+            });
+
+            fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
+            expect(mockOnChange).toHaveBeenCalledWith(true);
+            expect(mockOnChange).toHaveBeenCalledWith([]);
+        });
     });
 });
