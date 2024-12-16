@@ -129,9 +129,18 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
     const validateDOI = async doi => {
         if (isValidDOIValue(doi)) {
-            const response = await doesDOIExist(doi);
-            if (response && response.total) {
-                return validationErrors.validationErrors.doiExists; // Return the error message
+            try {
+                const response = await doesDOIExist(doi);
+
+                if (response?.total) {
+                    return validationErrors.validationErrors.doiExists; // Return the error message
+                }
+            } catch (error) {
+                console.log('error=', error);
+                // Check if the error is an HTTP 422
+                if (error?.status === 422 && error?.message === 'validation.doi') {
+                    return locale.validationErrors.doi;
+                }
             }
         } else {
             return locale.validationErrors.doi;
