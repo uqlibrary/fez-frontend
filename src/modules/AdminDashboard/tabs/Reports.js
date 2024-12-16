@@ -14,7 +14,11 @@ import { getFileName } from 'actions/exportPublicationsDataTransformers';
 import { getDisplayReportColumns, getReportTypeFromValue, getDefaultSorting } from '../config';
 import { useAlertStatus } from '../hooks';
 import { exportReportToExcel } from '../utils';
-import { transformExportReportRequest, transformDisplayReportRequest } from '../transformers';
+import {
+    transformExportReportRequest,
+    transformDisplayReportRequest,
+    transformDisplayReportExportData,
+} from '../transformers';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -111,11 +115,13 @@ const Reports = () => {
     const handleExportDisplayReportClick = actionState => {
         const fname = getFileName('xlsx');
 
-        const colHeaders = columns.sort((a, b) => a.exportOrder > b.exportOrder).map(col => col.headerName);
+        const sortedHeaders = columns.sort((a, b) => a.exportOrder - b.exportOrder);
+        const colHeaders = sortedHeaders.map(col => col.headerName);
 
         const sheetLabel = actionState.report.label;
 
-        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data: adminDashboardDisplayReportData });
+        const data = transformDisplayReportExportData(sortedHeaders, adminDashboardDisplayReportData);
+        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data });
     };
 
     const handleDisplayReportClick = actionState => {

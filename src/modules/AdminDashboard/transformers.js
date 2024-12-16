@@ -1,7 +1,7 @@
-import moment from 'moment';
+import moment from 'moment-timezone';
 
-import { DEFAULT_SERVER_DATE_FORMAT_NO_TIME, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
-import { filterObjectProps, getPlatformUrl } from './utils';
+import { exportReportAllowedFilters, DEFAULT_SERVER_DATE_FORMAT, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
+import { filterObjectProps, filterObjectPropsByKey, getPlatformUrl, trimTrailingSlash } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
@@ -27,10 +27,8 @@ export const transformSystemAlertRequest = ({ user, action, row }) => {
 
 export const transformUrlToPlatform = url => {
     const platform = getPlatformUrl();
-    if (url.includes(platform)) return url;
-
-    if (IS_PRODUCTION) return url.replace(STAGING_URL, PRODUCTION_URL);
-    else return url.replace(PRODUCTION_URL, STAGING_URL);
+    const altPlatform = IS_PRODUCTION ? trimTrailingSlash(STAGING_URL) : trimTrailingSlash(PRODUCTION_URL);
+    return url.startsWith(altPlatform) ? url.replace(altPlatform, platform) : url;
 };
 
 export const transformQuickLinkUpdateRequest = data => {
@@ -46,16 +44,17 @@ export const transformQuickLinkReorderRequest = data => {
     return request;
 };
 
-export const transformExportReportRequest = data => {
-    const allowedFilters = ['date_from', 'date_to'];
-    const filters = filterObjectProps(data.filters, allowedFilters);
+export const transformExportReportRequest = (data, allowedFilters = exportReportAllowedFilters) => {
+    const filters = filterObjectPropsByKey('name', data.filters, allowedFilters);
 
     const request = {
         report_type: data.report.sel_id,
-        ...Object.keys(filters).reduce(
-            (current, filter) => ({ ...current, ...(!!filters[filter] ? { [filter]: filters[filter] } : {}) }),
-            {},
-        ),
+        ...Object.keys(filters).reduce((current, filter) => {
+            const value =
+                allowedFilters.find(allowedFilter => allowedFilter.name === filter).formatter?.(filters[filter]) ??
+                filters[filter];
+            return { ...current, ...(!!filters[filter] ? { [filter]: value } : {}) };
+        }, {}),
     };
     return request;
 };
@@ -68,16 +67,20 @@ export const transformDisplayReportRequest = data => {
         report_type: reportId,
         ...(!!data.filters?.date_from && data.filters?.record_id === ''
             ? {
-                  date_from: moment(data.filters.date_from)
+                  date_from: moment
+                      .tz(data.filters.date_from, 'Australia/Brisbane')
                       .startOf('day')
-                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+                      .tz('UTC')
+                      .format(DEFAULT_SERVER_DATE_FORMAT),
               }
             : {}),
         ...(!!data.filters?.date_to && data.filters?.record_id === ''
             ? {
-                  date_to: moment(data.filters.date_to)
+                  date_to: moment
+                      .tz(data.filters.date_to, 'Australia/Brisbane')
                       .endOf('day')
-                      .format(DEFAULT_SERVER_DATE_FORMAT_NO_TIME),
+                      .tz('UTC')
+                      .format(DEFAULT_SERVER_DATE_FORMAT),
               }
             : {}),
         ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
@@ -86,4 +89,15 @@ export const transformDisplayReportRequest = data => {
     };
 
     return request;
+};
+
+export const transformDisplayReportExportData = (columns, data) => {
+    const newData = data.map(row => {
+        const newRow = {};
+        columns.forEach(header => {
+            newRow[header.field] = row[header.field];
+        });
+        return newRow;
+    });
+    return newData;
 };
