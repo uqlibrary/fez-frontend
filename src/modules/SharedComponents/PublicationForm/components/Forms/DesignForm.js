@@ -48,7 +48,7 @@ export const DesignForm = ({ formValues, submitting, isNtro, isAuthorSelected })
                                 rows={3}
                                 {...txt.information.fieldLabels.articleTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={12}>
@@ -59,6 +59,7 @@ export const DesignForm = ({ formValues, submitting, isNtro, isAuthorSelected })
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.projectName}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -69,6 +70,7 @@ export const DesignForm = ({ formValues, submitting, isNtro, isAuthorSelected })
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.location}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -79,7 +81,7 @@ export const DesignForm = ({ formValues, submitting, isNtro, isAuthorSelected })
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.publisher}
                             />
                         </Grid>
@@ -91,7 +93,7 @@ export const DesignForm = ({ formValues, submitting, isNtro, isAuthorSelected })
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.placeOfPublication}
                             />
                         </Grid>
