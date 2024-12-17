@@ -34,7 +34,7 @@ context('Dashboard', () => {
     });
 });
 
-context.only('Dashboard with no OrcID', () => {
+context('Dashboard with no OrcID', () => {
     it('should show the Link ORCID ID form in place of dashboard', () => {
         cy.visit('/dashboard?user=s4444444');
         cy.get('[data-testid=orcid-required]').should('exist');
