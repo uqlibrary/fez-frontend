@@ -14,6 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
+import { transformUrlToPlatform } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import PieChartContainer from '../components/PieChartContainer';
@@ -97,7 +98,7 @@ const Today = () => {
                                         <ExternalLink
                                             id={'unprocessed'}
                                             data-testid={'unprocessed'}
-                                            href={LINK_UNPROCESSED_WORKS}
+                                            href={transformUrlToPlatform(LINK_UNPROCESSED_WORKS)}
                                         >
                                             <Typography
                                                 fontSize={'0.875rem'}

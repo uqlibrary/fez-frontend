@@ -1,6 +1,6 @@
 import React from 'react';
 import FavouriteSearch from './FavouriteSearch';
-import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor } from 'test-utils';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 import * as repository from 'repositories';
 
@@ -74,33 +74,29 @@ describe('FavouriteSearch', () => {
     });
 
     it('should not update row if alias has found', async () => {
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByRole, getByText, getByTestId } = setup({});
 
         await waitFor(() => getByText('Favourite searches'));
 
         fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
 
         fireEvent.change(getByTestId('fvs-alias-input'), { target: { value: 'testing' } });
+        fireEvent.click(getByRole('button', { name: 'Save' }));
 
-        act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-0-save'));
-        });
-        await waitFor(() => getByTestId('favourite-search-list-item-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(2));
 
         expect(getByTestId('fvs-alias-0')).toHaveTextContent('test');
         expect(getByText('Alias "testing" has been taken')).toBeInTheDocument();
     });
 
     it('should handle row delete', async () => {
-        const { getByText, getByTestId } = setup({});
+        const { getByRole, getByText, getByTestId } = setup({});
         const deleteFavouriteSearchListItemFn = jest.spyOn(FavouriteSearchActions, 'deleteFavouriteSearchListItem');
 
         await waitFor(() => getByText('Favourite searches'));
 
         fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
-        act(() => {
-            fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
-        });
+        fireEvent.click(getByRole('button', { name: 'Save' }));
 
         expect(deleteFavouriteSearchListItemFn).toBeCalled();
     });

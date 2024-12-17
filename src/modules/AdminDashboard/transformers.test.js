@@ -5,11 +5,14 @@ import {
     transformUrlToPlatform,
     transformExportReportRequest,
     transformDisplayReportRequest,
+    transformDisplayReportExportData,
 } from './transformers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
 
 import * as General from 'config/general';
+
+import { trimTrailingSlash } from './utils';
 
 describe('transformers', () => {
     describe('transformSystemAlertRequest', () => {
@@ -170,28 +173,30 @@ describe('transformers', () => {
         afterEach(() => {
             General.IS_PRODUCTION = oldVal;
         });
-        it('should transform staging to prod links', () => {
-            General.IS_PRODUCTION = true;
-            expect(transformUrlToPlatform(`${General.STAGING_URL}/test.html`)).toEqual(
-                `${General.PRODUCTION_URL}/test.html`,
-            );
-            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
-                `${General.PRODUCTION_URL}/test.html`,
-            );
+        const testUrlByPlatform = () => {
+            const primaryPlatform = General.IS_PRODUCTION ? General.PRODUCTION_URL : General.STAGING_URL;
+            const altPlatform = General.IS_PRODUCTION ? General.STAGING_URL : General.PRODUCTION_URL;
+
+            expect(transformUrlToPlatform(`${altPlatform}test.html`)).toEqual(`${primaryPlatform}test.html`);
+            expect(transformUrlToPlatform(`${primaryPlatform}test.html`)).toEqual(`${primaryPlatform}test.html`);
+            expect(transformUrlToPlatform(altPlatform)).toEqual(primaryPlatform);
+            expect(transformUrlToPlatform(primaryPlatform)).toEqual(primaryPlatform);
+            const trimmedProdUrl = trimTrailingSlash(primaryPlatform);
+            expect(transformUrlToPlatform(trimmedProdUrl)).toEqual(trimmedProdUrl);
+            const trimmedStageUrl = trimTrailingSlash(altPlatform);
+            expect(transformUrlToPlatform(trimmedStageUrl)).toEqual(trimmedProdUrl);
             // if not staging or prod, nothing is transformed
             expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
                 'http://dev-espace.library.uq.edu.au/test.html',
             );
+        };
+        it('should transform staging to prod links', () => {
+            General.IS_PRODUCTION = true;
+            testUrlByPlatform();
         });
         it('should transform prod links to staging', () => {
             General.IS_PRODUCTION = false;
-            expect(transformUrlToPlatform(`${General.PRODUCTION_URL}/test.html`)).toEqual(
-                `${General.STAGING_URL}/test.html`,
-            );
-            // if not staging or prod, nothing is transformed
-            expect(transformUrlToPlatform('http://dev-espace.library.uq.edu.au/test.html')).toEqual(
-                'http://dev-espace.library.uq.edu.au/test.html',
-            );
+            testUrlByPlatform();
         });
     });
 
@@ -210,22 +215,50 @@ describe('transformers', () => {
             expect(
                 transformExportReportRequest({
                     report: { sel_id: 1 },
-                    filters: { doesnt_exist: 'should be deleted', date_from: 'some date' },
+                    filters: {
+                        doesnt_exist: 'should be deleted',
+                        date_from: '2024-01-01 00:00:00',
+                        date_to: '2024-01-01 23:59:59',
+                    },
                 }),
             ).toEqual({
                 report_type: 1,
-                date_from: 'some date',
+                date_from: '2023-12-31 14:00:00', // UTC
+                date_to: '2024-01-01 13:59:59', // UTC
             });
         });
         it('returns object with valid filters removed when they have no value assigned', () => {
             expect(
                 transformExportReportRequest({
                     report: { sel_id: 1 },
-                    filters: { date_from: null, date_to: 'some date' },
+                    filters: { date_from: null, date_to: '2024-01-01 23:59:59' },
                 }),
             ).toEqual({
                 report_type: 1,
-                date_to: 'some date',
+                date_to: '2024-01-01 13:59:59', // UTC
+            });
+        });
+        it('should return object value unmodified if it does not have a formatter function', () => {
+            expect(
+                transformExportReportRequest(
+                    {
+                        report: { sel_id: 1 },
+                        filters: { date_from: '2024-01-01 00:00:00', date_to: '2024-01-01 23:59:59' },
+                    },
+                    [
+                        {
+                            name: 'date_from',
+                        },
+                        {
+                            name: 'date_to',
+                            formatter: date => `${date} formatted`,
+                        },
+                    ],
+                ),
+            ).toEqual({
+                report_type: 1,
+                date_from: '2024-01-01 00:00:00', // will be returned untouched
+                date_to: '2024-01-01 23:59:59 formatted', // value has been through the formatter
             });
         });
     });
@@ -246,7 +279,7 @@ describe('transformers', () => {
                     report: { value: 'systemalertlog' },
                     filters: { date_from: '2024-01-01 00:00:00', date_to: '2024-01-10 23:59:59', record_id: '' },
                 }),
-            ).toEqual({ report_type: 1, date_from: '2024-01-01', date_to: '2024-01-10' });
+            ).toEqual({ report_type: 1, date_from: '2023-12-31 14:00:00', date_to: '2024-01-10 13:59:59' }); // UTC
         });
 
         it('returns object without dates when record id provided and report is system logs', () => {
@@ -265,6 +298,23 @@ describe('transformers', () => {
                     filters: { date_from: '01/01/2024 00:00:00', date_to: '10/01/2024 23:59:59', record_id: '123' },
                 }),
             ).toEqual({ report_type: 2 });
+        });
+    });
+
+    describe('transformDisplayReportExportData', () => {
+        it('returns sorted data', () => {
+            const cols = [{ field: 'field3' }, { field: 'field2' }, { field: 'field1' }];
+            const originalData = [
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+                { field1: 'value 1', field2: 'value 2', field3: 'value 3' },
+            ];
+            const expectedData = [
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+                { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
+            ];
+            expect(transformDisplayReportExportData(cols, originalData)).toEqual(expectedData);
         });
     });
 });
