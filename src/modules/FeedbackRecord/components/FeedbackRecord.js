@@ -61,7 +61,7 @@ const FeedbackRecord = () => {
     // form
     const {
         control,
-        getAlertErrorProps,
+        getPropsForAlert,
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useValidatedForm();
@@ -117,7 +117,7 @@ const FeedbackRecord = () => {
         submitting: isSubmitting,
         submitSucceeded: isSubmitSuccessful,
         alertLocale: txtForm,
-        ...getAlertErrorProps(formLevelError),
+        ...getPropsForAlert(formLevelError),
     });
 
     const onSubmit = safelyHandleSubmit(async () => {
