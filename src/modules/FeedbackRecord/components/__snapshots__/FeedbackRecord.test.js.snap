@@ -1651,15 +1651,19 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       <b>
                         Validation - 
                       </b>
-                      <span>
-                        Form cannot be submitted until all fields are valid. Please review all input fields.
-                        <ul>
-                          <li
-                            data-testid="validation-warning-0"
-                          >
-                            Please provide required information.
-                          </li>
-                        </ul>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+                            <li
+                              data-testid="validation-warning-0"
+                            >
+                              Please provide required information.
+                            </li>
+                          </ul>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -4825,15 +4829,19 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       <b>
                         Validation - 
                       </b>
-                      <span>
-                        Form cannot be submitted until all fields are valid. Please review all input fields.
-                        <ul>
-                          <li
-                            data-testid="validation-warning-0"
-                          >
-                            Please provide required information.
-                          </li>
-                        </ul>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+                            <li
+                              data-testid="validation-warning-0"
+                            >
+                              Please provide required information.
+                            </li>
+                          </ul>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -6903,15 +6911,19 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       <b>
                         Validation - 
                       </b>
-                      <span>
-                        Form cannot be submitted until all fields are valid. Please review all input fields.
-                        <ul>
-                          <li
-                            data-testid="validation-warning-0"
-                          >
-                            Please provide required information.
-                          </li>
-                        </ul>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+                            <li
+                              data-testid="validation-warning-0"
+                            >
+                              Please provide required information.
+                            </li>
+                          </ul>
+                        </span>
                       </span>
                     </div>
                   </div>
