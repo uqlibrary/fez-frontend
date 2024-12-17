@@ -1,15 +1,7 @@
 import React from 'react';
-
-import Immutable from 'immutable';
-import locale from 'locale/components';
-
-import { render, WithReduxStore, WithRouter, userEvent, within, createMatchMedia } from 'test-utils';
-
+import { createMatchMedia, fireEvent, render, userEvent, waitFor, WithReduxStore, WithRouter } from 'test-utils';
 import AdminPanel from './AdminPanel';
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
-}));
+import locale from 'locale/components';
 
 const setup = (testProps = {}, renderer = render) => {
     const props = {
@@ -17,38 +9,28 @@ const setup = (testProps = {}, renderer = render) => {
         isOpen: true,
         action: 'add',
         id: 'test',
-        initialize: jest.fn(),
-        initialized: false,
+        onAction: jest.fn(),
+        onClose: jest.fn(),
+        locale: locale.components.controlledVocabulary.admin,
+        initialValues: {
+            cvo_title: '',
+            cvo_desc: '',
+            cvo_external_id: '',
+            cvo_hide: false,
+        },
         ...testProps,
     };
 
     return renderer(
-        <WithReduxStore initialState={Immutable.Map({})}>
+        <WithReduxStore>
             <WithRouter>
-                <AdminPanel {...props} locale={locale.components.controlledVocabulary.admin} />
+                <AdminPanel {...props} />
             </WithRouter>
         </WithReduxStore>,
     );
 };
 
 describe('AdminPanel', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    ReduxFormMock.Field.mockImplementation(
-        ({ name, title, required, disabled, label, floatingLabelText, textFieldId, id }) => {
-            return (
-                <input
-                    is="mock"
-                    name={name}
-                    title={title}
-                    required={required}
-                    disabled={disabled}
-                    label={label || floatingLabelText}
-                    data-testid={`${textFieldId ?? id}-input`}
-                />
-            );
-        },
-    );
-
     const assertFields = getByTestId => {
         expect(getByTestId('cvo-title-input')).toBeInTheDocument();
         expect(getByTestId('cvo-desc-input')).toBeInTheDocument();
@@ -80,12 +62,50 @@ describe('AdminPanel', () => {
         });
     });
 
-    it('should render with minimal content div styles (coverage)', () => {
-        const { getByTestId } = setup({ noMinContentWidth: true });
-        expect(getByTestId('update_dialog-test-vc-content')).toHaveStyle({
-            'min-width': 'auto',
-            padding: '16px',
+    it('should fire expected Cancel button functions', async () => {
+        const mockCloseFn = jest.fn();
+        const { getByTestId } = setup({ onClose: mockCloseFn });
+
+        await userEvent.click(getByTestId('update_dialog-cancel-button'));
+        expect(mockCloseFn).toHaveBeenCalled();
+    });
+
+    it('should fire expected Submit button functions', async () => {
+        const mockSubmitFn = jest.fn();
+        const { getByTestId } = setup({
+            onAction: mockSubmitFn,
+            initialValues: {
+                cvo_title: '',
+                cvo_desc: '',
+                cvo_external_id: '',
+            },
         });
+
+        // Simulate typing valid inputs
+        await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+        await userEvent.type(getByTestId('cvo-desc-input'), 'Test description');
+
+        // Ensure the submit button becomes enabled
+        await waitFor(() => expect(getByTestId('update_dialog-action-button')).toBeEnabled());
+
+        // Click the submit button
+        await userEvent.click(getByTestId('update_dialog-action-button'));
+
+        // Assert that the submit function was called
+        expect(mockSubmitFn).toHaveBeenCalled();
+    });
+
+    it('should render buttons in desktop size when above phone breakpoint', () => {
+        window.matchMedia = createMatchMedia(800);
+        const { getByTestId } = setup({});
+        expect(getByTestId('update_dialog-cancel-button')).not.toHaveClass('MuiButton-fullWidth');
+        expect(getByTestId('update_dialog-action-button')).not.toHaveClass('MuiButton-fullWidth');
+    });
+    it('should render buttons in mobile size when in phone breakpoint', () => {
+        window.matchMedia = createMatchMedia(420);
+        const { getByTestId } = setup({});
+        expect(getByTestId('update_dialog-cancel-button')).toHaveClass('MuiButton-fullWidth');
+        expect(getByTestId('update_dialog-action-button')).toHaveClass('MuiButton-fullWidth');
     });
 
     it('should render form without parent styles', () => {
@@ -103,87 +123,56 @@ describe('AdminPanel', () => {
         });
     });
 
-    it('should fire expected Submit button functions', async () => {
-        const mockSubmitBtn = jest.fn();
-        const { getByTestId } = setup({ handleSubmit: mockSubmitBtn, valid: true });
+    it('should disable submit when form is invalid', async () => {
+        const { getByTestId } = setup({
+            initialValues: {
+                cvo_title: '',
+                cvo_desc: '',
+                cvo_external_id: '',
+            },
+        });
 
-        await userEvent.click(getByTestId('update_dialog-action-button'));
-
-        expect(mockSubmitBtn).not.toHaveBeenCalled();
-
-        await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
-
-        await userEvent.click(getByTestId('update_dialog-action-button'));
-
-        expect(mockSubmitBtn).toHaveBeenCalled();
-    });
-
-    it('should fire expected Cancel button functions', async () => {
-        const mockCloseFn = jest.fn();
-        const mockCancelFn = jest.fn();
-        const { getByTestId } = setup({ onClose: mockCloseFn, onCancelAction: mockCancelFn });
-        await userEvent.click(getByTestId('update_dialog-cancel-button'));
-
-        expect(mockCloseFn).toHaveBeenCalled();
-        expect(mockCancelFn).toHaveBeenCalled();
-    });
-
-    it('should not show a cancel button', () => {
-        const { queryByTestId } = setup({ hideCancelButton: true });
-        expect(queryByTestId('update_dialog-cancel-button')).not.toBeInTheDocument();
-    });
-
-    it('should not show an action button', () => {
-        const { queryByTestId } = setup({ hideActionButton: true });
-        expect(queryByTestId('update_dialog-action-button')).not.toBeInTheDocument();
-    });
-
-    it('should render an error panel', async () => {
-        const { getByTestId } = setup({ error: { message: 'A test error occurred' } });
-        expect(getByTestId('update_dialog-alert')).toHaveTextContent(/A test error occurred/);
-    });
-
-    it('should render buttons in desktop size when above phone breakpoint', () => {
-        window.matchMedia = createMatchMedia(800);
-        const { getByTestId } = setup({});
-        expect(getByTestId('update_dialog-cancel-button')).not.toHaveClass('MuiButton-fullWidth');
-        expect(getByTestId('update_dialog-action-button')).not.toHaveClass('MuiButton-fullWidth');
-    });
-    it('should render buttons in mobile size when in phone breakpoint', () => {
-        window.matchMedia = createMatchMedia(420);
-        const { getByTestId } = setup({});
-        expect(getByTestId('update_dialog-cancel-button')).toHaveClass('MuiButton-fullWidth');
-        expect(getByTestId('update_dialog-action-button')).toHaveClass('MuiButton-fullWidth');
-    });
-    it('should disable controls when submitting is true', () => {
-        const { getByTestId } = setup({ submitting: true });
-        expect(getByTestId('cvo-title-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-desc-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-external-id-input')).toHaveAttribute('disabled');
-        expect(getByTestId('cvo-hide-input')).toHaveAttribute('disabled');
-        expect(
-            within(getByTestId('update_dialog-action-button')).getByTestId('update_dialog-progress'),
-        ).toBeInTheDocument();
-        expect(getByTestId('update_dialog-cancel-button')).toHaveAttribute('disabled');
-    });
-    it('should disable submit when pristine is true', () => {
-        const { getByTestId } = setup({ pristine: true });
-        expect(getByTestId('cvo-title-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-desc-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-external-id-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-hide-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('update_dialog-cancel-button')).not.toHaveAttribute('disabled');
-
+        // Assert that the submit button is initially disabled
         expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
-    });
-    it('should disable submit when valid is false', () => {
-        const { getByTestId } = setup({ valid: false });
-        expect(getByTestId('cvo-title-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-desc-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-external-id-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('cvo-hide-input')).not.toHaveAttribute('disabled');
-        expect(getByTestId('update_dialog-cancel-button')).not.toHaveAttribute('disabled');
 
-        expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
+        // Simulate typing into the title input
+        await userEvent.type(getByTestId('cvo-title-input'), 'T');
+
+        // Wait for the submit button to become enabled
+        await waitFor(() => expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled'));
+    });
+
+    it('should disable controls when submitting', async () => {
+        const { getByTestId } = setup({
+            initialValues: {
+                cvo_title: '', // Start with an empty title
+                cvo_desc: '',
+                cvo_external_id: '',
+            },
+        });
+
+        const titleInput = getByTestId('cvo-title-input');
+        const submitButton = getByTestId('update_dialog-action-button');
+        fireEvent.focus(titleInput);
+        await userEvent.type(titleInput, 'Valid Title');
+        fireEvent.blur(titleInput);
+
+        await waitFor(async () => {
+            expect(submitButton).toBeEnabled();
+        });
+        userEvent.click(submitButton);
+        await waitFor(() => expect(submitButton).toBeDisabled());
+        await waitFor(() => expect(submitButton).toBeEnabled());
+    });
+
+    it('should show Required', async () => {
+        const { getByTestId } = setup({});
+        const titleInput = getByTestId('cvo-title-input');
+        fireEvent.focus(titleInput);
+        fireEvent.change(titleInput, { target: { value: 'new value' } });
+        fireEvent.change(titleInput, { target: { value: '' } });
+        await waitFor(() => {
+            expect(getByTestId('title-require-error')).toBeInTheDocument();
+        });
     });
 });

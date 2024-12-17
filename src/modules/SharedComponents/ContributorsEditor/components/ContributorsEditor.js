@@ -17,6 +17,7 @@ import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsL
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
+import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -79,8 +80,15 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        if (prevProps.input?.value !== this.props.input?.value) {
+            this.setState({
+                contributors: this.getContributorsWithAffiliationsFromProps(this.props),
+            });
+        }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        this.props.onChange?.(this.state.contributors);
+        if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
+            this.props.onChange?.(this.state.contributors);
+        }
         const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
             if (Object.keys(updated).length > 0) {

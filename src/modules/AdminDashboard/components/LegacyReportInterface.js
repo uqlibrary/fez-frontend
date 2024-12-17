@@ -23,8 +23,10 @@ export const validator = ({ locale, actionState }) => {
             validationErrors = Object.keys(exportReportFilters).reduce(
                 (current, key) => ({
                     ...current,
-                    ...(exportReportFilters[key]?.validator({ state: actionState, locale }) ||
-                        /* istanbul ignore next */ {}),
+                    ...(exportReportFilters[key]?.validator({
+                        state: actionState,
+                        locale,
+                    }) || /* istanbul ignore next */ {}),
                 }),
                 {},
             );

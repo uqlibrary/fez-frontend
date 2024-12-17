@@ -134,6 +134,23 @@ describe('utils', () => {
         });
     });
 
+    describe('filterObjectPropsByKey', () => {
+        it('should return expected results', () => {
+            const key = 'id';
+            const actual = { allowed1: 1, disallowed1: 2, allowed2: 3, disallowed2: 4 };
+            const propsToKeep = [
+                {
+                    id: 'allowed1',
+                },
+                {
+                    id: 'allowed2',
+                },
+            ];
+            const expected = { allowed1: 1, allowed2: 3 };
+            expect(Utils.filterObjectPropsByKey(key, actual, propsToKeep)).toEqual(expected);
+        });
+    });
+
     describe('exportReportToExcel', () => {
         it('should return error result', () => {
             expect(() => Utils.exportReportToExcel({})).toThrow(
@@ -186,10 +203,28 @@ describe('utils', () => {
         it('returns expected results', () => {
             const oldVal = General.IS_PRODUCTION;
             General.IS_PRODUCTION = true;
-            expect(Utils.getPlatformUrl()).toEqual(General.PRODUCTION_URL);
+            expect(Utils.getPlatformUrl()).toEqual(Utils.trimTrailingSlash(General.PRODUCTION_URL));
             General.IS_PRODUCTION = false;
-            expect(Utils.getPlatformUrl()).toEqual(General.STAGING_URL);
+            expect(Utils.getPlatformUrl()).toEqual(Utils.trimTrailingSlash(General.STAGING_URL));
             General.IS_PRODUCTION = oldVal;
+        });
+    });
+
+    describe('trimTrailingSlash', () => {
+        it('returns expected results', () => {
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au/')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // will remove all trailing chars in case of >1
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au///')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // wont remove a char when not present
+            expect(Utils.trimTrailingSlash('https://library.espace.uq.edu.au')).toEqual(
+                'https://library.espace.uq.edu.au',
+            );
+            // not just for urls
+            expect(Utils.trimTrailingSlash('/ Test / text /')).toEqual('/ Test / text ');
         });
     });
 });

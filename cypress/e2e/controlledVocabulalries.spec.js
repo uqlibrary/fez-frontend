@@ -82,7 +82,7 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=admin-add-vocabulary-button]').should('be.disabled');
                 cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
 
-                cy.get('[data-testid=cvo-title-input]').type('Test title');
+                cy.get('[data-testid=cvo-title-input]').type('Test title', { delay: 10 });
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
                 cy.get('[data-testid=update_dialog-action-button]')
@@ -101,7 +101,7 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=admin-add-vocabulary-button-453669]').should('be.disabled');
                 cy.get('[data-testid=update_dialog-action-button]').should('be.disabled');
 
-                cy.get('[data-testid=cvo-title-input]').type('Test title');
+                cy.get('[data-testid=cvo-title-input]').type('Test title', { delay: 10 });
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
                 cy.get('[data-testid=update_dialog-action-button]')
@@ -164,7 +164,7 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=portal-edit-453669]').should('not.contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').clear();
                 cy.get('[data-testid=portal-edit-453669]').should('contain', 'Required');
-                cy.get('[data-testid=cvo-title-input]').type('New title');
+                cy.get('[data-testid=cvo-title-input]').type('New title', { delay: 10 });
 
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 
@@ -189,7 +189,7 @@ context('Controlled vocabularies', () => {
                 cy.get('[data-testid=portal-edit-453670]').should('not.contain', 'Required');
                 cy.get('[data-testid=cvo-title-input]').clear();
                 cy.get('[data-testid=portal-edit-453670]').should('contain', 'Required');
-                cy.get('[data-testid=cvo-title-input]').type('New title');
+                cy.get('[data-testid=cvo-title-input]').type('New title', { delay: 10 });
 
                 cy.get('[data-testid=update_dialog-action-button]').should('not.be.disabled');
 

@@ -1,6 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import React, { useMemo, useRef } from 'react';
 import { parseHtmlToJSX } from 'helpers/general';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -10,13 +8,17 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { OrgUnitNameField, FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import {
+    OrgUnitNameField,
+    FilteredFieldOfResearchListField,
+    OrgNameField,
+} from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
-import { validation, TRANSITION_COHORT } from 'config';
+import { validation, TRANSITION_COHORT, general } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
@@ -27,16 +29,91 @@ import { useAccountContext } from 'context';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import { useDispatch, useSelector } from 'react-redux';
+import { useValidatedForm } from '../../../hooks';
+import PropTypes from 'prop-types';
+import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
+import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
+import * as actions from 'actions';
+import { PartialDateField } from '../../SharedComponents/Toolbox/PartialDate';
 
-export const cancelSubmit = () => {
-    window.location.assign(formLocale.thesisSubmission.cancelLink);
+export const getFormConstants = (account, author, isHdrThesis) => {
+    const today = new Date();
+    const rekDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+
+    if (isHdrThesis) {
+        const thesisLocale = formLocale.thesisSubmission;
+        return {
+            FORM_NAME: 'ThesisSubmission',
+            thesisLocale,
+            pageTitle: thesisLocale.title,
+            fileAccessId: general.HDR_THESIS_DEFAULT_VALUES.fileAccessId,
+            cancelSubmit: () => window.location.assign(thesisLocale.cancelLink),
+            afterSubmit: () => window.location.assign(thesisLocale.afterSubmitLink),
+            userIsAllowed: TRANSITION_COHORT.includes(account.id),
+            values: {
+                thesisTitle: '',
+                currentAuthor: [
+                    {
+                        nameAsPublished: author?.aut_display_name,
+                        authorId: author?.aut_id,
+                    },
+                ],
+                rek_genre_type: '',
+                fez_record_search_key_org_unit_name: {
+                    rek_org_unit_name: '',
+                },
+                thesisAbstract: '',
+                supervisors: '',
+                fieldOfResearch: '',
+                fez_record_search_key_keywords: '',
+                files: '',
+            },
+            defaultValues: {
+                ...general.HDR_THESIS_DEFAULT_VALUES,
+                rek_date: rekDate,
+                isHdrThesis,
+            },
+        };
+    }
+
+    const thesisLocale = formLocale.sbsSubmission;
+    return {
+        FORM_NAME: 'SbsSubmission',
+        thesisLocale,
+        pageTitle: thesisLocale.title,
+        fileAccessId: general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
+        cancelSubmit: () => window.location.reload(),
+        afterSubmit: () => window.location.reload(),
+        userIsAllowed: true,
+        values: {
+            thesisTitle: '',
+            currentAuthor: [
+                {
+                    nameAsPublished: author?.aut_display_name,
+                    authorId: author?.aut_id,
+                },
+            ],
+            rek_genre_type: 'Professional Doctorate',
+            fez_record_search_key_org_name: general.SBS_THESIS_DEFAULT_VALUES.fez_record_search_key_org_name,
+            fez_record_search_key_org_unit_name: {
+                rek_org_unit_name: '',
+            },
+            rek_date: rekDate,
+            thesisAbstract: '',
+            supervisors: '',
+            fieldOfResearch: '',
+            fez_record_search_key_keywords: '',
+            files: '',
+        },
+        defaultValues: {
+            ...general.SBS_THESIS_DEFAULT_VALUES,
+            isHdrThesis,
+        },
+    };
 };
 
-export const afterSubmit = () => {
-    window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
-};
-
-export const getfileUploadAlertProps = (locale, author, showRetries) => {
+export const getFileUploadAlertProps = (locale, author, showRetries) => {
     const { actionButtonLabel, type, title } = locale;
     const emailSubject = locale.emailSubject
         .replace('[studentFullName]', `${author.aut_fname} ${author.aut_lname}`)
@@ -51,12 +128,9 @@ export const getfileUploadAlertProps = (locale, author, showRetries) => {
 };
 
 // customise error for thesis submission
-export const getFormSubmitAlertProps = ({ submitting, error, formErrors, submitSucceeded }) =>
+export const getFormSubmitAlertProps = props =>
     validation.getErrorAlertProps({
-        submitting,
-        error,
-        formErrors,
-        submitSucceeded,
+        ...props,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
             progressAlert: { ...formLocale.progressAlert },
@@ -68,84 +142,79 @@ export const getFormSubmitAlertProps = ({ submitting, error, formErrors, submitS
         },
     });
 
-export const ThesisSubmission = ({
-    actions,
-    author,
-    dirty,
-    disableSubmit,
-    error,
-    fileAccessId,
-    formErrors,
-    formValues,
-    fullyUploadedFiles,
-    handleSubmit,
-    isHdrThesis,
-    isSessionValid,
-    isUploadInProgress,
-    newRecord,
-    newRecordFileUploadingOrIssueError,
-    retryUpload,
-    submitSucceeded,
-    submitting,
-}) => {
-    const deposit = () => {
-        actions.checkSession();
-    };
-
+export const ThesisSubmission = ({ isHdrThesis }) => {
+    const dispatch = useDispatch();
     const [retries, setRetries] = React.useState(0);
-
-    /* istanbul ignore next */
-    const _retryUpload = () => {
-        setRetries(retries + 1);
-        retryUpload(formValues, newRecord, fullyUploadedFiles);
-    };
-
-    const depositConfirmationRef = React.useRef();
-    const setDepositConfirmation = React.useCallback(
-        /* istanbul ignore next */ node => {
-            depositConfirmationRef.current = node;
-        },
-        [],
-    );
-
-    const openDepositConfirmation = () => {
-        depositConfirmationRef.current.showConfirmation();
-        actions.clearSessionExpiredFlag();
-    };
-
-    React.useEffect(() => {
-        if (isSessionValid && !submitting) {
-            openDepositConfirmation();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isSessionValid, submitting]);
-
+    const { account } = useAccountContext();
+    // to allow confirmDialogBox control
+    const confirmDialogBoxRef = useRef();
+    // app state
+    const { author, isSessionExpired } = useSelector(state => state.get('accountReducer'));
+    const { newRecordFileUploadingOrIssueError, newRecord } = useSelector(state => state.get('createRecordReducer'));
+    const { fullyUploadedFiles, isUploadInProgress } = useSelector(state => state.get('fileUploadReducer'));
+    // constants
     const txt = formLocale.thesis;
     const txtFoR = locale.components.fieldOfResearchForm;
     const txtSupervisors = locale.components.thesisSubmissionSupervisors;
-    const thesisLocale = formLocale.thesisSubmission;
-    const pageTitle = isHdrThesis ? thesisLocale.hdrTitle : thesisLocale.sbsTitle;
+    const {
+        FORM_NAME,
+        thesisLocale,
+        pageTitle,
+        fileAccessId,
+        cancelSubmit,
+        afterSubmit,
+        userIsAllowed,
+        values,
+        defaultValues,
+    } = useMemo(() => getFormConstants(account, author, isHdrThesis), [account, author, isHdrThesis]);
 
-    const { account } = useAccountContext();
-    const userIsAllowed = TRANSITION_COHORT.includes(account.id);
+    // form
+    const {
+        control,
+        getPropsForAlert,
+        safelyHandleSubmit,
+        mergeWithFormValues,
+        formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
+    } = useValidatedForm({
+        values,
+    });
+
+    const retryUpload = async () => {
+        setRetries(retries + 1);
+        dispatch(actions.submitThesis(mergeWithFormValues(), newRecord, FORM_NAME, fullyUploadedFiles))
+            .then(() => {
+                dispatch({
+                    type: 'CREATE_RECORD_SUCCESS',
+                    payload: {
+                        newRecord,
+                        fileUploadOrIssueFailed: false,
+                    },
+                });
+            })
+            .catch(() => {});
+    };
+
+    React.useEffect(() => {
+        if (isSessionExpired === false && !isSubmitting && confirmDialogBoxRef.current) {
+            confirmDialogBoxRef.current?.showConfirmation?.();
+            dispatch(actions.clearSessionExpiredFlag());
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isSessionExpired, isSubmitting, confirmDialogBoxRef.current]);
 
     if (!userIsAllowed) {
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-user-blocked">
                 <Grid container spacing={3}>
                     <Grid xs={12}>
-                        <Alert
-                            message={formLocale.thesisSubmission.message}
-                            type="info"
-                            alertId="alert-info-rdm-redirect"
-                        />
+                        <Alert message={thesisLocale.notAllowedMessage} type="info" alertId="alert-info-rdm-redirect" />
                     </Grid>
                 </Grid>
             </StandardPage>
         );
     }
 
-    if (submitSucceeded) {
+    if (isSubmitSuccessful) {
         return (
             <StandardPage title={pageTitle} standardPageId="rhd-submission-succeeded">
                 <Grid container spacing={3}>
@@ -164,13 +233,13 @@ export const ThesisSubmission = ({
                         <Grid xs={12}>
                             {newRecordFileUploadingOrIssueError && (
                                 <Alert
-                                    {...getfileUploadAlertProps(
+                                    {...getFileUploadAlertProps(
                                         thesisLocale.fileUpload.failedAlertLocale,
                                         author,
                                         retries < THESIS_UPLOAD_RETRIES,
                                     )}
                                     disableAlertClick
-                                    action={(retries < THESIS_UPLOAD_RETRIES && _retryUpload) || undefined}
+                                    action={(retries < THESIS_UPLOAD_RETRIES && retryUpload) || undefined}
                                     showLoader={isUploadInProgress}
                                 />
                             )}
@@ -180,40 +249,45 @@ export const ThesisSubmission = ({
                         </Grid>
                     </Grid>
                 )}
-                <Grid container spacing={2}>
-                    <Grid xs />
-                    <Grid>
-                        <Button
-                            children={thesisLocale.afterSubmit}
-                            color={!newRecordFileUploadingOrIssueError ? 'primary' : 'inherit'}
-                            fullWidth
-                            onClick={afterSubmit}
-                            variant={'contained'}
-                        />
+                {isHdrThesis && thesisLocale.afterSubmit && (
+                    <Grid container spacing={2}>
+                        <Grid xs />
+                        <Grid>
+                            <Button
+                                children={thesisLocale.afterSubmit}
+                                color={!newRecordFileUploadingOrIssueError ? 'primary' : 'inherit'}
+                                fullWidth
+                                onClick={afterSubmit}
+                                variant={'contained'}
+                            />
+                        </Grid>
                     </Grid>
-                </Grid>
+                )}
             </StandardPage>
         );
     }
 
-    const alertProps = getFormSubmitAlertProps({
-        submitting,
-        error,
-        formErrors,
-        submitSucceeded,
+    const alertProps = getFormSubmitAlertProps(getPropsForAlert());
+    const onPreSubmit = async () => await dispatch(actions.checkSession());
+    const onSubmit = safelyHandleSubmit(async () => {
+        const data = mergeWithFormValues(defaultValues);
+        await dispatch(actions.submitThesis(data, {}, FORM_NAME));
     });
 
     return (
         <StandardPage title={pageTitle} standardPageId="rhd-submission">
-            <ConfirmDiscardFormChanges dirty={dirty} submitSucceeded={submitSucceeded}>
+            <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form>
-                    <NavigationDialogBox when={dirty && !submitSucceeded} txt={formLocale.cancelWorkflowConfirmation} />
+                    <NavigationDialogBox
+                        when={isDirty && !isSubmitSuccessful}
+                        txt={formLocale.cancelWorkflowConfirmation}
+                    />
 
                     <ConfirmDialogBox
                         confirmDialogBoxId="thesis"
-                        onRef={setDepositConfirmation}
-                        onAction={handleSubmit}
-                        locale={formLocale.thesisSubmission.depositConfirmation}
+                        onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
+                        onAction={onSubmit}
+                        locale={thesisLocale.depositConfirmation}
                     />
                     <Grid container spacing={3}>
                         <Grid xs={12}>
@@ -221,10 +295,11 @@ export const ThesisSubmission = ({
                                 <Grid container spacing={3}>
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={RichEditorField}
                                             name="thesisTitle"
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
-                                            disabled={submitting}
+                                            disabled={isSubmitting}
                                             height={50}
                                             required
                                             validate={[validation.required]}
@@ -233,8 +308,9 @@ export const ThesisSubmission = ({
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
+                                            control={control}
                                             component={TextField}
-                                            disabled={submitting}
+                                            disabled={isSubmitting}
                                             name="currentAuthor.0.nameAsPublished"
                                             type="text"
                                             fullWidth
@@ -247,30 +323,63 @@ export const ThesisSubmission = ({
                                     </Grid>
                                     <Grid xs={12} sm={6}>
                                         <Field
+                                            control={control}
                                             component={ThesisSubtypeSelectField}
                                             id="thesis-subtype"
                                             itemsList={THESIS_SUBMISSION_SUBTYPES}
                                             name="rek_genre_type"
-                                            disabled={submitting}
+                                            disabled={isSubmitting}
                                             validate={[validation.required]}
                                             {...txt.information.fieldLabels.thesisType}
                                             required
                                         />
                                     </Grid>
+                                    {!isHdrThesis && (
+                                        <Grid xs={12}>
+                                            <Field
+                                                control={control}
+                                                component={OrgNameField}
+                                                name="fez_record_search_key_org_name.rek_org_name"
+                                                disabled={isSubmitting}
+                                                validate={[validation.required]}
+                                                required
+                                                {...txt.information.fieldLabels.orgName}
+                                            />
+                                        </Grid>
+                                    )}
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={OrgUnitNameField}
                                             name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                                            disabled={submitting}
+                                            disabled={isSubmitting}
                                             validate={[validation.required]}
                                             required
                                             {...txt.information.fieldLabels.orgUnitName}
                                         />
                                     </Grid>
+                                    {!isHdrThesis && (
+                                        <Grid xs={12}>
+                                            <Field
+                                                control={control}
+                                                component={PartialDateField}
+                                                disabled={isSubmitting}
+                                                partialDateFieldId="rek-date"
+                                                name="rek_date"
+                                                allowPartial
+                                                className="requiredHintField"
+                                                validate={[validation.required]}
+                                                floatingTitle={txt.information.fieldLabels.date.title}
+                                                floatingTitleRequired
+                                                required
+                                            />
+                                        </Grid>
+                                    )}
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={RichEditorField}
-                                            disabled={submitting}
+                                            disabled={isSubmitting}
                                             title={txt.optional.fieldLabels.abstract.label}
                                             name="thesisAbstract"
                                             required
@@ -284,13 +393,14 @@ export const ThesisSubmission = ({
                         <Grid xs={12}>
                             <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
                                 <Field
+                                    control={control}
                                     component={ContributorsEditorField}
                                     contributorEditorId="rek-supervisor"
                                     required
                                     name="supervisors"
                                     validate={[validation.supervisorRequired]}
                                     locale={txtSupervisors.field}
-                                    disabled={submitting}
+                                    disabled={isSubmitting}
                                 />
                             </StandardCard>
                         </Grid>
@@ -298,6 +408,7 @@ export const ThesisSubmission = ({
                             <StandardCard title={txtFoR.title} help={txtFoR.help}>
                                 <Typography>{txtFoR.text}</Typography>
                                 <Field
+                                    control={control}
                                     component={FilteredFieldOfResearchListField}
                                     listEditorId="rek-subject"
                                     name="fieldOfResearch"
@@ -306,7 +417,7 @@ export const ThesisSubmission = ({
                                     hideReorder
                                     distinctOnly
                                     maxCount={3}
-                                    disabled={submitting}
+                                    disabled={isSubmitting}
                                     locale={txtFoR.field}
                                 />
                             </StandardCard>
@@ -315,32 +426,52 @@ export const ThesisSubmission = ({
                             <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
                                 <Typography>{txt.keywords.description}</Typography>
                                 <Field
+                                    control={control}
                                     component={ListEditorField}
                                     name="fez_record_search_key_keywords"
-                                    required
                                     maxCount={10}
-                                    validate={[validation.requiredList]}
                                     searchKey={{
                                         value: 'rek_keywords',
                                         order: 'rek_keywords_order',
                                     }}
-                                    isValid={validation.isValidKeyword(111)}
-                                    listEditorId="rek-keywords"
                                     locale={locale.components.keywordsForm.field}
-                                    disabled={submitting}
+                                    listEditorId="rek-keywords"
+                                    disabled={isSubmitting}
+                                    isValid={validation.isValidKeyword(111)}
+                                    {...(isHdrThesis
+                                        ? {
+                                              required: true,
+                                              validate: [validation.requiredList],
+                                          }
+                                        : {})}
                                 />
                             </StandardCard>
                         </Grid>
+                        {!isHdrThesis && (
+                            <Grid xs={12}>
+                                <StandardCard title={txt.optional.fieldLabels.notes.title} help={txt.keywords.help}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        disabled={isSubmitting}
+                                        name="comments"
+                                        type="text"
+                                        fullWidth
+                                        rows={3}
+                                        multiline
+                                        {...txt.optional.fieldLabels.notes}
+                                    />
+                                </StandardCard>
+                            </Grid>
+                        )}
                         <Grid xs={12}>
-                            <StandardCard
-                                title={formLocale.thesisSubmission.fileUpload.title}
-                                help={formLocale.thesisSubmission.fileUpload.help}
-                            >
+                            <StandardCard title={thesisLocale.fileUpload.title} help={thesisLocale.fileUpload.help}>
                                 <Field
+                                    control={control}
                                     name="files"
                                     component={FileUploadField}
-                                    disabled={submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
+                                    disabled={isSubmitting}
+                                    locale={thesisLocale.fileUpload.locale}
                                     defaultQuickTemplateId={fileAccessId}
                                     validate={[validation.fileUploadRequired]}
                                 />
@@ -360,22 +491,23 @@ export const ThesisSubmission = ({
                                 data-testid="cancel-deposit-thesis"
                                 variant="contained"
                                 fullWidth
-                                aria-label={formLocale.thesisSubmission.cancel}
-                                children={formLocale.thesisSubmission.cancel}
-                                disabled={submitting}
+                                aria-label={thesisLocale.cancel}
+                                children={thesisLocale.cancel}
+                                disabled={isSubmitting}
                                 onClick={cancelSubmit}
                             />
                         </Grid>
                         <Grid xs={12} sm="auto">
                             <Button
+                                type="button"
                                 variant="contained"
                                 id="submit-thesis"
                                 data-testid="deposit-thesis"
                                 color="primary"
                                 fullWidth
-                                children={formLocale.thesisSubmission.submit}
-                                onClick={deposit}
-                                disabled={submitting || disableSubmit}
+                                children={thesisLocale.submit}
+                                onClick={onPreSubmit}
+                                disabled={isSubmitting || hasValidationError}
                             />
                         </Grid>
                     </Grid>
@@ -386,24 +518,7 @@ export const ThesisSubmission = ({
 };
 
 ThesisSubmission.propTypes = {
-    actions: PropTypes.object.isRequired,
-    author: PropTypes.object,
-    dirty: PropTypes.bool,
-    disableSubmit: PropTypes.bool,
-    error: PropTypes.any,
-    fileAccessId: PropTypes.number,
-    formErrors: PropTypes.object,
-    formValues: PropTypes.object,
-    fullyUploadedFiles: PropTypes.array,
-    handleSubmit: PropTypes.func,
-    isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
-    isSessionValid: PropTypes.bool,
-    isUploadInProgress: PropTypes.bool,
-    newRecord: PropTypes.object,
-    newRecordFileUploadingOrIssueError: PropTypes.bool,
-    retryUpload: PropTypes.func,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
+    isHdrThesis: PropTypes.bool,
 };
 
 export default ThesisSubmission;

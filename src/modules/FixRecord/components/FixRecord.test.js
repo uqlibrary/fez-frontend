@@ -181,7 +181,7 @@ describe('Component FixRecord', () => {
     it('should handle server error when unclaiming record', async () => {
         mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
 
-        const { getByTestId } = setup({ publication: mockRecordToFix });
+        setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
         switchToUnclaimMode();
@@ -190,7 +190,7 @@ describe('Component FixRecord', () => {
         await submitForm();
 
         await assertServerErrorMessage();
-        assertEnabled(getByTestId('fix-submit'));
+        assertEnabled('fix-submit');
     });
 
     it('should handle allow retries after a server error when unclaiming record', async () => {
@@ -202,7 +202,7 @@ describe('Component FixRecord', () => {
             .onPost(HIDE_POSSIBLE_RECORD_API().apiUrl)
             .replyOnce(200);
 
-        const { getByTestId } = setup({ publication: mockRecordToFix });
+        setup({ publication: mockRecordToFix });
 
         await assertValidationErrorSummary();
         switchToUnclaimMode();
@@ -211,7 +211,7 @@ describe('Component FixRecord', () => {
         await submitForm();
 
         await assertServerErrorMessage();
-        assertEnabled(getByTestId('fix-submit'));
+        assertEnabled('fix-submit');
 
         await submitForm();
         await assertFixedRecordConfirmationMessage();
@@ -230,7 +230,7 @@ describe('Component FixRecord', () => {
         switchToFixMode();
 
         expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled(getByTestId('fix-submit'));
+        assertDisabled('fix-submit');
 
         fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
         fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
@@ -256,7 +256,7 @@ describe('Component FixRecord', () => {
         switchToFixMode();
 
         expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled(getByTestId('fix-submit'));
+        assertDisabled('fix-submit');
 
         fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
         await assertNoValidationErrorSummary();
@@ -277,14 +277,14 @@ describe('Component FixRecord', () => {
         switchToFixMode();
 
         expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled(getByTestId('fix-submit'));
+        assertDisabled('fix-submit');
 
         fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
         await assertNoValidationErrorSummary();
 
         await submitForm();
         await assertServerErrorMessage();
-        assertEnabled(getByTestId('fix-submit'));
+        assertEnabled('fix-submit');
     });
 
     it('should allow retries after a server error when fixing record', async () => {
@@ -300,7 +300,7 @@ describe('Component FixRecord', () => {
         switchToFixMode();
 
         expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled(getByTestId('fix-submit'));
+        assertDisabled('fix-submit');
 
         fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
         await assertNoValidationErrorSummary();
