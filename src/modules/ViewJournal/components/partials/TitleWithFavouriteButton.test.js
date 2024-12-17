@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
+import { fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 import * as actions from 'actions';
 
 import TitleWithFavouriteButton from './TitleWithFavouriteButton';
