@@ -83,7 +83,8 @@ const doiRegexps = [
 
 export const getDoi = value => {
     for (const regex of doiRegexps) {
-        const matches = value?.trim().match(regex);
+        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
+        const matches = value?.match(anchoredRegex);
         if (matches) {
             return matches[0];
         }
