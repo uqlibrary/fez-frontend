@@ -83,8 +83,7 @@ const doiRegexps = [
 
 export const getDoi = value => {
     for (const regex of doiRegexps) {
-        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
-        const matches = value?.match(anchoredRegex);
+        const matches = value?.trim().match(regex);
         if (matches) {
             return matches[0];
         }
@@ -92,7 +91,16 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => !!getDoi(value);
+export const isValidDOIValue = value => {
+    for (const regex of doiRegexps) {
+        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
+        const matches = value?.match(anchoredRegex);
+        if (matches) {
+            return true;
+        }
+    }
+    return false;
+};
 
 export const sanitizeDoi = value => getDoi(value) || value;
 
