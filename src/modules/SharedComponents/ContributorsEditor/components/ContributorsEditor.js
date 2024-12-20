@@ -20,7 +20,8 @@ import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 export const getContributorsFromProps = input => {
     if (input?.name && input?.value) {
-        return input.value instanceof Immutable.List ? input.value.toJS() : input.value;
+        const ret = input.value instanceof Immutable.List ? input.value.toJS() : input.value;
+        return Array.isArray(ret) ? ret : [];
     }
     return [];
 };
@@ -164,7 +165,6 @@ export const handleSoSChange = (oldContribs, newContribs, scaleOfSignificance) =
 };
 
 const ContributorsEditor = props => {
-    console.log(props);
     const {
         canEdit = false,
         forceSelectable = false,
@@ -194,7 +194,7 @@ const ContributorsEditor = props => {
     const [contributorIndexSelectedToEdit, setContributorIndexSelectedToEdit] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
     const [isCurrentAuthorSelected, setIsCurrentAuthorSelected] = useState(false);
-    const [prevValue, setPrevValue] = useState();
+    const [prevValue, setPrevValue] = useState([]);
 
     const author = useSelector(state => state.get('accountReducer').author || null);
     const record = useSelector(state => state.get('viewRecordReducer').recordToView || null);
@@ -202,28 +202,32 @@ const ContributorsEditor = props => {
         state => state.get('adminScaleOfSignificanceReducer') || /* istanbul ignore next */ {},
     );
 
-    useEffect(() => {
-        console.log('mount');
-        const newContributors = getContributorsWithAffiliationsFromProps(input, record);
-        setContributors(newContributors);
-        const newScaleOfSignificance = buildInitialScaleOfSignificance({ record, isNtro });
-        setScaleOfSignificance(newScaleOfSignificance);
-        setPrevValue(input?.value);
-        onChange?.(newContributors);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    console.log(props, record);
+    // useEffect(() => {
+    //     console.log('mount');
+    //     const newContributors = getContributorsWithAffiliationsFromProps(input, record);
+    //     setContributors(newContributors);
+    //     const newScaleOfSignificance = buildInitialScaleOfSignificance({ record, isNtro });
+    //     setScaleOfSignificance(newScaleOfSignificance);
+    //     setPrevValue(Array.isArray(input?.value) ? input.value : []);
+    //     onChange?.(newContributors);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
     useEffect(() => {
         console.log('update');
+        const propsInputValue = Array.isArray(input?.value) ? input.value : [];
         const newContributors = getContributorsWithAffiliationsFromProps(input, record);
-        if (input?.value !== prevValue) {
-            setPrevValue(input?.value);
+        if (!isArrayDeeplyEqual(propsInputValue, prevValue)) {
+            console.log('input update', propsInputValue, prevValue);
+            setPrevValue(propsInputValue);
             setContributors(newContributors);
         }
 
-        if (!isArrayDeeplyEqual(newContributors, contributors)) {
-            onChange?.(newContributors);
-        }
+        // if (!isArrayDeeplyEqual(newContributors, contributors)) {
+        //     console.log('parent update', { newContributors, contributors });
+        //     onChange?.(newContributors);
+        // }
 
         if (useFormReducer) {
             const updated = diff(scaleOfSignificance, scaleOfSignificanceFromProps);
@@ -419,6 +423,7 @@ const ContributorsEditor = props => {
 
     const handleAuthorsListChange = contributors => {
         setContributors(contributors);
+        onChange?.(contributors);
     };
 
     let error = null;
