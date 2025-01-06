@@ -512,40 +512,28 @@ export const AuthorsListWithAffiliates = ({
         setData(result);
     }, [list]);
 
-    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
-
     const handleAuthorUpdate = (action, newData, oldData) => {
         const materialTable = materialTableRef.current;
         let newList = [...data];
 
-        if (action === 'delete') {
+        if (action === 'update') {
+            const index = oldData.tableData.id;
+            const updatedData = {
+                ...oldData,
+                ...newData,
+                // Reset affiliations if author changes
+                affiliations: newData.aut_id !== oldData.aut_id ? [] : oldData.affiliations,
+            };
+            newList = [...data.slice(0, index), updatedData, ...data.slice(index + 1)];
+        } else if (action === 'delete') {
             const index = oldData.tableData.id;
             newList = [...data.slice(0, index), ...data.slice(index + 1)];
-        } else if (
-            action === 'update' &&
-            data.filter(
-                (contributor, index) =>
-                    index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
-            ).length > 0
-        ) {
-            newList = [...data];
-        } else if (
-            action === 'add' &&
-            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
-        ) {
-            newList = [...data];
-        } else {
-            newList =
-                action === 'update'
-                    ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
-                    : transformNewAuthorObject(newData);
         }
 
         onChange(newList);
         setData(newList);
 
         materialTable.dataManager.changePaging(newList.length > 10);
-
         materialTable.setState({
             ...materialTable.dataManager.getRenderState(),
             showAddRow: false,
