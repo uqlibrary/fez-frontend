@@ -201,7 +201,9 @@ export const ContributorRow = ({
         } else if ((disabled || contributor.disabled) && !enableSelect) {
             return locale.lockedTooltip ? (
                 <Tooltip title={locale.lockedTooltip}>
-                    <Lock />
+                    <span>
+                        <Lock />
+                    </span>
                 </Tooltip>
             ) : (
                 <Lock />
@@ -268,17 +270,19 @@ export const ContributorRow = ({
                                 disableHoverListener={disabled || hideReorder}
                                 disableTouchListener={disabled || hideReorder}
                             >
-                                <IconButton
-                                    id={`${contributorRowId}-move-up-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-move-up`}
-                                    data-testid={`${contributorRowId}-${index}-move-up`}
-                                    onClick={_onMoveUp}
-                                    disabled={disabled || hideReorder}
-                                    aria-label={locale.moveUpHint}
-                                    size="large"
-                                >
-                                    <KeyboardArrowUp sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        id={`${contributorRowId}-move-up-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-move-up`}
+                                        data-testid={`${contributorRowId}-${index}-move-up`}
+                                        onClick={_onMoveUp}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={locale.moveUpHint}
+                                        size="large"
+                                    >
+                                        <KeyboardArrowUp sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         {canMoveDown && (
@@ -288,17 +292,19 @@ export const ContributorRow = ({
                                 disableHoverListener={disabled || hideReorder}
                                 disableTouchListener={disabled || hideReorder}
                             >
-                                <IconButton
-                                    id={`${contributorRowId}-move-down-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-move-down`}
-                                    data-testid={`${contributorRowId}-${index}-move-down`}
-                                    onClick={_onMoveDown}
-                                    disabled={disabled || hideReorder}
-                                    aria-label={locale.moveDownHint}
-                                    size="large"
-                                >
-                                    <KeyboardArrowDown sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        id={`${contributorRowId}-move-down-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-move-down`}
+                                        data-testid={`${contributorRowId}-${index}-move-down`}
+                                        onClick={_onMoveDown}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={locale.moveDownHint}
+                                        size="large"
+                                    >
+                                        <KeyboardArrowDown sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         {canEdit && (
@@ -308,17 +314,19 @@ export const ContributorRow = ({
                                 disableHoverListener={disabled || !!contributor.disabled}
                                 disableTouchListener={disabled || !!contributor.disabled}
                             >
-                                <IconButton
-                                    aria-label={locale.editHint}
-                                    onClick={_handleEdit}
-                                    disabled={disabled || !!contributor.disabled}
-                                    id={`${contributorRowId}-edit-${index}`}
-                                    data-analyticsid={`${contributorRowId}-${index}-edit`}
-                                    data-testid={`${contributorRowId}-${index}-edit`}
-                                    size="large"
-                                >
-                                    <Edit sx={{ ...selectedClass }} />
-                                </IconButton>
+                                <span>
+                                    <IconButton
+                                        aria-label={locale.editHint}
+                                        onClick={_handleEdit}
+                                        disabled={disabled || !!contributor.disabled}
+                                        id={`${contributorRowId}-edit-${index}`}
+                                        data-analyticsid={`${contributorRowId}-${index}-edit`}
+                                        data-testid={`${contributorRowId}-${index}-edit`}
+                                        size="large"
+                                    >
+                                        <Edit sx={{ ...selectedClass }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         )}
                         <Tooltip
@@ -327,21 +335,23 @@ export const ContributorRow = ({
                             disableHoverListener={disabled || hideDelete}
                             disableTouchListener={disabled || hideDelete}
                         >
-                            <IconButton
-                                aria-label={locale.deleteHint}
-                                onClick={e => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    showConfirmation();
-                                }}
-                                disabled={disabled || hideDelete}
-                                id={`${contributorRowId}-delete-${index}`}
-                                data-analyticsid={`${contributorRowId}-${index}-delete`}
-                                data-testid={`${contributorRowId}-${index}-delete`}
-                                size="large"
-                            >
-                                <Delete sx={{ ...selectedClass }} />
-                            </IconButton>
+                            <span>
+                                <IconButton
+                                    aria-label={locale.deleteHint}
+                                    onClick={e => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        showConfirmation();
+                                    }}
+                                    disabled={disabled || hideDelete}
+                                    id={`${contributorRowId}-delete-${index}`}
+                                    data-analyticsid={`${contributorRowId}-${index}-delete`}
+                                    data-testid={`${contributorRowId}-${index}-delete`}
+                                    size="large"
+                                >
+                                    <Delete sx={{ ...selectedClass }} />
+                                </IconButton>
+                            </span>
                         </Tooltip>
                     </StyledActionsContainer>
                 </Grid>

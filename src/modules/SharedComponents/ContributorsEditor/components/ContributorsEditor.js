@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { useSelector } from 'react-redux';
@@ -28,7 +28,6 @@ export const getContributorsFromProps = input => {
 
 export const getContributorsWithAffiliationsFromProps = (input, record) => {
     const authors = getContributorsFromProps(input);
-    console.log(input, authors);
     if (authors.every(author => !!author.affiliations)) return authors;
 
     const affiliations = record?.fez_author_affiliation ?? [];
@@ -189,45 +188,38 @@ const ContributorsEditor = props => {
         maintainSelected = false,
         useFormReducer = false,
     } = props;
-    const [contributors, setContributors] = useState([]);
-    const [scaleOfSignificance, setScaleOfSignificance] = useState([]);
-    const [contributorIndexSelectedToEdit, setContributorIndexSelectedToEdit] = useState(null);
-    const [errorMessage, setErrorMessage] = useState('');
-    const [isCurrentAuthorSelected, setIsCurrentAuthorSelected] = useState(false);
-    const prevValue = useRef([]);
-
     const author = useSelector(state => state.get('accountReducer').author || null);
     const record = useSelector(state => state.get('viewRecordReducer').recordToView || null);
     const { scaleOfSignificance: scaleOfSignificanceFromProps = /* istanbul ignore next */ [] } = useSelector(
         state => state.get('adminScaleOfSignificanceReducer') || /* istanbul ignore next */ {},
     );
 
-    console.log(props, record);
-    // useEffect(() => {
-    //     console.log('mount');
-    //     const newContributors = getContributorsWithAffiliationsFromProps(input, record);
-    //     setContributors(newContributors);
-    //     const newScaleOfSignificance = buildInitialScaleOfSignificance({ record, isNtro });
-    //     setScaleOfSignificance(newScaleOfSignificance);
-    //     setPrevValue(Array.isArray(input?.value) ? input.value : []);
-    //     onChange?.(newContributors);
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
+    const initialScaleOfSignificance = () => {
+        return buildInitialScaleOfSignificance({ record, isNtro });
+    };
+
+    const [contributors, setContributors] = useState([]);
+    const [scaleOfSignificance, setScaleOfSignificance] = useState(initialScaleOfSignificance);
+    const [contributorIndexSelectedToEdit, setContributorIndexSelectedToEdit] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [isCurrentAuthorSelected, setIsCurrentAuthorSelected] = useState(false);
+    const prevValue = useRef([]);
 
     useEffect(() => {
-        console.log('update');
+        const newContributors = getContributorsWithAffiliationsFromProps(input, record);
+        setContributors(newContributors);
+        onChange?.(newContributors);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
         const propsInputValue = Array.isArray(input?.value) ? input.value : [];
         const newContributors = getContributorsWithAffiliationsFromProps(input, record);
+
         if (!isArrayDeeplyEqual(propsInputValue, prevValue.current)) {
-            console.log('input update', propsInputValue, prevValue.current);
             prevValue.current = propsInputValue;
             setContributors(newContributors);
         }
-
-        // if (!isArrayDeeplyEqual(newContributors, contributors)) {
-        //     console.log('parent update', { newContributors, contributors });
-        //     onChange?.(newContributors);
-        // }
 
         if (useFormReducer) {
             const updated = diff(scaleOfSignificance, scaleOfSignificanceFromProps);
@@ -244,70 +236,61 @@ const ContributorsEditor = props => {
         }
     }, [contributors, input, onChange, record, scaleOfSignificance, scaleOfSignificanceFromProps, useFormReducer]);
 
-    const addContributor = useCallback(
-        contributor => {
-            const index =
-                contributorIndexSelectedToEdit !== null ? contributorIndexSelectedToEdit : contributors.length;
+    const handleAuthorsListChange = contributors => {
+        setContributors(contributors);
+        onChange?.(contributors);
+    };
 
-            const isDuplicate = contributors.some(
-                (item, itemIndex) =>
-                    !!contributor.aut_id &&
-                    item.aut_id === contributor.aut_id &&
-                    (index >= contributors.length || index !== itemIndex),
-            );
+    const addContributor = contributor => {
+        const index = contributorIndexSelectedToEdit !== null ? contributorIndexSelectedToEdit : contributors.length;
 
-            if (isDuplicate) {
-                setErrorMessage(locale.errorMessage);
-                return;
-            }
+        const isDuplicate = contributors.some(
+            (item, itemIndex) =>
+                !!contributor.aut_id &&
+                item.aut_id === contributor.aut_id &&
+                (index >= contributors.length || index !== itemIndex),
+        );
 
-            const isContributorACurrentAuthor = author && contributor.uqIdentifier === `${author.aut_id}`;
+        if (isDuplicate) {
+            setErrorMessage(locale.errorMessage);
+            return;
+        }
 
-            const updatedContributors = [
-                ...contributors.slice(0, index).map(contrib => ({
-                    ...contrib,
-                    selected: isContributorACurrentAuthor ? false : contrib.selected,
-                    ...(!isNtro ? { selected: contrib.selected } : {}),
-                    authorId:
-                        isContributorACurrentAuthor && contrib.authorId === author.aut_id ? null : contrib.authorId,
-                })),
-                {
-                    ...contributor,
-                    disabled: editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
-                    selected: !editMode && isContributorACurrentAuthor,
-                    ...(!isNtro ? { selected: contributor.selected } : {}),
-                    authorId: isContributorACurrentAuthor ? author.aut_id : null,
-                    required: contributor.required || false,
-                },
-                ...contributors.slice(index + 1).map(contrib => ({
-                    ...contrib,
-                    selected: isContributorACurrentAuthor ? false : contrib.selected,
-                    ...(!isNtro ? { selected: contrib.selected } : {}),
-                    authorId:
-                        isContributorACurrentAuthor && contrib.authorId === author.aut_id ? null : contrib.authorId,
-                })),
-            ];
+        const isContributorACurrentAuthor = author && contributor.uqIdentifier === `${author.aut_id}`;
 
-            setContributors(updatedContributors);
-            setErrorMessage('');
-            setIsCurrentAuthorSelected(isCurrentAuthorSelected || isContributorACurrentAuthor);
-            setContributorIndexSelectedToEdit(null);
-        },
-        [
-            author,
-            contributors,
-            contributorIndexSelectedToEdit,
-            editMode,
-            isCurrentAuthorSelected,
-            isNtro,
-            locale.errorMessage,
-        ],
-    );
+        const updatedContributors = [
+            ...contributors.slice(0, index).map(contrib => ({
+                ...contrib,
+                selected: isContributorACurrentAuthor ? false : contrib.selected,
+                ...(!isNtro ? { selected: contrib.selected } : {}),
+                authorId: isContributorACurrentAuthor && contrib.authorId === author.aut_id ? null : contrib.authorId,
+            })),
+            {
+                ...contributor,
+                disabled: editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
+                selected: !editMode && isContributorACurrentAuthor,
+                ...(!isNtro ? { selected: contributor.selected } : {}),
+                authorId: isContributorACurrentAuthor ? author.aut_id : null,
+                required: contributor.required || false,
+            },
+            ...contributors.slice(index + 1).map(contrib => ({
+                ...contrib,
+                selected: isContributorACurrentAuthor ? false : contrib.selected,
+                ...(!isNtro ? { selected: contrib.selected } : {}),
+                authorId: isContributorACurrentAuthor && contrib.authorId === author.aut_id ? null : contrib.authorId,
+            })),
+        ];
+
+        setErrorMessage('');
+        setIsCurrentAuthorSelected(isCurrentAuthorSelected || isContributorACurrentAuthor);
+        setContributorIndexSelectedToEdit(null);
+        handleAuthorsListChange(updatedContributors);
+    };
 
     const moveUpContributor = (contributor, index) => {
         if (index === 0) return;
         const nextContributor = contributors[index - 1];
-        setContributors([
+        handleAuthorsListChange([
             ...contributors.slice(0, index - 1),
             contributor,
             nextContributor,
@@ -318,7 +301,7 @@ const ContributorsEditor = props => {
     const moveDownContributor = (contributor, index) => {
         if (index === contributors.length - 1) return;
         const nextContributor = contributors[index + 1];
-        setContributors([
+        handleAuthorsListChange([
             ...contributors.slice(0, index),
             nextContributor,
             contributor,
@@ -327,13 +310,13 @@ const ContributorsEditor = props => {
     };
 
     const deleteContributor = (contributor, index) => {
-        setContributors(contributors.filter((_, i) => i !== index));
         setIsCurrentAuthorSelected(isCurrentAuthorSelected && author && contributor.aut_id !== author.aut_id);
+        handleAuthorsListChange(contributors.filter((_, i) => i !== index));
     };
 
     const deleteAllContributors = () => {
-        setContributors([]);
         setIsCurrentAuthorSelected(false);
+        handleAuthorsListChange([]);
     };
 
     const assignContributor = index => {
@@ -346,17 +329,17 @@ const ContributorsEditor = props => {
                 }))) ||
             contributors;
 
-        setContributors(newContributors);
+        handleAuthorsListChange(newContributors);
     };
 
     const selectContributor = index => {
-        setContributors(prevContributors =>
+        setContributorIndexSelectedToEdit(index);
+        handleAuthorsListChange(prevContributors =>
             prevContributors.map((contributor, itemIndex) => ({
                 ...contributor,
                 ...(!maintainSelected ? { selected: index === itemIndex } : {}),
             })),
         );
-        setContributorIndexSelectedToEdit(index);
     };
 
     const renderContributorRows = () => {
@@ -412,11 +395,6 @@ const ContributorsEditor = props => {
         );
     };
 
-    const handleAuthorsListChange = contributors => {
-        setContributors(contributors);
-        onChange?.(contributors);
-    };
-
     let error = null;
     if ((meta || {}).error) {
         error =
@@ -427,16 +405,6 @@ const ContributorsEditor = props => {
     }
 
     if (isAdmin) {
-        console.log({
-            record,
-            shouldHandleAffiliations,
-            contributors,
-            scaleOfSignificance,
-            contributorIndexSelectedToEdit,
-            errorMessage,
-            isCurrentAuthorSelected,
-            prevValue: prevValue.current,
-        });
         return shouldHandleAffiliations ? (
             <AuthorsListWithAffiliates
                 contributorEditorId={contributorEditorId}
