@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { useSelector } from 'react-redux';
@@ -194,7 +194,7 @@ const ContributorsEditor = props => {
     const [contributorIndexSelectedToEdit, setContributorIndexSelectedToEdit] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
     const [isCurrentAuthorSelected, setIsCurrentAuthorSelected] = useState(false);
-    const [prevValue, setPrevValue] = useState([]);
+    const prevValue = useRef([]);
 
     const author = useSelector(state => state.get('accountReducer').author || null);
     const record = useSelector(state => state.get('viewRecordReducer').recordToView || null);
@@ -218,9 +218,9 @@ const ContributorsEditor = props => {
         console.log('update');
         const propsInputValue = Array.isArray(input?.value) ? input.value : [];
         const newContributors = getContributorsWithAffiliationsFromProps(input, record);
-        if (!isArrayDeeplyEqual(propsInputValue, prevValue)) {
-            console.log('input update', propsInputValue, prevValue);
-            setPrevValue(propsInputValue);
+        if (!isArrayDeeplyEqual(propsInputValue, prevValue.current)) {
+            console.log('input update', propsInputValue, prevValue.current);
+            prevValue.current = propsInputValue;
             setContributors(newContributors);
         }
 
@@ -242,16 +242,7 @@ const ContributorsEditor = props => {
                 setScaleOfSignificance(updatedScaleOfSignificance);
             }
         }
-    }, [
-        contributors,
-        input,
-        onChange,
-        prevValue,
-        record,
-        scaleOfSignificance,
-        scaleOfSignificanceFromProps,
-        useFormReducer,
-    ]);
+    }, [contributors, input, onChange, record, scaleOfSignificance, scaleOfSignificanceFromProps, useFormReducer]);
 
     const addContributor = useCallback(
         contributor => {
@@ -444,7 +435,7 @@ const ContributorsEditor = props => {
             contributorIndexSelectedToEdit,
             errorMessage,
             isCurrentAuthorSelected,
-            prevValue,
+            prevValue: prevValue.current,
         });
         return shouldHandleAffiliations ? (
             <AuthorsListWithAffiliates

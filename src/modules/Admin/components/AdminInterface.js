@@ -365,7 +365,7 @@ export const AdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
+                    onClick={!isDeleted ? handleSubmit(onSubmit) : setPublicationStatusAndSubmit(UNPUBLISHED)}
                 />
             </Grid>
         </React.Fragment>
@@ -384,7 +384,7 @@ export const AdminInterface = ({
 
     return (
         <StandardPage>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}

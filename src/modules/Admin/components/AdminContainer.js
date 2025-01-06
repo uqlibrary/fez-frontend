@@ -105,8 +105,9 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
+        console.log('submit', data);
         try {
-            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError });
+            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError, params: { pid } });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
