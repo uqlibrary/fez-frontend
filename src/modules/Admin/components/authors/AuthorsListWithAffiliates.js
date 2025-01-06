@@ -453,18 +453,6 @@ export const AuthorsListWithAffiliates = ({
     loadSuggestedOrganisationalUnitsList,
     clearSuggestedOrganisationalUnits,
 }) => {
-    console.log({
-        contributorEditorId,
-        disabled,
-        isNtro,
-        list,
-        locale,
-        onChange,
-        showRoleInput,
-        loadOrganisationalUnitsList,
-        loadSuggestedOrganisationalUnitsList,
-        clearSuggestedOrganisationalUnits,
-    });
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
 
     // eslint-disable-next-line camelcase
@@ -512,7 +500,7 @@ export const AuthorsListWithAffiliates = ({
     const [data, setData] = React.useState([]);
 
     React.useEffect(() => {
-        const tmpList = structuredClone(list);
+        const tmpList = [...list];
         const result = [];
         tmpList.forEach((item, index) => {
             delete item.tableData;
