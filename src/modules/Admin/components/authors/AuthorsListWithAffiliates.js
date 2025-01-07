@@ -514,7 +514,6 @@ export const AuthorsListWithAffiliates = ({
     const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
 
     const handleAuthorUpdate = (action, newData, oldData) => {
-        console.log('action, newData, oldData=', action, newData, oldData);
         const materialTable = materialTableRef.current;
         let newList = [...data];
 
@@ -549,12 +548,6 @@ export const AuthorsListWithAffiliates = ({
                     : transformNewAuthorObject(newData);
         }
 
-        console.log('data==newList? ', JSON.stringify(data) === JSON.stringify(newList));
-        console.log('data, newList=');
-        console.log(JSON.stringify(data));
-        console.log(JSON.stringify(newList));
-        console.log('data=', data);
-        console.log('newList=', newList);
         onChange(newList);
         setData(newList);
 
