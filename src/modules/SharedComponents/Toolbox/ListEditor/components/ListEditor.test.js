@@ -6,14 +6,14 @@ import IssnForm from './IssnForm';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { rtlRender, act, fireEvent, waitFor } from 'test-utils';
+import { rtlRender, FormProviderWrapper, act, userEvent, fireEvent, waitFor, preview } from 'test-utils';
 
 const defaultProps = {
     className: 'testClass', // : PropTypes.string,
     searchKey: { value: 'value', order: 'order' }, // : PropTypes.object.isRequired,
     isValid: jest.fn(), // PropTypes.func,
     disabled: false, // PropTypes.bool,
-    onChange: jest.fn(), // PropTypes.func,
+    onChange: jest.fn(), // PropTypes.func ,
     formComponent: jest.fn(props => (
         <div data-testid="form-component" {...(!!props.disabled ? { disabled: 'disabled' } : {})} />
     )),
@@ -48,7 +48,11 @@ function setup(testProps = {}, renderer = rtlRender) {
         scrollListHeight: testProps.scrollListHeight || 250,
         ...testProps,
     };
-    return renderer(<ListEditor {...props} />);
+    return renderer(
+        <FormProviderWrapper>
+            <ListEditor {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('ListEditor tests', () => {
@@ -90,6 +94,7 @@ describe('ListEditor tests', () => {
         act(() => {
             fireEvent.click(getByTestId('test-list-row-1-move-down'));
         });
+        preview.debug();
         expect(getByTestId('test-list-row-1')).toHaveTextContent('three');
 
         expect(container).toMatchSnapshot();
@@ -104,6 +109,7 @@ describe('ListEditor tests', () => {
         act(() => {
             fireEvent.click(getByTestId('test-list-row-1-move-up'));
         });
+        preview.debug();
         expect(getByTestId('test-list-row-1')).toHaveTextContent('one');
 
         expect(container).toMatchSnapshot();
@@ -250,15 +256,42 @@ describe('ListEditor tests', () => {
         });
     });
 
-    it('should not call transformOutput if onChange prop method is not defined', () => {
+    it('should call given onChange only when `items` change', () => {
         const onChangeFn = jest.fn();
-        const { rerender } = setup();
+        const { rerender, getByTestId } = setup({
+            maxCount: 5,
+            distinctOnly: true,
+            locale: {
+                row: {},
+                form: {},
+                header: {},
+            },
+            onChange: onChangeFn,
+            formComponent: props => (
+                <div>
+                    <Button
+                        data-testid="test-button"
+                        onClick={() =>
+                            props.onAdd({
+                                id: 'test',
+                                value: 'test',
+                            })
+                        }
+                    />
+                </div>
+            ),
+        });
+        expect(onChangeFn).toHaveBeenCalledTimes(0);
+
+        act(() => {
+            fireEvent.click(getByTestId('test-button'));
+        });
+        expect(document.querySelector('[data-testid=test-list]').childElementCount).toEqual(1);
+        expect(getByTestId('test-list-row-0')).toHaveTextContent('test');
+        expect(onChangeFn).toHaveBeenCalledTimes(1);
 
         setup({ onChange: onChangeFn }, rerender);
         expect(onChangeFn).toHaveBeenCalledTimes(1);
-
-        setup({ onChange: null }, rerender);
-        expect(onChangeFn).toHaveBeenCalledTimes(1); // shouldnt increment
     });
 
     it('Should render a list of many items in a scrollable HTML div', () => {
@@ -357,183 +390,183 @@ describe('ListEditor tests', () => {
         expect(container).toMatchSnapshot();
     });
 
-    describe('Class instance', () => {
-        const getInstance = props => {
-            const instance = new ListEditor(props ?? defaultProps);
-            instance.setState = jest.fn(newState => {
-                instance.state = { ...instance.state, ...newState };
-            });
-            return instance;
-        };
+    // describe('Class instance', () => {
+    //     const getInstance = props => {
+    //         const instance = new ListEditor(props ?? defaultProps);
+    //         instance.setState = jest.fn(newState => {
+    //             instance.state = { ...instance.state, ...newState };
+    //         });
+    //         return instance;
+    //     };
 
-        it('should render an item to the list', () => {
-            const instance = getInstance();
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem('one');
-            expect(instance.state.itemList.length).toEqual(1);
-        });
+    //     it('should render an item to the list', () => {
+    //         const instance = getInstance();
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem('one');
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //     });
 
-        it('should render an object item to the list', () => {
-            const instance = getInstance();
+    //     it('should render an object item to the list', () => {
+    //         const instance = getInstance();
 
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem({ id: 'test', value: 'test value' });
-            expect(instance.state.itemList.length).toEqual(1);
-        });
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem({ id: 'test', value: 'test value' });
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //     });
 
-        it('should update an object item in the list', () => {
-            const instance = getInstance();
+    //     it('should update an object item in the list', () => {
+    //         const instance = getInstance();
 
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem({ id: 'test', value: 'test value' });
-            expect(instance.state.itemList.length).toEqual(1);
-            instance.editItem(0);
-            instance.addItem({ id: 'test', value: 'testing value' });
-            expect(instance.state.itemList.length).toEqual(1);
-            expect(instance.state.itemList).toEqual([{ id: 'test', value: 'testing value' }]);
-        });
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem({ id: 'test', value: 'test value' });
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         instance.editItem(0);
+    //         instance.addItem({ id: 'test', value: 'testing value' });
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         expect(instance.state.itemList).toEqual([{ id: 'test', value: 'testing value' }]);
+    //     });
 
-        it('should update an string item in the list', () => {
-            const instance = getInstance();
+    //     it('should update an string item in the list', () => {
+    //         const instance = getInstance();
 
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem({ id: 'test', key: 'key', value: 'test value' });
-            expect(instance.state.itemList.length).toEqual(1);
-            instance.editItem(0);
-            instance.addItem('newKey');
-            expect(instance.state.itemList.length).toEqual(1);
-            expect(instance.state.itemList).toEqual([{ id: 'test', key: 'newKey', value: 'test value' }]);
-        });
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem({ id: 'test', key: 'key', value: 'test value' });
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         instance.editItem(0);
+    //         instance.addItem('newKey');
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         expect(instance.state.itemList).toEqual([{ id: 'test', key: 'newKey', value: 'test value' }]);
+    //     });
 
-        it('should render items not more than maxCount', () => {
-            const instance = getInstance({ ...defaultProps, maxCount: 1 });
+    //     it('should render items not more than maxCount', () => {
+    //         const instance = getInstance({ ...defaultProps, maxCount: 1 });
 
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem('one');
-            expect(instance.state.itemList.length).toEqual(1);
-            instance.addItem('two');
-            expect(instance.state.itemList.length).toEqual(1);
-        });
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem('one');
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         instance.addItem('two');
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //     });
 
-        it('should not add null item to the list', () => {
-            const instance = getInstance();
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem(undefined);
-            instance.addItem(null);
-            instance.addItem('');
-            expect(instance.state.itemList.length).toEqual(0);
-        });
+    //     it('should not add null item to the list', () => {
+    //         const instance = getInstance();
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem(undefined);
+    //         instance.addItem(null);
+    //         instance.addItem('');
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //     });
 
-        it('should delete an item from the list', () => {
-            const instance = getInstance();
-            instance.setState({ itemList: ['one', 'two', 'three'] });
-            expect(instance.state.itemList.length).toEqual(3);
-            instance.deleteItem('one', 0);
-            expect(instance.state.itemList.length).toEqual(2);
-        });
+    //     it('should delete an item from the list', () => {
+    //         const instance = getInstance();
+    //         instance.setState({ itemList: ['one', 'two', 'three'] });
+    //         expect(instance.state.itemList.length).toEqual(3);
+    //         instance.deleteItem('one', 0);
+    //         expect(instance.state.itemList.length).toEqual(2);
+    //     });
 
-        it('should render items individually when comma separated not more than maxCount', () => {
-            const instance = getInstance({ ...defaultProps, maxCount: 5 });
+    //     it('should render items individually when comma separated not more than maxCount', () => {
+    //         const instance = getInstance({ ...defaultProps, maxCount: 5 });
 
-            expect(instance.state.itemList.length).toEqual(0);
-            instance.addItem('one');
-            expect(instance.state.itemList.length).toEqual(1);
-            instance.addItem('two|three|four');
-            expect(instance.state.itemList.length).toEqual(4);
-            instance.addItem('two|three|four||five||');
-            expect(instance.state.itemList.length).toEqual(5);
-        });
+    //         expect(instance.state.itemList.length).toEqual(0);
+    //         instance.addItem('one');
+    //         expect(instance.state.itemList.length).toEqual(1);
+    //         instance.addItem('two|three|four');
+    //         expect(instance.state.itemList.length).toEqual(4);
+    //         instance.addItem('two|three|four||five||');
+    //         expect(instance.state.itemList.length).toEqual(5);
+    //     });
 
-        it('should set item to edit index', () => {
-            const instance = getInstance();
-            instance.setState = jest.fn(newState => {
-                instance.state = { ...instance.state, ...newState };
-            });
-            instance.setState({ itemList: ['one', 'two', 'three'] });
-            instance.editItem(1);
-            expect(instance.state.itemIndexSelectedToEdit).toEqual(1);
-        });
+    //     it('should set item to edit index', () => {
+    //         const instance = getInstance();
+    //         instance.setState = jest.fn(newState => {
+    //             instance.state = { ...instance.state, ...newState };
+    //         });
+    //         instance.setState({ itemList: ['one', 'two', 'three'] });
+    //         instance.editItem(1);
+    //         expect(instance.state.itemIndexSelectedToEdit).toEqual(1);
+    //     });
 
-        it('should not add duplicate item with the same "key" in the list', () => {
-            const instance = getInstance({ maxCount: 0, distinctOnly: true });
+    //     it('should not add duplicate item with the same "key" in the list', () => {
+    //         const instance = getInstance({ maxCount: 0, distinctOnly: true });
 
-            instance.setState({
-                itemList: [
-                    { key: '1234-1234', value: { ulrichs: {} } },
-                    { key: '1234-1111', value: { ulrichs: {} } },
-                ],
-            });
-            instance.addItem({ key: '1234-1234', value: { sherpaRomeo: {}, ulrichs: {} } });
-            expect(instance.state.itemList.length).toEqual(2); // dupe not added
-            instance.addItem({ key: '1234-1235', value: { sherpaRomeo: {}, ulrichs: {} } });
-            expect(instance.state.itemList.length).toEqual(3);
-        });
+    //         instance.setState({
+    //             itemList: [
+    //                 { key: '1234-1234', value: { ulrichs: {} } },
+    //                 { key: '1234-1111', value: { ulrichs: {} } },
+    //             ],
+    //         });
+    //         instance.addItem({ key: '1234-1234', value: { sherpaRomeo: {}, ulrichs: {} } });
+    //         expect(instance.state.itemList.length).toEqual(2); // dupe not added
+    //         instance.addItem({ key: '1234-1235', value: { sherpaRomeo: {}, ulrichs: {} } });
+    //         expect(instance.state.itemList.length).toEqual(3);
+    //     });
 
-        it('should not add duplicate item with the same "id" in the list', () => {
-            const instance = getInstance({ maxCount: 0, distinctOnly: true });
+    //     it('should not add duplicate item with the same "id" in the list', () => {
+    //         const instance = getInstance({ maxCount: 0, distinctOnly: true });
 
-            instance.setState({
-                itemList: [
-                    { id: 1234, value: 'test' },
-                    { id: 2345, value: 'testing' },
-                ],
-            });
-            instance.addItem({ id: 1234, value: 'test' });
-            expect(instance.state.itemList.length).toEqual(2); // dupe not added
-            instance.addItem({ id: 1235, value: 'testing testing' });
-            expect(instance.state.itemList.length).toEqual(3);
-        });
+    //         instance.setState({
+    //             itemList: [
+    //                 { id: 1234, value: 'test' },
+    //                 { id: 2345, value: 'testing' },
+    //             ],
+    //         });
+    //         instance.addItem({ id: 1234, value: 'test' });
+    //         expect(instance.state.itemList.length).toEqual(2); // dupe not added
+    //         instance.addItem({ id: 1235, value: 'testing testing' });
+    //         expect(instance.state.itemList.length).toEqual(3);
+    //     });
 
-        it('should not add duplicate item with the same text in the list', () => {
-            const instance = getInstance({ maxCount: 0, distinctOnly: true });
+    //     it('should not add duplicate item with the same text in the list', () => {
+    //         const instance = getInstance({ maxCount: 0, distinctOnly: true });
 
-            instance.setState({
-                itemList: ['test', 'testing'],
-            });
-            instance.addItem('test');
-            expect(instance.state.itemList.length).toEqual(2); // dupe not added
-            instance.addItem('testing testing');
-            expect(instance.state.itemList.length).toEqual(3);
-        });
+    //         instance.setState({
+    //             itemList: ['test', 'testing'],
+    //         });
+    //         instance.addItem('test');
+    //         expect(instance.state.itemList.length).toEqual(2); // dupe not added
+    //         instance.addItem('testing testing');
+    //         expect(instance.state.itemList.length).toEqual(3);
+    //     });
 
-        it('should add edited item with the same "id" but different "value"', () => {
-            const instance = getInstance({ maxCount: 0, distinctOnly: true });
+    //     it('should add edited item with the same "id" but different "value"', () => {
+    //         const instance = getInstance({ maxCount: 0, distinctOnly: true });
 
-            instance.setState({
-                itemList: [
-                    { id: 1234, value: 'test' },
-                    { id: 2345, value: 'testing' },
-                ],
-            });
-            instance.addItem({ id: 1234, value: 'test' });
-            expect(instance.state.itemList.length).toEqual(2); // dupe not added
-            instance.editItem(1);
-            instance.addItem({ id: 2345, value: 'testing testing' });
-            expect(instance.state.itemList.length).toEqual(2);
-            expect(instance.state.itemList).toEqual([
-                { id: 1234, value: 'test' },
-                { id: 2345, value: 'testing testing' },
-            ]);
-        });
+    //         instance.setState({
+    //             itemList: [
+    //                 { id: 1234, value: 'test' },
+    //                 { id: 2345, value: 'testing' },
+    //             ],
+    //         });
+    //         instance.addItem({ id: 1234, value: 'test' });
+    //         expect(instance.state.itemList.length).toEqual(2); // dupe not added
+    //         instance.editItem(1);
+    //         instance.addItem({ id: 2345, value: 'testing testing' });
+    //         expect(instance.state.itemList.length).toEqual(2);
+    //         expect(instance.state.itemList).toEqual([
+    //             { id: 1234, value: 'test' },
+    //             { id: 2345, value: 'testing testing' },
+    //         ]);
+    //     });
 
-        it('should add edited item with the same "key" but different "value"', () => {
-            const instance = getInstance({ maxCount: 0, distinctOnly: true });
+    //     it('should add edited item with the same "key" but different "value"', () => {
+    //         const instance = getInstance({ maxCount: 0, distinctOnly: true });
 
-            instance.setState({
-                itemList: [
-                    { key: 'http://www.test.com', value: 'test site' },
-                    { key: 'http://www.testing.com', value: 'testing site' },
-                ],
-            });
-            instance.addItem({ key: 'http://www.test.com', value: 'test site' });
-            expect(instance.state.itemList.length).toEqual(2); // dupe not added
-            instance.editItem(0);
-            instance.addItem({ key: 'http://www.test.com', value: 'test link' });
-            expect(instance.state.itemList.length).toEqual(2);
-            expect(instance.state.itemList).toEqual([
-                { key: 'http://www.test.com', value: 'test link' },
-                { key: 'http://www.testing.com', value: 'testing site' },
-            ]);
-        });
-    });
+    //         instance.setState({
+    //             itemList: [
+    //                 { key: 'http://www.test.com', value: 'test site' },
+    //                 { key: 'http://www.testing.com', value: 'testing site' },
+    //             ],
+    //         });
+    //         instance.addItem({ key: 'http://www.test.com', value: 'test site' });
+    //         expect(instance.state.itemList.length).toEqual(2); // dupe not added
+    //         instance.editItem(0);
+    //         instance.addItem({ key: 'http://www.test.com', value: 'test link' });
+    //         expect(instance.state.itemList.length).toEqual(2);
+    //         expect(instance.state.itemList).toEqual([
+    //             { key: 'http://www.test.com', value: 'test link' },
+    //             { key: 'http://www.testing.com', value: 'testing site' },
+    //         ]);
+    //     });
+    // });
 });

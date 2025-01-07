@@ -496,15 +496,13 @@ export const AuthorsListWithAffiliates = ({
         isNtro,
         contributorEditorId,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //    [editState.editing],
-    // );
 
     const [data, setData] = React.useState([]);
 
     React.useEffect(() => {
+        const tmpList = [...list];
         const result = [];
-        list.forEach((item, index) => {
+        tmpList.forEach((item, index) => {
             delete item.tableData;
             item.id = index;
             result.push({ ...item });

@@ -105,8 +105,9 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
+        console.log('submit', data);
         try {
-            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError });
+            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError, params: { pid } });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
@@ -203,19 +204,19 @@ export const AdminContainer = ({ createMode = false }) => {
                                                 ),
                                             numberOfErrors: tabErrors.current.bibliographicSection || null,
                                         },
-                                        // authors: {
-                                        //     component: AuthorsSection,
-                                        //     activated: isActivated(),
-                                        //     numberOfErrors: tabErrors.current.authorsSection || null,
-                                        //     subComponent: {
-                                        //         title: 'NTRO',
-                                        //         component: NTRO_SUBTYPES.includes(
-                                        //             attributes.getValues('adminSection.rek_subtype'),
-                                        //         )
-                                        //             ? NtroSection
-                                        //             : null,
-                                        //     },
-                                        // },
+                                        authors: {
+                                            component: AuthorsSection,
+                                            activated: isActivated(),
+                                            numberOfErrors: tabErrors.current.authorsSection || null,
+                                            subComponent: {
+                                                title: 'NTRO',
+                                                component: NTRO_SUBTYPES.includes(
+                                                    attributes.getValues('adminSection.rek_subtype'),
+                                                )
+                                                    ? NtroSection
+                                                    : null,
+                                            },
+                                        },
                                         identifiers: {
                                             component: IdentifiersSection,
                                             activated: isActivated(),

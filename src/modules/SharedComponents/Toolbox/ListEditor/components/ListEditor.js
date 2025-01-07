@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
@@ -8,6 +8,7 @@ import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
 import FormHelperText from '@mui/material/FormHelperText';
+// import { isArrayDeeplyEqual } from '../../../../../helpers/general';
 
 export const ListEditor = ({
     formComponent: FormComponent,
@@ -58,19 +59,22 @@ export const ListEditor = ({
         return valueAsJson ? valueAsJson.map(item => item[searchKey.value]) : [];
     };
 
-    const [itemList, setItemList] = React.useState(setInitState);
-    const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = React.useState(null);
+    const [itemList, setItemList] = useState(setInitState);
+    const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = useState(null);
 
-    React.useEffect(() => {
-        const transformOutput = items => {
-            return items.map((item, index) => transformFunction(searchKey, item, index));
-        };
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        onChange?.(transformOutput(itemList));
+    useEffect(() => {
+        console.log('useEffect');
+        if (onChange) {
+            const transformOutput = items => {
+                return items.map((item, index) => transformFunction(searchKey, item, index));
+            };
+            // notify parent component when local state has been updated, eg itemList added/removed/reordered
+            onChange(transformOutput(itemList));
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [itemList]);
 
-    const addItem = React.useCallback(
+    const addItem = useCallback(
         item => {
             /**
              *  if item is not selected to edit
@@ -172,7 +176,7 @@ export const ListEditor = ({
         [distinctOnly, itemIndexSelectedToEdit, itemList, maxCount],
     );
 
-    const moveUpList = React.useCallback(
+    const moveUpList = useCallback(
         (item, index) => {
             /* istanbul ignore next */
             console.log(item, index, itemList, itemList.length - 1);
@@ -183,7 +187,7 @@ export const ListEditor = ({
         [itemList],
     );
 
-    const moveDownList = React.useCallback(
+    const moveDownList = useCallback(
         (item, index) => {
             /* istanbul ignore next */
             console.log(item, index, itemList, itemList.length - 1);
@@ -195,22 +199,22 @@ export const ListEditor = ({
         [itemList],
     );
 
-    const deleteItem = React.useCallback(
+    const deleteItem = useCallback(
         (item, index) => {
             setItemList(itemList.filter((_, i) => i !== index));
         },
         [itemList],
     );
 
-    const deleteAllItems = React.useCallback(() => {
+    const deleteAllItems = useCallback(() => {
         setItemList([]);
     }, []);
 
-    const editItem = React.useCallback(index => {
+    const editItem = useCallback(index => {
         setItemIndexSelectedToEdit(index);
     }, []);
 
-    const renderListsRows = React.useMemo(
+    const renderListsRows = useMemo(
         () => {
             return itemList.map((item, index) => (
                 <ListRow
@@ -309,7 +313,7 @@ ListEditor.propTypes = {
     errorText: PropTypes.string,
     remindToAdd: PropTypes.bool,
     input: PropTypes.object,
-    transformFunction: PropTypes.func.isRequired,
+    transformFunction: PropTypes.func,
     maxInputLength: PropTypes.number,
     inputNormalizer: PropTypes.func,
     rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
@@ -322,4 +326,4 @@ ListEditor.propTypes = {
     listEditorId: PropTypes.string.isRequired,
 };
 
-export default React.memo(ListEditor);
+export default memo(ListEditor);
