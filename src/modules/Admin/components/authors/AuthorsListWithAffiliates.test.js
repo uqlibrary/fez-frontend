@@ -3,8 +3,6 @@ import AuthorsListWithAffiliates from './AuthorsListWithAffiliates';
 import { act, render, fireEvent, WithReduxStore, within, waitFor } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
-import { preview } from 'test-utils';
-import userEvent from '@testing-library/user-event';
 
 const props = {
     contributorEditorId: 'rek-author',
@@ -181,11 +179,10 @@ describe('AuthorsListWithAffiliates', () => {
         const { getAllByTestId, getByTestId, getByText, queryByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();
 
-        userEvent.click(getByTestId('rek-author-add'));
-        userEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        userEvent.click(getByTestId('rek-author-add-save'));
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.click(getByTestId('rek-author-add-save'));
 
-        preview.debug();
         expect(queryByText('No records to display')).not.toBeInTheDocument();
         const tableRows = getAllByTestId('mtablebodyrow');
         expect(tableRows.length).toBe(1);
