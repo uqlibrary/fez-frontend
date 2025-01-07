@@ -6839,7 +6839,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1sdh29w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                         data-testid="test-list-row-0-uq-identifiers"
                         id="test-list-row-0-uq-identifiers"
                       />
