@@ -13,7 +13,7 @@ import { validation, publicationTypes, pathConfig } from 'config';
 import {
     DOCUMENT_TYPES_EDIT_ONLY,
     NEW_DOCTYPES_OPTIONS,
-    /* DOCTYPE_SUBTYPE_MAPPING,*/ NTRO_SUBTYPES,
+    /* DOCTYPE_SUBTYPE_MAPPING,,*/ NTRO_SUBTYPES,
 } from 'config/general';
 import locale from 'locale/pages';
 
@@ -41,10 +41,8 @@ export const AddSection = ({ onCreate, disabled = false }) => {
     const collections = attributes.getValues('adminSection.collections');
 
     let hasDefaultDocTypeSubType = false;
-    // let docTypeSubTypeCombo = null;
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
         hasDefaultDocTypeSubType = true;
-        // docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
     }
     const publicationSubtypeItems = subtypes
         ? subtypes.map((item, index) => (

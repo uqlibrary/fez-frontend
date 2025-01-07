@@ -1,33 +1,25 @@
 import React from 'react';
-import { AddSection } from './AddSection';
-import { rtlRender, WithRouter } from 'test-utils';
-
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
+import AddSection from './AddSection';
+import { rtlRender, WithReduxStore, WithRouter, FormProviderWrapper } from 'test-utils';
 
 function setup(testProps = {}) {
+    const { values = {}, ...rest } = testProps;
     const props = {
-        ...testProps,
+        ...rest,
     };
 
     return rtlRender(
-        <WithRouter>
-            <AddSection {...props} />
-        </WithRouter>,
+        <WithReduxStore>
+            <WithRouter>
+                <FormProviderWrapper
+                    values={{
+                        ...values,
+                    }}
+                >
+                    <AddSection {...props} />
+                </FormProviderWrapper>
+            </WithRouter>
+        </WithReduxStore>,
     );
 }
 
@@ -38,9 +30,7 @@ describe('AddSection component', () => {
     });
 
     it('should render with subtypes', () => {
-        const { container } = setup({
-            hasDefaultDocTypeSubType: true,
-        });
+        const { container } = setup({ values: { rek_display_type: 1004 } });
 
         expect(container).toMatchSnapshot();
     });

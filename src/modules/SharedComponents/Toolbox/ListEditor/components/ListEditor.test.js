@@ -6,7 +6,7 @@ import IssnForm from './IssnForm';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { rtlRender, FormProviderWrapper, act, userEvent, fireEvent, waitFor, preview } from 'test-utils';
+import { rtlRender, FormProviderWrapper, act, fireEvent, waitFor } from 'test-utils';
 
 const defaultProps = {
     className: 'testClass', // : PropTypes.string,
@@ -94,7 +94,6 @@ describe('ListEditor tests', () => {
         act(() => {
             fireEvent.click(getByTestId('test-list-row-1-move-down'));
         });
-        preview.debug();
         expect(getByTestId('test-list-row-1')).toHaveTextContent('three');
 
         expect(container).toMatchSnapshot();
@@ -109,7 +108,6 @@ describe('ListEditor tests', () => {
         act(() => {
             fireEvent.click(getByTestId('test-list-row-1-move-up'));
         });
-        preview.debug();
         expect(getByTestId('test-list-row-1')).toHaveTextContent('one');
 
         expect(container).toMatchSnapshot();
