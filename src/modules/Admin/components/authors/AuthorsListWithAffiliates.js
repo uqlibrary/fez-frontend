@@ -180,17 +180,16 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
             ),
             field: 'uqIdentifier',
             render: rowData => {
-                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                const identifierText =
+                    (!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                    (rowData.uqIdentifier && rowData.uqIdentifier !== '0' ? rowData.uqIdentifier : '');
                 return (
                     <Typography
                         variant="body2"
-                        sx={{ ...linkedClass(rowData, inProblemState) }}
                         id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                     >
-                        {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                            (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                            ''}
+                        {identifierText}
                     </Typography>
                 );
             },
@@ -512,28 +511,55 @@ export const AuthorsListWithAffiliates = ({
         setData(result);
     }, [list]);
 
+    const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
+
     const handleAuthorUpdate = (action, newData, oldData) => {
+        console.log('action, newData, oldData=', action, newData, oldData);
         const materialTable = materialTableRef.current;
         let newList = [...data];
 
-        if (action === 'update') {
-            const index = oldData.tableData.id;
-            const updatedData = {
-                ...oldData,
-                ...newData,
-                // Reset affiliations if author changes
-                affiliations: newData.aut_id !== oldData.aut_id ? [] : oldData.affiliations,
-            };
-            newList = [...data.slice(0, index), updatedData, ...data.slice(index + 1)];
-        } else if (action === 'delete') {
+        if (action === 'delete') {
             const index = oldData.tableData.id;
             newList = [...data.slice(0, index), ...data.slice(index + 1)];
+        } else if (
+            action === 'update' &&
+            data.filter(
+                (contributor, index) =>
+                    index !== oldData.tableData.id && !!contributor.aut_id && contributor.aut_id === newData.aut_id,
+            ).length > 0
+        ) {
+            newList = [...data];
+        } else if (
+            action === 'add' &&
+            data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newData.aut_id).length > 0
+        ) {
+            newList = [...data];
+        } else {
+            newList =
+                action === 'update'
+                    ? [
+                          ...data.slice(0, oldData.tableData.id),
+                          {
+                              ...newData,
+                              affiliations: newData.affiliation === '' ? [] : newData.affiliations,
+                              id: oldData.tableData.id,
+                          },
+                          ...data.slice(oldData.tableData.id + 1),
+                      ]
+                    : transformNewAuthorObject(newData);
         }
 
+        console.log('data==newList? ', JSON.stringify(data) === JSON.stringify(newList));
+        console.log('data, newList=');
+        console.log(JSON.stringify(data));
+        console.log(JSON.stringify(newList));
+        console.log('data=', data);
+        console.log('newList=', newList);
         onChange(newList);
         setData(newList);
 
         materialTable.dataManager.changePaging(newList.length > 10);
+
         materialTable.setState({
             ...materialTable.dataManager.getRenderState(),
             showAddRow: false,
