@@ -1141,6 +1141,10 @@ export default {
                     label: 'Abstract',
                     placeholder: 'Provide an abstract or summary of the work.',
                 },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
+                },
             },
         },
         authors: txt.components.authors,
