@@ -1,3 +1,19 @@
+const sdg = {
+    "fez_record_search_key_sustainable_development_goal": [
+        {
+            "rek_sustainable_development_goal_pid": "UQ:9227267",
+            "rek_sustainable_development_goal": 456994,
+            "rek_sustainable_development_goal_order": 1,
+            "rek_sustainable_development_goal_lookup": "01 - No poverty"
+        },
+        {
+            "rek_sustainable_development_goal": 456995,
+            "rek_sustainable_development_goal_order": 2,
+            "rek_sustainable_development_goal_lookup": "02 - Zero Hunger"
+        }
+    ],
+};
+
 export const dataCollection = {
     "rek_pid": "UQ:407731",
     "rek_title_xsdmf_id": null,
@@ -1098,6 +1114,7 @@ export const newspaperArticle = {
     "fez_record_search_key_translated_newspaper": null,
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Newspaper Article",
+    ...sdg,
 };
 
 export const thesis = {
@@ -2061,6 +2078,7 @@ export const digilibImage = {
     ],
     "fez_record_search_key_surrounding_features": [],
     "rek_display_type_lookup": "Digilib Image",
+    ...sdg,
 };
 
 export const workingPaper = {
@@ -2799,6 +2817,7 @@ export const design = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Design",
+    ...sdg,
 };
 
 export const creativeWork = {
@@ -3409,6 +3428,7 @@ export const departmentTechnicalReport = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Deparment Technical Report",
+    ...sdg,
 };
 
 export const journalArticle = {
@@ -3441,7 +3461,6 @@ export const journalArticle = {
     "rek_altmetric_id": 20711411,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -4660,6 +4679,7 @@ export const bookChapter = {
         "rek_volume_number": "886"
     },
     "rek_display_type_lookup": "Book Chapter",
+    ...sdg,
 };
 
 export const book = {
@@ -4967,6 +4987,7 @@ export const book = {
     "fez_record_search_key_type_of_data": [],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Book",
+    ...sdg,
 };
 
 export const editedBook = {
@@ -5711,6 +5732,7 @@ export const conferencePaper = {
         "rek_volume_number": "33"
     },
     "rek_display_type_lookup": "Conference Paper",
+    ...sdg,
 };
 
 export const generic = {
@@ -6657,6 +6679,7 @@ export const audioDocument = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Audio Document",
+    ...sdg,
 };
 
 export const preprint = {
@@ -8671,6 +8694,7 @@ export const researchReport = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Research Report",
+    ...sdg,
 };
 
 export const seminarPaper = {
@@ -8879,6 +8903,7 @@ export const seminarPaper = {
     ],
     "fez_record_search_key_total_pages": null,
     "rek_display_type_lookup": "Seminar Paper",
+    ...sdg,
 };
 
 export const manuscript = {
@@ -9546,6 +9571,7 @@ export const imageDocument = {
     "fez_record_search_key_subject": [],
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Image Document",
+    ...sdg,
 };
 
 export const videoDocument = {
@@ -9939,6 +9965,7 @@ export const videoDocument = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Video Document",
+    ...sdg,
 };
 
 export const journal = {
@@ -10368,6 +10395,7 @@ export const journal = {
         "rek_volume_number": "45"
     },
     "rek_display_type_lookup": "Journal",
+    ...sdg,
 };
 
 export const patent = {
@@ -10579,6 +10607,7 @@ export const patent = {
     ],
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Patent",
+    ...sdg,
 };
 
 export const publicationDetails = {
@@ -13174,6 +13203,7 @@ export const recordLinks = {
             "rek_link_description_order": 1
         }
     ],
+    ...sdg,
 };
 
 // TODO: each publication type should have a sample from eSpace data for testing
@@ -19104,6 +19134,7 @@ export const recordWithRDM = {
     "rek_scopus_doc_type_lookup": null,
     "rek_status_lookup": "Published",
     "rek_wok_doc_type_lookup": null,
+    ...sdg,
 };
 
 export const recordWithRdmMediatedAccess = {

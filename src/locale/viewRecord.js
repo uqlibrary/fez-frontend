@@ -150,6 +150,7 @@ export default {
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
                 fez_record_search_key_subject: 'Subject(s)',
+                fez_record_search_key_sustainable_development_goal: 'SDG(s)',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
                 fez_record_search_key_translated_journal_name: 'Translated journal name',
@@ -518,6 +519,10 @@ export default {
                     order: 25,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 25.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 26,
                 },
@@ -650,6 +655,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 22.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -788,6 +797,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 27,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 27.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -984,6 +997,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 35.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 36,
                 },
@@ -1150,6 +1167,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 35.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 36,
                 },
@@ -1255,21 +1276,17 @@ export default {
                     field: 'fez_record_search_key_end_page',
                     order: 18,
                 },
-                // {
-                //     field: 'fez_record_search_key_total_pages',
-                //     order: 19
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 20,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 21
-                // },
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 22.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -1376,6 +1393,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 21,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 21.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -1516,6 +1537,10 @@ export default {
                     order: 17,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 17.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 18,
                 },
@@ -1648,6 +1673,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 20.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -1826,6 +1855,10 @@ export default {
                     order: 2,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 2.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 3,
                 },
@@ -1980,6 +2013,10 @@ export default {
                     order: 18,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 18.5,
+                },
+                {
                     field: 'fez_record_search_key_geographic_area',
                     order: 19,
                 },
@@ -2096,6 +2133,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 19.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -2215,10 +2256,6 @@ export default {
                     field: 'fez_record_search_key_publisher',
                     order: 22,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 22
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 23,
@@ -2226,6 +2263,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 24,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 24.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -2320,6 +2361,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 15,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 15.5,
                 },
                 {
                     field: 'fez_record_search_key_geographic_area',
@@ -2436,6 +2481,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 19.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 20,
                 },
@@ -2540,6 +2589,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 19.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -2652,10 +2705,6 @@ export default {
                     field: 'fez_record_search_key_total_pages',
                     order: 16,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 17
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18,
@@ -2663,6 +2712,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 19.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -2755,6 +2808,10 @@ export default {
                     order: 13,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 13.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 14,
                 },
@@ -2779,6 +2836,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 2,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 2.5,
                 },
                 {
                     field: 'fez_record_search_key_publisher',
@@ -2827,6 +2888,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 12,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 12.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',
@@ -2927,6 +2992,10 @@ export default {
                     order: 16,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 16.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 17,
                 },
@@ -3025,6 +3094,10 @@ export default {
                     order: 15,
                 },
                 {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 15.5,
+                },
+                {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 16,
                 },
@@ -3121,6 +3194,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 18,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 18.5,
                 },
                 {
                     field: 'fez_record_search_key_license',
@@ -3239,6 +3316,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_sustainable_development_goal',
+                    order: 19.5,
                 },
                 {
                     field: 'fez_record_search_key_advisory_statement',

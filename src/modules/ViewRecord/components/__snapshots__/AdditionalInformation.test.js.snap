@@ -1409,6 +1409,54 @@ exports[`Additional Information Component  should not render map with empty geo 
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-transcript-label"
               >
                 Transcript
@@ -3033,6 +3081,54 @@ exports[`Additional Information Component  should render component with audio do
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-transcript-label"
               >
                 Transcript
@@ -3566,6 +3662,54 @@ exports[`Additional Information Component  should render component with book 1`]
                 >
                   158
                 </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
               </span>
             </div>
           </div>
@@ -4472,6 +4616,54 @@ exports[`Additional Information Component  should render component with book cha
             </div>
           </div>
         </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -5293,6 +5485,54 @@ exports[`Additional Information Component  should render component with conferen
                     data-testid="rek-language-0"
                   >
                     eng
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
                   </li>
                 </ul>
               </span>
@@ -11572,6 +11812,54 @@ exports[`Additional Information Component  should render component with design d
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-job-number-label"
               >
                 Job number
@@ -13017,6 +13305,54 @@ exports[`Additional Information Component  should render component with journal 
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Multinational+corporations&searchQueryParams%5Ball%5D="
                     >
                       Multinational corporations
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
                     </a>
                   </li>
                 </ul>
@@ -15099,6 +15435,54 @@ exports[`Additional Information Component  should render component with newspape
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-notes-label"
               >
                 Additional notes
@@ -15515,6 +15899,54 @@ exports[`Additional Information Component  should render component with patent 1
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=320800&searchQueryParams%5Ball%5D="
                     >
                       320800
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
                     </a>
                   </li>
                 </ul>
@@ -19295,6 +19727,54 @@ exports[`Additional Information Component  should render component with research
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-notes-label"
               >
                 Additional notes
@@ -20098,6 +20578,54 @@ exports[`Additional Information Component  should render component with video do
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451986&searchQueryParams%5Ball%5D="
                     >
                       451986
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
                     </a>
                   </li>
                 </ul>
@@ -23082,6 +23610,54 @@ exports[`Additional Information Component  should render map with geo coordinate
                       href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=450776&searchQueryParams%5Ball%5D="
                     >
                       450776
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sustainable-development-goal-label"
+              >
+                SDG(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sustainable-development-goal-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                    >
+                      01 - No poverty
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-sustainable-development-goal-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                    >
+                      02 - Zero Hunger
                     </a>
                   </li>
                 </ul>

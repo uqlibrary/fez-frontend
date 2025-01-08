@@ -156,6 +156,15 @@ export const pathConfig = {
                     },
                 },
             }),
+        sustainableDevelopmentGoal: (value, lookup) =>
+            getSearchUrl({
+                searchQuery: { all: '' },
+                activeFacets: {
+                    filters: {
+                        'SDG (lookup)': lookup,
+                    },
+                },
+            }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
