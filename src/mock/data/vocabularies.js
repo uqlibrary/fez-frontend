@@ -1,4 +1,4 @@
-import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
+import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID, SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID } from 'config/general';
 
 export const vocabulariesList = {
     [ORG_UNITS_VOCAB_ID]: {
@@ -32004,4 +32004,316 @@ export const vocabulariesList = {
         ],
         "filters": []
     },
+    [SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID]: {
+        "total": 17,
+        "data": [
+            {
+                "cvr_id": 8568,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456994,
+                "controlled_vocab": {
+                    "cvo_id": 456994,
+                    "cvo_title": "01 - No poverty",
+                    "cvo_desc": "End poverty in all its forms everywhere.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8569,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456995,
+                "controlled_vocab": {
+                    "cvo_id": 456995,
+                    "cvo_title": "02 - Zero Hunger",
+                    "cvo_desc": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8570,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456996,
+                "controlled_vocab": {
+                    "cvo_id": 456996,
+                    "cvo_title": "03 - Good health and well-being",
+                    "cvo_desc": "Ensure healthy lives and promote well-being for all at all ages.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8571,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456997,
+                "controlled_vocab": {
+                    "cvo_id": 456997,
+                    "cvo_title": "04 - Quality education",
+                    "cvo_desc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8572,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456998,
+                "controlled_vocab": {
+                    "cvo_id": 456998,
+                    "cvo_title": "05 - Gender Equality",
+                    "cvo_desc": "Achieve gender equality and empower all women and girls.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8573,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 456999,
+                "controlled_vocab": {
+                    "cvo_id": 456999,
+                    "cvo_title": "06 - Clean water and sanitation",
+                    "cvo_desc": "Ensure availability and sustainable management of water and sanitation for all.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8574,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457000,
+                "controlled_vocab": {
+                    "cvo_id": 457000,
+                    "cvo_title": "07 - Affordable and clean energy",
+                    "cvo_desc": "Ensure access to affordable, reliable, sustainable and modern energy for all.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8575,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457001,
+                "controlled_vocab": {
+                    "cvo_id": 457001,
+                    "cvo_title": "08 - Decent work and economic growth",
+                    "cvo_desc": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8576,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457002,
+                "controlled_vocab": {
+                    "cvo_id": 457002,
+                    "cvo_title": "09 - Industry, innovation and infrastructure",
+                    "cvo_desc": "Build resilient infrastructure, promote inclusive and sustainable industrialisation and foster innovation.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8577,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457003,
+                "controlled_vocab": {
+                    "cvo_id": 457003,
+                    "cvo_title": "10 - Reduced inequalities",
+                    "cvo_desc": "Reduce inequality within and among countries.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8578,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457004,
+                "controlled_vocab": {
+                    "cvo_id": 457004,
+                    "cvo_title": "11 - Sustainable cities and communities",
+                    "cvo_desc": "Make cities and human settlements inclusive, safe, resilient and sustainable.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8579,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457005,
+                "controlled_vocab": {
+                    "cvo_id": 457005,
+                    "cvo_title": "12 - Responsible consumption and production",
+                    "cvo_desc": "Ensure sustainable consumption and production patterns.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8580,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457006,
+                "controlled_vocab": {
+                    "cvo_id": 457006,
+                    "cvo_title": "13 - Climate action",
+                    "cvo_desc": "Take urgent action to combat climate change and its impacts.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8581,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457007,
+                "controlled_vocab": {
+                    "cvo_id": 457007,
+                    "cvo_title": "14 - Life Below Water",
+                    "cvo_desc": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8582,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457008,
+                "controlled_vocab": {
+                    "cvo_id": 457008,
+                    "cvo_title": "15 - Life on land",
+                    "cvo_desc": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8583,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457009,
+                "controlled_vocab": {
+                    "cvo_id": 457009,
+                    "cvo_title": "16 - Peace, justice and strong institutions",
+                    "cvo_desc": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            },
+            {
+                "cvr_id": 8584,
+                "cvr_parent_cvo_id": 456993,
+                "cvr_child_cvo_id": 457010,
+                "controlled_vocab": {
+                    "cvo_id": 457010,
+                    "cvo_title": "17 - Partnerships for the goals",
+                    "cvo_desc": "Strengthen the means of implementation and revitalise the Global Partnership for Sustainable Development.",
+                    "cvo_image_filename": null,
+                    "cvo_external_id": "",
+                    "cvo_hide": 0,
+                    "cvo_order": null,
+                    "cvo_lat": null,
+                    "cvo_long": null,
+                    "cvo_policy": null,
+                    "controlled_vocab_children": []
+                }
+            }
+        ],
+        "filters": [],
+    }
 };

@@ -617,6 +617,21 @@ export const getRecordSubjectSearchKey = subject => {
 };
 
 /**
+ * @param {Array<{rek_value: {key: string, value: string}, rek_order: number}>} items
+ * @returns {Object{fez_record_search_key_sustainable_development_goal:
+ * Array<{rek_sustainable_development_goal: string, rek_sustainable_development_goal_order: number}>}}
+ */
+export const getRecordSDGSearchKey = items => {
+    if (!items || items.length === 0) return {};
+    return {
+        fez_record_search_key_sustainable_development_goal: items.map(item => ({
+            rek_sustainable_development_goal: item.rek_value.key,
+            rek_sustainable_development_goal_order: item.rek_order,
+        })),
+    };
+};
+
+/**
  * getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
  *
  * @param {string} authorId - fez-authors id (eg 1671)
@@ -1120,6 +1135,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         languageOfJournalName,
         languages,
         subjects,
+        fez_record_search_key_sustainable_development_goal: sustainableDevelopmentGoal,
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
@@ -1214,6 +1230,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
+        ...getRecordSDGSearchKey(sustainableDevelopmentGoal),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),

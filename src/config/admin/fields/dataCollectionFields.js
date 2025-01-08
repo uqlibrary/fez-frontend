@@ -32,6 +32,10 @@ export default {
             groups: [['fez_record_search_key_keywords']],
         },
         {
+            title: 'Sustainable Development Goal',
+            groups: [['fez_record_search_key_sustainable_development_goal']],
+        },
+        {
             title: 'ANZSRC Fields of Research (FoR) Code(s)',
             groups: [['subjects']],
         },

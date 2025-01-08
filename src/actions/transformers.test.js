@@ -888,6 +888,33 @@ describe('transformers', () => {
         });
     });
 
+    describe('getRecordSDGSearchKey test', () => {
+        it('should return empty subject object', () => {
+            expect(transformers.getRecordSDGSearchKey()).toEqual({});
+        });
+
+        it('should return subject list based on input', () => {
+            const input = [
+                { rek_order: 1, rek_value: { key: 456994, value: '01 - No poverty' } },
+                { rek_order: 2, rek_value: { key: 456995, value: '02 - Zero Hunger' } },
+            ];
+            const expected = {
+                fez_record_search_key_sustainable_development_goal: [
+                    {
+                        rek_sustainable_development_goal: 456994,
+                        rek_sustainable_development_goal_order: 1,
+                    },
+                    {
+                        rek_sustainable_development_goal: 456995,
+                        rek_sustainable_development_goal_order: 2,
+                    },
+                ],
+            };
+            const result = transformers.getRecordSDGSearchKey(input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordSupervisorsSearchKey test', () => {
         it('should return empty supervisors object', () => {
             expect(transformers.getRecordSupervisorsSearchKey()).toEqual({});
@@ -5502,9 +5529,7 @@ describe('transformers', () => {
             ).toEqual([
                 {
                     rek_pid: 'UQ:11111',
-                    fez_record_search_key_ismemberof: [
-                        { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
-                    ],
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
                 },
             ]);
         });

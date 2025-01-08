@@ -1957,11 +1957,6 @@ export default {
         subjectForm: {
             title: 'Subject',
             text: 'Select subject codes',
-            // help: {
-            //     title: 'Field of research',
-            //     text: 'more info',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -1974,6 +1969,46 @@ export default {
                 header: {
                     locale: {
                         nameColumn: 'Subject',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        sustainableDevelopmentGoal: {
+            title: 'Sustainable Development Goals',
+            text: 'Select SDGs',
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Begin typing to select and add SDG(s)',
+                        inputFieldHint: 'Start typing code or field name and select from list',
+                        addButtonLabel: <span>Add&nbsp;SDG</span>,
+                        editButtonLabel: <span>Edit&nbsp;SDG</span>,
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Sustainable Development Goals',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',
