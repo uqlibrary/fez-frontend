@@ -1,10 +1,11 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter, waitFor } from 'test-utils';
+import { fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 import * as actions from 'actions';
 
 import TitleWithFavouriteButton from './TitleWithFavouriteButton';
 
 import { journalDetails } from 'mock/data';
+import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 
 function setup(testProps = {}) {
     const props = {
@@ -55,17 +56,13 @@ describe('TitleWithFavouriteButton', () => {
         const { getByTestId, queryByTestId } = setup();
         expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
 
-        fireEvent.click(getByTestId('favourite-journal-notsaved'));
-        await waitFor(() => {
-            expect(queryByTestId('favourite-journal-notsaved')).not.toBeInTheDocument();
-            expect(getByTestId('favourite-journal-saved')).toBeInTheDocument();
-        });
+        await userEvent.click(getByTestId('favourite-journal-notsaved'));
+        await waitForElementToBeRemoved(() => queryByTestId('favourite-journal-notsaved'));
+        await waitFor(() => expect(getByTestId('favourite-journal-saved')).toBeInTheDocument());
 
-        fireEvent.click(getByTestId('favourite-journal-saved'));
-        await waitFor(() => {
-            expect(queryByTestId('favourite-journal-saved')).not.toBeInTheDocument();
-            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
-        });
+        await userEvent.click(getByTestId('favourite-journal-saved'));
+        await waitForElementToBeRemoved(() => queryByTestId('favourite-journal-saved'));
+        expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
     });
 
     it('should call supplied error function if the favourite API call fails', async () => {
