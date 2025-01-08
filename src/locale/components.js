@@ -1995,7 +1995,7 @@ export default {
             },
         },
         sustainableDevelopmentGoal: {
-            title: 'Sustainable Development Goals',
+            title: 'Sustainable Development Goal',
             text: 'Select SDGs',
             field: {
                 form: {
@@ -2008,7 +2008,7 @@ export default {
                 },
                 header: {
                     locale: {
-                        nameColumn: 'Sustainable Development Goals',
+                        nameColumn: 'Sustainable Development Goal',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
                             confirmationTitle: 'Delete all',

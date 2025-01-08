@@ -376,6 +376,14 @@ const publicationTypeListJournalArticle = {
                     'rek_subject_lookup': '2910 Issues, ethics and legal aspects',
                 },
             ],
+            "fez_record_search_key_sustainable_development_goal": [
+                {
+                    "rek_sustainable_development_goal_pid": "UQ:9227267",
+                    "rek_sustainable_development_goal": 456994,
+                    "rek_sustainable_development_goal_order": 1,
+                    "rek_sustainable_development_goal_lookup": "01 - No poverty"
+                }
+            ],
             'fez_record_search_key_total_pages': '13',
             'fez_record_search_key_volume_number': '20',
             'fez_datastream_info': [

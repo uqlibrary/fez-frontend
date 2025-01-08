@@ -20,7 +20,7 @@ context('Journal Article admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('should render the different sections as expected', () => {
+    it.only('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.viewport(1000, 1000);
 
@@ -233,6 +233,20 @@ context('Journal Article admin edit', () => {
 
                 cy.get('@cards')
                     .eq(7)
+                    .within(() => {
+                        cy.get('h4').should('contain', 'Sustainable Development Goal');
+                        const items = record.fez_record_search_key_sustainable_development_goal.map(
+                            item => item.rek_sustainable_development_goal_lookup,
+                        );
+                        items.forEach((value, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', value);
+                        });
+                    });
+
+                cy.get('@cards')
+                    .eq(8)
                     .within(() => {
                         cy.get('h4').should('contain', 'Related publications');
                         // No Related publications in mock
@@ -797,7 +811,7 @@ context('Journal Article admin edit', () => {
             cy.get('[data-testid^="contributor-errorIcon-80316"]').should('not.exist');
         });
 
-        it.only('coverage - does not lose edited affiliation information when moving between admin tabs', () => {
+        it('coverage - does not lose edited affiliation information when moving between admin tabs', () => {
             cy.adminEditTabbedView();
 
             cy.get('[data-testid="authors-tab"]').click();
