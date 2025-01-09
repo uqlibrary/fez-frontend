@@ -7,6 +7,9 @@ const Chart = ({ chartOptions, className }) => {
     const chart = React.useRef(null);
 
     console.log('Chart render');
+    console.log('chartOptions:', JSON.stringify(chartOptions));
+    console.log('className:', className);
+
     /* istanbul ignore next */
     const reflowChart = () => {
         console.log('reflowChart');
