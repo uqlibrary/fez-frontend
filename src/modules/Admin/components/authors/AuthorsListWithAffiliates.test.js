@@ -510,7 +510,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(tableRows.length).toBe(1);
     });
 
-    it('should render the same list if a existing user with the same uq id in the list has been added', async () => {
+    it('should render the same list if an existing user with the same uq id in the list has been added', async () => {
         mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
             data: [
                 {

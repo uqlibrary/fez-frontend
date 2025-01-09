@@ -19,6 +19,7 @@ export const spacelessMaxLengthValidator = max => value => {
 };
 
 export const maxLength255Validator = maxLengthValidator(255);
+export const maxLength1000Validator = maxLengthValidator(1000);
 export const spacelessMaxLength9Validator = spacelessMaxLengthValidator(9);
 export const spacelessMaxLength10Validator = spacelessMaxLengthValidator(10);
 export const spacelessMaxLength11Validator = spacelessMaxLengthValidator(11);

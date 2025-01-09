@@ -44,7 +44,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 multiline
                                 rows={3}
                                 label={txt.information.fieldLabels.title}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -67,7 +67,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.conferenceLocation}
                             />
                         </Grid>
@@ -79,7 +79,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.conferenceDates}
                             />
                         </Grid>
@@ -100,6 +100,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 name="fez_record_search_key_journal_name.rek_journal_name"
                                 type="text"
                                 fullWidth
+                                validate={[validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.journalName}
                             />
                         </Grid>
@@ -110,6 +111,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
+                                validate={[validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.publicationPlace}
                             />
                         </Grid>
@@ -120,6 +122,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
+                                validate={[validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.publisher}
                             />
                         </Grid>
@@ -217,6 +220,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.other.fieldLabels.startPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -227,6 +231,7 @@ export const ConferencePaperForm = ({ submitting }) => {
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.other.fieldLabels.endPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>

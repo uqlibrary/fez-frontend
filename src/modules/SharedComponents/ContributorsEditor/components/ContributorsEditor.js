@@ -236,10 +236,13 @@ const ContributorsEditor = props => {
         }
     }, [contributors, input, onChange, record, scaleOfSignificance, scaleOfSignificanceFromProps, useFormReducer]);
 
-    const handleAuthorsListChange = contributors => {
-        setContributors(contributors);
-        onChange?.(contributors);
-    };
+    const handleAuthorsListChange = React.useCallback(
+        contributors => {
+            setContributors(contributors);
+            onChange?.(contributors);
+        },
+        [onChange],
+    );
 
     const addContributor = contributor => {
         const index = contributorIndexSelectedToEdit !== null ? contributorIndexSelectedToEdit : contributors.length;
