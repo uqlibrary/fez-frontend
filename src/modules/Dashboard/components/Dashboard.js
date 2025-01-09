@@ -292,9 +292,11 @@ const Dashboard = ({
     const isAdmin =
         authorDetails && (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1);
 
+    console.log('Dashboard render');
     useEffect(() => {
         // eslint-disable-next-line camelcase
         if (account && account.id && author?.aut_id) {
+            console.log('Dashboard render useEffect');
             // eslint-disable-next-line camelcase
             // don't call the api for non author users since the api call requires an author
             actions.countPossiblyYourPublications(account.id);
@@ -368,10 +370,10 @@ const Dashboard = ({
                     </React.Fragment>
                 )}
                 {/* render charts/stats depending on availability of data */}
-                {/* render bar chart full width */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
                     <Grid item xs={12}>
                         {barChart}
+                        {console.log('Bar chart rendered 1')}
                     </Grid>
                 )}
                 {/* render publication stats full width if donut chart not available */}
@@ -385,6 +387,7 @@ const Dashboard = ({
                     <React.Fragment>
                         <Grid item xs={12} sm={8}>
                             {barChart}
+                            {console.log('Bar chart rendered 2')}
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             {donutChart}

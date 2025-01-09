@@ -59,6 +59,7 @@ const AuthorsPublicationsPerYearChart = ({
         },
         series,
     };
+    console.log('AuthorsPublicationsPerYearChart render');
 
     return <Chart className={`${className || ''} authors-publications-per-year-chart`} chartOptions={options} />;
 };
