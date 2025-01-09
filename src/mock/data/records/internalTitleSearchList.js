@@ -68,7 +68,7 @@ const internalTitleSearchList = {
             ],
         },
         {
-            "rek_pid": "UQ:342708",
+         "rek_pid": "UQ:342708",
         "rek_title_xsdmf_id": null,
         "rek_title": "Vaccination day",
         "rek_description_xsdmf_id": null,
@@ -86,7 +86,7 @@ const internalTitleSearchList = {
         "rek_created_date_xsdmf_id": null,
         "rek_created_date": "2014-10-21T01:43:26Z",
         "rek_updated_date_xsdmf_id": null,
-        "rek_updated_date": "2022-10-20T20:20:54Z",
+        "rek_updated_date": "2025-01-08T23:32:03Z",
         "rek_file_downloads": 0,
         "rek_citation": "<a class=\"author_id_link\" title=\"Browse by Author ID for Parker, Malcolm\" href=\"/records/search?searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=710&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=Parker%2C+Malcolm&searchMode=advanced\">Parker, Malcolm</a> (<span class=\"citation_date\">2014</span>). <i><a class=\"citation_title\" title=\"Click to view Journal Article: Vaccination day\" href=\"/view/UQ:342708\">Vaccination day</a></i>. <span class=\"citation_journal_name\">Journal of Bioethical Inquiry</span>, <span class=\"citation_volume_number\">11</span> (<span class=\"citation_issue_number\">2</span>), <span class=\"citation_start_page\">161</span>-<span class=\"citation_end_page\">161</span>. doi: <span class=\"citation_doi\">10.1007/s11673-014-9531-6</span>",
         "rek_genre_xsdmf_id": null,
@@ -94,9 +94,9 @@ const internalTitleSearchList = {
         "rek_genre_type_xsdmf_id": null,
         "rek_genre_type": "Article (original research)",
         "rek_formatted_title_xsdmf_id": null,
-        "rek_formatted_title": null,
+        "rek_formatted_title": "Vaccination day",
         "rek_formatted_abstract_xsdmf_id": null,
-        "rek_formatted_abstract": "They enter<br /><br />in curves and stoops<br /><br />limping and tapping<br /><br />a file of bare arms<br /><br />creased faces uplifted<br /><br />red eyelids pouting<br /><br />eyes curtained in cataract.<br />",
+        "rek_formatted_abstract": "They enter<br><br>in curves and stoops<br><br>limping and tapping<br><br>a file of bare arms<br><br>creased faces uplifted<br><br>red eyelids pouting<br><br>eyes curtained in cataract.<br>",
         "rek_depositor_affiliation_xsdmf_id": null,
         "rek_depositor_affiliation": 898,
         "rek_thomson_citation_count": null,
@@ -129,7 +129,7 @@ const internalTitleSearchList = {
         "fez_record_search_key_assigned_user_id": [],
         "fez_record_search_key_author": [
             {
-                "rek_author_id": 28704357,
+                "rek_author_id": 37672334,
                 "rek_author_pid": "UQ:342708",
                 "rek_author_xsdmf_id": null,
                 "rek_author": "Parker, Malcolm",
@@ -138,7 +138,7 @@ const internalTitleSearchList = {
         ],
         "fez_record_search_key_author_id": [
             {
-                "rek_author_id_id": 28080611,
+                "rek_author_id_id": 37873119,
                 "rek_author_id_pid": "UQ:342708",
                 "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 710,
@@ -164,7 +164,7 @@ const internalTitleSearchList = {
             {
                 "rek_corresponding_country_id": 430713,
                 "rek_corresponding_country_pid": "UQ:342708",
-                "rek_corresponding_country_xsdmf_id": 0,
+                "rek_corresponding_country_xsdmf_id": null,
                 "rek_corresponding_country": "aus",
                 "rek_corresponding_country_order": 1
             }
@@ -174,7 +174,7 @@ const internalTitleSearchList = {
             {
                 "rek_corresponding_name_id": 142880,
                 "rek_corresponding_name_pid": "UQ:342708",
-                "rek_corresponding_name_xsdmf_id": 0,
+                "rek_corresponding_name_xsdmf_id": null,
                 "rek_corresponding_name": "Parker M.",
                 "rek_corresponding_name_order": 1
             }
@@ -204,7 +204,7 @@ const internalTitleSearchList = {
                 "as_doi": "10.1007/s11673-014-9531-6",
                 "as_score": 0,
                 "as_created": "2019-07-07 09:04:09",
-                "as_last_checked": "2024-10-30 23:42:47",
+                "as_last_checked": "2025-01-02 01:05:44",
                 "as_1d": 0,
                 "as_2d": 0,
                 "as_3d": 0,
@@ -252,21 +252,21 @@ const internalTitleSearchList = {
         "fez_record_search_key_grant_id": [],
         "fez_record_search_key_grant_text": [],
         "fez_record_search_key_herdc_code": {
-            "rek_herdc_code_id": 4626366,
+            "rek_herdc_code_id": 5390764,
             "rek_herdc_code_pid": "UQ:342708",
             "rek_herdc_code_xsdmf_id": null,
             "rek_herdc_code": 450013,
             "rek_herdc_code_lookup": "CX"
         },
         "fez_record_search_key_herdc_status": {
-            "rek_herdc_status_id": 3541497,
+            "rek_herdc_status_id": 4240039,
             "rek_herdc_status_pid": "UQ:342708",
             "rek_herdc_status_xsdmf_id": null,
             "rek_herdc_status": 453221,
             "rek_herdc_status_lookup": "Confirmed Code"
         },
         "fez_record_search_key_institutional_status": {
-            "rek_institutional_status_id": 3203829,
+            "rek_institutional_status_id": 3934046,
             "rek_institutional_status_pid": "UQ:342708",
             "rek_institutional_status_xsdmf_id": null,
             "rek_institutional_status": 453223,
@@ -277,7 +277,7 @@ const internalTitleSearchList = {
         "fez_record_search_key_isi_loc": null,
         "fez_record_search_key_ismemberof": [
             {
-                "rek_ismemberof_id": 11450931,
+                "rek_ismemberof_id": 13098105,
                 "rek_ismemberof_pid": "UQ:342708",
                 "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:3831",
@@ -291,7 +291,7 @@ const internalTitleSearchList = {
                 "rek_ismemberof_lookup": "School of Medicine Publications"
             },
             {
-                "rek_ismemberof_id": 11450932,
+                "rek_ismemberof_id": 13098106,
                 "rek_ismemberof_pid": "UQ:342708",
                 "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:237156",
@@ -308,7 +308,7 @@ const internalTitleSearchList = {
         "fez_record_search_key_ismn": [],
         "fez_record_search_key_issn": [
             {
-                "rek_issn_id": 5052689,
+                "rek_issn_id": 6054734,
                 "rek_issn_pid": "UQ:342708",
                 "rek_issn_xsdmf_id": null,
                 "rek_issn": "1176-7529",
@@ -326,7 +326,7 @@ const internalTitleSearchList = {
                 }
             },
             {
-                "rek_issn_id": 5052690,
+                "rek_issn_id": 6054735,
                 "rek_issn_pid": "UQ:342708",
                 "rek_issn_xsdmf_id": null,
                 "rek_issn": "1872-4353",
@@ -358,14 +358,14 @@ const internalTitleSearchList = {
         },
         "fez_record_search_key_keywords": [
             {
-                "rek_keywords_id": 30888647,
+                "rek_keywords_id": 32414368,
                 "rek_keywords_pid": "UQ:342708",
                 "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Health Policy",
                 "rek_keywords_order": 1
             },
             {
-                "rek_keywords_id": 30888648,
+                "rek_keywords_id": 32414369,
                 "rek_keywords_pid": "UQ:342708",
                 "rek_keywords_xsdmf_id": null,
                 "rek_keywords": "Health(social science)",
@@ -374,7 +374,7 @@ const internalTitleSearchList = {
         ],
         "fez_record_search_key_language": [
             {
-                "rek_language_id": 5190088,
+                "rek_language_id": 6043069,
                 "rek_language_pid": "UQ:342708",
                 "rek_language_xsdmf_id": null,
                 "rek_language": "eng",
@@ -398,14 +398,14 @@ const internalTitleSearchList = {
             "rek_oa_notes": "Post print permissible - 12 months embargo."
         },
         "fez_record_search_key_oa_status": {
-            "rek_oa_status_id": 1046931,
+            "rek_oa_status_id": 1578426,
             "rek_oa_status_pid": "UQ:342708",
             "rek_oa_status_xsdmf_id": null,
             "rek_oa_status": 453693,
             "rek_oa_status_lookup": "DOI"
         },
         "fez_record_search_key_oa_status_type": {
-            "rek_oa_status_type_id": 62365,
+            "rek_oa_status_type_id": 284399,
             "rek_oa_status_type_pid": "UQ:342708",
             "rek_oa_status_type": 454123,
             "rek_oa_status_type_lookup": "Bronze"
@@ -448,7 +448,7 @@ const internalTitleSearchList = {
             "fez_scopus_citations": {
                 "sc_eid": "2-s2.0-84957442577",
                 "sc_created": "2018-05-17 02:04:49",
-                "sc_last_checked": "2024-10-30 09:28:05",
+                "sc_last_checked": "2025-01-02 09:28:23",
                 "sc_count": 0,
                 "sc_1d": 0,
                 "sc_2d": 0,
@@ -482,7 +482,7 @@ const internalTitleSearchList = {
         },
         "fez_record_search_key_subject": [
             {
-                "rek_subject_id": 9709016,
+                "rek_subject_id": 10493334,
                 "rek_subject_pid": "UQ:342708",
                 "rek_subject_xsdmf_id": null,
                 "rek_subject": 453527,
@@ -490,7 +490,7 @@ const internalTitleSearchList = {
                 "rek_subject_lookup": "3306 Health (social science)"
             },
             {
-                "rek_subject_id": 9709017,
+                "rek_subject_id": 10493335,
                 "rek_subject_pid": "UQ:342708",
                 "rek_subject_xsdmf_id": null,
                 "rek_subject": 453438,
@@ -575,11 +575,11 @@ const internalTitleSearchList = {
         "rek_wok_doc_type_lookup": null,
         "rek_editing_user": null,
         "rek_editing_user_lookup": null,
-        "rek_editing_start_date": "2024-11-05 23:20:09",
+        "rek_editing_start_date": null,
         "fez_internal_notes": null,
         "fez_author_affiliation": [
             {
-                "af_id": 169439,
+                "af_id": 631868,
                 "af_pid": "UQ:342708",
                 "af_author_id": 710,
                 "af_percent_affiliation": 100000,
@@ -601,7 +601,7 @@ const internalTitleSearchList = {
             {
                 "rek_author_affiliation_country_id": 4494077,
                 "rek_author_affiliation_country_pid": "UQ:342708",
-                "rek_author_affiliation_country_xsdmf_id": 0,
+                "rek_author_affiliation_country_xsdmf_id": null,
                 "rek_author_affiliation_country": "aus",
                 "rek_author_affiliation_country_order": 1
             }
@@ -610,27 +610,53 @@ const internalTitleSearchList = {
             {
                 "rek_author_affiliation_full_address_id": 4454146,
                 "rek_author_affiliation_full_address_pid": "UQ:342708",
-                "rek_author_affiliation_full_address_xsdmf_id": 0,
+                "rek_author_affiliation_full_address_xsdmf_id": null,
                 "rek_author_affiliation_full_address": "St Lucia,Brisbane,QLD",
                 "rek_author_affiliation_full_address_order": 1
             }
         ],
         "fez_record_search_key_author_affiliation_name": [
             {
-                "rek_author_affiliation_name_id": 4595709,
+                "rek_author_affiliation_name_id": 11940962,
                 "rek_author_affiliation_name_pid": "UQ:342708",
-                "rek_author_affiliation_name_xsdmf_id": 0,
+                "rek_author_affiliation_name_xsdmf_id": null,
                 "rek_author_affiliation_name": "School of Medicine|University of Queensland",
                 "rek_author_affiliation_name_order": 1
             }
         ],
-        "fez_record_search_key_author_affiliation_type": [],
+        "fez_record_search_key_author_affiliation_type": [
+            {
+                "rek_author_affiliation_type_id": 2452962,
+                "rek_author_affiliation_type_pid": "UQ:342708",
+                "rek_author_affiliation_type_xsdmf_id": null,
+                "rek_author_affiliation_type": 0,
+                "rek_author_affiliation_type_lookup": null,
+                "rek_author_affiliation_type_order": 1
+            }
+        ],
         "fez_record_search_key_content_indicator": [],
-        "fez_record_search_key_creator_contribution_statement": [],
+        "fez_record_search_key_creator_contribution_statement": [
+            {
+                "rek_creator_contribution_statement_id": 2267259,
+                "rek_creator_contribution_statement_pid": "UQ:342708",
+                "rek_creator_contribution_statement_xsdmf_id": null,
+                "rek_creator_contribution_statement": "Missing",
+                "rek_creator_contribution_statement_order": 1
+            }
+        ],
         "fez_record_search_key_grant_type": [],
         "fez_record_search_key_grant_agency_type": [],
         "fez_record_search_key_quality_indicator": [],
-        "fez_record_search_key_significance": []
+        "fez_record_search_key_significance": [
+            {
+                "rek_significance_id": 2276340,
+                "rek_significance_pid": "UQ:342708",
+                "rek_significance_xsdmf_id": null,
+                "rek_significance": 0,
+                "rek_significance_lookup": null,
+                "rek_significance_order": 1
+            }
+        ]
         },
         {
             rek_pid: 'UQ:288545',
