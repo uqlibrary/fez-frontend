@@ -28,7 +28,8 @@ const mapStateToProps = state => {
 
     console.log('ret=', ret);
     ret.publicationTypesCount = null; // []
-    ret.publicationsByYear = null; // { "series": [], "categories": [] }
+    // ret.publicationsByYear = null; // { "series": [], "categories": [] }
+    ret.publicationsByYear = { series: null, categories: [] };
     return ret;
 };
 
