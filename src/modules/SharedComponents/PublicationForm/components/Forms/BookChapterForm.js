@@ -57,7 +57,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 multiline
                                 rows={3}
                                 label={txt.information.fieldLabels.bookChapterTitle}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -83,7 +83,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 required
                                 fullWidth
                                 label={txt.information.fieldLabels.publicationPlace}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -94,7 +94,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.information.fieldLabels.publisher}
                             />
                         </Grid>
@@ -223,6 +223,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 fullWidth
                                 disabled={submitting}
                                 label={txt.other.fieldLabels.edition}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -233,7 +234,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 fullWidth
                                 disabled={submitting}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.other.fieldLabels.startPage}
                                 error={!!pageError}
                                 errorText={pageError}
@@ -247,7 +248,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                                 fullWidth
                                 disabled={submitting}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.other.fieldLabels.endPage}
                                 error={!!pageError}
                                 errorText={pageError}

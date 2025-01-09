@@ -33,7 +33,7 @@ export const GenericDocumentForm = ({ submitting }) => {
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -44,6 +44,7 @@ export const GenericDocumentForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -54,6 +55,7 @@ export const GenericDocumentForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>

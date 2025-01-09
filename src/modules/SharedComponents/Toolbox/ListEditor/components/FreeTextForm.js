@@ -54,7 +54,13 @@ export const FreeTextForm = ({
 
     const addItem = event => {
         // add item if user hits 'enter' key on input field
-        if (disabled || (event && event.key && event.key !== 'Enter') || item.length === 0) {
+        if (
+            disabled ||
+            (event && event.key && event.key !== 'Enter') ||
+            item.length === 0 ||
+            // if isValid return casts to true, the value is invalid
+            (isValid && !!isValid(item))
+        ) {
             return;
         }
         event.preventDefault();

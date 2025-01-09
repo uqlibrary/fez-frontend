@@ -177,7 +177,7 @@ Cypress.Commands.add('editAffiliationAndAssert', (currentOrgId, nextOrgId, nextO
 
 Cypress.Commands.add(
     'assertAffiliationsAllowed',
-    ({ authorName, orgName, rowId, allowed = false, tabbed = true } = {}) => {
+    ({ authorName, orgName, rowId, allowed = false, tabbed = true, ntro = false } = {}) => {
         if (tabbed) {
             cy.adminEditTabbedView();
         }
@@ -194,7 +194,10 @@ Cypress.Commands.add(
             .click();
         cy.get('[data-testid=rek-author-add-save]').click();
         cy.get('[data-testid^=contributor-errorIcon]').should(allowed ? 'exist' : 'not.exist');
-        cy.get(`[data-testid=rek-author-list-row-${rowId}]`).within(() => {
+        // Material Table hardcored data-testid to mtablebodyrow for every row
+        // these tests do not apply for NTRO admin form
+        !ntro &&
+        cy.get(`[id=rek-author-list-row-${rowId}]`).within(() => {
             cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').should('exist');
             cy.wait(200);
             cy.get(allowed ? '[data-testid^=expandPanelIcon-]' : '[data-testid=ChevronRightIcon]').click();

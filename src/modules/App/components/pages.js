@@ -33,7 +33,7 @@ export const ChangeDisplayType = lazy(() =>
 );
 export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CollectionForm/containers/CollectionForm')),
+    lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
@@ -50,7 +50,6 @@ export const FavouriteSearch = lazy(() =>
     lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
 );
 export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/components/FixRecord')));
-export const GoogleScholar = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/GoogleScholar')));
 export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
 export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));
 export const ManageUsers = lazy(() => lazyRetry(() => import('modules/Admin/ManageUsers')));
@@ -59,15 +58,14 @@ export const MasterJournalListIngest = lazy(() =>
 );
 export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('modules/MyEditorialAppointments')));
 export const MyIncompleteRecord = lazy(() =>
-    lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
+    lazyRetry(() => import('modules/MyIncompleteRecord/components/MyIncompleteRecord')),
 );
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
     lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
 );
-export const SbsSubmission = lazy(() => lazyRetry(() => import('modules/SbsSubmission/containers/SbsSubmission')));
 export const ThesisSubmission = lazy(() =>
-    lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
+    lazyRetry(() => import('modules/ThesisSubmission/components/ThesisSubmission')),
 );
 export const ThirdPartyLookupTool = lazy(() =>
     lazyRetry(() => import('modules/ThirdPartyLookupTool/components/ThirdPartyLookupTool')),

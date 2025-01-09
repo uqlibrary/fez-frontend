@@ -174,6 +174,45 @@ exports[`Index page should render placeholders 1`] = `
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                data-testid="standard-card-restrictions-on-use"
+                id="standard-card-restrictions-on-use"
+              >
+                <div
+                  class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+                >
+                  <div
+                    class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                  >
+                    <h3
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                      data-testid="standard-card-restrictions-on-use-header"
+                      id="standard-card-restrictions-on-use-header"
+                    >
+                      Restrictions on Use
+                    </h3>
+                  </div>
+                </div>
+                <div
+                  class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                  data-analyticsid="standard-card-restrictions-on-use-content"
+                  data-testid="standard-card-restrictions-on-use-content"
+                  id="standard-card-restrictions-on-use-content"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                  >
+                    <span>
+                      You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-open-to-collaborate"
                 id="standard-card-open-to-collaborate"
               >

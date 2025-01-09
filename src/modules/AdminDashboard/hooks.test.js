@@ -1,6 +1,6 @@
 import { renderHook, act } from 'test-utils';
 
-import { useSystemAlertDrawer, useValidateReport, useAlertStatus } from './hooks';
+import { useSystemAlertDrawer, useAlertStatus } from './hooks';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -46,94 +46,6 @@ describe('hooks', () => {
         });
     });
 
-    describe('useValidateReport', () => {
-        const locale = {
-            systemAlertId: 'invalid',
-            required: 'is required',
-            dateNotAfter: 'invalid',
-        };
-        const displayReport = 'systemalertlog';
-
-        it('returns default state for unsupported reported types', () => {
-            const { result } = renderHook(() => useValidateReport({ locale, displayReport: 'unsupported' }));
-
-            expect(result.current.isValid).toBe(true);
-        });
-
-        it('returns default state for supported reported types with no inputs', () => {
-            const { result } = renderHook(() => useValidateReport({ locale, displayReport, systemAlertId: '' }));
-
-            expect(result.current.isValid).toBe(true);
-        });
-
-        it('return expected validation results', () => {
-            let displayReport = '';
-            let systemAlertId = '';
-            let fromDate = null;
-            let toDate = null;
-
-            // no inputs = invalid
-            const { result, rerender } = renderHook(() =>
-                useValidateReport({ locale, displayReport, systemAlertId, fromDate, toDate }),
-            );
-            expect(result.current.isValid).toBe(false);
-            displayReport = 'systemalertlog';
-            systemAlertId = 'abc'; // invalid system id
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
-            systemAlertId = '-1'; // invalid system id
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
-            systemAlertId = '1.1'; // invalid system id
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.systemAlertError).toEqual(locale.systemAlertId);
-
-            displayReport = 'workshistory';
-            systemAlertId = '123'; // should be ignored
-            toDate = null;
-            fromDate = null;
-            rerender(); // invalid, works history requires dates
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.fromDateError).toEqual(locale.required);
-            expect(result.current.toDateError).toEqual(locale.required);
-
-            displayReport = 'systemalertlog';
-            systemAlertId = '123'; // valid
-            toDate = '12/12/2024'; // 'to' without 'from'
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.fromDateError).toEqual(locale.required);
-
-            fromDate = '12/12/2025'; // after 'from'
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.fromDateError).toEqual(locale.dateNotAfter);
-
-            toDate = null; // 'from' without 'to'
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.toDateError).toEqual(locale.required);
-
-            toDate = '12/12/2026'; // valid
-            rerender();
-            expect(result.current.isValid).toBe(true);
-
-            fromDate = 'abc'; // invalid date
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.fromDateError).toEqual(locale.required);
-
-            fromDate = '12/12/2025';
-            toDate = 'abc'; // invalid date
-            rerender();
-            expect(result.current.isValid).toBe(false);
-            expect(result.current.toDateError).toEqual(locale.required);
-        });
-    });
-
     describe('useAlertStatus', () => {
         // afterEach(() => {
         //     jest.clearAllMocks();
@@ -167,6 +79,21 @@ describe('hooks', () => {
             rerender();
             [alertIsVisible] = result.current;
             expect(alertIsVisible).toBe(true);
+        });
+
+        it('manually moves from closed to open state', () => {
+            const hideAction = jest.fn();
+            const { result, rerender } = renderHook(() => useAlertStatus({ hideAction }));
+
+            const [alertIsVisible, , showAlert] = result.current;
+
+            expect(alertIsVisible).toBe(false);
+
+            showAlert('Test message');
+            rerender();
+            const [updatedAlertIsVisible, , , message] = result.current;
+            expect(updatedAlertIsVisible).toBe(true);
+            expect(message).toBe('Test message');
         });
 
         it('moves from open to closed state', () => {

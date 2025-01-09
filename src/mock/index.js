@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
-import { PUB_LIST_BULK_EXPORT_SIZES, } from 'config/general';
+import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
 import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
@@ -38,7 +38,7 @@ if (user && !mockData.accounts[user]) {
 
 // default user is researcher if user is not defined
 user = user || 'uqresearcher';
-// user = user || 'uqstaff';
+// user = user || 'uqstaff'; //remember to change it back when testing other menu item as fixRecord.spec.js will fail
 
 /*
  * Mocking CURRENT_ACCOUNT_API endpoint to check session with different instance of API
@@ -667,48 +667,76 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ),
     )
     .reply(200, { ...mockData.collectionList })
-    .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl))
-    )
-    .reply(200, { data: {...mockData.adminDashboardConfig} })
-    .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_TODAY_API().apiUrl))
-    )
-    .reply(200, { data: {...mockData.adminDashboardToday} })
-    .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl))
-    )
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_CONFIG_API().apiUrl)))
+    .reply(200, { data: { ...mockData.adminDashboardConfig } })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_TODAY_API().apiUrl)))
+    .reply(200, { data: { ...mockData.adminDashboardToday } })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
     .reply(200, { data: [...mockData.adminDashboardQuickLinks] })
-    .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl))
-    )
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
     .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
-    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({id: '.*'}).apiUrl)))
+    .onGet(
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 5, date_from: '.*' }).apiUrl)),
+    )
+    .reply(200, { data: { success: true } })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 6, date_from: '.*', date_to: '.*' }).apiUrl,
+            ),
+        ),
+    )
+    .reply(200, { data: { success: true } })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 3 }).apiUrl)))
+    .reply(200, { data: { success: false, message: 'No records found' } })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 1 }).apiUrl)))
     .reply(config => {
-        return [200, `Exported file contents for report ${config.url.split('=')[1]}`, {
-            'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-        }];
+        return [200, `Exported file contents for report ${config.url.split('=')[1]}`];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: '.*' }).apiUrl)))
+    .reply(config => {
+        return [
+            200,
+            `Exported file contents for report ${config.url.split('=')[1]}`,
+            {
+                'content-type': 'text/csv',
+            },
+        ];
     })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 2, date_from: '.*', date_to: '.*'}).apiUrl))
+        new RegExp(
+            escapeRegExp(
+                routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ report_type: 2, date_from: '.*', date_to: '.*' }).apiUrl,
+            ),
+        ),
     )
     .reply(200, { data: [...mockData.adminDashboardReportWorksData] })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, date_from: '.*', date_to: '.*'}).apiUrl))
+        new RegExp(
+            escapeRegExp(
+                routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ report_type: 1, date_from: '.*', date_to: '.*' }).apiUrl,
+            ),
+        ),
     )
-    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]})
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData] })
     .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1, record_id: '.*'}).apiUrl))
+        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ report_type: 1, record_id: '.*' }).apiUrl)),
     )
-    .reply(200, { data: [{...mockData.adminDashboardReportSystemAlertsData[0]}]})
-    .onGet(
-        new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({report_type: 1}).apiUrl))
-    )
-    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData]});
+    .reply(200, { data: [{ ...mockData.adminDashboardReportSystemAlertsData[0] }] })
+    .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({ report_type: 1 }).apiUrl)))
+    .reply(200, { data: [...mockData.adminDashboardReportSystemAlertsData] });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(() => [200, { data: {} }])
+    .reply(config => {
+        // this is to assert that forms are not submitting corrupted files - see forms.spec.js
+        if (!(config.data instanceof File)) {
+            const error = `File upload request with corrupted data detected: ${config.data}`;
+            console.error(error);
+            throw new Error(error);
+        }
+        return [200, { data: {} }];
+    })
     .onPut(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)))
     .reply(config => {
         return [200, { data: { ...mockData.favouriteSearchItem } }];
@@ -839,19 +867,21 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .onDelete(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_QUICKLINKS_API().apiUrl)))
     .reply(() => [201, {}]);
 
-mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
-    .reply((request) => {
-        if (request?.url.match(new RegExp(mockData.collectionRecord.rek_pid))) {
-            return [409, {"data":"Can't delete a record that has child records"}];
-        }
-        if (request?.url.match(new RegExp(mockData.recordThatFailsDeletion.rek_pid))) {
-            return [500, {}];
-        }
+mock.onDelete(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl))).reply(request => {
+    if (request?.url.match(new RegExp(mockData.collectionRecord.rek_pid))) {
+        return [409, { data: "Can't delete a record that has child records" }];
+    }
+    if (request?.url.match(new RegExp(mockData.recordThatFailsDeletion.rek_pid))) {
+        return [500, {}];
+    }
 
-        return [200, {
+    return [
+        200,
+        {
             data: 'Record deleted',
-        }];
-    });
+        },
+    ];
+});
 
 // Note: The existing records of all the mocked types below (regular records, collections and community)
 // are all patched via the same endpoint, so if you want to mock a failure of one of those,

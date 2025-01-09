@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 context('Admin Dashboard - Reports tab', () => {
     beforeEach(() => {
         cy.loadAdminDashboard();
@@ -25,17 +27,9 @@ context('Admin Dashboard - Reports tab', () => {
         cy.data('report-export-only-input')
             .should('have.value', '')
             .click();
-        cy.get('[role=option]').should('have.length', 4);
+        cy.get('[role=option]').should('have.length', 6);
         cy.get('[role=option]')
-            .eq(0)
-            .within(() => {
-                cy.get('p').should('have.length', 2);
-                cy.get('p')
-                    .eq(0)
-                    .contains('Wok ID dups');
-            });
-        cy.get('[role=option]')
-            .eq(0)
+            .contains('Wok ID dups')
             .click();
         cy.data('report-export-only-input').should('have.value', 'Wok ID dups');
 
@@ -92,19 +86,247 @@ context('Admin Dashboard - Reports tab', () => {
             },
             violations => console.log(violations),
         );
+
         cy.get('[role=option]')
-            .eq(0)
+            .contains('Wok ID dups')
             .click();
         cy.data('report-export-only-input').should('have.value', 'Wok ID dups');
 
-        cy.intercept('GET', '/admin/Exported*').as('exportReport');
+        cy.task('downloads', Cypress.config('downloadsFolder')).then(before => {
+            cy.data('report-export-button')
+                .should('not.be.disabled')
+                .click();
 
-        cy.data('report-export-button').click();
-        cy.data('report-export-button').should('be.disabled');
-        cy.data('export-report-progress').should('exist');
-        cy.wait('@exportReport'); // wait for the response to be received
+            cy.data('export-report-progress').should('exist');
+            cy.wait(2000);
+            cy.task('downloads', Cypress.config('downloadsFolder')).then(after => {
+                expect(after.length).to.be.eq(before.length + 1);
+            });
+        });
+
         cy.data('report-export-button').should('not.be.disabled');
         cy.data('export-report-progress').should('not.exist');
+    });
+
+    it('legacy report with no results shows alert', () => {
+        cy.data('report-export-button').should('be.disabled');
+        cy.data('report-export-only-input')
+            .should('have.value', '')
+            .click();
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                rules: {
+                    'color-contrast': { enabled: false },
+                },
+            },
+            violations => console.log(violations),
+        );
+
+        cy.get('[role=option]')
+            .contains('DOI Dups')
+            .click();
+        cy.data('report-export-only-input').should('have.value', 'DOI Dups');
+
+        cy.data('report-export-button')
+            .should('not.be.disabled')
+            .click();
+
+        cy.data('export-report-progress').should('exist');
+
+        cy.data('report-export-button').should('not.be.disabled');
+        cy.data('export-report-progress').should('not.exist');
+
+        cy.data('alert')
+            .should('be.visible')
+            .contains('Nothing to export');
+
+        // dismiss for coverage
+        cy.data('alert').within(() => {
+            cy.data('dismiss').click();
+        });
+        cy.data('alert').should('not.exist');
+    });
+    describe('queued legacy reports', () => {
+        it('should enable binding fields', () => {
+            cy.data('report-export-button').should('be.disabled');
+            cy.data('report-export-only-input')
+                .should('have.value', '')
+                .click();
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
+
+            cy.get('[role=option]')
+                .contains('Queued report one binding')
+                .click();
+            cy.data('report-export-only-input').should('have.value', 'Queued report one binding');
+
+            cy.data('report-export-button').should('be.disabled');
+
+            cy.data('report-export-only-date-from-input').should('not.be.disabled');
+            cy.data('report-export-only-date-to-input').should('be.disabled');
+
+            cy.data('report-export-only-input').click();
+            cy.get('[role=option]')
+                .contains('Queued report two bindings')
+                .click();
+            cy.data('report-export-only-input').should('have.value', 'Queued report two bindings');
+
+            cy.data('report-export-only-date-from-input')
+                .should('not.be.disabled')
+                .type('01012024');
+            cy.data('report-export-only-date-to-input')
+                .should('not.be.disabled')
+                .type('02012024');
+            cy.data('report-export-button')
+                .should('not.be.disabled')
+                .click();
+            cy.data('alert')
+                .should('be.visible')
+                .contains('Report queued');
+        });
+
+        it('validates the filters', () => {
+            cy.data('report-export-button').should('be.disabled');
+            cy.data('report-export-only-input')
+                .should('have.value', '')
+                .click();
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
+
+            cy.get('[role=option]')
+                .contains('Queued report two bindings')
+                .click();
+            cy.data('report-export-only-input').should('have.value', 'Queued report two bindings');
+
+            // check the mui calendar appears if button clicked.
+            cy.data('report-export-only-date-from').within(() => {
+                cy.get('button').click();
+            });
+            cy.get('.MuiPickersPopper-root').should('exist');
+            cy.data('report-export-only-date-to').within(() => {
+                cy.get('button').click();
+            });
+            cy.get('.MuiPickersPopper-root').should('exist');
+            cy.data('report-export-only-date-to').within(() => {
+                cy.get('button').click();
+            });
+            cy.get('.MuiPickersPopper-root').should('not.exist');
+            cy.data('report-export-only-date-to-input').type('01/01/2020');
+            // date from should be in error state
+            cy.data('report-export-only-date-from-input').should('have.attr', 'required');
+            cy.data('report-export-only-date-from').contains('Required');
+            cy.data('report-export-only-date-from-input')
+                .parent()
+                .should('have.class', 'Mui-error');
+            cy.data('report-export-button').should('be.disabled');
+
+            cy.data('report-export-only-date-to-input').clear();
+
+            cy.data('report-export-only-date-from-input').type('01/01/2020');
+            // to date should be in error state
+            cy.data('report-export-only-date-to-input').should('have.attr', 'required');
+            cy.data('report-export-only-date-to').contains('Required');
+            cy.data('report-export-only-date-to-input')
+                .parent()
+                .should('have.class', 'Mui-error');
+
+            cy.data('report-export-button').should('be.disabled');
+
+            cy.data('report-export-only-date-from-input').clear();
+
+            // to before from
+            cy.data('report-export-only-date-to-input').type('01/01/2025');
+            cy.data('report-export-only-date-from-input').type('01/01/2026');
+            cy.data('report-export-only-date-from').contains('Must not be after "to" date');
+            cy.data('report-export-only-date-to').contains('Must not be before "from" date');
+
+            cy.data('report-export-only-date-from-input')
+                .parent()
+                .should('have.class', 'Mui-error');
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                    rules: {
+                        'color-contrast': { enabled: false },
+                    },
+                },
+                violations => console.log(violations),
+            );
+
+            cy.data('report-export-button').should('be.disabled');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('01/01/2024');
+
+            cy.data('report-export-only-date-to').contains('Must be within 1 week of "from" date');
+            cy.data('report-export-only-date-to-input')
+                .clear()
+                .type('07/01/2024');
+            cy.data('report-export-only-date-to')
+                .contains('Must be within 1 week of "from" date')
+                .should('not.exist');
+            cy.data('report-export-button').should('not.be.disabled');
+
+            // test single binding with 52 week length
+            cy.data('report-export-only-input').click();
+            cy.get('[role=option]')
+                .contains('Queued report one binding')
+                .click();
+            cy.data('report-export-only-input').should('have.value', 'Queued report one binding');
+            cy.data('report-export-only-date-from-input').should('have.attr', 'required');
+            cy.data('report-export-only-date-from').contains('Required');
+            cy.data('report-export-only-date-from-input')
+                .parent()
+                .should('have.class', 'Mui-error');
+            cy.data('report-export-only-date-to-input').should('be.disabled');
+            cy.data('report-export-button').should('be.disabled');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('01/01/2015');
+            cy.data('report-export-only-date-to-input').should('have.value', '31/12/2015');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('30/10/2015');
+            cy.data('report-export-only-date-to-input').should('have.value', '28/10/2016');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type('28/02/2017');
+            cy.data('report-export-only-date-to-input').should('have.value', '27/02/2018');
+
+            // test auto-cutoff, when selected 'from' date is less than maximum date range.
+            // Auto-cutoff makes the "to" date become the current date
+            // since it doesnt make sense to have "to" dates in the future.
+            // e.g. if max date range is 1 year, today's date is 20/11/2024, and
+            // 'from' date is set to 20/06/2024, then normally the 'to' date would
+            // become 20/06/2025, which is 6 months in the future. Instead, set 'to' date
+            // automatically to today's date, making the range 20/06/2024 - 20/11/2024
+            const today = moment();
+            const dateFrom = moment().subtract(6, 'months');
+            cy.data('report-export-only-date-from-input')
+                .clear()
+                .type(dateFrom.format('DD/MM/YYYY'));
+            cy.data('report-export-only-date-to-input').should('have.value', today.format('DD/MM/YYYY'));
+        });
     });
 
     it('displays and downloads a display report', () => {
