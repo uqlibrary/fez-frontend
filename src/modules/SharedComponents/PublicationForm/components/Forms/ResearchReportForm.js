@@ -63,7 +63,7 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                 multiline
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
 
@@ -76,7 +76,9 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
                                 required={pubsMandatory}
-                                validate={pubsMandatory ? [validation.required] : undefined}
+                                validate={
+                                    pubsMandatory ? [validation.required, validation.maxLength255Validator] : undefined
+                                }
                             />
                         </Grid>
                         <Grid item xs={12} sm={4}>
@@ -88,7 +90,9 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
                                 required={pubsMandatory}
-                                validate={pubsMandatory ? [validation.required] : undefined}
+                                validate={
+                                    pubsMandatory ? [validation.required, validation.maxLength255Validator] : undefined
+                                }
                             />
                         </Grid>
                         <Grid item xs={12} sm={4}>
@@ -99,6 +103,7 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.reportNumber}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -107,6 +112,7 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 disabled={submitting}
                                 {...txt.information.fieldLabels.orgUnitName}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         {!isNtro && (
@@ -120,7 +126,7 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                     required
                                     {...txt.information.fieldLabels.totalPages}
                                     normalize={getNumbersOnly}
-                                    validate={[validation.required]}
+                                    validate={[validation.required, validation.maxLength255Validator]}
                                 />
                             </Grid>
                         )}
@@ -156,6 +162,7 @@ export const ResearchReportForm = ({ submitting, isNtro, isAuthorSelected, formV
                                     name="fez_record_search_key_series.rek_series"
                                     disabled={submitting}
                                     {...txt.information.fieldLabels.series}
+                                    validate={[validation.maxLength255Validator]}
                                 />
                             </Grid>
                         )}

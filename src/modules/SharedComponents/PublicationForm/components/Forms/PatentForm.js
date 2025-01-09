@@ -33,7 +33,7 @@ export const PatentForm = ({ submitting }) => {
                                 multiline
                                 rows={3}
                                 label={txt.information.fieldLabels.title}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -44,6 +44,7 @@ export const PatentForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 label={txt.information.fieldLabels.patentNumber}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -68,6 +69,7 @@ export const PatentForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 label={txt.information.fieldLabels.countryOfOrigin}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -78,6 +80,7 @@ export const PatentForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 label={txt.information.fieldLabels.patentOwner}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                     </Grid>
