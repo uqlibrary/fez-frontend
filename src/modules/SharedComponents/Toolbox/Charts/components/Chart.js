@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import Highcharts from 'highcharts';
+import isEqual from 'lodash/isEqual';
 
 const Chart = ({ chartOptions, className }) => {
     const chartRef = React.useRef();
@@ -42,8 +43,5 @@ Chart.propTypes = {
 
 // export default React.memo(Chart);
 export default React.memo(Chart, (prevProps, nextProps) => {
-    return (
-        JSON.stringify(prevProps.chartOptions) === JSON.stringify(nextProps.chartOptions) &&
-        prevProps.className === nextProps.className
-    );
+    return isEqual(prevProps.chartOptions, nextProps.chartOptions) && prevProps.className === nextProps.className;
 });
