@@ -8,7 +8,10 @@ const Chart = ({ chartOptions, className }) => {
 
     console.log('Chart render');
     /* istanbul ignore next */
-    const reflowChart = () => chart.current?.reflow();
+    const reflowChart = () => {
+        console.log('reflowChart');
+        return chart.current?.reflow();
+    };
     React.useEffect(() => {
         console.log('Chart useEffect');
         chart.current = new Highcharts.Chart(chartRef.current, chartOptions);

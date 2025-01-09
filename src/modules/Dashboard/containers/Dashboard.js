@@ -26,10 +26,11 @@ const mapStateToProps = state => {
         possiblyYourPublicationsCountLoading: loadingPossibleCounts,
     };
 
-    console.log('ret=', ret);
+    // console.log('ret=', ret);
     ret.publicationTypesCount = null; // []
-    // ret.publicationsByYear = null; // { "series": [], "categories": [] }
-    ret.publicationsByYear = { series: null, categories: [] };
+    // // ret.publicationsByYear = null; // { "series": [], "categories": [] }
+    // // ret.publicationsByYear = { series: [], categories: [] };
+    // ret.publicationsByYear = undefined;
     return ret;
 };
 
