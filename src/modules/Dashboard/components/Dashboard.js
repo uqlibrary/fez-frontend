@@ -207,7 +207,7 @@ const Dashboard = ({
     // console.log('publicationsByYear=', publicationsByYear);
     // console.log('publicationTypesCount=', publicationTypesCount);
     const barChart =
-        !loading && !isMobileView && publicationsByYear && publicationsByYear.series.length > 0 ? (
+        2 - 1 !== 1 && !loading && !isMobileView && publicationsByYear && publicationsByYear.series.length > 0 ? (
             <StandardCard
                 className="barChart"
                 title={txt.publicationsByYearChart.title}
