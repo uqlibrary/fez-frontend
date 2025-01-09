@@ -204,6 +204,8 @@ const Dashboard = ({
         // eslint-disable-next-line camelcase
         !!author?.aut_id && (loadingPublicationsByYear || accountAuthorDetailsLoading || loadingPublicationsStats);
     const userHasPublications = authorDetails && authorDetails.espace && authorDetails.espace.doc_count > 0;
+    console.log('publicationsByYear=', publicationsByYear);
+    console.log('publicationTypesCount=', publicationTypesCount);
     const barChart =
         !loading && !isMobileView && publicationsByYear && publicationsByYear.series.length > 0 ? (
             <StandardCard

@@ -9,7 +9,7 @@ const mapStateToProps = state => {
     const { possibleCounts, loadingPossibleCounts } = state.get('claimPublicationReducer');
     const account = state.get('accountReducer');
 
-    return {
+    const ret = {
         ...account,
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
@@ -25,6 +25,11 @@ const mapStateToProps = state => {
         possiblyYourPublicationsCount: possibleCounts,
         possiblyYourPublicationsCountLoading: loadingPossibleCounts,
     };
+
+    console.log('ret=', ret);
+    ret.publicationTypesCount = null; // []
+    ret.publicationsByYear = null; // { "series": [], "categories": [] }
+    return ret;
 };
 
 function mapDispatchToProps(dispatch) {

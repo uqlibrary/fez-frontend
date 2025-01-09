@@ -6,9 +6,11 @@ const Chart = ({ chartOptions, className }) => {
     const chartRef = React.useRef();
     const chart = React.useRef(null);
 
+    console.log('Chart render');
     /* istanbul ignore next */
     const reflowChart = () => chart.current?.reflow();
     React.useEffect(() => {
+        console.log('Chart useEffect');
         chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
 
         (window.matchMedia?.('print') || null)?.addEventListener('change', reflowChart);
