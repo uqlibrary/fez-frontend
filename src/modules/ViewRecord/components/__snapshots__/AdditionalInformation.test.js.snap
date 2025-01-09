@@ -1427,7 +1427,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -1436,7 +1436,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -3099,7 +3099,7 @@ exports[`Additional Information Component  should render component with audio do
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -3108,7 +3108,7 @@ exports[`Additional Information Component  should render component with audio do
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -3695,7 +3695,7 @@ exports[`Additional Information Component  should render component with book 1`]
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -3704,7 +3704,7 @@ exports[`Additional Information Component  should render component with book 1`]
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -4645,7 +4645,7 @@ exports[`Additional Information Component  should render component with book cha
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -4654,7 +4654,7 @@ exports[`Additional Information Component  should render component with book cha
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -5520,7 +5520,7 @@ exports[`Additional Information Component  should render component with conferen
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -5529,7 +5529,7 @@ exports[`Additional Information Component  should render component with conferen
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -11830,7 +11830,7 @@ exports[`Additional Information Component  should render component with design d
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -11839,7 +11839,7 @@ exports[`Additional Information Component  should render component with design d
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -13341,7 +13341,7 @@ exports[`Additional Information Component  should render component with journal 
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -13350,7 +13350,7 @@ exports[`Additional Information Component  should render component with journal 
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -15453,7 +15453,7 @@ exports[`Additional Information Component  should render component with newspape
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -15462,7 +15462,7 @@ exports[`Additional Information Component  should render component with newspape
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -15935,7 +15935,7 @@ exports[`Additional Information Component  should render component with patent 1
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -15944,7 +15944,7 @@ exports[`Additional Information Component  should render component with patent 1
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -19745,7 +19745,7 @@ exports[`Additional Information Component  should render component with research
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -19754,7 +19754,7 @@ exports[`Additional Information Component  should render component with research
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -20614,7 +20614,7 @@ exports[`Additional Information Component  should render component with video do
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -20623,7 +20623,7 @@ exports[`Additional Information Component  should render component with video do
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>
@@ -23646,7 +23646,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                     data-testid="rek-sustainable-development-goal-0"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
                     >
                       01 - No poverty
                     </a>
@@ -23655,7 +23655,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                     data-testid="rek-sustainable-development-goal-1"
                   >
                     <a
-                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSDG+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
                     >
                       02 - Zero Hunger
                     </a>

@@ -161,7 +161,8 @@ export const pathConfig = {
                 searchQuery: { all: '' },
                 activeFacets: {
                     filters: {
-                        'SDG (lookup)': lookup,
+                        'Sustainable Development Goal': value,
+                        'Sustainable Development Goal (lookup)': lookup,
                     },
                 },
             }),
