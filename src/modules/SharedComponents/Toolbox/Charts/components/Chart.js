@@ -17,7 +17,7 @@ const Chart = ({ chartOptions, className }) => {
         return chart.current?.reflow();
     };
     React.useEffect(() => {
-        console.log('Chart useEffect');
+        console.log('Chart useEffect create chart');
         chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
 
         (window.matchMedia?.('print') || null)?.addEventListener('change', reflowChart);
@@ -29,6 +29,7 @@ const Chart = ({ chartOptions, className }) => {
     }, []);
 
     React.useEffect(() => {
+        console.log('Chart useEffect update');
         chart.current?.update(chartOptions);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [chartOptions]);
