@@ -40,4 +40,10 @@ Chart.propTypes = {
     className: PropTypes.string,
 };
 
-export default React.memo(Chart);
+// export default React.memo(Chart);
+export default React.memo(Chart, (prevProps, nextProps) => {
+    return (
+        JSON.stringify(prevProps.chartOptions) === JSON.stringify(nextProps.chartOptions) &&
+        prevProps.className === nextProps.className
+    );
+});
