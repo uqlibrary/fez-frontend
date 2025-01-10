@@ -25,6 +25,7 @@ const defaultProps = {
     scrollList: false,
     scrollListHeight: 250,
     maxCount: 0,
+    input: { name: 'test', value: '' },
 };
 
 const addItemsToList = ({ items, getByTestId, assertCount = true }) => {

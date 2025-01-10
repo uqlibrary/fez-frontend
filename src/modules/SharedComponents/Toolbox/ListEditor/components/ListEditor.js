@@ -8,7 +8,7 @@ import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
 
 import FormHelperText from '@mui/material/FormHelperText';
-// import { isArrayDeeplyEqual } from '../../../../../helpers/general';
+import { isArrayDeeplyEqual } from '../../../../../helpers/general';
 
 export const ListEditor = ({
     formComponent: FormComponent,
@@ -50,25 +50,32 @@ export const ListEditor = ({
     category,
     listEditorId,
 }) => {
-    const methods = useFormContext();
-    const setInitState = () => {
+    const form = useFormContext();
+    const getListFromProps = () => {
         const valueAsJson =
             ((input || {}).name && typeof (input.value || {}).toJS === 'function' && input.value.toJS()) ||
             ((input || {}).name && input.value);
 
         return valueAsJson ? valueAsJson.map(item => item[searchKey.value]) : [];
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     };
 
-    const [itemList, setItemList] = useState(setInitState);
+    const [itemList, setItemList] = useState(getListFromProps);
     const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = useState(null);
 
     useEffect(() => {
-        console.log('useEffect');
+        const propList = getListFromProps();
+        if (!isArrayDeeplyEqual(propList, itemList)) {
+            setItemList(propList);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(input.value)]);
+
+    useEffect(() => {
         if (onChange) {
             const transformOutput = items => {
                 return items.map((item, index) => transformFunction(searchKey, item, index));
             };
-            // notify parent component when local state has been updated, eg itemList added/removed/reordered
             onChange(transformOutput(itemList));
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -172,14 +179,12 @@ export const ListEditor = ({
                 }
             }
         },
-
         [distinctOnly, itemIndexSelectedToEdit, itemList, maxCount],
     );
 
     const moveUpList = useCallback(
         (item, index) => {
             /* istanbul ignore next */
-            console.log(item, index, itemList, itemList.length - 1);
             if (index === 0) return;
             const nextList = itemList[index - 1];
             setItemList(prev => [...prev.slice(0, index - 1), item, nextList, ...prev.slice(index + 1)]);
@@ -190,7 +195,6 @@ export const ListEditor = ({
     const moveDownList = useCallback(
         (item, index) => {
             /* istanbul ignore next */
-            console.log(item, index, itemList, itemList.length - 1);
             if (index === itemList.length - 1) return;
             const nextList = itemList[index + 1];
 
@@ -242,7 +246,7 @@ export const ListEditor = ({
     return (
         <div className={`${className}`} id={`${listEditorId}-list-editor`} data-testid={`${listEditorId}-list-editor`}>
             <Field
-                control={methods.control}
+                control={form.control}
                 component={FormComponent}
                 name={listEditorId}
                 inputField={inputField}
