@@ -7,30 +7,12 @@ const Chart = ({ chartOptions, className }) => {
     const chartRef = React.useRef();
     const chart = React.useRef(null);
 
-    // /* istanbul ignore next */
-    // const reflowChart = () => {
-    //     console.log('call chart.current.reflow');
-    //     if (!!chart && !!chart.current && !!chart.current.reflow) {
-    //         try {
-    //             chart?.current?.reflow();
-    //         } catch (e) {
-    //             console.log('Error in reflowing chart', e);
-    //         }
-    //     } else {
-    //         console.log('chart is null');
-    //     }
-    // };
     React.useEffect(() => {
         if (chartRef.current) {
             chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
-            console.log('set chart.current');
         }
 
-        // (window.matchMedia?.('print') || null)?.addEventListener('change', reflowChart);
-
         return () => {
-            console.log('destroy chart');
-            // !!chart.current && (window.matchMedia?.('print') || null)?.removeEventListener('change', reflowChart);
             chart.current?.destroy();
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
