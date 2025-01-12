@@ -36,7 +36,7 @@ export const SeminarPaperForm = ({ submitting }) => {
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -45,6 +45,7 @@ export const SeminarPaperForm = ({ submitting }) => {
                                 disabled={submitting}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 {...txt.information.fieldLabels.orgUnitName}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -53,6 +54,7 @@ export const SeminarPaperForm = ({ submitting }) => {
                                 disabled={submitting}
                                 name="fez_record_search_key_org_name.rek_org_name"
                                 {...txt.information.fieldLabels.orgName}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -61,6 +63,7 @@ export const SeminarPaperForm = ({ submitting }) => {
                                 disabled={submitting}
                                 name="fez_record_search_key_series.rek_series"
                                 {...txt.information.fieldLabels.series}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>

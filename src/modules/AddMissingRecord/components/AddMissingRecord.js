@@ -34,7 +34,7 @@ export const AddMissingRecord = ({ rawSearchQuery, addRecordStep: AddRecordStep,
 };
 AddMissingRecord.propTypes = {
     rawSearchQuery: PropTypes.string,
-    addRecordStep: PropTypes.func,
+    addRecordStep: PropTypes.object,
 };
 
 export default React.memo(AddMissingRecord);

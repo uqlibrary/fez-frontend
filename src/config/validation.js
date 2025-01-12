@@ -19,6 +19,7 @@ export const spacelessMaxLengthValidator = max => value => {
 };
 
 export const maxLength255Validator = maxLengthValidator(255);
+export const maxLength1000Validator = maxLengthValidator(1000);
 export const spacelessMaxLength9Validator = spacelessMaxLengthValidator(9);
 export const spacelessMaxLength10Validator = spacelessMaxLengthValidator(10);
 export const spacelessMaxLength11Validator = spacelessMaxLengthValidator(11);
@@ -91,7 +92,16 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => !!getDoi(value);
+export const isValidDOIValue = value => {
+    for (const regex of doiRegexps) {
+        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
+        const matches = value?.match(anchoredRegex);
+        if (matches) {
+            return true;
+        }
+    }
+    return false;
+};
 
 export const sanitizeDoi = value => getDoi(value) || value;
 

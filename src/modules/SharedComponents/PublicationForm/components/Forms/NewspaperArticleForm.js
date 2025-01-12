@@ -33,7 +33,7 @@ export const NewspaperArticleForm = ({ submitting }) => {
                                 multiline
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -43,7 +43,7 @@ export const NewspaperArticleForm = ({ submitting }) => {
                                 disabled={submitting}
                                 {...txt.information.fieldLabels.newspaperName}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={3}>
@@ -54,6 +54,7 @@ export const NewspaperArticleForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.startPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={3}>
@@ -64,6 +65,7 @@ export const NewspaperArticleForm = ({ submitting }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.endPage}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>

@@ -797,7 +797,7 @@ context('Journal Article admin edit', () => {
             cy.get('[data-testid^="contributor-errorIcon-80316"]').should('not.exist');
         });
 
-        it.only('coverage - does not lose edited affiliation information when moving between admin tabs', () => {
+        it('coverage - does not lose edited affiliation information when moving between admin tabs', () => {
             cy.adminEditTabbedView();
 
             cy.get('[data-testid="authors-tab"]').click();
