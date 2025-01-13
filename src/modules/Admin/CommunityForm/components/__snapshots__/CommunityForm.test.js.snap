@@ -459,7 +459,11 @@ exports[`Community form should display successfull submission screen 1`] = `
                         <b>
                           Success - 
                         </b>
-                        New work has been saved successfully.
+                        <span
+                          data-testid="alert-message"
+                        >
+                          New work has been saved successfully.
+                        </span>
                       </div>
                     </div>
                   </div>

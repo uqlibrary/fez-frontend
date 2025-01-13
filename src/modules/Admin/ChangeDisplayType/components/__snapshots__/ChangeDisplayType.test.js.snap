@@ -204,7 +204,11 @@ exports[`ChangeDisplayType form should display confirmation box after successful
                       <b>
                         Success - 
                       </b>
-                      Display type has been changed successfully.
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Display type has been changed successfully.
+                      </span>
                     </div>
                   </div>
                 </div>

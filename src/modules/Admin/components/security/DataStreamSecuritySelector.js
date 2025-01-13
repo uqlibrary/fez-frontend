@@ -48,7 +48,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, d
                 ...dataStreamSecurity.slice(dataStreamIndexToChange + 1),
             ];
             setDataStreamSecurity(newDataStreamSecurity);
-            props.input.onChange(newDataStreamSecurity);
+            props.onChange?.(newDataStreamSecurity) || props.input.onChange?.(newDataStreamSecurity);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dataStreamIndexToChange, dataStreamToChange]);
@@ -94,6 +94,7 @@ DataStreamSecuritySelector.propTypes = {
     input: PropTypes.object,
     attachedDataStreams: PropTypes.array,
     text: PropTypes.object,
+    onChange: PropTypes.func,
 };
 
 export function isSame(prevProps, nextProps) {

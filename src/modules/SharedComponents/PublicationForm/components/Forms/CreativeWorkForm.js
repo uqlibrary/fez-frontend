@@ -61,7 +61,7 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                                 rows={3}
                                 {...txt.information.fieldLabels.articleTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={isNtroCpeeExhibitionEvent ? 12 : 6}>
@@ -72,7 +72,7 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.placeOfPublication}
                             />
                         </Grid>
@@ -84,7 +84,7 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.publisher}
                             />
                         </Grid>

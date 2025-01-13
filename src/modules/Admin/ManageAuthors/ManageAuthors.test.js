@@ -353,20 +353,17 @@ describe('ManageAuthors', () => {
                 current_page: 1,
             });
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('authors-list-row-19')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(20);
 
         fireEvent.mouseDown(getByText('20 rows'));
         fireEvent.click(getByText('50'));
 
-        await waitFor(() => getByTestId('authors-list-row-22'));
-
-        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('authors-list-row-22')).toBeInTheDocument();
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(23));
     });
 
     it('should bulk delete authors', async () => {
@@ -403,12 +400,12 @@ describe('ManageAuthors', () => {
                 },
             });
 
-        const { getByText, getByTestId, queryByTestId } = setup({});
+        const { queryAllByTestId, getAllByTestId, getByText, getByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(3);
 
         fireEvent.click(getByTestId('select-author-0'));
         fireEvent.click(getByTestId('select-author-1'));
@@ -417,8 +414,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await waitFor(() => {
-            expect(queryByTestId('authors-list-row-0')).not.toBeInTheDocument();
-            expect(queryByTestId('authors-list-row-2')).not.toBeInTheDocument();
+            expect(queryAllByTestId('mtablebodyrow').length).toBe(0);
         });
     });
 
@@ -452,12 +448,12 @@ describe('ManageAuthors', () => {
             .onPost(`${repository.routes.AUTHOR_API().apiUrl}/delete-list`)
             .replyOnce(500);
 
-        const { getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText, getByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-        expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(3);
 
         fireEvent.click(getByTestId('select-author-0'));
         fireEvent.click(getByTestId('select-author-1'));
@@ -466,8 +462,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-authors-confirmation'));
 
         await waitFor(() => {
-            expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
-            expect(getByTestId('authors-list-row-2')).toBeInTheDocument();
+            expect(getAllByTestId('mtablebodyrow').length).toBe(3);
             expect(showAppAlert).toHaveBeenCalled();
         });
     });
@@ -518,13 +513,14 @@ describe('ManageAuthors', () => {
             })
             .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
             .reply(200, { data: [], total: 0 });
-        const { getByTestId, getByText, queryByTestId, queryByText } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryByTestId, queryByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        expect(getByTestId('authors-list-row-0')).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(1);
 
-        fireEvent.click(getByTestId('authors-list-row-0'));
+        fireEvent.click(tableRows[0]);
         fireEvent.keyDown(getByTestId('author-edit-row'), { key: 'Escape' });
 
         expect(queryByTestId('author-edit-row')).not.toBeInTheDocument();
@@ -737,7 +733,7 @@ describe('ManageAuthors', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getByTestId, getByText } = setup();
+        const { getAllByTestId, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -770,7 +766,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
-        await waitFor(() => getByTestId('authors-list-row-0'));
+        await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -862,15 +858,12 @@ describe('ManageAuthors', () => {
             .replyOnce(200, { data: { aut_id: 2000003831 } });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
-        const { getByTestId, getByText } = setup();
+        const { getAllByTestId, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        const listItem0 = getByTestId('authors-list-row-0');
-        expect(listItem0).toBeInTheDocument();
-
-        const listItem1 = getByTestId('authors-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));
@@ -968,15 +961,12 @@ describe('ManageAuthors', () => {
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        const { getByTestId, getByText } = setup({});
+        const { getAllByTestId, getByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        const listItem0 = getByTestId('authors-list-row-0');
-        expect(listItem0).toBeInTheDocument();
-
-        const listItem1 = getByTestId('authors-list-row-1');
-        expect(listItem1).toBeInTheDocument();
+        const tableRows = getAllByTestId('mtablebodyrow');
+        expect(tableRows.length).toBe(2);
 
         fireEvent.click(getByTestId('authors-list-row-0-delete-this-author'));
         fireEvent.click(getByTestId('confirm-authors-delete-this-author-confirmation'));

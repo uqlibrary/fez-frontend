@@ -180,17 +180,16 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, showRoleInpu
             ),
             field: 'uqIdentifier',
             render: rowData => {
-                const inProblemState = hasAffiliationProblemsByAuthor(rowData);
+                const identifierText =
+                    (!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
+                    (rowData.uqIdentifier && rowData.uqIdentifier !== '0' ? rowData.uqIdentifier : '');
                 return (
                     <Typography
                         variant="body2"
-                        sx={{ ...linkedClass(rowData, inProblemState) }}
                         id={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                         data-testid={`${contributorEditorId}-list-row-${rowData.tableData.id}-uq-identifiers`}
                     >
-                        {(!!rowData.uqUsername && `${rowData.uqUsername} - ${rowData.uqIdentifier}`) ||
-                            (rowData.uqIdentifier !== '0' && rowData.uqIdentifier) ||
-                            ''}
+                        {identifierText}
                     </Typography>
                 );
             },
@@ -496,15 +495,13 @@ export const AuthorsListWithAffiliates = ({
         isNtro,
         contributorEditorId,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //    [editState.editing],
-    // );
 
     const [data, setData] = React.useState([]);
 
     React.useEffect(() => {
+        const tmpList = [...list];
         const result = [];
-        list.forEach((item, index) => {
+        tmpList.forEach((item, index) => {
             delete item.tableData;
             item.id = index;
             result.push({ ...item });
@@ -537,7 +534,15 @@ export const AuthorsListWithAffiliates = ({
         } else {
             newList =
                 action === 'update'
-                    ? [...data.slice(0, oldData.tableData.id), newData, ...data.slice(oldData.tableData.id + 1)]
+                    ? [
+                          ...data.slice(0, oldData.tableData.id),
+                          {
+                              ...newData,
+                              affiliations: newData.affiliation === '' ? [] : newData.affiliations,
+                              id: oldData.tableData.id,
+                          },
+                          ...data.slice(oldData.tableData.id + 1),
+                      ]
                     : transformNewAuthorObject(newData);
         }
 

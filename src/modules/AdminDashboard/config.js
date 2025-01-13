@@ -1,10 +1,17 @@
 import React from 'react';
 import moment from 'moment';
+import momentTz from 'moment-timezone';
 
 import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { isEmptyStr } from './utils';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -33,11 +40,13 @@ export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DEL
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
 export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
+export const DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME = 'DD/MM/YYYY HH:mm:ss';
 export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
 export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
+export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+export const DEFAULT_SERVER_DATE_FORMAT_NO_TIME = 'YYYY-MM-DD';
 export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm';
 export const DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS = 'Do MMMM YYYY HH:mm:ss';
-export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -47,9 +56,6 @@ export const SYSTEM_ALERT_ACTION = {
 export const REPORT_TYPE = {
     systemalertlog: 1,
     workshistory: 2,
-    workiddupe: 3,
-    scopusiddupe: 4,
-    doidupe: 5,
 };
 
 export const DEFAULT_SORTING = {
@@ -57,6 +63,13 @@ export const DEFAULT_SORTING = {
     systemalertlog: [{ field: 'sat_created_date', sort: 'asc' }],
     workshistory: [{ field: 'pre_date', sort: 'asc' }],
 };
+
+export const EXPORT_REPORT_JOBS = {
+    ExportReportEmailSqlQueryJob: { queued: true },
+};
+
+export const maxDefaultDateRange = 52;
+export const defaultDateRangeUnit = 'weeks'; // must match expected date units e.g. Moment.js https://momentjs.com/docs/#/manipulating/subtract/
 
 export const isUrl = str => {
     try {
@@ -70,24 +83,47 @@ export const isUrl = str => {
 export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
 export const optionDoubleRowRender = (props, option) => {
+    const hasBindings = option.sel_bindings?.length > 0 || false;
     return (
-        <li
+        <Box
+            component={'li'}
             {...props}
-            style={{
+            sx={{
                 flexDirection: 'column',
                 justifyContent: 'left',
-                alignItems: 'flex-start',
                 fontWeight: 400,
+                '&:not(:last-of-type)': {
+                    borderBottom: '1px solid #ccc',
+                },
+            }}
+            style={{
+                alignItems: 'flex-start',
             }}
             data-testid={props.id}
         >
-            <Typography variant="body1" color="textPrimary">
-                {option.sel_title}
+            <Typography component={'div'} variant="body1" color="textPrimary" fontWeight={500}>
+                {option.sel_title}{' '}
+                {hasBindings && (
+                    <Stack direction="row" spacing={1}>
+                        <Typography variant="body2" color="textPrimary" fontWeight={500}>
+                            Requires:{' '}
+                        </Typography>
+                        {option.sel_bindings.map((binding, index) => (
+                            <Chip
+                                key={`${binding}-${index}`}
+                                variant="outlined"
+                                color="primary"
+                                label={binding.replace(':', '').replace('_', ' ')}
+                                size="small"
+                            />
+                        ))}
+                    </Stack>
+                )}
             </Typography>
-            <Typography variant="body1" color="textSecondary">
+            <Typography variant="body1" color="textSecondary" sx={{ fontStyle: 'italic' }}>
                 {option.sel_description}
             </Typography>
-        </li>
+        </Box>
     );
 };
 
@@ -132,7 +168,7 @@ export const getSystemAlertColumns = (locale, users) => {
 };
 
 export const getDisplayReportColumns = ({ locale, actionState, params }) => {
-    const report = actionState?.displayReport?.value || getReportTypeFromValue(params.report_type);
+    const report = actionState?.report?.value || getReportTypeFromValue(params.report_type);
 
     const txt = locale.columns[report];
     switch (report) {
@@ -169,7 +205,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                 { field: 'pre_detail', headerName: txt.action, minWidth: 600, flex: 1, order: 5, exportOrder: 7 },
             ];
         default:
-            const systemIdParam = actionState?.systemAlertId || params?.record_id || '';
+            const systemIdParam = actionState?.filters.record_id || params?.record_id || '';
             const cols = [
                 { field: 'sat_id', headerName: txt.id, order: 0, exportOrder: 0 },
                 {
@@ -271,3 +307,189 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
             return cols;
     }
 };
+
+export const exportReportFilters = {
+    date_from: {
+        component: ({ state, id, errorMessage, onChange, locale }) => {
+            const hasOwnBinding = !!state.report?.sel_bindings?.includes(':date_from');
+            const hasDependantBinding = !!state.report?.sel_bindings?.includes(':date_to');
+            return (
+                <Grid item xs={12} sm={4} key={`${id}-date-from`}>
+                    <Box data-testid={`${id}-date-from`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-from-input`,
+                                'data-testid': `${id}-date-from-input`,
+                                label: locale.label.dateFrom,
+                                'aria-label': locale.label.dateFrom,
+                                'aria-labelledby': `${id}-input`,
+                                'data-analyticsid': `${id}-date-from-input`,
+                            }}
+                            label={locale.label.dateFrom}
+                            value={state.filters.date_from}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage?.date_from}
+                                    required={hasOwnBinding}
+                                    helperText={errorMessage?.date_from}
+                                />
+                            )}
+                            onChange={props => {
+                                onChange?.({
+                                    type: 'fromDate',
+                                    value: !!props
+                                        ? moment(props)
+                                              .startOf('day')
+                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        : null,
+                                });
+                                if (!hasDependantBinding) {
+                                    onChange?.({
+                                        type: 'toDate',
+                                        value: !!props
+                                            ? moment
+                                                  .min([
+                                                      moment(),
+                                                      moment(props)
+                                                          .endOf('day')
+                                                          .add(
+                                                              state.report.sel_maxDateRange ?? maxDefaultDateRange,
+                                                              defaultDateRangeUnit,
+                                                          ),
+                                                  ])
+                                                  .format(DEFAULT_SERVER_DATE_FORMAT)
+                                            : null,
+                                    });
+                                }
+                            }}
+                            defaultValue=""
+                            disableFuture
+                            disabled={!!!state.report || !hasOwnBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: ({ state, locale, maxDateRangeUnit = defaultDateRangeUnit }) => {
+            if (!state.report?.sel_bindings?.includes(':date_from')) return {};
+            if (isEmptyStr(state.filters.date_from)) return { date_from: locale.required };
+
+            const mFrom = moment(state.filters.date_from);
+            if (!mFrom.isValid()) return { date_from: locale.invalidDate };
+
+            // other field dependencies
+            if (!state.report?.sel_bindings?.includes(':date_to')) return {};
+            const mTo = moment(state.filters.date_to);
+            if (!mFrom.isSameOrBefore(mTo)) return { date_from: locale.dateNotAfter };
+            const maxRange = state.report.sel_maxDateRange ?? maxDefaultDateRange;
+            let maxRangeDays = maxRange;
+            switch (maxDateRangeUnit) {
+                case 'weeks':
+                    maxRangeDays *= 7;
+                    break;
+                case 'months':
+                    maxRangeDays *= 31;
+                    break;
+                case 'years':
+                    maxRangeDays *= 365;
+                    break;
+                default:
+                    break;
+            }
+            // compare by days for better accuracy
+            if (mTo.diff(mFrom, 'days') > maxRangeDays) {
+                return {
+                    date_to: `Must be within ${maxRange} ${
+                        maxRange > 1 ? maxDateRangeUnit : maxDateRangeUnit.slice(0, -1)
+                    } of "from" date`,
+                };
+            }
+            return {};
+        },
+    },
+    date_to: {
+        component: ({ state, id, errorMessage, onChange, locale }) => {
+            const hasBinding = !!state.report?.sel_bindings?.includes(':date_to');
+            const exportReport = state.report || defaultLegacyReportOption;
+            return (
+                <Grid item xs={12} sm={4} key={`${id}-date-to`}>
+                    <Box data-testid={`${id}-date-to`}>
+                        <DatePicker
+                            inputProps={{
+                                id: `${id}-date-to-input`,
+                                'data-testid': `${id}-date-to-input`,
+                                label: locale.label.dateTo,
+                                'aria-label': locale.label.dateTo,
+                                'aria-labelledby': `${id}-date-to-label`,
+                                'data-analyticsid': `${id}-date-to-input`,
+                            }}
+                            label={locale.label.dateTo}
+                            value={state.filters.date_to}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    variant="standard"
+                                    fullWidth
+                                    error={!!errorMessage?.date_to}
+                                    required={hasBinding}
+                                    helperText={errorMessage?.date_to}
+                                />
+                            )}
+                            onChange={props =>
+                                onChange?.({
+                                    type: 'toDate',
+                                    value: !!props
+                                        ? moment(props)
+                                              .endOf('day')
+                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        : null,
+                                })
+                            }
+                            defaultValue=""
+                            disableFuture
+                            minDate={state.filters.date_from}
+                            maxDate={moment(state.filters.date_from ?? new Date()).add(
+                                exportReport.sel_maxDateRange ?? maxDefaultDateRange,
+                                defaultDateRangeUnit,
+                            )}
+                            disabled={!!!state.report || !hasBinding}
+                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                        />
+                    </Box>
+                </Grid>
+            );
+        },
+        validator: ({ state, locale }) => {
+            if (!state.report?.sel_bindings?.includes(':date_to')) return {};
+            if (isEmptyStr(state.filters.date_to)) return { date_to: locale.required };
+
+            const mTo = moment(state.filters.date_to);
+            if (!mTo.isValid()) return { date_to: locale.invalidDate };
+
+            // other field dependencies
+            if (!state.report?.sel_bindings?.includes(':date_from')) return {};
+            const mFrom = moment(state.filters.date_from);
+            if (!mTo.isSameOrAfter(mFrom)) return { date_to: locale.dateNotBefore };
+            return {};
+        },
+    },
+};
+export const convertToUtc = (date, dayTimeReset = 'start', format = DEFAULT_SERVER_DATE_FORMAT) => {
+    const localDate = momentTz.tz(date, 'Australia/Brisbane');
+    return (dayTimeReset === 'start' ? localDate.startOf('day') : localDate.endOf('day')).tz('UTC').format(format);
+};
+
+export const exportReportAllowedFilters = [
+    {
+        name: 'date_from',
+        formatter: convertToUtc,
+    },
+    {
+        name: 'date_to',
+        formatter: date => convertToUtc(date, 'end'),
+    },
+];

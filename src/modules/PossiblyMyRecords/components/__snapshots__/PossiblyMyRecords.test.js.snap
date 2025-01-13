@@ -163,7 +163,11 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 <b>
                   Error - 
                 </b>
-                Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                <span
+                  data-testid="alert-message"
+                >
+                  Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                </span>
               </div>
             </div>
           </div>

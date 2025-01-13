@@ -8,6 +8,7 @@ import * as actions from 'actions';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useFormContext } from 'react-hook-form';
+import * as Sentry from '@sentry/react';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -123,6 +124,9 @@ export const AdminInterface = ({
     const txt = React.useRef(pageLocale.pages.edit);
 
     const errorMessage = error && typeof error === 'object' ? ' ' : null;
+    if (errorMessage) {
+        Sentry.captureMessage(`Error happened: ${errorMessage}`);
+    }
     alertProps.current = validation.getErrorAlertProps({
         isSubmitting,
         isSubmitSuccessful,
@@ -235,7 +239,6 @@ export const AdminInterface = ({
                     smallTitle
                 >
                     <TabComponent
-                        component={tabs[tab].component}
                         disabled={isSubmitting || (locked && record.rek_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
@@ -249,7 +252,6 @@ export const AdminInterface = ({
                         smallTitle
                     >
                         <TabComponent
-                            component={tabs[tab].subComponent.component}
                             disabled={
                                 isSubmitting ||
                                 (locked &&
@@ -363,7 +365,7 @@ export const AdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
+                    onClick={!isDeleted ? handleSubmit(onSubmit) : setPublicationStatusAndSubmit(UNPUBLISHED)}
                 />
             </Grid>
         </React.Fragment>
@@ -382,7 +384,7 @@ export const AdminInterface = ({
 
     return (
         <StandardPage>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}

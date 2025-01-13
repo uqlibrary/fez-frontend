@@ -173,6 +173,10 @@ export const exportJournals = (searchQuery, favourites = false, allJournals = fa
     }
 };
 
+/**
+ * @param searchQuery
+ * @returns {AnyAction}
+ */
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
@@ -210,6 +214,10 @@ export const addToFavourites = ids => async dispatch => {
     );
 };
 
+/**
+ * @param ids: string[]
+ * @returns {AnyAction}
+ */
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);
@@ -252,7 +260,7 @@ const getAdminJournalRequest = data => {
  * Update work request for admins: put record
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function adminJournalUpdate(data) {
     return dispatch => {

@@ -2,7 +2,8 @@ import { adminUpdate, adminCreate, updateCollection, updateCommunity } from 'act
 import { detailedDiff } from 'deep-object-diff';
 
 export const onSubmit = (values, dispatch, { setServerError, initialValues, params }) => {
-    const data = (values && values.toJS()) || null;
+    const data = (values && (values.toJS?.() || values)) || null; // TODO, remove toJS
+    console.log(data);
     const recType = (!!data.publication && data.publication.rek_object_type_lookup) || '';
     const isEdit = !!data.publication && !!data.publication.rek_pid && data.publication.rek_pid === params.pid;
 
@@ -14,7 +15,7 @@ export const onSubmit = (values, dispatch, { setServerError, initialValues, para
     if (recType === 'Collection' || recType === 'Community') {
         recValues = { ...data };
     } else {
-        const initialData = (initialValues && initialValues.toJS()) || null;
+        const initialData = (initialValues && (initialValues.toJS?.() || initialValues)) || null; // TODO, remove toJS
         const changes = detailedDiff(initialData, data);
         recValues = { ...changes };
     }
@@ -43,7 +44,7 @@ export const onSubmit = (values, dispatch, { setServerError, initialValues, para
             action = isEdit ? adminUpdate : adminCreate;
             break;
     }
-
+    console.log('requestObject', requestObject);
     return dispatch(action({ ...requestObject }))
         .then(() => Promise.resolve())
         .catch(e => {

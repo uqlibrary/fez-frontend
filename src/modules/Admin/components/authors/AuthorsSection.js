@@ -11,9 +11,8 @@ import { NTRO_SUBTYPES } from 'config/general';
 export const AuthorsSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
 
-    const methods = useFormContext();
-    const formValues = methods.getValues();
-    const subtype = formValues.adminSection?.rek_subtype;
+    const { getValues } = useFormContext();
+    const subtype = getValues('adminSection.rek_subtype');
 
     const isNtro = NTRO_SUBTYPES.includes(subtype);
 
