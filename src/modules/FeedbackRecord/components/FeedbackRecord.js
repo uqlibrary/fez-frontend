@@ -29,8 +29,9 @@ import { default as validationErrors } from 'locale/validationErrors';
 
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 
-import { useValidatedForm } from '../../../hooks';
-import { isEmptyObject } from '../../../helpers/general';
+import { useValidatedForm } from 'hooks';
+import { isEmptyObject } from 'helpers/general';
+import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 /**
  * @param hasValidationError
@@ -64,7 +65,14 @@ const FeedbackRecord = () => {
         getPropsForAlert,
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
-    } = useValidatedForm();
+    } = useValidatedForm({
+        values: {
+            shareDetails: txtForm.details.shareDetails.default,
+            lastName: '',
+            contactNo: '',
+            email: '',
+        },
+    });
 
     // watch for changes on all fields, as we have to perform a form level validation below
     const { feedbackTypes, ...data } = useWatch({
@@ -106,9 +114,7 @@ const FeedbackRecord = () => {
     };
 
     const requiredConditionally = value => {
-        return data.shareDetails?.hasOwnProperty('anonymous') || value.trim()
-            ? undefined
-            : validationErrors.validationErrors.required;
+        return data.shareDetails !== '1' || value.trim() ? undefined : validationErrors.validationErrors.required;
     };
 
     // dialog & alert
@@ -129,6 +135,9 @@ const FeedbackRecord = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={3}>
+                        <Grid xs={12}>
+                            <StandardCard>{txtForm.introduction}</StandardCard>
+                        </Grid>
                         <Grid xs={12}>
                             <StandardCard>
                                 <PublicationCitation
@@ -155,10 +164,10 @@ const FeedbackRecord = () => {
                                     <Grid xs={12}>
                                         <Field
                                             control={control}
-                                            component={CheckboxGroup}
+                                            component={RadioGroupField}
                                             disabled={isSubmitting}
                                             name="shareDetails"
-                                            checkboxGroupId="share-details"
+                                            radioGroupFieldId="share-details"
                                             data-testid="share-details"
                                             rules={{ deps: ['lastName', 'contactNo'] }}
                                             options={txtForm.details.shareDetails.options}
@@ -184,7 +193,7 @@ const FeedbackRecord = () => {
                                             name="lastName"
                                             label={txtForm.details.lastName}
                                             validate={[validation.maxLength255Validator, requiredConditionally]}
-                                            required={!data.shareDetails?.hasOwnProperty('anonymous')}
+                                            required={data.shareDetails === '1'}
                                             textFieldId="last-name"
                                             fullWidth
                                         />
@@ -197,7 +206,7 @@ const FeedbackRecord = () => {
                                             name="contactNo"
                                             label={txtForm.details.contactNo}
                                             validate={[validation.maxLengthValidator(30), requiredConditionally]}
-                                            required={!data.shareDetails?.hasOwnProperty('anonymous')}
+                                            required={data.shareDetails === '1'}
                                             textFieldId="contact-no"
                                             fullWidth
                                         />
@@ -251,7 +260,14 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.isICIPHolder.title}</Typography>
+                                        <Typography variant={'h6'}>
+                                            {txtForm.isICIPHolder.title}
+                                            <HelpIcon
+                                                {...txtForm.isICIPHolder.helpPanel}
+                                                iconSize={'small'}
+                                                style={{ marginTop: '-4px' }}
+                                            />
+                                        </Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}

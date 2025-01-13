@@ -48,6 +48,46 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
+                <span>
+                  <p>
+                    Thank you for your contributing more information about this collection item.
+                  </p>
+                  <p>
+                    This form is part of our commitment to
+                     
+                    <a
+                      href="https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection"
+                      target="_blank"
+                    >
+                      culturally sensitive collections
+                    </a>
+                    .
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
                 <div
                   class="publicationCitation"
                 >
@@ -247,82 +287,107 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         id="share-details-label"
                       />
                       <div
-                        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+                        aria-labelledby="share-details-label"
+                        class="MuiFormGroup-root MuiRadioGroup-root css-dmmspl-MuiFormGroup-root"
+                        role="radiogroup"
                       >
-                        <div
-                          class="MuiBox-root css-0"
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
                           >
+                            <input
+                              checked=""
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-1-option"
+                              data-testid="share-details-1-option"
+                              id="share-details-1-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="1"
+                            />
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my details with UQ Library"
+                              class="css-hyxlzm"
                             >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-withUQ-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-withUQ-option"
-                                id="share-details-withUQ-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
                                 />
                               </svg>
-                            </span>
-                            <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
-                            >
-                              I’d like to share my details with UQ Library
-                            </span>
-                          </label>
-                        </div>
-                        <div
-                          class="MuiBox-root css-0"
-                        >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                          >
-                            <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my feedback anonymously"
-                            >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-anonymous-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-anonymous-option"
-                                id="share-details-anonymous-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
                                 />
                               </svg>
                             </span>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my details with UQ Library
+                          </span>
+                        </label>
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                        >
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-0-option"
+                              data-testid="share-details-0-option"
+                              id="share-details-0-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="0"
+                            />
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                              class="css-hyxlzm"
                             >
-                              I’d like to share my feedback anonymously
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                />
+                              </svg>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                                />
+                              </svg>
                             </span>
-                          </label>
-                        </div>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my feedback anonymously
+                          </span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -871,6 +936,32 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
+                      <button
+                        aria-label="Click for more information"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                        data-analyticsid="help-icon"
+                        data-mui-internal-clone-element="true"
+                        data-testid="help-icon"
+                        id="help-icon"
+                        style="margin-top: -4px;"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                          data-testid="HelpOutlineIcon"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                          />
+                          <title>
+                            Click for more information
+                          </title>
+                        </svg>
+                      </button>
                     </h6>
                     <div
                       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
@@ -1294,7 +1385,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     <h6
                       class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
                     >
-                      Do you have information we could add to this item?
+                      Do you have more information on this item?
                     </h6>
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -1307,19 +1398,19 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         for="community-info-input"
                         id="community-info-label"
                       >
-                        This may include information on the Country, tribe/community or language found in the item.
+                        This may include Country, Community, or Language, found in the item.
                       </label>
                       <div
                         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1tg17ko-MuiInputBase-root-MuiOutlinedInput-root"
                       >
                         <textarea
                           aria-invalid="false"
-                          aria-label="This may include information on the Country, tribe/community or language found in the item."
+                          aria-label="This may include Country, Community, or Language, found in the item."
                           class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"
                           data-analyticsid="community-info-input"
                           data-testid="community-info-input"
                           id="community-info-input"
-                          label="This may include information on the Country, tribe/community or language found in the item."
+                          label="This may include Country, Community, or Language, found in the item."
                           name="communityInfo"
                           rows="5"
                           style="height: 0px; overflow: hidden;"
@@ -1339,7 +1430,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             class="css-yjsfm1"
                           >
                             <span>
-                              This may include information on the Country, tribe/community or language found in the item.
+                              This may include Country, Community, or Language, found in the item.
                             </span>
                           </legend>
                         </fieldset>
@@ -1814,6 +1905,46 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
+                <span>
+                  <p>
+                    Thank you for your contributing more information about this collection item.
+                  </p>
+                  <p>
+                    This form is part of our commitment to
+                     
+                    <a
+                      href="https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection"
+                      target="_blank"
+                    >
+                      culturally sensitive collections
+                    </a>
+                    .
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
                 <div
                   class="publicationCitation"
                 >
@@ -2008,82 +2139,107 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         id="share-details-label"
                       />
                       <div
-                        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+                        aria-labelledby="share-details-label"
+                        class="MuiFormGroup-root MuiRadioGroup-root css-dmmspl-MuiFormGroup-root"
+                        role="radiogroup"
                       >
-                        <div
-                          class="MuiBox-root css-0"
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
                           >
+                            <input
+                              checked=""
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-1-option"
+                              data-testid="share-details-1-option"
+                              id="share-details-1-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="1"
+                            />
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my details with UQ Library"
+                              class="css-hyxlzm"
                             >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-withUQ-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-withUQ-option"
-                                id="share-details-withUQ-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
                                 />
                               </svg>
-                            </span>
-                            <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
-                            >
-                              I’d like to share my details with UQ Library
-                            </span>
-                          </label>
-                        </div>
-                        <div
-                          class="MuiBox-root css-0"
-                        >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                          >
-                            <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my feedback anonymously"
-                            >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-anonymous-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-anonymous-option"
-                                id="share-details-anonymous-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
                                 />
                               </svg>
                             </span>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my details with UQ Library
+                          </span>
+                        </label>
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                        >
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-0-option"
+                              data-testid="share-details-0-option"
+                              id="share-details-0-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="0"
+                            />
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                              class="css-hyxlzm"
                             >
-                              I’d like to share my feedback anonymously
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                />
+                              </svg>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                                />
+                              </svg>
                             </span>
-                          </label>
-                        </div>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my feedback anonymously
+                          </span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2129,7 +2285,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="last-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="last-name-label"
                         for="last-name-input"
@@ -2138,17 +2294,18 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         Last Name
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            
                           *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                       >
                         <input
-                          aria-invalid="false"
+                          aria-describedby="last-name-helper-text"
+                          aria-invalid="true"
                           aria-label="Last Name"
                           class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="last-name-input"
@@ -2161,6 +2318,13 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           value=""
                         />
                       </div>
+                      <p
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+                        data-testid="last-name-helper-text"
+                        id="last-name-helper-text"
+                      >
+                        This field is required
+                      </p>
                     </div>
                   </div>
                   <div
@@ -2171,7 +2335,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="contact-no"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="contact-no-label"
                         for="contact-no-input"
@@ -2180,17 +2344,18 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         Contact Number
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            
                           *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
                       >
                         <input
-                          aria-invalid="false"
+                          aria-describedby="contact-no-helper-text"
+                          aria-invalid="true"
                           aria-label="Contact Number"
                           class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="contact-no-input"
@@ -2203,6 +2368,13 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           value=""
                         />
                       </div>
+                      <p
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
+                        data-testid="contact-no-helper-text"
+                        id="contact-no-helper-text"
+                      >
+                        This field is required
+                      </p>
                     </div>
                   </div>
                   <div
@@ -2616,6 +2788,32 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
+                      <button
+                        aria-label="Click for more information"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                        data-analyticsid="help-icon"
+                        data-mui-internal-clone-element="true"
+                        data-testid="help-icon"
+                        id="help-icon"
+                        style="margin-top: -4px;"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                          data-testid="HelpOutlineIcon"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                          />
+                          <title>
+                            Click for more information
+                          </title>
+                        </svg>
+                      </button>
                     </h6>
                     <div
                       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
@@ -3214,6 +3412,64 @@ exports[`Component FeedbackRecord should render record citation, general fields 
               </div>
             </div>
           </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              data-testid="alert"
+              style="margin-top: 5px;"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-17z5iqr-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-item alert-icon css-sco6ic-MuiGrid-root"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        data-testid="WarningIcon"
+                        focusable="false"
+                        id="warning-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true alert-text css-1ux0ax1-MuiGrid-root"
+                    >
+                      <b>
+                        Validation - 
+                      </b>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+                            <li
+                              data-testid="validation-warning-0"
+                            >
+                              Please provide required information.
+                            </li>
+                          </ul>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
@@ -3236,11 +3492,12 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid2-root MuiGrid2-direction-xs-row css-27y2fm-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="feedback-submit"
               data-testid="feedback-submit"
+              disabled=""
               id="feedback-submit"
-              tabindex="0"
+              tabindex="-1"
               type="submit"
             >
               Submit
@@ -3280,6 +3537,46 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
         <div
           class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-dkd71f-MuiGrid2-root"
         >
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
+                <span>
+                  <p>
+                    Thank you for your contributing more information about this collection item.
+                  </p>
+                  <p>
+                    This form is part of our commitment to
+                     
+                    <a
+                      href="https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection"
+                      target="_blank"
+                    >
+                      culturally sensitive collections
+                    </a>
+                    .
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
           <div
             class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
@@ -3500,82 +3797,107 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         id="share-details-label"
                       />
                       <div
-                        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+                        aria-labelledby="share-details-label"
+                        class="MuiFormGroup-root MuiRadioGroup-root css-dmmspl-MuiFormGroup-root"
+                        role="radiogroup"
                       >
-                        <div
-                          class="MuiBox-root css-0"
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
                           >
+                            <input
+                              checked=""
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-1-option"
+                              data-testid="share-details-1-option"
+                              id="share-details-1-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="1"
+                            />
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my details with UQ Library"
+                              class="css-hyxlzm"
                             >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-withUQ-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-withUQ-option"
-                                id="share-details-withUQ-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
                                 />
                               </svg>
-                            </span>
-                            <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
-                            >
-                              I’d like to share my details with UQ Library
-                            </span>
-                          </label>
-                        </div>
-                        <div
-                          class="MuiBox-root css-0"
-                        >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                          >
-                            <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my feedback anonymously"
-                            >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-anonymous-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-anonymous-option"
-                                id="share-details-anonymous-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
                                 />
                               </svg>
                             </span>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my details with UQ Library
+                          </span>
+                        </label>
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                        >
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-0-option"
+                              data-testid="share-details-0-option"
+                              id="share-details-0-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="0"
+                            />
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                              class="css-hyxlzm"
                             >
-                              I’d like to share my feedback anonymously
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                />
+                              </svg>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                                />
+                              </svg>
                             </span>
-                          </label>
-                        </div>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my feedback anonymously
+                          </span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -4124,6 +4446,32 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
+                      <button
+                        aria-label="Click for more information"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                        data-analyticsid="help-icon"
+                        data-mui-internal-clone-element="true"
+                        data-testid="help-icon"
+                        id="help-icon"
+                        style="margin-top: -4px;"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                          data-testid="HelpOutlineIcon"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                          />
+                          <title>
+                            Click for more information
+                          </title>
+                        </svg>
+                      </button>
                     </h6>
                     <div
                       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
@@ -4937,6 +5285,46 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
+                <span>
+                  <p>
+                    Thank you for your contributing more information about this collection item.
+                  </p>
+                  <p>
+                    This form is part of our commitment to
+                     
+                    <a
+                      href="https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection"
+                      target="_blank"
+                    >
+                      culturally sensitive collections
+                    </a>
+                    .
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+              data-testid="standard-card"
+              id="standard-card"
+            >
+              <div
+                class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                />
+              </div>
+              <div
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                data-analyticsid="standard-card-content"
+                data-testid="standard-card-content"
+                id="standard-card-content"
+              >
                 <div
                   class="publicationCitation"
                 >
@@ -5136,82 +5524,107 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         id="share-details-label"
                       />
                       <div
-                        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+                        aria-labelledby="share-details-label"
+                        class="MuiFormGroup-root MuiRadioGroup-root css-dmmspl-MuiFormGroup-root"
+                        role="radiogroup"
                       >
-                        <div
-                          class="MuiBox-root css-0"
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                         >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
                           >
+                            <input
+                              checked=""
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-1-option"
+                              data-testid="share-details-1-option"
+                              id="share-details-1-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="1"
+                            />
                             <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my details with UQ Library"
+                              class="css-hyxlzm"
                             >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-withUQ-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-withUQ-option"
-                                id="share-details-withUQ-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
                                 />
                               </svg>
-                            </span>
-                            <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
-                            >
-                              I’d like to share my details with UQ Library
-                            </span>
-                          </label>
-                        </div>
-                        <div
-                          class="MuiBox-root css-0"
-                        >
-                          <label
-                            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                          >
-                            <span
-                              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
-                              label="I’d like to share my feedback anonymously"
-                            >
-                              <input
-                                class="PrivateSwitchBase-input css-1m9pwf3"
-                                data-analyticsid="share-details-anonymous-option"
-                                data-indeterminate="false"
-                                data-testid="share-details-anonymous-option"
-                                id="share-details-anonymous-option"
-                                type="checkbox"
-                              />
                               <svg
                                 aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                data-testid="CheckBoxOutlineBlankIcon"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11zohuh-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                               >
                                 <path
-                                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
                                 />
                               </svg>
                             </span>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my details with UQ Library
+                          </span>
+                        </label>
+                        <label
+                          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+                        >
+                          <span
+                            class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-16qzzav-MuiButtonBase-root-MuiRadio-root"
+                          >
+                            <input
+                              class="PrivateSwitchBase-input css-1m9pwf3"
+                              data-analyticsid="share-details-0-option"
+                              data-testid="share-details-0-option"
+                              id="share-details-0-option"
+                              name="shareDetails"
+                              type="radio"
+                              value="0"
+                            />
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                              class="css-hyxlzm"
                             >
-                              I’d like to share my feedback anonymously
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hbvpl3-MuiSvgIcon-root"
+                                data-testid="RadioButtonUncheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                />
+                              </svg>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hhw7if-MuiSvgIcon-root"
+                                data-testid="RadioButtonCheckedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                                />
+                              </svg>
                             </span>
-                          </label>
-                        </div>
+                          </span>
+                          <span
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-u1nwny-MuiTypography-root"
+                          >
+                            I’d like to share my feedback anonymously
+                          </span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -5760,6 +6173,32 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
+                      <button
+                        aria-label="Click for more information"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-hvz71z-MuiButtonBase-root-MuiIconButton-root"
+                        data-analyticsid="help-icon"
+                        data-mui-internal-clone-element="true"
+                        data-testid="help-icon"
+                        id="help-icon"
+                        style="margin-top: -4px;"
+                        tabindex="0"
+                        type="button"
+                      >
+                        <svg
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-pmbis9-MuiSvgIcon-root"
+                          data-testid="HelpOutlineIcon"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                          />
+                          <title>
+                            Click for more information
+                          </title>
+                        </svg>
+                      </button>
                     </h6>
                     <div
                       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"

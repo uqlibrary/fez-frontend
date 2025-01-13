@@ -83,8 +83,13 @@ describe('Component FeedbackRecord', () => {
         await waitFor(() => getByText('Work not found'), waitForOptions);
     });
 
-    it('should render record citation, general fields and a cancel button and a submit button', () => {
-        const { container } = setup({ publication: mockRecordToFeedback });
+    it('should render record citation, general fields and a cancel button and a submit button', async () => {
+        const { container, getByRole, getByText, getByTestId } = setup({ publication: mockRecordToFeedback });
+        await waitFor(() => getByText('Feedback Form'), waitForOptions);
+
+        expect(getByTestId('publication-citation-parent-UQ:41878')).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Submit' })).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -125,7 +130,7 @@ describe('Component FeedbackRecord', () => {
 
         await assertValidationErrorSummary();
         expect(getByTestId('feedback-submit')).toBeDisabled();
-        await userEvent.click(getByRole('checkbox', { name: 'I’d like to share my feedback anonymously' }));
+        await userEvent.click(getByRole('radio', { name: 'I’d like to share my feedback anonymously' }));
         expect(getByTestId('feedback-submit')).toBeEnabled();
         assertNoValidationErrorSummary();
         await userEvent.type(getByTestId('first-name-input'), 'first name');
@@ -161,7 +166,7 @@ describe('Component FeedbackRecord', () => {
         const { getByRole, getByTestId } = setup({ publication: mockRecordToFeedback });
 
         await assertValidationErrorSummary();
-        await userEvent.click(getByRole('checkbox', { name: 'I’d like to share my feedback anonymously' }));
+        await userEvent.click(getByRole('radio', { name: 'I’d like to share my feedback anonymously' }));
 
         assertNoValidationErrorSummary();
         await submitForm();
@@ -180,7 +185,7 @@ describe('Component FeedbackRecord', () => {
         const { getByRole, getByTestId } = setup({ publication: mockRecordToFeedback });
 
         await assertValidationErrorSummary();
-        await userEvent.click(getByRole('checkbox', { name: 'I’d like to share my feedback anonymously' }));
+        await userEvent.click(getByRole('radio', { name: 'I’d like to share my feedback anonymously' }));
 
         assertNoValidationErrorSummary();
         await submitForm();

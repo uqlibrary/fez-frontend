@@ -322,6 +322,23 @@ export default {
             },
         },
         feedbackRecord: {
+            introduction: (
+                <span>
+                    <p>Thank you for your contributing more information about this collection item.</p>
+                    <p>
+                        This form is part of our commitment to{' '}
+                        <a
+                            target="_blank"
+                            href={
+                                'https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection'
+                            }
+                        >
+                            culturally sensitive collections
+                        </a>
+                        {'.'}
+                    </p>
+                </span>
+            ),
             feedbackTypes: {
                 title: 'I would like to',
                 options: [
@@ -339,9 +356,10 @@ export default {
                 community: 'Community',
                 shareDetails: {
                     options: [
-                        { label: 'I’d like to share my details with UQ Library', value: 'withUQ' },
-                        { label: 'I’d like to share my feedback anonymously', value: 'anonymous' },
+                        { label: 'I’d like to share my details with UQ Library', value: '1' },
+                        { label: 'I’d like to share my feedback anonymously', value: '0' },
                     ],
+                    default: '1',
                 },
             },
             indigenousIdentity: {
@@ -366,6 +384,23 @@ export default {
                     { label: 'Yes', value: '1' },
                     { label: 'No', value: '0' },
                 ],
+                helpPanel: {
+                    title: 'Indigenous Cultural and Intellectual Property (ICIP)',
+                    text: (
+                        <>
+                            <p>
+                                ICIP includes all aspects of cultural practices, traditional knowledge, resources, and
+                                knowledge systems developed by Aboriginal and Torres Strait Islander peoples as part of
+                                their Indigenous Identity. (
+                                <a target={'_blank'} href={'https://www.terrijanke.com.au/icip'}>
+                                    Terri Janke and Company (2022)
+                                </a>
+                                {')'}
+                            </p>
+                        </>
+                    ),
+                    buttonLabel: 'Close',
+                },
             },
             communityParticipant: {
                 title:
@@ -376,8 +411,8 @@ export default {
                 ],
             },
             communityInfo: {
-                title: 'Do you have information we could add to this item?',
-                subTitle: 'This may include information on the Country, tribe/community or language found in the item.',
+                title: 'Do you have more information on this item?',
+                subTitle: 'This may include Country, Community, or Language, found in the item.',
             },
             relatedPeople: {
                 title: 'Have you identified any people, language and/or place in this item?',
@@ -438,7 +473,7 @@ export default {
             successAlert: {
                 type: 'done',
                 title: 'Success',
-                message: 'Fix work request has been submitted successfully.',
+                message: 'Feedback has been submitted successfully.',
             },
             cancelWorkflowConfirmation: {
                 confirmationTitle: 'Cancel request',
@@ -450,7 +485,8 @@ export default {
                 confirmationTitle: 'Your feedback has been submitted',
                 confirmationMessage: (
                     <span style={{ display: 'block', margin: '1em 0' }}>
-                        Your feedback will be referred to a UQ eSpace staff member for review/action.
+                        Thank you for submitting information about this record. A team member will action this as soon
+                        as possible.
                     </span>
                 ),
                 confirmButtonLabel: 'Go to my dashboard',
