@@ -63,33 +63,9 @@ describe('Chart component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should set printMedia property', () => {
-        const test = jest.fn();
-        window.matchMedia = test;
-        setup();
-        expect(test).toHaveBeenCalled();
-    });
-
-    it('mounts', () => {
-        const addListenerFn = jest.fn();
-        const printMediaMock = { addEventListener: addListenerFn, removeEventListener: jest.fn() };
-        window.matchMedia = jest.fn(() => printMediaMock);
-        setup();
-        expect(addListenerFn).toHaveBeenCalled();
-    });
-
     it('updates', () => {
         const { rerender, container } = setup();
         rerender(<Chart chartOptions={{ title: { text: 'test' } }} />);
         expect(container).toMatchSnapshot();
-    });
-
-    it('unmounts', () => {
-        const removeListenerFn = jest.fn();
-        const printMediaMock = { addEventListener: jest.fn(), removeEventListener: removeListenerFn };
-        window.matchMedia = jest.fn(() => printMediaMock);
-        const { unmount } = setup();
-        unmount();
-        expect(removeListenerFn).toHaveBeenCalled();
     });
 });

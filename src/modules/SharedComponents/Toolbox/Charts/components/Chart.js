@@ -8,9 +8,7 @@ const Chart = ({ chartOptions, className }) => {
     const chart = React.useRef(null);
 
     React.useEffect(() => {
-        if (chartRef.current) {
-            chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
-        }
+        chart.current = new Highcharts.Chart(chartRef.current, chartOptions);
 
         return () => {
             chart.current?.destroy();
