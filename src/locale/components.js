@@ -4328,7 +4328,7 @@ export default {
                                     <p>
                                         Some publishers have{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/article-processing-charge"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/article-processing-charges"
                                             target="_blank"
                                         >
                                             Article processing charges (APCs)
