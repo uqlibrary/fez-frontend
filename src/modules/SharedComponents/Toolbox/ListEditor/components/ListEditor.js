@@ -1,7 +1,5 @@
 import React, { memo, useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { useFormContext } from 'react-hook-form';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
@@ -50,7 +48,6 @@ export const ListEditor = ({
     category,
     listEditorId,
 }) => {
-    const form = useFormContext();
     const getListFromProps = () => {
         const valueAsJson =
             ((input || {}).name && typeof (input.value || {}).toJS === 'function' && input.value.toJS()) ||
@@ -245,9 +242,7 @@ export const ListEditor = ({
     );
     return (
         <div className={`${className}`} id={`${listEditorId}-list-editor`} data-testid={`${listEditorId}-list-editor`}>
-            <Field
-                control={form.control}
-                component={FormComponent}
+            <FormComponent
                 name={listEditorId}
                 inputField={inputField}
                 key={(!!itemIndexSelectedToEdit && `${listEditorId}-form`) || 'list-editor-form'}
