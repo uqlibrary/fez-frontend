@@ -22,7 +22,7 @@ export default {
             prefixText: 'Yes<discount>, via <publisher> ',
             postfixText: '',
             linkText: 'Read and Publish Agreement',
-            externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
+            externalUrl: 'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
