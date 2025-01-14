@@ -24,6 +24,7 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
+import { lastRequest } from '../src/config/axios';
 
 export const AllTheProviders = props => {
     return (
@@ -238,6 +239,32 @@ const mockWebApiFile = () => {
     };
 };
 
+const assertLastApiRequest = ({ method, url, partialUrl, data }) => {
+    if (!lastRequest) {
+        throw new Error('No request has been made yet');
+    }
+
+    if (method && method !== '*') {
+        expect(lastRequest.method).toBe(method);
+    }
+
+    if (url) {
+        expect(lastRequest.url).toBe(url);
+    }
+
+    if (partialUrl) {
+        expect(lastRequest.url.contains(partialUrl)).toBeTruthy();
+    }
+
+    if (data instanceof Object) {
+        expect(JSON.parse(lastRequest.data)).toStrictEqual(data);
+    }
+
+    if (data instanceof Function) {
+        expect(data(JSON.parse(lastRequest.data))).toBeTruthy();
+    }
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -266,4 +293,5 @@ module.exports = {
     setFileUploaderFilesToClosedAccess,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
+    assertLastApiRequest,
 };

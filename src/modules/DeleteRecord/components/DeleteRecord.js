@@ -108,14 +108,15 @@ const DeleteRecord = () => {
     };
 
     useEffect(() => {
-        if (actions && pid) {
+        if (actions && pid && !recordToDelete?.rek_pid) {
             dispatch(actions.loadRecordToDelete(pid));
         }
 
         return () => {
-            // clear previously selected recordToDelete for a delete
+            // clear previously selected record for deletion
             dispatch(actions.clearDeleteRecord());
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch, pid]);
 
     useEffect(() => {
