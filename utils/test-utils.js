@@ -23,7 +23,7 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
-import * as useValidatedForm from 'hooks/useValidatedForm';
+import * as useForm from 'hooks/useForm';
 import { lastRequests } from '../src/config/axios';
 
 export const AllTheProviders = props => {
@@ -216,10 +216,10 @@ const waitForTextToBeRemoved = async (text, options) =>
     screen.queryByText(text) &&
     (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 
-const originalUseValidatedForm = useValidatedForm.useValidatedForm;
-const mockUseValidatedForm = implementation => {
-    return jest.spyOn(useValidatedForm, 'useValidatedForm').mockImplementation(props => {
-        return implementation(props, originalUseValidatedForm);
+const originalUseForm = useForm.useForm;
+const mockUseForm = implementation => {
+    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
+        return implementation(props, originalUseForm);
     });
 };
 
@@ -304,7 +304,7 @@ module.exports = {
     waitToBeDisabled,
     waitForText,
     waitForTextToBeRemoved,
-    mockUseValidatedForm,
+    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,

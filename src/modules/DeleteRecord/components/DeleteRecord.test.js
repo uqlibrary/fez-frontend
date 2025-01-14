@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
     assertLastApiRequest,
+    mockUseForm,
     render,
     waitForTextToBeRemoved,
     waitToBeEnabled,
@@ -18,6 +19,7 @@ import * as repositories from '../../../repositories';
 import { deletedRecord } from '../../../mock/data';
 import { escapeRegExp } from '../../../mock';
 import { publicationTypeListThesis, recordWithRDM } from '../../../mock/data/records';
+import { set } from 'lodash';
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
 const recordWithDataCiteDoi = recordWithRDM;
 
@@ -210,7 +212,17 @@ describe('Component DeleteRecord', () => {
         it('should allow enter reason, new doi and submit form for a record with DataCite DOI', async () => {
             const pid = recordWithDataCiteDoi.rek_pid;
             const newDoi = '10.1234/uql5678';
+            const deletionNotes = 'deletion notes';
             mockGetAndDeleteRecordApiCalls(recordWithDataCiteDoi);
+            mockUseForm((props, original) =>
+                original(
+                    set(
+                        { values: {} },
+                        'values.publication.fez_record_search_key_deletion_notes.rek_deletion_notes',
+                        deletionNotes,
+                    ),
+                ),
+            );
             setup();
 
             await fillReason();
@@ -224,6 +236,9 @@ describe('Component DeleteRecord', () => {
                     ...expectedPayloadWithReason,
                     fez_record_search_key_new_doi: {
                         rek_new_doi: newDoi,
+                    },
+                    fez_record_search_key_deletion_notes: {
+                        rek_deletion_notes: deletionNotes,
                     },
                 },
             });

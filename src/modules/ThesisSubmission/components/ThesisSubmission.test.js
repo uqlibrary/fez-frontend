@@ -10,7 +10,7 @@ import {
     assertEnabled,
     assertDisabled,
     userEvent,
-    mockUseValidatedForm,
+    mockUseForm,
     addFilesToFileUploader,
     waitForTextToBeRemoved,
     waitForText,
@@ -78,7 +78,7 @@ describe('ThesisSubmission', () => {
     const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
 
     const mockRichEditorFieldValues = values => {
-        mockUseValidatedForm((props, original) => {
+        mockUseForm((props, original) => {
             props.values.thesisTitle = values?.hasOwnProperty('thesisTitle') ? values.thesisTitle : 'thesis title';
             props.values.thesisAbstract = values?.hasOwnProperty('thesisAbstract')
                 ? values.thesisAbstract

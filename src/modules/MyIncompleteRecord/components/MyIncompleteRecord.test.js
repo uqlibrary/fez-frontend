@@ -9,7 +9,7 @@ import {
     screen,
     assertEnabled,
     userEvent,
-    mockUseValidatedForm,
+    mockUseForm,
     waitForTextToBeRemoved,
     waitForText,
     waitToBeDisabled,
@@ -74,7 +74,7 @@ describe('MyIncompleteRecord', () => {
     const submitButtonId = 'incomplete-record-button-submit';
 
     const mockRichEditorFieldValues = impactStatement =>
-        mockUseValidatedForm((props, original) => {
+        mockUseForm((props, original) => {
             props.values.impactStatement = impactStatement !== undefined ? impactStatement : 'impact statement';
             return original(props);
         });
