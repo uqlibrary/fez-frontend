@@ -2,11 +2,22 @@ import React from 'react';
 import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { render, WithReduxStore, WithRouter, fireEvent, screen, assertEnabled, assertDisabled } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    screen,
+    assertEnabled,
+    assertDisabled,
+    assertLastApiRequest,
+} from 'test-utils';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import validationErrors from '../../../locale/validationErrors';
 import forms from '../../../locale/forms';
 import { EXISTING_RECORD_API, HIDE_POSSIBLE_RECORD_API, RECORDS_ISSUES_API } from '../../../repositories/routes';
+import { pathConfig } from '../../../config';
+import { clearLastRequest } from '../../../config/axios';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
@@ -137,178 +148,250 @@ describe('Component FixRecord', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should display confirmation box after successful unclaim and go back to previous page', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200)
-            .onPost(HIDE_POSSIBLE_RECORD_API().apiUrl)
-            .replyOnce(200);
+    describe('form submission', () => {
+        const pid = mockRecordToFix.rek_pid;
+        const existingRecordUrl = EXISTING_RECORD_API({ pid }).apiUrl;
+        const recordIssuesUrl = RECORDS_ISSUES_API({ pid }).apiUrl;
+        const hideRecordUrl = HIDE_POSSIBLE_RECORD_API().apiUrl;
+        const expectedUnclaimPayload = {
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id: 0,
+                    rek_author_id_order: 1,
+                    rek_author_id_pid: pid,
+                },
+                {
+                    rek_author_id: 0,
+                    rek_author_id_order: 2,
+                },
+                {
+                    rek_author_id: 786,
+                    rek_author_id_order: 3,
+                    rek_author_id_pid: pid,
+                },
+                {
+                    rek_author_id: 687,
+                    rek_author_id_order: 4,
+                    rek_author_id_pid: pid,
+                },
+                {
+                    rek_author_id: 4100,
+                    rek_author_id_order: 5,
+                    rek_author_id_pid: pid,
+                },
+            ],
+            fez_record_search_key_contributor_id: [],
+            rek_pid: pid,
+        };
+        const expectedHideRecordPayload = {
+            pid: 'UQ:41878',
+            type: 'H',
+        };
+        const expectedFixRecordPayload = {
+            issue: 'Added comments: \n          my comments',
+        };
 
-        const { getByTestId } = setup({ publication: mockRecordToFix });
+        const mockUnclaimApiCalls = () =>
+            mockApi
+                .onPatch(existingRecordUrl)
+                .replyOnce(200)
+                .onPost(hideRecordUrl)
+                .replyOnce(200);
+        const mockFixRecordApiCall = () => mockApi.onPost(recordIssuesUrl).replyOnce(200);
 
-        await assertValidationErrorSummary();
-        switchToUnclaimMode();
-
-        await assertNoValidationErrorSummary();
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
-
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalledTimes(1);
-    });
-
-    it('should display confirmation box after successful unclaim and go to my works', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200)
-            .onPost(HIDE_POSSIBLE_RECORD_API().apiUrl)
-            .replyOnce(200);
-
-        const { getByTestId } = setup({ publication: mockRecordToFix });
-
-        await assertValidationErrorSummary();
-        switchToUnclaimMode();
-
-        await assertNoValidationErrorSummary();
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
-
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/records/mine');
-        expect(mockUseNavigate).toBeCalledTimes(1);
-    });
-
-    it('should handle server error when unclaiming record', async () => {
-        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
-
-        setup({ publication: mockRecordToFix });
-
-        await assertValidationErrorSummary();
-        switchToUnclaimMode();
-
-        await assertNoValidationErrorSummary();
-        await submitForm();
-
-        await assertServerErrorMessage();
-        assertEnabled('fix-submit');
-    });
-
-    it('should handle allow retries after a server error when unclaiming record', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(500)
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200)
-            .onPost(HIDE_POSSIBLE_RECORD_API().apiUrl)
-            .replyOnce(200);
-
-        setup({ publication: mockRecordToFix });
-
-        await assertValidationErrorSummary();
-        switchToUnclaimMode();
-
-        await assertNoValidationErrorSummary();
-        await submitForm();
-
-        await assertServerErrorMessage();
-        assertEnabled('fix-submit');
-
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
-    });
-
-    it('should display confirmation box after successful submission', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200)
-            .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200);
-
-        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
-
-        await assertValidationErrorSummary();
-        switchToFixMode();
-
-        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled('fix-submit');
-
-        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
-        fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
-        fireEvent.click(getByText('Protocol'));
-        await assertNoValidationErrorSummary();
-
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
-    });
-
-    it('should display confirmation box after successful submission and go to dashboard', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200)
-            .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200);
-
-        const { getByTestId, getByText } = setup({
-            publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
+        beforeEach(() => {
+            clearLastRequest();
+        });
+        afterEach(() => {
+            mockApi.resetHandlers();
         });
 
-        await assertValidationErrorSummary();
-        switchToFixMode();
+        it('should display confirmation box after successful unclaim and go back to previous page', async () => {
+            mockUnclaimApiCalls();
+            const { getByTestId } = setup({ publication: mockRecordToFix });
 
-        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled('fix-submit');
+            await assertValidationErrorSummary();
+            switchToUnclaimMode();
 
-        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
-        await assertNoValidationErrorSummary();
+            await assertNoValidationErrorSummary();
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
 
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
+            fireEvent.click(getByTestId('cancel-dialog-box'));
+            expect(mockUseNavigate).toBeCalledTimes(1);
+            expect(mockUseNavigate).toBeCalledWith(pathConfig.records.mine);
+            assertLastApiRequest({
+                method: 'patch',
+                url: existingRecordUrl,
+                data: expectedUnclaimPayload,
+            });
+            assertLastApiRequest({
+                method: 'post',
+                url: hideRecordUrl,
+                data: expectedHideRecordPayload,
+            });
+        });
 
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/dashboard');
+        it('should display confirmation box after successful unclaim and go to my works', async () => {
+            mockUnclaimApiCalls();
+            const { getByTestId } = setup({ publication: mockRecordToFix });
+
+            await assertValidationErrorSummary();
+            switchToUnclaimMode();
+
+            await assertNoValidationErrorSummary();
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
+
+            fireEvent.click(getByTestId('confirm-dialog-box'));
+            expect(mockUseNavigate).toBeCalledTimes(1);
+            expect(mockUseNavigate).toBeCalledWith(pathConfig.records.mine);
+            assertLastApiRequest({
+                method: 'patch',
+                url: existingRecordUrl,
+                data: expectedUnclaimPayload,
+            });
+            assertLastApiRequest({
+                method: 'post',
+                url: hideRecordUrl,
+                data: expectedHideRecordPayload,
+            });
+        });
+
+        it('should display confirmation box after fix work successful submission', async () => {
+            mockFixRecordApiCall();
+            const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+
+            await assertValidationErrorSummary();
+            switchToFixMode();
+
+            expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+            assertDisabled('fix-submit');
+
+            fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+            fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
+            fireEvent.click(getByText('Protocol'));
+            await assertNoValidationErrorSummary();
+
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
+            assertLastApiRequest({
+                method: 'post',
+                url: recordIssuesUrl,
+                data: expectedFixRecordPayload,
+            });
+        });
+
+        it('should display confirmation box after fix work successful submission and go to dashboard', async () => {
+            mockFixRecordApiCall();
+            const { getByTestId, getByText } = setup({
+                publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
+            });
+
+            await assertValidationErrorSummary();
+            switchToFixMode();
+
+            expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+            assertDisabled('fix-submit');
+
+            fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+            await assertNoValidationErrorSummary();
+
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
+
+            fireEvent.click(getByTestId('cancel-dialog-box'));
+            expect(mockUseNavigate).toBeCalledWith(pathConfig.dashboard);
+            assertLastApiRequest({
+                method: 'post',
+                url: recordIssuesUrl,
+                data: expectedFixRecordPayload,
+            });
+        });
     });
 
-    it('should handle server error when fixing record', async () => {
-        mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
+    describe('error handling', () => {
+        it('should handle server error when unclaiming record', async () => {
+            mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
 
-        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+            setup({ publication: mockRecordToFix });
 
-        await assertValidationErrorSummary();
-        switchToFixMode();
+            await assertValidationErrorSummary();
+            switchToUnclaimMode();
 
-        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled('fix-submit');
+            await assertNoValidationErrorSummary();
+            await submitForm();
 
-        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
-        await assertNoValidationErrorSummary();
+            await assertServerErrorMessage();
+            assertEnabled('fix-submit');
+        });
 
-        await submitForm();
-        await assertServerErrorMessage();
-        assertEnabled('fix-submit');
-    });
+        it('should handle allow retries after a server error when unclaiming record', async () => {
+            mockApi
+                .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
+                .replyOnce(500)
+                .onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
+                .replyOnce(200)
+                .onPost(HIDE_POSSIBLE_RECORD_API().apiUrl)
+                .replyOnce(200);
 
-    it('should allow retries after a server error when fixing record', async () => {
-        mockApi
-            .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(500)
-            .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
-            .replyOnce(200);
+            setup({ publication: mockRecordToFix });
 
-        const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+            await assertValidationErrorSummary();
+            switchToUnclaimMode();
 
-        await assertValidationErrorSummary();
-        switchToFixMode();
+            await assertNoValidationErrorSummary();
+            await submitForm();
 
-        expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
-        assertDisabled('fix-submit');
+            await assertServerErrorMessage();
+            assertEnabled('fix-submit');
 
-        fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
-        await assertNoValidationErrorSummary();
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
+        });
 
-        await submitForm();
-        await assertServerErrorMessage();
+        it('should handle server error when fixing record', async () => {
+            mockApi.onPatch(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(500);
 
-        await submitForm();
-        await assertFixedRecordConfirmationMessage();
+            const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+
+            await assertValidationErrorSummary();
+            switchToFixMode();
+
+            expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+            assertDisabled('fix-submit');
+
+            fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+            await assertNoValidationErrorSummary();
+
+            await submitForm();
+            await assertServerErrorMessage();
+            assertEnabled('fix-submit');
+        });
+
+        it('should allow retries after a server error when fixing record', async () => {
+            mockApi
+                .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
+                .replyOnce(500)
+                .onPost(RECORDS_ISSUES_API({ pid: mockRecordToFix.rek_pid }).apiUrl)
+                .replyOnce(200);
+
+            const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
+
+            await assertValidationErrorSummary();
+            switchToFixMode();
+
+            expect(getByText(validationErrors.validationErrorsSummary.fixRecordAnyField)).toBeInTheDocument();
+            assertDisabled('fix-submit');
+
+            fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
+            await assertNoValidationErrorSummary();
+
+            await submitForm();
+            await assertServerErrorMessage();
+
+            await submitForm();
+            await assertFixedRecordConfirmationMessage();
+        });
     });
 });

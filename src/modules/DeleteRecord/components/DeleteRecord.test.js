@@ -95,8 +95,16 @@ describe('Component DeleteRecord', () => {
     });
 
     describe('form submission', () => {
-        let expectedPayload = {};
-        let expectedPayloadWithReason = {};
+        const expectedPayload = {
+            rek_status: 8,
+            fez_record_search_key_doi_resolution_url: null,
+            fez_record_search_key_new_doi: null,
+            fez_record_search_key_deletion_notes: null,
+        };
+        const expectedPayloadWithReason = {
+            ...expectedPayload,
+            reason: 'deletion reason',
+        };
 
         const mockUseParamPidValue = pid => (mockParams.pid = pid);
         const mockGetAndDeleteRecordApiCalls = (record = mockRecordToDelete) => {
@@ -124,18 +132,7 @@ describe('Component DeleteRecord', () => {
 
         beforeEach(() => {
             clearLastRequest();
-            expectedPayload = {
-                rek_status: 8,
-                fez_record_search_key_doi_resolution_url: null,
-                fez_record_search_key_new_doi: null,
-                fez_record_search_key_deletion_notes: null,
-            };
-            expectedPayloadWithReason = {
-                ...expectedPayload,
-                reason: 'deletion reason',
-            };
         });
-
         afterEach(() => {
             mockApi.resetHandlers();
         });

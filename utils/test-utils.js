@@ -24,7 +24,7 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
-import { lastRequest } from '../src/config/axios';
+import { lastRequests } from '../src/config/axios';
 
 export const AllTheProviders = props => {
     return (
@@ -240,8 +240,26 @@ const mockWebApiFile = () => {
 };
 
 const assertLastApiRequest = ({ method, url, partialUrl, data }) => {
+    // try to find the last request based on method, url and partialUrl if these are available
+    const lastRequest = lastRequests.find(
+        entry =>
+            (!method || entry.method === method) &&
+            (!url || entry.url === url) &&
+            (!partialUrl || entry.url.includes(partialUrl)),
+    );
+
     if (!lastRequest) {
-        throw new Error('No request has been made yet');
+        throw new Error(
+            `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
+                partialUrl | 'N/A'}\n\nRequest queue:\n${JSON.stringify(
+                lastRequests.reduce((acc, item) => {
+                    acc.push({ method: item.method, url: item.url });
+                    return acc;
+                }, []),
+                null,
+                2,
+            )}`,
+        );
     }
 
     if (method && method !== '*') {
