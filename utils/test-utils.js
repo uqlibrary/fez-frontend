@@ -274,12 +274,10 @@ const assertLastApiRequest = ({ method, url, partialUrl, data }) => {
         expect(lastRequest.url.contains(partialUrl)).toBeTruthy();
     }
 
-    if (data instanceof Object) {
+    if (typeof data === 'object') {
         expect(JSON.parse(lastRequest.data)).toStrictEqual(data);
-    }
-
-    if (data instanceof Function) {
-        expect(data(JSON.parse(lastRequest.data))).toBeTruthy();
+    } else if (typeof data === 'function') {
+        expect(data(lastRequest.data)).toBeTruthy();
     }
 };
 
