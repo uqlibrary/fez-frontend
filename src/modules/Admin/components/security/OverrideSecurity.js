@@ -15,7 +15,7 @@ export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId })
                     }}
                     disabled={disabled}
                     onChange={input.onChange}
-                    checked={input.value === 1}
+                    checked={!!Number(input.value)}
                 />
             }
             {...{ label }}

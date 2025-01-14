@@ -31,9 +31,8 @@ export const getRecordType = record =>
     ).toLowerCase() || null;
 
 export const SecurityCard = ({ disabled }) => {
-    const methods = useFormContext();
-    const { record } = useRecordContext();
     const form = useFormContext();
+    const { record } = useRecordContext();
     const formValues = form.getValues('securitySection');
     const isSuperAdmin = useSelector(state =>
         Boolean(
@@ -48,7 +47,7 @@ export const SecurityCard = ({ disabled }) => {
     const dataStreams = !!(formValues?.dataStreams || {})?.toJS
         ? formValues.dataStreams.toJS()
         : formValues?.dataStreams;
-    const isOverrideSecurityChecked = formValues?.rek_security_inherited;
+    const isOverrideSecurityChecked = Number(formValues?.rek_security_inherited);
 
     const securityPolicy = formValues?.rek_security_policy;
     const dataStreamPolicy = formValues?.rek_datastream_policy;
@@ -150,7 +149,7 @@ export const SecurityCard = ({ disabled }) => {
                                                 text: text.dataStream,
                                             }}
                                             collections={record.fez_record_search_key_ismemberof}
-                                            value={methods.getValues('securitySection.dataStreams') ?? ''}
+                                            value={form.getValues('securitySection.dataStreams') ?? ''}
                                         />
                                     </Grid>
                                 </Grid>
