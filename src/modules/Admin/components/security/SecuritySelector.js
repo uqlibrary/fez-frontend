@@ -10,7 +10,7 @@ import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescripti
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, securitySelectorId }) => {
-    const methods = useFormContext();
+    const form = useFormContext();
     return (
         <Grid container spacing={1}>
             {!!text.description && (
@@ -22,7 +22,7 @@ export const SecuritySelector = ({ disabled, text, securityPolicy, fieldName, se
             )}
             <Grid xs={12}>
                 <Field
-                    control={methods.control}
+                    control={form.control}
                     component={PolicyDropdown}
                     name={fieldName}
                     fieldLabel={text.fieldLabel}
