@@ -1,5 +1,5 @@
 import React from 'react';
-import { PartialDateForm } from './PartialDateForm';
+import PartialDateForm from './PartialDateForm';
 import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps) {
