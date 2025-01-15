@@ -40,7 +40,7 @@ export const FullAuthorDetails = ({
 }) => {
     const {
         handleSubmit,
-        // control,
+        control,
         formState: { isDirty, isSubmitting, errors },
     } = useForm({
         defaultValues: rowData,
@@ -100,16 +100,16 @@ export const FullAuthorDetails = ({
                                 <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
-                                            <NameData />
+                                            <NameData control={control} />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <UsernameIdData />
+                                            <UsernameIdData control={control} />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <ResearcherIdentifierData />
+                                            <ResearcherIdentifierData control={control} />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <NotesData />
+                                            <NotesData control={control} />
                                         </Grid>
                                         <Grid item xs={12}>
                                             <Grid

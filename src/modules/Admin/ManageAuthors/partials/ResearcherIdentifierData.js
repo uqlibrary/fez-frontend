@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { Field, formValueSelector, change } from 'redux-form/immutable'; //todo: replace formValueSelector and change
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
@@ -21,7 +22,7 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const ResearcherIdentifierData = () => {
+export const ResearcherIdentifierData = ({ control }) => {
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -65,6 +66,7 @@ export const ResearcherIdentifierData = () => {
         <StandardCard subCard title="Researcher identifiers" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-researcher-id"
                     name="aut_researcher_id"
@@ -72,6 +74,7 @@ export const ResearcherIdentifierData = () => {
                     {...researcherId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
                     name="aut_scopus_id"
@@ -114,6 +117,7 @@ export const ResearcherIdentifierData = () => {
                     }}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-google-scholar-id"
                     name="aut_google_scholar_id"
@@ -121,6 +125,7 @@ export const ResearcherIdentifierData = () => {
                     {...googleScholarId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
                     name="aut_people_australia_id"
@@ -128,6 +133,7 @@ export const ResearcherIdentifierData = () => {
                     {...peopleAustraliaId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-orcid-id"
                     name="aut_orcid_id"
@@ -188,6 +194,9 @@ export const ResearcherIdentifierData = () => {
             </Grid>
         </StandardCard>
     );
+};
+ResearcherIdentifierData.propTypes = {
+    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(ResearcherIdentifierData);

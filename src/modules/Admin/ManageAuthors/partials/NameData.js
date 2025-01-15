@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { useSelector } from 'react-redux';
 // import { Field, formValueSelector } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
@@ -14,7 +15,7 @@ import { default as locale } from 'locale/components';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const NameData = () => {
+export const NameData = ({ control }) => {
     const {
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
@@ -28,6 +29,7 @@ export const NameData = () => {
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...displayName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-display-name"
                     name="aut_display_name"
@@ -36,6 +38,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...title}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-title"
                     name="aut_title"
@@ -43,6 +46,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...firstName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-fname"
                     name="aut_fname"
@@ -51,6 +55,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...middleName}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-mname"
                     name="aut_mname"
@@ -58,6 +63,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...lastName}
+                    control={control}
                     component={AuthorFieldData}
                     name="aut_lname"
                     authorFieldDataId="aut-lname"
@@ -66,6 +72,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...position}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-position"
                     name="aut_position"
@@ -73,6 +80,7 @@ export const NameData = () => {
                 />
                 <Field
                     {...email}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-email"
                     name="aut_email"
@@ -81,6 +89,9 @@ export const NameData = () => {
             </Grid>
         </StandardCard>
     );
+};
+NameData.propTypes = {
+    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(NameData);

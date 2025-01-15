@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { useSelector, useDispatch } from 'react-redux';
 // import { Field, formValueSelector, change } from 'redux-form/immutable';//todo: replace formValueSelector and change
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
@@ -19,7 +20,7 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const UsernameIdColumnData = () => {
+export const UsernameIdColumnData = ({ control }) => {
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -41,6 +42,7 @@ export const UsernameIdColumnData = () => {
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...orgStaffId}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-staff-id"
                     name="aut_org_staff_id"
@@ -48,6 +50,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...orgUsername}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
@@ -90,6 +93,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...orgStudentId}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-student-id"
                     name="aut_org_student_id"
@@ -97,6 +101,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...studentUsername}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
@@ -104,6 +109,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...refNum}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-ref-num"
                     name="aut_ref_num"
@@ -112,6 +118,9 @@ export const UsernameIdColumnData = () => {
             </Grid>
         </StandardCard>
     );
+};
+UsernameIdColumnData.propTypes = {
+    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(UsernameIdColumnData);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
 
@@ -9,7 +10,7 @@ import { default as locale } from 'locale/components';
 // import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-export const NotesData = props => {
+export const NotesData = ({ control, ...props }) => {
     const {
         editRow: {
             fields: { notes },
@@ -20,6 +21,7 @@ export const NotesData = props => {
         <StandardCard subCard noHeader>
             <Grid container spacing={2}>
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-description"
                     name="aut_description"
@@ -31,6 +33,9 @@ export const NotesData = props => {
             </Grid>
         </StandardCard>
     );
+};
+NotesData.propTypes = {
+    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(NotesData);
