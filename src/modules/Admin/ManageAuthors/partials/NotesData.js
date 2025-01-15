@@ -6,7 +6,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
-import { Field } from 'redux-form/immutable';
+// import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 export const NotesData = props => {
     const {

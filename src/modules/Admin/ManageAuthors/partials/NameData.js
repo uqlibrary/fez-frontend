@@ -1,6 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Field, formValueSelector } from 'redux-form/immutable';
+// import { useSelector } from 'react-redux';
+// import { Field, formValueSelector } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 
@@ -9,9 +10,9 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
-import { FORM_NAME } from './manageAuthorConfig';
+// import { FORM_NAME } from './manageAuthorConfig';
 
-const selector = formValueSelector(FORM_NAME);
+// const selector = formValueSelector(FORM_NAME);
 
 export const NameData = () => {
     const {
@@ -19,7 +20,8 @@ export const NameData = () => {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
-    const autEmail = useSelector(state => selector(state, 'aut_email'));
+    // const autEmail = useSelector(state => selector(state, 'aut_email'));
+    const autEmail = true; // todo: get autoEmail from somewhere
 
     return (
         <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">

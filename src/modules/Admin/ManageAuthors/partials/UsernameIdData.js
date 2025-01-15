@@ -1,6 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Field, formValueSelector, change } from 'redux-form/immutable';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { Field, formValueSelector, change } from 'redux-form/immutable';//todo: replace formValueSelector and change
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 import OverriddenIcon from '@mui/icons-material/Lock';
@@ -14,23 +15,25 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
 import { validation } from 'config';
-import { FORM_NAME } from './manageAuthorConfig';
+// import { FORM_NAME } from './manageAuthorConfig';
 
-const selector = formValueSelector(FORM_NAME);
+// const selector = formValueSelector(FORM_NAME);
 
 export const UsernameIdColumnData = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
         },
     } = locale.components.manageAuthors;
 
-    const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
-    const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
+    // const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
+    // const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
+    const autOrgUsername = true; // todo: get autOrgUsername from somewhere
+    const autNameOverridden = true; // todo: get autNameOverridden from somewhere
 
     const handleNameOverridden = () => {
-        dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
+        // dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
     };
 
     return (

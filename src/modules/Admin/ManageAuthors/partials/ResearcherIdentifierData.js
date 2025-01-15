@@ -1,6 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Field, formValueSelector, change } from 'redux-form/immutable';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { Field, formValueSelector, change } from 'redux-form/immutable'; //todo: replace formValueSelector and change
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -16,12 +17,12 @@ import AuthorFieldData from './AuthorFieldData';
 import { default as locale } from 'locale/components';
 import pageLocale from 'locale/pages';
 import { validation } from 'config';
-import { FORM_NAME } from './manageAuthorConfig';
+// import { FORM_NAME } from './manageAuthorConfig';
 
-const selector = formValueSelector(FORM_NAME);
+// const selector = formValueSelector(FORM_NAME);
 
 export const ResearcherIdentifierData = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const {
         editRow: {
             fields: {
@@ -39,18 +40,25 @@ export const ResearcherIdentifierData = () => {
 
     const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
 
-    const autIsScopusIdAuthenticated = useSelector(state => selector(state, 'aut_is_scopus_id_authenticated'));
-    const autIsOrcidSyncEnabled = useSelector(state => selector(state, 'aut_is_orcid_sync_enabled'));
-    const autOrcidId = useSelector(state => selector(state, 'aut_orcid_id'));
-    const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
-    const autGoogleScholarId = useSelector(state => selector(state, 'aut_google_scholar_id'));
+    // const autIsScopusIdAuthenticated = useSelector(state => selector(state, 'aut_is_scopus_id_authenticated'));
+    // const autIsOrcidSyncEnabled = useSelector(state => selector(state, 'aut_is_orcid_sync_enabled'));
+    // const autOrcidId = useSelector(state => selector(state, 'aut_orcid_id'));
+    // const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
+    // const autGoogleScholarId = useSelector(state => selector(state, 'aut_google_scholar_id'));
+    const autIsScopusIdAuthenticated = true; // todo: get autIsScopusIdAuthenticated from somewhere
+    const autIsOrcidSyncEnabled = true; // todo: get autIsOrcidSyncEnabled from somewhere
+    const autOrcidId = true; // todo: get autOrcidId from somewhere
+    const autScopusId = true; // todo: get autScopusId from somewhere
+    const autGoogleScholarId = true; // todo: get autGoogleScholarId from somewhere
 
     const handleIsScopusIDAuthenticated = () => {
-        dispatch(change(FORM_NAME, 'aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated)));
+        // todo: do the same as below
+        // dispatch(change(FORM_NAME, 'aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated)));
     };
 
     const handleIsOrcidSyncEnabled = () => {
-        dispatch(change(FORM_NAME, 'aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled)));
+        // todo: do the same as below
+        // dispatch(change(FORM_NAME, 'aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled)));
     };
 
     return (
