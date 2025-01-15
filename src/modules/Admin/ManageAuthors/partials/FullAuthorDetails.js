@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 // import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 // import { useValidatedForm } from 'hooks';
-import { Controller, useForm } from 'react-hook-form';
+// import { Controller, useForm } from 'react-hook-form';
+import { useValidatedForm } from 'hooks';
 // import debounce from 'debounce-promise';
 
 import Button from '@mui/material/Button';
@@ -29,7 +30,7 @@ import { default as locale } from 'locale/components';
 // import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig'; //todo: remove the file
 // import { checkForExisting } from '../helpers';
 
-console.log('Controller=', Controller);
+// console.log('Controller=', Controller);
 export const FullAuthorDetails = ({
     disabled,
     data: rowData,
@@ -42,7 +43,7 @@ export const FullAuthorDetails = ({
         handleSubmit,
         control,
         formState: { isDirty, isSubmitting, errors },
-    } = useForm({
+    } = useValidatedForm({
         defaultValues: rowData,
         mode: 'onChange',
     });
