@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-import { useSelector } from 'react-redux';
-import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
-import debounce from 'debounce-promise';
+// import Immutable from 'immutable';
+// import { useSelector } from 'react-redux';
+// import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
+// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+// import { useValidatedForm } from 'hooks';
+import { Controller, useForm } from 'react-hook-form';
+// import debounce from 'debounce-promise';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -23,9 +26,10 @@ import NotesData from './NotesData';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
-import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig';
-import { checkForExisting } from '../helpers';
+// import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig'; //todo: remove the file
+// import { checkForExisting } from '../helpers';
 
+console.log('Controller=', Controller);
 export const FullAuthorDetails = ({
     disabled,
     data: rowData,
@@ -34,22 +38,33 @@ export const FullAuthorDetails = ({
     onEditingCanceled,
     submitting,
 }) => {
-    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
+    const {
+        handleSubmit,
+        // control,
+        formState: { isDirty, isSubmitting, errors },
+    } = useForm({
+        defaultValues: rowData,
+        mode: 'onChange',
+    });
+    const [apiError, setApiError] = React.useState('');
 
-    const disableSubmit =
-        (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
-        (!!asyncFormErrors &&
-            asyncFormErrors instanceof Immutable.Map &&
-            Object.keys(asyncFormErrors.toJS()).length > 0);
+    const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
+    // const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
+    // const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
+
+    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}' || !!apiError;
+    // const disableSubmit =
+    //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
+    //     (!!asyncFormErrors &&
+    //         asyncFormErrors instanceof Immutable.Map &&
+    //         Object.keys(asyncFormErrors.toJS()).length > 0);
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
     } = locale.components.manageAuthors;
 
-    const handleSave = () => onEditingApproved(mode, formValues.toJS(), rowData);
+    const handleSave = formValues => onEditingApproved(mode, formValues, rowData);
     const handleDelete = () => onEditingApproved(mode, rowData, rowData);
     const handleCancel = () => onEditingCanceled(mode, rowData);
     const handleKeyPress = e => e.key === 'Escape' && onEditingCanceled(mode, rowData);
@@ -72,7 +87,16 @@ export const FullAuthorDetails = ({
                 <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
                     <TableCell colSpan={4}>
                         <ScrollToSection scrollToSection>
-                            <form>
+                            <form
+                                onSubmit={handleSubmit(async data => {
+                                    try {
+                                        setApiError('');
+                                        await handleSave(data);
+                                    } catch (error) {
+                                        setApiError(error.message);
+                                    }
+                                })}
+                            >
                                 <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                     <Grid container spacing={2}>
                                         <Grid item xs={12}>
@@ -168,10 +192,10 @@ FullAuthorDetails.propTypes = {
     submitting: PropTypes.bool,
 };
 
-const FullAuthorDetailsReduxForm = reduxForm({
-    form: FORM_NAME,
-    asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),
-    asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
-})(FullAuthorDetails);
+// const FullAuthorDetailsReduxForm = reduxForm({
+//     form: FORM_NAME,
+//     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),
+//     asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
+// })(FullAuthorDetails);
 
-export default React.memo(FullAuthorDetailsReduxForm);
+export default React.memo(FullAuthorDetails);
