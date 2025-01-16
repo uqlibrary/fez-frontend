@@ -24,7 +24,7 @@ import { validation } from 'config';
 // const selector = formValueSelector(FORM_NAME);
 
 export const ResearcherIdentifierData = () => {
-    const { control, watch } = useFormContext();
+    const { control, watch, setValue } = useFormContext();
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -43,24 +43,19 @@ export const ResearcherIdentifierData = () => {
 
     const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
 
-    // const autIsScopusIdAuthenticated = useSelector(state => selector(state, 'aut_is_scopus_id_authenticated'));
-    // const autIsOrcidSyncEnabled = useSelector(state => selector(state, 'aut_is_orcid_sync_enabled'));
-    // const autOrcidId = useSelector(state => selector(state, 'aut_orcid_id'));
-    // const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
-    const autIsScopusIdAuthenticated = true; // todo: get autIsScopusIdAuthenticated from somewhere
-    const autIsOrcidSyncEnabled = true; // todo: get autIsOrcidSyncEnabled from somewhere
-    // const autOrcidId = true; // todo: get autOrcidId from somewhere
-    // const autScopusId = true; // todo: get autScopusId from somewhere
-    const [autScopusId, autOrcidId] = watch(['aut_scopus_id', 'aut_orcid_id']);
+    const [autScopusId, autOrcidId, autIsScopusIdAuthenticated, autIsOrcidSyncEnabled] = watch([
+        'aut_scopus_id',
+        'aut_orcid_id',
+        'aut_is_scopus_id_authenticated',
+        'aut_is_orcid_sync_enabled',
+    ]);
 
     const handleIsScopusIDAuthenticated = () => {
-        // todo: do the same as below
-        // dispatch(change(FORM_NAME, 'aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated)));
+        setValue('aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated));
     };
 
     const handleIsOrcidSyncEnabled = () => {
-        // todo: do the same as below
-        // dispatch(change(FORM_NAME, 'aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled)));
+        setValue('aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled));
     };
 
     return (

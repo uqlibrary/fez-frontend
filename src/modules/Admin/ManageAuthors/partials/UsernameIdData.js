@@ -30,6 +30,7 @@ export const UsernameIdColumnData = () => {
     } = locale.components.manageAuthors;
 
     const { control, watch, setValue, getValues } = useFormContext();
+
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
     React.useEffect(() => {
