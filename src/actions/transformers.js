@@ -618,15 +618,15 @@ export const getRecordSubjectSearchKey = subject => {
 
 /**
  * @param {Array<{rek_value: {key: string, value: string}, rek_order: number}>} items
- * @returns {Object{fez_record_search_key_sustainable_development_goal:
- * Array<{rek_sustainable_development_goal: string, rek_sustainable_development_goal_order: number}>}}
+ * @returns {Object{fez_record_search_key_sdg:
+ * Array<{rek_sdg: string, rek_sdg_order: number}>}}
  */
 export const getRecordSDGSearchKey = items => {
     if (!items || items.length === 0) return {};
     return {
-        fez_record_search_key_sustainable_development_goal: items.map(item => ({
-            rek_sustainable_development_goal: item.rek_value.key,
-            rek_sustainable_development_goal_order: item.rek_order,
+        fez_record_search_key_sdg: items.map(item => ({
+            rek_sdg: item.rek_value.key,
+            rek_sdg_order: item.rek_order,
         })),
     };
 };
@@ -1135,7 +1135,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         languageOfJournalName,
         languages,
         subjects,
-        fez_record_search_key_sustainable_development_goal: sustainableDevelopmentGoal,
+        fez_record_search_key_sdg: sustainableDevelopmentGoal,
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,

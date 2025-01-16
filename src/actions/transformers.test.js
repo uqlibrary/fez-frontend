@@ -899,14 +899,14 @@ describe('transformers', () => {
                 { rek_order: 2, rek_value: { key: 456995, value: '02 - Zero Hunger' } },
             ];
             const expected = {
-                fez_record_search_key_sustainable_development_goal: [
+                fez_record_search_key_sdg: [
                     {
-                        rek_sustainable_development_goal: 456994,
-                        rek_sustainable_development_goal_order: 1,
+                        rek_sdg: 456994,
+                        rek_sdg_order: 1,
                     },
                     {
-                        rek_sustainable_development_goal: 456995,
-                        rek_sustainable_development_goal_order: 2,
+                        rek_sdg: 456995,
+                        rek_sdg_order: 2,
                     },
                 ],
             };

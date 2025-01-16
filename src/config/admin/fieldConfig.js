@@ -713,10 +713,10 @@ export default {
                 listEditorId: 'rek-subjects',
             },
         },
-        fez_record_search_key_sustainable_development_goal: {
+        fez_record_search_key_sdg: {
             component: SustainableDevelopmentGoalListField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_sustainable_development_goal',
+                name: 'bibliographicSection.fez_record_search_key_sdg',
                 locale: locale.components.sustainableDevelopmentGoal.field,
                 distinctOnly: true,
                 canEdit: true,

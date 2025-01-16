@@ -235,9 +235,7 @@ context('Journal Article admin edit', () => {
                     .eq(7)
                     .within(() => {
                         cy.get('h4').should('contain', 'Sustainable Development Goal');
-                        const items = record.fez_record_search_key_sustainable_development_goal.map(
-                            item => item.rek_sustainable_development_goal_lookup,
-                        );
+                        const items = record.fez_record_search_key_sdg.map(item => item.rek_sdg_lookup);
                         items.forEach((value, index) => {
                             cy.get('p')
                                 .eq(index)

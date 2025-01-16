@@ -350,19 +350,17 @@ export default {
             return returnValue;
         },
     },
-    fez_record_search_key_sustainable_development_goal: {
+    fez_record_search_key_sdg: {
         getValue: record => {
-            const returnValue = (record.fez_record_search_key_sustainable_development_goal || []).map(subject => ({
+            const returnValue = (record.fez_record_search_key_sdg || []).map(subject => ({
                 rek_value: {
-                    key: subject.rek_sustainable_development_goal,
-                    value:
-                        subject.rek_sustainable_development_goal_lookup ||
-                        `${subject.rek_sustainable_development_goal} (cvo_id)`,
+                    key: subject.rek_sdg,
+                    value: subject.rek_sdg_lookup || `${subject.rek_sdg} (cvo_id)`,
                 },
-                rek_order: subject.rek_sustainable_development_goal_order,
+                rek_order: subject.rek_sdg_order,
             }));
 
-            delete record.fez_record_search_key_sustainable_development_goal;
+            delete record.fez_record_search_key_sdg;
             return returnValue;
         },
     },
