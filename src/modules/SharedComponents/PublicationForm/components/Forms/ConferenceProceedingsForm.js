@@ -44,7 +44,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                                 multiline
                                 rows={3}
                                 {...txt.information.fieldLabels.title}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                                 style={{ marginBottom: '-12px' }}
                             />
                         </Grid>
@@ -70,7 +70,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.conferenceLocation}
                             />
                         </Grid>
@@ -82,7 +82,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                                 type="text"
                                 fullWidth
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.conferenceDates}
                             />
                         </Grid>
@@ -108,6 +108,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publisher}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -118,6 +119,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                                 type="text"
                                 fullWidth
                                 {...txt.information.fieldLabels.publicationPlace}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                     </Grid>

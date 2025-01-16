@@ -52,7 +52,7 @@ export const ThesisForm = ({ submitting }) => {
                                 rows={3}
                                 {...txt.information.fieldLabels.documentTitle}
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -60,7 +60,7 @@ export const ThesisForm = ({ submitting }) => {
                                 component={OrgUnitNameField}
                                 name="fez_record_search_key_org_unit_name.rek_org_unit_name"
                                 disabled={submitting}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 required
                                 {...txt.information.fieldLabels.orgUnitName}
                             />
@@ -71,7 +71,7 @@ export const ThesisForm = ({ submitting }) => {
                                 disabled={submitting}
                                 name="fez_record_search_key_org_name.rek_org_name"
                                 required
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                                 {...txt.information.fieldLabels.orgName}
                             />
                         </Grid>
@@ -196,6 +196,7 @@ export const ThesisForm = ({ submitting }) => {
                                 fullWidth
                                 normalize={getNumbersOnly}
                                 {...txt.optional.fieldLabels.totalPages}
+                                validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12}>

@@ -52,7 +52,7 @@ export const BookForm = ({ submitting, formValues, subtype = null, isNtro = fals
                                 multiline
                                 rows={3}
                                 label={txt.information.fieldLabels.bookTitle}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={!isNtro ? 4 : 6}>
@@ -66,7 +66,7 @@ export const BookForm = ({ submitting, formValues, subtype = null, isNtro = fals
                                 required
                                 fullWidth
                                 label={txt.information.fieldLabels.publicationPlace}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={!isNtro ? 4 : 6}>
@@ -80,7 +80,7 @@ export const BookForm = ({ submitting, formValues, subtype = null, isNtro = fals
                                 required
                                 fullWidth
                                 label={txt.information.fieldLabels.publisher}
-                                validate={[validation.required]}
+                                validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
                         {!isNtro && (
@@ -94,6 +94,7 @@ export const BookForm = ({ submitting, formValues, subtype = null, isNtro = fals
                                     disabled={submitting}
                                     label={txt.information.fieldLabels.extent.label}
                                     placeholder={txt.information.fieldLabels.extent.placeholder}
+                                    validate={[validation.maxLength255Validator]}
                                 />
                             </Grid>
                         )}
