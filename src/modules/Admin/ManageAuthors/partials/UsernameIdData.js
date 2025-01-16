@@ -17,7 +17,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
 import { validation } from 'config';
-// import { FORM_NAME } from './manageAuthorConfig';
+// import { FORM_NAME } from './manageAuthorConfig';//todo: delete file
 
 // const selector = formValueSelector(FORM_NAME);
 
@@ -29,33 +29,17 @@ export const UsernameIdColumnData = () => {
         },
     } = locale.components.manageAuthors;
 
-    // const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
-    // const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
-    // const autOrgUsername = true; // todo: get autOrgUsername from somewhere
-
-    // const { control, watch, setValue, getValues } = validatedForm;
     const { control, watch, setValue, getValues } = useFormContext();
-    // const [autOrgUsername, autNameOverridden] = watch(['aut_org_username', 'autNameOverridden']);
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
     React.useEffect(() => {
-        console.log('watchedField useEffect child', watchedField);
         setAutOrgUsername(watchedField);
     }, [watchedField]);
 
-    // console.log('autOrgUsername', autOrgUsername);
-    // console.log('getValues', getValues('aut_name_overridden'));
-    // const autNameOverridden = React.useState(getValues('aut_name_overridden'));
     const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
-
     const handleNameOverridden = () => {
-        console.log('autNameOverridden', Number(!autNameOverridden));
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
-        // dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
-    };
-    const handleChangeAutOrgUsername = e => {
-        console.log('handleChangeAutOrgUsername', e.target.value);
     };
 
     return (
@@ -75,7 +59,6 @@ export const UsernameIdColumnData = () => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
-                    onChange={handleChangeAutOrgUsername}
                     validate={[validation.spacelessMaxLength20Validator]}
                     InputProps={{
                         ...((!!autOrgUsername && {
