@@ -198,7 +198,7 @@ FullAuthorDetails.propTypes = {
 
 // const FullAuthorDetailsReduxForm = reduxForm({
 //     form: FORM_NAME,
-//     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),
+//     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),//todo: asyncValidate
 //     asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
 // })(FullAuthorDetails);
 
