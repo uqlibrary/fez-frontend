@@ -130,7 +130,7 @@ export const FullAuthorDetails = ({
                                                             disabled={disableSubmit || submitting || disabled}
                                                             variant="contained"
                                                             color="primary"
-                                                            onClick={handleSave}
+                                                            type="submit"
                                                         >
                                                             {mode === 'update' ? editButton : addButton}
                                                         </Button>
