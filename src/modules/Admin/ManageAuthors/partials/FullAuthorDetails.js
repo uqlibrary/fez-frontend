@@ -93,8 +93,9 @@ export const FullAuthorDetails = ({
                                 <form
                                     onSubmit={handleSubmit(async data => {
                                         try {
-                                            setApiError('');
-                                            await handleSave(data);
+                                            setApiError('test');
+                                            // await handleSave(data);
+                                            console.log('data=', data, handleSave);
                                         } catch (error) {
                                             setApiError(error.message);
                                         }
