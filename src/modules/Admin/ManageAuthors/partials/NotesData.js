@@ -1,3 +1,4 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +11,8 @@ import { default as locale } from 'locale/components';
 // import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-export const NotesData = ({ control, ...props }) => {
+export const NotesData = () => {
+    const { control } = useFormContext();
     const {
         editRow: {
             fields: { notes },
@@ -28,7 +30,6 @@ export const NotesData = ({ control, ...props }) => {
                     multiline
                     rows={5}
                     {...notes}
-                    {...props}
                 />
             </Grid>
         </StandardCard>

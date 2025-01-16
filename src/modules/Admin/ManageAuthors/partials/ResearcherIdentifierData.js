@@ -1,3 +1,4 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { useSelector, useDispatch } from 'react-redux';
@@ -22,7 +23,8 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const ResearcherIdentifierData = ({ control, watch }) => {
+export const ResearcherIdentifierData = () => {
+    const { control, watch } = useFormContext();
     // const dispatch = useDispatch();
     const {
         editRow: {

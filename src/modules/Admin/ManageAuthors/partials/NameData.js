@@ -1,3 +1,4 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { useSelector } from 'react-redux';
@@ -15,12 +16,13 @@ import { default as locale } from 'locale/components';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const NameData = ({ control }) => {
+export const NameData = () => {
     const {
         editRow: {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
+    const { control } = useFormContext();
 
     return (
         <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">

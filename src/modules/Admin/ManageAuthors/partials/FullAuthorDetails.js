@@ -1,12 +1,3 @@
-import Tooltip from '@mui/material/Tooltip';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import OverriddenIcon from '@mui/icons-material/Lock';
-import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
-import AuthorFieldData from './AuthorFieldData';
-import { validation } from 'config';
-
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -55,29 +46,9 @@ export const FullAuthorDetails = ({
     });
     const {
         handleSubmit,
-        watch,
-        control,
         formState: { isDirty, isSubmitting, errors },
     } = validatedForm;
     const [apiError, setApiError] = React.useState('');
-
-    const { getValues, setValue } = validatedForm;
-    const handleChangeAutOrgUsername = e => {
-        console.log('handleChangeAutOrgUsername main', e);
-    };
-    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
-    const handleNameOverridden = () => {
-        console.log('autNameOverridden main');
-        setAutNameOverridden(Number(!autNameOverridden));
-        setValue('aut_name_overridden', Number(!autNameOverridden));
-    };
-    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username2'));
-    const [watchedField] = watch(['aut_org_username2']);
-    React.useEffect(() => {
-        console.log('watchedField useEffect main', watchedField);
-        // Update the state whenever the watched field changes
-        setAutOrgUsername(watchedField);
-    }, [watchedField]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
@@ -132,63 +103,16 @@ export const FullAuthorDetails = ({
                                     <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
-                                                <Field
-                                                    control={control}
-                                                    component={AuthorFieldData}
-                                                    authorFieldDataId="aut-org-username"
-                                                    name="aut_org_username2"
-                                                    onChange={handleChangeAutOrgUsername}
-                                                    validate={[validation.spacelessMaxLength20Validator]}
-                                                    InputProps={{
-                                                        ...((!!autOrgUsername && {
-                                                            endAdornment: (
-                                                                <InputAdornment position="end">
-                                                                    <Tooltip title={'isUsernameOverridden.label'}>
-                                                                        <span>
-                                                                            <IconButton
-                                                                                aria-label={
-                                                                                    'isUsernameOverridden.label'
-                                                                                }
-                                                                                onClick={handleNameOverridden}
-                                                                                id="aut-name-overridden"
-                                                                                data-analyticsid="aut-name-overridden"
-                                                                                data-testid="aut-name-overridden"
-                                                                                size="large"
-                                                                            >
-                                                                                {autNameOverridden ? (
-                                                                                    <OverriddenIcon
-                                                                                        id="name-is-overridden"
-                                                                                        data-testid="name-is-overridden"
-                                                                                        color="primary"
-                                                                                    />
-                                                                                ) : (
-                                                                                    <NotOverriddenIcon
-                                                                                        id="name-is-not-overridden"
-                                                                                        data-testid="name-is-not-overridden"
-                                                                                        color="secondary"
-                                                                                    />
-                                                                                )}
-                                                                            </IconButton>
-                                                                        </span>
-                                                                    </Tooltip>
-                                                                </InputAdornment>
-                                                            ),
-                                                        }) ||
-                                                            {}),
-                                                    }}
-                                                />
+                                                <NameData />
                                             </Grid>
                                             <Grid item xs={12}>
-                                                <NameData control={control} />
+                                                <UsernameIdData />
                                             </Grid>
                                             <Grid item xs={12}>
-                                                <UsernameIdData validatedForm={validatedForm} />
+                                                <ResearcherIdentifierData />
                                             </Grid>
                                             <Grid item xs={12}>
-                                                <ResearcherIdentifierData control={control} watch={watch} />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <NotesData control={control} />
+                                                <NotesData />
                                             </Grid>
                                             <Grid item xs={12}>
                                                 <Grid
