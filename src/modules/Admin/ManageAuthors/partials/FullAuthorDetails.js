@@ -39,14 +39,17 @@ export const FullAuthorDetails = ({
     onEditingCanceled,
     submitting,
 }) => {
-    const {
-        handleSubmit,
-        control,
-        formState: { isDirty, isSubmitting, errors },
-    } = useValidatedForm({
+    console.log('rowData', rowData);
+    const validatedForm = useValidatedForm({
         defaultValues: rowData,
         mode: 'onChange',
     });
+    const {
+        handleSubmit,
+        watch,
+        control,
+        formState: { isDirty, isSubmitting, errors },
+    } = validatedForm;
     const [apiError, setApiError] = React.useState('');
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
@@ -104,10 +107,10 @@ export const FullAuthorDetails = ({
                                             <NameData control={control} />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <UsernameIdData control={control} />
+                                            <UsernameIdData control={control} validatedForm={validatedForm} />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <ResearcherIdentifierData control={control} />
+                                            <ResearcherIdentifierData control={control} watch={watch} />
                                         </Grid>
                                         <Grid item xs={12}>
                                             <NotesData control={control} />

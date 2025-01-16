@@ -22,7 +22,7 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const ResearcherIdentifierData = ({ control }) => {
+export const ResearcherIdentifierData = ({ control, watch }) => {
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -47,8 +47,9 @@ export const ResearcherIdentifierData = ({ control }) => {
     // const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
     const autIsScopusIdAuthenticated = true; // todo: get autIsScopusIdAuthenticated from somewhere
     const autIsOrcidSyncEnabled = true; // todo: get autIsOrcidSyncEnabled from somewhere
-    const autOrcidId = true; // todo: get autOrcidId from somewhere
-    const autScopusId = true; // todo: get autScopusId from somewhere
+    // const autOrcidId = true; // todo: get autOrcidId from somewhere
+    // const autScopusId = true; // todo: get autScopusId from somewhere
+    const [autScopusId, autOrcidId] = watch(['aut_scopus_id', 'aut_orcid_id']);
 
     const handleIsScopusIDAuthenticated = () => {
         // todo: do the same as below
@@ -195,6 +196,7 @@ export const ResearcherIdentifierData = ({ control }) => {
 };
 ResearcherIdentifierData.propTypes = {
     control: PropTypes.object.isRequired,
+    watch: PropTypes.func.isRequired,
 };
 
 export default React.memo(ResearcherIdentifierData);

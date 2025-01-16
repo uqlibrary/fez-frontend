@@ -20,7 +20,7 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const UsernameIdColumnData = ({ control }) => {
+export const UsernameIdColumnData = ({ control, validatedForm }) => {
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -30,10 +30,20 @@ export const UsernameIdColumnData = ({ control }) => {
 
     // const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
     // const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
-    const autOrgUsername = true; // todo: get autOrgUsername from somewhere
-    const autNameOverridden = true; // todo: get autNameOverridden from somewhere
+    // const autOrgUsername = true; // todo: get autOrgUsername from somewhere
+    const { watch, setValue, getValues } = validatedForm;
+    console.log('validatedForm', validatedForm);
+    // const [autOrgUsername, autNameOverridden] = watch(['aut_org_username', 'autNameOverridden']);
+    const [autOrgUsername] = watch(['aut_org_username']);
+    console.log('autOrgUsername', autOrgUsername);
+    console.log('getValues', getValues('aut_name_overridden'));
+    // const autNameOverridden = React.useState(getValues('aut_name_overridden'));
+    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
 
     const handleNameOverridden = () => {
+        console.log('autNameOverridden', Number(!autNameOverridden));
+        setAutNameOverridden(Number(!autNameOverridden));
+        setValue('aut_name_overridden', Number(!autNameOverridden));
         // dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
     };
 
@@ -121,6 +131,7 @@ export const UsernameIdColumnData = ({ control }) => {
 };
 UsernameIdColumnData.propTypes = {
     control: PropTypes.object.isRequired,
+    validatedForm: PropTypes.object.isRequired,
 };
 
 export default React.memo(UsernameIdColumnData);
