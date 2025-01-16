@@ -45,12 +45,10 @@ export const ResearcherIdentifierData = ({ control }) => {
     // const autIsOrcidSyncEnabled = useSelector(state => selector(state, 'aut_is_orcid_sync_enabled'));
     // const autOrcidId = useSelector(state => selector(state, 'aut_orcid_id'));
     // const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
-    // const autGoogleScholarId = useSelector(state => selector(state, 'aut_google_scholar_id'));
     const autIsScopusIdAuthenticated = true; // todo: get autIsScopusIdAuthenticated from somewhere
     const autIsOrcidSyncEnabled = true; // todo: get autIsOrcidSyncEnabled from somewhere
     const autOrcidId = true; // todo: get autOrcidId from somewhere
     const autScopusId = true; // todo: get autScopusId from somewhere
-    const autGoogleScholarId = true; // todo: get autGoogleScholarId from somewhere
 
     const handleIsScopusIDAuthenticated = () => {
         // todo: do the same as below
@@ -121,7 +119,7 @@ export const ResearcherIdentifierData = ({ control }) => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-google-scholar-id"
                     name="aut_google_scholar_id"
-                    {...(!!autGoogleScholarId ? { validate: [validation.isValidGoogleScholarId] } : {})}
+                    validate={[validation.isValidGoogleScholarId]}
                     {...googleScholarId}
                 />
                 <Field
