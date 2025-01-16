@@ -21,8 +21,6 @@ export const NameData = ({ control }) => {
             fields: { title, displayName, firstName, middleName, lastName, position, email },
         },
     } = locale.components.manageAuthors;
-    // const autEmail = useSelector(state => selector(state, 'aut_email'));
-    const autEmail = true; // todo: get autoEmail from somewhere
 
     return (
         <StandardCard subCard title="Name information" smallTitle customTitleBgColor="#F7F7F7">
@@ -84,7 +82,7 @@ export const NameData = ({ control }) => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-email"
                     name="aut_email"
-                    {...(!!autEmail ? { validate: [validation.email, validation.spacelessMaxLength255Validator] } : {})}
+                    validate={[validation.email, validation.spacelessMaxLength255Validator]}
                 />
             </Grid>
         </StandardCard>
