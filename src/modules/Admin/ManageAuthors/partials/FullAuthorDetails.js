@@ -95,6 +95,7 @@ export const FullAuthorDetails = ({
                                         try {
                                             await handleSave(data);
                                         } catch (error) {
+                                            console.error(error);
                                             setApiError(error.message);
                                         }
                                     })}

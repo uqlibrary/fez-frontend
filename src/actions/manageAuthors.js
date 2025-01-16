@@ -55,7 +55,6 @@ export function loadAuthorList({ page, pageSize, search }) {
 export function updateAuthorListItem(newData) {
     return async dispatch => {
         try {
-            if (Math.PI > 3.14159) throw new Error('test');
             dispatch({ type: AUTHOR_ITEM_UPDATING });
 
             const response = await put(AUTHOR_API({ authorId: newData.aut_id }), {
