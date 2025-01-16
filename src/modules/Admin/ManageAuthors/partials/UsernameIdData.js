@@ -34,9 +34,15 @@ export const UsernameIdColumnData = ({ control, validatedForm }) => {
     const { watch, setValue, getValues } = validatedForm;
     console.log('validatedForm', validatedForm);
     // const [autOrgUsername, autNameOverridden] = watch(['aut_org_username', 'autNameOverridden']);
-    const [autOrgUsername] = watch(['aut_org_username']);
-    console.log('autOrgUsername', autOrgUsername);
-    console.log('getValues', getValues('aut_name_overridden'));
+    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
+    const [watchedField] = watch(['aut_org_username']);
+    React.useEffect(() => {
+        // Update the state whenever the watched field changes
+        setAutOrgUsername(watchedField);
+    }, [watchedField]);
+
+    // console.log('autOrgUsername', autOrgUsername);
+    // console.log('getValues', getValues('aut_name_overridden'));
     // const autNameOverridden = React.useState(getValues('aut_name_overridden'));
     const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
 
@@ -45,6 +51,9 @@ export const UsernameIdColumnData = ({ control, validatedForm }) => {
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
         // dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
+    };
+    const handleChangeAutOrgUsername = e => {
+        console.log('handleChangeAutOrgUsername', e.target.value);
     };
 
     return (
@@ -64,6 +73,7 @@ export const UsernameIdColumnData = ({ control, validatedForm }) => {
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
+                    onChange={handleChangeAutOrgUsername}
                     validate={[validation.spacelessMaxLength20Validator]}
                     InputProps={{
                         ...((!!autOrgUsername && {
