@@ -36,7 +36,7 @@ describe('UqDataSection component', () => {
         );
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');
@@ -68,7 +68,7 @@ describe('UqDataSection component', () => {
         expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent('Yes, via De Gruyter');
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');

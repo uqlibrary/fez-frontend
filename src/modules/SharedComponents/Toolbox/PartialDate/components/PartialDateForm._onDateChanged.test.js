@@ -4,7 +4,7 @@ import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps) {
     const props = {
-        partialDateFormId: 'test',
+        partialDateFieldId: 'test',
         classes: {
             fakeTitle: {},
         },
