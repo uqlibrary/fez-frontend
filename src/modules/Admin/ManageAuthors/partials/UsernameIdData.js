@@ -1,3 +1,4 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { useSelector, useDispatch } from 'react-redux';
@@ -20,7 +21,7 @@ import { validation } from 'config';
 
 // const selector = formValueSelector(FORM_NAME);
 
-export const UsernameIdColumnData = ({ control, validatedForm }) => {
+export const UsernameIdColumnData = () => {
     // const dispatch = useDispatch();
     const {
         editRow: {
@@ -31,13 +32,14 @@ export const UsernameIdColumnData = ({ control, validatedForm }) => {
     // const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
     // const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
     // const autOrgUsername = true; // todo: get autOrgUsername from somewhere
-    const { watch, setValue, getValues } = validatedForm;
-    console.log('validatedForm', validatedForm);
+
+    // const { control, watch, setValue, getValues } = validatedForm;
+    const { control, watch, setValue, getValues } = useFormContext();
     // const [autOrgUsername, autNameOverridden] = watch(['aut_org_username', 'autNameOverridden']);
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
     React.useEffect(() => {
-        // Update the state whenever the watched field changes
+        console.log('watchedField useEffect child', watchedField);
         setAutOrgUsername(watchedField);
     }, [watchedField]);
 

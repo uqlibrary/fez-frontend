@@ -7,6 +7,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import AuthorFieldData from './AuthorFieldData';
 import { validation } from 'config';
 
+import { FormProvider } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 // import Immutable from 'immutable';
@@ -70,9 +71,10 @@ export const FullAuthorDetails = ({
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
     };
-    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
-    const [watchedField] = watch(['aut_org_username']);
+    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username2'));
+    const [watchedField] = watch(['aut_org_username2']);
     React.useEffect(() => {
+        console.log('watchedField useEffect main', watchedField);
         // Update the state whenever the watched field changes
         setAutOrgUsername(watchedField);
     }, [watchedField]);
@@ -116,114 +118,118 @@ export const FullAuthorDetails = ({
                 <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
                     <TableCell colSpan={4}>
                         <ScrollToSection scrollToSection>
-                            <form
-                                onSubmit={handleSubmit(async data => {
-                                    try {
-                                        setApiError('');
-                                        await handleSave(data);
-                                    } catch (error) {
-                                        setApiError(error.message);
-                                    }
-                                })}
-                            >
-                                <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
-                                    <Grid container spacing={2}>
-                                        <Grid item xs={12}>
-                                            <Field
-                                                control={control}
-                                                component={AuthorFieldData}
-                                                authorFieldDataId="aut-org-username"
-                                                name="aut_org_username"
-                                                onChange={handleChangeAutOrgUsername}
-                                                validate={[validation.spacelessMaxLength20Validator]}
-                                                InputProps={{
-                                                    ...((!!autOrgUsername && {
-                                                        endAdornment: (
-                                                            <InputAdornment position="end">
-                                                                <Tooltip title={'isUsernameOverridden.label'}>
-                                                                    <span>
-                                                                        <IconButton
-                                                                            aria-label={'isUsernameOverridden.label'}
-                                                                            onClick={handleNameOverridden}
-                                                                            id="aut-name-overridden"
-                                                                            data-analyticsid="aut-name-overridden"
-                                                                            data-testid="aut-name-overridden"
-                                                                            size="large"
-                                                                        >
-                                                                            {autNameOverridden ? (
-                                                                                <OverriddenIcon
-                                                                                    id="name-is-overridden"
-                                                                                    data-testid="name-is-overridden"
-                                                                                    color="primary"
-                                                                                />
-                                                                            ) : (
-                                                                                <NotOverriddenIcon
-                                                                                    id="name-is-not-overridden"
-                                                                                    data-testid="name-is-not-overridden"
-                                                                                    color="secondary"
-                                                                                />
-                                                                            )}
-                                                                        </IconButton>
-                                                                    </span>
-                                                                </Tooltip>
-                                                            </InputAdornment>
-                                                        ),
-                                                    }) ||
-                                                        {}),
-                                                }}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <NameData control={control} />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <UsernameIdData control={control} validatedForm={validatedForm} />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <ResearcherIdentifierData control={control} watch={watch} />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <NotesData control={control} />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <Grid
-                                                container
-                                                direction="row-reverse"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-                                            >
-                                                <Grid item>
-                                                    <Button
-                                                        id={`authors-${mode}-this-author-save`}
-                                                        data-analyticsid={`authors-${mode}-this-author-save`}
-                                                        data-testid={`authors-${mode}-this-author-save`}
-                                                        disabled={disableSubmit || submitting || disabled}
-                                                        variant="contained"
-                                                        color="primary"
-                                                        onClick={handleSave}
-                                                    >
-                                                        {mode === 'update' ? editButton : addButton}
-                                                    </Button>
-                                                </Grid>
-                                                <Grid item>
-                                                    <Button
-                                                        id={`authors-${mode}-this-author-cancel`}
-                                                        data-analyticsid={`authors-${mode}-this-author-cancel`}
-                                                        data-testid={`authors-${mode}-this-author-cancel`}
-                                                        disabled={disabled}
-                                                        variant="outlined"
-                                                        color="secondary"
-                                                        onClick={handleCancel}
-                                                    >
-                                                        {cancelButton}
-                                                    </Button>
+                            <FormProvider {...validatedForm}>
+                                <form
+                                    onSubmit={handleSubmit(async data => {
+                                        try {
+                                            setApiError('');
+                                            await handleSave(data);
+                                        } catch (error) {
+                                            setApiError(error.message);
+                                        }
+                                    })}
+                                >
+                                    <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
+                                        <Grid container spacing={2}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    control={control}
+                                                    component={AuthorFieldData}
+                                                    authorFieldDataId="aut-org-username"
+                                                    name="aut_org_username2"
+                                                    onChange={handleChangeAutOrgUsername}
+                                                    validate={[validation.spacelessMaxLength20Validator]}
+                                                    InputProps={{
+                                                        ...((!!autOrgUsername && {
+                                                            endAdornment: (
+                                                                <InputAdornment position="end">
+                                                                    <Tooltip title={'isUsernameOverridden.label'}>
+                                                                        <span>
+                                                                            <IconButton
+                                                                                aria-label={
+                                                                                    'isUsernameOverridden.label'
+                                                                                }
+                                                                                onClick={handleNameOverridden}
+                                                                                id="aut-name-overridden"
+                                                                                data-analyticsid="aut-name-overridden"
+                                                                                data-testid="aut-name-overridden"
+                                                                                size="large"
+                                                                            >
+                                                                                {autNameOverridden ? (
+                                                                                    <OverriddenIcon
+                                                                                        id="name-is-overridden"
+                                                                                        data-testid="name-is-overridden"
+                                                                                        color="primary"
+                                                                                    />
+                                                                                ) : (
+                                                                                    <NotOverriddenIcon
+                                                                                        id="name-is-not-overridden"
+                                                                                        data-testid="name-is-not-overridden"
+                                                                                        color="secondary"
+                                                                                    />
+                                                                                )}
+                                                                            </IconButton>
+                                                                        </span>
+                                                                    </Tooltip>
+                                                                </InputAdornment>
+                                                            ),
+                                                        }) ||
+                                                            {}),
+                                                    }}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <NameData control={control} />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <UsernameIdData validatedForm={validatedForm} />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <ResearcherIdentifierData control={control} watch={watch} />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <NotesData control={control} />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <Grid
+                                                    container
+                                                    direction="row-reverse"
+                                                    justifyContent="flex-start"
+                                                    alignItems="center"
+                                                    spacing={2}
+                                                >
+                                                    <Grid item>
+                                                        <Button
+                                                            id={`authors-${mode}-this-author-save`}
+                                                            data-analyticsid={`authors-${mode}-this-author-save`}
+                                                            data-testid={`authors-${mode}-this-author-save`}
+                                                            disabled={disableSubmit || submitting || disabled}
+                                                            variant="contained"
+                                                            color="primary"
+                                                            onClick={handleSave}
+                                                        >
+                                                            {mode === 'update' ? editButton : addButton}
+                                                        </Button>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Button
+                                                            id={`authors-${mode}-this-author-cancel`}
+                                                            data-analyticsid={`authors-${mode}-this-author-cancel`}
+                                                            data-testid={`authors-${mode}-this-author-cancel`}
+                                                            disabled={disabled}
+                                                            variant="outlined"
+                                                            color="secondary"
+                                                            onClick={handleCancel}
+                                                        >
+                                                            {cancelButton}
+                                                        </Button>
+                                                    </Grid>
                                                 </Grid>
                                             </Grid>
                                         </Grid>
-                                    </Grid>
-                                </Box>
-                            </form>
+                                    </Box>
+                                </form>
+                            </FormProvider>
                         </ScrollToSection>
                     </TableCell>
                 </TableRow>
