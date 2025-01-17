@@ -56,7 +56,7 @@ export const UsernameIdColumnData = () => {
         'aut_id',
     ]);
     const autId = watchedFields[4]; // Assuming aut_id is at index 4
-    console.log('watchedFields=', JSON.stringify(watchedFields));
+    // console.log('watchedFields=', JSON.stringify(watchedFields));
 
     console.dummy = () => {};
     console.dummy('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
@@ -77,6 +77,7 @@ export const UsernameIdColumnData = () => {
                     );
                     clearErrors(field); // Clear errors if validation passes
                 } catch (error) {
+                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
                     if (getValues(`${field}_error`) !== error.message) {
                         setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
                         setValue(`${field}_error`, error.message); // Store the error message to compare later
@@ -95,18 +96,7 @@ export const UsernameIdColumnData = () => {
         fields.forEach((field, index) => {
             const value = watchedFields[index];
             if (value && value !== '') {
-                // debouncedValidateField(field, value, autId, asyncErrors);
-                console.dummy = () => {};
-                console.dummy(
-                    'field, value, autId, asyncErrors=',
-                    field,
-                    value,
-                    autId,
-                    asyncErrors,
-                    debouncedValidateField,
-                );
-                console.log('field=', field);
-                console.log('value=', value);
+                debouncedValidateField(field, value, autId, asyncErrors);
             } else {
                 clearErrors(field); // Clear errors for fields with no value
             }

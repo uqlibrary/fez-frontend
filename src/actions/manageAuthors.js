@@ -147,25 +147,50 @@ export function addAuthor(data) {
 }
 
 export function checkForExistingAuthor(search, searchField, id, validation, asyncErrors) {
-    const console = { dummy: () => {} };
-    console.dummy(
-        'search, searchField, id, validation, asyncErrors=',
-        search,
-        searchField,
-        id,
-        validation,
-        asyncErrors,
-        CHECKING_EXISTING_AUTHOR_FAILED,
-        EXISTING_AUTHOR_FOUND,
-        AUTHORS_SEARCH_API,
-        createSentryFriendlyError,
-    );
+    let exceptionCaught = true;
     return async dispatch => {
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
-        dispatch({
-            type: EXISTING_AUTHOR_NOT_FOUND,
-        });
-        return Promise.resolve();
+        return get(AUTHORS_SEARCH_API({ query: search }))
+            .then(response => {
+                exceptionCaught = false;
+                if (
+                    response.total > 0 &&
+                    response.data.filter(author => author.aut_id !== id && author[searchField] === search).length > 0
+                ) {
+                    dispatch({
+                        type: EXISTING_AUTHOR_FOUND,
+                    });
+                    return Promise.reject(
+                        createSentryFriendlyError(validation[searchField], {
+                            ...asyncErrors,
+                            [searchField]: validation[searchField],
+                        }),
+                    );
+                } else {
+                    dispatch({
+                        type: EXISTING_AUTHOR_NOT_FOUND,
+                    });
+                    if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
+                        // eslint-disable-next-line no-unused-vars
+                        const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
+                        return Promise.reject(
+                            createSentryFriendlyError(validation[searchField], { ...restAsyncErrors }),
+                        );
+                    } else {
+                        return Promise.resolve();
+                    }
+                }
+            })
+            .catch(e => {
+                if (exceptionCaught) {
+                    dispatch({
+                        type: CHECKING_EXISTING_AUTHOR_FAILED,
+                        payload: e,
+                    });
+                }
+
+                return Promise.reject(e);
+            });
     };
 }
 
