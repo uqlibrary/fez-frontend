@@ -1,3 +1,16 @@
+import AuthorFieldData from './AuthorFieldData';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { validation } from 'config';
+import OverriddenIcon from '@mui/icons-material/Lock';
+import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
+import Tooltip from '@mui/material/Tooltip';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import debounce from 'debounce-promise';
+import { DEBOUNCE_VALUE } from './manageAuthorConfig';
+import { checkForExistingAuthor } from 'actions';
+import { useDispatch } from 'react-redux';
+
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -49,6 +62,71 @@ export const FullAuthorDetails = ({
         formState: { isDirty, isSubmitting, errors },
     } = validatedForm;
     const [apiError, setApiError] = React.useState('');
+
+    const dispatch = useDispatch();
+    const { control, watch, getValues, setValue, setError, trigger, clearErrors } = validatedForm;
+    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username2'));
+    const [watchedField] = watch(['aut_org_username2']);
+    React.useEffect(() => {
+        setAutOrgUsername(watchedField);
+    }, [watchedField]);
+    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
+    const handleNameOverridden = () => {
+        setAutNameOverridden(Number(!autNameOverridden));
+        setValue('aut_name_overridden', Number(!autNameOverridden));
+    };
+    const watchedFields = watch(['aut_org_username2', 'aut_id']);
+    const autId = watchedFields[1]; // Assuming aut_id is at index 4
+    // console.log('watchedFields=', JSON.stringify(watchedFields));
+    // Debounced validation function
+    const debouncedValidateField = React.useCallback(
+        (field, value, autId, asyncErrors) => {
+            debounce(async () => {
+                try {
+                    console.log('dispatching checkForExistingAuthor');
+                    dispatch(
+                        checkForExistingAuthor(
+                            value, // Field value to search
+                            field, // Field name to validate
+                            autId, // Author ID
+                            locale.components.manageAuthors.editRow.validation, // Validation messages
+                            asyncErrors,
+                        ),
+                    )
+                        .then(() => {
+                            clearErrors(field); // Clear errors if validation passes
+                        })
+                        .catch(error => {
+                            // console.error('Error during author validation:', error);
+                            console.log('setError', field, error.message);
+                            setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                            trigger(field);
+                        });
+                    clearErrors(field); // Clear errors if validation passes
+                } catch (error) {
+                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                }
+            }, DEBOUNCE_VALUE)();
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [setError, trigger],
+    );
+
+    // Track previous field values to validate only the changed field
+    React.useEffect(() => {
+        const fields = ['aut_org_username2'];
+        const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
+
+        fields.forEach((field, index) => {
+            const value = watchedFields[index];
+            if (value && value !== '') {
+                debouncedValidateField(field, value, autId, asyncErrors);
+            } else {
+                clearErrors(field); // Clear errors for fields with no value
+            }
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(watchedFields)]);
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
@@ -102,6 +180,56 @@ export const FullAuthorDetails = ({
                                 >
                                     <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                         <Grid container spacing={2}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    control={control}
+                                                    component={AuthorFieldData}
+                                                    authorFieldDataId="aut-org-username"
+                                                    name="aut_org_username2"
+                                                    validate={[
+                                                        validation.required,
+                                                        validation.spacelessMaxLength20Validator,
+                                                    ]}
+                                                    InputProps={{
+                                                        ...((!!autOrgUsername && {
+                                                            endAdornment: (
+                                                                <InputAdornment position="end">
+                                                                    <Tooltip title={'isUsernameOverridden.label'}>
+                                                                        <span>
+                                                                            <IconButton
+                                                                                aria-label={
+                                                                                    'isUsernameOverridden.label'
+                                                                                }
+                                                                                onClick={handleNameOverridden}
+                                                                                id="aut-name-overridden"
+                                                                                data-analyticsid="aut-name-overridden"
+                                                                                data-testid="aut-name-overridden"
+                                                                                size="large"
+                                                                            >
+                                                                                {autNameOverridden ? (
+                                                                                    <OverriddenIcon
+                                                                                        id="name-is-overridden"
+                                                                                        data-testid="name-is-overridden"
+                                                                                        color="primary"
+                                                                                    />
+                                                                                ) : (
+                                                                                    <NotOverriddenIcon
+                                                                                        id="name-is-not-overridden"
+                                                                                        data-testid="name-is-not-overridden"
+                                                                                        color="secondary"
+                                                                                    />
+                                                                                )}
+                                                                            </IconButton>
+                                                                        </span>
+                                                                    </Tooltip>
+                                                                </InputAdornment>
+                                                            ),
+                                                        }) ||
+                                                            {}),
+                                                    }}
+                                                />
+                                            </Grid>
+
                                             <Grid item xs={12}>
                                                 <NameData />
                                             </Grid>
