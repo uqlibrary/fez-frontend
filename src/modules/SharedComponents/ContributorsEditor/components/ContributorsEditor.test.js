@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within, preview, userEvent } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
