@@ -63,13 +63,13 @@ export const UsernameIdColumnData = () => {
         (field, value, autId, asyncErrors) => {
             debounce(async () => {
                 try {
-                    await dispatch(
+                    dispatch(
                         checkForExistingAuthor(
                             value, // Field value to search
                             field, // Field name to validate
                             autId, // Author ID
                             locale.components.manageAuthors.editRow.validation, // Validation messages
-                            asyncErrors, // Existing async errors
+                            asyncErrors,
                         ),
                     );
                     clearErrors(field); // Clear errors if validation passes
