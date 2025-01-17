@@ -74,6 +74,7 @@ export const FullAuthorDetails = ({
     const handleNameOverridden = () => {
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
+        setError('aut_org_username2', { type: 'manual', message: 'Error message' });
     };
     const watchedFields = watch(['aut_org_username2', 'aut_id']);
     const autId = watchedFields[1]; // Assuming aut_id is at index 4
@@ -187,7 +188,7 @@ export const FullAuthorDetails = ({
                                                     authorFieldDataId="aut-org-username"
                                                     name="aut_org_username2"
                                                     validate={[
-                                                        validation.required,
+                                                        // validation.required,
                                                         validation.spacelessMaxLength20Validator,
                                                     ]}
                                                     InputProps={{

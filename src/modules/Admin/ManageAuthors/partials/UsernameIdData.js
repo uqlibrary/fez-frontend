@@ -46,6 +46,7 @@ export const UsernameIdColumnData = () => {
     const handleNameOverridden = () => {
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
+        setError('aut_org_username', { type: 'manual', message: 'Error message' });
     };
 
     const watchedFields = watch([
