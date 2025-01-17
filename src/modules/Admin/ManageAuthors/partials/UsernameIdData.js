@@ -61,32 +61,26 @@ export const UsernameIdColumnData = () => {
     console.dummy = () => {};
     console.dummy('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
     // Debounced validation function
-    const debouncedValidateField = React.useCallback(
-        (field, value, autId, asyncErrors) => {
-            debounce(async () => {
-                try {
-                    console.log('dispatching checkForExistingAuthor');
-                    dispatch(
-                        checkForExistingAuthor(
-                            value, // Field value to search
-                            field, // Field name to validate
-                            autId, // Author ID
-                            locale.components.manageAuthors.editRow.validation, // Validation messages
-                            asyncErrors,
-                        ),
-                    );
-                    clearErrors(field); // Clear errors if validation passes
-                } catch (error) {
-                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                    if (getValues(`${field}_error`) !== error.message) {
-                        setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                        setValue(`${field}_error`, error.message); // Store the error message to compare later
-                    }
-                }
-            }, DEBOUNCE_VALUE)();
-        },
-        [dispatch, clearErrors, getValues, setError, setValue],
-    );
+    const debouncedValidateField = React.useCallback((field, value, autId, asyncErrors) => {
+        debounce(async () => {
+            try {
+                console.log('dispatching checkForExistingAuthor');
+                dispatch(
+                    checkForExistingAuthor(
+                        value, // Field value to search
+                        field, // Field name to validate
+                        autId, // Author ID
+                        locale.components.manageAuthors.editRow.validation, // Validation messages
+                        asyncErrors,
+                    ),
+                );
+                clearErrors(field); // Clear errors if validation passes
+            } catch (error) {
+                setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+            }
+        }, DEBOUNCE_VALUE)();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // Track previous field values to validate only the changed field
     React.useEffect(() => {
