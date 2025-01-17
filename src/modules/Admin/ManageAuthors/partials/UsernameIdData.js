@@ -1,3 +1,8 @@
+import { checkForExistingAuthor, clearAuthorAlerts } from 'actions';
+import { useDispatch } from 'react-redux';
+import debounce from 'debounce-promise';
+import { DEBOUNCE_VALUE } from './manageAuthorConfig';
+// import { checkForExisting } from '../helpers'; // todo: delete file
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -22,14 +27,14 @@ import { validation } from 'config';
 // const selector = formValueSelector(FORM_NAME);
 
 export const UsernameIdColumnData = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
         },
     } = locale.components.manageAuthors;
 
-    const { control, watch, setValue, getValues } = useFormContext();
+    const { control, watch, setValue, getValues, setError, clearErrors } = useFormContext();
 
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
@@ -42,6 +47,54 @@ export const UsernameIdColumnData = () => {
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
     };
+
+    const watchedFields = watch([
+        'aut_org_username',
+        'aut_org_staff_id',
+        'aut_student_username',
+        'aut_org_student_id',
+        'aut_id',
+    ]);
+    const autId = watchedFields[4]; // Assuming aut_id is at index 4
+
+    console.log('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
+    // Debounced validation function
+    const debouncedValidateField = React.useCallback(
+        (field, value, autId, asyncErrors) => {
+            debounce(async () => {
+                try {
+                    await dispatch(
+                        checkForExistingAuthor(
+                            value, // Field value to search
+                            field, // Field name to validate
+                            autId, // Author ID
+                            locale.components.manageAuthors.editRow.validation, // Validation messages
+                            asyncErrors, // Existing async errors
+                        ),
+                    );
+                    clearErrors(field); // Clear errors if validation passes
+                } catch (error) {
+                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                }
+            }, DEBOUNCE_VALUE)();
+        },
+        [dispatch, clearErrors, setError],
+    );
+
+    // Track previous field values to validate only the changed field
+    React.useEffect(() => {
+        const fields = ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'];
+        const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
+
+        fields.forEach((field, index) => {
+            const value = watchedFields[index];
+            if (value && value !== '') {
+                debouncedValidateField(field, value, autId, asyncErrors);
+            } else {
+                clearErrors(field); // Clear errors for fields with no value
+            }
+        });
+    }, [watchedFields, debouncedValidateField, clearErrors, autId]);
 
     return (
         <StandardCard subCard title="Username & IDs" smallTitle customTitleBgColor="#F7F7F7">
