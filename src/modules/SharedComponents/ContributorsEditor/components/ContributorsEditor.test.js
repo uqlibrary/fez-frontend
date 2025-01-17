@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -443,6 +443,35 @@ describe('ContributorsEditor', () => {
         fireEvent.click(getByTestId('test-add'));
 
         expect(container).toMatchSnapshot();
+    });
+
+    it('should keep authorId when editing a contributor that has been assigned as the publication author', async () => {
+        let contributors = [];
+        const { getByTestId } = setup({
+            onChange: values => (contributors = values),
+            canEdit: true,
+            forceSelectable: true,
+            author: authorsSearch.data[0],
+            input: {
+                name: 'test',
+                value: [],
+            },
+        });
+
+        // add a couple of contributors
+        await userEvent.type(getByTestId('test-input'), 'Author 1');
+        await userEvent.click(getByTestId('test-add'));
+        await userEvent.type(getByTestId('test-input'), 'Author 2');
+        await userEvent.click(getByTestId('test-add'));
+        // assign the first contributor as the pub author
+        await userEvent.click(getByTestId('test-list-row-0'));
+        // update the first contributor's name
+        await userEvent.click(getByTestId('test-list-row-0-edit'));
+        await userEvent.type(getByTestId('test-input'), ' (edited)');
+        await userEvent.click(getByTestId('test-add'));
+        // assert that the assigned and edited contributor has the expected authorId
+        expect(contributors[0].nameAsPublished).toEqual('Author 1 (edited)');
+        expect(contributors[0].authorId).toEqual(authorsSearch.data[0].aut_id);
     });
 
     it('should not be able to select contributor in edit mode', () => {

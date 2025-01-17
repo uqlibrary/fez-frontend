@@ -18,7 +18,7 @@ const _displayErrors = (state, validationStatus, allowPartial = true, required =
         allowPartial,
         locale: { validationMessage },
         clearable: true,
-        isRequired: required,
+        required,
     });
 };
 

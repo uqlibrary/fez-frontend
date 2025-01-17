@@ -99,7 +99,6 @@ export const displayErrors = ({
     const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
     let date = '';
-
     switch (validationStatus) {
         case STATUS_INVALID:
             date =
@@ -152,50 +151,51 @@ export const displayErrors = ({
     setError(date.trim());
 };
 
-const PartialDateForm = ({
-    locale = {
-        dayLabel: 'Day',
-        monthLabel: 'Month',
-        yearLabel: 'Year',
-        validationMessage: {
-            date: 'Invalid date',
-            day: 'Invalid day',
-            month: 'Enter a month',
-            year: 'Invalid year',
-            yearRequired: 'Year required',
-            future: 'Date must be before now',
+const PartialDateForm = props => {
+    const {
+        locale = {
+            dayLabel: 'Day',
+            monthLabel: 'Month',
+            yearLabel: 'Year',
+            validationMessage: {
+                date: 'Invalid date',
+                day: 'Invalid day',
+                month: 'Enter a month',
+                year: 'Invalid year',
+                yearRequired: 'Year required',
+                future: 'Date must be before now',
+            },
+            minNumberCharCode: 48,
+            maxNumberCharCode: 57,
         },
-        minNumberCharCode: 48,
-        maxNumberCharCode: 57,
-    },
-    onChange,
-    dateFormat = 'YYYY-MM-DD',
-    allowPartial,
-    disableFuture,
-    disabled,
-    months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-    ],
-    floatingTitle = 'Enter a date',
-    required,
-    hasError,
-    input,
-    meta,
-    partialDateFormId,
-    clearable,
-    value,
-}) => {
+        onChange,
+        dateFormat = 'YYYY-MM-DD',
+        allowPartial,
+        disableFuture,
+        disabled,
+        months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ],
+        floatingTitle = 'Enter a date',
+        required,
+        hasError,
+        input,
+        meta,
+        partialDateFieldId,
+        clearable,
+        value,
+    } = props;
     const getDateObject = () => {
         const dateValue =
             (value && moment(value)) ||
@@ -256,6 +256,7 @@ const PartialDateForm = ({
 
     useEffect(() => {
         const newDateObject = getDateObject();
+        /* istanbul ignore else */
         if (
             !!!state ||
             state.day !== newDateObject.day ||
@@ -264,6 +265,7 @@ const PartialDateForm = ({
         ) {
             const newState = { ...state, ...newDateObject };
             setState(newState);
+            // check for errors
             (onChange || input?.onChange) && getFullDateFromState(newState);
         }
 
@@ -278,7 +280,7 @@ const PartialDateForm = ({
     const isError = error || hasError || '';
 
     return (
-        <Grid container spacing={0} padding={0} id={partialDateFormId}>
+        <Grid container spacing={0} padding={0} id={partialDateFieldId}>
             <Grid xs={12}>
                 <InputLabel error={!!isError} shrink required={required}>
                     {floatingTitle}
@@ -290,7 +292,7 @@ const PartialDateForm = ({
                         <TextField
                             name="day"
                             variant="standard"
-                            id={`${partialDateFormId}-day`}
+                            id={`${partialDateFieldId}-day`}
                             type="text"
                             fullWidth
                             disabled={disabled}
@@ -302,9 +304,9 @@ const PartialDateForm = ({
                             inputProps={{
                                 label: 'day',
                                 maxLength: 2,
-                                id: `${partialDateFormId}-day-input`,
-                                'data-analyticsid': `${partialDateFormId}-day-input`,
-                                'data-testid': `${partialDateFormId}-day-input`,
+                                id: `${partialDateFieldId}-day-input`,
+                                'data-analyticsid': `${partialDateFieldId}-day-input`,
+                                'data-testid': `${partialDateFieldId}-day-input`,
                             }}
                             value={state?.day || ''}
                         />
@@ -314,29 +316,29 @@ const PartialDateForm = ({
                         <Select
                             name="month"
                             variant="standard"
-                            id={`${partialDateFormId}-month`}
+                            id={`${partialDateFieldId}-month`}
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
-                            value={state?.month === null ? /* istanbul ignore next */ -1 : state?.month || ''}
+                            value={!!!state || state?.month === null ? /* istanbul ignore next */ -1 : state?.month}
                             placeholder={locale.monthLabel}
                             onChange={_onDateChanged('month')}
                             inputProps={{
                                 label: 'month',
                                 maxLength: 2,
-                                'data-analyticsid': `${partialDateFormId}-month-input`,
-                                'data-testid': `${partialDateFormId}-month-input`,
-                                id: `${partialDateFormId}-month-input`,
+                                'data-analyticsid': `${partialDateFieldId}-month-input`,
+                                'data-testid': `${partialDateFieldId}-month-input`,
+                                id: `${partialDateFieldId}-month-input`,
                             }}
                             SelectDisplayProps={{
-                                id: `${partialDateFormId}-month-select`,
-                                'data-analyticsid': `${partialDateFormId}-month-select`,
-                                'data-testid': `${partialDateFormId}-month-select`,
+                                id: `${partialDateFieldId}-month-select`,
+                                'data-analyticsid': `${partialDateFieldId}-month-select`,
+                                'data-testid': `${partialDateFieldId}-month-select`,
                             }}
                             MenuProps={{
-                                id: `${partialDateFormId}-month-options`,
-                                'data-analyticsid': `${partialDateFormId}-month-options`,
-                                'data-testid': `${partialDateFormId}-month-options`,
+                                id: `${partialDateFieldId}-month-options`,
+                                'data-analyticsid': `${partialDateFieldId}-month-options`,
+                                'data-testid': `${partialDateFieldId}-month-options`,
                             }}
                         >
                             <MenuItem key={-1} value={MONTH_UNSELECTED}>
@@ -349,7 +351,7 @@ const PartialDateForm = ({
                         <TextField
                             name="year"
                             variant="standard"
-                            id={`${partialDateFormId}-year`}
+                            id={`${partialDateFieldId}-year`}
                             type="text"
                             fullWidth
                             disabled={disabled}
@@ -361,9 +363,9 @@ const PartialDateForm = ({
                             inputProps={{
                                 label: 'year',
                                 maxLength: 4,
-                                id: `${partialDateFormId}-year-input`,
-                                'data-analyticsid': `${partialDateFormId}-year-input`,
-                                'data-testid': `${partialDateFormId}-year-input`,
+                                id: `${partialDateFieldId}-year-input`,
+                                'data-analyticsid': `${partialDateFieldId}-year-input`,
+                                'data-testid': `${partialDateFieldId}-year-input`,
                             }}
                             value={state?.year || ''}
                         />
@@ -392,7 +394,7 @@ PartialDateForm.propTypes = {
         // TODO - remove after RHF migration
         initial: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // added object type to avoid console errors
     }),
-    partialDateFormId: PropTypes.string.isRequired,
+    partialDateFieldId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };
 

@@ -5,11 +5,10 @@ import { fireEvent, rtlRender } from 'test-utils';
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         allowPartial: false,
-        partialDateFormId: 'test',
+        partialDateFieldId: 'test',
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
-        partialDateFieldId: 'test',
         ...testProps,
     };
 
@@ -96,6 +95,26 @@ describe('PartialDateForm component', () => {
         });
         expect(container).toMatchSnapshot();
     });
+    it('should load existing values for month of January', () => {
+        const { container } = setup({
+            allowPartial: true,
+            onChange: jest.fn(),
+            meta: {
+                initial: '2020-01-01',
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
+    it('should load existing values for month of December', () => {
+        const { container } = setup({
+            allowPartial: true,
+            onChange: jest.fn(),
+            meta: {
+                initial: '2020-12-01',
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
 
     it('should load existing values from input value', () => {
         const { container } = setup({
@@ -105,6 +124,47 @@ describe('PartialDateForm component', () => {
                 value: '2020-02-02',
             },
         });
+        expect(container).toMatchSnapshot();
+    });
+
+    it('should update state when new value passed as prop', () => {
+        // initial render
+        const { container, rerender } = setup({
+            allowPartial: true,
+            input: {
+                value: '2020-02-02',
+            },
+        });
+        expect(container).toMatchSnapshot();
+
+        // check date changes when new day value provided in props
+        setup(
+            {
+                allowPartial: true,
+                value: '2020-02-01',
+            },
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
+
+        // check date changes when new month value provided in props
+        setup(
+            {
+                allowPartial: true,
+                value: '2020-03-01',
+            },
+            rerender,
+        );
+        expect(container).toMatchSnapshot();
+
+        // check date changes when new year value provided in props
+        setup(
+            {
+                allowPartial: true,
+                value: '2021-03-01',
+            },
+            rerender,
+        );
         expect(container).toMatchSnapshot();
     });
 
