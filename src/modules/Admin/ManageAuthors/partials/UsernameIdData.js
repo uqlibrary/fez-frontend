@@ -57,12 +57,14 @@ export const UsernameIdColumnData = () => {
     ]);
     const autId = watchedFields[4]; // Assuming aut_id is at index 4
 
-    console.log('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
+    console.dummy = () => {};
+    console.dummy('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
     // Debounced validation function
     const debouncedValidateField = React.useCallback(
         (field, value, autId, asyncErrors) => {
             debounce(async () => {
                 try {
+                    console.log('dispatching checkForExistingAuthor');
                     dispatch(
                         checkForExistingAuthor(
                             value, // Field value to search
@@ -74,11 +76,14 @@ export const UsernameIdColumnData = () => {
                     );
                     clearErrors(field); // Clear errors if validation passes
                 } catch (error) {
-                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                    if (getValues(`${field}_error`) !== error.message) {
+                        setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                        setValue(`${field}_error`, error.message); // Store the error message to compare later
+                    }
                 }
             }, DEBOUNCE_VALUE)();
         },
-        [dispatch, clearErrors, setError],
+        [dispatch, clearErrors, getValues, setError, setValue],
     );
 
     // Track previous field values to validate only the changed field
