@@ -56,6 +56,7 @@ export const UsernameIdColumnData = () => {
         'aut_id',
     ]);
     const autId = watchedFields[4]; // Assuming aut_id is at index 4
+    console.log('watchedFields=', JSON.stringify(watchedFields));
 
     console.dummy = () => {};
     console.dummy('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
@@ -94,12 +95,24 @@ export const UsernameIdColumnData = () => {
         fields.forEach((field, index) => {
             const value = watchedFields[index];
             if (value && value !== '') {
-                debouncedValidateField(field, value, autId, asyncErrors);
+                // debouncedValidateField(field, value, autId, asyncErrors);
+                console.dummy = () => {};
+                console.dummy(
+                    'field, value, autId, asyncErrors=',
+                    field,
+                    value,
+                    autId,
+                    asyncErrors,
+                    debouncedValidateField,
+                );
+                console.log('field=', field);
+                console.log('value=', value);
             } else {
                 clearErrors(field); // Clear errors for fields with no value
             }
         });
-    }, [watchedFields, debouncedValidateField, clearErrors, autId]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(watchedFields)]);
 
     return (
         <StandardCard subCard title="Username & IDs" smallTitle customTitleBgColor="#F7F7F7">
