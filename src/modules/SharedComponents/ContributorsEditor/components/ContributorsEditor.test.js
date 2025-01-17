@@ -1,9 +1,9 @@
-import ContributorsEditor from './ContributorsEditor';
+import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within, preview, userEvent } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -637,6 +637,28 @@ describe('ContributorsEditor', () => {
             },
         });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should map state to props as expected', () => {
+        const testFunction = () => ({
+            author: 'test',
+        });
+        expect(
+            mapStateToProps({
+                get: testFunction,
+            }),
+        ).toEqual({
+            author: 'test',
+            record: undefined,
+        });
+        expect(
+            mapStateToProps({
+                get: () => false,
+            }),
+        ).toEqual({
+            author: null,
+            record: null,
+        });
     });
 
     it('should update contributors state upon input prop changes', () => {
