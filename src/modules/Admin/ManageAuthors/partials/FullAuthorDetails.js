@@ -11,8 +11,8 @@ import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { Controller } from 'react-hook-form';
-// import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
+// import { Controller } from 'react-hook-form';
+import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
