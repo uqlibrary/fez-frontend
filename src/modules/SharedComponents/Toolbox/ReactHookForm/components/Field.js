@@ -50,9 +50,6 @@ export const validateHandler = (value, formValues, validators) => {
  * @constructor
  */
 const Field = ({ name, control, validate, rules, component: Component, ...childProps }) => {
-    if (name === 'aut_org_username2') {
-        console.log('childProps?.onChange', childProps?.onChange);
-    }
     return (
         <Controller
             name={name}
@@ -65,22 +62,7 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
             render={({ field }) => {
                 // eslint-disable-next-line react/prop-types
                 if (!!childProps.noRef) delete field.ref;
-                return (
-                    <Component
-                        onChange={e => {
-                            // field.onChange(e); // React Hook Form's onChange handler 22
-                            // childProps?.onChange(e); // Your custom onChange handler
-                            alert('onChange' + e.target.value);
-                        }}
-                        onBlur={e => {
-                            // field.onBlur(); // React Hook Form's onBlur handler
-                            // childProps?.onBlur(e); // Your custom onBlur handler
-                            alert('onBlur' + e.target.value);
-                        }}
-                        {...childProps}
-                        {...field}
-                    />
-                );
+                return <Component {...childProps} {...field} />;
             }}
         />
     );
