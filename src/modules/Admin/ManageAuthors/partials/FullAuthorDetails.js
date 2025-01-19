@@ -10,6 +10,9 @@ import debounce from 'debounce-promise';
 import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { Controller } from 'react-hook-form';
+// import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
@@ -82,6 +85,7 @@ export const FullAuthorDetails = ({
     // Debounced validation function
     const debouncedValidateField = React.useCallback(
         (field, value, autId, asyncErrors) => {
+            if (Math.PI > 3.14) return; // disable the code block
             debounce(async () => {
                 try {
                     console.log('dispatching checkForExistingAuthor');
@@ -112,7 +116,6 @@ export const FullAuthorDetails = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [setError, trigger],
     );
-
     // Track previous field values to validate only the changed field
     React.useEffect(() => {
         const fields = ['aut_org_username2'];
@@ -128,6 +131,10 @@ export const FullAuthorDetails = ({
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(watchedFields)]);
+    const handleAsyncCheck = ev => {
+        console.log('in handleAsyncCheck', ev.target.value);
+        alert('ehre');
+    };
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
@@ -182,11 +189,41 @@ export const FullAuthorDetails = ({
                                     <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
+                                                <Controller
+                                                    name="dummy2"
+                                                    control={control}
+                                                    render={({ field }) => {
+                                                        return (
+                                                            <TextField
+                                                                {...field}
+                                                                onChange={e => {
+                                                                    alert('onChange' + e.target.value);
+                                                                }}
+                                                                onBlur={e => {
+                                                                    alert('onBlur' + e.target.value);
+                                                                }}
+                                                            />
+                                                        );
+                                                    }}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    name="dummy"
+                                                    component={TextField}
+                                                    onChange={() => alert('change2')}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <TextField onChange={() => alert('change')} />
+                                            </Grid>
+                                            <Grid item xs={12}>
                                                 <Field
                                                     control={control}
                                                     component={AuthorFieldData}
                                                     authorFieldDataId="aut-org-username"
                                                     name="aut_org_username2"
+                                                    onChange={handleAsyncCheck}
                                                     validate={[
                                                         // validation.required,
                                                         validation.spacelessMaxLength20Validator,

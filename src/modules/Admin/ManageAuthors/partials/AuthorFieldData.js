@@ -12,6 +12,9 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
     const {
         formState: { isValidating },
     } = useFormContext();
+    if (props?.onChange) {
+        console.log('props', props?.onChange);
+    }
 
     return (
         <React.Fragment>
