@@ -10,9 +10,9 @@ import debounce from 'debounce-promise';
 import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+// import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
-import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
+// import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
@@ -131,10 +131,6 @@ export const FullAuthorDetails = ({
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(watchedFields)]);
-    const handleAsyncCheck = ev => {
-        console.log('in handleAsyncCheck', ev.target.value);
-        alert('ehre');
-    };
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
@@ -189,41 +185,11 @@ export const FullAuthorDetails = ({
                                     <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
-                                                <Controller
-                                                    name="dummy2"
-                                                    control={control}
-                                                    render={({ field }) => {
-                                                        return (
-                                                            <TextField
-                                                                {...field}
-                                                                onChange={e => {
-                                                                    alert('onChange' + e.target.value);
-                                                                }}
-                                                                onBlur={e => {
-                                                                    alert('onBlur' + e.target.value);
-                                                                }}
-                                                            />
-                                                        );
-                                                    }}
-                                                />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    name="dummy"
-                                                    component={TextField}
-                                                    onChange={() => alert('change2')}
-                                                />
-                                            </Grid>
-                                            <Grid item xs={12}>
-                                                <TextField onChange={() => alert('change')} />
-                                            </Grid>
-                                            <Grid item xs={12}>
                                                 <Field
                                                     control={control}
                                                     component={AuthorFieldData}
                                                     authorFieldDataId="aut-org-username"
                                                     name="aut_org_username2"
-                                                    onChange={handleAsyncCheck}
                                                     validate={[
                                                         // validation.required,
                                                         validation.spacelessMaxLength20Validator,
