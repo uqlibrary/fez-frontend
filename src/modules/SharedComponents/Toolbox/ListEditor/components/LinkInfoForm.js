@@ -6,12 +6,16 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { url } from 'config/validation';
 
+import { useFormContext } from 'react-hook-form';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+
 export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) => {
     const [link, setLink] = React.useState(null);
     const [description, setDescription] = React.useState(null);
     const [errorText, setErrorText] = React.useState(null);
     const linkInput = React.useRef(null);
     const descriptionInput = React.useRef(null);
+    const methods = useFormContext();
 
     React.useEffect(() => {
         if (!!itemSelectedToEdit && !!itemSelectedToEdit.key) {
@@ -65,11 +69,13 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
     return (
         <Grid container spacing={2} display="row" alignItems="center">
             <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
-                <TextField
+                <Field
+                    control={methods.control}
+                    component={TextField}
                     key={(itemSelectedToEdit || {}).key}
                     fullWidth
                     name="link"
-                    textFieldId="rek-link"
+                    FieldId="rek-link"
                     label={linkInputFieldLabel}
                     placeholder={linkInputFieldHint}
                     onChange={handleChange}
@@ -80,11 +86,13 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     inputProps={{
                         ref: linkInput,
                     }}
-                    defaultValue={(itemSelectedToEdit || {}).key || ''}
+                    value={(itemSelectedToEdit || {}).key || ''}
                 />
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
-                <TextField
+                <Field
+                    control={methods.control}
+                    component={TextField}
                     key={(itemSelectedToEdit || {}).value}
                     fullWidth
                     name="description"
@@ -97,7 +105,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     inputProps={{
                         ref: descriptionInput,
                     }}
-                    defaultValue={(itemSelectedToEdit || {}).value || ''}
+                    value={(itemSelectedToEdit || {}).value || ''}
                 />
             </Grid>
             <Grid item xs={12} md={2}>

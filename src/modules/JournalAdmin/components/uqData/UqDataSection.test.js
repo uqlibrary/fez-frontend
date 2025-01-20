@@ -1,20 +1,11 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
 import UqDataSection from './UqDataSection';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
-
-import { FormProvider } from 'react-hook-form';
 import { journalDoaj } from 'mock/data';
-import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
-
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
-};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -45,7 +36,7 @@ describe('UqDataSection component', () => {
         );
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');
@@ -77,7 +68,7 @@ describe('UqDataSection component', () => {
         expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent('Yes, via De Gruyter');
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');

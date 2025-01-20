@@ -1,11 +1,9 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
 import AdminSection from './AdminSection';
 import { journalDoaj } from 'mock/data';
 import { fieldConfig } from 'config/journalAdmin';
 
-import { FormProvider } from 'react-hook-form';
-import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../../../../context');
@@ -18,12 +16,6 @@ class ResizeObserver {
 }
 
 window.ResizeObserver = ResizeObserver;
-
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, ...props }) => {
-    const methods = useValidatedForm(props);
-    return <FormProvider {...methods}>{children}</FormProvider>;
-};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { values = {}, ...rest } = testProps;

@@ -33,8 +33,15 @@ export const AutoCompleteAsynchronousField = ({
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
     const [inputValue, setInputValue] = useState('');
-    const [value, setValue] = useState(defaultValue || null);
+    const [value, setValue] = useState(null);
     const active = useRef(true);
+
+    useEffect(() => {
+        // default value may not be ready when the component renders
+        // so update value whenever the id changes
+        setValue(defaultValue);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [defaultValue?.id]);
 
     const loading = itemsLoading;
     const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));

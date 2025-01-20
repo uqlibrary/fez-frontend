@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { memo, useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
+
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
 import { GenericTemplate } from './GenericTemplate';
@@ -7,329 +8,321 @@ import { GenericTemplate } from './GenericTemplate';
 import FormHelperText from '@mui/material/FormHelperText';
 import { isArrayDeeplyEqual } from '../../../../../helpers/general';
 
-export default class ListEditor extends Component {
-    static propTypes = {
-        formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
-        inputField: PropTypes.oneOfType([
-            PropTypes.object, // eg connected auto complete fields
-            PropTypes.func,
-        ]),
-        className: PropTypes.string,
-        searchKey: PropTypes.object.isRequired,
-        maxCount: PropTypes.number,
-        isValid: PropTypes.func,
-        disabled: PropTypes.bool,
-        onChange: PropTypes.func,
-        locale: PropTypes.object,
-        hideReorder: PropTypes.bool,
-        distinctOnly: PropTypes.bool,
-        error: PropTypes.bool,
-        errorText: PropTypes.string,
-        remindToAdd: PropTypes.bool,
-        input: PropTypes.object,
-        transformFunction: PropTypes.func.isRequired,
-        maxInputLength: PropTypes.number,
-        inputNormalizer: PropTypes.func,
-        rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        required: PropTypes.bool,
-        scrollList: PropTypes.bool,
-        scrollListHeight: PropTypes.number,
-        canEdit: PropTypes.bool,
-        getItemSelectedToEdit: PropTypes.func,
-        listEditorId: PropTypes.string.isRequired,
-    };
-
-    static defaultProps = {
-        canEdit: false,
-        hideReorder: false,
-        distinctOnly: false,
-        searchKey: {
-            value: 'rek_value',
-            order: 'rek_order',
-        },
-        maxCount: 0,
-        transformFunction: (searchKey, item, index) => ({
-            [searchKey.value]: item,
-            [searchKey.order]: index + 1,
-        }),
-        rowItemTemplate: GenericTemplate,
-        inputNormalizer: value => value,
-        locale: {
-            form: {
-                locale: {
-                    inputFieldLabel: 'NoLabel',
-                },
+export const ListEditor = ({
+    formComponent: FormComponent,
+    searchKey = {
+        value: 'rek_value',
+        order: 'rek_order',
+    },
+    locale = {
+        form: {
+            locale: {
+                inputFieldLabel: 'NoLabel',
             },
         },
-        required: false,
-        scrollList: false,
-        scrollListHeight: 250,
-        getItemSelectedToEdit: (list, index) => list[index] || null,
-    };
-
-    constructor(props) {
-        super(props);
-
+    },
+    transformFunction = (searchKey, item, index) => ({
+        [searchKey.value]: item,
+        [searchKey.order]: index + 1,
+    }),
+    getItemSelectedToEdit = (list, index) => list[index] || null,
+    inputNormalizer = value => value,
+    rowItemTemplate = GenericTemplate,
+    maxCount = 0,
+    scrollListHeight = 250,
+    required = false,
+    scrollList = false,
+    canEdit = false,
+    hideReorder = false,
+    distinctOnly = false,
+    inputField,
+    className,
+    isValid,
+    disabled,
+    onChange,
+    error,
+    errorText,
+    remindToAdd,
+    input,
+    maxInputLength,
+    category,
+    listEditorId,
+}) => {
+    const getListFromProps = () => {
         const valueAsJson =
-            ((props.input || {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || {}).name && props.input.value);
-        this.state = {
-            itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
-            itemIndexSelectedToEdit: null,
-        };
+            ((input || {}).name && typeof (input.value || {}).toJS === 'function' && input.value.toJS()) ||
+            ((input || {}).name && input.value);
 
-        this.transformOutput = this.transformOutput.bind(this);
-        this.addItem = this.addItem.bind(this);
-        this.moveUpList = this.moveUpList.bind(this);
-        this.moveDownList = this.moveDownList.bind(this);
-        this.deleteItem = this.deleteItem.bind(this);
-        this.deleteAllItems = this.deleteAllItems.bind(this);
-        this.editItem = this.editItem.bind(this);
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
-        if (this.props.onChange && !isArrayDeeplyEqual(prevState.itemList, this.state.itemList)) {
-            this.props.onChange(this.transformOutput(this.state.itemList));
-        }
-    }
-
-    transformOutput = items => {
-        return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
+        return valueAsJson ? valueAsJson.map(item => item[searchKey.value]) : [];
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     };
 
-    /**
-     *  if item is not selected to edit
-     *      then check for existing key/id in the list
-     *  else
-     *      check for existing key/id & value both
-     *
-     * @param item object
-     * @param list array
-     * @returns bool
-     */
-    isItemInTheList = (item, list) => {
-        if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
-            if (this.state.itemIndexSelectedToEdit === null) {
-                return (
-                    list.filter(listItem => {
-                        return (
-                            (!!listItem.key && listItem.key === item.key) || (!!listItem.id && listItem.id === item.id)
-                        );
-                    }).length > 0
-                );
-            } else {
-                return (
-                    list.filter(listItem => {
-                        return (
-                            (!!listItem.key &&
-                                listItem.key === item.key &&
-                                !!listItem.value &&
-                                listItem.value === item.value) ||
-                            (!!listItem.id &&
-                                listItem.id === item.id &&
-                                !!listItem.value &&
-                                listItem.value === item.value)
-                        );
-                    }).length > 0
-                );
-            }
-        } else {
-            return list.indexOf(item) !== -1;
+    const [itemList, setItemList] = useState(getListFromProps);
+    const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = useState(null);
+    const propList = getListFromProps();
+    const propsDifferentToState = !isArrayDeeplyEqual(propList, itemList);
+    useEffect(() => {
+        if (propsDifferentToState) {
+            setItemList(propList);
         }
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [JSON.stringify(input.value)]);
 
-    addItem = item => {
-        if (
-            !!item &&
-            (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
-            ((this.props.distinctOnly && !this.isItemInTheList(item, this.state.itemList)) ||
-                (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
-        ) {
-            // If when the item is submitted, there is no maxCount,
-            // its not exceeding the maxCount, is distinct and isnt already in the list...
-            if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
-                // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
-                // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
-                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
-                    this.setState({
-                        itemList: [
-                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+    useEffect(() => {
+        if (onChange && propsDifferentToState) {
+            const transformOutput = items => {
+                return items.map((item, index) => transformFunction(searchKey, item, index));
+            };
+            onChange(transformOutput(itemList));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [itemList]);
+
+    const addItem = useCallback(
+        item => {
+            /**
+             *  if item is not selected to edit
+             *      then check for existing key/id in the list
+             *  else
+             *      check for existing key/id & value both
+             *
+             * @param item object
+             * @param list array
+             * @returns bool
+             */
+            const isItemInTheList = (item, list) => {
+                if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
+                    if (itemIndexSelectedToEdit === null) {
+                        return (
+                            list.filter(listItem => {
+                                return (
+                                    (!!listItem.key && listItem.key === item.key) ||
+                                    (!!listItem.id && listItem.id === item.id)
+                                );
+                            }).length > 0
+                        );
+                    } else {
+                        return (
+                            list.filter(listItem => {
+                                return (
+                                    (!!listItem.key &&
+                                        listItem.key === item.key &&
+                                        !!listItem.value &&
+                                        listItem.value === item.value) ||
+                                    (!!listItem.id &&
+                                        listItem.id === item.id &&
+                                        !!listItem.value &&
+                                        listItem.value === item.value)
+                                );
+                            }).length > 0
+                        );
+                    }
+                } else {
+                    return list.indexOf(item) !== -1;
+                }
+            };
+
+            if (
+                !!item &&
+                (maxCount === 0 || itemList.length < maxCount) &&
+                ((distinctOnly && !isItemInTheList(item, itemList)) || (!distinctOnly && itemList.indexOf(item) === -1))
+            ) {
+                // If when the item is submitted, there is no maxCount,
+                // its not exceeding the maxCount, is distinct and isnt already in the list...
+                if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
+                    // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
+                    // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
+                    if (itemIndexSelectedToEdit !== null && itemIndexSelectedToEdit > -1) {
+                        setItemList(prev => [
+                            ...prev.slice(0, itemIndexSelectedToEdit),
                             item,
-                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
-                        ],
-                        itemIndexSelectedToEdit: null,
-                    });
+                            ...prev.slice(itemIndexSelectedToEdit + 1),
+                        ]);
+                        setItemIndexSelectedToEdit(null);
+                    } else {
+                        setItemList(prev => [...prev, item]);
+                    }
+                } else if (!!item && !item.key && !item.value && item.includes('|')) {
+                    // Item is a string with pipes in it -
+                    // we will strip and separate the values to be individual keywords
+                    const commaSepListToArray = item.split('|'); // Convert the string to an array of values
+                    // Filter out empty array values
+                    const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
+                    const totalArray = [...itemList, ...cleanArray]; // Merge into the list
+                    if (totalArray.length > maxCount && maxCount > 0) {
+                        // If the final list is longer that maxCount, trim it back
+                        totalArray.length = maxCount;
+                    }
+                    setItemList([...totalArray]);
                 } else {
-                    this.setState({
-                        itemList: [...this.state.itemList, item],
-                    });
-                }
-            } else if (!!item && !item.key && !item.value && item.includes('|')) {
-                // Item is a string with pipes in it - we will strip and separate the values to be individual keywords
-                const commaSepListToArray = item.split('|'); // Convert the string to an array of values
-                // Filter out empty array values
-                const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
-                const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
-                if (totalArray.length > this.props.maxCount && this.props.maxCount > 0) {
-                    // If the final list is longer that maxCount, trim it back
-                    totalArray.length = this.props.maxCount;
-                }
-                this.setState({
-                    itemList: [...totalArray],
-                });
-            } else {
-                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
-                    const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
-                        ? {
-                              ...this.state.itemList[this.state.itemIndexSelectedToEdit],
-                              key: item,
-                          }
-                        : item;
+                    if (itemIndexSelectedToEdit !== null && itemIndexSelectedToEdit > -1) {
+                        const itemSelected = !!itemList[itemIndexSelectedToEdit].key
+                            ? {
+                                  ...itemList[itemIndexSelectedToEdit],
+                                  key: item,
+                              }
+                            : item;
 
-                    this.setState({
-                        itemList: [
-                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+                        setItemList(prev => [
+                            ...prev.slice(0, itemIndexSelectedToEdit),
                             itemSelected,
-                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
-                        ],
-                        itemIndexSelectedToEdit: null,
-                    });
-                } else {
-                    // Item is just a string - so just add it
-                    this.setState({
-                        itemList: [...this.state.itemList, item],
-                    });
+                            ...prev.slice(itemIndexSelectedToEdit + 1),
+                        ]);
+                        setItemIndexSelectedToEdit(null);
+                    } else {
+                        // Item is just a string - so just add it
+                        setItemList(prev => [...prev, item]);
+                    }
                 }
             }
-        }
-    };
+        },
+        [distinctOnly, itemIndexSelectedToEdit, itemList, maxCount],
+    );
 
-    moveUpList = (item, index) => {
-        /* istanbul ignore next */
-        if (index === 0) return;
-        const nextList = this.state.itemList[index - 1];
-        this.setState({
-            itemList: [
-                ...this.state.itemList.slice(0, index - 1),
-                item,
-                nextList,
-                ...this.state.itemList.slice(index + 1),
-            ],
-        });
-    };
+    const moveUpList = useCallback(
+        (item, index) => {
+            /* istanbul ignore next */
+            if (index === 0) return;
+            const nextList = itemList[index - 1];
+            setItemList(prev => [...prev.slice(0, index - 1), item, nextList, ...prev.slice(index + 1)]);
+        },
+        [itemList],
+    );
 
-    moveDownList = (item, index) => {
-        /* istanbul ignore next */
-        if (index === this.state.itemList.length - 1) return;
-        const nextList = this.state.itemList[index + 1];
-        this.setState({
-            itemList: [...this.state.itemList.slice(0, index), nextList, item, ...this.state.itemList.slice(index + 2)],
-        });
-    };
+    const moveDownList = useCallback(
+        (item, index) => {
+            /* istanbul ignore next */
+            if (index === itemList.length - 1) return;
+            const nextList = itemList[index + 1];
 
-    deleteItem = (item, index) => {
-        this.setState({
-            itemList: this.state.itemList.filter((_, i) => i !== index),
-        });
-    };
+            setItemList(prev => [...prev.slice(0, index), nextList, item, ...prev.slice(index + 2)]);
+        },
+        [itemList],
+    );
 
-    deleteAllItems = () => {
-        this.setState({
-            itemList: [],
-        });
-    };
+    const deleteItem = useCallback(
+        (item, index) => {
+            setItemList(itemList.filter((_, i) => i !== index));
+        },
+        [itemList],
+    );
 
-    editItem = index => {
-        this.setState({
-            itemIndexSelectedToEdit: index,
-        });
-    };
-    render() {
-        const renderListsRows = this.state.itemList.map((item, index) => (
-            <ListRow
-                key={item.key || item.id || `${item}-${index}`}
-                index={index}
-                item={item}
-                canMoveDown={index !== this.state.itemList.length - 1}
-                canMoveUp={index !== 0}
-                onMoveUp={this.moveUpList}
-                onMoveDown={this.moveDownList}
-                onDelete={this.deleteItem}
-                onEdit={this.editItem}
-                {...((this.props.locale && this.props.locale.row) || {})}
-                hideReorder={this.props.hideReorder}
-                disabled={this.props.disabled}
-                itemTemplate={this.props.rowItemTemplate}
-                canEdit={this.props.canEdit}
-                listRowId={`${this.props.listEditorId}-list-row-${index}`}
-            />
-        ));
-        return (
-            <div
-                className={`${this.props.className}`}
-                id={`${this.props.listEditorId}-list-editor`}
-                data-testid={`${this.props.listEditorId}-list-editor`}
-            >
-                <this.props.formComponent
-                    inputField={this.props.inputField}
-                    key={
-                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
-                        'list-editor-form'
-                    }
-                    onAdd={this.addItem}
-                    remindToAdd={this.props.remindToAdd}
-                    {...((this.props.locale && this.props.locale.form) || {})}
-                    isValid={this.props.isValid}
-                    error={this.props.error}
-                    disabled={
-                        this.props.disabled ||
-                        (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)
-                    }
-                    maxInputLength={this.props.maxInputLength}
-                    normalize={this.props.inputNormalizer}
-                    category={this.props.category}
-                    required={this.props.required}
-                    itemSelectedToEdit={this.props.getItemSelectedToEdit(
-                        this.state.itemList,
-                        this.state.itemIndexSelectedToEdit,
-                    )}
-                    itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
-                    listEditorId={this.props.listEditorId}
+    const deleteAllItems = useCallback(() => {
+        setItemList([]);
+    }, []);
+
+    const editItem = useCallback(index => {
+        setItemIndexSelectedToEdit(index);
+    }, []);
+
+    const renderListsRows = useMemo(
+        () => {
+            return itemList.map((item, index) => (
+                <ListRow
+                    key={item.key || item.id || `${item}-${index}`}
+                    index={index}
+                    item={item}
+                    canMoveDown={index !== itemList.length - 1}
+                    canMoveUp={index !== 0}
+                    onMoveUp={moveUpList}
+                    onMoveDown={moveDownList}
+                    onDelete={deleteItem}
+                    onEdit={editItem}
+                    {...((locale && locale.row) || {})}
+                    hideReorder={hideReorder}
+                    disabled={disabled}
+                    itemTemplate={rowItemTemplate}
+                    canEdit={canEdit}
+                    listRowId={`${listEditorId}-list-row-${index}`}
                 />
-                {this.state.itemList.length > 0 && (
-                    <ListRowHeader
-                        onDeleteAll={this.deleteAllItems}
-                        hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
-                        disabled={this.props.disabled}
-                        listEditorId={this.props.listEditorId}
-                        {...((this.props.locale && this.props.locale.header) || {})}
-                    />
-                )}
-                {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
-                    <div
-                        className={'ListEditor-scrollable-list'}
-                        id={`${this.props.listEditorId}-list`}
-                        data-testid={`${this.props.listEditorId}-list`}
-                        style={{
-                            width: '100%',
-                            height: this.props.scrollListHeight,
-                            overflowX: 'hidden',
-                            overflowY: 'scroll',
-                        }}
-                    >
-                        {renderListsRows}
-                    </div>
-                ) : (
-                    <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
-                        {renderListsRows}
-                    </div>
-                )}
-                <FormHelperText error={this.props.error} children={this.props.errorText} />
-            </div>
-        );
-    }
-}
+            ));
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [itemList, moveDownList, moveUpList],
+    );
+    return (
+        <div className={`${className}`} id={`${listEditorId}-list-editor`} data-testid={`${listEditorId}-list-editor`}>
+            <FormComponent
+                name={listEditorId}
+                inputField={inputField}
+                key={(!!itemIndexSelectedToEdit && `${listEditorId}-form`) || 'list-editor-form'}
+                onAdd={addItem}
+                remindToAdd={remindToAdd}
+                {...((locale && locale.form) || {})}
+                isValid={isValid}
+                error={error}
+                disabled={disabled || (maxCount > 0 && itemList.length >= maxCount)}
+                maxInputLength={maxInputLength}
+                normalize={inputNormalizer}
+                category={category}
+                required={required}
+                itemSelectedToEdit={getItemSelectedToEdit(itemList, itemIndexSelectedToEdit)}
+                itemIndexSelectedToEdit={itemIndexSelectedToEdit}
+                listEditorId={listEditorId}
+            />
+
+            {itemList.length > 0 && (
+                <ListRowHeader
+                    onDeleteAll={deleteAllItems}
+                    hideReorder={hideReorder || itemList.length < 2}
+                    disabled={disabled}
+                    listEditorId={listEditorId}
+                    {...((locale && locale.header) || {})}
+                />
+            )}
+            {!!scrollList && itemList.length >= scrollListHeight / 55 ? (
+                <div
+                    className={'ListEditor-scrollable-list'}
+                    id={`${listEditorId}-list`}
+                    data-testid={`${listEditorId}-list`}
+                    style={{
+                        width: '100%',
+                        height: scrollListHeight,
+                        overflowX: 'hidden',
+                        overflowY: 'scroll',
+                    }}
+                >
+                    {renderListsRows}
+                </div>
+            ) : (
+                <div id={`${listEditorId}-list`} data-testid={`${listEditorId}-list`}>
+                    {renderListsRows}
+                </div>
+            )}
+            <FormHelperText error={error} children={errorText} />
+        </div>
+    );
+};
+ListEditor.propTypes = {
+    formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
+    inputField: PropTypes.oneOfType([
+        PropTypes.object, // eg connected auto complete fields
+        PropTypes.func,
+    ]),
+    className: PropTypes.string,
+    searchKey: PropTypes.object.isRequired,
+    maxCount: PropTypes.number,
+    isValid: PropTypes.func,
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func,
+    locale: PropTypes.object,
+    hideReorder: PropTypes.bool,
+    distinctOnly: PropTypes.bool,
+    error: PropTypes.bool,
+    errorText: PropTypes.string,
+    remindToAdd: PropTypes.bool,
+    input: PropTypes.object,
+    transformFunction: PropTypes.func,
+    maxInputLength: PropTypes.number,
+    inputNormalizer: PropTypes.func,
+    rowItemTemplate: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+    category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    required: PropTypes.bool,
+    scrollList: PropTypes.bool,
+    scrollListHeight: PropTypes.number,
+    canEdit: PropTypes.bool,
+    getItemSelectedToEdit: PropTypes.func,
+    listEditorId: PropTypes.string.isRequired,
+};
+
+export default memo(ListEditor);

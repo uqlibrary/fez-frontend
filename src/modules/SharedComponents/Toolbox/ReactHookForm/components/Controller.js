@@ -14,6 +14,7 @@ const getDecoratedField = (field, fieldState, formState) => {
         error: fieldState.error?.message,
         // required to make it compatible with ContentIndicatorsField,
         initial: { toJS: () => formState.defaultValues[field.name] },
+        form: Object.keys(formState).length > 0 ? 'hasForm' : null, // TODO - remove after reduxForm migration
     };
     // required to make it compatible with SelectFieldWrapper,
     decoratedField.input = decoratedField;

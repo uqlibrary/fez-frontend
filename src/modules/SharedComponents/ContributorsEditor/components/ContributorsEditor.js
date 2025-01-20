@@ -213,8 +213,12 @@ export class ContributorsEditor extends PureComponent {
             });
             return;
         }
-        const isContributorACurrentAuthor =
-            this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
+        const isContributorACurrentAuthor = contributor.uqIdentifier === `${this.props.author?.aut_id}`;
+        // if the contributor being updated is the author of the publication, we should keep its authorId
+        const isUpdatingPublicationAuthor =
+            this.props.canEdit &&
+            contributor.selected &&
+            parseInt(contributor.authorId, 10) === parseInt(this.props.author?.aut_id, 10);
 
         /* istanbul ignore next */
         this.setState({
@@ -234,7 +238,8 @@ export class ContributorsEditor extends PureComponent {
                         this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
                     selected: !this.props.editMode && isContributorACurrentAuthor,
                     ...(!this.props.isNtro ? { selected: contributor.selected } : {}),
-                    authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
+                    authorId:
+                        isContributorACurrentAuthor || isUpdatingPublicationAuthor ? this.props.author.aut_id : null,
                     required: contributor.required || false,
                 },
                 ...this.state.contributors.slice(index + 1).map(contrib => ({

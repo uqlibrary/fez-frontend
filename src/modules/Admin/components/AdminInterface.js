@@ -239,7 +239,6 @@ export const AdminInterface = ({
                     smallTitle
                 >
                     <TabComponent
-                        component={tabs[tab].component}
                         disabled={isSubmitting || (locked && record.rek_editing_user !== authorDetails.username)}
                         name={`${tab}Section`}
                     />
@@ -253,7 +252,6 @@ export const AdminInterface = ({
                         smallTitle
                     >
                         <TabComponent
-                            component={tabs[tab].subComponent.component}
                             disabled={
                                 isSubmitting ||
                                 (locked &&
@@ -367,7 +365,7 @@ export const AdminInterface = ({
                     color="primary"
                     fullWidth
                     children={submitButtonTxt}
-                    onClick={!isDeleted ? handleSubmit : setPublicationStatusAndSubmit(UNPUBLISHED)}
+                    onClick={!isDeleted ? handleSubmit(onSubmit) : setPublicationStatusAndSubmit(UNPUBLISHED)}
                 />
             </Grid>
         </React.Fragment>
@@ -386,7 +384,7 @@ export const AdminInterface = ({
 
     return (
         <StandardPage>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}

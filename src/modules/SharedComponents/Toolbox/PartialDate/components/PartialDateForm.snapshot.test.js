@@ -3,7 +3,7 @@ import PartialDateForm from './PartialDateForm';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
-    const props = { partialDateFormId: 'test', ...testProps };
+    const props = { partialDateFieldId: 'test', ...testProps };
     return rtlRender(<PartialDateForm {...props} />);
 }
 
