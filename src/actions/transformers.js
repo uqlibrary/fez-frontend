@@ -1464,7 +1464,7 @@ export const getSecuritySectionSearchKeys = (data = {}) => {
             ? { rek_datastream_policy: data.rek_datastream_policy }
             : {}),
         ...(!!data.hasOwnProperty('rek_security_inherited')
-            ? { rek_security_inherited: data.rek_security_inherited }
+            ? { rek_security_inherited: Number(data.rek_security_inherited) }
             : {}),
     };
 };
