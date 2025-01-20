@@ -10,12 +10,10 @@ import IconButton from '@mui/material/IconButton';
 import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+// import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
 // import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 import debounce from 'lodash.debounce';
-// import { useForm } from 'react-hook-form';
-import { useForm } from 'hooks';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -28,7 +26,7 @@ import PropTypes from 'prop-types';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 // import { useValidatedForm } from 'hooks';
 // import { Controller, useForm } from 'react-hook-form';
-import { useValidatedForm } from 'hooks';
+import { useForm } from 'hooks';
 // import debounce from 'debounce-promise';
 
 import Button from '@mui/material/Button';
@@ -63,42 +61,32 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         formState: { isDirty, isSubmitting, errors },
     } = validatedForm;
     const [apiError, setApiError] = React.useState('');
-    console.log('errors.aut_org_username2', errors?.aut_org_username2);
     const [submitting, setSubmitting] = React.useState(false);
 
     const dispatch = useDispatch();
     const { control, watch, getValues, setValue, setError, trigger, clearErrors } = validatedForm;
-    // const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username2'));
-    // const [watchedField] = watch(['aut_org_username2']);
-    // React.useEffect(() => {
-    //     setAutOrgUsername(watchedField);
-    // }, [watchedField]);
-    // const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
-    // const handleNameOverridden = () => {
-    //     setAutNameOverridden(Number(!autNameOverridden));
-    //     setValue('aut_name_overridden', Number(!autNameOverridden));
-    //     // setError('aut_org_username2', { type: 'manual', message: 'Error message' });
-    // };
-
-    // const myCheckForExisting = async (value, field) => {
-    //     console.log('field', field);
-    //     setError(field, { type: 'manual', message: 'error.message' }); // Set error if validation fails
-    //     // trigger(field);
-    //     // setApiError('error.message'); // Set error if validation fails
-    //     return 'error.message: ' + value + ', ' + field;
-    // };
-    const validateAsync = async value => {
-        return new Promise((resolve, reject) => {
-            reject('all rejected' + (value ? '1' : '0')); // Reject with an Error object
-            // if (email.includes('test')) {
-            //     resolve();
-            // } else {
-            //     reject(new Error('all rejected')); // Reject with an Error object
-            // }
-        });
-        //     const result = await myCheckForExisting(value, 'aut_org_username2');
-        // return result;
+    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username2'));
+    const [watchedField] = watch(['aut_org_username2']);
+    React.useEffect(() => {
+        setAutOrgUsername(watchedField);
+    }, [watchedField]);
+    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
+    const handleNameOverridden = () => {
+        setAutNameOverridden(Number(!autNameOverridden));
+        setValue('aut_name_overridden', Number(!autNameOverridden));
+        setError('aut_org_username2', { type: 'manual', message: 'Error message' });
     };
+
+    console.dummy = () => {};
+    console.dummy(
+        'checkForExistingAuthor=',
+        checkForExistingAuthor,
+        dispatch,
+        trigger,
+        clearErrors,
+        DEBOUNCE_VALUE,
+        debounce,
+    );
     // const myCheckForExisting = debounce(async (value, field) => {
     //     return 'error.message: ' + value + ', ' + field;
     // }, DEBOUNCE_VALUE);
@@ -138,7 +126,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     // const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     // const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
 
-    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}' || !!apiError;
+    const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
     // const disableSubmit =
     //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
     //     (!!asyncFormErrors &&
@@ -159,6 +147,33 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         hideConfirmation();
     };
 
+    React.useEffect(() => {
+        if (mode === 'delete') {
+            showConfirmation();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [mode]);
+
+    // const myCheckForExisting = async (value, field) => {
+    //     console.log('field', field);
+    //     setError(field, { type: 'manual', message: 'error.message' }); // Set error if validation fails
+    //     // trigger(field);
+    //     // setApiError('error.message'); // Set error if validation fails
+    //     return 'error.message: ' + value + ', ' + field;
+    // };
+    const validateAsync = async value => {
+        // const result = await myCheckForExisting(value, 'aut_org_username2');
+        // return result;
+        return new Promise((resolve, reject) => {
+            reject('all rejected' + (value ? '1' : '0')); // Reject with an Error object
+            // if (email.includes('test')) {
+            //     resolve();
+            // } else {
+            //     reject(new Error('all rejected')); // Reject with an Error object
+            // }
+        });
+    };
+
     const onSubmit = async data => {
         setSubmitting(true);
         try {
@@ -166,63 +181,21 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
             await validateAsync(data);
             console.log('errors.aut_org_username2 after', errors?.aut_org_username2);
 
-            // clearErrors();
+            clearErrors();
 
-            // await handleSave(data);
+            await handleSave(data);
         } catch (error) {
             // If validation fails, show error
             setError('aut_org_username2', { type: 'manual', message: error });
             console.log('errors.aut_org_username2 after2', errors?.aut_org_username2);
+            setApiError(error); // Set error if validation fails
         } finally {
             setSubmitting(false);
         }
         console.log('errors.aut_org_username2 after3', errors?.aut_org_username2);
         return true;
-
-        // return handleSubmit(async data => {
-        //     try {
-        //         await handleSave(data);
-        //     } catch (error) {
-        //         console.error(error);
-        //         setApiError(error.message);
-        //     }
-        //     return true;
-        // });
     };
 
-    console.dummy = () => {};
-    const autOrgUsername = true;
-    console.dummy(
-        'checkForExistingAuthor=',
-        checkForExistingAuthor,
-        dispatch,
-        trigger,
-        clearErrors,
-        DEBOUNCE_VALUE,
-        debounce,
-        watch,
-        handleSubmit,
-        setApiError,
-        validateAsync,
-        handleSave,
-        // myCheckForExisting,
-        NameData,
-        UsernameIdData,
-        ResearcherIdentifierData,
-        NotesData,
-        TextField,
-        OverriddenIcon,
-        NotOverriddenIcon,
-        Tooltip,
-        InputAdornment,
-        IconButton,
-        // handleNameOverridden,
-        autOrgUsername,
-        showConfirmation,
-        getValues,
-        setValue,
-        useValidatedForm,
-    );
     return (
         <React.Fragment>
             {(mode === 'update' || mode === 'add') && (
@@ -237,14 +210,67 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 <Field
                                                     control={control}
                                                     component={AuthorFieldData}
-                                                    error={!!errors.aut_org_username2}
-                                                    errorText={errors.aut_org_username2?.message}
+                                                    onKeyDown={ev => {
+                                                        if (ev.key === 'Enter') {
+                                                            setError('aut_org_username2', 'press enter');
+                                                            console.log('set error enter');
+                                                        }
+                                                    }}
                                                     authorFieldDataId="aut-org-username"
                                                     name="aut_org_username2"
                                                     validate={[validation.spacelessMaxLength20Validator]}
+                                                    InputProps={{
+                                                        ...((!!autOrgUsername && {
+                                                            endAdornment: (
+                                                                <InputAdornment position="end">
+                                                                    <Tooltip title={'isUsernameOverridden.label'}>
+                                                                        <span>
+                                                                            <IconButton
+                                                                                aria-label={
+                                                                                    'isUsernameOverridden.label'
+                                                                                }
+                                                                                onClick={handleNameOverridden}
+                                                                                id="aut-name-overridden"
+                                                                                data-analyticsid="aut-name-overridden"
+                                                                                data-testid="aut-name-overridden"
+                                                                                size="large"
+                                                                            >
+                                                                                {autNameOverridden ? (
+                                                                                    <OverriddenIcon
+                                                                                        id="name-is-overridden"
+                                                                                        data-testid="name-is-overridden"
+                                                                                        color="primary"
+                                                                                    />
+                                                                                ) : (
+                                                                                    <NotOverriddenIcon
+                                                                                        id="name-is-not-overridden"
+                                                                                        data-testid="name-is-not-overridden"
+                                                                                        color="secondary"
+                                                                                    />
+                                                                                )}
+                                                                            </IconButton>
+                                                                        </span>
+                                                                    </Tooltip>
+                                                                </InputAdornment>
+                                                            ),
+                                                        }) ||
+                                                            {}),
+                                                    }}
                                                 />
                                             </Grid>
 
+                                            <Grid item xs={12}>
+                                                <NameData />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <UsernameIdData />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <ResearcherIdentifierData />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <NotesData />
+                                            </Grid>
                                             <Grid item xs={12}>
                                                 <Grid
                                                     container
