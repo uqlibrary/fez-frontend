@@ -1,6 +1,5 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
 
@@ -34,9 +33,6 @@ export const NotesData = () => {
             </Grid>
         </StandardCard>
     );
-};
-NotesData.propTypes = {
-    control: PropTypes.object.isRequired,
 };
 
 export default React.memo(NotesData);
