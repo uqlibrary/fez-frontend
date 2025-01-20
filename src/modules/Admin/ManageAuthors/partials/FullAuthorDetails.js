@@ -117,7 +117,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
     const validateField = async (field, value, autId, asyncErrors) => {
         try {
-            console.log('dispatching checkForExistingAuthor');
             await dispatch(
                 checkForExistingAuthor(
                     value,
@@ -129,7 +128,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
             );
             clearErrors(field); // Clear errors if validation passes
         } catch (error) {
-            console.log('setError', field, error.message);
             setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
             throw error; // Propagate error to caller
         }
@@ -141,8 +139,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
 
         const validationPromises = fields.map(async field => {
-            const fieldValue = getValues(field);
-            const autId = getValues('aut_id');
+            const fieldValue = data[field];
+            const autId = data?.aut_id;
             if (fieldValue && fieldValue !== '') {
                 return validateField(field, fieldValue, autId, asyncErrors);
             } else {
