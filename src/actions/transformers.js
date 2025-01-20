@@ -618,16 +618,31 @@ export const getRecordSubjectSearchKey = subject => {
 
 /**
  * @param {Array<{rek_value: {key: string, value: string}, rek_order: number}>} items
- * @returns {Object{fez_record_search_key_sustainable_development_goal:
- * Array<{rek_sustainable_development_goal: string, rek_sustainable_development_goal_order: number}>}}
+ * @returns {Object{fez_record_search_key_sdg:Array<{rek_sdg: string, rek_sdg_order: number}>},
+ * fez_record_search_key_sdg_source:Array<{rek_sdg: string, rek_sdg_order: number}>}}
  */
-export const getRecordSDGSearchKey = items => {
-    if (!items || items.length === 0) return {};
+export const getSDGSearchKeys = items => {
+    if (!items) return {};
+    const sdgCvoIds = items
+        .map(item => item?.rek_value?.sdgCVOId)
+        // remove dups
+        .filter((item, index, items) => items.indexOf(item) === index)
+        .sort();
+
     return {
-        fez_record_search_key_sustainable_development_goal: items.map(item => ({
-            rek_sustainable_development_goal: item.rek_value.key,
-            rek_sustainable_development_goal_order: item.rek_order,
+        // fill SDG SK according provided SDG source values - each SDG source has a SDG as a parent
+        // this will avoid having records with SDGs and without SDG source values
+        fez_record_search_key_sdg: sdgCvoIds.map((value, index) => ({
+            rek_sdg: value,
+            rek_sdg_order: index + 1,
         })),
+        fez_record_search_key_sdg_source:
+            // add SDG sources only if there are any SDGs
+            // ignore given order, order by CVO id instead
+            (sdgCvoIds.length && items.sort((a, b) => a.rek_value.key > b.rek_value.key)).map((item, index) => ({
+                rek_sdg_source: item.rek_value.key,
+                rek_sdg_source_order: index + 1,
+            })) || [],
     };
 };
 
@@ -1135,7 +1150,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         languageOfJournalName,
         languages,
         subjects,
-        fez_record_search_key_sustainable_development_goal: sustainableDevelopmentGoal,
+        fez_record_search_key_sdg_source: sustainableDevelopmentGoalSource,
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
@@ -1230,7 +1245,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...getRecordSDGSearchKey(sustainableDevelopmentGoal),
+        ...getSDGSearchKeys(sustainableDevelopmentGoalSource),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),

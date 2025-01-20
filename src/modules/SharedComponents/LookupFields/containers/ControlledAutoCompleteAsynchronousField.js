@@ -11,27 +11,32 @@ import { FoROptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const Field = props => {
     const dispatch = useDispatch();
-    const { itemsKeyValueList, itemsLoading } = useSelector(
+    const { rawData, itemsKeyValueList, itemsLoading } = useSelector(
         state =>
             state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[props.category],
     ) || {
+        rawData: [],
         itemsKeyValueList: [],
         itemsLoading: false,
     };
+    // Note: it will send reqs. to API on every key stroke on DEV mode
     const loadSuggestions = () => dispatch(actions.loadVocabulariesList(props.category));
 
     return (
         <AutoCompleteAsynchronousField
-            filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
+            filterOptions={
+                props.filterOptions ||
+                ((options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] }))
+            }
             {...props}
-            onChange={props.input.onChange}
+            onChange={props.onChange || props.input.onChange}
             onClear={() => {}}
             errorText={props.meta ? props.meta.error : props.errorText}
             error={props.meta ? !!props.meta.error : !!props.error || null}
-            itemsList={itemsKeyValueList}
+            itemsList={props.dataTransformer ? props.dataTransformer(rawData) : itemsKeyValueList}
             itemsLoading={itemsLoading}
             defaultValue={!!props.input && !!props.input.value ? { value: props.input.value } : null}
-            getOptionLabel={() => ''}
+            getOptionLabel={props.getOptionLabel || (() => '')}
             OptionTemplate={FoROptionTemplate}
             loadSuggestions={loadSuggestions}
         />
@@ -43,6 +48,9 @@ Field.propTypes = {
         id: PropTypes.string.isRequired,
         category: PropTypes.number.isRequired,
         autoCompleteAsynchronousFieldId: PropTypes.string.isRequired,
+        filterOptions: PropTypes.func,
+        dataTransformer: PropTypes.func,
+        onChange: PropTypes.func,
         ...PropTypes.any,
     }),
 };

@@ -888,29 +888,53 @@ describe('transformers', () => {
         });
     });
 
-    describe('getRecordSDGSearchKey test', () => {
+    describe('getSDGSearchKeys test', () => {
         it('should return empty subject object', () => {
-            expect(transformers.getRecordSDGSearchKey()).toEqual({});
+            expect(transformers.getSDGSearchKeys()).toEqual({});
         });
 
         it('should return subject list based on input', () => {
             const input = [
-                { rek_order: 1, rek_value: { key: 456994, value: '01 - No poverty' } },
-                { rek_order: 2, rek_value: { key: 456995, value: '02 - Zero Hunger' } },
+                {
+                    rek_order: 1,
+                    rek_value: { key: 456998, value: 'Dimensions', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456999, value: 'Incites', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456996, value: 'Dimensions', sdgCVOId: 456994, group: '01 - No poverty' },
+                },
             ];
             const expected = {
-                fez_record_search_key_sustainable_development_goal: [
+                fez_record_search_key_sdg: [
                     {
-                        rek_sustainable_development_goal: 456994,
-                        rek_sustainable_development_goal_order: 1,
+                        rek_sdg: 456994,
+                        rek_sdg_order: 1,
                     },
                     {
-                        rek_sustainable_development_goal: 456995,
-                        rek_sustainable_development_goal_order: 2,
+                        rek_sdg: 456995,
+                        rek_sdg_order: 2,
+                    },
+                ],
+                fez_record_search_key_sdg_source: [
+                    {
+                        rek_sdg_source: 456998,
+                        rek_sdg_source_order: 1,
+                    },
+                    {
+                        rek_sdg_source: 456999,
+                        rek_sdg_source_order: 2,
+                    },
+                    {
+                        rek_sdg_source: 456996,
+                        rek_sdg_source_order: 3,
                     },
                 ],
             };
-            const result = transformers.getRecordSDGSearchKey(input);
+            const result = transformers.getSDGSearchKeys(input);
             expect(result).toEqual(expected);
         });
     });

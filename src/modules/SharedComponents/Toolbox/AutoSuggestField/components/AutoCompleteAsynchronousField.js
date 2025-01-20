@@ -29,6 +29,8 @@ export const AutoCompleteAsynchronousField = ({
     prefilledSearch,
     required,
     supplemental,
+    groupBy,
+    renderGroup,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -158,6 +160,8 @@ export const AutoCompleteAsynchronousField = ({
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
+                {...(groupBy && { groupBy })}
+                {...(renderGroup && { renderGroup })}
                 {...((!!OptionTemplate && {
                     renderOption: (props, option) => {
                         return (
@@ -209,6 +213,8 @@ AutoCompleteAsynchronousField.propTypes = {
     prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    groupBy: PropTypes.func,
+    renderGroup: PropTypes.func,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

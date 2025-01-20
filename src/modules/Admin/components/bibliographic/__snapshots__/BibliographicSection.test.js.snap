@@ -87,7 +87,7 @@ exports[`BibliographicSection component should render default view 1`] = `
       {
         "groups": [
           [
-            "fez_record_search_key_sustainable_development_goal",
+            "fez_record_search_key_sdg_source",
           ],
         ],
         "title": "Sustainable Development Goal",
@@ -195,7 +195,7 @@ exports[`BibliographicSection component should render design form fields 1`] = `
       {
         "groups": [
           [
-            "fez_record_search_key_sustainable_development_goal",
+            "fez_record_search_key_sdg_source",
           ],
         ],
         "title": "Sustainable Development Goal",
@@ -301,7 +301,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
       {
         "groups": [
           [
-            "fez_record_search_key_sustainable_development_goal",
+            "fez_record_search_key_sdg_source",
           ],
         ],
         "title": "Sustainable Development Goal",

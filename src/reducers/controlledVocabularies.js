@@ -1,6 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 const initState = {
+    rawData: [],
     itemsList: [],
     itemsKeyValueList: [],
     itemsLoading: false,
@@ -29,6 +30,7 @@ const handlers = {
         ...state,
         [actions.getActionSuffix(action.type)]: {
             ...initState,
+            rawData: action.payload,
             itemsList: action.payload.map(item => item.controlled_vocab.cvo_title),
             itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
         },

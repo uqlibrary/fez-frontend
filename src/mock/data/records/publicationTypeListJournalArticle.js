@@ -376,16 +376,22 @@ const publicationTypeListJournalArticle = {
                     'rek_subject_lookup': '2910 Issues, ethics and legal aspects',
                 },
             ],
-            "fez_record_search_key_sustainable_development_goal": [
+            "fez_record_search_key_sdg": [
                 {
-                    "rek_sustainable_development_goal": 456994,
-                    "rek_sustainable_development_goal_order": 1,
-                    "rek_sustainable_development_goal_lookup": "01 - No poverty"
-                },
+                    "rek_sdg": 456994,
+                    "rek_sdg_order": 1,
+                    "rek_sdg_lookup": "01 - No poverty"
+                }
+            ],
+            "fez_record_search_key_sdg_source": [
                 {
-                    "rek_sustainable_development_goal": 456995,
-                    "rek_sustainable_development_goal_order": 2,
-                    "rek_sustainable_development_goal_lookup": "02 - Zero Hunger"
+                    "rek_sdg_source": 456995,
+                    "rek_sdg_source_order": 1,
+                    "rek_sdg_source_lookup": "Dimensions",
+                    "sdg": {
+                        "cvo_id": 456994,
+                        "cvo_title": "01 - No poverty",
+                    }
                 }
             ],
             'fez_record_search_key_total_pages': '13',

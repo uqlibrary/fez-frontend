@@ -268,7 +268,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 return renderMap(objects);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_sustainable_development_goal':
+            case 'rek_sdg':
                 return renderList(objects, subkey, pathConfig.list.sustainableDevelopmentGoal);
             default:
                 return renderList(objects, subkey);

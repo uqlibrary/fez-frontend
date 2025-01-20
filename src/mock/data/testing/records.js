@@ -1,15 +1,15 @@
 const sdg = {
-    "fez_record_search_key_sustainable_development_goal": [
+    "fez_record_search_key_sdg": [
         {
-            "rek_sustainable_development_goal_pid": "UQ:9227267",
-            "rek_sustainable_development_goal": 456994,
-            "rek_sustainable_development_goal_order": 1,
-            "rek_sustainable_development_goal_lookup": "01 - No poverty"
+            "rek_sdg_pid": "UQ:9227267",
+            "rek_sdg": 456994,
+            "rek_sdg_order": 1,
+            "rek_sdg_lookup": "01 - No poverty"
         },
         {
-            "rek_sustainable_development_goal": 456995,
-            "rek_sustainable_development_goal_order": 2,
-            "rek_sustainable_development_goal_lookup": "02 - Zero Hunger"
+            "rek_sdg": 456995,
+            "rek_sdg_order": 2,
+            "rek_sdg_lookup": "02 - Zero Hunger"
         }
     ],
 };
