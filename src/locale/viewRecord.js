@@ -150,7 +150,7 @@ export default {
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
                 fez_record_search_key_subject: 'Subject(s)',
-                fez_record_search_key_sdg: 'SDG(s)',
+                fez_record_search_key_sdg_source: 'SDG(s)',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
                 fez_record_search_key_translated_journal_name: 'Translated journal name',
@@ -519,7 +519,7 @@ export default {
                     order: 25,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 25.5,
                 },
                 {
@@ -657,7 +657,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 22.5,
                 },
                 {
@@ -799,7 +799,7 @@ export default {
                     order: 27,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 27.5,
                 },
                 {
@@ -997,7 +997,7 @@ export default {
                     order: 35,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
                 {
@@ -1167,7 +1167,7 @@ export default {
                     order: 35,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
                 {
@@ -1285,7 +1285,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 22.5,
                 },
                 {
@@ -1395,7 +1395,7 @@ export default {
                     order: 21,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 21.5,
                 },
                 {
@@ -1537,7 +1537,7 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 17.5,
                 },
                 {
@@ -1675,7 +1675,7 @@ export default {
                     order: 20,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 20.5,
                 },
                 {
@@ -1855,7 +1855,7 @@ export default {
                     order: 2,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 2.5,
                 },
                 {
@@ -2013,7 +2013,7 @@ export default {
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 18.5,
                 },
                 {
@@ -2135,7 +2135,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
                 {
@@ -2265,7 +2265,7 @@ export default {
                     order: 24,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 24.5,
                 },
                 {
@@ -2363,7 +2363,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 15.5,
                 },
                 {
@@ -2481,7 +2481,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
                 {
@@ -2591,7 +2591,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
                 {
@@ -2714,7 +2714,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
                 {
@@ -2808,7 +2808,7 @@ export default {
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 13.5,
                 },
                 {
@@ -2838,7 +2838,7 @@ export default {
                     order: 2,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 2.5,
                 },
                 {
@@ -2890,7 +2890,7 @@ export default {
                     order: 12,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 12.5,
                 },
                 {
@@ -2992,7 +2992,7 @@ export default {
                     order: 16,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 16.5,
                 },
                 {
@@ -3094,7 +3094,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 15.5,
                 },
                 {
@@ -3196,7 +3196,7 @@ export default {
                     order: 18,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 18.5,
                 },
                 {
@@ -3318,7 +3318,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_sdg',
+                    field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
                 {

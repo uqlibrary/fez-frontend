@@ -44,7 +44,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return <AuthorsCitationView {...componentProps} />;
     };
 
-    // get lookup data if it exsts, except rek_issn_lookup as it returns sherpa romeo color
+    // get lookup data if it exists, except rek_issn_lookup as it returns sherpa romeo color
     const getData = (object, subkey) => {
         const lookupSuffix = '_lookup';
         return subkey === 'rek_oa_status' || (object[subkey + lookupSuffix] && subkey !== 'rek_issn')
@@ -249,8 +249,40 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         }
     };
 
-    // render a list of objects (objects with order fields)
-    const renderObjectList = (objects, subkey) => {
+    const renderSDG = publication => {
+        const { fez_record_search_key_sdg: sdg, fez_record_search_key_sdg_source: sdgSource } = publication;
+        if (!sdg?.length || !sdgSource?.length) {
+            return null;
+        }
+
+        return (
+            <Box component={'ul'} key="rek-sdg" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {sdg.map((item, index) => (
+                    <li key={`rek-sdg-${item.rek_sdg}-${index}`} data-testid={`rek-sdg-${item.rek_sdg}-${index}`}>
+                        {renderLink(
+                            pathConfig.list.sustainableDevelopmentGoal(item.rek_sdg, item.rek_sdg_lookup),
+                            item.rek_sdg_lookup,
+                        )}
+                        <ul>
+                            {sdgSource.map(
+                                (source, index) =>
+                                    source.sdg.cvo_id === item.rek_sdg && (
+                                        <li
+                                            key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                            data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                        >
+                                            {source.rek_sdg_source_lookup}
+                                        </li>
+                                    ),
+                            )}
+                        </ul>
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
+    const renderObjectList = (objects, subkey, publication) => {
         switch (subkey) {
             case 'rek_author':
                 return renderAuthors(publication);
@@ -268,8 +300,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 return renderMap(objects);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_sdg':
-                return renderList(objects, subkey, pathConfig.list.sustainableDevelopmentGoal);
+            case 'rek_sdg_source':
+                return renderSDG(publication);
             default:
                 return renderList(objects, subkey);
         }
@@ -400,7 +432,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
                     // logic to get values from fez_record_search_key fields
                     if (subkey) {
-                        data = Array.isArray(value) ? renderObjectList(value, subkey) : renderObject(value, subkey);
+                        data = Array.isArray(value)
+                            ? renderObjectList(value, subkey, publication)
+                            : renderObject(value, subkey);
                     } else {
                         data = renderContent(field, value);
                     }

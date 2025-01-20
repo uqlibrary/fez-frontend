@@ -1,5 +1,5 @@
 export default {
-    "rek_pid": "UQ:9227267",
+        "rek_pid": "UQ:9227267",
         "rek_title_xsdmf_id": null,
         "rek_title": "The role of dynamic capabilities in tourism crisis and disaster resilience",
         "rek_description_xsdmf_id": null,
@@ -311,19 +311,43 @@ export default {
         "fez_record_search_key_supervisor_id": [],
         "fez_record_search_key_sdg": [
             {
+                "rek_sdg_pid": "UQ:9227267",
                 "rek_sdg": 456994,
                 "rek_sdg_order": 1,
                 "rek_sdg_lookup": "01 - No poverty"
+            },
+            {
+                "rek_sdg": 456995,
+                "rek_sdg_order": 2,
+                "rek_sdg_lookup": "02 - Zero Hunger"
             }
         ],
         "fez_record_search_key_sdg_source": [
             {
-                "rek_sdg_source": 456995,
+                "rek_sdg_source": 460001,
                 "rek_sdg_source_order": 1,
                 "rek_sdg_source_lookup": "Dimensions",
                 "sdg": {
                     "cvo_id": 456994,
                     "cvo_title": "01 - No poverty",
+                }
+            },
+            {
+                "rek_sdg_source": 460002,
+                "rek_sdg_source_order": 2,
+                "rek_sdg_source_lookup": "Incites",
+                "sdg": {
+                    "cvo_id": 456994,
+                    "cvo_title": "01 - No poverty",
+                }
+            },
+            {
+                "rek_sdg_source": 460003,
+                "rek_sdg_source_order": 3,
+                "rek_sdg_source_lookup": "Dimensions",
+                "sdg": {
+                    "cvo_id": 456995,
+                    "cvo_title": "02 - Zero Hunger",
                 }
             }
         ],
