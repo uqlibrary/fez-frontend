@@ -198,19 +198,15 @@ export const FullAuthorDetails = ({
                                                     required
                                                     onKeyDown={ev => {
                                                         if (ev.key === 'Enter') {
-                                                            ev.target.setCustomValidity('press enter');
-                                                            ev.target.reportValidity(); // Show validation message
-
-                                                            // setError('dummy', {
-                                                            //     type: 'manual',
-                                                            //     message: 'press enter',
-                                                            // });
-                                                            // console.log('set error enter');
+                                                            setError('dummy', {
+                                                                type: 'manual',
+                                                                message: 'press enter',
+                                                            });
+                                                            console.log('set error enter');
                                                         }
                                                     }}
-                                                    // error="test"
-                                                    // errorText="test"
-                                                    errorText="helper text"
+                                                    error={!!errors.dummy}
+                                                    errorText={errors.dummy?.message}
                                                 />
                                                 <Button
                                                     onClick={() => {
