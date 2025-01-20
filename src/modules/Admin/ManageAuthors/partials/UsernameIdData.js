@@ -1,7 +1,7 @@
-import { checkForExistingAuthor, clearAuthorAlerts } from 'actions';
-import { useDispatch } from 'react-redux';
-import debounce from 'debounce-promise';
-import { DEBOUNCE_VALUE } from './manageAuthorConfig';
+// import { checkForExistingAuthor, clearAuthorAlerts } from 'actions'; // todo: delete dlearAuthorAlerts
+// import { useDispatch } from 'react-redux';
+// import debounce from 'debounce-promise';
+// import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 // import { checkForExisting } from '../helpers'; // todo: delete file
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
@@ -27,14 +27,14 @@ import { validation } from 'config';
 // const selector = formValueSelector(FORM_NAME);
 
 export const UsernameIdColumnData = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
         },
     } = locale.components.manageAuthors;
 
-    const { control, watch, setValue, getValues, setError, clearErrors, trigger } = useFormContext();
+    const { control, watch, setValue, getValues, setError } = useFormContext();
 
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
@@ -48,68 +48,6 @@ export const UsernameIdColumnData = () => {
         setValue('aut_name_overridden', Number(!autNameOverridden));
         setError('aut_org_username', { type: 'manual', message: 'Error message' });
     };
-
-    const watchedFields = watch([
-        'aut_org_username',
-        'aut_org_staff_id',
-        'aut_student_username',
-        'aut_org_student_id',
-        'aut_id',
-    ]);
-    const autId = watchedFields[4]; // Assuming aut_id is at index 4
-    // console.log('watchedFields=', JSON.stringify(watchedFields));
-
-    console.dummy = () => {};
-    console.dummy('todo:', clearAuthorAlerts); // todo: see if clearAuthorAlerts is used
-    // Debounced validation function
-    const debouncedValidateField = React.useCallback(
-        (field, value, autId, asyncErrors) => {
-            debounce(async () => {
-                try {
-                    console.log('dispatching checkForExistingAuthor');
-                    dispatch(
-                        checkForExistingAuthor(
-                            value, // Field value to search
-                            field, // Field name to validate
-                            autId, // Author ID
-                            locale.components.manageAuthors.editRow.validation, // Validation messages
-                            asyncErrors,
-                        ),
-                    )
-                        .then(() => {
-                            clearErrors(field); // Clear errors if validation passes
-                        })
-                        .catch(error => {
-                            // console.error('Error during author validation:', error);
-                            console.log('setError', field, error.message);
-                            setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                            trigger(field);
-                        });
-                    clearErrors(field); // Clear errors if validation passes
-                } catch (error) {
-                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                }
-            }, DEBOUNCE_VALUE)();
-        },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [setError, trigger],
-    );
-
-    // Track previous field values to validate only the changed field
-    React.useEffect(() => {
-        const fields = ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'];
-        const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
-
-        fields.forEach((field, index) => {
-            const value = watchedFields[index];
-            if (value && value !== '') {
-                debouncedValidateField(field, value, autId, asyncErrors);
-            } else {
-                clearErrors(field); // Clear errors for fields with no value
-            }
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(watchedFields)]);
 
     return (
         <StandardCard subCard title="Username & IDs" smallTitle customTitleBgColor="#F7F7F7">
