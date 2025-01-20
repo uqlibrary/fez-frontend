@@ -1,13 +1,13 @@
 import React from 'react';
 import { LookupListEditor } from '../../Toolbox/ListEditor';
-import SustainableDevelopmentGoalSourceField from './SustainableDevelopmentGoalSourceField';
+import SustainableDevelopmentGoalField from './SustainableDevelopmentGoalField';
 
-export const SustainableDevelopmentGoalSourceListField = fieldProps => {
+export const SustainableDevelopmentGoalListField = fieldProps => {
     return (
         <LookupListEditor
             hideReorder
             listEditorId="sustainable-development-goal"
-            inputField={SustainableDevelopmentGoalSourceField}
+            inputField={SustainableDevelopmentGoalField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
             // inputNormalizer={item => {

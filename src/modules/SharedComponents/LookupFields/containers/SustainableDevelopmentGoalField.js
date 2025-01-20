@@ -35,7 +35,7 @@ const flattenSDGCVOTree = data => {
     );
 };
 
-const SustainableDevelopmentGoalSourceField = props => {
+const SustainableDevelopmentGoalField = props => {
     return (
         <ControlledAutoCompleteAsynchronousField
             {...props}
@@ -51,9 +51,9 @@ const SustainableDevelopmentGoalSourceField = props => {
     );
 };
 
-SustainableDevelopmentGoalSourceField.propTypes = {
+SustainableDevelopmentGoalField.propTypes = {
     input: PropTypes.object,
     ...PropTypes.any,
 };
 
-export default SustainableDevelopmentGoalSourceField;
+export default SustainableDevelopmentGoalField;

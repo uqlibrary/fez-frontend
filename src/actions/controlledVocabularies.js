@@ -23,6 +23,7 @@ export function loadVocabulariesList(id) {
                     type: `${actions.VOCABULARIES_LOAD_FAILED}@${id}`,
                     payload: error.message,
                 });
+                throw error;
             });
     };
 }

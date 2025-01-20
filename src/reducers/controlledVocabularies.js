@@ -5,12 +5,13 @@ const initState = {
     itemsList: [],
     itemsKeyValueList: [],
     itemsLoading: false,
+    itemsLoaded: false,
     itemsLoadingError: false,
 };
 
 function flatten(list) {
     // controlled_vocab.controlled_vocab_children
-    return list.map(item => {
+    return list?.map?.(item => {
         return [
             { key: item.controlled_vocab.cvo_id, value: item.controlled_vocab.cvo_title },
             ...[].concat.apply([], flatten(item.controlled_vocab.controlled_vocab_children)),
@@ -31,7 +32,7 @@ const handlers = {
         [actions.getActionSuffix(action.type)]: {
             ...initState,
             rawData: action.payload,
-            itemsList: action.payload.map(item => item.controlled_vocab.cvo_title),
+            itemsList: action.payload?.map?.(item => item.controlled_vocab.cvo_title),
             itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
         },
     }),
