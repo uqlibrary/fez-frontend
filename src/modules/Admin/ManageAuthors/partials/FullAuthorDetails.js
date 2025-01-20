@@ -10,10 +10,12 @@ import IconButton from '@mui/material/IconButton';
 import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
-// import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
 // import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 import debounce from 'lodash.debounce';
+
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
@@ -92,6 +94,10 @@ export const FullAuthorDetails = ({
         debounce,
     );
     const myCheckForExisting = async (value, field) => {
+        console.log('field', field);
+        setError(field, { type: 'manual', message: 'error.message' }); // Set error if validation fails
+        trigger(field);
+        // setApiError('error.message'); // Set error if validation fails
         return 'error.message: ' + value + ', ' + field;
     };
     const validateAsync = async value => {
@@ -175,26 +181,63 @@ export const FullAuthorDetails = ({
                                 <form
                                     onSubmit={handleSubmit(async data => {
                                         try {
+                                            if ((await validateAsync()) !== true) return false;
                                             await handleSave(data);
                                         } catch (error) {
                                             console.error(error);
                                             setApiError(error.message);
                                         }
+                                        return true;
                                     })}
                                 >
                                     <Box sx={{ backgroundColor: 'secondary.light', padding: 2 }}>
                                         <Grid container spacing={2}>
                                             <Grid item xs={12}>
+                                                <TextField
+                                                    name="dummy"
+                                                    required
+                                                    onKeyDown={ev => {
+                                                        if (ev.key === 'Enter') {
+                                                            ev.target.setCustomValidity('press enter');
+                                                            ev.target.reportValidity(); // Show validation message
+
+                                                            // setError('dummy', {
+                                                            //     type: 'manual',
+                                                            //     message: 'press enter',
+                                                            // });
+                                                            // console.log('set error enter');
+                                                        }
+                                                    }}
+                                                    // error="test"
+                                                    // errorText="test"
+                                                    errorText="helper text"
+                                                />
+                                                <Button
+                                                    onClick={() => {
+                                                        setError('dummy', {
+                                                            type: 'manual',
+                                                            message: 'click',
+                                                        });
+                                                        console.log('set error click');
+                                                    }}
+                                                >
+                                                    set error
+                                                </Button>
+                                            </Grid>
+
+                                            <Grid item xs={12}>
                                                 <Field
                                                     control={control}
                                                     component={AuthorFieldData}
+                                                    onKeyDown={ev => {
+                                                        if (ev.key === 'Enter') {
+                                                            setError('aut_org_username2', 'press enter');
+                                                            console.log('set error enter');
+                                                        }
+                                                    }}
                                                     authorFieldDataId="aut-org-username"
                                                     name="aut_org_username2"
-                                                    validate={[
-                                                        // validation.required,
-                                                        validation.spacelessMaxLength20Validator,
-                                                        validateAsync,
-                                                    ]}
+                                                    validate={[validation.spacelessMaxLength20Validator]}
                                                     InputProps={{
                                                         ...((!!autOrgUsername && {
                                                             endAdornment: (
@@ -283,6 +326,16 @@ export const FullAuthorDetails = ({
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
+
+                                            {!!apiError && (
+                                                <Grid xs={12}>
+                                                    <Alert
+                                                        alertId="api_error_alert"
+                                                        type="error_outline"
+                                                        message={apiError}
+                                                    />
+                                                </Grid>
+                                            )}
                                         </Grid>
                                     </Box>
                                 </form>
