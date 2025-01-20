@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
     blockHosts: ['www.googletagmanager.com'],
-    chromeWebSecurity: true,
+    chromeWebSecurity: false,
     defaultCommandTimeout: 10000,
     numTestsKeptInMemory: 50,
     pageLoadTimeout: 30000,
