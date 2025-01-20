@@ -25,6 +25,7 @@ import { validation } from 'config';
 
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPE_ID_UNIVERSITY, ORG_TYPES_LOOKUP, AFFILIATION_TYPE_UQ } from 'config/general';
 import { default as globalLocale } from 'locale/global';
+import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 const classes = {
     linked: {
@@ -400,20 +401,25 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
+    const prevList = React.useRef([]);
 
     const [data, setData] = React.useState([]);
     const [triggerState, setTriggerState] = React.useState(true);
     React.useEffect(() => {
-        const result = [];
-        list.forEach((item, index) => {
-            delete item.tableData;
-            item.id = index;
-            result.push({ ...item });
-        });
-        setData(result);
-        if (triggerState) {
-            setTriggerState(false);
-            onChange(result);
+        if (!isArrayDeeplyEqual(prevList.current, list)) {
+            prevList.current = [...list];
+            const result = [];
+            list.forEach((item, index) => {
+                delete item.tableData;
+                item.id = index;
+                result.push({ ...item });
+            });
+            setData(result);
+
+            if (triggerState) {
+                setTriggerState(false);
+                onChange(result);
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [list]);
