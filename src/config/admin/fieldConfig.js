@@ -81,7 +81,7 @@ import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
-import { SustainableDevelopmentGoalSourceListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalSourceListField';
+import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -714,7 +714,7 @@ export default {
             },
         },
         fez_record_search_key_sdg_source: {
-            component: SustainableDevelopmentGoalSourceListField,
+            component: SustainableDevelopmentGoalListField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_sdg_source',
                 locale: locale.components.sustainableDevelopmentGoal.field,

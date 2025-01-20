@@ -1150,7 +1150,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         languageOfJournalName,
         languages,
         subjects,
-        fez_record_search_key_sdg_source: sustainableDevelopmentGoalSource,
+        fez_record_search_key_sdg_source: sustainableDevelopmentGoal,
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
@@ -1245,7 +1245,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
-        ...getSDGSearchKeys(sustainableDevelopmentGoalSource),
+        ...getSDGSearchKeys(sustainableDevelopmentGoal),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),
