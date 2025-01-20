@@ -6,13 +6,14 @@ import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
-import debounce from 'debounce-promise';
+// import debounce from 'debounce-promise';
 import { DEBOUNCE_VALUE } from './manageAuthorConfig';
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
 // import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
 // import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
+import debounce from 'lodash.debounce';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
@@ -79,58 +80,57 @@ export const FullAuthorDetails = ({
         setValue('aut_name_overridden', Number(!autNameOverridden));
         setError('aut_org_username2', { type: 'manual', message: 'Error message' });
     };
-    const watchedFields = watch(['aut_org_username2', 'aut_id']);
-    const autId = watchedFields[1]; // Assuming aut_id is at index 4
-    // console.log('watchedFields=', JSON.stringify(watchedFields));
-    // Debounced validation function
-    const debouncedValidateField = React.useCallback(
-        (field, value, autId, asyncErrors) => {
-            if (Math.PI > 3.14) return; // disable the code block
-            debounce(async () => {
-                try {
-                    console.log('dispatching checkForExistingAuthor');
-                    dispatch(
-                        checkForExistingAuthor(
-                            value, // Field value to search
-                            field, // Field name to validate
-                            autId, // Author ID
-                            locale.components.manageAuthors.editRow.validation, // Validation messages
-                            asyncErrors,
-                        ),
-                    )
-                        .then(() => {
-                            clearErrors(field); // Clear errors if validation passes
-                        })
-                        .catch(error => {
-                            // console.error('Error during author validation:', error);
-                            console.log('setError', field, error.message);
-                            setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                            trigger(field);
-                        });
-                    clearErrors(field); // Clear errors if validation passes
-                } catch (error) {
-                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
-                }
-            }, DEBOUNCE_VALUE)();
-        },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [setError, trigger],
-    );
-    // Track previous field values to validate only the changed field
-    React.useEffect(() => {
-        const fields = ['aut_org_username2'];
-        const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
 
-        fields.forEach((field, index) => {
-            const value = watchedFields[index];
-            if (value && value !== '') {
-                debouncedValidateField(field, value, autId, asyncErrors);
-            } else {
-                clearErrors(field); // Clear errors for fields with no value
-            }
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(watchedFields)]);
+    console.dummy = () => {};
+    console.dummy(
+        'checkForExistingAuthor=',
+        checkForExistingAuthor,
+        dispatch,
+        trigger,
+        clearErrors,
+        DEBOUNCE_VALUE,
+        debounce,
+    );
+    const myCheckForExisting = async (value, field) => {
+        return 'error.message: ' + value + ', ' + field;
+    };
+    const validateAsync = async value => {
+        const result = await myCheckForExisting(value, 'aut_org_username2');
+        return result;
+    };
+    // const myCheckForExisting = debounce(async (value, field) => {
+    //     return 'error.message: ' + value + ', ' + field;
+    // }, DEBOUNCE_VALUE);
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // const myCheckForExisting = React.useCallback(
+    //     debounce(async (value, field) => {
+    //         return 'error.message: ' + value + ', ' + field;
+    //         // console.log('debounce checkForExisting', value, field);
+    //         // if (Math.PI > 3.141) return 'error.message: ' + value + ', ' + field;
+    //         // // if (Math.PI > 3.14) return; // disable the code block
+    //         // const autId = getValues('aut_id');
+    //         // const asyncErrors = {};
+    //         // try {
+    //         //     await dispatch(
+    //         //         checkForExistingAuthor(
+    //         //             value, // Field value to search
+    //         //             field, // Field name to validate
+    //         //             autId, // Author ID
+    //         //             locale.components.manageAuthors.editRow.validation, // Validation messages
+    //         //             asyncErrors,
+    //         //         ),
+    //         //     );
+
+    //         //     clearErrors(field); // Clear errors if validation passes
+    //         // } catch (error) {
+    //         //     console.log('setError', field, error.message);
+    //         //     setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+    //         //     trigger(field);
+    //         // }
+    //         // return 'test';
+    //     }, DEBOUNCE_VALUE),
+    //     [],
+    // );
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
@@ -193,6 +193,7 @@ export const FullAuthorDetails = ({
                                                     validate={[
                                                         // validation.required,
                                                         validation.spacelessMaxLength20Validator,
+                                                        validateAsync,
                                                     ]}
                                                     InputProps={{
                                                         ...((!!autOrgUsername && {
