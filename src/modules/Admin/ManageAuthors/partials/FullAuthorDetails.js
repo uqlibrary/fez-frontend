@@ -107,7 +107,47 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mode]);
 
+    const validateField = async (field, value, autId, asyncErrors) => {
+        try {
+            console.log('dispatching checkForExistingAuthor');
+            dispatch(
+                checkForExistingAuthor(
+                    value, // Field value to search
+                    field, // Field name to validate
+                    autId, // Author ID
+                    locale.components.manageAuthors.editRow.validation, // Validation messages
+                    asyncErrors,
+                ),
+            )
+                .then(() => {
+                    clearErrors(field); // Clear errors if validation passes
+                })
+                .catch(error => {
+                    // console.error('Error during author validation:', error);
+                    console.log('setError', field, error.message);
+                    setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+                    // trigger(field);
+                });
+            clearErrors(field); // Clear errors if validation passes
+        } catch (error) {
+            setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
+        }
+    };
+
     const validateAsync = async value => {
+        const fields = ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'];
+        const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
+
+        fields.forEach(field => {
+            const value = getValues(field);
+            const autId = getValues('aut_id');
+            if (value && value !== '') {
+                validateField(field, value, autId, asyncErrors);
+            } else {
+                clearErrors(field); // Clear errors for fields with no value
+            }
+        });
+
         return new Promise((resolve, reject) => {
             reject('all rejected' + (value ? '1' : '0')); // Reject with an Error object
         });
