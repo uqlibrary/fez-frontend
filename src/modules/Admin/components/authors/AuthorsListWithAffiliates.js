@@ -35,7 +35,6 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 import { ChevronRight } from '@mui/icons-material';
-import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 const classes = {
     linked: {
@@ -454,7 +453,7 @@ export const AuthorsListWithAffiliates = ({
     clearSuggestedOrganisationalUnits,
 }) => {
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
-    const prevList = React.useRef([]);
+    const prevList = React.useRef('');
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
@@ -500,8 +499,9 @@ export const AuthorsListWithAffiliates = ({
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
-        if (!isArrayDeeplyEqual(prevList.current, list)) {
-            prevList.current = [...list];
+        const listStr = JSON.stringify(list);
+        if (prevList.current !== listStr) {
+            prevList.current = listStr;
             const result = [];
             list.forEach((item, index) => {
                 delete item.tableData;
