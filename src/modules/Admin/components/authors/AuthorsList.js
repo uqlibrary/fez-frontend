@@ -408,20 +408,26 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
+    const prevList = React.useRef('');
 
     const [data, setData] = React.useState([]);
     const [triggerState, setTriggerState] = React.useState(true);
     React.useEffect(() => {
-        const result = [];
-        list.forEach((item, index) => {
-            delete item.tableData;
-            item.id = index;
-            result.push({ ...item });
-        });
-        setData(result);
-        if (triggerState) {
-            setTriggerState(false);
-            onChange(result);
+        const listStr = JSON.stringify(list);
+        if (prevList.current !== listStr) {
+            prevList.current = listStr;
+            const result = [];
+            list.forEach((item, index) => {
+                delete item.tableData;
+                item.id = index;
+                result.push({ ...item });
+            });
+            setData(result);
+
+            if (triggerState) {
+                setTriggerState(false);
+                onChange(result);
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [list]);

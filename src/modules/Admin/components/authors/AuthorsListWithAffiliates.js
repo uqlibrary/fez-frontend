@@ -453,6 +453,7 @@ export const AuthorsListWithAffiliates = ({
     clearSuggestedOrganisationalUnits,
 }) => {
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
+    const prevList = React.useRef('');
 
     // eslint-disable-next-line camelcase
     const setEditing = ({ editing, aut_id }) => {
@@ -495,20 +496,20 @@ export const AuthorsListWithAffiliates = ({
         isNtro,
         contributorEditorId,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    //    [editState.editing],
-    // );
 
     const [data, setData] = React.useState([]);
-
     React.useEffect(() => {
-        const result = [];
-        list.forEach((item, index) => {
-            delete item.tableData;
-            item.id = index;
-            result.push({ ...item });
-        });
-        setData(result);
+        const listStr = JSON.stringify(list);
+        if (prevList.current !== listStr) {
+            prevList.current = listStr;
+            const result = [];
+            list.forEach((item, index) => {
+                delete item.tableData;
+                item.id = index;
+                result.push({ ...item });
+            });
+            setData(result);
+        }
     }, [list]);
 
     const transformNewAuthorObject = newAuthor => [...data, { ...newAuthor, affiliations: [] }];
