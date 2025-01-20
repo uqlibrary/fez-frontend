@@ -81,7 +81,7 @@ import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
-import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
+import { SustainableDevelopmentGoalSourceListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalSourceListField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -713,10 +713,10 @@ export default {
                 listEditorId: 'rek-subjects',
             },
         },
-        fez_record_search_key_sdg: {
-            component: SustainableDevelopmentGoalListField,
+        fez_record_search_key_sdg_source: {
+            component: SustainableDevelopmentGoalSourceListField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_sdg',
+                name: 'bibliographicSection.fez_record_search_key_sdg_source',
                 locale: locale.components.sustainableDevelopmentGoal.field,
                 distinctOnly: true,
                 canEdit: true,

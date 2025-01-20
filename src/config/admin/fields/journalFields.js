@@ -44,7 +44,7 @@ export default {
         },
         {
             title: 'Sustainable Development Goal',
-            groups: [['fez_record_search_key_sdg']],
+            groups: [['fez_record_search_key_sdg_source']],
         },
         {
             title: 'Related publications', // Succeeds

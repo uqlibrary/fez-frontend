@@ -350,17 +350,20 @@ export default {
             return returnValue;
         },
     },
-    fez_record_search_key_sdg: {
+    fez_record_search_key_sdg_source: {
         getValue: record => {
-            const returnValue = (record.fez_record_search_key_sdg || []).map(subject => ({
+            const returnValue = (record.fez_record_search_key_sdg_source || []).map(item => ({
                 rek_value: {
-                    key: subject.rek_sdg,
-                    value: subject.rek_sdg_lookup || `${subject.rek_sdg} (cvo_id)`,
+                    key: item.rek_sdg_source,
+                    value: `${item.sdg?.cvo_title} - ${item.rek_sdg_source_lookup ||
+                        `${item.rek_sdg_source} (cvo_id)`}`,
+                    group: item.sdg?.cvo_title,
+                    sdgCVOId: item.sdg?.cvo_id,
                 },
-                rek_order: subject.rek_sdg_order,
+                rek_order: item.rek_sdg_source_order,
             }));
 
-            delete record.fez_record_search_key_sdg;
+            delete record.fez_record_search_key_sdg_source;
             return returnValue;
         },
     },
