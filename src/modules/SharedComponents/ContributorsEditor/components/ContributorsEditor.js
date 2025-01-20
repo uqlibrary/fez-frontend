@@ -80,16 +80,14 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        let newContributors = this.state?.contributors || /* istanbul ignore next */ [];
-        if (!isArrayDeeplyEqual(prevProps.input?.value || [], this.props.input?.value || [])) {
-            newContributors = this.getContributorsWithAffiliationsFromProps(this.props);
+        if (prevProps.input?.value !== this.props.input?.value) {
             this.setState({
-                contributors: newContributors,
+                contributors: this.getContributorsWithAffiliationsFromProps(this.props),
             });
         }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        if (!isArrayDeeplyEqual(prevState?.contributors, newContributors)) {
-            this.props.onChange?.(newContributors);
+        if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
+            this.props.onChange?.(this.state.contributors);
         }
         const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
@@ -98,7 +96,7 @@ export class ContributorsEditor extends PureComponent {
             } else {
                 this.state.scaleOfSignificance = this.handleSoSChange(
                     prevState.contributors,
-                    newContributors,
+                    this.state.contributors,
                     this.props.scaleOfSignificance,
                 );
             }
