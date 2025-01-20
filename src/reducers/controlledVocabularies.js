@@ -5,7 +5,6 @@ const initState = {
     itemsList: [],
     itemsKeyValueList: [],
     itemsLoading: false,
-    itemsLoaded: false,
     itemsLoadingError: false,
 };
 
