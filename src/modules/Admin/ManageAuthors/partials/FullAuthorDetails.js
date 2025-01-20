@@ -14,7 +14,8 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
 // import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
 import debounce from 'lodash.debounce';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
+import { useForm } from 'hooks';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
