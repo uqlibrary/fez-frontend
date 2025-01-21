@@ -159,8 +159,13 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     const getAllUniqueErrorMessages = () => {
-        // Collect form validation errors and API errors
-        const errorMessages = [...Object.values(errors).map(error => error.message), apiError].filter(Boolean);
+        // Collect manual errors
+        const errorMessages = [
+            ...Object.values(errors)
+                .filter(error => error.type === 'manual') // Filter only errors with type 'manual'
+                .map(error => error.message), // Map to get the message
+            apiError,
+        ].filter(Boolean); // Remove falsy values like null or undefined
         const uniqueMessages = new Set(errorMessages);
 
         // The below wrongly return array of set in the current node JS
