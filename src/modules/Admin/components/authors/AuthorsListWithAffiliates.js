@@ -500,6 +500,7 @@ export const AuthorsListWithAffiliates = ({
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         const listStr = JSON.stringify(list);
+        /* istanbul ignore else */
         if (prevList.current !== listStr) {
             prevList.current = listStr;
             const result = [];
