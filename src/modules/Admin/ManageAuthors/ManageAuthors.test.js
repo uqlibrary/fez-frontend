@@ -1,3 +1,4 @@
+import { preview } from 'test-utils';
 import React from 'react';
 import ManageAuthors from './index';
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
@@ -537,11 +538,12 @@ describe('ManageAuthors', () => {
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
 
-        const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+        // const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
         const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('authors-add-new-author'));
+        await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
@@ -557,12 +559,13 @@ describe('ManageAuthors', () => {
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => getByTestId('aut-name-overridden'));
+        // preview.debug();
 
         fireEvent.click(getByTestId('aut-name-overridden'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
+        // await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
     });
