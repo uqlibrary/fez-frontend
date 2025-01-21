@@ -16,6 +16,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         OptionTemplate: null,
         required: true,
         allowFreeText: false,
+        groupBy: () => null,
         filterOptions: jest.fn(options => options),
         ...testProps,
     };
