@@ -156,16 +156,6 @@ export const pathConfig = {
                     },
                 },
             }),
-        sustainableDevelopmentGoal: (value, lookup) =>
-            getSearchUrl({
-                searchQuery: { all: '' },
-                activeFacets: {
-                    filters: {
-                        'Sustainable Development Goal': value,
-                        'Sustainable Development Goal (lookup)': lookup,
-                    },
-                },
-            }),
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
