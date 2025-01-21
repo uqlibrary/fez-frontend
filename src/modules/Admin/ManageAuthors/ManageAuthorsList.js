@@ -94,7 +94,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         const materialTable = materialTableRef.current;
 
         if (mode === 'add') {
-            console.log('newData', newData);
+            console.log('add newData', newData);
             materialTable.props.editable
                 .onRowAdd(newData)
                 .then(data => {

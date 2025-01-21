@@ -126,7 +126,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     const validateAsync = async data => {
-        console.log('validateAsync', data);
         const fields = ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'];
         const asyncErrors = {}; // Modify to retrieve actual asyncErrors if available
 
@@ -184,12 +183,19 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         title: 'Validation',
         type: 'warning',
     };
-    console.log('alertProps=', alertProps);
 
     const onSubmit = async data => {
         setSubmitting(true);
         try {
             await validateAsync(data);
+
+            // Convert empty strings to null as empty string will violate unique key constraints
+            const fields = ['aut_org_username', 'aut_org_staff_id', 'aut_student_username'];
+            fields.forEach(field => {
+                if (data[field] === '') {
+                    data[field] = null;
+                }
+            });
 
             clearErrors();
 
