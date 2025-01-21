@@ -891,6 +891,7 @@ describe('transformers', () => {
     describe('getSDGSearchKeys test', () => {
         it('should return empty subject object', () => {
             expect(transformers.getSDGSearchKeys()).toEqual({});
+            expect(transformers.getSDGSearchKeys([])).toEqual({});
         });
 
         it('should return subject list based on input', () => {
