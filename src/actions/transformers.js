@@ -623,11 +623,12 @@ export const getRecordSubjectSearchKey = subject => {
  */
 export const getSDGSearchKeys = items => {
     if (!items) return {};
-    const sdgCvoIds = items
-        .map(item => item?.rek_value?.sdgCVOId)
-        // remove dups
-        .filter((item, index, items) => items.indexOf(item) === index)
-        .sort();
+    const sdgCvoIds =
+        items
+            .map(item => item?.rek_value?.sdgCVOId)
+            // remove dups
+            .filter((item, index, items) => items.indexOf(item) === index)
+            .sort() || [];
 
     return {
         // fill SDG SK according provided SDG source values - each SDG source has a SDG as a parent
@@ -639,10 +640,14 @@ export const getSDGSearchKeys = items => {
         fez_record_search_key_sdg_source:
             // add SDG sources only if there are any SDGs
             // ignore given order, order by CVO id instead
-            (sdgCvoIds.length && items.sort((a, b) => a.rek_value.key > b.rek_value.key)).map((item, index) => ({
-                rek_sdg_source: item.rek_value.key,
-                rek_sdg_source_order: index + 1,
-            })) || [],
+            (sdgCvoIds.length &&
+                items
+                    .sort((a, b) => a.rek_value.key > b.rek_value.key)
+                    .map((item, index) => ({
+                        rek_sdg_source: item.rek_value.key,
+                        rek_sdg_source_order: index + 1,
+                    }))) ||
+            [],
     };
 };
 
