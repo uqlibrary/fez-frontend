@@ -44,7 +44,6 @@ const SustainableDevelopmentGoalField = props => {
             category={SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID}
             dataTransformer={flattenSDGCVOTree}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
-            getOptionLabel={option => option.value}
             groupBy={option => option.group}
             onChange={value => props.input?.onChange({ ...value, value: `${value.group} - ${value.value}` })}
         />

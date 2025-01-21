@@ -10,24 +10,13 @@ export const SustainableDevelopmentGoalListField = fieldProps => {
             inputField={SustainableDevelopmentGoalField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            // inputNormalizer={item => {
-            //     console.log('inputNormalizer', item);
-            //     return item;
-            // }}
             onChange={fieldProps.input?.onChange}
-            // transformOutput={values => {
-            //     console.log('transformOutput', values);
-            //     return values;
-            //     // return [
-            //     //     ...values.sort((a, b) => {
-            //     //         dd(
-            //     //             `${a.rek_value.sdgCVOId} > ${b.rek_value.sdgCVOId} ? ${a.rek_value.sdgCVOId >
-            //     //                 b.rek_value.sdgCVOId}`,
-            //     //         );
-            //     //         return a.rek_value.sdgCVOId > b.rek_value.sdgCVOId;
-            //     //     }),
-            //     // ];
-            // }}
+            onAddItem={state => ({
+                ...state,
+                itemList: state.itemList.sort((a, b) =>
+                    a.sdgCVOId === b.sdgCVOId ? a.key - b.key : a.sdgCVOId - b.sdgCVOId,
+                ),
+            })}
             {...fieldProps}
         />
     );
