@@ -94,11 +94,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         const materialTable = materialTableRef.current;
 
         if (mode === 'add') {
-            console.log('add newData', newData);
             materialTable.props.editable
                 .onRowAdd(newData)
                 .then(data => {
-                    console.log('after add data', data);
                     materialTable.setState(prevState => {
                         materialTable.dataManager.setData([data, ...prevState.data]);
                         return {
@@ -108,7 +106,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     });
                 })
                 .catch(() => {
-                    console.log('error add data');
                     materialTable.setState(prevState => {
                         materialTable.dataManager.setData([...prevState.data]);
                         return {
@@ -117,7 +114,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         };
                     });
                 });
-            console.log('done add data');
         } else if (mode === 'update') {
             const index = oldData.tableData.id;
             materialTable.props.editable

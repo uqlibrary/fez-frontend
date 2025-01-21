@@ -34,7 +34,7 @@ export const UsernameIdColumnData = () => {
         },
     } = locale.components.manageAuthors;
 
-    const { control, watch, setValue, getValues, setError } = useFormContext();
+    const { control, watch, setValue, getValues } = useFormContext();
 
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
     const [watchedField] = watch(['aut_org_username']);
@@ -46,7 +46,6 @@ export const UsernameIdColumnData = () => {
     const handleNameOverridden = () => {
         setAutNameOverridden(Number(!autNameOverridden));
         setValue('aut_name_overridden', Number(!autNameOverridden));
-        setError('aut_org_username', { type: 'manual', message: 'Error message' });
     };
 
     return (

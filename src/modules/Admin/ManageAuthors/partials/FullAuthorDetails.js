@@ -42,11 +42,10 @@ import { default as locale } from 'locale/components';
 // import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig'; //todo: remove the file
 // import { checkForExisting } from '../helpers';
 
-// console.log('Controller=', Controller);
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const validatedForm = useForm({
         defaultValues: rowData,
-        mode: 'onBlur',
+        mode: 'onChange',
         shouldUseNativeValidation: false, // Disable HTML5 form validation
     });
     const {
@@ -150,7 +149,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     const getAllUniqueErrorMessages = () => {
-        console.log('errors inside getAllUniqueErrorMessages=', errors);
         // Collect manual errors
         const errorMessages = [
             ...Object.values(errors)
