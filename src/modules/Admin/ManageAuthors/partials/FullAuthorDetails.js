@@ -46,7 +46,7 @@ import { default as locale } from 'locale/components';
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const validatedForm = useForm({
         defaultValues: rowData,
-        mode: 'onChange',
+        mode: 'onBlur',
     });
     const {
         handleSubmit,
@@ -65,6 +65,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
     console.log('errors=', errors);
+    console.log('mode=', mode);
     // const disableSubmit =
     //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
     //     (!!asyncFormErrors &&
