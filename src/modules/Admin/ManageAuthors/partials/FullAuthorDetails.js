@@ -159,36 +159,18 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     const getAllUniqueErrorMessages = () => {
-        console.log('errors=', errors);
-        console.log('apiError=', apiError);
         // Collect form validation errors and API errors
         const errorMessages = [...Object.values(errors).map(error => error.message), apiError].filter(Boolean);
-
-        console.log('errorMessages=', errorMessages);
-
         const uniqueMessages = new Set(errorMessages);
-        console.log('uniqueMessages=', uniqueMessages, uniqueMessages.constructor.name);
 
-        // Convert Set to array correctly and check result
-        const uniqueMessagesArray = [...uniqueMessages];
-        console.log('uniqueMessagesArray=', uniqueMessagesArray, uniqueMessagesArray.constructor.name);
-
-        const a = ['a', 'b', 'c'];
-        const b = new Set(a);
-        const c = [...b];
-        console.log('c=', c, c.constructor.name);
+        // The below wrongly return array of set in the current node JS
+        // const uniqueMessagesArray = [...uniqueMessages];
 
         let ret = '';
         uniqueMessages.forEach(message => {
             ret += message + '\n';
         });
         return ret;
-
-        // // Join properly to avoid "[object Set]"
-        // const finalMessages = uniqueMessagesArray.join('\n') || '';
-        // console.log('uniqueMessages.join=', finalMessages);
-
-        // return finalMessages;
     };
 
     const onSubmit = async data => {
