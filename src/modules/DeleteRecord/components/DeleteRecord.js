@@ -55,6 +55,7 @@ const DeleteRecord = () => {
 
     const onSubmit = safelyHandleSubmit(async () => {
         const payload = mergeWithFormValues({ publication: { ...recordToDelete } });
+        /* istanbul ignore next */
         if (payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
             payload.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
                 payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;

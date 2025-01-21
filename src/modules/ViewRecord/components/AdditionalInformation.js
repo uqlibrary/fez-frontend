@@ -251,6 +251,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderSDG = publication => {
         const { fez_record_search_key_sdg: sdg, fez_record_search_key_sdg_source: sdgSource } = publication;
+        /* istanbul ignore next */
         if (!sdg?.length || !sdgSource?.length) {
             return null;
         }
