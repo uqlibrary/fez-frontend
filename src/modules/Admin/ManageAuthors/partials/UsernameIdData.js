@@ -1,13 +1,6 @@
-// import { checkForExistingAuthor, clearAuthorAlerts } from 'actions'; // todo: delete dlearAuthorAlerts
-// import { useDispatch } from 'react-redux';
-// import debounce from 'debounce-promise';
-// import { DEBOUNCE_VALUE } from './manageAuthorConfig';
-// import { checkForExisting } from '../helpers'; // todo: delete file
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { Field, formValueSelector, change } from 'redux-form/immutable';//todo: replace formValueSelector and change
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
@@ -22,12 +15,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
 import { validation } from 'config';
-// import { FORM_NAME } from './manageAuthorConfig';//todo: delete file
-
-// const selector = formValueSelector(FORM_NAME);
 
 export const UsernameIdColumnData = () => {
-    // const dispatch = useDispatch();
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },

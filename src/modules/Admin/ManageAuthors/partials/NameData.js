@@ -1,8 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { useSelector } from 'react-redux';
-// import { Field, formValueSelector } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
@@ -12,9 +10,6 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
-// import { FORM_NAME } from './manageAuthorConfig';
-
-// const selector = formValueSelector(FORM_NAME);
 
 export const NameData = () => {
     const {

@@ -1,25 +1,12 @@
-// import debounce from 'debounce-promise';
-// import { DEBOUNCE_VALUE } from './manageAuthorConfig';//todo: delete file or settings
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
-// import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-// import { Controller } from 'react-hook-form';
-// import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
-// import debounce from 'lodash.debounce';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { FormProvider } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Immutable from 'immutable';
-// import { useSelector } from 'react-redux';
-// import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
-// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
-// import { useValidatedForm } from 'hooks';
-// import { Controller, useForm } from 'react-hook-form';
 import { useForm } from 'hooks';
-// import debounce from 'debounce-promise';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -39,8 +26,6 @@ import NotesData from './NotesData';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
-// import { FORM_NAME, DEBOUNCE_VALUE } from './manageAuthorConfig'; //todo: remove the file
-// import { checkForExisting } from '../helpers';
 
 export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const validatedForm = useForm({
@@ -60,20 +45,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const { watch, setError, clearErrors } = validatedForm;
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
-    // const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    // const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
 
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
-    console.log('errors=', errors);
-    console.log('mode=', mode);
-    console.log('isDirty=', isDirty);
-    console.log('disableSubmit=', disableSubmit);
-    // const disableSubmit =
-    //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
-    //     (!!asyncFormErrors &&
-    //         asyncFormErrors instanceof Immutable.Map &&
-    //         Object.keys(asyncFormErrors.toJS()).length > 0);
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
@@ -316,11 +289,5 @@ FullAuthorDetails.propTypes = {
     onEditingApproved: PropTypes.func,
     onEditingCanceled: PropTypes.func,
 };
-
-// const FullAuthorDetailsReduxForm = reduxForm({
-//     form: FORM_NAME,
-//     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),//todo: asyncValidate
-//     asyncChangeFields: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
-// })(FullAuthorDetails);
 
 export default React.memo(FullAuthorDetails);

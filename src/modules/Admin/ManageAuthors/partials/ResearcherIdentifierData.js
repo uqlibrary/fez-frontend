@@ -1,8 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { Field, formValueSelector, change } from 'redux-form/immutable'; //todo: replace formValueSelector and change
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
@@ -19,13 +17,9 @@ import AuthorFieldData from './AuthorFieldData';
 import { default as locale } from 'locale/components';
 import pageLocale from 'locale/pages';
 import { validation } from 'config';
-// import { FORM_NAME } from './manageAuthorConfig';
-
-// const selector = formValueSelector(FORM_NAME);
 
 export const ResearcherIdentifierData = () => {
     const { control, watch, setValue } = useFormContext();
-    // const dispatch = useDispatch();
     const {
         editRow: {
             fields: {
