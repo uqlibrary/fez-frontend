@@ -221,20 +221,20 @@ export const AdminContainer = ({ createMode = false }) => {
                                             component: IdentifiersSection,
                                             activated: isActivated(),
                                         },
-                                        // grants: {
-                                        //     component: GrantInformationSection,
-                                        //     activated:
-                                        //         isActivated() &&
-                                        //         // Blacklist types without grant info
-                                        //         !(
-                                        //             [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                        //                 recordToView && recordToView.rek_display_type,
-                                        //             ) ||
-                                        //             [SUBTYPE_NON_NTRO].includes(
-                                        //                 attributes.getValues('adminSection.rek_subtype'),
-                                        //             )
-                                        //         ),
-                                        // },
+                                        grants: {
+                                            component: GrantInformationSection,
+                                            activated:
+                                                isActivated() &&
+                                                // Blacklist types without grant info
+                                                !(
+                                                    [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                                        recordToView && recordToView.rek_display_type,
+                                                    ) ||
+                                                    [SUBTYPE_NON_NTRO].includes(
+                                                        attributes.getValues('adminSection.rek_subtype'),
+                                                    )
+                                                ),
+                                        },
                                         notes: {
                                             component: NotesSection,
                                             activated:
