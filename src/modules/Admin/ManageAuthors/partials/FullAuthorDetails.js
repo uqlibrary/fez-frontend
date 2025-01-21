@@ -1,11 +1,11 @@
 // import debounce from 'debounce-promise';
-import { DEBOUNCE_VALUE } from './manageAuthorConfig';
+// import { DEBOUNCE_VALUE } from './manageAuthorConfig';//todo: delete file or settings
 import { checkForExistingAuthor } from 'actions';
 import { useDispatch } from 'react-redux';
 // import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 // import { Controller } from 'react-hook-form';
 // import Controller from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller.js';
-import debounce from 'lodash.debounce';
+// import debounce from 'lodash.debounce';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -56,23 +56,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [submitting, setSubmitting] = React.useState(false);
 
     const dispatch = useDispatch();
-    const { control, watch, getValues, setValue, setError, trigger, clearErrors } = validatedForm;
-
-    console.dummy = () => {};
-    console.dummy(
-        'checkForExistingAuthor=',
-        checkForExistingAuthor,
-        dispatch,
-        trigger,
-        clearErrors,
-        DEBOUNCE_VALUE,
-        debounce,
-        control,
-        watch,
-        getValues,
-        setValue,
-        setError,
-    );
+    const { watch, setError, clearErrors } = validatedForm;
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
