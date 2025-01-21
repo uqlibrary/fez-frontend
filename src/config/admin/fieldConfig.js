@@ -16,6 +16,7 @@ import {
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
     COLLECTION_VIEW_TYPE,
+    SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -719,7 +720,8 @@ export default {
                 name: 'bibliographicSection.fez_record_search_key_sdg_source',
                 locale: locale.components.sustainableDevelopmentGoal.field,
                 distinctOnly: true,
-                canEdit: true,
+                category: SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+                canEdit: false,
                 listEditorId: 'rek-sustainable-development-goal',
             },
         },

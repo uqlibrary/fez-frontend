@@ -1,6 +1,6 @@
 import React from 'react';
 import AutoCompleteAsynchronousField from './AutoCompleteAsynchronousField';
-import { rtlRender, fireEvent, waitFor } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, userEvent, waitForText, waitForTextToBeRemoved } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -16,7 +16,6 @@ function setup(testProps = {}, renderer = rtlRender) {
         OptionTemplate: null,
         required: true,
         allowFreeText: false,
-        groupBy: () => null,
         filterOptions: jest.fn(options => options),
         ...testProps,
     };
@@ -168,5 +167,31 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         expect(getByText('hello')).toBeInTheDocument();
+    });
+
+    it('should not clear internal `options` state on close when clearOptionOnClose is set to false', async () => {
+        const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
+
+        const { getByTestId } = setup({
+            itemsList: ['cherry', 'chevy'],
+            itemsLoading: false,
+            clearOptionOnClose: false,
+            groupBy: () => null,
+            OptionTemplate,
+            getOptionLabel: () => '',
+        });
+
+        const triggerOpen = async () => {
+            await userEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+            await waitForText('cherry');
+            await waitForText('chevy');
+        };
+
+        await triggerOpen();
+        // trigger close
+        await userEvent.type(getByTestId('autocomplete-asynchronous-field-input'), '[esc]');
+        await waitForTextToBeRemoved('cherry');
+        await waitForTextToBeRemoved('chevy');
+        await triggerOpen();
     });
 });

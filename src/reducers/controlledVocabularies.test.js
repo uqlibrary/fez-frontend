@@ -127,6 +127,7 @@ describe('Controlled vocabularies reducer', () => {
                 itemsList: ['Three', 'Four'],
                 itemsLoading: false,
                 itemsLoadingError: false,
+                itemsLoaded: true,
                 rawData: [
                     {
                         controlled_vocab: {

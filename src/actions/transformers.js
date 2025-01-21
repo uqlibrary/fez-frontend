@@ -638,7 +638,7 @@ export const getSDGSearchKeys = items => {
         })),
         // ignore given order, order by CVO id instead
         fez_record_search_key_sdg_source: items
-            .sort((a, b) => a.rek_value.key > b.rek_value.key)
+            .sort((a, b) => a.rek_value.key - b.rek_value.key)
             .map((item, index) => ({
                 rek_sdg_source: item.rek_value.key,
                 rek_sdg_source_order: index + 1,
