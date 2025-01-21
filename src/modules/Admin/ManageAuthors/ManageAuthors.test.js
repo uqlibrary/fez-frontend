@@ -353,7 +353,7 @@ describe('ManageAuthors', () => {
                 current_page: 1,
             });
 
-        const { getAllByTestId, getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -400,7 +400,7 @@ describe('ManageAuthors', () => {
                 },
             });
 
-        const { queryAllByTestId, getAllByTestId, getByText, getByTestId, queryByTestId } = setup({});
+        const { queryAllByTestId, getAllByTestId, getByText, getByTestId } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
