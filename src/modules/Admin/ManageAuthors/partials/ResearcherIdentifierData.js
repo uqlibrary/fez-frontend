@@ -51,11 +51,11 @@ export const ResearcherIdentifierData = () => {
     ]);
 
     const handleIsScopusIDAuthenticated = () => {
-        setValue('aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated));
+        setValue('aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated), { shouldDirty: true });
     };
 
     const handleIsOrcidSyncEnabled = () => {
-        setValue('aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled));
+        setValue('aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled), { shouldDirty: true });
     };
 
     return (

@@ -45,7 +45,7 @@ export const UsernameIdColumnData = () => {
     const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
     const handleNameOverridden = () => {
         setAutNameOverridden(Number(!autNameOverridden));
-        setValue('aut_name_overridden', Number(!autNameOverridden));
+        setValue('aut_name_overridden', Number(!autNameOverridden), { shouldDirty: true });
     };
 
     return (

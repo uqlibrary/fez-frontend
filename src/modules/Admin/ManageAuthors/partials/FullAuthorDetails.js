@@ -67,6 +67,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
     console.log('errors=', errors);
     console.log('mode=', mode);
+    console.log('isDirty=', isDirty);
+    console.log('disableSubmit=', disableSubmit);
     // const disableSubmit =
     //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
     //     (!!asyncFormErrors &&
