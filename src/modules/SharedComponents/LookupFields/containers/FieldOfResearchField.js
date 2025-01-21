@@ -1,18 +1,45 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { FIELD_OF_RESEARCH_VOCAB_ID } from 'config/general';
 
-import { ControlledAutoCompleteAsynchronousField } from './ControlledAutoCompleteAsynchronousField';
+import * as actions from 'actions';
+import { matchSorter } from 'match-sorter';
+import { FoROptionTemplate } from 'modules/SharedComponents/LookupFields';
+
+const category = FIELD_OF_RESEARCH_VOCAB_ID;
 
 const FieldOfResearch = props => {
+    const dispatch = useDispatch();
+    const { itemsKeyValueList, itemsLoading } = useSelector(
+        state =>
+            state.get('controlledVocabulariesReducer') &&
+            state.get('controlledVocabulariesReducer')[props.category || category],
+    ) || {
+        itemsKeyValueList: [],
+        itemsLoading: false,
+    };
+    const loadSuggestions = () => dispatch(actions.loadVocabulariesList(props.category || category));
+
     return (
-        <ControlledAutoCompleteAsynchronousField
-            {...props}
+        <AutoCompleteAsynchronousField
+            filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
             id="field-of-research-field-input"
+            {...props}
             autoCompleteAsynchronousFieldId={'rek-subject'}
-            category={FIELD_OF_RESEARCH_VOCAB_ID}
+            onChange={props.input.onChange}
+            onClear={() => {}}
+            errorText={props.meta ? props.meta.error : props.errorText}
+            error={props.meta ? !!props.meta.error : !!props.error || null}
+            itemsList={itemsKeyValueList}
+            itemsLoading={itemsLoading}
+            defaultValue={!!props.input && !!props.input.value ? { value: props.input.value } : null}
+            getOptionLabel={() => ''}
+            OptionTemplate={FoROptionTemplate}
+            loadSuggestions={loadSuggestions}
         />
     );
 };

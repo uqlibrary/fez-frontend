@@ -23,13 +23,14 @@ export const AutoCompleteAsynchronousField = ({
     loadSuggestions,
     name,
     onChange,
-    onClear,
+    onClear = () => {},
     OptionTemplate,
     placeholder,
     prefilledSearch,
     required,
     supplemental,
     groupBy,
+    clearOptionOnClose = true,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -87,10 +88,10 @@ export const AutoCompleteAsynchronousField = ({
     }, [itemsList, loading]);
 
     React.useEffect(() => {
-        if (!open) {
+        if (!open && clearOptionOnClose) {
             setOptions([]);
         }
-    }, [open]);
+    }, [open, clearOptionOnClose]);
 
     return (
         <React.Fragment>
@@ -212,6 +213,7 @@ AutoCompleteAsynchronousField.propTypes = {
     required: PropTypes.bool,
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
     groupBy: PropTypes.func,
+    clearOptionOnClose: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

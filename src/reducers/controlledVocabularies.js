@@ -6,6 +6,7 @@ const initState = {
     itemsKeyValueList: [],
     itemsLoading: false,
     itemsLoadingError: false,
+    itemsLoaded: false,
 };
 
 function flatten(list) {
@@ -33,6 +34,7 @@ const handlers = {
             rawData: action.payload,
             itemsList: action.payload?.map?.(item => item.controlled_vocab.cvo_title),
             itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
+            itemsLoaded: true,
         },
     }),
     [`${actions.VOCABULARIES_LOADING}@`]: (state, action) => ({
