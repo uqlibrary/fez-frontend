@@ -47,9 +47,11 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const validatedForm = useForm({
         defaultValues: rowData,
         mode: 'onBlur',
+        shouldUseNativeValidation: false, // Disable HTML5 form validation
     });
     const {
         handleSubmit,
+        trigger,
         formState: { isDirty, isSubmitting, errors },
     } = validatedForm;
     const [apiError, setApiError] = React.useState('');
@@ -92,6 +94,11 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mode]);
+
+    React.useEffect(() => {
+        trigger();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [trigger]);
 
     const watchedFields = watch(['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id']);
     // Track previous field values to validate only the changed field
