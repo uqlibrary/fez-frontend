@@ -167,17 +167,28 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         console.log('errorMessages=', errorMessages);
 
         const uniqueMessages = new Set(errorMessages);
-        console.log('uniqueMessages=', uniqueMessages);
+        console.log('uniqueMessages=', uniqueMessages, uniqueMessages.constructor.name);
 
         // Convert Set to array correctly and check result
         const uniqueMessagesArray = [...uniqueMessages];
-        console.log('[...uniqueMessages]=', uniqueMessagesArray);
+        console.log('uniqueMessagesArray=', uniqueMessagesArray, uniqueMessagesArray.constructor.name);
 
-        // Join properly to avoid "[object Set]"
-        const finalMessages = uniqueMessagesArray.join('\n') || '';
-        console.log('uniqueMessages.join=', finalMessages);
+        const a = ['a', 'b', 'c'];
+        const b = new Set(a);
+        const c = [...b];
+        console.log('c=', c, c.constructor.name);
 
-        return finalMessages;
+        let ret = '';
+        uniqueMessages.forEach(message => {
+            ret += message + '\n';
+        });
+        return ret;
+
+        // // Join properly to avoid "[object Set]"
+        // const finalMessages = uniqueMessagesArray.join('\n') || '';
+        // console.log('uniqueMessages.join=', finalMessages);
+
+        // return finalMessages;
     };
 
     const onSubmit = async data => {
