@@ -20,7 +20,7 @@ context('Journal Article admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it.only('should render the different sections as expected', () => {
+    it('should render the different sections as expected', () => {
         cy.loadRecordForAdminEdit(record.rek_pid);
         cy.viewport(1000, 1000);
 
