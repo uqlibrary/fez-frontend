@@ -260,7 +260,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <Box component={'ul'} key="rek-sdg" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                 {sdg.map((item, index) => (
                     <li key={`rek-sdg-${item.rek_sdg}-${index}`} data-testid={`rek-sdg-${item.rek_sdg}-${index}`}>
-                        {item.rek_sdg_lookup}
+                        {renderLink(
+                            pathConfig.list.sustainableDevelopmentGoal(item.rek_sdg, item.rek_sdg_lookup),
+                            item.rek_sdg_lookup,
+                        )}
                         <ul>
                             {sdgSource.map(
                                 (source, index) =>
