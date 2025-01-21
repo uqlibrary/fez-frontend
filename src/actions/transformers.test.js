@@ -922,15 +922,15 @@ describe('transformers', () => {
                 ],
                 fez_record_search_key_sdg_source: [
                     {
-                        rek_sdg_source: 456998,
+                        rek_sdg_source: 456996,
                         rek_sdg_source_order: 1,
                     },
                     {
-                        rek_sdg_source: 456999,
+                        rek_sdg_source: 456998,
                         rek_sdg_source_order: 2,
                     },
                     {
-                        rek_sdg_source: 456996,
+                        rek_sdg_source: 456999,
                         rek_sdg_source_order: 3,
                     },
                 ],
