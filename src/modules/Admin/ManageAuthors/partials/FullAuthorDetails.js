@@ -146,11 +146,12 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
             clearErrors(); // Clear all errors if validation passes
             return Promise.resolve('Validation passed');
         } catch (error) {
-            return Promise.reject(`Validation failed: ${error.message}`);
+            return Promise.reject(error.message);
         }
     };
 
     const getAllUniqueErrorMessages = () => {
+        console.log('errors inside getAllUniqueErrorMessages=', errors);
         // Collect manual errors
         const errorMessages = [
             ...Object.values(errors)
@@ -158,17 +159,32 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                 .map(error => error.message), // Map to get the message
             apiError,
         ].filter(Boolean); // Remove falsy values like null or undefined
+
         const uniqueMessages = new Set(errorMessages);
-
-        // The below wrongly return array of set in the current node JS
-        // const uniqueMessagesArray = [...uniqueMessages];
-
-        let ret = '';
-        uniqueMessages.forEach(message => {
-            ret += message + '\n';
-        });
-        return ret;
+        return Array.from(uniqueMessages);
     };
+
+    const errorMessagesList = getAllUniqueErrorMessages();
+    const message = (
+        <span>
+            {locale.components.manageAuthors.validationAlertTitle}
+            <ul>
+                {errorMessagesList &&
+                    errorMessagesList.length > 0 &&
+                    errorMessagesList.map((item, index) => (
+                        <li key={`key-${index}`} data-testid={`key-${index}`}>
+                            {item}
+                        </li>
+                    ))}
+            </ul>
+        </span>
+    );
+    const alertProps = {
+        message: message,
+        title: 'Validation',
+        type: 'warning',
+    };
+    console.log('alertProps=', alertProps);
 
     const onSubmit = async data => {
         setSubmitting(true);
@@ -247,11 +263,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
 
                                             {(!!apiError || !!Object.keys(errors).length) && (
                                                 <Grid xs={12}>
-                                                    <Alert
-                                                        alertId="api_error_alert"
-                                                        type="error_outline"
-                                                        message={getAllUniqueErrorMessages()}
-                                                    />
+                                                    <Alert alertId="api_error_alert" {...alertProps} />
                                                 </Grid>
                                             )}
                                         </Grid>
