@@ -158,25 +158,41 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         }
     };
 
+    const getAllUniqueErrorMessages = () => {
+        console.log('errors=', errors);
+        console.log('apiError=', apiError);
+        // Collect form validation errors and API errors
+        const errorMessages = [...Object.values(errors).map(error => error.message), apiError].filter(Boolean);
+
+        console.log('errorMessages=', errorMessages);
+
+        const uniqueMessages = new Set(errorMessages);
+        console.log('uniqueMessages=', uniqueMessages);
+
+        // Convert Set to array correctly and check result
+        const uniqueMessagesArray = [...uniqueMessages];
+        console.log('[...uniqueMessages]=', uniqueMessagesArray);
+
+        // Join properly to avoid "[object Set]"
+        const finalMessages = uniqueMessagesArray.join('\n') || '';
+        console.log('uniqueMessages.join=', finalMessages);
+
+        return finalMessages;
+    };
+
     const onSubmit = async data => {
         setSubmitting(true);
         try {
-            console.log('errors.aut_org_username2 before', errors?.aut_org_username2);
             await validateAsync(data);
-            console.log('errors.aut_org_username2 after', errors?.aut_org_username2);
 
             clearErrors();
 
             await handleSave(data);
         } catch (error) {
-            // If validation fails, show error
-            // setError('aut_org_username2', { type: 'manual', message: error });
-            console.log('errors.aut_org_username2 after2', errors?.aut_org_username2);
-            setApiError(error); // Set error if validation fails
+            setApiError(error);
         } finally {
             setSubmitting(false);
         }
-        console.log('errors.aut_org_username2 after3', errors?.aut_org_username2);
         return true;
     };
 
@@ -239,12 +255,12 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 </Grid>
                                             </Grid>
 
-                                            {!!apiError && (
+                                            {(!!apiError || !!Object.keys(errors).length) && (
                                                 <Grid xs={12}>
                                                     <Alert
                                                         alertId="api_error_alert"
                                                         type="error_outline"
-                                                        message={apiError}
+                                                        message={getAllUniqueErrorMessages()}
                                                     />
                                                 </Grid>
                                             )}
