@@ -1426,31 +1426,57 @@ exports[`Additional Information Component  should not render map with empty geo 
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -3109,31 +3135,57 @@ exports[`Additional Information Component  should render component with audio do
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -3716,31 +3768,57 @@ exports[`Additional Information Component  should render component with book 1`]
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -4677,31 +4755,57 @@ exports[`Additional Information Component  should render component with book cha
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -5563,31 +5667,57 @@ exports[`Additional Information Component  should render component with conferen
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -11884,31 +12014,57 @@ exports[`Additional Information Component  should render component with design d
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -13406,31 +13562,57 @@ exports[`Additional Information Component  should render component with journal 
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -15529,31 +15711,57 @@ exports[`Additional Information Component  should render component with newspape
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -16022,31 +16230,57 @@ exports[`Additional Information Component  should render component with patent 1
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -19843,31 +20077,57 @@ exports[`Additional Information Component  should render component with research
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -20723,31 +20983,57 @@ exports[`Additional Information Component  should render component with video do
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>
@@ -23766,31 +24052,57 @@ exports[`Additional Information Component  should render map with geo coordinate
                   <li
                     data-testid="rek-sdg-456994-0"
                   >
-                    01 - No poverty
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456994-460001-0"
-                      >
-                        Dimensions
-                      </li>
-                      <li
-                        data-testid="rek-sdg-source-456994-460002-1"
-                      >
-                        Incites
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      01 - No poverty
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                   <li
                     data-testid="rek-sdg-456995-1"
                   >
-                    02 - Zero Hunger
-                    <ul>
-                      <li
-                        data-testid="rek-sdg-source-456995-460003-2"
-                      >
-                        Dimensions
-                      </li>
-                    </ul>
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      02 - Zero Hunger
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      03 - Good health and well-being
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
                   </li>
                 </ul>
               </span>

@@ -270,7 +270,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                 <Tooltip title={source?.rek_sdg_source_lookup}>
                                     <span
                                         key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                        data-testid={`rek-sdg-source-${item.rek_sdg_lookup}-${source.rek_sdg_source_lookup}-${index}`}
+                                        data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
                                         className={`fez-icon ${icon} medium`}
                                         style={{ margin: '0 4px' }}
                                     />
