@@ -1,11 +1,11 @@
-import { isNumber } from './PartialDateForm';
+import { PartialDateForm } from './PartialDateForm';
 
 const locale = {
     minNumberCharCode: 48,
     maxNumberCharCode: 57,
 };
 
-const partialDateForm = event => isNumber(locale)(event);
+const partialDateForm = new PartialDateForm({ allowPartial: true, locale: locale });
 
 describe('PartialDateForm unit tests', () => {
     it('should check if pressed key charCode 39 is numeric key or not and prevent default event', () => {
@@ -14,8 +14,8 @@ describe('PartialDateForm unit tests', () => {
             charCode: 39,
             preventDefault: test,
         };
-        partialDateForm(event);
-        expect(test).toHaveBeenCalled();
+        partialDateForm._isNumber(event);
+        expect(test).toBeCalled();
     });
 
     it('should check if pressed key charCode 59 is numeric key or not and prevent default event', () => {
@@ -24,8 +24,8 @@ describe('PartialDateForm unit tests', () => {
             charCode: 59,
             preventDefault: test,
         };
-        partialDateForm(event);
-        expect(test).toHaveBeenCalled();
+        partialDateForm._isNumber(event);
+        expect(test).toBeCalled();
     });
 
     it('should check if pressed key is within range and default event is not prevented', () => {
@@ -34,7 +34,7 @@ describe('PartialDateForm unit tests', () => {
             charCode: 50,
             preventDefault: test,
         };
-        partialDateForm(event);
-        expect(test).not.toHaveBeenCalled();
+        partialDateForm._isNumber(event);
+        expect(test).not.toBeCalled();
     });
 });

@@ -1,46 +1,56 @@
 import React from 'react';
-import PartialDateForm from './PartialDateForm';
+import PartialDateField from './PartialDateField';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps) {
-    const props = { partialDateFormId: 'test', ...testProps };
-    return rtlRender(<PartialDateForm {...props} />);
+    const props = {
+        classes: {
+            fakeTitle: {},
+        },
+        ...testProps,
+    };
+    return rtlRender(<PartialDateField {...props} />);
 }
 
-describe('PartialDateForm snapshots tests', () => {
-    it('renders PartialDateForm component', () => {
+describe('Redux-form Field PartialDateField snapshots tests', () => {
+    it('renders PartialDateField component', () => {
         const props = {
             name: 'partialDate',
             allowPartial: true,
-            onChange: () => {},
+            input: {
+                onChange: () => {},
+            },
         };
 
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
     });
 
-    it('renders PartialDateForm component 2', () => {
+    it('renders PartialDateField component with requiredField class on year field', () => {
         const props = {
             name: 'partialDate',
             allowPartial: true,
             className: 'requiredField',
-            onChange: () => {},
+            input: {
+                onChange: () => {},
+            },
         };
 
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
     });
 
-    it('renders PartialDateForm component 3', () => {
+    it('renders PartialDateField component with requiredField class on all fields', () => {
         const props = {
             name: 'partialDate',
             allowPartial: false,
             className: 'requiredField',
-            onChange: () => {},
+            input: {
+                onChange: () => {},
+            },
         };
 
         const { container } = setup(props);
-
         expect(container).toMatchSnapshot();
     });
 });
