@@ -483,7 +483,7 @@ describe('AuthorsListWithAffiliates', () => {
                 },
             ],
         });
-        const { getAllByTestId, getByTestId, getByText, queryByTestId } = setup({
+        const { getAllByTestId, getByTestId, getByText } = setup({
             list: [
                 {
                     nameAsPublished: 'test 1',
