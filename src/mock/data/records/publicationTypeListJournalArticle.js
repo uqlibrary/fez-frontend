@@ -1,4 +1,5 @@
 import { hydrateMockSearchList } from '../../../helpers/general';
+import { sdgSKs } from '../testing/records';
 
 const publicationTypeListJournalArticle = {
     'total': 2,
@@ -376,47 +377,7 @@ const publicationTypeListJournalArticle = {
                     'rek_subject_lookup': '2910 Issues, ethics and legal aspects',
                 },
             ],
-            "fez_record_search_key_sdg": [
-                {
-                    "rek_sdg": 456994,
-                    "rek_sdg_order": 1,
-                    "rek_sdg_lookup": "01 - No poverty"
-                },
-                {
-                    "rek_sdg": 456995,
-                    "rek_sdg_order": 2,
-                    "rek_sdg_lookup": "02 - Zero Hunger"
-                }
-            ],
-            "fez_record_search_key_sdg_source": [
-                {
-                    "rek_sdg_source": 460001,
-                    "rek_sdg_source_order": 1,
-                    "rek_sdg_source_lookup": "Dimensions",
-                    "sdg": {
-                        "cvo_id": 456994,
-                        "cvo_title": "01 - No poverty",
-                    }
-                },
-                {
-                    "rek_sdg_source": 460002,
-                    "rek_sdg_source_order": 2,
-                    "rek_sdg_source_lookup": "Incites",
-                    "sdg": {
-                        "cvo_id": 456994,
-                        "cvo_title": "01 - No poverty",
-                    }
-                },
-                {
-                    "rek_sdg_source": 460003,
-                    "rek_sdg_source_order": 3,
-                    "rek_sdg_source_lookup": "Dimensions",
-                    "sdg": {
-                        "cvo_id": 456995,
-                        "cvo_title": "02 - Zero Hunger",
-                    }
-                }
-            ],
+            ...sdgSKs,
             'fez_record_search_key_total_pages': '13',
             'fez_record_search_key_volume_number': '20',
             'fez_datastream_info': [

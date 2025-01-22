@@ -20,6 +20,7 @@ import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZUL
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
 
 export const formatDate = (date, format = 'YYYY-MM-DD') => {
     return <DateCitationView format={format} date={date} prefix={''} suffix={''} data-testid="rek-date" />;
@@ -260,23 +261,27 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <Box component={'ul'} key="rek-sdg" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                 {sdg.map((item, index) => (
                     <li key={`rek-sdg-${item.rek_sdg}-${index}`} data-testid={`rek-sdg-${item.rek_sdg}-${index}`}>
-                        {renderLink(
-                            pathConfig.list.sustainableDevelopmentGoal(item.rek_sdg, item.rek_sdg_lookup),
-                            item.rek_sdg_lookup,
-                        )}
-                        <ul>
-                            {sdgSource.map(
-                                (source, index) =>
-                                    source.sdg.cvo_id === item.rek_sdg && (
-                                        <li
-                                            key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                            data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                        >
-                                            {source.rek_sdg_source_lookup}
-                                        </li>
-                                    ),
+                        <span style={{ marginRight: '2px' }}>
+                            {renderLink(
+                                pathConfig.list.sustainableDevelopmentGoal(item.rek_sdg, item.rek_sdg_lookup),
+                                item.rek_sdg_lookup,
                             )}
-                        </ul>
+                        </span>
+                        {sdgSource.map((source, index) => {
+                            if (source.sdg.cvo_id !== item.rek_sdg) return null;
+                            const icon = source?.rek_sdg_source_lookup?.toLowerCase?.();
+                            if (!icon) return null;
+                            return (
+                                <Tooltip title={source?.rek_sdg_source_lookup}>
+                                    <span
+                                        key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                        data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                        className={`fez-icon ${icon} medium`}
+                                        style={{ margin: '0 4px' }}
+                                    />
+                                </Tooltip>
+                            );
+                        })}
                     </li>
                 ))}
             </Box>

@@ -1,4 +1,4 @@
-const sdgSKs = {
+export const sdgSKs = {
     "fez_record_search_key_sdg": [
         {
             "rek_sdg": 456994,
@@ -9,6 +9,11 @@ const sdgSKs = {
             "rek_sdg": 456995,
             "rek_sdg_order": 2,
             "rek_sdg_lookup": "02 - Zero Hunger"
+        },
+        {
+            "rek_sdg": 456996,
+            "rek_sdg_order": 2,
+            "rek_sdg_lookup": "03 - Good health and well-being"
         }
     ],
     "fez_record_search_key_sdg_source": [
@@ -24,7 +29,7 @@ const sdgSKs = {
         {
             "rek_sdg_source": 460002,
             "rek_sdg_source_order": 2,
-            "rek_sdg_source_lookup": "Incites",
+            "rek_sdg_source_lookup": "WOS",
             "sdg": {
                 "cvo_id": 456994,
                 "cvo_title": "01 - No poverty",
@@ -37,6 +42,15 @@ const sdgSKs = {
             "sdg": {
                 "cvo_id": 456995,
                 "cvo_title": "02 - Zero Hunger",
+            }
+        },
+        {
+            "rek_sdg_source": 460004,
+            "rek_sdg_source_order": 4,
+            "rek_sdg_source_lookup": "Elsevier",
+            "sdg": {
+                "cvo_id": 456996,
+                "cvo_title": "03 - Good health and well-being",
             }
         }
     ],
