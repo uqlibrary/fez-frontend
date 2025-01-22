@@ -182,7 +182,7 @@ context('As an admin, I can', () => {
             authorName: 'Steve Su (uqysu4)',
             orgName: 'The University of Queensland',
             rowId: 0,
-            ntro: true
+            ntro: true,
         });
     });
 });
