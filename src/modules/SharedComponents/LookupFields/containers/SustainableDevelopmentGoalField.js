@@ -51,7 +51,6 @@ const SustainableDevelopmentGoalField = props => {
         <AutoCompleteAsynchronousField
             id="sustainable-development-goal-input"
             autoCompleteAsynchronousFieldId={'rek-sustainable-development-goal'}
-            onChange={props.input.onChange}
             errorText={props.meta ? props.meta.error : props.errorText}
             error={props.meta ? !!props.meta.error : !!props.error || null}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
@@ -62,7 +61,8 @@ const SustainableDevelopmentGoalField = props => {
             OptionTemplate={FoROptionTemplate}
             groupBy={option => option.group}
             onChange={value => props.input?.onChange({ ...value, value: `${value.group} - ${value.value}` })}
-            clearOptionOnClose={false}
+            onClear={() => {}}
+            clearSuggestionsOnClose={false}
             loadSuggestions={loadSuggestions}
             {...props}
         />
