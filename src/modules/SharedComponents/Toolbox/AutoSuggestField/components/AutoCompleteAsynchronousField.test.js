@@ -169,13 +169,13 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(getByText('hello')).toBeInTheDocument();
     });
 
-    it('should not clear internal `options` state on close when clearOptionOnClose is set to false', async () => {
+    it('should not remove provided suggestions on close when clearSuggestionsOnClose is set to false', async () => {
         const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
 
         const { getByTestId } = setup({
             itemsList: ['cherry', 'chevy'],
             itemsLoading: false,
-            clearOptionOnClose: false,
+            clearSuggestionsOnClose: false,
             groupBy: () => null,
             OptionTemplate,
             getOptionLabel: () => '',
