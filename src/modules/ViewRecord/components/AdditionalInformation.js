@@ -138,7 +138,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         const licenseLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqLicenseLinkText =
             licenseLink && licenseLink.className.indexOf('uq') === 0
-                ? locale.viewRecord.sections.additionalInformation.licenseLinkText
+                ? locale.viewRecord.sections.additionalInformation.license.link.text
                 : null;
         const licenseLinkDetails = CURRENT_LICENCES.filter(licence => {
             return cvoId === licence.value;
@@ -256,35 +256,64 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         if (!sdg?.length || !sdgSource?.length) {
             return null;
         }
+        const link = locale.viewRecord.sections.additionalInformation.sdg.link;
 
         return (
-            <Box component={'ul'} key="rek-sdg" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {sdg.map((item, index) => (
-                    <li key={`rek-sdg-${item.rek_sdg}-${index}`} data-testid={`rek-sdg-${item.rek_sdg}-${index}`}>
-                        <span style={{ marginRight: '2px' }}>
-                            {renderLink(
-                                pathConfig.list.sustainableDevelopmentGoal(item.rek_sdg, item.rek_sdg_lookup),
-                                item.rek_sdg_lookup,
-                            )}
-                        </span>
-                        {sdgSource.map((source, index) => {
-                            if (source.sdg.cvo_id !== item.rek_sdg) return null;
-                            const icon = source?.rek_sdg_source_lookup?.toLowerCase?.();
-                            if (!icon) return null;
+            <>
+                <Box component={'ul'} key="rek-sdg" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                    {sdg
+                        .sort((a, b) => a.rek_sdg - b.rek_sdg)
+                        .map((item, index) => {
+                            /* istanbul ignore next */
+                            if (!item?.rek_sdg || !item?.rek_sdg_lookup) return null;
                             return (
-                                <Tooltip title={source?.rek_sdg_source_lookup}>
-                                    <span
-                                        key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                        data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                        className={`fez-icon ${icon} medium`}
-                                        style={{ margin: '0 4px' }}
-                                    />
-                                </Tooltip>
+                                <li
+                                    key={`rek-sdg-${item.rek_sdg}-${index}`}
+                                    data-testid={`rek-sdg-${item.rek_sdg}-${index}`}
+                                >
+                                    <span style={{ marginRight: '2px' }}>
+                                        {renderLink(
+                                            pathConfig.list.sustainableDevelopmentGoal(
+                                                item.rek_sdg,
+                                                item.rek_sdg_lookup,
+                                            ),
+                                            item.rek_sdg_lookup,
+                                        )}
+                                    </span>
+                                    {sdgSource
+                                        .sort((a, b) => a.rek_sdg_source - b.rek_sdg_source)
+                                        .map((source, index) => {
+                                            /* istanbul ignore next */
+                                            if (
+                                                !source?.rek_sdg_source ||
+                                                !source?.rek_sdg_source_lookup ||
+                                                source?.sdg?.cvo_id !== item.rek_sdg
+                                            ) {
+                                                return null;
+                                            }
+                                            const icon = source.rek_sdg_source_lookup.toLowerCase?.().trim();
+                                            /* istanbul ignore next */
+                                            if (!icon) return null;
+                                            return (
+                                                <Tooltip title={source.rek_sdg_source_lookup}>
+                                                    <span
+                                                        key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                                        data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
+                                                        className={`fez-icon ${icon} medium`}
+                                                        style={{ margin: '0 4px' }}
+                                                    />
+                                                </Tooltip>
+                                            );
+                                        })}
+                                </li>
                             );
                         })}
-                    </li>
-                ))}
-            </Box>
+                </Box>
+                <p />
+                <ExternalLink href={link.url} openInNewIcon id="rek-sdg">
+                    {link.text}
+                </ExternalLink>
+            </>
         );
     };
 

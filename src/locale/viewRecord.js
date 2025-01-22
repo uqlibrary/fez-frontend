@@ -19,7 +19,17 @@ export default {
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
-                licenseLinkText: 'View license details',
+                license: {
+                    link: {
+                        text: 'View license details',
+                    },
+                },
+                sdg: {
+                    link: {
+                        text: 'View goals details',
+                        url: 'https://sdgs.un.org/goals',
+                    },
+                },
             },
             relatedPublications: {
                 title: 'Related works and datasets in eSpace',
@@ -150,7 +160,7 @@ export default {
                 fez_record_search_key_total_chapters: 'Total chapters',
                 fez_record_search_key_language: 'Language',
                 fez_record_search_key_subject: 'Subject(s)',
-                fez_record_search_key_sdg_source: 'SDG(s)',
+                fez_record_search_key_sdg_source: 'Sustainable Development Goal(s)',
                 fez_record_search_key_journal_name: 'Journal name',
                 fez_record_search_key_language_of_journal_name: 'Language of journal name',
                 fez_record_search_key_translated_journal_name: 'Translated journal name',
