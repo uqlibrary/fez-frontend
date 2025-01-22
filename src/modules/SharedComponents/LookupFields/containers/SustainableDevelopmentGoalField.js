@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useCallback, useMemo, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -69,8 +70,7 @@ const SustainableDevelopmentGoalField = props => {
 };
 
 SustainableDevelopmentGoalField.propTypes = {
-    input: PropTypes.object,
-    ...PropTypes.any,
+    props: PropTypes.object,
 };
 
 export default SustainableDevelopmentGoalField;
