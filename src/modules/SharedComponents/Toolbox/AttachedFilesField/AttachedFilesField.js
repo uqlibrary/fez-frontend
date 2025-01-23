@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
+
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
 
@@ -62,15 +64,28 @@ export const handleOnChange = (dataStreams, onChange) => {
     onChange(dataStreams);
 };
 
-export const AttachedFilesField = ({ input, ...props }) => {
-    const { formValues, onDeleteAttachedFile, onRenameAttachedFile } = useFormValuesContext();
+export const AttachedFilesField = ({ input, onRenameAttachedFile, ...props }) => {
+    const { getValues } = useFormContext();
+    const formValues = getValues('filesSection');
+    const { onDeleteAttachedFile } = useFormValuesContext();
+    const prevDatastream = React.useRef();
 
-    const [dataStreams, setDataStreams] = useState(() => {
-        return !!formValues.fez_datastream_info
+    const getState = () =>
+        !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
             : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
-    });
 
+    const [dataStreams, setDataStreams] = useState(getState);
+    const newDataStreams = getState();
+    const newDataStreamsString = JSON.stringify(newDataStreams);
+    if (newDataStreamsString !== prevDatastream.current) {
+        console.log('dataStreams changed', dataStreams, prevDatastream.current, newDataStreams);
+
+        prevDatastream.current = newDataStreamsString;
+        setDataStreams(newDataStreams);
+    }
+
+    console.log(formValues, formValues.fez_datastream_info, dataStreams);
     const { onChange } = input;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
@@ -85,6 +100,11 @@ export const AttachedFilesField = ({ input, ...props }) => {
         return handleOnChange(dataStreams, onChange);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dataStreams]);
+
+    if (!Array.isArray(formValues.fez_datastream_info)) {
+        console.log('return null');
+        return <></>;
+    }
 
     return (
         <AttachedFiles
@@ -103,5 +123,6 @@ export const AttachedFilesField = ({ input, ...props }) => {
 
 AttachedFilesField.propTypes = {
     input: PropTypes.object,
+    onRenameAttachedFile: PropTypes.func.isRequired,
     meta: PropTypes.object,
 };
