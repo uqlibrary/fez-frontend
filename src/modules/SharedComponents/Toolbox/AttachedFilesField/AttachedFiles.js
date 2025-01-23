@@ -252,12 +252,10 @@ export const AttachedFiles = ({
     const isAuthor = userIsAuthor();
     const { getValues } = useFormContext();
     const formValues = getValues('filesSection');
-    console.log(formValues);
     const isAdminEditing = isAdmin && canEdit;
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
-    console.log(fileData, openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
 
     if (fileData.length === 0) return null;
 

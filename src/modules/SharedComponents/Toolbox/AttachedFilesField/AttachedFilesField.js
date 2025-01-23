@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 
 import { AttachedFiles } from './AttachedFiles';
-import { useFormValuesContext } from 'context';
 
 export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
     const callback = key => {
@@ -64,10 +63,9 @@ export const handleOnChange = (dataStreams, onChange) => {
     onChange(dataStreams);
 };
 
-export const AttachedFilesField = ({ input, onRenameAttachedFile, ...props }) => {
+export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttachedFile, ...props }) => {
     const { getValues } = useFormContext();
     const formValues = getValues('filesSection');
-    const { onDeleteAttachedFile } = useFormValuesContext();
     const prevDatastream = React.useRef();
 
     const getState = () =>
@@ -124,5 +122,6 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, ...props }) =>
 AttachedFilesField.propTypes = {
     input: PropTypes.object,
     onRenameAttachedFile: PropTypes.func.isRequired,
+    onDeleteAttachedFile: PropTypes.func.isRequired,
     meta: PropTypes.object,
 };
