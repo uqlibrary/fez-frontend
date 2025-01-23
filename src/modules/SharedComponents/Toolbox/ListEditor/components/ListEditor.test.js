@@ -562,5 +562,13 @@ describe('ListEditor tests', () => {
                 { key: 'http://www.testing.com', value: 'testing site' },
             ]);
         });
+
+        it('should call given onAddItem function', () => {
+            const onAddItem = jest.fn();
+            const item = { key: 'http://www.test.com', value: 'test link' };
+            const instance = getInstance({ maxCount: 0, distinctOnly: true, onAddItem });
+            instance.addItem(item);
+            expect(onAddItem).toHaveBeenCalledWith({ itemList: [item] });
+        });
     });
 });

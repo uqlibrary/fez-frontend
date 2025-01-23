@@ -1409,6 +1409,129 @@ exports[`Additional Information Component  should not render map with empty geo 
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-transcript-label"
               >
                 Transcript
@@ -3033,6 +3156,129 @@ exports[`Additional Information Component  should render component with audio do
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-transcript-label"
               >
                 Transcript
@@ -3566,6 +3812,129 @@ exports[`Additional Information Component  should render component with book 1`]
                 >
                   158
                 </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
@@ -4472,6 +4841,129 @@ exports[`Additional Information Component  should render component with book cha
             </div>
           </div>
         </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -5295,6 +5787,129 @@ exports[`Additional Information Component  should render component with conferen
                     eng
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
@@ -11572,6 +12187,129 @@ exports[`Additional Information Component  should render component with design d
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-job-number-label"
               >
                 Job number
@@ -13020,6 +13758,129 @@ exports[`Additional Information Component  should render component with journal 
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
@@ -15099,6 +15960,129 @@ exports[`Additional Information Component  should render component with newspape
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-notes-label"
               >
                 Additional notes
@@ -15518,6 +16502,129 @@ exports[`Additional Information Component  should render component with patent 1
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
@@ -19295,6 +20402,129 @@ exports[`Additional Information Component  should render component with research
             >
               <span
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-notes-label"
               >
                 Additional notes
@@ -20101,6 +21331,129 @@ exports[`Additional Information Component  should render component with video do
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
@@ -23085,6 +24438,129 @@ exports[`Additional Information Component  should render map with geo coordinate
                     </a>
                   </li>
                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-sdg-source-label"
+              >
+                Sustainable Development Goal(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-sdg-456994-0"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460001-0"
+                      style="margin: 0px 4px;"
+                    />
+                    <span
+                      aria-label="WOS"
+                      class="fez-icon wos medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456994-460002-1"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456995-1"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Dimensions"
+                      class="fez-icon dimensions medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456995-460003-2"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                  <li
+                    data-testid="rek-sdg-456996-2"
+                  >
+                    <span
+                      style="margin-right: 2px;"
+                    >
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
+                    </span>
+                    <span
+                      aria-label="Elsevier"
+                      class="fez-icon elsevier medium"
+                      data-mui-internal-clone-element="true"
+                      data-testid="rek-sdg-source-456996-460004-3"
+                      style="margin: 0px 4px;"
+                    />
+                  </li>
+                </ul>
+                <p />
+                <a
+                  class=" css-1oqhn84"
+                  data-analyticsid="rek-sdg-link"
+                  data-testid="rek-sdg-link"
+                  href="https://sdgs.un.org/goals"
+                  id="rek-sdg-link"
+                  rel="noopener noreferrer"
+                  tabindex="0"
+                  target="_blank"
+                  title="Link to https://sdgs.un.org/goals will open in a new window."
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                    data-testid="OpenInNewIcon"
+                    focusable="false"
+                    id="rek-sdg-link-new-window-icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                    />
+                  </svg>
+                  View goals details
+                </a>
               </span>
             </div>
           </div>
