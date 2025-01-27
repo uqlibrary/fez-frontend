@@ -663,10 +663,10 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-title-input')).toHaveAttribute('value', 'Mr.');
         expect(getByTestId('aut-description-input')).toHaveTextContent('Added position. Updated name');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-fname-input'));
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-lname-input'));
 
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
