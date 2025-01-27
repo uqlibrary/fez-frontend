@@ -1,6 +1,6 @@
 import React from 'react';
 import { AttachedFilesField } from './AttachedFilesField';
-import { rtlRender, WithReduxStore, FormProviderWrapper, cleanup, userEvent, preview } from 'test-utils';
+import { rtlRender, WithReduxStore, FormProviderWrapper, cleanup, userEvent } from 'test-utils';
 
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 
