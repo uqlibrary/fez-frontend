@@ -538,7 +538,7 @@ describe('ManageAuthors', () => {
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
 
-        // const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+        const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
         const { getByTestId } = setup();
 
@@ -556,6 +556,8 @@ describe('ManageAuthors', () => {
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
 
+        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
+
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => getByTestId('aut-name-overridden'));
@@ -565,7 +567,7 @@ describe('ManageAuthors', () => {
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 
-        // await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
+        await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
     });
