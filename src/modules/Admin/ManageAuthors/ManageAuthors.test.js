@@ -14,6 +14,7 @@ import { checkForExisting } from './helpers';
 
 jest.mock('js-cookie');
 import Cookie from 'js-cookie';
+import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
@@ -530,10 +531,10 @@ describe('ManageAuthors', () => {
 
     it('should validate inputs and render added info after adding', async () => {
         mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
+            .onGet(/.*/)
+            .reply(config => {
+                console.log('$$$config.url=', config.url);
+                return [200, { data: [], total: 0 }];
             })
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
@@ -550,8 +551,9 @@ describe('ManageAuthors', () => {
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
@@ -561,7 +563,6 @@ describe('ManageAuthors', () => {
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => getByTestId('aut-name-overridden'));
-        // preview.debug();
 
         fireEvent.click(getByTestId('aut-name-overridden'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));

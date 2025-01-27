@@ -47,6 +47,9 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
+    console.log('$$isDirty', isDirty);
+    console.log('$$errors=', errors);
+    // console.log('disableSubmit || submitting || disabled', disableSubmit, submitting, disabled);
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },

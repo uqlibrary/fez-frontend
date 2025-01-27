@@ -3,7 +3,6 @@ import { default as locale } from 'locale/components';
 
 /* istanbul ignore next */
 export const checkForExisting = (values, dispatch, props, field) => {
-    console.log('values', values);
     dispatch(
         checkForExistingAuthor(
             values.get(field),
