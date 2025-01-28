@@ -245,48 +245,67 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org student id input for existing org student id and display error message', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
-            data: [],
-            total: 0,
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            })
+
+            .onGet(new RegExp('^fez-authors/search'), { params: { query: '12345678', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [
+                    {
+                        id: 123,
+                        aut_id: 1234,
+                        aut_org_student_id: '12345678',
+                    },
+                ],
+                total: 1,
+            })
+            .onGet(new RegExp('^fez-authors/search'), { params: { query: '12345679', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            });
+        mockApi.onGet(/.*/).reply(config => {
+            console.log('$$$config.url=', config.url);
+            return [200, { data: [], total: 0 }];
         });
-        const { getByTestId, getByText } = setup();
+
+        const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345678' } });
+        await userEvent.type(getByTestId('aut-org-student-id-input'), '12345678');
 
-        checkForExisting.mockImplementationOnce(
-            jest.fn(() =>
-                Promise.reject({
-                    aut_org_student_id: 'The supplied Organisation Student ID is already on file for another author.',
-                }),
-            ),
-        );
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await waitFor(() =>
-            expect(
-                getByText('The supplied Organisation Student ID is already on file for another author.'),
-            ).toBeInTheDocument(),
-        );
+        await waitFor(() => {
+            const messages = queryAllByText(
+                'The supplied Organisation Student ID is already on file for another author.',
+            );
+            expect(messages.length).toBeGreaterThan(0);
+            messages.forEach(message => expect(message).toBeInTheDocument());
+        });
 
         expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
+        await fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-
+        preview.debug();
         await waitFor(() => {
             expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'false');
             expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
