@@ -85,6 +85,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     }, [JSON.stringify(watchedFields)]);
 
     const validateField = async (field, value, autId, asyncErrors) => {
+        console.log('$$$async validateField', field, value, autId, asyncErrors);
         try {
             await dispatch(
                 checkForExistingAuthor(
@@ -95,8 +96,10 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                     asyncErrors,
                 ),
             );
+            console.log('$$$clearErrors', field);
             clearErrors(field); // Clear errors if validation passes
         } catch (error) {
+            console.log('$$$error', error);
             setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
             throw error; // Propagate error to caller
         }

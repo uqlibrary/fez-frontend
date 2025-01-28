@@ -1,7 +1,9 @@
+import { preview } from 'test-utils';
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
 import { render, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as repository from 'repositories';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('./helpers', () => ({
     checkForExisting: jest.fn(),
@@ -47,48 +49,75 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input for existing org username', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
-            data: [],
-            total: 0,
-        });
+        mockApi
+            .onGet(new RegExp(`^${repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl}`))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            })
+            .onGet(new RegExp('^fez-authors/search'))
+            .replyOnce(200, {
+                data: [
+                    {
+                        id: 7639720,
+                        value: 'Test, Test (uqtest)',
+                        aut_id: 7639720,
+                        aut_org_username: 'uqtest',
+                        aut_title: 'Mr',
+                        aut_fname: 'Test',
+                        aut_lname: 'Test',
+                        aut_org_staff_id: '5012120',
+                        aut_display_name: 'Test, Test',
+                    },
+                ],
+                total: 1,
+            });
 
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        userEvent.click(getByTestId('authors-add-new-author'));
+
+        await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
 
-        checkForExisting.mockImplementationOnce(
-            jest.fn(() =>
-                Promise.reject({
-                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
-                }),
-            ),
-        );
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
+        preview.debug();
 
-        await waitFor(() =>
-            expect(
-                getByText('The supplied Organisation Username is already on file for another author.'),
-            ).toBeInTheDocument(),
-        );
+        // checkForExisting.mockImplementationOnce(
+        //     jest.fn(() =>
+        //         Promise.reject({
+        //             aut_org_username: 'The supplied Organisation Username is already on file for another author.',
+        //         }),
+        //     ),
+        // );
+
+        await waitFor(() => {
+            const messages = queryAllByText(
+                'The supplied Organisation Username is already on file for another author.',
+            );
+            expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
+            messages.forEach(message => expect(message).toBeInTheDocument());
+        });
 
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
+        userEvent.clear(getByTestId('aut-org-username-input'));
+        userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
