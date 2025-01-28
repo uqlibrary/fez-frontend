@@ -749,7 +749,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
+        await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -765,18 +765,16 @@ describe('ManageAuthors', () => {
 
         expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        // act(() => {
-        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
-        // });
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-scopus-id-input'), '1234-543');
+        await userEvent.type(getByTestId('aut-org-student-id-input'), '1234564');
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
-        fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
-        fireEvent.click(getByTestId('authors-update-this-author-save'));
+        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
+        await userEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
+        await userEvent.click(getByTestId('authors-update-this-author-save'));
 
         await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
