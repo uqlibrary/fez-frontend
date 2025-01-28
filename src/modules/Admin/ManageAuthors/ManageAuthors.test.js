@@ -648,6 +648,10 @@ describe('ManageAuthors', () => {
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name', aut_org_username: 'uqtname' } });
+        mockApi.onGet(/.*/).reply(config => {
+            console.log('$$$config.url=', config.url);
+            return [200, { data: [], total: 0 }];
+        });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -655,7 +659,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
+        await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -671,16 +675,14 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-scopus-id-input'), '1234-543');
+        await userEvent.type(getByTestId('aut-org-student-id-input'), '1234564');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
+        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
