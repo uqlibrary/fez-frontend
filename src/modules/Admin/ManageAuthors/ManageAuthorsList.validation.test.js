@@ -515,6 +515,10 @@ describe('ManageAuthorsList', () => {
             ],
             total: 1,
         });
+        mockApi.onGet(/.*/).reply(config => {
+            console.log('$$$config.url=', config.url);
+            return [200, { data: [], total: 0 }];
+        });
         const { getAllByTestId, getByTestId, getByText } = setup({
             onRowUpdate: jest.fn(() => Promise.reject({ code: 500 })),
         });
@@ -524,9 +528,9 @@ describe('ManageAuthorsList', () => {
         const tableRows = getAllByTestId('mtablebodyrow');
         expect(tableRows.length).toBe(1);
         fireEvent.click(tableRows[0]);
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
-        fireEvent.click(getByTestId('authors-update-this-author-save'));
+        await userEvent.click(getByTestId('authors-update-this-author-save'));
 
         await waitFor(() => expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Asai'));
     });
