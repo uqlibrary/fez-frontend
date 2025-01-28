@@ -5,7 +5,7 @@ import { fireEvent, rtlRender } from 'test-utils';
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         allowPartial: false,
-        partialDateFieldId: 'test',
+        partialDateFormId: 'test',
         classes: testProps.classes || {
             hideLabel: 'hidden',
         },
