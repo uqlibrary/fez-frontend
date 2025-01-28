@@ -1,4 +1,3 @@
-import { preview } from 'test-utils';
 import React from 'react';
 import ManageAuthors from './index';
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
@@ -531,9 +530,8 @@ describe('ManageAuthors', () => {
 
     it('should validate inputs and render added info after adding', async () => {
         mockApi
-            .onGet(/.*/)
-            .reply(config => {
-                console.log('$$$config.url=', config.url);
+            .onGet(/fez-authors\/search/)
+            .reply(() => {
                 return [200, { data: [], total: 0 }];
             })
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
@@ -648,8 +646,7 @@ describe('ManageAuthors', () => {
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name', aut_org_username: 'uqtname' } });
-        mockApi.onGet(/.*/).reply(config => {
-            console.log('$$$config.url=', config.url);
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
             return [200, { data: [], total: 0 }];
         });
 
@@ -738,8 +735,7 @@ describe('ManageAuthors', () => {
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(500);
-        mockApi.onGet(/.*/).reply(config => {
-            console.log('$$$config.url=', config.url);
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
             return [200, { data: [], total: 0 }];
         });
 
