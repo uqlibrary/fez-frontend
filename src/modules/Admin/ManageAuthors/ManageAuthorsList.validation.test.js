@@ -59,14 +59,13 @@ describe('ManageAuthorsList', () => {
             .replyOnce(200, {
                 data: [
                     {
-                        id: 7639720,
+                        id: 123,
                         value: 'Test, Test (uqtest)',
-                        aut_id: 7639720,
+                        aut_id: 1234,
                         aut_org_username: 'uqtest',
-                        aut_title: 'Mr',
                         aut_fname: 'Test',
                         aut_lname: 'Test',
-                        aut_org_staff_id: '5012120',
+                        aut_org_staff_id: '123',
                         aut_display_name: 'Test, Test',
                     },
                 ],
@@ -93,7 +92,6 @@ describe('ManageAuthorsList', () => {
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
-        preview.debug();
 
         // checkForExisting.mockImplementationOnce(
         //     jest.fn(() =>
@@ -126,40 +124,47 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate student username input for existing student username', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
-            data: [],
-            total: 0,
-        });
-        const { getByTestId, getByText } = setup();
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            })
+            .onGet(new RegExp('^fez-authors/search'))
+            .replyOnce(200, {
+                data: [
+                    {
+                        id: 123,
+                        aut_id: 1234,
+                        aut_org_username: 'uqtest',
+                        aut_student_username: 's1234567',
+                    },
+                ],
+                total: 1,
+            });
+        const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234567' } });
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        checkForExisting.mockImplementationOnce(
-            jest.fn(() =>
-                Promise.reject({
-                    aut_student_username: 'The supplied Student username is already on file for another author.',
-                }),
-            ),
-        );
-
-        await waitFor(() =>
-            expect(
-                getByText('The supplied Student username is already on file for another author.'),
-            ).toBeInTheDocument(),
-        );
+        await waitFor(() => {
+            const messages = queryAllByText('The supplied Student username is already on file for another author.');
+            expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
+            messages.forEach(message => expect(message).toBeInTheDocument());
+        });
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
