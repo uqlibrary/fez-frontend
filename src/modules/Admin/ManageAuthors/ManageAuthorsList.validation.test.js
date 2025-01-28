@@ -268,10 +268,10 @@ describe('ManageAuthorsList', () => {
                 data: [],
                 total: 0,
             });
-        mockApi.onGet(/.*/).reply(config => {
-            console.log('$$$config.url=', config.url);
-            return [200, { data: [], total: 0 }];
-        });
+        // mockApi.onGet(/.*/).reply(config => {
+        //     console.log('$$$config.url=', config.url);
+        //     return [200, { data: [], total: 0 }];
+        // });
 
         const { getByTestId, getByText, queryAllByText } = setup();
 
@@ -397,6 +397,7 @@ describe('ManageAuthorsList', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
+        preview.debug();
         const tableRows = getAllByTestId('mtablebodyrow');
         expect(tableRows.length).toBe(2);
 
