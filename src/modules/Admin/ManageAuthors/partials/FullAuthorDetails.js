@@ -47,9 +47,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
-    console.log('$$isDirty', isDirty);
-    console.log('$$errors=', errors);
-    // console.log('disableSubmit || submitting || disabled', disableSubmit, submitting, disabled);
 
     const {
         form: { deleteConfirmationLocale, editButton, cancelButton, addButton },
@@ -85,7 +82,6 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     }, [JSON.stringify(watchedFields)]);
 
     const validateField = async (field, value, autId, asyncErrors) => {
-        console.log('$$$async validateField', field, value, autId, asyncErrors);
         try {
             await dispatch(
                 checkForExistingAuthor(
@@ -96,10 +92,8 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                     asyncErrors,
                 ),
             );
-            console.log('$$$clearErrors', field);
             clearErrors(field); // Clear errors if validation passes
         } catch (error) {
-            console.log('$$$error', error);
             setError(field, { type: 'manual', message: error.message }); // Set error if validation fails
             throw error; // Propagate error to caller
         }

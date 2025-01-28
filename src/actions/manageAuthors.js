@@ -147,13 +147,11 @@ export function addAuthor(data) {
 }
 
 export function checkForExistingAuthor(search, searchField, id, validation, asyncErrors) {
-    console.log('$$$checkForExistingAuthor');
     let exceptionCaught = true;
     return async dispatch => {
         dispatch({ type: CHECKING_EXISTING_AUTHOR });
         return get(AUTHORS_SEARCH_API({ query: search }))
             .then(response => {
-                console.log('$$$response=', response);
                 exceptionCaught = false;
                 if (
                     response.total > 0 &&
@@ -162,7 +160,6 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
                     dispatch({
                         type: EXISTING_AUTHOR_FOUND,
                     });
-                    console.log('$$$EXISTING_AUTHOR_FOUND return reject');
                     return Promise.reject(
                         createSentryFriendlyError(validation[searchField], {
                             ...asyncErrors,
