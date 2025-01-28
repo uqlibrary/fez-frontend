@@ -585,17 +585,17 @@ describe('ManageAuthors', () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
         const { getByTestId, queryByTestId } = setup({});
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
-        fireEvent.click(getByTestId('authors-add-this-author-save'));
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
