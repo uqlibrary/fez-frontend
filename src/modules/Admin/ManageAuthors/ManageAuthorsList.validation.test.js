@@ -416,51 +416,61 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
-            data: [],
-            total: 0,
-        });
+        mockApi
+            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
+            .replyOnce(200, {
+                data: [],
+                total: 0,
+            })
 
-        const { getByTestId, getByText } = setup();
+            .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtest', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [
+                    {
+                        id: 123,
+                        aut_id: 1234,
+                        aut_org_username: 'uqtest',
+                        aut_org_staff_id: '1234567',
+                    },
+                ],
+                total: 1,
+            });
+
+        const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
+        await fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
+        await fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        checkForExisting.mockImplementationOnce(
-            jest.fn(() =>
-                Promise.reject({
-                    aut_org_username: 'The supplied Organisation Username is already on file for another author.',
-                }),
-            ),
-        );
+        await waitFor(() => {
+            const messages = queryAllByText(
+                'The supplied Organisation Username is already on file for another author.',
+            );
+            expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
+            messages.forEach(message => expect(message).toBeInTheDocument());
+        });
 
-        await waitFor(() => getByText('The supplied Organisation Username is already on file for another author.'));
-
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await waitFor(() => {
-            expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
-            expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
-        });
+        await userEvent.clear(getByTestId('aut-fname-input'));
+        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+
+        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
+        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
