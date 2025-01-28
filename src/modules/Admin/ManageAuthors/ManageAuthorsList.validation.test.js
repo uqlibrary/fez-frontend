@@ -1,4 +1,3 @@
-import { preview } from 'test-utils';
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
 import { render, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
@@ -55,7 +54,7 @@ describe('ManageAuthorsList', () => {
                 data: [],
                 total: 0,
             })
-            .onGet(new RegExp('^fez-authors/search'))
+            .onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl)
             .replyOnce(200, {
                 data: [
                     {
@@ -92,14 +91,6 @@ describe('ManageAuthorsList', () => {
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
-
-        // checkForExisting.mockImplementationOnce(
-        //     jest.fn(() =>
-        //         Promise.reject({
-        //             aut_org_username: 'The supplied Organisation Username is already on file for another author.',
-        //         }),
-        //     ),
-        // );
 
         await waitFor(() => {
             const messages = queryAllByText(
@@ -268,10 +259,6 @@ describe('ManageAuthorsList', () => {
                 data: [],
                 total: 0,
             });
-        // mockApi.onGet(/.*/).reply(config => {
-        //     console.log('$$$config.url=', config.url);
-        //     return [200, { data: [], total: 0 }];
-        // });
 
         const { getByTestId, getByText, queryAllByText } = setup();
 
@@ -305,7 +292,6 @@ describe('ManageAuthorsList', () => {
 
         await fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '12345679' } });
 
-        preview.debug();
         await waitFor(() => {
             expect(getByTestId('aut-org-student-id-input')).toHaveAttribute('aria-invalid', 'false');
             expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
@@ -397,7 +383,6 @@ describe('ManageAuthorsList', () => {
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
-        preview.debug();
         const tableRows = getAllByTestId('mtablebodyrow');
         expect(tableRows.length).toBe(2);
 
@@ -516,8 +501,7 @@ describe('ManageAuthorsList', () => {
             ],
             total: 1,
         });
-        mockApi.onGet(/.*/).reply(config => {
-            console.log('$$$config.url=', config.url);
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
             return [200, { data: [], total: 0 }];
         });
         const { getAllByTestId, getByTestId, getByText } = setup({
