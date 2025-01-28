@@ -192,7 +192,7 @@ const PartialDateForm = props => {
         hasError,
         input,
         meta,
-        partialDateFieldId,
+        partialDateFormId,
         clearable,
         value,
     } = props;
@@ -280,7 +280,7 @@ const PartialDateForm = props => {
     const isError = error || hasError || '';
 
     return (
-        <Grid container spacing={0} padding={0} id={partialDateFieldId}>
+        <Grid container spacing={0} padding={0} id={partialDateFormId}>
             <Grid xs={12}>
                 <InputLabel error={!!isError} shrink required={required}>
                     {floatingTitle}
@@ -292,7 +292,7 @@ const PartialDateForm = props => {
                         <TextField
                             name="day"
                             variant="standard"
-                            id={`${partialDateFieldId}-day`}
+                            id={`${partialDateFormId}-day`}
                             type="text"
                             fullWidth
                             disabled={disabled}
@@ -304,9 +304,9 @@ const PartialDateForm = props => {
                             inputProps={{
                                 label: 'day',
                                 maxLength: 2,
-                                id: `${partialDateFieldId}-day-input`,
-                                'data-analyticsid': `${partialDateFieldId}-day-input`,
-                                'data-testid': `${partialDateFieldId}-day-input`,
+                                id: `${partialDateFormId}-day-input`,
+                                'data-analyticsid': `${partialDateFormId}-day-input`,
+                                'data-testid': `${partialDateFormId}-day-input`,
                             }}
                             value={state?.day || ''}
                         />
@@ -316,7 +316,7 @@ const PartialDateForm = props => {
                         <Select
                             name="month"
                             variant="standard"
-                            id={`${partialDateFieldId}-month`}
+                            id={`${partialDateFormId}-month`}
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
@@ -326,19 +326,19 @@ const PartialDateForm = props => {
                             inputProps={{
                                 label: 'month',
                                 maxLength: 2,
-                                'data-analyticsid': `${partialDateFieldId}-month-input`,
-                                'data-testid': `${partialDateFieldId}-month-input`,
-                                id: `${partialDateFieldId}-month-input`,
+                                'data-analyticsid': `${partialDateFormId}-month-input`,
+                                'data-testid': `${partialDateFormId}-month-input`,
+                                id: `${partialDateFormId}-month-input`,
                             }}
                             SelectDisplayProps={{
-                                id: `${partialDateFieldId}-month-select`,
-                                'data-analyticsid': `${partialDateFieldId}-month-select`,
-                                'data-testid': `${partialDateFieldId}-month-select`,
+                                id: `${partialDateFormId}-month-select`,
+                                'data-analyticsid': `${partialDateFormId}-month-select`,
+                                'data-testid': `${partialDateFormId}-month-select`,
                             }}
                             MenuProps={{
-                                id: `${partialDateFieldId}-month-options`,
-                                'data-analyticsid': `${partialDateFieldId}-month-options`,
-                                'data-testid': `${partialDateFieldId}-month-options`,
+                                id: `${partialDateFormId}-month-options`,
+                                'data-analyticsid': `${partialDateFormId}-month-options`,
+                                'data-testid': `${partialDateFormId}-month-options`,
                             }}
                         >
                             <MenuItem key={-1} value={MONTH_UNSELECTED}>
@@ -351,7 +351,7 @@ const PartialDateForm = props => {
                         <TextField
                             name="year"
                             variant="standard"
-                            id={`${partialDateFieldId}-year`}
+                            id={`${partialDateFormId}-year`}
                             type="text"
                             fullWidth
                             disabled={disabled}
@@ -363,9 +363,9 @@ const PartialDateForm = props => {
                             inputProps={{
                                 label: 'year',
                                 maxLength: 4,
-                                id: `${partialDateFieldId}-year-input`,
-                                'data-analyticsid': `${partialDateFieldId}-year-input`,
-                                'data-testid': `${partialDateFieldId}-year-input`,
+                                id: `${partialDateFormId}-year-input`,
+                                'data-analyticsid': `${partialDateFormId}-year-input`,
+                                'data-testid': `${partialDateFormId}-year-input`,
                             }}
                             value={state?.year || ''}
                         />
@@ -394,7 +394,7 @@ PartialDateForm.propTypes = {
         // TODO - remove after RHF migration
         initial: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // added object type to avoid console errors
     }),
-    partialDateFieldId: PropTypes.string.isRequired,
+    partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };
 

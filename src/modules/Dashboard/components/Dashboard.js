@@ -366,7 +366,6 @@ const Dashboard = ({
                     </React.Fragment>
                 )}
                 {/* render charts/stats depending on availability of data */}
-                {/* render bar chart full width */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
                     <Grid item xs={12}>
                         {barChart}

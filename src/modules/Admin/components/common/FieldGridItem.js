@@ -8,7 +8,7 @@ import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
 import { useRecordContext } from 'context';
 
-export const FieldGridItem = ({ field, group, disabled }) => {
+export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
     const methods = useFormContext();
     if (!fieldConfig.default[field]) {
@@ -48,6 +48,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
                 {...componentProps}
                 {...(!!error ? { error: true, errorText: error } : {})}
                 value={methods.getValues(componentProps.name) ?? ''}
+                {...props}
             />
         </Grid>
     );

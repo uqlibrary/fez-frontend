@@ -45,35 +45,39 @@ import AuthorsSection from './authors/AuthorsSection';
 import GrantInformationSection from './grantInformation/GrantInformationSection';
 import NtroSection from './ntro/NtroSection';
 
-const useFormOnChangeHook = methods => {
-    const formValues = { ...useWatch({ control: methods.control }), ...methods.getValues() };
-    if (!!formValues.filesSection?.fez_datastream_info) {
-        const attachments = methods.getValues('journal.fez_record_search_key_file_attachment_name');
-        let updated = false;
-        formValues.filesSection.fez_datastream_info.forEach(file => {
-            if (!!file.dsi_dsid_new) {
-                const oldFileName = file.dsi_dsid_new;
-                const newFileName = file.dsi_dsid;
-                const originalFileAttachmentIndex = attachments.findIndex(file => {
-                    return file.rek_file_attachment_name === oldFileName;
-                });
-                if (originalFileAttachmentIndex > -1) {
-                    updated = true;
-                    // will be -1 if we've already done this operation before
-                    attachments[originalFileAttachmentIndex].rek_file_attachment_name = newFileName;
-                }
-            }
-        });
-        if (updated) {
-            methods.setValue('journal.fez_record_search_key_file_attachment_name', attachments);
-        }
-    }
+const useFormOnChangeHook = form => {
+    const formValues = useWatch({
+        control: form.control,
+        name: ['rek_display_type', 'adminSection.rek_subtype', 'bibliographicSection.rek_genre_type'],
+    });
+    // if (!!formValues.filesSection?.fez_datastream_info) {
+    //     const attachments = form.getValues('journal.fez_record_search_key_file_attachment_name');
+    //     let updated = false;
+    //     formValues.filesSection.fez_datastream_info.forEach(file => {
+    //         if (!!file.dsi_dsid_new) {
+    //             const oldFileName = file.dsi_dsid_new;
+    //             const newFileName = file.dsi_dsid;
+    //             const originalFileAttachmentIndex = attachments.findIndex(file => {
+    //                 return file.rek_file_attachment_name === oldFileName;
+    //             });
+    //             if (originalFileAttachmentIndex > -1) {
+    //                 updated = true;
+    //                 // will be -1 if we've already done this operation before
+    //                 attachments[originalFileAttachmentIndex].rek_file_attachment_name = newFileName;
+    //             }
+    //         }
+    //     });
+    //     if (updated) {
+    //         form.setValue('journal.fez_record_search_key_file_attachment_name', attachments);
+    //     }
+    // }
     if (
         formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
         !!formValues.adminSection?.rek_subtype &&
         !!!formValues.bibliographicSection?.rek_genre_type
     ) {
-        methods.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
+        console.log('updating bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
+        form.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
     }
 };
 
