@@ -1,6 +1,7 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Field, formValueSelector, change } from 'redux-form/immutable';
+import PropTypes from 'prop-types';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -16,12 +17,9 @@ import AuthorFieldData from './AuthorFieldData';
 import { default as locale } from 'locale/components';
 import pageLocale from 'locale/pages';
 import { validation } from 'config';
-import { FORM_NAME } from './manageAuthorConfig';
-
-const selector = formValueSelector(FORM_NAME);
 
 export const ResearcherIdentifierData = () => {
-    const dispatch = useDispatch();
+    const { control, watch, setValue } = useFormContext();
     const {
         editRow: {
             fields: {
@@ -39,24 +37,26 @@ export const ResearcherIdentifierData = () => {
 
     const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
 
-    const autIsScopusIdAuthenticated = useSelector(state => selector(state, 'aut_is_scopus_id_authenticated'));
-    const autIsOrcidSyncEnabled = useSelector(state => selector(state, 'aut_is_orcid_sync_enabled'));
-    const autOrcidId = useSelector(state => selector(state, 'aut_orcid_id'));
-    const autScopusId = useSelector(state => selector(state, 'aut_scopus_id'));
-    const autGoogleScholarId = useSelector(state => selector(state, 'aut_google_scholar_id'));
+    const [autScopusId, autOrcidId, autIsScopusIdAuthenticated, autIsOrcidSyncEnabled] = watch([
+        'aut_scopus_id',
+        'aut_orcid_id',
+        'aut_is_scopus_id_authenticated',
+        'aut_is_orcid_sync_enabled',
+    ]);
 
     const handleIsScopusIDAuthenticated = () => {
-        dispatch(change(FORM_NAME, 'aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated)));
+        setValue('aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated), { shouldDirty: true });
     };
 
     const handleIsOrcidSyncEnabled = () => {
-        dispatch(change(FORM_NAME, 'aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled)));
+        setValue('aut_is_orcid_sync_enabled', Number(!autIsOrcidSyncEnabled), { shouldDirty: true });
     };
 
     return (
         <StandardCard subCard title="Researcher identifiers" smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-researcher-id"
                     name="aut_researcher_id"
@@ -64,6 +64,7 @@ export const ResearcherIdentifierData = () => {
                     {...researcherId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-scopus-id"
                     name="aut_scopus_id"
@@ -106,13 +107,15 @@ export const ResearcherIdentifierData = () => {
                     }}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-google-scholar-id"
                     name="aut_google_scholar_id"
-                    {...(!!autGoogleScholarId ? { validate: [validation.isValidGoogleScholarId] } : {})}
+                    validate={[validation.isValidGoogleScholarId]}
                     {...googleScholarId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-people-australia-id"
                     name="aut_people_australia_id"
@@ -120,6 +123,7 @@ export const ResearcherIdentifierData = () => {
                     {...peopleAustraliaId}
                 />
                 <Field
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-orcid-id"
                     name="aut_orcid_id"
@@ -180,6 +184,10 @@ export const ResearcherIdentifierData = () => {
             </Grid>
         </StandardCard>
     );
+};
+ResearcherIdentifierData.propTypes = {
+    control: PropTypes.object.isRequired,
+    watch: PropTypes.func.isRequired,
 };
 
 export default React.memo(ResearcherIdentifierData);

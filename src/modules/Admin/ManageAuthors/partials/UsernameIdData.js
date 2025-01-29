@@ -1,6 +1,7 @@
+import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Field, formValueSelector, change } from 'redux-form/immutable';
+import PropTypes from 'prop-types';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 import OverriddenIcon from '@mui/icons-material/Lock';
@@ -14,23 +15,26 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
 import { validation } from 'config';
-import { FORM_NAME } from './manageAuthorConfig';
-
-const selector = formValueSelector(FORM_NAME);
 
 export const UsernameIdColumnData = () => {
-    const dispatch = useDispatch();
     const {
         editRow: {
             fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
         },
     } = locale.components.manageAuthors;
 
-    const autOrgUsername = useSelector(state => selector(state, 'aut_org_username'));
-    const autNameOverridden = useSelector(state => selector(state, 'aut_name_overridden'));
+    const { control, watch, setValue, getValues } = useFormContext();
 
+    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
+    const [watchedField] = watch(['aut_org_username']);
+    React.useEffect(() => {
+        setAutOrgUsername(watchedField);
+    }, [watchedField]);
+
+    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
     const handleNameOverridden = () => {
-        dispatch(change(FORM_NAME, 'aut_name_overridden', Number(!autNameOverridden)));
+        setAutNameOverridden(Number(!autNameOverridden));
+        setValue('aut_name_overridden', Number(!autNameOverridden), { shouldDirty: true });
     };
 
     return (
@@ -38,6 +42,7 @@ export const UsernameIdColumnData = () => {
             <Grid container spacing={2} alignItems="center">
                 <Field
                     {...orgStaffId}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-staff-id"
                     name="aut_org_staff_id"
@@ -45,6 +50,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...orgUsername}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
@@ -87,6 +93,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...orgStudentId}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-org-student-id"
                     name="aut_org_student_id"
@@ -94,6 +101,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...studentUsername}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
@@ -101,6 +109,7 @@ export const UsernameIdColumnData = () => {
                 />
                 <Field
                     {...refNum}
+                    control={control}
                     component={AuthorFieldData}
                     authorFieldDataId="aut-ref-num"
                     name="aut_ref_num"
@@ -109,6 +118,10 @@ export const UsernameIdColumnData = () => {
             </Grid>
         </StandardCard>
     );
+};
+UsernameIdColumnData.propTypes = {
+    control: PropTypes.object.isRequired,
+    validatedForm: PropTypes.object.isRequired,
 };
 
 export default React.memo(UsernameIdColumnData);

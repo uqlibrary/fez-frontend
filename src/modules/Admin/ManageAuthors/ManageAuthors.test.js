@@ -13,6 +13,7 @@ import { checkForExisting } from './helpers';
 
 jest.mock('js-cookie');
 import Cookie from 'js-cookie';
+import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
@@ -529,10 +530,9 @@ describe('ManageAuthors', () => {
 
     it('should validate inputs and render added info after adding', async () => {
         mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
-                data: [],
-                total: 0,
+            .onGet(/fez-authors\/search/)
+            .reply(() => {
+                return [200, { data: [], total: 0 }];
             })
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
@@ -542,17 +542,21 @@ describe('ManageAuthors', () => {
         const { getByTestId } = setup();
 
         fireEvent.click(getByTestId('authors-add-new-author'));
+        await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+
         fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
         fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-342' } });
         fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtest' } });
+
+        expect(getByTestId('authors-add-this-author-save').closest('button')).not.toHaveAttribute('disabled');
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
@@ -579,17 +583,17 @@ describe('ManageAuthors', () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
         const { getByTestId, queryByTestId } = setup({});
 
-        fireEvent.click(getByTestId('authors-add-new-author'));
+        await userEvent.click(getByTestId('authors-add-new-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
-        fireEvent.click(getByTestId('authors-add-this-author-save'));
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
+        await userEvent.click(getByTestId('authors-add-this-author-save'));
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
@@ -642,6 +646,9 @@ describe('ManageAuthors', () => {
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name', aut_org_username: 'uqtname' } });
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
+            return [200, { data: [], total: 0 }];
+        });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -649,7 +656,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
+        await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -657,24 +664,22 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-title-input')).toHaveAttribute('value', 'Mr.');
         expect(getByTestId('aut-description-input')).toHaveTextContent('Added position. Updated name');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-fname-input'));
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-lname-input'));
 
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-scopus-id-input'), '1234-543');
+        await userEvent.type(getByTestId('aut-org-student-id-input'), '1234564');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
+        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
         fireEvent.click(getByTestId('authors-update-this-author-save'));
 
@@ -730,6 +735,9 @@ describe('ManageAuthors', () => {
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
             .replyOnce(500);
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(() => {
+            return [200, { data: [], total: 0 }];
+        });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -737,7 +745,7 @@ describe('ManageAuthors', () => {
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
-        fireEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
+        await userEvent.click(getByTestId('authors-list-row-0-edit-this-author'));
 
         expect(getByTestId('aut-fname-input')).toHaveAttribute('value', 'Vishal');
         expect(getByTestId('aut-lname-input')).toHaveAttribute('value', 'Desai');
@@ -745,26 +753,24 @@ describe('ManageAuthors', () => {
         expect(getByTestId('aut-title-input')).toHaveAttribute('value', 'Mr.');
         expect(getByTestId('aut-description-input')).toHaveTextContent('Added position. Updated name');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-fname-input'));
         expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: '' } });
+        await userEvent.clear(getByTestId('aut-lname-input'));
         expect(getByTestId('aut-lname-input')).toHaveAttribute('aria-invalid', 'true');
 
         expect(getByTestId('authors-update-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-fname-input'), { target: { value: 'Test' } });
-        fireEvent.change(getByTestId('aut-lname-input'), { target: { value: 'Name' } });
-        // act(() => {
-        fireEvent.change(getByTestId('aut-scopus-id-input'), { target: { value: '1234-543' } });
-        // });
-        fireEvent.change(getByTestId('aut-org-student-id-input'), { target: { value: '1234564' } });
-        fireEvent.change(getByTestId('aut-display-name-input'), { target: { value: 'Test, Name' } });
+        await userEvent.type(getByTestId('aut-fname-input'), 'Test');
+        await userEvent.type(getByTestId('aut-lname-input'), 'Name');
+        await userEvent.type(getByTestId('aut-scopus-id-input'), '1234-543');
+        await userEvent.type(getByTestId('aut-org-student-id-input'), '1234564');
+        await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
 
         checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtname' } });
-        fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
-        fireEvent.click(getByTestId('authors-update-this-author-save'));
+        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
+        await userEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
+        await userEvent.click(getByTestId('authors-update-this-author-save'));
 
         await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
