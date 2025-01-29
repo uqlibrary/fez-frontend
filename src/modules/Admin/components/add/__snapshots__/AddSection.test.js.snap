@@ -62,24 +62,131 @@ exports[`AddSection component should render default view 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      disabled="false"
-                      is="mock"
-                      label="Member of collections"
-                      name="adminSection.collections"
-                      required="true"
-                    />
+                    <div
+                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1x6bjyf-MuiAutocomplete-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          for="rek-ismemberof"
+                          id="rek-ismemberof-label"
+                        >
+                          Member of collections
+                          <span
+                            aria-hidden="true"
+                            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                          >
+                             
+                            *
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-ismemberof-input"
+                            data-testid="rek-ismemberof-input"
+                            id="rek-ismemberof-input"
+                            placeholder="Begin typing to select and add work to a list of collection(s)"
+                            required=""
+                            role="combobox"
+                            spellcheck="false"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                          >
+                            <button
+                              aria-label="Open"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1aav1nn-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              tabindex="-1"
+                              title="Open"
+                              type="button"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      disabled="false"
-                      is="mock"
-                      label="Work type"
-                      name="rek_display_type"
-                      required="true"
-                    />
+                    <div
+                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                      style="width: 100%;"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        id="rek-display-type-label"
+                      >
+                        Work type
+                        <span
+                          aria-hidden="true"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                        >
+                           
+                          *
+                        </span>
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        required=""
+                      >
+                        <div
+                          aria-controls=":r2:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="rek-display-type-select"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          data-testid="rek-display-type-select"
+                          id="rek-display-type-select"
+                          role="combobox"
+                          tabindex="0"
+                        >
+                          <span
+                            class="notranslate"
+                          >
+                            ​
+                          </span>
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          aria-labelledby="rek-display-type-label"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-display-type-input"
+                          data-testid="rek-display-type-input"
+                          id="rek-display-type-input"
+                          name="rek_display_type"
+                          placeholder="Select a Work type from the dropdown list"
+                          required=""
+                          tabindex="-1"
+                          value=""
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -111,11 +218,12 @@ exports[`AddSection component should render default view 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
+                          disabled=""
                           id="submit-work"
-                          tabindex="0"
+                          tabindex="-1"
                           type="button"
                         >
                           Create work
@@ -196,24 +304,127 @@ exports[`AddSection component should render with subtypes 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      disabled="false"
-                      is="mock"
-                      label="Member of collections"
-                      name="adminSection.collections"
-                      required="true"
-                    />
+                    <div
+                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1x6bjyf-MuiAutocomplete-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          for="rek-ismemberof"
+                          id="rek-ismemberof-label"
+                        >
+                          Member of collections
+                          <span
+                            aria-hidden="true"
+                            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                          >
+                             
+                            *
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="rek-ismemberof-input"
+                            data-testid="rek-ismemberof-input"
+                            id="rek-ismemberof-input"
+                            placeholder="Begin typing to select and add work to a list of collection(s)"
+                            required=""
+                            role="combobox"
+                            spellcheck="false"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                          >
+                            <button
+                              aria-label="Open"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1aav1nn-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              tabindex="-1"
+                              title="Open"
+                              type="button"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
-                    <field
-                      disabled="false"
-                      is="mock"
-                      label="Work type"
-                      name="rek_display_type"
-                      required="true"
-                    />
+                    <div
+                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                      style="width: 100%;"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="true"
+                        id="rek-display-type-label"
+                      >
+                        Work type
+                        <span
+                          aria-hidden="true"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                        >
+                           
+                          *
+                        </span>
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        required=""
+                      >
+                        <div
+                          aria-controls=":r5:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="rek-display-type-select"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          data-testid="rek-display-type-select"
+                          id="rek-display-type-select"
+                          role="combobox"
+                          tabindex="0"
+                        >
+                          Conference Paper
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          aria-labelledby="rek-display-type-label"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          data-analyticsid="rek-display-type-input"
+                          data-testid="rek-display-type-input"
+                          id="rek-display-type-input"
+                          name="rek_display_type"
+                          placeholder="Select a Work type from the dropdown list"
+                          required=""
+                          tabindex="-1"
+                          value="130"
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
@@ -221,13 +432,68 @@ exports[`AddSection component should render with subtypes 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     >
-                      <field
-                        disabled="false"
-                        is="mock"
-                        label="Work subtype"
-                        name="adminSection.rek_subtype"
-                        required="true"
-                      />
+                      <div
+                        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                        style="width: 100%;"
+                      >
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="true"
+                          id="rek-subtype-label"
+                        >
+                          Work subtype
+                          <span
+                            aria-hidden="true"
+                            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+                          >
+                             
+                            *
+                          </span>
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          required=""
+                        >
+                          <div
+                            aria-controls=":r6:"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="rek-subtype-select"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            data-testid="rek-subtype-select"
+                            id="rek-subtype-select"
+                            role="combobox"
+                            tabindex="0"
+                          >
+                            Fully published paper
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            aria-invalid="false"
+                            aria-labelledby="rek-subtype-label"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            data-analyticsid="rek-subtype-input"
+                            data-testid="rek-subtype-input"
+                            id="rek-subtype-input"
+                            name="adminSection.rek_subtype"
+                            placeholder="Select a work subtype from the dropdown list"
+                            required=""
+                            tabindex="-1"
+                            value="Fully published paper"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -257,11 +523,12 @@ exports[`AddSection component should render with subtypes 1`] = `
                         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
+                          disabled=""
                           id="submit-work"
-                          tabindex="0"
+                          tabindex="-1"
                           type="button"
                         >
                           Create work

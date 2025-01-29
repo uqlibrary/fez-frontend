@@ -10,7 +10,7 @@ import { useRecordContext } from 'context';
 
 export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
-    const methods = useFormContext();
+    const form = useFormContext();
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -21,7 +21,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
             isNtro:
                 (NTRO_SUBTYPES.includes(record.rek_subtype) && record.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) ||
-                methods.getValues('isNtro') ||
+                form.getValues('isNtro') ||
                 false,
             isNonNtro: record.rek_subtype === SUBTYPE_NON_NTRO,
             isCreate: !record.rek_pid,
@@ -36,18 +36,18 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
             </Grid>
         );
     }
-    const error = methods.getFieldState(componentProps.name).error;
+    const error = form.getFieldState(componentProps.name).error;
 
     return (
         <Grid item xs={12} md={12 / group.length}>
             <Field
                 name={componentProps.name}
-                control={methods.control}
+                control={form.control}
                 component={fieldConfig.default[field].component}
                 disabled={disabled}
                 {...componentProps}
                 {...(!!error ? { error: true, errorText: error } : {})}
-                value={methods.getValues(componentProps.name) ?? ''}
+                value={form.getValues(componentProps.name) ?? ''}
                 {...props}
             />
         </Grid>

@@ -50,27 +50,6 @@ const useFormOnChangeHook = form => {
         control: form.control,
         name: ['rek_display_type', 'adminSection.rek_subtype', 'bibliographicSection.rek_genre_type'],
     });
-    // if (!!formValues.filesSection?.fez_datastream_info) {
-    //     const attachments = form.getValues('journal.fez_record_search_key_file_attachment_name');
-    //     let updated = false;
-    //     formValues.filesSection.fez_datastream_info.forEach(file => {
-    //         if (!!file.dsi_dsid_new) {
-    //             const oldFileName = file.dsi_dsid_new;
-    //             const newFileName = file.dsi_dsid;
-    //             const originalFileAttachmentIndex = attachments.findIndex(file => {
-    //                 return file.rek_file_attachment_name === oldFileName;
-    //             });
-    //             if (originalFileAttachmentIndex > -1) {
-    //                 updated = true;
-    //                 // will be -1 if we've already done this operation before
-    //                 attachments[originalFileAttachmentIndex].rek_file_attachment_name = newFileName;
-    //             }
-    //         }
-    //     });
-    //     if (updated) {
-    //         form.setValue('journal.fez_record_search_key_file_attachment_name', attachments);
-    //     }
-    // }
     if (
         formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
         !!formValues.adminSection?.rek_subtype &&
@@ -146,7 +125,8 @@ export const AdminContainer = ({ createMode = false }) => {
         return () => {
             dispatch(actions.clearRecordToView());
         };
-    }, [dispatch, pid]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {
@@ -277,29 +257,7 @@ export const AdminContainer = ({ createMode = false }) => {
 };
 
 AdminContainer.propTypes = {
-    // actions: PropTypes.object,
-    // authorDetails: PropTypes.object,
-    // clearRecordToView: PropTypes.func,
     createMode: PropTypes.bool,
-    // destroy: PropTypes.func,
-    // dirty: PropTypes.bool,
-    // disableSubmit: PropTypes.any,
-    // formErrors: PropTypes.object,
-    // formValues: PropTypes.object,
-    // handleSubmit: PropTypes.func,
-    // loadingRecordToView: PropTypes.bool,
-    // loadRecordToView: PropTypes.func,
-    // recordToViewError: PropTypes.object,
-    // locked: PropTypes.bool,
-    // recordToView: PropTypes.object,
-    // isDeleted: PropTypes.bool,
-    // isJobCreated: PropTypes.bool,
-    // showAddForm: PropTypes.bool,
-    // submitSucceeded: PropTypes.bool,
-    // submitting: PropTypes.any,
-    // unlockRecord: PropTypes.func,
-    // params: PropTypes.object,
-    // error: PropTypes.object,
 };
 
 export default React.memo(AdminContainer);

@@ -30,8 +30,9 @@ describe('AddSection component', () => {
     });
 
     it('should render with subtypes', () => {
-        const { container } = setup({ values: { rek_display_type: 1004 } });
-
+        const { container } = setup({
+            values: { rek_display_type: 130, adminSection: { rek_subtype: 'Fully published paper' } },
+        });
         expect(container).toMatchSnapshot();
     });
 });
