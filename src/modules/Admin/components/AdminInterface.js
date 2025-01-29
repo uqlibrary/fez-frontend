@@ -97,6 +97,7 @@ export const AdminInterface = ({
     const {
         handleSubmit,
         reset,
+        setValue,
         formState: { errors: formErrors, isSubmitting, isSubmitSuccessful, isDirty },
     } = useFormContext();
 
@@ -128,8 +129,8 @@ export const AdminInterface = ({
         Sentry.captureMessage(`Error happened: ${errorMessage}`);
     }
     alertProps.current = validation.getErrorAlertProps({
-        isSubmitting,
-        isSubmitSuccessful,
+        submitting: isSubmitting,
+        submitSucceeded: isSubmitSuccessful,
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
@@ -273,10 +274,10 @@ export const AdminInterface = ({
 
     const submitButtonTxt = !isDeleted ? 'Save' : 'Undelete';
 
-    const setPublicationStatusAndSubmit = status =>
-        handleSubmit((values, dispatch, props) =>
-            onSubmit(values.setIn(['publication', 'rek_status'], status), dispatch, props),
-        );
+    const setPublicationStatusAndSubmit = status => {
+        setValue('publication.rek_status', status);
+        handleSubmit(onSubmit)();
+    };
 
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
