@@ -1,10 +1,10 @@
 import React from 'react';
-import AdminContainer, { isSame } from './AdminContainer';
-import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
-import { useIsMobileView } from '../../../hooks/useIsMobileView';
-import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
-import { reduxForm } from 'redux-form';
+
+import AdminContainer from './AdminContainer';
+import { recordWithDatastreams } from 'mock/data';
+import { useIsMobileView } from '../../../hooks';
+import { rtlRender, WithReduxStore, WithRouter, preview } from 'test-utils';
 import Cookies from 'js-cookie';
 
 class ResizeObserver {
@@ -23,51 +23,79 @@ jest.mock('../submitHandler', () => ({
 
 jest.mock('js-cookie', () => jest.fn());
 
-jest.mock('redux-form/immutable');
-
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: () => mockDispatch,
 }));
 
-const WithReduxForm = reduxForm({ form: 'AdminWorkForm' })(AdminContainer);
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useParams: jest.fn(() => ({ pid: 'UQ:111111' })),
+}));
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup({ state, ...testProps } = {}, renderer = rtlRender) {
     const props = {
-        authorDetails: {
-            username: 'uqstaff',
-        },
-        params: {
-            pid: 'UQ:111111',
-        },
-        loadRecordToView: jest.fn(),
-        loadingRecordToView: false,
-        recordToView: recordWithDatastreams,
-        handleSubmit: jest.fn(),
-        clearRecordToView: jest.fn(),
-        formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
+        createMode: false,
         ...testProps,
     };
 
+    const initState = {
+        accountReducer: { authorDetails: { username: 'uqstaff' } },
+        viewRecordReducer: {
+            recordToView: recordWithDatastreams,
+            loadingRecordToView: false,
+            recordToViewError: null,
+            isRecordLocked: false,
+            isDeleted: false,
+            isDeletedVersion: false,
+            isJobCreated: false,
+            error: null,
+        },
+        ...state,
+    };
+    /*
+loadingRecordToView,
+        authorDetails,
+        recordToView: record,
+        isDeleted,
+        isJobCreated,
+        recordToViewError,
+        initialValues,
+        locked,
+        error,
+*/
     return renderer(
-        <WithReduxStore>
+        <WithReduxStore initialState={Immutable.Map(initState)}>
             <WithRouter>
-                <WithReduxForm {...props} />
+                <AdminContainer {...props} />
             </WithRouter>
             ,
         </WithReduxStore>,
     );
 }
-
+/*
+const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
+    const {
+        recordToView: record,
+        isRecordLocked,
+        loadingRecordToView,
+        isDeleted,
+        isJobCreated,
+        recordToViewError,
+        error,
+    } = useSelector(state => state.get('viewRecordReducer'));
+*/
 describe('AdminContainer component', () => {
     beforeEach(() => {
         Cookies.get = jest.fn().mockImplementation(() => 'tabbed');
         Cookies.set = jest.fn();
     });
+
     it('should render default view', () => {
         Cookies.get = jest.fn().mockImplementation(() => 'fullform');
         const { container } = setup({});
+        preview.debug();
         expect(container).toMatchSnapshot();
     });
     it('should render mobile view', () => {
@@ -145,26 +173,10 @@ describe('AdminContainer component', () => {
         });
         expect(container).toMatchSnapshot();
     });
-    describe('isSame callback function', () => {
-        it('should return true if props are not changed', () => {
-            expect(
-                isSame(
-                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
-                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
-                ),
-            ).toBeTruthy();
-        });
-        it('should return true if props are not changed', () => {
-            expect(
-                isSame(
-                    { disableSubmit: false, loadRecordToView: false },
-                    { disableSubmit: false, loadRecordToView: false },
-                ),
-            ).toBeTruthy();
-        });
-    });
+
     describe('React hooks', () => {
         it('should call clearRecordToView() prop on unload', () => {
+            // need to override actions to check this is fired
             const clearRecordToView = jest.fn();
             const { unmount } = setup({
                 clearRecordToView,

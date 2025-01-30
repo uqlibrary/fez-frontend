@@ -274,7 +274,7 @@ export const AdminInterface = ({
 
     const submitButtonTxt = !isDeleted ? 'Save' : 'Undelete';
 
-    const setPublicationStatusAndSubmit = status => {
+    const setPublicationStatusAndSubmit = status => () => {
         setValue('publication.rek_status', status);
         handleSubmit(onSubmit)();
     };

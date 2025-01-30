@@ -1,33 +1,8 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
-import { RECORD_TYPE_RECORD } from 'config/general';
-
-/*
-{
-    authorDetails,
-    clearRecordToView,
-    createMode,
-    destroy,
-    dirty,
-    disableSubmit,
-    formErrors,
-    formValues,
-    handleSubmit,
-    isDeleted,
-    isJobCreated,
-    loadingRecordToView,
-    loadRecordToView,
-    locked,
-    recordToView,
-    recordToViewError,
-    submitSucceeded,
-    submitting,
-    unlockRecord,
-    params,
-    error,
-}
-    */
+import { RECORD_TYPE_RECORD, PUBLICATION_TYPE_THESIS } from 'config/general';
+import { useWatch } from 'react-hook-form';
 
 export const useRecord = (displayType, subType, createMode) => {
     let initialFormValues = {
@@ -89,4 +64,19 @@ export const useRecordToView = (recordToView, createMode, methods) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newRecord, createMode, recordToView]);
     return results;
+};
+
+export const useFormOnChangeHook = form => {
+    const formValues = useWatch({
+        control: form.control,
+        name: ['rek_display_type', 'adminSection.rek_subtype', 'bibliographicSection.rek_genre_type'],
+    });
+    if (
+        formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
+        !!formValues.adminSection?.rek_subtype &&
+        !!!formValues.bibliographicSection?.rek_genre_type
+    ) {
+        console.log('updating bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
+        form.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
+    }
 };

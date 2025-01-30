@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
@@ -6,7 +5,7 @@ import Cookies from 'js-cookie';
 import * as actions from 'actions';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { FormProvider, useWatch } from 'react-hook-form';
+import { FormProvider } from 'react-hook-form';
 
 import locale from 'locale/pages';
 import {
@@ -24,7 +23,7 @@ import { adminTheme } from 'config';
 
 import { onSubmit } from '../submitHandler';
 import { validateResolver } from '../validators';
-import { useRecord, useRecordToView } from '../hooks';
+import { useRecord, useRecordToView, useFormOnChangeHook } from '../hooks';
 import { RecordContext, TabbedContext } from 'context';
 import { useIsMobileView, useValidatedForm } from '../../../hooks';
 
@@ -44,21 +43,6 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import AuthorsSection from './authors/AuthorsSection';
 import GrantInformationSection from './grantInformation/GrantInformationSection';
 import NtroSection from './ntro/NtroSection';
-
-const useFormOnChangeHook = form => {
-    const formValues = useWatch({
-        control: form.control,
-        name: ['rek_display_type', 'adminSection.rek_subtype', 'bibliographicSection.rek_genre_type'],
-    });
-    if (
-        formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
-        !!formValues.adminSection?.rek_subtype &&
-        !!!formValues.bibliographicSection?.rek_genre_type
-    ) {
-        console.log('updating bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
-        form.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
-    }
-};
 
 export const AdminContainer = ({ createMode = false }) => {
     const dispatch = useDispatch();

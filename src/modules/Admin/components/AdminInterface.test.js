@@ -836,8 +836,8 @@ describe('AdminInterface component', () => {
         });
 
         fireEvent.click(getByTestId('unpublish-admin-top'));
-        expect(handleSubmit).toHaveBeenCalledTimes(2);
-        expect(mockFormState.handleSubmit).toHaveBeenCalledTimes(4);
+        expect(handleSubmit).toHaveBeenCalledTimes(1);
+        expect(mockFormState.handleSubmit).toHaveBeenCalledTimes(3);
 
         fireEvent.click(getByTestId('unpublish-admin'));
         expect(handleSubmit).toHaveBeenCalledTimes(2);

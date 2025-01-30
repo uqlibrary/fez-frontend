@@ -51,7 +51,6 @@ export const SecurityCard = ({ disabled }) => {
 
     const securityPolicy = formValues?.rek_security_policy;
     const dataStreamPolicy = formValues?.rek_datastream_policy;
-    console.log(record);
     return (
         <Grid container spacing={2}>
             <Grid xs={12}>
