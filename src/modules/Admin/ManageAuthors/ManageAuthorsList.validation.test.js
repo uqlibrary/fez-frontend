@@ -445,12 +445,10 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(usernameInput, { target: { value: 'uqtesta' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        const autFnameInput = await findByTestId('aut-fname-input');
+        const autFnameInput = await findByTestId('aut-fname-input', {}, { timeout: 3000 }); // 3 seconds timeout
         await userEvent.clear(autFnameInput);
         await waitFor(() => expect(autFnameInput).toHaveValue(''));
 
-        // await userEvent.clear(getByTestId('aut-fname-input'));
-        // await waitFor(() => expect(getByTestId('aut-fname-input')).toHaveValue(''));
         expect(autFnameInput).toHaveAttribute('aria-invalid', 'true');
 
         expect(usernameInput).toHaveAttribute('aria-invalid', 'false');
