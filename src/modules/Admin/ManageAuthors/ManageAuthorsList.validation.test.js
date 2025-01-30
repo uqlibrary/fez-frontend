@@ -4,13 +4,6 @@ import { render, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved }
 import * as repository from 'repositories';
 import userEvent from '@testing-library/user-event';
 
-jest.mock('./helpers', () => ({
-    checkForExisting: jest.fn(),
-    clearAlerts: jest.fn(),
-}));
-
-import { checkForExisting } from './helpers';
-
 function setup(testProps = {}) {
     const props = {
         onRowAdd: jest.fn(data => Promise.resolve(data)),
@@ -103,8 +96,6 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
-
         userEvent.clear(getByTestId('aut-org-username-input'));
         userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
 
@@ -159,8 +150,6 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('aut-student-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
-
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         fireEvent.change(getByTestId('aut-student-username-input'), { target: { value: 's1234569' } });
 
@@ -226,8 +215,6 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('aut-org-staff-id-input'), { target: { value: '1234569' } });
-
-        checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve()));
 
         await waitFor(() => {
             expect(getByTestId('aut-org-staff-id-input')).toHaveAttribute('aria-invalid', 'false');
@@ -420,9 +407,14 @@ describe('ManageAuthorsList', () => {
                     },
                 ],
                 total: 1,
+            })
+            .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtesta', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [],
+                total: 0,
             });
 
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, getByText, queryAllByText, findByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
@@ -449,14 +441,19 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
+        const usernameInput = await findByTestId('aut-org-username-input');
+        fireEvent.change(usernameInput, { target: { value: 'uqtesta' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await userEvent.clear(getByTestId('aut-fname-input'));
-        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+        const autFnameInput = await findByTestId('aut-fname-input');
+        await userEvent.clear(autFnameInput);
+        await waitFor(() => expect(autFnameInput).toHaveValue(''));
 
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
+        // await userEvent.clear(getByTestId('aut-fname-input'));
+        // await waitFor(() => expect(getByTestId('aut-fname-input')).toHaveValue(''));
+        expect(autFnameInput).toHaveAttribute('aria-invalid', 'true');
+
+        expect(usernameInput).toHaveAttribute('aria-invalid', 'false');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
