@@ -407,6 +407,11 @@ describe('ManageAuthorsList', () => {
                     },
                 ],
                 total: 1,
+            })
+            .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtesta', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [],
+                total: 0,
             });
 
         const { getByTestId, getByText, queryAllByText } = setup();
