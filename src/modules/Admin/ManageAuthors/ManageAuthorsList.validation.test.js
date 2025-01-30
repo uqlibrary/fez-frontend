@@ -414,7 +414,7 @@ describe('ManageAuthorsList', () => {
                 total: 0,
             });
 
-        const { getByTestId, getByText, queryAllByText } = setup();
+        const { getByTestId, getByText, queryAllByText, findByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
 
@@ -441,13 +441,19 @@ describe('ManageAuthorsList', () => {
         expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('authors-add-this-author-save').closest('button')).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('aut-org-username-input'), { target: { value: 'uqtesta' } });
+        const usernameInput = await findByTestId('aut-org-username-input');
+        fireEvent.change(usernameInput, { target: { value: 'uqtesta' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        await userEvent.clear(getByTestId('aut-fname-input'));
-        expect(getByTestId('aut-fname-input')).toHaveAttribute('aria-invalid', 'true');
+        const autFnameInput = await findByTestId('aut-fname-input');
+        await userEvent.clear(autFnameInput);
+        await waitFor(() => expect(autFnameInput).toHaveValue(''));
 
-        expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
+        // await userEvent.clear(getByTestId('aut-fname-input'));
+        // await waitFor(() => expect(getByTestId('aut-fname-input')).toHaveValue(''));
+        expect(autFnameInput).toHaveAttribute('aria-invalid', 'true');
+
+        expect(usernameInput).toHaveAttribute('aria-invalid', 'false');
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
