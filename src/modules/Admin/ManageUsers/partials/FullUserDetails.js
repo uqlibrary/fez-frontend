@@ -22,8 +22,9 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
 // import { FORM_NAME, DEBOUNCE_VALUE } from './manageUserConfig';
-import { checkForExisting } from '../helpers';
+// import { checkForExisting } from '../helpers';
 import UserDetailsRow from './UserDetailsRow';
+import { checkForExistingUser } from 'actions';
 
 const classes = {
     background: {
@@ -93,10 +94,16 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(watchedFields)]);
 
-    const validateField = async (field, value, autId, asyncErrors) => {
+    const validateField = async (field, value, usrId, asyncErrors) => {
         try {
             await dispatch(
-                checkForExisting(value, field, autId, locale.components.manageAuthors.editRow.validation, asyncErrors),
+                checkForExistingUser(
+                    value,
+                    field,
+                    usrId,
+                    locale.components.manageUsers.editRow.validation,
+                    asyncErrors,
+                ),
             );
             clearErrors(field); // Clear errors if validation passes
         } catch (error) {
@@ -111,9 +118,9 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
         const validationPromises = fields.map(async field => {
             const fieldValue = data[field];
-            const autId = data?.aut_id;
+            const usrId = data?.usr_id;
             if (fieldValue && fieldValue !== '') {
-                return validateField(field, fieldValue, autId, asyncErrors);
+                return validateField(field, fieldValue, usrId, asyncErrors);
             } else {
                 clearErrors(field); // Clear errors for fields with no value
                 return Promise.resolve();
@@ -164,9 +171,11 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     };
 
     const onSubmit = async data => {
+        console.log('data', data);
         setSubmitting(true);
         try {
             await validateAsync(data);
+            console.log('data after validateAsync', data);
 
             // Convert empty strings to null as empty string will violate unique key constraints
             const fields = ['usr_username'];
@@ -218,7 +227,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                                             disabled={disableSubmit || submitting || disabled}
                                                             variant="contained"
                                                             color="primary"
-                                                            onClick={handleSave}
+                                                            type="submit"
                                                         >
                                                             {mode === 'update' ? editButton : addButton}
                                                         </Button>
