@@ -178,7 +178,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
             console.log('data after validateAsync', data);
 
             // Convert empty strings to null as empty string will violate unique key constraints
-            const fields = ['usr_username'];
+            const fields = ['usr_administrator', 'usr_super_administrator'];
             fields.forEach(field => {
                 if (data[field] === '') {
                     data[field] = null;
