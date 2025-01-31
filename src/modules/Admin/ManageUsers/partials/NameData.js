@@ -1,6 +1,8 @@
 import React from 'react';
 // import { useSelector, useDispatch } from 'react-redux';
-import { Field } from 'redux-form/immutable';
+// import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { useFormContext } from 'react-hook-form';
 
 import Grid from '@mui/material/Grid';
 
@@ -25,10 +27,13 @@ export const NameData = () => {
         },
     } = locale.components.manageUsers;
 
+    const { control } = useFormContext();
+
     return (
         <StandardCard subCard title={title} smallTitle customTitleBgColor="#F7F7F7">
             <Grid container spacing={2} alignItems="center">
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-full-name"
                     name="usr_full_name"
@@ -38,6 +43,7 @@ export const NameData = () => {
                     {...fullName}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-email"
                     name="usr_email"
@@ -46,6 +52,7 @@ export const NameData = () => {
                     {...email}
                 />
                 <Field
+                    control={control}
                     component={UserFieldData}
                     userFieldDataId="usr-username"
                     name="usr_username"
