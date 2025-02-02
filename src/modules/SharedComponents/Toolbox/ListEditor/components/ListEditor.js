@@ -66,7 +66,7 @@ export const ListEditor = ({
             setItemList(propList);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(input.value)]);
+    }, [JSON.stringify(input?.value)]);
 
     useEffect(() => {
         if (onChange && propsDifferentToState) {

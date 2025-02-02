@@ -6,11 +6,11 @@ import { useForm } from './useForm';
  * @return {UseFormReturn<FieldValues, *, undefined>}
  */
 export const useValidatedForm = props => {
-    const attributes = useForm(props);
+    const form = useForm(props);
     const {
         trigger,
         formState: { isValid, hasValidationError },
-    } = attributes;
+    } = form;
 
     // trigger validation prior to rendering in order to display errors (to match redux form behaviour)
     useLayoutEffect(() => {
@@ -20,5 +20,5 @@ export const useValidatedForm = props => {
         (async () => await trigger())();
     }, [isValid, hasValidationError, trigger]);
 
-    return attributes;
+    return form;
 };

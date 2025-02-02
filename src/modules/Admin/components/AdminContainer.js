@@ -60,26 +60,26 @@ export const AdminContainer = ({ createMode = false }) => {
         error,
     } = useRecord(createMode);
 
-    const attributes = useValidatedForm({
+    const form = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
         resolver: validateResolver,
     });
 
-    useFormOnChangeHook(attributes);
-    const recordToView = useRecordToView(record, createMode, attributes);
+    useFormOnChangeHook(form);
+    const recordToView = useRecordToView(record, createMode, form);
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         console.log('submit', data);
         try {
-            await onSubmit(data, dispatch, { setServerError: attributes.formState.setServerError, params: { pid } });
+            await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            attributes.setServerError(e);
+            form.setServerError(e);
         }
     };
 
@@ -90,7 +90,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    tabErrors.current = Object.entries(attributes.formState || /* istanbul ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(form.formState || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
@@ -101,8 +101,14 @@ export const AdminContainer = ({ createMode = false }) => {
     );
 
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
+    const toggleObject = React.useMemo(() => ({ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }), [
+        isMobileView,
+        tabbed,
+        handleToggle,
+    ]);
+
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
-    const destroy = () => attributes.reset();
+    const destroy = () => form.reset();
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));
@@ -128,15 +134,10 @@ export const AdminContainer = ({ createMode = false }) => {
 
     return (
         <React.Fragment>
-            <FormProvider {...attributes}>
+            <FormProvider {...form}>
                 {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
                 {!showAddForm && (
-                    <TabbedContext.Provider
-                        value={{
-                            tabbed: isMobileView ? false : tabbed,
-                            toggleTabbed: handleToggle,
-                        }}
-                    >
+                    <TabbedContext.Provider value={{ ...toggleObject }}>
                         <RecordContext.Provider
                             value={{
                                 record: recordToView,
@@ -179,7 +180,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                             subComponent: {
                                                 title: 'NTRO',
                                                 component: NTRO_SUBTYPES.includes(
-                                                    attributes.getValues('adminSection.rek_subtype'),
+                                                    form.getValues('adminSection.rek_subtype'),
                                                 )
                                                     ? NtroSection
                                                     : null,
@@ -199,7 +200,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                                         recordToView && recordToView.rek_display_type,
                                                     ) ||
                                                     [SUBTYPE_NON_NTRO].includes(
-                                                        attributes.getValues('adminSection.rek_subtype'),
+                                                        form.getValues('adminSection.rek_subtype'),
                                                     )
                                                 ),
                                         },

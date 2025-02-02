@@ -26,7 +26,7 @@ export const useRecord = (displayType, subType, createMode) => {
     } = useSelector(state => state.get('viewRecordReducer'));
 
     if (!createMode) {
-        recordToView = { ...record };
+        recordToView = record;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =
             (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
