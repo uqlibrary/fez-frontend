@@ -25,6 +25,7 @@ import './adminDashboard';
 import './adminEdit';
 import './ckeditor';
 import './commands';
+import { BASE_PROD_API_URL } from './constants';
 
 export const A11YOptions = {
     runOnly: {
@@ -50,4 +51,8 @@ Cypress.on('uncaught:exception', () => {
  */
 Cypress.Keyboard.defaults({
     keystrokeDelay: 0,
+});
+
+beforeEach(() => {
+    cy.intercept('GET', `${BASE_PROD_API_URL}/alerts/current*`, []);
 });
