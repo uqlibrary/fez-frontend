@@ -36,8 +36,11 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const {
         handleSubmit,
         trigger,
-        formState: { isDirty, isSubmitting, errors },
+        formState: { isDirty, isSubmitting, errors, dirtyFields },
     } = validatedForm;
+    const isFieldChanged = fieldName => {
+        return dirtyFields[fieldName]; // Returns true if the field is changed
+    };
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
 
@@ -106,7 +109,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         const validationPromises = fields.map(async field => {
             const fieldValue = data[field];
             const autId = data?.aut_id;
-            if (fieldValue && fieldValue !== '') {
+            if (fieldValue && fieldValue !== '' && isFieldChanged(field)) {
                 return validateField(field, fieldValue, autId, asyncErrors);
             } else {
                 clearErrors(field); // Clear errors for fields with no value
