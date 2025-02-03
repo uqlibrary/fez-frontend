@@ -52,8 +52,11 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     const {
         handleSubmit,
         trigger,
-        formState: { isDirty, isSubmitting, errors },
+        formState: { isDirty, isSubmitting, errors, dirtyFields },
     } = validatedForm;
+    const isFieldChanged = fieldName => {
+        return dirtyFields[fieldName]; // Returns true if the field is changed
+    };
     const [apiError, setApiError] = React.useState('');
     const [submitting, setSubmitting] = React.useState(false);
 
@@ -119,7 +122,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
         const validationPromises = fields.map(async field => {
             const fieldValue = data[field];
             const usrId = data?.usr_id;
-            if (fieldValue && fieldValue !== '') {
+            if (fieldValue && fieldValue !== '' && isFieldChanged(field)) {
                 return validateField(field, fieldValue, usrId, asyncErrors);
             } else {
                 clearErrors(field); // Clear errors for fields with no value
@@ -189,6 +192,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
             await handleSave(data);
         } catch (error) {
+            console.log('setApiError, error=', error);
             setApiError(error);
         } finally {
             setSubmitting(false);
