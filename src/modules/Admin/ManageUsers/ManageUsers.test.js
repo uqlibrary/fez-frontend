@@ -4,8 +4,6 @@ import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent }
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
 import * as AppActions from 'actions/app';
-import { preview } from 'test-utils';
-// import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
