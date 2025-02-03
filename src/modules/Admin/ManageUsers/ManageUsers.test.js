@@ -455,6 +455,8 @@ describe('ManageUsers', () => {
 
     it('should render updated info after editing', async () => {
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
