@@ -179,6 +179,7 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
                     response.total === 1 &&
                     response.data.filter(user => user.usr_id !== id && user[searchField] === search).length > 0
                 ) {
+                    console.log('username found');
                     dispatch({
                         type: EXISTING_USER_FOUND,
                     });
