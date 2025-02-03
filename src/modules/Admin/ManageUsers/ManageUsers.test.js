@@ -4,6 +4,7 @@ import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent }
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
 import * as AppActions from 'actions/app';
+import { preview } from 'test-utils';
 
 const setup = (testProps = {}) => {
     return render(
@@ -555,6 +556,8 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
+        preview.debug();
+        await waitForElementToBeRemoved(() => getByTestId('users-update-this-user-save'));
         await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
