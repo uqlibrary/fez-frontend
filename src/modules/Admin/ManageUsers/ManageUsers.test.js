@@ -5,6 +5,7 @@ import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
 import * as AppActions from 'actions/app';
 import { preview } from 'test-utils';
+// import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
@@ -515,7 +516,10 @@ describe('ManageUsers', () => {
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
+        console.log('search url=', new RegExp(repository.routes.USERS_SEARCH_API({}).apiUrl));
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
@@ -556,8 +560,6 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         fireEvent.click(getByTestId('users-update-this-user-save'));
 
-        preview.debug();
-        await waitForElementToBeRemoved(() => getByTestId('users-update-this-user-save'));
         await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
         expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Test User');
