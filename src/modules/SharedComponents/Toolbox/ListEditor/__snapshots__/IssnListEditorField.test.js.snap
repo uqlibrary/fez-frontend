@@ -2,86 +2,34 @@
 
 exports[`IssnListEditorField function should return <ListEditor> 1`] = `
 <ListEditor
-  canEdit={false}
-  distinctOnly={false}
   errorText={null}
   formComponent={[Function]}
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
   input={
     {
       "onChange": [MockFunction],
     }
   }
-  inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
-  locale={
-    {
-      "form": {
-        "locale": {
-          "inputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
   onChange={[MockFunction]}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
 />
 `;
 
 exports[`IssnListEditorField function should return <ListEditor> with error attributes 1`] = `
 <ListEditor
-  canEdit={false}
-  distinctOnly={false}
   error={true}
   errorText="test"
   formComponent={[Function]}
-  getItemSelectedToEdit={[Function]}
-  hideReorder={false}
   input={
     {
       "onChange": [MockFunction],
     }
   }
-  inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
-  locale={
-    {
-      "form": {
-        "locale": {
-          "inputFieldLabel": "NoLabel",
-        },
-      },
-    }
-  }
-  maxCount={0}
   meta={
     {
       "error": "test",
     }
   }
   onChange={[MockFunction]}
-  required={false}
-  rowItemTemplate={[Function]}
-  scrollList={false}
-  scrollListHeight={250}
-  searchKey={
-    {
-      "order": "rek_order",
-      "value": "rek_value",
-    }
-  }
-  transformFunction={[Function]}
 />
 `;

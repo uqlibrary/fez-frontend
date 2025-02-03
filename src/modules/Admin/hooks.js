@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
 import { RECORD_TYPE_RECORD, PUBLICATION_TYPE_THESIS } from 'config/general';
@@ -49,21 +48,17 @@ export const useRecord = (displayType, subType, createMode) => {
 export const useRecordToView = (recordToView, createMode, methods) => {
     const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : {}));
 
-    const results = useMemo(() => {
-        if (!createMode) return recordToView;
+    if (!createMode) return recordToView;
 
-        const displayType = methods.getValues('rek_display_type');
-        const selectedSubType = methods.getValues('adminSection.rek_subtype');
+    const displayType = methods.getValues('rek_display_type');
+    const selectedSubType = methods.getValues('adminSection.rek_subtype');
 
-        return {
-            rek_pid: newRecord?.rek_pid ?? null,
-            rek_display_type: displayType,
-            rek_subtype: selectedSubType,
-            rek_object_type_lookup: RECORD_TYPE_RECORD,
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [newRecord, createMode, recordToView]);
-    return results;
+    return {
+        rek_pid: newRecord?.rek_pid ?? null,
+        rek_display_type: displayType,
+        rek_subtype: selectedSubType,
+        rek_object_type_lookup: RECORD_TYPE_RECORD,
+    };
 };
 
 export const useFormOnChangeHook = form => {

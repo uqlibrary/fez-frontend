@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import ListRowHeader from './ListRowHeader';
@@ -325,4 +325,4 @@ ListEditor.propTypes = {
     listEditorId: PropTypes.string.isRequired,
 };
 
-export default memo(ListEditor);
+export default ListEditor;
