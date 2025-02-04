@@ -3,14 +3,6 @@ import ManageUsers from './index';
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as repository from 'repositories';
 import userEvent from '@testing-library/user-event';
-import { preview } from 'test-utils';
-
-// jest.mock('./helpers', () => ({
-//     checkForExisting: jest.fn(),
-//     clearAlerts: jest.fn(),
-// }));
-
-// import { checkForExisting } from './helpers';
 
 const setup = (testProps = {}) => {
     return render(
@@ -120,14 +112,6 @@ describe('ManageUsers', () => {
         expect(getByTestId('usr-email-input')).toHaveAttribute('value', 't.user@library.uq.edu.au');
         expect(getByTestId('usr-username-input')).toHaveAttribute('value', 'uqvasai');
 
-        // checkForExisting.mockImplementationOnce(
-        //     jest.fn(() =>
-        //         Promise.reject({
-        //             usr_username: 'The supplied Username is already on file for another user.',
-        //         }),
-        //     ),
-        // );
-
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
@@ -135,16 +119,11 @@ describe('ManageUsers', () => {
 
         await userEvent.click(getByTestId('users-update-this-user-save'));
 
-        // await waitFor(() =>
-        //     expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
-        // );
         await waitFor(() => {
             const messages = queryAllByText('The supplied username is already on file for another user.');
             expect(messages.length).toBeGreaterThan(0);
             messages.forEach(message => expect(message).toBeInTheDocument());
         });
-
-        // checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve({})));
 
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
         await userEvent.click(getByTestId('users-update-this-user-save'));

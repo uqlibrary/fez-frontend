@@ -59,8 +59,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
     const handleSave = (mode, newData, oldData) => {
         const materialTable = materialTableRef.current;
 
-        console.log('handleSave', mode, newData, oldData);
-
         // materialTable.setState(prevState => {
         if (mode === 'add') {
             materialTable.props.editable

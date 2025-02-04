@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Immutable from 'immutable';
-// import { useSelector } from 'react-redux';
-// import { getFormSyncErrors, getFormAsyncErrors, reduxForm, getFormValues } from 'redux-form/immutable';
-// import debounce from 'debounce-promise';
 import { useDispatch } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import { useForm } from 'hooks';
@@ -21,8 +17,6 @@ import NameData from './NameData';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 import { default as locale } from 'locale/components';
-// import { FORM_NAME, DEBOUNCE_VALUE } from './manageUserConfig';
-// import { checkForExisting } from '../helpers';
 import UserDetailsRow from './UserDetailsRow';
 import { checkForExistingUser } from 'actions';
 
@@ -35,15 +29,6 @@ const classes = {
 
 export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApproved, onEditingCanceled }) => {
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    // const formValues = useSelector(state => getFormValues(FORM_NAME)(state));
-    // const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    // const asyncFormErrors = useSelector(state => getFormAsyncErrors(FORM_NAME)(state));
-
-    // const disableSubmit =
-    //     (!!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0) ||
-    //     (!!asyncFormErrors &&
-    //         asyncFormErrors instanceof Immutable.Map &&
-    //         Object.keys(asyncFormErrors.toJS()).length > 0);
     const validatedForm = useForm({
         defaultValues: rowData,
         mode: 'onChange',
@@ -174,11 +159,9 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     };
 
     const onSubmit = async data => {
-        console.log('data', data);
         setSubmitting(true);
         try {
             await validateAsync(data);
-            console.log('data after validateAsync', data);
 
             // Convert empty strings to null as empty string won't submit successfully
             const fields = ['usr_administrator', 'usr_super_administrator'];
@@ -192,15 +175,12 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
             await handleSave(data);
         } catch (error) {
-            console.log('setApiError, error=', error);
             setApiError(error);
         } finally {
             setSubmitting(false);
         }
         return true;
     };
-    console.log('apiError', apiError);
-    console.log('errors', errors);
 
     return (
         <React.Fragment>
@@ -272,7 +252,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                     data-testid="author-delete-row"
                     sx={{ ...classes.background }}
                 >
-                    {console.log('Rendering delete mode')}
                     <ConfirmationBox
                         confirmationBoxId="users-delete-this-user-confirmation"
                         onAction={handleDelete}
@@ -297,11 +276,5 @@ FullUserDetails.propTypes = {
     onEditingCanceled: PropTypes.func,
     rowData: PropTypes.object,
 };
-
-// const FullUserDetailsReduxForm = reduxForm({
-//     form: FORM_NAME,
-//     asyncValidate: debounce(checkForExisting, DEBOUNCE_VALUE),
-//     asyncChangeFields: ['usr_username'],
-// })(FullUserDetails);
 
 export default React.memo(FullUserDetails);

@@ -174,12 +174,10 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
         return get(USERS_SEARCH_API({ query: search }))
             .then(response => {
                 exceptionCaught = false;
-                console.log('response', response);
                 if (
                     response.total === 1 &&
                     response.data.filter(user => user.usr_id !== id && user[searchField] === search).length > 0
                 ) {
-                    console.log('username found');
                     dispatch({
                         type: EXISTING_USER_FOUND,
                     });
