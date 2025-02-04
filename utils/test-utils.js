@@ -239,19 +239,42 @@ const mockWebApiFile = () => {
     };
 };
 
-const assertLastApiRequest = ({ method, url, partialUrl, data }) => {
+const assertRequestData = (data, request) => {
+    if (typeof data === 'object') {
+        expect(JSON.parse(request.data)).toStrictEqual(data);
+    } else if (typeof data === 'function') {
+        expect(data(request.data)).toBeTruthy();
+    }
+};
+
+const assertRequest = ({ method, url, partialUrl, data, request }) => {
+    if (method && method !== '*') {
+        expect(request.method).toBe(method);
+    }
+
+    if (url) {
+        expect(request.url).toBe(url);
+    } else if (partialUrl) {
+        expect(request.url.includes(partialUrl)).toBeTruthy();
+    }
+
+    assertRequestData(data, request);
+};
+
+const assertApiRequest = ({ method, url, partialUrl, data }) => {
     // try to find the last request based on method, url and partialUrl if these are available
-    const lastRequest = lastRequests.find(
+    const index = lastRequests.findIndex(
         entry =>
             (!method || entry.method === method) &&
             (!url || entry.url === url) &&
             (!partialUrl || entry.url.includes(partialUrl)),
     );
 
-    if (!lastRequest) {
+    if (index < 0) {
         throw new Error(
             `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
-                partialUrl | 'N/A'}\n\nRequest queue:\n${JSON.stringify(
+                partialUrl ||
+                'N/A'}\n\nRequest queue:\n${JSON.stringify(
                 lastRequests.reduce((acc, item) => {
                     acc.push({ method: item.method, url: item.url });
                     return acc;
@@ -261,24 +284,21 @@ const assertLastApiRequest = ({ method, url, partialUrl, data }) => {
             )}`,
         );
     }
+    // pop match from queue, so that similar requests can be processed by consecutive calls
+    const [request] = lastRequests.splice(index, 1);
+    assertRequest({ method, url, partialUrl, data, request });
 
-    if (method && method !== '*') {
-        expect(lastRequest.method).toBe(method);
-    }
+    return request;
+};
 
-    if (url) {
-        expect(lastRequest.url).toBe(url);
-    }
-
-    if (partialUrl) {
-        expect(lastRequest.url.contains(partialUrl)).toBeTruthy();
-    }
-
-    if (typeof data === 'object') {
-        expect(JSON.parse(lastRequest.data)).toStrictEqual(data);
-    } else if (typeof data === 'function') {
-        expect(data(lastRequest.data)).toBeTruthy();
-    }
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+    const request = assertApiRequest({
+        method,
+        url,
+        partialUrl: url,
+        data: data => expect(data).toMatchSnapshot() || true,
+    });
+    return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
 
 module.exports = {
@@ -309,5 +329,8 @@ module.exports = {
     setFileUploaderFilesToClosedAccess,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
-    assertLastApiRequest,
+    assertRequestData,
+    assertRequest,
+    assertApiRequest,
+    expectApiRequestToMatchSnapshot,
 };

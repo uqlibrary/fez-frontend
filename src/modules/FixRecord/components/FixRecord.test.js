@@ -10,8 +10,7 @@ import {
     screen,
     assertEnabled,
     assertDisabled,
-    assertLastApiRequest,
-    turnOnJestPreviewOnTestFailure,
+    assertApiRequest,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
 } from 'test-utils';
@@ -226,12 +225,12 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'patch',
                     url: existingRecordUrl,
                     data: expectedUnclaimPayload,
                 });
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'post',
                     url: hideRecordUrl,
                     data: expectedHideRecordPayload,
@@ -253,7 +252,7 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'post',
                     url: recordIssuesUrl,
                     data: expectedFixRecordPayload,
@@ -283,14 +282,14 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'post',
                     url: recordIssuesUrl,
                     data: {
                         issue: `${expectedFixRecordPayload.issue} \n\n                Added files: \n          ${fileMock[0]} \n\n        Selected Content Indicator(s): \n          ${newContentIndicator}`,
                     },
                 });
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'patch',
                     url: existingRecordUrl,
                     data: {
@@ -325,7 +324,7 @@ describe('Component FixRecord', () => {
                         rek_pid: pid,
                     },
                 });
-                assertLastApiRequest({
+                assertApiRequest({
                     method: 'put',
                     url: s3Url,
                     data: data => data instanceof File,

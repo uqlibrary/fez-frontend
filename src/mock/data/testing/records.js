@@ -3441,7 +3441,6 @@ export const journalArticle = {
     "rek_altmetric_id": 20711411,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],

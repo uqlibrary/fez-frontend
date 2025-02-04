@@ -4,7 +4,7 @@ import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
-    assertLastApiRequest,
+    assertApiRequest,
     mockUseForm,
     render,
     waitForTextToBeRemoved,
@@ -145,7 +145,7 @@ describe('Component DeleteRecord', () => {
             setup();
             await submitForm();
 
-            assertLastApiRequest({
+            assertApiRequest({
                 url: `records/${mockRecordToDelete.rek_pid}`,
                 method: 'delete',
                 data: expectedPayload,
@@ -167,7 +167,7 @@ describe('Component DeleteRecord', () => {
             setup();
             await submitForm();
 
-            assertLastApiRequest({
+            assertApiRequest({
                 url: `records/${pid}`,
                 method: 'patch',
                 data: expectedPayload,
@@ -181,7 +181,7 @@ describe('Component DeleteRecord', () => {
             await fillReason();
             await submitForm();
 
-            assertLastApiRequest({
+            assertApiRequest({
                 url: `records/${mockRecordToDelete.rek_pid}`,
                 method: 'delete',
                 data: expectedPayloadWithReason,
@@ -197,7 +197,7 @@ describe('Component DeleteRecord', () => {
             await userEvent.type(screen.getByTestId('rek-doi-resolution-url-input'), doiResolutionUrl);
             await submitForm();
 
-            assertLastApiRequest({
+            assertApiRequest({
                 url: `records/${recordWithCrossrefDoi.rek_pid}`,
                 method: 'delete',
                 data: {
@@ -229,7 +229,7 @@ describe('Component DeleteRecord', () => {
             await userEvent.type(screen.getByTestId('rek-new-doi-input'), newDoi);
             await submitForm();
 
-            assertLastApiRequest({
+            assertApiRequest({
                 url: `records/${pid}`,
                 method: 'delete',
                 data: {

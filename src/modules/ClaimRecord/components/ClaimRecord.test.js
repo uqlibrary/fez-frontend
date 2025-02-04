@@ -2,7 +2,13 @@ import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
-import { CLAIM_PRE_CHECK, EXISTING_RECORD_API, FILE_UPLOAD_API, NEW_RECORD_API } from 'repositories/routes';
+import {
+    CLAIM_PRE_CHECK,
+    EXISTING_RECORD_API,
+    FILE_UPLOAD_API,
+    NEW_RECORD_API,
+    RECORDS_ISSUES_API,
+} from 'repositories/routes';
 import React from 'react';
 import {
     render,
@@ -14,8 +20,9 @@ import {
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     screen,
-    assertLastApiRequest,
     turnOnJestPreviewOnTestFailure,
+    userEvent,
+    expectApiRequestToMatchSnapshot,
 } from 'test-utils';
 import locale from 'locale/forms';
 import { clearLastRequest } from '../../../config/axios';
@@ -100,6 +107,9 @@ function setup(props = {}) {
     );
 }
 describe('Component ClaimRecord ', () => {
+    const isDebugging = false;
+    const waitForOptions = { timeout: isDebugging ? 120000 : 1000 };
+
     beforeEach(() => {
         mockUseNavigate.mockReset();
         mockClearNewRecord.mockReset();
@@ -387,6 +397,9 @@ describe('Component ClaimRecord ', () => {
         turnOnJestPreviewOnTestFailure();
         const fileMock = ['myTestImage.png'];
         const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
+        const recordIssuesUrl = RECORDS_ISSUES_API({ pid: journalArticle.rek_pid }).apiUrl;
+        const mockIssuesApiCall = () => mockApi.onPost(recordIssuesUrl).replyOnce(200);
+
         const s3Url = 's3-ap-southeast-2.amazonaws.com';
         const selectAuthor = () => {
             fireEvent.click(screen.getByTestId('rek-author-id-1'));
@@ -395,8 +408,9 @@ describe('Component ClaimRecord ', () => {
         const submitForm = async () => {
             fireEvent.click(screen.getByTestId('claim-record-submit'));
             screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message) &&
-                (await waitForElementToBeRemoved(() =>
-                    screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message),
+                (await waitForElementToBeRemoved(
+                    () => screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message),
+                    waitForOptions,
                 ));
         };
 
@@ -408,44 +422,36 @@ describe('Component ClaimRecord ', () => {
         });
 
         it('should display confirmation box after successful submission', async () => {
+            const newContentIndicator = 'Case Study';
             mockApi
                 .onPatch(existingRecordUrl)
-                .replyOnce(200, { data: journalArticle })
+                .reply(200, { data: journalArticle })
                 .onPost(FILE_UPLOAD_API().apiUrl)
                 .replyOnce(200, s3Url)
                 .onPut(s3Url)
                 .replyOnce(200, {});
-            const { getByTestId, queryByTestId } = setup({
+            mockIssuesApiCall();
+
+            const { getByText, getByTestId, queryByTestId } = setup({
                 redirectPath: '/test',
             });
 
             selectAuthor();
             addFilesToFileUploader(fileMock);
             await setFileUploaderFilesToClosedAccess(fileMock);
-            await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+            await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'), waitForOptions);
+            await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
+            await userEvent.click(getByTestId('rek-content-indicator-select'));
+            await userEvent.click(getByText(newContentIndicator));
             await submitForm();
-            assertLastApiRequest({
-                method: 'patch',
-                url: existingRecordUrl,
-                data: {
-                    fez_record_search_key_author_id: [
-                        journalArticle.fez_record_search_key_author_id[0],
-                        // assert selected author
-                        { ...journalArticle.fez_record_search_key_author_id[1], rek_author_id: 410 },
-                        ...journalArticle.fez_record_search_key_author_id.slice(2),
-                    ],
-                    fez_record_search_key_content_indicator: [
-                        {
-                            rek_content_indicator: 454079,
-                            rek_content_indicator_order: 1,
-                        },
-                        {
-                            rek_content_indicator: 454080,
-                            rek_content_indicator_order: 2,
-                        },
-                    ],
-                },
-            });
+
+            // assert submitted data
+            expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(410)); // records updates
+            expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
+            expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(fileMock[0])); // datastream updates
+            expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
+
+            // confirmation dialog
             fireEvent.click(getByTestId('confirm-dialog-box'));
             expect(mockUseNavigate).toBeCalledWith('/records/mine');
             fireEvent.click(getByTestId('cancel-dialog-box'));
@@ -482,10 +488,13 @@ describe('Component ClaimRecord ', () => {
                 selectAuthor();
                 addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
-                await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+                await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'), waitForOptions);
                 await submitForm();
                 // assert a file upload error
-                await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
+                await waitFor(
+                    () => getByText(/File upload and\/or edits\/changes\/comments post failed/i),
+                    waitForOptions,
+                );
                 // navigate to fix page
                 fireEvent.click(getByTestId('alternate-dialog-box'));
                 expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
@@ -501,12 +510,14 @@ describe('Component ClaimRecord ', () => {
                 selectAuthor();
                 await submitForm();
 
-                await waitFor(() =>
-                    queryByText(
-                        locale.forms.claimPublicationForm.errorAlert.message(
-                            'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                await waitFor(
+                    () =>
+                        queryByText(
+                            locale.forms.claimPublicationForm.errorAlert.message(
+                                'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                            ),
                         ),
-                    ),
+                    waitForOptions,
                 );
             });
 
