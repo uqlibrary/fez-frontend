@@ -254,7 +254,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             {(!!apiError || !!Object.keys(errors).length) && (
                                                 <Grid xs={12}>
                                                     <Alert alertId="api_error_alert" {...alertProps} />
-                                                    <span>Has error</span>
                                                 </Grid>
                                             )}
                                         </Grid>

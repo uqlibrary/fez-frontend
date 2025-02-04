@@ -3,7 +3,7 @@ import ManageUsers from './index';
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as repository from 'repositories';
 import userEvent from '@testing-library/user-event';
-import { preview, screen } from 'test-utils';
+import { preview } from 'test-utils';
 
 // jest.mock('./helpers', () => ({
 //     checkForExisting: jest.fn(),
@@ -134,27 +134,20 @@ describe('ManageUsers', () => {
         expect(getByTestId('users-update-this-user-save').closest('button')).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByTestId('users-update-this-user-save'));
-        preview.debug();
 
         // await waitFor(() =>
         //     expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
         // );
-        console.log('messages.length=0');
         await waitFor(() => {
             const messages = queryAllByText('The supplied username is already on file for another user.');
-            console.log('messages.length$=', container.innerHTML);
-            // const messages = queryAllByText('Has error');
-            console.log('messages.length=', messages.length);
-
             expect(messages.length).toBeGreaterThan(0);
             messages.forEach(message => expect(message).toBeInTheDocument());
         });
-        console.log('messages.length=2');
 
         // checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve({})));
 
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtname' } });
-        fireEvent.click(getByTestId('users-update-this-user-save'));
+        await userEvent.click(getByTestId('users-update-this-user-save'));
 
         await waitFor(() => expect(getAllByTestId('mtablebodyrow').length).toBe(1));
 
