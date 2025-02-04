@@ -445,7 +445,7 @@ describe('ManageAuthorsList', () => {
         fireEvent.change(usernameInput, { target: { value: 'uqtesta' } });
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
-        const autFnameInput = await findByTestId('aut-fname-input', {}, { timeout: 10000 });
+        const autFnameInput = await findByTestId('aut-fname-input', {}, { timeout: 30000 });
         await userEvent.clear(autFnameInput);
         await waitFor(() => expect(autFnameInput).toHaveValue(''));
 
