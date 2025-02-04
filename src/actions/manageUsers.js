@@ -175,7 +175,7 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
             .then(response => {
                 exceptionCaught = false;
                 if (
-                    response.total === 1 &&
+                    response.total >= 1 &&
                     response.data.filter(user => user.usr_id !== id && user[searchField] === search).length > 0
                 ) {
                     dispatch({
