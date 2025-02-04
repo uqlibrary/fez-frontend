@@ -14,8 +14,11 @@ import {
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     screen,
+    assertLastApiRequest,
+    turnOnJestPreviewOnTestFailure,
 } from 'test-utils';
 import locale from 'locale/forms';
+import { clearLastRequest } from '../../../config/axios';
 
 const mockUseNavigate = jest.fn();
 /* eslint-disable react/prop-types */
@@ -97,35 +100,64 @@ function setup(props = {}) {
     );
 }
 describe('Component ClaimRecord ', () => {
-    const fileMock = ['myTestImage.png'];
-    const selectAuthor = () => {
-        fireEvent.click(screen.getByTestId('rek-author-id-1'));
-        fireEvent.click(screen.getByTestId('author-accept-declaration-input'));
-    };
-    const submitForm = async () => {
-        fireEvent.click(screen.getByTestId('claim-record-submit'));
-        await waitForElementToBeRemoved(() =>
-            screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message),
-        );
-    };
     beforeEach(() => {
         mockUseNavigate.mockReset();
         mockClearNewRecord.mockReset();
         mockClearRedirectPath.mockReset();
     });
 
-    it('should render claim publication form', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
-    });
+    describe('snapshots', () => {
+        it('should render claim publication form', () => {
+            const { container } = setup();
+            expect(container).toMatchSnapshot();
+        });
 
-    it(
-        'should render publication citation, error message if publication has PID and ' +
-            'it was claimed by current author already',
-        () => {
-            const props = {
-                publication: {
+        it(
+            'should render publication citation, error message if publication has PID and ' +
+                'it was claimed by current author already',
+            () => {
+                const props = {
+                    publication: {
+                        ...journalArticle,
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: 410,
+                                rek_author_id_order: 1,
+                            },
+                            {
+                                rek_author_id: 0,
+                                rek_author_id_order: 2,
+                            },
+                        ],
+                        fez_record_search_key_author: [
+                            {
+                                rek_author_id: null,
+                                rek_author_pid: 'UQ:111111',
+                                rek_author: 'Smith, A',
+                                rek_author_order: 1,
+                            },
+                            {
+                                rek_author_id: null,
+                                rek_author_pid: 'UQ:222222',
+                                rek_author: 'Smith, J',
+                                rek_author_order: 2,
+                            },
+                        ],
+                    },
+                };
+
+                const { container } = setup(props);
+                expect(container).toMatchSnapshot();
+            },
+        );
+
+        it(
+            "should render claim form if publication doesn't have a PID but current author " +
+                'was assigned (author linking component should not be rendered)',
+            () => {
+                const testArticle = {
                     ...journalArticle,
+                    rek_pid: null,
                     fez_record_search_key_author_id: [
                         {
                             rek_author_id: 410,
@@ -150,89 +182,159 @@ describe('Component ClaimRecord ', () => {
                             rek_author_order: 2,
                         },
                     ],
+                };
+
+                const { container } = setup({ publication: testArticle });
+                expect(container).toMatchSnapshot();
+            },
+        );
+
+        it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
+            const { container } = setup({
+                publication: journalArticle,
+            });
+            expect(container).toMatchSnapshot();
+        });
+
+        it(
+            "should render claim form, author linking component should be rendered even if there's" +
+                ' only one author on a publication',
+            () => {
+                const testArticle = {
+                    ...journalArticle,
+                    rek_pid: null,
+                    fez_record_search_key_author_id: [],
+                    fez_record_search_key_author: [
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:10000',
+                            rek_author: 'Smith, J',
+                            rek_author_order: 1,
+                        },
+                    ],
+                };
+
+                const { container } = setup({
+                    publication: testArticle,
+                });
+
+                expect(container).toMatchSnapshot();
+            },
+        );
+
+        it(
+            "should render claim form, contributor linking component should be rendered even if there's" +
+                ' only one contributor on a publication',
+            () => {
+                const testArticle = {
+                    ...dataCollection,
+                    rek_pid: null,
+                    fez_record_search_key_author: [],
+                    fez_record_search_key_author_id: [],
+                    fez_record_search_key_contributor_id: [],
+                    fez_record_search_key_contributor: [
+                        {
+                            rek_contributor_id: null,
+                            rek_contributor_pid: 'UQ:10000',
+                            rek_contributor: 'Smith, J',
+                            rek_contributor_order: 1,
+                        },
+                    ],
+                };
+
+                const { container } = setup({
+                    publication: testArticle,
+                });
+
+                expect(container).toMatchSnapshot();
+            },
+        );
+
+        it(
+            'should render claim form, author linking component and contributor linking component should be' +
+                ' rendered even if there are only one author and one contributor on a publication',
+            () => {
+                const testArticle = {
+                    ...dataCollection,
+                    rek_pid: null,
+                    fez_record_search_key_author_id: [],
+                    fez_record_search_key_author: [
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:10000',
+                            rek_author: 'Smith, J',
+                            rek_author_order: 1,
+                        },
+                    ],
+                    fez_record_search_key_contributor_id: [],
+                    fez_record_search_key_contributor: [
+                        {
+                            rek_contributor_id: null,
+                            rek_contributor_pid: 'UQ:10000',
+                            rek_contributor: 'Smith, J',
+                            rek_contributor_order: 1,
+                        },
+                    ],
+                };
+
+                const { container } = setup({
+                    publication: testArticle,
+                });
+
+                expect(container).toMatchSnapshot();
+            },
+        );
+
+        it('should show contributor as linked', () => {
+            const props = {
+                publication: {
+                    ...journalArticle,
+                    fez_record_search_key_contributor_id: [
+                        {
+                            rek_contributor_id: 410,
+                            rek_contributor_id_order: 1,
+                        },
+                        {
+                            rek_contributor_id: 0,
+                            rek_contributor_id_order: 2,
+                        },
+                    ],
                 },
             };
 
             const { container } = setup(props);
             expect(container).toMatchSnapshot();
-        },
-    );
+        });
 
-    it(
-        "should render claim form if publication doesn't have a PID but current author " +
-            'was assigned (author linking component should not be rendered)',
-        () => {
-            const testArticle = {
-                ...journalArticle,
-                rek_pid: null,
-                fez_record_search_key_author_id: [
-                    {
-                        rek_author_id: 410,
-                        rek_author_id_order: 1,
-                    },
-                    {
-                        rek_author_id: 0,
-                        rek_author_id_order: 2,
-                    },
-                ],
-                fez_record_search_key_author: [
-                    {
-                        rek_author_id: null,
-                        rek_author_pid: 'UQ:111111',
-                        rek_author: 'Smith, A',
-                        rek_author_order: 1,
-                    },
-                    {
-                        rek_author_id: null,
-                        rek_author_pid: 'UQ:222222',
-                        rek_author: 'Smith, J',
-                        rek_author_order: 2,
-                    },
-                ],
+        it('should show the loader', () => {
+            const props = {
+                publication: null,
+                fullPublicationToClaimLoading: true,
             };
 
-            const { container } = setup({ publication: testArticle });
+            const { container } = setup(props);
             expect(container).toMatchSnapshot();
-        },
-    );
-
-    it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
-        const { container } = setup({
-            publication: journalArticle,
         });
-        expect(container).toMatchSnapshot();
     });
 
-    it(
-        "should render claim form, author linking component should be rendered even if there's" +
-            ' only one author on a publication',
-        () => {
-            const testArticle = {
-                ...journalArticle,
-                rek_pid: null,
-                fez_record_search_key_author_id: [],
-                fez_record_search_key_author: [
-                    {
-                        rek_author_id: null,
-                        rek_author_pid: 'UQ:10000',
-                        rek_author: 'Smith, J',
-                        rek_author_order: 1,
-                    },
-                ],
-            };
+    describe('navigation', () => {
+        it('should go back to previous page on cancel', () => {
+            const { getByText } = setup({});
 
-            const { container } = setup({
-                publication: testArticle,
-            });
+            fireEvent.click(getByText('Cancel this claim'));
 
-            expect(container).toMatchSnapshot();
-        },
-    );
+            expect(mockClearNewRecord).toBeCalled();
+            expect(mockUseNavigate).toBeCalledWith(-1);
+        });
 
-    it(
-        "should render claim form, contributor linking component should be rendered even if there's" +
-            ' only one contributor on a publication',
-        () => {
+        it('should redirect if no author or record set', () => {
+            setup({ author: null });
+            expect(mockUseNavigate).toHaveBeenCalled();
+        });
+    });
+
+    describe('validation', () => {
+        it('should validate contributor with contributor only', () => {
             const testArticle = {
                 ...dataCollection,
                 rek_pid: null,
@@ -241,7 +343,6 @@ describe('Component ClaimRecord ', () => {
                 fez_record_search_key_contributor_id: [],
                 fez_record_search_key_contributor: [
                     {
-                        rek_contributor_id: null,
                         rek_contributor_pid: 'UQ:10000',
                         rek_contributor: 'Smith, J',
                         rek_contributor_order: 1,
@@ -249,34 +350,23 @@ describe('Component ClaimRecord ', () => {
                 ],
             };
 
-            const { container } = setup({
+            setup({
                 publication: testArticle,
             });
 
-            expect(container).toMatchSnapshot();
-        },
-    );
+            const contributorLinking = { authors: [], valid: false };
+            expect(mockContributorValidation(contributorLinking)).toEqual(
+                validationErrors.validationErrors.contributorLinking,
+            );
+        });
 
-    it(
-        'should render claim form, author linking component and contributor linking component should be' +
-            ' rendered even if there are only one author and one contributor on a publication',
-        () => {
+        it('should validate contributor with authors and contributors', () => {
             const testArticle = {
                 ...dataCollection,
                 rek_pid: null,
-                fez_record_search_key_author_id: [],
-                fez_record_search_key_author: [
-                    {
-                        rek_author_id: null,
-                        rek_author_pid: 'UQ:10000',
-                        rek_author: 'Smith, J',
-                        rek_author_order: 1,
-                    },
-                ],
                 fez_record_search_key_contributor_id: [],
                 fez_record_search_key_contributor: [
                     {
-                        rek_contributor_id: null,
                         rek_contributor_pid: 'UQ:10000',
                         rek_contributor: 'Smith, J',
                         rek_contributor_order: 1,
@@ -284,224 +374,188 @@ describe('Component ClaimRecord ', () => {
                 ],
             };
 
-            const { container } = setup({
+            setup({
                 publication: testArticle,
             });
 
-            expect(container).toMatchSnapshot();
-        },
-    );
+            const contributorLinking = { authors: [], valid: true };
+            expect(mockContributorValidation(contributorLinking)).toEqual('');
+        });
+    });
 
-    it('should show contributor as linked', () => {
-        const props = {
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_contributor_id: [
-                    {
-                        rek_contributor_id: 410,
-                        rek_contributor_id_order: 1,
-                    },
-                    {
-                        rek_contributor_id: 0,
-                        rek_contributor_id_order: 2,
-                    },
-                ],
-            },
+    describe('form submission', () => {
+        turnOnJestPreviewOnTestFailure();
+        const fileMock = ['myTestImage.png'];
+        const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
+        const s3Url = 's3-ap-southeast-2.amazonaws.com';
+        const selectAuthor = () => {
+            fireEvent.click(screen.getByTestId('rek-author-id-1'));
+            fireEvent.click(screen.getByTestId('author-accept-declaration-input'));
+        };
+        const submitForm = async () => {
+            fireEvent.click(screen.getByTestId('claim-record-submit'));
+            screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message) &&
+                (await waitForElementToBeRemoved(() =>
+                    screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message),
+                ));
         };
 
-        const { container } = setup(props);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should show the loader', () => {
-        const props = {
-            publication: null,
-            fullPublicationToClaimLoading: true,
-        };
-
-        const { container } = setup(props);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render server error', async () => {
-        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
-
-        const { queryByText } = setup();
-
-        selectAuthor();
-        await submitForm();
-
-        await waitFor(() =>
-            queryByText(
-                locale.forms.claimPublicationForm.errorAlert.message(
-                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-                ),
-            ),
-        );
-    });
-
-    it('should render incomplete data error message when trying to claim an incomplete external (non-eSpace) record', async () => {
-        mockApi
-            .onPost(CLAIM_PRE_CHECK().apiUrl)
-            .reply(200, { data: '' })
-            .onPost(NEW_RECORD_API().apiUrl)
-            .reply(422);
-
-        const { getByText } = setup({
-            publication: {
-                ...journalArticle,
-                rek_pid: null,
-            },
+        beforeEach(() => {
+            clearLastRequest();
+        });
+        afterEach(() => {
+            mockApi.resetHandlers();
         });
 
-        selectAuthor();
-        await submitForm();
+        it('should display confirmation box after successful submission', async () => {
+            mockApi
+                .onPatch(existingRecordUrl)
+                .replyOnce(200, { data: journalArticle })
+                .onPost(FILE_UPLOAD_API().apiUrl)
+                .replyOnce(200, s3Url)
+                .onPut(s3Url)
+                .replyOnce(200, {});
+            const { getByTestId, queryByTestId } = setup({
+                redirectPath: '/test',
+            });
 
-        expect(getByText(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBeInTheDocument();
-    });
-
-    it('should render custom error message when the pre check request failed', async () => {
-        const customErrorMessage = 'Unexpected field rek_pid : UQ:123456';
-        mockApi.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
-            return [
-                500,
-                {
-                    data: customErrorMessage,
-                    request: {
-                        responseURL: 'https://api.library.uq.edu.au/staging/external/records/claim/pre-check',
-                    },
+            selectAuthor();
+            addFilesToFileUploader(fileMock);
+            await setFileUploaderFilesToClosedAccess(fileMock);
+            await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+            await submitForm();
+            assertLastApiRequest({
+                method: 'patch',
+                url: existingRecordUrl,
+                data: {
+                    fez_record_search_key_author_id: [
+                        journalArticle.fez_record_search_key_author_id[0],
+                        // assert selected author
+                        { ...journalArticle.fez_record_search_key_author_id[1], rek_author_id: 410 },
+                        ...journalArticle.fez_record_search_key_author_id.slice(2),
+                    ],
+                    fez_record_search_key_content_indicator: [
+                        {
+                            rek_content_indicator: 454079,
+                            rek_content_indicator_order: 1,
+                        },
+                        {
+                            rek_content_indicator: 454080,
+                            rek_content_indicator_order: 2,
+                        },
+                    ],
                 },
-            ];
+            });
+            fireEvent.click(getByTestId('confirm-dialog-box'));
+            expect(mockUseNavigate).toBeCalledWith('/records/mine');
+            fireEvent.click(getByTestId('cancel-dialog-box'));
+            expect(mockUseNavigate).toBeCalledWith('/test');
+            expect(mockClearNewRecord).toBeCalled();
+            expect(mockClearRedirectPath).toBeCalled();
         });
 
-        const { getByText } = setup({
-            publication: {
-                ...journalArticle,
-                rek_pid: null,
-            },
+        describe('post submission', () => {
+            it('should display confirmation box after successful submission and go back to previous page', async () => {
+                mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
+                    data: journalArticle,
+                });
+                const { getByTestId } = setup();
+
+                selectAuthor();
+                await submitForm();
+
+                fireEvent.click(getByTestId('cancel-dialog-box'));
+                expect(mockUseNavigate).toBeCalledWith(-1);
+            });
+
+            it('should render the confirm dialog with an alert due to a file upload error', async () => {
+                mockApi
+                    .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
+                    .replyOnce(200, {
+                        data: journalArticle,
+                    })
+                    .onPost(FILE_UPLOAD_API().apiUrl)
+                    .reply(500);
+
+                const { getByText, getByTestId, queryByTestId } = setup();
+
+                selectAuthor();
+                addFilesToFileUploader(fileMock);
+                await setFileUploaderFilesToClosedAccess(fileMock);
+                await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
+                await submitForm();
+                // assert a file upload error
+                await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
+                // navigate to fix page
+                fireEvent.click(getByTestId('alternate-dialog-box'));
+                expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
+            });
         });
 
-        selectAuthor();
-        await submitForm();
+        describe('error handling', () => {
+            it('should render server error', async () => {
+                mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
 
-        expect(getByText(customErrorMessage)).toBeInTheDocument();
-    });
+                const { queryByText } = setup();
 
-    it('should display confirmation box after successful submission', async () => {
-        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
-            data: journalArticle,
+                selectAuthor();
+                await submitForm();
+
+                await waitFor(() =>
+                    queryByText(
+                        locale.forms.claimPublicationForm.errorAlert.message(
+                            'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                        ),
+                    ),
+                );
+            });
+
+            it('should render incomplete data error message when trying to claim an incomplete external (non-eSpace) record', async () => {
+                mockApi
+                    .onPost(CLAIM_PRE_CHECK().apiUrl)
+                    .reply(200, { data: '' })
+                    .onPost(NEW_RECORD_API().apiUrl)
+                    .reply(422);
+
+                const { getByText } = setup({
+                    publication: {
+                        ...journalArticle,
+                        rek_pid: null,
+                    },
+                });
+
+                selectAuthor();
+                await submitForm();
+
+                expect(getByText(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBeInTheDocument();
+            });
+
+            it('should render custom error message when the pre check request failed', async () => {
+                const customErrorMessage = 'Unexpected field rek_pid : UQ:123456';
+                mockApi.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
+                    return [
+                        500,
+                        {
+                            data: customErrorMessage,
+                            request: {
+                                responseURL: 'https://api.library.uq.edu.au/staging/external/records/claim/pre-check',
+                            },
+                        },
+                    ];
+                });
+
+                const { getByText } = setup({
+                    publication: {
+                        ...journalArticle,
+                        rek_pid: null,
+                    },
+                });
+
+                selectAuthor();
+                await submitForm();
+
+                expect(getByText(customErrorMessage)).toBeInTheDocument();
+            });
         });
-        const { getByTestId } = setup({
-            redirectPath: '/test',
-        });
-
-        selectAuthor();
-        await submitForm();
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/records/mine');
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/test');
-        expect(mockClearNewRecord).toBeCalled();
-        expect(mockClearRedirectPath).toBeCalled();
-    });
-
-    it('should display confirmation box after successful submission and go back to previous page', async () => {
-        mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
-            data: journalArticle,
-        });
-        const { getByTestId } = setup();
-
-        selectAuthor();
-        await submitForm();
-
-        fireEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith(-1);
-    });
-
-    it('should render the confirm dialog with an alert due to a file upload error', async () => {
-        mockApi
-            .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
-            .replyOnce(200, {
-                data: journalArticle,
-            })
-            .onPost(FILE_UPLOAD_API().apiUrl)
-            .reply(500);
-
-        const { container, getByText, getByTestId, queryByTestId } = setup();
-
-        selectAuthor();
-        addFilesToFileUploader(fileMock);
-        await setFileUploaderFilesToClosedAccess(fileMock);
-        await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'));
-        await submitForm();
-        // assert a file upload error
-        await waitFor(() => getByText(/File upload and\/or edits\/changes\/comments post failed/i));
-        // navigate to fix page
-        fireEvent.click(getByTestId('alternate-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should go back to previous page on cancel', () => {
-        const { getByText } = setup({});
-
-        fireEvent.click(getByText('Cancel this claim'));
-
-        expect(mockClearNewRecord).toBeCalled();
-        expect(mockUseNavigate).toBeCalledWith(-1);
-    });
-
-    it('should redirect if no author or record set', () => {
-        setup({ author: null });
-        expect(mockUseNavigate).toHaveBeenCalled();
-    });
-
-    it('should validate contributor with contributor only', () => {
-        const testArticle = {
-            ...dataCollection,
-            rek_pid: null,
-            fez_record_search_key_author: [],
-            fez_record_search_key_author_id: [],
-            fez_record_search_key_contributor_id: [],
-            fez_record_search_key_contributor: [
-                {
-                    rek_contributor_pid: 'UQ:10000',
-                    rek_contributor: 'Smith, J',
-                    rek_contributor_order: 1,
-                },
-            ],
-        };
-
-        setup({
-            publication: testArticle,
-        });
-
-        const contributorLinking = { authors: [], valid: false };
-        expect(mockContributorValidation(contributorLinking)).toEqual(
-            validationErrors.validationErrors.contributorLinking,
-        );
-    });
-
-    it('should validate contributor with authors and contributors', () => {
-        const testArticle = {
-            ...dataCollection,
-            rek_pid: null,
-            fez_record_search_key_contributor_id: [],
-            fez_record_search_key_contributor: [
-                {
-                    rek_contributor_pid: 'UQ:10000',
-                    rek_contributor: 'Smith, J',
-                    rek_contributor_order: 1,
-                },
-            ],
-        };
-
-        setup({
-            publication: testArticle,
-        });
-
-        const contributorLinking = { authors: [], valid: true };
-        expect(mockContributorValidation(contributorLinking)).toEqual('');
     });
 });

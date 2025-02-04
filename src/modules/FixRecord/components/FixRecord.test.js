@@ -157,7 +157,6 @@ describe('Component FixRecord', () => {
     });
 
     describe('form submission', () => {
-        turnOnJestPreviewOnTestFailure();
         const pid = mockRecordToFix.rek_pid;
         const fileMock = ['test.png'];
         const existingRecordUrl = EXISTING_RECORD_API({ pid }).apiUrl;
