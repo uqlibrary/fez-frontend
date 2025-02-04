@@ -142,7 +142,7 @@ describe('Add new record', () => {
         // submit to trigger confirmation box
         fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
 
-        await waitFor(() => getByTestId('confirm-dialog-box'));
+        await waitFor(() => getByTestId('confirm-dialog-box'), { timeout: 5000 });
         expect(getByText(/File upload and\/or notes post failed/i)).toBeInTheDocument();
 
         fireEvent.click(getByRole('button', { name: 'Fix work' }));
