@@ -153,7 +153,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     };
 
     const errorMessagesList = getAllUniqueErrorMessages();
-    console.log('errorMessagesList shown', errorMessagesList);
     const message = (
         <span>
             {locale.components.manageUsers.validationAlertTitle}
@@ -168,7 +167,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
             </ul>
         </span>
     );
-    console.log('message shown', message);
     const alertProps = {
         message: message,
         title: 'Validation',
@@ -255,8 +253,8 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             </Grid>
                                             {(!!apiError || !!Object.keys(errors).length) && (
                                                 <Grid xs={12}>
-                                                    {console.log('alertProps shown', alertProps.message)}
                                                     <Alert alertId="api_error_alert" {...alertProps} />
+                                                    <span>Has error</span>
                                                 </Grid>
                                             )}
                                         </Grid>

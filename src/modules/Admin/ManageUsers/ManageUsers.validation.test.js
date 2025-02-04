@@ -3,14 +3,14 @@ import ManageUsers from './index';
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
 import * as repository from 'repositories';
 import userEvent from '@testing-library/user-event';
-import { preview } from 'test-utils';
+import { preview, screen } from 'test-utils';
 
-jest.mock('./helpers', () => ({
-    checkForExisting: jest.fn(),
-    clearAlerts: jest.fn(),
-}));
+// jest.mock('./helpers', () => ({
+//     checkForExisting: jest.fn(),
+//     clearAlerts: jest.fn(),
+// }));
 
-import { checkForExisting } from './helpers';
+// import { checkForExisting } from './helpers';
 
 const setup = (testProps = {}) => {
     return render(
@@ -110,7 +110,7 @@ describe('ManageUsers', () => {
                 },
             ];
         });
-        const { getAllByTestId, getByTestId, getByText, queryAllByText } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryAllByText, container } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -131,6 +131,7 @@ describe('ManageUsers', () => {
         fireEvent.change(getByTestId('usr-full-name-input'), { target: { value: 'Test' } });
         fireEvent.change(getByTestId('usr-email-input'), { target: { value: 'test@uq.edu.au' } });
         fireEvent.change(getByTestId('usr-username-input'), { target: { value: 'uqtest' } });
+        expect(getByTestId('users-update-this-user-save').closest('button')).not.toHaveAttribute('disabled');
 
         await userEvent.click(getByTestId('users-update-this-user-save'));
         preview.debug();
@@ -138,11 +139,17 @@ describe('ManageUsers', () => {
         // await waitFor(() =>
         //     expect(getByText('The supplied Username is already on file for another user.')).toBeInTheDocument(),
         // );
+        console.log('messages.length=0');
         await waitFor(() => {
-            const messages = queryAllByText('The supplied Username is already on file for another user.');
-            expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
+            const messages = queryAllByText('The supplied username is already on file for another user.');
+            console.log('messages.length$=', container.innerHTML);
+            // const messages = queryAllByText('Has error');
+            console.log('messages.length=', messages.length);
+
+            expect(messages.length).toBeGreaterThan(0);
             messages.forEach(message => expect(message).toBeInTheDocument());
         });
+        console.log('messages.length=2');
 
         // checkForExisting.mockImplementationOnce(jest.fn(() => Promise.resolve({})));
 
