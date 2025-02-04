@@ -1,6 +1,4 @@
 import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { Field } from 'redux-form/immutable';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useFormContext } from 'react-hook-form';
 
@@ -12,9 +10,6 @@ import UserFieldData from './UserFieldData';
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
 import { useIsUserSuperAdmin } from 'hooks';
-// import { FORM_NAME } from './manageUserConfig';
-
-// const selector = formValueSelector(FORM_NAME);
 
 export const NameData = () => {
     // const dispatch = useDispatch();
