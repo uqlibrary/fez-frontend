@@ -13,18 +13,13 @@ import {
     expectApiRequestToMatchSnapshot,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    api,
 } from 'test-utils';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import validationErrors from '../../../locale/validationErrors';
 import forms from '../../../locale/forms';
-import {
-    EXISTING_RECORD_API,
-    FILE_UPLOAD_API,
-    HIDE_POSSIBLE_RECORD_API,
-    RECORDS_ISSUES_API,
-} from '../../../repositories/routes';
+import { HIDE_POSSIBLE_RECORD_API } from '../../../repositories/routes';
 import { pathConfig } from '../../../config';
-import { clearLastRequest } from '../../../config/axios';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
@@ -130,7 +125,6 @@ describe('Component FixRecord', () => {
     });
 
     it('should render work not found page if record can not be loaded', async () => {
-        mockApi.onGet(EXISTING_RECORD_API({ pid: mockRecordToFix.rek_pid }).apiUrl).replyOnce(404);
         const { getByText } = setup();
         await waitFor(() => getByText('Work not found'), waitForOptions);
     });
@@ -158,23 +152,22 @@ describe('Component FixRecord', () => {
     describe('form submission', () => {
         const pid = mockRecordToFix.rek_pid;
         const fileMock = ['test.png'];
-        const existingRecordUrl = EXISTING_RECORD_API({ pid }).apiUrl;
-        const recordIssuesUrl = RECORDS_ISSUES_API({ pid }).apiUrl;
+        const existingRecordUrl = api.url.records.get(pid);
+        const recordIssuesUrl = api.url.records.issues(pid);
         const hideRecordUrl = HIDE_POSSIBLE_RECORD_API().apiUrl;
-        const s3Url = 's3-ap-southeast-2.amazonaws.com';
 
-        const mockPatchRecordApiCall = () => mockApi.onPatch(existingRecordUrl).replyOnce(200);
+        const mockPatchRecordApiCall = () => api.mock.records.update({ pid });
         const mockUnclaimApiCalls = () =>
             mockPatchRecordApiCall()
                 .onPost(hideRecordUrl)
                 .replyOnce(200);
-        const mockFixRecordApiCall = () => mockApi.onPost(recordIssuesUrl).replyOnce(200);
+        const mockFixRecordApiCall = () => api.mock.records.issues({ pid });
 
         beforeEach(() => {
-            clearLastRequest();
+            api.request.history.reset();
         });
         afterEach(() => {
-            mockApi.resetHandlers();
+            api.mock.reset();
         });
 
         describe('payload', () => {
@@ -213,11 +206,8 @@ describe('Component FixRecord', () => {
             it('should submit fix record data with new content indicator and file', async () => {
                 const newContentIndicator = 'Case Study';
                 mockPatchRecordApiCall();
-                mockFixRecordApiCall()
-                    .onPost(FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, s3Url)
-                    .onPut(s3Url)
-                    .replyOnce(200, {});
+                mockFixRecordApiCall();
+                api.mock.files.upload();
                 const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
                 await assertValidationErrorSummary();
@@ -235,7 +225,7 @@ describe('Component FixRecord', () => {
                 await assertFixedRecordConfirmationMessage();
                 expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
                 expectApiRequestToMatchSnapshot('patch', existingRecordUrl);
-                expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
+                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
             });
         });
 

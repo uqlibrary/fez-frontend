@@ -14,6 +14,8 @@ import {
     addFilesToFileUploader,
     waitForTextToBeRemoved,
     waitForText,
+    expectApiRequestToMatchSnapshot,
+    api,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import Immutable from 'immutable';
@@ -68,7 +70,7 @@ function setup(props = {}) {
 }
 
 /**
- * These tests are intentionally extensive, as they functional tests of the ThesisSubmission component — a critical
+ * These tests are intentionally extensive, as they are functional tests of the ThesisSubmission component — a critical
  * feature of the application. This approach was deliberately chosen to ensure comprehensive coverage of the component's
  * functionality.
  */
@@ -142,7 +144,7 @@ describe('ThesisSubmission', () => {
     beforeEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        mockApi.resetHandlers();
+        api.request.history.reset();
 
         config.THESIS_UPLOAD_RETRIES = 1;
         mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(200);
@@ -154,7 +156,7 @@ describe('ThesisSubmission', () => {
     afterEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        mockApi.resetHandlers();
+        api.mock.reset();
     });
 
     describe('HDR submission', () => {
@@ -219,13 +221,8 @@ describe('ThesisSubmission', () => {
             });
 
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-                    .onPut('s3-ap-southeast-2.amazonaws.com')
-                    .replyOnce(200, {});
+                api.mock.records.create({ pid: 'UQ:123456' });
+                api.mock.files.upload();
 
                 mockRichEditorFieldValues();
                 setup({ isHdrThesis: true });
@@ -235,26 +232,18 @@ describe('ThesisSubmission', () => {
                 await confirmDeposit();
 
                 await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
+                expectApiRequestToMatchSnapshot('post', api.url.records.create);
+                expectApiRequestToMatchSnapshot('post', api.url.files.presignedUrl);
+                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
             });
 
             it('should display file upload error and successfully upload after a retry', async () => {
                 const pid = 'UQ:123456';
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: pid } })
-                    // file upload failure
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    // automatic retry
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-                    .replyOnce(200, { data: {} })
-                    // manual file upload retry
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-                    .onPut('s3-ap-southeast-2.amazonaws.com')
-                    .replyOnce(200, {});
+                api.mock.records.create({ pid });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.records.issues({ pid });
+                api.mock.files.upload();
 
                 mockRichEditorFieldValues();
                 const { queryByText, getByTestId } = setup({ isHdrThesis: true });
@@ -272,20 +261,12 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: pid } })
-                    // file upload failure
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-                    .replyOnce(200, { data: {} });
+                api.mock.records.create({ pid });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.records.issues({ pid });
 
                 mockRichEditorFieldValues();
                 const { getByText } = setup({ isHdrThesis: true });
@@ -300,7 +281,7 @@ describe('ThesisSubmission', () => {
             });
 
             it('should show server error while trying to create the thesis', async () => {
-                mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
+                api.mock.records.create({ status: 500 });
 
                 mockRichEditorFieldValues();
                 setup({ isHdrThesis: true });
@@ -400,13 +381,8 @@ describe('ThesisSubmission', () => {
             });
 
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: 'UQ:123456' } })
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-                    .onPut('s3-ap-southeast-2.amazonaws.com')
-                    .replyOnce(200, {});
+                api.mock.records.create({ pid: 'UQ:123456' });
+                api.mock.files.upload();
 
                 mockRichEditorFieldValues();
                 setup();
@@ -416,26 +392,18 @@ describe('ThesisSubmission', () => {
                 await confirmDeposit();
 
                 await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
+                expectApiRequestToMatchSnapshot('post', api.url.records.create);
+                expectApiRequestToMatchSnapshot('post', api.url.files.presignedUrl);
+                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
             });
 
             it('should display file upload error and successfully upload after a retry', async () => {
                 const pid = 'UQ:123456';
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: pid } })
-                    // file upload failure
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    // automatic retry
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-                    .replyOnce(200, { data: {} })
-                    // manual file upload retry
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, 's3-ap-southeast-2.amazonaws.com')
-                    .onPut('s3-ap-southeast-2.amazonaws.com')
-                    .replyOnce(200, {});
+                api.mock.records.create({ pid });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.records.issues({ pid });
+                api.mock.files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup();
@@ -453,20 +421,12 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
-                mockApi
-                    .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                    .replyOnce(200, { data: { rek_pid: pid } })
-                    // file upload failure
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    .onPatch(repositories.routes.RECORDS_ISSUES_API({ pid: pid }).apiUrl)
-                    .replyOnce(200, { data: {} });
+                api.mock.records.create({ pid });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.files.presignedUrl({ status: 500 });
+                api.mock.records.issues({ pid });
 
                 mockRichEditorFieldValues();
                 const { getByText } = setup();
@@ -481,7 +441,7 @@ describe('ThesisSubmission', () => {
             });
 
             it('should show server error while trying to create the thesis', async () => {
-                mockApi.onPost(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
+                api.mock.records.create({ status: 500 });
 
                 mockRichEditorFieldValues();
                 setup();

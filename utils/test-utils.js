@@ -24,7 +24,8 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
-import { lastRequests } from '../src/config/axios';
+import { clearLastRequest, lastRequests } from '../src/config/axios';
+import * as repositories from '../src/repositories';
 
 export const AllTheProviders = props => {
     return (
@@ -306,6 +307,58 @@ const previewAndHalt = () => {
     process.exit(0);
 };
 
+const api = {
+    url: {
+        records: {
+            create: repositories.routes.NEW_RECORD_API().apiUrl,
+            get: pid => repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl,
+            issues: pid => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
+        },
+        files: {
+            presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
+            upload: 's3-ap-southeast-2.amazonaws.com',
+        },
+    },
+    mock: {
+        records: {
+            create: ({ status = 200, pid, data = {}, once = true }) =>
+                mockApi
+                    .onPost(api.url.records.create)
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
+            get: ({ status = 200, pid, data, once = true }) =>
+                mockApi
+                    .onGet(api.url.records.get(pid))
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
+            update: ({ status = 200, pid, data = {}, once = true }) =>
+                mockApi
+                    .onPatch(api.url.records.get(pid))
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
+            delete: ({ status = 200, pid = {}, once = true }) =>
+                mockApi
+                    .onDelete(api.url.records.get(pid))
+                    [once ? 'replyOnce' : 'reply'](status, { data: 'Record deleted' }),
+            issues: ({ status = 200, pid, data = {}, once = true }) =>
+                mockApi.onPost(api.url.records.issues(pid))[once ? 'replyOnce' : 'reply'](status, { data: data }),
+        },
+        files: {
+            presignedUrl: ({ status = 200, once = true }) =>
+                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.upload),
+            put: ({ status = 200, once = true }) =>
+                mockApi.onPut(api.url.files.upload)[once ? 'replyOnce' : 'reply'](status),
+            upload: (attributes = {}, defaults = { status: 200, once: true }) => {
+                api.mock.files.presignedUrl({ ...attributes, ...defaults });
+                api.mock.files.put({ ...attributes, ...defaults });
+            },
+        },
+        reset: () => mockApi.resetHandlers(),
+    },
+    request: {
+        history: {
+            reset: () => clearLastRequest(),
+        },
+    },
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -339,4 +392,5 @@ module.exports = {
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
     previewAndHalt,
+    api,
 };

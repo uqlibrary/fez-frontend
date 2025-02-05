@@ -22,9 +22,9 @@ import {
     screen,
     userEvent,
     expectApiRequestToMatchSnapshot,
+    api,
 } from 'test-utils';
 import locale from 'locale/forms';
-import { clearLastRequest } from '../../../config/axios';
 
 const mockUseNavigate = jest.fn();
 /* eslint-disable react/prop-types */
@@ -396,8 +396,6 @@ describe('Component ClaimRecord ', () => {
         const fileMock = ['myTestImage.png'];
         const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
         const recordIssuesUrl = RECORDS_ISSUES_API({ pid: journalArticle.rek_pid }).apiUrl;
-        const mockPatchRecordApiCall = () => mockApi.onPatch(existingRecordUrl).reply(200, { data: journalArticle });
-        const mockIssuesApiCall = () => mockApi.onPost(recordIssuesUrl).replyOnce(200);
 
         const s3Url = 's3-ap-southeast-2.amazonaws.com';
         const selectAuthor = () => {
@@ -416,23 +414,18 @@ describe('Component ClaimRecord ', () => {
         };
 
         beforeEach(() => {
-            clearLastRequest();
+            api.request.history.reset();
         });
         afterEach(() => {
-            mockApi.resetHandlers();
+            api.mock.reset();
         });
 
         describe('payload', () => {
             it('all fields data', async () => {
                 const newContentIndicator = 'Case Study';
-                mockPatchRecordApiCall()
-                    .onPost(recordIssuesUrl)
-                    .replyOnce(200)
-                    .onPost(FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(200, s3Url)
-                    .onPut(s3Url)
-                    .replyOnce(200, {});
-                mockIssuesApiCall();
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle, once: false });
+                api.mock.records.issues({ pid: journalArticle.rek_pid });
+                api.mock.files.upload();
 
                 const { getByText, getByTestId, queryByTestId } = setup();
 
@@ -454,7 +447,7 @@ describe('Component ClaimRecord ', () => {
 
         describe('post submission', () => {
             it('should display confirmation box after successful submission and navigate to given redirectPath on cancel click button', async () => {
-                mockPatchRecordApiCall();
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle });
                 const { getByTestId } = setup({
                     redirectPath: '/test',
                 });
@@ -471,9 +464,7 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should display confirmation box after successful submission and go back to previous page', async () => {
-                mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
-                    data: journalArticle,
-                });
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle });
                 const { getByTestId } = setup();
 
                 selectAuthor();
@@ -484,13 +475,8 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
-                mockApi
-                    .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
-                    .replyOnce(200, {
-                        data: journalArticle,
-                    })
-                    .onPost(FILE_UPLOAD_API().apiUrl)
-                    .reply(500);
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle });
+                api.mock.files.upload({ status: 500, once: false });
 
                 const { getByText, getByTestId, queryByTestId } = setup();
 
@@ -511,7 +497,7 @@ describe('Component ClaimRecord ', () => {
 
         describe('error handling', () => {
             it('should render server error', async () => {
-                mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(500);
+                api.mock.records.update({ pid: journalArticle.rek_pid, status: 500 });
 
                 const { queryByText } = setup();
 

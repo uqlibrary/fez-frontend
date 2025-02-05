@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
     expectApiRequestToMatchSnapshot,
+    api,
     mockUseForm,
     render,
     waitForTextToBeRemoved,
@@ -13,7 +14,6 @@ import {
     WithRouter,
 } from 'test-utils';
 import userEvent from '@testing-library/user-event';
-import { clearLastRequest } from '../../../config/axios';
 import { screen } from '@testing-library/react';
 import * as repositories from '../../../repositories';
 import { deletedRecord } from '../../../mock/data';
@@ -104,11 +104,8 @@ describe('Component DeleteRecord', () => {
             const pid = record.rek_pid;
             mockUseParamPidValue(pid);
             // mock api
-            mockApi
-                .onGet(new RegExp(escapeRegExp(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)))
-                .reply(200, { data: { ...record } })
-                .onDelete(new RegExp(escapeRegExp(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)))
-                .reply(() => [200, { data: 'Record deleted' }]);
+            api.mock.records.get({ pid, data: { ...record } });
+            api.mock.records.delete({ pid });
         };
 
         const fillReason = async () => {
@@ -124,10 +121,10 @@ describe('Component DeleteRecord', () => {
         };
 
         beforeEach(() => {
-            clearLastRequest();
+            api.request.history.reset();
         });
         afterEach(() => {
-            mockApi.resetHandlers();
+            api.mock.reset();
         });
 
         it('should submit the form for a record without DOI', async () => {
