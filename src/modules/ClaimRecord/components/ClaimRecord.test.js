@@ -20,7 +20,6 @@ import {
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     screen,
-    turnOnJestPreviewOnTestFailure,
     userEvent,
     expectApiRequestToMatchSnapshot,
 } from 'test-utils';
@@ -397,6 +396,7 @@ describe('Component ClaimRecord ', () => {
         const fileMock = ['myTestImage.png'];
         const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
         const recordIssuesUrl = RECORDS_ISSUES_API({ pid: journalArticle.rek_pid }).apiUrl;
+        const mockPatchRecordApiCall = () => mockApi.onPatch(existingRecordUrl).reply(200, { data: journalArticle });
         const mockIssuesApiCall = () => mockApi.onPost(recordIssuesUrl).replyOnce(200);
 
         const s3Url = 's3-ap-southeast-2.amazonaws.com';
@@ -425,9 +425,7 @@ describe('Component ClaimRecord ', () => {
         describe('payload', () => {
             it('all fields data', async () => {
                 const newContentIndicator = 'Case Study';
-                mockApi
-                    .onPatch(existingRecordUrl)
-                    .reply(200, { data: journalArticle })
+                mockPatchRecordApiCall()
                     .onPost(recordIssuesUrl)
                     .replyOnce(200)
                     .onPost(FILE_UPLOAD_API().apiUrl)
@@ -455,6 +453,7 @@ describe('Component ClaimRecord ', () => {
 
         describe('post submission', () => {
             it('should display confirmation box after successful submission and navigate to given redirectPath on cancel click button', async () => {
+                mockPatchRecordApiCall();
                 const { getByTestId } = setup({
                     redirectPath: '/test',
                 });
@@ -462,7 +461,6 @@ describe('Component ClaimRecord ', () => {
                 selectAuthor();
                 await submitForm();
 
-                // confirmation dialog
                 fireEvent.click(getByTestId('confirm-dialog-box'));
                 expect(mockUseNavigate).toBeCalledWith('/records/mine');
                 fireEvent.click(getByTestId('cancel-dialog-box'));
