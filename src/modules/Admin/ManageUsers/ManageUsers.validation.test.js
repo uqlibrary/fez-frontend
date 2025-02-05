@@ -101,7 +101,7 @@ describe('ManageUsers', () => {
                 },
             ];
         });
-        const { getAllByTestId, getByTestId, getByText, queryAllByText, container } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
