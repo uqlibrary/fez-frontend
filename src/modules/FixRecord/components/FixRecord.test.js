@@ -10,7 +10,7 @@ import {
     screen,
     assertEnabled,
     assertDisabled,
-    assertApiRequest,
+    expectApiRequestToMatchSnapshot,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
 } from 'test-utils';
@@ -162,43 +162,6 @@ describe('Component FixRecord', () => {
         const recordIssuesUrl = RECORDS_ISSUES_API({ pid }).apiUrl;
         const hideRecordUrl = HIDE_POSSIBLE_RECORD_API().apiUrl;
         const s3Url = 's3-ap-southeast-2.amazonaws.com';
-        const expectedUnclaimPayload = {
-            fez_record_search_key_author_id: [
-                {
-                    rek_author_id: 0,
-                    rek_author_id_order: 1,
-                    rek_author_id_pid: pid,
-                },
-                {
-                    rek_author_id: 0,
-                    rek_author_id_order: 2,
-                },
-                {
-                    rek_author_id: 786,
-                    rek_author_id_order: 3,
-                    rek_author_id_pid: pid,
-                },
-                {
-                    rek_author_id: 687,
-                    rek_author_id_order: 4,
-                    rek_author_id_pid: pid,
-                },
-                {
-                    rek_author_id: 4100,
-                    rek_author_id_order: 5,
-                    rek_author_id_pid: pid,
-                },
-            ],
-            fez_record_search_key_contributor_id: [],
-            rek_pid: pid,
-        };
-        const expectedHideRecordPayload = {
-            pid: 'UQ:41878',
-            type: 'H',
-        };
-        const expectedFixRecordPayload = {
-            issue: 'Added comments: \n          my comments',
-        };
 
         const mockPatchRecordApiCall = () => mockApi.onPatch(existingRecordUrl).replyOnce(200);
         const mockUnclaimApiCalls = () =>
@@ -225,16 +188,8 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertApiRequest({
-                    method: 'patch',
-                    url: existingRecordUrl,
-                    data: expectedUnclaimPayload,
-                });
-                assertApiRequest({
-                    method: 'post',
-                    url: hideRecordUrl,
-                    data: expectedHideRecordPayload,
-                });
+                expectApiRequestToMatchSnapshot('patch', existingRecordUrl);
+                expectApiRequestToMatchSnapshot('post', hideRecordUrl);
             });
 
             it('should submit fix record data', async () => {
@@ -252,11 +207,7 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertApiRequest({
-                    method: 'post',
-                    url: recordIssuesUrl,
-                    data: expectedFixRecordPayload,
-                });
+                expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
             });
 
             it('should submit fix record data with new content indicator and file', async () => {
@@ -282,53 +233,9 @@ describe('Component FixRecord', () => {
                 await submitForm();
 
                 await assertFixedRecordConfirmationMessage();
-                assertApiRequest({
-                    method: 'post',
-                    url: recordIssuesUrl,
-                    data: {
-                        issue: `${expectedFixRecordPayload.issue} \n\n                Added files: \n          ${fileMock[0]} \n\n        Selected Content Indicator(s): \n          ${newContentIndicator}`,
-                    },
-                });
-                assertApiRequest({
-                    method: 'patch',
-                    url: existingRecordUrl,
-                    data: {
-                        fez_record_search_key_content_indicator: [
-                            {
-                                rek_content_indicator: 454079,
-                                rek_content_indicator_order: 1,
-                            },
-                            {
-                                rek_content_indicator: 454080,
-                                rek_content_indicator_order: 2,
-                            },
-                            {
-                                rek_content_indicator: 454081,
-                                rek_content_indicator_order: 3,
-                            },
-                        ],
-                        fez_record_search_key_file_attachment_access_condition: [
-                            {
-                                rek_file_attachment_access_condition: 1,
-                                rek_file_attachment_access_condition_order: 1,
-                            },
-                        ],
-                        fez_record_search_key_file_attachment_embargo_date: [],
-                        fez_record_search_key_file_attachment_name: [
-                            {
-                                rek_file_attachment_name: 'test.png',
-                                rek_file_attachment_name_order: 1,
-                            },
-                        ],
-                        fez_record_search_key_file_attachment_security_policy: [],
-                        rek_pid: pid,
-                    },
-                });
-                assertApiRequest({
-                    method: 'put',
-                    url: s3Url,
-                    data: data => data instanceof File,
-                });
+                expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
+                expectApiRequestToMatchSnapshot('patch', existingRecordUrl);
+                expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
             });
         });
 

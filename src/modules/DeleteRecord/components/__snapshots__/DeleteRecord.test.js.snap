@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component DeleteRecord form submission should allow enter reason and submit the form for a record without DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
+
+exports[`Component DeleteRecord form submission should allow enter reason, new doi and submit form for a record with DataCite DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":{"rek_new_doi":"10.1234/uql5678"},"fez_record_search_key_deletion_notes":{"rek_deletion_notes":"deletion notes"}}"`;
+
+exports[`Component DeleteRecord form submission should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":{"rek_doi_resolution_url":"https://web.library.uq.edu.au/test"},"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
+
+exports[`Component DeleteRecord form submission should submit form for a deleted record without DOI 1`] = `"{"rek_status":8,"fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
+
+exports[`Component DeleteRecord form submission should submit the form for a record without DOI 1`] = `"{"rek_status":8,"fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
+
 exports[`Component DeleteRecord should render delete record form with data collection citation 1`] = `
 <div>
   <div

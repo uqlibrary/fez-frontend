@@ -4,7 +4,7 @@ import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
-    assertApiRequest,
+    expectApiRequestToMatchSnapshot,
     mockUseForm,
     render,
     waitForTextToBeRemoved,
@@ -97,16 +97,7 @@ describe('Component DeleteRecord', () => {
     });
 
     describe('form submission', () => {
-        const expectedPayload = {
-            rek_status: 8,
-            fez_record_search_key_doi_resolution_url: null,
-            fez_record_search_key_new_doi: null,
-            fez_record_search_key_deletion_notes: null,
-        };
-        const expectedPayloadWithReason = {
-            ...expectedPayload,
-            reason: 'deletion reason',
-        };
+        const deletionReason = 'deletion reason';
 
         const mockUseParamPidValue = pid => (mockParams.pid = pid);
         const mockGetAndDeleteRecordApiCalls = (record = mockRecordToDelete) => {
@@ -122,7 +113,7 @@ describe('Component DeleteRecord', () => {
 
         const fillReason = async () => {
             await waitForTextToBeRemoved('Loading work');
-            await userEvent.type(screen.getByTestId('reason-input'), expectedPayloadWithReason.reason);
+            await userEvent.type(screen.getByTestId('reason-input'), deletionReason);
         };
 
         const submitForm = async () => {
@@ -145,11 +136,7 @@ describe('Component DeleteRecord', () => {
             setup();
             await submitForm();
 
-            assertApiRequest({
-                url: `records/${mockRecordToDelete.rek_pid}`,
-                method: 'delete',
-                data: expectedPayload,
-            });
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
         });
 
         it('should submit form for a deleted record without DOI', async () => {
@@ -167,11 +154,7 @@ describe('Component DeleteRecord', () => {
             setup();
             await submitForm();
 
-            assertApiRequest({
-                url: `records/${pid}`,
-                method: 'patch',
-                data: expectedPayload,
-            });
+            expectApiRequestToMatchSnapshot('patch', `records/${pid}`);
         });
 
         it('should allow enter reason and submit the form for a record without DOI', async () => {
@@ -181,11 +164,7 @@ describe('Component DeleteRecord', () => {
             await fillReason();
             await submitForm();
 
-            assertApiRequest({
-                url: `records/${mockRecordToDelete.rek_pid}`,
-                method: 'delete',
-                data: expectedPayloadWithReason,
-            });
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
         });
 
         it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', async () => {
@@ -197,16 +176,7 @@ describe('Component DeleteRecord', () => {
             await userEvent.type(screen.getByTestId('rek-doi-resolution-url-input'), doiResolutionUrl);
             await submitForm();
 
-            assertApiRequest({
-                url: `records/${recordWithCrossrefDoi.rek_pid}`,
-                method: 'delete',
-                data: {
-                    ...expectedPayloadWithReason,
-                    fez_record_search_key_doi_resolution_url: {
-                        rek_doi_resolution_url: doiResolutionUrl,
-                    },
-                },
-            });
+            expectApiRequestToMatchSnapshot('delete', `records/${recordWithCrossrefDoi.rek_pid}`);
         });
 
         it('should allow enter reason, new doi and submit form for a record with DataCite DOI', async () => {
@@ -229,19 +199,7 @@ describe('Component DeleteRecord', () => {
             await userEvent.type(screen.getByTestId('rek-new-doi-input'), newDoi);
             await submitForm();
 
-            assertApiRequest({
-                url: `records/${pid}`,
-                method: 'delete',
-                data: {
-                    ...expectedPayloadWithReason,
-                    fez_record_search_key_new_doi: {
-                        rek_new_doi: newDoi,
-                    },
-                    fez_record_search_key_deletion_notes: {
-                        rek_deletion_notes: deletionNotes,
-                    },
-                },
-            });
+            expectApiRequestToMatchSnapshot('delete', `records/${pid}`);
         });
     });
 });
