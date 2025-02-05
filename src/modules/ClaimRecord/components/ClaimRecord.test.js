@@ -394,7 +394,6 @@ describe('Component ClaimRecord ', () => {
     });
 
     describe('form submission', () => {
-        turnOnJestPreviewOnTestFailure();
         const fileMock = ['myTestImage.png'];
         const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
         const recordIssuesUrl = RECORDS_ISSUES_API({ pid: journalArticle.rek_pid }).apiUrl;
@@ -406,6 +405,8 @@ describe('Component ClaimRecord ', () => {
             fireEvent.click(screen.getByTestId('author-accept-declaration-input'));
         };
         const submitForm = async () => {
+            screen.queryByTestId('validation-warning-0') &&
+                (await waitForElementToBeRemoved(() => screen.queryByTestId('validation-warning-0'), waitForOptions));
             fireEvent.click(screen.getByTestId('claim-record-submit'));
             screen.queryByText(locale.forms.claimPublicationForm.progressAlert.message) &&
                 (await waitForElementToBeRemoved(
@@ -421,46 +422,55 @@ describe('Component ClaimRecord ', () => {
             mockApi.resetHandlers();
         });
 
-        it('should display confirmation box after successful submission', async () => {
-            const newContentIndicator = 'Case Study';
-            mockApi
-                .onPatch(existingRecordUrl)
-                .reply(200, { data: journalArticle })
-                .onPost(FILE_UPLOAD_API().apiUrl)
-                .replyOnce(200, s3Url)
-                .onPut(s3Url)
-                .replyOnce(200, {});
-            mockIssuesApiCall();
+        describe('payload', () => {
+            it('all fields data', async () => {
+                const newContentIndicator = 'Case Study';
+                mockApi
+                    .onPatch(existingRecordUrl)
+                    .reply(200, { data: journalArticle })
+                    .onPost(recordIssuesUrl)
+                    .replyOnce(200)
+                    .onPost(FILE_UPLOAD_API().apiUrl)
+                    .replyOnce(200, s3Url)
+                    .onPut(s3Url)
+                    .replyOnce(200, {});
+                mockIssuesApiCall();
 
-            const { getByText, getByTestId, queryByTestId } = setup({
-                redirectPath: '/test',
+                const { getByText, getByTestId, queryByTestId } = setup();
+
+                selectAuthor();
+                addFilesToFileUploader(fileMock);
+                await setFileUploaderFilesToClosedAccess(fileMock);
+                await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
+                await userEvent.click(getByTestId('rek-content-indicator-select'));
+                await userEvent.click(getByText(newContentIndicator));
+                await submitForm();
+
+                expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(410)); // records updates
+                expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
+                expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(fileMock[0])); // datastream updates
+                expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
             });
-
-            selectAuthor();
-            addFilesToFileUploader(fileMock);
-            await setFileUploaderFilesToClosedAccess(fileMock);
-            await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'), waitForOptions);
-            await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
-            await userEvent.click(getByTestId('rek-content-indicator-select'));
-            await userEvent.click(getByText(newContentIndicator));
-            await submitForm();
-
-            // assert submitted data
-            expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(410)); // records updates
-            expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
-            expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(fileMock[0])); // datastream updates
-            expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
-
-            // confirmation dialog
-            fireEvent.click(getByTestId('confirm-dialog-box'));
-            expect(mockUseNavigate).toBeCalledWith('/records/mine');
-            fireEvent.click(getByTestId('cancel-dialog-box'));
-            expect(mockUseNavigate).toBeCalledWith('/test');
-            expect(mockClearNewRecord).toBeCalled();
-            expect(mockClearRedirectPath).toBeCalled();
         });
 
         describe('post submission', () => {
+            it('should display confirmation box after successful submission and navigate to given redirectPath on cancel click button', async () => {
+                const { getByTestId } = setup({
+                    redirectPath: '/test',
+                });
+
+                selectAuthor();
+                await submitForm();
+
+                // confirmation dialog
+                fireEvent.click(getByTestId('confirm-dialog-box'));
+                expect(mockUseNavigate).toBeCalledWith('/records/mine');
+                fireEvent.click(getByTestId('cancel-dialog-box'));
+                expect(mockUseNavigate).toBeCalledWith('/test');
+                expect(mockClearNewRecord).toBeCalled();
+                expect(mockClearRedirectPath).toBeCalled();
+            });
+
             it('should display confirmation box after successful submission and go back to previous page', async () => {
                 mockApi.onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl).replyOnce(200, {
                     data: journalArticle,
@@ -488,7 +498,6 @@ describe('Component ClaimRecord ', () => {
                 selectAuthor();
                 addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
-                await waitForElementToBeRemoved(() => queryByTestId('validation-warning-0'), waitForOptions);
                 await submitForm();
                 // assert a file upload error
                 await waitFor(
