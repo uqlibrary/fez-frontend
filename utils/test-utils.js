@@ -301,6 +301,11 @@ const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
     return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
 
+const previewAndHalt = () => {
+    preview.debug();
+    process.exit(0);
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -333,4 +338,5 @@ module.exports = {
     assertRequest,
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
+    previewAndHalt,
 };

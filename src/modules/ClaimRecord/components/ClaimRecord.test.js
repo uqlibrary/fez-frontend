@@ -440,6 +440,7 @@ describe('Component ClaimRecord ', () => {
                 addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
+                await userEvent.type(getByTestId('claim-link-input'), 'https://www.test.com');
                 await userEvent.click(getByTestId('rek-content-indicator-select'));
                 await userEvent.click(getByText(newContentIndicator));
                 await submitForm();
@@ -482,7 +483,7 @@ describe('Component ClaimRecord ', () => {
                 expect(mockUseNavigate).toBeCalledWith(-1);
             });
 
-            it('should render the confirm dialog with an alert due to a file upload error', async () => {
+            it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
                 mockApi
                     .onPatch(EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl)
                     .replyOnce(200, {
