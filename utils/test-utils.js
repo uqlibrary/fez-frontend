@@ -24,8 +24,8 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
-import { clearLastRequest, lastRequests } from '../src/config/axios';
-import * as repositories from '../src/repositories';
+import { lastRequests } from '../src/config/axios';
+import { api } from './api-mock';
 
 export const AllTheProviders = props => {
     return (
@@ -311,85 +311,6 @@ const previewAndHalt = () => {
     preview.debug();
     process.exit(0);
 };
-
-const api = {
-    url: {
-        records: {
-            create: repositories.routes.NEW_RECORD_API().apiUrl,
-            get: pid => repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl,
-            issues: pid => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
-        },
-        files: {
-            presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
-            put: 's3-ap-southeast-2.amazonaws.com',
-        },
-    },
-    mock: {
-        instance: mockApi,
-        records: {
-            create: function({ status = 200, pid, data = {}, once = true }) {
-                mockApi
-                    .onPost(api.url.records.create)
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
-                return this;
-            },
-            get: function({ status = 200, pid, data, once = true }) {
-                mockApi
-                    .onGet(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
-                return this;
-            },
-            update: function({ status = 200, pid, data = {}, once = true }) {
-                mockApi
-                    .onPatch(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
-                return this;
-            },
-            delete: function({ status = 200, pid = {}, once = true }) {
-                mockApi
-                    .onDelete(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: 'Record deleted' });
-                return this;
-            },
-            issues: function({ status = 200, pid, data = {}, once = true }) {
-                mockApi.onPost(api.url.records.issues(pid))[once ? 'replyOnce' : 'reply'](status, { data });
-                return this;
-            },
-        },
-        files: {
-            presignedUrl: function({ status = 200, once = true }) {
-                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.put);
-                return this;
-            },
-            put: function({ status = 200, once = true }) {
-                mockApi.onPut(api.url.files.put)[once ? 'replyOnce' : 'reply'](status);
-                return this;
-            },
-            upload: function(attributes = {}, defaults = { status: 200, once: true }) {
-                this.presignedUrl({ ...attributes, ...defaults });
-                this.put({ ...attributes, ...defaults });
-                return this;
-            },
-        },
-        reset: function() {
-            mockApi.resetHandlers();
-            return this;
-        },
-    },
-    request: {
-        history: {
-            reset: function() {
-                clearLastRequest();
-                return this;
-            },
-        },
-    },
-};
-// create aliases to allow chaining
-api.mock.records.files = api.mock.files;
-api.mock.records.instance = api.mock.instance;
-api.mock.files.records = api.mock.records;
-api.mock.files.instance = api.mock.instance;
 
 module.exports = {
     ...domTestingLib,
