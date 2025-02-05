@@ -16,6 +16,7 @@ import {
     waitForText,
     expectApiRequestToMatchSnapshot,
     api,
+    assertInstanceOfFile,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import Immutable from 'immutable';
@@ -234,7 +235,7 @@ describe('ThesisSubmission', () => {
                 await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
                 expectApiRequestToMatchSnapshot('post', api.url.records.create);
                 expectApiRequestToMatchSnapshot('post', api.url.files.presignedUrl);
-                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
+                expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });
 
             it('should display file upload error and successfully upload after a retry', async () => {
@@ -394,7 +395,7 @@ describe('ThesisSubmission', () => {
                 await waitForText(formLocale.thesisSubmission.afterSubmitTitle, waitForOptions);
                 expectApiRequestToMatchSnapshot('post', api.url.records.create);
                 expectApiRequestToMatchSnapshot('post', api.url.files.presignedUrl);
-                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
+                expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });
 
             it('should display file upload error and successfully upload after a retry', async () => {

@@ -292,6 +292,11 @@ const assertApiRequest = ({ method, url, partialUrl, data }) => {
     return request;
 };
 
+const assertInstanceOfFile = data => {
+    expect(data).toBeInstanceOf(File);
+    return true;
+};
+
 const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
     const request = assertApiRequest({
         method,
@@ -316,7 +321,7 @@ const api = {
         },
         files: {
             presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
-            upload: 's3-ap-southeast-2.amazonaws.com',
+            put: 's3-ap-southeast-2.amazonaws.com',
         },
     },
     mock: {
@@ -342,9 +347,9 @@ const api = {
         },
         files: {
             presignedUrl: ({ status = 200, once = true }) =>
-                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.upload),
+                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.put),
             put: ({ status = 200, once = true }) =>
-                mockApi.onPut(api.url.files.upload)[once ? 'replyOnce' : 'reply'](status),
+                mockApi.onPut(api.url.files.put)[once ? 'replyOnce' : 'reply'](status),
             upload: (attributes = {}, defaults = { status: 200, once: true }) => {
                 api.mock.files.presignedUrl({ ...attributes, ...defaults });
                 api.mock.files.put({ ...attributes, ...defaults });
@@ -391,6 +396,7 @@ module.exports = {
     assertRequest,
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
+    assertInstanceOfFile,
     previewAndHalt,
     api,
 };

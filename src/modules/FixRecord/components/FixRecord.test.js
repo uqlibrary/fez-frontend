@@ -14,6 +14,7 @@ import {
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
     api,
+    assertInstanceOfFile,
 } from 'test-utils';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import validationErrors from '../../../locale/validationErrors';
@@ -225,7 +226,7 @@ describe('Component FixRecord', () => {
                 await assertFixedRecordConfirmationMessage();
                 expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
                 expectApiRequestToMatchSnapshot('patch', existingRecordUrl);
-                expectApiRequestToMatchSnapshot('put', api.url.files.upload, data => data instanceof File);
+                expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });
         });
 

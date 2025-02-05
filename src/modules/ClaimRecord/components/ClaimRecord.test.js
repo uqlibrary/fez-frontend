@@ -23,6 +23,7 @@ import {
     userEvent,
     expectApiRequestToMatchSnapshot,
     api,
+    assertInstanceOfFile,
 } from 'test-utils';
 import locale from 'locale/forms';
 
@@ -393,11 +394,9 @@ describe('Component ClaimRecord ', () => {
     });
 
     describe('form submission', () => {
+        const pid = journalArticle.rek_pid;
         const fileMock = ['myTestImage.png'];
-        const existingRecordUrl = EXISTING_RECORD_API({ pid: journalArticle.rek_pid }).apiUrl;
-        const recordIssuesUrl = RECORDS_ISSUES_API({ pid: journalArticle.rek_pid }).apiUrl;
 
-        const s3Url = 's3-ap-southeast-2.amazonaws.com';
         const selectAuthor = () => {
             fireEvent.click(screen.getByTestId('rek-author-id-1'));
             fireEvent.click(screen.getByTestId('author-accept-declaration-input'));
@@ -438,10 +437,10 @@ describe('Component ClaimRecord ', () => {
                 await userEvent.click(getByText(newContentIndicator));
                 await submitForm();
 
-                expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(410)); // records updates
-                expectApiRequestToMatchSnapshot('put', s3Url, data => data instanceof File);
-                expectApiRequestToMatchSnapshot('patch', existingRecordUrl, data => data.includes(fileMock[0])); // datastream updates
-                expectApiRequestToMatchSnapshot('post', recordIssuesUrl);
+                expectApiRequestToMatchSnapshot('patch', api.url.records.get(pid), data => data.includes(410)); // records updates
+                expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
+                expectApiRequestToMatchSnapshot('patch', api.url.records.get(pid), data => data.includes(fileMock[0])); // datastream updates
+                expectApiRequestToMatchSnapshot('post', api.url.records.issues(pid));
             });
         });
 
