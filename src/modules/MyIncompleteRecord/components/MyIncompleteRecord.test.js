@@ -29,7 +29,6 @@ jest.mock('../../../context');
 import MyIncompleteRecord from './MyIncompleteRecord';
 import { incompleteNTRORecordUQ352045 } from '../../../mock/data';
 import validationErrors from '../../../locale/validationErrors';
-import * as repositories from '../../../repositories';
 import { pathConfig } from '../../../config';
 
 const mockUseNavigate = jest.fn();
@@ -352,9 +351,7 @@ describe('MyIncompleteRecord', () => {
         describe('error handling', () => {
             it('should display server error when it fails to save the record', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                mockApi
-                    .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
-                    .replyOnce(500, { data: { rek_pid: pid } });
+                api.mock.records.update({ pid, status: 500 });
 
                 mockRichEditorFieldValues();
                 setup({ publication: mockRecordToFix });
@@ -369,16 +366,10 @@ describe('MyIncompleteRecord', () => {
 
             it('should display server error when it fails to upload file', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                mockApi
-                    .onPatch(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl)
-                    .replyOnce(200, { data: { rek_pid: pid } })
-                    .onPost(repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl)
-                    .replyOnce(200, { data: { pid } })
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500)
-                    // automatic retry
-                    .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
-                    .replyOnce(500);
+                api.mock.records
+                    .update({ pid })
+                    .issues({ pid })
+                    .files.presignedUrl({ status: 500, once: false });
 
                 mockRichEditorFieldValues();
                 setup({ publication: mockRecordToFix });

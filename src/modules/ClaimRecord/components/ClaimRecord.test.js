@@ -2,13 +2,7 @@ import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
-import {
-    CLAIM_PRE_CHECK,
-    EXISTING_RECORD_API,
-    FILE_UPLOAD_API,
-    NEW_RECORD_API,
-    RECORDS_ISSUES_API,
-} from 'repositories/routes';
+import { CLAIM_PRE_CHECK, NEW_RECORD_API } from 'repositories/routes';
 import React from 'react';
 import {
     render,
@@ -517,7 +511,7 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should render incomplete data error message when trying to claim an incomplete external (non-eSpace) record', async () => {
-                mockApi
+                api.mock.instance
                     .onPost(CLAIM_PRE_CHECK().apiUrl)
                     .reply(200, { data: '' })
                     .onPost(NEW_RECORD_API().apiUrl)
@@ -538,7 +532,7 @@ describe('Component ClaimRecord ', () => {
 
             it('should render custom error message when the pre check request failed', async () => {
                 const customErrorMessage = 'Unexpected field rek_pid : UQ:123456';
-                mockApi.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
+                api.mock.instance.onPost(CLAIM_PRE_CHECK().apiUrl).reply(() => {
                     return [
                         500,
                         {

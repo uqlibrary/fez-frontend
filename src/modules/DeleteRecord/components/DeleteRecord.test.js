@@ -15,9 +15,7 @@ import {
 } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
-import * as repositories from '../../../repositories';
 import { deletedRecord } from '../../../mock/data';
-import { escapeRegExp } from '../../../mock';
 import { publicationTypeListThesis, recordWithRDM } from '../../../mock/data/records';
 import { set } from 'lodash';
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
@@ -103,7 +101,6 @@ describe('Component DeleteRecord', () => {
         const mockGetAndDeleteRecordApiCalls = (record = mockRecordToDelete) => {
             const pid = record.rek_pid;
             mockUseParamPidValue(pid);
-            // mock api
             api.mock.records.get({ pid, data: { ...record } }).delete({ pid });
         };
 
@@ -137,14 +134,9 @@ describe('Component DeleteRecord', () => {
 
         it('should submit form for a deleted record without DOI', async () => {
             const pid = deletedRecord.rek_pid;
-            const url = new RegExp(escapeRegExp(repositories.routes.EXISTING_RECORD_API({ pid }).apiUrl));
-            mockApi
-                .onGet(url)
-                .reply(() => {
-                    return [410, { data: { ...deletedRecord } }];
-                })
-                .onPatch(url)
-                .reply(200, { data: { ...deletedRecord } });
+            api.mock.records
+                .get({ pid, status: 410, data: { ...deletedRecord } })
+                .update({ pid, data: { ...deletedRecord } });
             mockUseParamPidValue(pid);
 
             setup();

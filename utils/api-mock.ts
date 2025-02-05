@@ -115,8 +115,8 @@ export const api: Api = {
                 this.instance.onPut(api.url.files.put)[replyMethod(once)](status);
                 return this;
             },
-            upload: function(attributes: Params = {}, defaults: Params = { status: 200, once: true }) {
-                return this.presignedUrl({ ...attributes, ...defaults }).put({ ...attributes, ...defaults });
+            upload: function(params: Params = {}, defaults: Params = { status: 200, once: true }) {
+                return this.presignedUrl({ ...defaults, ...params }).put({ ...defaults, ...params });
             },
             records: {} as RecordApi,
             instance: {} as MockAdapter,
