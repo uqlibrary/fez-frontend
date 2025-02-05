@@ -77,31 +77,22 @@ describe('ManageUsers', () => {
                     },
                 ],
                 total: 1,
+            })
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {
+                data: [
+                    {
+                        usr_id: 1234,
+                        usr_full_name: 'Test',
+                        usr_email: 'test@uq.edu.au',
+                        usr_username: 'uqtest',
+                        usr_auth_rule_groups:
+                            '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
+                    },
+                ],
+                total: 1,
             });
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [
-                200,
-                {
-                    data: [
-                        {
-                            usr_id: 1234,
-                            usr_full_name: 'Test',
-                            usr_email: 'test@uq.edu.au',
-                            usr_username: 'uqtest',
-                            usr_auth_rule_groups:
-                                '53733,57010,57293,57294,57830,57831,57832,57833,57834,57847,57848,57939,57940,3302,11',
-                        },
-                    ],
-                    total: 1,
-                },
-            ];
-        });
-        const { getAllByTestId, getByTestId, getByText, queryAllByText, container } = setup();
+        const { getAllByTestId, getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
