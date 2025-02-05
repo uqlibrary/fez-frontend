@@ -309,9 +309,10 @@ describe('MyIncompleteRecord', () => {
         describe('payload', () => {
             it('all fields data', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                api.mock.records.update({ pid });
-                api.mock.records.issues({ pid });
-                api.mock.files.upload();
+                api.mock.records
+                    .update({ pid })
+                    .issues({ pid })
+                    .files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });
@@ -331,9 +332,10 @@ describe('MyIncompleteRecord', () => {
         describe('post submission', () => {
             it('should navigate to dashboard after form submission', async () => {
                 const pid = mockRecordToFix.rek_pid;
-                api.mock.records.update({ pid });
-                api.mock.records.issues({ pid });
-                api.mock.files.upload();
+                api.mock.records
+                    .update({ pid })
+                    .issues({ pid })
+                    .files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup({ publication: mockRecordToFix });

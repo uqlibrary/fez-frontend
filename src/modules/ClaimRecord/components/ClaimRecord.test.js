@@ -422,9 +422,10 @@ describe('Component ClaimRecord ', () => {
         describe('payload', () => {
             it('all fields data', async () => {
                 const newContentIndicator = 'Case Study';
-                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle, once: false });
-                api.mock.records.issues({ pid: journalArticle.rek_pid });
-                api.mock.files.upload();
+                api.mock.records
+                    .update({ pid: journalArticle.rek_pid, data: journalArticle, once: false })
+                    .issues({ pid: journalArticle.rek_pid })
+                    .files.upload();
 
                 const { getByText, getByTestId, queryByTestId } = setup();
 
@@ -474,8 +475,9 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
-                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle });
-                api.mock.files.upload({ status: 500, once: false });
+                api.mock.records
+                    .update({ pid: journalArticle.rek_pid, data: journalArticle })
+                    .files.upload({ status: 500, once: false });
 
                 const { getByText, getByTestId, queryByTestId } = setup();
 

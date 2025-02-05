@@ -325,44 +325,71 @@ const api = {
         },
     },
     mock: {
+        instance: mockApi,
         records: {
-            create: ({ status = 200, pid, data = {}, once = true }) =>
+            create: function({ status = 200, pid, data = {}, once = true }) {
                 mockApi
                     .onPost(api.url.records.create)
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
-            get: ({ status = 200, pid, data, once = true }) =>
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
+                return this;
+            },
+            get: function({ status = 200, pid, data, once = true }) {
                 mockApi
                     .onGet(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
-            update: ({ status = 200, pid, data = {}, once = true }) =>
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
+                return this;
+            },
+            update: function({ status = 200, pid, data = {}, once = true }) {
                 mockApi
                     .onPatch(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } }),
-            delete: ({ status = 200, pid = {}, once = true }) =>
+                    [once ? 'replyOnce' : 'reply'](status, { data: { rek_pid: pid, ...data } });
+                return this;
+            },
+            delete: function({ status = 200, pid = {}, once = true }) {
                 mockApi
                     .onDelete(api.url.records.get(pid))
-                    [once ? 'replyOnce' : 'reply'](status, { data: 'Record deleted' }),
-            issues: ({ status = 200, pid, data = {}, once = true }) =>
-                mockApi.onPost(api.url.records.issues(pid))[once ? 'replyOnce' : 'reply'](status, { data: data }),
-        },
-        files: {
-            presignedUrl: ({ status = 200, once = true }) =>
-                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.put),
-            put: ({ status = 200, once = true }) =>
-                mockApi.onPut(api.url.files.put)[once ? 'replyOnce' : 'reply'](status),
-            upload: (attributes = {}, defaults = { status: 200, once: true }) => {
-                api.mock.files.presignedUrl({ ...attributes, ...defaults });
-                api.mock.files.put({ ...attributes, ...defaults });
+                    [once ? 'replyOnce' : 'reply'](status, { data: 'Record deleted' });
+                return this;
+            },
+            issues: function({ status = 200, pid, data = {}, once = true }) {
+                mockApi.onPost(api.url.records.issues(pid))[once ? 'replyOnce' : 'reply'](status, { data });
+                return this;
             },
         },
-        reset: () => mockApi.resetHandlers(),
+        files: {
+            presignedUrl: function({ status = 200, once = true }) {
+                mockApi.onPost(api.url.files.presignedUrl)[once ? 'replyOnce' : 'reply'](status, api.url.files.put);
+                return this;
+            },
+            put: function({ status = 200, once = true }) {
+                mockApi.onPut(api.url.files.put)[once ? 'replyOnce' : 'reply'](status);
+                return this;
+            },
+            upload: function(attributes = {}, defaults = { status: 200, once: true }) {
+                this.presignedUrl({ ...attributes, ...defaults });
+                this.put({ ...attributes, ...defaults });
+                return this;
+            },
+        },
+        reset: function() {
+            mockApi.resetHandlers();
+            return this;
+        },
     },
     request: {
         history: {
-            reset: () => clearLastRequest(),
+            reset: function() {
+                clearLastRequest();
+                return this;
+            },
         },
     },
 };
+// create aliases to allow chaining
+api.mock.records.files = api.mock.files;
+api.mock.records.instance = api.mock.instance;
+api.mock.files.records = api.mock.records;
+api.mock.files.instance = api.mock.instance;
 
 module.exports = {
     ...domTestingLib,

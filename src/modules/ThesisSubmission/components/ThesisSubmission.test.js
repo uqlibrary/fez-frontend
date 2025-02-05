@@ -222,8 +222,7 @@ describe('ThesisSubmission', () => {
             });
 
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
-                api.mock.records.create({ pid: 'UQ:123456' });
-                api.mock.files.upload();
+                api.mock.records.create({ pid: 'UQ:123456' }).files.upload();
 
                 mockRichEditorFieldValues();
                 setup({ isHdrThesis: true });
@@ -240,11 +239,12 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and successfully upload after a retry', async () => {
                 const pid = 'UQ:123456';
-                api.mock.records.create({ pid });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.records.issues({ pid });
-                api.mock.files.upload();
+                api.mock.records
+                    .create({ pid })
+                    .files.presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .records.issues({ pid })
+                    .files.upload();
 
                 mockRichEditorFieldValues();
                 const { queryByText, getByTestId } = setup({ isHdrThesis: true });
@@ -262,12 +262,13 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
-                api.mock.records.create({ pid });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.records.issues({ pid });
+                api.mock.records
+                    .create({ pid })
+                    .files.presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .records.issues({ pid });
 
                 mockRichEditorFieldValues();
                 const { getByText } = setup({ isHdrThesis: true });
@@ -382,8 +383,7 @@ describe('ThesisSubmission', () => {
             });
 
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
-                api.mock.records.create({ pid: 'UQ:123456' });
-                api.mock.files.upload();
+                api.mock.records.create({ pid: 'UQ:123456' }).files.upload();
 
                 mockRichEditorFieldValues();
                 setup();
@@ -400,11 +400,12 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and successfully upload after a retry', async () => {
                 const pid = 'UQ:123456';
-                api.mock.records.create({ pid });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.records.issues({ pid });
-                api.mock.files.upload();
+                api.mock.records
+                    .create({ pid })
+                    .files.presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .records.issues({ pid })
+                    .files.upload();
 
                 mockRichEditorFieldValues();
                 const { getByTestId } = setup();
@@ -422,12 +423,13 @@ describe('ThesisSubmission', () => {
 
             it('should display file upload error and show error message after failed retry', async () => {
                 const pid = 'UQ:123456';
-                api.mock.records.create({ pid });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.files.presignedUrl({ status: 500 });
-                api.mock.records.issues({ pid });
+                api.mock.records
+                    .create({ pid })
+                    .files.presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .presignedUrl({ status: 500 })
+                    .records.issues({ pid });
 
                 mockRichEditorFieldValues();
                 const { getByText } = setup();

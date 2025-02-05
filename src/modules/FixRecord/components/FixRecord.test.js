@@ -158,10 +158,11 @@ describe('Component FixRecord', () => {
         const hideRecordUrl = HIDE_POSSIBLE_RECORD_API().apiUrl;
 
         const mockPatchRecordApiCall = () => api.mock.records.update({ pid });
-        const mockUnclaimApiCalls = () =>
+        const mockUnclaimApiCalls = () => {
             mockPatchRecordApiCall()
-                .onPost(hideRecordUrl)
+                .instance.onPost(hideRecordUrl)
                 .replyOnce(200);
+        };
         const mockFixRecordApiCall = () => api.mock.records.issues({ pid });
 
         beforeEach(() => {
@@ -207,8 +208,7 @@ describe('Component FixRecord', () => {
             it('should submit fix record data with new content indicator and file', async () => {
                 const newContentIndicator = 'Case Study';
                 mockPatchRecordApiCall();
-                mockFixRecordApiCall();
-                api.mock.files.upload();
+                mockFixRecordApiCall().files.upload();
                 const { getByTestId, getByText } = setup({ publication: mockRecordToFix });
 
                 await assertValidationErrorSummary();

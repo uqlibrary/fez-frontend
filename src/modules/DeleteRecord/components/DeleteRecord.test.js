@@ -104,8 +104,7 @@ describe('Component DeleteRecord', () => {
             const pid = record.rek_pid;
             mockUseParamPidValue(pid);
             // mock api
-            api.mock.records.get({ pid, data: { ...record } });
-            api.mock.records.delete({ pid });
+            api.mock.records.get({ pid, data: { ...record } }).delete({ pid });
         };
 
         const fillReason = async () => {
