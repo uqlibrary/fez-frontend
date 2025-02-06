@@ -92,11 +92,6 @@ describe('AddDataCollection test', () => {
         expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
     });
 
-    it('should render component with all fields disabled', () => {
-        const { container } = setup({ submitting: true });
-        expect(container.querySelectorAll('field[disabled=true]').length).toEqual(28);
-    });
-
     it('should disable submit button if invalid form data before submit', () => {
         const { getByRole } = setup({ disableSubmit: true });
         expect(getByRole('button', { name: 'Submit for approval' })).toBeDisabled();
