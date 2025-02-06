@@ -198,7 +198,12 @@ export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
-export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
+/**
+ * @typedef {{pid: string, isEdit?: boolean}} ExistingRecordApiParams
+ * @param {ExistingRecordApiParams}
+ * @returns {{apiUrl: string}}
+ */
+export const EXISTING_RECORD_API = ({ pid, isEdit = false }) => ({
     apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
 });
 

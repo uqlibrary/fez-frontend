@@ -83,10 +83,22 @@ setupDefaults();
 
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
+export let lastRequests = [];
 export let lastRequest = null;
+export const clearLastRequest = () => {
+    lastRequest = null;
+    lastRequests = [];
+};
+
 let isGet = null;
 api.interceptors.request.use(request => {
     lastRequest = request;
+    // keep track of last requests just for tests
+    if (isTest()) {
+        // keep only the last 10 requests in the queue
+        lastRequests.length > 10 && lastRequests.shift();
+        lastRequests.push(request);
+    }
     isGet = request.method === 'get';
     if (
         (request.url?.includes('records/search') || request.url?.includes('records/export')) &&
