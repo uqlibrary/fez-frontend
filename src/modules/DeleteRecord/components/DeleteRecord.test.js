@@ -2,8 +2,24 @@ import React from 'react';
 import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
 import Immutable from 'immutable';
-import { DELETED, DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
+import {
+    expectApiRequestToMatchSnapshot,
+    api,
+    mockUseForm,
+    render,
+    waitForTextToBeRemoved,
+    waitToBeEnabled,
+    WithReduxStore,
+    WithRouter,
+} from 'test-utils';
+import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
+import { deletedRecord } from '../../../mock/data';
+import { publicationTypeListThesis, recordWithRDM } from '../../../mock/data/records';
+import { set } from 'lodash';
+const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
+const recordWithDataCiteDoi = recordWithRDM;
 
 const mockUseNavigate = jest.fn();
 let mockParams = { pid: mockRecordToDelete.rek_pid };
@@ -15,18 +31,18 @@ jest.mock('react-router-dom', () => ({
 }));
 
 function setup(props = {}, renderMethod = render) {
-    const state = Immutable.Map({
+    const state = {
         accountReducer: {
             accountAuthorLoading: props.accountAuthorLoading || false,
         },
         deleteRecordReducer: {
             loadingRecordToDelete: props.loadingRecordToDelete || false,
-            recordToDelete: { ...(props.recordToDelete || mockRecordToDelete) },
+            recordToDelete: { ...props.recordToDelete },
         },
-    });
+    };
 
     return renderMethod(
-        <WithReduxStore initialState={state}>
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <DeleteRecord />
             </WithRouter>
@@ -34,11 +50,10 @@ function setup(props = {}, renderMethod = render) {
     );
 }
 
-// note: most of the testing has been done in deleteRecord.spec.js, as Cypress tests
 describe('Component DeleteRecord', () => {
     afterEach(() => {
-        mockUseNavigate.mockClear();
         mockParams = {};
+        jest.restoreAllMocks();
     });
 
     it('should render loader when current author info is not loaded', () => {
@@ -49,11 +64,6 @@ describe('Component DeleteRecord', () => {
     it('should render loader when record is loading', () => {
         const { getByText } = setup({ loadingRecordToDelete: true });
         expect(getByText('Loading work')).toBeVisible();
-    });
-
-    it('should render correctly', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
     });
 
     it('should render delete record form with deleted record citation', () => {
@@ -84,25 +94,100 @@ describe('Component DeleteRecord', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render delete record form for records with Crossref UQ DOIs', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...mockRecordToDelete,
-                fez_record_search_key_doi: { rek_doi: `${DOI_CROSSREF_PREFIX}12345` },
-            },
-        });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('submit-delete-record')).toBeEnabled();
-    });
+    describe('form submission', () => {
+        const deletionReason = 'deletion reason';
 
-    it('should render delete record form for records with DataCite UQ DOIs', () => {
-        const { container, getByTestId } = setup({
-            recordToDelete: {
-                ...mockRecordToDelete,
-                fez_record_search_key_doi: { rek_doi: `${DOI_DATACITE_PREFIX}12345` },
-            },
+        const mockUseParamPidValue = pid => (mockParams.pid = pid);
+        const mockGetAndDeleteRecordApiCalls = (record = mockRecordToDelete) => {
+            const pid = record.rek_pid;
+            mockUseParamPidValue(pid);
+            api.mock.records.get({ pid, data: { ...record } }).delete({ pid });
+        };
+
+        const fillReason = async () => {
+            await waitForTextToBeRemoved('Loading work');
+            await userEvent.type(screen.getByTestId('reason-input'), deletionReason);
+        };
+
+        const submitForm = async () => {
+            await waitForTextToBeRemoved('Loading work');
+            await waitToBeEnabled(screen.getByTestId('submit-delete-record'));
+            await userEvent.click(screen.getByTestId('submit-delete-record'));
+            await waitForTextToBeRemoved('Request is being processed');
+        };
+
+        beforeEach(() => {
+            api.request.history.reset();
         });
-        expect(container).toMatchSnapshot();
-        expect(getByTestId('submit-delete-record')).toBeEnabled();
+        afterEach(() => {
+            api.mock.reset();
+        });
+
+        it('should submit the form for a record without DOI', async () => {
+            mockGetAndDeleteRecordApiCalls();
+
+            setup();
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
+        });
+
+        it('should submit form for a deleted record without DOI', async () => {
+            const pid = deletedRecord.rek_pid;
+            api.mock.records
+                .get({ pid, status: 410, data: { ...deletedRecord } })
+                .update({ pid, data: { ...deletedRecord } });
+            mockUseParamPidValue(pid);
+
+            setup();
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('patch', `records/${pid}`);
+        });
+
+        it('should allow enter reason and submit the form for a record without DOI', async () => {
+            mockGetAndDeleteRecordApiCalls();
+
+            setup();
+            await fillReason();
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${mockRecordToDelete.rek_pid}`);
+        });
+
+        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', async () => {
+            const doiResolutionUrl = 'https://web.library.uq.edu.au/test';
+            mockGetAndDeleteRecordApiCalls(recordWithCrossrefDoi);
+
+            setup();
+            await fillReason();
+            await userEvent.type(screen.getByTestId('rek-doi-resolution-url-input'), doiResolutionUrl);
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${recordWithCrossrefDoi.rek_pid}`);
+        });
+
+        it('should allow enter reason, new doi and submit form for a record with DataCite DOI', async () => {
+            const pid = recordWithDataCiteDoi.rek_pid;
+            const newDoi = '10.1234/uql5678';
+            const deletionNotes = 'deletion notes';
+            mockGetAndDeleteRecordApiCalls(recordWithDataCiteDoi);
+            mockUseForm((props, original) =>
+                original(
+                    set(
+                        { values: {} },
+                        'values.publication.fez_record_search_key_deletion_notes.rek_deletion_notes',
+                        deletionNotes,
+                    ),
+                ),
+            );
+            setup();
+
+            await fillReason();
+            await userEvent.type(screen.getByTestId('rek-new-doi-input'), newDoi);
+            await submitForm();
+
+            expectApiRequestToMatchSnapshot('delete', `records/${pid}`);
+        });
     });
 });
