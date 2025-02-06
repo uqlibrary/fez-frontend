@@ -7,11 +7,14 @@ import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 import { sanitizeDoi } from 'config/validation';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { searchPublications } from '../../../../actions';
 
-export const FindRecords = ({ actions }) => {
+export const FindRecords = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const _performSearch = values => {
-        actions.searchPublications(sanitizeDoi(values.get('searchQuery')));
+        dispatch(searchPublications(sanitizeDoi(values.get('searchQuery'))));
         navigate(pathConfig.records.add.results);
     };
 
