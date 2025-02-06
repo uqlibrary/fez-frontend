@@ -2,6 +2,10 @@ import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
+import { useValidatedForm } from 'hooks';
+jest.mock('hooks', () => ({
+    useValidatedForm: jest.fn(),
+}));
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -115,18 +119,36 @@ describe('AddDataCollection test', () => {
 
     it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
-        const { rerender } = setup({
+        let counter = 0;
+        useValidatedForm.mockImplementation(() => ({
+            handleSubmit: jest.fn(),
+            watch: jest.fn(),
+            setError: jest.fn(),
+            control: {},
+            formState: {
+                isSubmitting: false,
+                get isSubmitSuccessful() {
+                    counter++;
+                    if (counter <= 2) return false;
+                    // Getter will return the latest value
+                    else return true;
+                },
+                isDirty: false,
+                errors: {},
+            },
+        }));
+
+        const { rerender, container } = setup({
             submitSucceeded: false,
         });
+        console.log(container.innerHTML);
 
-        setup(
-            {
-                submitSucceeded: true,
-                actions: {
-                    clearNewRecord: clearNewRecordFn,
-                },
-            },
-            rerender,
+        rerender(
+            <WithReduxStore>
+                <WithRouter>
+                    <AddDataCollection submitSucceeded actions={{ clearNewRecord: clearNewRecordFn }} />
+                </WithRouter>
+            </WithReduxStore>,
         );
         await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
 

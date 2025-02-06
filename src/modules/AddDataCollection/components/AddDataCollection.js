@@ -86,6 +86,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             ...NEW_DATASET_DEFAULT_VALUES,
         },
     });
+    console.log('isSubmitSuccessful=', isSubmitSuccessful);
     const [apiError, setApiError] = React.useState('');
 
     const navigate = useNavigate();
@@ -93,6 +94,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const confirmationBoxRef = React.useRef();
 
     React.useEffect(() => {
+        console.log('previous:', previous, 'isSubmitSuccessful:', isSubmitSuccessful);
         if (previous !== undefined && previous !== isSubmitSuccessful) {
             confirmationBoxRef?.current?.showConfirmation();
         }
@@ -299,6 +301,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         }
     };
 
+    console.log('apiError=', apiError);
     return (
         <StandardPage title={txt.pageTitle}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
