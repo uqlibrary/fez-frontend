@@ -4,7 +4,7 @@ import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
 
 /* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
+jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
     Field: props => {
         return (
             <field
