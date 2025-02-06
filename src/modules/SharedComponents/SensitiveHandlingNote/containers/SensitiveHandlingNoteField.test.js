@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, userEvent, FormProviderWrapper, act } from 'test-utils';
+import { render, userEvent, FormProviderWrapper, act, preview } from 'test-utils';
 
 import SensitiveHandlingNoteField from './SensitiveHandlingNoteField';
 
 function setup(testProps = {}, renderer = render) {
-    const { values = {}, methods = {}, ...rest } = testProps;
     const props = {
-        ...rest,
+        ...testProps,
     };
 
     return renderer(
-        <FormProviderWrapper
-            values={{
-                ...values,
-            }}
-            methods={methods}
-        >
+        <FormProviderWrapper>
             <SensitiveHandlingNoteField {...props} />
         </FormProviderWrapper>,
     );
@@ -35,12 +29,11 @@ describe('SensitiveHandlingNoteField', () => {
         await userEvent.click(getByTestId('rek-sensitive-handling-note-id-select'));
 
         await userEvent.click(getByRole('option', { name: 'Other' }));
-        // this fails unless the order of the spread in Field is reversed.
-        // However, when it works, the "other" text does not appear in the input element.
-        // TODO, fix this thing.
+        preview.debug();
+
         expect(getByTestId('rek-sensitive-handling-note-other')).toBeInTheDocument();
 
-        await expect(getByTestId('rek-sensitive-handling-note-id-input')).toHaveValue('Other');
+        await expect(getByTestId('rek-sensitive-handling-note-id-input')).toHaveValue('456860');
     });
 
     it('should render disabled view', async () => {

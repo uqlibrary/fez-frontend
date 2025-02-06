@@ -11,6 +11,7 @@ import Controller from './Controller';
  * @return {string|null}
  */
 export const validateHandler = (value, formValues, validators) => {
+    console.log('validateHandler', { value, formValues, validators });
     if (!(validators instanceof Array)) {
         return null;
     }
@@ -49,7 +50,9 @@ export const validateHandler = (value, formValues, validators) => {
  * @return {Element}
  * @constructor
  */
-const Field = ({ name, control, validate, rules, component: Component, ...childProps }) => {
+const Field = props => {
+    const { name, control, validate, rules, component: Component, ...childProps } = props;
+    // if (name === 'filesSection.sensitiveHandlingNote.other') console.log(name, props);
     return (
         <Controller
             name={name}
@@ -60,9 +63,22 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
                     validateHandler(value, formValues, validate),
             }}
             render={({ field }) => {
+                const componentProps = {
+                    ...field,
+                    ...childProps,
+                    value: field.value,
+                    ...(!!childProps?.onChange
+                        ? {
+                              onChange: e => {
+                                  childProps.onChange(e, field.onChange);
+                              },
+                          }
+                        : {}),
+                };
+                // if (name === 'filesSection.sensitiveHandlingNote.other') console.log(componentProps);
                 // eslint-disable-next-line react/prop-types
-                if (!!childProps.noRef) delete field.ref;
-                return <Component {...childProps} {...field} />;
+                if (!!childProps.noRef) delete componentProps.ref;
+                return <Component {...componentProps} />;
             }}
         />
     );
