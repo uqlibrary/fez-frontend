@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { render, WithReduxStore, fireEvent, waitFor, within } from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}, renderMethod = render) {
@@ -445,6 +445,35 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should keep authorId when editing a contributor that has been assigned as the publication author', async () => {
+        let contributors = [];
+        const { getByTestId } = setup({
+            onChange: values => (contributors = values),
+            canEdit: true,
+            forceSelectable: true,
+            author: authorsSearch.data[0],
+            input: {
+                name: 'test',
+                value: [],
+            },
+        });
+
+        // add a couple of contributors
+        await userEvent.type(getByTestId('test-input'), 'Author 1');
+        await userEvent.click(getByTestId('test-add'));
+        await userEvent.type(getByTestId('test-input'), 'Author 2');
+        await userEvent.click(getByTestId('test-add'));
+        // assign the first contributor as the pub author
+        await userEvent.click(getByTestId('test-list-row-0'));
+        // update the first contributor's name
+        await userEvent.click(getByTestId('test-list-row-0-edit'));
+        await userEvent.type(getByTestId('test-input'), ' (edited)');
+        await userEvent.click(getByTestId('test-add'));
+        // assert that the assigned and edited contributor has the expected authorId
+        expect(contributors[0].nameAsPublished).toEqual('Author 1 (edited)');
+        expect(contributors[0].authorId).toEqual(authorsSearch.data[0].aut_id);
+    });
+
     it('should not be able to select contributor in edit mode', () => {
         const { getByRole, getByTestId } = setup({
             editMode: true,
@@ -550,15 +579,20 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update component', () => {
+    it('should call given onChange only when `contributors` change', () => {
         const onChangeFn = jest.fn();
-        const { rerender } = setup({
+        const { getByTestId, getByRole, rerender } = setup({
             onChange: onChangeFn,
         });
+        expect(onChangeFn).toHaveBeenCalledTimes(1);
 
-        setup({ onChange: onChangeFn, contributors: [{ displayName: 'test 1' }, { displayName: 'test 2' }] }, rerender);
+        fireEvent.change(getByTestId('test-input'), { target: { value: 'J.Smith' } });
+        fireEvent.click(getByRole('button', { name: 'Add contributor' }));
+        expect(getByTestId('test-list-row-0-name-as-published')).toHaveTextContent('J.Smith');
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
 
-        expect(onChangeFn).toHaveBeenCalled();
+        setup({ onChange: onChangeFn }, rerender);
+        expect(onChangeFn).toHaveBeenCalledTimes(2);
     });
 
     it('should get contributors from props and input value set as an array', () => {
@@ -625,5 +659,28 @@ describe('ContributorsEditor', () => {
             author: null,
             record: null,
         });
+    });
+
+    it('should update contributors state upon input prop changes', () => {
+        const authorName = 'Author 1';
+        const { rerender, queryByText } = setup();
+        expect(queryByText(authorName)).not.toBeInTheDocument();
+
+        setup(
+            {
+                input: {
+                    name: 'test',
+                    value: [
+                        {
+                            nameAsPublished: authorName,
+                            aut_id: 410,
+                            selected: true,
+                        },
+                    ],
+                },
+            },
+            rerender,
+        );
+        expect(queryByText(authorName)).toBeInTheDocument();
     });
 });

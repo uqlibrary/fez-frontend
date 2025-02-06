@@ -4235,7 +4235,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish/publish-and-share/think"
                                         >
                                             Read more about Strategic Publishing
                                         </a>
@@ -4272,7 +4272,7 @@ export default {
                                     <p>
                                         The published version (
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             also known as Gold open access
@@ -4282,7 +4282,7 @@ export default {
                                         versions can be made open access via Article process charges, without charges,
                                         or through the Library's{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -4292,7 +4292,7 @@ export default {
                                     <p>
                                         The accepted version (also referred to as{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             self-archiving or Green open access
@@ -4310,7 +4310,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access"
                                         >
                                             Read more about open access
                                         </a>
@@ -4327,13 +4327,16 @@ export default {
                                     </p>
                                     <p>
                                         Some publishers have{' '}
-                                        <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
+                                        <a
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/article-processing-charges"
+                                            target="_blank"
+                                        >
                                             Article processing charges (APCs)
                                         </a>{' '}
                                         a fee paid to make an article immediately available and openly accessible. The
                                         Library has{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/read-and-publish-agreements"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -4347,7 +4350,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/publishing-your-work-open-access"
                                         >
                                             Read more
                                         </a>
@@ -4376,7 +4379,7 @@ export default {
                                     <li>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/publish-share"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish"
                                         >
                                             Find out more about publishing at UQ Library
                                         </a>
