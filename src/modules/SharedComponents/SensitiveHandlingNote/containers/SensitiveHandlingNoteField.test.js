@@ -29,7 +29,6 @@ describe('SensitiveHandlingNoteField', () => {
         await userEvent.click(getByTestId('rek-sensitive-handling-note-id-select'));
 
         await userEvent.click(getByRole('option', { name: 'Other' }));
-        preview.debug();
 
         expect(getByTestId('rek-sensitive-handling-note-other')).toBeInTheDocument();
 

@@ -74,19 +74,25 @@ const RichEditor = ({
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
     }
 
-    let error = (hasFormError && errorText) || meta?.error;
+    let error = null;
     // default rich editor has "<p></p>"
     const inputLength = value?.plainText?.length || value?.length - 7;
-    if (error && !!meta?.error?.props) {
-        error = React.Children.map(meta.error.props.children, (child, index) => {
-            if (child.type) {
-                return React.cloneElement(child, {
-                    key: index,
-                });
-            } else {
-                return child;
-            }
-        });
+    if (meta && meta.error) {
+        error =
+            !!meta.error.props &&
+            React.Children.map(meta.error.props.children, (child, index) => {
+                if (child.type) {
+                    return React.cloneElement(child, {
+                        key: index,
+                    });
+                } else {
+                    return child;
+                }
+            });
+    }
+    if (!error && hasFormError) {
+        if (typeof errorText === 'string') error = errorText;
+        else error = errorText.message;
     }
     // rendered content of empty CKEditor:
     // <p><br data-cke-filler="true"></p>
@@ -166,7 +172,7 @@ RichEditor.propTypes = {
     textOnlyOnPaste: PropTypes.bool,
     description: PropTypes.string,
     error: PropTypes.bool,
-    errorText: PropTypes.string,
+    errorText: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     titleProps: PropTypes.object,

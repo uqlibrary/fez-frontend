@@ -127,10 +127,7 @@ export const isValidPublicationTitle = value => {
 };
 
 // Generic
-export const required = value => {
-    console.log('required', value);
-    return !!value ? undefined : locale.validationErrors.required;
-};
+export const required = value => (!!value ? undefined : locale.validationErrors.required);
 
 // Check if copyright/agreement is checked
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);

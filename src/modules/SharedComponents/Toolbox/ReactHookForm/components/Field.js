@@ -11,7 +11,6 @@ import Controller from './Controller';
  * @return {string|null}
  */
 export const validateHandler = (value, formValues, validators) => {
-    console.log('validateHandler', { value, formValues, validators });
     if (!(validators instanceof Array)) {
         return null;
     }
@@ -50,9 +49,7 @@ export const validateHandler = (value, formValues, validators) => {
  * @return {Element}
  * @constructor
  */
-const Field = props => {
-    const { name, control, validate, rules, component: Component, ...childProps } = props;
-    // if (name === 'filesSection.sensitiveHandlingNote.other') console.log(name, props);
+const Field = ({ name, control, validate, rules, component: Component, ...childProps }) => {
     return (
         <Controller
             name={name}

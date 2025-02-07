@@ -22,7 +22,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
 import { onSubmit } from '../submitHandler';
-import { validateResolver } from '../validators';
+// import { validateResolver } from '../validators';
+import { validate } from 'config/admin';
 import { useRecord, useRecordToView, useFormOnChangeHook } from '../hooks';
 import { RecordContext, TabbedContext } from 'context';
 import { useIsMobileView, useValidatedForm } from '../../../hooks';
@@ -64,7 +65,7 @@ export const AdminContainer = ({ createMode = false }) => {
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
-        resolver: validateResolver,
+        // resolver: validateResolver,
     });
 
     useFormOnChangeHook(form);
@@ -72,9 +73,15 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
-        console.log('submit', data);
         try {
-            await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
+            const errors = validate(data);
+            if (Object.keys(errors).length === 0) {
+                await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
+            } else {
+                Object.keys(errors).forEach(error =>
+                    form.setError(error, { type: 'validate', message: errors[error] }),
+                );
+            }
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);

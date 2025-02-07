@@ -11,21 +11,18 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 export const SensitiveHandlingNoteField = props => {
     const form = useFormContext();
-    const [sensitiveHandlingNoteId, texts] = useWatch({
+    const [sensitiveHandlingNoteId] = useWatch({
         control: form.control,
-        name: ['filesSection.sensitiveHandlingNote.id', 'filesSection.sensitiveHandlingNote.other'],
+        name: ['filesSection.sensitiveHandlingNote.id'],
     });
-
-    console.log(sensitiveHandlingNoteId, texts);
     const isOther = isSensitiveHandlingNoteTypeOther(sensitiveHandlingNoteId);
-    // const handleSensitiveHandlingNoteIdChange = value => {
-    //     const isSensitive = isSensitiveHandlingNoteTypeOther(value);
-    //     setIsOther(isSensitive);
-    //     console.log('handleSensitiveHandlingNoteIdChange', value);
-    // };
+    React.useLayoutEffect(() => {
+        !!isOther && form.trigger('filesSection.sensitiveHandlingNote.other');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isOther]);
+
     const idError = form.getFieldState('filesSection.sensitiveHandlingNote.id').error;
     const otherError = form.getFieldState('filesSection.sensitiveHandlingNote.other').error;
-    console.log(form.getFieldState('filesSection.sensitiveHandlingNote.other'));
     return (
         <>
             <Field
@@ -37,8 +34,6 @@ export const SensitiveHandlingNoteField = props => {
                 genericSelectFieldId="rek-sensitive-handling-note-id"
                 itemsList={[{ value: '0', text: 'None' }, ...SENSITIVE_HANDLING_NOTE_TYPE]}
                 onChange={(value, onChange) => {
-                    // handleSensitiveHandlingNoteIdChange(value);
-                    // form.trigger('filesSection.sensitiveHandlingNote');
                     onChange(value);
                 }}
                 {...selectFields.sensitiveHandlingNoteType}
