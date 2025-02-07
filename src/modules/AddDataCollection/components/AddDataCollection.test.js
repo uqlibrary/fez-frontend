@@ -2,7 +2,6 @@ import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
-import { useValidatedForm } from 'hooks';
 import { before } from 'lodash';
 
 /* eslint-disable react/prop-types */
@@ -80,35 +79,40 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
+// jest.mock('hooks', () => ({
+//     useValidatedForm: jest.fn(),
+// }));
 describe('AddDataCollection test mocking hooks', () => {
-    beforeEach(() => {
-        jest.mock('hooks', () => ({
-            useValidatedForm: jest.fn(),
-        }));
+    beforeAll(() => {
+        jest.isolateModules(() => {
+            let counter = 0;
+            // Mock the 'useValidatedForm' function inside isolateModules
+            jest.doMock('hooks', () => ({
+                useValidatedForm: jest.fn(() => ({
+                    handleSubmit: jest.fn(),
+                    watch: jest.fn(),
+                    setError: jest.fn(),
+                    control: {},
+                    formState: {
+                        isSubmitting: false,
+                        get isSubmitSuccessful() {
+                            counter++;
+                            if (counter <= 2) return false;
+                            return true;
+                        },
+                        isDirty: false,
+                        errors: {},
+                    },
+                })),
+            }));
+        });
     });
-    afterEach(() => {
-        mockUseNavigate.mockClear();
+    afterAll(() => {
+        jest.unmock('hooks');
     });
+    beforeEach(() => {});
     it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
-        let counter = 0;
-        useValidatedForm.mockImplementation(() => ({
-            handleSubmit: jest.fn(),
-            watch: jest.fn(),
-            setError: jest.fn(),
-            control: {},
-            formState: {
-                isSubmitting: false,
-                get isSubmitSuccessful() {
-                    counter++;
-                    if (counter <= 2) return false;
-                    // Getter will return the latest value
-                    else return true;
-                },
-                isDirty: false,
-                errors: {},
-            },
-        }));
 
         const { rerender, container } = setup({
             submitSucceeded: false,
