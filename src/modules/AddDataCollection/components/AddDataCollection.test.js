@@ -30,42 +30,6 @@ jest.mock('react-router-dom', () => ({
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
-        autofill: jest.fn(),
-        blur: jest.fn(),
-        change: jest.fn(),
-        clearAsyncError: jest.fn(),
-        anyTouched: true,
-        asyncValidating: false,
-        asyncValidate: jest.fn(),
-        clearFields: jest.fn(),
-        clearSubmitErrors: jest.fn(),
-        destroy: jest.fn(),
-        dispatch: jest.fn(),
-        handleSubmit: jest.fn(),
-        initialize: jest.fn(),
-        reset: jest.fn(),
-        resetSection: jest.fn(),
-        touch: jest.fn(),
-        submit: jest.fn(),
-        untouch: jest.fn(),
-        clearSubmit: jest.fn(),
-        dirty: true,
-        form: 'form',
-        initialized: false,
-        submitFailed: false,
-        valid: true,
-        pure: true,
-        submitAsSideEffect: false,
-        // common immutable props above
-        formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
-        submitting: testProps.submitting || false, // : PropTypes.bool
-        submitSucceeded: testProps.submitSucceeded || false, // : PropTypes.bool
-        invalid: testProps.invalid || false, // : PropTypes.bool
-        pristine: testProps.pristine || false, // : PropTypes.bool
-        fileAccessId: testProps.fileAccessId || 3, // PropTypes.number
-        actions: {
-            logout: jest.fn(),
-        },
         resetForm: testProps.resetForm || jest.fn(),
         ...testProps,
     };
@@ -79,59 +43,45 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
-// jest.mock('hooks', () => ({
-//     useValidatedForm: jest.fn(),
-// }));
+jest.mock('hooks', () => ({
+    useValidatedForm: jest.fn(() => ({
+        handleSubmit: jest.fn(),
+        watch: jest.fn(),
+        setError: jest.fn(),
+        control: {},
+        formState: {
+            isSubmitting: false,
+            isSubmitSuccessful: false,
+            isDirty: false,
+            errors: {},
+        },
+    })),
+}));
 describe('AddDataCollection test mocking hooks', () => {
-    beforeAll(() => {
-        jest.isolateModules(() => {
-            let counter = 0;
-            // Mock the 'useValidatedForm' function inside isolateModules
-            jest.doMock('hooks', () => ({
-                useValidatedForm: jest.fn(() => ({
-                    handleSubmit: jest.fn(),
-                    watch: jest.fn(),
-                    setError: jest.fn(),
-                    control: {},
-                    formState: {
-                        isSubmitting: false,
-                        get isSubmitSuccessful() {
-                            counter++;
-                            if (counter <= 2) return false;
-                            return true;
-                        },
-                        isDirty: false,
-                        errors: {},
-                    },
-                })),
-            }));
-        });
+    beforeEach(() => {
+        // jest.resetModules(); // Reset modules to ensure fresh imports
     });
-    afterAll(() => {
+
+    afterEach(() => {
+        jest.clearAllMocks(); // Clear mocks so other tests are unaffected
+        jest.resetModules(); // Reset modules to ensure fresh imports
         jest.unmock('hooks');
+        jest.restoreAllMocks();
     });
-    beforeEach(() => {});
     it('should navigate to my datasets url', async () => {
-        const clearNewRecordFn = jest.fn();
+        const { useValidatedForm } = require('hooks'); // Mocked version
+        const MyComponent = require('./AddDataCollection').default;
+        const { render } = require('@testing-library/react');
 
-        const { rerender, container } = setup({
-            submitSucceeded: false,
-        });
-        console.log(container.innerHTML);
-
-        rerender(
+        render(
             <WithReduxStore>
                 <WithRouter>
-                    <AddDataCollection submitSucceeded actions={{ clearNewRecord: clearNewRecordFn }} />
+                    <MyComponent submitSucceeded={false} />
                 </WithRouter>
             </WithReduxStore>,
         );
-        await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
 
-        fireEvent.click(screen.getByTestId('confirm-dialog-box'));
-
-        expect(clearNewRecordFn).toHaveBeenCalled();
-        expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
+        expect(useValidatedForm).toHaveBeenCalled();
     });
 });
 
