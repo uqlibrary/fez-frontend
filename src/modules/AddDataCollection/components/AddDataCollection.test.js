@@ -6,18 +6,8 @@ import { before } from 'lodash';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
+    Field: () => {
+        return <field />;
     },
 }));
 
@@ -37,18 +27,7 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 jest.mock('hooks', () => ({
-    useValidatedForm: jest.fn(() => ({
-        handleSubmit: jest.fn(),
-        watch: jest.fn(),
-        setError: jest.fn(),
-        control: {},
-        formState: {
-            isSubmitting: false,
-            isSubmitSuccessful: false,
-            isDirty: false,
-            errors: {},
-        },
-    })),
+    useValidatedForm: jest.fn(),
 }));
 describe('AddDataCollection test mocking hooks', () => {
     it('should navigate to my datasets url', async () => {
