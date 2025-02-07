@@ -3,9 +3,7 @@ import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
-jest.mock('hooks', () => ({
-    useValidatedForm: jest.fn(),
-}));
+import { before } from 'lodash';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -82,41 +80,15 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
-describe('AddDataCollection test', () => {
+describe('AddDataCollection test mocking hooks', () => {
+    beforeEach(() => {
+        jest.mock('hooks', () => ({
+            useValidatedForm: jest.fn(),
+        }));
+    });
     afterEach(() => {
         mockUseNavigate.mockClear();
     });
-
-    it('should render data set form', () => {
-        const { container, getByRole } = setup();
-
-        expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(28);
-        expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
-        expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
-    });
-
-    it('should disable submit button if invalid form data before submit', () => {
-        const { getByRole } = setup({ disableSubmit: true });
-        expect(getByRole('button', { name: 'Submit for approval' })).toBeDisabled();
-    });
-
-    it('should not disable submit button if form submit has failed', () => {
-        const { getByRole } = setup({ submitFailed: true });
-        expect(getByRole('button', { name: 'Submit for approval' })).not.toBeDisabled();
-    });
-
-    it('should redirect to cancel page', async () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { reload: jest.fn() };
-        const { getByRole } = setup();
-
-        fireEvent.click(getByRole('button', { name: 'Cancel' }));
-        expect(window.location.reload).toHaveBeenCalled();
-        window.location = location;
-    });
-
     it('should navigate to my datasets url', async () => {
         const clearNewRecordFn = jest.fn();
         let counter = 0;
@@ -156,6 +128,42 @@ describe('AddDataCollection test', () => {
 
         expect(clearNewRecordFn).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
+    });
+});
+
+describe('AddDataCollection test', () => {
+    afterEach(() => {
+        mockUseNavigate.mockClear();
+    });
+
+    it('should render data set form', () => {
+        const { container, getByRole } = setup();
+
+        expect(container).toMatchSnapshot();
+        expect(container.getElementsByTagName('field').length).toEqual(28);
+        expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
+        expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
+    });
+
+    it('should disable submit button if invalid form data before submit', () => {
+        const { getByRole } = setup({ disableSubmit: true });
+        expect(getByRole('button', { name: 'Submit for approval' })).toBeDisabled();
+    });
+
+    it('should not disable submit button if form submit has failed', () => {
+        const { getByRole } = setup({ submitFailed: true });
+        expect(getByRole('button', { name: 'Submit for approval' })).not.toBeDisabled();
+    });
+
+    it('should redirect to cancel page', async () => {
+        const { location } = window;
+        delete window.location;
+        window.location = { reload: jest.fn() };
+        const { getByRole } = setup();
+
+        fireEvent.click(getByRole('button', { name: 'Cancel' }));
+        expect(window.location.reload).toHaveBeenCalled();
+        window.location = location;
     });
 
     it('should get save confirmation locale correctly', () => {
