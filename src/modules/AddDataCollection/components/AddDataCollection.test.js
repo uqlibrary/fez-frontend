@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 
 /* eslint-disable react/prop-types */
@@ -43,19 +43,9 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 jest.mock('hooks', () => ({
-    useValidatedForm: jest.fn(() => ({
-        handleSubmit: jest.fn(),
-        watch: jest.fn(),
-        setError: jest.fn(),
-        control: {},
-        formState: {
-            isSubmitting: false,
-            isSubmitSuccessful: false,
-            isDirty: false,
-            errors: {},
-        },
-    })),
+    useValidatedForm: jest.fn(),
 }));
+
 describe('AddDataCollection test mocking hooks', () => {
     beforeEach(() => {
         // jest.resetModules(); // Reset modules to ensure fresh imports
@@ -68,19 +58,58 @@ describe('AddDataCollection test mocking hooks', () => {
         // jest.restoreAllMocks();
     });
     it('should navigate to my datasets url', async () => {
-        const { useValidatedForm } = require('hooks'); // Mocked version
-        const MyComponent = require('./AddDataCollection').default;
-        const { render } = require('@testing-library/react');
+        // Mock the hook implementation for this test
+        let counter = 0;
+        useValidatedForm.mockImplementation(() => ({
+            handleSubmit: jest.fn(),
+            watch: jest.fn(),
+            setError: jest.fn(),
+            control: {},
+            formState: {
+                isSubmitting: false,
+                get isSubmitSuccessful() {
+                    counter++;
+                    if (counter <= 2) return false;
+                    // Getter will return the latest value
+                    else return true;
+                },
+                isDirty: false,
+                errors: {},
+            },
+        }));
+        // const { useValidatedForm } = require('hooks'); // Mocked version
+        // const MyComponent = require('./AddDataCollection').default;
+        // const { render } = require('@testing-library/react');
 
-        render(
-            <WithReduxStore>
-                <WithRouter>
-                    <MyComponent submitSucceeded={false} />
-                </WithRouter>
-            </WithReduxStore>,
-        );
+        // render(
+        //     <WithReduxStore>
+        //         <WithRouter>
+        //             <MyComponent submitSucceeded={false} />
+        //         </WithRouter>
+        //     </WithReduxStore>,
+        // );
 
+        const clearNewRecordFn = jest.fn();
+        const { rerender, getByTestId } = setup({
+            submitSucceeded: false,
+        });
         expect(useValidatedForm).toHaveBeenCalled();
+
+        setup(
+            {
+                submitSucceeded: true,
+                actions: {
+                    clearNewRecord: clearNewRecordFn,
+                },
+            },
+            rerender,
+        );
+        await waitFor(() => expect(getByTestId('confirm-dialog-box')));
+
+        fireEvent.click(screen.getByTestId('confirm-dialog-box'));
+
+        expect(clearNewRecordFn).toHaveBeenCalled();
+        expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
     });
 });
 
