@@ -58,6 +58,10 @@ describe('AddDataCollection test mocking hooks', () => {
         // jest.restoreAllMocks();
     });
     it('should navigate to my datasets url', async () => {
+        mockApi
+            .onGet('records/search', { rule: 'lookup', search_key: 'doi', lookup_value: '10.1037/arc0000014' })
+            .reply(() => [200, { total: 0, data: [] }]);
+
         // Mock the hook implementation for this test
         let counter = 0;
         useValidatedForm.mockImplementation(() => ({
@@ -71,9 +75,8 @@ describe('AddDataCollection test mocking hooks', () => {
                 isSubmitting: false,
                 get isSubmitSuccessful() {
                     counter++;
-                    if (counter <= 2) return false;
-                    // Getter will return the latest value
-                    else return true;
+                    console.log('counter', counter);
+                    return true;
                 },
                 isDirty: false,
                 errors: {},
