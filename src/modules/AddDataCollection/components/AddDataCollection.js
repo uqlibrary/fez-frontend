@@ -96,6 +96,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     React.useEffect(() => {
         console.log('previous:', previous, 'isSubmitSuccessful:', isSubmitSuccessful);
         if (previous !== undefined && previous !== isSubmitSuccessful) {
+            console.log('showConfirmation');
             confirmationBoxRef?.current?.showConfirmation();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -301,7 +302,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         }
     };
 
-    console.log('apiError=', apiError);
     return (
         <StandardPage title={txt.pageTitle}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>

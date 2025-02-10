@@ -2,6 +2,7 @@ import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 import { useValidatedForm } from 'hooks';
+import userEvent from '@testing-library/user-event';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -59,7 +60,9 @@ describe('AddDataCollection test mocking hooks', () => {
     });
     it('should navigate to my datasets url', async () => {
         mockApi
-            .onGet('records/search', { rule: 'lookup', search_key: 'doi', lookup_value: '10.1037/arc0000014' })
+            .onGet('records/search', {
+                params: { rule: 'lookup', search_key: 'doi', lookup_value: '10.1037/arc0000014' },
+            })
             .reply(() => [200, { total: 0, data: [] }]);
 
         // Mock the hook implementation for this test
@@ -76,7 +79,7 @@ describe('AddDataCollection test mocking hooks', () => {
                 get isSubmitSuccessful() {
                     counter++;
                     console.log('counter', counter);
-                    return true;
+                    return counter === 1 ? false : true;
                 },
                 isDirty: false,
                 errors: {},
@@ -95,12 +98,11 @@ describe('AddDataCollection test mocking hooks', () => {
         // );
 
         const clearNewRecordFn = jest.fn();
-        const { rerender } = setup({
+        const { rerender, getByTestId } = setup({
             submitSucceeded: false,
         });
         expect(useValidatedForm).toHaveBeenCalled();
 
-        preview.debug();
         setup(
             {
                 submitSucceeded: true,
@@ -110,6 +112,10 @@ describe('AddDataCollection test mocking hooks', () => {
             },
             rerender,
         );
+        console.log('before click');
+        await userEvent.click(getByTestId('submit-data-collection'));
+        console.log('after click');
+        preview.debug();
         await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
 
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
