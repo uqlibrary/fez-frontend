@@ -77,7 +77,7 @@ const RichEditor = ({
     let error = null;
     // default rich editor has "<p></p>"
     const inputLength = value?.plainText?.length || value?.length - 7;
-    if (meta && meta.error) {
+    if (meta && meta?.error) {
         error =
             !!meta.error.props &&
             React.Children.map(meta.error.props.children, (child, index) => {
@@ -94,6 +94,7 @@ const RichEditor = ({
         if (typeof errorText === 'string') error = errorText;
         else error = errorText.message;
     }
+
     // rendered content of empty CKEditor:
     // <p><br data-cke-filler="true"></p>
     return (
@@ -129,7 +130,7 @@ const RichEditor = ({
                     handleEditorDataChange(event, editor);
                 }}
             />
-            {error && (
+            {(error || meta?.error) && (
                 <Typography
                     color="error"
                     variant="caption"

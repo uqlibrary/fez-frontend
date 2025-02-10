@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent, FormProviderWrapper, act, preview } from 'test-utils';
+import { render, userEvent, FormProviderWrapper, act } from 'test-utils';
 
 import SensitiveHandlingNoteField from './SensitiveHandlingNoteField';
 

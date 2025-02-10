@@ -114,7 +114,7 @@ export const AutoCompleteAsynchronousField = ({
                 onInputChange={handleInputChange}
                 onChange={handleChange}
                 filterOptions={filterOptions}
-                isOptionEqualToValue={(option, value) => option.value === value.value}
+                isOptionEqualToValue={(option, value) => option?.value === value?.value || option === value}
                 getOptionLabel={getOptionLabel}
                 options={options}
                 loading={loading}

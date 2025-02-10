@@ -1,6 +1,11 @@
 import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
-import { RECORD_TYPE_RECORD, PUBLICATION_TYPE_THESIS } from 'config/general';
+import {
+    RECORD_TYPE_RECORD,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+} from 'config/general';
 import { useWatch } from 'react-hook-form';
 
 export const useRecord = (displayType, subType, createMode) => {
@@ -62,16 +67,51 @@ export const useRecordToView = (recordToView, createMode, methods) => {
 };
 
 export const useFormOnChangeHook = form => {
-    const formValues = useWatch({
+    const [
+        rekDisplayType,
+        adminSectionRekSubtype,
+        bibliographicSectionRekGenreType,
+        bibliographicSectionFezMatchedJournals,
+        fezJournalIssn,
+    ] = useWatch({
         control: form.control,
-        name: ['rek_display_type', 'adminSection.rek_subtype', 'bibliographicSection.rek_genre_type'],
+        name: [
+            'rek_display_type',
+            'adminSection.rek_subtype',
+            'bibliographicSection.rek_genre_type',
+            'bibliographicSection.fez_matched_journals',
+            'fez_journal_issn',
+        ],
     });
+    if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
+        console.log('updating bibliographicSection.rek_genre_type', adminSectionRekSubtype);
+        form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
+    }
+
+    const { isTouched } = form.getFieldState('rek_display_type');
+
     if (
-        formValues.rek_display_type === PUBLICATION_TYPE_THESIS &&
-        !!formValues.adminSection?.rek_subtype &&
-        !!!formValues.bibliographicSection?.rek_genre_type
+        bibliographicSectionFezMatchedJournals &&
+        fezJournalIssn &&
+        isTouched === false &&
+        [PUBLICATION_TYPE_CONFERENCE_PAPER, PUBLICATION_TYPE_JOURNAL_ARTICLE].includes(rekDisplayType)
     ) {
-        console.log('updating bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
-        form.setValue('bibliographicSection.rek_genre_type', formValues.adminSection.rek_subtype);
+        console.log('update issns', bibliographicSectionFezMatchedJournals, fezJournalIssn);
+        const issns = fezJournalIssn.map(issn => ({
+            rek_value: {
+                key: issn.jnl_issn,
+                value: {
+                    sherpaRomeo: { link: false },
+                    ulrichs: { link: false, linkText: '' },
+                },
+            },
+        }));
+        form.setValue(
+            'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+            bibliographicSectionFezMatchedJournals,
+        );
+        const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || [];
+        const updatedBibliographicSectionIssns = bibliographicSectionIssns.concat(issns);
+        form.setValue('bibliographicSection.issns', updatedBibliographicSectionIssns);
     }
 };
