@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 
 /* eslint-disable react/prop-types */
@@ -62,7 +62,9 @@ describe('AddDataCollection test mocking hooks', () => {
         let counter = 0;
         useValidatedForm.mockImplementation(() => ({
             handleSubmit: jest.fn(),
-            watch: jest.fn(),
+            watch: () =>
+                // startDate, endDate, watchedDoiField
+                ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
             setError: jest.fn(),
             control: {},
             formState: {
@@ -90,11 +92,12 @@ describe('AddDataCollection test mocking hooks', () => {
         // );
 
         const clearNewRecordFn = jest.fn();
-        const { rerender, getByTestId } = setup({
+        const { rerender } = setup({
             submitSucceeded: false,
         });
         expect(useValidatedForm).toHaveBeenCalled();
 
+        preview.debug();
         setup(
             {
                 submitSucceeded: true,
@@ -104,7 +107,7 @@ describe('AddDataCollection test mocking hooks', () => {
             },
             rerender,
         );
-        await waitFor(() => expect(getByTestId('confirm-dialog-box')));
+        await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
 
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
