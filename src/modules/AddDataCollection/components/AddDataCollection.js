@@ -170,6 +170,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
         ...props,
+        formErrors: errors,
         dirty: true,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
