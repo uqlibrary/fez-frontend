@@ -11,6 +11,7 @@ context('Data Collection form', () => {
 
     function submitButtonCorrect(incrementErrorCountBy = 0) {
         errorCount = errorCount + incrementErrorCountBy;
+        console.log('errorCount=', errorCount);
         cy.waitUntil(() => cy.get('[data-testid=submit-data-collection]').should('exist'));
         cy.get('[data-testid=submit-data-collection]').should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
         cy.get('[data-testid=alert] li').should(

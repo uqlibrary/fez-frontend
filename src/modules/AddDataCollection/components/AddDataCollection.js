@@ -86,7 +86,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             ...NEW_DATASET_DEFAULT_VALUES,
         },
     });
-    console.log('isSubmitSuccessful=', isSubmitSuccessful);
     const [apiError, setApiError] = React.useState('');
 
     const navigate = useNavigate();
@@ -94,9 +93,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const confirmationBoxRef = React.useRef();
 
     React.useEffect(() => {
-        console.log('previous:', previous, 'isSubmitSuccessful:', isSubmitSuccessful);
         if (previous !== undefined && previous !== isSubmitSuccessful) {
-            console.log('showConfirmation');
             confirmationBoxRef?.current?.showConfirmation();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -139,7 +136,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                     return validationErrors.validationErrors.doiExists; // Return the error message
                 }
             } catch (error) {
-                console.log('error=', error);
                 // Check if the error is an HTTP 422
                 if (error?.status === 422 && error?.message === 'validation.doi') {
                     return locale.validationErrors.doi;
@@ -156,7 +152,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         if (watchedDoiField) {
             (async () => {
                 const error = await validateDOI(watchedDoiField);
-                console.log('error=', error);
                 if (error) {
                     setError('fez_record_search_key_doi.rek_doi', {
                         type: 'async',
@@ -295,7 +290,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             await dispatch(createNewRecord(cleanValues));
             // Form submission successful
         } catch (error) {
-            console.log('Submitting error=', error);
             let err = error.message;
             const originalMessage = error?.original?.error?.message;
             err += originalMessage && ' ' + originalMessage;
