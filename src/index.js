@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
 import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
+import { setup } from 'mock';
 
 // pick utils
 import MomentUtils from '@date-io/moment';
@@ -23,7 +24,7 @@ require('events').EventEmitter.prototype._maxListeners = 30;
 
 // Import mock data if required
 if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
-    require('./mock');
+    setup();
 }
 
 if (process.env.ENABLE_LOG) {
