@@ -171,7 +171,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, [watchedDoiField, setError]);
 
-    console.log('errors', errors);
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
         ...props,

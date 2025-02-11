@@ -3,6 +3,7 @@ import AddDataCollection, { licenseText } from './AddDataCollection';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
+// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
