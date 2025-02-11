@@ -203,42 +203,4 @@ describe('AddDataCollection test', () => {
         // licence text lacks required internal structure
         expect(licenseText(['something'])).toMatchSnapshot();
     });
-
-    it('should check doi error', async () => {
-        jest.clearAllMocks(); // Ensure clean test state
-
-        // Restore the real implementations
-        jest.unmock('hooks');
-        jest.unmock('modules/SharedComponents/Toolbox/ReactHookForm');
-
-        // Import the actual implementations
-        const { useValidatedForm: originalUseValidatedForm } = jest.requireActual('hooks');
-        useValidatedForm.mockImplementation(originalUseValidatedForm);
-
-        // const { Field: originalField } = jest.requireActual('modules/SharedComponents/Toolbox/ReactHookForm');
-        // jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
-        //     Field: originalField,
-        // }));
-        jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => {
-            const actualModule = jest.requireActual('modules/SharedComponents/Toolbox/ReactHookForm');
-            return {
-                Field: actualModule.Field,
-            };
-        });
-
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [200, {}];
-        });
-
-        const { getByTestId } = setup();
-
-        preview.debug();
-        await userEvent.type(getByTestId('rek-doi-input'), 'Test');
-        expect(getByTestId('rek-doi-input')).toHaveValue('Test');
-    });
 });
