@@ -248,9 +248,22 @@ const PartialDateForm = props => {
                 };
             }
             const newDateObject = { ...state, ...newState };
-            const fullDate = getFullDateFromState(newDateObject);
+            console.log('newDateObject', newDateObject);
             setState(newDateObject);
-            onChange?.(fullDate) || input?.onChange?.(fullDate);
+            // onChange?.(fullDate) || input?.onChange?.(fullDate);
+            displayErrors({
+                state: newState,
+                setError,
+                validationStatus: validate({ state: newState, allowPartial, disableFuture, clearable }),
+                allowPartial,
+                required,
+                clearable,
+                locale,
+            });
+            if (key !== 'year' || newState.year !== '') {
+                const fullDate = getFullDateFromState(newDateObject);
+                onChange?.(fullDate) || input?.onChange?.(fullDate);
+            }
         };
     };
 
