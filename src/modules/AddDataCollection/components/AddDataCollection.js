@@ -78,6 +78,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         handleSubmit,
         watch,
         setError,
+        clearErrors,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -128,14 +129,18 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             : '';
 
     const validateDOI = async doi => {
+        if (!!!doi) return null;
         if (isValidDOIValue(doi)) {
             try {
                 const response = await doesDOIExist(doi);
+                console.log('doi response', response);
 
                 if (response?.total) {
+                    console.log('doi exists error: ', validationErrors.validationErrors.doiExists);
                     return validationErrors.validationErrors.doiExists; // Return the error message
                 }
             } catch (error) {
+                console.log('doi error', error);
                 // Check if the error is an HTTP 422
                 if (error?.status === 422 && error?.message === 'validation.doi') {
                     return locale.validationErrors.doi;
@@ -147,21 +152,26 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         return null; // Return null if no errors
     };
 
+    console.info = () => {};
+    console.info('watchedDoiField', watchedDoiField, setError, clearErrors);
     // Trigger validation when the watched field changes
-    React.useEffect(() => {
-        if (watchedDoiField) {
-            (async () => {
-                const error = await validateDOI(watchedDoiField);
-                if (error) {
-                    setError('fez_record_search_key_doi.rek_doi', {
-                        type: 'async',
-                        message: error,
-                    });
-                }
-            })();
-        }
-    }, [watchedDoiField, setError]); // Include watchedDoiField in the dependency array
+    // React.useEffect(() => {
+    //     if (watchedDoiField) {
+    //         (async () => {
+    //             const error = await validateDOI(watchedDoiField);
+    //             if (error) {
+    //                 console.log('set doi error', error);
+    //                 setError('fez_record_search_key_doi.rek_doi', {
+    //                     type: 'async',
+    //                     message: error,
+    //                 });
+    //             }
+    //         })();
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [watchedDoiField, setError]);
 
+    console.log('errors', errors);
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
         ...props,
@@ -412,7 +422,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.doi}
-                                            validate={[validation.doi]}
+                                            validate={[validation.doi, validateDOI]}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={6}>
