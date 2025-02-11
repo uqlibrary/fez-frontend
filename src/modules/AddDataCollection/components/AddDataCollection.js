@@ -683,6 +683,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             component={PartialDateField}
                                             partialDateFieldId="rek-end-date"
                                             disableFuture
+                                            allowPartial
                                             autoOk
                                             floatingTitle={
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label
