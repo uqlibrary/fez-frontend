@@ -26,7 +26,7 @@ export default {
                 },
                 sdg: {
                     link: {
-                        text: 'View goals details',
+                        text: 'About SDGs',
                         url: 'https://sdgs.un.org/goals',
                     },
                 },
