@@ -111,6 +111,7 @@ describe('AddDataCollection test', () => {
 
         await userEvent.click(getByTestId('rek-copyright-input'));
 
+        // Inputs
         const inputs = [
             ['rek-title-input', 'test'],
             ['rek-description-input', 'test'],
@@ -131,6 +132,7 @@ describe('AddDataCollection test', () => {
         }
         expect(getByTestId('rek-title-input')).toHaveValue('test');
 
+        // Selects
         const selects = [
             ['rek-date-month-select', 'November'],
             ['rek-access-conditions-select', 'Open Access'],
@@ -142,6 +144,20 @@ describe('AddDataCollection test', () => {
             await userEvent.click(selectedOption);
             await userEvent.tab();
         }
+
+        // Type to get a list from the api, then choose one
+        // Type element, type value, select value
+        const selects2 = [
+            ['rek-subject-input', 'a', '010101'],
+            ['rek-contributor-id-input', 'David', 'David Stevens'],
+        ];
+        for (const [testId, typeValue, selectValue] of selects2) {
+            const input = screen.getByTestId(testId);
+            await userEvent.type(input, typeValue);
+            const option = await screen.findByText(selectValue); // Wait for the option to appear
+            await userEvent.click(option);
+            await userEvent.tab();
+        }
         preview.debug();
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
@@ -149,16 +165,10 @@ describe('AddDataCollection test', () => {
         // await userEvent.type(getByTestId('rek-contributor-input'), 'test');
         // await userEvent.tab();
 
-        // const input = screen.getByTestId('rek-contributor-id-input');
-        // await userEvent.type(input, 'David');
-
-        // const option = await screen.findByText('David Stevens'); // Waits for the option to appear
-        // await userEvent.click(option);
-
         // // Optionally, assert that the input now has the selected value
         // expect(input).toHaveValue('David Stevens');
 
-        // expect(getByTestId('submit-data-collection')).toBeEnabled();
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
 
         // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
