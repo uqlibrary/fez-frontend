@@ -135,10 +135,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                 const response = await doesDOIExist(doi);
                 console.log('doi response', response);
 
-                if (response?.total) {
-                    console.log('doi exists error: ', validationErrors.validationErrors.doiExists);
-                    return validationErrors.validationErrors.doiExists; // Return the error message
-                }
+                return response?.total ? validationErrors.validationErrors.doiExists : null;
             } catch (error) {
                 console.log('doi error', error);
                 // Check if the error is an HTTP 422
@@ -147,6 +144,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                 }
             }
         } else {
+            console.log('qgz doi error');
             return locale.validationErrors.doi;
         }
         return null; // Return null if no errors
@@ -421,7 +419,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                                             type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.doi}
-                                            validate={[validation.doi, validateDOI]}
+                                            validate={[validateDOI]}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={6}>
