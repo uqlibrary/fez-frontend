@@ -45,7 +45,6 @@ describe('AddDataCollection test', () => {
         // mockUseNavigate.mockClear();
     });
     it('should check doi error', async () => {
-        jest.spyOn(actions, 'doesDOIExist');
         const existingDoiValue = '10.1037/a0028240';
         mockApi
             .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
@@ -95,7 +94,41 @@ describe('AddDataCollection test', () => {
         await userEvent.tab();
         doi.blur();
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+        // actions.doesDOIExist = jest.requireActual('actions').doesDOIExist;
+    });
+    it('should submit', async () => {
+        mockDoiExist = false;
+        mockApi.onAny().reply(config => {
+            console.log(
+                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                    config.params,
+                )}`,
+            );
+            return [200, {}];
+        });
 
-        actions.doesDOIExist = jest.requireActual('actions').doesDOIExist;
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('rek-copyright-input'));
+        await userEvent.type(getByTestId('rek-title-input'), 'test');
+        await userEvent.tab();
+        await userEvent.type(getByTestId('rek-description-input'), 'test');
+        await userEvent.tab();
+        await userEvent.type(getByTestId('rek-contributor-input'), 'test');
+        await userEvent.tab();
+
+        const input = screen.getByTestId('rek-contributor-id-input');
+        await userEvent.type(input, 'David');
+
+        const option = await screen.findByText('David Stevens'); // Waits for the option to appear
+        await userEvent.click(option);
+
+        // Optionally, assert that the input now has the selected value
+        expect(input).toHaveValue('David Stevens');
+
+        preview.debug();
+        // expect(getByTestId('submit-data-collection')).toBeEnabled();
+
+        // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
 });
