@@ -111,21 +111,18 @@ describe('AddDataCollection test', () => {
 
         await userEvent.click(getByTestId('rek-copyright-input'));
 
-        // await userEvent.type(getByTestId('rek-title-input'), 'test');
-        // await userEvent.tab();
-
         const inputs = [
             ['rek-title-input', 'test'],
-            // ['rek-description-input', 'test'],
-            // ['rek-contributor-input', 'test'],
-            // ['rek-contact-details-email-input', 'test@t.au'],
-            // ['rek-date-day-input', '1'],
-            // ['rek-date-month-select', '1'],
-            // ['rek-date-year-input', '2000'],
-            // ['rek-author-input', 'test'],
-            // ['rek-author-role-input', 'test'],
-            // ['rek-project-name-input', 'test'],
-            // ['rek-project-description-input', 'test'],
+            ['rek-description-input', 'test'],
+            ['rek-contributor-input', 'test'],
+            ['rek-contact-details-email-input', 'test@t.au'],
+            ['rek-date-day-input', '1'],
+            ['rek-date-month-select', '1'],
+            ['rek-date-year-input', '2000'],
+            ['rek-author-input', 'test'],
+            ['rek-author-role-input', 'test'],
+            ['rek-project-name-input', 'test'],
+            ['rek-project-description-input', 'test'],
         ];
         for (const [testId, value] of inputs) {
             await userEvent.click(screen.getByTestId(testId));
@@ -134,19 +131,18 @@ describe('AddDataCollection test', () => {
         }
         expect(getByTestId('rek-title-input')).toHaveValue('test');
 
+        const selects = [
+            ['rek-date-month-select', 'November'],
+            ['rek-access-conditions-input', 'Open Access'],
+            ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
+        ];
+        for (const [testId, value] of selects) {
+            await userEvent.click(screen.getByTestId(testId));
+            const selectedOption = await screen.findByText(value); // Adjust if the text is different
+            await userEvent.click(selectedOption);
+            await userEvent.tab();
+        }
         preview.debug();
-
-        // const selects = [
-        //     ['rek-date-month-select', 'November'],
-        //     ['rek-access-conditions-input', 'Open Access'],
-        //     ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
-        // ];
-        // selects.map(async ([testId, value]) => {
-        //     await userEvent.click(screen.getByTestId(testId));
-        //     const selectedOption = await screen.findByText(value); // Adjust if the text is different
-        //     await userEvent.click(selectedOption);
-        //     await userEvent.tab();
-        // });
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
         // await userEvent.tab();
