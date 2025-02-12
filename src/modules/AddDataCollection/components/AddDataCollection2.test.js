@@ -110,24 +110,58 @@ describe('AddDataCollection test', () => {
         const { getByTestId } = setup();
 
         await userEvent.click(getByTestId('rek-copyright-input'));
-        await userEvent.type(getByTestId('rek-title-input'), 'test');
-        await userEvent.tab();
-        await userEvent.type(getByTestId('rek-description-input'), 'test');
-        await userEvent.tab();
-        await userEvent.type(getByTestId('rek-contributor-input'), 'test');
-        await userEvent.tab();
-
-        const input = screen.getByTestId('rek-contributor-id-input');
-        await userEvent.type(input, 'David');
-
-        const option = await screen.findByText('David Stevens'); // Waits for the option to appear
-        await userEvent.click(option);
-
-        // Optionally, assert that the input now has the selected value
-        expect(input).toHaveValue('David Stevens');
-
         preview.debug();
-        // expect(getByTestId('submit-data-collection')).toBeEnabled();
+
+        const inputs = [
+            ['rek-title-input', 'test'],
+            // ['rek-description-input', 'test'],
+            // ['rek-contributor-input', 'test'],
+            // ['rek-contact-details-email-input', 'test@t.au'],
+            // ['rek-date-day-input', '1'],
+            // ['rek-date-month-select', '1'],
+            // ['rek-date-year-input', '2000'],
+            // ['rek-author-input', 'test'],
+            // ['rek-author-role-input', 'test'],
+            // ['rek-project-name-input', 'test'],
+            // ['rek-project-description-input', 'test'],
+        ];
+        inputs.map(async ([testId, value]) => {
+            await userEvent.click(screen.getByTestId(testId));
+            await userEvent.type(screen.getByTestId(testId), value);
+            await userEvent.tab();
+        });
+
+        expect(getByTestId('rek-title-input')).toHaveValue('test');
+
+        // const selects = [
+        //     ['rek-date-month-select', 'November'],
+        //     ['rek-access-conditions-input', 'Open Access'],
+        //     ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
+        // ];
+        // selects.map(async ([testId, value]) => {
+        //     await userEvent.click(screen.getByTestId(testId));
+        //     const selectedOption = await screen.findByText(value); // Adjust if the text is different
+        //     await userEvent.click(selectedOption);
+        //     await userEvent.tab();
+        // });
+
+        // await userEvent.type(getByTestId('rek-title-input'), 'test');
+        // await userEvent.tab();
+        // await userEvent.type(getByTestId('rek-description-input'), 'test');
+        // await userEvent.tab();
+        // await userEvent.type(getByTestId('rek-contributor-input'), 'test');
+        // await userEvent.tab();
+
+        // const input = screen.getByTestId('rek-contributor-id-input');
+        // await userEvent.type(input, 'David');
+
+        // const option = await screen.findByText('David Stevens'); // Waits for the option to appear
+        // await userEvent.click(option);
+
+        // // Optionally, assert that the input now has the selected value
+        // expect(input).toHaveValue('David Stevens');
+
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
 
         // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
