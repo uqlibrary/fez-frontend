@@ -144,10 +144,8 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                 }
             }
         } else {
-            console.log('qgz doi error');
             return locale.validationErrors.doi;
         }
-        return null; // Return null if no errors
     };
 
     console.info = () => {};

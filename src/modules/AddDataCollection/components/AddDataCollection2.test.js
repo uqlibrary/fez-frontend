@@ -2,13 +2,23 @@ import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 import userEvent from '@testing-library/user-event';
-// import * as actions from 'actions';
+import * as actions from 'actions';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as repository from 'repositories';
 
 const mockUseNavigate = jest.fn();
-// jest.mock('actions'); // Mock the `actions` module
-
+let mockDoiExist = false;
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
+    doesDOIExist: jest.fn(doi => {
+        if (mockDoiExist) {
+            console.log('mock doi exist');
+            return Promise.reject({ status: 422, message: 'validation.doi' });
+        } else {
+            return jest.requireActual('actions').doesDOIExist(doi);
+        }
+    }),
+}));
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockUseNavigate,
@@ -35,7 +45,7 @@ describe('AddDataCollection test', () => {
         // mockUseNavigate.mockClear();
     });
     it('should check doi error', async () => {
-        // const spy = jest.spyOn(actions, 'doesDOIExist');
+        jest.spyOn(actions, 'doesDOIExist');
         const existingDoiValue = '10.1037/a0028240';
         mockApi
             .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
@@ -74,6 +84,18 @@ describe('AddDataCollection test', () => {
         await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
         // await new Promise(resolve => setTimeout(resolve, 2000));
         preview.debug();
+
+        mockDoiExist = true;
+        // actions.doesDOIExist = jest.fn().mockRejectedValue({ status: 422, message: 'validation.doi' });
+
+        // jest.spyOn(actions, 'doesDOIExist').mockRejectedValue({ status: 422, message: 'validation.doi' });
         // await waitFor(() => expect(spy).toHaveBeenCalled());
+        // actions.doesDOIExist.mockRejectedValue({ status: 422, message: 'validation.doi' });
+        await userEvent.type(doi, existingDoiValue);
+        await userEvent.tab();
+        doi.blur();
+        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+
+        actions.doesDOIExist = jest.requireActual('actions').doesDOIExist;
     });
 });
