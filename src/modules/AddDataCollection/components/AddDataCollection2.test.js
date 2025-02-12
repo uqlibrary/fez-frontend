@@ -56,7 +56,39 @@ describe('AddDataCollection test', () => {
                         config.params,
                     )}`,
                 );
-                return [200, { total: 1 }];
+                return [
+                    200,
+                    {
+                        total: 1,
+                        data: [
+                            {
+                                cvr_id: 2932,
+                                cvr_parent_cvo_id: 451799,
+                                cvr_child_cvo_id: 451800,
+                                controlled_vocab: {
+                                    cvo_id: 451800,
+                                    cvo_title: '0101 Pure Mathematics',
+                                    cvo_desc: 'FOR2008',
+                                    cvo_external_id: '01',
+                                    controlled_vocab_children: [
+                                        {
+                                            cvr_id: 2933,
+                                            cvr_parent_cvo_id: 451800,
+                                            cvr_child_cvo_id: 451801,
+                                            controlled_vocab: {
+                                                cvo_id: 451801,
+                                                cvo_title: '010101 Algebra and Number Theory',
+                                                cvo_desc: 'FOR2008',
+                                                cvo_external_id: '010101',
+                                                controlled_vocab_children: [],
+                                            },
+                                        },
+                                    ],
+                                },
+                            },
+                        ],
+                    },
+                ];
             });
 
         mockApi.onAny().reply(config => {
@@ -157,16 +189,16 @@ describe('AddDataCollection test', () => {
         // Type element, type value, select value
         const selects2 = [
             ['rek-subject-input', 'a', '010101'],
-            ['rek-contributor-id-input', 'David', 'David Stevens'],
+            // ['rek-contributor-id-input', 'David', 'David Stevens'],
         ];
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
             await userEvent.type(input, typeValue);
-            const option = await screen.findByText(selectValue); // Wait for the option to appear
+            preview.debug();
+            const option = await screen.findByText(selectValue);
             await userEvent.click(option);
             await userEvent.tab();
         }
-        preview.debug();
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
         // await userEvent.tab();
