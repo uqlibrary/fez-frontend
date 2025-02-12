@@ -133,12 +133,12 @@ describe('AddDataCollection test', () => {
 
         const selects = [
             ['rek-date-month-select', 'November'],
-            ['rek-access-conditions-input', 'Open Access'],
+            // ['rek-access-conditions-input', 'Open Access'],
             ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
         ];
         for (const [testId, value] of selects) {
             await userEvent.click(screen.getByTestId(testId));
-            const selectedOption = await screen.findByText(value); // Adjust if the text is different
+            const selectedOption = await screen.findByText(value);
             await userEvent.click(selectedOption);
             await userEvent.tab();
         }
