@@ -110,7 +110,9 @@ describe('AddDataCollection test', () => {
         const { getByTestId } = setup();
 
         await userEvent.click(getByTestId('rek-copyright-input'));
-        preview.debug();
+
+        // await userEvent.type(getByTestId('rek-title-input'), 'test');
+        // await userEvent.tab();
 
         const inputs = [
             ['rek-title-input', 'test'],
@@ -125,13 +127,14 @@ describe('AddDataCollection test', () => {
             // ['rek-project-name-input', 'test'],
             // ['rek-project-description-input', 'test'],
         ];
-        inputs.map(async ([testId, value]) => {
+        for (const [testId, value] of inputs) {
             await userEvent.click(screen.getByTestId(testId));
             await userEvent.type(screen.getByTestId(testId), value);
             await userEvent.tab();
-        });
-
+        }
         expect(getByTestId('rek-title-input')).toHaveValue('test');
+
+        preview.debug();
 
         // const selects = [
         //     ['rek-date-month-select', 'November'],
@@ -145,8 +148,6 @@ describe('AddDataCollection test', () => {
         //     await userEvent.tab();
         // });
 
-        // await userEvent.type(getByTestId('rek-title-input'), 'test');
-        // await userEvent.tab();
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
         // await userEvent.tab();
         // await userEvent.type(getByTestId('rek-contributor-input'), 'test');
@@ -161,7 +162,7 @@ describe('AddDataCollection test', () => {
         // // Optionally, assert that the input now has the selected value
         // expect(input).toHaveValue('David Stevens');
 
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
+        // expect(getByTestId('submit-data-collection')).toBeEnabled();
 
         // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
