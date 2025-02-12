@@ -138,10 +138,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
                 return response?.total ? validationErrors.validationErrors.doiExists : null;
             } catch (error) {
                 console.log('doi error', error);
-                // Check if the error is an HTTP 422
-                if (error?.status === 422 && error?.message === 'validation.doi') {
-                    return locale.validationErrors.doi;
-                }
+                return locale.validationErrors.doi;
             }
         } else {
             return locale.validationErrors.doi;
