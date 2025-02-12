@@ -98,6 +98,14 @@ describe('AddDataCollection test', () => {
     });
     it('should submit', async () => {
         mockDoiExist = false;
+        mockApi.onGet('vocabularies?cvo_ids=451780').reply(config => {
+            console.log(
+                `Request2 made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                    config.params,
+                )}`,
+            );
+            return [200, { total: 1 }];
+        });
         mockApi.onAny().reply(config => {
             console.log(
                 `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
