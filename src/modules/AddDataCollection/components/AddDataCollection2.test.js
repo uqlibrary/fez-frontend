@@ -133,7 +133,7 @@ describe('AddDataCollection test', () => {
 
         const selects = [
             ['rek-date-month-select', 'November'],
-            // ['rek-access-conditions-input', 'Open Access'],
+            ['rek-access-conditions-select', 'Open Access'],
             ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
         ];
         for (const [testId, value] of selects) {
