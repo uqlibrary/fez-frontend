@@ -151,19 +151,19 @@ describe('AddDataCollection test', () => {
             ['rek-contributor-input', 'test'],
             ['rek-contact-details-email-input', 'test@t.au'],
             ['rek-date-day-input', '1'],
-            ['rek-date-month-select', '1'],
             ['rek-date-year-input', '2000'],
             ['rek-author-input', 'test'],
-            ['rek-author-role-input', 'test'],
             ['rek-project-name-input', 'test'],
             ['rek-project-description-input', 'test'],
         ];
         for (const [testId, value] of inputs) {
-            await userEvent.click(screen.getByTestId(testId));
-            await userEvent.type(screen.getByTestId(testId), value);
+            const input = getByTestId(testId);
+            await userEvent.click(input);
+            await userEvent.type(input, value);
             await userEvent.tab();
+            expect(input).toHaveValue(value);
         }
-        expect(getByTestId('rek-title-input')).toHaveValue('test');
+        expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
 
         // Selects
         const selects = [
@@ -185,6 +185,8 @@ describe('AddDataCollection test', () => {
             ['rek-subject-input', '010101', /010101/i],
             // Contact Name ID
             ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
+            // Creator Role
+            ['rek-author-role-input', 'a', /Project Lead/i],
         ];
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
@@ -194,6 +196,8 @@ describe('AddDataCollection test', () => {
             await userEvent.click(option);
             await userEvent.tab();
         }
+
+        // Creators
 
         // await userEvent.click(getByTestId('rek-contributor-id-input'));
         // await userEvent.type(getByTestId('rek-contributor-id-input'), 'David Johnsen');
