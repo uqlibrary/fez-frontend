@@ -7,7 +7,7 @@ import * as actions from 'actions';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
 
-const mockUseNavigate = jest.fn();
+// const mockUseNavigate = jest.fn();
 let mockDoiExist = false;
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
@@ -20,10 +20,10 @@ jest.mock('actions', () => ({
         }
     }),
 }));
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useNavigate: () => mockUseNavigate,
-}));
+// jest.mock('react-router-dom', () => ({
+//     ...jest.requireActual('react-router-dom'),
+//     useNavigate: () => mockUseNavigate,
+// }));
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
@@ -76,20 +76,12 @@ describe('AddDataCollection test', () => {
 
     it('should submit', async () => {
         mockDoiExist = false;
-        mockApi.onGet('vocabularies?cvo_ids=451780').reply(config => {
-            console.log(
-                `Request2 made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
+        // Field of Research lookup
+        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
             return [200, vocabsFieldResearch];
         });
-        mockApi.onGet('fez-authors/search').reply(config => {
-            console.log(
-                `Request2 made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
+        // Contact Name ID lookup
+        mockApi.onGet('fez-authors/search').reply(() => {
             return [
                 200,
                 {
