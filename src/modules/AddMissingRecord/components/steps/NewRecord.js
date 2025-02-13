@@ -17,7 +17,7 @@ export const NewRecord = ({ newRecord = {} }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const confirmationBoxRef = React.useRef();
-    const { author, account } = useSelector(state => state.get('accountReducer'));
+    const { author } = useSelector(state => state.get('accountReducer'));
     const { rawSearchQuery } = useSelector(state => state.get('searchRecordsReducer'));
 
     const setConfirmationRef = React.useCallback(node => {
@@ -62,11 +62,6 @@ export const NewRecord = ({ newRecord = {} }) => {
             },
         ],
         rek_title: rawSearchQuery || '',
-        isHdrStudent:
-            !!account &&
-            account.class &&
-            account.class.indexOf('IS_CURRENT') >= 0 &&
-            account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0,
     };
 
     // set confirmation message depending on file upload status

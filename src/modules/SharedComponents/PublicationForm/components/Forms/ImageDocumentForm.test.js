@@ -25,7 +25,7 @@ jest.mock('redux-form/immutable', () => ({
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        submitting: testProps.submitting || false, // : PropTypes.bool,
+        isSubmitting: testProps.isSubmitting || false, // : PropTypes.bool,
     };
     return render(
         <WithReduxStore>
@@ -46,7 +46,7 @@ describe('ImageDocumentForm renders ', () => {
     });
 
     it('component with all fields disabled', () => {
-        const { container } = setup({ submitting: true });
+        const { container } = setup({ isSubmitting: true });
         expect(container.querySelectorAll('field[disabled=true]').length).toEqual(7);
     });
 });

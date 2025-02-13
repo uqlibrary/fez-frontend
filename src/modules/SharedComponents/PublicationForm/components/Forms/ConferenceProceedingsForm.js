@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -15,7 +15,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
+export const ConferenceProceedingsForm = ({ control, isSubmitting, canEdit }) => {
     const normalizeIssn = value => {
         const newValue = value.replace('-', '');
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
@@ -34,9 +34,10 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 autoFocus
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_title"
                                 required
                                 type="text"
@@ -52,8 +53,9 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_conference_name.rek_conference_name"
                                 type="text"
                                 required
@@ -64,8 +66,9 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_conference_location.rek_conference_location"
                                 type="text"
                                 fullWidth
@@ -76,8 +79,9 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_conference_dates.rek_conference_dates"
                                 type="text"
                                 fullWidth
@@ -88,9 +92,10 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -102,8 +107,9 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
@@ -113,8 +119,9 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
@@ -129,6 +136,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
                     <Typography>{txt.editors.description}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit={canEdit}
                         forceSelectable
@@ -140,7 +148,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         showContributorAssignment
                         required
                         validate={[validation.editorRequired]}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -148,6 +156,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
+                        control={control}
                         component={ListEditorField}
                         remindToAdd
                         name="fez_record_search_key_isbn"
@@ -156,7 +165,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                         locale={locale.components.isbnForm.field}
                         listEditorId="isbn"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -164,6 +173,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
+                        control={control}
                         component={IssnListEditorField}
                         remindToAdd
                         isValid={validation.isValidIssn}
@@ -172,7 +182,7 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         locale={locale.components.issnForm.field}
                         listEditorId="issn"
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         inputNormalizer={normalizeIssn}
                         rowItemTemplate={IssnRowItemTemplate}
                         transformFunction={transformIssn}
@@ -184,10 +194,11 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="comments"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 multiline
                                 {...txt.other.fieldLabels.notes}
@@ -195,10 +206,11 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 {...txt.other.fieldLabels.link}
                                 validate={[validation.url]}
@@ -211,7 +223,8 @@ export const ConferenceProceedingsForm = ({ submitting, canEdit }) => {
     );
 };
 ConferenceProceedingsForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
     canEdit: PropTypes.bool,
 };
 export default ConferenceProceedingsForm;

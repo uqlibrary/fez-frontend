@@ -63,9 +63,12 @@ export const flattenErrors = (errors, ...otherFlattenedErrorList) => {
  * @param fields
  * @return {string[]}
  */
-export const flattenFormFieldKeys = fields => {
+export const flattenFormFieldKeys = (fields, except = []) => {
     return fields && typeof fields === 'object'
         ? Object.entries(fields).reduce((acc, [key]) => {
+              if (except.includes(key)) {
+                  return acc;
+              }
               // recurse and merge keys
               if (isFezRecordOneToOneRelation(fields, key)) {
                   return [...acc, ...flattenFormFieldKeys(fields[key])];
@@ -123,7 +126,7 @@ const getPropsForAlert = attributes => (...additionalValidationErrors) => {
     // formErrors object.
     // Note: when using theses props, they must include all forms fields in the desired order.
     // Otherwise, the missing fields will not be present in the formErrors object. Unfortunately,
-    // with the current RHF implementation, this is not possible to solved programmatically.
+    // with the current RHF implementation, this is not possible to be solved programmatically.
     const formFields = flattenFormFieldKeys(
         attributes.values && !!Object.keys(attributes.values).length
             ? attributes.values

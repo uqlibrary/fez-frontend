@@ -80,7 +80,7 @@ exports[`ThesisForm  should render component 1`] = `
                           data-testid="alert-message"
                         >
                           <p>
-                            Are you submitting a UQ Higher Degree by Research (HDR) thesis?
+                            Are you isSubmitting a UQ Higher Degree by Research (HDR) thesis?
                           </p>
                           <ul>
                             <li>
@@ -93,7 +93,7 @@ exports[`ThesisForm  should render component 1`] = `
                               .
                             </li>
                             <li>
-                              If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
+                              If you are isSubmitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
                                
                               <a
                                 href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"

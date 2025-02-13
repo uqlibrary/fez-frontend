@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 
 import PropTypes from 'prop-types';
 
-export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected, formValues }) => {
+export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, formValues }) => {
     const normalizeIssn = value => {
         const newValue = value.replace('-', '');
         return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
@@ -47,9 +47,10 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 autoFocus={!isNtro}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_title"
                                 required
                                 type="text"
@@ -62,8 +63,9 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_book_title.rek_book_title"
                                 required
                                 type="text"
@@ -76,8 +78,9 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 required
@@ -88,8 +91,9 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
@@ -100,8 +104,9 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_doi.rek_doi"
                                 textFieldId="rek-doi"
                                 type="text"
@@ -112,9 +117,10 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -130,6 +136,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
             <Grid item xs={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
@@ -141,7 +148,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         showContributorAssignment
                         required
                         validate={[validation.authorRequired]}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         isNtro={isNtro}
                     />
                 </StandardCard>
@@ -149,6 +156,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
             <Grid item xs={12}>
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         maintainSelected
@@ -157,14 +165,15 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         contributorEditorId="editors"
                         name="editors"
                         locale={txt.editors.field}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
             {isNtro && (
                 <NtroFields
+                    control={control}
                     canEdit
-                    submitting={submitting}
+                    isSubmitting={isSubmitting}
                     showContributionStatement={isAuthorSelected}
                     hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                     hideIsrc
@@ -181,6 +190,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
+                        control={control}
                         component={ListEditorField}
                         remindToAdd
                         name="fez_record_search_key_isbn"
@@ -189,7 +199,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                         listEditorId="isbn"
                         locale={locale.components.isbnForm.field}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -197,6 +207,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
+                        control={control}
                         component={IssnListEditorField}
                         remindToAdd
                         isValid={validation.isValidIssn}
@@ -205,7 +216,7 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         locale={locale.components.issnForm.field}
                         listEditorId="issn"
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         inputNormalizer={normalizeIssn}
                         rowItemTemplate={IssnRowItemTemplate}
                         transformFunction={transformIssn}
@@ -217,22 +228,24 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_edition.rek_edition"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 label={txt.other.fieldLabels.edition}
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_start_page.rek_start_page"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 required
                                 validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.other.fieldLabels.startPage}
@@ -242,11 +255,12 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="fez_record_search_key_end_page.rek_end_page"
                                 type="text"
                                 fullWidth
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 required
                                 validate={[validation.required, validation.maxLength255Validator]}
                                 label={txt.other.fieldLabels.endPage}
@@ -258,10 +272,11 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="comments"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 multiline
                                 label={txt.other.fieldLabels.notes}
@@ -269,10 +284,11 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
@@ -285,10 +301,11 @@ export const BookChapterForm = ({ submitting, subtype, isNtro, isAuthorSelected,
     );
 };
 BookChapterForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
-    formValues: PropTypes.any,
+    formValues: PropTypes.object,
 };
 export default BookChapterForm;

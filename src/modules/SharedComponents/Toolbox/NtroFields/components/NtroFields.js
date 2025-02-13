@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field as LegacyFieldWrapper } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,9 +17,11 @@ import { SeriesField } from 'modules/SharedComponents/LookupFields';
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
+import { Field } from '../../ReactHookForm';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
+        control: PropTypes.object,
         canEdit: PropTypes.bool,
         submitting: PropTypes.bool,
         locale: PropTypes.object,
@@ -41,7 +42,6 @@ export default class NtroFields extends React.PureComponent {
         showSignificance: PropTypes.bool,
         hideAbstract: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
-        fieldWrapper: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     };
 
     static defaultProps = {
@@ -164,7 +164,6 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Grant details',
             },
         },
-        fieldWrapper: LegacyFieldWrapper,
     };
 
     constructor(props) {
@@ -236,7 +235,7 @@ export default class NtroFields extends React.PureComponent {
 
     render() {
         const { contributionStatement, metadata, grantEditor } = this.props.locale;
-        const { fieldWrapper: Field } = this.props;
+        const control = this.props.control;
         return (
             <React.Fragment>
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
@@ -249,6 +248,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid xs={12}>
                                         <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
                                         <Field
+                                            control={control}
                                             component={SelectField}
                                             disabled={this.props.submitting}
                                             name="significance"
@@ -268,6 +268,7 @@ export default class NtroFields extends React.PureComponent {
                                 {this.props.showContributionStatement && (
                                     <Grid xs={12} style={{ marginTop: 24 }}>
                                         <Field
+                                            control={control}
                                             component={RichEditorField}
                                             name="impactStatement"
                                             fullWidth
@@ -305,6 +306,7 @@ export default class NtroFields extends React.PureComponent {
                                     {!this.props.hideAbstract && (
                                         <>
                                             <Field
+                                                control={control}
                                                 component={RichEditorField}
                                                 name="ntroAbstract"
                                                 fullWidth
@@ -320,6 +322,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideIsmn && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={ListEditorField}
                                             remindToAdd
                                             name="fez_record_search_key_ismn"
@@ -336,6 +339,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideIsrc && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={ListEditorField}
                                             remindToAdd
                                             name="fez_record_search_key_isrc"
@@ -353,6 +357,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideSeries && (
                                     <Grid xs={12}>
                                         <Field
+                                            control={control}
                                             component={SeriesField}
                                             disabled={this.props.submitting}
                                             name="fez_record_search_key_series.rek_series"
@@ -363,6 +368,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideVolume && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_volume_number.rek_volume_number"
                                             textFieldId="rek-volume-number"
@@ -376,6 +382,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideIssue && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_issue_number.rek_issue_number"
                                             textFieldId="rek-issue-number"
@@ -389,6 +396,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideStartPage && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_start_page.rek_start_page"
                                             textFieldId="rek-start-page"
@@ -402,6 +410,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideEndPage && (
                                     <Grid xs={12} sm={this.row3Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_end_page.rek_end_page"
                                             textFieldId="rek-end-page"
@@ -415,6 +424,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideExtent && (
                                     <Grid xs={12} sm={this.row4Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             id="rek-total-pages"
                                             name="fez_record_search_key_total_pages.rek_total_pages"
@@ -432,6 +442,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideOriginalFormat && (
                                     <Grid xs={12} sm={this.row4Width}>
                                         <Field
+                                            control={control}
                                             component={TextField}
                                             name="fez_record_search_key_original_format.rek_original_format"
                                             textFieldId="rek-original-format"
@@ -445,6 +456,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideAudienceSize && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={SelectField}
                                             name="fez_record_search_key_audience_size.rek_audience_size"
                                             disabled={this.props.submitting}
@@ -464,6 +476,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hideLanguage && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={NewGenericSelectField}
                                             genericSelectFieldId="rek-language"
                                             name="languages"
@@ -478,6 +491,7 @@ export default class NtroFields extends React.PureComponent {
                                 {!this.props.hidePeerReviewActivity && (
                                     <Grid xs={12} sm={this.row5Width}>
                                         <Field
+                                            control={control}
                                             component={NewGenericSelectField}
                                             disabled={this.props.submitting}
                                             genericSelectFieldId="rek-quality-indicator"
@@ -500,6 +514,7 @@ export default class NtroFields extends React.PureComponent {
                     <Grid xs={12}>
                         <StandardCard title={grantEditor.title}>
                             <Field
+                                control={control}
                                 component={GrantListEditorField}
                                 canEdit={this.props.canEdit}
                                 name="grants"

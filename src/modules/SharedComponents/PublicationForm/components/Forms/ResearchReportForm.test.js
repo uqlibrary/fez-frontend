@@ -14,7 +14,7 @@ jest.mock('redux-form/immutable', () => ({
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        submitting: testProps.submitting || false, // : PropTypes.bool,
+        isSubmitting: testProps.isSubmitting || false, // : PropTypes.bool,
     };
     return render(
         <WithReduxStore>
@@ -84,7 +84,7 @@ describe('ResearchReportForm renders ', () => {
             formValues: {
                 get: jest.fn(),
             },
-            submitting: true,
+            isSubmitting: true,
         };
         const { container } = setup(testProps);
         expect(container.querySelectorAll('field[disabled=true]').length).toEqual(15);

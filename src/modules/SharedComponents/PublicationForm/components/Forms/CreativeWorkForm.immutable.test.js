@@ -53,7 +53,7 @@ function setup(testProps = {}) {
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         onFormCancel: testProps.onFormCancel || jest.fn(),
         onFormSubmitSuccess: testProps.onFormSubmitSuccess || jest.fn(),
-        submitting: testProps.submitting || false,
+        isSubmitting: testProps.isSubmitting || false,
         pristine: testProps.pristine || false,
         author: testProps.author || null,
         actions: testProps.actions || {},

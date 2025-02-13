@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -25,7 +25,7 @@ import {
 } from 'config/general';
 import moment from 'moment';
 
-export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected, formValues }) => {
+export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, formValues }) => {
     const txt = formLocale.creativeWork;
     const _formValues = formValues && formValues.toJS();
     const startDate = _formValues && _formValues.rek_date;
@@ -51,8 +51,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 autoFocus={!isNtro}
                                 name="rek_title"
                                 type="text"
@@ -66,8 +67,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         </Grid>
                         <Grid item xs={12} sm={isNtroCpeeExhibitionEvent ? 12 : 6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                 type="text"
                                 fullWidth
@@ -78,8 +80,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         </Grid>
                         <Grid item xs={12} sm={isNtroCpeeExhibitionEvent ? 12 : 6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
@@ -91,8 +94,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         {!isNtroCpeeExhibitionEvent && (
                             <Grid item xs={12} sm={displayEndDate ? 12 : 6}>
                                 <Field
+                                    control={control}
                                     component={TextField}
-                                    disabled={submitting}
+                                    disabled={isSubmitting}
                                     name="fez_record_search_key_doi.rek_doi"
                                     type="text"
                                     fullWidth
@@ -103,8 +107,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         )}
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -119,8 +124,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         {displayEndDate && (
                             <Grid item xs={12} sm={6}>
                                 <Field
+                                    control={control}
                                     component={PartialDateField}
-                                    disabled={submitting}
+                                    disabled={isSubmitting}
                                     name="fez_record_search_key_end_date.rek_end_date"
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.endDate.title}
@@ -136,12 +142,13 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
                         maintainSelected
                         contributorEditorId="authors"
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         isNtro={isNtro}
                         locale={txt.authors.field}
                         name="authors"
@@ -153,8 +160,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
             </Grid>
             {isNtro && (
                 <NtroFields
+                    control={control}
                     canEdit
-                    submitting={submitting}
+                    isSubmitting={isSubmitting}
                     showContributionStatement={isAuthorSelected}
                     hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                     hideIsrc={!RRW_NTRO_SUBTYPES.includes(subtype)}
@@ -169,8 +177,9 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="comments"
                                 type="text"
                                 fullWidth
@@ -180,10 +189,11 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 {...txt.optional.fieldLabels.url}
                                 validate={[validation.url]}
@@ -191,10 +201,11 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link_description"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 label={'Link description'}
                             />
@@ -206,10 +217,11 @@ export const CreativeWorkForm = ({ submitting, subtype, isNtro, isAuthorSelected
     );
 };
 CreativeWorkForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
-    formValues: PropTypes.any,
+    formValues: PropTypes.object,
 };
 export default CreativeWorkForm;

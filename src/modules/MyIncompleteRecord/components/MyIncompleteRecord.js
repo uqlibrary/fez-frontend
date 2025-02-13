@@ -373,6 +373,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             </Grid>
                             {isNtro && (
                                 <NtroFields
+                                    control={control}
                                     fieldWrapper={fieldWrapper}
                                     submitting={isSubmitting}
                                     hideIsmn
