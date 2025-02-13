@@ -108,6 +108,29 @@ describe('AddDataCollection test', () => {
             );
             return [200, vocabsFieldResearch];
         });
+        mockApi.onGet('fez-authors/search').reply(config => {
+            console.log(
+                `Request2 made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                    config.params,
+                )}`,
+            );
+            return [
+                200,
+                {
+                    total: 1,
+                    data: [
+                        {
+                            id: 46980,
+                            value: 'David Johnsen',
+                            aut_id: 46980,
+                            aut_fname: 'David',
+                            aut_lname: 'Johnsen',
+                            aut_display_name: 'David Johnsen',
+                        },
+                    ],
+                },
+            ];
+        });
         mockApi.onAny().reply(config => {
             console.log(
                 `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
@@ -158,8 +181,10 @@ describe('AddDataCollection test', () => {
         // Type to get a list from the api, then choose one
         // Type element, type value, select value
         const selects2 = [
+            // Field of Research
             ['rek-subject-input', '010101', /010101/i],
-            // ['rek-contributor-id-input', 'David', 'David Stevens'],
+            // Contact Name ID
+            ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
         ];
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
@@ -169,6 +194,13 @@ describe('AddDataCollection test', () => {
             await userEvent.click(option);
             await userEvent.tab();
         }
+
+        // await userEvent.click(getByTestId('rek-contributor-id-input'));
+        // await userEvent.type(getByTestId('rek-contributor-id-input'), 'David Johnsen');
+        // const option = await screen.findByText('David Johnsen');
+        // await userEvent.click(option);
+        // await userEvent.tab();
+
         preview.debug();
         await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
 
