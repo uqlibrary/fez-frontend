@@ -164,15 +164,13 @@ describe('AddDataCollection test', () => {
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
             await userEvent.type(input, typeValue);
-            await waitFor(() => expect(queryByTestId('loading-suggestions')).not.toBeInTheDocument());
-            // const option = await screen.findByText(selectValue);
-            let option;
-            await waitFor(() => expect((option = screen.queryByText(selectValue))));
+            const option = await screen.findByText(selectValue);
+            console.log('option=', option);
+            console.log(container.innerHTML);
+            preview.debug();
             await userEvent.click(option);
             await userEvent.tab();
         }
-        console.log(container.innerHTML);
-        preview.debug();
         await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
