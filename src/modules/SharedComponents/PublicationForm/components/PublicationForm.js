@@ -132,41 +132,33 @@ const validate = data => {
     return errors;
 };
 
-const getProps = (initialValues, values, displayType, publicationSubtype) => {
-    const selectedPublicationType = displayType && publicationTypes({ ...recordForms })[displayType];
+const getProps = (initialValues, values, displayType, subtype) => {
+    const publicationType = displayType && publicationTypes({ ...recordForms })[displayType];
 
-    let hasDefaultDocTypeSubType = false;
-    let docTypeSubTypeCombo = null;
-
+    let isComboDocTypeSelected = false;
+    let comboDocType = null;
     if (displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
-        hasDefaultDocTypeSubType = true;
-        docTypeSubTypeCombo = DOCTYPE_SUBTYPE_MAPPING[displayType] || null;
+        isComboDocTypeSelected = true;
+        comboDocType = DOCTYPE_SUBTYPE_MAPPING[displayType];
     } else if (displayType === PUBLICATION_TYPE_DESIGN) {
-        hasDefaultDocTypeSubType = true;
-        docTypeSubTypeCombo = {
+        isComboDocTypeSelected = true;
+        comboDocType = {
             docTypeId: PUBLICATION_TYPE_DESIGN,
             subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-            name: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         };
     }
 
-    const hasSubtypes = selectedPublicationType?.subtypes;
-    const subtypes = hasSubtypes ? selectedPublicationType.subtypes : null;
-    const formComponent = hasSubtypes
-        ? publicationSubtype && selectedPublicationType.formComponent
-        : selectedPublicationType?.formComponent || null;
-
+    const hasSubtypes = !!publicationType?.subtypes?.length;
     return {
-        hasSubtypes,
+        hasSubtypes: !!publicationType?.subtypes?.length,
         subtypes:
-            publicationSubtype && general.NTRO_SUBTYPES.includes(publicationSubtype)
-                ? subtypes?.filter(type => general.NTRO_SUBTYPES.includes(type))
-                : subtypes,
-        subtype: publicationSubtype,
-        formComponent: (!hasSubtypes && formComponent) || (hasSubtypes && publicationSubtype && formComponent) || null,
-        isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
-        hasDefaultDocTypeSubType,
-        docTypeSubTypeCombo,
+            subtype && general.NTRO_SUBTYPES.includes(subtype)
+                ? publicationType?.subtypes?.filter(type => general.NTRO_SUBTYPES.includes(type)) // restrict to NTRO only if one NTRO subtype is selected
+                : publicationType?.subtypes,
+        formComponent: displayType && (!hasSubtypes || subtype) && publicationType?.formComponent,
+        isNtro: general.NTRO_SUBTYPES.includes(subtype),
+        isComboDocTypeSelected,
+        comboDocType,
         isAuthorSelected: values?.authors?.some?.(object => object.selected === true) || false,
     };
 };
@@ -200,10 +192,13 @@ const formValues = values => ({ get: key => values[key], toJS: () => values });
 const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const triggeredFromComboDocTypeSelection = useRef(false);
+
     // form
     const {
         trigger,
         unregister,
+        setValue,
         getValues,
         control,
         resetField,
@@ -212,14 +207,14 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useForm({
-        // shouldUnregister: true, // causes multiple re-renders - handled with useEffect bellow
+        // shouldUnregister: true, // causes multiple re-renders - handled by useEffect bellow
         defaultValues: {
             languages: ['eng'],
             rek_title: initialValues.rek_title || '',
         },
     });
-    // watch for changes on all fields, as we have to perform a form level validation below
-    const [displayType, selectedSubtype] = useWatch({
+    // watch for changes on displayType and subtype drop-down options
+    let [displayType, subtype] = useWatch({
         control,
         name: ['rek_display_type', 'rek_subtype'],
     });
@@ -228,46 +223,50 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
     const {
         hasSubtypes,
         subtypes,
-        subtype,
         formComponent: FormComponent,
         isNtro,
-        hasDefaultDocTypeSubType,
-        docTypeSubTypeCombo,
+        isComboDocTypeSelected,
+        comboDocType,
         isAuthorSelected,
-    } = useMemo(() => getProps(initialValues, values, displayType, selectedSubtype, recordForms), [
-        displayType,
-        selectedSubtype,
-        JSON.stringify(values?.authors),
-    ]);
+    } = getProps(initialValues, values, displayType, subtype, recordForms);
 
-    console.log(displayType, selectedSubtype, values);
+    if (isComboDocTypeSelected) {
+        displayType = comboDocType.docTypeId;
+        subtype = comboDocType.subtype;
+    }
 
-    const publicationSubtypeList = subtypes?.map((item, index) => (
-        <MenuItem value={item} key={`${displayType}-${index}`}>
-            {item}
-        </MenuItem>
-    ));
-
+    // handles combo doc type option selection
     useEffect(() => {
-        if (isSubmitSuccessful) {
-            onFormSubmitSuccess();
+        if (!isComboDocTypeSelected || !comboDocType?.docTypeId || !comboDocType?.subtype) {
+            return;
         }
-    }, [isSubmitSuccessful, onFormSubmitSuccess]);
+        // using setValue() on watched values triggers a re-render
+        // we have to use a ref var to avoid re-renders from the displayType changes - handle by the useEffect below
+        triggeredFromComboDocTypeSelection.current = true;
+        setValue('rek_display_type', comboDocType.docTypeId);
+        setValue('rek_subtype', comboDocType.subtype);
+    }, [isComboDocTypeSelected, comboDocType?.docTypeId, comboDocType?.subtype]);
 
-    // clear subtype upon changing display type
+    // handle displayType changes
     useEffect(() => {
         if (!displayType) return;
+        if (triggeredFromComboDocTypeSelection.current) {
+            triggeredFromComboDocTypeSelection.current = false;
+            return;
+        }
+        // unregister previously registered form fields, as they are no longer present
         const fields = flattenFormFieldKeys(values, ['rek_display_type', 'rek_subtype']);
         if (!!fields.length) {
             unregister(fields);
         }
         resetField('rek_subtype');
     }, [displayType]);
-    // trigger validation upon selectedSubtype
+
+    // trigger a form validation upon subtype changes, to show the form validation error summary
     useEffect(() => {
-        if (!selectedSubtype || !FormComponent) return;
+        if (!subtype || !FormComponent) return;
         trigger();
-    }, [selectedSubtype, FormComponent]);
+    }, [subtype, FormComponent]);
 
     const handleSubmit = safelyHandleSubmit(async () => {
         const data = mergeWithFormValues({ author, publication });
@@ -295,7 +294,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                                         disabled={isSubmitting}
                                         name="rek_display_type"
                                         id="rek-display-type"
-                                        value={values?.rek_display_type}
+                                        value={displayType}
                                         label={txt.publicationType.inputLabelText}
                                         required
                                         placeholder={txt.publicationType.hintText}
@@ -304,22 +303,26 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                                         {publicationTypeItems}
                                     </Field>
                                 </Grid>
-                                {(hasSubtypes || hasDefaultDocTypeSubType) && (
+                                {hasSubtypes && (!subtype || subtypes.includes(subtype)) && (
                                     <Grid xs={12}>
                                         <Field
-                                            key={displayType}
+                                            key={`${displayType}${subtype}`}
                                             control={control}
                                             component={SelectField}
                                             disabled={isSubmitting}
                                             id="rek-subtype"
                                             name="rek_subtype"
-                                            value={values?.rek_subtype}
+                                            value={subtype}
                                             label={txt.publicationSubtype.inputLabelText}
                                             required
                                             placeholder={txt.publicationSubtype.hintText}
                                             selectFieldId="rek-subtype"
                                         >
-                                            {publicationSubtypeList}
+                                            {subtypes?.map((item, index) => (
+                                                <MenuItem value={item} key={`${displayType}-${index}`}>
+                                                    {item}
+                                                </MenuItem>
+                                            ))}
                                         </Field>
                                     </Grid>
                                 )}
@@ -331,7 +334,6 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                             {!!isNtro && <NtroHeader />}
                             <Grid xs={12}>
                                 <FormComponent
-                                    key={`${displayType}${selectedSubtype}`}
                                     control={control}
                                     formValues={formValues(values)}
                                     subtype={subtype}
