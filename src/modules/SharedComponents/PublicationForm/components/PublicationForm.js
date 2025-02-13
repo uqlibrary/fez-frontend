@@ -7,7 +7,7 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable max-len */
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -48,6 +48,7 @@ import { useForm } from '../../../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
+import { isEmptyObject } from '../../../../helpers/general';
 
 const asyncValidate = data => {
     const doi = data.fez_record_search_key_doi && data.fez_record_search_key_doi.rek_doi;
@@ -62,77 +63,59 @@ const asyncValidate = data => {
     return Promise.resolve();
 };
 
-const validate = data => {
-    // add only multi field validations
-    // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
-    // reset global errors, eg form submit failure
+const hasAtLeastOneContributorSelected = items => items?.some(v => v.selected);
+
+const validateAuthors = data => {
     const errors = {};
-    // Check authors validation for special cases
-    switch (data.rek_display_type) {
-        case general.PUBLICATION_TYPE_BOOK:
-        case general.PUBLICATION_TYPE_AUDIO_DOCUMENT:
-        case general.PUBLICATION_TYPE_VIDEO_DOCUMENT:
-            // either author or editor should be selected and linked to a user
-            // Edited book only require editors
-            if (
-                data?.rek_subtype &&
-                data?.rek_subtype === SUBTYPE_EDITED_BOOK &&
-                (!data.editors ||
-                    (data.editors && data.editors.length === 0) ||
-                    (data.editors || []).filter(item => item.selected).length === 0)
-            ) {
-                errors.editors = locale.validationErrors.editorRequired;
-            } else if (
-                (!data.authors && !data.editors) ||
-                (!data.authors && data.editors && data.editors.length === 0) ||
-                (!data.editors && data.authors && data.authors.length === 0) ||
-                (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
-                (data.authors &&
-                    data.authors.length !== 0 &&
-                    (data.editors || []).filter(item => item.selected).length === 0 &&
-                    data.authors.filter(item => item.selected).length === 0) ||
-                (data.editors &&
-                    data.editors.length !== 0 &&
-                    (data.authors || []).filter(item => item.selected).length === 0 &&
-                    data.editors.filter(item => item.selected).length === 0)
-            ) {
-                errors.authors = locale.validationErrors.authorRequired;
-                errors.editors = locale.validationErrors.editorRequired;
-            }
-            break;
-        default:
-            break;
-    }
-
-    // Check start\end dates are valid
-    const endDate =
-        data.fez_record_search_key_end_date &&
-        data.fez_record_search_key_end_date.rek_end_date &&
-        moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format();
-    const startDate = data.rek_date && moment(data.rek_date).format();
-
-    if (!!endDate && !!startDate && startDate > endDate) {
-        errors.dateRange = locale.validationErrors.dateRange;
-    }
-
-    // Check start/end pages are valid for Book Chapters
-    const startPage = data.fez_record_search_key_start_page && data.fez_record_search_key_start_page.rek_start_page;
-    const endPage = data.fez_record_search_key_end_page && data.fez_record_search_key_end_page.rek_end_page;
-    const docType = data.rek_display_type;
-    if (
-        docType === 177 &&
-        (!startPage || !endPage || (!!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10)))
+    if (data.rek_subtype === SUBTYPE_EDITED_BOOK && !hasAtLeastOneContributorSelected(data.editors)) {
+        errors.editors = locale.validationErrors.editorRequired;
+    } else if ((!data.authors || !data.authors.length) && (!data.editors || !data.editors.length)) {
+        errors.authors = locale.validationErrors.authorRequired;
+        errors.editors = locale.validationErrors.editorRequired;
+    } else if (
+        data.authors?.length &&
+        !hasAtLeastOneContributorSelected(data.authors) &&
+        !hasAtLeastOneContributorSelected(data.editors)
     ) {
-        errors.pageRange = locale.validationErrors.pageRange;
-    } else {
-        if (errors.pageRange) {
-            delete errors.pageRange;
-        }
+        errors.authors = locale.validationErrors.authorRequired;
     }
     return errors;
 };
 
-const getProps = (initialValues, values, displayType, subtype) => {
+const validateDates = data => {
+    const endDate = data.fez_record_search_key_end_date?.rek_end_date
+        ? moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format()
+        : null;
+    const startDate = data.rek_date ? moment(data.rek_date).format() : null;
+    if (startDate && endDate && startDate > endDate) {
+        return { dateRange: locale.validationErrors.dateRange };
+    }
+    return {};
+};
+
+const validatePages = data => {
+    const startPage = data.fez_record_search_key_start_page?.rek_start_page;
+    const endPage = data.fez_record_search_key_end_page?.rek_end_page;
+    const docType = data.rek_display_type;
+    if (
+        docType === 177 &&
+        (!startPage || !endPage || (startPage && endPage && parseInt(startPage, 10) > parseInt(endPage, 10)))
+    ) {
+        return { pageRange: locale.validationErrors.pageRange };
+    }
+    return {};
+};
+
+const getFormLevelError = data => {
+    if (!data) return {};
+    return {
+        ...validateAuthors(data),
+        ...validateDates(data),
+        ...validatePages(data),
+    };
+};
+
+const getState = (initialValues, authors, displayType, subtype) => {
     const publicationType = displayType && publicationTypes({ ...recordForms })[displayType];
 
     let isComboDocTypeOption = false;
@@ -159,7 +142,7 @@ const getProps = (initialValues, values, displayType, subtype) => {
         isNtro: general.NTRO_SUBTYPES.includes(subtype),
         isComboDocTypeOption,
         comboDocTypeOption,
-        isAuthorSelected: values?.authors?.some?.(object => object.selected === true) || false,
+        isAuthorSelected: authors?.some?.(object => object.selected === true) || false,
     };
 };
 
@@ -214,12 +197,10 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         },
     });
     // watch for changes on displayType and subtype drop-down options
-    let [displayType, subtype] = useWatch({
-        control,
-        name: ['rek_display_type', 'rek_subtype'],
-    });
+    let [displayType, subtype] = useWatch({ control, name: ['rek_display_type', 'rek_subtype'] });
+    const [authors, editors] = useWatch({ control, name: ['authors', 'editors'] });
 
-    const values = getValues();
+    const values = { ...getValues(), authors, editors };
     const {
         hasSubtypes,
         subtypes,
@@ -228,15 +209,16 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         isComboDocTypeOption,
         comboDocTypeOption,
         isAuthorSelected,
-    } = getProps(initialValues, values, displayType, subtype, recordForms);
-
+    } = getState(initialValues, authors, displayType, subtype, recordForms);
+    // update displayType and subtype according to selected comboDocTypeOption prior to the useLayoutEffect call below,
+    // where displayType changes are handled, in order to avoid unnecessary re-renders
     if (isComboDocTypeOption) {
         displayType = comboDocTypeOption.docTypeId;
         subtype = comboDocTypeOption.subtype;
     }
 
     // handles combo doc type option selection
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!isComboDocTypeOption || !comboDocTypeOption?.docTypeId || !comboDocTypeOption?.subtype) {
             return;
         }
@@ -248,7 +230,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
     }, [isComboDocTypeOption, comboDocTypeOption?.docTypeId, comboDocTypeOption?.subtype]);
 
     // handle displayType changes
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!displayType) return;
         if (shouldIgnoreDisplayTypeChange.current) {
             shouldIgnoreDisplayTypeChange.current = false;
@@ -263,7 +245,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
     }, [displayType]);
 
     // trigger a form validation upon subtype changes, to show the form validation error summary
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!subtype || !FormComponent) return;
         trigger();
     }, [subtype, FormComponent]);
@@ -278,7 +260,8 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         await dispatch(createNewRecord({ ...data }));
     });
 
-    const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert() });
+    const formLevelError = getFormLevelError({ ...values });
+    const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
     return (
         <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
             <form onSubmit={handleSubmit}>
@@ -352,7 +335,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                                                 <Field
                                                     control={control}
                                                     component={ContentIndicatorsField}
-                                                    displayType={values?.rek_display_type}
+                                                    displayType={displayType}
                                                     disabled={isSubmitting}
                                                     id="content-indicators"
                                                     name="contentIndicators"
@@ -401,7 +384,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                             onClick={onFormCancel}
                         />
                     </Grid>
-                    {(hasSubtypes || !!values?.rek_display_type) && (
+                    {(hasSubtypes || !!displayType) && (
                         <Grid xs={12} sm="auto">
                             <Button
                                 type="submit"
@@ -413,7 +396,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                                 color="primary"
                                 fullWidth
                                 children={txt.submit}
-                                disabled={isSubmitting || hasValidationError}
+                                disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
                             />
                         </Grid>
                     )}
