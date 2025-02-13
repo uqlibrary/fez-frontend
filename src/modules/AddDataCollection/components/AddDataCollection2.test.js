@@ -99,6 +99,24 @@ describe('AddDataCollection test', () => {
                 },
             ];
         });
+        mockApi.onPost('records').reply(() => {
+            return [
+                200,
+                {
+                    total: 1,
+                    data: [
+                        {
+                            id: 46980,
+                            value: 'David Johnsen',
+                            aut_id: 46980,
+                            aut_fname: 'David',
+                            aut_lname: 'Johnsen',
+                            aut_display_name: 'David Johnsen',
+                        },
+                    ],
+                },
+            ];
+        });
         mockApi.onAny().reply(config => {
             console.log(
                 `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
