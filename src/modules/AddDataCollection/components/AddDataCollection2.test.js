@@ -51,25 +51,9 @@ describe('AddDataCollection test', () => {
             .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
                 params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
             })
-            .reply(config => {
-                console.log(
-                    `Request2 made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                        config.params,
-                    )}`,
-                );
+            .reply(() => {
                 return [200, { total: 1 }];
             });
-
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [200, {}];
-        });
-
-        // Re-import the component after resetting modules
         const { getByTestId } = setup();
 
         const doi = getByTestId('rek-doi-input');
@@ -82,20 +66,12 @@ describe('AddDataCollection test', () => {
         await userEvent.tab();
         doi.blur();
         await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
-        // await new Promise(resolve => setTimeout(resolve, 2000));
-        preview.debug();
 
         mockDoiExist = true;
-        // actions.doesDOIExist = jest.fn().mockRejectedValue({ status: 422, message: 'validation.doi' });
-
-        // jest.spyOn(actions, 'doesDOIExist').mockRejectedValue({ status: 422, message: 'validation.doi' });
-        // await waitFor(() => expect(spy).toHaveBeenCalled());
-        // actions.doesDOIExist.mockRejectedValue({ status: 422, message: 'validation.doi' });
         await userEvent.type(doi, existingDoiValue);
         await userEvent.tab();
         doi.blur();
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
-        // actions.doesDOIExist = jest.requireActual('actions').doesDOIExist;
     });
 
     it('should submit', async () => {
@@ -198,6 +174,8 @@ describe('AddDataCollection test', () => {
         }
 
         expect(getByTestId('submit-data-collection')).toBeEnabled();
+
+        await userEvent.click(getByTestId('submit-data-collection'));
         preview.debug();
     });
 });
