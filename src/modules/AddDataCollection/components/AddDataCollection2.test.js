@@ -197,27 +197,7 @@ describe('AddDataCollection test', () => {
             await userEvent.tab();
         }
 
-        // Creators
-
-        // await userEvent.click(getByTestId('rek-contributor-id-input'));
-        // await userEvent.type(getByTestId('rek-contributor-id-input'), 'David Johnsen');
-        // const option = await screen.findByText('David Johnsen');
-        // await userEvent.click(option);
-        // await userEvent.tab();
-
-        preview.debug();
-        await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
-
-        // await userEvent.type(getByTestId('rek-description-input'), 'test');
-        // await userEvent.tab();
-        // await userEvent.type(getByTestId('rek-contributor-input'), 'test');
-        // await userEvent.tab();
-
-        // // Optionally, assert that the input now has the selected value
-        // expect(input).toHaveValue('David Stevens');
-
         expect(getByTestId('submit-data-collection')).toBeEnabled();
-
-        // await waitFor(() => expect(screen.getByText('010101 Algebra and Number Theory')).toBeInTheDocument());
+        preview.debug();
     });
 });
