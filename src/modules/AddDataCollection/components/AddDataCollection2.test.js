@@ -169,9 +169,9 @@ describe('AddDataCollection test', () => {
             // const option = await waitFor(() => screen.findByText(selectValue));
             await new Promise(resolve => setTimeout(resolve, 2000)); // Give time for async rendering
             // console.log(container.innerHTML);
-            const option = await screen.findAllByText(selectValue);
+            const option = await screen.findByText(selectValue);
             console.log(option);
-            await userEvent.click(option[0]); // Click the first matching option
+            await userEvent.click(option); // Click the first matching option
             preview.debug();
 
             // const option = await waitFor(() => screen.findByText(selectValue), { timeout: 5000 });
