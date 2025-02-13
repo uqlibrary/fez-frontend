@@ -5,6 +5,7 @@ import userEvent from '@testing-library/user-event';
 import * as actions from 'actions';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as repository from 'repositories';
+import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
 
 const mockUseNavigate = jest.fn();
 let mockDoiExist = false;
@@ -56,39 +57,7 @@ describe('AddDataCollection test', () => {
                         config.params,
                     )}`,
                 );
-                return [
-                    200,
-                    {
-                        total: 1,
-                        data: [
-                            {
-                                cvr_id: 2932,
-                                cvr_parent_cvo_id: 451799,
-                                cvr_child_cvo_id: 451800,
-                                controlled_vocab: {
-                                    cvo_id: 451800,
-                                    cvo_title: '0101 Pure Mathematics',
-                                    cvo_desc: 'FOR2008',
-                                    cvo_external_id: '01',
-                                    controlled_vocab_children: [
-                                        {
-                                            cvr_id: 2933,
-                                            cvr_parent_cvo_id: 451800,
-                                            cvr_child_cvo_id: 451801,
-                                            controlled_vocab: {
-                                                cvo_id: 451801,
-                                                cvo_title: '010101 Algebra and Number Theory',
-                                                cvo_desc: 'FOR2008',
-                                                cvo_external_id: '010101',
-                                                controlled_vocab_children: [],
-                                            },
-                                        },
-                                    ],
-                                },
-                            },
-                        ],
-                    },
-                ];
+                return [200, { total: 1 }];
             });
 
         mockApi.onAny().reply(config => {
@@ -128,6 +97,7 @@ describe('AddDataCollection test', () => {
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
         // actions.doesDOIExist = jest.requireActual('actions').doesDOIExist;
     });
+
     it('should submit', async () => {
         mockDoiExist = false;
         mockApi.onGet('vocabularies?cvo_ids=451780').reply(config => {
@@ -136,7 +106,7 @@ describe('AddDataCollection test', () => {
                     config.params,
                 )}`,
             );
-            return [200, { total: 1 }];
+            return [200, { ...vocabsFieldResearch }];
         });
         mockApi.onAny().reply(config => {
             console.log(
@@ -194,11 +164,12 @@ describe('AddDataCollection test', () => {
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
             await userEvent.type(input, typeValue);
-            preview.debug();
             const option = await screen.findByText(selectValue);
             await userEvent.click(option);
             await userEvent.tab();
         }
+        await waitFor(() => expect(screen.getByText('010101 Algebra and Number Theory')).toBeInTheDocument());
+        preview.debug();
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
         // await userEvent.tab();
@@ -210,6 +181,6 @@ describe('AddDataCollection test', () => {
 
         expect(getByTestId('submit-data-collection')).toBeEnabled();
 
-        // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+        // await waitFor(() => expect(screen.getByText('010101 Algebra and Number Theory')).toBeInTheDocument());
     });
 });
