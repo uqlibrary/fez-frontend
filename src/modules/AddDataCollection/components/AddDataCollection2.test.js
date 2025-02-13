@@ -158,17 +158,24 @@ describe('AddDataCollection test', () => {
         // Type to get a list from the api, then choose one
         // Type element, type value, select value
         const selects2 = [
-            ['rek-subject-input', 'a', '010101'],
+            ['rek-subject-input', '010101', /010101/i],
             // ['rek-contributor-id-input', 'David', 'David Stevens'],
         ];
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
+            await userEvent.click(input);
             await userEvent.type(input, typeValue);
-            const option = await screen.findByText(selectValue);
-            console.log('option=', option);
-            console.log(container.innerHTML);
+            // const option = await screen.findByText(selectValue);
+            // const option = await waitFor(() => screen.findByText(selectValue));
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Give time for async rendering
+            // console.log(container.innerHTML);
+            const option = await screen.findAllByText(selectValue);
+            console.log(option);
+            await userEvent.click(option[0]); // Click the first matching option
             preview.debug();
-            await userEvent.click(option);
+
+            // const option = await waitFor(() => screen.findByText(selectValue), { timeout: 5000 });
+            // await userEvent.click(option);
             await userEvent.tab();
         }
         await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
