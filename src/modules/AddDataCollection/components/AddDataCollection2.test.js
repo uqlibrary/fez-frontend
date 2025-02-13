@@ -106,39 +106,7 @@ describe('AddDataCollection test', () => {
                     config.params,
                 )}`,
             );
-            return [
-                200,
-                {
-                    total: 1,
-                    data: [
-                        {
-                            cvr_id: 2932,
-                            cvr_parent_cvo_id: 451799,
-                            cvr_child_cvo_id: 451800,
-                            controlled_vocab: {
-                                cvo_id: 451800,
-                                cvo_title: '0101 Pure Mathematics',
-                                cvo_desc: 'FOR2008',
-                                cvo_external_id: '01',
-                                controlled_vocab_children: [
-                                    {
-                                        cvr_id: 2933,
-                                        cvr_parent_cvo_id: 451800,
-                                        cvr_child_cvo_id: 451801,
-                                        controlled_vocab: {
-                                            cvo_id: 451801,
-                                            cvo_title: '010101 Algebra and Number Theory',
-                                            cvo_desc: 'FOR2008',
-                                            cvo_external_id: '010101',
-                                            controlled_vocab_children: [],
-                                        },
-                                    },
-                                ],
-                            },
-                        },
-                    ],
-                },
-            ];
+            return [200, vocabsFieldResearch];
         });
         mockApi.onAny().reply(config => {
             console.log(
@@ -149,7 +117,7 @@ describe('AddDataCollection test', () => {
             return [200, {}];
         });
 
-        const { getByTestId } = setup();
+        const { getByTestId, queryByTestId, container } = setup();
 
         await userEvent.click(getByTestId('rek-copyright-input'));
 
@@ -196,12 +164,16 @@ describe('AddDataCollection test', () => {
         for (const [testId, typeValue, selectValue] of selects2) {
             const input = screen.getByTestId(testId);
             await userEvent.type(input, typeValue);
-            const option = await screen.findByText(selectValue);
+            await waitFor(() => expect(queryByTestId('loading-suggestions')).not.toBeInTheDocument());
+            // const option = await screen.findByText(selectValue);
+            let option;
+            await waitFor(() => expect((option = screen.queryByText(selectValue))));
             await userEvent.click(option);
             await userEvent.tab();
         }
-        await waitFor(() => expect(screen.getByText('010101 Algebra and Number Theory')).toBeInTheDocument());
+        console.log(container.innerHTML);
         preview.debug();
+        await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
         // await userEvent.tab();
