@@ -165,19 +165,11 @@ describe('AddDataCollection test', () => {
             const input = screen.getByTestId(testId);
             await userEvent.click(input);
             await userEvent.type(input, typeValue);
-            // const option = await screen.findByText(selectValue);
-            // const option = await waitFor(() => screen.findByText(selectValue));
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Give time for async rendering
-            // console.log(container.innerHTML);
             const option = await screen.findByText(selectValue);
-            console.log(option);
-            await userEvent.click(option); // Click the first matching option
-            preview.debug();
-
-            // const option = await waitFor(() => screen.findByText(selectValue), { timeout: 5000 });
-            // await userEvent.click(option);
+            await userEvent.click(option);
             await userEvent.tab();
         }
+        preview.debug();
         await waitFor(() => expect(screen.queryByText('010101 Algebra and Number Theory')).toBeInTheDocument());
 
         // await userEvent.type(getByTestId('rek-description-input'), 'test');
