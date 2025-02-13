@@ -8,19 +8,23 @@ import {
 } from 'config/general';
 import { useWatch } from 'react-hook-form';
 
-export const useRecord = (displayType, subType, createMode) => {
-    let initialFormValues = {
+export const useInitialFormValues = (recordToView, createMode) => {
+    const initialFormValues = {
         initialValues: {
             bibliographicSection: {
                 languages: ['eng'],
             },
         },
     };
-    let recordToView = undefined;
 
+    if (createMode) return initialFormValues;
+    const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
+    return (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
+};
+export const useRecord = (displayType, subType, createMode) => {
     const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
     const {
-        recordToView: record,
+        recordToView,
         isRecordLocked,
         loadingRecordToView,
         isDeleted,
@@ -29,12 +33,7 @@ export const useRecord = (displayType, subType, createMode) => {
         error,
     } = useSelector(state => state.get('viewRecordReducer'));
 
-    if (!createMode) {
-        recordToView = record;
-        const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
-        initialFormValues =
-            (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
-    }
+    const initialFormValues = useInitialFormValues(recordToView, createMode);
 
     return {
         loadingRecordToView,

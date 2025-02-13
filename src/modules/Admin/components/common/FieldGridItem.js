@@ -21,7 +21,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
             isNtro:
                 (NTRO_SUBTYPES.includes(record.rek_subtype) && record.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) ||
-                form.getValues('isNtro') ||
+                props.isNtro ||
                 false,
             isNonNtro: record.rek_subtype === SUBTYPE_NON_NTRO,
             isCreate: !record.rek_pid,
@@ -58,6 +58,7 @@ FieldGridItem.propTypes = {
     field: PropTypes.string,
     group: PropTypes.array,
     disabled: PropTypes.bool,
+    isNtro: PropTypes.bool,
     childrenItems: PropTypes.array,
 };
 

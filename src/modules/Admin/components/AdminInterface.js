@@ -230,6 +230,7 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => {
         const TabComponent = tabs[tab].component;
+        const TabSubComponent = tabs[tab].subComponent?.component;
         return (
             <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
                 <StandardCard
@@ -244,7 +245,7 @@ export const AdminInterface = ({
                         name={`${tab}Section`}
                     />
                 </StandardCard>
-                {tabs[tab].subComponent?.component && (
+                {TabSubComponent && (
                     <StandardCard
                         standardCardId={`${tabs[tab].subComponent.title.toLowerCase().replace(/ /g, '-')}-section`}
                         title={tabs[tab].subComponent.title}
@@ -252,11 +253,11 @@ export const AdminInterface = ({
                         squareTop
                         smallTitle
                     >
-                        <TabComponent
+                        <TabSubComponent
                             disabled={
                                 isSubmitting ||
                                 (locked &&
-                                    /* istanbul ignore next */ record.rek_editing_user !== authorDetails.username)
+                                    /* istanbul ignore  next */ record.rek_editing_user !== authorDetails.username)
                             }
                             name={`${tab}Section`}
                         />

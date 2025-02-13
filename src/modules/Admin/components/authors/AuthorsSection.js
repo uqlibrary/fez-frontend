@@ -18,12 +18,11 @@ export const AuthorsSection = ({ disabled = false }) => {
 
     const cards = useRef(adminInterfaceConfig[record.rek_display_type].authors(authorsParams(record, isNtro)));
 
-    return <Section cards={cards.current} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} isNtro={isNtro} />;
 };
 
 AuthorsSection.propTypes = {
     disabled: PropTypes.bool,
-    isNtro: PropTypes.bool,
 };
 
 export default React.memo(AuthorsSection);

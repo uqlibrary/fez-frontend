@@ -394,10 +394,6 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                               class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                             >
                               <th
-                                class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lngr1t-MuiTableCell-root"
-                                scope="col"
-                              />
-                              <th
                                 class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                                 scope="col"
                                 style="box-sizing: border-box;"
@@ -470,6 +466,40 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
                                   >
                                     UQ identifiers
+                                  </span>
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                    data-testid="ArrowDownwardIcon"
+                                    focusable="false"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                                    />
+                                  </svg>
+                                </span>
+                                <span
+                                  data-testid="material-table-column-sort-order-indicator"
+                                  style="width: 1em;"
+                                />
+                              </th>
+                              <th
+                                class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
+                                scope="col"
+                                style="box-sizing: border-box;"
+                              >
+                                <span
+                                  aria-sort="none"
+                                  class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                                  data-testid="mtableheader-sortlabel"
+                                  role="columnheader"
+                                  tabindex="0"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
+                                  >
+                                    Organisation/Organisation type
                                   </span>
                                   <svg
                                     aria-hidden="true"
