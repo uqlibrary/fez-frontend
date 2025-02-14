@@ -52,11 +52,8 @@ import { isEmptyObject } from '../../../../helpers/general';
 
 const asyncValidate = async (data, setError) => {
     const doi = data.fez_record_search_key_doi?.rek_doi;
-    if (!validation.isValidDOIValue(doi)) return true;
-    if (!(await doesDOIExist(doi))?.total) return true;
-    setError('fez_record_search_key_doi.rek_doi', {
-        message: validationErrors.validationErrors.doiExists,
-    });
+    if (!validation.isValidDOIValue(doi) || !(await doesDOIExist(doi))?.total) return true;
+    setError('fez_record_search_key_doi.rek_doi', { message: validationErrors.validationErrors.doiExists });
     return false;
 };
 
