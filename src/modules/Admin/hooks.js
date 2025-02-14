@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
 import {
@@ -7,6 +8,7 @@ import {
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
 } from 'config/general';
 import { useWatch } from 'react-hook-form';
+import { unionBy } from 'lodash';
 
 export const useInitialFormValues = (recordToView, createMode) => {
     const initialFormValues = {
@@ -66,12 +68,12 @@ export const useRecordToView = (recordToView, createMode, methods) => {
 };
 
 export const useFormOnChangeHook = form => {
+    const prevBibliographicSectionFezMatchedJournals = useRef('');
     const [
         rekDisplayType,
         adminSectionRekSubtype,
         bibliographicSectionRekGenreType,
         bibliographicSectionFezMatchedJournals,
-        fezJournalIssn,
     ] = useWatch({
         control: form.control,
         name: [
@@ -79,7 +81,6 @@ export const useFormOnChangeHook = form => {
             'adminSection.rek_subtype',
             'bibliographicSection.rek_genre_type',
             'bibliographicSection.fez_matched_journals',
-            'fez_journal_issn',
         ],
     });
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
@@ -87,30 +88,33 @@ export const useFormOnChangeHook = form => {
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
     }
 
-    const { isTouched } = form.getFieldState('rek_display_type');
+    const { isTouched } = form.getFieldState('bibliographicSection.fez_matched_journals');
 
     if (
         bibliographicSectionFezMatchedJournals &&
-        fezJournalIssn &&
+        bibliographicSectionFezMatchedJournals.id !== prevBibliographicSectionFezMatchedJournals.current &&
         isTouched === false &&
         [PUBLICATION_TYPE_CONFERENCE_PAPER, PUBLICATION_TYPE_JOURNAL_ARTICLE].includes(rekDisplayType)
     ) {
-        console.log('update issns', bibliographicSectionFezMatchedJournals, fezJournalIssn);
-        const issns = fezJournalIssn.map(issn => ({
-            rek_value: {
-                key: issn.jnl_issn,
-                value: {
-                    sherpaRomeo: { link: false },
-                    ulrichs: { link: false, linkText: '' },
+        prevBibliographicSectionFezMatchedJournals.current = bibliographicSectionFezMatchedJournals.id;
+        const issns =
+            bibliographicSectionFezMatchedJournals?.fez_journal_issn?.map(issn => ({
+                rek_value: {
+                    key: issn.jnl_issn,
+                    value: {
+                        sherpaRomeo: { link: false },
+                        ulrichs: { link: false, linkText: '' },
+                    },
                 },
-            },
-        }));
+            })) || [];
         form.setValue(
             'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
-            bibliographicSectionFezMatchedJournals,
+            bibliographicSectionFezMatchedJournals.value,
+            { shouldValidate: true, shouldDirty: true },
         );
         const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || [];
-        const updatedBibliographicSectionIssns = bibliographicSectionIssns.concat(issns);
+        // create new array, filter out any dupes
+        const updatedBibliographicSectionIssns = unionBy(bibliographicSectionIssns, issns, 'rek_value.key');
         form.setValue('bibliographicSection.issns', updatedBibliographicSectionIssns);
     }
 };
