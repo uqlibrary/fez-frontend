@@ -50,17 +50,14 @@ import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
 import { isEmptyObject } from '../../../../helpers/general';
 
-const asyncValidate = data => {
-    const doi = data.fez_record_search_key_doi && data.fez_record_search_key_doi.rek_doi;
-    if (validation.isValidDOIValue(doi)) {
-        return doesDOIExist(doi).then(response => {
-            if (response && response.total) {
-                // redux-form error structure for field names with dots
-                throw { fez_record_search_key_doi: { rek_doi: validationErrors.validationErrors.doiExists } };
-            }
-        });
-    }
-    return Promise.resolve();
+const asyncValidate = async (data, setError) => {
+    const doi = data.fez_record_search_key_doi?.rek_doi;
+    if (!validation.isValidDOIValue(doi)) return true;
+    if (!(await doesDOIExist(doi))?.total) return true;
+    setError('fez_record_search_key_doi.rek_doi', {
+        message: validationErrors.validationErrors.doiExists,
+    });
+    return false;
 };
 
 const hasAtLeastOneContributorSelected = items => items?.some(v => v.selected);
@@ -180,9 +177,10 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
     // form
     const {
         trigger,
-        unregister,
-        setValue,
         control,
+        setValue,
+        setError,
+        unregister,
         resetField,
         getPropsForAlert,
         safelyHandleSubmit,
@@ -259,7 +257,10 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         onFormSubmitSuccess();
     }, [isSubmitSuccessful]);
 
-    const handleSubmit = safelyHandleSubmit(async data => await dispatch(createNewRecord(data)));
+    const handleSubmit = safelyHandleSubmit(async data => {
+        if (!(await asyncValidate({ ...data }, setError))) return;
+        await dispatch(createNewRecord(data));
+    });
 
     const formLevelError = getFormLevelError({ ...values });
     const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
