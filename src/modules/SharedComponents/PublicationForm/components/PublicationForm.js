@@ -252,12 +252,19 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         setTimeout(() => trigger());
     }, [FormComponent]);
 
-    const handleSubmit = safelyHandleSubmit(async data => await dispatch(createNewRecord({ ...data })));
+    // handle successful form submission
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        resetField('rek_display_type');
+        onFormSubmitSuccess();
+    }, [isSubmitSuccessful]);
+
+    const handleSubmit = safelyHandleSubmit(async data => await dispatch(createNewRecord(data)));
 
     const formLevelError = getFormLevelError({ ...values });
     const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
     return (
-        <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
+        <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
             <form onSubmit={e => e.preventDefault()}>
                 <Grid container spacing={3}>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
