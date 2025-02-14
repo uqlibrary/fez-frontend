@@ -144,6 +144,7 @@ export const ConferenceProceedingsForm = ({ control, isSubmitting, canEdit }) =>
                         maintainSelected
                         contributorEditorId="editors"
                         name="editors"
+                        required
                         locale={txt.editors.field}
                         showContributorAssignment
                         required

@@ -137,12 +137,14 @@ const getPropsForAlert = attributes => (...additionalValidationErrors) => {
         const { validationErrors } = attributes.formState;
         const orderedErrors = reorderObjectKeys(flattenErrors(validationErrors), formFields);
 
-        const validationErrorsKeys = Object.keys(validationErrors);
-        const orderedErrorsKeys = Object.keys(orderedErrors);
         // warn devs in case not all errors are present in the ordered errors object
-        if (isDevEnv() && validationErrorsKeys.length !== orderedErrorsKeys.length) {
-            const result = Object.values(arrayDiff(validationErrorsKeys, orderedErrorsKeys));
-            console.error(getPropsForAlertInconsistencyWarning(result));
+        if (isDevEnv()) {
+            const validationErrorsKeys = Object.keys(validationErrors);
+            const orderedErrorsKeys = Object.keys(orderedErrors);
+            if (validationErrorsKeys.length !== orderedErrorsKeys.length) {
+                const result = Object.values(arrayDiff(validationErrorsKeys, orderedErrorsKeys));
+                console.error(getPropsForAlertInconsistencyWarning(result));
+            }
         }
 
         return {

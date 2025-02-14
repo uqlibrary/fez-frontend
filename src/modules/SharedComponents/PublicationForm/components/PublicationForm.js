@@ -7,7 +7,7 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable max-len */
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -115,7 +115,7 @@ const getFormLevelError = data => {
     };
 };
 
-const getState = (initialValues, authors, displayType, subtype) => {
+const getState = (initialValues, values, displayType, subtype) => {
     const publicationType = displayType && publicationTypes({ ...recordForms })[displayType];
 
     let isComboDocTypeOption = false;
@@ -131,18 +131,18 @@ const getState = (initialValues, authors, displayType, subtype) => {
         };
     }
 
-    const hasSubtypes = !!publicationType?.subtypes?.length;
+    const hasSubtype = !!publicationType?.subtypes?.length;
     return {
-        hasSubtypes: !!publicationType?.subtypes?.length,
+        hasSubtype: !!publicationType?.subtypes?.length,
         subtypes:
             subtype && general.NTRO_SUBTYPES.includes(subtype)
                 ? publicationType?.subtypes?.filter(type => general.NTRO_SUBTYPES.includes(type)) // restrict to NTRO only if one NTRO subtype is selected
                 : publicationType?.subtypes,
-        formComponent: displayType && (!hasSubtypes || subtype) && publicationType?.formComponent,
+        formComponent: displayType && (!hasSubtype || subtype) && publicationType?.formComponent,
         isNtro: general.NTRO_SUBTYPES.includes(subtype),
         isComboDocTypeOption,
         comboDocTypeOption,
-        isAuthorSelected: authors?.some?.(object => object.selected === true) || false,
+        isAuthorSelected: !!values.authors?.some?.(object => object.selected === true),
     };
 };
 
@@ -182,11 +182,9 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         trigger,
         unregister,
         setValue,
-        getValues,
         control,
         resetField,
         getPropsForAlert,
-        mergeWithFormValues,
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useForm({
@@ -196,20 +194,19 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
             rek_title: initialValues.rek_title || '',
         },
     });
-    // watch for changes on displayType and subtype drop-down options
-    let [displayType, subtype] = useWatch({ control, name: ['rek_display_type', 'rek_subtype'] });
-    const [authors, editors] = useWatch({ control, name: ['authors', 'editors'] });
+    const values = useWatch({ control });
+    let displayType = values.rek_display_type;
+    let subtype = values.rek_subtype;
 
-    const values = { ...getValues(), authors, editors };
     const {
-        hasSubtypes,
+        hasSubtype,
         subtypes,
         formComponent: FormComponent,
         isNtro,
         isComboDocTypeOption,
         comboDocTypeOption,
         isAuthorSelected,
-    } = getState(initialValues, authors, displayType, subtype, recordForms);
+    } = getState(initialValues, values, displayType, subtype, recordForms);
     // update displayType and subtype according to selected comboDocTypeOption prior to the useLayoutEffect call below,
     // where displayType changes are handled, in order to avoid unnecessary re-renders
     if (isComboDocTypeOption) {
@@ -217,8 +214,8 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         subtype = comboDocTypeOption.subtype;
     }
 
-    // handles combo doc type option selection
-    useLayoutEffect(() => {
+    // handles combo displayType + subtype option selection
+    useEffect(() => {
         if (!isComboDocTypeOption || !comboDocTypeOption?.docTypeId || !comboDocTypeOption?.subtype) {
             return;
         }
@@ -230,7 +227,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
     }, [isComboDocTypeOption, comboDocTypeOption?.docTypeId, comboDocTypeOption?.subtype]);
 
     // handle displayType changes
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!displayType) return;
         if (shouldIgnoreDisplayTypeChange.current) {
             shouldIgnoreDisplayTypeChange.current = false;
@@ -244,27 +241,24 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         resetField('rek_subtype');
     }, [displayType]);
 
-    // trigger a form validation upon subtype changes, to show the form validation error summary
-    useLayoutEffect(() => {
-        if (!subtype || !FormComponent) return;
-        trigger();
-    }, [subtype, FormComponent]);
-
-    const handleSubmit = safelyHandleSubmit(async () => {
-        const data = mergeWithFormValues({ author, publication });
-        // Delete the currentAuthor if there is no author field in the form
-        // (potentially editors only like conference proceedings) and its not a thesis (specific field name)
-        if (!data.authors && !data['currentAuthor.0.nameAsPublished']) {
-            delete data.currentAuthor;
+    // handle FormComponent changes
+    useEffect(() => {
+        if (!FormComponent) return;
+        // set default title value if it's present, and it hasn't been overridden by the use yet
+        if (initialValues.rek_title?.trim?.() && !values.rek_title?.trim?.()) {
+            setValue('rek_title', initialValues.rek_title);
         }
-        await dispatch(createNewRecord({ ...data }));
-    });
+        // queue validation trigger, to allow selected pub. form's fields to be fully rendered prior to validation
+        setTimeout(() => trigger());
+    }, [FormComponent]);
+
+    const handleSubmit = safelyHandleSubmit(async data => await dispatch(createNewRecord({ ...data })));
 
     const formLevelError = getFormLevelError({ ...values });
     const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
     return (
         <ConfirmDiscardFormChanges dirty={isDirty} isSubmitSuccessful={isSubmitSuccessful}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={e => e.preventDefault()}>
                 <Grid container spacing={3}>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid xs={12}>
@@ -286,7 +280,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                                         {publicationTypeItems}
                                     </Field>
                                 </Grid>
-                                {hasSubtypes && (!subtype || subtypes.includes(subtype)) && (
+                                {hasSubtype && (!subtype || subtypes.includes(subtype)) && (
                                     <Grid xs={12}>
                                         <Field
                                             key={`${displayType}${subtype}`}
@@ -384,10 +378,10 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
                             onClick={onFormCancel}
                         />
                     </Grid>
-                    {(hasSubtypes || !!displayType) && (
+                    {(hasSubtype || !!displayType) && (
                         <Grid xs={12} sm="auto">
                             <Button
-                                type="submit"
+                                onClick={handleSubmit}
                                 style={{ whiteSpace: 'nowrap' }}
                                 id="submit-work"
                                 data-analyticsid="submit-work"

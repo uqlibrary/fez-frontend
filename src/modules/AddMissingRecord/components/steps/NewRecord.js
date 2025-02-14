@@ -54,13 +54,6 @@ export const NewRecord = ({ newRecord = {} }) => {
 
     // set initial value only if it's a title (not pubmed/DOI)
     const initialValues = {
-        currentAuthor: [
-            {
-                nameAsPublished: author.aut_display_name ? author.aut_display_name : '',
-                // eslint-disable-next-line camelcase
-                authorId: author?.aut_id,
-            },
-        ],
         rek_title: rawSearchQuery || '',
     };
 
