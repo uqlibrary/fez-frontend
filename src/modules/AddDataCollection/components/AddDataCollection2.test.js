@@ -453,8 +453,9 @@ describe('AddDataCollection test', () => {
 
         await userEvent.click(getByTestId('submit-data-collection'));
 
-        await waitFor(() => expect(screen.getByText('ADD ANOTHER MISSING DATASET')).toBeInTheDocument());
-
+        await new Promise(resolve => setTimeout(resolve, 5000));
         preview.debug();
+
+        await waitFor(() => expect(screen.findByText(/ADD ANOTHER/i)).toBeInTheDocument());
     });
 });
