@@ -184,10 +184,6 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
     } = useForm({
         // shouldUnregister: true, // causes multiple re-renders - handled by useEffect bellow
-        defaultValues: {
-            languages: ['eng'],
-            rek_title: initialValues.rek_title || '',
-        },
     });
     const values = useWatch({ control });
     let displayType = values.rek_display_type;
@@ -208,6 +204,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         displayType = comboDocTypeOption.docTypeId;
         subtype = comboDocTypeOption.subtype;
     }
+    dd(values);
 
     // handles combo displayType + subtype option selection
     useEffect(() => {
@@ -242,6 +239,9 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         // set default title value if it's present, and it hasn't been overridden by the use yet
         if (initialValues.rek_title?.trim?.() && !values.rek_title?.trim?.()) {
             setValue('rek_title', initialValues.rek_title);
+        }
+        if (!values.languages?.length) {
+            setValue('languages', ['eng']);
         }
         // queue validation trigger, to allow selected pub. form's fields to be fully rendered prior to validation
         setTimeout(() => trigger());
