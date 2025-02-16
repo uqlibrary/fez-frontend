@@ -164,7 +164,6 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                         hideUqIDFields
                         contributorEditorId="editors"
                         name="editors"
-                        required
                         locale={txt.editors.field}
                         disabled={isSubmitting}
                     />

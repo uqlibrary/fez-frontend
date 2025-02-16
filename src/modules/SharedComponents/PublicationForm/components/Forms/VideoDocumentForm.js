@@ -142,7 +142,6 @@ export const VideoDocumentForm = ({ isSubmitting, control, formValues }) => {
                         contributorEditorId="contributors"
                         showContributorAssignment={!authorSelected}
                         name="editors"
-                        required
                         locale={txt.contributor.field}
                         disabled={isSubmitting}
                     />

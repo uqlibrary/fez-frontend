@@ -175,7 +175,6 @@ export const BookForm = ({
                             showContributorAssignment={!authorSelected}
                             id="editors-name-as-published-field"
                             name="editors"
-                            required
                             locale={txt.editors.field}
                             disabled={isSubmitting}
                         />
