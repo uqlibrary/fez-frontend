@@ -204,7 +204,6 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         displayType = comboDocTypeOption.docTypeId;
         subtype = comboDocTypeOption.subtype;
     }
-    dd(values);
 
     // handles combo displayType + subtype option selection
     useEffect(() => {
