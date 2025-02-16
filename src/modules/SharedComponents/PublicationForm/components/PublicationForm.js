@@ -112,11 +112,11 @@ const getFormLevelError = data => {
 const getState = (initialValues, values, displayType, subtype) => {
     const publicationType = displayType && publicationTypes({ ...recordForms })[displayType];
 
-    let selectedComboPubTypeOption = null;
+    let selectedTypeComboOption = null;
     if (displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
-        selectedComboPubTypeOption = DOCTYPE_SUBTYPE_MAPPING[displayType];
+        selectedTypeComboOption = DOCTYPE_SUBTYPE_MAPPING[displayType];
     } else if (displayType === PUBLICATION_TYPE_DESIGN) {
-        selectedComboPubTypeOption = {
+        selectedTypeComboOption = {
             docTypeId: PUBLICATION_TYPE_DESIGN,
             subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         };
@@ -131,7 +131,7 @@ const getState = (initialValues, values, displayType, subtype) => {
                 : publicationType?.subtypes,
         formComponent: displayType && (!hasSubtype || subtype) && publicationType?.formComponent,
         isNtro: general.NTRO_SUBTYPES.includes(subtype),
-        selectedComboPubTypeOption,
+        selectedTypeComboOption,
         isAuthorSelected: !!values.authors?.some?.(object => object.selected === true),
     };
 };
@@ -190,27 +190,27 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         subtypes,
         formComponent: FormComponent,
         isNtro,
-        selectedComboPubTypeOption,
+        selectedTypeComboOption,
         isAuthorSelected,
     } = getState(initialValues, values, displayType, subtype, recordForms);
-    // update displayType and subtype according to selected selectedComboPubTypeOption prior to the useLayoutEffect call below,
+    // update displayType and subtype according to selected selectedTypeComboOption prior to the useLayoutEffect call below,
     // where displayType changes are handled, in order to avoid unnecessary re-renders
-    if (selectedComboPubTypeOption) {
-        displayType = selectedComboPubTypeOption.docTypeId;
-        subtype = selectedComboPubTypeOption.subtype;
+    if (selectedTypeComboOption) {
+        displayType = selectedTypeComboOption.docTypeId;
+        subtype = selectedTypeComboOption.subtype;
     }
 
     // handles combo displayType + subtype option selection
     useEffect(() => {
-        if (!selectedComboPubTypeOption?.docTypeId || !selectedComboPubTypeOption?.subtype) {
+        if (!selectedTypeComboOption?.docTypeId || !selectedTypeComboOption?.subtype) {
             return;
         }
         // using setValue() on watched values triggers a re-render
         // we have to use a ref var to avoid re-renders from the displayType changes - handle by the useEffect below
         shouldIgnoreDisplayTypeChange.current = true;
-        setValue('rek_display_type', selectedComboPubTypeOption.docTypeId);
-        setValue('rek_subtype', selectedComboPubTypeOption.subtype);
-    }, [selectedComboPubTypeOption?.docTypeId, selectedComboPubTypeOption?.subtype]);
+        setValue('rek_display_type', selectedTypeComboOption.docTypeId);
+        setValue('rek_subtype', selectedTypeComboOption.subtype);
+    }, [selectedTypeComboOption?.docTypeId, selectedTypeComboOption?.subtype]);
 
     // handle displayType changes
     useEffect(() => {
