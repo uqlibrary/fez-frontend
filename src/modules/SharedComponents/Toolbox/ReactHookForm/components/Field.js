@@ -20,12 +20,7 @@ export const validateHandler = async (value, formValues, validators) => {
             continue;
         }
 
-        let result = validators[i](value, formValues);
-
-        // Check if the result is a Promise (async function)
-        if (result instanceof Promise) {
-            result = await result; // Wait for async validation
-        }
+        let result = Promise.resolve(validators[i](value, formValues));
 
         if (!result?.trim) {
             continue;
