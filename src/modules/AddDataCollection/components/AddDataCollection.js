@@ -133,11 +133,8 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         if (isValidDOIValue(doi)) {
             try {
                 const response = await doesDOIExist(doi);
-                console.log('doi response', response);
-
                 return response?.total ? validationErrors.validationErrors.doiExists : null;
             } catch (error) {
-                console.log('doi error', error);
                 return locale.validationErrors.doi;
             }
         } else {

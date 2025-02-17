@@ -114,14 +114,21 @@ describe('AddDataCollection test', () => {
     });
     it('should check doi error', async () => {
         const existingDoiValue = '10.1037/a0028240';
+        const notExistingDoiValue = '10.1037/a002824';
         mockApi
             .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
                 params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
             })
             .reply(() => {
                 return [200, { total: 1 }];
+            })
+            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
+            })
+            .reply(() => {
+                return [200, { total: 0 }];
             });
-        const { getByTestId } = setup();
+        const { getByTestId, queryByText } = setup();
 
         const doi = getByTestId('rek-doi-input');
         await userEvent.type(doi, 'Test');
@@ -133,6 +140,12 @@ describe('AddDataCollection test', () => {
         await userEvent.tab();
         doi.blur();
         await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
+
+        await userEvent.clear(doi);
+        await userEvent.type(doi, notExistingDoiValue);
+        await userEvent.tab();
+        doi.blur();
+        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
 
         mockDoiExist = true;
         await userEvent.type(doi, existingDoiValue);
