@@ -243,7 +243,7 @@ describe('AddDataCollection test', () => {
             return [
                 422,
                 {
-                    error: 'wrong!',
+                    error: { message: 'wrong!' },
                 },
             ];
         });

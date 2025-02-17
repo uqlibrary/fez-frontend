@@ -259,9 +259,11 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             await dispatch(createNewRecord(cleanValues));
             // Form submission successful
         } catch (error) {
+            console.log('error=', error);
             let err = error.message;
             const originalMessage = error?.original?.error?.message;
             err += originalMessage && ' ' + originalMessage;
+            console.log('err=', err);
             setApiError(err);
         }
     };
