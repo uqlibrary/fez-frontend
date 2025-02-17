@@ -280,9 +280,10 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
         // Get the list of redux-form registered fields for the current form
         const formFields = Object.keys(convertedData);
 
+        const cleanValues = { ...convertedData };
+
         // Delete the currentAuthor if there is no author field in the
         //  form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
-        const cleanValues = { ...convertedData };
         if (!formFields.includes('authors') && !formFields.includes('currentAuthor.0.nameAsPublished')) {
             delete cleanValues.currentAuthor;
         }
