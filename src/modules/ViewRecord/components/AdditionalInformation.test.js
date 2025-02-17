@@ -186,6 +186,11 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render component with instrument', () => {
+        const { container } = setup({ publication: records.instrument });
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render component with generic document', () => {
         const { container } = setup({ publication: records.generic });
         expect(container).toMatchSnapshot();

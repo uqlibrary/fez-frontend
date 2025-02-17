@@ -12568,6 +12568,469 @@ exports[`Additional Information Component  should render component with image 1`
 </div>
 `;
 
+exports[`Additional Information Component  should render component with instrument 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+      data-testid="standard-card-additional-information"
+      id="standard-card-additional-information"
+    >
+      <div
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+      >
+        <div
+          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+            data-testid="standard-card-additional-information-header"
+            id="standard-card-additional-information-header"
+          >
+            Additional information
+          </h3>
+        </div>
+      </div>
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
+        data-testid="standard-card-additional-information-content"
+        id="standard-card-additional-information-content"
+      >
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-author-label"
+              >
+                Manufacturer(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationAuthors"
+                >
+                  <a
+                    class="authorNameLink"
+                    data-testid="rek-author-0-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=manufacturer&searchMode=advanced"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-0"
+                    >
+                      manufacturer
+                    </span>
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-title-label"
+              >
+                Instrument Name
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-title"
+                >
+                  <p>
+                    Title
+                  </p>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-description-label"
+              >
+                Abstract
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-description"
+                >
+                  <p>
+                    desc
+                  </p>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-date-label"
+              >
+                Publication Date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-date"
+                >
+                  <span
+                    class="citationDate"
+                  >
+                    1933-03-03
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-contributor-label"
+              >
+                Owner
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationEditors"
+                >
+                  <a
+                    class="authorNameLink"
+                    data-testid="rek-contributor-0-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor%5D%5Bvalue%5D=Owner+name&searchMode=advanced"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-0"
+                    >
+                      Owner name
+                    </span>
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-start-date-label"
+              >
+                Commissioned Date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  1911-01-02
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-end-date-label"
+              >
+                Decommissioned Date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  1922-02-02
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-model-label"
+              >
+                Model
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-model-0"
+                  >
+                    model
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-measured-variable-label"
+              >
+                Measured variable
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-measured-variable-0"
+                  >
+                    variable
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-instrument-type-label"
+              >
+                Instrument type
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-instrument-type-0"
+                  >
+                    instrument type
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-alternate-identifier-label"
+              >
+                Alternate identifier
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="alternate-identifier-0"
+                  >
+                    alternate identifier 1 (Serial Number)
+                  </li>
+                  <li
+                    data-testid="alternate-identifier-1"
+                  >
+                    alternate identifier 2 (Inventory Number)
+                  </li>
+                  <li
+                    data-testid="alternate-identifier-2"
+                  >
+                    alternate identifier 3
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-notes-label"
+              >
+                Additional notes
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <p>
+                  additional notes
+                </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Additional Information Component  should render component with journal 1`] = `
 <div>
   <div

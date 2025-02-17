@@ -162,6 +162,10 @@ export default {
                 fez_record_search_key_building_materials: 'Building materials',
                 fez_record_search_key_architect_name: 'Architect',
                 fez_record_search_key_architectural_features: 'Architectural features',
+                fez_record_search_key_alternate_identifier: 'Alternate identifier',
+                fez_record_search_key_instrument_type: 'Instrument type',
+                fez_record_search_key_measured_variable: 'Measured variable',
+                fez_record_search_key_model: 'Model',
                 fez_record_search_key_oa_status: 'Open access status',
                 fez_record_search_key_oa_status_type: 'Open access status type',
                 fez_record_search_key_conference_name: 'Conference name',
@@ -331,6 +335,15 @@ export default {
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
+            },
+            Instrument: {
+                rek_date: 'Publication Date',
+                rek_title: 'Instrument Name',
+                fez_record_search_key_author: 'Manufacturer(s)',
+                fez_record_search_key_contributor: 'Owner',
+                fez_record_search_key_doi: 'Instrument Identifier',
+                fez_record_search_key_start_date: 'Commissioned Date',
+                fez_record_search_key_end_date: 'Decommissioned Date',
             },
             Journal: {
                 rek_title: 'Title of journal',
@@ -1998,6 +2011,56 @@ export default {
                 {
                     field: 'fez_record_search_key_acknowledgements',
                     order: 22,
+                },
+            ],
+            Instrument: [
+                {
+                    field: 'fez_record_search_key_author',
+                    order: 1,
+                },
+                {
+                    field: 'rek_title',
+                    order: 2,
+                },
+                {
+                    field: 'rek_description',
+                    order: 3,
+                },
+                {
+                    field: 'rek_date',
+                    order: 4,
+                },
+                {
+                    field: 'fez_record_search_key_doi',
+                    order: 5,
+                },
+                {
+                    field: 'fez_record_search_key_contributor',
+                    order: 6,
+                },
+                {
+                    field: 'fez_record_search_key_start_date',
+                    order: 7,
+                },
+                {
+                    field: 'fez_record_search_key_end_date',
+                    order: 8,
+                },
+                {
+                    field: 'fez_record_search_key_model',
+                    order: 9,
+                },
+                {
+                    field: 'fez_record_search_key_measured_variable',
+                    order: 10,
+                },
+                {
+                    field: 'fez_record_search_key_instrument_type',
+                    order: 11,
+                },
+                {
+                    field: 'fez_record_search_key_alternate_identifier',
+                    order: 12,
                 },
             ],
             Journal: [
