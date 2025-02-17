@@ -3,7 +3,6 @@ import AddDataCollection, { licenseText } from './AddDataCollection';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
-// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -49,16 +48,6 @@ jest.mock('hooks', () => ({
 }));
 
 describe('AddDataCollection test mocking hooks', () => {
-    beforeEach(() => {
-        // jest.resetModules(); // Reset modules to ensure fresh imports
-    });
-
-    afterEach(() => {
-        // jest.clearAllMocks(); // Clear mocks so other tests are unaffected
-        // jest.resetModules(); // Reset modules to ensure fresh imports
-        // jest.unmock('hooks');
-        // jest.restoreAllMocks();
-    });
     it('should navigate to my datasets url', async () => {
         mockApi
             .onGet('records/search', {
@@ -86,17 +75,6 @@ describe('AddDataCollection test mocking hooks', () => {
                 errors: {},
             },
         }));
-        // const { useValidatedForm } = require('hooks'); // Mocked version
-        // const MyComponent = require('./AddDataCollection').default;
-        // const { render } = require('@testing-library/react');
-
-        // render(
-        //     <WithReduxStore>
-        //         <WithRouter>
-        //             <MyComponent submitSucceeded={false} />
-        //         </WithRouter>
-        //     </WithReduxStore>,
-        // );
 
         const { rerender, getByTestId } = setup({
             submitSucceeded: false,
@@ -109,15 +87,11 @@ describe('AddDataCollection test mocking hooks', () => {
             },
             rerender,
         );
-        console.log('before click');
         await userEvent.click(getByTestId('submit-data-collection'));
-        console.log('after click');
-        preview.debug();
         await waitFor(() => expect(screen.getByTestId('confirm-dialog-box')));
 
         fireEvent.click(screen.getByTestId('confirm-dialog-box'));
 
-        // expect(clearNewRecordFn).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith('/data-collections/mine');
     });
 });
@@ -134,7 +108,6 @@ describe('AddDataCollection test', () => {
     it('should render data set form', () => {
         const { container, getByRole } = setup();
 
-        // expect(container).toMatchSnapshot();
         expect(container.getElementsByTagName('field').length).toEqual(28);
         expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
         expect(getByRole('button', { name: 'Submit for approval' })).toBeInTheDocument();
