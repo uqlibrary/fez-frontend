@@ -219,6 +219,8 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
     const dispatch = useDispatch();
     const onSubmit = async data => {
+        console.log('start onSubmit');
+
         setApiError('');
 
         // '' to []
@@ -281,15 +283,18 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
         // set default values for a new unapproved record and handle submission
         try {
+            console.log('dispatching createNewRecord');
             await dispatch(createNewRecord(cleanValues));
             // Form submission successful
         } catch (error) {
+            console.log('error=', error);
             let err = error.message;
             const originalMessage = error?.original?.error?.message;
             err += originalMessage && ' ' + originalMessage;
             setApiError(err);
         }
     };
+    // console.log('apiError=', apiError);
 
     return (
         <StandardPage title={txt.pageTitle}>
@@ -770,7 +775,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
                         {!!apiError && (
                             <Grid xs={12}>
-                                <Alert alertId="api_error_alert" type="error_outline" message={apiError} />
+                                <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                             </Grid>
                         )}
                     </Grid>
