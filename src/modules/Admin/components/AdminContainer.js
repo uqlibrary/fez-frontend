@@ -65,7 +65,8 @@ export const AdminContainer = ({ createMode = false }) => {
         values: { ...initialValues },
         shouldUnregister: false,
         mode: 'onChange',
-        // resolver: validateResolver,
+        criteriaMode: 'all',
+        // errors // can we use this to handle tab errors?
     });
 
     useFormOnChangeHook(form);
@@ -97,7 +98,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    console.log(form.formState.errors);
+    // console.log(form.formState.errors);
     tabErrors.current = Object.entries(form.formState?.errors || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
