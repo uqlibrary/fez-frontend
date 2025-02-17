@@ -1,14 +1,10 @@
 import React from 'react';
-import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
+import AddDataCollection from './AddDataCollection';
+import { render, WithReduxStore, WithRouter, waitFor, screen, preview } from 'test-utils';
 import userEvent from '@testing-library/user-event';
-import * as actions from 'actions';
-// import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
-import { act } from '@testing-library/react';
 
-// const mockUseNavigate = jest.fn();
 let mockDoiExist = false;
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
@@ -20,10 +16,6 @@ jest.mock('actions', () => ({
         }
     }),
 }));
-// jest.mock('react-router-dom', () => ({
-//     ...jest.requireActual('react-router-dom'),
-//     useNavigate: () => mockUseNavigate,
-// }));
 async function inputText(getByTestId, settings) {
     for (const [testId, value] of settings) {
         const input = getByTestId(testId);
@@ -107,21 +99,6 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
-    beforeAll(() => {
-        // // Mock console.warn to suppress specific warnings
-        // jest.spyOn(console, 'warn').mockImplementation(message => {
-        //     if (message.includes('An update to ForwardRef')) {
-        //         // Suppress this specific warning
-        //         return;
-        //     }
-        //     // Otherwise, log the warning
-        //     console.warn(message);
-        // });
-        jest.spyOn(console, 'warn').mockImplementation(() => {});
-    });
-    afterAll(() => {
-        // mockUseNavigate.mockClear();
-    });
     it('should check doi error', async () => {
         const existingDoiValue = '10.1037/a0028240';
         const notExistingDoiValue = '10.1037/a002824';
@@ -206,7 +183,7 @@ describe('AddDataCollection test', () => {
             return [200, {}];
         });
 
-        const { getByTestId, queryByText, queryAllByText, queryByTestId, container } = setup();
+        const { getByTestId, queryByText, queryAllByText } = setup();
 
         await inputRequired(getByTestId);
 
@@ -279,7 +256,7 @@ describe('AddDataCollection test', () => {
             return [200, {}];
         });
 
-        const { getByTestId, queryByTestId, container } = setup();
+        const { getByTestId } = setup();
 
         await inputRequired(getByTestId);
 
