@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, waitFor, screen, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, screen } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
@@ -200,8 +200,6 @@ describe('AddDataCollection test', () => {
             ['rek-end-date-year-input', '2000'],
         ]);
         await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
-        preview.debug();
-        // await new Promise(resolve => setTimeout(resolve, 5000));
 
         await waitFor(() => expect(queryAllByText('Date range is not valid').length).toBeGreaterThan(0));
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
 
