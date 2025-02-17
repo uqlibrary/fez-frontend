@@ -15,18 +15,12 @@ export const validateHandler = async (value, formValues, validators) => {
         return null;
     }
 
-    for (let i = 0; i < validators.length; i++) {
-        if (!(validators[i] instanceof Function)) {
-            continue;
-        }
+    for (const validator of validators) {
+        if (typeof validator !== 'function') continue;
 
-        let result = validators[i](value, formValues);
-        // Check if the result is a Promise (async function)
-        if (result instanceof Promise) {
-            result = await result; // Wait for async validation
-        }
+        let result = await Promise.resolve(validator(value, formValues));
 
-        if (!result?.trim) {
+        if (typeof result !== 'string') {
             continue;
         }
 
@@ -35,6 +29,7 @@ export const validateHandler = async (value, formValues, validators) => {
             return result;
         }
     }
+
     return null;
 };
 
