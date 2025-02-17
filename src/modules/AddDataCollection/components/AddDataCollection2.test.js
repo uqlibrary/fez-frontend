@@ -33,11 +33,25 @@ async function inputText(getByTestId, settings) {
         expect(input).toHaveValue(value);
     }
 }
+
+// click the select, find the option, click the option, tab out
 async function inputSelects(getByTestId, selects) {
     for (const [testId, value] of selects) {
         await userEvent.click(getByTestId(testId));
         const selectedOption = await screen.findByText(value);
         await userEvent.click(selectedOption);
+        await userEvent.tab();
+    }
+}
+
+// click the select, type value, find the option, click the option, tab out
+async function inputAndSelect(getByTestId, selects) {
+    for (const [testId, typeValue, selectValue] of selects) {
+        const input = getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, typeValue);
+        const option = await screen.findByText(selectValue);
+        await userEvent.click(option);
         await userEvent.tab();
     }
 }
@@ -67,22 +81,14 @@ async function inputRequired(getByTestId) {
 
     // Type to get a list from the api, then choose one
     // Type element, type value, select value
-    const selects2 = [
+    await inputAndSelect(getByTestId, [
         // Field of Research
         ['rek-subject-input', '010101', /010101/i],
         // Contact Name ID
         ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
         // Creator Role
         ['rek-author-role-input', 'a', /Project Lead/i],
-    ];
-    for (const [testId, typeValue, selectValue] of selects2) {
-        const input = screen.getByTestId(testId);
-        await userEvent.click(input);
-        await userEvent.type(input, typeValue);
-        const option = await screen.findByText(selectValue);
-        await userEvent.click(option);
-        await userEvent.tab();
-    }
+    ]);
 }
 
 function setup(testProps = {}, renderMethod = render) {
