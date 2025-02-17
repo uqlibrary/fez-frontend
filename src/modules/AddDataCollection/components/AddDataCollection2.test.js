@@ -6,7 +6,7 @@ import * as actions from 'actions';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
-import { count } from 'console';
+import { act } from '@testing-library/react';
 
 // const mockUseNavigate = jest.fn();
 let mockDoiExist = false;
@@ -143,73 +143,75 @@ describe('AddDataCollection test', () => {
 
         const { getByTestId, queryByTestId, container } = setup();
 
-        await userEvent.click(getByTestId('rek-copyright-input'));
+        await act(async () => {
+            await userEvent.click(getByTestId('rek-copyright-input'));
 
-        // Inputs
-        const inputs = [
-            ['rek-title-input', 'test'],
-            ['rek-description-input', 'test'],
-            ['rek-contributor-input', 'test'],
-            ['rek-contact-details-email-input', 'test@t.au'],
-            ['rek-date-day-input', '1'],
-            ['rek-date-year-input', '2000'],
-            ['rek-author-input', 'test'],
-            ['rek-project-name-input', 'test'],
-            ['rek-project-description-input', 'test'],
-        ];
-        for (const [testId, value] of inputs) {
-            const input = getByTestId(testId);
-            await userEvent.click(input);
-            await userEvent.type(input, value);
-            await userEvent.tab();
-            expect(input).toHaveValue(value);
-        }
-        expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
+            // Inputs
+            const inputs = [
+                ['rek-title-input', 'test'],
+                ['rek-description-input', 'test'],
+                ['rek-contributor-input', 'test'],
+                ['rek-contact-details-email-input', 'test@t.au'],
+                ['rek-date-day-input', '1'],
+                ['rek-date-year-input', '2000'],
+                ['rek-author-input', 'test'],
+                ['rek-project-name-input', 'test'],
+                ['rek-project-description-input', 'test'],
+            ];
+            for (const [testId, value] of inputs) {
+                const input = getByTestId(testId);
+                await userEvent.click(input);
+                await userEvent.type(input, value);
+                await userEvent.tab();
+                expect(input).toHaveValue(value);
+            }
+            expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
 
-        // Selects
-        const selects = [
-            ['rek-date-month-select', 'November'],
-            ['rek-access-conditions-select', 'Open Access'],
-            ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
-        ];
-        for (const [testId, value] of selects) {
-            await userEvent.click(screen.getByTestId(testId));
-            const selectedOption = await screen.findByText(value);
-            await userEvent.click(selectedOption);
-            await userEvent.tab();
-        }
+            // Selects
+            const selects = [
+                ['rek-date-month-select', 'November'],
+                ['rek-access-conditions-select', 'Open Access'],
+                ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
+            ];
+            for (const [testId, value] of selects) {
+                await userEvent.click(screen.getByTestId(testId));
+                const selectedOption = await screen.findByText(value);
+                await userEvent.click(selectedOption);
+                await userEvent.tab();
+            }
 
-        // Type to get a list from the api, then choose one
-        // Type element, type value, select value
-        const selects2 = [
-            // Field of Research
-            ['rek-subject-input', '010101', /010101/i],
-            // Contact Name ID
-            ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
-            // Creator Role
-            ['rek-author-role-input', 'a', /Project Lead/i],
-        ];
-        for (const [testId, typeValue, selectValue] of selects2) {
-            const input = screen.getByTestId(testId);
-            await userEvent.click(input);
-            await userEvent.type(input, typeValue);
-            const option = await screen.findByText(selectValue);
-            await userEvent.click(option);
-            await userEvent.tab();
-        }
+            // Type to get a list from the api, then choose one
+            // Type element, type value, select value
+            const selects2 = [
+                // Field of Research
+                ['rek-subject-input', '010101', /010101/i],
+                // Contact Name ID
+                ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
+                // Creator Role
+                ['rek-author-role-input', 'a', /Project Lead/i],
+            ];
+            for (const [testId, typeValue, selectValue] of selects2) {
+                const input = screen.getByTestId(testId);
+                await userEvent.click(input);
+                await userEvent.type(input, typeValue);
+                const option = await screen.findByText(selectValue);
+                await userEvent.click(option);
+                await userEvent.tab();
+            }
 
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
 
-        await userEvent.click(getByTestId('submit-data-collection'));
+            await userEvent.click(getByTestId('submit-data-collection'));
 
-        await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+            await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
 
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-        preview.debug();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            preview.debug();
 
-        await new Promise(resolve => setTimeout(resolve, 5000));
+            await new Promise(resolve => setTimeout(resolve, 5000));
 
-        await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
+            await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
+        });
     });
 });
