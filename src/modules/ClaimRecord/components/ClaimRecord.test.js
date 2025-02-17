@@ -469,10 +469,7 @@ describe('Component ClaimRecord ', () => {
             });
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
-                api.mock.records
-                    .update({ pid: journalArticle.rek_pid, data: journalArticle })
-                    .files.upload({ status: 500, once: false });
-
+                api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle }).files.fail.upload();
                 const { getByText, getByTestId, queryByTestId } = setup();
 
                 selectAuthor();

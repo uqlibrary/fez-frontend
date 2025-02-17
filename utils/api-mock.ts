@@ -25,6 +25,9 @@ interface DatastreamApi {
     presignedUrl: (params: Params) => DatastreamApi;
     put: (params: Params) => DatastreamApi;
     upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
+    fail: {
+        upload: () => DatastreamApi;
+    };
     records: RecordApi;
     instance: MockAdapter;
 }
@@ -117,6 +120,9 @@ export const api: Api = {
             },
             upload: function(params: Params = {}, defaults: Params = { status: 200, once: true }) {
                 return this.presignedUrl({ ...defaults, ...params }).put({ ...defaults, ...params });
+            },
+            fail: {
+                upload: () => api.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
             },
             records: {} as RecordApi,
             instance: {} as MockAdapter,

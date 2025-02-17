@@ -1,8 +1,5 @@
 import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
-
-import Immutable from 'immutable';
-
 import * as Context from './ControlledVocabularyContext';
 
 describe('ControlledVocabularyContext', () => {
@@ -60,7 +57,7 @@ describe('ControlledVocabularyContext', () => {
 
         function setup(state = {}) {
             return render(
-                <WithReduxStore initialState={Immutable.Map(state)}>
+                <WithReduxStore initialState={state}>
                     <Context.ControlledVocabulariesProvider>
                         <Child />
                     </Context.ControlledVocabulariesProvider>

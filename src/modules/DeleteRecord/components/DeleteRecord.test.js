@@ -1,7 +1,6 @@
 import React from 'react';
 import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
-import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
     expectApiRequestToMatchSnapshot,
@@ -42,7 +41,7 @@ function setup(props = {}, renderMethod = render) {
     };
 
     return renderMethod(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <DeleteRecord />
             </WithRouter>

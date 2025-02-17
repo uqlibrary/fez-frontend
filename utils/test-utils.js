@@ -10,8 +10,7 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
-import { getStore } from '../src/config/store';
-import Immutable from 'immutable';
+import { getStore, storeInstance } from '../src/config/store';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -52,14 +51,15 @@ export const WithRouter = ({ children, route = '/', initialEntries = [route] }) 
     return <RouterProvider router={router} />;
 };
 
-export const withRedux = (initialState = Immutable.Map()) => WrappedComponent => {
-    return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
-};
+export const getReduxStoreState = namespace =>
+    namespace ? storeInstance.getState().toJS()[namespace] : storeInstance.getState().toJS();
 
-export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => (
-    <Provider store={getStore(initialState)}>
+export const WithRedux = ({ initialState, children }) => <Provider store={getStore(initialState)}>{children}</Provider>;
+
+export const WithReduxStore = ({ initialState = {}, children }) => (
+    <WithRedux initialState={initialState}>
         <AllTheProviders>{children}</AllTheProviders>
-    </Provider>
+    </WithRedux>
 );
 
 export const assertTooltipText = async (trigger, tooltipText) => {
@@ -316,7 +316,8 @@ module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
     rtlRender,
-    withRedux,
+    WithRedux,
+    getReduxStoreState,
     AllTheProviders,
     WithReduxStore,
     assertTooltipText,
