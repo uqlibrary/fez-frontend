@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlternateIdentifierTemplate component should render default view 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+  >
+    <strong>
+      Identifier: 
+    </strong>
+  </p>
+  <span
+    class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+  >
+    <strong>
+      Identifier Type: 
+    </strong>
+  </span>
+</div>
+`;

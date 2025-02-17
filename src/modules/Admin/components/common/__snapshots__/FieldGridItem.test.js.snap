@@ -89,6 +89,9 @@ exports[`FieldGridItem should render with correct props 1`] = `
             },
             "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
             "creatorRoleLabel": "Enter creator's role",
+            "externalIdentifierHint": "Enter an external identifier",
+            "externalIdentifierLabel": "External identifier",
+            "externalIdentifierTypeLabel": "Identifier type",
             "identifierLabel": "UQ identifier (if available)",
             "nameAsPublishedHint": "Type the name exactly as published (eg. Smith, John)",
             "nameAsPublishedLabel": "Editor's name as published",
@@ -97,6 +100,8 @@ exports[`FieldGridItem should render with correct props 1`] = `
         "header": {
           "locale": {
             "contributorAssignmentColumn": "Select your name",
+            "externalIdentifierColumn": "External identifier",
+            "externalIdentifierTypeColumn": "External identifier type",
             "identifierColumn": "UQ identifiers",
             "nameColumn": "Editor's name as published",
             "organisationColumn": "Organisation/Organisation type",

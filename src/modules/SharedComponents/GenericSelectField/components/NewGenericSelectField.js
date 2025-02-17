@@ -22,6 +22,7 @@ export const NewGenericSelectField = ({
     genericSelectFieldId,
     hideLabel,
     input,
+    inputProps,
     itemsList = [],
     itemsLoading,
     label,
@@ -97,15 +98,17 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error]);
 
-    const handleChange = React.useCallback(event => {
-        if (!!input) {
-            input.onChange(event.target.value);
-        }
-        if (!!onChange) {
-            onChange(event.target.value);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    const handleChange = React.useCallback(
+        event => {
+            if (!!input) {
+                input.onChange(event.target.value);
+            }
+            if (!!onChange) {
+                onChange(event.target.value);
+            }
+        },
+        [input, onChange],
+    );
 
     const renderMenuItems = itemsList => {
         return [
@@ -155,6 +158,7 @@ export const NewGenericSelectField = ({
                 disabled={disabled}
                 displayEmpty={displayEmpty}
                 inputProps={{
+                    ...inputProps,
                     'aria-labelledby': `${genericSelectFieldId}-label`,
                     'data-analyticsid': `${genericSelectFieldId}-input`,
                     'data-testid': `${genericSelectFieldId}-input`,
@@ -202,6 +206,7 @@ NewGenericSelectField.propTypes = {
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
     input: PropTypes.object,
+    inputProps: PropTypes.object,
     meta: PropTypes.object,
     itemsList: PropTypes.arrayOf(
         PropTypes.shape({

@@ -745,6 +745,34 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-list-row-0-role')).toHaveTextContent('Technician');
     });
 
+    it('should be able to add and update external identifier', () => {
+        const externalId = '0000-0000-0000-00001';
+        const updatedExternalId = '0000-0000-0000-0002';
+        const { getByTestId, getAllByTestId, getByText } = setup({
+            showExternalIdentifierInput: true,
+        });
+
+        // add a new author
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('Orcid ID'));
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(getAllByTestId('mtablebodyrow').length).toBe(1);
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+
+        // update author
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('RoR'));
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
+    });
+
     it('should delete row correctly', () => {
         const { getByTestId } = setup({
             showRoleInput: true,

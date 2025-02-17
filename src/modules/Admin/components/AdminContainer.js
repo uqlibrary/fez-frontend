@@ -7,6 +7,7 @@ import Immutable from 'immutable';
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
+    PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
     RECORD_TYPE_COLLECTION,
@@ -184,9 +185,11 @@ export const AdminContainer = ({
                                             isActivated() &&
                                             // Blacklist types without grant info
                                             !(
-                                                [PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                                    recordToView && recordToView.rek_display_type,
-                                                ) ||
+                                                [
+                                                    PUBLICATION_TYPE_MANUSCRIPT,
+                                                    PUBLICATION_TYPE_THESIS,
+                                                    PUBLICATION_TYPE_INSTRUMENT,
+                                                ].includes(recordToView && recordToView.rek_display_type) ||
                                                 [SUBTYPE_NON_NTRO].includes(
                                                     !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
                                                 )
