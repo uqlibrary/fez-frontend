@@ -216,7 +216,6 @@ describe('AddDataCollection test', () => {
             ['rek-start-date-year-input', '2020'],
         ]);
         await clickSelect(getByTestId, [['rek-start-date-month-select', 'March']]);
-        await inputAndSelect(getByTestId, [[]]);
 
         // input collection end date
         await inputText(getByTestId, [
@@ -224,7 +223,6 @@ describe('AddDataCollection test', () => {
             ['rek-end-date-year-input', '2020'],
         ]);
         await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
-        await inputAndSelect(getByTestId, [[]]);
 
         await waitFor(() => expect(queryByText('Date range is not valid')).toBeInTheDocument());
         await clickSelect(getByTestId, [['rek-end-date-month-select', 'April']]);
