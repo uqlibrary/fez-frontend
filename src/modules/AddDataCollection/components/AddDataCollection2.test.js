@@ -25,6 +25,61 @@ jest.mock('actions', () => ({
 //     ...jest.requireActual('react-router-dom'),
 //     useNavigate: () => mockUseNavigate,
 // }));
+async function inputRequired(getByTestId) {
+    await userEvent.click(getByTestId('rek-copyright-input'));
+    // Inputs
+    const inputs = [
+        ['rek-title-input', 'test'],
+        ['rek-description-input', 'test'],
+        ['rek-contributor-input', 'test'],
+        ['rek-contact-details-email-input', 'test@t.au'],
+        ['rek-date-day-input', '1'],
+        ['rek-date-year-input', '2000'],
+        ['rek-author-input', 'test'],
+        ['rek-project-name-input', 'test'],
+        ['rek-project-description-input', 'test'],
+    ];
+    for (const [testId, value] of inputs) {
+        const input = getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, value);
+        await userEvent.tab();
+        expect(input).toHaveValue(value);
+    }
+    expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
+
+    // Selects
+    const selects = [
+        ['rek-date-month-select', 'November'],
+        ['rek-access-conditions-select', 'Open Access'],
+        ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
+    ];
+    for (const [testId, value] of selects) {
+        await userEvent.click(screen.getByTestId(testId));
+        const selectedOption = await screen.findByText(value);
+        await userEvent.click(selectedOption);
+        await userEvent.tab();
+    }
+
+    // Type to get a list from the api, then choose one
+    // Type element, type value, select value
+    const selects2 = [
+        // Field of Research
+        ['rek-subject-input', '010101', /010101/i],
+        // Contact Name ID
+        ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
+        // Creator Role
+        ['rek-author-role-input', 'a', /Project Lead/i],
+    ];
+    for (const [testId, typeValue, selectValue] of selects2) {
+        const input = screen.getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, typeValue);
+        const option = await screen.findByText(selectValue);
+        await userEvent.click(option);
+        await userEvent.tab();
+    }
+}
 
 function setup(testProps = {}, renderMethod = render) {
     const props = {
@@ -111,26 +166,13 @@ describe('AddDataCollection test', () => {
                 },
             ];
         });
-        let postCounter = 0;
         mockApi.onPost('records').reply(() => {
-            console.log('postCounter=', postCounter);
-            postCounter++;
-            if (postCounter === 1) {
-                return [
-                    422,
-                    {
-                        error: 'wrong!',
-                    },
-                ];
-            } else {
-                console.log('return 200');
-                return [
-                    200,
-                    {
-                        data: {},
-                    },
-                ];
-            }
+            return [
+                200,
+                {
+                    data: {},
+                },
+            ];
         });
         mockApi.onAny().reply(config => {
             console.log(
@@ -143,73 +185,68 @@ describe('AddDataCollection test', () => {
 
         const { getByTestId, queryByTestId, container } = setup();
 
-        await userEvent.click(getByTestId('rek-copyright-input'));
+        await inputRequired(getByTestId);
 
-        // Inputs
-        const inputs = [
-            ['rek-title-input', 'test'],
-            ['rek-description-input', 'test'],
-            ['rek-contributor-input', 'test'],
-            ['rek-contact-details-email-input', 'test@t.au'],
-            ['rek-date-day-input', '1'],
-            ['rek-date-year-input', '2000'],
-            ['rek-author-input', 'test'],
-            ['rek-project-name-input', 'test'],
-            ['rek-project-description-input', 'test'],
-        ];
-        for (const [testId, value] of inputs) {
-            const input = getByTestId(testId);
-            await userEvent.click(input);
-            await userEvent.type(input, value);
-            await userEvent.tab();
-            expect(input).toHaveValue(value);
-        }
-        expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
 
-        // Selects
-        const selects = [
-            ['rek-date-month-select', 'November'],
-            ['rek-access-conditions-select', 'Open Access'],
-            ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
-        ];
-        for (const [testId, value] of selects) {
-            await userEvent.click(screen.getByTestId(testId));
-            const selectedOption = await screen.findByText(value);
-            await userEvent.click(selectedOption);
-            await userEvent.tab();
-        }
+        await userEvent.click(getByTestId('submit-data-collection'));
 
-        // Type to get a list from the api, then choose one
-        // Type element, type value, select value
-        const selects2 = [
-            // Field of Research
-            ['rek-subject-input', '010101', /010101/i],
-            // Contact Name ID
-            ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
-            // Creator Role
-            ['rek-author-role-input', 'a', /Project Lead/i],
-        ];
-        for (const [testId, typeValue, selectValue] of selects2) {
-            const input = screen.getByTestId(testId);
-            await userEvent.click(input);
-            await userEvent.type(input, typeValue);
-            const option = await screen.findByText(selectValue);
-            await userEvent.click(option);
-            await userEvent.tab();
-        }
+        // preview.debug();
+        // await new Promise(resolve => setTimeout(resolve, 5000));
+
+        await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
+    });
+
+    it('should submit error', async () => {
+        mockDoiExist = false;
+        // Field of Research lookup
+        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+            return [200, vocabsFieldResearch];
+        });
+        // Contact Name ID lookup
+        mockApi.onGet('fez-authors/search').reply(() => {
+            return [
+                200,
+                {
+                    total: 1,
+                    data: [
+                        {
+                            id: 46980,
+                            value: 'David Johnsen',
+                            aut_id: 46980,
+                            aut_fname: 'David',
+                            aut_lname: 'Johnsen',
+                            aut_display_name: 'David Johnsen',
+                        },
+                    ],
+                },
+            ];
+        });
+        mockApi.onPost('records').reply(() => {
+            return [
+                422,
+                {
+                    error: 'wrong!',
+                },
+            ];
+        });
+        mockApi.onAny().reply(config => {
+            console.log(
+                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                    config.params,
+                )}`,
+            );
+            return [200, {}];
+        });
+
+        const { getByTestId, queryByTestId, container } = setup();
+
+        await inputRequired(getByTestId);
 
         expect(getByTestId('submit-data-collection')).toBeEnabled();
 
         await userEvent.click(getByTestId('submit-data-collection'));
 
         await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
-
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-        preview.debug();
-
-        await new Promise(resolve => setTimeout(resolve, 5000));
-
-        await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
     });
 });
