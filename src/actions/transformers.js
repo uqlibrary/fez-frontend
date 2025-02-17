@@ -338,6 +338,44 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+/**
+ * getRecordAuthorsExternalIdSearchKey - returns authors external identifier objects formatted for record request
+ *
+ * @param {array} authors - array of objects in format
+ *
+ * @returns {Object} formatted {
+ *     fez_record_search_key_author_identifier,
+ *     fez_record_search_key_author_identifier_type
+ * } for record request
+ */
+export const getRecordAuthorsExternalIdSearchKey = authors => {
+    // return empty object if all parameters are null
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_identifier: [],
+            fez_record_search_key_author_identifier_type: [],
+        };
+    }
+
+    const ids = [];
+    const idTypes = [];
+
+    authors.forEach((item, index) => {
+        if (!!item.externalIdentifier && !!item.externalIdentifierType) {
+            ids.push({ rek_author_identifier: item.externalIdentifier, rek_author_identifier_order: index + 1 });
+            idTypes.push({
+                rek_author_identifier_type: item.externalIdentifierType,
+                rek_author_identifier_type_order: index + 1,
+            });
+        }
+    });
+
+    return {
+        fez_record_search_key_author_identifier: ids,
+        fez_record_search_key_author_identifier_type: idTypes,
+    };
+};
+
 export const getRecordAuthorAffiliationSearchKey = authors => {
     if (!authors || authors.length === 0) {
         return {
@@ -877,6 +915,28 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
+export const getAlternateIdentifierSearchKey = (alternateIdentifiers = []) => {
+    if (!alternateIdentifiers || alternateIdentifiers.length === 0) return {};
+
+    return {
+        fez_record_search_key_alternate_identifier: alternateIdentifiers.map(alternateIdentifier => ({
+            rek_alternate_identifier: alternateIdentifier.rek_value.key,
+            rek_alternate_identifier_order: alternateIdentifier.rek_order,
+        })),
+    };
+};
+
+export const getAlternateIdentifierTypeSearchKey = (alternateIdentifiers = []) => {
+    if (!alternateIdentifiers || alternateIdentifiers.length === 0) return {};
+
+    return {
+        fez_record_search_key_alternate_identifier_type: alternateIdentifiers.map(alternateIdentifier => ({
+            rek_alternate_identifier_type: alternateIdentifier.rek_value.value,
+            rek_alternate_identifier_type_order: alternateIdentifier.rek_order,
+        })),
+    };
+};
+
 export const getLinkSearchKey = (links = []) => {
     if (!links || links.length === 0) return {};
 
@@ -996,6 +1056,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         rek_pubmed_doc_type: pubmedDocType,
         rek_scopus_doc_type: scopusDocType,
         rek_wok_doc_type: wosDocType,
+        alternateIdentifiers,
         links,
         ...rest
     } = data;
@@ -1021,6 +1082,8 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
+        ...getAlternateIdentifierSearchKey(alternateIdentifiers),
+        ...getAlternateIdentifierTypeSearchKey(alternateIdentifiers),
         ...getLinkSearchKey(links),
         ...getLinkDescriptionSearchKey(links),
         ...(!!locations ? getRecordLocationSearchKey(locations) : {}),
@@ -1262,6 +1325,7 @@ export const getAuthorsSearchKeys = (authors, canHaveAffiliations = false) => ({
     ...getRecordAuthorAffiliations(authors, canHaveAffiliations),
     ...getRecordAuthorsSearchKey(authors),
     ...getRecordAuthorsIdSearchKey(authors),
+    ...getRecordAuthorsExternalIdSearchKey(authors),
     ...getRecordAuthorAffiliationSearchKey(authors),
     ...getRecordAuthorAffiliationTypeSearchKey(authors),
     ...getDatasetCreatorRolesSearchKey(authors),
@@ -1390,6 +1454,23 @@ export const getOpenAccessStatusSearchKey = record => {
     };
 };
 
+export const getOwnerIdentifierSearchKey = (ownerIdentifier, ownerIdentifierType) => {
+    return {
+        fez_record_search_key_author_identifier: [
+            {
+                rek_author_identifier: ownerIdentifier,
+                rek_author_identifier_order: 1,
+            },
+        ],
+        fez_record_search_key_author_identifier_type: [
+            {
+                rek_author_identifier_type: ownerIdentifierType,
+                rek_author_identifier_type_order: 1,
+            },
+        ],
+    };
+};
+
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
@@ -1398,6 +1479,8 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         contactName,
         contactNameId,
         contactEmail,
+        ownerIdentifier,
+        ownerIdentifierType,
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
@@ -1419,6 +1502,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
+        ...(!!ownerIdentifier ? getOwnerIdentifierSearchKey(ownerIdentifier, ownerIdentifierType) : {}),
         ...{
             fez_record_search_key_license: {
                 ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),

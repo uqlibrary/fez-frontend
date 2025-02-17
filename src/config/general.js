@@ -61,6 +61,7 @@ export const PUBLICATION_TYPE_DESIGN = 316;
 export const PUBLICATION_TYPE_DIGILIB_IMAGE = 228;
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_IMAGE = 238;
+export const PUBLICATION_TYPE_INSTRUMENT = 378;
 export const PUBLICATION_TYPE_JOURNAL = 294;
 export const PUBLICATION_TYPE_JOURNAL_ARTICLE = 179;
 export const PUBLICATION_TYPE_MANUSCRIPT = 374;
@@ -115,6 +116,7 @@ export const DOCUMENT_TYPE_DESIGN = 'Design';
 export const DOCUMENT_TYPE_DIGILIB_IMAGE = 'Digilib Image';
 export const DOCUMENT_TYPE_GENERIC_DOCUMENT = 'Generic Document';
 export const DOCUMENT_TYPE_IMAGE = 'Image';
+export const DOCUMENT_TYPE_INSTRUMENT = 'Instrument';
 export const DOCUMENT_TYPE_JOURNAL = 'Journal';
 export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
 export const DOCUMENT_TYPE_MANUSCRIPT = 'Manuscript';
@@ -478,6 +480,13 @@ export const publicationTypes = (components, isAdmin = false) => ({
         citationComponent: components ? components.ImageDocumentCitation : null,
         formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true,
+    },
+    [PUBLICATION_TYPE_INSTRUMENT]: {
+        id: PUBLICATION_TYPE_INSTRUMENT,
+        name: DOCUMENT_TYPE_INSTRUMENT,
+        class: 'Uqlibrary\\FezCore\\Types\\Instrument',
+        citationComponent: components ? components.InstrumentCitation : null,
+        hasFormComponent: false,
     },
     [PUBLICATION_TYPE_JOURNAL]: {
         id: PUBLICATION_TYPE_JOURNAL,
@@ -1664,6 +1673,17 @@ export const OA_STATUS_TYPE = [
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
     { value: 454123, text: 'Bronze' },
+];
+
+export const ALTERNATE_IDENTIFIER_TYPE = [
+    { value: 459133, text: 'Serial Number' },
+    { value: 459134, text: 'Inventory Number' },
+    { value: 459135, text: 'Other' },
+];
+
+export const AUTHOR_EXTERNAL_IDENTIFIER_TYPE = [
+    { value: 459136, text: 'Orcid ID' },
+    { value: 459137, text: 'RoR' },
 ];
 
 export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;

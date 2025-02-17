@@ -41,6 +41,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        showExternalIdentifierInput: PropTypes.bool,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
@@ -63,6 +64,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
     };
@@ -483,6 +485,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            showExternalIdentifierInput,
             useFormReducer,
         } = this.props;
 
@@ -516,6 +519,7 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
+                    showExternalIdentifierInput={showExternalIdentifierInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}

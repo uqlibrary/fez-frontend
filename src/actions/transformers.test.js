@@ -98,6 +98,93 @@ describe('transformers', () => {
         });
     });
 
+    describe('getRecordAlternateIdentifierSearchKey test', () => {
+        it('should return request object structure with alternate identifier and identifier type', () => {
+            const data = [
+                {
+                    rek_value: { key: 'id', value: '111' },
+                    rek_order: 1,
+                },
+            ];
+            const expectedId = {
+                fez_record_search_key_alternate_identifier: [
+                    {
+                        rek_alternate_identifier: 'id',
+                        rek_alternate_identifier_order: 1,
+                    },
+                ],
+            };
+            const expectedIdType = {
+                fez_record_search_key_alternate_identifier_type: [
+                    {
+                        rek_alternate_identifier_type: '111',
+                        rek_alternate_identifier_type_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getAlternateIdentifierSearchKey(data)).toEqual(expectedId);
+            expect(transformers.getAlternateIdentifierTypeSearchKey(data)).toEqual(expectedIdType);
+        });
+
+        it('should return empty object structure with missing alternate identifier', () => {
+            const data = [];
+            const expected = {};
+            expect(transformers.getAlternateIdentifierSearchKey(data)).toEqual(expected);
+            expect(transformers.getAlternateIdentifierTypeSearchKey(data)).toEqual(expected);
+        });
+
+        it('should return empty request object structure if no link is provided', () => {
+            const data = {};
+            const expected = null;
+            const result = transformers.getRecordLinkSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+    });
+
+    describe('getRecordAuthorExternalIdentifierSearchKey test', () => {
+        it('should return request object structure with external identifiers', () => {
+            const data = [
+                {
+                    externalIdentifier: 'ext id',
+                    externalIdentifierType: '111',
+                },
+                {
+                    externalIdentifier: 'ext id 2',
+                },
+                {
+                    externalIdentifierType: '222',
+                },
+            ];
+            const expected = {
+                fez_record_search_key_author_identifier: [
+                    {
+                        rek_author_identifier: 'ext id',
+                        rek_author_identifier_order: 1,
+                    },
+                ],
+                fez_record_search_key_author_identifier_type: [
+                    {
+                        rek_author_identifier_type: '111',
+                        rek_author_identifier_type_order: 1,
+                    },
+                ],
+            };
+            const result = transformers.getRecordAuthorsExternalIdSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+
+        it('should return empty request object structure if no external id is provided', () => {
+            const data = [];
+            const expected = {
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
+            };
+            const result = transformers.getRecordAuthorsExternalIdSearchKey(data);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getCollectionsOnRecordWithSecurity', () => {
         it('should retrieve security policy of existing collections from search key', () => {
             const record = {
@@ -2768,6 +2855,8 @@ describe('transformers', () => {
                 contactName: 'Test',
                 contactEmail: 'test@email.com',
                 contactNameId: { id: 1234 },
+                ownerIdentifier: '1234',
+                ownerIdentifierType: '1111',
                 fez_record_search_key_herdc_code: {
                     rek_herdc_code: '450003',
                     rek_herdc_code_id: 5013387,
@@ -2833,6 +2922,18 @@ describe('transformers', () => {
                     {
                         rek_contact_details_email: 'test@email.com',
                         rek_contact_details_email_order: 1,
+                    },
+                ],
+                fez_record_search_key_author_identifier: [
+                    {
+                        rek_author_identifier: '1234',
+                        rek_author_identifier_order: 1,
+                    },
+                ],
+                fez_record_search_key_author_identifier_type: [
+                    {
+                        rek_author_identifier_type: '1111',
+                        rek_author_identifier_type_order: 1,
                     },
                 ],
                 fez_record_search_key_herdc_code: {
@@ -4183,12 +4284,14 @@ describe('transformers', () => {
             expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
                 fez_author_affiliation: null,
                 fez_record_search_key_author: [],
+                fez_record_search_key_author_id: [],
                 fez_record_search_key_author_affiliation_country: [],
                 fez_record_search_key_author_affiliation_full_address: [],
                 fez_record_search_key_author_affiliation_id: [],
                 fez_record_search_key_author_affiliation_name: [],
                 fez_record_search_key_author_affiliation_type: [],
-                fez_record_search_key_author_id: [],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4252,6 +4355,8 @@ describe('transformers', () => {
                         rek_author_affiliation_type_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4316,6 +4421,8 @@ describe('transformers', () => {
                         rek_author_affiliation_type_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4519,6 +4626,8 @@ describe('transformers', () => {
                         rek_author_role_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
 
@@ -4619,6 +4728,8 @@ describe('transformers', () => {
                         rek_author_role_order: 4,
                     },
                 ],
+                fez_record_search_key_author_identifier: [],
+                fez_record_search_key_author_identifier_type: [],
             });
         });
     });
