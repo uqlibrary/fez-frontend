@@ -782,6 +782,7 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 AddDataCollection.propTypes = {
     disableSubmit: PropTypes.bool,
     resetForm: PropTypes.any,
+    newRecordFileUploadingOrIssueError: PropTypes.bool,
 };
 
 export default AddDataCollection;
