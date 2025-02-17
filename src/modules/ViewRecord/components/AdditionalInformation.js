@@ -222,6 +222,32 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         );
     };
 
+    const renderAlternateIdentifier = publication => {
+        const ids = publication.fez_record_search_key_alternate_identifier;
+        return (
+            <Box component={'ul'} key={'alternate-identifier'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {ids.map((item, index) => (
+                    <li key={`alternate-identifier-${index}`} data-testid={`alternate-identifier-${index}`}>
+                        {(() => {
+                            const identifier = item.rek_alternate_identifier;
+                            const order = item.rek_alternate_identifier_order;
+                            const typeObject = publication.fez_record_search_key_alternate_identifier_type?.find(
+                                identifierType => identifierType.rek_alternate_identifier_type_order === order,
+                            );
+
+                            if (typeObject) {
+                                const identifierType = getData(typeObject, 'rek_alternate_identifier_type');
+                                return `${identifier} (${identifierType})`;
+                            } else {
+                                return identifier;
+                            }
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
     const transformFieldNameToSubkey = field => {
         const keyPrefix = 'fez_record_search_key_';
         const subkeyPrefix = 'rek_';
@@ -268,6 +294,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 return renderMap(objects);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_alternate_identifier':
+                return renderAlternateIdentifier(publication);
             default:
                 return renderList(objects, subkey);
         }

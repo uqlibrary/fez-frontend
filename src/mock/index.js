@@ -448,6 +448,7 @@ export const setup = () => {
                 ...mockData.publicationTypeListDigilibImage.data,
                 ...mockData.publicationTypeListGenericDocument.data,
                 ...mockData.publicationTypeListImage.data,
+                ...mockData.publicationTypeListInstrument.data,
                 ...mockData.publicationTypeListJournal.data,
                 ...mockData.publicationTypeListJournalArticle.data,
                 ...mockData.publicationTypeListManuscript.data,
