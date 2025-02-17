@@ -1,12 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unreachable */
-/* eslint-disable no-debugger */
-/* eslint-disable no-constant-condition */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable max-len */
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
@@ -126,8 +117,9 @@ const getState = (initialValues, values, displayType, subtype) => {
     return {
         hasSubtype: !!publicationType?.subtypes?.length,
         subtypes:
+            // restrict to NTRO only if one NTRO subtype is selected
             subtype && general.NTRO_SUBTYPES.includes(subtype)
-                ? publicationType?.subtypes?.filter(type => general.NTRO_SUBTYPES.includes(type)) // restrict to NTRO only if one NTRO subtype is selected
+                ? publicationType?.subtypes?.filter(type => general.NTRO_SUBTYPES.includes(type))
                 : publicationType?.subtypes,
         formComponent: displayType && (!hasSubtype || subtype) && publicationType?.formComponent,
         isNtro: general.NTRO_SUBTYPES.includes(subtype),
@@ -160,9 +152,9 @@ const publicationTypeItems = [
     )),
 ];
 
-const formValues = values => ({ get: key => values[key], toJS: () => values });
+export const formValues = values => ({ get: key => values[key], toJS: () => values });
 
-const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) => {
+const PublicationForm = ({ initialValues, onFormSubmitSuccess, onFormCancel }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const shouldIgnoreDisplayTypeChange = useRef(false);
@@ -193,8 +185,8 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         selectedTypeComboOption,
         isAuthorSelected,
     } = getState(initialValues, values, displayType, subtype, recordForms);
-    // update displayType and subtype according to selected selectedTypeComboOption prior to the useLayoutEffect call below,
-    // where displayType changes are handled, in order to avoid unnecessary re-renders
+    // update displayType and subtype according to selected selectedTypeComboOption prior to the useLayoutEffect call
+    // below, where displayType changes are handled, in order to avoid unnecessary re-renders
     if (selectedTypeComboOption) {
         displayType = selectedTypeComboOption.docTypeId;
         subtype = selectedTypeComboOption.subtype;
@@ -210,6 +202,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         shouldIgnoreDisplayTypeChange.current = true;
         setValue('rek_display_type', selectedTypeComboOption.docTypeId);
         setValue('rek_subtype', selectedTypeComboOption.subtype);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedTypeComboOption?.docTypeId, selectedTypeComboOption?.subtype]);
 
     // handle displayType changes
@@ -225,6 +218,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
             unregister(fields);
         }
         resetField('rek_subtype');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [displayType]);
 
     // handle FormComponent changes
@@ -239,6 +233,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         }
         // queue validation trigger, to allow selected pub. form's fields to be fully rendered prior to validation
         setTimeout(() => trigger());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [FormComponent]);
 
     // handle successful form submission
@@ -246,6 +241,7 @@ const PublicationForm = ({ onFormCancel, initialValues, onFormSubmitSuccess }) =
         if (!isSubmitSuccessful) return;
         resetField('rek_display_type');
         onFormSubmitSuccess();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isSubmitSuccessful]);
 
     const handleSubmit = safelyHandleSubmit(async data => {

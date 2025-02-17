@@ -15,16 +15,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isAuthorSelected }) => {
-    const normalizeIssn = value => {
-        const newValue = value.replace('-', '');
-        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
-    };
-
-    const transformIssn = (searchKey, item, index) => ({
-        [searchKey.value]: item.key,
-        [searchKey.order]: index + 1,
-    });
-
     // path to the locale data for each of the sections
     const txt = formLocale.journalArticle;
     return (
@@ -150,9 +140,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                         listEditorId="issn"
                         disabled={isSubmitting}
-                        inputNormalizer={normalizeIssn}
                         rowItemTemplate={IssnRowItemTemplate}
-                        transformFunction={transformIssn}
                     />
                 </StandardCard>
             </Grid>

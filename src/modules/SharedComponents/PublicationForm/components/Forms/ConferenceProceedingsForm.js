@@ -1,31 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
-
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { IssnListEditorField, ListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
-
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
-
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const ConferenceProceedingsForm = ({ control, isSubmitting, canEdit }) => {
-    const normalizeIssn = value => {
-        const newValue = value.replace('-', '');
-        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
-    };
-
-    const transformIssn = (searchKey, item, index) => ({
-        [searchKey.value]: item.key,
-        [searchKey.order]: index + 1,
-    });
-
     const txt = formLocale.conferenceProceedings;
     return (
         <Grid container spacing={3}>
@@ -184,9 +171,7 @@ export const ConferenceProceedingsForm = ({ control, isSubmitting, canEdit }) =>
                         listEditorId="issn"
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                         disabled={isSubmitting}
-                        inputNormalizer={normalizeIssn}
                         rowItemTemplate={IssnRowItemTemplate}
-                        transformFunction={transformIssn}
                     />
                 </StandardCard>
             </Grid>

@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
-
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { ListEditorField, IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
-
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { locale } from 'locale';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
 import { default as formLocale } from 'locale/publicationForm';
-
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
@@ -25,16 +22,6 @@ export const BookForm = ({
     isNtro = false,
     isAuthorSelected = false,
 }) => {
-    const normalizeIssn = value => {
-        const newValue = value.replace('-', '');
-        return newValue.length >= 5 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
-    };
-
-    const transformIssn = (searchKey, item, index) => ({
-        [searchKey.value]: item.key,
-        [searchKey.order]: index + 1,
-    });
-
     const txt = formLocale.book;
     const editors = formValues && formValues.get('editors');
     const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
@@ -229,9 +216,7 @@ export const BookForm = ({
                         listEditorId="issn"
                         searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                         disabled={isSubmitting}
-                        inputNormalizer={normalizeIssn}
                         rowItemTemplate={IssnRowItemTemplate}
-                        transformFunction={transformIssn}
                     />
                 </StandardCard>
             </Grid>
