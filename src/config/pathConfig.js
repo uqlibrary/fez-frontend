@@ -159,6 +159,7 @@ export const pathConfig = {
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
+        dashboard: '/admin/dashboard',
         add: '/admin/add',
         changeDisplayType: pid => `/admin/change-display-type/${pid}`,
         bulkUpdates: '/admin/bulk-updates',
@@ -171,7 +172,6 @@ export const pathConfig = {
         editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
         favouriteSearch: '/admin/favourite-search',
-        legacyEspace: `${fullPath}/my_upo_tools.php`,
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         unpublished: '/admin/unpublished',
@@ -188,10 +188,6 @@ export const pathConfig = {
                 process.env.BRANCH === 'development' ? window.location.pathname : ''
             }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
-        },
-        googleScholar: {
-            link: '/author-identifiers/google-scholar/link',
-            // unlink: '/author-identifiers/google-scholar/link'
         },
     },
     authorStatistics: {

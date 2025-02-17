@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Field, propTypes } from 'redux-form/immutable';
+import React, { useEffect, useMemo, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
@@ -24,398 +23,386 @@ import {
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
 import { CLAIM_PRE_CHECK } from 'repositories/routes';
+import { useDispatch, useSelector } from 'react-redux';
+import * as actions from 'actions';
+import { useValidatedForm } from '../../../hooks';
+import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 
-export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
-
-export default class ClaimRecord extends PureComponent {
-    static propTypes = {
-        ...propTypes, // all redux-form props
-        disableSubmit: PropTypes.bool,
-
-        fullPublicationToClaim: PropTypes.object,
-        fullPublicationToClaimLoading: PropTypes.bool,
-        fullPublicationToClaimLoadingFailed: PropTypes.any,
-
-        publicationToClaimFileUploadingError: PropTypes.bool,
-        publicationFailedToClaim: PropTypes.string,
-        redirectPath: PropTypes.string,
-        navigate: PropTypes.func.isRequired,
-        actions: PropTypes.object.isRequired,
-    };
-
-    constructor(props) {
-        super(props);
-
-        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-        const publication = this.props.initialValues.get('publication')
-            ? this.props.initialValues.get('publication').toJS()
-            : null;
-
-        if (!author || !publication) {
-            this.props.navigate(-1);
-        }
+const isClaimPreCheckResponse = errors => errors?.original?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
+const getCustomErrorMessageIfAvailable = (serverError, defaultMessage) => {
+    if (isClaimPreCheckResponse(serverError) && serverError?.original?.data) {
+        return serverError.original.data;
     }
-    componentDidMount() {
-        const publication = this.props.initialValues.get('publication')
-            ? this.props.initialValues.get('publication').toJS()
-            : null;
+    return defaultMessage;
+};
 
-        if (publication && publication.rek_pid && this.props.actions) {
-            this.props.actions.loadFullRecordToClaim(publication.rek_pid);
-        }
+export const getAlertProps = (
+    publication,
+    authorLinked,
+    contributorLinked,
+    getPropsForAlert,
+    isSubmitting,
+    isSubmitSuccessful,
+    isSubmitFailure,
+    serverError,
+) => {
+    const txt = locale.forms.claimPublicationForm;
+    // When trying to claim a record from an external source, the available
+    // data might not be sufficient for creating a new record. This scenario
+    // would be handled up by the code block below.
+    if (!publication.rek_pid && isSubmitFailure) {
+        return validation.getErrorAlertProps({
+            submitting: isSubmitting,
+            submitSucceeded: isSubmitSuccessful,
+            error: getCustomErrorMessageIfAvailable(serverError, txt.errorAlert.incompleteData),
+            dirty: true,
+            alertLocale: txt,
+        });
     }
 
-    componentDidUpdate(prevProps) {
-        // update content indicator initial value for the ContentIndicatorsField component
-        if (prevProps.fullPublicationToClaimLoading === true && this.props.fullPublicationToClaimLoading === false) {
-            /* istanbul ignore next */
-            const contentIndicators =
-                (this.props.fullPublicationToClaim &&
-                    (this.props.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
-                        item => item.rek_content_indicator,
-                    )) ||
-                [];
-
-            /* istanbul ignore else */
-            if (contentIndicators) {
-                this.props.initialize({
-                    publication: this.props.initialValues.get('publication'),
-                    author: this.props.initialValues.get('publication'),
-                    contentIndicators,
-                });
-            }
-        }
-        /* istanbul ignore else */
-        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
-            this.successConfirmationBox.showConfirmation();
-        }
-    }
-    componentWillUnmount() {
-        // clear previously selected publication for a claim
-        this.props.actions.clearClaimPublication();
+    if (publication?.rek_pid && (authorLinked || contributorLinked)) {
+        return { ...txt.alreadyClaimedAlert };
     }
 
-    _navigateToMyResearch = () => {
-        this.props.navigate(pathConfig.records.mine);
+    return validation.getErrorAlertProps({
+        submitting: isSubmitting,
+        submitSucceeded: isSubmitSuccessful,
+        dirty: true,
+        alertLocale: txt,
+        ...getPropsForAlert(),
+    });
+};
+
+const ClaimRecord = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    // to allow confirmDialogBox control
+    const confirmDialogBoxRef = useRef();
+    // constants
+    const txt = locale.forms.claimPublicationForm;
+    // app's global state
+    const {
+        publicationToClaim,
+        fullPublicationToClaim,
+        fullPublicationToClaimLoading,
+        publicationToClaimFileUploadingError,
+    } = useSelector(state => state.get('claimPublicationReducer'));
+    const { author } = useSelector(state => state.get('accountReducer'));
+    const { redirectPath } = useSelector(state => state.get('appReducer'));
+
+    const contentIndicators = useMemo(
+        () =>
+            fullPublicationToClaim?.fez_record_search_key_content_indicator?.map?.(
+                item => item.rek_content_indicator,
+            ) || [],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [JSON.stringify(fullPublicationToClaim?.fez_record_search_key_content_indicator)],
+    );
+
+    const publication = {
+        ...publicationToClaim,
+        ...fullPublicationToClaim,
+        contentIndicators,
     };
 
-    _cancelClaim = () => {
-        this.props.actions.clearNewRecord();
-        this.props.navigate(-1);
-    };
+    const {
+        control,
+        setValue,
+        resetField,
+        safelyHandleSubmit,
+        getPropsForAlert,
+        mergeWithFormValues,
+        formState: { isDirty, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError, serverError },
+    } = useValidatedForm({
+        values: { authorLinking: '', contributorLinking: '', comments: '', rek_link: '', contentIndicators, files: [] },
+    });
 
-    _claimAnother = () => {
-        if (!!this.props.redirectPath) {
-            this.props.navigate(this.props.redirectPath);
-            this.props.actions.clearNewRecord();
-            this.props.actions.clearRedirectPath();
-        } else {
-            this.props.navigate(-1);
-        }
-    };
-
-    _setSuccessConfirmation = ref => {
-        this.successConfirmationBox = ref;
-    };
-    /* istanbul ignore next */
-    _handleDefaultSubmit = event => {
-        !!event && event.preventDefault();
-    };
-
-    _contributorValidation = link => {
-        const publication =
-            this.props.initialValues.get('publication') &&
-            this.props.initialValues.get('publication').toJS &&
-            this.props.initialValues.get('publication').toJS();
-        return publication &&
-            publication.fez_record_search_key_author &&
-            publication.fez_record_search_key_author.length > 0
-            ? validation.isValidContributorLink(link)
-            : validation.isValidContributorLink(link, true);
-    };
-
-    _navigateToFixRecord = () => {
-        this.props.navigate(pathConfig.records.fix(this._publication().rek_pid));
-    };
-
-    _publication = () => {
-        return {
-            ...(this.props.initialValues.get('publication') && this.props.initialValues.get('publication').toJS(0)),
-            ...this.props.fullPublicationToClaim,
-        };
-    };
-
-    _useCustomErrorMessageIfAvailable = (error, defaultMessage) => {
-        if (error?.original?.data && typeof error?.original?.data === 'string' && isClaimPreCheckResponse(error)) {
-            return error.original.data;
-        }
-
-        return defaultMessage;
-    };
-
-    render() {
-        const txt = locale.forms.claimPublicationForm;
-
-        const publication = this._publication();
-        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-
-        if (!author) {
-            return <div />;
+    useEffect(() => {
+        if (!author?.aut_id || !publication) {
+            navigate(-1);
         }
 
-        if (!publication || this.props.fullPublicationToClaimLoading) {
-            return (
-                <StandardPage>
-                    <Grid container>
-                        <Grid xs={12}>
-                            <InlineLoader message={txt.publicationLoading} />
-                        </Grid>
-                    </Grid>
-                </StandardPage>
-            );
+        if (publication?.rek_pid && actions) {
+            dispatch(actions.loadFullRecordToClaim(publication.rek_pid));
         }
 
-        const authorLinked =
-            publication &&
-            author &&
-            Array.isArray(publication.fez_record_search_key_author_id) &&
-            publication.fez_record_search_key_author_id.some(authorId => authorId.rek_author_id === author.aut_id);
-        const contributorLinked =
-            publication &&
-            author &&
-            Array.isArray(publication.fez_record_search_key_contributor_id) &&
-            publication.fez_record_search_key_contributor_id.some(
-                contributorId => contributorId.rek_contributor_id === author.aut_id,
-            );
-        const contributorClassName =
-            publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0
-                ? 'contributorsField'
-                : 'requiredField';
-        // if publication.sources is set, user is claiming from Add missing record page
-        const fromAddRecord = !!publication.sources;
-        // set confirmation message depending on file upload status and publication fromAddRecord
-        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
+        return () => dispatch(actions.clearClaimPublication());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [author?.aut_id, publication?.rek_pid, navigate]);
 
-        saveConfirmationLocale.cancelButtonLabel = fromAddRecord
-            ? txt.successWorkflowConfirmation.addRecordButtonLabel
-            : txt.successWorkflowConfirmation.cancelButtonLabel;
+    // Update contentIndicators field's default value once the record is loaded.
+    // This is required to properly render the field with already selected
+    // content indicators as disabled options.
+    useEffect(() => {
+        resetField('contentIndicators', { defaultValue: contentIndicators });
+    }, [setValue, resetField, contentIndicators]);
 
-        saveConfirmationLocale.confirmationMessage = (
-            <React.Fragment>
-                {this.props.publicationToClaimFileUploadingError && (
-                    <Grid container>
-                        <Grid xs={12}>
-                            <Alert pushToTop {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />
-                        </Grid>
-                    </Grid>
-                )}
-                {txt.successWorkflowConfirmation.successConfirmationMessage}
-            </React.Fragment>
-        );
-        let alertProps;
-        if (!publication.rek_pid && this.props.submitFailed) {
-            // if creating a new record from external source failed it might be
-            // because external source doesn't have full required record data
-            // display a custom error message
-            alertProps = validation.getErrorAlertProps({
-                ...this.props,
-                error: this._useCustomErrorMessageIfAvailable(this.props.error, txt.errorAlert.incompleteData),
-                dirty: true,
-                alertLocale: txt,
-            });
-        } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
-            alertProps = { ...txt.alreadyClaimedAlert };
-        } else {
-            alertProps = validation.getErrorAlertProps({
-                ...this.props,
-                error: this.props.error?.message || this.props.error,
-                dirty: true,
-                alertLocale: txt,
-            });
-        }
+    useEffect(() => {
+        if (isSubmitSuccessful) confirmDialogBoxRef.current.showConfirmation();
+    }, [isSubmitSuccessful]);
 
+    if (!author) return null;
+    if (fullPublicationToClaimLoading) {
         return (
-            <StandardPage title={txt.title}>
-                <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
-                    <form onSubmit={this._handleDefaultSubmit}>
-                        <Grid container spacing={3}>
-                            <Grid xs={12}>
-                                <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                                    <PublicationCitation publication={publication} citationStyle={'header'} />
-                                </StandardCard>
-                            </Grid>
-                            {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
-                                <React.Fragment>
-                                    <ConfirmDialogBox
-                                        locale={saveConfirmationLocale}
-                                        onRef={this._setSuccessConfirmation}
-                                        onAction={this._navigateToMyResearch}
-                                        onAlternateAction={this._navigateToFixRecord}
-                                        onCancelAction={this._claimAnother}
-                                        showAlternateActionButton={this.props.publicationToClaimFileUploadingError}
-                                    />
-                                    <NavigationDialogBox
-                                        when={this.props.dirty && !this.props.submitSucceeded}
-                                        txt={txt.cancelWorkflowConfirmation}
-                                    />
-                                    {publication.fez_record_search_key_author &&
-                                        publication.fez_record_search_key_author.length > 0 &&
-                                        !authorLinked && (
-                                            <Grid xs={12}>
-                                                <StandardCard
-                                                    title={txt.authorLinking.title}
-                                                    help={txt.authorLinking.help}
-                                                    className="requiredField"
-                                                >
-                                                    <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
-                                                    <Field
-                                                        name="authorLinking"
-                                                        component={AuthorLinkingField}
-                                                        loggedInAuthor={author}
-                                                        authorList={publication.fez_record_search_key_author}
-                                                        linkedAuthorIdList={publication.fez_record_search_key_author_id}
-                                                        disabled={this.props.submitting}
-                                                        className="requiredField"
-                                                        validate={[validation.required, validation.isValidAuthorLink]}
-                                                    />
-                                                </StandardCard>
-                                            </Grid>
-                                        )}
-                                    {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
-                                        publication.fez_record_search_key_contributor &&
-                                        publication.fez_record_search_key_contributor.length > 0 &&
-                                        !contributorLinked && (
-                                            <Grid xs={12}>
-                                                <StandardCard
-                                                    title={txt.contributorLinking.title}
-                                                    help={txt.contributorLinking.help}
-                                                    className={contributorClassName}
-                                                >
-                                                    <label htmlFor="contributorLinking">
-                                                        {txt.contributorLinking.text}
-                                                    </label>
-                                                    <Field
-                                                        name="contributorLinking"
-                                                        component={ContributorLinkingField}
-                                                        loggedInAuthor={author}
-                                                        authorList={publication.fez_record_search_key_contributor}
-                                                        linkedAuthorIdList={
-                                                            publication.fez_record_search_key_contributor_id
-                                                        }
-                                                        disabled={this.props.submitting}
-                                                        className={contributorClassName}
-                                                        validate={this._contributorValidation}
-                                                    />
-                                                </StandardCard>
-                                            </Grid>
-                                        )}
-                                    <Grid xs={12}>
-                                        <StandardCard title={txt.comments.title} help={txt.comments.help}>
-                                            <Grid container spacing={2}>
-                                                <Grid xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        textFieldId="claim-comments"
-                                                        disabled={this.props.submitting}
-                                                        name="comments"
-                                                        type="text"
-                                                        fullWidth
-                                                        multiline
-                                                        rows={3}
-                                                        label={txt.comments.fieldLabels.comments}
-                                                    />
-                                                </Grid>
-                                                <Grid xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        textFieldId="claim-link"
-                                                        disabled={this.props.submitting}
-                                                        name="rek_link"
-                                                        type="text"
-                                                        fullWidth
-                                                        label={txt.comments.fieldLabels.url}
-                                                        validate={[validation.url]}
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                    {showContentIndicatorsField(publication) && (
-                                        <Grid xs={12}>
-                                            <StandardCard
-                                                title={txt.contentIndicators.title}
-                                                help={txt.contentIndicators.help}
-                                            >
-                                                <Grid container spacing={3}>
-                                                    <Grid xs={12}>
-                                                        <Typography>{txt.contentIndicators.description}</Typography>
-                                                    </Grid>
-                                                    <Grid xs={12}>
-                                                        <Field
-                                                            component={ContentIndicatorsField}
-                                                            displayType={publication.rek_display_type}
-                                                            disabled={this.props.submitting}
-                                                            id="content-indicators"
-                                                            name="contentIndicators"
-                                                            label={txt.contentIndicators.label}
-                                                            multiple
-                                                            fullWidth
-                                                        />
-                                                    </Grid>
-                                                </Grid>
-                                            </StandardCard>
-                                        </Grid>
-                                    )}
-                                    <Grid xs={12}>
-                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                            <Field
-                                                name="files"
-                                                component={FileUploadField}
-                                                disabled={this.props.submitting}
-                                                requireOpenAccessStatus
-                                                validate={[validation.validFileUpload]}
-                                            />
-                                        </StandardCard>
-                                    </Grid>
-                                </React.Fragment>
-                            )}
-                            {alertProps && (
-                                <Grid xs={12}>
-                                    <Alert pushToTop {...alertProps} />
-                                </Grid>
-                            )}
-                        </Grid>
-                        <Grid container spacing={3}>
-                            <Grid xs sx={{ display: { xs: 'none', sm: 'block' } }} />
-                            <Grid xs={12} sm={'auto'}>
-                                <Button
-                                    variant={'contained'}
-                                    fullWidth
-                                    children={txt.cancel}
-                                    disabled={this.props.submitting}
-                                    onClick={this._cancelClaim}
-                                    color={'default'}
-                                />
-                            </Grid>
-                            {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
-                                !(!publication.rek_pid && this.props.submitFailed) && (
-                                    <Grid xs={12} sm={'auto'}>
-                                        <Button
-                                            variant={'contained'}
-                                            color={'primary'}
-                                            fullWidth
-                                            children={txt.submit}
-                                            onClick={this.props.handleSubmit}
-                                            disabled={this.props.submitting || this.props.disableSubmit}
-                                            id="claimSubmit"
-                                            data-analyticsid="claimSubmit"
-                                        />
-                                    </Grid>
-                                )}
-                        </Grid>
-                    </form>
-                </ConfirmDiscardFormChanges>
+            <StandardPage>
+                <Grid container>
+                    <Grid xs={12}>
+                        <InlineLoader message={txt.publicationLoading} />
+                    </Grid>
+                </Grid>
             </StandardPage>
         );
     }
-}
+
+    const onSubmit = safelyHandleSubmit(
+        async () => await dispatch(actions.claimPublication(mergeWithFormValues({ author, publication }))),
+    );
+    // validation
+    const contributorValidation = link => {
+        const hasAuthors = !!publication?.fez_record_search_key_author?.length;
+        return validation.isValidContributorLink(link, !hasAuthors);
+    };
+    // navigation
+    const navigateToMyResearch = () => navigate(pathConfig.records.mine);
+    const navigateToFixRecord = () => navigate(pathConfig.records.fix(publication.rek_pid));
+    const claimAnother = () => {
+        if (!!redirectPath) {
+            navigate(redirectPath);
+            dispatch(actions.clearNewRecord());
+            dispatch(actions.clearRedirectPath());
+        } else {
+            navigate(-1);
+        }
+    };
+    const cancelClaim = () => {
+        dispatch(actions.clearNewRecord());
+        navigate(-1);
+    };
+
+    // dialog & alert
+    const authorLinked = publication?.fez_record_search_key_author_id?.some(id => id.rek_author_id === author.aut_id);
+    const contributorLinked = publication?.fez_record_search_key_contributor_id?.some(
+        id => id.rek_contributor_id === author.aut_id,
+    );
+    const alertProps = getAlertProps(
+        publication,
+        authorLinked,
+        contributorLinked,
+        getPropsForAlert,
+        isSubmitting,
+        isSubmitSuccessful,
+        isSubmitFailure,
+        serverError,
+    );
+    // set confirmation message depending on file upload status
+    const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
+    saveConfirmationLocale.confirmationMessage = (
+        <React.Fragment>
+            {publicationToClaimFileUploadingError && (
+                <Grid container>
+                    <Grid xs={12}>
+                        <Alert pushToTop {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />
+                    </Grid>
+                </Grid>
+            )}
+            {txt.successWorkflowConfirmation.successConfirmationMessage}
+        </React.Fragment>
+    );
+    const contributorClassName = publication?.fez_record_search_key_author?.length
+        ? 'contributorsField'
+        : 'requiredField';
+
+    return (
+        <StandardPage title={txt.title}>
+            <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
+                <form onSubmit={onSubmit}>
+                    <Grid container spacing={3}>
+                        <Grid xs={12}>
+                            <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
+                                <PublicationCitation publication={publication} citationStyle="header" />
+                            </StandardCard>
+                        </Grid>
+                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
+                            <>
+                                <ConfirmDialogBox
+                                    locale={saveConfirmationLocale}
+                                    onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
+                                    onAction={navigateToMyResearch}
+                                    onAlternateAction={navigateToFixRecord}
+                                    onCancelAction={claimAnother}
+                                    showAlternateActionButton={!!publicationToClaimFileUploadingError}
+                                />
+                                <NavigationDialogBox
+                                    when={isDirty && !isSubmitSuccessful}
+                                    txt={txt.cancelWorkflowConfirmation}
+                                />
+                                {publication.fez_record_search_key_author &&
+                                    publication.fez_record_search_key_author.length > 0 &&
+                                    !authorLinked && (
+                                        <Grid xs={12}>
+                                            <StandardCard
+                                                title={txt.authorLinking.title}
+                                                help={txt.authorLinking.help}
+                                                className="requiredField"
+                                            >
+                                                <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
+                                                <Field
+                                                    control={control}
+                                                    name="authorLinking"
+                                                    component={AuthorLinkingField}
+                                                    loggedInAuthor={author}
+                                                    authorList={publication.fez_record_search_key_author}
+                                                    linkedAuthorIdList={publication.fez_record_search_key_author_id}
+                                                    disabled={isSubmitting}
+                                                    className="requiredField"
+                                                    validate={[validation.required, validation.isValidAuthorLink]}
+                                                />
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
+                                {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
+                                    publication.fez_record_search_key_contributor &&
+                                    publication.fez_record_search_key_contributor.length > 0 &&
+                                    !contributorLinked && (
+                                        <Grid xs={12}>
+                                            <StandardCard
+                                                title={txt.contributorLinking.title}
+                                                help={txt.contributorLinking.help}
+                                                className={contributorClassName}
+                                            >
+                                                <label htmlFor="contributorLinking">
+                                                    {txt.contributorLinking.text}
+                                                </label>
+                                                <Field
+                                                    control={control}
+                                                    name="contributorLinking"
+                                                    component={ContributorLinkingField}
+                                                    loggedInAuthor={author}
+                                                    authorList={publication.fez_record_search_key_contributor}
+                                                    linkedAuthorIdList={
+                                                        publication.fez_record_search_key_contributor_id
+                                                    }
+                                                    disabled={isSubmitting}
+                                                    className={contributorClassName}
+                                                    validate={[contributorValidation]}
+                                                />
+                                            </StandardCard>
+                                        </Grid>
+                                    )}
+                                <Grid xs={12}>
+                                    <StandardCard title={txt.comments.title} help={txt.comments.help}>
+                                        <Grid container spacing={2}>
+                                            <Grid xs={12}>
+                                                <Field
+                                                    control={control}
+                                                    component={TextField}
+                                                    textFieldId="claim-comments"
+                                                    disabled={isSubmitting}
+                                                    name="comments"
+                                                    type="text"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={3}
+                                                    label={txt.comments.fieldLabels.comments}
+                                                />
+                                            </Grid>
+                                            <Grid xs={12}>
+                                                <Field
+                                                    control={control}
+                                                    component={TextField}
+                                                    textFieldId="claim-link"
+                                                    disabled={isSubmitting}
+                                                    name="rek_link"
+                                                    type="text"
+                                                    fullWidth
+                                                    label={txt.comments.fieldLabels.url}
+                                                    validate={[validation.url]}
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                                {showContentIndicatorsField(publication) && (
+                                    <Grid xs={12}>
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
+                                            <Grid container spacing={3}>
+                                                <Grid xs={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                </Grid>
+                                                <Grid xs={12}>
+                                                    <Field
+                                                        control={control}
+                                                        component={ContentIndicatorsField}
+                                                        displayType={publication.rek_display_type}
+                                                        disabled={isSubmitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                )}
+                                <Grid xs={12}>
+                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                        <Field
+                                            control={control}
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={isSubmitting}
+                                            requireOpenAccessStatus
+                                            validate={[validation.validFileUpload]}
+                                        />
+                                    </StandardCard>
+                                </Grid>
+                            </>
+                        )}
+                        {alertProps && (
+                            <Grid xs={12}>
+                                <Alert {...alertProps} />
+                            </Grid>
+                        )}
+                    </Grid>
+                    <Grid container spacing={3}>
+                        <Grid xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                        <Grid xs={12} sm={'auto'}>
+                            <Button
+                                variant={'contained'}
+                                fullWidth
+                                children={txt.cancel}
+                                disabled={isSubmitting}
+                                onClick={cancelClaim}
+                                color={'default'}
+                            />
+                        </Grid>
+                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                            !(!publication.rek_pid && isSubmitFailure) && (
+                                <Grid xs={12} sm="auto">
+                                    <Button
+                                        type="submit"
+                                        variant={'contained'}
+                                        color={'primary'}
+                                        fullWidth
+                                        children={txt.submit}
+                                        disabled={isSubmitting || hasError}
+                                        id="claimSubmit"
+                                        data-testid="claim-record-submit"
+                                        data-analyticsid="claimSubmit"
+                                    />
+                                </Grid>
+                            )}
+                    </Grid>
+                </form>
+            </ConfirmDiscardFormChanges>
+        </StandardPage>
+    );
+};
+
+export default ClaimRecord;

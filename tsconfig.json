@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "modules/*": ["modules/*"]
+        },
+        "target": "esnext",
+        "jsx": "react-jsxdev",
+        "module": "esnext",
+        "moduleResolution": "Bundler",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "allowJs": true,
+        "checkJs": false,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        // for MUI types
+        "lib": ["es6", "dom"]
+    },
+    "include": ["src/**/*.tsx", "src/**/*.ts", "utils/**/*.ts"],
+    "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist" ]
+}

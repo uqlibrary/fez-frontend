@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field as LegacyFieldWrapper } from 'redux-form/immutable';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import MenuItem from '@mui/material/MenuItem';
@@ -41,6 +41,7 @@ export default class NtroFields extends React.PureComponent {
         showSignificance: PropTypes.bool,
         hideAbstract: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
+        fieldWrapper: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     };
 
     static defaultProps = {
@@ -117,7 +118,8 @@ export default class NtroFields extends React.PureComponent {
                                 Abstract/Description* <span style={{ fontWeight: 700 }}>(for public view)</span>
                             </span>
                         ),
-                        placeholder: 'Enter a brief description of the work',
+                        placeholder:
+                            'Enter a brief description of the work - 800 character limit is no longer applicable',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -162,6 +164,7 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Grant details',
             },
         },
+        fieldWrapper: LegacyFieldWrapper,
     };
 
     constructor(props) {
@@ -171,19 +174,39 @@ export default class NtroFields extends React.PureComponent {
         this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
-    componentDidUpdate() {
-        this.row3Width = this.getWidth([
-            this.props.hideVolume,
-            this.props.hideIssue,
-            this.props.hideStartPage,
-            this.props.hideEndPage,
-        ]);
-        this.row4Width = this.getWidth([this.props.hideExtent, this.props.hideOriginalFormat]);
-        this.row5Width = this.getWidth([
-            this.props.hideAudienceSize,
-            this.props.hidePeerReviewActivity,
-            this.props.hideLanguage,
-        ]);
+    componentDidUpdate(prevProps) {
+        if (
+            prevProps.hideVolume !== this.props.hideVolume ||
+            prevProps.hideIssue !== this.props.hideIssue ||
+            prevProps.hideStartPage !== this.props.hideStartPage ||
+            prevProps.hideEndPage !== this.props.hideEndPage
+        ) {
+            this.row3Width = this.getWidth([
+                this.props.hideVolume,
+                this.props.hideIssue,
+                this.props.hideStartPage,
+                this.props.hideEndPage,
+            ]);
+        }
+
+        if (
+            prevProps.hideExtent !== this.props.hideExtent ||
+            prevProps.hideOriginalFormat !== this.props.hideOriginalFormat
+        ) {
+            this.row4Width = this.getWidth([this.props.hideExtent, this.props.hideOriginalFormat]);
+        }
+
+        if (
+            prevProps.hideAudienceSize !== this.props.hideAudienceSize ||
+            prevProps.hidePeerReviewActivity !== this.props.hidePeerReviewActivity ||
+            prevProps.hideLanguage !== this.props.hideLanguage
+        ) {
+            this.row5Width = this.getWidth([
+                this.props.hideAudienceSize,
+                this.props.hidePeerReviewActivity,
+                this.props.hideLanguage,
+            ]);
+        }
     }
 
     getWidth = fields => {
@@ -213,6 +236,7 @@ export default class NtroFields extends React.PureComponent {
 
     render() {
         const { contributionStatement, metadata, grantEditor } = this.props.locale;
+        const { fieldWrapper: Field } = this.props;
         return (
             <React.Fragment>
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
@@ -279,17 +303,18 @@ export default class NtroFields extends React.PureComponent {
                             <Grid container spacing={2}>
                                 <Grid xs={12}>
                                     {!this.props.hideAbstract && (
-                                        <Field
-                                            component={RichEditorField}
-                                            name="ntroAbstract"
-                                            fullWidth
-                                            title={metadata.fields.abstract.label}
-                                            description={metadata.fields.abstract.placeholder}
-                                            maxValue={800}
-                                            disabled={this.props.submitting}
-                                            validate={[validation.required, validation.maxListEditorTextLength800]}
-                                            richEditorId="rek-description"
-                                        />
+                                        <>
+                                            <Field
+                                                component={RichEditorField}
+                                                name="ntroAbstract"
+                                                fullWidth
+                                                title={metadata.fields.abstract.label}
+                                                description={metadata.fields.abstract.placeholder}
+                                                disabled={this.props.submitting}
+                                                validate={[validation.required, validation.maxListEditorTextLength65k]}
+                                                richEditorId="rek-description"
+                                            />
+                                        </>
                                     )}
                                 </Grid>
                                 {!this.props.hideIsmn && (

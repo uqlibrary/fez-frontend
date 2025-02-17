@@ -1,7 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
+
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
+import { prefixByUrlResolver } from 'config/general';
+
+import HelpIcon from '@mui/icons-material/Help';
+import Tooltip from '@mui/material/Tooltip';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -20,6 +26,225 @@ export const loremIpsum =
 
 export default {
     components: {
+        adminDashboard: {
+            title: 'Admin dashboard',
+            tabs: {
+                today: {
+                    tabLabel: 'TODAY',
+                    systemalerts: {
+                        title: 'System Alerts',
+                        total: { label: 'Total' },
+                        today: {
+                            label: 'New today',
+                        },
+                        assigned: {
+                            label: 'Assigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                        unassigned: {
+                            label: 'Unassigned',
+                            suffix: (total, value) =>
+                                (!!total && !!value && ` (${Math.round((value / total) * 100)}%)`) || '',
+                        },
+                    },
+                    works: {
+                        unprocessed: 'Unprocessed Works',
+                        unprocessedSubText: 'view',
+                        processed: 'Processed Works',
+                        processedSubText: (dateFrom, dateTo) => {
+                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                            return (
+                                <>
+                                    this iteration{' '}
+                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
+                                        <HelpIcon fontSize="small" />
+                                    </Tooltip>
+                                </>
+                            );
+                        },
+                    },
+                    openaccess: {
+                        researchOutput: {
+                            title: 'OA Status',
+                            subText: 'of research output',
+                            chart: {
+                                text: (current, total) =>
+                                    `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
+                                subtext: total => `of ${total} records`,
+                            },
+                        },
+                    },
+                    quicklinks: {
+                        title: 'Quick Links ',
+                        addLinkText: '+ add',
+                        loading: {
+                            message: 'Loading quick links...',
+                            nodata: 'Add your first quick link using the "add" button',
+                        },
+                        link: {
+                            menu: {
+                                editLabel: 'Edit',
+                                deleteLabel: 'Delete',
+                                moveUpLabel: 'Move up',
+                                moveTopLabel: 'Move to top',
+                                moveDownLabel: 'Move down',
+                                moveBottomLabel: 'Move to bottom',
+                            },
+                        },
+                        admin: {
+                            add: {
+                                title: 'Add new quick link',
+                            },
+                            edit: {
+                                title: 'Edit ',
+                            },
+                            delete: {
+                                title: 'DELETE ',
+                            },
+                            button: {
+                                delete: 'Delete',
+                                save: 'Save',
+                                deleteBusy: 'Deleting...',
+                                saveBusy: 'Saving...',
+                                cancel: 'Cancel',
+                            },
+                            fields: {
+                                title: 'Title',
+                                link: 'Link',
+                            },
+                        },
+                        error: {
+                            title: 'Error',
+                            updating: 'An error occurred updating the quick link data.',
+                        },
+                    },
+                    loading: {
+                        message: 'Loading dashboard...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                },
+                systemalerts: {
+                    tabLabel: 'SYSTEM ALERTS',
+                    title: count => `${count} system alerts`,
+                    loading: {
+                        message: 'Loading system alerts...',
+                        nodata: 'No alerts available',
+                        noconfig: 'No config available',
+                    },
+                    updating: 'Updating...',
+                    columns: {
+                        createdDate: 'Created',
+                        topic: 'Topic',
+                        status: 'Status',
+                    },
+                    drawer: {
+                        markResolved: 'Mark as resolved',
+                        updating: 'Updating...',
+                        alertId: 'Alert ID',
+                        received: 'Received',
+                        status: 'Status',
+                        statusHelpText: 'Assign a staff member to this issue',
+                    },
+                    alertStatus: {
+                        UNASSIGNED: 'Unassigned',
+                        UNKNOWN: 'Unknown',
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving system alert data.',
+                        updateFailed: 'An error occurred updating the system alert data.',
+                    },
+                },
+                reports: {
+                    tabLabel: 'REPORTS',
+                    exportTitle: 'Export-only reports',
+                    displayTitle: 'Display reports',
+                    loading: {
+                        config: 'Loading config data...',
+                        nodata: 'No data available',
+                        noconfig: 'No config available',
+                    },
+                    label: {
+                        report: 'Report',
+                        systemId: 'System alert ID',
+                        dateFrom: 'From',
+                        dateTo: 'To',
+                        runReport: 'Run report',
+                        export: 'Export',
+                        exportReport: 'Export report',
+                        helperText: 'Report will download to your device or be emailed directly to you',
+                    },
+                    columns: {
+                        workshistory: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            pubDate: 'Date published',
+                            pid: 'PID',
+                            genre: 'Genre',
+                            subtype: 'Subtype',
+                            user: 'Username',
+                            action: 'Action',
+                        },
+                        systemalertlog: {
+                            id: 'ID',
+                            dateCreated: 'Date created',
+                            title: 'Title',
+                            assignedTo: 'Assigned to',
+                            assignedDate: 'Date assigned',
+                            resolvedBy: 'Resolved by',
+                            resolvedDate: 'Date resolved',
+                            content: 'Description',
+                            link: 'Link',
+                        },
+                    },
+                    error: {
+                        title: 'Error',
+                        general: 'An error occurred while retrieving the report.',
+                        required: 'Required',
+                        invalidDate: 'Invalid date',
+                        dateNotBefore: 'Must not be before "from" date',
+                        dateNotAfter: 'Must not be after "to" date',
+                        recordId: 'Must be a positive whole number',
+                    },
+                    alert: {
+                        noResults: reportName => ({
+                            title: 'Nothing to export',
+                            message: `No results were returned by the report '${reportName}'`,
+                            type: 'info',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                        jobQueued: reportName => ({
+                            title: 'Report queued',
+                            message: `Your report '${reportName}' has been added to the queue. Exported data will be emailed to you directly.`,
+                            type: 'done',
+                            alertId: 'alert-export-report',
+                            allowDismiss: true,
+                        }),
+                    },
+                    options: {
+                        display: [
+                            {
+                                value: 'workshistory',
+                                label: 'Works history',
+                            },
+                            {
+                                value: 'systemalertlog',
+                                label: 'System alert log',
+                            },
+                        ],
+                    },
+                },
+            },
+            loading: {
+                config: 'Loading config data...',
+                nodata: 'No data available',
+                noconfig: 'No config available',
+            },
+        },
         publicationsList: {
             selectAllText: 'Select all',
         },
@@ -78,6 +303,10 @@ export default {
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
                     title: 'Google scholar',
+                },
+                dimensions: {
+                    externalUrl: prefixByUrlResolver('https://app.dimensions.ai/details/publication/') + '[id]',
+                    title: 'Dimensions',
                 },
             },
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
@@ -2300,6 +2529,19 @@ export default {
                 </span>
             ),
         },
+        genAiTermsOfUse: {
+            title: 'Restrictions on Use',
+            text: (
+                <span>
+                    You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s
+                    commercial licences with resource providers. You may not share, re-publish, copy or enter into AI
+                    technologies any part of an object accessed from our digital collections, unless expressly permitted
+                    in the licence terms for that digital object. Data/text mining, distribution, systematic copying and
+                    downloading of objects may also be prohibited. More information may be available in the rights
+                    statement located in an item's record.
+                </span>
+            ),
+        },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
         },
@@ -3993,7 +4235,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish/publish-and-share/think"
                                         >
                                             Read more about Strategic Publishing
                                         </a>
@@ -4030,7 +4272,7 @@ export default {
                                     <p>
                                         The published version (
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             also known as Gold open access
@@ -4040,7 +4282,7 @@ export default {
                                         versions can be made open access via Article process charges, without charges,
                                         or through the Library's{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -4050,7 +4292,7 @@ export default {
                                     <p>
                                         The accepted version (also referred to as{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/types-open-access"
                                             target="_blank"
                                         >
                                             self-archiving or Green open access
@@ -4068,7 +4310,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access"
                                         >
                                             Read more about open access
                                         </a>
@@ -4085,13 +4327,16 @@ export default {
                                     </p>
                                     <p>
                                         Some publishers have{' '}
-                                        <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
+                                        <a
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/article-processing-charges"
+                                            target="_blank"
+                                        >
                                             Article processing charges (APCs)
                                         </a>{' '}
                                         a fee paid to make an article immediately available and openly accessible. The
                                         Library has{' '}
                                         <a
-                                            href="https://web.library.uq.edu.au/read-and-publish-agreements"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
@@ -4105,7 +4350,7 @@ export default {
                                     <p>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/publishing-your-work-open-access"
                                         >
                                             Read more
                                         </a>
@@ -4134,7 +4379,7 @@ export default {
                                     <li>
                                         <a
                                             target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/publish-share"
+                                            href="https://web.library.uq.edu.au/research-and-publish/publish"
                                         >
                                             Find out more about publishing at UQ Library
                                         </a>

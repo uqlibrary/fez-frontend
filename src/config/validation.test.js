@@ -147,10 +147,6 @@ describe('Validation method', () => {
     });
 
     it('should validate doi', () => {
-        expect(validation.isValidDOIValue('https://doi.org/10.1007/978-3-319-60492-3_52')).toBeTruthy();
-        expect(validation.isValidDOIValue('https://dx.doi.org/10.1007/978-3-319-60492-3_52')).toBeTruthy();
-        expect(validation.isValidDOIValue('https://12345/10.1007/978-3-319-60492-3_52')).toBeTruthy();
-        expect(validation.isValidDOIValue('abcde/10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/something')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1021/jp030583+')).toBeTruthy();
@@ -228,10 +224,10 @@ describe('Validation method', () => {
     });
 
     it('should validate google scholar id', () => {
-        expect(validation.isValidGoogleScholarId('231234252345')).toEqual('');
-        expect(validation.isValidGoogleScholarId('rtgtwDFRjuHn')).toEqual('');
-        expect(validation.isValidGoogleScholarId('-31234252345')).toEqual('');
-        expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toEqual('');
+        expect(validation.isValidGoogleScholarId('231234252345')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('rtgtwDFRjuHn')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('-31234252345')).toBeUndefined();
+        expect(validation.isValidGoogleScholarId('12345vbgHJ0p')).toBeUndefined();
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 

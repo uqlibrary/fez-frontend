@@ -1,14 +1,54 @@
 import formsLocale from '../../src/locale/forms';
-import { myRecordsList, publicationTypeListThesis } from '../../src/mock/data/records';
+import {
+    myRecordsList,
+    publicationTypeListThesis,
+    recordWithRDM,
+    collectionRecord,
+    recordThatFailsDeletion,
+} from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
-const uqDoiRecord = publicationTypeListThesis.data[0];
+const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
+const recordWithDataCiteDoi = recordWithRDM;
+
+const baseUrl = Cypress.config('baseUrl');
+
+const selectors = {
+    reasonInput: '[data-testid=reason-input]',
+    submitButton: '[data-testid=submit-delete-record]',
+    cancelButton: '[data-testid=cancel-delete-record]',
+};
+
+const loadPage = record => {
+    cy.visit(`/admin/delete/${record.rek_pid}?user=uqstaff`);
+};
+
+const submit = () => {
+    const deleteFormLocale = formsLocale.forms.deleteRecordForm;
+    cy.assertEnabled(selectors.submitButton).click();
+    cy.get('[data-testid=alert] .alert-text')
+        .should('contain', deleteFormLocale.progressAlert.title)
+        .should('contain', deleteFormLocale.progressAlert.message);
+    cy.get('[data-testid=alert] .alert-text')
+        .should('contain', deleteFormLocale.successAlert.title)
+        .should('contain', deleteFormLocale.successAlert.message);
+    cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
+    cy.contains('button', deleteFormLocale.successWorkflowConfirmation.confirmButtonLabel).click();
+};
+
+const assertNavigatedToViewPage = record => {
+    cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
+};
+
+const triggerReasonFieldValidationError = () => {
+    cy.fillInput(selectors.reasonInput, 'a', 256);
+    cy.get('p', { timeout: 1000 }).should('contain', 'Must be 255 characters or less');
+};
 
 context('Delete work form', () => {
-    const baseUrl = Cypress.config('baseUrl');
     const deleteFormLocale = formsLocale.forms.deleteRecordForm;
 
     it('should render as expected', () => {
-        cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
+        loadPage(record);
         cy.contains('h2', 'Delete work');
         cy.get('.StandardCard')
             .should('have.length', 2)
@@ -17,47 +57,82 @@ context('Delete work form', () => {
         cy.contains('.StandardCard .publicationCitation h6 a', myRecordsList.data[0].rek_title);
         cy.get('[data-testid=rek-content-indicator]').contains('Scholarship of Teaching and Learning');
         cy.contains('Describe the reason to delete this work');
-        cy.contains('button', 'Cancel');
+        cy.contains('button', 'Cancel').should('not.be.disabled');
         cy.contains('button', 'Delete').should('not.be.disabled');
     });
 
-    it('can submit the form', () => {
-        cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
-        cy.contains('h2', 'Delete work');
-        cy.get('button#submit-delete-record')
-            .should('not.be.disabled')
-            .click();
-        cy.get('[data-testid=alert] .alert-text')
-            .should('contain', deleteFormLocale.progressAlert.title)
-            .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[data-testid=alert] .alert-text')
-            .should('contain', deleteFormLocale.successAlert.title)
-            .should('contain', deleteFormLocale.successAlert.message);
-        cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
-        cy.contains('button', deleteFormLocale.successWorkflowConfirmation.confirmButtonLabel).click();
-        cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
+    context('validation', () => {
+        context('form', () => {
+            it('should validate reason field for a record without DOI', () => {
+                loadPage(record);
+                cy.assertTriggersDisabled(selectors.submitButton, () => {
+                    triggerReasonFieldValidationError();
+                });
+            });
+
+            it('should validate fields for a record with Crossref DOI', () => {
+                loadPage(recordWithCrossrefDoi);
+                cy.assertTriggersDisabled(selectors.submitButton, () => {
+                    triggerReasonFieldValidationError();
+                    cy.fillInput('[data-testid=rek-doi-resolution-url-input]', 'bad.url');
+                    cy.get('p').should('contain', 'URL is not valid');
+                });
+            });
+
+            it('should validate fields for a record with DataCite DOI', () => {
+                loadPage(recordWithDataCiteDoi);
+                cy.assertTriggersDisabled(selectors.submitButton, () => {
+                    triggerReasonFieldValidationError();
+                    cy.fillInput('[data-testid=rek-new-doi-input]', '10.123.bad-doi');
+                    cy.get('p').should('contain', 'DOI is not valid');
+                    cy.typeCKEditor('rek-deletion-notes', 'a'.repeat(2001));
+                    cy.get('span').should('contain', 'Must be 2000 characters or less');
+                });
+            });
+        });
+
+        context('server', () => {
+            it('should display "not found" message on 404', () => {
+                loadPage({ rek_pid: 'UQ:abc123' });
+                cy.get('[data-testid=page-title]').contains('Work not found');
+            });
+
+            it('should display error message on server error', () => {
+                loadPage(recordThatFailsDeletion);
+                cy.assertEnabled(selectors.submitButton).click();
+                cy.get('[data-testid=ErrorOutlineIcon]').should('be.visible');
+                cy.assertEnabled(selectors.submitButton);
+                cy.assertEnabled(selectors.cancelButton);
+            });
+
+            it('should display error when trying to delete collection record with children', () => {
+                loadPage(collectionRecord);
+                cy.assertEnabled(selectors.submitButton).click();
+                cy.get('[data-testid=ErrorOutlineIcon]').should('be.visible');
+                cy.assertEnabled(selectors.submitButton);
+                cy.assertEnabled(selectors.cancelButton);
+            });
+        });
     });
 
-    it('can enter reason and submit the form', () => {
-        cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
-        cy.get('[data-testid=reason-input]').type('reason');
-        cy.get('button#submit-delete-record')
-            .should('not.be.disabled')
-            .click();
-        cy.get('[data-testid=alert] .alert-text')
-            .should('contain', deleteFormLocale.progressAlert.title)
-            .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[data-testid=alert] .alert-text')
-            .should('contain', deleteFormLocale.successAlert.title)
-            .should('contain', deleteFormLocale.successAlert.message);
-        cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
-        cy.contains('button', deleteFormLocale.successWorkflowConfirmation.cancelButtonLabel).click();
-        cy.url().should('equal', `${baseUrl}/records/search`);
-    });
+    context('navigation', () => {
+        it('should navigate to view record on cancel', () => {
+            loadPage(record);
+            cy.assertEnabled(selectors.cancelButton).click();
+            assertNavigatedToViewPage(record);
+        });
 
-    it('should show nav dialog when exit the form with reason entered', () => {
-        cy.visit(`/admin/delete/${record.rek_pid}/?user=uqstaff`);
-        cy.get('[data-testid=reason-input]').type('reason');
-        cy.navToHomeFromMenu(deleteFormLocale.cancelWorkflowConfirmation);
+        it('should allow navigating to search records after form submission', () => {
+            loadPage(record);
+            cy.assertEnabled(selectors.submitButton).click();
+            cy.contains('button', deleteFormLocale.successWorkflowConfirmation.cancelButtonLabel).click();
+            cy.url().should('equal', `${baseUrl}/records/search`);
+        });
+
+        it('should show nav dialog when exit the form with reason entered', () => {
+            loadPage(record);
+            cy.get(selectors.reasonInput).type('reason');
+            cy.navToHomeFromMenu(deleteFormLocale.cancelWorkflowConfirmation);
+        });
     });
 });

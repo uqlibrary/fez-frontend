@@ -1,6 +1,7 @@
 export const TRANSITION_COHORT = [
     /* test accounts */
     's2222222',
+    's5555555',
     'student_test',
     /* from grad school */
     's001106',
@@ -512,4 +513,6 @@ export const TRANSITION_COHORT = [
     's4627000',
     's4604786',
     's4604760',
+    's4650905',
+    's4595123',
 ];

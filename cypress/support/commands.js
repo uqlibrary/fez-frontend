@@ -26,6 +26,22 @@
 
 import moment from 'moment';
 
+import { DATA_ATTRIBUTE, CSS_SELECTOR_STARTSWITH } from './constants';
+
+Cypress.Commands.add('data', id => {
+    return cy.get(`[${DATA_ATTRIBUTE}\=${id}]`);
+});
+
+/* Convenience command for selectors starting with a string (^=) */
+Cypress.Commands.add('dataStartsWith', (id, ...args) => {
+    return cy.get(`[${DATA_ATTRIBUTE}${CSS_SELECTOR_STARTSWITH}${id}]${args}`);
+});
+
+/* Convenience command for specific elements with selectors starting with a string (^=) */
+Cypress.Commands.add('dataByElementStartsWith', (el, id, ...args) => {
+    return cy.get(`${el}[${DATA_ATTRIBUTE}${CSS_SELECTOR_STARTSWITH}${id}]${args}`);
+});
+
 /**
  * Simulates a paste event.
  * Modified from https://gist.github.com/nickytonline/bcdef8ef00211b0faf7c7c0e7777aaf6
@@ -151,3 +167,29 @@ Cypress.Commands.add('axeViolationParser', errors => {
         console.log(`${error.impact} : ${error.description}`, elements);
     });
 });
+
+/**
+ * Check if a given element (input) lacks disable attribute
+ */
+Cypress.Commands.add('assertEnabled', selector => cy.get(selector).should('not.be.disabled'));
+
+/**
+ * Check if a given element (input) has disabled attribute
+ */
+Cypress.Commands.add('assertDisabled', selector => cy.get(selector).should('be.disabled'));
+
+/**
+ * Check if a given enabled element (input) is enabled before and disabled after a given callback is executed
+ */
+Cypress.Commands.add('assertTriggersDisabled', (selector, callback) => {
+    cy.assertEnabled(selector);
+    callback();
+    cy.assertDisabled(selector);
+});
+
+/**
+ * Fill input with given value, n times
+ */
+Cypress.Commands.add('fillInput', (selector, value, times = 1) =>
+    cy.get(selector).type(String(value).repeat(times), { delay: 0 }),
+);

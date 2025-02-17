@@ -109,6 +109,9 @@ const webpackConfig = {
         },
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            process: 'process/browser.js',
+        }),
         new HtmlWebpackPlugin({
             favicon: resolve(__dirname, './public', 'favicon.ico'),
             filename: 'index.html',
@@ -202,7 +205,7 @@ const webpackConfig = {
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.(j|t)sx?$/,
                 include: [resolve(__dirname, 'src')],
                 exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
@@ -214,6 +217,11 @@ const webpackConfig = {
                         ],
                     },
                 },
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader?configFile=tsconfig.webpack-dist.json',
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
             },
             {
                 test: /\.scss/,
@@ -233,7 +241,7 @@ const webpackConfig = {
     resolve: {
         descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: ['.jsx', '.js', '.json'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
         modules: ['src', 'node_modules', 'custom_modules'],
         fallback: {
             assert: require.resolve('assert'),

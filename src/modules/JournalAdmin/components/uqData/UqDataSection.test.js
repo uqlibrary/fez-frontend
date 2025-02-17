@@ -1,13 +1,20 @@
 import React from 'react';
-import { rtlRender, WithReduxStore } from 'test-utils';
+import { rtlRender } from 'test-utils';
 import UqDataSection from './UqDataSection';
 
 jest.mock('../../../../context');
-import { useJournalContext, useFormValuesContext } from 'context';
-import { journalDoaj } from 'mock/data';
-import { reduxForm } from 'redux-form';
+import { useJournalContext } from 'context';
 
-const WithReduxForm = reduxForm({ form: 'testForm' })(UqDataSection);
+import { FormProvider } from 'react-hook-form';
+import { journalDoaj } from 'mock/data';
+import { useValidatedForm } from 'hooks';
+import { ADMIN_JOURNAL } from 'config/general';
+
+// eslint-disable-next-line react/prop-types
+const FormProviderWrapper = ({ children, ...props }) => {
+    const methods = useValidatedForm(props);
+    return <FormProvider {...methods}>{children}</FormProvider>;
+};
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -15,9 +22,9 @@ function setup(testProps = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore>
-            <WithReduxForm {...props} />
-        </WithReduxStore>,
+        <FormProviderWrapper>
+            <UqDataSection {...props} />
+        </FormProviderWrapper>,
     );
 }
 
@@ -27,12 +34,7 @@ describe('UqDataSection component', () => {
             journalDetails: {
                 ...journalDoaj.data,
             },
-            jnlDisplayType: 'adminjournal',
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
-            },
+            jnlDisplayType: ADMIN_JOURNAL,
         }));
 
         const { getByTestId } = setup();
@@ -43,7 +45,7 @@ describe('UqDataSection component', () => {
         );
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');
@@ -68,11 +70,6 @@ describe('UqDataSection component', () => {
             },
             jnlDisplayType: 'adminjournal',
         }));
-        useFormValuesContext.mockImplementation(() => ({
-            formValues: {
-                languages: ['eng'],
-            },
-        }));
 
         const { getByTestId } = setup();
 
@@ -80,7 +77,7 @@ describe('UqDataSection component', () => {
         expect(getByTestId('jnl-read-and-publish-link-prefix')).toHaveTextContent('Yes, via De Gruyter');
         expect(getByTestId('jnl-read-and-publish-lookup-link')).toHaveAttribute(
             'href',
-            'https://web.library.uq.edu.au/read-and-publish-agreements',
+            'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
         );
 
         expect(getByTestId('jnl-uq-author-count-header')).toHaveTextContent('Recently published UQ authors');

@@ -17,6 +17,7 @@ import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsL
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
+import { isArrayDeeplyEqual } from '../../../../helpers/general';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -79,8 +80,15 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        if (prevProps.input?.value !== this.props.input?.value) {
+            this.setState({
+                contributors: this.getContributorsWithAffiliationsFromProps(this.props),
+            });
+        }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
-        this.props.onChange?.(this.state.contributors);
+        if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
+            this.props.onChange?.(this.state.contributors);
+        }
         const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
             if (Object.keys(updated).length > 0) {
@@ -205,8 +213,12 @@ export class ContributorsEditor extends PureComponent {
             });
             return;
         }
-        const isContributorACurrentAuthor =
-            this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
+        const isContributorACurrentAuthor = contributor.uqIdentifier === `${this.props.author?.aut_id}`;
+        // if the contributor being updated is the author of the publication, we should keep its authorId
+        const isUpdatingPublicationAuthor =
+            this.props.canEdit &&
+            contributor.selected &&
+            parseInt(contributor.authorId, 10) === parseInt(this.props.author?.aut_id, 10);
 
         /* istanbul ignore next */
         this.setState({
@@ -226,7 +238,8 @@ export class ContributorsEditor extends PureComponent {
                         this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
                     selected: !this.props.editMode && isContributorACurrentAuthor,
                     ...(!this.props.isNtro ? { selected: contributor.selected } : {}),
-                    authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
+                    authorId:
+                        isContributorACurrentAuthor || isUpdatingPublicationAuthor ? this.props.author.aut_id : null,
                     required: contributor.required || false,
                 },
                 ...this.state.contributors.slice(index + 1).map(contrib => ({

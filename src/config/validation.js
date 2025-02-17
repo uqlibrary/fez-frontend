@@ -19,6 +19,7 @@ export const spacelessMaxLengthValidator = max => value => {
 };
 
 export const maxLength255Validator = maxLengthValidator(255);
+export const maxLength1000Validator = maxLengthValidator(1000);
 export const spacelessMaxLength9Validator = spacelessMaxLengthValidator(9);
 export const spacelessMaxLength10Validator = spacelessMaxLengthValidator(10);
 export const spacelessMaxLength11Validator = spacelessMaxLengthValidator(11);
@@ -71,6 +72,7 @@ export const maxListEditorTextLength = max => value =>
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
 export const maxListEditorTextLength2000 = maxListEditorTextLength(2000);
+export const maxListEditorTextLength65k = maxListEditorTextLength(65535);
 
 const doiRegexps = [
     /10\.\d{4,9}\/[-._;()\/:A-Z0-9]+/i,
@@ -90,7 +92,16 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => !!getDoi(value);
+export const isValidDOIValue = value => {
+    for (const regex of doiRegexps) {
+        const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
+        const matches = value?.match(anchoredRegex);
+        if (matches) {
+            return true;
+        }
+    }
+    return false;
+};
 
 export const sanitizeDoi = value => getDoi(value) || value;
 
@@ -180,9 +191,7 @@ export const validFileNames = value => {
 };
 
 export const fileUploadRequired = value => {
-    return value === undefined || (value.queue || {}).length === 0
-        ? locale.validationErrors.fileUploadRequired
-        : undefined;
+    return !value || value.queue?.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
@@ -258,7 +267,7 @@ export const isValidContributorLink = (link, required = false) => {
 export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
     if (regex.test(id)) {
-        return '';
+        return undefined;
     } else {
         return locale.validationErrors.googleScholarId;
     }
@@ -320,6 +329,14 @@ export const translateFormErrorsToText = formErrors => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
+/**
+ * @param submitting {boolean}
+ * @param error {Object|undefined}
+ * @param formErrors {Object|undefined}
+ * @param submitSucceeded {boolean}
+ * @param alertLocale {Object}
+ * @return {Object}
+ */
 export const getErrorAlertProps = ({
     submitting = false,
     error,
@@ -346,7 +363,7 @@ export const getErrorAlertProps = ({
                 ...alertLocale.errorAlert,
                 message: message,
             };
-        } else if (formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
+        } else if (!!formErrors && formErrors.constructor === Object && Object.keys(formErrors).length > 0) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
             const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const keyPrefix = `validation-${alertLocale.validationAlert.type || 'warning'}`;

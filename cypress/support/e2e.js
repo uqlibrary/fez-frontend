@@ -21,9 +21,11 @@ import 'cypress-wait-until';
 import 'cypress-axe';
 
 // Custom
+import './adminDashboard';
 import './adminEdit';
 import './ckeditor';
 import './commands';
+import { BASE_PROD_API_URL } from './constants';
 
 export const A11YOptions = {
     runOnly: {
@@ -37,4 +39,20 @@ export const A11YOptions = {
 // They recommend ignoring these until they say otherwise.
 Cypress.on('uncaught:exception', () => {
     return false;
+});
+
+/**
+ * Set the delay between each keystroke when simulating keyboard input to 0 for all tests.
+ * This improves overall test speed.
+ *
+ * For fixing issues with specific tests, please specify an alternative delay value using
+ * the options object given to the type() method.
+ * e.g. `cy.get('myInput').type('abc', { delay: 10 });`
+ */
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 0,
+});
+
+beforeEach(() => {
+    cy.intercept('GET', `${BASE_PROD_API_URL}/alerts/current*`, []);
 });

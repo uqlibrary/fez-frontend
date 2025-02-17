@@ -156,7 +156,7 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.sbsSubmission,
                       element: isHdrStudent ? (
-                          <components.SbsSubmission />
+                          <components.ThesisSubmission />
                       ) : (
                           <components.StandardPage {...locale.pages.thesisSubmissionDenied} />
                       ),
@@ -284,13 +284,6 @@ export const getRoutesConfig = ({
                         ]
                       : []),
                   {
-                      path: pathConfig.authorIdentifiers.googleScholar.link,
-                      element: <components.GoogleScholar />,
-                      access: [roles.researcher, roles.admin],
-                      exact: true,
-                      pageTitle: locale.pages.googleScholarLink.title,
-                  },
-                  {
                       path: pathConfig.editorialAppointments.list,
                       element: <components.MyEditorialAppointments />,
                       access: [roles.researcher, roles.admin],
@@ -313,12 +306,12 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.journals.compare,
                       element: <components.JournalComparison />,
-                      pageTitle: locale.pages.journals.compare.title,
+                      pageTitle: locale.components.journalComparison.title,
                   },
                   {
                       path: pathConfig.journals.favourites,
                       element: <components.FavouriteJournals />,
-                      pageTitle: locale.pages.journals.favourites.title,
+                      pageTitle: locale.components.favouriteJournals.title,
                   },
               ]
             : []),
@@ -338,6 +331,17 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.collection.title,
+                  },
+              ]
+            : []),
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+            ? [
+                  {
+                      path: pathConfig.admin.dashboard,
+                      element: <components.AdminDashboard />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.adminDashboard.title,
                   },
               ]
             : []),
@@ -575,6 +579,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
 
     return [
         ...homePage,
+        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+            ? [
+                  {
+                      linkTo: pathConfig.admin.dashboard,
+                      ...locale.menu.adminDashboard,
+                  },
+              ]
+            : []),
         ...(account && isAuthor
             ? [
                   {
@@ -672,10 +684,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.admin.controlledVocabularies,
                       ...locale.menu.controlledVocabularies,
-                  },
-                  {
-                      linkTo: pathConfig.admin.legacyEspace,
-                      ...locale.menu.legacyEspace,
                   },
                   {
                       linkTo: pathConfig.digiteam.batchImport,

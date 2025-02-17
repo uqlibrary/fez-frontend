@@ -5,7 +5,18 @@ import {
     sanitiseId,
     formatUrlTextWithWbrTags,
     handleKeyboardPressActivate,
+    reorderObjectKeys,
+    isEmptyObject,
+    filterObjectKeys,
+    combineObjects,
+    isArrayDeeplyEqual,
+    isFezRecordRelationKey,
+    hasAtLeastOneFezRecordField,
+    isFezRecordOneToOneRelation,
+    isFezRecordOneToManyRelation,
+    filterObject,
 } from './general';
+import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
     describe('debugging helpers', () => {
@@ -14,13 +25,6 @@ describe('general helpers', () => {
             const mock = jest.spyOn(console, 'dir').mockImplementation(() => {});
             dd(...args);
             args.forEach(arg => expect(mock).toBeCalledWith(arg, { depth: null }));
-            mock.mockRestore();
-        });
-
-        it('dc should given args using console.log', () => {
-            const mock = jest.spyOn(console, 'log').mockImplementation(() => {});
-            dc(...args);
-            args.forEach(arg => expect(mock).toBeCalledWith(arg));
             mock.mockRestore();
         });
 
@@ -272,6 +276,259 @@ describe('general helpers', () => {
             const mockKey = { code: 'A', preventDefault: jest.fn() };
             handleKeyboardPressActivate(mockKey, testFn);
             expect(testFn).not.toHaveBeenCalled();
+        });
+    });
+
+    describe('reorderObjectKeys', () => {
+        it('should return new object with keys in given order', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b', 'c'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c', 'a'])).toEqual({ b: 2, c: 3, a: 1 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['c', 'a', 'b'])).toEqual({ c: 3, a: 1, b: 2 });
+        });
+
+        it('should return new object with keys in given order, ignoring unexisting keys', () => {
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'e', 'c'])).toEqual({ a: 1, c: 3 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e', 'b'])).toEqual({ b: 2 });
+            expect(reorderObjectKeys({ a: 1, b: 2, c: 3 }, ['e'])).toEqual({});
+        });
+    });
+
+    describe('isEmptyObject', () => {
+        it('should return true for empty object', () => {
+            expect(isEmptyObject({})).toEqual(true);
+        });
+
+        it('should return false for non-empty objects', () => {
+            expect(isEmptyObject({ a: 0 })).toEqual(false);
+            expect(isEmptyObject({ a: '' })).toEqual(false);
+            expect(isEmptyObject({ a: false })).toEqual(false);
+            expect(isEmptyObject({ a: true })).toEqual(false);
+            expect(isEmptyObject({ a: null })).toEqual(false);
+            expect(isEmptyObject({ a: undefined })).toEqual(false);
+        });
+
+        it('should return false for non-objects', () => {
+            expect(isEmptyObject(0)).toEqual(false);
+            expect(isEmptyObject('')).toEqual(false);
+            expect(isEmptyObject(false)).toEqual(false);
+            expect(isEmptyObject(true)).toEqual(false);
+            expect(isEmptyObject(null)).toEqual(false);
+            expect(isEmptyObject(undefined)).toEqual(false);
+            expect(isEmptyObject([])).toEqual(false);
+        });
+    });
+
+    describe('filterObjectKeys', () => {
+        it('should return empty object for given non-object', () => {
+            expect(filterObjectKeys(null, ['a'])).toEqual({});
+            expect(filterObjectKeys(undefined, ['a'])).toEqual({});
+            expect(filterObjectKeys(1, ['a'])).toEqual({});
+            expect(filterObjectKeys(false, ['a'])).toEqual({});
+            expect(filterObjectKeys('abcdef', ['a'])).toEqual({});
+            expect(filterObjectKeys([], ['a'])).toEqual({});
+            expect(filterObjectKeys(new Error('error'), ['a'])).toEqual({});
+        });
+
+        it('should return object with selected keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'])).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'])).toEqual({ a: 1, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'])).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'])).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'])).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'])).toEqual({ b: 2 });
+        });
+
+        it('should ignore non-existing keys', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, [])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['d'])).toEqual({ a: 1, b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'd'])).toEqual({ b: 2, c: 3 });
+        });
+
+        it('should keep object with selected keys when inclusive=true', () => {
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a'], true)).toEqual({ a: 1 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b'], true)).toEqual({ b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['c'], true)).toEqual({ c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'b'], true)).toEqual({ a: 1, b: 2 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['b', 'c'], true)).toEqual({ b: 2, c: 3 });
+            expect(filterObjectKeys({ a: 1, b: 2, c: 3 }, ['a', 'c'], true)).toEqual({ a: 1, c: 3 });
+        });
+    });
+
+    describe('combineObjects', () => {
+        it('should return empty object for empty object list', () => {
+            expect(combineObjects({})).toEqual({});
+            expect(combineObjects({}, {})).toEqual({});
+        });
+
+        it('should return a single object from given objects', () => {
+            expect(combineObjects({ a: 1 }, { b: 2 }, { c: 3 })).toEqual({ a: 1, b: 2, c: 3 });
+        });
+
+        it('should ignore non-object and undefined object keys', () => {
+            expect(
+                combineObjects(
+                    { a: 1 },
+                    { b: null },
+                    null,
+                    undefined,
+                    1,
+                    'a',
+                    'abc',
+                    true,
+                    false,
+                    { c: 3 },
+                    { d: undefined },
+                ),
+            ).toEqual({
+                a: 1,
+                b: null,
+                c: 3,
+            });
+        });
+
+        describe('isArrayDeeplyEqual', () => {
+            it('should return true for equal arrays', () => {
+                expect(isArrayDeeplyEqual([], [])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1], [1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([1, 2], [1, 2])).toBeTruthy();
+                expect(isArrayDeeplyEqual([0.1], [0.1])).toBeTruthy();
+                expect(isArrayDeeplyEqual([undefined], [undefined])).toBeTruthy();
+                expect(isArrayDeeplyEqual([null], [null])).toBeTruthy();
+                expect(isArrayDeeplyEqual([false], [false])).toBeTruthy();
+                expect(isArrayDeeplyEqual([''], [''])).toBeTruthy();
+                expect(isArrayDeeplyEqual(['str'], ['str'])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{}], [{}])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{ a: 1 }])).toBeTruthy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ a: 1, b: 2 }])).toBeTruthy();
+            });
+
+            it('should return false for non-equal arrays', () => {
+                expect(isArrayDeeplyEqual([1], [])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1], [1, 2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([1, 2], [2, 1])).toBeFalsy();
+                expect(isArrayDeeplyEqual([0.1], [0.2])).toBeFalsy();
+                expect(isArrayDeeplyEqual([undefined], [null])).toBeFalsy();
+                expect(isArrayDeeplyEqual([true], [false])).toBeFalsy();
+                expect(isArrayDeeplyEqual([''], ['a'])).toBeFalsy();
+                expect(isArrayDeeplyEqual(['string'], ['str'])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1 }], [{}])).toBeFalsy();
+                expect(isArrayDeeplyEqual([{ a: 1, b: 2 }], [{ b: 2, a: 1 }])).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordRelationKey', () => {
+            it('should return true for alike fez record relation keys', () => {
+                expect(isFezRecordRelationKey('fez_record_search_key_doi')).toBeTruthy();
+            });
+
+            it('should return false for non alike fez record relation keys', () => {
+                expect(isFezRecordRelationKey(undefined)).toBeFalsy();
+                expect(isFezRecordRelationKey('abc')).toBeFalsy();
+                expect(isFezRecordRelationKey('test_fez_record_search_key_doi')).toBeFalsy();
+                expect(isFezRecordRelationKey(' fez_record_search_key_doi')).toBeFalsy();
+                expect(isFezRecordRelationKey('fez_record_search_key_doi ')).toBeFalsy();
+                expect(isFezRecordRelationKey(' fez_record_search_key_doi ')).toBeFalsy();
+            });
+        });
+
+        describe('hasAtLeastOneFezRecordField', () => {
+            it('should return true for objects with at least one alike fez record field', () => {
+                expect(hasAtLeastOneFezRecordField({ rek_doi: '10.000/abc.def' })).toBeTruthy();
+                expect(hasAtLeastOneFezRecordField({ a: 1, rek_doi: '10.000/abc.def' })).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(hasAtLeastOneFezRecordField(undefined)).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField('abc')).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField({ a: '10.000/abc.def' })).toBeFalsy();
+                expect(hasAtLeastOneFezRecordField({ 'rek_doi ': '10.000/abc.def' })).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordOneToOneRelation', () => {
+            it('should return true when given object has a fez record alike one-to-one relation', () => {
+                expect(
+                    isFezRecordOneToOneRelation(
+                        { fez_record_search_key_doi: { rek_doi: '10.000/abc.def' } },
+                        'fez_record_search_key_doi',
+                    ),
+                ).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(isFezRecordOneToOneRelation(undefined, undefined)).toBeFalsy();
+                expect(isFezRecordOneToOneRelation('abc', 'abc')).toBeFalsy();
+                expect(
+                    isFezRecordOneToOneRelation(
+                        { fez_record_search_key_author: [{ rek_author: 'author 1' }] },
+                        'fez_record_search_key_author',
+                    ),
+                ).toBeFalsy();
+            });
+        });
+
+        describe('isFezRecordOneToManyRelation', () => {
+            it('should return true when given object has a fez record alike one-to-one relation', () => {
+                expect(
+                    isFezRecordOneToManyRelation(
+                        { fez_record_search_key_author: [{ rek_author: 'author 1' }] },
+                        'fez_record_search_key_author',
+                    ),
+                ).toBeTruthy();
+            });
+
+            it('should return false for objects with none alike fez record field', () => {
+                expect(isFezRecordOneToManyRelation(undefined, undefined)).toBeFalsy();
+                expect(isFezRecordOneToManyRelation('abc', 'abc')).toBeFalsy();
+                expect(
+                    isFezRecordOneToManyRelation(
+                        { fez_record_search_key_doi: { rek_doi: '10.000/abc.def' } },
+                        'fez_record_search_key_doi',
+                    ),
+                ).toBeFalsy();
+            });
+        });
+
+        describe('filterObject', () => {
+            it('should return given object if any args are invalid', () => {
+                expect(filterObject(undefined, value => value === 1)).toEqual(undefined);
+                expect(filterObject([1, 2], value => value === 1)).toEqual([1, 2]);
+                expect(filterObject({ a: 1 }, true)).toEqual({ a: 1 });
+            });
+
+            it('should filter values according to given filter function', () => {
+                mockWebApiFile();
+                const mockFile = new File(['test'], 'test.jpg');
+
+                expect(
+                    filterObject(
+                        {
+                            a: 1,
+                            b: 2,
+                            c: { a: 1, b: 2, c: 3 },
+                            d: [
+                                { a: 1, b: 2 },
+                                { a: 1, b: 2, c: [{ a: 1 }] },
+                            ],
+                            e: { b: 2 },
+                            f: [{ b: 2 }, { c: 2 }, { d: { b: 2 } }],
+                            g: mockFile,
+                            h: { a: mockFile },
+                            i: [mockFile],
+                            j: [{ b: mockFile }],
+                        },
+                        value => value === 1,
+                    ),
+                ).toEqual({
+                    a: 1,
+                    c: { a: 1 },
+                    d: [{ a: 1 }, { a: 1, c: [{ a: 1 }] }],
+                    g: mockFile,
+                    h: { a: mockFile },
+                    i: [mockFile],
+                    j: [{ b: mockFile }],
+                });
+            });
         });
     });
 });

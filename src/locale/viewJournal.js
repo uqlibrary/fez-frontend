@@ -1,6 +1,8 @@
 import { APP_URL } from 'config/general';
 import React from 'react';
 
+const caulLink = 'https://caul.libguides.com/read-and-publish/home';
+
 export default {
     viewJournal: {
         authorCountWorks: {
@@ -20,12 +22,30 @@ export default {
             prefixText: 'Yes<discount>, via <publisher> ',
             postfixText: '',
             linkText: 'Read and Publish Agreement',
-            externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
+            externalUrl: 'https://web.library.uq.edu.au/research-and-publish/open-research/read-and-publish-agreements',
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
-                externalUrl: 'https://caul.libguides.com/read-and-publish/home',
+                externalUrl: caulLink,
+            },
+            alert: {
+                title: 'Read and Publish Agreement',
+                approaching: (
+                    <p>
+                        The available cap for this title is projected to run out shortly. Please{' '}
+                        <a href={caulLink} target="_blank">
+                            check the current status
+                        </a>
+                        .
+                    </p>
+                ),
+                exceeded: (
+                    <p>
+                        The available cap for this title has been exceeded. For the remainder of the year open access
+                        publishing in this title will no longer be fully covered through the agreement.
+                    </p>
+                ),
             },
         },
         notFound: {

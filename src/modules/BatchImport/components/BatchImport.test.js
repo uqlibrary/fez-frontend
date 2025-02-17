@@ -1,5 +1,15 @@
 import React from 'react';
-import { fireEvent, render, WithRouter, WithReduxStore, waitForElementToBeRemoved, waitFor } from 'test-utils';
+import {
+    fireEvent,
+    render,
+    WithRouter,
+    WithReduxStore,
+    waitForElementToBeRemoved,
+    waitFor,
+    screen,
+    assertDisabled,
+    waitToBeEnabled,
+} from 'test-utils';
 import * as repositories from 'repositories';
 import * as BatchImportActions from 'actions/batchImport';
 
@@ -22,6 +32,27 @@ function setup(testProps = {}) {
 }
 
 describe('BatchImport Component', () => {
+    const assertValidationErrorSummary = async (fields, toBeInTheDocument = true) => {
+        const expectedErrors = fields.map(field => `You must select a ${field}`);
+        for await (const error of expectedErrors) {
+            const assertion = () => screen.queryByText(error);
+            if (toBeInTheDocument) {
+                await waitFor(assertion);
+                continue;
+            }
+
+            if (!assertion()) continue;
+            await waitForElementToBeRemoved(assertion);
+        }
+
+        if (toBeInTheDocument && expectedErrors.length > 1) {
+            const currentErrors = Array.from(screen.getByTestId('batch-import-validation').querySelectorAll('li')).map(
+                element => element.innerHTML,
+            );
+            expect(currentErrors).toEqual(expectedErrors);
+        }
+    };
+
     afterEach(() => {
         mockUseNavigate.mockClear();
     });
@@ -53,31 +84,97 @@ describe('BatchImport Component', () => {
 
         mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(200, { data: {} });
 
-        const { getByTestId, getByText } = setup();
+        const { queryByText, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+        assertDisabled('batch-import-submit');
 
         fireEvent.mouseDown(getByTestId('community-pid-select'));
         fireEvent.click(getByText('Testing community'));
 
         await waitForElementToBeRemoved(() => getByText('Loading collections...'));
+        assertDisabled('batch-import-submit');
 
         fireEvent.mouseDown(getByTestId('collection-pid-select'));
         fireEvent.click(getByText('Tested collection (Administrators)'));
+        assertDisabled('batch-import-submit');
 
         fireEvent.mouseDown(getByTestId('doc-type-id-select'));
         fireEvent.click(getByText('Design'));
+        assertDisabled('batch-import-submit');
 
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
+        await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
+        await waitToBeEnabled('batch-import-submit');
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('action-button'));
 
         expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
-        expect(getByTestId('batch-import-submit')).toHaveAttribute('disabled');
-        expect(createBatchImport).toBeCalled();
+        assertDisabled('batch-import-submit');
+        expect(createBatchImport).toBeCalledWith({
+            collection_pid: 'UQ:333',
+            directory: 'Test directory 1',
+            doc_type_id: 316,
+            is_bulk_file_ingest: false,
+        });
+
+        fireEvent.click(getByTestId('action-button'));
+        await assertValidationErrorSummary(['community', 'document type', 'directory']);
+    });
+
+    it('should successfully submit form after toggling "bulk file/edit ingest" option and display success message', async () => {
+        const createBatchImport = jest.spyOn(BatchImportActions, 'createBatchImport');
+
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:111', rek_title: 'Testing community' },
+                    { rek_pid: 'UQ:123', rek_title: '<b>Tested community</b>' },
+                ],
+            });
+
+        mockApi
+            .onGet(repositories.routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: 'UQ:111' }).apiUrl)
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:222', rek_title: 'Testing collection', rek_security_policy: 5 },
+                    { rek_pid: 'UQ:333', rek_title: 'Tested collection', rek_security_policy: 1 },
+                ],
+            });
+
+        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API({}).apiUrl).replyOnce(200, {
+            data: ['Test directory 1', 'Test directory 2'],
+        });
+
+        mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(200, { data: {} });
+
+        const { queryByText, getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+        assertDisabled('batch-import-submit');
+
+        fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
+        await assertValidationErrorSummary(['directory']);
+
+        fireEvent.mouseDown(getByTestId('directory-select'));
+        fireEvent.click(getByText('Test directory 2'));
+
+        await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
+        await waitToBeEnabled('batch-import-submit');
+        fireEvent.click(getByTestId('batch-import-submit'));
+
+        await waitFor(() => getByTestId('action-button'));
+
+        expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
+        assertDisabled('batch-import-submit');
+        expect(createBatchImport).toBeCalledWith({
+            directory: 'Test directory 2',
+            is_bulk_file_ingest: true,
+        });
     });
 
     it('should submit batch import and display submission error', async () => {
@@ -107,7 +204,7 @@ describe('BatchImport Component', () => {
 
         mockApi.onPost(repositories.routes.BATCH_IMPORT_API().apiUrl).replyOnce(500, { data: {} });
 
-        const { getByTestId, getByText } = setup();
+        const { queryByText, getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
 
@@ -125,6 +222,7 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
+        await waitForElementToBeRemoved(() => queryByText(/Form cannot/, { exact: false }));
         fireEvent.click(getByTestId('batch-import-submit'));
 
         await waitFor(() => getByTestId('alert-error-batch-import'));
@@ -158,13 +256,26 @@ describe('BatchImport Component', () => {
         const { getByTestId, getByText, queryByTestId } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading communities...'));
+        await assertValidationErrorSummary(['community', 'document type', 'directory']);
+        assertDisabled('batch-import-submit');
+
+        fireEvent.mouseDown(getByTestId('community-pid-select'));
+        fireEvent.click(getByText('Testing community'));
+
+        await waitForElementToBeRemoved(() => getByText('Loading collections...'));
+        await assertValidationErrorSummary(['collection', 'document type', 'directory']);
 
         fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
+        await assertValidationErrorSummary(['directory']);
+        await assertValidationErrorSummary(['community', 'collection', 'document type'], false);
+        assertDisabled('batch-import-submit');
 
         expect(queryByTestId('community-pid-select')).not.toBeInTheDocument();
         expect(queryByTestId('doc-type-id-select')).not.toBeInTheDocument();
 
         fireEvent.click(getByTestId('is-bulk-file-ingest-input'));
+        await assertValidationErrorSummary(['collection', 'document type', 'directory']);
+        assertDisabled('batch-import-submit');
 
         expect(getByTestId('community-pid-select')).toBeInTheDocument();
         expect(getByTestId('doc-type-id-select')).toBeInTheDocument();

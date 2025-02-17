@@ -63,7 +63,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -96,7 +96,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                     value="uqresearcher - 410"
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Clear"
@@ -139,7 +139,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               id="test-add"
@@ -154,7 +154,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               id="test-cancel"
@@ -818,7 +818,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -851,7 +851,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -875,7 +875,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -891,7 +891,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -2500,7 +2500,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
       </div>
     </div>
     <div
-      class="MuiBox-root css-187halg"
+      class="MuiBox-root css-2e16le"
     >
       <div>
         <div
@@ -2518,11 +2518,11 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                   class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                 >
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-1jpqyvl-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lngr1t-MuiTableCell-root"
                     scope="col"
                   />
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -2579,7 +2579,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                     />
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -2613,7 +2613,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                     />
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1i1xvzn-MuiTableCell-root"
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1ajh4qi-MuiTableCell-root"
                     scope="col"
                     style="text-align: center; width: 128px; box-sizing: border-box;"
                   >
@@ -2716,7 +2716,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -2749,7 +2749,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -2773,7 +2773,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -2789,7 +2789,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6130,7 +6130,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6163,7 +6163,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -6187,7 +6187,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -6203,7 +6203,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6284,7 +6284,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -6317,7 +6317,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -6341,7 +6341,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -6357,7 +6357,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6430,7 +6430,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
         </div>
       </div>
       <div
-        class="MuiBox-root css-187halg"
+        class="MuiBox-root css-2e16le"
       >
         <div>
           <div
@@ -6448,11 +6448,11 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                     class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                   >
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-1jpqyvl-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lngr1t-MuiTableCell-root"
                       scope="col"
                     />
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                       scope="col"
                       style="box-sizing: border-box;"
                     >
@@ -6509,7 +6509,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                       />
                     </th>
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                       scope="col"
                       style="box-sizing: border-box;"
                     >
@@ -6543,7 +6543,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                       />
                     </th>
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1i1xvzn-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1ajh4qi-MuiTableCell-root"
                       scope="col"
                       style="text-align: center; width: 128px; box-sizing: border-box;"
                     >
@@ -6639,7 +6639,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
         </div>
       </div>
       <div
-        class="MuiBox-root css-187halg"
+        class="MuiBox-root css-2e16le"
       >
         <div>
           <div
@@ -6657,11 +6657,11 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
                   >
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-1jpqyvl-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lngr1t-MuiTableCell-root"
                       scope="col"
                     />
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                       scope="col"
                       style="box-sizing: border-box;"
                     >
@@ -6718,7 +6718,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       />
                     </th>
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-16awj44-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
                       scope="col"
                       style="box-sizing: border-box;"
                     >
@@ -6752,7 +6752,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       />
                     </th>
                     <th
-                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1i1xvzn-MuiTableCell-root"
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1ajh4qi-MuiTableCell-root"
                       scope="col"
                       style="text-align: center; width: 128px; box-sizing: border-box;"
                     >
@@ -6772,7 +6772,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 >
                   <tr
                     class="MuiTableRow-root css-4wzszn-MuiTableRow-root"
-                    data-testid="test-list-row-0"
+                    data-testid="mtablebodyrow"
                     id="test-list-row-0"
                     index="0"
                     level="0"
@@ -6795,6 +6795,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     </td>
                     <td
                       class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-nnohq2-MuiTableCell-root"
+                      data-testid="mtablecell"
                       style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
                     >
                       <div
@@ -6834,10 +6835,11 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     </td>
                     <td
                       class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeSmall css-nnohq2-MuiTableCell-root"
+                      data-testid="mtablecell"
                       style="box-sizing: border-box; font-family: inherit; font-weight: inherit; vertical-align: top;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-1sdh29w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                         data-testid="test-list-row-0-uq-identifiers"
                         id="test-list-row-0-uq-identifiers"
                       />
@@ -6849,58 +6851,48 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       <div
                         style="display: flex;"
                       >
-                        <span
+                        <button
                           aria-label="Move item up the order"
-                          class=""
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
+                          disabled=""
+                          tabindex="-1"
+                          type="button"
                         >
-                          <button
-                            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
-                            disabled=""
-                            tabindex="-1"
-                            type="button"
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                            data-testid="test-list-row-0-move-up"
+                            focusable="false"
+                            id="test-list-row-0-move-up"
+                            viewBox="0 0 24 24"
                           >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                              data-testid="test-list-row-0-move-up"
-                              disabled=""
-                              focusable="false"
-                              id="test-list-row-0-move-up"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                              />
-                            </svg>
-                          </button>
-                        </span>
-                        <span
+                            <path
+                              d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                            />
+                          </svg>
+                        </button>
+                        <button
                           aria-label="Move item down the order-0"
-                          class=""
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
                           data-mui-internal-clone-element="true"
+                          disabled=""
+                          tabindex="-1"
+                          type="button"
                         >
-                          <button
-                            class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
-                            disabled=""
-                            tabindex="-1"
-                            type="button"
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                            data-testid="test-list-row-0-move-down"
+                            focusable="false"
+                            id="test-list-row-0-move-down"
+                            viewBox="0 0 24 24"
                           >
-                            <svg
-                              aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                              data-testid="test-list-row-0-move-down"
-                              disabled=""
-                              focusable="false"
-                              id="test-list-row-0-move-down"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                              />
-                            </svg>
-                          </button>
-                        </span>
+                            <path
+                              d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                            />
+                          </svg>
+                        </button>
                         <button
                           aria-label="Edit this item"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall css-1ulzga1-MuiButtonBase-root-MuiIconButton-root"
@@ -7077,7 +7069,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7111,7 +7103,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -7136,7 +7128,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7223,7 +7215,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7304,7 +7296,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7338,7 +7330,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                     value=""
                   />
                   <div
-                    class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                    class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
                   >
                     <button
                       aria-label="Open"
@@ -7363,7 +7355,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7444,7 +7436,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
           >
             <div
-              class="MuiAutocomplete-root css-1h51icj-MuiAutocomplete-root"
+              class="MuiAutocomplete-root css-ka7ti6-MuiAutocomplete-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -7482,7 +7474,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7569,7 +7561,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7950,7 +7942,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8331,7 +8323,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8425,7 +8417,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8517,7 +8509,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""

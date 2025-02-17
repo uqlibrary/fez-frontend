@@ -18,6 +18,23 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
 import TestRenderer from 'react-test-renderer';
 import ShallowRenderer from 'react-test-renderer/shallow';
+import * as ResizeObserverModule from 'resize-observer-polyfill';
+
+jest.mock('@mui/x-charts', () => ({
+    ResponsiveChartContainer: jest.fn().mockImplementation(({ children }) => {
+        return children;
+    }),
+    BarChart: jest.fn().mockImplementation(({ children }) => {
+        return children;
+    }),
+    GaugeContainer: jest.fn().mockImplementation(({ children }) => children),
+    GaugeValueArc: jest.fn().mockImplementation(({ children }) => children),
+    GaugeReferenceArc: jest.fn().mockImplementation(({ children }) => children),
+    useGaugeState: jest.fn(),
+    GaugeValueText: jest.fn().mockImplementation(({ children }) => children),
+    ChartsText: jest.fn().mockImplementation(({ children }) => children),
+    PiePlot: jest.fn().mockImplementation(({ children }) => children),
+}));
 
 // jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
@@ -87,6 +104,9 @@ global.renderComponent = (component, props, args = {}) => {
     );
 };
 
+// required to avoid CKEditor errors during tests
+global.ResizeObserver = ResizeObserverModule.default;
+
 global.componentToString = component => {
     return prettyFormat(TestRenderer.create(component), {
         plugins: [prettyFormat.plugins.ReactTestComponent],
@@ -110,6 +130,14 @@ const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
+
+//ResizeObserver is either not available or not correctly recognized in the test environment
+class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 
 // jsdom v20 is unable to parse CKEditor 5 v41 css files
 // suppressing the CSS parsing error messages as they dont really break the tests

@@ -99,7 +99,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -360,7 +360,11 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                   <b>
                     Error - 
                   </b>
-                  Error has occurred during request and request cannot be processed. There is an error Please contact eSpace administrators or try again later.
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Error has occurred during request and request cannot be processed. There is an error Please contact eSpace administrators or try again later.
+                  </span>
                 </div>
               </div>
             </div>
@@ -378,7 +382,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -484,7 +488,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -590,7 +594,7 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -707,7 +711,7 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -824,7 +828,7 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -941,7 +945,7 @@ exports[`Component PublicationForm should call getDerivedStateFromProps when pro
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -1052,7 +1056,7 @@ exports[`Component PublicationForm should render component initialised with just
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -1174,7 +1178,7 @@ exports[`Component PublicationForm should render component initialised with two 
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -1332,7 +1336,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                       label="Book title"
                       name="rek_title"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -1344,7 +1348,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                       label="Place of publication"
                       name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -1356,7 +1360,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                       label="Publisher"
                       name="fez_record_search_key_publisher.rek_publisher"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -1367,6 +1371,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                       is="mock"
                       label="Total pages"
                       name="fez_record_search_key_total_pages.rek_total_pages"
+                      validate=""
                     />
                   </div>
                   <div
@@ -1771,7 +1776,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -1929,7 +1934,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                       label="Title"
                       name="rek_title"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -1940,6 +1945,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                       is="mock"
                       label="Place of publication"
                       name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                      validate=""
                     />
                   </div>
                   <div
@@ -1950,6 +1956,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                       is="mock"
                       label="Publisher"
                       name="fez_record_search_key_publisher.rek_publisher"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2238,7 +2245,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -2396,7 +2403,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       label="Title"
                       name="rek_title"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -2408,7 +2415,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       label="Journal name"
                       name="fez_record_search_key_journal_name.rek_journal_name"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -2600,6 +2607,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       is="mock"
                       label="Volume"
                       name="fez_record_search_key_volume_number.rek_volume_number"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2610,6 +2618,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       is="mock"
                       label="Issue"
                       name="fez_record_search_key_issue_number.rek_issue_number"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2620,6 +2629,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       is="mock"
                       label="Start page"
                       name="fez_record_search_key_start_page.rek_start_page"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2630,6 +2640,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       is="mock"
                       label="End page"
                       name="fez_record_search_key_end_page.rek_end_page"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2640,6 +2651,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                       is="mock"
                       label="Article number"
                       name="fez_record_search_key_article_number.rek_article_number"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2798,7 +2810,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -2956,7 +2968,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                       label="Title"
                       name="rek_title"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -2989,6 +3001,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                       is="mock"
                       label="Report number"
                       name="fez_record_search_key_report_number.rek_report_number"
+                      validate=""
                     />
                   </div>
                   <div
@@ -2999,6 +3012,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                       is="mock"
                       label="School, Centre or Institute"
                       name="fez_record_search_key_org_unit_name.rek_org_unit_name"
+                      validate=""
                     />
                   </div>
                   <div
@@ -3010,7 +3024,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                       label="Total pages"
                       name="fez_record_search_key_total_pages.rek_total_pages"
                       required="true"
-                      validate="required"
+                      validate="required,"
                     />
                   </div>
                   <div
@@ -3043,6 +3057,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                       is="mock"
                       label="Series title"
                       name="fez_record_search_key_series.rek_series"
+                      validate=""
                     />
                   </div>
                 </div>
@@ -3404,7 +3419,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -3515,7 +3530,7 @@ exports[`Component PublicationForm should render component with all fields disab
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           disabled=""
           tabindex="-1"
           type="button"
@@ -3638,7 +3653,7 @@ exports[`Component PublicationForm should render form after selecting both publi
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-66x7n6-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -3649,7 +3664,7 @@ exports[`Component PublicationForm should render form after selecting both publi
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-auto css-1o48fio-MuiGrid2-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="submit-work"
           data-testid="submit-work"
           id="submit-work"

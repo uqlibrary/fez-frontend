@@ -65,6 +65,8 @@ export {
     UQ339703,
     recordWithIncorrectAffiliation,
     recordWithOrphanedAffiliation,
+    recordThatFailsDeletion,
+    deletedRecord
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
@@ -102,3 +104,6 @@ export { default as myEditorialAppointmentItem } from './myEditorialAppointments
 export { userList } from './testing/usersList';
 export { organisationalUnits } from './organisationalUnits';
 export { suggestedOrganisationalUnits } from './suggestedOrganisationalUnits';
+
+
+export { adminDashboardConfig, adminDashboardToday, adminDashboardQuickLinks, adminDashboardSystemAlerts, adminDashboardReportWorksData, adminDashboardReportSystemAlertsData } from './adminDashboard';

@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+    baseProdApiUrl: 'https://api.library.uq.edu.au/v1',
     blockHosts: ['www.googletagmanager.com'],
     chromeWebSecurity: false,
     defaultCommandTimeout: 10000,
