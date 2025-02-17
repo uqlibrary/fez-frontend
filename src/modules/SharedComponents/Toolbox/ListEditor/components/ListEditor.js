@@ -54,22 +54,14 @@ export const ListEditor = ({
             ((input || {}).name && input.value);
 
         return valueAsJson ? valueAsJson.map(item => item[searchKey.value]) : [];
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     };
 
     const [itemList, setItemList] = useState(getListFromProps);
     const [itemIndexSelectedToEdit, setItemIndexSelectedToEdit] = useState(null);
     const propList = getListFromProps();
-    const propsDifferentToState = !isArrayDeeplyEqual(propList, itemList);
-    useEffect(() => {
-        if (propsDifferentToState) {
-            setItemList(propList);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(input?.value)]);
 
     useEffect(() => {
-        if (onChange && propsDifferentToState) {
+        if (onChange && !isArrayDeeplyEqual(propList, itemList)) {
             const transformOutput = items => {
                 return items.map((item, index) => transformFunction(searchKey, item, index));
             };

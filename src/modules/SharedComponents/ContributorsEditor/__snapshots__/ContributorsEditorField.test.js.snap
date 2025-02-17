@@ -4,7 +4,7 @@ exports[`ContributorsEditorField should render default component 1`] = `
 <div>
   <div
     class="contributorEditor"
-    id="undefined-list-editor"
+    id="test-list-editor"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
@@ -29,13 +29,14 @@ exports[`ContributorsEditorField should render default component 1`] = `
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+              data-testid="test"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
-                data-testid="undefined-label"
-                for="undefined-input"
-                id="undefined-label"
+                data-testid="test-label"
+                for="test-input"
+                id="test-label"
               >
                 Name as published
               </label>
@@ -47,9 +48,9 @@ exports[`ContributorsEditorField should render default component 1`] = `
                   aria-label="Name as published"
                   autocomplete="off"
                   class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                  data-analyticsid="undefined-input"
-                  data-testid="undefined-input"
-                  id="undefined-input"
+                  data-analyticsid="test-input"
+                  data-testid="test-input"
+                  id="test-input"
                   label="Name as published"
                   placeholder="Please type the name exactly as published"
                   type="text"
@@ -69,10 +70,10 @@ exports[`ContributorsEditorField should render default component 1`] = `
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
-              data-analyticsid="undefined-add"
-              data-testid="undefined-add"
+              data-analyticsid="test-add"
+              data-testid="test-add"
               disabled=""
-              id="undefined-add"
+              id="test-add"
               tabindex="-1"
               type="button"
             >
