@@ -206,16 +206,32 @@ describe('AddDataCollection test', () => {
             return [200, {}];
         });
 
-        const { getByTestId, queryByTestId, container } = setup();
+        const { getByTestId, queryByText, queryByTestId, container } = setup();
 
         await inputRequired(getByTestId);
 
+        // input collection start date
+        await inputText(getByTestId, [
+            ['rek-start-date-day-input', '1'],
+            ['rek-start-date-year-input', '2020'],
+        ]);
+        await clickSelect(getByTestId, [['rek-start-date-month-select', 'March']]);
+        await inputAndSelect(getByTestId, [[]]);
+
+        // input collection end date
+        await inputText(getByTestId, [
+            ['rek-end-date-day-input', '1'],
+            ['rek-end-date-year-input', '2020'],
+        ]);
+        await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
+        await inputAndSelect(getByTestId, [[]]);
+
+        await waitFor(() => expect(queryByText('Date range is not valid')).toBeInTheDocument());
+        await clickSelect(getByTestId, [['rek-end-date-month-select', 'April']]);
+        await waitFor(() => expect(queryByText('Date range is not valid')).not.toBeInTheDocument());
+
         expect(getByTestId('submit-data-collection')).toBeEnabled();
-
         await userEvent.click(getByTestId('submit-data-collection'));
-
-        // preview.debug();
-        // await new Promise(resolve => setTimeout(resolve, 5000));
 
         await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
     });
