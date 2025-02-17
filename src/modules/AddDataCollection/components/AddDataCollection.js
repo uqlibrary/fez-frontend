@@ -77,8 +77,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const {
         handleSubmit,
         watch,
-        setError,
-        clearErrors,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -118,10 +116,9 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    const [startDate, endDate, watchedDoiField] = watch([
+    const [startDate, endDate] = watch([
         'fez_record_search_key_start_date.rek_start_date',
         'fez_record_search_key_end_date.rek_end_date',
-        'fez_record_search_key_doi.rek_doi',
     ]);
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
@@ -141,25 +138,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
             return locale.validationErrors.doi;
         }
     };
-
-    console.info = () => {};
-    console.info('watchedDoiField', watchedDoiField, setError, clearErrors);
-    // Trigger validation when the watched field changes
-    // React.useEffect(() => {
-    //     if (watchedDoiField) {
-    //         (async () => {
-    //             const error = await validateDOI(watchedDoiField);
-    //             if (error) {
-    //                 console.log('set doi error', error);
-    //                 setError('fez_record_search_key_doi.rek_doi', {
-    //                     type: 'async',
-    //                     message: error,
-    //                 });
-    //             }
-    //         })();
-    //     }
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [watchedDoiField, setError]);
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -216,8 +194,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
     const dispatch = useDispatch();
     const onSubmit = async data => {
-        console.log('start onSubmit');
-
         setApiError('');
 
         // '' to []
@@ -280,18 +256,15 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 
         // set default values for a new unapproved record and handle submission
         try {
-            console.log('dispatching createNewRecord');
             await dispatch(createNewRecord(cleanValues));
             // Form submission successful
         } catch (error) {
-            console.log('error=', error);
             let err = error.message;
             const originalMessage = error?.original?.error?.message;
             err += originalMessage && ' ' + originalMessage;
             setApiError(err);
         }
     };
-    // console.log('apiError=', apiError);
 
     return (
         <StandardPage title={txt.pageTitle}>
