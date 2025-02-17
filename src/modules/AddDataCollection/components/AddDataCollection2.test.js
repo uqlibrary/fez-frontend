@@ -35,7 +35,7 @@ async function inputText(getByTestId, settings) {
 }
 
 // click the select, find the option, click the option, tab out
-async function inputSelects(getByTestId, selects) {
+async function clickSelect(getByTestId, selects) {
     for (const [testId, value] of selects) {
         await userEvent.click(getByTestId(testId));
         const selectedOption = await screen.findByText(value);
@@ -73,7 +73,7 @@ async function inputRequired(getByTestId) {
     expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
 
     // Selects
-    await inputSelects(getByTestId, [
+    await clickSelect(getByTestId, [
         ['rek-date-month-select', 'November'],
         ['rek-access-conditions-select', 'Open Access'],
         ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
