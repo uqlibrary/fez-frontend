@@ -6,6 +6,7 @@ import * as actions from 'actions';
 // import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
+import { count } from 'console';
 
 // const mockUseNavigate = jest.fn();
 let mockDoiExist = false;
@@ -41,7 +42,18 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
-    beforeAll(() => {});
+    beforeAll(() => {
+        // // Mock console.warn to suppress specific warnings
+        // jest.spyOn(console, 'warn').mockImplementation(message => {
+        //     if (message.includes('An update to ForwardRef')) {
+        //         // Suppress this specific warning
+        //         return;
+        //     }
+        //     // Otherwise, log the warning
+        //     console.warn(message);
+        // });
+        jest.spyOn(console, 'warn').mockImplementation(() => {});
+    });
     afterAll(() => {
         // mockUseNavigate.mockClear();
     });
@@ -99,13 +111,26 @@ describe('AddDataCollection test', () => {
                 },
             ];
         });
+        let postCounter = 0;
         mockApi.onPost('records').reply(() => {
-            return [
-                200,
-                {
-                    data: {},
-                },
-            ];
+            console.log('postCounter=', postCounter);
+            postCounter++;
+            if (postCounter === 1) {
+                return [
+                    422,
+                    {
+                        error: 'wrong!',
+                    },
+                ];
+            } else {
+                console.log('return 200');
+                return [
+                    200,
+                    {
+                        data: {},
+                    },
+                ];
+            }
         });
         mockApi.onAny().reply(config => {
             console.log(
@@ -177,8 +202,13 @@ describe('AddDataCollection test', () => {
 
         await userEvent.click(getByTestId('submit-data-collection'));
 
-        // await new Promise(resolve => setTimeout(resolve, 5000));
-        // preview.debug();
+        await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
+        await userEvent.click(getByTestId('submit-data-collection'));
+        preview.debug();
+
+        await new Promise(resolve => setTimeout(resolve, 5000));
 
         await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
     });
