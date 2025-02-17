@@ -14,7 +14,6 @@ jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
     doesDOIExist: jest.fn(doi => {
         if (mockDoiExist) {
-            console.log('mock doi exist');
             return Promise.reject({ status: 422, message: 'validation.doi' });
         } else {
             return jest.requireActual('actions').doesDOIExist(doi);
@@ -25,10 +24,28 @@ jest.mock('actions', () => ({
 //     ...jest.requireActual('react-router-dom'),
 //     useNavigate: () => mockUseNavigate,
 // }));
+async function inputText(getByTestId, settings) {
+    for (const [testId, value] of settings) {
+        const input = getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, value);
+        await userEvent.tab();
+        expect(input).toHaveValue(value);
+    }
+}
+async function inputSelects(getByTestId, selects) {
+    for (const [testId, value] of selects) {
+        await userEvent.click(getByTestId(testId));
+        const selectedOption = await screen.findByText(value);
+        await userEvent.click(selectedOption);
+        await userEvent.tab();
+    }
+}
+
 async function inputRequired(getByTestId) {
     await userEvent.click(getByTestId('rek-copyright-input'));
-    // Inputs
-    const inputs = [
+
+    await inputText(getByTestId, [
         ['rek-title-input', 'test'],
         ['rek-description-input', 'test'],
         ['rek-contributor-input', 'test'],
@@ -38,28 +55,15 @@ async function inputRequired(getByTestId) {
         ['rek-author-input', 'test'],
         ['rek-project-name-input', 'test'],
         ['rek-project-description-input', 'test'],
-    ];
-    for (const [testId, value] of inputs) {
-        const input = getByTestId(testId);
-        await userEvent.click(input);
-        await userEvent.type(input, value);
-        await userEvent.tab();
-        expect(input).toHaveValue(value);
-    }
+    ]);
     expect(getByTestId('rek-date-year-input')).toHaveValue('2000');
 
     // Selects
-    const selects = [
+    await inputSelects(getByTestId, [
         ['rek-date-month-select', 'November'],
         ['rek-access-conditions-select', 'Open Access'],
         ['rek-license-select', 'Permitted Re-use with Acknowledgement'],
-    ];
-    for (const [testId, value] of selects) {
-        await userEvent.click(screen.getByTestId(testId));
-        const selectedOption = await screen.findByText(value);
-        await userEvent.click(selectedOption);
-        await userEvent.tab();
-    }
+    ]);
 
     // Type to get a list from the api, then choose one
     // Type element, type value, select value
