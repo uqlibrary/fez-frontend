@@ -107,11 +107,13 @@ export const useFormOnChangeHook = form => {
                     },
                 },
             })) || [];
-        form.setValue(
-            'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
-            bibliographicSectionFezMatchedJournals.value,
-            { shouldValidate: true, shouldDirty: true },
-        );
+        if (bibliographicSectionFezMatchedJournals.value) {
+            form.setValue(
+                'bibliographicSection.fez_record_search_key_journal_name.rek_journal_name',
+                bibliographicSectionFezMatchedJournals.value,
+                { shouldValidate: true, shouldDirty: true },
+            );
+        }
         const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || [];
         // create new array, filter out any dupes
         const updatedBibliographicSectionIssns = unionBy(bibliographicSectionIssns, issns, 'rek_value.key');
