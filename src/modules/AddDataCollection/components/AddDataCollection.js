@@ -70,11 +70,12 @@ const usePrevious = value => {
     return ref.current;
 };
 
-export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
+export const AddDataCollection = ({ disableSubmit, ...props }) => {
     // form
     const {
         handleSubmit,
         watch,
+        reset: resetForm,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -781,7 +782,6 @@ export const AddDataCollection = ({ disableSubmit, resetForm, ...props }) => {
 };
 AddDataCollection.propTypes = {
     disableSubmit: PropTypes.bool,
-    resetForm: PropTypes.any,
     newRecordFileUploadingOrIssueError: PropTypes.bool,
 };
 
