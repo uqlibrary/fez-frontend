@@ -2027,40 +2027,44 @@ export default {
                     order: 3,
                 },
                 {
-                    field: 'rek_date',
+                    field: 'fez_record_search_key_publisher',
                     order: 4,
                 },
                 {
-                    field: 'fez_record_search_key_doi',
+                    field: 'rek_date',
                     order: 5,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
+                    field: 'fez_record_search_key_doi',
                     order: 6,
                 },
                 {
-                    field: 'fez_record_search_key_start_date',
+                    field: 'fez_record_search_key_contributor',
                     order: 7,
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_start_date',
                     order: 8,
                 },
                 {
-                    field: 'fez_record_search_key_model',
+                    field: 'fez_record_search_key_end_date',
                     order: 9,
                 },
                 {
-                    field: 'fez_record_search_key_measured_variable',
+                    field: 'fez_record_search_key_model',
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_instrument_type',
+                    field: 'fez_record_search_key_measured_variable',
                     order: 11,
                 },
                 {
-                    field: 'fez_record_search_key_alternate_identifier',
+                    field: 'fez_record_search_key_instrument_type',
                     order: 12,
+                },
+                {
+                    field: 'fez_record_search_key_alternate_identifier',
+                    order: 13,
                 },
             ],
             Journal: [

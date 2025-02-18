@@ -217,6 +217,11 @@ const publicationTypeListInstrument = {
             "rek_notes_xsdmf_id": null,
             "rek_notes": "<p>additional notes<\/p>"
         },
+        "fez_record_search_key_publisher": {
+            "rek_publisher_id": 1224660,
+            "rek_publisher_pid": "UQ:23aac26",
+            "rek_publisher": "The University of Queensland"
+        },
         "fez_record_search_key_security_policy": [
             {
                 "rek_security_policy_id": 1070784,

@@ -30,6 +30,13 @@ exports[`InstrumentCitation renders  component with a doi view 1`] = `
       .
     </span>
     <span
+      class="citationPublisher"
+    >
+       
+      The University of Queensland
+      .
+    </span>
+    <span
       data-testid="rek-doi"
     >
       <a
@@ -93,6 +100,13 @@ exports[`InstrumentCitation renders  component with a mock espace record 1`] = `
       .
     </span>
     <span
+      class="citationPublisher"
+    >
+       
+      The University of Queensland
+      .
+    </span>
+    <span
       class="citationDOI empty"
     />
   </div>
@@ -112,6 +126,9 @@ exports[`InstrumentCitation renders  component with empty publication 1`] = `
     />
     <span
       class="citationTitle empty"
+    />
+    <span
+      class="citationPublisher empty"
     />
     <span
       class="citationDOI empty"
