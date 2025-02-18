@@ -1,7 +1,7 @@
-import { setupWrapper } from './test-utils';
+import { ControlledFieldWithReduxStore } from './test-utils';
 import JournalArticleForm from './JournalArticleForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
-const setup = props => setupWrapper(JournalArticleForm, props);
+const setup = props => ControlledFieldWithReduxStore(JournalArticleForm, props);
 
 describe('JournalArticleForm', () => {
     it('component', () => {

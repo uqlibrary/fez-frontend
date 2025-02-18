@@ -1,6 +1,6 @@
 import PreprintForm from './PreprintForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(PreprintForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(PreprintForm, props);
 
 describe('PreprintForm', () => {
     it('component', () => {

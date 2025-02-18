@@ -23,20 +23,13 @@ import {
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     RRW_NTRO_SUBTYPES,
 } from 'config/general';
-import moment from 'moment';
+import { dateRange } from 'config/validation';
 
 export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, formValues }) => {
     const txt = formLocale.creativeWork;
     const _formValues = formValues && formValues.toJS();
-    const startDate = _formValues && _formValues.rek_date;
-    const endDate =
-        _formValues &&
-        _formValues.fez_record_search_key_end_date &&
-        _formValues.fez_record_search_key_end_date.rek_end_date;
-    const dateError =
-        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? 'Date range is not valid'
-            : '';
+    // not sure why rek_date is used as the start date in here
+    const hasDateError = dateRange(_formValues.rek_date, _formValues.fez_record_search_key_end_date?.rek_end_date);
     const displayEndDate = [
         ...LP_NTRO_SUBTYPES,
         ...CPEE_NTRO_SUBTYPES,
@@ -117,7 +110,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 validate={[validation.required]}
                                 floatingTitle={txt.information.fieldLabels.date.title}
                                 floatingTitleRequired
-                                hasError={dateError}
+                                hasError={hasDateError}
                                 partialDateFieldId="rek-date"
                             />
                         </Grid>
@@ -130,7 +123,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                     name="fez_record_search_key_end_date.rek_end_date"
                                     allowPartial
                                     floatingTitle={txt.information.fieldLabels.endDate.title}
-                                    hasError={dateError}
+                                    hasError={hasDateError}
                                     partialDateFieldId="rek-end-date"
                                 />
                             </Grid>

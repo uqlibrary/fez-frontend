@@ -14,12 +14,9 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { numbersOnly } from 'helpers/general';
 
 export const WorkingPaperForm = ({ isSubmitting, control }) => {
-    const getNumbersOnly = value => {
-        return value.replace(/[^\d]/g, '');
-    };
-
     const txt = formLocale.workingPaper;
     return (
         <Grid container spacing={3}>
@@ -92,7 +89,7 @@ export const WorkingPaperForm = ({ isSubmitting, control }) => {
                                 textFieldId="rek-total-pages"
                                 type="text"
                                 fullWidth
-                                normalize={getNumbersOnly}
+                                normalize={numbersOnly}
                                 {...txt.information.fieldLabels.totalPages}
                                 validate={[validation.maxLength255Validator]}
                             />

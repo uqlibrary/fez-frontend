@@ -19,12 +19,9 @@ import {
 } from 'config/general';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { numbersOnly } from 'helpers/general';
 
 export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, control, formValues }) => {
-    const getNumbersOnly = value => {
-        return value.replace(/[^\d]/g, '');
-    };
-
     const txt = formLocale.researchReport;
     const pubsMandatory =
         (formValues && formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_PUBLIC_SECTOR) ||
@@ -116,7 +113,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     fullWidth
                                     required
                                     {...txt.information.fieldLabels.totalPages}
-                                    normalize={getNumbersOnly}
+                                    normalize={numbersOnly}
                                     validate={[validation.required, validation.maxLength255Validator]}
                                 />
                             </Grid>

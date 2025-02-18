@@ -1,6 +1,6 @@
 import ImageDocumentForm from './ImageDocumentForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(ImageDocumentForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(ImageDocumentForm, props);
 
 describe('ImageDocumentForm', () => {
     it('component', () => {

@@ -1,6 +1,6 @@
 import ThesisForm from './ThesisForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(ThesisForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(ThesisForm, props);
 
 describe('ThesisForm', () => {
     it('component', () => {

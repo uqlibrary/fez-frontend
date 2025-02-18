@@ -1,6 +1,6 @@
 import PatentForm from './PatentForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(PatentForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(PatentForm, props);
 
 describe('PatentForm', () => {
     it('component', () => {

@@ -548,3 +548,10 @@ export const filterObject = (obj, filter) => {
         return acc;
     }, {});
 };
+
+/**
+ *
+ * @param {string} value
+ * @return {string}
+ */
+export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, '')) || value;

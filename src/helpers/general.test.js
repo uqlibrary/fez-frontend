@@ -15,6 +15,7 @@ import {
     isFezRecordOneToOneRelation,
     isFezRecordOneToManyRelation,
     filterObject,
+    numbersOnly,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -529,6 +530,25 @@ describe('general helpers', () => {
                 i: [mockFile],
                 j: [{ b: mockFile }],
             });
+        });
+    });
+
+    describe('numbersOnly', () => {
+        it('should return original value for non-replaceable', () => {
+            expect(numbersOnly()).toEqual(undefined);
+            expect(numbersOnly(null)).toEqual(null);
+            expect(numbersOnly(false)).toEqual(false);
+            expect(numbersOnly(true)).toEqual(true);
+            expect(numbersOnly([])).toEqual([]);
+            expect(numbersOnly({})).toEqual({});
+            expect(numbersOnly('')).toEqual('');
+            expect(numbersOnly('a')).toEqual('a');
+            expect(numbersOnly(1)).toEqual(1);
+            expect(numbersOnly(1.1)).toEqual(1.1);
+        });
+
+        it('should return numbers only', () => {
+            expect(numbersOnly('10a20b30')).toEqual('102030');
         });
     });
 });

@@ -1,6 +1,6 @@
 import GenericDocumentForm from './GenericDocumentForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(GenericDocumentForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(GenericDocumentForm, props);
 
 describe('GenericDocumentForm', () => {
     it('component', () => {

@@ -1,6 +1,6 @@
 import SeminarPaperForm from './SeminarPaperForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(SeminarPaperForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(SeminarPaperForm, props);
 
 describe('SeminarPaperForm', () => {
     it('component', () => {

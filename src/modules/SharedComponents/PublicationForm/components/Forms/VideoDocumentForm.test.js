@@ -1,6 +1,6 @@
 import VideoDocumentForm from './VideoDocumentForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(VideoDocumentForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(VideoDocumentForm, props);
 
 describe('VideoDocumentForm', () => {
     it('component', () => {

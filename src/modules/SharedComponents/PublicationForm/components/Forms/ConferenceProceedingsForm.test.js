@@ -1,6 +1,6 @@
-import { setupWrapper } from './test-utils';
+import { ControlledFieldWithReduxStore } from './test-utils';
 import ConferenceProceedingsForm from './ConferenceProceedingsForm';
-const setup = props => setupWrapper(ConferenceProceedingsForm, props);
+const setup = props => ControlledFieldWithReduxStore(ConferenceProceedingsForm, props);
 
 describe('ConferenceProceedingsForm', () => {
     it('component', () => {

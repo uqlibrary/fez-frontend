@@ -1,6 +1,6 @@
 import ConferencePaperForm from './ConferencePaperForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(ConferencePaperForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(ConferencePaperForm, props);
 
 describe('ConferencePaperForm', () => {
     it('component', () => {

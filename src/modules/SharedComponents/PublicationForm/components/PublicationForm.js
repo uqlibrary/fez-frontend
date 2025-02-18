@@ -32,7 +32,6 @@ import {
 import { createNewRecord, doesDOIExist } from '../../../../actions';
 import validationErrors from '../../../../locale/validationErrors';
 import { locale } from '../../../../locale';
-import moment from 'moment/moment';
 import { useDispatch } from 'react-redux';
 import { Field } from '../../Toolbox/ReactHookForm';
 import { useForm } from '../../../../hooks';
@@ -40,6 +39,7 @@ import { useNavigate } from 'react-router-dom';
 import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
 import { isEmptyObject } from '../../../../helpers/general';
+import { dateRange } from 'config/validation';
 
 const asyncValidate = async (data, setError) => {
     const doi = data.fez_record_search_key_doi?.rek_doi;
@@ -68,14 +68,11 @@ const validateAuthors = data => {
 };
 
 const validateDates = data => {
-    const endDate = data.fez_record_search_key_end_date?.rek_end_date
-        ? moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format()
-        : null;
-    const startDate = data.rek_date ? moment(data.rek_date).format() : null;
-    if (startDate && endDate && startDate > endDate) {
-        return { dateRange: locale.validationErrors.dateRange };
+    const error = dateRange(data.rek_date, data.fez_record_search_key_end_page?.rek_end_date);
+    if (!error) {
+        return {};
     }
-    return {};
+    return { dateRange: error };
 };
 
 const validatePages = data => {

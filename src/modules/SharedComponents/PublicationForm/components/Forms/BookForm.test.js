@@ -1,7 +1,7 @@
-import { setupWrapper } from './test-utils';
+import { ControlledFieldWithReduxStore } from './test-utils';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
 import BookForm from './BookForm';
-const setup = props => setupWrapper(BookForm, props);
+const setup = props => ControlledFieldWithReduxStore(BookForm, props);
 
 describe('BookForm', () => {
     it('component', () => {

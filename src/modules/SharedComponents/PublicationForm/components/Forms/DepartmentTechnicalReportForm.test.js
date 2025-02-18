@@ -1,6 +1,6 @@
 import DepartmentTechnicalReportForm from './DepartmentTechnicalReportForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(DepartmentTechnicalReportForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(DepartmentTechnicalReportForm, props);
 
 describe('DepartmentTechnicalReportForm', () => {
     it('component', () => {

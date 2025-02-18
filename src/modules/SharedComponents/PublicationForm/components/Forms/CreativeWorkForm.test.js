@@ -1,7 +1,7 @@
 import CreativeWorkForm from './CreativeWorkForm';
 import { NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT, NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE } from 'config/general';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(CreativeWorkForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(CreativeWorkForm, props);
 
 describe('CreativeWorkForm', () => {
     it('component', () => {

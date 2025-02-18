@@ -1,6 +1,6 @@
 import NewspaperArticleForm from './NewspaperArticleForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(NewspaperArticleForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(NewspaperArticleForm, props);
 
 describe('NewspaperArticleForm', () => {
     it('component', () => {

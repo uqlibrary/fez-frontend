@@ -1,7 +1,7 @@
 import ResearchReportForm from './ResearchReportForm';
-import { setupWrapper } from './test-utils';
+import { ControlledFieldWithReduxStore } from './test-utils';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../../../config/general';
-const setup = props => setupWrapper(ResearchReportForm, props);
+const setup = props => ControlledFieldWithReduxStore(ResearchReportForm, props);
 
 describe('ResearchReportForm', () => {
     it('component', () => {

@@ -3,7 +3,7 @@ import { render, WithReduxStore } from 'test-utils';
 import React from 'react';
 import { formValues } from '../PublicationForm';
 
-export const setupWrapper = (Form, props) => {
+export const ControlledFieldWithReduxStore = (Form, props) => {
     const Wrapper = () => {
         const {
             control,

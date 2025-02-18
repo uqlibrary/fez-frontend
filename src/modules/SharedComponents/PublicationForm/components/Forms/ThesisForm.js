@@ -17,14 +17,11 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { numbersOnly } from 'helpers/general';
 
 export const ThesisForm = ({ isSubmitting, control }) => {
-    const getNumbersOnly = value => {
-        return value.replace(/[^\d]/g, '');
-    };
-
     const txt = formLocale.thesis;
-    const authortxt = formLocale.journalArticle;
+    const authorTxt = formLocale.journalArticle;
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -109,10 +106,10 @@ export const ThesisForm = ({ isSubmitting, control }) => {
             </Grid>
             {/* New Authors field */}
             <Grid item xs={12}>
-                <StandardCard title={authortxt.authors.title} help={authortxt.authors.help}>
+                <StandardCard title={authorTxt.authors.title} help={authorTxt.authors.help}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <Typography>{authortxt.authors.description}</Typography>
+                            <Typography>{authorTxt.authors.description}</Typography>
                             <Field
                                 control={control}
                                 component={ContributorsEditorField}
@@ -123,7 +120,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 contributorEditorId="authors"
                                 showContributorAssignment
                                 name="authors"
-                                locale={authortxt.authors.field}
+                                locale={authorTxt.authors.field}
                                 disabled={isSubmitting}
                                 validate={[validation.authorRequired]}
                                 required
@@ -189,7 +186,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 textFieldId="rek-total-pages"
                                 type="text"
                                 fullWidth
-                                normalize={getNumbersOnly}
+                                normalize={numbersOnly}
                                 {...txt.optional.fieldLabels.totalPages}
                                 validate={[validation.maxLength255Validator]}
                             />

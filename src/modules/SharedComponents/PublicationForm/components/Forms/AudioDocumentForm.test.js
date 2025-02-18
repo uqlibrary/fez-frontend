@@ -1,6 +1,6 @@
 import AudioDocumentForm from './AudioDocumentForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(AudioDocumentForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(AudioDocumentForm, props);
 
 describe('AudioDocumentForm', () => {
     it('component', () => {

@@ -1,6 +1,6 @@
 import WorkingPaperForm from './WorkingPaperForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(WorkingPaperForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(WorkingPaperForm, props);
 
 describe('WorkingPaperForm', () => {
     it('component', () => {

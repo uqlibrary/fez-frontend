@@ -31,7 +31,7 @@ export const showContentIndicatorsField = record => {
 export const getContentIndicatorsItemsList = (items, props = {}) => {
     return items.map(item => ({
         ...item,
-        disabled: !props.canUnselect && props?.meta?.initial?.toJS?.()?.includes?.(item?.value),
+        disabled: !props.canUnselect && !!props?.meta?.initial?.toJS?.()?.includes?.(item?.value),
     }));
 };
 

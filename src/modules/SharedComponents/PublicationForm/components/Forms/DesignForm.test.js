@@ -1,7 +1,7 @@
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 import DesignForm from './DesignForm';
-import { setupWrapper } from './test-utils';
-const setup = props => setupWrapper(DesignForm, props);
+import { ControlledFieldWithReduxStore } from './test-utils';
+const setup = props => ControlledFieldWithReduxStore(DesignForm, props);
 
 describe('DesignForm', () => {
     it('component', () => {
