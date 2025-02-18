@@ -10,25 +10,17 @@ import { Controller as Base } from 'react-hook-form';
  */
 const getDecoratedField = (field, fieldState, formState) => {
     const decoratedField = field;
-    const input = {
-        ...field,
-        meta: {
-            error: fieldState.error?.message,
-            // required to make it compatible with ContentIndicatorsField,
-            initial: { toJS: () => formState.defaultValues[field.name] },
-            form: Object.keys(formState).length > 0 ? 'hasForm' : null, // TODO - remove after reduxForm migration
-        },
-        ref: null,
-        value: decoratedField.value || '',
+    decoratedField.meta = {
+        error: fieldState.error?.message,
+        // required to make it compatible with ContentIndicatorsField,
+        initial: { toJS: () => formState.defaultValues[field.name] },
     };
     // required to make it compatible with SelectFieldWrapper,
-    decoratedField.input = input;
-    decoratedField.meta = input.meta;
+    decoratedField.input = decoratedField;
     // to avoid `ref` & forwardRef() errors
-    decoratedField.ref = input.ref; // TODO make it conditional if required
+    decoratedField.ref = null; // TODO make it conditional if required
     // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
-    decoratedField.value = input.value;
-
+    decoratedField.value = decoratedField.value || '';
     return decoratedField;
 };
 
