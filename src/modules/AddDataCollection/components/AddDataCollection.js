@@ -196,9 +196,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const onSubmit = async data => {
         setApiError('');
 
-        const errorDoi = validateDOI(data.fez_record_search_key_doi.rek_doi);
+        console.log('All registered fields:', watch());
+        const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
         if (errorDoi) {
-            // console.log('setError', setError);
+            console.log('setError', setError);
             setError('fez_record_search_key_doi.rek_doi', {
                 type: 'manual',
                 message: errorDoi,
@@ -206,6 +207,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
             // setApiError(errorDoi);
             return;
         }
+        console.log('setError rek_title');
+        setError('rek_title', {
+            type: 'manual',
+            message: errorDoi,
+        });
+        // setApiError(errorDoi);
+        if (Math.E > 2) return;
 
         // '' to []
         const specialKeys = [
