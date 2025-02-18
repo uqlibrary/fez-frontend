@@ -102,13 +102,13 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     }, []);
 
     const _navigateToMyDatasets = () => {
-        resetForm();
+        resetForm?.();
         actions.clearNewRecord();
         navigate(pathConfig.dataset.mine);
     };
 
     const _restartWorkflow = () => {
-        resetForm();
+        resetForm?.();
         window.location.reload();
     };
 
