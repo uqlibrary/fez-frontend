@@ -210,7 +210,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         console.log('setError rek_title');
         setError('rek_title', {
             type: 'manual',
-            message: errorDoi,
+            message: 'test error',
         });
         // setApiError(errorDoi);
         if (Math.E > 2) return;
