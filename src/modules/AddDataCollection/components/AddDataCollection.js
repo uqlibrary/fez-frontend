@@ -198,7 +198,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
         const errorDoi = validateDOI(data.fez_record_search_key_doi.rek_doi);
         if (errorDoi) {
-            setError('fez_record_search_key_doi.rek_doi', errorDoi);
+            // console.log('setError', setError);
+            setError('fez_record_search_key_doi.rek_doi', {
+                type: 'manual',
+                message: errorDoi,
+            });
+            // setApiError(errorDoi);
             return;
         }
 
