@@ -21,7 +21,6 @@ const getDecoratedField = (field, fieldState, formState) => {
         ref: null,
         value: decoratedField.value || '',
     };
-    // Object.keys(formState).length > 0 && (input.meta.form = 'hasForm');
     // required to make it compatible with SelectFieldWrapper,
     decoratedField.input = input;
     decoratedField.meta = input.meta;
