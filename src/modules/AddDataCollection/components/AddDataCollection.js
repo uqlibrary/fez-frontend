@@ -76,6 +76,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         handleSubmit,
         watch,
         reset: resetForm,
+        setError,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -194,6 +195,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const dispatch = useDispatch();
     const onSubmit = async data => {
         setApiError('');
+
+        const errorDoi = validateDOI(data.fez_record_search_key_doi.rek_doi);
+        if (errorDoi) {
+            setError('fez_record_search_key_doi.rek_doi', errorDoi);
+            return;
+        }
 
         // '' to []
         const specialKeys = [
@@ -380,7 +387,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             type="text"
                                             fullWidth
                                             {...txt.information.dataset.fieldLabels.doi}
-                                            validate={[validateDOI]}
+                                            validate={[validation.doi]}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={6}>
