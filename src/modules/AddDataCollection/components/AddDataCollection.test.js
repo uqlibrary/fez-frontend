@@ -68,7 +68,6 @@ describe('AddDataCollection test mocking hooks', () => {
                 isSubmitting: false,
                 get isSubmitSuccessful() {
                     counter++;
-                    console.log('counter', counter);
                     return counter === 1 ? false : true;
                 },
                 isDirty: false,
