@@ -17,7 +17,7 @@ import {
     waitToBeEnabled,
     WithReduxStore,
     WithRouter,
-    assertApiRequestCount,
+    expectApiRequestCountToBe,
 } from 'test-utils';
 import { screen } from '@testing-library/react';
 import publicationForm from '../../../../locale/publicationForm';
@@ -211,6 +211,9 @@ describe('PublicationForm', () => {
     });
 
     describe('form submission', () => {
+        const pid = 'UQ:1';
+        const fileMock = ['test.pdf'];
+
         beforeEach(() => {
             api.mock.reset();
             api.request.history.reset();
@@ -269,7 +272,6 @@ describe('PublicationForm', () => {
             await setRichTextEditorValue('rek-creator-contribution-statement', 'statement');
             await setRichTextEditorValue('rek-description', 'abstract');
             await setRichTextEditorValue('rek-description', 'abstract');
-            const fileMock = ['test.pdf'];
             addFilesToFileUploader(fileMock);
             await setFileUploaderFilesToClosedAccess(fileMock);
 
@@ -281,7 +283,6 @@ describe('PublicationForm', () => {
         });
 
         it('should perform async on submit', async () => {
-            const pid = 'UQ:1';
             const doiSearchUrl = SEARCH_KEY_LOOKUP_API({ searchKey: 'doi', searchQuery: '' }).apiUrl;
             api.mock.records
                 .create({ pid })
@@ -325,7 +326,7 @@ describe('PublicationForm', () => {
             await submitForm();
             await assertSavingMessage();
             expectApiRequestToMatchSnapshot('get', doiSearchUrl);
-            assertApiRequestCount('get', doiSearchUrl, 0);
+            expectApiRequestCountToBe('get', doiSearchUrl, 0);
         });
 
         describe('error handling', () => {

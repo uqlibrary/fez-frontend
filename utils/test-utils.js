@@ -286,7 +286,7 @@ const assertRequest = ({ method, url, partialUrl, data, request }) => {
     assertRequestData(data, request);
 };
 
-const assertApiRequestCount = (method, url, expectation) =>
+const expectApiRequestCountToBe = (method, url, expectation) =>
     assertRequestCount({ history: apiRequestHistory, method, url }, expectation);
 
 /**
@@ -399,7 +399,7 @@ module.exports = {
     assertRequestData,
     assertRequest,
     debugApiRequestHistory,
-    assertApiRequestCount,
+    expectApiRequestCountToBe,
     expectApiRequestHistoryLengthToBe,
     expectApiRequestHistoryToBeEmpty,
     assertApiRequest,
