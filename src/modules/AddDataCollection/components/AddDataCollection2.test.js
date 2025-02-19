@@ -99,6 +99,9 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
+    afterEach(() => {
+        mockApi.reset();
+    });
     it('should check doi error', async () => {
         const { getByTestId } = setup();
 
@@ -234,7 +237,6 @@ describe('AddDataCollection test', () => {
     });
 
     it('should submit check doi existing', async () => {
-        mockDoiExist = false;
         const existingDoiValue = '10.1037/a0028240';
         const notExistingDoiValue = '10.1037/a002824';
         mockApi
@@ -294,6 +296,7 @@ describe('AddDataCollection test', () => {
 
         await inputRequired(getByTestId);
 
+        mockDoiExist = false;
         const doi = getByTestId('rek-doi-input');
         await userEvent.clear(doi);
         await userEvent.type(doi, existingDoiValue);
@@ -301,8 +304,7 @@ describe('AddDataCollection test', () => {
         doi.blur();
         expect(getByTestId('submit-data-collection')).toBeEnabled();
         await userEvent.click(getByTestId('submit-data-collection'));
-
-        await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
+        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
 
         await userEvent.clear(doi);
         await userEvent.type(doi, notExistingDoiValue);
@@ -318,6 +320,6 @@ describe('AddDataCollection test', () => {
         doi.blur();
         expect(getByTestId('submit-data-collection')).toBeEnabled();
         await userEvent.click(getByTestId('submit-data-collection'));
-        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+        await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
     });
 });
