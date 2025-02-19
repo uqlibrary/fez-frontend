@@ -411,13 +411,16 @@ describe('dates', () => {
 
     describe('dateRange', () => {
         it('should not return error when start date is before or equal to end date', () => {
-            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:00')).toEqual('');
-            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:01')).toEqual('');
+            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:00')).toBeUndefined();
+            expect(validation.dateRange('2000-01-01 00:00:00', '2000-01-01 00:00:01')).toBeUndefined();
         });
 
         it('should return error when start date is after end date', () => {
             expect(validation.dateRange('2000-01-01 00:00:01', '2000-01-01 00:00:00')).toEqual(
                 locale.validationErrors.dateRange,
+            );
+            expect(validation.dateRange('2000-01-01 00:00:01', '2000-01-01 00:00:00', 'error message')).toEqual(
+                'error message',
             );
         });
     });

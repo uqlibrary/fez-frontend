@@ -386,7 +386,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                             onClick={onFormCancel}
                         />
                     </Grid>
-                    {(hasSubtype || !!displayType) && (
+                    {!!displayType && (!hasSubtype || subtype) && (
                         <Grid xs={12} sm="auto">
                             <Button
                                 onClick={handleSubmit}
