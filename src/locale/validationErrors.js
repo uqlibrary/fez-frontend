@@ -16,6 +16,8 @@ export default {
         email: 'Email address is not valid',
         url: 'URL is not valid',
         doi: 'DOI is not valid',
+        orcid: 'ORCiD is not valid',
+        ror: 'ROR is not valid',
         doiExists: 'DOI is assigned to another work already',
         researcherId: 'ResearcherId is not valid',
         pid: 'Please provide a valid PID (e.g. UQ:129af6)',

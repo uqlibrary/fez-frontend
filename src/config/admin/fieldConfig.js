@@ -2012,6 +2012,15 @@ export default {
                 label: 'Owner Email',
                 placeholder: 'Type the email address of owner for this instrument',
             }),
+            ownerIdentifier: () => ({
+                validate: [
+                    (value, allValues) => {
+                        const type = allValues.get('adminSection')?.get('ownerIdentifierType');
+                        const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
+                        return validateMethod ? validation[validateMethod.text.toLowerCase()](value) : undefined;
+                    },
+                ],
+            }),
             fez_record_search_key_end_date: () => ({
                 name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
             }),
