@@ -106,6 +106,9 @@ export const getColumns = ({
     } = locale;
     return [
         {
+            cellStyle: () => ({
+                verticalAlign: 'top',
+            }),
             title: (
                 <NameAsPublished
                     icon={<People color="secondary" />}
@@ -264,6 +267,10 @@ export const getColumns = ({
                           </Typography>
                       ),
                       editComponent: props => {
+                          const validateId = (id, type) => {
+                              const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
+                              return validateMethod ? validation[validateMethod.text.toLowerCase()](id) : undefined;
+                          };
                           return (
                               <Grid container spacing={2}>
                                   <Grid item style={{ flexGrow: '1' }}>
@@ -272,9 +279,13 @@ export const getColumns = ({
                                           value={props.value}
                                           onChange={e => props.onChange(e.target.value)}
                                           textFieldId={`${contributorEditorId}-external-identifier`}
-                                          error={validation.maxLength255Validator(props.rowData?.externalIdentifier)}
-                                          errorText={validation.maxLength255Validator(
+                                          error={validateId(
                                               props.rowData?.externalIdentifier,
+                                              props.rowData?.externalIdentifierType,
+                                          )}
+                                          errorText={validateId(
+                                              props.rowData?.externalIdentifier,
+                                              props.rowData?.externalIdentifierType,
                                           )}
                                           label={externalIdentifierLabel}
                                           placeholder={externalIdentifierHint}
@@ -286,6 +297,9 @@ export const getColumns = ({
                       },
                   },
                   {
+                      cellStyle: () => ({
+                          verticalAlign: 'top',
+                      }),
                       title: (
                           <Typography variant="caption" color="secondary">
                               {externalIdentifierTypeColumn}

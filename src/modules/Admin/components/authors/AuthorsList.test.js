@@ -757,7 +757,7 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
-        fireEvent.click(getByText('Orcid ID'));
+        fireEvent.click(getByText('Orcid'));
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(getAllByTestId('mtablebodyrow').length).toBe(1);
@@ -767,7 +767,7 @@ describe('AuthorsList', () => {
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
-        fireEvent.click(getByText('RoR'));
+        fireEvent.click(getByText('ROR'));
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
