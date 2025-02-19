@@ -151,12 +151,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     }, []);
     React.useEffect(() => {
         console.log('show/hide confirm isSubmitSuccessful=', isSubmitSuccessful);
-        if (isSubmitSuccessful) {
+        if (isSubmitSuccessful && !!!apiError) {
             confirmationBoxRef.current?.showConfirmation();
         } else {
             confirmationBoxRef.current?._hideConfirmation();
         }
-    }, [isSubmitSuccessful]);
+    }, [isSubmitSuccessful, apiError]);
 
     const _navigateToMyDatasets = () => {
         resetForm?.();
@@ -341,14 +341,12 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         <StandardPage title={txt.pageTitle}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
-                    {!!!apiError && (
-                        <ConfirmDialogBox
-                            onRef={setConfirmationRef}
-                            onAction={_navigateToMyDatasets}
-                            onCancelAction={_restartWorkflow}
-                            locale={saveConfirmationLocale}
-                        />
-                    )}
+                    <ConfirmDialogBox
+                        onRef={setConfirmationRef}
+                        onAction={_navigateToMyDatasets}
+                        onCancelAction={_restartWorkflow}
+                        locale={saveConfirmationLocale}
+                    />
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3} className={'DataCollection'}>
                         <Grid xs={12}>
