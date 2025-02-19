@@ -105,17 +105,17 @@ export class ContributorsEditor extends PureComponent {
     buildInitialScaleOfSignificance = props => {
         if (!props.isNtro) return [];
 
-        const ScaleOfSignificance = [];
+        const scaleOfSignificance = [];
         props.record?.fez_record_search_key_significance &&
             props.record?.fez_record_search_key_significance.length > 0 &&
             props.record?.fez_record_search_key_significance.map((item, index) => {
                 // check here for the length of the significance vs the authors.
                 /* istanbul ignore else */
                 if (props.record?.fez_record_search_key_author.length >= index + 1) {
-                    ScaleOfSignificance[index] = {};
-                    ScaleOfSignificance[index].id = item.rek_significance_id;
-                    ScaleOfSignificance[index].key = item.rek_significance;
-                    ScaleOfSignificance[index].value = {
+                    scaleOfSignificance[index] = {};
+                    scaleOfSignificance[index].id = item.rek_significance_id;
+                    scaleOfSignificance[index].key = item.rek_significance;
+                    scaleOfSignificance[index].value = {
                         plainText:
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
@@ -123,7 +123,7 @@ export class ContributorsEditor extends PureComponent {
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
                     };
-                    ScaleOfSignificance[index].author = {
+                    scaleOfSignificance[index].author = {
                         rek_author_id:
                             props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                             /* istanbul ignore next */ 0,
@@ -141,14 +141,14 @@ export class ContributorsEditor extends PureComponent {
         (!props.record?.fez_record_search_key_significance ||
             props.record?.fez_record_search_key_significance?.length === 0) &&
             props.record?.fez_record_search_key_author?.map((item, index) => {
-                ScaleOfSignificance[index] = {};
-                ScaleOfSignificance[index].id = 0;
-                ScaleOfSignificance[index].key = 0;
-                ScaleOfSignificance[index].value = {
+                scaleOfSignificance[index] = {};
+                scaleOfSignificance[index].id = 0;
+                scaleOfSignificance[index].key = 0;
+                scaleOfSignificance[index].value = {
                     plainText: 'Missing',
                     htmlText: 'Missing',
                 };
-                ScaleOfSignificance[index].author = {
+                scaleOfSignificance[index].author = {
                     rek_author_id:
                         props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                         /* istanbul ignore next */ 0,
@@ -161,12 +161,15 @@ export class ContributorsEditor extends PureComponent {
                     rek_author_order: index + 1,
                 };
             });
-        return ScaleOfSignificance;
+        return scaleOfSignificance;
     };
 
     getContributorsFromProps = props => {
-        if (props.input && props.input.name && props.input.value) {
-            return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+        if (props.value || (props.input && props.input.name && props.input.value)) {
+            return (
+                props.value ||
+                (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
+            );
         }
 
         return [];

@@ -90,6 +90,7 @@ export const AdminInterface = ({
     locked,
     tabs,
     error,
+    formErrors = {},
 }) => {
     const dispatch = useDispatch();
     const { record } = useRecordContext();
@@ -98,7 +99,7 @@ export const AdminInterface = ({
         handleSubmit,
         reset,
         setValue,
-        formState: { errors: formErrors, isSubmitting, isSubmitSuccessful, isDirty },
+        formState: { isSubmitting, isSubmitSuccessful, isDirty },
     } = useFormContext();
 
     const numErrors = Object.keys(formErrors).length;
@@ -487,6 +488,7 @@ AdminInterface.propTypes = {
     locked: PropTypes.bool,
     tabs: PropTypes.object,
     error: PropTypes.object,
+    formErrors: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

@@ -22,11 +22,10 @@ import { ThemeProvider } from '@mui/material/styles';
 import { adminTheme } from 'config';
 
 import { onSubmit } from '../submitHandler';
-// import { validateResolver } from '../validators';
-import { validate } from 'config/admin';
 import { useRecord, useRecordToView, useFormOnChangeHook } from '../hooks';
 import { RecordContext, TabbedContext } from 'context';
 import { useIsMobileView, useValidatedForm } from '../../../hooks';
+import { useFormValidator } from '../validators';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
@@ -58,36 +57,30 @@ export const AdminContainer = ({ createMode = false }) => {
         recordToViewError,
         initialValues,
         locked,
-        error,
+        error: apiUpdateError,
     } = useRecord(createMode);
 
     const form = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
-        mode: 'onChange',
         criteriaMode: 'all',
+        mode: 'onChange',
         // errors // can we use this to handle tab errors?
     });
 
-    useFormOnChangeHook(form);
     const recordToView = useRecordToView(record, createMode, form);
+    useFormOnChangeHook(form);
+    const { errors: formErrors } = useFormValidator(form);
 
     const handleSubmit = async (data, e) => {
         e.preventDefault();
         try {
-            const errors = validate(data);
-            if (Object.keys(errors).length === 0) {
-                await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
-            } else {
-                Object.keys(errors).forEach(error =>
-                    form.setError(error, { type: 'validate', message: errors[error] }),
-                );
-            }
+            await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
             /* istanbul ignore next */
-            form.setServerError(e);
+            form.setServerError(form.setError, e);
         }
     };
 
@@ -99,7 +92,7 @@ export const AdminContainer = ({ createMode = false }) => {
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
     // console.log(form.formState.errors);
-    tabErrors.current = Object.entries(form.formState?.errors || /* istanbul ignore next */ {}).reduce(
+    tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
                 ...numberOfErrors,
@@ -162,7 +155,8 @@ export const AdminContainer = ({ createMode = false }) => {
                                     destroy={destroy}
                                     locked={locked}
                                     disabled
-                                    error={error}
+                                    error={apiUpdateError}
+                                    formErrors={formErrors}
                                     tabs={{
                                         admin: {
                                             component: AdminSection,

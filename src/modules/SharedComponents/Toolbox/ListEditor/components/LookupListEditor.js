@@ -3,6 +3,8 @@ import ListEditor from './ListEditor';
 import LookupForm from './LookupForm';
 
 export default function LookupListEditor(fieldProps) {
-    if (!!!fieldProps.input.value) return <></>;
-    return <ListEditor formComponent={LookupForm} {...fieldProps} />;
+    const props = { ...fieldProps };
+    // eslint-disable-next-line react/prop-types
+    if (!props.input.value) props.input.value = [];
+    return <ListEditor formComponent={LookupForm} {...props} />;
 }

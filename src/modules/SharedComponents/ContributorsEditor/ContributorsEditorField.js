@@ -3,12 +3,11 @@ import React from 'react';
 import ContributorsEditor from './components/ContributorsEditor';
 
 export default function ContributorsEditorField(fieldProps) {
-    if (
-        !fieldProps.value ||
-        (!!fieldProps.input.value && !!fieldProps.input.value?.toJS && !!fieldProps.input.value.toJS())
-    ) {
-        return <></>;
-    }
-
-    return <ContributorsEditor onChange={fieldProps.input?.onChange} {...fieldProps} />;
+    return (
+        <ContributorsEditor
+            onChange={fieldProps?.onChange || fieldProps.input?.onChange}
+            {...fieldProps}
+            value={fieldProps.value || fieldProps.input.value || []}
+        />
+    );
 }
