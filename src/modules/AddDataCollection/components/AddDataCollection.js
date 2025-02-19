@@ -149,22 +149,29 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         shouldValidate: true,
     });
     const [apiError, setApiError] = React.useState('');
-    console.log('apiError=', apiError);
 
     const navigate = useNavigate();
     const previous = usePrevious(isSubmitSuccessful);
     const confirmationBoxRef = React.useRef();
 
     React.useEffect(() => {
+        console.log('previous=', previous);
         if (previous !== undefined && previous !== isSubmitSuccessful) {
             confirmationBoxRef?.current?.showConfirmation();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isSubmitSuccessful]);
+    }, [isSubmitSuccessful, apiError]);
 
-    const setConfirmationRef = React.useCallback(node => {
-        confirmationBoxRef.current = node; // TODO: Add check that this worked
-    }, []);
+    const setConfirmationRef = React.useCallback(
+        node => {
+            console.log('ConfirmDialogBox ref set:', node);
+            confirmationBoxRef.current = node;
+            if (isSubmitSuccessful) {
+                confirmationBoxRef?.current?.showConfirmation();
+            }
+        },
+        [isSubmitSuccessful],
+    );
 
     const _navigateToMyDatasets = () => {
         resetForm?.();
@@ -330,7 +337,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         // set default values for a new unapproved record and handle submission
         try {
             await dispatch(createNewRecord(cleanValues));
-            setApiError('');
+            setApiError(prev => (prev === '' ? ' ' : ''));
             console.log('onSubmit done');
             // Form submission successful
         } catch (error) {
@@ -341,11 +348,15 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         }
     };
 
+    console.log('apiError=', apiError);
+    console.log('isSubmitSuccessful=', isSubmitSuccessful);
+    console.log('confirmationBoxRef.current=', confirmationBoxRef?.current);
+
     return (
         <StandardPage title={txt.pageTitle}>
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
-                    {!apiError && (
+                    {!!!apiError && (
                         <ConfirmDialogBox
                             onRef={setConfirmationRef}
                             onAction={_navigateToMyDatasets}
