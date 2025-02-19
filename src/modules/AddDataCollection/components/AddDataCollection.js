@@ -75,68 +75,68 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         values: {
             ...NEW_DATASET_DEFAULT_VALUES,
             // debug set required values
-            ...{
-                rek_copyright: 'on',
-                rek_title: 'test',
-                rek_description: 'test',
-                contact: {
-                    contactName: 'test',
-                    contactNameId: {
-                        id: 2000003221,
-                        value: 'test test (test)',
-                        aut_id: 2000003221,
-                        aut_org_username: 'test',
-                        aut_fname: 'test',
-                        aut_student_username: 'test',
-                        aut_lname: 'test',
-                        aut_org_staff_id: 'test',
-                        aut_display_name: 'test test',
-                        aut_org_student_id: 'test',
-                    },
-                    contactEmail: 't@t.au',
-                },
-                fez_record_search_key_doi: {
-                    rek_doi: '',
-                },
-                rek_date: '2000-04-01',
-                fieldOfResearch: [
-                    {
-                        rek_value: {
-                            key: 452301,
-                            value: '090108 Satellite, Space Vehicle and Missile Design and Testing',
-                        },
-                        rek_order: 1,
-                    },
-                ],
-                authors: [
-                    {
-                        nameAsPublished: 'test',
-                        creatorRole: 'Project lead/Principal investigator',
-                        uqIdentifier: '',
-                        orgaff: '',
-                        orgtype: '',
-                        affiliation: '',
-                        uqUsername: '',
-                        required: false,
-                        disabled: false,
-                        authorId: null,
-                        aut_title: '',
-                        affiliations: [],
-                    },
-                ],
-                fez_record_search_key_access_conditions: {
-                    rek_access_conditions: 453619,
-                },
-                fez_record_search_key_license: {
-                    rek_license: 453701,
-                },
-                fez_record_search_key_project_name: {
-                    rek_project_name: 'test',
-                },
-                fez_record_search_key_project_description: {
-                    rek_project_description: 'test',
-                },
-            },
+            // ...{
+            //     rek_copyright: 'on',
+            //     rek_title: 'test',
+            //     rek_description: 'test',
+            //     contact: {
+            //         contactName: 'test',
+            //         contactNameId: {
+            //             id: 2000003221,
+            //             value: 'test test (test)',
+            //             aut_id: 2000003221,
+            //             aut_org_username: 'test',
+            //             aut_fname: 'test',
+            //             aut_student_username: 'test',
+            //             aut_lname: 'test',
+            //             aut_org_staff_id: 'test',
+            //             aut_display_name: 'test test',
+            //             aut_org_student_id: 'test',
+            //         },
+            //         contactEmail: 't@t.au',
+            //     },
+            //     fez_record_search_key_doi: {
+            //         rek_doi: '',
+            //     },
+            //     rek_date: '2000-04-01',
+            //     fieldOfResearch: [
+            //         {
+            //             rek_value: {
+            //                 key: 452301,
+            //                 value: '090108 Satellite, Space Vehicle and Missile Design and Testing',
+            //             },
+            //             rek_order: 1,
+            //         },
+            //     ],
+            //     authors: [
+            //         {
+            //             nameAsPublished: 'test',
+            //             creatorRole: 'Project lead/Principal investigator',
+            //             uqIdentifier: '',
+            //             orgaff: '',
+            //             orgtype: '',
+            //             affiliation: '',
+            //             uqUsername: '',
+            //             required: false,
+            //             disabled: false,
+            //             authorId: null,
+            //             aut_title: '',
+            //             affiliations: [],
+            //         },
+            //     ],
+            //     fez_record_search_key_access_conditions: {
+            //         rek_access_conditions: 453619,
+            //     },
+            //     fez_record_search_key_license: {
+            //         rek_license: 453701,
+            //     },
+            //     fez_record_search_key_project_name: {
+            //         rek_project_name: 'test',
+            //     },
+            //     fez_record_search_key_project_description: {
+            //         rek_project_description: 'test',
+            //     },
+            // },
         },
         shouldValidate: true,
     });
