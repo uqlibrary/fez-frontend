@@ -45,6 +45,8 @@ export const getDefaultCenter = geoCoords => {
     }
 };
 
+console.log('Google Maps API Key:', googleMapsApiKey);
+
 export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const initialGeoCoords =
         (!!coordinates &&
