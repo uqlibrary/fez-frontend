@@ -13,6 +13,7 @@ import {
     RECORD_TYPE_RECORD,
     RECORD_TYPE_COMMUNITY,
     RECORD_TYPE_COLLECTION,
+    PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
@@ -43,6 +44,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
+    const isInstrument = recordToView.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
     return {
         initialValues: {
             pid: recordToView.rek_pid,
@@ -82,7 +84,10 @@ const getInitialFormValues = (recordToView, recordType) => {
                 {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
+                (recordType === RECORD_TYPE_RECORD &&
+                    !isInstrument &&
+                    getInitialValues(recordToView, 'grantInformation')) ||
+                {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
             notesSection:

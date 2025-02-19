@@ -2012,6 +2012,9 @@ export default {
                 label: 'Owner Email',
                 placeholder: 'Type the email address of owner for this instrument',
             }),
+            fez_record_search_key_end_date: () => ({
+                name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
+            }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
             authors: ({ isNtro }) => ({ isNtro }),
