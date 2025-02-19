@@ -194,13 +194,16 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
     const dispatch = useDispatch();
     const onSubmit = async data => {
+        console.log('onSubmit start');
         setApiError('');
 
         const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
         if (errorDoi) {
+            console.log('errorDoi', errorDoi);
             setApiError(errorDoi);
             return;
         }
+        console.log('async validateDOI done');
 
         // '' to []
         const specialKeys = [
@@ -263,6 +266,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         // set default values for a new unapproved record and handle submission
         try {
             await dispatch(createNewRecord(cleanValues));
+            console.log('onSubmit done');
             // Form submission successful
         } catch (error) {
             let err = error.message;
