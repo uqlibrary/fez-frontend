@@ -125,8 +125,22 @@ const publicationTypeListInstrument = {
                 "rek_contributor_id_order": 1
             }
         ],
-        "fez_record_search_key_contributor_identifier": [],
-        "fez_record_search_key_contributor_identifier_type": [],
+        "fez_record_search_key_contributor_identifier": [
+            {
+                "rek_contributor_identifier_id": 2475658,
+                "rek_contributor_identifier_pid": "UQ:23aac26",
+                "rek_contributor_identifier": '0000-0000-0000-0001',
+                "rek_contributor_id_order": 1
+            }
+        ],
+        "fez_record_search_key_contributor_identifier_type": [
+            {
+                "rek_contributor_identifier_type_id": 2475658,
+                "rek_contributor_identifier_type_pid": "UQ:23aac26",
+                "rek_contributor_identifier_type": 459136,
+                "rek_contributor_id_type_order": 1
+            }
+        ],
         "fez_record_search_key_datastream_policy": null,
         "fez_record_search_key_instrument_type": [
             {
@@ -141,7 +155,7 @@ const publicationTypeListInstrument = {
             "rek_end_date_id": 2579,
             "rek_end_date_pid": "UQ:23aac26",
             "rek_end_date_xsdmf_id": null,
-            "rek_end_date": "1922-02-02T00:00:00Z"
+            "rek_end_date": "2022-02-03T00:00:00Z"
         },
         "fez_record_search_key_model": [
             {
