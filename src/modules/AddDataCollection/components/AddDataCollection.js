@@ -76,7 +76,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         handleSubmit,
         watch,
         reset: resetForm,
-        setError,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
     } = useValidatedForm({
@@ -84,6 +83,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         values: {
             ...NEW_DATASET_DEFAULT_VALUES,
         },
+        shouldValidate: false,
     });
     const [apiError, setApiError] = React.useState('');
 
@@ -196,24 +196,11 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const onSubmit = async data => {
         setApiError('');
 
-        console.log('All registered fields:', watch());
         const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
         if (errorDoi) {
-            console.log('setError', setError);
-            setError('fez_record_search_key_doi.rek_doi', {
-                type: 'manual',
-                message: errorDoi,
-            });
-            // setApiError(errorDoi);
+            setApiError(errorDoi);
             return;
         }
-        console.log('setError rek_title');
-        setError('rek_title', {
-            type: 'manual',
-            message: 'test error',
-        });
-        // setApiError(errorDoi);
-        if (Math.E > 2) return;
 
         // '' to []
         const specialKeys = [
