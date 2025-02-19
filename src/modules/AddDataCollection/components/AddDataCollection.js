@@ -62,14 +62,6 @@ export const licenseText = licenses => {
         .join('');
 };
 
-const usePrevious = value => {
-    const ref = React.useRef();
-    React.useEffect(() => {
-        ref.current = value;
-    }, [value]);
-    return ref.current;
-};
-
 export const AddDataCollection = ({ disableSubmit, ...props }) => {
     // form
     const {
@@ -151,16 +143,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const [apiError, setApiError] = React.useState('');
 
     const navigate = useNavigate();
-    const previous = usePrevious(isSubmitSuccessful);
     const confirmationBoxRef = React.useRef();
-
-    React.useEffect(() => {
-        console.log('previous=', previous);
-        if (previous !== undefined && previous !== isSubmitSuccessful) {
-            confirmationBoxRef?.current?.showConfirmation();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isSubmitSuccessful, apiError]);
 
     const setConfirmationRef = React.useCallback(
         node => {
