@@ -181,14 +181,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
     const validateDOI = async doi => {
         if (!!!doi) return null;
-        if (isValidDOIValue(doi)) {
-            try {
-                const response = await doesDOIExist(doi);
-                return response?.total ? validationErrors.validationErrors.doiExists : null;
-            } catch (error) {
-                return locale.validationErrors.doi;
-            }
-        } else {
+        try {
+            const response = await doesDOIExist(doi);
+            return response?.total ? validationErrors.validationErrors.doiExists : null;
+        } catch (error) {
             return locale.validationErrors.doi;
         }
     };

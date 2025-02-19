@@ -298,6 +298,12 @@ describe('AddDataCollection test', () => {
 
         mockDoiExist = false;
         const doi = getByTestId('rek-doi-input');
+
+        await userEvent.type(doi, 'Test');
+        await userEvent.tab();
+        expect(doi).toHaveValue('Test');
+        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+
         await userEvent.clear(doi);
         await userEvent.type(doi, existingDoiValue);
         await userEvent.tab();
