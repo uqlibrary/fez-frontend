@@ -29,7 +29,11 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
     const txt = formLocale.creativeWork;
     const _formValues = formValues && formValues.toJS();
     // not sure why rek_date is used as the start date in here
-    const hasDateError = dateRange(_formValues.rek_date, _formValues.fez_record_search_key_end_date?.rek_end_date);
+    const hasDateError = dateRange(
+        _formValues.rek_date,
+        _formValues.fez_record_search_key_end_date?.rek_end_date,
+        'Date range is not valid',
+    );
     const displayEndDate = [
         ...LP_NTRO_SUBTYPES,
         ...CPEE_NTRO_SUBTYPES,

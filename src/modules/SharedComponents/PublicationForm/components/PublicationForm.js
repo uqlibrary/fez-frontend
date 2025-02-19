@@ -68,10 +68,20 @@ const validateAuthors = data => {
 };
 
 const validateDates = data => {
-    const error = dateRange(data.rek_date, data.fez_record_search_key_end_page?.rek_end_date);
-    if (!error) {
+    if (
+        (!data.rek_date && !data.fez_record_search_key_project_start_date?.rek_project_start_date) ||
+        !data.fez_record_search_key_end_date?.rek_end_date
+    ) {
         return {};
     }
+
+    // TODO check why project_start_date is being compared with end_date
+    const error = dateRange(
+        data.fez_record_search_key_project_start_date?.rek_project_start_date || data.rek_date,
+        data.fez_record_search_key_end_date?.rek_end_date,
+    );
+    if (!error) return {};
+
     return { dateRange: error };
 };
 
@@ -83,13 +93,12 @@ const validatePages = data => {
         docType === 177 &&
         (!startPage || !endPage || (startPage && endPage && parseInt(startPage, 10) > parseInt(endPage, 10)))
     ) {
-        return { pageRange: locale.validationErrors.pageRange };
+        return { pageRange: { message: locale.validationErrors.pageRange } };
     }
     return {};
 };
 
 const getFormLevelError = data => {
-    if (!data) return {};
     return {
         ...validateAuthors(data),
         ...validateDates(data),
@@ -142,16 +151,19 @@ const publicationTypeItems = [
                 {item.name}
             </MenuItem>
         )),
-    ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
-        <MenuItem value={item} key={`ntro-${index}`}>
-            {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
-        </MenuItem>
-    )),
+    ...NEW_DOCTYPES_OPTIONS.map((item, index) => {
+        /* istanbul ignore next */
+        return (
+            <MenuItem value={item} key={`ntro-${index}`}>
+                {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
+            </MenuItem>
+        );
+    }),
 ];
 
 export const formValues = values => ({ get: key => values[key], toJS: () => values });
 
-const PublicationForm = ({ initialValues, onFormSubmitSuccess, onFormCancel }) => {
+const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const shouldIgnoreDisplayTypeChange = useRef(false);
@@ -241,6 +253,10 @@ const PublicationForm = ({ initialValues, onFormSubmitSuccess, onFormCancel }) =
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isSubmitSuccessful]);
 
+    /* istanbul ignore next */
+    const handleDefaultSubmit = e => {
+        e.preventDefault();
+    };
     const handleSubmit = safelyHandleSubmit(async data => {
         if (!(await asyncValidate({ ...data }, setError))) return;
         await dispatch(createNewRecord(data));
@@ -250,7 +266,7 @@ const PublicationForm = ({ initialValues, onFormSubmitSuccess, onFormCancel }) =
     const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
     return (
         <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-            <form onSubmit={e => e.preventDefault()}>
+            <form onSubmit={handleDefaultSubmit}>
                 <Grid container spacing={3}>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid xs={12}>

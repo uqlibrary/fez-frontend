@@ -23,8 +23,9 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
-import { lastRequests } from '../src/config/axios';
+import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
+import { isEmptyObject } from '../src/helpers/general';
 
 export const AllTheProviders = props => {
     return (
@@ -240,13 +241,36 @@ const mockWebApiFile = () => {
     };
 };
 
-const assertRequestData = (data, request) => {
-    if (typeof data === 'object') {
-        expect(JSON.parse(request.data)).toStrictEqual(data);
-    } else if (typeof data === 'function') {
-        expect(data(request.data)).toBeTruthy();
+const assertRequestData = (expected, request) => {
+    const actual = !isEmptyObject(request.data || {}) ? request.data : request.params;
+    if (typeof expected === 'object') {
+        expect(JSON.parse(actual)).toStrictEqual(expected);
+    } else if (typeof expected === 'function') {
+        expect(expected(actual)).toBeTruthy();
     }
 };
+
+const requestHistoryToString = history =>
+    JSON.stringify(
+        history.reduce((acc, item) => {
+            acc.push({ method: item.method, url: item.url, data: item.data, params: item.params });
+            return acc;
+        }, []),
+        null,
+        2,
+    );
+
+const debugApiRequestHistory = () => console.log(requestHistoryToString(apiRequestHistory));
+
+const requestFilter = ({ method, url, partialUrl }) => entry =>
+    (!method || entry.method === method) &&
+    (!url || entry.url === url) &&
+    (!partialUrl || entry.url.includes(partialUrl));
+
+const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
+    history.findIndex(requestFilter({ method, url, partialUrl }));
+const assertRequestCount = ({ history, method, url, partialUrl }, expectation) =>
+    expect(history.filter(requestFilter({ method, url, partialUrl }))).toHaveLength(expectation);
 
 const assertRequest = ({ method, url, partialUrl, data, request }) => {
     if (method && method !== '*') {
@@ -262,31 +286,28 @@ const assertRequest = ({ method, url, partialUrl, data, request }) => {
     assertRequestData(data, request);
 };
 
-const assertApiRequest = ({ method, url, partialUrl, data }) => {
-    // try to find the last request based on method, url and partialUrl if these are available
-    const index = lastRequests.findIndex(
-        entry =>
-            (!method || entry.method === method) &&
-            (!url || entry.url === url) &&
-            (!partialUrl || entry.url.includes(partialUrl)),
-    );
+const assertApiRequestCount = (method, url, expectation) =>
+    assertRequestCount({ history: apiRequestHistory, method, url }, expectation);
 
+/**
+ * @param {number} count
+ */
+const expectApiRequestHistoryLengthToBe = (count = 0) => expect(apiRequestHistory).toHaveLength(count);
+const expectApiRequestHistoryToBeEmpty = () => expectApiRequestHistoryLengthToBe(0);
+const assertApiRequest = ({ method, url, partialUrl, data }) => {
+    if (!method && !url && !partialUrl && isEmptyObject(data || {})) throw new Error('invalid params');
+
+    // try to find the last request based on method, url and partialUrl if these are available
+    const index = findRequestHistoryIndex({ history: apiRequestHistory, method, url, partialUrl });
     if (index < 0) {
         throw new Error(
             `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
                 partialUrl ||
-                'N/A'}\n\nRequest queue:\n${JSON.stringify(
-                lastRequests.reduce((acc, item) => {
-                    acc.push({ method: item.method, url: item.url });
-                    return acc;
-                }, []),
-                null,
-                2,
-            )}`,
+                'N/A'}\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
         );
     }
     // pop match from queue, so that similar requests can be processed by consecutive calls
-    const [request] = lastRequests.splice(index, 1);
+    const [request] = apiRequestHistory.splice(index, 1);
     assertRequest({ method, url, partialUrl, data, request });
 
     return request;
@@ -310,6 +331,40 @@ const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
 const previewAndHalt = () => {
     preview.debug();
     process.exit(0);
+};
+
+/**
+ * @param {string} containerTestId
+ * @param {string} value
+ */
+const setRichTextEditorValue = async (containerTestId, value) => {
+    const editor = screen.getByTestId(containerTestId).querySelector('.ck-editor__editable').ckeditorInstance;
+    editor.model.change(writer => {
+        writer.insertText(value, editor.model.document.selection.getFirstPosition());
+    });
+    await userEvent.tab();
+};
+
+/**
+ * @param {string} id
+ * @param {string} option
+ * @param {number}  index
+ * @return {Promise<void>}
+ */
+const selectDropDownOption = async (id, option, index = 0) => {
+    await userEvent.click(screen.getByTestId(id));
+    await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
+};
+
+/**
+ * @param {string} fieldName
+ * @param {string} name
+ * @return {Promise<void>}
+ */
+const addContributorsEditorItem = async (fieldName, name = 'author') => {
+    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+    await userEvent.click(screen.getByTestId(`${fieldName}-add`));
+    await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
 module.exports = {
@@ -343,9 +398,16 @@ module.exports = {
     mockWebApiFile,
     assertRequestData,
     assertRequest,
+    debugApiRequestHistory,
+    assertApiRequestCount,
+    expectApiRequestHistoryLengthToBe,
+    expectApiRequestHistoryToBeEmpty,
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     previewAndHalt,
+    setRichTextEditorValue,
+    selectDropDownOption,
+    addContributorsEditorItem,
     api,
 };

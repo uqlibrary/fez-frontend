@@ -20,8 +20,12 @@ export const DesignForm = ({ control, formValues, isSubmitting, isNtro, isAuthor
     // path to the locale data for each of the sections
     const txt = formLocale.design;
     const _formValues = formValues && formValues.toJS();
-    // not sure why rek_date is used as the start date in here
-    const hasDateError = dateRange(_formValues.rek_date, _formValues.fez_record_search_key_end_date?.rek_end_date);
+    // TODO check why project_start_date is being compared with end_date
+    const hasDateError = dateRange(
+        _formValues.fez_record_search_key_project_start_date?.rek_project_start_date,
+        _formValues.fez_record_search_key_end_date?.rek_end_date,
+        'Date range is not valid',
+    );
 
     return (
         <Grid container spacing={3}>

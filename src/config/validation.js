@@ -297,7 +297,7 @@ export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from)
  * @return {string}
  */
 export const dateRange = (start, end, message = locale.validationErrors.dateRange) =>
-    !!start && !!end && !isDateSameOrBefore(start, end) ? message : '';
+    !!start && !!end && !isDateSameOrBefore(start, end) ? message : undefined;
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 
