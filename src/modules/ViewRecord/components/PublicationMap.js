@@ -76,7 +76,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const drawingManagerRef = React.useRef();
 
     React.useEffect(() => {
-        if (!!bounds.current && !!geoCoords && geoCoords.length > 0) {
+        if (!!bounds.current && !!geoCoords && geoCoords.length > 0 && !!map) {
             geoCoords.map(coord => {
                 bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
             });
@@ -243,7 +243,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         );
     };
 
-    return isLoaded ? renderMap() : <></>;
+    return isLoaded && window.google ? renderMap() : <></>;
 };
 
 PublicationMap.propTypes = {
