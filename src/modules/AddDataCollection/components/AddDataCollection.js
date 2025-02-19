@@ -96,7 +96,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                     contactEmail: 't@t.au',
                 },
                 fez_record_search_key_doi: {
-                    rek_doi: '10.1037/a00',
+                    rek_doi: '',
                 },
                 rek_date: '2000-04-01',
                 fieldOfResearch: [
