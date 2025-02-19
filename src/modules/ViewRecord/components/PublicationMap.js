@@ -45,8 +45,6 @@ export const getDefaultCenter = geoCoords => {
     }
 };
 
-console.log('Google Maps API Key:', googleMapsApiKey);
-
 export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const initialGeoCoords =
         (!!coordinates &&
@@ -78,7 +76,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const drawingManagerRef = React.useRef();
 
     React.useEffect(() => {
-        if (!!bounds.current && !!geoCoords && geoCoords.length > 0 && !!map) {
+        if (!!bounds.current && !!geoCoords && geoCoords.length > 0) {
             geoCoords.map(coord => {
                 bounds.current.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
             });
@@ -245,7 +243,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
         );
     };
 
-    return isLoaded && window.google ? renderMap() : <></>;
+    return isLoaded ? renderMap() : <></>;
 };
 
 PublicationMap.propTypes = {
