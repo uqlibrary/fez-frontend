@@ -2924,16 +2924,16 @@ describe('transformers', () => {
                         rek_contact_details_email_order: 1,
                     },
                 ],
-                fez_record_search_key_author_identifier: [
+                fez_record_search_key_contributor_identifier: [
                     {
-                        rek_author_identifier: '1234',
-                        rek_author_identifier_order: 1,
+                        rek_contributor_identifier: '1234',
+                        rek_contributor_identifier_order: 1,
                     },
                 ],
-                fez_record_search_key_author_identifier_type: [
+                fez_record_search_key_contributor_identifier_type: [
                     {
-                        rek_author_identifier_type: '1111',
-                        rek_author_identifier_type_order: 1,
+                        rek_contributor_identifier_type: '1111',
+                        rek_contributor_identifier_type_order: 1,
                     },
                 ],
                 fez_record_search_key_herdc_code: {
