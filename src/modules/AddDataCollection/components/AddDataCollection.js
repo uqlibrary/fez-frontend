@@ -145,16 +145,18 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const navigate = useNavigate();
     const confirmationBoxRef = React.useRef();
 
-    const setConfirmationRef = React.useCallback(
-        node => {
-            console.log('ConfirmDialogBox ref set:', node);
-            confirmationBoxRef.current = node;
-            if (isSubmitSuccessful) {
-                confirmationBoxRef?.current?.showConfirmation();
-            }
-        },
-        [isSubmitSuccessful],
-    );
+    const setConfirmationRef = React.useCallback(node => {
+        node && (confirmationBoxRef.current = node);
+        console.log('ConfirmDialogBox ref set:', confirmationBoxRef.current, node);
+    }, []);
+    React.useEffect(() => {
+        console.log('show/hide confirm isSubmitSuccessful=', isSubmitSuccessful);
+        if (isSubmitSuccessful) {
+            confirmationBoxRef.current?.showConfirmation();
+        } else {
+            confirmationBoxRef.current?._hideConfirmation();
+        }
+    }, [isSubmitSuccessful]);
 
     const _navigateToMyDatasets = () => {
         resetForm?.();
@@ -320,7 +322,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         // set default values for a new unapproved record and handle submission
         try {
             await dispatch(createNewRecord(cleanValues));
-            setApiError(prev => (prev === '' ? ' ' : ''));
+            setApiError('');
             console.log('onSubmit done');
             // Form submission successful
         } catch (error) {
