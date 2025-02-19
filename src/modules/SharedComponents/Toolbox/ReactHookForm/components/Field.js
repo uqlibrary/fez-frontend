@@ -59,18 +59,10 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
                 validate: /* istanbul ignore next */ (value, formValues) =>
                     validateHandler(value, formValues, validate),
             }}
-            render={({ field, fieldState }) => {
+            render={({ field }) => {
                 // eslint-disable-next-line react/prop-types
                 if (!!childProps.noRef) delete field.ref;
-                if (field.name === 'rek_title') console.log('fieldState', fieldState.error, field);
-                return (
-                    <Component
-                        {...childProps}
-                        {...field}
-                        error={!!fieldState.error}
-                        helperText={fieldState.error?.message || ''}
-                    />
-                );
+                return <Component {...childProps} {...field} />;
             }}
         />
     );
