@@ -100,44 +100,12 @@ function setup(testProps = {}, renderMethod = render) {
 
 describe('AddDataCollection test', () => {
     it('should check doi error', async () => {
-        const existingDoiValue = '10.1037/a0028240';
-        const notExistingDoiValue = '10.1037/a002824';
-        mockApi
-            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
-            })
-            .reply(() => {
-                return [200, { total: 1 }];
-            })
-            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
-            })
-            .reply(() => {
-                return [200, { total: 0 }];
-            });
-        const { getByTestId, queryByText } = setup();
+        const { getByTestId } = setup();
 
         const doi = getByTestId('rek-doi-input');
         await userEvent.type(doi, 'Test');
         await userEvent.tab();
         expect(doi).toHaveValue('Test');
-        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
-        await userEvent.clear(doi);
-        await userEvent.type(doi, existingDoiValue);
-        await userEvent.tab();
-        doi.blur();
-        await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
-
-        await userEvent.clear(doi);
-        await userEvent.type(doi, notExistingDoiValue);
-        await userEvent.tab();
-        doi.blur();
-        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
-
-        mockDoiExist = true;
-        await userEvent.type(doi, existingDoiValue);
-        await userEvent.tab();
-        doi.blur();
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
 
@@ -263,5 +231,93 @@ describe('AddDataCollection test', () => {
         await userEvent.click(getByTestId('submit-data-collection'));
 
         await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+    });
+
+    it('should submit check doi existing', async () => {
+        mockDoiExist = false;
+        const existingDoiValue = '10.1037/a0028240';
+        const notExistingDoiValue = '10.1037/a002824';
+        mockApi
+            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
+            })
+            .reply(() => {
+                return [200, { total: 1 }];
+            })
+            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
+            })
+            .reply(() => {
+                return [200, { total: 0 }];
+            });
+        // Field of Research lookup
+        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+            return [200, vocabsFieldResearch];
+        });
+        // Contact Name ID lookup
+        mockApi.onGet('fez-authors/search').reply(() => {
+            return [
+                200,
+                {
+                    total: 1,
+                    data: [
+                        {
+                            id: 46980,
+                            value: 'David Johnsen',
+                            aut_id: 46980,
+                            aut_fname: 'David',
+                            aut_lname: 'Johnsen',
+                            aut_display_name: 'David Johnsen',
+                        },
+                    ],
+                },
+            ];
+        });
+        mockApi.onPost('records').reply(() => {
+            return [
+                422,
+                {
+                    error: { message: 'wrong!' },
+                },
+            ];
+        });
+        mockApi.onAny().reply(config => {
+            console.log(
+                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                    config.params,
+                )}`,
+            );
+            return [200, {}];
+        });
+
+        const { getByTestId, queryByText } = setup();
+
+        await inputRequired(getByTestId);
+
+        const doi = getByTestId('rek-doi-input');
+        await userEvent.clear(doi);
+        await userEvent.type(doi, existingDoiValue);
+        await userEvent.tab();
+        doi.blur();
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
+        await userEvent.click(getByTestId('submit-data-collection'));
+
+        await waitFor(() => expect(screen.getByText('DOI is assigned to another work already')).toBeInTheDocument());
+
+        await userEvent.clear(doi);
+        await userEvent.type(doi, notExistingDoiValue);
+        await userEvent.tab();
+        doi.blur();
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
+        await userEvent.click(getByTestId('submit-data-collection'));
+        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
+
+        mockDoiExist = true;
+        await userEvent.type(doi, existingDoiValue);
+        await userEvent.tab();
+        doi.blur();
+        expect(getByTestId('submit-data-collection')).toBeEnabled();
+        await userEvent.click(getByTestId('submit-data-collection'));
+        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
 });
