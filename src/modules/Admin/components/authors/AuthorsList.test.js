@@ -746,8 +746,8 @@ describe('AuthorsList', () => {
     });
 
     it('should be able to add and update external identifier', () => {
-        const externalId = '0000-0000-0000-00001';
-        const updatedExternalId = '0000-0000-0000-0002';
+        const externalId = '0000-0000-0000-0001';
+        const updatedExternalId = '02mhbdp94';
         const { getByTestId, getAllByTestId, getByText } = setup({
             showExternalIdentifierInput: true,
         });

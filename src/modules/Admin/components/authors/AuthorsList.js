@@ -70,6 +70,11 @@ NameAsPublished.propTypes = {
 
 const isValid = value => !validation.isEmpty(value) && !validation.maxLength255Validator(value);
 
+const isIdValid = (id, type) => {
+    const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
+    return validateMethod ? validation[validateMethod.text.toLowerCase()](id) : undefined;
+};
+
 export const getColumns = ({
     contributorEditorId,
     disabled,
@@ -267,10 +272,6 @@ export const getColumns = ({
                           </Typography>
                       ),
                       editComponent: props => {
-                          const validateId = (id, type) => {
-                              const validateMethod = AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(item => item.value === type);
-                              return validateMethod ? validation[validateMethod.text.toLowerCase()](id) : undefined;
-                          };
                           return (
                               <Grid container spacing={2}>
                                   <Grid item style={{ flexGrow: '1' }}>
@@ -279,11 +280,11 @@ export const getColumns = ({
                                           value={props.value}
                                           onChange={e => props.onChange(e.target.value)}
                                           textFieldId={`${contributorEditorId}-external-identifier`}
-                                          error={validateId(
+                                          error={isIdValid(
                                               props.rowData?.externalIdentifier,
                                               props.rowData?.externalIdentifierType,
                                           )}
-                                          errorText={validateId(
+                                          errorText={isIdValid(
                                               props.rowData?.externalIdentifier,
                                               props.rowData?.externalIdentifierType,
                                           )}
@@ -295,11 +296,9 @@ export const getColumns = ({
                               </Grid>
                           );
                       },
+                      validate: rowData => isIdValid(rowData.externalIdentifier, rowData.externalIdentifierType),
                   },
                   {
-                      cellStyle: () => ({
-                          verticalAlign: 'top',
-                      }),
                       title: (
                           <Typography variant="caption" color="secondary">
                               {externalIdentifierTypeColumn}

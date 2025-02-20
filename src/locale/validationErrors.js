@@ -108,6 +108,7 @@ export default {
         contactName: 'Contact name is required',
         contactNameId: 'ID for contact name is required',
         contactEmail: 'Contact email is required',
+        ownerIdentifier: 'Owner identifier is invalid',
         rek_access_conditions: 'Access condition is required',
         rek_copyright: 'You are required to accept deposit agreement',
         depositAgreement: 'You are required to accept deposit agreement',
