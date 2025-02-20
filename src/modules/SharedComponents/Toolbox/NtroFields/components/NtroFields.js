@@ -195,7 +195,6 @@ export default class NtroFields extends React.PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        if (!Object.keys(this.props.control).length) return;
         if (
             prevProps.hideVolume !== this.props.hideVolume ||
             prevProps.hideIssue !== this.props.hideIssue ||
