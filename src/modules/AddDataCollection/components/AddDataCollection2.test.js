@@ -101,11 +101,12 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
+    const gSubmitTimeout = 60000; // Ensure timeout applies here too
     afterEach(() => {
         mockApi.reset();
     });
     beforeAll(() => {
-        jest.setTimeout(60000); // Increase timeout to 60 seconds
+        jest.setTimeout(gSubmitTimeout);
     });
     it('should check doi error', async () => {
         const { getByTestId } = setup();
@@ -118,6 +119,7 @@ describe('AddDataCollection test', () => {
     });
 
     it('should submit', async () => {
+        jest.setTimeout(gSubmitTimeout);
         mockDoiExist = false;
         // Field of Research lookup
         mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
@@ -189,6 +191,7 @@ describe('AddDataCollection test', () => {
     });
 
     it('should submit error', async () => {
+        jest.setTimeout(gSubmitTimeout);
         mockDoiExist = false;
         // Field of Research lookup
         mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
@@ -242,6 +245,7 @@ describe('AddDataCollection test', () => {
     });
 
     it('should submit check doi existing', async () => {
+        jest.setTimeout(gSubmitTimeout);
         const existingDoiValue = '10.1037/a0028240';
         const notExistingDoiValue = '10.1037/a002824';
         mockApi
