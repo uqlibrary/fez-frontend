@@ -39,8 +39,9 @@ function setup(testProps = {}) {
 }
 
 describe('Add new record', () => {
+    beforeEach(() => api.reset());
     afterEach(() => {
-        api.mock.reset;
+        api.reset();
         jest.clearAllMocks();
     });
 

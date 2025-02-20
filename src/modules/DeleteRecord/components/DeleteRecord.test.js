@@ -115,12 +115,8 @@ describe('Component DeleteRecord', () => {
             await waitForTextToBeRemoved('Request is being processed');
         };
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         it('should submit the form for a record without DOI', async () => {
             mockGetAndDeleteRecordApiCalls();

@@ -406,12 +406,8 @@ describe('Component ClaimRecord ', () => {
                 ));
         };
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         describe('payload', () => {
             it('all fields data', async () => {
@@ -421,7 +417,7 @@ describe('Component ClaimRecord ', () => {
                     .issues({ pid: journalArticle.rek_pid })
                     .files.upload();
 
-                const { getByText, getByTestId, queryByTestId } = setup();
+                const { getByText, getByTestId } = setup();
 
                 selectAuthor();
                 addFilesToFileUploader(fileMock);

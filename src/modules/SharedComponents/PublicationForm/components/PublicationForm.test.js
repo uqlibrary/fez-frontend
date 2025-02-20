@@ -217,10 +217,9 @@ describe('PublicationForm', () => {
         const pid = 'UQ:1';
         const fileMock = ['test.pdf'];
 
-        beforeEach(() => {
-            api.mock.reset();
-            api.request.history.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
+
         const submitForm = async () => {
             await waitToBeEnabled('submit-work');
             await userEvent.click(screen.getByTestId('submit-work'));

@@ -55,6 +55,7 @@ interface Api {
             reset: () => void;
         };
     };
+    reset: () => void;
 }
 
 const replyMethod = (once: boolean): 'reply' | 'replyOnce' => (once ? 'replyOnce' : 'reply');
@@ -135,6 +136,10 @@ export const api: Api = {
         history: {
             reset: () => clearLastRequest(),
         },
+    },
+    reset: function() {
+        this.mock.reset();
+        this.request.history.reset();
     },
 };
 
