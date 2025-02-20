@@ -561,4 +561,4 @@ export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, 
  * @param {string} attr
  * @return {boolean}
  */
-export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr]);
+export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr] === true);

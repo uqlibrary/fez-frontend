@@ -49,7 +49,9 @@ describe('PublicationForm', () => {
 
     const assertValidationErrorSummary = async (expectedErrors = []) => {
         await waitForText(publicationForm.validationAlert.message);
-        expectedErrors.forEach(error => expect(screen.getByText(error)).toBeInTheDocument());
+        for (const error of expectedErrors) {
+            await waitForText(error);
+        }
     };
     const assertMissingValidationErrorSummary = async unexpectedErrors => {
         for (const error of unexpectedErrors) {

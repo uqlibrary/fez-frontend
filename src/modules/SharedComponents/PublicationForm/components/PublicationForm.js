@@ -128,7 +128,7 @@ const getState = (initialValues, values, displayType, subtype) => {
         formComponent: displayType && (!hasSubtype || subtype) && publicationType?.formComponent,
         isNtro: general.NTRO_SUBTYPES.includes(subtype),
         selectedTypeComboOption,
-        isAuthorSelected: !!values.authors?.some?.(object => object.selected === true),
+        isAuthorSelected: hasAtLeastOneItemSelected(values.authors),
     };
 };
 
@@ -163,6 +163,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const shouldIgnoreDisplayTypeChange = useRef(false);
+    const queuedFormValidationId = useRef(0);
 
     // form
     const {
@@ -236,10 +237,25 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
         if (!values.languages?.length) {
             setValue('languages', ['eng']);
         }
-        // queue validation trigger, to allow selected pub. form's fields to be fully rendered prior to validation
-        setTimeout(() => trigger());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [FormComponent]);
+
+    // handle form field count changes - this fixes validation error summary ordering
+    useEffect(() => {
+        if (isEmptyObject(values)) return;
+        // clear previously queued
+        if (queuedFormValidationId.current) clearTimeout(queuedFormValidationId.current);
+        // queue validation trigger, to allow selected pub. form's fields to be fully rendered prior to validation
+        queuedFormValidationId.current = setTimeout(() => trigger(), 100);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [Object.keys(values).length]);
+
+    // handle validation for fields added upon selecting an author
+    useEffect(() => {
+        if (!isAuthorSelected) return;
+        trigger(['significance', 'impactStatement']);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isAuthorSelected]);
 
     // handle successful form submission
     useEffect(() => {
