@@ -21,6 +21,6 @@
         // for MUI types
         "lib": ["es6", "dom"]
     },
-    "include": ["src/**/*.tsx", "src/**/*.ts"],
+    "include": ["src/**/*.tsx", "src/**/*.ts", "utils/**/*.ts"],
     "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist" ]
 }

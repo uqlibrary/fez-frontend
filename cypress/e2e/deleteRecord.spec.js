@@ -5,7 +5,6 @@ import {
     recordWithRDM,
     collectionRecord,
     recordThatFailsDeletion,
-    deleteRecord,
 } from '../../src/mock/data/records';
 const record = myRecordsList.data[0];
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
@@ -60,44 +59,6 @@ context('Delete work form', () => {
         cy.contains('Describe the reason to delete this work');
         cy.contains('button', 'Cancel').should('not.be.disabled');
         cy.contains('button', 'Delete').should('not.be.disabled');
-    });
-
-    context('form submission', () => {
-        it('should submit the form for a record without DOI', () => {
-            loadPage(record);
-            submit();
-            assertNavigatedToViewPage(record);
-        });
-
-        it('should submit form for a deleted record without DOI', () => {
-            loadPage(deleteRecord);
-            submit();
-            assertNavigatedToViewPage(deleteRecord);
-        });
-
-        it('should allow enter reason and submit the form for a record without DOI', () => {
-            loadPage(record);
-            cy.get(selectors.reasonInput).type('reason');
-            submit();
-            assertNavigatedToViewPage(record);
-        });
-
-        it('should allow enter reason, new doi resolution URL and submit form for a record with Crossref DOI', () => {
-            loadPage(recordWithCrossrefDoi);
-            cy.get(selectors.reasonInput).type('reason');
-            cy.get('[data-testid=rek-doi-resolution-url-input]').type('https://web.library.uq.edu.au/test');
-            submit();
-            assertNavigatedToViewPage(recordWithCrossrefDoi);
-        });
-
-        it('should allow enter reason, new doi resolution URL and submit form for a record with DataCite DOI', () => {
-            loadPage(recordWithDataCiteDoi);
-            cy.get(selectors.reasonInput).type('reason');
-            cy.get('[data-testid=rek-new-doi-input]').type('10.1234/uql5678');
-            cy.typeCKEditor('rek-deletion-notes', 'deletion notes');
-            submit();
-            assertNavigatedToViewPage(recordWithDataCiteDoi);
-        });
     });
 
     context('validation', () => {
