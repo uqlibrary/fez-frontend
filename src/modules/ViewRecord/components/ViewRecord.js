@@ -13,6 +13,7 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 
 import { belongsToAuthor, userIsAdmin } from 'hooks';
 import { general } from 'config';
@@ -273,16 +274,18 @@ export const ViewRecord = () => {
                                 )}
                                 {shouldShowFeedbackButton() && (
                                     <Grid>
-                                        <Button
-                                            variant="outlined"
-                                            startIcon={<CreateOutlinedIcon fontSize={'inherit'} />}
-                                            onClick={navigateToFeedbackForm}
-                                            id="feedbackButton"
-                                            data-analyticsid="btnFeedback"
-                                            data-testid="btnFeedback"
-                                        >
-                                            {txt.feedbackButton}
-                                        </Button>
+                                        <Tooltip title={txt.feedbackButtonTooltip} placement="top-end">
+                                            <Button
+                                                variant="outlined"
+                                                startIcon={<CreateOutlinedIcon fontSize={'inherit'} />}
+                                                onClick={navigateToFeedbackForm}
+                                                id="feedbackButton"
+                                                data-analyticsid="btnFeedback"
+                                                data-testid="btnFeedback"
+                                            >
+                                                {txt.feedbackButton}
+                                            </Button>
+                                        </Tooltip>
                                     </Grid>
                                 )}
                                 <Grid xs sx={{ display: 'flex', alignItems: 'center' }}>

@@ -167,16 +167,16 @@ describe('ViewRecord', () => {
     });
 
     it('should render feedback button and navigate to feedback form page on click', () => {
-        const { getByRole } = setup({
+        const { getByText } = setup({
             viewRecordReducer: {
-                recordToView: { ...record, fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:774620b' }] },
+                recordToView: { ...record, fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:229001' }] },
             },
         });
 
-        const feedbackBtn = getByRole('button', { name: 'Tell Us More' });
+        const feedbackBtn = getByText('Tell Us More');
 
         expect(feedbackBtn).toBeInTheDocument();
-        fireEvent.click(getByRole('button', { name: 'Tell Us More' }));
+        fireEvent.click(feedbackBtn);
 
         // pid from useParam mock
         expect(mockNavigate).toHaveBeenCalledWith('/records/UQ:123456/feedback');
