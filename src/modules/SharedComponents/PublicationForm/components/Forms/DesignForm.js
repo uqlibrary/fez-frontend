@@ -24,7 +24,6 @@ export const DesignForm = ({ control, formValues, isSubmitting, isNtro, isAuthor
     const hasDateError = dateRange(
         _formValues.fez_record_search_key_project_start_date?.rek_project_start_date,
         _formValues.fez_record_search_key_end_date?.rek_end_date,
-        'Date range is not valid',
     );
 
     return (

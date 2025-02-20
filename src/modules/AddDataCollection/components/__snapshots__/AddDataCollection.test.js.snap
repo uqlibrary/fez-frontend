@@ -2115,7 +2115,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   >
                     <field
                       disabled="false"
-                      haserror="Please provide a valid start/end date range"
+                      haserror="Date range is not valid"
                       is="mock"
                       name="fez_record_search_key_start_date.rek_start_date"
                     />
@@ -2125,7 +2125,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   >
                     <field
                       disabled="false"
-                      haserror="Please provide a valid start/end date range"
+                      haserror="Date range is not valid"
                       is="mock"
                       name="fez_record_search_key_end_date.rek_end_date"
                     />

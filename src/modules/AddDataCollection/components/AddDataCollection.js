@@ -53,7 +53,7 @@ const dateRange = (value, values) => {
         moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
 
     if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.collectionDateRange;
+        return locale.validationErrors.dateRange;
     } else {
         return '';
     }
