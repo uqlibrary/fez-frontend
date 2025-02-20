@@ -3441,7 +3441,6 @@ export const journalArticle = {
     "rek_altmetric_id": 20711411,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -7111,37 +7110,27 @@ export const mockRecordToFix = {
     ],
     "fez_record_search_key_author_id": [
         {
-            "rek_author_id_id": 29384218,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 1
         },
         {
-            "rek_author_id_id": 29384219,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 410,
             "rek_author_id_order": 2
         },
         {
-            "rek_author_id_id": 29384220,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 786,
             "rek_author_id_order": 3
         },
         {
-            "rek_author_id_id": 29384221,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 687,
             "rek_author_id_order": 4
         },
         {
-            "rek_author_id_id": 29384222,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 4100,
             "rek_author_id_order": 5
         }
@@ -7627,37 +7616,27 @@ export const mockRecordToDelete = {
     ],
     "fez_record_search_key_author_id": [
         {
-            "rek_author_id_id": 29384218,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 1
         },
         {
-            "rek_author_id_id": 29384219,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 410,
             "rek_author_id_order": 2
         },
         {
-            "rek_author_id_id": 29384220,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 786,
             "rek_author_id_order": 3
         },
         {
-            "rek_author_id_id": 29384221,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 687,
             "rek_author_id_order": 4
         },
         {
-            "rek_author_id_id": 29384222,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 4100,
             "rek_author_id_order": 5
         }
