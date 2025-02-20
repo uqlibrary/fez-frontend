@@ -51,10 +51,16 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         case 'rek_date':
             value = formatPublicationDate(data, displayTypeLookup);
             break;
+        case 'fez_record_search_key_start_date':
+        case 'fez_record_search_key_end_date':
+            const rekKey = field.replace('fez_record_search_key', 'rek');
+            value = formatPublicationDate(data[rekKey], displayTypeLookup);
+            break;
 
         // Arrays
         case 'fez_record_search_key_isbn':
         case 'fez_record_search_key_issn':
+        case 'fez_record_search_key_alternate_identifier':
             if (!!data && data.length === 0) {
                 break;
             }
@@ -63,7 +69,7 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
             value = (
                 <ul>
                     {data.map((item, index) => (
-                        <li data-testid={`${testId}-${index}`} key={`${testId}-${item[`${subKey}_id`]}`}>
+                        <li data-testid={`${testId}-${index}`} key={`${testId}-${item[`${subKey}_id`]}-${index}`}>
                             {item[subKey]}
                         </li>
                     ))}
