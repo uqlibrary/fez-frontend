@@ -658,6 +658,7 @@ export default {
                 },
             },
             feedbackButton: 'Tell Us More',
+            feedbackButtonTooltip: 'Help care for our cultural collections',
         },
         searchRecords: {
             title: 'eSpace search',
