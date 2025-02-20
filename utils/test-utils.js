@@ -186,17 +186,6 @@ const addFilesToFileUploader = files => {
         },
     });
 };
-const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
-    const { fireEvent } = reactTestingLib;
-    // set all files to closed access
-    for (const file of files) {
-        const index = files.indexOf(file);
-        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
-        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
-        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
-    }
-};
-
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -217,6 +206,17 @@ const waitForTextToBeRemoved = async (text, options) =>
     ((typeof text === 'string' && !!text.trim().length) || text) &&
     screen.queryByText(text) &&
     (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+const setFileUploaderFilesToClosedAccess = async files => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitForText(new RegExp(getFilenameBasename(file)));
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
@@ -241,6 +241,11 @@ const mockWebApiFile = () => {
     };
 };
 
+/**
+ *
+ * @param {object|function} expected
+ * @param {object} request
+ */
 const assertRequestData = (expected, request) => {
     const actual = !isEmptyObject(request.data || {}) ? request.data : request.params;
     if (typeof expected === 'object') {
@@ -272,6 +277,13 @@ const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
 const assertRequestCount = ({ history, method, url, partialUrl }, expectation) =>
     expect(history.filter(requestFilter({ method, url, partialUrl }))).toHaveLength(expectation);
 
+/**
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {function|object} data
+ * @param {object} request
+ */
 const assertRequest = ({ method, url, partialUrl, data, request }) => {
     if (method && method !== '*') {
         expect(request.method).toBe(method);
@@ -294,6 +306,15 @@ const expectApiRequestCountToBe = (method, url, expectation) =>
  */
 const expectApiRequestHistoryLengthToBe = (count = 0) => expect(apiRequestHistory).toHaveLength(count);
 const expectApiRequestHistoryToBeEmpty = () => expectApiRequestHistoryLengthToBe(0);
+
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {function|object} data
+ * @return {*}
+ */
 const assertApiRequest = ({ method, url, partialUrl, data }) => {
     if (!method && !url && !partialUrl && isEmptyObject(data || {})) throw new Error('invalid params');
 
@@ -318,6 +339,13 @@ const assertInstanceOfFile = data => {
     return true;
 };
 
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {function} assertPayload
+ * @return {*}
+ */
 const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
     const request = assertApiRequest({
         method,

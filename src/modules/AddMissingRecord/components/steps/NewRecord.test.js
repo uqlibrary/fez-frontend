@@ -12,6 +12,7 @@ import {
     setFileUploaderFilesToClosedAccess,
     waitToBeEnabled,
     assertInstanceOfFile,
+    userEvent,
 } from 'test-utils';
 import { NEW_RECORD_API } from 'repositories/routes';
 
@@ -114,7 +115,7 @@ describe('Add new record', () => {
         await setFileUploaderFilesToClosedAccess(mockFile);
         await waitToBeEnabled(getByRole('button', { name: 'Submit for approval' }));
         // submit to trigger confirmation box
-        fireEvent.click(getByRole('button', { name: 'Submit for approval' }));
+        await userEvent.click(getByRole('button', { name: 'Submit for approval' }));
         await waitFor(() => getByTestId('confirm-dialog-box'));
         expect(getByText(/File upload and\/or notes post failed/i)).toBeInTheDocument();
         expectApiRequestToMatchSnapshot('post', NEW_RECORD_API().apiUrl);
