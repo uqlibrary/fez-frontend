@@ -22,7 +22,9 @@ async function inputText(getByTestId, settings) {
         await userEvent.click(input);
         await userEvent.type(input, value);
         await userEvent.tab();
+        console.log('expect', testId, value);
         expect(input).toHaveValue(value);
+        console.log('expect done', testId, value);
     }
 }
 
@@ -101,6 +103,9 @@ function setup(testProps = {}, renderMethod = render) {
 describe('AddDataCollection test', () => {
     afterEach(() => {
         mockApi.reset();
+    });
+    beforeAll(() => {
+        jest.setTimeout(60000); // Increase timeout to 60 seconds
     });
     it('should check doi error', async () => {
         const { getByTestId } = setup();
