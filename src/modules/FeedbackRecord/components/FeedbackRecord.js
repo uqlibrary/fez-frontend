@@ -69,8 +69,7 @@ const FeedbackRecord = () => {
         values: {
             shareDetails: txtForm.details.shareDetails.default,
             lastName: '',
-            contactNo: '',
-            email: '',
+            contactDetail: '',
         },
     });
 
@@ -169,7 +168,7 @@ const FeedbackRecord = () => {
                                             name="shareDetails"
                                             radioGroupFieldId="share-details"
                                             data-testid="share-details"
-                                            rules={{ deps: ['lastName', 'contactNo'] }}
+                                            rules={{ deps: ['lastName', 'contactDetail'] }}
                                             options={txtForm.details.shareDetails.options}
                                         />
                                     </Grid>
@@ -203,23 +202,11 @@ const FeedbackRecord = () => {
                                             control={control}
                                             component={TextField}
                                             disabled={isSubmitting}
-                                            name="contactNo"
-                                            label={txtForm.details.contactNo}
-                                            validate={[validation.maxLengthValidator(30), requiredConditionally]}
+                                            name="contactDetail"
+                                            label={txtForm.details.contactDetail}
+                                            validate={[validation.maxLength255Validator, requiredConditionally]}
                                             required={data.shareDetails === '1'}
-                                            textFieldId="contact-no"
-                                            fullWidth
-                                        />
-                                    </Grid>
-                                    <Grid xs={12}>
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            disabled={isSubmitting}
-                                            name="email"
-                                            label={txtForm.details.email}
-                                            validate={[validation.maxLength255Validator, validation.email]}
-                                            textFieldId="email"
+                                            textFieldId="contact-detail"
                                             fullWidth
                                         />
                                     </Grid>
@@ -278,18 +265,20 @@ const FeedbackRecord = () => {
                                             options={txtForm.isICIPHolder.options}
                                         />
                                     </Grid>
-                                    <Grid xs={12}>
-                                        <Typography variant={'h6'}>{txtForm.communityParticipant.title}</Typography>
-                                        <Field
-                                            control={control}
-                                            component={RadioGroupField}
-                                            disabled={isSubmitting}
-                                            name="communityParticipant"
-                                            radioGroupFieldId="community-participant"
-                                            data-testid="community-participant"
-                                            options={txtForm.communityParticipant.options}
-                                        />
-                                    </Grid>
+                                    {data.isIcipHolder === '1' && (
+                                        <Grid xs={12}>
+                                            <Typography variant={'h6'}>{txtForm.communityParticipant.title}</Typography>
+                                            <Field
+                                                control={control}
+                                                component={RadioGroupField}
+                                                disabled={isSubmitting}
+                                                name="communityParticipant"
+                                                radioGroupFieldId="community-participant"
+                                                data-testid="community-participant"
+                                                options={txtForm.communityParticipant.options}
+                                            />
+                                        </Grid>
+                                    )}
                                 </Grid>
                             </StandardCard>
                         </Grid>

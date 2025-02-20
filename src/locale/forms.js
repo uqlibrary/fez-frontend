@@ -324,13 +324,13 @@ export default {
         feedbackRecord: {
             introduction: (
                 <span>
-                    <p>Thank you for your contributing more information about this collection item.</p>
+                    <p>Thank you for contributing more information about this collection item.</p>
                     <p>
                         This form is part of our commitment to{' '}
                         <a
                             target="_blank"
                             href={
-                                'https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collection'
+                                'https://web.library.uq.edu.au/find-and-borrow/collections-overview/using-culturally-sensitive-collections'
                             }
                         >
                             culturally sensitive collections
@@ -351,8 +351,7 @@ export default {
                 title: 'Your Details',
                 firstName: 'First Name',
                 lastName: 'Last Name',
-                contactNo: 'Contact Number',
-                email: 'Email',
+                contactDetail: 'Contact Detail (Email or Contact Number)',
                 community: 'Community',
                 shareDetails: {
                     options: [
