@@ -105,9 +105,6 @@ describe('AddDataCollection test', () => {
     afterEach(() => {
         mockApi.reset();
     });
-    beforeAll(() => {
-        jest.setTimeout(gSubmitTimeout);
-    });
     it('should check doi error', async () => {
         const { getByTestId } = setup();
 
@@ -197,7 +194,6 @@ describe('AddDataCollection test', () => {
     it(
         'should submit error',
         async () => {
-            jest.setTimeout(gSubmitTimeout);
             mockDoiExist = false;
             // Field of Research lookup
             mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
@@ -255,7 +251,6 @@ describe('AddDataCollection test', () => {
     it(
         'should submit check doi existing',
         async () => {
-            jest.setTimeout(gSubmitTimeout);
             const existingDoiValue = '10.1037/a0028240';
             const notExistingDoiValue = '10.1037/a002824';
             mockApi
