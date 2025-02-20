@@ -60,9 +60,7 @@ describe('Component FeedbackRecord', () => {
         assertEnabled(screen.getByTestId('feedback-submit'));
         await userEvent.click(screen.getByTestId('feedback-submit'));
         await waitFor(() => {
-            expect(screen.queryByText(forms.forms.feedbackRecord.progressAlert.message))
-                .not
-                .toBeInTheDocument();
+            expect(screen.queryByText(forms.forms.feedbackRecord.progressAlert.message)).not.toBeInTheDocument();
         }, waitForOptions);
     };
 
@@ -91,6 +89,14 @@ describe('Component FeedbackRecord', () => {
         expect(getByRole('button', { name: 'Cancel' })).toBeInTheDocument();
         expect(getByRole('button', { name: 'Submit' })).toBeInTheDocument();
         expect(container).toMatchSnapshot();
+    });
+
+    it('should render community participant field', async () => {
+        const { getByTestId, queryByTestId } = setup({ publication: mockRecordToFeedback });
+
+        expect(queryByTestId('community-participant-1-option')).not.toBeInTheDocument();
+        await userEvent.click(getByTestId('is-icip-holder-1-option'));
+        expect(getByTestId('community-participant-1-option')).toBeInTheDocument();
     });
 
     it('should render feedback fields', async () => {
@@ -149,7 +155,7 @@ describe('Component FeedbackRecord', () => {
 
         await assertValidationErrorSummary();
         await userEvent.type(getByTestId('last-name-input'), 'name');
-        await userEvent.type(getByTestId('contact-no-input'), '12345');
+        await userEvent.type(getByTestId('contact-detail-input'), '12345');
 
         assertNoValidationErrorSummary();
         await submitForm();
