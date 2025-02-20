@@ -118,223 +118,235 @@ describe('AddDataCollection test', () => {
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
 
-    it('should submit', async () => {
-        jest.setTimeout(gSubmitTimeout);
-        mockDoiExist = false;
-        // Field of Research lookup
-        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
-            return [200, vocabsFieldResearch];
-        });
-        // Contact Name ID lookup
-        mockApi.onGet('fez-authors/search').reply(() => {
-            return [
-                200,
-                {
-                    total: 1,
-                    data: [
-                        {
-                            id: 46980,
-                            value: 'David Johnsen',
-                            aut_id: 46980,
-                            aut_fname: 'David',
-                            aut_lname: 'Johnsen',
-                            aut_display_name: 'David Johnsen',
-                        },
-                    ],
-                },
-            ];
-        });
-        mockApi.onPost('records').reply(() => {
-            return [
-                200,
-                {
-                    data: {},
-                },
-            ];
-        });
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [200, {}];
-        });
-
-        const { getByTestId, queryByText, queryAllByText } = setup();
-
-        await inputRequired(getByTestId);
-
-        // input collection start date
-        await inputText(getByTestId, [
-            ['rek-start-date-day-input', '1'],
-            ['rek-start-date-year-input', '2000'],
-        ]);
-        await clickSelect(getByTestId, [['rek-start-date-month-select', 'March']]);
-
-        // input collection end date
-        await inputText(getByTestId, [
-            ['rek-end-date-day-input', '1'],
-            ['rek-end-date-year-input', '2000'],
-        ]);
-        await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
-
-        await waitFor(() => expect(queryAllByText('Date range is not valid').length).toBeGreaterThan(0));
-
-        await clickSelect(getByTestId, [['rek-end-date-month-select', 'April']]);
-        await waitFor(() => expect(queryByText('Date range is not valid')).not.toBeInTheDocument());
-
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-
-        await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
-    });
-
-    it('should submit error', async () => {
-        jest.setTimeout(gSubmitTimeout);
-        mockDoiExist = false;
-        // Field of Research lookup
-        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
-            return [200, vocabsFieldResearch];
-        });
-        // Contact Name ID lookup
-        mockApi.onGet('fez-authors/search').reply(() => {
-            return [
-                200,
-                {
-                    total: 1,
-                    data: [
-                        {
-                            id: 46980,
-                            value: 'David Johnsen',
-                            aut_id: 46980,
-                            aut_fname: 'David',
-                            aut_lname: 'Johnsen',
-                            aut_display_name: 'David Johnsen',
-                        },
-                    ],
-                },
-            ];
-        });
-        mockApi.onPost('records').reply(() => {
-            return [
-                422,
-                {
-                    error: { message: 'wrong!' },
-                },
-            ];
-        });
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [200, {}];
-        });
-
-        const { getByTestId } = setup();
-
-        await inputRequired(getByTestId);
-
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-
-        await userEvent.click(getByTestId('submit-data-collection'));
-
-        await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
-    });
-
-    it('should submit check doi existing', async () => {
-        jest.setTimeout(gSubmitTimeout);
-        const existingDoiValue = '10.1037/a0028240';
-        const notExistingDoiValue = '10.1037/a002824';
-        mockApi
-            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
-            })
-            .reply(() => {
-                return [200, { total: 1 }];
-            })
-            .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
-            })
-            .reply(() => {
-                return [200, { total: 0 }];
+    it(
+        'should submit',
+        async () => {
+            jest.setTimeout(gSubmitTimeout);
+            mockDoiExist = false;
+            // Field of Research lookup
+            mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+                return [200, vocabsFieldResearch];
             });
-        // Field of Research lookup
-        mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
-            return [200, vocabsFieldResearch];
-        });
-        // Contact Name ID lookup
-        mockApi.onGet('fez-authors/search').reply(() => {
-            return [
-                200,
-                {
-                    total: 1,
-                    data: [
-                        {
-                            id: 46980,
-                            value: 'David Johnsen',
-                            aut_id: 46980,
-                            aut_fname: 'David',
-                            aut_lname: 'Johnsen',
-                            aut_display_name: 'David Johnsen',
-                        },
-                    ],
-                },
-            ];
-        });
-        mockApi.onPost('records').reply(() => {
-            return [
-                422,
-                {
-                    error: { message: 'wrong!' },
-                },
-            ];
-        });
-        mockApi.onAny().reply(config => {
-            console.log(
-                `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                    config.params,
-                )}`,
-            );
-            return [200, {}];
-        });
+            // Contact Name ID lookup
+            mockApi.onGet('fez-authors/search').reply(() => {
+                return [
+                    200,
+                    {
+                        total: 1,
+                        data: [
+                            {
+                                id: 46980,
+                                value: 'David Johnsen',
+                                aut_id: 46980,
+                                aut_fname: 'David',
+                                aut_lname: 'Johnsen',
+                                aut_display_name: 'David Johnsen',
+                            },
+                        ],
+                    },
+                ];
+            });
+            mockApi.onPost('records').reply(() => {
+                return [
+                    200,
+                    {
+                        data: {},
+                    },
+                ];
+            });
+            mockApi.onAny().reply(config => {
+                console.log(
+                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                        config.params,
+                    )}`,
+                );
+                return [200, {}];
+            });
 
-        const { getByTestId, queryByText } = setup();
+            const { getByTestId, queryByText, queryAllByText } = setup();
 
-        await inputRequired(getByTestId);
+            await inputRequired(getByTestId);
 
-        mockDoiExist = false;
-        const doi = getByTestId('rek-doi-input');
+            // input collection start date
+            await inputText(getByTestId, [
+                ['rek-start-date-day-input', '1'],
+                ['rek-start-date-year-input', '2000'],
+            ]);
+            await clickSelect(getByTestId, [['rek-start-date-month-select', 'March']]);
 
-        await userEvent.type(doi, 'Test');
-        await userEvent.tab();
-        expect(doi).toHaveValue('Test');
-        await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+            // input collection end date
+            await inputText(getByTestId, [
+                ['rek-end-date-day-input', '1'],
+                ['rek-end-date-year-input', '2000'],
+            ]);
+            await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
 
-        await userEvent.clear(doi);
-        await userEvent.type(doi, existingDoiValue);
-        await userEvent.tab();
-        doi.blur();
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
+            await waitFor(() => expect(queryAllByText('Date range is not valid').length).toBeGreaterThan(0));
 
-        await userEvent.clear(doi);
-        await userEvent.type(doi, notExistingDoiValue);
-        await userEvent.tab();
-        doi.blur();
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-        await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
+            await clickSelect(getByTestId, [['rek-end-date-month-select', 'April']]);
+            await waitFor(() => expect(queryByText('Date range is not valid')).not.toBeInTheDocument());
 
-        mockDoiExist = true;
-        await userEvent.type(doi, existingDoiValue);
-        await userEvent.tab();
-        doi.blur();
-        expect(getByTestId('submit-data-collection')).toBeEnabled();
-        await userEvent.click(getByTestId('submit-data-collection'));
-        await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
-    });
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+
+            await waitFor(() => expect(screen.getByText(/ADD ANOTHER/i)).toBeInTheDocument());
+        },
+        gSubmitTimeout,
+    );
+
+    it(
+        'should submit error',
+        async () => {
+            jest.setTimeout(gSubmitTimeout);
+            mockDoiExist = false;
+            // Field of Research lookup
+            mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+                return [200, vocabsFieldResearch];
+            });
+            // Contact Name ID lookup
+            mockApi.onGet('fez-authors/search').reply(() => {
+                return [
+                    200,
+                    {
+                        total: 1,
+                        data: [
+                            {
+                                id: 46980,
+                                value: 'David Johnsen',
+                                aut_id: 46980,
+                                aut_fname: 'David',
+                                aut_lname: 'Johnsen',
+                                aut_display_name: 'David Johnsen',
+                            },
+                        ],
+                    },
+                ];
+            });
+            mockApi.onPost('records').reply(() => {
+                return [
+                    422,
+                    {
+                        error: { message: 'wrong!' },
+                    },
+                ];
+            });
+            mockApi.onAny().reply(config => {
+                console.log(
+                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                        config.params,
+                    )}`,
+                );
+                return [200, {}];
+            });
+
+            const { getByTestId } = setup();
+
+            await inputRequired(getByTestId);
+
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+
+            await userEvent.click(getByTestId('submit-data-collection'));
+
+            await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+        },
+        gSubmitTimeout,
+    );
+
+    it(
+        'should submit check doi existing',
+        async () => {
+            jest.setTimeout(gSubmitTimeout);
+            const existingDoiValue = '10.1037/a0028240';
+            const notExistingDoiValue = '10.1037/a002824';
+            mockApi
+                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                    params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
+                })
+                .reply(() => {
+                    return [200, { total: 1 }];
+                })
+                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                    params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
+                })
+                .reply(() => {
+                    return [200, { total: 0 }];
+                });
+            // Field of Research lookup
+            mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+                return [200, vocabsFieldResearch];
+            });
+            // Contact Name ID lookup
+            mockApi.onGet('fez-authors/search').reply(() => {
+                return [
+                    200,
+                    {
+                        total: 1,
+                        data: [
+                            {
+                                id: 46980,
+                                value: 'David Johnsen',
+                                aut_id: 46980,
+                                aut_fname: 'David',
+                                aut_lname: 'Johnsen',
+                                aut_display_name: 'David Johnsen',
+                            },
+                        ],
+                    },
+                ];
+            });
+            mockApi.onPost('records').reply(() => {
+                return [
+                    422,
+                    {
+                        error: { message: 'wrong!' },
+                    },
+                ];
+            });
+            mockApi.onAny().reply(config => {
+                console.log(
+                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                        config.params,
+                    )}`,
+                );
+                return [200, {}];
+            });
+
+            const { getByTestId, queryByText } = setup();
+
+            await inputRequired(getByTestId);
+
+            mockDoiExist = false;
+            const doi = getByTestId('rek-doi-input');
+
+            await userEvent.type(doi, 'Test');
+            await userEvent.tab();
+            expect(doi).toHaveValue('Test');
+            await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+
+            await userEvent.clear(doi);
+            await userEvent.type(doi, existingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
+
+            await userEvent.clear(doi);
+            await userEvent.type(doi, notExistingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
+
+            mockDoiExist = true;
+            await userEvent.type(doi, existingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
+        },
+        gSubmitTimeout,
+    );
 });
