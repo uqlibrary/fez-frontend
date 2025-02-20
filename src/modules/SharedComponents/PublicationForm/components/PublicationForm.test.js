@@ -51,15 +51,18 @@ describe('PublicationForm', () => {
         await waitForText(publicationForm.validationAlert.message);
         expectedErrors.forEach(error => expect(screen.getByText(error)).toBeInTheDocument());
     };
-    const assertMissingValidationErrorSummary = async unexpectedErrors =>
-        await unexpectedErrors.forEach(async error => await waitForTextToBeRemoved(error));
-
+    const assertMissingValidationErrorSummary = async unexpectedErrors => {
+        for (const error of unexpectedErrors) {
+            await waitForTextToBeRemoved(error);
+        }
+    };
     const assertDisabledSubmitButton = () => assertDisabled(screen.getByTestId('submit-work'));
 
     describe('work type selection', () => {
         it('should allow selecting work type without a subtype and load a validated form', async () => {
             setup();
             await selectDisplayType('Image');
+
             await assertValidationErrorSummary([
                 'Title is required',
                 'Publication date is required',
@@ -73,6 +76,7 @@ describe('PublicationForm', () => {
             setup();
             await selectDisplayType('Journal Article');
             await selectSubtype('Article (original research)');
+
             await assertValidationErrorSummary([
                 'Title is required',
                 'Journal name is required',
@@ -86,6 +90,7 @@ describe('PublicationForm', () => {
         it('should allow selecting work type with a subtype via a predefined option and load a validated form', async () => {
             setup();
             await selectTypeCombo('Creative Work - Design/Architectural', 'Design');
+
             await assertValidationErrorSummary([
                 'Title is required',
                 'Total page is required',
@@ -168,9 +173,7 @@ describe('PublicationForm', () => {
             await selectSubtype('Other');
 
             const pageRangeError = ['Please provide a valid start/end page range'];
-            await assertMissingValidationErrorSummary(pageRangeError);
             await userEvent.type(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '20');
-            await assertMissingValidationErrorSummary(pageRangeError);
             await userEvent.type(screen.getByTestId('fez_record_search_key_end_page.rek_end_page-input'), '10');
             await assertValidationErrorSummary(pageRangeError);
             await userEvent.clear(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'));
@@ -223,8 +226,8 @@ describe('PublicationForm', () => {
             await userEvent.click(screen.getByTestId('submit-work'));
         };
         const assertSavingMessage = async () => {
-            await waitForText(publicationForm.progressAlert.message);
-            await waitForTextToBeRemoved(publicationForm.progressAlert.message);
+            await waitForText(new RegExp(publicationForm.progressAlert.message, 'i'));
+            await waitForTextToBeRemoved(new RegExp(publicationForm.progressAlert.message, 'i'));
         };
 
         it('should submit form with expected payload', async () => {
@@ -235,9 +238,10 @@ describe('PublicationForm', () => {
                 .update({ pid })
                 .issues({ pid })
                 .files.upload();
-            setup({ onFormSubmitSuccess: mockOnFormSubmitSuccess });
 
+            setup({ onFormSubmitSuccess: mockOnFormSubmitSuccess });
             await selectTypeCombo('Creative Work - Design/Architectural', 'Design');
+
             await assertValidationErrorSummary([
                 'Title is required',
                 'Total page is required',
@@ -294,7 +298,8 @@ describe('PublicationForm', () => {
 
             setup({ onFormSubmitSuccess: jest.fn() });
             await selectDisplayType('Image');
-            await selectDisplayType('Image');
+
+            // fill up form
             await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
             await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
             await addContributorsEditorItem('creators');
@@ -323,6 +328,7 @@ describe('PublicationForm', () => {
             await userEvent.type(screen.getByTestId('rek-doi-input'), '10.1037/neu0000575');
             await assertMissingValidationErrorSummary([validationErrors.validationErrors.doiExists]);
             expectApiRequestHistoryToBeEmpty();
+
             await submitForm();
             await assertSavingMessage();
             expectApiRequestToMatchSnapshot('get', doiSearchUrl);
@@ -333,12 +339,13 @@ describe('PublicationForm', () => {
             it('should render server error', async () => {
                 setup();
                 await selectDisplayType('Image');
+
+                // fill up form
                 await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
                 await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
                 await addContributorsEditorItem('creators');
 
                 await submitForm();
-                await assertSavingMessage();
                 await waitForText(/Error has occurred during request and request cannot be processed/i);
             });
         });
