@@ -13,14 +13,13 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { hasAtLeastOneItemSelected } from 'helpers/general';
 
-export const VideoDocumentForm = ({ isSubmitting, control, formValues }) => {
+export const VideoDocumentForm = ({ isSubmitting, control, values }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.video;
-    const editors = formValues && formValues.get('editors');
-    const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
-    const authors = formValues && formValues.get('authors');
-    const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
+    const isAuthorSelected = hasAtLeastOneItemSelected(values.authors);
+    const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -121,7 +120,7 @@ export const VideoDocumentForm = ({ isSubmitting, control, formValues }) => {
                         hideUqIDFields
                         maintainSelected
                         contributorEditorId="creators"
-                        showContributorAssignment={!editorSelected}
+                        showContributorAssignment={!isEditorSelected}
                         required
                         name="authors"
                         locale={txt.creator.field}
@@ -140,7 +139,7 @@ export const VideoDocumentForm = ({ isSubmitting, control, formValues }) => {
                         hideUqIDFields
                         maintainSelected
                         contributorEditorId="contributors"
-                        showContributorAssignment={!authorSelected}
+                        showContributorAssignment={!isAuthorSelected}
                         name="editors"
                         locale={txt.contributor.field}
                         disabled={isSubmitting}
@@ -183,6 +182,6 @@ export const VideoDocumentForm = ({ isSubmitting, control, formValues }) => {
 VideoDocumentForm.propTypes = {
     control: PropTypes.any,
     isSubmitting: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
 };
 export default VideoDocumentForm;

@@ -13,20 +13,19 @@ import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config
 import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { hasAtLeastOneItemSelected } from 'helpers/general';
 
 export const BookForm = ({
     isSubmitting,
     control,
-    formValues,
+    values,
     subtype = null,
     isNtro = false,
-    isAuthorSelected = false,
+    isAuthorSelected: showContributionStatement = false,
 }) => {
     const txt = formLocale.book;
-    const editors = formValues && formValues.get('editors');
-    const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
-    const authors = formValues && formValues.get('authors');
-    const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
+    const isAuthorSelected = hasAtLeastOneItemSelected(values.authors);
+    const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -127,7 +126,7 @@ export const BookForm = ({
                     </Grid>
                 </StandardCard>
             </Grid>
-            {subtype !== SUBTYPE_EDITED_BOOK && (!editors || editors.length === 0) && (
+            {subtype !== SUBTYPE_EDITED_BOOK && !values.editors?.length && (
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
                         <Field
@@ -140,7 +139,7 @@ export const BookForm = ({
                             contributorEditorId="rek-author"
                             name="authors"
                             locale={txt.authors.field}
-                            showContributorAssignment={!editorSelected}
+                            showContributorAssignment={!isEditorSelected}
                             required
                             disabled={isSubmitting}
                             isNtro={isNtro}
@@ -148,7 +147,7 @@ export const BookForm = ({
                     </StandardCard>
                 </Grid>
             )}
-            {(!authors || authors.length === 0) && (
+            {!values.authors?.length && (
                 <Grid item xs={12}>
                     <StandardCard title={txt.editors.title} help={txt.editors.help}>
                         <Field
@@ -159,7 +158,7 @@ export const BookForm = ({
                             hideUqIDFields
                             maintainSelected
                             contributorEditorId="rek-contributor"
-                            showContributorAssignment={!authorSelected}
+                            showContributorAssignment={!isAuthorSelected}
                             id="editors-name-as-published-field"
                             name="editors"
                             locale={txt.editors.field}
@@ -173,7 +172,7 @@ export const BookForm = ({
                     control={control}
                     canEdit
                     isSubmitting={isSubmitting}
-                    showContributionStatement={isAuthorSelected}
+                    showContributionStatement={showContributionStatement}
                     hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
                     hideIsrc
                     hideVolume
@@ -258,7 +257,7 @@ export const BookForm = ({
 BookForm.propTypes = {
     control: PropTypes.any,
     isSubmitting: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,

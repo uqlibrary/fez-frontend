@@ -25,11 +25,10 @@ import {
 } from 'config/general';
 import { dateRange } from 'config/validation';
 
-export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, formValues }) => {
+export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, values }) => {
     const txt = formLocale.creativeWork;
-    const _formValues = formValues && formValues.toJS();
     // not sure why rek_date is used as the start date in here
-    const hasDateError = dateRange(_formValues.rek_date, _formValues.fez_record_search_key_end_date?.rek_end_date);
+    const hasDateError = dateRange(values.rek_date, values.fez_record_search_key_end_date?.rek_end_date);
     const displayEndDate = [
         ...LP_NTRO_SUBTYPES,
         ...CPEE_NTRO_SUBTYPES,
@@ -215,6 +214,6 @@ CreativeWorkForm.propTypes = {
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
 };
 export default CreativeWorkForm;

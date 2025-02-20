@@ -16,6 +16,7 @@ import {
     isFezRecordOneToManyRelation,
     filterObject,
     numbersOnly,
+    hasAtLeastOneItemSelected,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -549,6 +550,28 @@ describe('general helpers', () => {
 
         it('should return numbers only', () => {
             expect(numbersOnly('10a20b30')).toEqual('102030');
+        });
+    });
+
+    describe('hasAtLeastOneItemSelected', () => {
+        it('should return false', () => {
+            expect(hasAtLeastOneItemSelected()).toBeFalsy();
+            expect(hasAtLeastOneItemSelected(null)).toBeFalsy();
+            expect(hasAtLeastOneItemSelected(false)).toBeFalsy();
+            expect(hasAtLeastOneItemSelected(true)).toBeFalsy();
+            expect(hasAtLeastOneItemSelected([])).toBeFalsy();
+            expect(hasAtLeastOneItemSelected([1])).toBeFalsy();
+            expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2 }])).toBeFalsy();
+            expect(hasAtLeastOneItemSelected({})).toBeFalsy();
+            expect(hasAtLeastOneItemSelected('')).toBeFalsy();
+            expect(hasAtLeastOneItemSelected('a')).toBeFalsy();
+            expect(hasAtLeastOneItemSelected(1)).toBeFalsy();
+            expect(hasAtLeastOneItemSelected(1.1)).toBeFalsy();
+        });
+
+        it('should return true', () => {
+            expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, selected: true }])).toBeTruthy();
+            expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, custom: true }], 'custom')).toBeTruthy();
         });
     });
 });

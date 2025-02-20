@@ -14,17 +14,10 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 
-export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, formValues }) => {
+export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelected, control, values }) => {
     const txt = formLocale.bookChapter;
-    const _formValues = formValues && formValues.toJS();
-    const startPage =
-        _formValues &&
-        _formValues.fez_record_search_key_start_page &&
-        _formValues.fez_record_search_key_start_page.rek_start_page;
-    const endPage =
-        _formValues &&
-        _formValues.fez_record_search_key_end_page &&
-        _formValues.fez_record_search_key_end_page.rek_end_page;
+    const startPage = values.fez_record_search_key_start_page?.rek_start_page;
+    const endPage = values.fez_record_search_key_end_page?.rek_end_page;
     const pageError =
         !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
     return (
@@ -291,6 +284,6 @@ BookChapterForm.propTypes = {
     subtype: PropTypes.string,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
 };
 export default BookChapterForm;

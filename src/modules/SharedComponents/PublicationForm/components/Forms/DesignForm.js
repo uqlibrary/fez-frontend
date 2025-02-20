@@ -16,14 +16,13 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { dateRange } from 'config/validation';
 
-export const DesignForm = ({ control, formValues, isSubmitting, isNtro, isAuthorSelected }) => {
+export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSelected }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.design;
-    const _formValues = formValues && formValues.toJS();
     // TODO check why project_start_date is being compared with end_date
     const hasDateError = dateRange(
-        _formValues.fez_record_search_key_project_start_date?.rek_project_start_date,
-        _formValues.fez_record_search_key_end_date?.rek_end_date,
+        values.fez_record_search_key_project_start_date?.rek_project_start_date,
+        values.fez_record_search_key_end_date?.rek_end_date,
     );
 
     return (
@@ -225,7 +224,7 @@ export const DesignForm = ({ control, formValues, isSubmitting, isNtro, isAuthor
 DesignForm.propTypes = {
     control: PropTypes.any,
     isSubmitting: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
 };

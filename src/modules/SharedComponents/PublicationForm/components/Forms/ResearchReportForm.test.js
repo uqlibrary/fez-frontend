@@ -24,7 +24,7 @@ describe('ResearchReportForm', () => {
 
     it('should render validation required', () => {
         const { container } = setup({
-            formValues: {
+            values: {
                 rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
             },
         });

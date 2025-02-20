@@ -555,3 +555,10 @@ export const filterObject = (obj, filter) => {
  * @return {string}
  */
 export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, '')) || value;
+
+/**
+ * @param {{ selected: boolean }[]} items
+ * @param {string} attr
+ * @return {boolean}
+ */
+export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr]);

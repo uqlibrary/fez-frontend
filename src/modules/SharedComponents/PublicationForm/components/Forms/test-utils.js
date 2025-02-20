@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { render, WithReduxStore } from 'test-utils';
 import React from 'react';
-import { formValues } from '../PublicationForm';
 
 export const ControlledFieldWithReduxStore = (Form, props) => {
     const Wrapper = () => {
@@ -11,7 +10,7 @@ export const ControlledFieldWithReduxStore = (Form, props) => {
         } = useForm();
 
         // eslint-disable-next-line react/prop-types
-        return <Form {...{ control, isSubmitting, ...props, formValues: formValues(props?.formValues || {}) }} />;
+        return <Form {...{ control, isSubmitting, ...props, values: props?.values || {} }} />;
     };
 
     return render(

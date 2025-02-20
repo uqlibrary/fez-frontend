@@ -21,13 +21,13 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
 
-export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, control, formValues }) => {
+export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, control, values }) => {
     const txt = formLocale.researchReport;
     const pubsMandatory =
-        (formValues && formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_PUBLIC_SECTOR) ||
-        formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_INDUSTRY ||
-        formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT ||
-        formValues.get('rek_subtype') === NTRO_SUBTYPE_RREB_OTHER;
+        values.rek_subtype === NTRO_SUBTYPE_RREB_PUBLIC_SECTOR ||
+        values.rek_subtype === NTRO_SUBTYPE_RREB_INDUSTRY ||
+        values.rek_subtype === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT ||
+        values.rek_subtype === NTRO_SUBTYPE_RREB_OTHER;
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
@@ -286,6 +286,6 @@ ResearchReportForm.propTypes = {
     isSubmitting: PropTypes.bool,
     isNtro: PropTypes.bool,
     isAuthorSelected: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
 };
 export default ResearchReportForm;

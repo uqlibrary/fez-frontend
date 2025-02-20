@@ -38,7 +38,7 @@ import { useForm } from '../../../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
-import { isEmptyObject } from '../../../../helpers/general';
+import { hasAtLeastOneItemSelected, isEmptyObject } from 'helpers/general';
 import { dateRange } from 'config/validation';
 
 const asyncValidate = async (data, setError) => {
@@ -48,19 +48,17 @@ const asyncValidate = async (data, setError) => {
     return false;
 };
 
-const hasAtLeastOneContributorSelected = items => items?.some(v => v.selected);
-
 const validateAuthors = data => {
     const errors = {};
-    if (data.rek_subtype === SUBTYPE_EDITED_BOOK && !hasAtLeastOneContributorSelected(data.editors)) {
+    if (data.rek_subtype === SUBTYPE_EDITED_BOOK && !hasAtLeastOneItemSelected(data.editors)) {
         errors.editors = locale.validationErrors.editorRequired;
     } else if ((!data.authors || !data.authors.length) && (!data.editors || !data.editors.length)) {
         errors.authors = locale.validationErrors.authorRequired;
         errors.editors = locale.validationErrors.editorRequired;
     } else if (
         data.authors?.length &&
-        !hasAtLeastOneContributorSelected(data.authors) &&
-        !hasAtLeastOneContributorSelected(data.editors)
+        !hasAtLeastOneItemSelected(data.authors) &&
+        !hasAtLeastOneItemSelected(data.editors)
     ) {
         errors.authors = locale.validationErrors.authorRequired;
     }
@@ -160,8 +158,6 @@ const publicationTypeItems = [
         );
     }),
 ];
-
-export const formValues = values => ({ get: key => values[key], toJS: () => values });
 
 const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel }) => {
     const dispatch = useDispatch();
@@ -320,7 +316,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
                             <Grid xs={12}>
                                 <FormComponent
                                     control={control}
-                                    formValues={formValues(values)}
+                                    values={values}
                                     subtype={subtype}
                                     isNtro={isNtro}
                                     isAuthorSelected={isAuthorSelected}

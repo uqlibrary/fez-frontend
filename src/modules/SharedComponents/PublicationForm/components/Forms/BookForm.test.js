@@ -26,7 +26,7 @@ describe('BookForm', () => {
 
     it('component should render contributor assignment', () => {
         const { container } = setup({
-            formValues: {
+            values: {
                 editors: [{ selected: true }, { selected: true }],
                 authors: [{ selected: true }, { selected: true }],
             },

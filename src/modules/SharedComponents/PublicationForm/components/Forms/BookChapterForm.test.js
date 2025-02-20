@@ -26,7 +26,7 @@ describe('BookChapterForm', () => {
 
     it('shows an error when end page is less than start page', () => {
         const { container } = setup({
-            formValues: {
+            values: {
                 fez_record_search_key_start_page: {
                     rek_start_page: 768,
                 },

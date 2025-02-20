@@ -11,14 +11,13 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
+import { hasAtLeastOneItemSelected } from 'helpers/general';
 
-export const AudioDocumentForm = ({ isSubmitting, control, formValues }) => {
+export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.audioDocument;
-    const editors = formValues && formValues.get('editors');
-    const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
-    const authors = formValues && formValues.get('authors');
-    const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
+    const isAuthorSelected = hasAtLeastOneItemSelected(values.authors);
+    const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -118,7 +117,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, formValues }) => {
                         forceSelectable
                         hideUqIDFields
                         contributorEditorId="creators"
-                        showContributorAssignment={!editorSelected}
+                        showContributorAssignment={!isEditorSelected}
                         required
                         name="authors"
                         locale={txt.creator.field}
@@ -136,7 +135,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, formValues }) => {
                         forceSelectable
                         hideUqIDFields
                         contributorEditorId="contributors"
-                        showContributorAssignment={!authorSelected}
+                        showContributorAssignment={!isAuthorSelected}
                         name="editors"
                         required
                         locale={txt.contributor.field}
@@ -182,7 +181,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, formValues }) => {
 AudioDocumentForm.propTypes = {
     control: PropTypes.any,
     isSubmitting: PropTypes.bool,
-    formValues: PropTypes.object,
+    values: PropTypes.object,
 };
 
 export default AudioDocumentForm;
