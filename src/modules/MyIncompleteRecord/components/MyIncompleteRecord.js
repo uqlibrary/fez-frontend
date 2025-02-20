@@ -246,8 +246,6 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
         if (isSubmitSuccessful) showConfirmation();
     }, [showConfirmation, isSubmitSuccessful]);
 
-    const fieldWrapper = React.useCallback(props => <Field {...props} control={control} />, [control]);
-
     // loading message
     if (accountAuthorLoading || loadingRecordToFix) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -373,7 +371,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                             </Grid>
                             {isNtro && (
                                 <NtroFields
-                                    fieldWrapper={fieldWrapper}
+                                    control={control}
                                     submitting={isSubmitting}
                                     hideIsmn
                                     hideIsrc

@@ -10,8 +10,7 @@ import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
-import { getStore } from '../src/config/store';
-import Immutable from 'immutable';
+import { getStore, storeInstance } from '../src/config/store';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -24,8 +23,9 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
-import { lastRequests } from '../src/config/axios';
+import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
+import { isEmptyObject } from '../src/helpers/general';
 
 export const AllTheProviders = props => {
     return (
@@ -52,14 +52,15 @@ export const WithRouter = ({ children, route = '/', initialEntries = [route] }) 
     return <RouterProvider router={router} />;
 };
 
-export const withRedux = (initialState = Immutable.Map()) => WrappedComponent => {
-    return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
-};
+export const getReduxStoreState = namespace =>
+    namespace ? storeInstance.getState().toJS()[namespace] : storeInstance.getState().toJS();
 
-export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => (
-    <Provider store={getStore(initialState)}>
+export const WithRedux = ({ initialState, children }) => <Provider store={getStore(initialState)}>{children}</Provider>;
+
+export const WithReduxStore = ({ initialState = {}, children }) => (
+    <WithRedux initialState={initialState}>
         <AllTheProviders>{children}</AllTheProviders>
-    </Provider>
+    </WithRedux>
 );
 
 export const assertTooltipText = async (trigger, tooltipText) => {
@@ -185,17 +186,6 @@ const addFilesToFileUploader = files => {
         },
     });
 };
-const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
-    const { fireEvent } = reactTestingLib;
-    // set all files to closed access
-    for (const file of files) {
-        const index = files.indexOf(file);
-        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
-        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
-        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
-    }
-};
-
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -216,6 +206,17 @@ const waitForTextToBeRemoved = async (text, options) =>
     ((typeof text === 'string' && !!text.trim().length) || text) &&
     screen.queryByText(text) &&
     (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+const setFileUploaderFilesToClosedAccess = async files => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitForText(new RegExp(getFilenameBasename(file)));
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
@@ -240,14 +241,49 @@ const mockWebApiFile = () => {
     };
 };
 
-const assertRequestData = (data, request) => {
-    if (typeof data === 'object') {
-        expect(JSON.parse(request.data)).toStrictEqual(data);
-    } else if (typeof data === 'function') {
-        expect(data(request.data)).toBeTruthy();
+/**
+ *
+ * @param {object|function} expected
+ * @param {object} request
+ */
+const assertRequestData = (expected, request) => {
+    const actual = !isEmptyObject(request.data || {}) ? request.data : request.params;
+    if (typeof expected === 'object') {
+        expect(JSON.parse(actual)).toStrictEqual(expected);
+    } else if (typeof expected === 'function') {
+        expect(expected(actual)).toBeTruthy();
     }
 };
 
+const requestHistoryToString = history =>
+    JSON.stringify(
+        history.reduce((acc, item) => {
+            acc.push({ method: item.method, url: item.url, data: item.data, params: item.params });
+            return acc;
+        }, []),
+        null,
+        2,
+    );
+
+const debugApiRequestHistory = () => console.log(requestHistoryToString(apiRequestHistory));
+
+const requestFilter = ({ method, url, partialUrl }) => entry =>
+    (!method || entry.method === method) &&
+    (!url || entry.url === url) &&
+    (!partialUrl || entry.url.includes(partialUrl));
+
+const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
+    history.findIndex(requestFilter({ method, url, partialUrl }));
+const assertRequestCount = ({ history, method, url, partialUrl }, expectation) =>
+    expect(history.filter(requestFilter({ method, url, partialUrl }))).toHaveLength(expectation);
+
+/**
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {function|object} data
+ * @param {object} request
+ */
 const assertRequest = ({ method, url, partialUrl, data, request }) => {
     if (method && method !== '*') {
         expect(request.method).toBe(method);
@@ -262,31 +298,37 @@ const assertRequest = ({ method, url, partialUrl, data, request }) => {
     assertRequestData(data, request);
 };
 
-const assertApiRequest = ({ method, url, partialUrl, data }) => {
-    // try to find the last request based on method, url and partialUrl if these are available
-    const index = lastRequests.findIndex(
-        entry =>
-            (!method || entry.method === method) &&
-            (!url || entry.url === url) &&
-            (!partialUrl || entry.url.includes(partialUrl)),
-    );
+const expectApiRequestCountToBe = (method, url, expectation) =>
+    assertRequestCount({ history: apiRequestHistory, method, url }, expectation);
 
+/**
+ * @param {number} count
+ */
+const expectApiRequestHistoryLengthToBe = (count = 0) => expect(apiRequestHistory).toHaveLength(count);
+const expectApiRequestHistoryToBeEmpty = () => expectApiRequestHistoryLengthToBe(0);
+
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {string} partialUrl
+ * @param {function|object} data
+ * @return {*}
+ */
+const assertApiRequest = ({ method, url, partialUrl, data }) => {
+    if (!method && !url && !partialUrl && isEmptyObject(data || {})) throw new Error('invalid params');
+
+    // try to find the last request based on method, url and partialUrl if these are available
+    const index = findRequestHistoryIndex({ history: apiRequestHistory, method, url, partialUrl });
     if (index < 0) {
         throw new Error(
             `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
                 partialUrl ||
-                'N/A'}\n\nRequest queue:\n${JSON.stringify(
-                lastRequests.reduce((acc, item) => {
-                    acc.push({ method: item.method, url: item.url });
-                    return acc;
-                }, []),
-                null,
-                2,
-            )}`,
+                'N/A'}\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
         );
     }
     // pop match from queue, so that similar requests can be processed by consecutive calls
-    const [request] = lastRequests.splice(index, 1);
+    const [request] = apiRequestHistory.splice(index, 1);
     assertRequest({ method, url, partialUrl, data, request });
 
     return request;
@@ -297,6 +339,13 @@ const assertInstanceOfFile = data => {
     return true;
 };
 
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {function} assertPayload
+ * @return {*}
+ */
 const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
     const request = assertApiRequest({
         method,
@@ -312,11 +361,46 @@ const previewAndHalt = () => {
     process.exit(0);
 };
 
+/**
+ * @param {string} containerTestId
+ * @param {string} value
+ */
+const setRichTextEditorValue = async (containerTestId, value) => {
+    const editor = screen.getByTestId(containerTestId).querySelector('.ck-editor__editable').ckeditorInstance;
+    editor.model.change(writer => {
+        writer.insertText(value, editor.model.document.selection.getFirstPosition());
+    });
+    await userEvent.tab();
+};
+
+/**
+ * @param {string} id
+ * @param {string} option
+ * @param {number}  index
+ * @return {Promise<void>}
+ */
+const selectDropDownOption = async (id, option, index = 0) => {
+    await userEvent.click(screen.getByTestId(id));
+    await userEvent.click(screen.queryAllByRole('option', { name: option })[index]);
+};
+
+/**
+ * @param {string} fieldName
+ * @param {string} name
+ * @return {Promise<void>}
+ */
+const addContributorsEditorItem = async (fieldName, name = 'author') => {
+    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+    await userEvent.click(screen.getByTestId(`${fieldName}-add`));
+    await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
     rtlRender,
-    withRedux,
+    WithRedux,
+    getReduxStoreState,
     AllTheProviders,
     WithReduxStore,
     assertTooltipText,
@@ -342,9 +426,16 @@ module.exports = {
     mockWebApiFile,
     assertRequestData,
     assertRequest,
+    debugApiRequestHistory,
+    expectApiRequestCountToBe,
+    expectApiRequestHistoryLengthToBe,
+    expectApiRequestHistoryToBeEmpty,
     assertApiRequest,
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     previewAndHalt,
+    setRichTextEditorValue,
+    selectDropDownOption,
+    addContributorsEditorItem,
     api,
 };

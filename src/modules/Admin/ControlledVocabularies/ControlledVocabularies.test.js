@@ -1,18 +1,13 @@
 import React from 'react';
-
 import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitForElementToBeRemoved } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
 import * as UserIsAdmin from 'hooks/userIsAdmin';
-import Immutable from 'immutable';
-
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
 
 const setup = ({ state = {} } = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <ControlledVocabularies {...state} />
             </WithRouter>

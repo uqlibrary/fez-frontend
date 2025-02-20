@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -13,7 +13,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const PreprintForm = ({ submitting }) => {
+export const PreprintForm = ({ isSubmitting, control }) => {
     // path to the locale data for each of the sections
     const txt = formLocale.preprint;
     return (
@@ -23,8 +23,9 @@ export const PreprintForm = ({ submitting }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 autoFocus
                                 name="rek_title"
                                 type="text"
@@ -38,8 +39,9 @@ export const PreprintForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_doi.rek_doi"
                                 textFieldId="rek-doi"
                                 type="text"
@@ -50,9 +52,10 @@ export const PreprintForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -69,6 +72,7 @@ export const PreprintForm = ({ submitting }) => {
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
@@ -80,7 +84,7 @@ export const PreprintForm = ({ submitting }) => {
                         name="authors"
                         locale={txt.authors.field}
                         validate={[validation.authorRequired]}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                     />
                 </StandardCard>
             </Grid>
@@ -89,8 +93,9 @@ export const PreprintForm = ({ submitting }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="comments"
                                 type="text"
                                 fullWidth
@@ -101,8 +106,9 @@ export const PreprintForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_link"
                                 type="text"
                                 fullWidth
@@ -117,6 +123,7 @@ export const PreprintForm = ({ submitting }) => {
     );
 };
 PreprintForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
 };
 export default PreprintForm;

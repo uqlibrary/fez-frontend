@@ -1,7 +1,6 @@
 import React from 'react';
 import DeleteRecord from './DeleteRecord';
 import { mockRecordToDelete } from 'mock/data/testing/records';
-import Immutable from 'immutable';
 import { DELETED, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 import {
     expectApiRequestToMatchSnapshot,
@@ -42,7 +41,7 @@ function setup(props = {}, renderMethod = render) {
     };
 
     return renderMethod(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <DeleteRecord />
             </WithRouter>
@@ -116,12 +115,8 @@ describe('Component DeleteRecord', () => {
             await waitForTextToBeRemoved('Request is being processed');
         };
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         it('should submit the form for a record without DOI', async () => {
             mockGetAndDeleteRecordApiCalls();
