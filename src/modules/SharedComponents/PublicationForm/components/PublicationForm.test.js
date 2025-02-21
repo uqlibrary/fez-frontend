@@ -1,7 +1,7 @@
 import PublicationForm from './PublicationForm';
 import React from 'react';
 import {
-    addContributorsEditorItem,
+    addAndSelectContributorsEditorItem,
     addFilesToFileUploader,
     assertDisabled,
     assertInstanceOfFile,
@@ -165,7 +165,7 @@ describe('PublicationForm', () => {
 
             const editorValidationError = ['Editor/contributor names are required'];
             await assertValidationErrorSummary(editorValidationError);
-            await addContributorsEditorItem('rek-contributor');
+            await addAndSelectContributorsEditorItem('rek-contributor');
             await assertMissingValidationErrorSummary(editorValidationError);
         });
 
@@ -212,6 +212,16 @@ describe('PublicationForm', () => {
             await userEvent.clear(screen.getByTestId('rek-date-year-input'));
             await userEvent.type(screen.getByTestId('rek-date-year-input'), '60');
             await assertMissingValidationErrorSummary(pageRangeError);
+        });
+
+        it('should validate added fields upon selecting an author', async () => {
+            setup();
+            await selectDisplayType('Design');
+
+            const expectedError = ['Scale/Significance of work is required', 'Creator research statement is required'];
+            await assertMissingValidationErrorSummary(expectedError);
+            await addAndSelectContributorsEditorItem('authors');
+            await assertValidationErrorSummary(expectedError);
         });
     });
 
@@ -267,7 +277,7 @@ describe('PublicationForm', () => {
                 'place of publication',
             );
             await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '1980');
-            await addContributorsEditorItem('authors');
+            await addAndSelectContributorsEditorItem('authors');
             await userEvent.type(screen.getByTestId('rek-total-pages-input'), '123');
             await selectDropDownOption(
                 'rek-quality-indicator-select',
@@ -276,14 +286,13 @@ describe('PublicationForm', () => {
             await selectDropDownOption('rek-significance-select', 'Minor');
             await setRichTextEditorValue('rek-creator-contribution-statement', 'statement');
             await setRichTextEditorValue('rek-description', 'abstract');
-            await setRichTextEditorValue('rek-description', 'abstract');
             addFilesToFileUploader(fileMock);
             await setFileUploaderFilesToClosedAccess(fileMock);
 
             await submitForm();
             await assertSavingMessage();
             expect(mockOnFormSubmitSuccess).toHaveBeenCalledTimes(1);
-            expectApiRequestToMatchSnapshot('post', api.url.records.create);
+            expectApiRequestToMatchSnapshot('post', api.url.records.create, v => JSON.parse(v).isNtro === true);
             expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
         });
 
@@ -303,7 +312,7 @@ describe('PublicationForm', () => {
             // fill up form
             await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
             await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-            await addContributorsEditorItem('creators');
+            await addAndSelectContributorsEditorItem('creators');
             // fill up DOI
             // invalid
             const doiValidationError = ['DOI is invalid'];
@@ -332,6 +341,7 @@ describe('PublicationForm', () => {
 
             await submitForm();
             await assertSavingMessage();
+            expectApiRequestToMatchSnapshot('post', api.url.records.create, v => !JSON.parse(v).isNtro);
             expectApiRequestToMatchSnapshot('get', doiSearchUrl);
             expectApiRequestCountToBe('get', doiSearchUrl, 0);
         });
@@ -344,7 +354,7 @@ describe('PublicationForm', () => {
                 // fill up form
                 await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
                 await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-                await addContributorsEditorItem('creators');
+                await addAndSelectContributorsEditorItem('creators');
 
                 await submitForm();
                 await waitForText(/Error has occurred during request and request cannot be processed/i);
