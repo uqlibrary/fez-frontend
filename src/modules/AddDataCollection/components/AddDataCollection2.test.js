@@ -253,19 +253,10 @@ describe('AddDataCollection test', () => {
         async () => {
             const existingDoiValue = '10.1037/a0028240';
             const notExistingDoiValue = '10.1037/a002824';
-            mockApi
-                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                    params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
-                })
-                .reply(() => {
-                    return [200, { total: 1 }];
-                })
-                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
-                    params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
-                })
-                .reply(() => {
-                    return [200, { total: 0 }];
-                });
+            mockApi.onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl).reply(config => {
+                const { lookup_value: lookupValue } = config.params;
+                return [200, { total: lookupValue === existingDoiValue ? 1 : 0 }];
+            });
             // Field of Research lookup
             mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
                 return [200, vocabsFieldResearch];
