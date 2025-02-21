@@ -2,7 +2,7 @@
 import React from 'react';
 import { validate } from 'config/admin';
 import { useWatch } from 'react-hook-form';
-import _, { isMatch } from 'lodash';
+import { merge } from 'lodash';
 
 export const useFormValidator = form => {
     const data = {
@@ -11,8 +11,8 @@ export const useFormValidator = form => {
         }),
         ...form.getValues(),
     };
-    const stateErrors = form.formState.errors;
+    const formErrors = form.formState.errors;
     const validationErrors = validate(data);
-    const errors = { errors: { ...stateErrors, ...validationErrors } };
+    const errors = { errors: merge(validationErrors, formErrors) };
     return errors;
 };

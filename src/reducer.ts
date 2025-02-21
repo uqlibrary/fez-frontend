@@ -6,7 +6,6 @@ import { default as helpDrawerReducer } from 'modules/SharedComponents/Toolbox/H
 import { default as fileUploadReducer } from 'modules/SharedComponents/Toolbox/FileUploader/reducer';
 
 import * as reducers from './reducers';
-// import * as plugins from './reducers/formReducerPlugins';
 
 const rootReducer = () =>
     combineReducers({

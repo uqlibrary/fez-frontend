@@ -18,6 +18,7 @@ import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
 import { isArrayDeeplyEqual } from '../../../../helpers/general';
+import _ from 'lodash';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -41,6 +42,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        showExternalIdentifierInput: PropTypes.bool,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
@@ -63,6 +65,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
     };
@@ -80,42 +83,46 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevProps.input?.value !== this.props.input?.value) {
+        if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
             this.setState({
                 contributors: this.getContributorsWithAffiliationsFromProps(this.props),
             });
+        }
+        if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
+            this.state.scaleOfSignificance = this.buildInitialScaleOfSignificance(this.props);
         }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
             this.props.onChange?.(this.state.contributors);
         }
-        const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
+            const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
             if (Object.keys(updated).length > 0) {
                 this.state.scaleOfSignificance = this.props.scaleOfSignificance;
             } else {
-                this.state.scaleOfSignificance = this.handleSoSChange(
+                const newSos = this.handleSoSChange(
                     prevState.contributors,
                     this.state.contributors,
                     this.props.scaleOfSignificance,
                 );
+                this.state.scaleOfSignificance = newSos;
             }
         }
     }
     buildInitialScaleOfSignificance = props => {
         if (!props.isNtro) return [];
 
-        const scaleOfSignificance = [];
+        const ScaleOfSignificance = [];
         props.record?.fez_record_search_key_significance &&
             props.record?.fez_record_search_key_significance.length > 0 &&
             props.record?.fez_record_search_key_significance.map((item, index) => {
                 // check here for the length of the significance vs the authors.
                 /* istanbul ignore else */
                 if (props.record?.fez_record_search_key_author.length >= index + 1) {
-                    scaleOfSignificance[index] = {};
-                    scaleOfSignificance[index].id = item.rek_significance_id;
-                    scaleOfSignificance[index].key = item.rek_significance;
-                    scaleOfSignificance[index].value = {
+                    ScaleOfSignificance[index] = {};
+                    ScaleOfSignificance[index].id = item.rek_significance_id;
+                    ScaleOfSignificance[index].key = item.rek_significance;
+                    ScaleOfSignificance[index].value = {
                         plainText:
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
@@ -123,7 +130,7 @@ export class ContributorsEditor extends PureComponent {
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
                     };
-                    scaleOfSignificance[index].author = {
+                    ScaleOfSignificance[index].author = {
                         rek_author_id:
                             props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                             /* istanbul ignore next */ 0,
@@ -141,14 +148,14 @@ export class ContributorsEditor extends PureComponent {
         (!props.record?.fez_record_search_key_significance ||
             props.record?.fez_record_search_key_significance?.length === 0) &&
             props.record?.fez_record_search_key_author?.map((item, index) => {
-                scaleOfSignificance[index] = {};
-                scaleOfSignificance[index].id = 0;
-                scaleOfSignificance[index].key = 0;
-                scaleOfSignificance[index].value = {
+                ScaleOfSignificance[index] = {};
+                ScaleOfSignificance[index].id = 0;
+                ScaleOfSignificance[index].key = 0;
+                ScaleOfSignificance[index].value = {
                     plainText: 'Missing',
                     htmlText: 'Missing',
                 };
-                scaleOfSignificance[index].author = {
+                ScaleOfSignificance[index].author = {
                     rek_author_id:
                         props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                         /* istanbul ignore next */ 0,
@@ -161,7 +168,7 @@ export class ContributorsEditor extends PureComponent {
                     rek_author_order: index + 1,
                 };
             });
-        return scaleOfSignificance;
+        return ScaleOfSignificance;
     };
 
     getContributorsFromProps = props => {
@@ -171,7 +178,6 @@ export class ContributorsEditor extends PureComponent {
                 (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
             );
         }
-
         return [];
     };
 
@@ -461,9 +467,10 @@ export class ContributorsEditor extends PureComponent {
 
                 newList = scaleOfSignificance;
             }
-            this.props.actions.updateAdminScaleSignificance(newList);
+            const dedupedList = _.uniqWith(newList, (a, b) => a.author.rek_author === b.author.rek_author);
+            this.props.actions.updateAdminScaleSignificance(dedupedList);
 
-            return newList;
+            return dedupedList;
         }
     };
 
@@ -486,6 +493,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            showExternalIdentifierInput,
             useFormReducer,
         } = this.props;
 
@@ -519,6 +527,7 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
+                    showExternalIdentifierInput={showExternalIdentifierInput}
                     locale={this.props.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}

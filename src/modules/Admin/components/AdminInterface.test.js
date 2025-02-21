@@ -946,11 +946,9 @@ describe('AdminInterface component', () => {
         useIsUserSuperAdmin.mockImplementationOnce(() => true);
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
-        const error = 'Title is required';
-        mockFormState.formState.errors = { bibliographicSection: { rek_title: error } };
         const { getByTestId } = setup({
             handleSubmit: jest.fn(),
-            error: { message: 'error' },
+            formErrors: { bibliographicSection: { rek_title: 'Title is required' } },
             tabs: {
                 bibliographic: {
                     activated: true,
@@ -958,7 +956,6 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-
         expect(getByTestId('alert')).toHaveTextContent(/Title is required/);
     });
 });

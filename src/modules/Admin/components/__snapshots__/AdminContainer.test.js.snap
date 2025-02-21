@@ -3202,15 +3202,14 @@ exports[`AdminContainer component should render default view 1`] = `
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                                    data-testid="link"
-                                    fieldid="rek-link"
+                                    data-testid="rek-link"
                                   >
                                     <label
                                       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
-                                      data-testid="link-label"
-                                      for="link-input"
-                                      id="link-label"
+                                      data-testid="rek-link-label"
+                                      for="rek-link-input"
+                                      id="rek-link-label"
                                     >
                                       Link
                                     </label>
@@ -3221,9 +3220,9 @@ exports[`AdminContainer component should render default view 1`] = `
                                         aria-invalid="false"
                                         aria-label="Link"
                                         class="MuiInputBase-input MuiInput-input css-8sgtit-MuiInputBase-input-MuiInput-input"
-                                        data-analyticsid="link-input"
-                                        data-testid="link-input"
-                                        id="link-input"
+                                        data-analyticsid="rek-link-input"
+                                        data-testid="rek-link-input"
+                                        id="rek-link-input"
                                         label="Link"
                                         name="link"
                                         placeholder="Enter link"
@@ -4132,7 +4131,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-13-download-link"
                                       data-testid="file-name-13-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
                                       id="file-name-13-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -4312,7 +4311,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-14-download-link"
                                       data-testid="file-name-14-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
                                       id="file-name-14-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -4492,7 +4491,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-15-download-link"
                                       data-testid="file-name-15-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
                                       id="file-name-15-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -4672,7 +4671,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-16-download-link"
                                       data-testid="file-name-16-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
                                       id="file-name-16-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -4852,7 +4851,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-17-download-link"
                                       data-testid="file-name-17-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
                                       id="file-name-17-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -5032,7 +5031,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-31-download-link"
                                       data-testid="file-name-31-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
+                                      href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
                                       id="file-name-31-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -5212,7 +5211,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-32-download-link"
                                       data-testid="file-name-32-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
+                                      href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
                                       id="file-name-32-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -7372,7 +7371,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4q:"
+                                  aria-controls=":r3o:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-code-select"
@@ -7431,7 +7430,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4r:"
+                                  aria-controls=":r3p:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-status-select"
@@ -7479,8 +7478,8 @@ exports[`AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
-                                data-shrink="false"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-6rwyl5-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
                                 data-testid="rek-institutional-status-label"
                                 id="rek-institutional-status-label"
                               >
@@ -7490,7 +7489,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4s:"
+                                  aria-controls=":r3q:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-institutional-status-select"
@@ -7500,11 +7499,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                   role="combobox"
                                   tabindex="0"
                                 >
-                                  <span
-                                    class="notranslate"
-                                  >
-                                    ​
-                                  </span>
+                                  Non-UQ
                                 </div>
                                 <input
                                   aria-hidden="true"
@@ -7515,7 +7510,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                   data-testid="rek-institutional-status-input"
                                   id="rek-institutional-status-input"
                                   tabindex="-1"
-                                  value=""
+                                  value="453224"
                                 />
                                 <svg
                                   aria-hidden="true"
@@ -7538,8 +7533,8 @@ exports[`AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
-                                data-shrink="false"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-6rwyl5-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="true"
                                 data-testid="rek-refereed-source-label"
                                 id="rek-refereed-source-label"
                               >
@@ -7549,7 +7544,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4t:"
+                                  aria-controls=":r3r:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-refereed-source-select"
@@ -7559,11 +7554,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                   role="combobox"
                                   tabindex="0"
                                 >
-                                  <span
-                                    class="notranslate"
-                                  >
-                                    ​
-                                  </span>
+                                  Not yet assessed
                                 </div>
                                 <input
                                   aria-hidden="true"
@@ -7574,7 +7565,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                   data-testid="rek-refereed-source-input"
                                   id="rek-refereed-source-input"
                                   tabindex="-1"
-                                  value=""
+                                  value="453638"
                                 />
                                 <svg
                                   aria-hidden="true"
@@ -7608,7 +7599,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4u:"
+                                  aria-controls=":r3s:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-content-indicator-select"
@@ -7667,7 +7658,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r4v:"
+                                  aria-controls=":r3t:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-select"
@@ -7722,7 +7713,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r50:"
+                                  aria-controls=":r3u:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-type-select"
@@ -7781,7 +7772,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r51:"
+                                  aria-controls=":r3v:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-license-select"
@@ -7988,7 +7979,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r52:"
+                                  aria-controls=":r40:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-language-select"
@@ -8546,7 +8537,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r5c:"
+                                        aria-controls=":r4a:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="rek-date-month-select"
@@ -10180,15 +10171,14 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                                    data-testid="link"
-                                    fieldid="rek-link"
+                                    data-testid="rek-link"
                                   >
                                     <label
                                       class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
-                                      data-testid="link-label"
-                                      for="link-input"
-                                      id="link-label"
+                                      data-testid="rek-link-label"
+                                      for="rek-link-input"
+                                      id="rek-link-label"
                                     >
                                       Link
                                     </label>
@@ -10199,9 +10189,9 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                         aria-invalid="false"
                                         aria-label="Link"
                                         class="MuiInputBase-input MuiInput-input css-8sgtit-MuiInputBase-input-MuiInput-input"
-                                        data-analyticsid="link-input"
-                                        data-testid="link-input"
-                                        id="link-input"
+                                        data-analyticsid="rek-link-input"
+                                        data-testid="rek-link-input"
+                                        id="rek-link-input"
                                         label="Link"
                                         name="link"
                                         placeholder="Enter link"
@@ -10451,7 +10441,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r66:"
+                                        aria-controls=":r54:"
                                         aria-disabled="true"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
@@ -11110,7 +11100,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-13-download-link"
                                       data-testid="file-name-13-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
                                       id="file-name-13-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -11290,7 +11280,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-14-download-link"
                                       data-testid="file-name-14-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
                                       id="file-name-14-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -11470,7 +11460,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-15-download-link"
                                       data-testid="file-name-15-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
                                       id="file-name-15-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -11650,7 +11640,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-16-download-link"
                                       data-testid="file-name-16-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
                                       id="file-name-16-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -11830,7 +11820,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-17-download-link"
                                       data-testid="file-name-17-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
+                                      href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
                                       id="file-name-17-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -12010,7 +12000,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-31-download-link"
                                       data-testid="file-name-31-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
+                                      href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
                                       id="file-name-31-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -12190,7 +12180,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class=" css-1571yvh"
                                       data-analyticsid="file-name-32-download-link"
                                       data-testid="file-name-32-download-link"
-                                      href="https://fez-staging.library.uq.edu.au/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
+                                      href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
                                       id="file-name-32-download-link"
                                       rel="noopener noreferrer"
                                       tabindex="0"
@@ -12596,7 +12586,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r70:"
+                                  aria-controls=":r5u:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-sensitive-handling-note-id-select"
@@ -12689,9 +12679,10 @@ exports[`AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-obfw65-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-v3js7l-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
+                                  checked=""
                                   class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="rek-copyright-input"
                                   data-indeterminate="false"
@@ -12702,17 +12693,17 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 <svg
                                   aria-hidden="true"
                                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="CheckBoxOutlineBlankIcon"
+                                  data-testid="CheckBoxIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
-                                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                                   />
                                 </svg>
                               </span>
                               <div
-                                class="MuiTypography-root MuiTypography-body1 css-4w12ei-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-1h4mvg8-MuiTypography-root"
                                 data-testid="rek-copyright-label"
                                 id="rek-copyright-label"
                               >
@@ -12944,7 +12935,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                   >
                                     <div
-                                      aria-controls=":r71:"
+                                      aria-controls=":r5v:"
                                       aria-expanded="false"
                                       aria-haspopup="listbox"
                                       aria-labelledby="rek-security-policy-select"
@@ -13188,7 +13179,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r72:"
+                                        aria-controls=":r60:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -13272,7 +13263,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r73:"
+                                        aria-controls=":r61:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -13356,7 +13347,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r74:"
+                                        aria-controls=":r62:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -13440,7 +13431,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r75:"
+                                        aria-controls=":r63:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -13524,7 +13515,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r76:"
+                                        aria-controls=":r64:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -13608,7 +13599,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r77:"
+                                        aria-controls=":r65:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -13692,7 +13683,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r78:"
+                                        aria-controls=":r66:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -13776,7 +13767,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r79:"
+                                        aria-controls=":r67:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"

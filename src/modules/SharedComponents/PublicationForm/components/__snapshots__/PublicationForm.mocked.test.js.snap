@@ -83,7 +83,43 @@ exports[`Component PublicationForm should render properly with non-matching doct
               xs={12}
             >
               <Field
-                component={[Function]}
+                component={
+                  {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "propTypes": {
+                      "IconComponent": [Function],
+                      "MenuProps": [Function],
+                      "SelectDisplayProps": [Function],
+                      "autoWidth": [Function],
+                      "children": [Function],
+                      "className": [Function],
+                      "classes": [Function],
+                      "defaultOpen": [Function],
+                      "defaultValue": [Function],
+                      "displayEmpty": [Function],
+                      "formHelperTextProps": [Function],
+                      "help": [Function],
+                      "hideLabel": [Function],
+                      "id": [Function],
+                      "input": [Function],
+                      "inputProps": [Function],
+                      "label": [Function],
+                      "labelId": [Function],
+                      "multiple": [Function],
+                      "native": [Function],
+                      "onChange": [Function],
+                      "onClose": [Function],
+                      "onOpen": [Function],
+                      "open": [Function],
+                      "renderValue": [Function],
+                      "selectFieldId": [Function],
+                      "sx": [Function],
+                      "value": [Function],
+                      "variant": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 disabled={false}
                 id="rek-display-type"
                 label="Work type"
