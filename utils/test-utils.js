@@ -243,7 +243,7 @@ const mockWebApiFile = () => {
 
 /**
  *
- * @param {object|function} expected
+ * @param {object|function?} expected
  * @param {object} request
  */
 const assertRequestData = (expected, request) => {
@@ -312,7 +312,7 @@ const expectApiRequestHistoryToBeEmpty = () => expectApiRequestHistoryLengthToBe
  * @param {string} method
  * @param {string} url
  * @param {string} partialUrl
- * @param {function|object} data
+ * @param {?function|object} data
  * @return {*}
  */
 const assertApiRequest = ({ method, url, partialUrl, data }) => {
@@ -343,7 +343,7 @@ const assertInstanceOfFile = data => {
  * Note: this method will pop matched request from history
  * @param {string} method
  * @param {string} url
- * @param {function} assertPayload
+ * @param {function?} assertPayload
  * @return {*}
  */
 const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
@@ -392,6 +392,15 @@ const selectDropDownOption = async (id, option, index = 0) => {
 const addContributorsEditorItem = async (fieldName, name = 'author') => {
     await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
+};
+
+/**
+ * @param {string} fieldName
+ * @param {string} name
+ * @return {Promise<void>}
+ */
+const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
+    await addContributorsEditorItem(fieldName, name);
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -437,5 +446,6 @@ module.exports = {
     setRichTextEditorValue,
     selectDropDownOption,
     addContributorsEditorItem,
+    addAndSelectContributorsEditorItem,
     api,
 };

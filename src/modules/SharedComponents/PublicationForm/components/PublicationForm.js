@@ -38,7 +38,7 @@ import { useForm } from '../../../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
-import { hasAtLeastOneItemSelected, isEmptyObject } from 'helpers/general';
+import { filterObject, hasAtLeastOneItemSelected, isEmptyObject } from 'helpers/general';
 import { dateRange } from 'config/validation';
 
 const asyncValidate = async (data, setError) => {
@@ -269,9 +269,10 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
     const handleDefaultSubmit = e => {
         e.preventDefault();
     };
-    const handleSubmit = safelyHandleSubmit(async data => {
+    const handleSubmit = safelyHandleSubmit(async values => {
+        const data = { isNtro, ...values };
         if (!(await asyncValidate({ ...data }, setError))) return;
-        await dispatch(createNewRecord(data));
+        await dispatch(createNewRecord(filterObject(data, v => v !== '')));
     });
 
     const formLevelError = getFormLevelError({ ...values });
