@@ -273,7 +273,7 @@ export const isValidGoogleScholarId = id => {
     }
 };
 
-export const dateRange = (value, values) => {
+export const dateRangeCollection = (value, values) => {
     const valuesObj = values?.toJS?.() || values;
     const lowerInRange =
         !!valuesObj.fez_record_search_key_start_date &&

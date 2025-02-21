@@ -684,7 +684,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
                                             disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
+                                            validate={[validation.dateRangeCollection]}
                                             hasError={dateError}
                                         />
                                     </Grid>
@@ -702,7 +702,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                             name="fez_record_search_key_end_date.rek_end_date"
                                             id="rek_end_date"
                                             disabled={isSubmitting}
-                                            validate={[validation.dateRange]}
+                                            validate={[validation.dateRangeCollection]}
                                             hasError={dateError}
                                         />
                                     </Grid>
