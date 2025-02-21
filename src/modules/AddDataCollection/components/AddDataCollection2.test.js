@@ -288,47 +288,61 @@ describe('AddDataCollection test', () => {
                     },
                 ];
             });
-            mockApi.onAny().reply(config => {
-                console.log(
-                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                        config.params,
-                    )}`,
-                );
-                return [200, {}];
-            });
+            mockApi.onAny().reply(200, {});
 
             const { getByTestId, queryByText } = setup();
 
             await inputRequired(getByTestId);
 
             mockDoiExist = false;
-            const doi = getByTestId('rek-doi-input');
 
-            await userEvent.type(doi, 'Test');
-            await userEvent.tab();
-            expect(doi).toHaveValue('Test');
-            await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+            const doiInput = getByTestId('rek-doi-input');
+            const submitButton = getByTestId('submit-data-collection');
+            const typeAndSubmit = async (value, expectedError) => {
+                await userEvent.clear(doiInput);
+                await userEvent.type(doiInput, value);
+                await userEvent.tab();
 
-            await userEvent.clear(doi);
-            await userEvent.type(doi, existingDoiValue);
-            await userEvent.tab();
-            doi.blur();
-            expect(getByTestId('submit-data-collection')).toBeEnabled();
-            await userEvent.click(getByTestId('submit-data-collection'));
-            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
+                expect(submitButton).toBeEnabled();
+                await userEvent.click(submitButton);
 
-            await userEvent.clear(doi);
-            await userEvent.type(doi, notExistingDoiValue);
-            await userEvent.tab();
-            doi.blur();
-            expect(getByTestId('submit-data-collection')).toBeEnabled();
-            await userEvent.click(getByTestId('submit-data-collection'));
-            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
+                if (expectedError) {
+                    await waitFor(() => expect(queryByText(expectedError)).toBeInTheDocument());
+                } else {
+                    await waitFor(() =>
+                        expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument(),
+                    );
+                }
+            };
+            await typeAndSubmit('Test', 'DOI is not valid');
+            await typeAndSubmit(existingDoiValue, 'DOI is assigned to another work already');
+            await typeAndSubmit(notExistingDoiValue, null);
+            mockDoiExist = true;
+            await typeAndSubmit(existingDoiValue, 'DOI is not valid');
+
+            // const doi = getByTestId('rek-doi-input');
+            // await userEvent.type(doi, 'Test');
+            // await userEvent.tab();
+            // expect(doi).toHaveValue('Test');
+            // await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
+
+            // await userEvent.clear(doi);
+            // await userEvent.type(doi, existingDoiValue);
+            // await userEvent.tab();
+            // expect(getByTestId('submit-data-collection')).toBeEnabled();
+            // await userEvent.click(getByTestId('submit-data-collection'));
+            // await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
+
+            // await userEvent.clear(doi);
+            // await userEvent.type(doi, notExistingDoiValue);
+            // await userEvent.tab();
+            // expect(getByTestId('submit-data-collection')).toBeEnabled();
+            // await userEvent.click(getByTestId('submit-data-collection'));
+            // await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
 
             mockDoiExist = true;
             await userEvent.type(doi, existingDoiValue);
             await userEvent.tab();
-            doi.blur();
             expect(getByTestId('submit-data-collection')).toBeEnabled();
             await userEvent.click(getByTestId('submit-data-collection'));
             await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
