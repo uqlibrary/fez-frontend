@@ -550,6 +550,22 @@ exports[`BookForm component 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="rek-author-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -2331,6 +2347,22 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="rek-author-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -3859,6 +3891,22 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="rek-author-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -5391,6 +5439,22 @@ exports[`BookForm component with all fields disabled 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="rek-author-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>

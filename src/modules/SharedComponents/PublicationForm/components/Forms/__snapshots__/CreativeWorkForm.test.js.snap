@@ -574,6 +574,22 @@ exports[`CreativeWorkForm component 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="authors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -1312,6 +1328,22 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="authors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -2231,6 +2263,22 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="authors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -3702,6 +3750,22 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="authors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
