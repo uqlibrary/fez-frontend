@@ -659,6 +659,22 @@ exports[`ThesisForm component 1`] = `
                     </div>
                   </div>
                 </div>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                  data-testid="authors-error"
+                >
+                  <span>
+                    Please 
+                    <b>
+                      provide a list as described
+                    </b>
+                     and 
+                    <b>
+                      select one
+                    </b>
+                     as you
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -799,6 +815,22 @@ exports[`ThesisForm component 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="supervisors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -1759,6 +1791,22 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                     </div>
                   </div>
                 </div>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+                  data-testid="authors-error"
+                >
+                  <span>
+                    Please 
+                    <b>
+                      provide a list as described
+                    </b>
+                     and 
+                    <b>
+                      select one
+                    </b>
+                     as you
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -1900,6 +1948,22 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="supervisors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>

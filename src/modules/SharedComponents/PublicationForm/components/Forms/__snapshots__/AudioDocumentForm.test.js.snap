@@ -544,6 +544,22 @@ exports[`AudioDocumentForm component 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="creators-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -717,6 +733,22 @@ exports[`AudioDocumentForm component 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="contributors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -1376,6 +1408,22 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="creators-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -1543,6 +1591,22 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="contributors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -2217,6 +2281,22 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="creators-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -2391,6 +2471,22 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                 </div>
               </div>
             </div>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+              data-testid="contributors-error"
+            >
+              <span>
+                Please 
+                <b>
+                  provide a list as described
+                </b>
+                 and 
+                <b>
+                  select one
+                </b>
+                 as you
+              </span>
+            </span>
           </div>
         </div>
       </div>

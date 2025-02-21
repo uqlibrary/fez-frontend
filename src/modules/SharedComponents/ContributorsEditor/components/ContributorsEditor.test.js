@@ -2,7 +2,7 @@ import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
 import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
-import locale from 'locale/components';
+import { locale } from 'locale';
 import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';
 import * as repositories from 'repositories';
 
@@ -571,12 +571,74 @@ describe('ContributorsEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should show validation error', () => {
+    it('should show given validation error', () => {
         const { container } = setup({
             contributors: [],
             meta: { error: 'This is a test error' },
         });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should show error when required props is true and there are no items selected', () => {
+        const { getByTestId } = setup({
+            input: {
+                name: 'test',
+                value: [
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 410,
+                    },
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 420,
+                    },
+                ],
+            },
+            required: true,
+        });
+        expect(getByTestId('test-error')).toHaveTextContent(
+            /Please provide a list as described and select one as you/i,
+        );
+    });
+
+    it('should not show error when required props is true and there are items selected', () => {
+        const { queryByTestId } = setup({
+            input: {
+                name: 'test',
+                value: [
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 410,
+                    },
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 420,
+                        selected: true,
+                    },
+                ],
+            },
+            required: true,
+        });
+        expect(queryByTestId('test-error')).not.toBeInTheDocument();
+    });
+
+    it('should not show error when required props is not true, even when there are no items selected', () => {
+        const { queryByTestId } = setup({
+            input: {
+                name: 'test',
+                value: [
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 410,
+                    },
+                    {
+                        nameAsPublished: 'author 2',
+                        aut_id: 420,
+                    },
+                ],
+            },
+        });
+        expect(queryByTestId('test-error')).not.toBeInTheDocument();
     });
 
     it('should call given onChange only when `contributors` change', () => {
