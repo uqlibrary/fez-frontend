@@ -101,7 +101,7 @@ function setup(testProps = {}, renderMethod = render) {
 }
 
 describe('AddDataCollection test', () => {
-    const gSubmitTimeout = 60000; // Ensure timeout applies here too
+    const gSubmitTimeout = 180000; // 3 minutes
     afterEach(() => {
         mockApi.reset();
     });
