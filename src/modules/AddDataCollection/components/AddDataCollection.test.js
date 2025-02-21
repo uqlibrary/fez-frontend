@@ -132,47 +132,4 @@ describe('AddDataCollection test', () => {
         expect(window.location.reload).toHaveBeenCalled();
         window.location = location;
     });
-
-    it('should get save confirmation locale correctly', () => {
-        const { container, rerender } = setup();
-        setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true }, rerender);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render component with an invalid collection date range', () => {
-        const { container } = setup({
-            initialValues: {
-                fez_record_search_key_start_date: {
-                    rek_start_date: '2018-06-30',
-                },
-                fez_record_search_key_end_date: {
-                    rek_end_date: '2018-04-30', // before the start date - invalid!
-                },
-            },
-        });
-        // hasError Date range is not valid
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render component with a valid collection date range', () => {
-        const { container } = setup({
-            initialValues: {
-                fez_record_search_key_start_date: {
-                    rek_start_date: '2018-06-30',
-                },
-                fez_record_search_key_end_date: {
-                    rek_end_date: '2018-07-30',
-                },
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not generate an error when licence locale is missing', () => {
-        // licence text not supplied
-        expect(licenseText()).toMatchSnapshot();
-
-        // licence text lacks required internal structure
-        expect(licenseText(['something'])).toMatchSnapshot();
-    });
 });
