@@ -166,14 +166,7 @@ describe('AddDataCollection test', () => {
                     },
                 ];
             });
-            mockApi.onAny().reply(config => {
-                console.log(
-                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                        config.params,
-                    )}`,
-                );
-                return [200, {}];
-            });
+            mockApi.onAny().reply(() => [200, {}]);
 
             const { getByTestId, queryByText, queryAllByText } = setup();
 
@@ -241,14 +234,7 @@ describe('AddDataCollection test', () => {
                     },
                 ];
             });
-            mockApi.onAny().reply(config => {
-                console.log(
-                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
-                        config.params,
-                    )}`,
-                );
-                return [200, {}];
-            });
+            mockApi.onAny().reply(() => [200, {}]);
 
             const { getByTestId } = setup();
 
@@ -311,32 +297,10 @@ describe('AddDataCollection test', () => {
 
             mockDoiExist = false;
 
-            // await typeAndSubmit('Test', 'DOI is not valid', getByTestId, queryByText);
             await typeAndSubmit(existingDoiValue, 'DOI is assigned to another work already', getByTestId, queryByText);
             await typeAndSubmit(notExistingDoiValue, null, getByTestId, queryByText);
             mockDoiExist = true;
             await typeAndSubmit(existingDoiValue, 'DOI is not valid', getByTestId, queryByText);
-
-            // await userEvent.clear(doi);
-            // await userEvent.type(doi, existingDoiValue);
-            // await userEvent.tab();
-            // expect(getByTestId('submit-data-collection')).toBeEnabled();
-            // await userEvent.click(getByTestId('submit-data-collection'));
-            // await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
-
-            // await userEvent.clear(doi);
-            // await userEvent.type(doi, notExistingDoiValue);
-            // await userEvent.tab();
-            // expect(getByTestId('submit-data-collection')).toBeEnabled();
-            // await userEvent.click(getByTestId('submit-data-collection'));
-            // await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
-
-            // mockDoiExist = true;
-            // await userEvent.type(doi, existingDoiValue);
-            // await userEvent.tab();
-            // expect(getByTestId('submit-data-collection')).toBeEnabled();
-            // await userEvent.click(getByTestId('submit-data-collection'));
-            // await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
         },
         gSubmitTimeout,
     );
