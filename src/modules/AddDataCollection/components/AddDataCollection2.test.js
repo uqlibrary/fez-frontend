@@ -253,61 +253,94 @@ describe('AddDataCollection test', () => {
         async () => {
             const existingDoiValue = '10.1037/a0028240';
             const notExistingDoiValue = '10.1037/a002824';
-
-            mockApi.onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl).reply(config => {
-                const { lookup_value: lookupValue } = config.params;
-                return [200, { total: lookupValue === existingDoiValue ? 1 : 0 }];
+            mockApi
+                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                    params: { rule: 'lookup', search_key: 'doi', lookup_value: existingDoiValue },
+                })
+                .reply(() => {
+                    return [200, { total: 1 }];
+                })
+                .onGet(repository.routes.SEARCH_KEY_LOOKUP_API({}).apiUrl, {
+                    params: { rule: 'lookup', search_key: 'doi', lookup_value: notExistingDoiValue },
+                })
+                .reply(() => {
+                    return [200, { total: 0 }];
+                });
+            // Field of Research lookup
+            mockApi.onGet('vocabularies?cvo_ids=451780').reply(() => {
+                return [200, vocabsFieldResearch];
             });
-
-            mockApi.onGet('vocabularies?cvo_ids=451780').reply(200, vocabsFieldResearch);
-
-            mockApi.onGet('fez-authors/search').reply(200, {
-                total: 1,
-                data: [
+            // Contact Name ID lookup
+            mockApi.onGet('fez-authors/search').reply(() => {
+                return [
+                    200,
                     {
-                        id: 46980,
-                        value: 'David Johnsen',
-                        aut_id: 46980,
-                        aut_fname: 'David',
-                        aut_lname: 'Johnsen',
-                        aut_display_name: 'David Johnsen',
+                        total: 1,
+                        data: [
+                            {
+                                id: 46980,
+                                value: 'David Johnsen',
+                                aut_id: 46980,
+                                aut_fname: 'David',
+                                aut_lname: 'Johnsen',
+                                aut_display_name: 'David Johnsen',
+                            },
+                        ],
                     },
-                ],
+                ];
             });
-
-            mockApi.onPost('records').reply(422, { error: { message: 'wrong!' } });
-
-            mockApi.onAny().reply(200, {});
+            mockApi.onPost('records').reply(() => {
+                return [
+                    422,
+                    {
+                        error: { message: 'wrong!' },
+                    },
+                ];
+            });
+            mockApi.onAny().reply(config => {
+                console.log(
+                    `Request made with method: ${config.method}, url: ${config.url}, params: ${JSON.stringify(
+                        config.params,
+                    )}`,
+                );
+                return [200, {}];
+            });
 
             const { getByTestId, queryByText } = setup();
+
             await inputRequired(getByTestId);
 
-            const doiInput = getByTestId('rek-doi-input');
-            const submitButton = getByTestId('submit-data-collection');
+            mockDoiExist = false;
+            const doi = getByTestId('rek-doi-input');
 
-            const typeAndSubmit = async (value, expectedError) => {
-                await userEvent.clear(doiInput);
-                await userEvent.type(doiInput, value);
-                await userEvent.tab();
+            await userEvent.type(doi, 'Test');
+            await userEvent.tab();
+            expect(doi).toHaveValue('Test');
+            await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
 
-                expect(submitButton).toBeEnabled();
-                await userEvent.click(submitButton);
+            await userEvent.clear(doi);
+            await userEvent.type(doi, existingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).toBeInTheDocument());
 
-                if (expectedError) {
-                    await waitFor(() => expect(queryByText(expectedError)).toBeInTheDocument());
-                } else {
-                    await waitFor(() =>
-                        expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument(),
-                    );
-                }
-            };
-
-            await typeAndSubmit('Test', 'DOI is not valid');
-            await typeAndSubmit(existingDoiValue, 'DOI is assigned to another work already');
-            await typeAndSubmit(notExistingDoiValue, null);
+            await userEvent.clear(doi);
+            await userEvent.type(doi, notExistingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is assigned to another work already')).not.toBeInTheDocument());
 
             mockDoiExist = true;
-            await typeAndSubmit(existingDoiValue, 'DOI is not valid');
+            await userEvent.type(doi, existingDoiValue);
+            await userEvent.tab();
+            doi.blur();
+            expect(getByTestId('submit-data-collection')).toBeEnabled();
+            await userEvent.click(getByTestId('submit-data-collection'));
+            await waitFor(() => expect(queryByText('DOI is not valid')).toBeInTheDocument());
         },
         gSubmitTimeout,
     );
