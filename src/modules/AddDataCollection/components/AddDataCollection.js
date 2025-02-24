@@ -175,7 +175,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     ]);
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? validationErrors.validationErrors.dateRange
+            ? validationErrors.validationErrors.collectionDateRange
             : '';
 
     const validateDOI = async doi => {
