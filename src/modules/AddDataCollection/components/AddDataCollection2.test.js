@@ -159,6 +159,12 @@ describe('AddDataCollection test', () => {
                 ['rek-start-date-year-input', '2000'],
             ]);
             await clickSelect(getByTestId, [['rek-start-date-month-select', 'March']]);
+            // clear year to test the date and month are not cleared
+            await userEvent.clear(getByTestId('rek-start-date-year-input'));
+            expect(getByTestId('rek-start-date-year-input')).toHaveValue('');
+            expect(getByTestId('rek-start-date-day-input')).toHaveValue('1');
+
+            await inputText(getByTestId, [['rek-start-date-year-input', '2000']]);
 
             await inputText(getByTestId, [
                 ['rek-end-date-day-input', '1'],
