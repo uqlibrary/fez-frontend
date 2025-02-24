@@ -166,9 +166,13 @@ describe('AddDataCollection test', () => {
             ]);
             await clickSelect(getByTestId, [['rek-end-date-month-select', 'February']]);
 
-            await waitFor(() => expect(queryAllByText('Date range is not valid').length).toBeGreaterThan(0));
+            await waitFor(() =>
+                expect(queryAllByText('Please provide a valid start/end date range').length).toBeGreaterThan(0),
+            );
             await clickSelect(getByTestId, [['rek-end-date-month-select', 'April']]);
-            await waitFor(() => expect(queryByText('Date range is not valid')).not.toBeInTheDocument());
+            await waitFor(() =>
+                expect(queryByText('Please provide a valid start/end date range')).not.toBeInTheDocument(),
+            );
 
             expect(getByTestId('submit-data-collection')).toBeEnabled();
             await userEvent.click(getByTestId('submit-data-collection'));
