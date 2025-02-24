@@ -225,6 +225,7 @@ export default {
                 fez_record_search_key_subcategory: 'Subcategory',
                 fez_record_search_key_condition: 'Condition',
                 fez_record_search_key_period: 'Period',
+                fez_record_search_key_resource_type: 'Resource type',
                 fez_record_search_key_style: 'Style',
                 fez_record_search_key_structural_systems: 'Structural systems & elements',
                 fez_record_search_key_interior_features: 'Interior features',

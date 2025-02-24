@@ -34,7 +34,12 @@ export default {
         },
         {
             title: 'Instrument information',
-            groups: [['contactName', 'contactNameId'], ['contactEmail'], ['ownerIdentifier', 'ownerIdentifierType']],
+            groups: [
+                ['contactName', 'contactNameId'],
+                ['contactEmail'],
+                ['ownerIdentifier', 'ownerIdentifierType'],
+                ['fez_record_search_key_resource_type'],
+            ],
         },
         {
             title: 'Additional information',

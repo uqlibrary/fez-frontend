@@ -293,6 +293,7 @@ export const doiFields = {
             {
                 field: 'fez_record_search_key_resource_type',
                 order: 10,
+                isRequired: true,
             },
         ],
     },
