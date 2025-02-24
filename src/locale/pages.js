@@ -10,7 +10,12 @@ import locale from 'locale/components';
 import globalLocale from './global';
 
 import { pathConfig } from 'config/pathConfig';
-import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
+import {
+    DOI_CROSSREF_PREFIX,
+    DOI_DATACITE_PREFIX,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_INSTRUMENT,
+} from 'config/general';
 /*
 
 NOTE:
@@ -933,7 +938,7 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION
+                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
