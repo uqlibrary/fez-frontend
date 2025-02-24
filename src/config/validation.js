@@ -274,6 +274,24 @@ export const isValidGoogleScholarId = id => {
     }
 };
 
+export const dateRangeCollection = (value, values) => {
+    const valuesObj = values?.toJS?.() || values;
+    const lowerInRange =
+        !!valuesObj.fez_record_search_key_start_date &&
+        !!valuesObj.fez_record_search_key_start_date.rek_start_date &&
+        moment(valuesObj.fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!valuesObj.fez_record_search_key_end_date &&
+        !!valuesObj.fez_record_search_key_end_date.rek_end_date &&
+        moment(valuesObj.fez_record_search_key_end_date.rek_end_date);
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.collectionDateRange;
+    } else {
+        return undefined;
+    }
+};
+
 export const isValidDate = date => {
     try {
         return moment(date).isValid();

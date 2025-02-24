@@ -10,18 +10,17 @@ import Controller from './Controller';
  * @param validate
  * @return {string|null}
  */
-export const validateHandler = (value, formValues, validators) => {
+export const validateHandler = async (value, formValues, validators) => {
     if (!(validators instanceof Array)) {
         return null;
     }
 
-    for (let i = 0; i < validators.length; i++) {
-        if (!(validators[i] instanceof Function)) {
-            continue;
-        }
+    for (const validator of validators) {
+        if (typeof validator !== 'function') continue;
 
-        let result = validators[i](value, formValues);
-        if (!result?.trim) {
+        let result = await Promise.resolve(validator(value, formValues));
+
+        if (typeof result !== 'string') {
             continue;
         }
 
@@ -30,6 +29,7 @@ export const validateHandler = (value, formValues, validators) => {
             return result;
         }
     }
+
     return null;
 };
 

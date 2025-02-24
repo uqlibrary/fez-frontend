@@ -111,7 +111,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                             validate={[validation.required]}
                             uqIdFieldId="search-by-rek-author-id"
                             getOptionLabel={option => !!option && `${option.id} (${option.value})`}
-                            normalize={value => value.aut_id}
+                            normalize={value => value?.aut_id}
                             onClear={handleClear(`search_author.${searchAuthorBy}`)}
                         />
                     </Grid>

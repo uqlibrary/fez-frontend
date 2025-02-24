@@ -42,9 +42,9 @@ export const AutoCompleteSelectField = ({
             if (!!allowFreeText && !!value && reason === 'input') {
                 onChange({ value });
             } else if (!!event && event.type === 'click' && reason === 'clear') {
-                onClear();
+                onClear?.();
             } else if (!value && reason === 'input') {
-                onClear();
+                onClear?.();
             }
         },
         [allowFreeText, onChange, onClear],

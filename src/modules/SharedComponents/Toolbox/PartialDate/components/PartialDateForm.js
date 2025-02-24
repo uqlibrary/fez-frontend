@@ -235,22 +235,33 @@ const PartialDateForm = props => {
 
     const _onDateChanged = key => {
         return (event, index, value) => {
-            let newState = {};
-            if (event.target.value === '') {
-                // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
-                newState = { [key]: '' };
+            const newState = { ...state };
+
+            if (key === 'year' && event.target.value === '') {
+                // Only clear the year field without affecting day and month
+                newState.year = '';
+            } else if (event.target.value === '') {
+                // Allow clearing other fields normally
+                newState[key] = '';
             } else {
-                newState = {
-                    [key]: parseInt(
-                        event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
-                        10,
-                    ),
-                };
+                newState[key] = parseInt(
+                    event.target.value === undefined ? /* istanbul ignore next */ value : event.target.value,
+                    10,
+                );
             }
-            const newDateObject = { ...state, ...newState };
-            const fullDate = getFullDateFromState(newDateObject);
-            setState(newDateObject);
-            onChange?.(fullDate) || input?.onChange?.(fullDate);
+
+            const validationStatus = validate({ state: newState, allowPartial, disableFuture, clearable });
+            displayErrors({ state: newState, setError, validationStatus, allowPartial, required, clearable, locale });
+
+            if (validationStatus !== STATUS_FUTURE_DATE) {
+                const fullDate = getFullDateFromState(newState);
+                setState(newState);
+                if (key !== 'year' || newState.year !== '') {
+                    onChange?.(fullDate) || input?.onChange?.(fullDate);
+                }
+            } else {
+                setState(newState); // Keep the existing day and month when year is in the future
+            }
         };
     };
 
