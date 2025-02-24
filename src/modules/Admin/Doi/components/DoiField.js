@@ -89,6 +89,7 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         case 'fez_record_search_key_proceedings_title':
         case 'fez_record_search_key_publisher':
         case 'fez_record_search_key_report_number':
+        case 'fez_record_search_key_resource_type':
         case 'fez_record_search_key_series':
         case 'fez_record_search_key_start_page':
         case 'fez_record_search_key_volume_number':

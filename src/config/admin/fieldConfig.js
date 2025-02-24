@@ -1541,6 +1541,16 @@ export default {
                 placeholder: '',
             },
         },
+        fez_record_search_key_resource_type: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'rek-resource-type',
+                fullWidth: true,
+                label: 'Resource type',
+                name: 'adminSection.fez_record_search_key_resource_type.rek_resource_type',
+                placeholder: '',
+            },
+        },
         fez_record_search_key_section: {
             component: GenericTextField,
             componentProps: {
