@@ -6,7 +6,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useDispatch } from 'react-redux';
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
@@ -143,10 +143,10 @@ const MasterJournalListIngest = () => {
 };
 
 MasterJournalListIngest.propTypes = {
-    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    handleSubmit: PropTypes.func,
-    submitSucceeded: PropTypes.bool,
-    submitting: PropTypes.bool,
+    // error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    // handleSubmit: PropTypes.func,
+    // submitSucceeded: PropTypes.bool,
+    // submitting: PropTypes.bool,
 };
 
 // const MasterJournalListIngestForm = reduxForm({
