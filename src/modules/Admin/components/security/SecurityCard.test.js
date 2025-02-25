@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-import SecurityCard, { overrideSecurityValueNormalizer, getRecordType, isSame } from './SecurityCard';
+import SecurityCard, { getRecordType, isSame } from './SecurityCard';
 import { List } from 'immutable';
 import { DOCUMENT_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
@@ -146,7 +146,7 @@ describe('SecurityCard component', () => {
         });
         expect(container).toMatchSnapshot();
         expect(getAllByText('Test collection').length).toEqual(2);
-        expect(container.querySelector('[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
+        expect(container.querySelector('[name="securitySection.rek_security_policy"]')).not.toBeInTheDocument();
         expect(container.querySelector('[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 
@@ -179,7 +179,7 @@ describe('SecurityCard component', () => {
         });
         expect(container).toMatchSnapshot();
         expect(getAllByText('Test collection').length).toEqual(1);
-        expect(container.querySelector('[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
+        expect(container.querySelector('[name="securitySection.rek_security_policy"]')).not.toBeInTheDocument();
         expect(container.querySelector('[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
     });
 
@@ -209,7 +209,7 @@ describe('SecurityCard component', () => {
                             dsi_security_policy: 1,
                         },
                     ]),
-                    rek_security_inherited: 1,
+                    rek_security_inherited: 0,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,
                 },
@@ -294,7 +294,7 @@ describe('SecurityCard component', () => {
                             dsi_security_policy: 1,
                         },
                     ]),
-                    rek_security_inherited: 1,
+                    rek_security_inherited: 0,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,
                 },
@@ -303,15 +303,10 @@ describe('SecurityCard component', () => {
 
         expect(container).toMatchSnapshot();
         expect(getAllByText('Test collection').length).toEqual(2);
+        expect(container.querySelector('[name="securitySection.rek_security_policy"]')).toBeInTheDocument();
         expect(container.querySelector('[name="securitySection.rek_security_policy"]')).toHaveAttribute('disabled');
         expect(container.querySelector('[name="securitySection.rek_datastream_policy"]')).not.toBeInTheDocument();
-    });
-});
-
-describe('overrideSecurityValueNormalizer', () => {
-    it('should return 1 or 0', () => {
-        expect(overrideSecurityValueNormalizer(true)).toBe(0);
-        expect(overrideSecurityValueNormalizer(false)).toBe(1);
+        expect(container).toMatchSnapshot();
     });
 });
 

@@ -72,8 +72,6 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
                           }
                         : {}),
                 };
-                // if (name === 'filesSection.sensitiveHandlingNote.other') console.log(componentProps);
-                // eslint-disable-next-line react/prop-types
                 if (!!childProps.noRef) delete componentProps.ref;
                 return <Component {...componentProps} />;
             }}

@@ -18,11 +18,6 @@ import { locale } from 'locale';
 import { publicationTypes } from 'config';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
-/**
- * Redux-form normalize callback
- */
-export const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
-
 export const getRecordType = record =>
     (
         record.rek_object_type_lookup ||
@@ -44,13 +39,14 @@ export const SecurityCard = ({ disabled }) => {
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
-    const dataStreams = !!(formValues?.dataStreams || {})?.toJS
+    const dataStreams = !!(formValues?.dataStreams || {}).toJS
         ? formValues.dataStreams.toJS()
         : formValues?.dataStreams;
-    const isOverrideSecurityChecked = Number(formValues?.rek_security_inherited);
-
+    const isOverrideSecurityChecked =
+        formValues?.rek_security_inherited === true || formValues?.rek_security_inherited === 0;
     const securityPolicy = formValues?.rek_security_policy;
     const dataStreamPolicy = formValues?.rek_datastream_policy;
+
     return (
         <Grid container spacing={2}>
             <Grid xs={12}>
@@ -76,18 +72,15 @@ export const SecurityCard = ({ disabled }) => {
                                         component={OverrideSecurity}
                                         name="securitySection.rek_security_inherited"
                                         label="Override inherited security (detailed below)"
-                                        normalize={overrideSecurityValueNormalizer}
                                         disabled={disabled}
                                         overrideSecurityId="rek-security-inherited"
                                     />
                                 </Grid>
                             </React.Fragment>
                         )}
-                        {!!(
-                            recordType === RECORD_TYPE_COMMUNITY ||
+                        {(recordType === RECORD_TYPE_COMMUNITY ||
                             recordType === RECORD_TYPE_COLLECTION ||
-                            (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)
-                        ) && (
+                            (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
                             <Grid xs={12}>
                                 <SecuritySelector
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
