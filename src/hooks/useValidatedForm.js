@@ -5,7 +5,7 @@ import { useForm } from './useForm';
  * @param props
  * @return {UseFormReturn<FieldValues, *, undefined>}
  */
-export const useValidatedForm = props => {
+export const useValidatedForm = (props = {}) => {
     const form = useForm(props);
     const {
         trigger,

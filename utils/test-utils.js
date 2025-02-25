@@ -25,6 +25,9 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
+import * as useForm from 'hooks/useForm';
+import { lastRequests } from '../src/config/axios';
+import { api } from './api-mock';
 
 export const AllTheProviders = props => {
     return (
@@ -222,6 +225,12 @@ const mockUseValidatedForm = implementation => {
         return implementation(props, originalUseValidatedForm);
     });
 };
+const originalUseForm = useForm.useForm;
+const mockUseForm = implementation => {
+    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
+        return implementation(props, originalUseForm);
+    });
+};
 
 const turnOnJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
@@ -249,6 +258,78 @@ export const FormProviderWrapper = ({ children, methods, ...props }) => {
     );
 };
 
+const assertRequestData = (data, request) => {
+    if (typeof data === 'object') {
+        expect(JSON.parse(request.data)).toStrictEqual(data);
+    } else if (typeof data === 'function') {
+        expect(data(request.data)).toBeTruthy();
+    }
+};
+
+const assertRequest = ({ method, url, partialUrl, data, request }) => {
+    if (method && method !== '*') {
+        expect(request.method).toBe(method);
+    }
+
+    if (url) {
+        expect(request.url).toBe(url);
+    } else if (partialUrl) {
+        expect(request.url.includes(partialUrl)).toBeTruthy();
+    }
+
+    assertRequestData(data, request);
+};
+
+const assertApiRequest = ({ method, url, partialUrl, data }) => {
+    // try to find the last request based on method, url and partialUrl if these are available
+    const index = lastRequests.findIndex(
+        entry =>
+            (!method || entry.method === method) &&
+            (!url || entry.url === url) &&
+            (!partialUrl || entry.url.includes(partialUrl)),
+    );
+
+    if (index < 0) {
+        throw new Error(
+            `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
+                partialUrl ||
+                'N/A'}\n\nRequest queue:\n${JSON.stringify(
+                lastRequests.reduce((acc, item) => {
+                    acc.push({ method: item.method, url: item.url });
+                    return acc;
+                }, []),
+                null,
+                2,
+            )}`,
+        );
+    }
+    // pop match from queue, so that similar requests can be processed by consecutive calls
+    const [request] = lastRequests.splice(index, 1);
+    assertRequest({ method, url, partialUrl, data, request });
+
+    return request;
+};
+
+const assertInstanceOfFile = data => {
+    expect(data).toBeInstanceOf(File);
+    return true;
+};
+
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+    const request = assertApiRequest({
+        method,
+        url,
+        partialUrl: url,
+        data: data => expect(data).toMatchSnapshot() || true,
+    });
+    return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
+};
+
+const previewAndHalt = () => {
+    preview.debug();
+    process.exit(0);
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -271,6 +352,7 @@ module.exports = {
     waitForText,
     waitForTextToBeRemoved,
     mockUseValidatedForm,
+    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
@@ -278,4 +360,11 @@ module.exports = {
     FormProviderWrapper,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
+    assertRequestData,
+    assertRequest,
+    assertApiRequest,
+    expectApiRequestToMatchSnapshot,
+    assertInstanceOfFile,
+    previewAndHalt,
+    api,
 };
