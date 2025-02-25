@@ -103,6 +103,11 @@ const MasterJournalListIngest = () => {
                             <Alert alertId="batch-import-validation" {...validationErrors} />
                         </Grid>
                     )}
+                    {!!apiError && (
+                        <Grid xs={12}>
+                            <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
+                        </Grid>
+                    )}
                     <Grid item xs={12} sm="auto">
                         <Button
                             aria-label={txt.formLabels.cancelButtonLabel}
