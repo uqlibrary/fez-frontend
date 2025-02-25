@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import { propTypes } from 'redux-form/immutable';
 // import { Field } from 'redux-form/immutable';
 import { useValidatedForm } from 'hooks';
@@ -185,6 +185,11 @@ export const CommunityForm = ({ ...props }) => {
                             {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert {...alertProps} />
+                                </Grid>
+                            )}
+                            {!!apiError && (
+                                <Grid xs={12}>
+                                    <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                                 </Grid>
                             )}
                         </Grid>
