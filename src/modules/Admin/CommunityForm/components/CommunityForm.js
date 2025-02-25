@@ -24,9 +24,16 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
+const newRecordSelector = state => {
+    const createCommunityReducer = state?.createCommunityReducer || state?.get?.('createCommunityReducer');
+    return createCommunityReducer?.newRecord || createCommunityReducer?.get?.('newRecord') || null;
+};
+
+const authorSelector = state => {
+    const accountReducer = state?.accountReducer || state?.get?.('accountReducer');
+    return accountReducer?.author || accountReducer?.get?.('author') || null;
+};
 export const CommunityForm = ({ ...props }) => {
-    const newRecordSelector = state => state?.get('createCommunityReducer')?.get('newRecord') || null;
-    const authorSelector = state => state?.get('accountReducer')?.get('author') || null;
     const newRecord = useSelector(newRecordSelector);
     const author = useSelector(authorSelector);
 
@@ -54,6 +61,7 @@ export const CommunityForm = ({ ...props }) => {
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {},
     });
+
     const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
 
     const cancelSubmit = () => {
@@ -153,6 +161,7 @@ export const CommunityForm = ({ ...props }) => {
                                         <Grid item xs={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
+                                                control={control}
                                                 component={NewListEditorField}
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
