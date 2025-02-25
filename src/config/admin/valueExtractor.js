@@ -855,6 +855,9 @@ export default {
     fez_record_search_key_model: {
         getValue: record => getValueSearchKeyArray(record, 'fez_record_search_key_model'),
     },
+    fez_record_search_key_resource_type: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_resource_type'),
+    },
     fez_record_search_key_project_name: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_project_name'),
     },
