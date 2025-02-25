@@ -404,6 +404,11 @@ const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') =>
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
+const clearAndType = async (input, value) => {
+    await userEvent.clear(screen.getByTestId(input));
+    await userEvent.type(screen.getByTestId(input), value);
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -447,5 +452,6 @@ module.exports = {
     selectDropDownOption,
     addContributorsEditorItem,
     addAndSelectContributorsEditorItem,
+    clearAndType,
     api,
 };
