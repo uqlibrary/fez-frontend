@@ -27,6 +27,7 @@ const MasterJournalListIngest = () => {
     const [apiError, setApiError] = React.useState('');
     const dispatch = useDispatch();
     const onSubmit = async data => {
+        console.log('data', data);
         return dispatch(requestMJLIngest(data)).catch(error => {
             // throw new SubmissionError({ _error: error.message });
             setApiError(error.message);
@@ -39,7 +40,7 @@ const MasterJournalListIngest = () => {
         // watch,
         // reset: resetForm,
         control,
-        formState: { isSubmitting: submitting, isSubmitSuccessful: submitSucceeded, isDirty, errors: formErrors },
+        formState: { isSubmitting: submitting, isSubmitSuccessful: submitSucceeded, errors: formErrors },
     } = useValidatedForm({
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {},
