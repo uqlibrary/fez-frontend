@@ -1,7 +1,19 @@
 import React from 'react';
 import CopyToOrRemoveFromCollectionForm from './CopyToOrRemoveFromCollectionForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    waitForText,
+    waitToBeDisabled,
+    waitForTextToBeRemoved,
+    waitToBeEnabled,
+} from 'test-utils';
 import * as repositories from 'repositories';
+import { locale } from 'locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -22,6 +34,20 @@ function setup(testProps = {}) {
 }
 
 describe('CopyToOrRemoveFromCollectionForm', () => {
+    const assertFormInitialState = async idPrefix => {
+        await waitForText(locale.validationErrors.required);
+        await waitToBeDisabled(`${idPrefix}-collection-submit`);
+    };
+    const assertCopyToFormInitialState = async () => assertFormInitialState('copy-to');
+    const assertRemoveFromFormInitialState = async () => assertFormInitialState('remove-from');
+
+    const assertFormCanBeSubmitted = async idPrefix => {
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        await waitToBeEnabled(`${idPrefix}-collection-submit`);
+    };
+    const assertCopyToFormCanBeSubmitted = async () => assertFormCanBeSubmitted('copy-to');
+    const assertRemoveFromFormCanBeSubmitted = async () => assertFormCanBeSubmitted('remove-from');
+
     beforeEach(() => {
         document.createRange = () => ({
             setStart: () => {},
@@ -47,19 +73,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).toHaveAttribute('disabled');
+        await assertCopyToFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).not.toHaveAttribute('disabled');
+        await assertCopyToFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -84,19 +104,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).toHaveAttribute('disabled');
+        await assertCopyToFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).not.toHaveAttribute('disabled');
+        await assertCopyToFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -121,19 +135,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        await assertRemoveFromFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).not.toHaveAttribute('disabled');
+        await assertRemoveFromFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -158,19 +166,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        await assertRemoveFromFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).not.toHaveAttribute('disabled');
+        await assertRemoveFromFormCanBeSubmitted();
 
         // submit form
         act(() => {
