@@ -1,6 +1,14 @@
 import React from 'react';
 import ChangeAuthorIdForm from './ChangeAuthorIdForm';
-import { render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import {
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+} from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
@@ -102,6 +110,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByTestId('change-author-id-submit'));
 
         await waitFor(() => expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument());
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should correctly search by author name, submit form and display error', async () => {
@@ -193,6 +202,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByTestId('change-author-id-submit'));
 
         await waitFor(() => expect(getByTestId('alert-done-change-author-id')).toBeInTheDocument());
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should correctly search by author id, submit form and display error', async () => {

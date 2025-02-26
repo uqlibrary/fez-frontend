@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChangeAuthorIdForm should correctly search by author id, submit form and display success info 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_author_id":[{"rek_author_id":111,"rek_author_id_order":1}]},{"rek_pid":"UQ:1234","fez_record_search_key_author_id":[{"rek_author_id":111,"rek_author_id_order":1},{"rek_author_id":2,"rek_author_id_order":2,"rek_author_id_id":22}]},{"rek_pid":"UQ:4321"}]"`;
+
+exports[`ChangeAuthorIdForm should correctly search by author name, submit form and display success info 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_author_id":[{"rek_author_id":111,"rek_author_id_order":1}]},{"rek_pid":"UQ:1234","fez_record_search_key_author_id":[{"rek_author_id":111,"rek_author_id_order":1},{"rek_author_id":2,"rek_author_id_order":2,"rek_author_id_id":22}]},{"rek_pid":"UQ:4321"}]"`;
