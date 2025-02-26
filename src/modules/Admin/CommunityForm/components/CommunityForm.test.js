@@ -49,6 +49,15 @@ async function inputText(getByTestId, settings) {
 }
 
 describe('Community form', () => {
+    beforeAll(() => {
+        delete window.location;
+        window.location = { assign: jest.fn(), reload: jest.fn() };
+    });
+
+    afterAll(() => {
+        window.location = location;
+    });
+
     it('should render form', async () => {
         actions.createCommunity
             .mockImplementationOnce(() => {
@@ -71,8 +80,10 @@ describe('Community form', () => {
         await userEvent.click(submitButton);
         await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
         await userEvent.click(submitButton);
-        preview.debug();
         await waitFor(() => expect(getByRole('button', { name: /return to the homepage/i })).toBeInTheDocument());
+        await userEvent.click(getByRole('button', { name: /return to the homepage/i }));
+
+        expect(window.location.assign).toHaveBeenCalledWith('/');
     });
 
     // it('should render form', () => {
