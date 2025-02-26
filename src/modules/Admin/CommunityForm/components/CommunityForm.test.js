@@ -1,4 +1,5 @@
 import CommunityForm from './CommunityForm';
+import Immutable from 'immutable';
 // import Immutable from 'immutable';
 import React from 'react';
 import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor, preview } from 'test-utils';
@@ -29,9 +30,9 @@ jest.mock('actions', () => ({
 //     },
 // }));
 
-function setup(testProps) {
-    return render(
-        <WithReduxStore>
+function setup(testProps = {}, state = {}, rerender = render) {
+    return rerender(
+        <WithReduxStore initialState={Immutable.Map(state)}>
             <WithRouter>
                 <CommunityForm {...testProps} />
             </WithRouter>
@@ -49,6 +50,8 @@ async function inputText(getByTestId, settings) {
 }
 
 describe('Community form', () => {
+    const { location } = window;
+
     beforeAll(() => {
         delete window.location;
         window.location = { assign: jest.fn(), reload: jest.fn() };
@@ -69,7 +72,7 @@ describe('Community form', () => {
                 return () => Promise.resolve();
             });
 
-        const { getByTestId, getByRole } = setup({});
+        const { getByTestId, rerender } = setup();
         await inputText(getByTestId, [
             ['rek-title-input', 'test'],
             ['rek-description-input', 'test'],
@@ -79,9 +82,21 @@ describe('Community form', () => {
 
         await userEvent.click(submitButton);
         await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+
+        setup(
+            {},
+            {
+                createCommunityReducer: {
+                    newRecord: true,
+                },
+            },
+            rerender,
+        );
+
         await userEvent.click(submitButton);
-        await waitFor(() => expect(getByRole('button', { name: /return to the homepage/i })).toBeInTheDocument());
-        await userEvent.click(getByRole('button', { name: /return to the homepage/i }));
+        preview.debug();
+        await waitFor(() => expect(getByTestId('after-submit-community')).toBeInTheDocument());
+        await userEvent.click(getByTestId('after-submit-community'));
 
         expect(window.location.assign).toHaveBeenCalledWith('/');
     });

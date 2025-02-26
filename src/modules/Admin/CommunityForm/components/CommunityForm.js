@@ -36,6 +36,7 @@ const authorSelector = state => {
 export const CommunityForm = () => {
     const newRecord = useSelector(newRecordSelector);
     const author = useSelector(authorSelector);
+    console.log('newRecord=', newRecord);
 
     const [apiError, setApiError] = React.useState('');
     const dispatch = useDispatch();
@@ -86,7 +87,13 @@ export const CommunityForm = () => {
                 <Grid container spacing={2}>
                     <Grid item xs />
                     <Grid item>
-                        <Button variant="contained" fullWidth onClick={cancelSubmit}>
+                        <Button
+                            variant="contained"
+                            fullWidth
+                            onClick={cancelSubmit}
+                            data-analyticsid="after-submit-community"
+                            data-testid="after-submit-community"
+                        >
                             {txt.afterSubmitButton}
                         </Button>
                     </Grid>
