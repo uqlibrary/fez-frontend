@@ -1,7 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { propTypes } from 'redux-form/immutable';
-// import { Field } from 'redux-form/immutable';
 import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { getNotesSectionSearchKeys } from 'actions/transformers';
@@ -36,7 +33,6 @@ const authorSelector = state => {
 export const CommunityForm = () => {
     const newRecord = useSelector(newRecordSelector);
     const author = useSelector(authorSelector);
-    console.log('newRecord=', newRecord);
 
     const [apiError, setApiError] = React.useState('');
     const dispatch = useDispatch();
@@ -248,19 +244,5 @@ export const CommunityForm = () => {
             </ConfirmDiscardFormChanges>
         </StandardPage>
     );
-};
-CommunityForm.propTypes = {
-    // ...propTypes, // all redux-form props
-    // author: PropTypes.object,
-    // account: PropTypes.bool,
-    // disableSubmit: PropTypes.bool,
-    // fileAccessId: PropTypes.number,
-    // actions: PropTypes.object,
-    // isSessionValid: PropTypes.bool,
-    // formValues: PropTypes.object,
-    // formErrors: PropTypes.object,
-    // newCommunitySaving: PropTypes.bool,
-    // newCommunityError: PropTypes.bool,
-    // newRecord: PropTypes.object,
 };
 export default CommunityForm;
