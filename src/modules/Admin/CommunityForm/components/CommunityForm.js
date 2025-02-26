@@ -68,10 +68,6 @@ export const CommunityForm = () => {
         window.location.assign(pathConfig.index);
     };
 
-    const afterSubmit = () => {
-        window.location.assign(pathConfig.index);
-    };
-
     const reloadForm = () => {
         window.location.reload();
     };
@@ -90,7 +86,7 @@ export const CommunityForm = () => {
                 <Grid container spacing={2}>
                     <Grid item xs />
                     <Grid item>
-                        <Button variant="contained" fullWidth onClick={afterSubmit}>
+                        <Button variant="contained" fullWidth onClick={cancelSubmit}>
                             {txt.afterSubmitButton}
                         </Button>
                     </Grid>
