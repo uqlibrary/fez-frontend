@@ -105,6 +105,8 @@ export const CommunityForm = () => {
     }
     // customise error for thesis submission
     const alertProps = validation.getErrorAlertProps({
+        formErrors,
+        dirty: isDirty,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
             progressAlert: { ...formLocale.progressAlert },

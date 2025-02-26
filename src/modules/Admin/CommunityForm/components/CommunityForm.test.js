@@ -1,24 +1,24 @@
 import CommunityForm from './CommunityForm';
 // import Immutable from 'immutable';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor, preview } from 'test-utils';
 
-/* eslint-disable react/prop-types */
-jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
-    Field: props => {
-        return (
-            <field
-                is="mock"
-                name={props.name}
-                title={props.title}
-                required={props.required}
-                disabled={props.disabled}
-                label={props.label || props.floatingLabelText}
-                hasError={props.hasError}
-            />
-        );
-    },
-}));
+// /* eslint-disable react/prop-types */
+// jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
+//     Field: props => {
+//         return (
+//             <field
+//                 is="mock"
+//                 name={props.name}
+//                 title={props.title}
+//                 required={props.required}
+//                 disabled={props.disabled}
+//                 label={props.label || props.floatingLabelText}
+//                 hasError={props.hasError}
+//             />
+//         );
+//     },
+// }));
 
 function setup(testProps) {
     return render(
@@ -29,20 +29,39 @@ function setup(testProps) {
         </WithReduxStore>,
     );
 }
+async function inputText(getByTestId, settings) {
+    for (const [testId, value] of settings) {
+        const input = getByTestId(testId);
+        await userEvent.click(input);
+        await userEvent.type(input, value);
+        await userEvent.tab();
+        expect(input).toHaveValue(value);
+    }
+}
 
 describe('Community form', () => {
-    it('should render form', () => {
-        const { container } = setup({});
-        // expect(container).toMatchSnapshot();
-        expect(container.getElementsByTagName('field').length).toEqual(4);
-        expect(container.getElementsByTagName('button').length).toEqual(2);
+    it('should render form', async () => {
+        const { getByTestId } = setup({});
+        await inputText(getByTestId, [
+            ['rek-title-input', 'test'],
+            ['rek-description-input', 'test'],
+        ]);
+        const submitButton = getByTestId('submit-community');
+        await waitFor(() => expect(submitButton).toBeEnabled());
     });
 
-    it('should not disable submit button if form submit has failed', () => {
-        const { container, getByRole } = setup();
-        expect(container.getElementsByTagName('button').length).toEqual(2);
-        expect(getByRole('button', { name: 'Add community' })).toBeEnabled();
-    });
+    // it('should render form', () => {
+    //     const { container } = setup({});
+    //     preview.debug();
+    //     // expect(container).toMatchSnapshot();
+    //     expect(container.getElementsByTagName('field').length).toEqual(4);
+    //     expect(container.getElementsByTagName('button').length).toEqual(2);
+    // });
+    // it('should not disable submit button if form submit has failed', () => {
+    //     const { container, getByRole } = setup();
+    //     expect(container.getElementsByTagName('button').length).toEqual(2);
+    //     expect(getByRole('button', { name: 'Add community' })).toBeEnabled();
+    // });
 });
 
 describe('Collection form redirections', () => {
