@@ -36,7 +36,7 @@ export const CollectionForm = lazy(() =>
     lazyRetry(() => import('modules/Admin/CollectionForm/components/CollectionForm')),
 );
 export const CommunityForm = lazy(() =>
-    lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
+    lazyRetry(() => import('modules/Admin/CommunityForm/components/CommunityForm')),
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
 export const ControlledVocabularies = lazy(() =>
