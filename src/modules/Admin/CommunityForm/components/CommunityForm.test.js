@@ -2,6 +2,15 @@ import CommunityForm from './CommunityForm';
 // import Immutable from 'immutable';
 import React from 'react';
 import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor, preview } from 'test-utils';
+import * as actions from 'actions';
+import { useDispatch } from 'react-redux';
+import { default as formLocale } from 'locale/publicationForm';
+const txt = formLocale.addACommunity;
+
+jest.mock('actions', () => ({
+    ...jest.requireActual('actions'), // Retain the actual implementations of other functions
+    createCommunity: jest.fn(),
+}));
 
 // /* eslint-disable react/prop-types */
 // jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -41,13 +50,29 @@ async function inputText(getByTestId, settings) {
 
 describe('Community form', () => {
     it('should render form', async () => {
-        const { getByTestId } = setup({});
+        actions.createCommunity
+            .mockImplementationOnce(() => {
+                console.log('run 1');
+                return () => Promise.reject(new Error('test'));
+            })
+            .mockImplementationOnce(() => {
+                console.log('run 2');
+                return () => Promise.resolve();
+            });
+
+        const { getByTestId, getByRole } = setup({});
         await inputText(getByTestId, [
             ['rek-title-input', 'test'],
             ['rek-description-input', 'test'],
         ]);
         const submitButton = getByTestId('submit-community');
         await waitFor(() => expect(submitButton).toBeEnabled());
+
+        await userEvent.click(submitButton);
+        await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+        await userEvent.click(submitButton);
+        preview.debug();
+        await waitFor(() => expect(getByRole('button', { name: /return to the homepage/i })).toBeInTheDocument());
     });
 
     // it('should render form', () => {
@@ -61,6 +86,24 @@ describe('Community form', () => {
     //     const { container, getByRole } = setup();
     //     expect(container.getElementsByTagName('button').length).toEqual(2);
     //     expect(getByRole('button', { name: 'Add community' })).toBeEnabled();
+    // });
+
+    // it('should set currentAuthor to null when author is undefined', async () => {
+    //     const mockDispatch = jest.fn();
+    //     jest.spyOn(require('react-redux'), 'useDispatch').mockReturnValue(mockDispatch);
+    //     jest.spyOn(require('react-redux'), 'useSelector').mockImplementation(selector =>
+    //         selector === authorSelector ? null : selector,
+    //     );
+
+    //     const { getByRole } = setup();
+
+    //     fireEvent.change(screen.getByLabelText(/Title/i), { target: { value: 'New Community' } });
+    //     fireEvent.change(screen.getByLabelText(/Description/i), { target: { value: 'Test description' } });
+    //     fireEvent.click(getByRole('button', { name: /add community/i }));
+
+    //     await waitFor(() => {
+    //         expect(mockDispatch).toHaveBeenCalledWith(expect.objectContaining({ type: 'CREATE_COMMUNITY' }));
+    //     });
     // });
 });
 
