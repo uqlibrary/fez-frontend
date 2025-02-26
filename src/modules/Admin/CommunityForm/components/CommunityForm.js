@@ -33,7 +33,7 @@ const authorSelector = state => {
     const accountReducer = state?.accountReducer || state?.get?.('accountReducer');
     return accountReducer?.author || accountReducer?.get?.('author') || null;
 };
-export const CommunityForm = ({ ...props }) => {
+export const CommunityForm = () => {
     const newRecord = useSelector(newRecordSelector);
     const author = useSelector(authorSelector);
 
@@ -105,7 +105,6 @@ export const CommunityForm = ({ ...props }) => {
     }
     // customise error for thesis submission
     const alertProps = validation.getErrorAlertProps({
-        ...props,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
             progressAlert: { ...formLocale.progressAlert },
