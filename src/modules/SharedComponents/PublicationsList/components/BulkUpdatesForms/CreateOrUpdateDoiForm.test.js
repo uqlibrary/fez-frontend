@@ -1,7 +1,15 @@
 import React from 'react';
 import CreateOrUpdateDoiForm from './CreateOrUpdateDoiForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
-import * as repositories from 'repositories';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+} from 'test-utils';
+import { api } from '../../../../../../utils/api-mock';
 
 function setup(testProps = {}) {
     const props = {
@@ -51,7 +59,7 @@ describe('CreateOrUpdateDoiForm', () => {
     });
 
     it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');
@@ -63,10 +71,11 @@ describe('CreateOrUpdateDoiForm', () => {
 
         await waitFor(() => getByTestId('alert-done-create-or-update-doi'));
         expect(getByTestId('alert-done-create-or-update-doi')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error ', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');

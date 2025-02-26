@@ -11,6 +11,9 @@ import {
     waitToBeDisabled,
     waitForTextToBeRemoved,
     waitToBeEnabled,
+    expectApiRequestToMatchSnapshot,
+    api,
+    expectApiRequestCountToBe,
 } from 'test-utils';
 import * as repositories from 'repositories';
 import { locale } from 'locale';
@@ -60,7 +63,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     });
 
     it('should correctly submit form and display success info for copy to collection form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -88,10 +91,11 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-done-copy-to-collection'));
         expect(getByTestId('alert-done-copy-to-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for copy to collection form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -119,10 +123,11 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-error-copy-to-collection'));
         expect(getByTestId('alert-error-copy-to-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should correctly submit form and display success info for remove from collection', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -150,10 +155,11 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-done-remove-from-collection'));
         expect(getByTestId('alert-done-remove-from-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for remove from collection', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
+        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -181,10 +187,10 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-error-remove-from-collection'));
         expect(getByTestId('alert-error-remove-from-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should display warning alert to user if work is being removed from all collections', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -207,9 +213,9 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         expect(getByTestId('alert-warning-remove-from-collection')).toBeInTheDocument();
         expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        expectApiRequestCountToBe('patch', api.url.records.create, 0);
     });
     it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
@@ -232,7 +238,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
         });
 
         expect(queryByTestId('alert-warning-remove-from-collection')).not.toBeInTheDocument();
-
         expect(getByTestId('alert-info-copy-to-collection-notallowed')).toBeInTheDocument();
+        expectApiRequestCountToBe('patch', api.url.records.create, 0);
     });
 });
