@@ -78,6 +78,7 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
             scaleOfSignificance: this.buildInitialScaleOfSignificance(props),
+            locale: props.locale,
         };
         this.props.onChange?.(this.state.contributors);
     }
@@ -516,7 +517,7 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
-                    locale={this.props.locale}
+                    locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}
                 />
@@ -528,7 +529,7 @@ export class ContributorsEditor extends PureComponent {
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
                     showExternalIdentifierInput={showExternalIdentifierInput}
-                    locale={this.props.locale}
+                    locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}
                 />

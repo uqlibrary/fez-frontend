@@ -399,7 +399,10 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
     const theme = useTheme();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId });
+    columns.current = React.useMemo(
+        () => getColumns({ disabled, suffix, showRoleInput, locale, isNtro, contributorEditorId }),
+        [contributorEditorId, disabled, isNtro, locale, showRoleInput, suffix],
+    );
     const prevList = React.useRef('');
 
     const [data, setData] = React.useState([]);
@@ -476,6 +479,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         return (
                             <MTableAction
                                 {...props}
+                                onColumnsChanged={() => {}}
                                 action={{
                                     ...restAction,
                                     icon: () => (
@@ -492,7 +496,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             />
                         );
                     } else {
-                        return <MTableAction {...props} />;
+                        return <MTableAction {...props} onColumnsChanged={() => {}} />;
                     }
                 },
                 Row: props => (
