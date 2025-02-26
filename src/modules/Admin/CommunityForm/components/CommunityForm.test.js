@@ -97,8 +97,10 @@ describe('Community form', () => {
         preview.debug();
         await waitFor(() => expect(getByTestId('after-submit-community')).toBeInTheDocument());
         await userEvent.click(getByTestId('after-submit-community'));
-
         expect(window.location.assign).toHaveBeenCalledWith('/');
+
+        await userEvent.click(getByTestId('reload-community'));
+        expect(window.location.reload).toHaveBeenCalled();
     });
 
     // it('should render form', () => {

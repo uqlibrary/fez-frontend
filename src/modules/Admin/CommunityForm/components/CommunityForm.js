@@ -98,7 +98,14 @@ export const CommunityForm = () => {
                         </Button>
                     </Grid>
                     <Grid item>
-                        <Button variant="contained" color="primary" fullWidth onClick={reloadForm}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            onClick={reloadForm}
+                            data-analyticsid="reload-community"
+                            data-testid="reload-community"
+                        >
                             {txt.AddAnotherButton}
                         </Button>
                     </Grid>
