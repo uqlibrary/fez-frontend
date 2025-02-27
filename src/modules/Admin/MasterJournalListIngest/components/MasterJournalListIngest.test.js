@@ -80,7 +80,7 @@ describe('MasterJournalListIngest Component', () => {
         await userEvent.click(getByTestId('master-journal-list-ingest-submit'));
 
         expect(requestMJLIngest).toHaveBeenCalledWith({ directory: 'Test directory 1' });
-        await waitFor(() => getByTestId('api-error-alert'));
+        await waitFor(() => getByTestId('alert-error-mjl-ingest'));
     });
 
     it('should redirect to index page on cancel', () => {
