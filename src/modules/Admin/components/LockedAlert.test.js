@@ -1,6 +1,6 @@
 import React from 'react';
 import LockedAlert from './LockedAlert';
-import { rtlRender, fireEvent, withRedux } from 'test-utils';
+import { rtlRender, fireEvent, WithRedux } from 'test-utils';
 import { useRecordContext, useAccountContext } from 'context';
 import { unlockRecordToView } from 'actions';
 
@@ -8,7 +8,11 @@ jest.mock('../../../context');
 jest.mock('../../../actions');
 
 const setup = (testProps = {}) => {
-    return rtlRender(withRedux()(<LockedAlert {...testProps} />));
+    return rtlRender(
+        <WithRedux>
+            <LockedAlert {...testProps} />
+        </WithRedux>,
+    );
 };
 
 describe('LockedAlert', () => {
