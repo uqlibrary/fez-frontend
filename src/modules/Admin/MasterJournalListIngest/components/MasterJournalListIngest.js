@@ -42,14 +42,16 @@ const MasterJournalListIngest = () => {
     const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
 
     const alertProps = validation.getErrorAlertProps({
-        formErrors,
-        dirty: true,
         alertLocale: {
             validationAlert: { ...publicationLocale.validationAlert },
             progressAlert: { ...txt.submitProgressAlert },
             successAlert: { ...txt.submitSuccessAlert },
             errorAlert: { ...txt.submitFailureAlert },
         },
+        apiError,
+        formErrors,
+        submitSucceeded,
+        submitting,
     });
 
     const cancelIngest = () => {
