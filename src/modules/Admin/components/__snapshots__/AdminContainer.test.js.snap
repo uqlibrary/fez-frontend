@@ -5901,10 +5901,9 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
-                                  checked=""
                                   class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="rek-security-inherited-input"
                                   data-indeterminate="false"
@@ -5915,12 +5914,12 @@ exports[`AdminContainer component should render default view 1`] = `
                                 <svg
                                   aria-hidden="true"
                                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="CheckBoxIcon"
+                                  data-testid="CheckBoxOutlineBlankIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
-                                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                                   />
                                 </svg>
                               </span>
@@ -5930,110 +5929,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Override inherited security (detailed below)
                               </span>
                             </label>
-                          </div>
-                          <div
-                            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                          >
-                            <div
-                              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1pu6osv-MuiGrid2-root"
-                            >
-                              <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                              >
-                                <div
-                                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                                  style="width: 100%;"
-                                >
-                                  <label
-                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-6rwyl5-MuiFormLabel-root-MuiInputLabel-root"
-                                    data-shrink="true"
-                                    id="rek-security-policy-label"
-                                  >
-                                    Override work
-                                    <span
-                                      aria-hidden="true"
-                                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                                    >
-                                       
-                                      *
-                                    </span>
-                                  </label>
-                                  <div
-                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                                    required=""
-                                    validation="function required(value) {
-  return value ? undefined : _validationErrors["default"].validationErrors.required;
-}"
-                                  >
-                                    <div
-                                      aria-controls=":r2c:"
-                                      aria-expanded="false"
-                                      aria-haspopup="listbox"
-                                      aria-labelledby="rek-security-policy-select"
-                                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1ucdrps-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                                      data-testid="rek-security-policy-select"
-                                      id="rek-security-policy-select"
-                                      role="combobox"
-                                      tabindex="0"
-                                    >
-                                      Administrators
-                                    </div>
-                                    <input
-                                      aria-hidden="true"
-                                      aria-invalid="false"
-                                      aria-labelledby="rek-security-policy-label"
-                                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                                      data-analyticsid="rek-security-policy-input"
-                                      data-testid="rek-security-policy-input"
-                                      id="rek-security-policy-input"
-                                      name="securitySection.rek_security_policy"
-                                      required=""
-                                      tabindex="-1"
-                                      value="1"
-                                    />
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                                      data-testid="ArrowDropDownIcon"
-                                      focusable="false"
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path
-                                        d="M7 10l5 5 5-5z"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                                style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
-                              >
-                                <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
-                                  style="margin-top: -8px;"
-                                >
-                                  Selected work level security policy details
-                                </h6>
-                                <div
-                                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1gyulir-MuiGrid2-root"
-                                  style="margin-top: 8px;"
-                                >
-                                  <div
-                                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1c3vcyv-MuiGrid2-root"
-                                  >
-                                    <b>
-                                      Name (ID):
-                                    </b>
-                                  </div>
-                                  <div
-                                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-1ifbr87-MuiGrid2-root"
-                                  >
-                                    Administrators (1)
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -6210,7 +6105,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2d:"
+                                        aria-controls=":r2c:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -6294,7 +6189,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2e:"
+                                        aria-controls=":r2d:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -6378,7 +6273,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2f:"
+                                        aria-controls=":r2e:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -6462,7 +6357,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2g:"
+                                        aria-controls=":r2f:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -6546,7 +6441,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2h:"
+                                        aria-controls=":r2g:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -6630,7 +6525,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2i:"
+                                        aria-controls=":r2h:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -6714,7 +6609,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2j:"
+                                        aria-controls=":r2i:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -6798,7 +6693,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2k:"
+                                        aria-controls=":r2j:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"
@@ -7371,7 +7266,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3o:"
+                                  aria-controls=":r3n:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-code-select"
@@ -7430,7 +7325,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3p:"
+                                  aria-controls=":r3o:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-status-select"
@@ -7489,7 +7384,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3q:"
+                                  aria-controls=":r3p:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-institutional-status-select"
@@ -7544,7 +7439,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3r:"
+                                  aria-controls=":r3q:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-refereed-source-select"
@@ -7599,7 +7494,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3s:"
+                                  aria-controls=":r3r:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-content-indicator-select"
@@ -7658,7 +7553,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3t:"
+                                  aria-controls=":r3s:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-select"
@@ -7713,7 +7608,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3u:"
+                                  aria-controls=":r3t:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-type-select"
@@ -7772,7 +7667,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3v:"
+                                  aria-controls=":r3u:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-license-select"
@@ -7979,7 +7874,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r40:"
+                                  aria-controls=":r3v:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-language-select"
@@ -8537,7 +8432,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r4a:"
+                                        aria-controls=":r49:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="rek-date-month-select"
@@ -10441,7 +10336,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r54:"
+                                        aria-controls=":r53:"
                                         aria-disabled="true"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
@@ -12586,7 +12481,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r5u:"
+                                  aria-controls=":r5t:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-sensitive-handling-note-id-select"
@@ -12870,10 +12765,9 @@ exports[`AdminContainer component should render mobile view 1`] = `
                               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                             >
                               <span
-                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                               >
                                 <input
-                                  checked=""
                                   class="PrivateSwitchBase-input css-1m9pwf3"
                                   data-analyticsid="rek-security-inherited-input"
                                   data-indeterminate="false"
@@ -12884,12 +12778,12 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 <svg
                                   aria-hidden="true"
                                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                  data-testid="CheckBoxIcon"
+                                  data-testid="CheckBoxOutlineBlankIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                 >
                                   <path
-                                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                                   />
                                 </svg>
                               </span>
@@ -12899,110 +12793,6 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 Override inherited security (detailed below)
                               </span>
                             </label>
-                          </div>
-                          <div
-                            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                          >
-                            <div
-                              class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1pu6osv-MuiGrid2-root"
-                            >
-                              <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                              >
-                                <div
-                                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                                  style="width: 100%;"
-                                >
-                                  <label
-                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-6rwyl5-MuiFormLabel-root-MuiInputLabel-root"
-                                    data-shrink="true"
-                                    id="rek-security-policy-label"
-                                  >
-                                    Override work
-                                    <span
-                                      aria-hidden="true"
-                                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
-                                    >
-                                       
-                                      *
-                                    </span>
-                                  </label>
-                                  <div
-                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                                    required=""
-                                    validation="function required(value) {
-  return value ? undefined : _validationErrors["default"].validationErrors.required;
-}"
-                                  >
-                                    <div
-                                      aria-controls=":r5v:"
-                                      aria-expanded="false"
-                                      aria-haspopup="listbox"
-                                      aria-labelledby="rek-security-policy-select"
-                                      class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1ucdrps-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                                      data-testid="rek-security-policy-select"
-                                      id="rek-security-policy-select"
-                                      role="combobox"
-                                      tabindex="0"
-                                    >
-                                      Administrators
-                                    </div>
-                                    <input
-                                      aria-hidden="true"
-                                      aria-invalid="false"
-                                      aria-labelledby="rek-security-policy-label"
-                                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                                      data-analyticsid="rek-security-policy-input"
-                                      data-testid="rek-security-policy-input"
-                                      id="rek-security-policy-input"
-                                      name="securitySection.rek_security_policy"
-                                      required=""
-                                      tabindex="-1"
-                                      value="1"
-                                    />
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
-                                      data-testid="ArrowDropDownIcon"
-                                      focusable="false"
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path
-                                        d="M7 10l5 5 5-5z"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-1munexq-MuiGrid2-root"
-                                style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
-                              >
-                                <h6
-                                  class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
-                                  style="margin-top: -8px;"
-                                >
-                                  Selected work level security policy details
-                                </h6>
-                                <div
-                                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1gyulir-MuiGrid2-root"
-                                  style="margin-top: 8px;"
-                                >
-                                  <div
-                                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-2 css-1c3vcyv-MuiGrid2-root"
-                                  >
-                                    <b>
-                                      Name (ID):
-                                    </b>
-                                  </div>
-                                  <div
-                                    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-10 css-1ifbr87-MuiGrid2-root"
-                                  >
-                                    Administrators (1)
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -13179,7 +12969,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r60:"
+                                        aria-controls=":r5u:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -13263,7 +13053,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r61:"
+                                        aria-controls=":r5v:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -13347,7 +13137,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r62:"
+                                        aria-controls=":r60:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -13431,7 +13221,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r63:"
+                                        aria-controls=":r61:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -13515,7 +13305,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r64:"
+                                        aria-controls=":r62:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -13599,7 +13389,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r65:"
+                                        aria-controls=":r63:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -13683,7 +13473,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r66:"
+                                        aria-controls=":r64:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -13767,7 +13557,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r67:"
+                                        aria-controls=":r65:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"

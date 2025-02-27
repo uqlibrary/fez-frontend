@@ -94,10 +94,9 @@ export default class ListEditor extends Component {
         if (propsValueJsonString !== state.value && propsValueJsonString !== state.transformedState) {
             const newList = props.value ? props.value.map(item => item[props.searchKey?.value]) : [];
             return {
-                value: props.value,
+                value: propsValueJsonString,
                 itemList: newList,
             };
-            // this.props.onChange(this.transformOutput(newList));
         }
         return null;
     }

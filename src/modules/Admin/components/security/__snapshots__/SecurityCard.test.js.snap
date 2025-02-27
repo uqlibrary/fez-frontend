@@ -2209,7 +2209,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                     >
                       <div
-                        aria-controls=":r0:"
+                        aria-controls=":r9:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -2427,7 +2427,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                       >
                         <div
-                          aria-controls=":r1:"
+                          aria-controls=":ra:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -2643,7 +2643,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                     >
                       <div
-                        aria-controls=":r0:"
+                        aria-controls=":r9:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -2861,7 +2861,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                       >
                         <div
-                          aria-controls=":r1:"
+                          aria-controls=":ra:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
