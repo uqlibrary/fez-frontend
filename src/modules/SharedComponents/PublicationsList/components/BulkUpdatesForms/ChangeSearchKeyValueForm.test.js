@@ -9,6 +9,10 @@ import {
     waitFor,
     expectApiRequestToMatchSnapshot,
     api,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
+    assertDisabled,
+    assertEnabled,
 } from 'test-utils';
 import * as repositories from 'repositories';
 
@@ -29,33 +33,32 @@ function setup(testProps = {}) {
 }
 
 describe('ChangeSearchKeyValueForm', () => {
+    const assertFormInitialState = async () => {
+        await expectRequiredFieldError('search-key');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertDisabled('change-search-key-value-submit');
+    };
+
     it('should correctly submit form and display success info', async () => {
         mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
         const { getByTestId, getByText, queryByTestId } = setup();
-
-        // assert initial state of the form
-        expect(getByTestId('search-key-helper-text')).toBeInTheDocument();
-        expect(getByTestId('search-key-helper-text')).toHaveTextContent('This field is required');
-        expect(queryByTestId('rek-oa-status-select')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('OA status'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        expect(queryByTestId('search-key-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-select')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toHaveTextContent('This field is required');
+        await expectMissingRequiredFieldError('search-key');
+        await expectRequiredFieldError('rek-oa-status');
         expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('rek-oa-status-select'));
         fireEvent.click(getByText('DOI'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        expect(queryByTestId('rek-oa-status-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).not.toHaveAttribute('disabled');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertEnabled('change-search-key-value-submit');
 
         fireEvent.change(getByTestId('edit-reason-input'), { target: { value: 'test edit reason' } });
 
@@ -72,30 +75,23 @@ describe('ChangeSearchKeyValueForm', () => {
     it('should submit form and display error', async () => {
         mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500, {});
         const { getByTestId, getByText, queryByTestId } = setup();
-
-        // assert initial state of the form
-        expect(getByTestId('search-key-helper-text')).toBeInTheDocument();
-        expect(getByTestId('search-key-helper-text')).toHaveTextContent('This field is required');
-        expect(queryByTestId('rek-oa-status-select')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.mouseDown(getByTestId('search-key-select'));
         fireEvent.click(getByText('OA status'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        expect(queryByTestId('search-key-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-select')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toBeInTheDocument();
-        expect(getByTestId('rek-oa-status-helper-text')).toHaveTextContent('This field is required');
+        await expectMissingRequiredFieldError('search-key');
+        await expectRequiredFieldError('rek-oa-status');
         expect(getByTestId('change-search-key-value-submit')).toHaveAttribute('disabled');
 
         fireEvent.mouseDown(getByTestId('rek-oa-status-select'));
         fireEvent.click(getByText('DOI'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        expect(queryByTestId('rek-oa-status-helper-text')).not.toBeInTheDocument();
-        expect(getByTestId('change-search-key-value-submit')).not.toHaveAttribute('disabled');
+        await expectMissingRequiredFieldError('rek-oa-status');
+        assertEnabled('change-search-key-value-submit');
 
         // submit form
         act(() => {

@@ -8,14 +8,14 @@ import {
     waitFor,
     expectApiRequestToMatchSnapshot,
     api,
-    turnOnJestPreviewOnTestFailure,
     waitForText,
     assertEnabled,
     assertDisabled,
     userEvent,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
 } from 'test-utils';
 import * as repositories from 'repositories';
-import { screen } from '@testing-library/react';
 import { locale } from '../../../../../locale';
 
 function setup(testProps = {}) {
@@ -60,25 +60,14 @@ function setup(testProps = {}) {
 }
 
 describe('ChangeAuthorIdForm', () => {
-    const assertRequiredFieldError = async field =>
-        await waitFor(() => {
-            expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
-            expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent('This field is required');
-        });
-
-    const assertNoRequiredFieldError = async field =>
-        await waitFor(() => {
-            expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
-        });
-
     const assertFormInitialState = async () => {
         await waitForText(
             new RegExp(locale.components.bulkUpdates.bulkUpdatesForms.changeAuthorIdForm.alert.message, 'i'),
         );
-        await assertRequiredFieldError('search-author-by');
-        await assertRequiredFieldError('rek-author-id');
-        await assertNoRequiredFieldError('search-by-rek-author');
-        await assertNoRequiredFieldError('search-by-rek-author-id');
+        await expectRequiredFieldError('search-author-by');
+        await expectRequiredFieldError('rek-author-id');
+        await expectMissingRequiredFieldError('search-by-rek-author');
+        await expectMissingRequiredFieldError('search-by-rek-author-id');
         assertDisabled('change-author-id-submit');
     };
 
@@ -106,12 +95,12 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author name'));
 
-        await assertRequiredFieldError('search-by-rek-author');
+        await expectRequiredFieldError('search-by-rek-author');
 
         fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
 
         // assert next state of the form
-        await assertNoRequiredFieldError('search-by-rek-author');
+        await expectMissingRequiredFieldError('search-by-rek-author');
 
         expect(getByTestId('alert-warning-change-author-id')).toHaveTextContent(
             '1 of the 3 works you have selected do not match and will not be updated',
@@ -124,7 +113,7 @@ describe('ChangeAuthorIdForm', () => {
         });
 
         // assert next state of the form
-        await assertNoRequiredFieldError('rek-author-id');
+        await expectMissingRequiredFieldError('rek-author-id');
         assertEnabled('change-author-id-submit');
 
         // submit form
@@ -146,12 +135,12 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author name'));
 
-        await assertRequiredFieldError('search-by-rek-author');
+        await expectRequiredFieldError('search-by-rek-author');
 
         fireEvent.change(getByTestId('search-by-rek-author-input'), { target: { value: 'Test' } });
 
         // assert next state of the form
-        await assertNoRequiredFieldError('search-by-rek-author');
+        await expectMissingRequiredFieldError('search-by-rek-author');
 
         fireEvent.click(getByTestId('rek-author-id-input'));
         fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
@@ -159,7 +148,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
-        await assertNoRequiredFieldError('rek-author-id');
+        await expectMissingRequiredFieldError('rek-author-id');
         assertEnabled('change-author-id-submit');
 
         // submit form
@@ -184,7 +173,7 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
-        await assertRequiredFieldError('search-by-rek-author-id');
+        await expectRequiredFieldError('search-by-rek-author-id');
 
         fireEvent.click(getByTestId('search-by-rek-author-id-input'));
         fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
@@ -192,7 +181,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
-        await assertNoRequiredFieldError('search-by-rek-author-id');
+        await expectMissingRequiredFieldError('search-by-rek-author-id');
 
         fireEvent.click(getByTestId('rek-author-id-input'));
         fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
@@ -200,7 +189,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
-        await assertNoRequiredFieldError('rek-author-id');
+        await expectMissingRequiredFieldError('rek-author-id');
         assertEnabled('change-author-id-submit');
 
         // submit form
@@ -226,7 +215,7 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
-        await assertRequiredFieldError('search-by-rek-author-id');
+        await expectRequiredFieldError('search-by-rek-author-id');
 
         fireEvent.click(getByTestId('search-by-rek-author-id-input'));
         fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
@@ -234,7 +223,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
-        await assertNoRequiredFieldError('search-by-rek-author-id');
+        await expectMissingRequiredFieldError('search-by-rek-author-id');
 
         fireEvent.click(getByTestId('rek-author-id-input'));
         fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
@@ -242,7 +231,7 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
 
         // assert next state of the form
-        await assertNoRequiredFieldError('rek-author-id');
+        await expectMissingRequiredFieldError('rek-author-id');
         assertEnabled('change-author-id-submit');
 
         // submit form
@@ -261,7 +250,7 @@ describe('ChangeAuthorIdForm', () => {
         await waitFor(() => getByTestId('search-author-by-options'));
         fireEvent.click(getByText('Author ID'));
 
-        await assertRequiredFieldError('search-by-rek-author-id');
+        await expectRequiredFieldError('search-by-rek-author-id');
 
         fireEvent.click(getByTestId('search-by-rek-author-id-input'));
         fireEvent.change(getByTestId('search-by-rek-author-id-input'), { target: { value: 'Test' } });
@@ -270,6 +259,6 @@ describe('ChangeAuthorIdForm', () => {
         fireEvent.click(getByText('Testing'));
         await userEvent.click(getAllByTitle('Clear')[0]);
 
-        await assertRequiredFieldError('search-by-rek-author-id');
+        await expectRequiredFieldError('search-by-rek-author-id');
     });
 });

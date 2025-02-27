@@ -9,13 +9,12 @@ import {
     waitFor,
     expectApiRequestToMatchSnapshot,
     api,
-    waitForText,
     assertDisabled,
     assertEnabled,
+    expectRequiredFieldError,
+    expectMissingRequiredFieldError,
 } from 'test-utils';
 import * as repositories from 'repositories';
-import { screen } from '@testing-library/react';
-import { locale } from '../../../../../locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,24 +33,13 @@ function setup(testProps = {}) {
 }
 
 describe('ChangeDisplayTypeForm', () => {
-    const assertRequiredFieldError = async field =>
-        await waitFor(() => {
-            expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
-            expect(screen.getByTestId(`${field}-helper-text`)).toHaveTextContent('This field is required');
-        });
-
-    const assertNoRequiredFieldError = async field =>
-        await waitFor(() => {
-            expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
-        });
-
     const assertFormInitialState = async () => {
         // await waitForText(
         //     new RegExp(locale.components.bulkUpdates.bulkUpdatesForms.changeDisplayTypeForm.alert.message, 'i'),
         // );
-        await assertRequiredFieldError('rek-display-type');
-        await assertNoRequiredFieldError('rek-subtype-select');
-        await assertDisabled('change-display-type-submit');
+        await expectRequiredFieldError('rek-display-type');
+        await expectMissingRequiredFieldError('rek-subtype-select');
+        assertDisabled('change-display-type-submit');
     };
 
     it('should correctly submit form and display success info', async () => {
@@ -64,17 +52,17 @@ describe('ChangeDisplayTypeForm', () => {
         fireEvent.click(getByText('Book'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        await assertNoRequiredFieldError('rek-display-type');
+        await expectMissingRequiredFieldError('rek-display-type');
         expect(getByTestId('rek-subtype-select')).toBeInTheDocument();
-        await assertRequiredFieldError('rek-subtype');
-        await assertDisabled('change-display-type-submit');
+        await expectRequiredFieldError('rek-subtype');
+        assertDisabled('change-display-type-submit');
 
         fireEvent.mouseDown(getByTestId('rek-subtype-select'));
         fireEvent.click(getByText('Research book (original research)'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        await assertNoRequiredFieldError('rek-subtype');
-        await assertEnabled('change-display-type-submit');
+        await expectMissingRequiredFieldError('rek-subtype');
+        assertEnabled('change-display-type-submit');
 
         // submit form
         act(() => {
@@ -96,17 +84,17 @@ describe('ChangeDisplayTypeForm', () => {
         fireEvent.click(getByText('Book'));
 
         // assert next state of the form on display type selected (e.g. Book)
-        await assertNoRequiredFieldError('rek-display-type');
+        await expectMissingRequiredFieldError('rek-display-type');
         expect(getByTestId('rek-subtype-select')).toBeInTheDocument();
-        await assertRequiredFieldError('rek-subtype');
-        await assertDisabled('change-display-type-submit');
+        await expectRequiredFieldError('rek-subtype');
+        assertDisabled('change-display-type-submit');
 
         fireEvent.mouseDown(getByTestId('rek-subtype-select'));
         fireEvent.click(getByText('Research book (original research)'));
 
         // assert next state of the form on display type selected (e.g. Research book)
-        await assertNoRequiredFieldError('rek-subtype');
-        await assertEnabled('change-display-type-submit');
+        await expectMissingRequiredFieldError('rek-subtype');
+        assertEnabled('change-display-type-submit');
 
         // submit form
         act(() => {
