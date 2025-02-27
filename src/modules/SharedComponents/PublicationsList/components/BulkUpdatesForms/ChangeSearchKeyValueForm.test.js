@@ -1,6 +1,15 @@
 import React from 'react';
 import ChangeSearchKeyValueForm from './ChangeSearchKeyValueForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+} from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
@@ -57,6 +66,7 @@ describe('ChangeSearchKeyValueForm', () => {
 
         await waitFor(() => getByTestId('alert-done-change-search-key-value'));
         expect(getByTestId('alert-done-change-search-key-value')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error', async () => {
@@ -131,7 +141,8 @@ describe('ChangeSearchKeyValueForm', () => {
         fireEvent.click(getByText('Copyright notice'));
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
-
         // Advisory statement tested in cypress
+
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 });

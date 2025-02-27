@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChangeSearchKeyValueForm should correctly submit form and display success info 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_oa_status":{"rek_oa_status":453693},"edit_reason":"test edit reason"}]"`;
+
+exports[`ChangeSearchKeyValueForm should render correct field on selecting search field 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_oa_status":{"rek_oa_status":453693},"edit_reason":""}]"`;
