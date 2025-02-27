@@ -41,25 +41,6 @@ const MasterJournalListIngest = () => {
     const txt = componentsLocale.components.MasterJournalListIngest;
     const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
 
-    // useEffect(() => {
-    //     const alertProps = validation.getErrorAlertProps({
-    //         alertLocale: {
-    //             validationAlert: { ...publicationLocale.validationAlert },
-    //             progressAlert: { ...txt.submitProgressAlert },
-    //             successAlert: { ...txt.submitSuccessAlert },
-    //             errorAlert: { ...txt.submitFailureAlert },
-    //         },
-    //         apiError,
-    //         formErrors,
-    //         submitSucceeded,
-    //         submitting,
-    //     });
-
-    //     setValidationErrors(alertProps);
-
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [apiError, formErrors, submitSucceeded, submitting]);
-
     const alertProps = validation.getErrorAlertProps({
         formErrors,
         dirty: true,
