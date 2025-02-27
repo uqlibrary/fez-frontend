@@ -1,7 +1,7 @@
 import CommunityForm from './CommunityForm';
 import Immutable from 'immutable';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor, preview } from 'test-utils';
 import * as actions from 'actions';
 
 jest.mock('actions', () => ({
@@ -59,6 +59,7 @@ describe('Community form', () => {
 
         await userEvent.click(submitButton);
         await waitFor(() => expect(getByTestId('alert-error-community')).toBeInTheDocument());
+        preview.debug();
 
         setup(
             {},
