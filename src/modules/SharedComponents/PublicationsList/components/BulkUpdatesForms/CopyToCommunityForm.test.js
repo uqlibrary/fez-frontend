@@ -1,6 +1,15 @@
 import React from 'react';
 import CopyToCommunityForm from './CopyToCommunityForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    expectApiRequestToMatchSnapshot,
+    api,
+} from 'test-utils';
 import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
@@ -72,6 +81,7 @@ describe('CopyToCommunityForm', () => {
 
         await waitFor(() => getByTestId('alert-done-copy-to-community'));
         expect(getByTestId('alert-done-copy-to-community')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for copy to community form', async () => {
@@ -146,6 +156,7 @@ describe('CopyToCommunityForm', () => {
 
         await waitFor(() => getByTestId('alert-done-remove-from-community'));
         expect(getByTestId('alert-done-remove-from-community')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for remove from community', async () => {
@@ -209,6 +220,7 @@ describe('CopyToCommunityForm', () => {
 
         expect(getByTestId('alert-warning-remove-from-community')).toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
@@ -237,5 +249,6 @@ describe('CopyToCommunityForm', () => {
         expect(queryByTestId('alert-warning-remove-from-community')).not.toBeInTheDocument();
 
         expect(getByTestId('alert-info-copy-to-community-notallowed')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 });
