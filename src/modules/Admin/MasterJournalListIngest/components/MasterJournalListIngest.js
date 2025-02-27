@@ -48,9 +48,9 @@ const MasterJournalListIngest = () => {
             successAlert: { ...txt.submitSuccessAlert },
             errorAlert: { ...txt.submitFailureAlert },
         },
-        apiError,
+        error: apiError,
         formErrors,
-        submitSucceeded,
+        submitSucceeded: submitSucceeded && !!!apiError,
         submitting,
     });
 
@@ -84,11 +84,6 @@ const MasterJournalListIngest = () => {
                     {alertProps && (
                         <Grid item xs={12}>
                             <Alert alertId="batch-import-validation" {...alertProps} />
-                        </Grid>
-                    )}
-                    {!!apiError && (
-                        <Grid xs={12}>
-                            <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                         </Grid>
                     )}
                     <Grid item xs={12} sm="auto">
