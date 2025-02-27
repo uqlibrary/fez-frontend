@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useDispatch } from 'react-redux';
@@ -37,28 +37,39 @@ const MasterJournalListIngest = () => {
     });
 
     const navigate = useNavigate();
-    const [validationErrors, setValidationErrors] = useState(null);
+    // const [validationErrors, setValidationErrors] = useState(null);
     const txt = componentsLocale.components.MasterJournalListIngest;
     const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
 
-    useEffect(() => {
-        const alertProps = validation.getErrorAlertProps({
-            alertLocale: {
-                validationAlert: { ...publicationLocale.validationAlert },
-                progressAlert: { ...txt.submitProgressAlert },
-                successAlert: { ...txt.submitSuccessAlert },
-                errorAlert: { ...txt.submitFailureAlert },
-            },
-            apiError,
-            formErrors,
-            submitSucceeded,
-            submitting,
-        });
+    // useEffect(() => {
+    //     const alertProps = validation.getErrorAlertProps({
+    //         alertLocale: {
+    //             validationAlert: { ...publicationLocale.validationAlert },
+    //             progressAlert: { ...txt.submitProgressAlert },
+    //             successAlert: { ...txt.submitSuccessAlert },
+    //             errorAlert: { ...txt.submitFailureAlert },
+    //         },
+    //         apiError,
+    //         formErrors,
+    //         submitSucceeded,
+    //         submitting,
+    //     });
 
-        setValidationErrors(alertProps);
+    //     setValidationErrors(alertProps);
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [apiError, formErrors, submitSucceeded, submitting]);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [apiError, formErrors, submitSucceeded, submitting]);
+
+    const alertProps = validation.getErrorAlertProps({
+        formErrors,
+        dirty: true,
+        alertLocale: {
+            validationAlert: { ...publicationLocale.validationAlert },
+            progressAlert: { ...txt.submitProgressAlert },
+            successAlert: { ...txt.submitSuccessAlert },
+            errorAlert: { ...txt.submitFailureAlert },
+        },
+    });
 
     const cancelIngest = () => {
         navigate(pathConfig.index);
@@ -87,9 +98,9 @@ const MasterJournalListIngest = () => {
                             </Grid>
                         </StandardCard>
                     </Grid>
-                    {validationErrors && (
+                    {alertProps && (
                         <Grid item xs={12}>
-                            <Alert alertId="batch-import-validation" {...validationErrors} />
+                            <Alert alertId="batch-import-validation" {...alertProps} />
                         </Grid>
                     )}
                     {!!apiError && (
