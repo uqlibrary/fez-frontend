@@ -46,7 +46,7 @@ export const CommunityForm = () => {
         const currentAuthor = author;
         // eslint-disable-next-line camelcase
         return dispatch(createCommunity(data, currentAuthor?.aut_id)).catch(error => {
-            setApiError(error.message);
+            setApiError(error);
         });
     };
 
@@ -111,14 +111,15 @@ export const CommunityForm = () => {
     }
     // customise error for thesis submission
     const alertProps = validation.getErrorAlertProps({
+        error: apiError,
         formErrors,
-        dirty: isDirty,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
             progressAlert: { ...formLocale.progressAlert },
             successAlert: { ...formLocale.successAlert },
             errorAlert: {
                 ...formLocale.errorAlert,
+                alertId: 'alert-error-community',
                 message: formLocale.addACommunity.addFailedMessage,
             },
         },
@@ -201,11 +202,6 @@ export const CommunityForm = () => {
                             {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert {...alertProps} />
-                                </Grid>
-                            )}
-                            {!!apiError && (
-                                <Grid xs={12}>
-                                    <Alert alertId="api-error-alert" type="error_outline" message={apiError} />
                                 </Grid>
                             )}
                         </Grid>

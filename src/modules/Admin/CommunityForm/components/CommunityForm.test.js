@@ -58,7 +58,7 @@ describe('Community form', () => {
         await waitFor(() => expect(submitButton).toBeEnabled());
 
         await userEvent.click(submitButton);
-        await waitFor(() => expect(getByTestId('api-error-alert')).toBeInTheDocument());
+        await waitFor(() => expect(getByTestId('alert-error-community')).toBeInTheDocument());
 
         setup(
             {},
