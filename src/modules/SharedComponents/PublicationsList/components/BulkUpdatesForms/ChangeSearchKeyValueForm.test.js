@@ -5,7 +5,7 @@ import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
-        recordsSelected: [{ rek_pid: 'UQ:123456' }],
+        recordsSelected: { 'UQ:123456': { rek_pid: 'UQ:123456' } },
         onCancel: jest.fn(),
         ...testProps,
     };

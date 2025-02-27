@@ -60,7 +60,6 @@ function setup(testProps = {}) {
 }
 
 describe('ChangeAuthorIdForm', () => {
-    turnOnJestPreviewOnTestFailure();
     const assertRequiredFieldError = async field =>
         await waitFor(() => {
             expect(screen.getByTestId(`${field}-helper-text`)).toBeInTheDocument();
