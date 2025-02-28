@@ -63,6 +63,23 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render component with data collection with raid', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { container } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_raid: [
+                    {
+                        rek_raid: '10.1234/xxx',
+                        rek_raid_order: 1,
+                    },
+                ],
+            },
+        });
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render component with data collection with license link', () => {
         initialize();
         useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));

@@ -131,6 +131,11 @@ export const isValidOrcid = value => {
     return isValid.test(value.toString().trim());
 };
 
+export const isValidRaid = value => {
+    const isValid = /[^\/]+\/[^\/]+/;
+    return isValid.test(value.toString().trim());
+};
+
 export const isValidROR = value => {
     const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
     return isValid.test(value.toString().trim());
@@ -157,6 +162,7 @@ export const url = value =>
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
+export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);
 export const ror = value => (!!value && !isValidROR(value) ? locale.validationErrors.ror : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;

@@ -278,6 +278,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     // render a list of objects (objects with order fields)
     const renderObjectList = (objects, subkey) => {
         switch (subkey) {
+            case 'rek_alternate_identifier':
+                return renderAlternateIdentifier(publication);
             case 'rek_author':
                 return renderAuthors(publication);
             case 'rek_contributor':
@@ -292,10 +294,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 return renderContactEmail();
             case 'rek_geographic_area':
                 return renderMap(objects);
+            case 'rek_raid':
+                return renderList(objects, subkey, pathConfig.list.raid);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
-            case 'rek_alternate_identifier':
-                return renderAlternateIdentifier(publication);
             default:
                 return renderList(objects, subkey);
         }

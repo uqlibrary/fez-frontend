@@ -19,6 +19,7 @@ export default {
                 ['rek_description'],
                 ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_isdatasetof'],
+                ['fez_record_search_key_raid'],
                 ['fez_record_search_key_related_publications'],
                 ['fez_record_search_key_related_datasets'],
             ],
