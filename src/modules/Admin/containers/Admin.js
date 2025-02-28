@@ -25,7 +25,6 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
-    console.log('qgz adminInterfaceConfig=', adminInterfaceConfig);
     if (!adminInterfaceConfig || typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }

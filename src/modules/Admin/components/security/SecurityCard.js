@@ -41,7 +41,6 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
-    console.log('qgz record=', record);
     return (
         <Grid container spacing={2}>
             <Grid xs={12}>
