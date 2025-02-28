@@ -126,7 +126,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                             validate={[validation.required]}
                             uqIdFieldId="search-by-rek-author-id"
                             getOptionLabel={option => !!option && `${option.id} (${option.value})`}
-                            normalize={value => value.aut_id}
+                            normalize={value => value?.aut_id || value}
                             onClear={handleClear('search_author.author_id')}
                         />
                     </Grid>
@@ -142,7 +142,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         validate={[validation.required]}
                         uqIdFieldId="rek-author-id"
                         getOptionLabel={option => !!option && `${option.id} (${option.value})`}
-                        normalize={value => value.aut_id}
+                        normalize={value => value?.aut_id || value}
                         onClear={handleClear('rek_author_id')}
                     />
                 </Grid>
