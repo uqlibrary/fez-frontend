@@ -17,7 +17,7 @@ import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsL
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
-import _ from 'lodash';
+import { uniqWith } from 'lodash';
 import { hasAtLeastOneItemSelected, isArrayDeeplyEqual } from '../../../../helpers/general';
 import { locale } from 'locale';
 
