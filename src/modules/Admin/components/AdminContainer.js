@@ -93,6 +93,8 @@ export const AdminContainer = ({
     React.useEffect(() => {
         if (createMode) {
             setShowAddForm(true);
+        } else {
+            setShowAddForm(false);
         }
         console.log('qgz Admin createMode=', createMode);
     }, [createMode]);
