@@ -59,7 +59,7 @@ export const AdminContainer = ({
     params,
     error,
 }) => {
-    console.log('qgz Admin');
+    console.log('qgz Admin params=', params);
     const { pid } = params;
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -81,12 +81,21 @@ export const AdminContainer = ({
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
+    console.log('showAddForm=', showAddForm);
     React.useEffect(() => {
+        console.log('qgz Admin pid=', pid);
         !!pid && !!loadRecordToView && loadRecordToView(pid, true);
         return () => {
             clearRecordToView();
         };
     }, [loadRecordToView, clearRecordToView, pid]);
+
+    React.useEffect(() => {
+        if (createMode) {
+            setShowAddForm(true);
+        }
+        console.log('qgz Admin createMode=', createMode);
+    }, [createMode]);
 
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {
@@ -267,7 +276,8 @@ export function isSame(prevProps, nextProps) {
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
         prevProps.showAddForm === nextProps.showAddForm &&
         prevProps.formErrors === nextProps.formErrors &&
-        prevProps.locked === nextProps.locked
+        prevProps.locked === nextProps.locked &&
+        prevProps.createMode === nextProps.createMode
     );
 }
 
