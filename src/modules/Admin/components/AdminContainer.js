@@ -59,6 +59,7 @@ export const AdminContainer = ({
     params,
     error,
 }) => {
+    console.log('qgz Admin params=', params);
     const { pid } = params;
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -80,7 +81,9 @@ export const AdminContainer = ({
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
+    console.log('showAddForm=', showAddForm);
     React.useEffect(() => {
+        console.log('qgz Admin pid=', pid);
         !!pid && !!loadRecordToView && loadRecordToView(pid, true);
         return () => {
             clearRecordToView();
@@ -91,6 +94,7 @@ export const AdminContainer = ({
         if (createMode) {
             setShowAddForm(true);
         }
+        console.log('qgz Admin createMode=', createMode);
     }, [createMode]);
 
     const txt = locale.pages.edit;
