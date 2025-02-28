@@ -2,7 +2,7 @@
 
 exports[`CopyToCommunityForm should correctly submit form and display success info for copy to collection form 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123"},{"rek_ismemberof":"UQ:222","rek_ismemberof_order":2}]}]"`;
 
-exports[`CopyToCommunityForm should correctly submit form and display success info for remove from community 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123"},{"rek_ismemberof":"UQ:222","rek_ismemberof_order":2}]}]"`;
+exports[`CopyToCommunityForm should correctly submit form and display success info for remove from community 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123"}]}]"`;
 
 exports[`CopyToCommunityForm should display warning alert to user if an attempt to copy incorrect record exists in selected items 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123"}]}]"`;
 

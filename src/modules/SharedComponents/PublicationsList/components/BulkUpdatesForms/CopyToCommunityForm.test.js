@@ -7,10 +7,17 @@ import {
     WithReduxStore,
     fireEvent,
     waitFor,
+    assertDisabled,
+    assertEnabled,
     expectApiRequestToMatchSnapshot,
     api,
+    waitForText,
+    waitForTextToBeRemoved,
+    debugApiRequestHistory,
+    expectApiRequestCountToBe,
 } from 'test-utils';
 import * as repositories from 'repositories';
+import { locale } from '../../../../../locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -35,7 +42,13 @@ function setup(testProps = {}) {
 }
 
 describe('CopyToCommunityForm', () => {
+    const assertFormInitialState = async () => {
+        await waitForText(locale.validationErrors.required);
+        assertDisabled('copy-to-community-submit');
+    };
+
     beforeEach(() => {
+        api.reset();
         document.createRange = () => ({
             setStart: () => {},
             setEnd: () => {},
@@ -47,9 +60,9 @@ describe('CopyToCommunityForm', () => {
     });
 
     it('should correctly submit form and display success info for copy to collection form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -60,10 +73,7 @@ describe('CopyToCommunityForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-community-submit')).toHaveAttribute('disabled');
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
@@ -71,8 +81,8 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-community-submit')).not.toHaveAttribute('disabled');
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        assertEnabled('copy-to-community-submit');
 
         // submit form
         act(() => {
@@ -81,13 +91,14 @@ describe('CopyToCommunityForm', () => {
 
         await waitFor(() => getByTestId('alert-done-copy-to-community'));
         expect(getByTestId('alert-done-copy-to-community')).toBeInTheDocument();
+        debugApiRequestHistory();
         expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for copy to community form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -98,10 +109,7 @@ describe('CopyToCommunityForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-community-submit')).toHaveAttribute('disabled');
+        await assertFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
@@ -109,8 +117,8 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-community-submit')).not.toHaveAttribute('disabled');
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        assertEnabled('copy-to-community-submit');
 
         // submit form
         act(() => {
@@ -122,9 +130,9 @@ describe('CopyToCommunityForm', () => {
     });
 
     it('should correctly submit form and display success info for remove from community', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -137,8 +145,8 @@ describe('CopyToCommunityForm', () => {
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
+        await waitForText(locale.validationErrors.required);
+        assertDisabled('remove-from-community-submit');
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
@@ -146,8 +154,8 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-community-submit')).not.toHaveAttribute('disabled');
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        assertEnabled('remove-from-community-submit');
 
         // submit form
         act(() => {
@@ -160,9 +168,9 @@ describe('CopyToCommunityForm', () => {
     });
 
     it('should submit form and display error for remove from community', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -175,8 +183,8 @@ describe('CopyToCommunityForm', () => {
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
 
         // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
+        await waitForText(locale.validationErrors.required);
+        assertDisabled('remove-from-community-submit');
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
@@ -184,8 +192,8 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-community-submit')).not.toHaveAttribute('disabled');
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        assertEnabled('remove-from-community-submit');
 
         // submit form
         act(() => {
@@ -197,8 +205,7 @@ describe('CopyToCommunityForm', () => {
     });
 
     it('should display warning alert to user if work is being removed from all communities', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
@@ -219,13 +226,12 @@ describe('CopyToCommunityForm', () => {
         fireEvent.click(getByText('Testing community'));
 
         expect(getByTestId('alert-warning-remove-from-community')).toBeInTheDocument();
-        expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
-        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
+        assertDisabled('remove-from-community-submit');
+        expectApiRequestCountToBe('patch', undefined, 0);
     });
 
     it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
             )
@@ -247,8 +253,7 @@ describe('CopyToCommunityForm', () => {
         });
 
         expect(queryByTestId('alert-warning-remove-from-community')).not.toBeInTheDocument();
-
         expect(getByTestId('alert-info-copy-to-community-notallowed')).toBeInTheDocument();
-        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
+        expectApiRequestCountToBe('patch', undefined, 0);
     });
 });
