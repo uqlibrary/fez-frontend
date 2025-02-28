@@ -41,6 +41,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
+    console.log('qgz record=', record);
     return (
         <Grid container spacing={2}>
             <Grid xs={12}>
@@ -56,7 +57,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                 <Grid xs={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.record.title}
-                                        collections={record.fez_record_search_key_ismemberof}
+                                        collections={record?.fez_record_search_key_ismemberof || []}
                                         parentKey="rek_security_policy"
                                     />
                                 </Grid>

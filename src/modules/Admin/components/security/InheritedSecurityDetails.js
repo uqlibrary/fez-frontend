@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import PolicyDescription from './PolicyDescription';
 
 export const InheritedSecurityDetails = ({ title, collections, parentKey }) => {
-    // console.log('collections.map=', collections.map);
+    console.log('qgz collections.map=', collections.map);
     return (
         <Grid
             xs={12}
