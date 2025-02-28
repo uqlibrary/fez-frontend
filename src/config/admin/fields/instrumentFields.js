@@ -89,6 +89,16 @@ export const validateInstrument = (
             },
         }) ||
             {}),
+        ...((!(bs || {}).rek_description && {
+            rek_description: summary.rek_description,
+        }) ||
+            {}),
+        ...(((bs || {}).fez_record_search_key_model || []).length === 0 && {
+            fez_record_search_key_model: summary.fez_record_search_key_model,
+        }),
+        ...(((bs || {}).fez_record_search_key_instrument_type || []).length === 0 && {
+            fez_record_search_key_instrument_type: summary.fez_record_search_key_instrument_type,
+        }),
     },
     adminSection: {
         ...((!(ais || {}).contactName && {
