@@ -2034,6 +2034,17 @@ export default {
             fez_record_search_key_end_date: () => ({
                 name: 'adminSection.fez_record_search_key_end_date.rek_end_date',
             }),
+            fez_record_search_key_model: () => ({
+                validate: [validation.requiredList],
+                required: true,
+            }),
+            fez_record_search_key_instrument_type: () => ({
+                validate: [validation.requiredList],
+                required: true,
+            }),
+            rek_description: () => ({
+                required: true,
+            }),
         },
         [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
             authors: ({ isNtro }) => ({ isNtro }),
