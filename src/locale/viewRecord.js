@@ -168,6 +168,7 @@ export default {
                 fez_record_search_key_model: 'Model',
                 fez_record_search_key_oa_status: 'Open access status',
                 fez_record_search_key_oa_status_type: 'Open access status type',
+                fez_record_search_key_raid: 'RAiD',
                 fez_record_search_key_conference_name: 'Conference name',
                 fez_record_search_key_translated_conference_name: 'Translated conference name',
                 fez_record_search_key_conference_location: 'Conference Location',
@@ -1436,12 +1437,16 @@ export default {
                     order: 31,
                 },
                 {
-                    field: 'fez_record_search_key_related_publications',
+                    field: 'fez_record_search_key_raid',
                     order: 32,
                 },
                 {
-                    field: 'fez_record_search_key_related_datasets',
+                    field: 'fez_record_search_key_related_publications',
                     order: 33,
+                },
+                {
+                    field: 'fez_record_search_key_related_datasets',
+                    order: 34,
                 },
             ],
             'Department Technical Report': [

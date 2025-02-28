@@ -10868,6 +10868,1404 @@ exports[`Additional Information Component  should render component with data col
 </div>
 `;
 
+exports[`Additional Information Component  should render component with data collection with raid 1`] = `
+<div>
+  <div
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+      data-testid="standard-card-additional-information"
+      id="standard-card-additional-information"
+    >
+      <div
+        class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+      >
+        <div
+          class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+            data-testid="standard-card-additional-information-header"
+            id="standard-card-additional-information-header"
+          >
+            Additional information
+          </h3>
+        </div>
+      </div>
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        data-analyticsid="standard-card-additional-information-content"
+        data-testid="standard-card-additional-information-content"
+        id="standard-card-additional-information-content"
+      >
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-project-name-label"
+              >
+                Project name
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-project-name"
+                >
+                  Toward a complete view of life on earth via single cell genomics
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-project-description-label"
+              >
+                Project description
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                ARC DP120103498 - (&lt;30%) Genome sequencing has revolutionised biology, but for most microorganisms this revolution has not arrived because the majority cannot be grown in the laboratory. This project will address this grand challenge by targeted sequencing of single cells from the environment that will fill in many major gaps in the microbial tree of life.
+                <br />
+                <br />
+                ARC DP1093175 - Microorganisms underpin life on Earth, but our understanding of their diversity and activity is limited by our inability to grow most of them in the laboratory. Recently, new techniques have emerged that allow access to the genetic information of all microorganisms by directly sequencing DNA and RNA from the environment. In this research we will further develop these frontier technologies, promoting this new area of science in Australia. We will apply these techniques to microbial communities involved in wastewater treatment in order to understand the interactions between microorganisms and the viruses that infect them. Understanding this interaction will have important implications for optimising these treatment processes. 
+                <br />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-contributor-label"
+              >
+                Contact(s) name
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationEditors"
+                >
+                  <a
+                    class=""
+                    data-testid="rek-contributor-0-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_contributor_id%5D%5Bvalue%5D=79391&searchQueryParams%5Brek_contributor_id%5D%5Blabel%5D=79391+(Tyson%2C+Gene+W.+)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-contributor-0"
+                    >
+                      Tyson, Gene W. 
+                    </span>
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-contact-details-email-label"
+              >
+                Contact email
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <a
+                  data-testid="rek-contact-details-email"
+                  href="mailto:data@library.uq.edu.au"
+                >
+                  data@library.uq.edu.au
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-author-label"
+              >
+                Creator(s) name
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationAuthors"
+                >
+                  <a
+                    class=""
+                    data-testid="rek-author-0-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=96310&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=96310+(Parks%2C+Donovan+H.)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-0"
+                    >
+                      Parks, Donovan H.
+                    </span>
+                  </a>
+                  , 
+                  <a
+                    class=""
+                    data-testid="rek-author-1-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=6366&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=6366+(Imelfort%2C+Michael)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-1"
+                    >
+                      Imelfort, Michael
+                    </span>
+                  </a>
+                  , 
+                  <a
+                    class=""
+                    data-testid="rek-author-2-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=76682&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=76682+(Skennerton%2C+Connor+T.)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-2"
+                    >
+                      Skennerton, Connor T.
+                    </span>
+                  </a>
+                  , 
+                  <a
+                    class=""
+                    data-testid="rek-author-3-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=20288&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=20288+(Hugenholtz%2C+Philip)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-3"
+                    >
+                      Hugenholtz, Philip
+                    </span>
+                  </a>
+                  , 
+                   and 
+                  <a
+                    class=""
+                    data-testid="rek-author-4-link"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=79391&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=79391+(Tyson%2C+Gene+W.)&searchMode=advanced"
+                    style="color: rgb(0, 114, 0);"
+                  >
+                    <span
+                      class="citationAuthor"
+                      data-testid="rek-author-4"
+                    >
+                      Tyson, Gene W.
+                    </span>
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-author-role-label"
+              >
+                Creator(s) role
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-author-role-0"
+                  >
+                    Investigator
+                  </li>
+                  <li
+                    data-testid="rek-author-role-1"
+                  >
+                    Investigator
+                  </li>
+                  <li
+                    data-testid="rek-author-role-2"
+                  >
+                    Investigator
+                  </li>
+                  <li
+                    data-testid="rek-author-role-3"
+                  >
+                    Investigator
+                  </li>
+                  <li
+                    data-testid="rek-author-role-4"
+                  >
+                    Investigator
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-title-label"
+              >
+                Dataset name
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-title"
+                >
+                  Data collection mock testing record
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-description-label"
+              >
+                Dataset description
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-description"
+                >
+                  <strong>
+                    Supplementary Results
+                  </strong>
+                  <br />
+                  Refinement for Gene Loss and Duplication
+                  <br />
+                  Estimates under Opal Stop Codon Recodings
+                  <br />
+                  <br />
+                  <strong>
+                    Supplementary Methods
+                  </strong>
+                  <br />
+                  Identification of Trusted Reference Genomes
+                  <br />
+                  Refining Marker Sets for Lineage-specific Gene Loss and Duplication
+                  <br />
+                  Determination of Coding Table
+                  <br />
+                  Systematic Bias of Completeness and Contamination Estimates
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S1.
+                  </strong>
+                   Distribution of the 104 bacterial and 281 gammaproteobacterial marker genes around the E. coli K12 genome.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S2.
+                  </strong>
+                   Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random contig model.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S3.
+                  </strong>
+                   Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S4. 
+                  </strong>
+                  Maximum-likelihood genome tree inferred from 5656 reference genomes. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S5. 
+                  </strong>
+                  Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the random fragment model using a window size of 20 kbp.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S6. 
+                  </strong>
+                  Error in completeness and contamination estimates on simulated genomes with varying levels of completeness and contamination generated under the inverse length model. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S7. 
+                  </strong>
+                  Error in completeness and contamination estimates on simulated genomes from different phyla.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S8. 
+                  </strong>
+                  Bias in completeness and contamination estimates when modelled as a binomial distribution. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S9. 
+                  </strong>
+                  GC-distribution plots of the HMP Capnocytophaga sp. oral taxon 329 genome.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S10. 
+                  </strong>
+                  Phylogenetic placement of the two genomes (Cluster 0 and Cluster 1) identified within the HMP Capnocytophaga sp. oral taxon 329 genome.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S11.
+                  </strong>
+                   Completeness estimates for 90 putative population genomes recovered from an acetate-amended aquifer.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S12. 
+                  </strong>
+                  Contamination estimates for 90 putative population genomes recovered from an acetate-amended aquifer.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S13.
+                  </strong>
+                   Identification of the 213 marker genes within the Meyerdierks et al. (2010) ANME-1 genome.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Figure S14.
+                  </strong>
+                   Refining a marker set for lineage-specific gene loss and duplication. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Tables
+                    <br />
+                    Supplemental Table S1.
+                  </strong>
+                   Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using different universal- and domain-specific marker gene sets.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S2. 
+                  </strong>
+                  Number of marker genes and marker sets for taxonomic groups with ≥ 20 reference genomes. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S3. 
+                  </strong>
+                  Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
+                  <br />
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S4. 
+                  </strong>
+                  Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS).
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S5.
+                  </strong>
+                   Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker genes treated individually (IM) or organized into collocated marker sets (MS). 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S6. 
+                  </strong>
+                  Phylogenetically informative marker genes used to infer the reference genome tree 
+                  <br />
+                  along with matching PhyloSift genes.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S7. 
+                  </strong>
+                  Phylogenetically informative genes used in PhyloSift without a matching CheckM gene.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S8. 
+                  </strong>
+                  Mean absolute error of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S9.
+                  </strong>
+                   Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms). 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S10. 
+                  </strong>
+                  Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms), the lineage-specific marker set selected by CheckM (sms), and the best performing lineage-specific marker set (bms).
+                  <br />
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S11. 
+                  </strong>
+                  Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker set selected by CheckM (sms). 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S12.
+                  </strong>
+                   Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms). 
+                  <br />
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S13.
+                  </strong>
+                   Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates determined using domain-specific marker sets (dms) and the lineage-specific marker sets selected by CheckM (sms).
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S14. T
+                  </strong>
+                  axonomic rank of the selected lineage-specific marker set used for evaluating the quality of genomes at different degrees of taxonomic novelty. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S15. 
+                  </strong>
+                  Mean absolute error and standard deviation of completeness (comp.) and contamination (cont.) estimates for simulated genomes at different degrees of taxonomic novelty.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S16. 
+                  </strong>
+                  Lineage-specific completeness and contamination estimates for isolate genomes from large-scale sequencing initiatives.
+                  <br />
+                  (see Excel file)
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S17
+                  </strong>
+                  . Completeness and contamination estimates of the Lactobacillus gasseri MV-22 genome for increasingly basal lineage-specific marker sets.
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S18
+                  </strong>
+                  . Bacterial marker genes identified within the HMP Lactobacillus gasseri genomes. Markers missing from a genome or present in multiple copies are highlighted with a grey background. 
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S19
+                  </strong>
+                  . Lineage-specific completeness and contamination estimates for genomes annotated as finished at IMG, along with predicted translation tables and calculated coding density. (see Excel file)
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S20
+                  </strong>
+                  : Lineage-specific completeness and contamination estimates for single-cell genomes from the GEBA-MDM initiative along with traditional assembly statistics. (see Excel file)
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S21
+                  </strong>
+                  : Lineage-specific completeness and contamination estimates for population genomes, plasmids, and phage recovered from metagenomic datasets along with traditional assembly statistics. (see Excel file)
+                  <br />
+                  <br />
+                  <strong>
+                    Supplemental Table S22
+                  </strong>
+                  : Completeness and contamination estimates for population genomes recovered from an acetate-amended aquifer determined using domain-level and lineage-specific marker sets. (see Excel file)
+                  <br />
+                  <br />
+                  <br />
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-access-conditions-label"
+              >
+                Access conditions
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-access-conditions"
+                >
+                  453619
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-license-label"
+              >
+                Licence and terms of access
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span>
+                  <a
+                    data-testid="rek-license-lookup"
+                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=453701"
+                  >
+                    453701
+                  </a>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
+                  <a
+                    class=" css-1oqhn84"
+                    data-analyticsid="rek-license-link"
+                    data-testid="rek-license-link"
+                    href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement"
+                    id="rek-license-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                    title="Link to https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement will open in a new window."
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                      data-testid="OpenInNewIcon"
+                      focusable="false"
+                      id="rek-license-link-new-window-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                      />
+                    </svg>
+                    View license details
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-subject-label"
+              >
+                ANZSRC Field of Research (FoR) Code
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-subject-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452086&searchQueryParams%5Ball%5D="
+                    >
+                      452086
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-subject-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=452109&searchQueryParams%5Ball%5D="
+                    >
+                      452109
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-doi-label"
+              >
+                DOI
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-doi"
+                >
+                  <a
+                    aria-label="Open this DOI in an new window"
+                    class="citationDoiLink css-1oqhn84"
+                    data-analyticsid="citation-doi-link"
+                    data-testid="citation-doi-link"
+                    href="https://doi.org/10.14264/uql.2016.841"
+                    id="citation-doi-link"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                    target="_blank"
+                    title="Open this DOI in an new window"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7r41zx-MuiSvgIcon-root"
+                      data-testid="OpenInNewIcon"
+                      focusable="false"
+                      id="citation-doi-link-new-window-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                      />
+                    </svg>
+                    https://doi.org/10.14264/uql.2016.841
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-type-of-data-label"
+              >
+                Type of data
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-type-of-data-0"
+                  >
+                    Text
+                  </li>
+                  <li
+                    data-testid="rek-type-of-data-1"
+                  >
+                    Figures
+                  </li>
+                  <li
+                    data-testid="rek-type-of-data-2"
+                  >
+                    Spreadsheets
+                  </li>
+                  <li
+                    data-testid="rek-type-of-data-3"
+                  >
+                    Python files
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-software-required-label"
+              >
+                Software required
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-software-required-0"
+                  >
+                    CheckM v0.9.4
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-language-label"
+              >
+                Language
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-language-0"
+                  >
+                    eng
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-start-date-label"
+              >
+                Collection start date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  2005-01-05
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-end-date-label"
+              >
+                Collection end date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  2005-01-05
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-time-period-start-date-label"
+              >
+                Time coverage start date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  2001
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-time-period-end-date-label"
+              >
+                Time coverage end date
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  class="citationDate"
+                >
+                  2009
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-keywords-label"
+              >
+                Keyword(s)
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-keywords-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Isolates&searchQueryParams%5Ball%5D="
+                    >
+                      Isolates
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-keywords-1"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Single+cells&searchQueryParams%5Ball%5D="
+                    >
+                      Single cells
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-keywords-2"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Metagenomic+data&searchQueryParams%5Ball%5D="
+                    >
+                      Metagenomic data
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-keywords-3"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Genome+quality&searchQueryParams%5Ball%5D="
+                    >
+                      Genome quality
+                    </a>
+                  </li>
+                  <li
+                    data-testid="rek-keywords-4"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=CheckM&searchQueryParams%5Ball%5D="
+                    >
+                      CheckM
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-geographic-area-label"
+              >
+                Geographic co-ordinates
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <div>
+                  <div
+                    id="mock-google-maps"
+                  />
+                  <div
+                    id="mock-marker"
+                  />
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-seo-code-label"
+              >
+                ANZSRC Socio-Economic Objective (SEO) Code
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-seo-code-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=970106+Expanding+Knowledge+in+the+Biological+Sciences&searchQueryParams%5Ball%5D="
+                    >
+                      970106 Expanding Knowledge in the Biological Sciences
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-ands-collection-type-label"
+              >
+                Collection type
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-ands-collection-type"
+                >
+                  453616
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-publisher-label"
+              >
+                Publisher
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <a
+                  data-testid="rek-publisher"
+                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Cold+Spring+Harbor+Laboratory+Press&searchMode=advanced"
+                >
+                  Cold Spring Harbor Laboratory Press
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-date-label"
+              >
+                Publication year
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-date"
+                >
+                  <span
+                    class="citationDate"
+                  >
+                    2015
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-rights-label"
+              >
+                Copyright notice
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <span
+                  data-testid="rek-rights"
+                >
+                  2015, The University of Queensland
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-raid-label"
+              >
+                RAiD
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <ul
+                  class="MuiBox-root css-1yukr9r"
+                >
+                  <li
+                    data-testid="rek-raid-0"
+                  >
+                    <a
+                      href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_raid%5D%5Bvalue%5D=10.1234%2Fxxx&searchMode=advanced"
+                    >
+                      10.1234/xxx
+                    </a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Additional Information Component  should render component with design document 1`] = `
 <div>
   <div
