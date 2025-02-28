@@ -243,6 +243,7 @@ const AppClass = ({
         forceOrcidRegistration: isOrcidRequired && isHdrStudent,
         isHdrStudent: isHdrStudent,
     });
+    console.log('routesConfig', routesConfig);
     const titleOffset = docked && !isThesisSubmissionPage ? 284 : 0;
     const isIndex = location.pathname === '/';
     const isAdminPage =

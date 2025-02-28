@@ -59,6 +59,7 @@ export const AdminContainer = ({
     params,
     error,
 }) => {
+    console.log('qgz Admin');
     const { pid } = params;
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
