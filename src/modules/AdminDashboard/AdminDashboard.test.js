@@ -1,17 +1,13 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
-
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
-
 import AdminDashboard, { CustomTabPanel } from './AdminDashboard';
 
 const setup = (props = {}, state = {}, renderer = render) => {
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <AdminDashboard {...props} />
         </WithReduxStore>,
     );

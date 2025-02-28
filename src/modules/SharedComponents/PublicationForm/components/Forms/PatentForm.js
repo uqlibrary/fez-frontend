@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -14,7 +14,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-export const PatentForm = ({ submitting }) => {
+export const PatentForm = ({ isSubmitting, control }) => {
     const txt = formLocale.patent;
     return (
         <Grid container spacing={3}>
@@ -23,9 +23,10 @@ export const PatentForm = ({ submitting }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 autoFocus
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_title"
                                 required
                                 type="text"
@@ -38,8 +39,9 @@ export const PatentForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_patent_number.rek_patent_number"
                                 type="text"
                                 fullWidth
@@ -49,9 +51,10 @@ export const PatentForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={PartialDateField}
                                 partialDateFieldId="rek-date"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="rek_date"
                                 allowPartial
                                 required
@@ -63,8 +66,9 @@ export const PatentForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_country_of_issue.rek_country_of_issue"
                                 type="text"
                                 fullWidth
@@ -74,8 +78,9 @@ export const PatentForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Field
+                                control={control}
                                 component={TextField}
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 name="fez_record_search_key_publisher.rek_publisher"
                                 type="text"
                                 fullWidth
@@ -90,6 +95,7 @@ export const PatentForm = ({ submitting }) => {
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
+                        control={control}
                         component={ContributorsEditorField}
                         canEdit
                         forceSelectable
@@ -100,7 +106,7 @@ export const PatentForm = ({ submitting }) => {
                         required
                         name="authors"
                         locale={txt.authors.field}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         validate={[validation.authorRequired]}
                     />
                 </StandardCard>
@@ -110,10 +116,11 @@ export const PatentForm = ({ submitting }) => {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="comments"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 multiline
                                 rows={1}
@@ -122,10 +129,11 @@ export const PatentForm = ({ submitting }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <Field
+                                control={control}
                                 component={TextField}
                                 name="rek_link"
                                 type="text"
-                                disabled={submitting}
+                                disabled={isSubmitting}
                                 fullWidth
                                 label={txt.other.fieldLabels.url}
                                 validate={[validation.url]}
@@ -138,6 +146,7 @@ export const PatentForm = ({ submitting }) => {
     );
 };
 PatentForm.propTypes = {
-    submitting: PropTypes.bool,
+    control: PropTypes.any,
+    isSubmitting: PropTypes.bool,
 };
 export default PatentForm;

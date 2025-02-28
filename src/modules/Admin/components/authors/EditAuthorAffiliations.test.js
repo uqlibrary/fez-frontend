@@ -2,7 +2,6 @@ import React from 'react';
 import EditAuthorAffiliations, { actionHandler } from './EditAuthorAffiliations';
 import { render, WithReduxStore } from 'test-utils';
 import locale from 'locale/components';
-import Immutable from 'immutable';
 import { NON_HERDC_ID, ACTIONS } from 'helpers/authorAffiliations';
 import * as OrgActions from 'actions/organisationalUnits';
 
@@ -45,7 +44,7 @@ function setup(props = {}, initialState = {}, renderMethod = render) {
     };
 
     return renderMethod(
-        <WithReduxStore initialState={Immutable.Map({ ...state })}>
+        <WithReduxStore initialState={{ ...state }}>
             <EditAuthorAffiliations {...testProps} />
         </WithReduxStore>,
     );

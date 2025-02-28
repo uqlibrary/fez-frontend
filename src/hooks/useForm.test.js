@@ -6,6 +6,7 @@ import {
     setServerError,
     flattenErrors,
     getPropsForAlertInconsistencyWarning,
+    flattenFormFieldKeys,
 } from './useForm';
 import * as general from '../helpers/general';
 
@@ -195,7 +196,7 @@ describe('useForm hook', () => {
     });
 
     describe('mergeWithFormValues', () => {
-        it('mergeWithFormValues should merge form values with given values', () => {
+        it('should merge form values with given values', () => {
             mockWebApiFile();
             const mockFiles = {
                 queue: [new File(['test'], 'test.jpg')],
@@ -227,7 +228,7 @@ describe('useForm hook', () => {
     });
 
     describe('flattenErrors', () => {
-        it('flattenErrors should return an object in "field => error" format', () => {
+        it('should return an object in "field => error" format', () => {
             mockFormReturn.formState.errors = {
                 fieldA: { type: 'required', message: 'field is required' },
                 fieldB: { type: 'maxLength', message: 'field should not have more...' },
@@ -240,7 +241,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('flattenErrors should return an object in "field => error" format with additional errors given', () => {
+        it('should return an object in "field => error" format with additional errors given', () => {
             mockFormReturn.formState.errors = {
                 fieldA: { type: 'required', message: 'field is required' },
                 fieldB: { type: 'maxLength', message: 'field should not have more...' },
@@ -258,7 +259,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('flattenErrors should return an object in "field => error" format when form errors are empty and additional errors are given', () => {
+        it('should return an object in "field => error" format when form errors are empty and additional errors are given', () => {
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form is has to be fixed' };
 
@@ -268,10 +269,26 @@ describe('useForm hook', () => {
             });
         });
 
-        it('flattenErrors should return an empty object when no errors are given', () => {
+        it('should return an empty object when no errors are given', () => {
             const formLevelErrorA = {};
 
             expect(flattenErrors(null, formLevelErrorA, false)).toEqual({});
+        });
+    });
+
+    describe('flattenFormFieldKeys', () => {
+        it('should return a list with all object fields names, including nested ones', () => {
+            expect(
+                flattenFormFieldKeys({ fez_record_search_key_doi: { rek_doi: '10.000/abc' }, rek_status: 2 }),
+            ).toEqual(['rek_doi', 'rek_status']);
+        });
+
+        it('should return a list with all object fields names, including nested ones, with the exception of ones in a given blacklist', () => {
+            expect(
+                flattenFormFieldKeys({ fez_record_search_key_doi: { rek_doi: '10.000/abc' }, rek_status: 2 }, [
+                    'fez_record_search_key_doi',
+                ]),
+            ).toEqual(['rek_status']);
         });
     });
 
@@ -281,12 +298,12 @@ describe('useForm hook', () => {
             submitting: false,
         };
 
-        it('getPropsForAlert should return object default values', () => {
+        it('should return object default values', () => {
             const { result } = setup();
             expect(result.current.getPropsForAlert()).toEqual(defaults);
         });
 
-        it('getPropsForAlert should return object submitting=true when isSubmitting is true', () => {
+        it('should return object submitting=true when isSubmitting is true', () => {
             mockFormReturn.formState.isSubmitting = true;
             const { result } = setup();
             expect(result.current.getPropsForAlert()).toEqual({
@@ -295,7 +312,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return object submitSucceeded=true when isSubmitSuccessful is true', () => {
+        it('should return object submitSucceeded=true when isSubmitSuccessful is true', () => {
             mockFormReturn.formState.isSubmitSuccessful = true;
             const { result } = setup();
             expect(result.current.getPropsForAlert()).toEqual({
@@ -304,7 +321,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return object with submitting & submitSucceeded attrs reflecting isSubmitting & isSubmitSuccessful formState values', () => {
+        it('should return object with submitting & submitSucceeded attrs reflecting isSubmitting & isSubmitSuccessful formState values', () => {
             mockFormReturn.formState.isSubmitting = true;
             mockFormReturn.formState.isSubmitSuccessful = true;
             const { result } = setup();
@@ -315,7 +332,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return server error if any', () => {
+        it('should return server error if any', () => {
             const serverError = 'Server error';
             mockServerError(serverError);
 
@@ -326,7 +343,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return server error only when there are validation errors too', () => {
+        it('should return server error only when there are validation errors too', () => {
             const serverError = 'Server error';
             mockServerError(serverError);
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
@@ -338,7 +355,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return validation errors', () => {
+        it('should return validation errors', () => {
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
 
             const { result } = setup();
@@ -348,7 +365,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return validation errors with additional errors', () => {
+        it('should return validation errors with additional errors', () => {
             mockFormReturn.formState.errors.fieldA = { message: 'required' };
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
@@ -364,7 +381,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return additional errors regardless of validation errors', () => {
+        it('should return additional errors regardless of validation errors', () => {
             const formLevelErrorA = { formLevelErrorA: 'form is invalid' };
             const formLevelErrorB = { formLevelErrorB: 'form needs fixing' };
 
@@ -375,7 +392,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return validation errors in the correct order using defaultValues, ignoring some validation errors', () => {
+        it('should return validation errors in the correct order using defaultValues, ignoring some validation errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
                 fez_record_search_key_doi: { rek_doi: { message: 'required' } },
@@ -390,7 +407,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should return validation errors in the correct order using values with additional errors', () => {
+        it('should return validation errors in the correct order using values with additional errors', () => {
             mockFormReturn.formState.errors = {
                 fieldB: { message: 'required' },
                 fez_record_search_key_keywords: [{ rek_keywords: { message: 'required' } }],
@@ -416,7 +433,7 @@ describe('useForm hook', () => {
             });
         });
 
-        it('getPropsForAlert should warn devs when formErrors have missing errors', () => {
+        it('should warn devs when formErrors have missing errors', () => {
             const spy = jest.spyOn(general, 'isDevEnv').mockReturnValue(true);
             const mock = jest.spyOn(console, 'error').mockImplementation(() => {});
             mockFormReturn.formState.errors = {
@@ -440,7 +457,7 @@ describe('useForm hook', () => {
     });
 
     describe('safelyHandleSubmit', () => {
-        it('safelyHandleSubmit should execute given callback with form values', async () => {
+        it('should execute given callback with form values', async () => {
             mockFormReturn.values = { field: 'value' };
             const fn = jest.fn().mockResolvedValue(undefined);
             const { result } = setup();
@@ -454,7 +471,7 @@ describe('useForm hook', () => {
             expect(fn).toHaveBeenCalledWith({ field: 'value' });
         });
 
-        it('safelyHandleSubmit should catch error when executing given callback as set it as a server error', async () => {
+        it('should catch error when executing given callback as set it as a server error', async () => {
             const error = new Error('server error');
             mockFormReturn.values = { field: 'value' };
             const fn = jest.fn().mockRejectedValue(error);

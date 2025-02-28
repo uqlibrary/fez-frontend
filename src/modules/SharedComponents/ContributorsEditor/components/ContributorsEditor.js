@@ -17,8 +17,9 @@ import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsL
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
-import { isArrayDeeplyEqual } from '../../../../helpers/general';
 import _ from 'lodash';
+import { hasAtLeastOneItemSelected, isArrayDeeplyEqual } from '../../../../helpers/general';
+import { locale } from 'locale';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -72,8 +73,10 @@ export class ContributorsEditor extends PureComponent {
 
     constructor(props) {
         super(props);
+        const items = this.getContributorsWithAffiliationsFromProps(props);
         this.state = {
-            contributors: this.getContributorsWithAffiliationsFromProps(props),
+            contributors: items,
+            error: this.props.required && !hasAtLeastOneItemSelected(items) && locale.validationErrors.authorRequired,
             errorMessage: '',
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
@@ -85,8 +88,11 @@ export class ContributorsEditor extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
         if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
+            const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
-                contributors: this.getContributorsWithAffiliationsFromProps(this.props),
+                contributors: items,
+                error:
+                    this.props.required && !hasAtLeastOneItemSelected(items) && locale.validationErrors.authorRequired,
             });
         }
         if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
@@ -468,7 +474,7 @@ export class ContributorsEditor extends PureComponent {
 
                 newList = scaleOfSignificance;
             }
-            const dedupedList = _.uniqWith(newList, (a, b) => a.author.rek_author === b.author.rek_author);
+            const dedupedList = uniqWith(newList, (a, b) => a.author.rek_author === b.author.rek_author);
             this.props.actions.updateAdminScaleSignificance(dedupedList);
 
             return dedupedList;
@@ -500,13 +506,11 @@ export class ContributorsEditor extends PureComponent {
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
 
-        let error = null;
-        if ((meta || {}).error) {
-            error =
-                !!meta.error.props &&
-                React.Children.map(meta.error.props.children, (child, index) => {
-                    return child.type ? React.cloneElement(child, { key: index }) : child;
-                });
+        let error = meta?.error || this.state.error;
+        if (!!meta?.error?.props) {
+            error = React.Children.map(meta.error.props.children, (child, index) => {
+                return child.type ? React.cloneElement(child, { key: index }) : child;
+            });
         }
 
         if (isAdmin) {
@@ -600,9 +604,9 @@ export class ContributorsEditor extends PureComponent {
                         </Grid>
                     </Grid>
                 )}
-                {(meta || {}).error && (
-                    <Typography color="error" variant="caption">
-                        {error || meta.error}
+                {error && (
+                    <Typography color="error" variant="caption" data-testid={`${contributorEditorId}-error`}>
+                        {error}
                     </Typography>
                 )}
             </div>

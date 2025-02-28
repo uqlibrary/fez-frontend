@@ -1,14 +1,13 @@
 import React from 'react';
 import { fireEvent, render, WithReduxStore, WithRouter, act } from 'test-utils';
 import { FavouriteJournals } from '../index';
-import Immutable from 'immutable';
 import mockData from '../../../mock/data/testing/journals/journals';
 import * as redux from 'react-redux';
 
 const setup = ({ state = {} } = {}) => {
     return render(
         <WithRouter>
-            <WithReduxStore initialState={Immutable.Map({ favouriteJournalsReducer: state })}>
+            <WithReduxStore initialState={{ favouriteJournalsReducer: state }}>
                 <FavouriteJournals />
             </WithReduxStore>
         </WithRouter>,

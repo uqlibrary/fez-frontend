@@ -1,16 +1,11 @@
 import React from 'react';
 import PageNotFound from './PageNotFound';
-
 import { pathConfig } from 'config/pathConfig';
-
 import { accounts } from 'mock/data/account';
-
 import { render, WithReduxStore, WithRouter, act } from 'test-utils';
-import Immutable from 'immutable';
 import { useLocation } from 'react-router-dom';
 import * as Context from 'context';
 import * as FavouriteSearchAction from 'actions/favouriteSearch';
-
 import * as repositories from 'repositories';
 import { waitForElementToBeRemoved, waitFor } from '@testing-library/dom';
 
@@ -21,7 +16,7 @@ jest.mock('react-router-dom', () => ({
 }));
 function setup(state = {}, renderer = render) {
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <PageNotFound />
             </WithRouter>
