@@ -49,14 +49,6 @@ describe('CopyToCommunityForm', () => {
 
     beforeEach(() => {
         api.reset();
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
     });
 
     it('should correctly submit form and display success info for copy to collection form', async () => {

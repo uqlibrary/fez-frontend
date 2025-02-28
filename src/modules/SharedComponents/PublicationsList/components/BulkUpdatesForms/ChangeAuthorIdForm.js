@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
@@ -18,7 +18,11 @@ import { useWatch } from 'react-hook-form';
 export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const dispatch = useDispatch();
-    const authorNames = React.createRef(null);
+    const authorNames = useRef(
+        Object.values(recordsSelected)?.map?.(record =>
+            record.fez_record_search_key_author.map(author => author.rek_author),
+        ),
+    );
     const [authorNameNoMatchCount, setAuthorNameNoMatchCount] = React.useState(null);
     const {
         control,
@@ -33,12 +37,8 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
         name: ['search_author_by', 'search_author.author'],
     });
 
-    authorNames.current = Object.values(recordsSelected).map(record =>
-        record.fez_record_search_key_author.map(author => author.rek_author),
-    );
-
     // handles "search author by" option changes
-    React.useEffect(() => {
+    useEffect(() => {
         // remove hidden field
         unregister(searchAuthorBy !== SEARCH_BY_AUTHOR_NAME ? 'search_author.author' : 'search_author.author_id');
         // trigger validation for added field
@@ -47,14 +47,14 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
     }, [searchAuthorBy]);
 
     // handles raising alert about unmatched authors when searching by authors name
-    React.useEffect(() => {
+    useEffect(() => {
         if (!searchAuthorByName) return;
         const count = authorNames.current.filter(author => !author.includes(searchAuthorByName)).length;
         setAuthorNameNoMatchCount(count);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchAuthorByName]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!isSubmitSuccessful) return;
         setTimeout(onCancel, 2000);
     }, [isSubmitSuccessful, onCancel]);

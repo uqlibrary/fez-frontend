@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { useDispatch } from 'react-redux';
@@ -16,8 +16,8 @@ import { useWatch } from 'react-hook-form';
 export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom }) => {
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
     const dispatch = useDispatch();
-    const [alertUser, setAlertUser] = React.useState(null);
-    const records = React.useRef(
+    const [alertUser, setAlertUser] = useState(null);
+    const records = useRef(
         Object.values(recordsSelected).map(record =>
             record.fez_record_search_key_ismemberof.map(community => community.rek_ismemberof),
         ),
@@ -31,7 +31,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
     const communities = useWatch({ control, name: 'communities' });
     const idText = isRemoveFrom ? 'remove-from' : 'copy-to';
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isRemoveFrom) {
             const communitySet = Immutable.Set(
                 (!!communities && communities.map(community => community.rek_pid)) || [],
@@ -45,7 +45,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [communities]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!isSubmitSuccessful) return;
         setTimeout(onCancel, 2000);
     }, [isSubmitSuccessful, onCancel]);

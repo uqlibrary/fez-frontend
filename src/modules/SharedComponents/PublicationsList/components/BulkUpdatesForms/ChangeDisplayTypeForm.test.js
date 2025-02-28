@@ -14,7 +14,6 @@ import {
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
 } from 'test-utils';
-import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
@@ -34,16 +33,15 @@ function setup(testProps = {}) {
 
 describe('ChangeDisplayTypeForm', () => {
     const assertFormInitialState = async () => {
-        // await waitForText(
-        //     new RegExp(locale.components.bulkUpdates.bulkUpdatesForms.changeDisplayTypeForm.alert.message, 'i'),
-        // );
         await expectRequiredFieldError('rek-display-type');
         await expectMissingRequiredFieldError('rek-subtype-select');
         assertDisabled('change-display-type-submit');
     };
 
+    beforeEach(() => api.reset());
+
     it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+        api.mock.records.bulkUpdate();
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -75,7 +73,7 @@ describe('ChangeDisplayTypeForm', () => {
     });
 
     it('should submit form and display error', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500, {});
+        api.mock.records.fail.bulkUpdate();
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 

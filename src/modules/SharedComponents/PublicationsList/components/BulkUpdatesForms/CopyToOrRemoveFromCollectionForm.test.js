@@ -51,21 +51,12 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     const assertCopyToFormCanBeSubmitted = async () => assertFormCanBeSubmitted('copy-to');
     const assertRemoveFromFormCanBeSubmitted = async () => assertFormCanBeSubmitted('remove-from');
 
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
+    beforeEach(() => api.reset());
 
     it('should correctly submit form and display success info for copy to collection form', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -95,9 +86,9 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     });
 
     it('should submit form and display error for copy to collection form', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -127,9 +118,9 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     });
 
     it('should correctly submit form and display success info for remove from collection', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -159,9 +150,9 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     });
 
     it('should submit form and display error for remove from collection', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -191,7 +182,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
     });
 
     it('should display warning alert to user if work is being removed from all collections', async () => {
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
@@ -216,7 +207,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
         expectApiRequestCountToBe('patch', api.url.records.create, 0);
     });
     it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )

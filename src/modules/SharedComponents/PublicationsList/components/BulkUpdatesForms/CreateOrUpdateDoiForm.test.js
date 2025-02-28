@@ -30,16 +30,7 @@ function setup(testProps = {}) {
 }
 
 describe('CreateOrUpdateDoiForm', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
+    beforeEach(() => api.reset());
 
     it('should not show collection warning when no collections are selected', async () => {
         const { getByTestId } = setup();
@@ -59,7 +50,7 @@ describe('CreateOrUpdateDoiForm', () => {
     });
 
     it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(200, {});
+        api.mock.records.bulkUpdate();
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');
@@ -75,7 +66,7 @@ describe('CreateOrUpdateDoiForm', () => {
     });
 
     it('should submit form and display error ', async () => {
-        mockApi.onPatch(api.url.records.create).replyOnce(500, {});
+        api.mock.records.fail.bulkUpdate();
         const { getByTestId } = setup();
         // assert initial state of the form
         expect(getByTestId('create-or-update-doi-submit')).not.toHaveAttribute('disabled');

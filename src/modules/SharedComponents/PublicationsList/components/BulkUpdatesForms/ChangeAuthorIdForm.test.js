@@ -34,7 +34,7 @@ function setup(testProps = {}) {
                 ],
                 fez_record_search_key_author_id: [
                     { rek_author_id: null },
-                    { rek_author_id: 2, rek_author_id_order: 2, rek_author_id_id: 22 },
+                    { rek_author_id: 123, rek_author_id_order: 2 },
                 ],
             },
             'UQ:4321': {
@@ -42,7 +42,7 @@ function setup(testProps = {}) {
                 fez_record_search_key_author: [{ rek_author: 'Testing', rek_author_order: 1 }],
                 fez_record_search_key_author_id: [
                     { rek_author_id: null },
-                    { rek_author_id: 2, rek_author_id_order: 2, rek_author_id_id: 22 },
+                    { rek_author_id: 2, rek_author_id_order: 2 },
                 ],
             },
         },
@@ -71,22 +71,15 @@ describe('ChangeAuthorIdForm', () => {
         assertDisabled('change-author-id-submit');
     };
 
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
+    beforeEach(() => api.reset());
 
     it('should correctly search by author name, submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
-        });
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
+            });
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -124,10 +117,12 @@ describe('ChangeAuthorIdForm', () => {
     });
 
     it('should correctly search by author name, submit form and display error', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
-        });
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
+            });
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -158,14 +153,17 @@ describe('ChangeAuthorIdForm', () => {
     });
 
     it('should correctly search by author id, submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
-        });
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 123, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
-        });
-        const { getByTestId, getByText, queryByTestId } = setup({});
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
+            })
+            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 123, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
+            });
+        const { getByTestId, getByText } = setup({});
         await assertFormInitialState();
 
         // interact with the form
@@ -200,13 +198,16 @@ describe('ChangeAuthorIdForm', () => {
     });
 
     it('should correctly search by author id, submit form and display error', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500);
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
-        });
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 123, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
-        });
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 111, value: 'Testing', aut_id: 111, aut_org_username: 'uqtest' }],
+            })
+            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 123, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
+            });
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -241,9 +242,11 @@ describe('ChangeAuthorIdForm', () => {
     });
 
     it('should correctly clear author ID field', async () => {
-        mockApi.onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl).replyOnce(200, {
-            data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
-        });
+        api.mock.instance
+            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: '.*' }).apiUrl)
+            .replyOnce(200, {
+                data: [{ id: 111, value: 'Testing', aut_id: 123, aut_org_username: 'uqtest' }],
+            });
         const { getByTestId, getByText, getAllByTitle } = setup();
 
         fireEvent.mouseDown(getByTestId('search-author-by-select'));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
@@ -33,11 +33,11 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
     const subtypes = usePublicationSubtype(displayType || null, true);
 
     // handles displayType changes
-    React.useEffect(() => {
+    useEffect(() => {
         setValue('rek_subtype', null);
     }, [displayType, setValue]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!isSubmitSuccessful) return;
         setTimeout(onCancel, 2000);
         // eslint-disable-next-line react-hooks/exhaustive-deps

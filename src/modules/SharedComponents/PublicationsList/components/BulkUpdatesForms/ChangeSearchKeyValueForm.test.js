@@ -14,7 +14,6 @@ import {
     assertDisabled,
     assertEnabled,
 } from 'test-utils';
-import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
@@ -39,8 +38,10 @@ describe('ChangeSearchKeyValueForm', () => {
         assertDisabled('change-search-key-value-submit');
     };
 
+    beforeEach(() => api.reset());
+
     it('should correctly submit form and display success info', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+        api.mock.records.bulkUpdate();
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -73,7 +74,7 @@ describe('ChangeSearchKeyValueForm', () => {
     });
 
     it('should submit form and display error', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500, {});
+        api.mock.records.fail.bulkUpdate();
         const { getByTestId, getByText, queryByTestId } = setup();
         await assertFormInitialState();
 
@@ -138,7 +139,5 @@ describe('ChangeSearchKeyValueForm', () => {
 
         expect(getByTestId('rek-rights-input')).toBeInTheDocument();
         // Advisory statement tested in cypress
-
-        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 });

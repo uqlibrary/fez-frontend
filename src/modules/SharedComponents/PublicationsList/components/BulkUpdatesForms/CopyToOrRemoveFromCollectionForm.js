@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
@@ -16,11 +16,12 @@ import { useWatch } from 'react-hook-form';
 export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recordsSelected }) => {
     const dispatch = useDispatch();
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const records = React.createRef(null);
-    const [alertUser, setAlertUser] = React.useState(null);
-    records.current = Object.values(recordsSelected).map(record =>
-        record.fez_record_search_key_ismemberof.map(collection => collection.rek_ismemberof),
+    const records = useRef(
+        Object.values(recordsSelected)?.map?.(record =>
+            record.fez_record_search_key_ismemberof.map(collection => collection.rek_ismemberof),
+        ),
     );
+    const [alertUser, setAlertUser] = useState(null);
     const {
         control,
         safelyHandleSubmit,
@@ -29,7 +30,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
     const collections = useWatch({ control, name: 'collections' });
     const idText = isRemoveFrom ? 'remove-from' : 'copy-to';
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isRemoveFrom) {
             const collectionsSet = Immutable.Set(
                 (!!collections && collections.map(collection => collection.rek_pid)) || [],
@@ -43,7 +44,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [collections]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!isSubmitSuccessful) return;
         setTimeout(onCancel, 2000);
     }, [isSubmitSuccessful, onCancel]);

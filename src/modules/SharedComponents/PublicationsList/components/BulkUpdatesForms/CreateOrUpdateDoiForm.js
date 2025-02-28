@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import Grid from '@mui/material/Grid';
@@ -24,7 +24,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                 record.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION,
         ).length > 0;
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (!isSubmitSuccessful) return;
         setTimeout(onCancel, 2000);
         // eslint-disable-next-line react-hooks/exhaustive-deps
