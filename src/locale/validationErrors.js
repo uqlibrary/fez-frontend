@@ -17,6 +17,7 @@ export default {
         url: 'URL is not valid',
         doi: 'DOI is not valid',
         orcid: 'ORCiD is not valid',
+        raid: 'RAiD value is not valid',
         ror: 'ROR is not valid',
         doiExists: 'DOI is assigned to another work already',
         researcherId: 'ResearcherId is not valid',

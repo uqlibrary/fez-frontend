@@ -705,6 +705,21 @@ export default {
                 placeholder: '',
             },
         },
+        fez_record_search_key_raid: {
+            component: ListEditorField,
+            componentProps: {
+                remindToAdd: true,
+                name: 'bibliographicSection.fez_record_search_key_raid',
+                isValid: validation.raid,
+                searchKey: {
+                    value: 'rek_raid',
+                    order: 'rek_raid_order',
+                },
+                listEditorId: 'rek-raid',
+                locale: locale.components.raidForm.field,
+                canEdit: true,
+            },
+        },
         fez_record_search_key_total_pages: {
             component: GenericTextField,
             componentProps: {

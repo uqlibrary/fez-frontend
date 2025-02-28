@@ -1278,6 +1278,57 @@ export default {
                 },
             },
         },
+        raidForm: {
+            title: 'RAiD',
+            text: 'You can add RAiD values',
+            // help: {
+            //     title: 'RAiD value',
+            //     text: 'Acceptable RAiD formats are....',
+            //     buttonLabel: 'CLOSE'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'RAiD value',
+                        inputFieldHint: 'Enter RAiD, e.g. {prefix}/{suffix}',
+                        addButtonLabel: <span>Add&nbsp;RAiD</span>,
+                        editButtonLabel: <span>Update&nbsp;RAiD</span>,
+                        remindToAddText: (
+                            <span>
+                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
+                            </span>
+                        ),
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'RAiD',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        editHint: 'Edit this item',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         scaleOfSignificanceListForm: {
             title: 'Manage scale/significance of work and creator contribution statement',
             field: {
@@ -2553,6 +2604,17 @@ export default {
                         validation: ['required'],
                         id: 'rek-org-unit-name',
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
+                    },
+                    rek_raid: {
+                        order: 8.5,
+                        map: '',
+                        title: 'RAiD',
+                        combiner: 'is',
+                        id: 'rek-raid',
+                        type: 'TextField',
+                        hint: 'Add a RAiD',
+                        validation: ['required', 'raid'],
+                        ariaLabel: 'Type a RAiD to search for',
                     },
                     rek_display_type: {
                         order: 20,
