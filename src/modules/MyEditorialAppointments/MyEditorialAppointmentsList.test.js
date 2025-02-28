@@ -21,17 +21,6 @@ function setup(testProps = {}) {
 }
 
 describe('MyEditorialAppointmentsList', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     it('should render empty list', () => {
         const { getByText } = setup();
         expect(getByText('No records to display')).toBeInTheDocument();

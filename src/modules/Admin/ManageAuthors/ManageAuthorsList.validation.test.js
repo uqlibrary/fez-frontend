@@ -21,15 +21,6 @@ function setup(testProps = {}) {
 
 describe('ManageAuthorsList', () => {
     beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-
         const scrollIntoViewMock = jest.fn();
         window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
 
