@@ -1429,7 +1429,11 @@ exports[`Additional Information Component  should not render map with empty geo 
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -1452,7 +1456,11 @@ exports[`Additional Information Component  should not render map with empty geo 
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -1468,7 +1476,11 @@ exports[`Additional Information Component  should not render map with empty geo 
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -3164,7 +3176,11 @@ exports[`Additional Information Component  should render component with audio do
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -3187,7 +3203,11 @@ exports[`Additional Information Component  should render component with audio do
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -3203,7 +3223,11 @@ exports[`Additional Information Component  should render component with audio do
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -3823,7 +3847,11 @@ exports[`Additional Information Component  should render component with book 1`]
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -3846,7 +3874,11 @@ exports[`Additional Information Component  should render component with book 1`]
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -3862,7 +3894,11 @@ exports[`Additional Information Component  should render component with book 1`]
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -4836,7 +4872,11 @@ exports[`Additional Information Component  should render component with book cha
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -4859,7 +4899,11 @@ exports[`Additional Information Component  should render component with book cha
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -4875,7 +4919,11 @@ exports[`Additional Information Component  should render component with book cha
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -5774,7 +5822,11 @@ exports[`Additional Information Component  should render component with conferen
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -5797,7 +5849,11 @@ exports[`Additional Information Component  should render component with conferen
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -5813,7 +5869,11 @@ exports[`Additional Information Component  should render component with conferen
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -12147,7 +12207,11 @@ exports[`Additional Information Component  should render component with design d
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -12170,7 +12234,11 @@ exports[`Additional Information Component  should render component with design d
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -12186,7 +12254,11 @@ exports[`Additional Information Component  should render component with design d
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -13721,7 +13793,11 @@ exports[`Additional Information Component  should render component with journal 
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -13744,7 +13820,11 @@ exports[`Additional Information Component  should render component with journal 
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -13760,7 +13840,11 @@ exports[`Additional Information Component  should render component with journal 
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -15896,7 +15980,11 @@ exports[`Additional Information Component  should render component with newspape
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -15919,7 +16007,11 @@ exports[`Additional Information Component  should render component with newspape
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -15935,7 +16027,11 @@ exports[`Additional Information Component  should render component with newspape
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -16441,7 +16537,11 @@ exports[`Additional Information Component  should render component with patent 1
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -16464,7 +16564,11 @@ exports[`Additional Information Component  should render component with patent 1
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -16480,7 +16584,11 @@ exports[`Additional Information Component  should render component with patent 1
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -20314,7 +20422,11 @@ exports[`Additional Information Component  should render component with research
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -20337,7 +20449,11 @@ exports[`Additional Information Component  should render component with research
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -20353,7 +20469,11 @@ exports[`Additional Information Component  should render component with research
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -21246,7 +21366,11 @@ exports[`Additional Information Component  should render component with video do
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -21269,7 +21393,11 @@ exports[`Additional Information Component  should render component with video do
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -21285,7 +21413,11 @@ exports[`Additional Information Component  should render component with video do
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
@@ -24341,7 +24473,11 @@ exports[`Additional Information Component  should render map with geo coordinate
                     <span
                       style="margin-right: 2px;"
                     >
-                      01 - No poverty
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456994&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=01+-+No+poverty&searchQueryParams%5Ball%5D="
+                      >
+                        01 - No poverty
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -24364,7 +24500,11 @@ exports[`Additional Information Component  should render map with geo coordinate
                     <span
                       style="margin-right: 2px;"
                     >
-                      02 - Zero Hunger
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456995&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=02+-+Zero+Hunger&searchQueryParams%5Ball%5D="
+                      >
+                        02 - Zero Hunger
+                      </a>
                     </span>
                     <span
                       aria-label="Dimensions"
@@ -24380,7 +24520,11 @@ exports[`Additional Information Component  should render map with geo coordinate
                     <span
                       style="margin-right: 2px;"
                     >
-                      03 - Good health and well-being
+                      <a
+                        href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal%5D=456996&activeFacets%5Bfilters%5D%5BSustainable+Development+Goal+(lookup)%5D=03+-+Good+health+and+well-being&searchQueryParams%5Ball%5D="
+                      >
+                        03 - Good health and well-being
+                      </a>
                     </span>
                     <span
                       aria-label="Elsevier"
