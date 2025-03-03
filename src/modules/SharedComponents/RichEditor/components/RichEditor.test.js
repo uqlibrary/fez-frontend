@@ -124,6 +124,34 @@ describe('RichEditor', () => {
         const { container } = setup({ value: 'test' });
         expect(container).toMatchSnapshot();
     });
+    it('should render input text value', () => {
+        const { container } = setup({ input: { value: 'test' } });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render input html text value', () => {
+        const { container } = setup({ input: { value: { htmlText: 'test' } } });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render input plain text value', () => {
+        const { container } = setup({ input: { value: { plainText: 'test' } } });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render redux value using htmlText', () => {
+        const { container } = setup({ value: Immutable.Map({ htmlText: 'test' }) });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render redux value using plainText', () => {
+        const { container } = setup({ value: Immutable.Map({ plainText: 'test' }) });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render input redux value using htmlText', () => {
+        const { container } = setup({ input: { value: Immutable.Map({ htmlText: 'test' }) } });
+        expect(container).toMatchSnapshot();
+    });
+    it('should render input redux value using plainText', () => {
+        const { container } = setup({ input: { value: Immutable.Map({ plainText: 'test' }) } });
+        expect(container).toMatchSnapshot();
+    });
 
     it('should handle null value', () => {
         const { container } = setup({ value: null });

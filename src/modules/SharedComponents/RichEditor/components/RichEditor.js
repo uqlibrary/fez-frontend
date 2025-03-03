@@ -59,18 +59,21 @@ const RichEditor = ({
 
     function getContent() {
         let dataForEditor = '';
-        /* istanbul ignore else */
-        if (input?.value?.size > 0) {
-            dataForEditor = input.value.get('htmlText') || input.value.get('plainText') || '';
-        } else if (value) {
-            if (!!value.get && !!value.get('htmlText')) {
-                dataForEditor = value.get('htmlText');
-            } else if (!!value.htmlText) {
-                dataForEditor = value.htmlText;
-            } else if (typeof value === 'string' && value.length > 0) {
-                dataForEditor = value;
-            }
+        if (typeof value === 'string' && value.length > 0) {
+            dataForEditor = value;
+        } else if (!!value?.htmlText || !!value?.plainText) {
+            dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
+        } else if (!!value?.get) {
+            dataForEditor = value.get('htmlText') || value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
+        } else if (typeof input?.value === 'string') {
+            dataForEditor = input.value;
+        } else if (!!input?.value?.htmlText || !!input?.value?.plainText) {
+            dataForEditor = input.value.htmlText || input.value.plainText || /* istanbul ignore next */ '';
+        } else if (input?.value?.get) {
+            dataForEditor =
+                input.value.get('htmlText') || input.value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
         }
+
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
     }
 
