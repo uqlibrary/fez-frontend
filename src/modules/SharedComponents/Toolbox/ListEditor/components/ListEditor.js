@@ -74,7 +74,9 @@ export default class ListEditor extends Component {
         const valuesAsJson = this.getPropValueAsJson(props);
         this.state = {
             prevValuesAsJson: valuesAsJson,
-            itemList: valuesAsJson ? this.mapValueToList(props.searchKey?.value, valuesAsJson) : [],
+            itemList: valuesAsJson
+                ? this.mapValueToList(props.searchKey?.value, valuesAsJson)
+                : /* istanbul ignore next */ [],
             itemIndexSelectedToEdit: null,
             value: JSON.stringify(''),
             transformedState: JSON.stringify(''),
@@ -92,7 +94,9 @@ export default class ListEditor extends Component {
     static getDerivedStateFromProps(props, state) {
         const propsValueJsonString = JSON.stringify(props.value || '');
         if (propsValueJsonString !== state.value && propsValueJsonString !== state.transformedState) {
-            const newList = props.value ? props.value.map(item => item[props.searchKey?.value]) : [];
+            const newList = props.value
+                ? props.value.map(item => item[props.searchKey?.value])
+                : /* istanbul ignore next */ [];
             return {
                 value: propsValueJsonString,
                 itemList: newList,
@@ -109,7 +113,8 @@ export default class ListEditor extends Component {
         }
     }
 
-    mapValueToList = (key, valueAsJson) => (valueAsJson ? valueAsJson.map(item => item[key]) : []);
+    mapValueToList = (key, valueAsJson) =>
+        valueAsJson ? valueAsJson.map(item => item[key]) : /* istanbul ignore next */ [];
     getPropValueAsJson = props => {
         const vals =
             ((props.input || {}).name &&

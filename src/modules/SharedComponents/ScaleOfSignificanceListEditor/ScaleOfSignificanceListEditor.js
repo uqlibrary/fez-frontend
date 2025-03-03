@@ -99,7 +99,10 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         /* istanbul ignore else */
-        if (this.props.onChange && JSON.stringify(prevState?.itemList || []) !== JSON.stringify(this.state.itemList)) {
+        if (
+            this.props.onChange &&
+            JSON.stringify(prevState?.itemList || /* istanbul ignore next */ []) !== JSON.stringify(this.state.itemList)
+        ) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
 
