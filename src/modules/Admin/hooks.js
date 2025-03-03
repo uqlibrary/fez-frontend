@@ -23,7 +23,7 @@ export const useInitialFormValues = (recordToView, createMode) => {
     const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
     return (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
 };
-export const useRecord = (displayType, subType, createMode) => {
+export const useRecord = createMode => {
     const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
     const {
         recordToView,
@@ -51,13 +51,13 @@ export const useRecord = (displayType, subType, createMode) => {
     };
 };
 
-export const useRecordToView = (recordToView, createMode, methods) => {
+export const useRecordToView = (recordToView, createMode, form) => {
     const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : {}));
 
     if (!createMode) return recordToView;
 
-    const displayType = methods.getValues('rek_display_type');
-    const selectedSubType = methods.getValues('adminSection.rek_subtype');
+    const displayType = form.getValues('rek_display_type');
+    const selectedSubType = form.getValues('adminSection.rek_subtype');
 
     return {
         rek_pid: newRecord?.rek_pid ?? null,
@@ -114,7 +114,7 @@ export const useFormOnChangeHook = form => {
                 { shouldValidate: true, shouldDirty: true },
             );
         }
-        const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || [];
+        const bibliographicSectionIssns = form.getValues('bibliographicSection.issns') || /* istanbul ignore next */ [];
         // create new array, filter out any dupes
         const updatedBibliographicSectionIssns = unionBy(bibliographicSectionIssns, issns, 'rek_value.key');
         form.setValue('bibliographicSection.issns', updatedBibliographicSectionIssns);
