@@ -10,11 +10,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import { validation, publicationTypes, pathConfig } from 'config';
-import {
-    DOCUMENT_TYPES_EDIT_ONLY,
-    NEW_DOCTYPES_OPTIONS,
-    /* DOCTYPE_SUBTYPE_MAPPING,,*/ NTRO_SUBTYPES,
-} from 'config/general';
+import { DOCUMENT_TYPES_EDIT_ONLY, NEW_DOCTYPES_OPTIONS, NTRO_SUBTYPES } from 'config/general';
 import locale from 'locale/pages';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -25,11 +21,11 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 
 export const AddSection = ({ onCreate, disabled = false }) => {
     const navigate = useNavigate();
-    const attributes = useFormContext();
-    const displayType = attributes.getValues('rek_display_type');
+    const form = useFormContext();
+    const displayType = form.getValues('rek_display_type');
     const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms }, true)[displayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
-    const publicationSubtype = hasSubtypes ? attributes.getValues('adminSection.rek_subtype') : null;
+    const publicationSubtype = hasSubtypes ? form.getValues('adminSection.rek_subtype') : null;
     const _subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
     const subtypes =
         (!!publicationSubtype &&
@@ -38,12 +34,13 @@ export const AddSection = ({ onCreate, disabled = false }) => {
             _subtypes.filter(type => NTRO_SUBTYPES.includes(type))) ||
         _subtypes ||
         null;
-    const collections = attributes.getValues('adminSection.collections');
+    const collections = form.getValues('adminSection.collections');
 
     let hasDefaultDocTypeSubType = false;
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
         hasDefaultDocTypeSubType = true;
     }
+
     const publicationSubtypeItems = subtypes
         ? subtypes.map((item, index) => (
               <MenuItem value={item} key={index}>
@@ -84,7 +81,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                     <Field
                                         name="adminSection.collections"
                                         collectionFieldId="rek-ismemberof"
-                                        control={attributes.control}
+                                        control={form.control}
                                         component={CollectionField}
                                         disabled={disabled}
                                         floatingLabelText={
@@ -94,10 +91,10 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         required
                                         validate={[validation.requiredList]}
                                         fullWidth
-                                        {...(!!attributes.getFieldState('adminSection.collections').error
+                                        {...(!!form.getFieldState('adminSection.collections').error
                                             ? {
                                                   error: true,
-                                                  errorText: attributes.getFieldState('adminSection.collections').error,
+                                                  errorText: form.getFieldState('adminSection.collections').error,
                                               }
                                             : {})}
                                     />
@@ -106,7 +103,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                     <Field
                                         name="rek_display_type"
                                         selectFieldId="rek-display-type"
-                                        control={attributes.control}
+                                        control={form.control}
                                         component={SelectField}
                                         disabled={disabled}
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
@@ -114,10 +111,10 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         required
                                         validate={[validation.required]}
                                         value={selectedPublicationType}
-                                        {...(!!attributes.getFieldState('rek_display_type').error
+                                        {...(!!form.getFieldState('rek_display_type').error
                                             ? {
                                                   error: true,
-                                                  errorText: attributes.getFieldState('rek_display_type').error,
+                                                  errorText: form.getFieldState('rek_display_type').error,
                                               }
                                             : {})}
                                     >
@@ -131,7 +128,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                 id="rek-subtype"
                                                 name="adminSection.rek_subtype"
                                                 selectFieldId="rek-subtype"
-                                                control={attributes.control}
+                                                control={form.control}
                                                 component={SelectField}
                                                 disabled={disabled}
                                                 value={publicationSubtype}
@@ -139,12 +136,11 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                 required
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
-                                                {...(!!attributes.getFieldState('adminSection.rek_subtype').error
+                                                {...(!!form.getFieldState('adminSection.rek_subtype').error
                                                     ? {
                                                           error: true,
-                                                          errorText: attributes.getFieldState(
-                                                              'adminSection.rek_subtype',
-                                                          ).error,
+                                                          errorText: form.getFieldState('adminSection.rek_subtype')
+                                                              .error,
                                                       }
                                                     : {})}
                                             >

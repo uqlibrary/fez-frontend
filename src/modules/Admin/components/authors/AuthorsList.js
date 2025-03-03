@@ -479,7 +479,6 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         return (
                             <MTableAction
                                 {...props}
-                                onColumnsChanged={() => {}}
                                 action={{
                                     ...restAction,
                                     icon: () => (
@@ -496,7 +495,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                             />
                         );
                     } else {
-                        return <MTableAction {...props} onColumnsChanged={() => {}} />;
+                        return <MTableAction {...props} />;
                     }
                 },
                 Row: props => (

@@ -110,7 +110,7 @@ export const AdminContainer = ({ createMode = false }) => {
     ]);
 
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
-    const destroy = () => form.reset();
+    const destroy = React.useCallback(() => form.reset(), [form]);
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));

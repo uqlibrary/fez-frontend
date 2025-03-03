@@ -121,10 +121,11 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
+    /* istanbul ignore next */
     if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
-    return (adminInterfaceConfig[record.rek_display_type] || {})
+    return (adminInterfaceConfig[record.rek_display_type] || /* istanbul ignore next */ {})
         [tab](tabParams(record))
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
@@ -138,7 +139,9 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 
 export const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
-    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
+    const validDataStreams = (dataStreams || /* istanbul ignore next */ []).filter(
+        isFileValid(viewRecordsConfig, true, true),
+    );
     return {
         initialValues: {
             pid: recordToView.rek_pid,

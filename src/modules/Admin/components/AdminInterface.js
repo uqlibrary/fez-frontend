@@ -84,6 +84,7 @@ const getActiveTabs = tabs => Object.keys(tabs).filter(tab => tabs[tab].activate
 export const AdminInterface = ({
     authorDetails,
     handleSubmit: onSubmit,
+    destroy,
     createMode,
     isDeleted,
     isJobCreated,
@@ -97,7 +98,6 @@ export const AdminInterface = ({
 
     const {
         handleSubmit,
-        reset,
         setValue,
         formState: { isSubmitting, isSubmitSuccessful, isDirty },
     } = useFormContext();
@@ -149,9 +149,9 @@ export const AdminInterface = ({
     // clear form state on unmount, so the form state from admin edit form wont show up in the add form
     React.useEffect(() => {
         return () => {
-            reset();
+            destroy?.();
         };
-    }, [reset]);
+    }, [destroy]);
 
     React.useEffect(() => {
         if (!isSubmitting && isSubmitSuccessful && successConfirmationRef.current) {
@@ -485,6 +485,7 @@ AdminInterface.propTypes = {
     isJobCreated: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     handleSubmit: PropTypes.func,
+    destroy: PropTypes.func,
     locked: PropTypes.bool,
     tabs: PropTypes.object,
     error: PropTypes.object,
