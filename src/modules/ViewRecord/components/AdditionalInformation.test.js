@@ -213,7 +213,7 @@ describe('Additional Information Component ', () => {
         const { getByTestId } = setup({
             publication: {
                 ...records.instrument,
-                ...{ fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }] },
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
         expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://orcid.org/0000-0000-0000-0001');
@@ -224,7 +224,7 @@ describe('Additional Information Component ', () => {
         const { getByTestId } = setup({
             publication: {
                 ...records.instrument,
-                ...{ fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }] },
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
         expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://ror.org/02mhbdp94');
