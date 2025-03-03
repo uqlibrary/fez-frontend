@@ -902,7 +902,7 @@ describe('transformers', () => {
                 },
                 {
                     rek_order: 2,
-                    rek_value: { key: 456999, value: 'Incites', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                    rek_value: { key: 456999, value: 'WOS', sdgCVOId: 456995, group: '02 - Zero Hunger' },
                 },
                 {
                     rek_order: 2,

@@ -1,5 +1,7 @@
+import { sdgSKs } from '../testing/records';
+
 export default {
-    "rek_pid": "UQ:9227267",
+        "rek_pid": "UQ:9227267",
         "rek_title_xsdmf_id": null,
         "rek_title": "The role of dynamic capabilities in tourism crisis and disaster resilience",
         "rek_description_xsdmf_id": null,
@@ -309,24 +311,7 @@ export default {
             }
         ],
         "fez_record_search_key_supervisor_id": [],
-        "fez_record_search_key_sdg": [
-            {
-                "rek_sdg": 456994,
-                "rek_sdg_order": 1,
-                "rek_sdg_lookup": "01 - No poverty"
-            }
-        ],
-        "fez_record_search_key_sdg_source": [
-            {
-                "rek_sdg_source": 456995,
-                "rek_sdg_source_order": 1,
-                "rek_sdg_source_lookup": "Dimensions",
-                "sdg": {
-                    "cvo_id": 456994,
-                    "cvo_title": "01 - No poverty",
-                }
-            }
-        ],
+        ...sdgSKs,
         "fez_record_search_key_total_pages": {
             "rek_total_pages_id": 5928783,
             "rek_total_pages_pid": "UQ:9227267",
