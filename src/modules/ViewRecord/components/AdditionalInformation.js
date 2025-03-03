@@ -15,11 +15,19 @@ import { parseHtmlToJSX } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
+import {
+    CURRENT_LICENCES,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    PLACEHOLDER_ISO8601_ZULU_DATE,
+    PUBLICATION_TYPE_INSTRUMENT,
+    ORCID_BASE_URL,
+    ROR_BASE_URL,
+} from 'config/general';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { isValidOrcid, isValidROR } from 'config/validation';
 
 export const formatDate = (date, format = 'YYYY-MM-DD') => {
     return <DateCitationView format={format} date={date} prefix={''} suffix={''} data-testid="rek-date" />;
@@ -214,10 +222,32 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     // TODO: display original contact email for admin users
-    const renderContactEmail = () => {
+    const renderContactEmail = (objects, subKey) => {
+        const isInstrument = publication.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
+        const email = isInstrument ? objects[0][subKey] : viewRecordsConfig.genericDataEmail;
         return (
-            <a href={`mailto:${viewRecordsConfig.genericDataEmail}`} data-testid="rek-contact-details-email">
-                {viewRecordsConfig.genericDataEmail}
+            <a href={`mailto:${email}`} data-testid="rek-contact-details-email">
+                {email}
+            </a>
+        );
+    };
+
+    const renderContributorIdentifier = (objects, subKey) => {
+        const id = objects[0][subKey];
+        let value = objects[0][subKey];
+
+        if (isValidOrcid(id)) {
+            value = `${ORCID_BASE_URL}/${value}`;
+        } else {
+            /* istanbul ignore else */
+            if (isValidROR(id)) {
+                value = `${ROR_BASE_URL}/${value}`;
+            }
+        }
+
+        return (
+            <a href={`${value}`} target="blank" data-testid="rek-contributor-identifier">
+                {value}
             </a>
         );
     };
@@ -291,7 +321,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_alternate_genre':
                 return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_contact_details_email':
-                return renderContactEmail();
+                return renderContactEmail(objects, subkey);
+            case 'rek_contributor_identifier':
+                return renderContributorIdentifier(objects, subkey);
             case 'rek_geographic_area':
                 return renderMap(objects);
             case 'rek_raid':
