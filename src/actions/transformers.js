@@ -655,6 +655,36 @@ export const getRecordSubjectSearchKey = subject => {
 };
 
 /**
+ * @param {Array<{rek_value: {key: string, value: string}, rek_order: number}>} items
+ * @returns {Object{fez_record_search_key_sdg:Array<{rek_sdg: string, rek_sdg_order: number}>},
+ * fez_record_search_key_sdg_source:Array<{rek_sdg: string, rek_sdg_order: number}>}}
+ */
+export const getSDGSearchKeys = items => {
+    if (!items) return {};
+
+    const sdgCvoIds = items
+        .map(item => item?.rek_value?.sdgCVOId)
+        .filter((item, index, items) => items.indexOf(item) === index) // remove dups
+        .sort();
+    if (!sdgCvoIds.length) return {};
+
+    return {
+        // fill SDG SK according provided SDG source values; each belong to a single SDG
+        fez_record_search_key_sdg: sdgCvoIds.map((value, index) => ({
+            rek_sdg: value,
+            rek_sdg_order: index + 1,
+        })),
+        // ignore given order, order by CVO id instead
+        fez_record_search_key_sdg_source: items
+            .sort((a, b) => a.rek_value.key - b.rek_value.key)
+            .map((item, index) => ({
+                rek_sdg_source: item.rek_value.key,
+                rek_sdg_source_order: index + 1,
+            })),
+    };
+};
+
+/**
  * getAuthorIdentifierOrcidPatchRequest - returns author patch request to update author identifier with new orcid id
  *
  * @param {string} authorId - fez-authors id (eg 1671)
@@ -1183,6 +1213,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         languageOfJournalName,
         languages,
         subjects,
+        fez_record_search_key_sdg_source: sustainableDevelopmentGoal,
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
@@ -1277,6 +1308,7 @@ export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
+        ...getSDGSearchKeys(sustainableDevelopmentGoal),
         ...(!!location && location.length === 1 && !!location[0].rek_location
             ? { fez_record_search_key_location: [...location] }
             : {}),

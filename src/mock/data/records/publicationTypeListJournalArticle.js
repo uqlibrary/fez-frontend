@@ -1,4 +1,5 @@
 import { hydrateMockSearchList } from '../../../helpers/general';
+import { sdgSKs } from '../testing/records';
 
 const publicationTypeListJournalArticle = {
     'total': 2,
@@ -376,6 +377,7 @@ const publicationTypeListJournalArticle = {
                     'rek_subject_lookup': '2910 Issues, ethics and legal aspects',
                 },
             ],
+            ...sdgSKs,
             'fez_record_search_key_total_pages': '13',
             'fez_record_search_key_volume_number': '20',
             'fez_datastream_info': [
