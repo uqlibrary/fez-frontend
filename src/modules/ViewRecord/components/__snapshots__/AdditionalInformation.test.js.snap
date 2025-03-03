@@ -14085,7 +14085,7 @@ exports[`Additional Information Component  should render component with instrume
                 class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
                 data-testid="rek-description-label"
               >
-                Abstract
+                Description
               </span>
             </div>
             <div
@@ -14210,6 +14210,38 @@ exports[`Additional Information Component  should render component with instrume
                     </span>
                   </a>
                 </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-378kpi"
+        >
+          <div
+            class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-2 css-6ysy4b-MuiGrid2-root"
+          >
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+                data-testid="rek-contact-details-email-label"
+              >
+                Owner Email
+              </span>
+            </div>
+            <div
+              class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+              >
+                <a
+                  data-testid="rek-contact-details-email"
+                  href="mailto:Owner@email.com"
+                >
+                  Owner@email.com
+                </a>
               </span>
             </div>
           </div>

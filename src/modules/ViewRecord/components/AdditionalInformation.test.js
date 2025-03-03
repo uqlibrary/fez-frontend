@@ -208,6 +208,28 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render component with orcid owner identifier', () => {
+        const id = '0000-0000-0000-0001';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                ...{ fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }] },
+            },
+        });
+        expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://orcid.org/0000-0000-0000-0001');
+    });
+
+    it('should render component with ror owner identifier', () => {
+        const id = '02mhbdp94';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                ...{ fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }] },
+            },
+        });
+        expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://ror.org/02mhbdp94');
+    });
+
     it('should render component with generic document', () => {
         const { container } = setup({ publication: records.generic });
         expect(container).toMatchSnapshot();

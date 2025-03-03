@@ -184,6 +184,7 @@ export default {
                 fez_record_search_key_seo_code: 'ANZSRC Socio-Economic Objective (SEO) Code',
                 fez_record_search_key_ands_collection_type: 'Collection type',
                 fez_record_search_key_contact_details_email: 'Contact email',
+                fez_record_search_key_contributor_identifier: 'Editor(s) Identifiers',
                 fez_record_search_key_author_role: 'Author(s) role',
                 fez_record_search_key_data_volume: 'Data Volume',
                 fez_record_search_key_project_id: 'Project ID',
@@ -340,9 +341,12 @@ export default {
             },
             Instrument: {
                 rek_date: 'Publication Date',
+                rek_description: 'Description',
                 rek_title: 'Instrument Name',
                 fez_record_search_key_author: 'Manufacturer(s)',
                 fez_record_search_key_contributor: 'Owner',
+                fez_record_search_key_contact_details_email: 'Owner Email',
+                fez_record_search_key_contributor_identifier: 'Owner Identifier',
                 fez_record_search_key_doi: 'Instrument Identifier',
                 fez_record_search_key_start_date: 'Commissioned Date',
                 fez_record_search_key_end_date: 'Decommissioned Date',
@@ -2049,28 +2053,36 @@ export default {
                     order: 7,
                 },
                 {
-                    field: 'fez_record_search_key_start_date',
+                    field: 'fez_record_search_key_contact_details_email',
                     order: 8,
                 },
                 {
-                    field: 'fez_record_search_key_end_date',
+                    field: 'fez_record_search_key_contributor_identifier',
                     order: 9,
                 },
                 {
-                    field: 'fez_record_search_key_model',
+                    field: 'fez_record_search_key_start_date',
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_measured_variable',
+                    field: 'fez_record_search_key_end_date',
                     order: 11,
                 },
                 {
-                    field: 'fez_record_search_key_instrument_type',
+                    field: 'fez_record_search_key_model',
                     order: 12,
                 },
                 {
-                    field: 'fez_record_search_key_alternate_identifier',
+                    field: 'fez_record_search_key_measured_variable',
                     order: 13,
+                },
+                {
+                    field: 'fez_record_search_key_instrument_type',
+                    order: 14,
+                },
+                {
+                    field: 'fez_record_search_key_alternate_identifier',
+                    order: 15,
                 },
             ],
             Journal: [
