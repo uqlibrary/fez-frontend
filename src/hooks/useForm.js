@@ -161,7 +161,7 @@ const getPropsForAlert = attributes => (...additionalValidationErrors) => {
  * @param props
  * @return {UseFormReturn<FieldValues, any, undefined>}
  */
-export const useForm = props => {
+export const useForm = (props = {}) => {
     const attributes = useReactHookForm({ mode: 'onChange', ...props });
 
     // add additional errors related attributes

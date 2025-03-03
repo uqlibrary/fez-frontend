@@ -65,4 +65,4 @@ export { default as recordWithOrphanedAffiliation } from './recordWithOrphanedAf
 export { default as recordWithRDM } from './recordWithRDM'
 export { default as recordWithRDMMediatedAccess } from './recordWithRDMMediatedAccess'
 export { default as recordThatFailsDeletion } from './recordThatFailsDeletion'
-export { default as deleteRecord } from './deletedRecord'
+export { default as deletedRecord } from './deletedRecord'
