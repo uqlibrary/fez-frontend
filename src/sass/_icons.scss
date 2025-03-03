@@ -2,6 +2,9 @@
   display: inline-block;
   vertical-align: text-top;
 
+  &.elsevier::before {
+    content: url(~/src/images/elsevier_logo.svg);
+  }
   &.scopus::before {
     content: url(~/src/images/scopus_icon.svg);
   }
