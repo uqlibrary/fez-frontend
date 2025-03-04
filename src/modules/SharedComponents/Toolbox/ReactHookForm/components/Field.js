@@ -64,13 +64,6 @@ const Field = ({ name, control, validate, rules, component: Component, ...childP
                     ...field,
                     ...childProps,
                     value: field.value,
-                    ...(!!childProps?.onChange
-                        ? {
-                              onChange: e => {
-                                  childProps.onChange(e, field.onChange);
-                              },
-                          }
-                        : {}),
                 };
                 if (!!childProps.noRef) delete componentProps.ref;
                 return <Component {...componentProps} />;

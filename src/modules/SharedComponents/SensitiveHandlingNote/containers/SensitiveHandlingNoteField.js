@@ -16,11 +16,6 @@ export const SensitiveHandlingNoteField = props => {
         name: ['filesSection.sensitiveHandlingNote.id'],
     });
     const isOther = isSensitiveHandlingNoteTypeOther(sensitiveHandlingNoteId);
-    React.useLayoutEffect(() => {
-        !!isOther && form.trigger('filesSection.sensitiveHandlingNote.other');
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isOther]);
-
     const idError = form.getFieldState('filesSection.sensitiveHandlingNote.id').error;
     const otherError = form.getFieldState('filesSection.sensitiveHandlingNote.other').error;
     return (
@@ -33,9 +28,6 @@ export const SensitiveHandlingNoteField = props => {
                 textFieldId={'rek-sensitive-handling-note-id'}
                 genericSelectFieldId="rek-sensitive-handling-note-id"
                 itemsList={[{ value: '0', text: 'None' }, ...SENSITIVE_HANDLING_NOTE_TYPE]}
-                onChange={(value, onChange) => {
-                    onChange(value);
-                }}
                 {...selectFields.sensitiveHandlingNoteType}
                 {...(!!idError ? { error: true, errorText: idError } : {})}
             />

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { getInitialFormValues } from './helpers';
 import {
@@ -10,7 +10,7 @@ import {
 import { useWatch } from 'react-hook-form';
 import { unionBy } from 'lodash';
 
-export const useInitialFormValues = (recordToView, createMode) => {
+export const getInitialValuesForForm = (recordToView, createMode) => {
     const initialFormValues = {
         initialValues: {
             bibliographicSection: {
@@ -35,7 +35,10 @@ export const useRecord = createMode => {
         error,
     } = useSelector(state => state.get('viewRecordReducer'));
 
-    const initialFormValues = useInitialFormValues(recordToView, createMode);
+    const initialFormValues = useMemo(() => getInitialValuesForForm(recordToView, createMode), [
+        createMode,
+        recordToView,
+    ]);
 
     return {
         loadingRecordToView,
@@ -52,7 +55,7 @@ export const useRecord = createMode => {
 };
 
 export const useRecordToView = (recordToView, createMode, form) => {
-    const { newRecord } = useSelector(state => (createMode ? state.get('createAdminRecordReducer') : {}));
+    const { newRecord } = useSelector(state => state.get('createAdminRecordReducer'));
 
     if (!createMode) return recordToView;
 
