@@ -5,6 +5,7 @@ import { render } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
+import { FormProvider } from 'react-hook-form';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -22,6 +23,7 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
+import * as useValidatedForm from 'hooks/useValidatedForm';
 import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
@@ -254,6 +256,16 @@ const mockWebApiFile = () => {
     };
 };
 
+// eslint-disable-next-line react/prop-types
+export const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm.useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
+};
+
 /**
  *
  * @param {object|function?} expected
@@ -451,6 +463,7 @@ module.exports = {
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    FormProviderWrapper,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,

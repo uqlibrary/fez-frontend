@@ -10,10 +10,11 @@ import * as actions from 'actions';
 export const CollectionField = props => {
     const dispatch = useDispatch();
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
+
     const loadSuggestions = () => dispatch(actions.collectionsList());
     const hasForm = props?.meta || props?.form;
 
-    const defaultValue = hasForm
+    const defaultValue = hasForm // TODO - remove after reduxForm migrated
         ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
           (!!props.input.value && props.input.value) ||
           []

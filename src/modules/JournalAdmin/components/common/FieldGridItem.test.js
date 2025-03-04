@@ -1,26 +1,14 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { rtlRender, FormProviderWrapper } from 'test-utils';
 import FieldGridItem from './FieldGridItem';
-import { FormProvider } from 'react-hook-form';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
-import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
 
 global.console = {
     ...global.console,
     warn: jest.fn(),
-};
-
-// eslint-disable-next-line react/prop-types
-const FormProviderWrapper = ({ children, methods, ...props }) => {
-    const attributes = useValidatedForm(props);
-    return (
-        <FormProvider {...attributes} {...methods}>
-            {children}
-        </FormProvider>
-    );
 };
 
 const setup = (testProps = {}, renderer = rtlRender) => {

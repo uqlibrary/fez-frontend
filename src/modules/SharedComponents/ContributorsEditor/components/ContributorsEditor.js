@@ -17,6 +17,7 @@ import AuthorsListWithAffiliates from 'modules/Admin/components/authors/AuthorsL
 import AuthorsList from 'modules/Admin/components/authors/AuthorsList';
 
 import { diff } from 'deep-object-diff';
+import { uniqWith } from 'lodash';
 import { hasAtLeastOneItemSelected, isArrayDeeplyEqual } from '../../../../helpers/general';
 import { locale } from 'locale';
 
@@ -42,6 +43,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        showExternalIdentifierInput: PropTypes.bool,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
@@ -64,6 +66,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
     };
@@ -78,12 +81,13 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             contributorIndexSelectedToEdit: null,
             scaleOfSignificance: this.buildInitialScaleOfSignificance(props),
+            locale: props.locale,
         };
         this.props.onChange?.(this.state.contributors);
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevProps.input?.value !== this.props.input?.value) {
+        if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
                 contributors: items,
@@ -91,20 +95,24 @@ export class ContributorsEditor extends PureComponent {
                     this.props.required && !hasAtLeastOneItemSelected(items) && locale.validationErrors.authorRequired,
             });
         }
+        if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
+            this.state.scaleOfSignificance = this.buildInitialScaleOfSignificance(this.props);
+        }
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
             this.props.onChange?.(this.state.contributors);
         }
-        const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
         if (this.props.useFormReducer) {
+            const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
             if (Object.keys(updated).length > 0) {
                 this.state.scaleOfSignificance = this.props.scaleOfSignificance;
             } else {
-                this.state.scaleOfSignificance = this.handleSoSChange(
+                const newSos = this.handleSoSChange(
                     prevState.contributors,
                     this.state.contributors,
                     this.props.scaleOfSignificance,
                 );
+                this.state.scaleOfSignificance = newSos;
             }
         }
     }
@@ -171,10 +179,12 @@ export class ContributorsEditor extends PureComponent {
     };
 
     getContributorsFromProps = props => {
-        if (props.input && props.input.name && props.input.value) {
-            return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+        if (props.value || (props.input && props.input.name && props.input.value)) {
+            return (
+                props.value ||
+                (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
+            );
         }
-
         return [];
     };
 
@@ -464,9 +474,10 @@ export class ContributorsEditor extends PureComponent {
 
                 newList = scaleOfSignificance;
             }
-            this.props.actions.updateAdminScaleSignificance(newList);
+            const dedupedList = uniqWith(newList, (a, b) => a.author.rek_author === b.author.rek_author);
+            this.props.actions.updateAdminScaleSignificance(dedupedList);
 
-            return newList;
+            return dedupedList;
         }
     };
 
@@ -489,6 +500,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            showExternalIdentifierInput,
             useFormReducer,
         } = this.props;
 
@@ -509,7 +521,7 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
-                    locale={this.props.locale}
+                    locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}
                 />
@@ -520,7 +532,8 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
-                    locale={this.props.locale}
+                    showExternalIdentifierInput={showExternalIdentifierInput}
+                    locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}
                 />

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
@@ -72,15 +73,15 @@ export default class ListEditor extends Component {
 
     constructor(props) {
         super(props);
-
-        const valueAsJson =
-            ((props.input || {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || {}).name && props.input.value);
+        const valuesAsJson = this.getPropValueAsJson(props);
         this.state = {
-            itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
+            prevValuesAsJson: valuesAsJson,
+            itemList: valuesAsJson
+                ? this.mapValueToList(props.searchKey?.value, valuesAsJson)
+                : /* istanbul ignore next */ [],
             itemIndexSelectedToEdit: null,
+            value: JSON.stringify(''),
+            transformedState: JSON.stringify(''),
         };
 
         this.transformOutput = this.transformOutput.bind(this);
@@ -92,12 +93,38 @@ export default class ListEditor extends Component {
         this.editItem = this.editItem.bind(this);
     }
 
+    static getDerivedStateFromProps(props, state) {
+        const propsValueJsonString = JSON.stringify(props.value || '');
+        if (propsValueJsonString !== state.value && propsValueJsonString !== state.transformedState) {
+            const newList = props.value
+                ? props.value.map(item => item[props.searchKey?.value])
+                : /* istanbul ignore next */ [];
+            return {
+                value: propsValueJsonString,
+                itemList: newList,
+            };
+        }
+        return null;
+    }
     componentDidUpdate(prevProps, prevState) {
-        // notify parent component when local state has been updated, eg itemList added/removed/reordered
         if (this.props.onChange && !isArrayDeeplyEqual(prevState.itemList, this.state.itemList)) {
-            this.props.onChange(this.transformOutput(this.state.itemList));
+            // notify parent component when local state has been updated, eg itemList added/removed/reordered
+            const transformedState = this.transformOutput(this.state.itemList);
+            this.setState({ transformedState: JSON.stringify(transformedState) });
+            this.props.onChange(transformedState);
         }
     }
+
+    mapValueToList = (key, valueAsJson) =>
+        valueAsJson ? valueAsJson.map(item => item[key]) : /* istanbul ignore next */ [];
+    getPropValueAsJson = props => {
+        const vals =
+            ((props.input || {}).name &&
+                typeof (props.input.value || {}).toJS === 'function' &&
+                props.input.value.toJS()) ||
+            ((props.input || {}).name && props.input.value);
+        return !!vals ? vals : [];
+    };
 
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
@@ -250,25 +277,27 @@ export default class ListEditor extends Component {
         });
     };
     render() {
-        const renderListsRows = this.state.itemList.map((item, index) => (
-            <ListRow
-                key={item.key || item.id || `${item}-${index}`}
-                index={index}
-                item={item}
-                canMoveDown={index !== this.state.itemList.length - 1}
-                canMoveUp={index !== 0}
-                onMoveUp={this.moveUpList}
-                onMoveDown={this.moveDownList}
-                onDelete={this.deleteItem}
-                onEdit={this.editItem}
-                {...((this.props.locale && this.props.locale.row) || {})}
-                hideReorder={this.props.hideReorder}
-                disabled={this.props.disabled}
-                itemTemplate={this.props.rowItemTemplate}
-                canEdit={this.props.canEdit}
-                listRowId={`${this.props.listEditorId}-list-row-${index}`}
-            />
-        ));
+        const renderListsRows = this.state.itemList.map((item, index) => {
+            return (
+                <ListRow
+                    key={item.key || item.id || `${item}-${index}`}
+                    index={index}
+                    item={item}
+                    canMoveDown={index !== this.state.itemList.length - 1}
+                    canMoveUp={index !== 0}
+                    onMoveUp={this.moveUpList}
+                    onMoveDown={this.moveDownList}
+                    onDelete={this.deleteItem}
+                    onEdit={this.editItem}
+                    {...((this.props.locale && this.props.locale.row) || {})}
+                    hideReorder={this.props.hideReorder}
+                    disabled={this.props.disabled}
+                    itemTemplate={this.props.rowItemTemplate}
+                    canEdit={this.props.canEdit}
+                    listRowId={`${this.props.listEditorId}-list-row-${index}`}
+                />
+            );
+        });
         return (
             <div
                 className={`${this.props.className}`}

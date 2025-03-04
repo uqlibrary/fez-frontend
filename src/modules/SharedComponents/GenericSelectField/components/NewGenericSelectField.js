@@ -98,12 +98,8 @@ export const NewGenericSelectField = ({
     }, [error]);
 
     const handleChange = React.useCallback(event => {
-        if (!!input) {
-            input.onChange(event.target.value);
-        }
-        if (!!onChange) {
-            onChange(event.target.value);
-        }
+        // TODO - remove input.onChange post RHF migration
+        onChange?.(event.target.value) || /* istanbul ignore next */ input?.onChange?.(event.target.value);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

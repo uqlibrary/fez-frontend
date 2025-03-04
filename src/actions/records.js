@@ -532,7 +532,7 @@ export function adminUpdate(data) {
             ...data.publication,
             collections: data.adminSection.collections,
         });
-
+        console.log(patchRecordRequest);
         return Promise.resolve([])
             .then(() =>
                 hasFilesToUpload
@@ -666,24 +666,6 @@ export function adminCreate(data) {
             });
     };
 }
-
-export const deleteAttachedFile = file => {
-    return dispatch => {
-        dispatch({
-            type: actions.ADMIN_DELETE_ATTACHED_FILE,
-            payload: file,
-        });
-    };
-};
-
-export const renameAttachedFile = (prev, next) => {
-    return dispatch => {
-        dispatch({
-            type: actions.ADMIN_RENAME_ATTACHED_FILE,
-            payload: { prev, next },
-        });
-    };
-};
 
 export const unlockRecord = (pid, unlockRecordCallback) => {
     return dispatch => {

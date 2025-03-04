@@ -9,9 +9,8 @@ import {
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { contentIndicators } from '../config';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
-import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { STATE_DELETED } from '../config/viewRecord';
-import { isDerivative } from 'helpers/datastreams';
+import { isDerivative, isSensitiveHandlingNoteTypeOther } from 'helpers/datastreams';
 import { sanitizeDoi } from '../config/validation';
 
 const moment = require('moment');
@@ -1496,7 +1495,7 @@ export const getSecuritySectionSearchKeys = (data = {}) => {
             ? { rek_datastream_policy: data.rek_datastream_policy }
             : {}),
         ...(!!data.hasOwnProperty('rek_security_inherited')
-            ? { rek_security_inherited: data.rek_security_inherited }
+            ? { rek_security_inherited: Number(data.rek_security_inherited) }
             : {}),
     };
 };
