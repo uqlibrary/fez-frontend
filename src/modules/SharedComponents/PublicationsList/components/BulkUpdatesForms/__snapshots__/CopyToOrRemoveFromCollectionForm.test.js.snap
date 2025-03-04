@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CopyToOrRemoveFromCollectionForm should correctly submit form and display success info for copy to collection form 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123","rek_ismemberof_order":1},{"rek_ismemberof":"UQ:222","rek_ismemberof_order":2}]}]"`;
+
+exports[`CopyToOrRemoveFromCollectionForm should correctly submit form and display success info for remove from collection 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123","rek_ismemberof_order":1}]}]"`;
+
+exports[`CopyToOrRemoveFromCollectionForm should submit form and display error for copy to collection form 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123","rek_ismemberof_order":1},{"rek_ismemberof":"UQ:222","rek_ismemberof_order":2}]}]"`;
+
+exports[`CopyToOrRemoveFromCollectionForm should submit form and display error for remove from collection 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123","rek_ismemberof_order":1}]}]"`;
