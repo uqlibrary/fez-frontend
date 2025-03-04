@@ -118,7 +118,15 @@ export const AdminContainer = ({ createMode = false }) => {
             dispatch(actions.clearRecordToView());
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [pid]);
+
+    React.useEffect(() => {
+        if (createMode) {
+            setShowAddForm(true);
+        } else {
+            setShowAddForm(false);
+        }
+    }, [createMode]);
 
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {

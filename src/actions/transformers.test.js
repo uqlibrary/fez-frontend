@@ -888,6 +888,58 @@ describe('transformers', () => {
         });
     });
 
+    describe('getSDGSearchKeys test', () => {
+        it('should return empty subject object', () => {
+            expect(transformers.getSDGSearchKeys()).toEqual({});
+            expect(transformers.getSDGSearchKeys([])).toEqual({});
+        });
+
+        it('should return subject list based on input', () => {
+            const input = [
+                {
+                    rek_order: 1,
+                    rek_value: { key: 456998, value: 'Dimensions', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456999, value: 'WOS', sdgCVOId: 456995, group: '02 - Zero Hunger' },
+                },
+                {
+                    rek_order: 2,
+                    rek_value: { key: 456996, value: 'Dimensions', sdgCVOId: 456994, group: '01 - No poverty' },
+                },
+            ];
+            const expected = {
+                fez_record_search_key_sdg: [
+                    {
+                        rek_sdg: 456994,
+                        rek_sdg_order: 1,
+                    },
+                    {
+                        rek_sdg: 456995,
+                        rek_sdg_order: 2,
+                    },
+                ],
+                fez_record_search_key_sdg_source: [
+                    {
+                        rek_sdg_source: 456996,
+                        rek_sdg_source_order: 1,
+                    },
+                    {
+                        rek_sdg_source: 456998,
+                        rek_sdg_source_order: 2,
+                    },
+                    {
+                        rek_sdg_source: 456999,
+                        rek_sdg_source_order: 3,
+                    },
+                ],
+            };
+            const result = transformers.getSDGSearchKeys(input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordSupervisorsSearchKey test', () => {
         it('should return empty supervisors object', () => {
             expect(transformers.getRecordSupervisorsSearchKey()).toEqual({});

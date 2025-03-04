@@ -29,6 +29,8 @@ export const AutoCompleteAsynchronousField = ({
     prefilledSearch,
     required,
     supplemental,
+    groupBy,
+    clearSuggestionsOnClose = true,
 }) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState([]);
@@ -101,10 +103,10 @@ export const AutoCompleteAsynchronousField = ({
     }, [itemsList, loading]);
 
     React.useEffect(() => {
-        if (!open) {
+        if (!open && clearSuggestionsOnClose) {
             setOptions([]);
         }
-    }, [open]);
+    }, [open, clearSuggestionsOnClose]);
 
     return (
         <React.Fragment>
@@ -173,6 +175,7 @@ export const AutoCompleteAsynchronousField = ({
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
+                {...(groupBy && { groupBy })}
                 {...((!!OptionTemplate && {
                     renderOption: (props, option) => {
                         return (
@@ -224,6 +227,8 @@ AutoCompleteAsynchronousField.propTypes = {
     prefilledSearch: PropTypes.bool,
     required: PropTypes.bool,
     supplemental: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+    groupBy: PropTypes.func,
+    clearSuggestionsOnClose: PropTypes.bool,
 };
 
 export default React.memo(AutoCompleteAsynchronousField);

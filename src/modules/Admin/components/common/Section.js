@@ -39,7 +39,7 @@ GroupsWithinCard.propTypes = {
 
 export const Section = ({ disabled, cards, ...props }) => (
     <Grid container spacing={1}>
-        {cards.map((card, index) =>
+        {cards?.map((card, index) =>
             !!card.title ? (
                 <GroupsWithinCard
                     key={card.title}

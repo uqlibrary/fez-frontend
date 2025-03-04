@@ -16,7 +16,7 @@ export const AuthorsSection = ({ disabled = false }) => {
 
     const isNtro = NTRO_SUBTYPES.includes(subtype);
 
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].authors(authorsParams(record, isNtro)));
+    const cards = useRef(adminInterfaceConfig[record.rek_display_type].authors?.(authorsParams(record, isNtro)));
 
     return <Section cards={cards.current} disabled={disabled} isNtro={isNtro} />;
 };
