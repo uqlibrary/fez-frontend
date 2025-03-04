@@ -2066,6 +2066,115 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiTypography-root MuiTypography-body1 css-19tu9ew-MuiTypography-root"
                               >
                                  
+                                Sustainable Development Goal
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+                          >
+                            <div
+                              class="undefined"
+                              data-testid="rek-sustainable-development-goal-list-editor"
+                              id="rek-sustainable-development-goal-list-editor"
+                            >
+                              <div
+                                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
+                              >
+                                <div
+                                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                                >
+                                  <label
+                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
+                                    data-shrink="false"
+                                    for="rek-sustainable-development-goal"
+                                    id="rek-sustainable-development-goal-label"
+                                  >
+                                    Begin typing to select and add SDG(s)
+                                  </label>
+                                  <div
+                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-r8alc7-MuiInputBase-root-MuiInput-root"
+                                  >
+                                    <input
+                                      aria-autocomplete="list"
+                                      aria-expanded="false"
+                                      aria-invalid="false"
+                                      autocapitalize="none"
+                                      autocomplete="off"
+                                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-8sgtit-MuiInputBase-input-MuiInput-input"
+                                      data-analyticsid="rek-sustainable-development-goal-input"
+                                      data-testid="rek-sustainable-development-goal-input"
+                                      id="rek-sustainable-development-goal"
+                                      name="rek-sustainable-development-goal"
+                                      role="combobox"
+                                      spellcheck="false"
+                                      type="text"
+                                      value=""
+                                    />
+                                    <div
+                                      class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                                    >
+                                      <button
+                                        aria-label="Open"
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1aav1nn-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                        tabindex="-1"
+                                        title="Open"
+                                        type="button"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                data-testid="rek-sustainable-development-goal-list"
+                                id="rek-sustainable-development-goal-list"
+                              />
+                              <p
+                                class="MuiFormHelperText-root css-nw3qem-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                            >
+                              <hr
+                                class="MuiBox-root css-1a7sacs"
+                              />
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                            >
+                              <h4
+                                class="MuiTypography-root MuiTypography-body1 css-19tu9ew-MuiTypography-root"
+                              >
+                                 
                                 Related publications
                               </h4>
                             </div>
@@ -3472,7 +3581,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r1h:"
+                                        aria-controls=":r1j:"
                                         aria-disabled="true"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
@@ -5617,7 +5726,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r2b:"
+                                  aria-controls=":r2d:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-sensitive-handling-note-id-select"
@@ -6105,7 +6214,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2c:"
+                                        aria-controls=":r2e:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -6189,7 +6298,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2d:"
+                                        aria-controls=":r2f:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -6273,7 +6382,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2e:"
+                                        aria-controls=":r2g:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -6357,7 +6466,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2f:"
+                                        aria-controls=":r2h:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -6441,7 +6550,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2g:"
+                                        aria-controls=":r2i:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -6525,7 +6634,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2h:"
+                                        aria-controls=":r2j:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -6609,7 +6718,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2i:"
+                                        aria-controls=":r2k:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -6693,7 +6802,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2j:"
+                                        aria-controls=":r2l:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"
@@ -7266,7 +7375,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3n:"
+                                  aria-controls=":r3r:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-code-select"
@@ -7325,7 +7434,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3o:"
+                                  aria-controls=":r3s:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-status-select"
@@ -7384,7 +7493,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3p:"
+                                  aria-controls=":r3t:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-institutional-status-select"
@@ -7439,7 +7548,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3q:"
+                                  aria-controls=":r3u:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-refereed-source-select"
@@ -7494,7 +7603,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3r:"
+                                  aria-controls=":r3v:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-content-indicator-select"
@@ -7553,7 +7662,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3s:"
+                                  aria-controls=":r40:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-select"
@@ -7608,7 +7717,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3t:"
+                                  aria-controls=":r41:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-type-select"
@@ -7667,7 +7776,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3u:"
+                                  aria-controls=":r42:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-license-select"
@@ -7874,7 +7983,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r3v:"
+                                  aria-controls=":r43:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-language-select"
@@ -8432,7 +8541,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r49:"
+                                        aria-controls=":r4d:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="rek-date-month-select"
@@ -8891,6 +9000,115 @@ exports[`AdminContainer component should render mobile view 1`] = `
                               <div
                                 data-testid="rek-subjects-list"
                                 id="rek-subjects-list"
+                              />
+                              <p
+                                class="MuiFormHelperText-root css-nw3qem-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container undefined AdminCard css-1sthlmf-MuiGrid-root"
+                    >
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+                            >
+                              <hr
+                                class="MuiBox-root css-1a7sacs"
+                              />
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-bnen19-MuiGrid-root"
+                            >
+                              <h4
+                                class="MuiTypography-root MuiTypography-body1 css-19tu9ew-MuiTypography-root"
+                              >
+                                 
+                                Sustainable Development Goal
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1idn90j-MuiGrid-root"
+                          >
+                            <div
+                              class="undefined"
+                              data-testid="rek-sustainable-development-goal-list-editor"
+                              id="rek-sustainable-development-goal-list-editor"
+                            >
+                              <div
+                                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
+                              >
+                                <div
+                                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                                >
+                                  <label
+                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-11ahjkk-MuiFormLabel-root-MuiInputLabel-root"
+                                    data-shrink="false"
+                                    for="rek-sustainable-development-goal"
+                                    id="rek-sustainable-development-goal-label"
+                                  >
+                                    Begin typing to select and add SDG(s)
+                                  </label>
+                                  <div
+                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-r8alc7-MuiInputBase-root-MuiInput-root"
+                                  >
+                                    <input
+                                      aria-autocomplete="list"
+                                      aria-expanded="false"
+                                      aria-invalid="false"
+                                      autocapitalize="none"
+                                      autocomplete="off"
+                                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-8sgtit-MuiInputBase-input-MuiInput-input"
+                                      data-analyticsid="rek-sustainable-development-goal-input"
+                                      data-testid="rek-sustainable-development-goal-input"
+                                      id="rek-sustainable-development-goal"
+                                      name="rek-sustainable-development-goal"
+                                      role="combobox"
+                                      spellcheck="false"
+                                      type="text"
+                                      value=""
+                                    />
+                                    <div
+                                      class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                                    >
+                                      <button
+                                        aria-label="Open"
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1aav1nn-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                        tabindex="-1"
+                                        title="Open"
+                                        type="button"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                data-testid="rek-sustainable-development-goal-list"
+                                id="rek-sustainable-development-goal-list"
                               />
                               <p
                                 class="MuiFormHelperText-root css-nw3qem-MuiFormHelperText-root"
@@ -10336,7 +10554,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r53:"
+                                        aria-controls=":r59:"
                                         aria-disabled="true"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
@@ -12481,7 +12699,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r5t:"
+                                  aria-controls=":r63:"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-sensitive-handling-note-id-select"
@@ -12969,7 +13187,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r5u:"
+                                        aria-controls=":r64:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -13053,7 +13271,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r5v:"
+                                        aria-controls=":r65:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -13137,7 +13355,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r60:"
+                                        aria-controls=":r66:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -13221,7 +13439,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r61:"
+                                        aria-controls=":r67:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -13305,7 +13523,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r62:"
+                                        aria-controls=":r68:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -13389,7 +13607,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r63:"
+                                        aria-controls=":r69:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -13473,7 +13691,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r64:"
+                                        aria-controls=":r6a:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -13557,7 +13775,7 @@ exports[`AdminContainer component should render mobile view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r65:"
+                                        aria-controls=":r6b:"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"
