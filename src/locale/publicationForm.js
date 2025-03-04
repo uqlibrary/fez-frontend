@@ -1420,7 +1420,6 @@ export default {
                         label: 'Collection start date',
                         placeholder: 'Date that data started being collected',
                         name: 'fez_record_search_key_start_date.rek_start_date',
-                        rangeError: 'Date range is not valid',
                     },
                     collectionEnd: {
                         label: 'Collection end date',

@@ -1,11 +1,7 @@
 import React from 'react';
-
 import { render, WithReduxStore, WithRouter, waitFor, waitForElementToBeRemoved, userEvent } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
 import ChildVocabTable from './ChildVocabTable';
-import Immutable from 'immutable';
 import * as repositories from 'repositories';
 
 jest.mock('../ControlledVocabularyContext');
@@ -29,7 +25,7 @@ const setup = (testProps = {}, state = {}) => {
     };
 
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <ControlledVocabulariesActionContext.Provider value={actionContext}>
                     <ControlledVocabulariesStateContext.Provider value={stateContext}>

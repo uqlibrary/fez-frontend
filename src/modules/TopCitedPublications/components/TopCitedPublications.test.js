@@ -4,7 +4,6 @@ import { trendingPublications } from 'mock/data/testing/trendingPublications';
 import { default as TopCitedPublications } from './TopCitedPublications';
 import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
 import { rtlRender, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
-import Immutable from 'immutable';
 
 jest.mock('../../../hooks', () => ({
     ...jest.requireActual('../../../hooks'),
@@ -25,7 +24,7 @@ function setup(testProps = {}, testState = {}) {
     };
 
     return rtlRender(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <TopCitedPublications {...props} />
             </WithRouter>

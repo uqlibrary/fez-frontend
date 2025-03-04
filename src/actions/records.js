@@ -746,7 +746,7 @@ export const changeAuthorId = (records, data) => {
  * @param {bool} isBulkUpdate
  */
 export const changeDisplayType = (records, data, isBulkUpdate = false) => {
-    const changeDisplayTypeRequest = records.map(record => ({
+    const changeDisplayTypeRequest = records.map?.(record => ({
         rek_pid: record.rek_pid,
         ...data,
         fez_record_search_key_herdc_code: {

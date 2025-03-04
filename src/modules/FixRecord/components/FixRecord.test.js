@@ -165,12 +165,8 @@ describe('Component FixRecord', () => {
         };
         const mockFixRecordApiCall = () => api.mock.records.issues({ pid });
 
-        beforeEach(() => {
-            api.request.history.reset();
-        });
-        afterEach(() => {
-            api.mock.reset();
-        });
+        beforeEach(() => api.reset());
+        afterEach(() => api.reset());
 
         describe('payload', () => {
             it('should submit unclaim data', async () => {
