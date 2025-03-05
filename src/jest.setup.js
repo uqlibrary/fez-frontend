@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { toMatchDiffSnapshot } from 'snapshot-diff';
+import { configure } from '@testing-library/react';
 
 const extensions = {
     toHaveDispatchedActions: (actions, expectedActions) => {
@@ -57,6 +58,8 @@ const extensions = {
     },
     toMatchDiffSnapshot,
 };
+
+configure({ asyncUtilTimeout: 5000 }); // Default timeout for all async queries
 
 expect.extend(extensions);
 global.expect = expect;
