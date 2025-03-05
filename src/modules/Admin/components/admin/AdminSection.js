@@ -11,7 +11,7 @@ export const AdminSection = ({ disabled = false }) => {
     const { formValues } = useFormValuesContext();
 
     const cards = useRef(
-        adminInterfaceConfig[record.rek_display_type].admin(
+        adminInterfaceConfig[record.rek_display_type]?.admin?.(
             formValues.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
         ),
     );

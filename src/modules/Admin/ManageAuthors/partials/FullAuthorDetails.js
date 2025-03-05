@@ -7,6 +7,7 @@ import { FormProvider } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'hooks';
+import { useWatch } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -35,6 +36,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     });
     const {
         handleSubmit,
+        control,
         trigger,
         formState: { isDirty, isSubmitting, errors, dirtyFields },
     } = validatedForm;
@@ -45,7 +47,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     const [submitting, setSubmitting] = React.useState(false);
 
     const dispatch = useDispatch();
-    const { watch, setError, clearErrors } = validatedForm;
+    const { setError, clearErrors } = validatedForm;
 
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
 
@@ -77,7 +79,10 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trigger]);
 
-    const watchedFields = watch(['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id']);
+    const watchedFields = useWatch({
+        control,
+        name: ['aut_org_username', 'aut_org_staff_id', 'aut_student_username', 'aut_org_student_id'],
+    });
     // Track previous field values to validate only the changed field
     React.useEffect(() => {
         setApiError('');

@@ -2,6 +2,7 @@ import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { useWatch } from 'react-hook-form';
 
 import Grid from '@mui/material/Grid';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -19,7 +20,7 @@ import pageLocale from 'locale/pages';
 import { validation } from 'config';
 
 export const ResearcherIdentifierData = () => {
-    const { control, watch, setValue } = useFormContext();
+    const { control, setValue } = useFormContext();
     const {
         editRow: {
             fields: {
@@ -37,12 +38,10 @@ export const ResearcherIdentifierData = () => {
 
     const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
 
-    const [autScopusId, autOrcidId, autIsScopusIdAuthenticated, autIsOrcidSyncEnabled] = watch([
-        'aut_scopus_id',
-        'aut_orcid_id',
-        'aut_is_scopus_id_authenticated',
-        'aut_is_orcid_sync_enabled',
-    ]);
+    const [autScopusId, autOrcidId, autIsScopusIdAuthenticated, autIsOrcidSyncEnabled] = useWatch({
+        control,
+        name: ['aut_scopus_id', 'aut_orcid_id', 'aut_is_scopus_id_authenticated', 'aut_is_orcid_sync_enabled'],
+    });
 
     const handleIsScopusIDAuthenticated = () => {
         setValue('aut_is_scopus_id_authenticated', Number(!autIsScopusIdAuthenticated), { shouldDirty: true });
@@ -184,10 +183,6 @@ export const ResearcherIdentifierData = () => {
             </Grid>
         </StandardCard>
     );
-};
-ResearcherIdentifierData.propTypes = {
-    control: PropTypes.object.isRequired,
-    watch: PropTypes.func.isRequired,
 };
 
 export default React.memo(ResearcherIdentifierData);

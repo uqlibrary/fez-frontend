@@ -434,7 +434,7 @@ describe('ManageAuthorsList', () => {
 
         const usernameInput = await findByTestId('aut-org-username-input');
 
-        const autFnameInput = await findByTestId('aut-fname-input', {}, { timeout: 3000 }); // 3 seconds timeout
+        const autFnameInput = await findByTestId('aut-fname-input');
         await userEvent.clear(autFnameInput);
         await waitFor(() => expect(autFnameInput).toHaveValue(''));
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useValidatedForm } from 'hooks';
+import { useWatch } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { parseHtmlToJSX } from 'helpers/general';
 import moment from 'moment';
@@ -62,10 +63,8 @@ export const licenseText = licenses => {
 };
 
 export const AddDataCollection = ({ disableSubmit, ...props }) => {
-    // form
     const {
         handleSubmit,
-        watch,
         reset: resetForm,
         control,
         formState: { isSubmitting, isSubmitSuccessful, isDirty, errors },
@@ -169,10 +168,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
 
-    const [startDate, endDate] = watch([
-        'fez_record_search_key_start_date.rek_start_date',
-        'fez_record_search_key_end_date.rek_end_date',
-    ]);
+    const [startDate, endDate] = useWatch({
+        control,
+        name: ['fez_record_search_key_start_date.rek_start_date', 'fez_record_search_key_end_date.rek_end_date'],
+    });
     const dateError =
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
             ? validationErrors.validationErrors.collectionDateRange

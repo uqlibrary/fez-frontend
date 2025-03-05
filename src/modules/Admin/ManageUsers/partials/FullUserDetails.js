@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import { useForm } from 'hooks';
+import { useWatch } from 'react-hook-form';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import Box from '@mui/material/Box';
@@ -36,6 +37,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     });
     const {
         handleSubmit,
+        control,
         trigger,
         formState: { isDirty, isSubmitting, errors, dirtyFields },
     } = validatedForm;
@@ -46,7 +48,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
     const [submitting, setSubmitting] = React.useState(false);
 
     const dispatch = useDispatch();
-    const { watch, setError, clearErrors } = validatedForm;
+    const { setError, clearErrors } = validatedForm;
 
     const disableSubmit = !isDirty || isSubmitting || JSON.stringify(errors) !== '{}';
 
@@ -75,7 +77,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
         trigger();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trigger]);
-    const watchedFields = watch(['usr_username']);
+    const watchedFields = useWatch({ control, name: ['usr_username'] });
     // Track previous field values to validate only the changed field
     React.useEffect(() => {
         setApiError('');

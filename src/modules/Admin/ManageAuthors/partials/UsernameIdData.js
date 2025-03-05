@@ -2,6 +2,7 @@ import { useFormContext } from 'react-hook-form';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { useWatch } from 'react-hook-form';
 
 import Grid from '@mui/material/Grid';
 import OverriddenIcon from '@mui/icons-material/Lock';
@@ -23,10 +24,10 @@ export const UsernameIdColumnData = () => {
         },
     } = locale.components.manageAuthors;
 
-    const { control, watch, setValue, getValues } = useFormContext();
+    const { control, setValue, getValues } = useFormContext();
 
     const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
-    const [watchedField] = watch(['aut_org_username']);
+    const [watchedField] = useWatch({ control, name: ['aut_org_username'] });
     React.useEffect(() => {
         setAutOrgUsername(watchedField);
     }, [watchedField]);
