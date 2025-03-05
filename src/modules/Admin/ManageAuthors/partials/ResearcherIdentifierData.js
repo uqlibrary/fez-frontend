@@ -1,6 +1,5 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useWatch } from 'react-hook-form';
 
