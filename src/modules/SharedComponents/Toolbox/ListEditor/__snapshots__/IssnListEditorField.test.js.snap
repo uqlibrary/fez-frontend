@@ -25,6 +25,7 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
     }
   }
   maxCount={0}
+  onAddItem={[Function]}
   onChange={[MockFunction]}
   required={false}
   rowItemTemplate={[Function]}
@@ -71,6 +72,7 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
       "error": "test",
     }
   }
+  onAddItem={[Function]}
   onChange={[MockFunction]}
   required={false}
   rowItemTemplate={[Function]}
