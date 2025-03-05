@@ -389,8 +389,15 @@ describe('ManageUsers', () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
-                data: [],
-                total: 0,
+                data: [
+                    {
+                        usr_id: 1,
+                        usr_full_name: 'Test Name',
+                        usr_username: 'uqtest',
+                        usr_created_date: '2017-02-16T23:11:37Z',
+                    },
+                ],
+                total: 1,
             })
             .onPost(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(200, {
@@ -421,6 +428,8 @@ describe('ManageUsers', () => {
 
     it('should render previous list on unsuccessful add operation', async () => {
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtest', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [],
@@ -446,6 +455,8 @@ describe('ManageUsers', () => {
 
     it('should render updated info after editing', async () => {
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
@@ -507,7 +518,10 @@ describe('ManageUsers', () => {
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
+        console.log('search url=', new RegExp(repository.routes.USERS_SEARCH_API({}).apiUrl));
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
@@ -801,7 +815,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
-            expect( getAllByTestId('mtablebodyrow').length).toBe(3);
+            expect(getAllByTestId('mtablebodyrow').length).toBe(3);
             expect(getByText('Add new user')).toBeInTheDocument();
         });
     });
