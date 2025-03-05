@@ -55,6 +55,8 @@ const DeleteRecord = () => {
 
     const onSubmit = safelyHandleSubmit(async () => {
         const payload = mergeWithFormValues({ publication: { ...recordToDelete } });
+        // unfortunately, RTL doesn't render the editor as the browser does
+        /* istanbul ignore next */
         if (payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText) {
             payload.publication.fez_record_search_key_deletion_notes.rek_deletion_notes =
                 payload.publication?.fez_record_search_key_deletion_notes?.rek_deletion_notes?.htmlText;
@@ -108,14 +110,15 @@ const DeleteRecord = () => {
     };
 
     useEffect(() => {
-        if (actions && pid) {
+        if (actions && pid && !recordToDelete?.rek_pid) {
             dispatch(actions.loadRecordToDelete(pid));
         }
 
         return () => {
-            // clear previously selected recordToDelete for a delete
+            // clear previously selected record for deletion
             dispatch(actions.clearDeleteRecord());
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch, pid]);
 
     useEffect(() => {

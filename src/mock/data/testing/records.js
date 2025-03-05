@@ -1,3 +1,61 @@
+export const sdgSKs = {
+    "fez_record_search_key_sdg": [
+        {
+            "rek_sdg": 456994,
+            "rek_sdg_order": 1,
+            "rek_sdg_lookup": "01 - No poverty"
+        },
+        {
+            "rek_sdg": 456995,
+            "rek_sdg_order": 2,
+            "rek_sdg_lookup": "02 - Zero Hunger"
+        },
+        {
+            "rek_sdg": 456996,
+            "rek_sdg_order": 2,
+            "rek_sdg_lookup": "03 - Good health and well-being"
+        }
+    ],
+    "fez_record_search_key_sdg_source": [
+        {
+            "rek_sdg_source": 460001,
+            "rek_sdg_source_order": 1,
+            "rek_sdg_source_lookup": "Dimensions",
+            "sdg": {
+                "cvo_id": 456994,
+                "cvo_title": "01 - No poverty",
+            }
+        },
+        {
+            "rek_sdg_source": 460002,
+            "rek_sdg_source_order": 2,
+            "rek_sdg_source_lookup": "WOS",
+            "sdg": {
+                "cvo_id": 456994,
+                "cvo_title": "01 - No poverty",
+            }
+        },
+        {
+            "rek_sdg_source": 460003,
+            "rek_sdg_source_order": 3,
+            "rek_sdg_source_lookup": "Dimensions",
+            "sdg": {
+                "cvo_id": 456995,
+                "cvo_title": "02 - Zero Hunger",
+            }
+        },
+        {
+            "rek_sdg_source": 460004,
+            "rek_sdg_source_order": 4,
+            "rek_sdg_source_lookup": "Elsevier",
+            "sdg": {
+                "cvo_id": 456996,
+                "cvo_title": "03 - Good health and well-being",
+            }
+        }
+    ],
+};
+
 export const dataCollection = {
     "rek_pid": "UQ:407731",
     "rek_title_xsdmf_id": null,
@@ -1098,6 +1156,7 @@ export const newspaperArticle = {
     "fez_record_search_key_translated_newspaper": null,
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Newspaper Article",
+    ...sdgSKs,
 };
 
 export const thesis = {
@@ -2061,6 +2120,7 @@ export const digilibImage = {
     ],
     "fez_record_search_key_surrounding_features": [],
     "rek_display_type_lookup": "Digilib Image",
+    ...sdgSKs,
 };
 
 export const workingPaper = {
@@ -2799,6 +2859,7 @@ export const design = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Design",
+    ...sdgSKs,
 };
 
 export const creativeWork = {
@@ -3409,6 +3470,7 @@ export const departmentTechnicalReport = {
     },
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Deparment Technical Report",
+    ...sdgSKs,
 };
 
 export const journalArticle = {
@@ -3441,7 +3503,6 @@ export const journalArticle = {
     "rek_altmetric_id": 20711411,
     "fez_record_search_key_access_conditions": null,
     "fez_record_search_key_acknowledgements": null,
-    
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_alternate_genre": [],
     "fez_record_search_key_alternative_title": [],
@@ -4660,6 +4721,7 @@ export const bookChapter = {
         "rek_volume_number": "886"
     },
     "rek_display_type_lookup": "Book Chapter",
+    ...sdgSKs,
 };
 
 export const book = {
@@ -4967,6 +5029,7 @@ export const book = {
     "fez_record_search_key_type_of_data": [],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Book",
+    ...sdgSKs,
 };
 
 export const editedBook = {
@@ -5711,6 +5774,7 @@ export const conferencePaper = {
         "rek_volume_number": "33"
     },
     "rek_display_type_lookup": "Conference Paper",
+    ...sdgSKs,
 };
 
 export const generic = {
@@ -6657,6 +6721,7 @@ export const audioDocument = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Audio Document",
+    ...sdgSKs,
 };
 
 export const preprint = {
@@ -7111,37 +7176,27 @@ export const mockRecordToFix = {
     ],
     "fez_record_search_key_author_id": [
         {
-            "rek_author_id_id": 29384218,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 1
         },
         {
-            "rek_author_id_id": 29384219,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 410,
             "rek_author_id_order": 2
         },
         {
-            "rek_author_id_id": 29384220,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 786,
             "rek_author_id_order": 3
         },
         {
-            "rek_author_id_id": 29384221,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 687,
             "rek_author_id_order": 4
         },
         {
-            "rek_author_id_id": 29384222,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 4100,
             "rek_author_id_order": 5
         }
@@ -7627,37 +7682,27 @@ export const mockRecordToDelete = {
     ],
     "fez_record_search_key_author_id": [
         {
-            "rek_author_id_id": 29384218,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 0,
             "rek_author_id_order": 1
         },
         {
-            "rek_author_id_id": 29384219,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 410,
             "rek_author_id_order": 2
         },
         {
-            "rek_author_id_id": 29384220,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 786,
             "rek_author_id_order": 3
         },
         {
-            "rek_author_id_id": 29384221,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 687,
             "rek_author_id_order": 4
         },
         {
-            "rek_author_id_id": 29384222,
             "rek_author_id_pid": "UQ:41878",
-            "rek_author_id_xsdmf_id": null,
             "rek_author_id": 4100,
             "rek_author_id_order": 5
         }
@@ -8671,6 +8716,7 @@ export const researchReport = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Research Report",
+    ...sdgSKs,
 };
 
 export const seminarPaper = {
@@ -8879,6 +8925,7 @@ export const seminarPaper = {
     ],
     "fez_record_search_key_total_pages": null,
     "rek_display_type_lookup": "Seminar Paper",
+    ...sdgSKs,
 };
 
 export const manuscript = {
@@ -9546,6 +9593,7 @@ export const imageDocument = {
     "fez_record_search_key_subject": [],
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Image Document",
+    ...sdgSKs,
 };
 
 export const videoDocument = {
@@ -9939,6 +9987,7 @@ export const videoDocument = {
     ],
     "fez_record_search_key_volume_number": null,
     "rek_display_type_lookup": "Video Document",
+    ...sdgSKs,
 };
 
 export const journal = {
@@ -10368,6 +10417,7 @@ export const journal = {
         "rek_volume_number": "45"
     },
     "rek_display_type_lookup": "Journal",
+    ...sdgSKs,
 };
 
 export const patent = {
@@ -10579,6 +10629,7 @@ export const patent = {
     ],
     "fez_record_search_key_translated_title": null,
     "rek_display_type_lookup": "Patent",
+    ...sdgSKs,
 };
 
 export const publicationDetails = {
@@ -13174,6 +13225,7 @@ export const recordLinks = {
             "rek_link_description_order": 1
         }
     ],
+    ...sdgSKs,
 };
 
 // TODO: each publication type should have a sample from eSpace data for testing
@@ -19104,6 +19156,7 @@ export const recordWithRDM = {
     "rek_scopus_doc_type_lookup": null,
     "rek_status_lookup": "Published",
     "rek_wok_doc_type_lookup": null,
+    ...sdgSKs,
 };
 
 export const recordWithRdmMediatedAccess = {

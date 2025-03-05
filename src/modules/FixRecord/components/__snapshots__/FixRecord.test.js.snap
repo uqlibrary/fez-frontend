@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FixRecord form submission payload should submit fix record data 1`] = `"{"issue":"Added comments: \\n          my comments"}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 1`] = `"{"issue":"Added comments: \\n          my comments \\n\\n                Added files: \\n          test.png \\n\\n        Selected Content Indicator(s): \\n          Case Study"}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 2`] = `"{"rek_pid":"UQ:41878","fez_record_search_key_file_attachment_name":[{"rek_file_attachment_name":"test.png","rek_file_attachment_name_order":1}],"fez_record_search_key_file_attachment_embargo_date":[],"fez_record_search_key_file_attachment_access_condition":[{"rek_file_attachment_access_condition":1,"rek_file_attachment_access_condition_order":1}],"fez_record_search_key_file_attachment_security_policy":[],"fez_record_search_key_content_indicator":[{"rek_content_indicator":454079,"rek_content_indicator_order":1},{"rek_content_indicator":454080,"rek_content_indicator_order":2},{"rek_content_indicator":454081,"rek_content_indicator_order":3}]}"`;
+
+exports[`Component FixRecord form submission payload should submit fix record data with new content indicator and file 3`] = `
+File {
+  "path": "test.png",
+}
+`;
+
+exports[`Component FixRecord form submission payload should submit unclaim data 1`] = `"{"rek_pid":"UQ:41878","fez_record_search_key_author_id":[{"rek_author_id_pid":"UQ:41878","rek_author_id":0,"rek_author_id_order":1},{"rek_author_id":0,"rek_author_id_order":2},{"rek_author_id_pid":"UQ:41878","rek_author_id":786,"rek_author_id_order":3},{"rek_author_id_pid":"UQ:41878","rek_author_id":687,"rek_author_id_order":4},{"rek_author_id_pid":"UQ:41878","rek_author_id":4100,"rek_author_id_order":5}],"fez_record_search_key_contributor_id":[]}"`;
+
+exports[`Component FixRecord form submission payload should submit unclaim data 2`] = `"{"pid":"UQ:41878","type":"H"}"`;
+
 exports[`Component FixRecord should render fix record form 1`] = `
 <div>
   <div

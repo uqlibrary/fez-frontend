@@ -18,7 +18,7 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
             {title}
         </Typography>
         <Grid container spacing={1} style={{ marginTop: 8 }}>
-            {collections.map(item => (
+            {collections?.map(item => (
                 <React.Fragment key={item.rek_ismemberof}>
                     <Grid xs={12} sm={2}>
                         <Typography variant="subtitle1">{`${item.rek_ismemberof}`}</Typography>

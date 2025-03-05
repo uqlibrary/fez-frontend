@@ -7,6 +7,7 @@ function setup(testProps) {
         classes: {
             fakeTitle: {},
         },
+        partialDateFieldId: 'test',
         ...testProps,
     };
     return rtlRender(<PartialDateField {...props} />);
