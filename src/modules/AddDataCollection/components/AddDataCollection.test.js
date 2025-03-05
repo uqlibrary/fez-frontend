@@ -3,6 +3,7 @@ import AddDataCollection, { licenseText } from './AddDataCollection';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
+import { useWatch } from 'react-hook-form';
 
 /* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
@@ -47,6 +48,11 @@ jest.mock('hooks', () => ({
     useValidatedForm: jest.fn(),
 }));
 
+jest.mock('react-hook-form', () => ({
+    ...jest.requireActual('react-hook-form'),
+    useWatch: jest.fn(),
+}));
+
 describe('AddDataCollection test mocking hooks', () => {
     it('should navigate to my datasets url', async () => {
         mockApi
@@ -55,15 +61,21 @@ describe('AddDataCollection test mocking hooks', () => {
             })
             .reply(() => [200, { total: 0, data: [] }]);
 
+        useWatch.mockImplementation(() => ['2025-01-01', '2025-02-01']);
         // Mock the hook implementation for this test
         let counter = 0;
         useValidatedForm.mockImplementation(() => ({
             handleSubmit: jest.fn(),
-            watch: () =>
-                // startDate, endDate, watchedDoiField
-                ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
+            // watch: () =>
+            //     // startDate, endDate, watchedDoiField
+            //     ['2025-01-01', '2025-02-01', '10.1037/arc0000014'],
             setError: jest.fn(),
-            control: {},
+            control: {
+                values: {
+                    'fez_record_search_key_start_date.rek_start_date': '2025-01-01',
+                    'fez_record_search_key_end_date.rek_end_date': '2025-02-01',
+                },
+            },
             formState: {
                 isSubmitting: false,
                 get isSubmitSuccessful() {
