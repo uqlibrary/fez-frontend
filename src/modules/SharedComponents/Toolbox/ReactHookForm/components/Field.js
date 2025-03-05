@@ -67,16 +67,10 @@ const Field = ({ name, control, rules, component: Component, validate, normalize
                     ...field,
                     ...childProps,
                     value: field.value,
-                    ...(!!childProps?.onChange
-                        ? {
-                              onChange: e => childProps.onChange(e, field.onChange),
-                          }
-                        : {}),
                 };
-                if (typeof normalize === 'function') {
-                    const originalOnChange = componentProps.onChange;
+                if (typeof field.onChange === 'function' && typeof normalize === 'function') {
                     componentProps.onChange = event =>
-                        originalOnChange(normalize(event && event?.target ? event.target.value : event));
+                        field.onChange(normalize(event && event?.target ? event.target.value : event));
                 }
                 if (!!childProps.noRef) delete componentProps.ref;
                 return <Component {...componentProps} />;

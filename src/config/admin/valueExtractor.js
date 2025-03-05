@@ -371,7 +371,7 @@ export default {
                     return a.rek_value.sdgCVOId - b.rek_value.sdgCVOId;
                 });
 
-            delete record.fez_record_search_key_sdg_source;
+            // delete record.fez_record_search_key_sdg_source;
             return returnValue;
         },
     },
