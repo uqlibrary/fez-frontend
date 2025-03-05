@@ -235,21 +235,23 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderContributorIdentifier = (objects, subKey) => {
         const id = objects[0][subKey];
-        let value = objects[0][subKey];
+        let link = null;
 
         if (isValidOrcid(id)) {
-            value = `${ORCID_BASE_URL}/${value}`;
+            link = `${ORCID_BASE_URL}/${id}`;
         } else {
             /* istanbul ignore else */
             if (isValidROR(id)) {
-                value = `${ROR_BASE_URL}/${value}`;
+                link = `${ROR_BASE_URL}/${id}`;
             }
         }
 
-        return (
-            <a href={`${value}`} target="blank" data-testid="rek-contributor-identifier">
-                {value}
-            </a>
+        return link ? (
+            <ExternalLink id={'rek-contributor-identifier'} data-testid={'rek-contributor-identifier'} href={link}>
+                {id}
+            </ExternalLink>
+        ) : (
+            id
         );
     };
 

@@ -214,7 +214,8 @@ describe('Additional Information Component ', () => {
                 fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
-        expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://orcid.org/0000-0000-0000-0001');
+
+        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
     });
 
     it('should render component with ror owner identifier', () => {
@@ -225,7 +226,19 @@ describe('Additional Information Component ', () => {
                 fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
-        expect(getByTestId('rek-contributor-identifier')).toHaveTextContent('https://ror.org/02mhbdp94');
+        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+    });
+
+    it('should render component with unrecognised owner identifier', () => {
+        const id = '12345';
+        const { getByText } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
+            },
+        });
+
+        expect(getByText(id)).toBeInTheDocument();
     });
 
     it('should render component with generic document', () => {
