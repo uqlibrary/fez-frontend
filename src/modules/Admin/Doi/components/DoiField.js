@@ -60,6 +60,8 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         // Arrays
         case 'fez_record_search_key_isbn':
         case 'fez_record_search_key_issn':
+        case 'fez_record_search_key_instrument_type':
+        case 'fez_record_search_key_measured_variable':
         case 'fez_record_search_key_alternate_identifier':
             if (!!data && data.length === 0) {
                 break;
