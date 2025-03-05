@@ -287,12 +287,20 @@ export const doiFields = {
                 order: 8,
             },
             {
-                field: 'fez_record_search_key_alternate_identifier',
+                field: 'fez_record_search_key_measured_variable',
                 order: 9,
             },
             {
-                field: 'fez_record_search_key_resource_type',
+                field: 'fez_record_search_key_instrument_type',
                 order: 10,
+            },
+            {
+                field: 'fez_record_search_key_alternate_identifier',
+                order: 11,
+            },
+            {
+                field: 'fez_record_search_key_resource_type',
+                order: 12,
             },
         ],
     },
