@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyIncompleteRecord form submission payload all fields data 1`] = `"{"rek_pid":"UQ:352045","fez_record_search_key_audience_size":{"rek_audience_size":453993},"comments":"comments","fez_record_search_key_language":[{"rek_language":"eng","rek_language_order":1}],"fez_record_search_key_quality_indicator":[{"rek_quality_indicator":453996,"rek_quality_indicator_order":1}],"fez_record_search_key_significance":[{"rek_significance":454026,"rek_significance_order":1}],"fez_record_search_key_file_attachment_name":[{"rek_file_attachment_name":"myTestImage.png","rek_file_attachment_name_order":1}],"fez_record_search_key_file_attachment_embargo_date":[],"fez_record_search_key_file_attachment_access_condition":[{"rek_file_attachment_access_condition":1,"rek_file_attachment_access_condition_order":1}],"fez_record_search_key_file_attachment_security_policy":[],"fez_record_search_key_author_affiliation_name":[{"rek_author_affiliation_name":"The University of Queensland","rek_author_affiliation_name_order":1}],"fez_record_search_key_author_affiliation_type":[{"rek_author_affiliation_type":453989,"rek_author_affiliation_type_order":1}]}"`;
+
+exports[`MyIncompleteRecord form submission payload all fields data 2`] = `"{"issue":"Added comments: \\n          comments \\n\\n                Added files: \\n          myTestImage.png"}"`;
+
+exports[`MyIncompleteRecord form submission payload all fields data 3`] = `
+File {
+  "path": "myTestImage.png",
+}
+`;
