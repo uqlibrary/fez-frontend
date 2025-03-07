@@ -19,7 +19,7 @@ const lazyRetry = (importFn, retries = 3, interval = 500) => {
 
 // lazy loaded components
 export const AddDataCollection = lazy(() =>
-    lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
+    lazyRetry(() => import('modules/AddDataCollection/components/AddDataCollection')),
 );
 export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/components/AdminContainer')));
 export const AdminDashboard = lazy(() => lazyRetry(() => import('modules/AdminDashboard/AdminDashboard')));

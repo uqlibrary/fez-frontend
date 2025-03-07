@@ -269,9 +269,8 @@ export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
     if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
-    } else {
-        return undefined;
     }
+    return undefined;
 };
 
 export const isValidDate = date => {

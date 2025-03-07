@@ -3,7 +3,7 @@ import { locale } from 'locale';
 import { APP_URL, viewRecordsConfig } from 'config';
 import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
-import { dateRange, isFileValid } from './validation';
+import { isFileValid } from './validation';
 import { STATE_DELETED } from './viewRecord';
 
 describe('Validation method', () => {
