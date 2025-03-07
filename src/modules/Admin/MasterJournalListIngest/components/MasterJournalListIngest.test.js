@@ -1,5 +1,13 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, waitForElementToBeRemoved, waitFor } from 'test-utils';
+import {
+    fireEvent,
+    render,
+    WithReduxStore,
+    WithRouter,
+    waitForElementToBeRemoved,
+    waitFor,
+    userEvent,
+} from 'test-utils';
 import * as repositories from 'repositories';
 import * as JournalActions from 'actions/journals';
 
@@ -49,9 +57,9 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
+        await userEvent.click(getByTestId('master-journal-list-ingest-submit'));
 
-        expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
+        expect(requestMJLIngest).toHaveBeenCalledWith({ directory: 'Test directory 1' });
         await waitFor(() => getByTestId('alert-done-mjl-ingest'));
     });
 
@@ -69,9 +77,9 @@ describe('MasterJournalListIngest Component', () => {
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
-        fireEvent.click(getByTestId('master-journal-list-ingest-submit'));
+        await userEvent.click(getByTestId('master-journal-list-ingest-submit'));
 
-        expect(requestMJLIngest).toBeCalledWith({ directory: 'Test directory 1' });
+        expect(requestMJLIngest).toHaveBeenCalledWith({ directory: 'Test directory 1' });
         await waitFor(() => getByTestId('alert-error-mjl-ingest'));
     });
 
