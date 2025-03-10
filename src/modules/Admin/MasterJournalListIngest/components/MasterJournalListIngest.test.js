@@ -7,7 +7,6 @@ import {
     waitForElementToBeRemoved,
     waitFor,
     userEvent,
-    preview,
 } from 'test-utils';
 import * as repositories from 'repositories';
 import * as JournalActions from 'actions/journals';
@@ -58,7 +57,6 @@ describe('MasterJournalListIngest Component', () => {
         await waitForElementToBeRemoved(() => getByText('Loading items...'));
 
         await userEvent.click(getByTestId('directory-select'));
-        preview.debug();
         await userEvent.click(getByText('Test directory 1'));
 
         await userEvent.click(getByTestId('master-journal-list-ingest-submit'));
@@ -69,7 +67,7 @@ describe('MasterJournalListIngest Component', () => {
 
     it('should show submission failure in case of network error', async () => {
         const requestMJLIngest = jest.spyOn(JournalActions, 'requestMJLIngest');
-        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl).replyOnce(200, {
+        mockApi.onGet(repositories.routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl).reply(200, {
             data: ['Test directory 1', 'Test directory 2'],
         });
         mockApi.onPost(repositories.routes.MASTER_JOURNAL_LIST_INGEST_API().apiUrl).networkErrorOnce();
