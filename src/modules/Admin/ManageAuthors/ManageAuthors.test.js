@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthors from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent } from 'test-utils';
+import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, preview } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
 import * as repository from 'repositories';
@@ -222,7 +222,18 @@ describe('ManageAuthors', () => {
                 total: 23,
                 pageSize: 20,
                 current_page: 1,
-            })
+            });
+
+        const { getAllByTestId, getByText } = setup({});
+
+        await waitForElementToBeRemoved(() => getByText('No records to display'));
+
+        const tableRows = getAllByTestId('mtablebodyrow');
+        preview.debug();
+        expect(tableRows.length).toBe(20);
+
+        mockApi.reset();
+        mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 50, query: '' }).apiUrl))
             .reply(200, {
                 data: [
@@ -347,14 +358,6 @@ describe('ManageAuthors', () => {
                 pageSize: 20,
                 current_page: 1,
             });
-
-        const { getAllByTestId, getByText } = setup({});
-
-        await waitForElementToBeRemoved(() => getByText('No records to display'));
-
-        const tableRows = getAllByTestId('mtablebodyrow');
-        expect(tableRows.length).toBe(20);
-
         fireEvent.mouseDown(getByText('20 rows'));
         fireEvent.click(getByText('50'));
 
@@ -463,51 +466,47 @@ describe('ManageAuthors', () => {
     });
 
     it('should exit from editing author mode', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .reply(200, {
-                data: [
-                    {
-                        aut_created_date: '2006-03-31T00:00:00Z',
-                        aut_description: null,
-                        aut_display_name: 'Pun, PaulKang K.',
-                        aut_email: 'punp@ramsayhealth.com.au',
-                        aut_external_id: '0000065773',
-                        aut_fname: 'PaulKang',
-                        aut_google_scholar_id: null,
-                        aut_homepage_link: null,
-                        aut_id: 2011,
-                        aut_is_orcid_sync_enabled: null,
-                        aut_is_scopus_id_authenticated: 0,
-                        aut_lname: 'Pun',
-                        aut_mname: null,
-                        aut_mypub_url: null,
-                        aut_orcid_bio: null,
-                        aut_orcid_id: null,
-                        aut_orcid_works_last_modified: null,
-                        aut_orcid_works_last_sync: null,
-                        aut_org_staff_id: '0030916',
-                        aut_org_student_id: null,
-                        aut_org_username: 'uqppun',
-                        aut_people_australia_id: null,
-                        aut_position: null,
-                        aut_publons_id: null,
-                        aut_ref_num: null,
-                        aut_researcher_id: null,
-                        aut_review_orcid_scopus_id_integration: null,
-                        aut_rid_last_updated: null,
-                        aut_rid_password: null,
-                        aut_scopus_id: null,
-                        aut_student_username: null,
-                        aut_title: 'Dr',
-                        aut_twitter_username: null,
-                        aut_update_date: '2020-01-19T19:29:55Z',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl))
-            .reply(200, { data: [], total: 0 });
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).reply(200, {
+            data: [
+                {
+                    aut_created_date: '2006-03-31T00:00:00Z',
+                    aut_description: null,
+                    aut_display_name: 'Pun, PaulKang K.',
+                    aut_email: 'punp@ramsayhealth.com.au',
+                    aut_external_id: '0000065773',
+                    aut_fname: 'PaulKang',
+                    aut_google_scholar_id: null,
+                    aut_homepage_link: null,
+                    aut_id: 2011,
+                    aut_is_orcid_sync_enabled: null,
+                    aut_is_scopus_id_authenticated: 0,
+                    aut_lname: 'Pun',
+                    aut_mname: null,
+                    aut_mypub_url: null,
+                    aut_orcid_bio: null,
+                    aut_orcid_id: null,
+                    aut_orcid_works_last_modified: null,
+                    aut_orcid_works_last_sync: null,
+                    aut_org_staff_id: '0030916',
+                    aut_org_student_id: null,
+                    aut_org_username: 'uqppun',
+                    aut_people_australia_id: null,
+                    aut_position: null,
+                    aut_publons_id: null,
+                    aut_ref_num: null,
+                    aut_researcher_id: null,
+                    aut_review_orcid_scopus_id_integration: null,
+                    aut_rid_last_updated: null,
+                    aut_rid_password: null,
+                    aut_scopus_id: null,
+                    aut_student_username: null,
+                    aut_title: 'Dr',
+                    aut_twitter_username: null,
+                    aut_update_date: '2020-01-19T19:29:55Z',
+                },
+            ],
+            total: 1,
+        });
         const { getAllByTestId, getByTestId, getByText, queryByTestId, queryByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
@@ -515,6 +514,7 @@ describe('ManageAuthors', () => {
         const tableRows = getAllByTestId('mtablebodyrow');
         expect(tableRows.length).toBe(1);
 
+        mockApi.onGet(new RegExp(repository.routes.AUTHORS_SEARCH_API({}).apiUrl)).reply(200, { data: [], total: 0 });
         fireEvent.click(tableRows[0]);
         fireEvent.keyDown(getByTestId('author-edit-row'), { key: 'Escape' });
 
