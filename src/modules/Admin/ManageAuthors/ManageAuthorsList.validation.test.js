@@ -1,8 +1,8 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
+import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as repository from 'repositories';
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 
 function setup(testProps = {}) {
     const props = {
@@ -13,9 +13,11 @@ function setup(testProps = {}) {
     };
 
     return render(
-        <WithReduxStore>
-            <ManageAuthorsList {...props} />
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <ManageAuthorsList {...props} />
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 }
 
@@ -43,12 +45,12 @@ describe('ManageAuthorsList', () => {
     it('should validate org username input for existing org username', async () => {
         mockApi
             .onGet(new RegExp(`^${repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl}`))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
             .onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl)
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         id: 123,
@@ -108,12 +110,12 @@ describe('ManageAuthorsList', () => {
     it('should validate student username input for existing student username', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
             .onGet(new RegExp('^fez-authors/search'))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         id: 123,
@@ -162,12 +164,12 @@ describe('ManageAuthorsList', () => {
     it('should validate org staff id input for existing org staff id and display error message', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '1234567', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         id: 123,
@@ -179,7 +181,7 @@ describe('ManageAuthorsList', () => {
                 total: 1,
             })
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '1234569', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             });
@@ -225,13 +227,13 @@ describe('ManageAuthorsList', () => {
     it('should validate org student id input for existing org student id and display error message', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
 
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '12345678', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         id: 123,
@@ -242,7 +244,7 @@ describe('ManageAuthorsList', () => {
                 total: 1,
             })
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '12345679', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             });
@@ -286,7 +288,7 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should render same list after unsuccessful bulk delete operation', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).reply(200, {
             data: [
                 {
                     aut_created_date: '2021-03-18T04:47:06Z',
@@ -391,13 +393,13 @@ describe('ManageAuthorsList', () => {
     it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
 
             .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtest', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         id: 123,
@@ -409,7 +411,7 @@ describe('ManageAuthorsList', () => {
                 total: 1,
             })
             .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtesta', rule: 'lookup' } })
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             });
@@ -453,7 +455,7 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).reply(200, {
             data: [
                 {
                     aut_created_date: '2021-03-18T04:47:06Z',
