@@ -21,7 +21,6 @@ const MasterJournalListIngest = () => {
     const [apiError, setApiError] = React.useState('');
     const dispatch = useDispatch();
     const onSubmit = async data => {
-        console.log('data', data);
         return dispatch(requestMJLIngest(data)).catch(error => {
             setApiError(error.message);
         });
