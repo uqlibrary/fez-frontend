@@ -11,11 +11,13 @@ jest.mock('actions', () => ({
 
 function setup(testProps = {}, state = {}, rerender = render) {
     return rerender(
-        <WithReduxStore initialState={Immutable.Map(state)}>
-            <WithRouter>
-                <CommunityForm {...testProps} />
-            </WithRouter>
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore initialState={Immutable.Map(state)}>
+                <WithRouter>
+                    <CommunityForm {...testProps} />
+                </WithRouter>
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 }
 async function inputText(getByTestId, settings) {
