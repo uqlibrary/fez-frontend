@@ -11,9 +11,11 @@ import userEvent from '@testing-library/user-event';
 
 const setup = (testProps = {}) => {
     return render(
-        <WithReduxStore>
-            <ManageAuthors {...testProps} />
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <ManageAuthors {...testProps} />
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 };
 
@@ -29,7 +31,7 @@ describe('ManageAuthors', () => {
     });
 
     it('should render empty list', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).reply(200, {
             data: [],
             total: 0,
         });
@@ -43,7 +45,7 @@ describe('ManageAuthors', () => {
     it('should render default view', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 1, search: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2006-03-31T00:00:00Z',
@@ -103,9 +105,7 @@ describe('ManageAuthors', () => {
     it('should render error message', async () => {
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
-        mockApi
-            .onGet(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 1, query: '' }).apiUrl)
-            .replyOnce(500);
+        mockApi.onGet(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 1, query: '' }).apiUrl).reply(500);
 
         const { getByText } = setup({});
         await waitFor(() => expect(getByText('No records to display')).toBeInTheDocument());
@@ -115,7 +115,7 @@ describe('ManageAuthors', () => {
     it('should change call an api with updated page size', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_id: 2011,
@@ -224,7 +224,7 @@ describe('ManageAuthors', () => {
                 current_page: 1,
             })
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 50, query: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_id: 2011,
@@ -364,7 +364,7 @@ describe('ManageAuthors', () => {
     it('should bulk delete authors', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_id: 2011,
@@ -387,7 +387,7 @@ describe('ManageAuthors', () => {
                 current_page: 1,
             })
             .onPost('fez-authors/delete-list')
-            .replyOnce(200, {
+            .reply(200, {
                 data: {
                     '2011': 'Author deleted',
                     '2012': 'Author deleted',
@@ -418,7 +418,7 @@ describe('ManageAuthors', () => {
 
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_id: 2011,
@@ -465,7 +465,7 @@ describe('ManageAuthors', () => {
     it('should exit from editing author mode', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2006-03-31T00:00:00Z',
@@ -529,7 +529,7 @@ describe('ManageAuthors', () => {
                 return [200, { data: [], total: 0 }];
             })
             .onPost(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
-            .replyOnce(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
+            .reply(200, { data: { aut_id: 1, aut_display_name: 'Test, Name' } });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -566,7 +566,7 @@ describe('ManageAuthors', () => {
     it('should render previous list on unsuccessful add operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [],
                 total: 0,
             })
@@ -595,7 +595,7 @@ describe('ManageAuthors', () => {
     it('should validate inputs and render updated info after editing', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -684,7 +684,7 @@ describe('ManageAuthors', () => {
     it('should validate inputs and render same info after unsuccessful editing operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -762,7 +762,7 @@ describe('ManageAuthors', () => {
     it('should delete an author item', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -862,7 +862,7 @@ describe('ManageAuthors', () => {
     it('should render same list after unsuccessful delete operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -965,7 +965,7 @@ describe('ManageAuthors', () => {
     });
 
     it('should copy author id to clipboard', async () => {
-        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).replyOnce(200, {
+        mockApi.onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl)).reply(200, {
             data: [
                 {
                     aut_created_date: '2006-03-31T00:00:00Z',
@@ -1029,7 +1029,7 @@ describe('ManageAuthors', () => {
     it('should trigger scopus ingest for the author', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -1172,7 +1172,7 @@ describe('ManageAuthors', () => {
     it('should fail to trigger scopus ingest for the author', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
