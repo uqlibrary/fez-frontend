@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
+import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitForElementToBeRemoved, preview } from 'test-utils';
 import * as repository from 'repositories';
 // import userEvent from '@testing-library/user-event';
 
@@ -36,6 +36,7 @@ describe('ManageAuthorsList', () => {
         window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
 
         // jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
+        mockApi.reset();
     });
 
     afterEach(() => {
@@ -43,29 +44,21 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input for existing org username', async () => {
-        mockApi
-            .onGet(new RegExp(`^${repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl}`))
-            .reply(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl)
-            .reply(200, {
-                data: [
-                    {
-                        id: 123,
-                        value: 'Test, Test (uqtest)',
-                        aut_id: 1234,
-                        aut_org_username: 'uqtest',
-                        aut_fname: 'Test',
-                        aut_lname: 'Test',
-                        aut_org_staff_id: '123',
-                        aut_display_name: 'Test, Test',
-                    },
-                ],
-                total: 1,
-            });
-
+        mockApi.onGet(repository.routes.AUTHORS_SEARCH_API({}).apiUrl).reply(200, {
+            data: [
+                {
+                    id: 123,
+                    value: 'Test, Test (uqtest)',
+                    aut_id: 1234,
+                    aut_org_username: 'uqtest',
+                    aut_fname: 'Test',
+                    aut_lname: 'Test',
+                    aut_org_staff_id: '123',
+                    aut_display_name: 'Test, Test',
+                },
+            ],
+            total: 1,
+        });
         const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
@@ -108,24 +101,17 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate student username input for existing student username', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .reply(200, {
-                data: [],
-                total: 0,
-            })
-            .onGet(new RegExp('^fez-authors/search'))
-            .reply(200, {
-                data: [
-                    {
-                        id: 123,
-                        aut_id: 1234,
-                        aut_org_username: 'uqtest',
-                        aut_student_username: 's1234567',
-                    },
-                ],
-                total: 1,
-            });
+        mockApi.onGet(new RegExp('^fez-authors/search')).reply(200, {
+            data: [
+                {
+                    id: 123,
+                    aut_id: 1234,
+                    aut_org_username: 'uqtest',
+                    aut_student_username: 's1234567',
+                },
+            ],
+            total: 1,
+        });
         const { getByTestId, getByText, queryAllByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading authors'));
@@ -163,11 +149,6 @@ describe('ManageAuthorsList', () => {
 
     it('should validate org staff id input for existing org staff id and display error message', async () => {
         mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .reply(200, {
-                data: [],
-                total: 0,
-            })
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '1234567', rule: 'lookup' } })
             .reply(200, {
                 data: [
@@ -226,12 +207,6 @@ describe('ManageAuthorsList', () => {
 
     it('should validate org student id input for existing org student id and display error message', async () => {
         mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .reply(200, {
-                data: [],
-                total: 0,
-            })
-
             .onGet(new RegExp('^fez-authors/search'), { params: { query: '12345678', rule: 'lookup' } })
             .reply(200, {
                 data: [
@@ -391,30 +366,21 @@ describe('ManageAuthorsList', () => {
     });
 
     it('should validate org username input and leave in invalid state for existing org username even after updating first name and last name', async () => {
-        mockApi
-            .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
-            .reply(200, {
-                data: [],
-                total: 0,
-            })
-
-            .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtest', rule: 'lookup' } })
-            .reply(200, {
-                data: [
-                    {
-                        id: 123,
-                        aut_id: 1234,
-                        aut_org_username: 'uqtest',
-                        aut_org_staff_id: '1234567',
-                    },
-                ],
-                total: 1,
-            })
-            .onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtesta', rule: 'lookup' } })
-            .reply(200, {
-                data: [],
-                total: 0,
-            });
+        mockApi.onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtest', rule: 'lookup' } }).reply(200, {
+            data: [
+                {
+                    id: 123,
+                    aut_id: 1234,
+                    aut_org_username: 'uqtest',
+                    aut_org_staff_id: '1234567',
+                },
+            ],
+            total: 1,
+        });
+        mockApi.onGet(new RegExp('^fez-authors/search'), { params: { query: 'uqtesta', rule: 'lookup' } }).reply(200, {
+            data: [],
+            total: 0,
+        });
 
         const { getByTestId, getByText, queryAllByText, findByTestId } = setup();
 
@@ -436,6 +402,7 @@ describe('ManageAuthorsList', () => {
             const messages = queryAllByText(
                 'The supplied Organisation Username is already on file for another author.',
             );
+            preview.debug();
             expect(messages.length).toBeGreaterThan(0); // Ensure at least one match
             messages.forEach(message => expect(message).toBeInTheDocument());
         });
