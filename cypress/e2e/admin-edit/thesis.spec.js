@@ -101,7 +101,7 @@ context('Thesis admin edit', () => {
                 });
 
             cy.get('@cards')
-                .eq(5)
+                .eq(6)
                 .within(() => {
                     cy.get('h4').should('contain', 'Related publications');
                     const relatedPubs = record.fez_record_search_key_isderivationof.map(

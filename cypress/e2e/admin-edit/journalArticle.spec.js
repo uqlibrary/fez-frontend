@@ -234,6 +234,18 @@ context('Journal Article admin edit', () => {
                 cy.get('@cards')
                     .eq(7)
                     .within(() => {
+                        cy.get('h4').should('contain', 'Sustainable Development Goal');
+                        record.fez_record_search_key_sdg_source.forEach((item, index) =>
+                            cy
+                                .get('p')
+                                .eq(index)
+                                .should('have.text', `${item.sdg.cvo_title} - ${item.rek_sdg_source_lookup}`),
+                        );
+                    });
+
+                cy.get('@cards')
+                    .eq(8)
+                    .within(() => {
                         cy.get('h4').should('contain', 'Related publications');
                         // No Related publications in mock
                     });

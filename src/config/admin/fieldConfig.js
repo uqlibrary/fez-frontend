@@ -16,6 +16,7 @@ import {
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
     COLLECTION_VIEW_TYPE,
+    SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -81,6 +82,7 @@ import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
+import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -710,6 +712,17 @@ export default {
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
                 canEdit: true,
                 listEditorId: 'rek-subjects',
+            },
+        },
+        fez_record_search_key_sdg_source: {
+            component: SustainableDevelopmentGoalListField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_sdg_source',
+                locale: locale.components.sustainableDevelopmentGoal.field,
+                distinctOnly: true,
+                category: SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+                canEdit: false,
+                listEditorId: 'rek-sustainable-development-goal',
             },
         },
         fez_record_search_key_refereed_source: {

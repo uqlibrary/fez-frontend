@@ -38,6 +38,7 @@ export default class ListEditor extends Component {
         canEdit: PropTypes.bool,
         getItemSelectedToEdit: PropTypes.func,
         listEditorId: PropTypes.string.isRequired,
+        onAddItem: PropTypes.func,
     };
 
     static defaultProps = {
@@ -66,6 +67,7 @@ export default class ListEditor extends Component {
         scrollList: false,
         scrollListHeight: 250,
         getItemSelectedToEdit: (list, index) => list[index] || null,
+        onAddItem: state => state,
     };
 
     constructor(props) {
@@ -149,24 +151,25 @@ export default class ListEditor extends Component {
             ((this.props.distinctOnly && !this.isItemInTheList(item, this.state.itemList)) ||
                 (!this.props.distinctOnly && this.state.itemList.indexOf(item) === -1))
         ) {
+            let newState = {};
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
-                    this.setState({
+                    newState = {
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
                             item,
                             ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
                         ],
                         itemIndexSelectedToEdit: null,
-                    });
+                    };
                 } else {
-                    this.setState({
+                    newState = {
                         itemList: [...this.state.itemList, item],
-                    });
+                    };
                 }
             } else if (!!item && !item.key && !item.value && item.includes('|')) {
                 // Item is a string with pipes in it - we will strip and separate the values to be individual keywords
@@ -178,9 +181,9 @@ export default class ListEditor extends Component {
                     // If the final list is longer that maxCount, trim it back
                     totalArray.length = this.props.maxCount;
                 }
-                this.setState({
+                newState = {
                     itemList: [...totalArray],
-                });
+                };
             } else {
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
@@ -189,22 +192,20 @@ export default class ListEditor extends Component {
                               key: item,
                           }
                         : item;
-
-                    this.setState({
+                    newState = {
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
                             itemSelected,
                             ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
                         ],
                         itemIndexSelectedToEdit: null,
-                    });
+                    };
                 } else {
                     // Item is just a string - so just add it
-                    this.setState({
-                        itemList: [...this.state.itemList, item],
-                    });
+                    newState = { itemList: [...this.state.itemList, item] };
                 }
             }
+            this.setState((this.props.onAddItem && this.props.onAddItem(newState)) || newState);
         }
     };
 
