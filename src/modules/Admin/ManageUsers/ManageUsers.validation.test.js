@@ -5,9 +5,11 @@ import * as repository from 'repositories';
 
 const setup = (testProps = {}) => {
     return render(
-        <WithReduxStore>
-            <ManageUsers {...testProps} />
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <ManageUsers {...testProps} />
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 };
 
