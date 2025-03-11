@@ -88,6 +88,14 @@ export const AdminContainer = ({
         };
     }, [loadRecordToView, clearRecordToView, pid]);
 
+    React.useEffect(() => {
+        if (createMode) {
+            setShowAddForm(true);
+        } else {
+            setShowAddForm(false);
+        }
+    }, [createMode]);
+
     const txt = locale.pages.edit;
     if (!!pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -269,7 +277,8 @@ export function isSame(prevProps, nextProps) {
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
         prevProps.showAddForm === nextProps.showAddForm &&
         prevProps.formErrors === nextProps.formErrors &&
-        prevProps.locked === nextProps.locked
+        prevProps.locked === nextProps.locked &&
+        prevProps.createMode === nextProps.createMode
     );
 }
 
