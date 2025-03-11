@@ -26,12 +26,12 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
-    if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
+    if (!adminInterfaceConfig || typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
     return (adminInterfaceConfig[record.rek_display_type] || {})
         [tab](tabParams(record))
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        ?.map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
