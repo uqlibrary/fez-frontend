@@ -362,7 +362,7 @@ describe('form submission', () => {
 
             await submitForm();
             expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
-                JSON.stringify(sortObjectProps(JSON.parse(data))),
+                sortObjectProps(JSON.parse(data)),
             );
             expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             expectApiRequestToMatchSnapshot('patch', api.url.records.get(pid), data => data.includes(fileMock[0])); // datastream updates
