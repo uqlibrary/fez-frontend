@@ -27,6 +27,8 @@ import * as useForm from 'hooks/useForm';
 import { lastRequests } from '../src/config/axios';
 import { api } from './api-mock';
 
+import { isPlainObject } from 'lodash';
+
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>
@@ -312,12 +314,20 @@ const assertInstanceOfFile = data => {
     return true;
 };
 
-const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+/**
+ * Note: this method will pop matched request from history
+ * @param {string} method
+ * @param {string} url
+ * @param {function?} assertPayload
+ * @param {function?} transformer
+ * @return {*}
+ */
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload, transformer) => {
     const request = assertApiRequest({
         method,
         url,
         partialUrl: url,
-        data: data => expect(data).toMatchSnapshot() || true,
+        data: data => expect(transformer?.(data) ?? data).toMatchSnapshot() || true,
     });
     return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
@@ -325,6 +335,29 @@ const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
 const previewAndHalt = () => {
     preview.debug();
     process.exit(0);
+};
+
+// https://stackoverflow.com/a/73160202/1417494
+const sortObjectProps = obj => {
+    return Object.keys(obj)
+        .sort()
+        .reduce((ordered, key) => {
+            let value = obj[key];
+
+            if (isPlainObject(value)) {
+                ordered[key] = sortObjectProps(value);
+            } else {
+                if (Array.isArray(value)) {
+                    value = value.map(v => {
+                        // eslint-disable-next-line no-param-reassign
+                        if (isPlainObject(v)) v = sortObjectProps(v);
+                        return v;
+                    });
+                }
+                ordered[key] = value;
+            }
+            return ordered;
+        }, {});
 };
 
 module.exports = {
@@ -362,5 +395,6 @@ module.exports = {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     previewAndHalt,
+    sortObjectProps,
     api,
 };

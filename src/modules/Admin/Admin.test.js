@@ -1,5 +1,5 @@
 import React from 'react';
-import Admin from './Admin';
+import Admin from './containers/Admin';
 import * as mock from 'mock/data';
 import { record } from 'mock/data/records';
 import Immutable from 'immutable';
@@ -18,6 +18,7 @@ import {
     api,
     assertInstanceOfFile,
     waitFor,
+    sortObjectProps,
 } from 'test-utils';
 
 function setup(testProps = {}, testState = {}, renderer = rtlRender) {
@@ -360,7 +361,9 @@ describe('form submission', () => {
             );
 
             await submitForm();
-            expectApiRequestToMatchSnapshot('post', api.url.files.create);
+            expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
+                JSON.stringify(sortObjectProps(JSON.parse(data))),
+            );
             expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             expectApiRequestToMatchSnapshot('patch', api.url.records.get(pid), data => data.includes(fileMock[0])); // datastream updates
         });
