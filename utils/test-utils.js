@@ -166,7 +166,7 @@ export const createMatchMedia = width => {
 
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-const addFilesToFileUploader = files => {
+const addFilesToFileUploader = async (files, timeout = 500) => {
     const { screen, fireEvent } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
@@ -184,6 +184,9 @@ const addFilesToFileUploader = files => {
             types: ['Files'],
         },
     });
+    for (const file of files) {
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+    }
 };
 const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
     const { fireEvent } = reactTestingLib;
@@ -193,6 +196,18 @@ const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
         fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
         fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
+const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 500) => {
+    const { fireEvent, within } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+        fireEvent.mouseDown(
+            within(screen.getByTestId('files-section-content')).getByTestId(`dsi-security-policy-${index}-select`),
+        );
+        fireEvent.click(screen.getByRole('option', { name: optionName }));
     }
 };
 
@@ -338,6 +353,7 @@ module.exports = {
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    setFileUploaderFilesSecurityPolicy,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,
