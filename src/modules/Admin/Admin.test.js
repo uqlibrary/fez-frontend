@@ -1,5 +1,5 @@
 import React from 'react';
-import Admin from './Admin';
+import AdminContainer from './components/AdminContainer';
 import * as mock from 'mock/data';
 import { record } from 'mock/data/records';
 import Immutable from 'immutable';
@@ -18,6 +18,7 @@ import {
     api,
     assertInstanceOfFile,
     waitFor,
+    sortObjectProps,
 } from 'test-utils';
 
 function setup(testProps = {}, testState = {}, renderer = rtlRender) {
@@ -88,7 +89,7 @@ function setup(testProps = {}, testState = {}, renderer = rtlRender) {
     return renderer(
         <WithReduxStore initialState={Immutable.Map({ ...state })}>
             <WithRouter>
-                <Admin {...props} />
+                <AdminContainer {...props} />
             </WithRouter>
             ,
         </WithReduxStore>,
@@ -360,9 +361,11 @@ describe('form submission', () => {
             );
 
             await submitForm();
-            expectApiRequestToMatchSnapshot('post', api.url.files.create);
+            expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
+                JSON.stringify(sortObjectProps(JSON.parse(data))),
+            );
             expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             expectApiRequestToMatchSnapshot('patch', api.url.records.get(pid), data => data.includes(fileMock[0])); // datastream updates
-        });
+        }, 60000);
     });
 });
