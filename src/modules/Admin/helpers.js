@@ -172,7 +172,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
-                {},
+                /* istanbul ignore next */ {},
             authorsSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
             adminSection:
@@ -189,7 +189,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'notes')) ||
-                {},
+                /* istanbul ignore next */ {},
             reasonSection:
                 ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'reason')) ||

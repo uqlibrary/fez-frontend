@@ -44,7 +44,7 @@ export const onSubmit = (values, dispatch, { setServerError, initialValues, para
             action = isEdit ? adminUpdate : adminCreate;
             break;
     }
-    console.log('requestObject', requestObject);
+
     return dispatch(action({ ...requestObject }))
         .then(() => Promise.resolve())
         .catch(e => {

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import { validate } from 'config/admin';
 import { useWatch } from 'react-hook-form';
 import { merge } from 'lodash';
