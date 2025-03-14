@@ -18,10 +18,14 @@ export const getInitialValuesForForm = (recordToView, createMode) => {
             },
         },
     };
-
-    if (createMode) return initialFormValues;
-    const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
-    return (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
+    if (createMode || !!!recordToView?.rek_object_type_lookup) return initialFormValues;
+    const recordType = (
+        (recordToView || /* istanbul ignore next */ {}).rek_object_type_lookup || /* istanbul ignore next */ ''
+    ).toLowerCase();
+    return (
+        (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) ||
+        /* istanbul ignore next */ {}
+    );
 };
 export const useRecord = createMode => {
     const { authorDetails, author } = useSelector(state => state.get('accountReducer'));
@@ -87,7 +91,6 @@ export const useFormOnChangeHook = form => {
         ],
     });
     if (rekDisplayType === PUBLICATION_TYPE_THESIS && !!adminSectionRekSubtype && !!!bibliographicSectionRekGenreType) {
-        console.log('updating bibliographicSection.rek_genre_type', adminSectionRekSubtype);
         form.setValue('bibliographicSection.rek_genre_type', adminSectionRekSubtype);
     }
 

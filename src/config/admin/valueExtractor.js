@@ -73,10 +73,10 @@ const authorsGetValue = record => {
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
     }));
 
-    // // deleterecord.fez_record_search_key_author_id;
-    //  // deleterecord.fez_record_search_key_author_affiliation_name;
-    //  // deleterecord.fez_record_search_key_author_affiliation_type;
-    //  // deleterecord.fez_record_search_key_author_role;
+    // delete record.fez_record_search_key_author_id;
+    delete record.fez_record_search_key_author_affiliation_name;
+    delete record.fez_record_search_key_author_affiliation_type;
+    delete record.fez_record_search_key_author_role;
 
     return returnValue;
 };
@@ -105,22 +105,22 @@ const editorsGetValue = record => {
         aut_id: (contributorIds[order] || {}).rek_contributor_id || 0,
     }));
 
-    // // deleterecord.fez_record_search_key_contributor;
-    // // deleterecord.fez_record_search_key_contributor_id;
+    delete record.fez_record_search_key_contributor;
+    delete record.fez_record_search_key_contributor_id;
 
     return returnValue;
 };
 
 // eslint-disable-next-line no-unused-vars
 export const deleteKey = (record, searchKey) => {
-    // const skipDeleteForKeys = [
-    //     'rek_date',
-    //     'rek_title',
-    //     'rek_subtype',
-    //     'fez_record_search_key_oa_status',
-    //     'fez_record_search_key_language',
-    // ];
-    // !skipDeleteForKeys.includes(searchKey) && // delete(record || {})[searchKey];
+    const skipDeleteForKeys = [
+        'rek_date',
+        'rek_title',
+        'rek_subtype',
+        'fez_record_search_key_oa_status',
+        'fez_record_search_key_language',
+    ];
+    !skipDeleteForKeys.includes(searchKey) && delete (record || {})[searchKey];
 };
 
 export const getValueSearchKeyObject = (record, searchKey) => {
@@ -263,19 +263,19 @@ export default {
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
-            record.fez_record_search_key_ismemberof.forEach(community => {
+            record.fez_record_search_key_ismemberof?.forEach(community => {
                 if (!uniqueCommunities.find(uniqueItem => community.rek_ismemberof === uniqueItem.rek_ismemberof)) {
                     uniqueCommunities.push(community);
                 }
             });
-            const returnValue = uniqueCommunities.map(community => ({
+            const returnValue = uniqueCommunities?.map(community => ({
                 rek_pid: community.rek_ismemberof,
                 rek_title: community.rek_ismemberof_lookup,
                 id: community.rek_ismemberof,
                 value: community.rek_ismemberof_lookup,
             }));
 
-            // // deleterecord.fez_record_search_key_ismemberof;
+            // delete record.fez_record_search_key_ismemberof;
 
             return returnValue;
         },
@@ -283,19 +283,19 @@ export default {
     collections: {
         getValue: record => {
             const uniqueCollections = [];
-            record.fez_record_search_key_ismemberof.forEach(collection => {
+            record.fez_record_search_key_ismemberof?.forEach(collection => {
                 if (!uniqueCollections.find(uniqueItem => collection.rek_ismemberof === uniqueItem.rek_ismemberof)) {
                     uniqueCollections.push(collection);
                 }
             });
-            const returnValue = uniqueCollections.map(collection => ({
+            const returnValue = uniqueCollections?.map(collection => ({
                 rek_pid: collection.rek_ismemberof,
                 rek_title: collection.rek_ismemberof_lookup,
                 id: collection.rek_ismemberof,
                 value: collection.rek_ismemberof_lookup,
             }));
 
-            // // deleterecord.fez_record_search_key_ismemberof;
+            // delete record.fez_record_search_key_ismemberof;
 
             return returnValue;
         },
@@ -314,7 +314,7 @@ export default {
                 },
             }));
 
-            // deleterecord.fez_record_search_key_issn;
+            delete record.fez_record_search_key_issn;
             return returnValue;
         },
     },
@@ -346,7 +346,7 @@ export default {
                 rek_order: subject.rek_subject_order,
             }));
 
-            // deleterecord.fez_record_search_key_subject;
+            delete record.fez_record_search_key_subject;
 
             return returnValue;
         },
@@ -371,7 +371,7 @@ export default {
                     return a.rek_value.sdgCVOId - b.rek_value.sdgCVOId;
                 });
 
-            // delete record.fez_record_search_key_sdg_source;
+            delete record.fez_record_search_key_sdg_source;
             return returnValue;
         },
     },
@@ -484,8 +484,8 @@ export default {
                 },
             }));
 
-            // deleterecord.fez_record_search_key_link;
-            // deleterecord.fez_record_search_key_link_description;
+            delete record.fez_record_search_key_link;
+            delete record.fez_record_search_key_link_description;
 
             return returnValue;
         },
@@ -586,9 +586,9 @@ export default {
                 };
             });
 
-            // // deleterecord.fez_record_search_key_author;
-            // // deleterecord.fez_record_search_key_significance;
-            // // deleterecord.fez_record_search_key_creator_contribution_statement;
+            // delete record.fez_record_search_key_author;
+            // delete record.fez_record_search_key_significance;
+            // delete record.fez_record_search_key_creator_contribution_statement;
 
             return returnValue;
         },
@@ -630,9 +630,9 @@ export default {
                 grantAgencyType: (grantAgencyTypes[order] || {}).rek_grant_agency_type || ORG_TYPE_NOT_SET,
             }));
 
-            // deleterecord.fez_record_search_key_grant_agency;
-            // deleterecord.fez_record_search_key_grant_id;
-            // deleterecord.fez_record_search_key_grant_agency_type;
+            delete record.fez_record_search_key_grant_agency;
+            delete record.fez_record_search_key_grant_id;
+            delete record.fez_record_search_key_grant_agency_type;
 
             return returnValue;
         },
@@ -668,7 +668,7 @@ export default {
                         'YYYY',
                     ),
                 };
-            // deleterecord.fez_record_search_key_date_available;
+            delete record.fez_record_search_key_date_available;
             return returnValue;
         },
     },
@@ -743,7 +743,7 @@ export default {
                 record.fez_record_search_key_geographic_area.length > 0 &&
                 record.fez_record_search_key_geographic_area[0].rek_geographic_area;
 
-            // deleterecord.fez_record_search_key_geographic_area;
+            delete record.fez_record_search_key_geographic_area;
 
             return returnValue;
         },
@@ -789,7 +789,7 @@ export default {
                 rek_isdatasetof_order: dataset.rek_isdatasetof_order,
             }));
 
-            // deleterecord.fez_record_search_key_isdatasetof;
+            delete record.fez_record_search_key_isdatasetof;
 
             return returnValue;
         },
@@ -797,7 +797,7 @@ export default {
     contactName: {
         getValue: record => {
             const returnValue = ((record.fez_record_search_key_contributor || [{}])[0] || {}).rek_contributor;
-            // deleterecord.fez_record_search_key_contributor;
+            delete record.fez_record_search_key_contributor;
             return returnValue;
         },
     },
@@ -808,7 +808,7 @@ export default {
                 value: ((record.fez_record_search_key_contributor_id || [{}])[0] || {}).rek_contributor_id,
             };
 
-            // deleterecord.fez_record_search_key_contributor_id;
+            delete record.fez_record_search_key_contributor_id;
             return returnValue;
         },
     },
@@ -816,7 +816,7 @@ export default {
         getValue: record => {
             const returnValue = ((record.fez_record_search_key_contact_details_email || [{}])[0] || {})
                 .rek_contact_details_email;
-            // deleterecord.fez_record_search_key_contact_details_email;
+            delete record.fez_record_search_key_contact_details_email;
             return returnValue;
         },
     },
@@ -922,8 +922,8 @@ export default {
                 }),
             );
 
-            // deleterecord.fez_record_search_key_architect_name;
-            // deleterecord.fez_record_search_key_architect_id;
+            delete record.fez_record_search_key_architect_name;
+            delete record.fez_record_search_key_architect_id;
 
             return returnValue;
         },
@@ -955,8 +955,8 @@ export default {
                 }),
             );
 
-            // deleterecord.fez_record_search_key_supervisor;
-            // deleterecord.fez_record_search_key_supervisor_id;
+            delete record.fez_record_search_key_supervisor;
+            delete record.fez_record_search_key_supervisor_id;
 
             return returnValue;
         },
@@ -988,8 +988,8 @@ export default {
                 }),
             );
 
-            // // deleterecord.fez_record_search_key_creator_name;
-            // // deleterecord.fez_record_search_key_creator_id;
+            delete record.fez_record_search_key_creator_name;
+            delete record.fez_record_search_key_creator_id;
 
             return returnValue;
         },
