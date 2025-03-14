@@ -18,6 +18,8 @@ import {
     api,
     assertInstanceOfFile,
     waitFor,
+    selectDropDownOption,
+    clearAndType,
     sortObjectProps,
 } from 'test-utils';
 
@@ -120,6 +122,10 @@ describe('form submission', () => {
         it(
             'create a journal article',
             async () => {
+                // Note, although the FE will consider this record as being edited, when it is submitted,
+                // the submit handler will determine it to be a create action. This does not matter for this test.
+                // The purpose of the test is only to ensure the API request matches the snapshot that was
+                // originally taken on Master before RHF went live.
                 api.mock.records
                     .create({
                         pid,
@@ -185,7 +191,7 @@ describe('form submission', () => {
                     ],
                 };
 
-                const { getByTestId, getByRole } = setup(
+                const { getByTestId } = setup(
                     {},
                     {
                         viewRecordReducer: {
@@ -195,44 +201,14 @@ describe('form submission', () => {
                 );
 
                 // ADMIN
-                await userEvent.click(getByTestId('rek-herdc-code-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'A1 Authored Book (Research)',
-                    }),
-                );
-
-                await userEvent.click(getByTestId('rek-herdc-status-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Confirmed Code',
-                    }),
-                );
-
-                await userEvent.click(getByTestId('rek-refereed-source-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Thomson Reuters',
-                    }),
-                );
-
-                await userEvent.click(getByTestId('rek-oa-status-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Link (no DOI)',
-                    }),
-                );
-
-                await userEvent.click(getByTestId('rek-oa-status-type-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Green',
-                    }),
-                );
+                await selectDropDownOption('rek-herdc-code-select', 'A1 Authored Book (Research)');
+                await selectDropDownOption('rek-herdc-status-select', 'Confirmed Code');
+                await selectDropDownOption('rek-refereed-source-select', 'Thomson Reuters');
+                await selectDropDownOption('rek-oa-status-select', 'Link (no DOI)');
+                await selectDropDownOption('rek-oa-status-type-select', 'Green');
 
                 // add a license
-                await userEvent.click(getByTestId('rek-license-select'));
-                await userEvent.click(getByRole('option', { name: 'Permitted Re-use with Acknowledgement' }));
+                await selectDropDownOption('rek-license-select', 'Permitted Re-use with Acknowledgement');
 
                 // BIBLIOGRAPHIC
                 await userEvent.type(getByTestId('rek-journal-name-input'), ' test');
@@ -247,18 +223,10 @@ describe('form submission', () => {
                 await userEvent.type(getByTestId('rek-end-page-input'), '1');
                 await userEvent.type(getByTestId('rek-total-pages-input'), '1');
 
-                await userEvent.clear(getByTestId('rek-date-day-input'));
-                await userEvent.clear(getByTestId('rek-date-year-input'));
-                await userEvent.type(getByTestId('rek-date-day-input'), '1');
-                await userEvent.click(getByTestId('rek-date-month-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'January',
-                    }),
-                );
-                await userEvent.type(getByTestId('rek-date-year-input'), '2011');
-                await userEvent.clear(getByTestId('rek-date-available-input'));
-                await userEvent.type(getByTestId('rek-date-available-input'), '2011');
+                await clearAndType('rek-date-day-input', '1');
+                await selectDropDownOption('rek-date-month-select', 'January');
+                await clearAndType('rek-date-year-input', '2011');
+                await clearAndType('rek-date-available-input', '2011');
 
                 // add an ISBN
                 await userEvent.type(getByTestId('rek-isbn-input'), '978-3-16-148410-0{enter}');
@@ -284,12 +252,8 @@ describe('form submission', () => {
                 await waitFor(() => expect(getByTestId('detailPanel-7626877')).toBeInTheDocument());
                 await userEvent.click(getByTestId('affiliationEditBtn-7626877'));
                 await waitFor(() => expect(getByTestId('orgSelect-add-input')).toBeInTheDocument());
-                await userEvent.click(getByTestId('orgSelect-add-input'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: '!NON-HERDC',
-                    }),
-                );
+
+                await selectDropDownOption('orgSelect-add-input', '!NON-HERDC');
 
                 await waitFor(() => expect(getByTestId('affiliationSaveBtn')).not.toBeDisabled());
                 await userEvent.click(getByTestId('affiliationSaveBtn'));
@@ -300,24 +264,10 @@ describe('form submission', () => {
                 await userEvent.type(getByTestId('rek-scopus-id-input'), '1');
                 await userEvent.type(getByTestId('rek-pubmed-id-input'), '1');
                 await userEvent.type(getByTestId('rek-pubmed-central-id-input'), '1');
-                await userEvent.click(getByTestId('rek-wok-doc-type-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: '7 - Bibliography',
-                    }),
-                );
-                await userEvent.click(getByTestId('rek-scopus-doc-type-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'ab - Abstract Report',
-                    }),
-                );
-                await userEvent.click(getByTestId('rek-pubmed-doc-type-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Editorial',
-                    }),
-                );
+                await selectDropDownOption('rek-wok-doc-type-select', '7 - Bibliography');
+                await selectDropDownOption('rek-scopus-doc-type-select', 'ab - Abstract Report');
+                await selectDropDownOption('rek-pubmed-doc-type-select', 'Editorial');
+
                 // adjust order of a link
                 await userEvent.click(getByTestId('rek-link-list-row-1-move-up'));
 
@@ -338,12 +288,9 @@ describe('form submission', () => {
                 await setFileUploaderFilesSecurityPolicy(fileMock, 'Administrators');
 
                 // select a sensitive handling note
-                await userEvent.click(getByTestId('rek-sensitive-handling-note-id-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name:
-                            'Indigenous/First Nations people should be aware that this output is about men’s business.',
-                    }),
+                await selectDropDownOption(
+                    'rek-sensitive-handling-note-id-select',
+                    'Indigenous/First Nations people should be aware that this output is about men’s business.',
                 );
 
                 // SECURITY
@@ -351,20 +298,10 @@ describe('form submission', () => {
                 await userEvent.click(getByTestId('rek-security-inherited-input'));
 
                 // select a work override
-                await userEvent.click(getByTestId('rek-security-policy-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Administrators',
-                    }),
-                );
+                await selectDropDownOption('rek-security-policy-select', 'Administrators');
 
                 // change security of a file to test
-                await userEvent.click(getByTestId('dsi-security-policy-5-select'));
-                await userEvent.click(
-                    getByRole('option', {
-                        name: 'Public',
-                    }),
-                );
+                await selectDropDownOption('dsi-security-policy-5-select', 'Public');
 
                 await submitForm();
                 expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
