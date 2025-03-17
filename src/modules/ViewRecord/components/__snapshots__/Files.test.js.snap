@@ -3068,7 +3068,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                     >
                       <source
                         src="http://localhost/view/UQ:676287/audio.wav"
-                        type="audio/wav"
+                        type="audio/mpeg"
                       />
                     </audio>
                     <button
@@ -3227,7 +3227,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                     >
                       <source
                         src="http://localhost/view/UQ:676287/audiotest_xt.mp3"
-                        type="audio/wav"
+                        type="audio/mpeg"
                       />
                     </audio>
                     <button
@@ -5527,7 +5527,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                     >
                       <source
                         src="http://localhost/view/UQ:1/preview_test.jpg"
-                        type="audio/mp3"
+                        type="audio/mpeg"
                       />
                     </audio>
                     <button
