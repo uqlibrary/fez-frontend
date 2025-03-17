@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
@@ -20,11 +22,14 @@ export const NewListEditorField = props => {
     } = props;
 
     const [value, setValue] = useItemsList(props, normalize, searchKey);
+    const prevValue = React.useRef();
+    const propValueNormalised = getValue(props, normalize, searchKey);
+    const propValueStringified = JSON.stringify(propValueNormalised);
 
-    React.useEffect(() => {
-        setValue(getValue(props, normalize, searchKey));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props]);
+    if (propValueStringified !== prevValue.current) {
+        prevValue.current = propValueStringified;
+        setValue(propValueNormalised);
+    }
 
     return (
         <NewListEditor

@@ -91,6 +91,7 @@ describe('AdminContainer component', () => {
     afterEach(() => {
         useRecordContext.mockReset();
         useTabbedContext.mockReset();
+        useIsMobileView.mockReset();
     });
 
     it('should render default view', () => {
@@ -98,13 +99,7 @@ describe('AdminContainer component', () => {
         const { container } = setup({});
         expect(container).toMatchSnapshot();
     });
-    it('should render mobile view', () => {
-        mockCookieSetter = jest.fn().mockImplementation(() => 'fullform');
-        useIsMobileView.mockImplementation(() => true);
 
-        const { container } = setup({});
-        expect(container).toMatchSnapshot();
-    });
     it('should render loading record view', () => {
         const { container } = setup({
             state: {
@@ -134,25 +129,22 @@ describe('AdminContainer component', () => {
         });
         expect(container).toMatchSnapshot();
     });
-    // it('should render when form errors are present', () => {
-    //     useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-    //     const actualHook = jest.requireActual('../../../hooks/useValidatedForm');
-    //     jest.spyOn(require('../../../hooks'), 'useValidatedForm').mockImplementation(() => ({
-    //         ...actualHook,
-    //         formState: {
-    //             errors: {
-    //                 bibliographicSection: {
-    //                     rek_date: 'Publication date is required',
-    //                     rek_title: 'Title is required',
-    //                 },
-    //             },
-    //         },
-    //     }));
+    it('should render when form errors are present', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        const actualHook = jest.requireActual('../validators');
+        jest.spyOn(require('../validators'), 'useFormValidator').mockImplementation(() => ({
+            ...actualHook,
+            errors: {
+                bibliographicSection: {
+                    rek_date: 'Publication date is required',
+                    rek_title: 'Title is required',
+                },
+            },
+        }));
 
-    //     const { container } = setup({});
-    //     preview.debug();
-    //     expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
-    // });
+        const { container } = setup({});
+        expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
+    });
     it('should render with an empty record', () => {
         useParams.mockImplementation(() => ({ pid: 'UQ:123456' }));
         const { container } = setup({
