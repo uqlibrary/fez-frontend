@@ -142,9 +142,6 @@ export const api: Api = {
             fail: {
                 upload: () => api.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
             },
-            fail: {
-                upload: () => api.mock.files.presignedUrl({ once: false }).put({ status: 500, once: false }),
-            },
             records: {} as RecordApi,
             instance: {} as MockAdapter,
         },
