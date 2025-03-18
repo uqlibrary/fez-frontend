@@ -453,9 +453,7 @@
             "!src/modules/ThirdPartyLookupTool/components/**",
             "!src/modules/ViewJournal/components/**",
             "!src/modules/ViewJournal/components/partials/",
-            "src/reducers/account.ts",
-            "src/modules/Admin/ManageUsers/ManageUsersList.js",
-            "src/modules/Admin/ManageUsers/partials/ActionFeedback.js"
+            "src/reducers/account.ts"
         ],
         "all": true
     }
