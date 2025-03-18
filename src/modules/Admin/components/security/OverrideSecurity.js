@@ -21,7 +21,7 @@ export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId })
                     }}
                     disabled={disabled}
                     onChange={e => {
-                        input.onChange(e.target.checked ? 0 : 1);
+                        input.onChange(overrideSecurityValueNormaliser(e.target.checked));
                     }}
                     checked={normalisedValue === 0}
                 />

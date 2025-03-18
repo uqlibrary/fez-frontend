@@ -223,6 +223,10 @@ describe('form submission', () => {
                 await userEvent.type(getByTestId('rek-end-page-input'), '1');
                 await userEvent.type(getByTestId('rek-total-pages-input'), '1');
 
+                // some branches, for some reason, won't reliably clear rek-date-day-input
+                // when using 'clearAndType' alone. Seems to work if we manually clear once,
+                // and then run 'clearAndType' again.
+                await userEvent.clear(screen.getByTestId('rek-date-day-input'));
                 await clearAndType('rek-date-day-input', '1');
                 await selectDropDownOption('rek-date-month-select', 'January');
                 await clearAndType('rek-date-year-input', '2011');
