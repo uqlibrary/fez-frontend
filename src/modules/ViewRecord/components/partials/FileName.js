@@ -168,7 +168,6 @@ const FileName = ({
                     <AudioPlayer
                         pid={pid}
                         fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}
-                        mimeType={mimeType}
                     />
                 </Grid>
             )}
