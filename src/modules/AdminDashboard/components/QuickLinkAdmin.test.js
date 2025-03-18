@@ -1,6 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
-
 import { render, WithReduxStore, within, screen, userEvent } from 'test-utils';
 import QuickLinkAdmin from './QuickLinkAdmin';
 
@@ -44,7 +42,7 @@ const setup = (props = {}, state = {}, renderer = render) => {
         ...props,
     };
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <QuickLinkAdmin {...testProps} />
         </WithReduxStore>,
     );

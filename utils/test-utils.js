@@ -23,7 +23,7 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
-import { lastRequests as apiRequestHistory } from '../src/config/axios';
+import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
 import { isEmptyObject } from '../src/helpers/general';
 import { locale } from '../src/locale';

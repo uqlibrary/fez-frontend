@@ -1,12 +1,10 @@
 import React from 'react';
 import Orcid from './Orcid';
-import Immutable from 'immutable';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { rtlRender, WithReduxStore, fireEvent } from 'test-utils';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import * as AuthorAction from 'actions/authors';
 import * as AppAction from 'actions/app';
-
 let mockUseLocation = { pathname: '/' };
 
 jest.mock('react-router-dom', () => ({
@@ -16,7 +14,7 @@ jest.mock('react-router-dom', () => ({
 
 function setup({ state = {} } = {}, renderMethod = rtlRender) {
     return renderMethod(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <MemoryRouter>
                 <Routes>
                     <Route path="/dashboard" element={<div>Dashboard</div>} />

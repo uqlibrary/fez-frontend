@@ -35,6 +35,29 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { useNavigate } from 'react-router-dom';
+import { dateRange as validateDateRange } from 'config/validation';
+
+/**
+ * @param {object} value
+ * @param {object} values
+ * @return {string}
+ */
+const dateRange = (value, values) => {
+    const lowerInRange =
+        !!values.toJS().fez_record_search_key_start_date &&
+        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
+        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!values.toJS().fez_record_search_key_end_date &&
+        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
+        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.dateRange;
+    } else {
+        return '';
+    }
+};
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -93,18 +116,10 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
     const txt = formLocale.addDataset;
     const txtFoR = componentLocale.components.fieldOfResearchForm;
     const formValues = props.formValues && props.formValues.toJS();
-    const startDate =
-        formValues &&
-        formValues.fez_record_search_key_start_date &&
-        formValues.fez_record_search_key_start_date.rek_start_date;
-    const endDate =
-        formValues &&
-        formValues.fez_record_search_key_end_date &&
-        formValues.fez_record_search_key_end_date.rek_end_date;
-    const dateError =
-        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
-            : '';
+    const hasDateError = validateDateRange(
+        formValues.fez_record_search_key_start_date?.rek_start_date,
+        formValues.fez_record_search_key_end_date?.rek_end_date,
+    );
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -505,8 +520,8 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
                                                 txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label
                                             }
                                             disabled={props.submitting}
-                                            validate={[validation.dateRange]}
-                                            hasError={dateError}
+                                            validate={[dateRange]}
+                                            hasError={hasDateError}
                                         />
                                     </Grid>
                                     <Grid xs={12} sm={6}>
@@ -521,8 +536,8 @@ export const AddDataCollection = ({ author, disableSubmit, actions, isSessionVal
                                             name="fez_record_search_key_end_date.rek_end_date"
                                             id="rek_end_date"
                                             disabled={props.submitting}
-                                            validate={[validation.dateRange]}
-                                            hasError={dateError}
+                                            validate={[dateRange]}
+                                            hasError={hasDateError}
                                         />
                                     </Grid>
                                 </Grid>

@@ -64,6 +64,10 @@ export default {
               ]
             : []),
         {
+            title: 'Sustainable Development Goal',
+            groups: [['fez_record_search_key_sdg_source']],
+        },
+        {
             title: 'Related publications',
             groups: [['fez_record_search_key_isderivationof']],
         },

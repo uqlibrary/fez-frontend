@@ -1,12 +1,8 @@
 import React from 'react';
-
 import { render, WithReduxStore, within } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
 import VocabTable from './VocabTable';
 import locale from 'locale/components';
-import Immutable from 'immutable';
 
 jest.mock('../ControlledVocabularyContext');
 import {
@@ -29,7 +25,7 @@ function setup(testProps = {}, state = {}) {
     };
 
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <ControlledVocabulariesActionContext.Provider value={actionContext}>
                 <ControlledVocabulariesStateContext.Provider value={stateContext}>
                     <VocabTable {...testProps} />

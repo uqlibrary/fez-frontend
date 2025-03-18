@@ -1,6 +1,6 @@
 import React from 'react';
 import AutoCompleteAsynchronousField from './AutoCompleteAsynchronousField';
-import { rtlRender, fireEvent, waitFor } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, userEvent, waitForText, waitForTextToBeRemoved } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -156,5 +156,31 @@ describe('AutoCompleteAsynchronousField component', () => {
         });
 
         expect(getByText('hello')).toBeInTheDocument();
+    });
+
+    it('should not remove provided suggestions on close when clearSuggestionsOnClose is set to false', async () => {
+        const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
+
+        const { getByTestId } = setup({
+            itemsList: ['cherry', 'chevy'],
+            itemsLoading: false,
+            clearSuggestionsOnClose: false,
+            groupBy: () => null,
+            OptionTemplate,
+            getOptionLabel: () => '',
+        });
+
+        const triggerOpen = async () => {
+            await userEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
+            await waitForText('cherry');
+            await waitForText('chevy');
+        };
+
+        await triggerOpen();
+        // trigger close
+        await userEvent.type(getByTestId('autocomplete-asynchronous-field-input'), '[esc]');
+        await waitForTextToBeRemoved('cherry');
+        await waitForTextToBeRemoved('chevy');
+        await triggerOpen();
     });
 });
