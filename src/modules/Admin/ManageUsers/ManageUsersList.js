@@ -74,8 +74,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         };
                     });
                 })
-                /* istanbul ignore next */
                 .catch(() => {
+                    /* istanbul ignore next */
                     materialTable.setState(prevState => {
                         materialTable.dataManager.setData([...prevState.data]);
                         return {
@@ -132,8 +132,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         };
                     });
                 })
-                /* istanbul ignore next */
                 .catch(() => {
+                    /* istanbul ignore next */
                     materialTable.setState(prevState => {
                         materialTable.dataManager.setData([...prevState.data]);
                         return {
