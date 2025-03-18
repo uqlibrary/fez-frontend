@@ -47,7 +47,6 @@ export const ActionFeedback = () => {
 
     React.useEffect(() => {
         const alert =
-            /* istanbul ignore next */
             (!!userAddSuccess && addUserSuccessAlert) ||
             (!!userAddError && addUserErrorAlert) ||
             (!!userListItemDeleteSuccess && deleteUserSuccessAlert) ||
