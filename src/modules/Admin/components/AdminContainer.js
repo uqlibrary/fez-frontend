@@ -72,8 +72,7 @@ export const AdminContainer = ({ createMode = false }) => {
     useFormOnChangeHook(form);
     const { errors: formErrors } = useFormValidator(form);
 
-    const handleSubmit = async (data, e) => {
-        e.preventDefault();
+    const handleSubmit = async data => {
         try {
             await onSubmit(data, dispatch, { setServerError: form.formState.setServerError, params: { pid } });
         } catch (e) {
