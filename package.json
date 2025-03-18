@@ -357,7 +357,6 @@
         ],
         "collectCoverage": true,
         "collectCoverageFrom": [
-            "src/modules/Admin/ManageUsers/**/*",
             "src/modules/**/*.{js,jsx,ts,tsx}",
             "!src/**/*.test.{js,jsx,ts,tsx}",
             "!src/modules/App/components/pages.js",
@@ -436,7 +435,6 @@
             "src/repositories/routes.js"
         ],
         "exclude": [
-            "src/modules/Admin/ManageUsers/**/*",
             "src/**/{index,locale,config,pages}.js",
             "src/**/containers/*.{js,jsx,ts,tsx}",
             "src/**/*.test.{js,jsx,ts,tsx}",
@@ -444,6 +442,8 @@
             "!src/modules/Admin/FavouriteSearch/components/**",
             "!src/modules/Admin/ManageAuthors/**",
             "!src/modules/Admin/ManageAuthors/partials/**",
+            "!src/modules/Admin/ManageUsers/**",
+            "!src/modules/Admin/ManageUsers/partials/**",
             "!src/modules/Admin/MasterJournalListIngest/components/**",
             "!src/modules/AuthorIdentifiers/components/**",
             "!src/modules/BulkUpdates/**",
@@ -453,7 +453,9 @@
             "!src/modules/ThirdPartyLookupTool/components/**",
             "!src/modules/ViewJournal/components/**",
             "!src/modules/ViewJournal/components/partials/",
-            "src/reducers/account.ts"
+            "src/reducers/account.ts",
+            "src/modules/Admin/ManageUsers/ManageUsersList.js",
+            "src/modules/Admin/ManageUsers/partials/ActionFeedback.js"
         ],
         "all": true
     }
