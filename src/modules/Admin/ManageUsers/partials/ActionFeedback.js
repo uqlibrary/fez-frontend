@@ -46,7 +46,6 @@ export const ActionFeedback = () => {
     } = locale.components.manageUsers;
 
     React.useEffect(() => {
-        /* istanbul ignore next */
         const alert =
             (!!userAddSuccess && addUserSuccessAlert) ||
             (!!userAddError && addUserErrorAlert) ||
