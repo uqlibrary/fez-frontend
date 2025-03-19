@@ -358,7 +358,7 @@ export default class ListEditor extends Component {
                         {renderListsRows}
                     </div>
                 )}
-                <FormHelperText error={this.props.error} children={this.props.errorText} />
+                <FormHelperText error={this.props.error} children={this.props.errorText?.message} />
             </div>
         );
     }
