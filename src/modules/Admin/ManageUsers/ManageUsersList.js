@@ -76,8 +76,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 })
                 .catch(() => {
                     materialTable.setState(prevState => {
-                        console.log('qgz start');
-                        console.log(new Error().stack);
                         materialTable.dataManager.setData([...prevState.data]);
                         return {
                             ...materialTable.dataManager.getRenderState(),
@@ -135,8 +133,6 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 })
                 .catch(() => {
                     materialTable.setState(prevState => {
-                        console.log('qgz start2');
-                        console.log(new Error().stack);
                         materialTable.dataManager.setData([...prevState.data]);
                         return {
                             ...materialTable.dataManager.getRenderState(),
