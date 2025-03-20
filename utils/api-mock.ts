@@ -12,6 +12,7 @@ interface Params {
 interface ApiUrls {
     records: {
         create: string;
+        update: (pid: string, isEdit?: boolean) => string;
         get: (pid: string, isEdit?: boolean) => string;
         issues: (pid: string) => string;
     };
@@ -41,6 +42,7 @@ interface RecordApi {
     issues: (params?: Params) => RecordApi;
     fail: {
         create: () => RecordApi;
+        get: (params?: Params) => RecordApi;
         update: (params?: Params) => RecordApi;
         bulkUpdate: (params?: Params) => RecordApi;
     };
@@ -73,6 +75,7 @@ export const api: Api = {
     url: {
         records: {
             create: repositories.routes.NEW_RECORD_API().apiUrl,
+            update: (pid: string, isEdit: boolean = false) => api.url.records.get(pid, isEdit),
             get: (pid: string, isEdit: boolean = false) =>
                 repositories.routes.EXISTING_RECORD_API({ pid, isEdit }).apiUrl,
             issues: (pid: string) => repositories.routes.RECORDS_ISSUES_API({ pid }).apiUrl,
@@ -119,6 +122,7 @@ export const api: Api = {
             },
             fail: {
                 create: () => api.mock.records.create({ status: 500 }),
+                get: ({ pid = '', once = true }: Params = {}) => api.mock.records.get({ pid, status: 500, once }),
                 update: ({ pid = '', data = {}, once = true }: Params = {}) =>
                     api.mock.records.update({ status: 500, pid, data, once }),
                 bulkUpdate: ({ data = {}, once = true }: Params = {}) =>

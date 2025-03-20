@@ -29,7 +29,7 @@ export const JournalAdmin = lazy(() =>
 export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
 export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
 export const ChangeDisplayType = lazy(() =>
-    lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),
+    lazyRetry(() => import('modules/Admin/ChangeDisplayType/components/ChangeDisplayType')),
 );
 export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/components/ClaimRecord')));
 export const CollectionForm = lazy(() =>
