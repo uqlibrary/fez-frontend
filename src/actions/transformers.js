@@ -1039,15 +1039,11 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         ...(!!wosDocType && wosDocType !== 'None' && wosDocType !== null
             ? { rek_wok_doc_type: wosDocType }
             : { rek_wok_doc_type: null }),
-        ...(!!doi && doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
-        ...(!!isiLoc && isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
-        ...(!!scopusId && scopusId.hasOwnProperty('rek_scopus_id')
-            ? { fez_record_search_key_scopus_id: scopusId }
-            : {}),
-        ...(!!pubmedId && pubmedId.hasOwnProperty('rek_pubmed_id')
-            ? { fez_record_search_key_pubmed_id: pubmedId }
-            : {}),
-        ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
+        ...(!!doi?.rek_doi ? { fez_record_search_key_doi: doi } : {}),
+        ...(!!isiLoc?.rek_isi_loc ? { fez_record_search_key_isi_loc: isiLoc } : {}),
+        ...(!!scopusId?.rek_scopus_id ? { fez_record_search_key_scopus_id: scopusId } : {}),
+        ...(!!pubmedId?.rek_pubmed_id ? { fez_record_search_key_pubmed_id: pubmedId } : {}),
+        ...(!!pubmedCentralId?.rek_pubmed_central_id
             ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
         ...getLinkSearchKey(links),
@@ -1376,8 +1372,9 @@ export const getHerdcStatusSearchKey = record => {
 export const getOpenAccessStatusTypeSearchKey = record => {
     // return empty object if all parameters are null
     if (
-        record.rek_oa_status_type === '0' ||
-        (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null)
+        record?.rek_oa_status_type === '0' ||
+        record?.rek_oa_status_type === null ||
+        record?.rek_oa_status_type === ''
     ) {
         return {
             fez_record_search_key_oa_status_type: null,
@@ -1408,7 +1405,7 @@ export const getInstitutionalStatusSearchKey = record => {
 
 export const getOpenAccessStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_oa_status && record.rek_oa_status.value === null) {
+    if (record.rek_oa_status === undefined || record.rek_oa_status === null || record.rek_oa_status === '') {
         return {
             fez_record_search_key_oa_status: {},
         };
@@ -1452,7 +1449,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         ...(!!openAccessStatusType ? getOpenAccessStatusTypeSearchKey(openAccessStatusType) : {}),
         ...{
             fez_record_search_key_license: {
-                ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
+                ...(!!license && license?.rek_license > 0 ? license : {}),
             },
         },
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
@@ -1462,7 +1459,9 @@ export const getAdminSectionSearchKeys = (data = {}) => {
 
 export const getFilesSectionSearchKeys = data => {
     const { advisoryStatement, sensitiveHandlingNote, ...rest } = data;
-    return !data.hasOwnProperty('advisoryStatement')
+    return !data.hasOwnProperty('advisoryStatement') ||
+        data?.advisoryStatement === null ||
+        data?.advisoryStatement === ''
         ? { ...cleanBlankEntries(rest) }
         : {
               ...cleanBlankEntries(rest),
@@ -1558,7 +1557,7 @@ export const getNotesSectionSearchKeys = (data = {}) => {
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : { fez_internal_notes: null }),
 
-        ...(!(ciNotices === null || ciNotices === undefined)
+        ...(!(ciNotices === null || ciNotices === undefined || ciNotices === '')
             ? { rek_ci_notice_attribution_incomplete: !!ciNotices ? 1 : 0 }
             : {}),
     };
