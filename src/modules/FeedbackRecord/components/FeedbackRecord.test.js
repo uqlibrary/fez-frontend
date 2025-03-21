@@ -5,7 +5,8 @@ import Immutable from 'immutable';
 import { render, WithReduxStore, WithRouter, userEvent, screen, assertEnabled } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 import forms from 'locale/forms';
-import { EXISTING_RECORD_API, RECORDS_FEEDBACK_API } from '../../../repositories/routes';
+import { EXISTING_RECORD_API, RECORDS_FEEDBACK_API } from 'repositories/routes';
+import { useAccountContext } from 'context';
 
 const mockUseNavigate = jest.fn();
 let mockParams;
@@ -15,6 +16,8 @@ jest.mock('react-router-dom', () => ({
     useNavigate: () => mockUseNavigate,
     useParams: () => mockParams,
 }));
+
+jest.mock('../../../context');
 
 function setup(props = {}) {
     const state = Immutable.Map({
@@ -67,6 +70,9 @@ describe('Component FeedbackRecord', () => {
     beforeEach(() => {
         mockUseNavigate.mockReset();
         mockParams = { pid: mockRecordToFeedback.rek_pid };
+        useAccountContext.mockImplementation(() => ({
+            account: {},
+        }));
     });
 
     it('should render loader when record is loading', async () => {
@@ -148,7 +154,7 @@ describe('Component FeedbackRecord', () => {
         expect(mockUseNavigate).toBeCalledWith(`/view/${mockRecordToFeedback.rek_pid}`);
     });
 
-    it('should display confirmation box after successful feedback and go to my works', async () => {
+    it('should display confirmation box after successful feedback and go to homepage for non-logged in users', async () => {
         mockApi.onPost(RECORDS_FEEDBACK_API({ pid: mockRecordToFeedback.rek_pid }).apiUrl).replyOnce(201);
 
         const { getByTestId } = setup({ publication: mockRecordToFeedback });
@@ -162,7 +168,30 @@ describe('Component FeedbackRecord', () => {
         await assertFeedbackRecordConfirmationMessage();
 
         await userEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/records/mine');
+        expect(mockUseNavigate).toBeCalledWith('/');
+        expect(mockUseNavigate).toBeCalledTimes(1);
+    });
+
+    it('should display confirmation box after successful feedback and go to my dashboard for logged in users', async () => {
+        mockApi.onPost(RECORDS_FEEDBACK_API({ pid: mockRecordToFeedback.rek_pid }).apiUrl).replyOnce(201);
+        useAccountContext.mockImplementation(() => ({
+            account: {
+                username: 'uqadmin',
+            },
+        }));
+
+        const { getByTestId } = setup({ publication: mockRecordToFeedback });
+
+        await assertValidationErrorSummary();
+        await userEvent.type(getByTestId('last-name-input'), 'name');
+        await userEvent.type(getByTestId('contact-detail-input'), '12345');
+
+        assertNoValidationErrorSummary();
+        await submitForm();
+        await assertFeedbackRecordConfirmationMessage();
+
+        await userEvent.click(getByTestId('confirm-dialog-box'));
+        expect(mockUseNavigate).toBeCalledWith('/dashboard');
         expect(mockUseNavigate).toBeCalledTimes(1);
     });
 

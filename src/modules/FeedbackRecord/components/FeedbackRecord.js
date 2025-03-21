@@ -32,6 +32,7 @@ import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { useValidatedForm } from 'hooks';
 import { isEmptyObject } from 'helpers/general';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { useAccountContext } from 'context';
 
 /**
  * @param hasValidationError
@@ -48,6 +49,9 @@ const getFormLevelError = hasValidationError => {
 const FeedbackRecord = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const { account } = useAccountContext();
+    const isLoggedin = !!account.username;
+
     // route params
     const { pid } = useParams();
     // to allow confirmDialogBox control
@@ -104,8 +108,12 @@ const FeedbackRecord = () => {
         return <WorkNotFound />;
     }
 
-    const navigateToMyResearch = () => {
-        navigate(pathConfig.records.mine);
+    const navigateToDashboard = () => {
+        navigate(pathConfig.dashboard);
+    };
+
+    const navigateToHomepage = () => {
+        navigate(pathConfig.index);
     };
 
     const navigateToRecord = () => {
@@ -153,9 +161,14 @@ const FeedbackRecord = () => {
                         />
                         <ConfirmDialogBox
                             onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}
-                            onAction={navigateToMyResearch}
+                            onAction={isLoggedin ? navigateToDashboard : navigateToHomepage}
                             onCancelAction={navigateToRecord}
-                            locale={txtForm.successWorkflowConfirmation}
+                            locale={{
+                                ...txtForm.successWorkflowConfirmation,
+                                confirmButtonLabel: isLoggedin
+                                    ? txtForm.successWorkflowConfirmation.confirmButtonLabel
+                                    : txtForm.successWorkflowConfirmation.guestConfirmationButtonLabel,
+                            }}
                         />
                         <Grid xs={12}>
                             <StandardCard title={txtForm.details.title}>
