@@ -489,6 +489,7 @@ export default {
                     </span>
                 ),
                 confirmButtonLabel: 'Go to my dashboard',
+                guestConfirmationButtonLabel: 'Go to homepage',
                 cancelButtonLabel: 'Go back to view page',
             },
             cancel: 'Cancel',
