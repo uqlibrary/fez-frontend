@@ -235,6 +235,8 @@ describe('Files Component ', () => {
         const { container } = setup({
             publication: {
                 rek_pid: 'UQ:1',
+                // note: this might not represent real data, as attachments with same (extensionless) filenames are not
+                // allowed
                 fez_datastream_info: [
                     {
                         dsi_pid: 'UQ:1',
