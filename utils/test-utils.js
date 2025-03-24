@@ -29,7 +29,6 @@ import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
 import { isEmptyObject } from '../src/helpers/general';
 import { locale } from 'locale';
-
 import { isPlainObject } from 'lodash';
 
 export const AllTheProviders = props => {

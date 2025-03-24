@@ -322,7 +322,7 @@ describe('MyIncompleteRecord', () => {
                 assertDisabled(submitButtonId);
                 await waitForText(pageLocale.successWorkflowConfirmation.confirmationTitle, waitForOptions);
 
-                expectApiRequestToMatchSnapshot('patch', api.url.records.update);
+                expectApiRequestToMatchSnapshot('patch', api.url.records.update(pid));
                 expectApiRequestToMatchSnapshot('post', api.url.records.issues(pid));
                 expectApiRequestToMatchSnapshot('put', api.url.files.put, assertInstanceOfFile);
             });
