@@ -168,4 +168,15 @@ describe('RichEditor', () => {
         });
         expect(container).toMatchSnapshot();
     });
+
+    it('should render alternative error from react-hook-form', () => {
+        const { container } = setup({
+            title: 'This is title with error',
+            description: 'This is description with error',
+            required: true,
+            error: true,
+            errorText: { message: 'This field is required' },
+        });
+        expect(container).toMatchSnapshot();
+    });
 });

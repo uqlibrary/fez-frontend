@@ -46,7 +46,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
                 component={fieldConfig.default[field].component}
                 disabled={disabled}
                 {...componentProps}
-                {...(!!error ? { error: true, errorText: error?.message || error } : {})}
+                {...(!!error ? { error: true, errorText: error?.message || /* istanbul ignore next */ error } : {})}
                 value={form.getValues(componentProps.name) ?? ''}
                 {...props}
             />

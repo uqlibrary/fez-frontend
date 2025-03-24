@@ -1337,7 +1337,11 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
 export const getHerdcCodeSearchKey = record => {
     // return empty object if all parameters are null
-    if (record.rek_herdc_code === '0' || (!!record.rek_herdc_code && record.rek_herdc_code.value === null)) {
+    if (
+        !!!record.rek_herdc_code ||
+        record.rek_herdc_code === '0' ||
+        (!!record.rek_herdc_code && record.rek_herdc_code.value === null)
+    ) {
         return {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
@@ -1354,7 +1358,7 @@ export const getHerdcCodeSearchKey = record => {
 
 export const getHerdcStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_herdc_status && record.rek_herdc_status.value === null) {
+    if (!!!record.rek_herdc_status || (!!record.rek_herdc_status && record.rek_herdc_status.value === null)) {
         return {
             fez_record_search_key_herdc_status: {
                 rek_herdc_status: null,
@@ -1390,7 +1394,10 @@ export const getOpenAccessStatusTypeSearchKey = record => {
 
 export const getInstitutionalStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_institutional_status && record.rek_institutional_status.value === null) {
+    if (
+        !!!record.rek_institutional_status ||
+        (!!record.rek_institutional_status && record.rek_institutional_status.value === null)
+    ) {
         return {
             fez_record_search_key_institutional_status: {},
         };
@@ -1405,7 +1412,7 @@ export const getInstitutionalStatusSearchKey = record => {
 
 export const getOpenAccessStatusSearchKey = record => {
     // return empty object if all parameters are null
-    if (record.rek_oa_status && record.rek_oa_status?.value === null) {
+    if (!!!record.rek_oa_status || (record.rek_oa_status && record.rek_oa_status?.value === null)) {
         return {
             fez_record_search_key_oa_status: {},
         };
