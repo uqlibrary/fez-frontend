@@ -100,7 +100,7 @@ export class ContributorsEditor extends PureComponent {
             this.props.onChange?.(this.state.contributors);
         }
 
-        // SoS specific section
+        // == SoS specific section
         if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
             this.setState({ scaleOfSignificance: this.buildInitialScaleOfSignificance(this.props) });
             // notify parent component when local state has been updated, eg contributors added/removed/reordered
@@ -117,6 +117,7 @@ export class ContributorsEditor extends PureComponent {
                 this.setState({ scaleOfSignificance: newSos });
             }
         }
+        // == End SoS specific section
     }
     buildInitialScaleOfSignificance = props => {
         if (!props.isNtro) return [];
