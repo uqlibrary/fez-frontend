@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
@@ -131,7 +131,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
 </div>
 `;
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on all fields 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on all fields 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
@@ -262,7 +262,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
 </div>
 `;
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on year field 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on year field 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
