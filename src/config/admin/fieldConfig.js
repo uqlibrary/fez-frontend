@@ -1983,6 +1983,10 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
+            subjects: () => ({
+                required: true,
+                validate: [validation.requiredList],
+            }),
         },
         [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
             rek_date: () => ({
