@@ -45,10 +45,7 @@ export const AuthorIdField = props => {
             // If form key is set in props.meta object then it's a redux-form Field
             {...(!!((props || {}).meta || {}).form
                 ? {
-                      defaultValue:
-                          (!!props.input.value &&
-                              (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
-                          null,
+                      defaultValue: props.input?.value || null,
                       error: !!props.meta.error,
                       errorText: props.meta.error || '',
                       onChange: item => props.input.onChange(item),

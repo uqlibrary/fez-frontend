@@ -9675,7 +9675,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
 </div>
 `;
 
-exports[`GrantListEditor should render with default given value is Immutable List 1`] = `
+exports[`GrantListEditor should render with default given value is List 1`] = `
 <div>
   <div>
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list

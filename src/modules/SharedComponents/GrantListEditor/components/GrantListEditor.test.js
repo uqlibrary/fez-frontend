@@ -1,6 +1,5 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
-import Immutable from 'immutable';
 import { rtlRender, fireEvent, within } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -78,17 +77,17 @@ describe('GrantListEditor', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render with default given value is Immutable List', () => {
+    it('should render with default given value is List', () => {
         const { container } = setup({
             input: {
                 name: 'TestField',
-                value: Immutable.List([
+                value: [
                     {
                         grantAgencyName: 'Testing',
                         grantId: '1234',
                         grantAgencyType: 'Test',
                     },
-                ]),
+                ],
             },
         });
         expect(container).toMatchSnapshot();

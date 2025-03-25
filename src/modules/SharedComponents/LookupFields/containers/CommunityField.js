@@ -12,12 +12,8 @@ export const CommunityField = props => {
     const loadSuggestions = () => dispatch(actions.communitiesList());
     const { itemsList, itemsLoading } = useSelector(state => state.get('communitiesReducer')) || {};
 
-    const hasForm = props?.meta || props?.form;
-    const defaultValue = hasForm
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    const hasForm = props?.meta;
+    const defaultValue = (hasForm ? props.input?.value : props.value) || [];
 
     // remove existing entries from full list of communities
     const existingCommunityPids = defaultValue.map(community => community.rek_pid || community);

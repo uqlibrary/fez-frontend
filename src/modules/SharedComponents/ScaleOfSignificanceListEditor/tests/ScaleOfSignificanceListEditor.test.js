@@ -1,6 +1,5 @@
 import React from 'react';
 import ScaleOfSignificanceListEditor from '../ScaleOfSignificanceListEditor';
-import { List } from 'immutable';
 import { render, WithReduxStore, fireEvent, within } from 'test-utils';
 
 /* eslint react/prop-types: 0 */
@@ -112,14 +111,14 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         const { container } = setup({
             input: {
                 name: 'test',
-                value: new List([
+                value: [
                     {
                         rek_value: 'test 1',
                     },
                     {
                         rek_value: 'test 2',
                     },
-                ]),
+                ],
             },
             searchKey: {
                 order: 'rek_order',
@@ -192,7 +191,7 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         const { getByTestId } = setup({
             input: {
                 name: 'test',
-                value: new List([
+                value: [
                     {
                         rek_value: {
                             author: {
@@ -213,7 +212,7 @@ describe('ScaleOfSignificanceListEditor tests', () => {
                             value: { plainText: 'Major', htmlText: 'Major' },
                         },
                     },
-                ]),
+                ],
             },
             searchKey: {
                 order: 'rek_order',
@@ -231,7 +230,7 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         const { getByTestId } = setup({
             input: {
                 name: 'test',
-                value: new List([
+                value: [
                     {
                         rek_value: {
                             author: {
@@ -252,7 +251,7 @@ describe('ScaleOfSignificanceListEditor tests', () => {
                             value: { plainText: 'Major', htmlText: 'Major' },
                         },
                     },
-                ]),
+                ],
             },
             searchKey: {
                 order: 'rek_order',

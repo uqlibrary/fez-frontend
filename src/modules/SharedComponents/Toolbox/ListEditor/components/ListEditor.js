@@ -117,14 +117,7 @@ export default class ListEditor extends Component {
 
     mapValueToList = (key, valueAsJson) =>
         valueAsJson ? valueAsJson.map(item => item[key]) : /* istanbul ignore next */ [];
-    getPropValueAsJson = props => {
-        const vals =
-            ((props.input || {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || {}).name && props.input.value);
-        return !!vals ? vals : [];
-    };
+    getPropValueAsJson = props => (props.input?.name && props.input?.value ? props.input?.value : []);
 
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));

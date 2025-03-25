@@ -134,9 +134,7 @@ export const required = value => (value ? undefined : locale.validationErrors.re
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
-        ? undefined
-        : locale.validationErrors.required;
+    return !value?.length && locale.validationErrors.required;
 };
 
 export const email = value =>
@@ -196,7 +194,7 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    const accessCondition = values.fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {

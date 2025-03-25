@@ -242,7 +242,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
 </div>
 `;
 
-exports[`ContentIndicatorsField component should render with given field props in immutable list 1`] = `
+exports[`ContentIndicatorsField component should render with given field props in list 1`] = `
 <div>
   <div
     class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"

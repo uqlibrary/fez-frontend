@@ -12,13 +12,8 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    const hasForm = props?.meta || props?.form;
-
-    const defaultValue = hasForm // TODO - remove after reduxForm migrated
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    const hasForm = props?.meta;
+    const defaultValue = (hasForm ? props.input?.value : props.value) || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);

@@ -1,7 +1,6 @@
 import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
 import NewGenericSelectField from './NewGenericSelectField';
-import Immutable from 'immutable';
 
 function setup(testProps = {}, render = rtlRender) {
     const props = {
@@ -117,7 +116,7 @@ describe('NewGenericSelectField', () => {
                 },
             ],
             input: {
-                value: Immutable.List([2]),
+                value: [2],
             },
             multiple: true,
             displayEmpty: true,

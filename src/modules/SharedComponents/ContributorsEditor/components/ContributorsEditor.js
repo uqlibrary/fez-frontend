@@ -178,15 +178,7 @@ export class ContributorsEditor extends PureComponent {
         return ScaleOfSignificance;
     };
 
-    getContributorsFromProps = props => {
-        if (props.value || (props.input && props.input.name && props.input.value)) {
-            return (
-                props.value ||
-                (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
-            );
-        }
-        return [];
-    };
+    getContributorsFromProps = props => props.value || (props.input?.name && props.input?.value) || [];
 
     getContributorsWithAffiliationsFromProps = props => {
         const authors = this.getContributorsFromProps(props);

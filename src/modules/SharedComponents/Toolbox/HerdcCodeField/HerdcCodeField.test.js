@@ -1,6 +1,5 @@
 import React from 'react';
 import HerdcCodeField from './HerdcCodeField';
-import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -37,7 +36,7 @@ describe('HerdcCodeField component', () => {
             label: 'Test label',
             placeholder: 'Test placeholder',
             input: {
-                value: Immutable.List(['One', 'Two']),
+                value: ['One', 'Two'],
                 onChange: jest.fn(),
             },
             meta: {
