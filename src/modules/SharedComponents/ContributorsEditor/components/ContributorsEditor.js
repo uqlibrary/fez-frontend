@@ -87,6 +87,7 @@ export class ContributorsEditor extends PureComponent {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        // Authors, not used by SoS
         if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
@@ -95,41 +96,42 @@ export class ContributorsEditor extends PureComponent {
                     this.props.required && !hasAtLeastOneItemSelected(items) && locale.validationErrors.authorRequired,
             });
         }
-        if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
-            this.state.scaleOfSignificance = this.buildInitialScaleOfSignificance(this.props);
-        }
-        // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (!isArrayDeeplyEqual(prevState?.contributors, this.state?.contributors)) {
             this.props.onChange?.(this.state.contributors);
         }
-        if (this.props.useFormReducer) {
+
+        // SoS specific section
+        if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
+            this.setState({ scaleOfSignificance: this.buildInitialScaleOfSignificance(this.props) });
+            // notify parent component when local state has been updated, eg contributors added/removed/reordered
+        } else if (this.props.useFormReducer) {
             const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
             if (Object.keys(updated).length > 0) {
-                this.state.scaleOfSignificance = this.props.scaleOfSignificance;
+                this.setState({ scaleOfSignificance: this.props.scaleOfSignificance });
             } else {
                 const newSos = this.handleSoSChange(
                     prevState.contributors,
                     this.state.contributors,
                     this.props.scaleOfSignificance,
                 );
-                this.state.scaleOfSignificance = newSos;
+                this.setState({ scaleOfSignificance: newSos });
             }
         }
     }
     buildInitialScaleOfSignificance = props => {
         if (!props.isNtro) return [];
 
-        const ScaleOfSignificance = [];
+        const scaleOfSignificance = [];
         props.record?.fez_record_search_key_significance &&
             props.record?.fez_record_search_key_significance.length > 0 &&
             props.record?.fez_record_search_key_significance.map((item, index) => {
                 // check here for the length of the significance vs the authors.
                 /* istanbul ignore else */
                 if (props.record?.fez_record_search_key_author.length >= index + 1) {
-                    ScaleOfSignificance[index] = {};
-                    ScaleOfSignificance[index].id = item.rek_significance_id;
-                    ScaleOfSignificance[index].key = item.rek_significance;
-                    ScaleOfSignificance[index].value = {
+                    scaleOfSignificance[index] = {};
+                    scaleOfSignificance[index].id = item.rek_significance_id;
+                    scaleOfSignificance[index].key = item.rek_significance;
+                    scaleOfSignificance[index].value = {
                         plainText:
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
@@ -137,7 +139,7 @@ export class ContributorsEditor extends PureComponent {
                             props.record?.fez_record_search_key_creator_contribution_statement[index]
                                 ?.rek_creator_contribution_statement || /* istanbul ignore next */ 'Missing',
                     };
-                    ScaleOfSignificance[index].author = {
+                    scaleOfSignificance[index].author = {
                         rek_author_id:
                             props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                             /* istanbul ignore next */ 0,
@@ -155,14 +157,14 @@ export class ContributorsEditor extends PureComponent {
         (!props.record?.fez_record_search_key_significance ||
             props.record?.fez_record_search_key_significance?.length === 0) &&
             props.record?.fez_record_search_key_author?.map((item, index) => {
-                ScaleOfSignificance[index] = {};
-                ScaleOfSignificance[index].id = 0;
-                ScaleOfSignificance[index].key = 0;
-                ScaleOfSignificance[index].value = {
+                scaleOfSignificance[index] = {};
+                scaleOfSignificance[index].id = 0;
+                scaleOfSignificance[index].key = 0;
+                scaleOfSignificance[index].value = {
                     plainText: 'Missing',
                     htmlText: 'Missing',
                 };
-                ScaleOfSignificance[index].author = {
+                scaleOfSignificance[index].author = {
                     rek_author_id:
                         props.record?.fez_record_search_key_author[index]?.rek_author_id ||
                         /* istanbul ignore next */ 0,
@@ -175,7 +177,7 @@ export class ContributorsEditor extends PureComponent {
                     rek_author_order: index + 1,
                 };
             });
-        return ScaleOfSignificance;
+        return scaleOfSignificance;
     };
 
     getContributorsFromProps = props => {
@@ -437,8 +439,10 @@ export class ContributorsEditor extends PureComponent {
                 };
                 if (newContribs.length > 1) {
                     newList = [...this.state.scaleOfSignificance, newItem];
+                } else if (this.state?.scaleOfSignificance?.length === 0) {
+                    newList = [newItem]; // reset newList if incoming SoS value is not populated
                 } else {
-                    newList = [newItem];
+                    newList = this.state.scaleOfSignificance; // otherwise reset to incoming SoS prop value
                 }
             } else if (oldContribs.length > newContribs.length) {
                 let found = false;
