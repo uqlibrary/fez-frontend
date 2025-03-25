@@ -85,7 +85,7 @@ describe('AttachedFilesField component', () => {
                 fez_datastream_info: undefined,
             },
             meta: {
-                initial: Immutable.List(newDs),
+                value: newDs,
             },
         });
         expect(container).toMatchSnapshot();

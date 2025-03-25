@@ -15,8 +15,7 @@ const getDecoratedField = (field, fieldState, formState) => {
         ...field,
         meta: {
             error: fieldState.error?.message,
-            // required to make it compatible with ContentIndicatorsField,
-            initial: { toJS: () => formState.defaultValues[field.name] },
+            value: formState?.defaultValues?.[field.name],
             form: Object.keys(formState).length > 0 && 'hasForm', // TODO - remove after reduxForm migration
         },
         ref: null,
