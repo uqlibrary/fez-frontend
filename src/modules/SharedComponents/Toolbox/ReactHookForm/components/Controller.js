@@ -21,11 +21,12 @@ const getDecoratedField = (field, fieldState, formState) => {
     decoratedField.input = input;
     decoratedField.meta = {
         error: fieldState.error?.message,
-        value: formState?.defaultValues?.[field.name],
     };
     // to avoid `ref` & forwardRef() errors
     decoratedField.ref = null;
     decoratedField.value = input.value;
+    decoratedField.defaultValue = formState?.defaultValues?.[field.name];
+    decoratedField.hasError = !!fieldState.error?.message;
 
     return decoratedField;
 };

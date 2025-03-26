@@ -58,9 +58,7 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark existing indicators as disabled', () => {
         const input = {
-            meta: {
-                value: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
-            },
+            defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
         };
         const expected = CONTENT_INDICATORS.map(item => ({
             ...item,
@@ -74,9 +72,7 @@ describe('ContentIndicatorsField component', () => {
     it('should not mark existing indicators as disabled for admins', () => {
         const input = {
             canUnselect: true,
-            meta: {
-                value: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
-            },
+            defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
         };
         const expected = CONTENT_INDICATORS.map(item => ({
             ...item,
@@ -100,9 +96,7 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
         const { container } = setup({
-            meta: {
-                value: CONTENT_INDICATORS,
-            },
+            defaultValue: CONTENT_INDICATORS,
         });
         expect(container).toMatchSnapshot();
     });
@@ -129,9 +123,7 @@ describe('ContentIndicatorsField component', () => {
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
         const { container } = setup({
-            meta: {
-                value: CONTENT_INDICATORS,
-            },
+            defaultValue: CONTENT_INDICATORS,
             canUnselect: true,
         });
         expect(container).toMatchSnapshot();

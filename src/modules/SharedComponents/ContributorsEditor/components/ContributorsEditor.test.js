@@ -116,11 +116,6 @@ describe('ContributorsEditor', () => {
                     },
                 },
             },
-            meta: {
-                initial: {
-                    toJS: () => [{}],
-                },
-            },
             input: {
                 name: 'test',
                 value: [

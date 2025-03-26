@@ -191,16 +191,16 @@ const PartialDateForm = props => {
         required,
         hasError,
         input,
-        meta,
         partialDateFormId,
         clearable,
         value,
+        defaultValue,
     } = props;
     const getDateObject = () => {
         const dateValue =
             (value && moment(value)) ||
             (input && input.value && moment(input.value)) ||
-            (meta && meta.initial && typeof meta.initial === 'string' && moment(meta.initial)) ||
+            (defaultValue && typeof defaultValue === 'string' && moment(defaultValue)) ||
             null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
@@ -390,6 +390,7 @@ const PartialDateForm = props => {
 PartialDateForm.propTypes = {
     control: PropTypes.any,
     value: PropTypes.any,
+    defaultValue: PropTypes.any,
     locale: PropTypes.object,
     onChange: PropTypes.func,
     dateFormat: PropTypes.string,
@@ -401,10 +402,6 @@ PartialDateForm.propTypes = {
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
     input: PropTypes.object,
-    meta: PropTypes.shape({
-        // TODO - remove after RHF migration
-        initial: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // added object type to avoid console errors
-    }),
     partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };

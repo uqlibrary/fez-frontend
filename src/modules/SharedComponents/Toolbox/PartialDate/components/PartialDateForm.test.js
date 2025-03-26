@@ -89,9 +89,7 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-02-02',
-            },
+            defaultValue: '2020-02-02',
         });
         expect(container).toMatchSnapshot();
     });
@@ -99,9 +97,7 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-01-01',
-            },
+            defaultValue: '2020-01-01',
         });
         expect(container).toMatchSnapshot();
     });
@@ -109,9 +105,7 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-12-01',
-            },
+            defaultValue: '2020-12-01',
         });
         expect(container).toMatchSnapshot();
     });
@@ -173,9 +167,7 @@ describe('PartialDateForm component', () => {
             const { getByText, queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             expect(queryByText('Invalid date')).not.toBeInTheDocument();
@@ -189,9 +181,7 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByRole, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // clear whole date and check for not an error
@@ -206,9 +196,7 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter valid date and check for not an error
@@ -222,9 +210,7 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter future date and check for an error
@@ -238,9 +224,7 @@ describe('PartialDateForm component', () => {
                 allowPartial: false,
                 disableFuture: true,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter future date and check for an error
@@ -254,9 +238,7 @@ describe('PartialDateForm component', () => {
                 allowPartial: true,
                 disableFuture: true,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter future date and check for an error
@@ -269,9 +251,7 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter invalid date and check for an error
@@ -284,9 +264,7 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
-                },
+                defaultValue: '2017-02-02',
                 clearable: true,
             });
             // enter invalid date and check for an error
