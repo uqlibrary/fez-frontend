@@ -90,7 +90,7 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const isMobileView = useIsMobileView();
     const tabErrors = React.useRef(null);
-    // console.log(form.formState.errors);
+
     tabErrors.current = Object.entries(formErrors || /* istanbul ignore next */ {}).reduce(
         (numberOfErrors, [key, errorObject]) => {
             return {
