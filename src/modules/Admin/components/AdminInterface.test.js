@@ -588,6 +588,22 @@ describe('AdminInterface component', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should show server error alert', async () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        mockFormState.formState.errors = { root: { serverError: { type: 'custom', message: 'An API error' } } };
+
+        const { getByTestId } = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+            formErrors: { 'bibliographicSection.rek_title': 'Title is required' },
+        });
+        expect(within(getByTestId('alert')).getByTestId('action-button')).toBeInTheDocument();
+    });
+
     it('should display successful alert', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         const { container, getByTestId, rerender } = setup({
@@ -935,7 +951,6 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-
         expect(getByTestId('alert')).toHaveTextContent(
             'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
         );
