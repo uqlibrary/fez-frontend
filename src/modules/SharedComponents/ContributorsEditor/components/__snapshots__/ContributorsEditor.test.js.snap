@@ -7560,7 +7560,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 required=""
               >
                 <div
-                  aria-controls=":r7:"
+                  aria-controls="<dynamic>"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="org-affiliation-label org-affiliation-select"

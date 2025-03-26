@@ -222,7 +222,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":r7:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -417,7 +417,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":r1:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -624,7 +624,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
 }"
           >
             <div
-              aria-controls=":r4:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
@@ -825,7 +825,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls=":ra:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"

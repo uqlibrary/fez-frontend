@@ -416,7 +416,8 @@
         "testEnvironmentOptions": {
             "url": "http://fez-staging.library.uq.edu.au"
         },
-        "testTimeout": 30000
+        "testTimeout": 30000,
+        "snapshotSerializers": ["<rootDir>/utils/jest-serializer.ts"]
     },
     "nyc": {
         "reporter": [

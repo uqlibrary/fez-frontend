@@ -276,7 +276,7 @@ exports[`CreativeWorkForm component 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r5:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1025,7 +1025,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":rj:"
+                          aria-controls="<dynamic>"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -1777,7 +1777,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r1s:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1907,7 +1907,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r1v:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-end-date-month-select"
@@ -2090,7 +2090,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         required=""
                       >
                         <div
-                          aria-controls=":r22:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -2518,7 +2518,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                   required=""
                 >
                   <div
-                    aria-controls=":r2b:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-audience-size-select"
@@ -2579,7 +2579,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r2c:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -2645,7 +2645,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r2d:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -2815,7 +2815,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls=":r2g:"
+                      aria-controls="<dynamic>"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
@@ -3264,7 +3264,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r10:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -3394,7 +3394,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r13:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-end-date-month-select"
@@ -3577,7 +3577,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls=":r16:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -3970,7 +3970,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                   required=""
                 >
                   <div
-                    aria-controls=":r1e:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-audience-size-select"
@@ -4031,7 +4031,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r1f:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -4097,7 +4097,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r1g:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
@@ -4267,7 +4267,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-controls=":r1j:"
+                      aria-controls="<dynamic>"
                       aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"

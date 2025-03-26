@@ -16,7 +16,7 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       floatinglabeltext="This is a test selectfield component"
     >
       <div
-        aria-controls=":r0:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="test-select"
@@ -76,7 +76,7 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       floatinglabeltext="test selectfield component"
     >
       <div
-        aria-controls=":r1:"
+        aria-controls="<dynamic>"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="test-select"

@@ -60,7 +60,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r1:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -191,7 +191,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r7:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -322,7 +322,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r4:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
