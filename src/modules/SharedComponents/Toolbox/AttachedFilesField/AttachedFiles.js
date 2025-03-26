@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useFormContext } from 'react-hook-form';
 import moment from 'moment';
 
 import Delete from '@mui/icons-material/Delete';
@@ -14,7 +15,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
-import { useFormValuesContext, useRecordContext } from 'context';
+import { useRecordContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isDateInBetween, isFileValid, isValidDate } from 'config/validation';
@@ -228,6 +229,7 @@ export const AttachedFiles = ({
     dataStreams,
     disabled,
     deleteHint = 'Remove this file',
+    openAccessStatusId,
     onDelete,
     onDateChange,
     onDescriptionChange,
@@ -256,8 +258,8 @@ export const AttachedFiles = ({
     const { record } = useRecordContext();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
-    const { openAccessStatusId } = useFormValuesContext();
-    const { formValues: formValuesFromContext } = useFormValuesContext();
+    const { getValues } = useFormContext();
+    const formValues = getValues('filesSection');
     const isAdminEditing = isAdmin && canEdit;
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
@@ -492,7 +494,7 @@ export const AttachedFiles = ({
                                                 checkFileNameForErrors={checkFileNameForErrors(item.id)}
                                                 checkFileNamesForDupes={checkFileNamesForDupes(
                                                     dataStreams,
-                                                    formValuesFromContext,
+                                                    formValues,
                                                     setFileNameErrorMessage,
                                                     getDsIndex(item.id),
                                                 )}
@@ -688,6 +690,7 @@ export const AttachedFiles = ({
 AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
     disabled: PropTypes.bool,
+    openAccessStatusId: PropTypes.number,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,

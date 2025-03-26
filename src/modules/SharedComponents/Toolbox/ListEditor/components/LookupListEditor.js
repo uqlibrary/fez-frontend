@@ -3,5 +3,10 @@ import ListEditor from './ListEditor';
 import LookupForm from './LookupForm';
 
 export default function LookupListEditor(fieldProps) {
-    return <ListEditor formComponent={LookupForm} {...fieldProps} />;
+    const errorText = fieldProps?.meta?.error;
+    const props = {
+        ...fieldProps,
+        errorText: typeof errorText === 'string' ? errorText : errorText?.message || '',
+    };
+    return <ListEditor formComponent={LookupForm} {...props} />;
 }

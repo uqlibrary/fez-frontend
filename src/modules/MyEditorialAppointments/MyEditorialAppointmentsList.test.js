@@ -100,7 +100,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should render previous list on unsuccessful add operation', async () => {
-        const { queryAllByTestId, getByTestId, getByText, queryByTestId } = setup({
+        const { queryAllByTestId, getByTestId, getByText } = setup({
             list: [],
             handleRowAdd: jest.fn(() => Promise.reject()),
         });
@@ -123,7 +123,7 @@ describe('MyEditorialAppointmentsList', () => {
     });
 
     it('should validate inputs and render updated info after editing', async () => {
-        const { getByTestId, getByLabelText, getByText } = setup({
+        const { getByTestId, getByText } = setup({
             list: [
                 {
                     eap_id: 1,
@@ -148,7 +148,11 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        fireEvent.click(getByLabelText('Clear'));
+        fireEvent.click(
+            getByTestId('eap-role-cvo-id-input')
+                .closest('div')
+                .querySelector('[aria-label=Clear]'),
+        );
 
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 

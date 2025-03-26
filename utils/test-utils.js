@@ -5,6 +5,7 @@ import { render } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
+import { FormProvider } from 'react-hook-form';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -22,11 +23,14 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
+import * as useValidatedForm from 'hooks/useValidatedForm';
 import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
 import { isEmptyObject } from '../src/helpers/general';
 import { locale } from '../src/locale';
+
+import { isPlainObject } from 'lodash';
 
 export const AllTheProviders = props => {
     return (
@@ -168,7 +172,7 @@ export const createMatchMedia = width => {
 
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
-const addFilesToFileUploader = files => {
+const addFilesToFileUploader = async (files, timeout = 500) => {
     const { screen, fireEvent } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
@@ -186,7 +190,33 @@ const addFilesToFileUploader = files => {
             types: ['Files'],
         },
     });
+    for (const file of files) {
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+    }
 };
+const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
+const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 500) => {
+    const { fireEvent, within } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+        fireEvent.mouseDown(
+            within(screen.getByTestId('files-section-content')).getByTestId(`dsi-security-policy-${index}-select`),
+        );
+        fireEvent.click(screen.getByRole('option', { name: optionName }));
+    }
+};
+
 const assertEnabled = element =>
     expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
 const assertDisabled = element =>
@@ -220,17 +250,6 @@ const expectMissingRequiredFieldError = async field =>
         expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
     }));
 
-const setFileUploaderFilesToClosedAccess = async files => {
-    const { fireEvent } = reactTestingLib;
-    // set all files to closed access
-    for (const file of files) {
-        const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)));
-        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
-        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
-    }
-};
-
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
     return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
@@ -252,6 +271,16 @@ const mockWebApiFile = () => {
             this.name = name;
         }
     };
+};
+
+// eslint-disable-next-line react/prop-types
+export const FormProviderWrapper = ({ children, methods, ...props }) => {
+    const attributes = useValidatedForm.useValidatedForm(props);
+    return (
+        <FormProvider {...attributes} {...methods}>
+            {children}
+        </FormProvider>
+    );
 };
 
 /**
@@ -357,14 +386,15 @@ const assertInstanceOfFile = data => {
  * @param {string} method
  * @param {string} url
  * @param {function?} assertPayload
+ * @param {function?} transformer
  * @return {*}
  */
-const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload, transformer) => {
     const request = assertApiRequest({
         method,
         url,
         partialUrl: url,
-        data: data => expect(data).toMatchSnapshot() || true,
+        data: data => expect(transformer?.(data) ?? data).toMatchSnapshot() || true,
     });
     return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
@@ -422,6 +452,29 @@ const clearAndType = async (input, value) => {
     await userEvent.type(screen.getByTestId(input), value);
 };
 
+// https://stackoverflow.com/a/73160202/1417494
+const sortObjectProps = obj => {
+    return Object.keys(obj)
+        .sort()
+        .reduce((ordered, key) => {
+            let value = obj[key];
+
+            if (isPlainObject(value)) {
+                ordered[key] = sortObjectProps(value);
+            } else {
+                if (Array.isArray(value)) {
+                    value = value.map(v => {
+                        // eslint-disable-next-line no-param-reassign
+                        if (isPlainObject(v)) v = sortObjectProps(v);
+                        return v;
+                    });
+                }
+                ordered[key] = value;
+            }
+            return ordered;
+        }, {});
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -451,6 +504,8 @@ module.exports = {
     getFilenameBasename,
     addFilesToFileUploader,
     setFileUploaderFilesToClosedAccess,
+    FormProviderWrapper,
+    setFileUploaderFilesSecurityPolicy,
     turnOnJestPreviewOnTestFailure,
     mockWebApiFile,
     assertRequestData,
@@ -468,5 +523,6 @@ module.exports = {
     addContributorsEditorItem,
     addAndSelectContributorsEditorItem,
     clearAndType,
+    sortObjectProps,
     api,
 };

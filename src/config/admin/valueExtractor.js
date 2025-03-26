@@ -111,6 +111,7 @@ const editorsGetValue = record => {
     return returnValue;
 };
 
+// eslint-disable-next-line no-unused-vars
 export const deleteKey = (record, searchKey) => {
     const skipDeleteForKeys = [
         'rek_date',
@@ -262,12 +263,12 @@ export default {
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
-            record.fez_record_search_key_ismemberof.forEach(community => {
+            record.fez_record_search_key_ismemberof?.forEach(community => {
                 if (!uniqueCommunities.find(uniqueItem => community.rek_ismemberof === uniqueItem.rek_ismemberof)) {
                     uniqueCommunities.push(community);
                 }
             });
-            const returnValue = uniqueCommunities.map(community => ({
+            const returnValue = uniqueCommunities?.map(community => ({
                 rek_pid: community.rek_ismemberof,
                 rek_title: community.rek_ismemberof_lookup,
                 id: community.rek_ismemberof,
@@ -282,12 +283,12 @@ export default {
     collections: {
         getValue: record => {
             const uniqueCollections = [];
-            record.fez_record_search_key_ismemberof.forEach(collection => {
+            record.fez_record_search_key_ismemberof?.forEach(collection => {
                 if (!uniqueCollections.find(uniqueItem => collection.rek_ismemberof === uniqueItem.rek_ismemberof)) {
                     uniqueCollections.push(collection);
                 }
             });
-            const returnValue = uniqueCollections.map(collection => ({
+            const returnValue = uniqueCollections?.map(collection => ({
                 rek_pid: collection.rek_ismemberof,
                 rek_title: collection.rek_ismemberof_lookup,
                 id: collection.rek_ismemberof,

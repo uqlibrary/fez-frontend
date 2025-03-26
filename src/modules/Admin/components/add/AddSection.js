@@ -1,33 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+
+import { useNavigate } from 'react-router-dom';
+import { useFormContext } from 'react-hook-form';
 
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-import { validation, publicationTypes } from 'config';
-import { DOCUMENT_TYPES_EDIT_ONLY } from 'config/general';
+import { validation, publicationTypes, pathConfig } from 'config';
+import { DOCUMENT_TYPES_EDIT_ONLY, NEW_DOCTYPES_OPTIONS, NTRO_SUBTYPES } from 'config/general';
 import locale from 'locale/pages';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
-import { pathConfig } from 'config';
-import { useNavigate } from 'react-router-dom';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
-export const AddSection = ({
-    hasDefaultDocTypeSubType,
-    publicationSubtypeItems,
-    selectedPublicationType,
-    publicationSubtype,
-    hasSubtypes,
-    disabled = false,
-    onCreate,
-    disableSubmit,
-}) => {
+export const AddSection = ({ onCreate, disabled = false }) => {
     const navigate = useNavigate();
+    const form = useFormContext();
+    const displayType = form.getValues('rek_display_type');
+    const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms }, true)[displayType];
+    const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
+    const publicationSubtype = hasSubtypes ? form.getValues('adminSection.rek_subtype') : null;
+    const _subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
+    const subtypes =
+        (!!publicationSubtype &&
+            !!_subtypes &&
+            NTRO_SUBTYPES.includes(publicationSubtype) &&
+            _subtypes.filter(type => NTRO_SUBTYPES.includes(type))) ||
+        _subtypes ||
+        null;
+    const collections = form.getValues('adminSection.collections');
+
+    let hasDefaultDocTypeSubType = false;
+    if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
+        hasDefaultDocTypeSubType = true;
+    }
+
+    const publicationSubtypeItems = subtypes
+        ? subtypes.map((item, index) => (
+              <MenuItem value={item} key={index}>
+                  {item}
+              </MenuItem>
+          ))
+        : [];
+    const disableSubmit =
+        !collections || !collections.length || !selectedPublicationType || (hasSubtypes && !publicationSubtype);
+
     const allPublicationTypes = Object.values(publicationTypes());
     const availablePublicationTypes = allPublicationTypes.filter(
         pubType => !DOCUMENT_TYPES_EDIT_ONLY.includes(pubType.id),
@@ -46,6 +69,7 @@ export const AddSection = ({
         event.preventDefault();
         navigate(pathConfig.index);
     };
+
     return (
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
@@ -55,9 +79,11 @@ export const AddSection = ({
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                     <Field
+                                        name="adminSection.collections"
+                                        collectionFieldId="rek-ismemberof"
+                                        control={form.control}
                                         component={CollectionField}
                                         disabled={disabled}
-                                        name="adminSection.collections"
                                         floatingLabelText={
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
@@ -65,20 +91,32 @@ export const AddSection = ({
                                         required
                                         validate={[validation.requiredList]}
                                         fullWidth
-                                        collectionFieldId="rek-ismemberof"
+                                        {...(!!form.getFieldState('adminSection.collections').error
+                                            ? {
+                                                  error: true,
+                                                  errorText: form.getFieldState('adminSection.collections').error,
+                                              }
+                                            : {})}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Field
+                                        name="rek_display_type"
+                                        selectFieldId="rek-display-type"
+                                        control={form.control}
                                         component={SelectField}
                                         disabled={disabled}
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
-                                        name="rek_display_type"
                                         placeholder={locale.pages.adminAdd.formLabels.rek_display_type.hintText}
                                         required
-                                        selectFieldId="rek-display-type"
                                         validate={[validation.required]}
                                         value={selectedPublicationType}
+                                        {...(!!form.getFieldState('rek_display_type').error
+                                            ? {
+                                                  error: true,
+                                                  errorText: form.getFieldState('rek_display_type').error,
+                                              }
+                                            : {})}
                                     >
                                         {publicationTypeItems}
                                     </Field>
@@ -87,16 +125,24 @@ export const AddSection = ({
                                     {(hasSubtypes || hasDefaultDocTypeSubType) && (
                                         <Grid item xs={12}>
                                             <Field
-                                                component={SelectField}
-                                                disabled={disabled}
                                                 id="rek-subtype"
                                                 name="adminSection.rek_subtype"
+                                                selectFieldId="rek-subtype"
+                                                control={form.control}
+                                                component={SelectField}
+                                                disabled={disabled}
                                                 value={publicationSubtype}
                                                 label={locale.pages.adminAdd.formLabels.rek_subtype.inputLabelText}
                                                 required
                                                 validate={[validation.required]}
                                                 placeholder={locale.pages.adminAdd.formLabels.rek_subtype.hintText}
-                                                selectFieldId="rek-subtype"
+                                                {...(!!form.getFieldState('adminSection.rek_subtype').error
+                                                    ? {
+                                                          error: true,
+                                                          errorText: form.getFieldState('adminSection.rek_subtype')
+                                                              .error,
+                                                      }
+                                                    : {})}
                                             >
                                                 {publicationSubtypeItems}
                                             </Field>

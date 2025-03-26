@@ -187,10 +187,10 @@ describe('useForm hook', () => {
             expect(result.current.formState.serverError.message).toBe(serverError);
         });
 
-        it('should expose resetServerError to clear server error', () => {
+        it('should expose resetServerErrors to clear server error', () => {
             const { result } = setup();
 
-            result.current.resetServerError();
+            result.current.resetServerErrors();
             expect(mockFormReturn.clearErrors).toHaveBeenCalledWith(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
         });
     });

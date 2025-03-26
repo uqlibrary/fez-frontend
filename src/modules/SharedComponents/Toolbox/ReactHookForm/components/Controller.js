@@ -20,7 +20,7 @@ const getDecoratedField = (field, fieldState, formState) => {
             form: Object.keys(formState).length > 0 && 'hasForm', // TODO - remove after reduxForm migration
         },
         ref: null,
-        value: decoratedField.value || '',
+        value: decoratedField.value,
     };
     // required to make it compatible with SelectFieldWrapper,
     decoratedField.input = input;
