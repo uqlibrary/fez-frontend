@@ -566,13 +566,13 @@ export const getRecordCreatorsIdSearchKey = creators => {
  *
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
  *
- * @returns {Object} formatted {fez_record_search_key_architect} for record request
+ * @returns {Object} formatted {fez_record_search_key_architect_name} for record request
  */
 export const getRecordArchitectsSearchKey = architects => {
     if (!architects || architects.length === 0) return {};
 
     return {
-        fez_record_search_key_architect: architects.map((item, index) => ({
+        fez_record_search_key_architect_name: architects.map((item, index) => ({
             rek_architect: item.nameAsPublished,
             rek_architect_order: index + 1,
         })),
