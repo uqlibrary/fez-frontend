@@ -1,7 +1,7 @@
 import moment from 'moment-timezone';
 
 import { exportReportAllowedFilters, DEFAULT_SERVER_DATE_FORMAT, SYSTEM_ALERT_ACTION, REPORT_TYPE } from './config';
-import { filterObjectProps, filterObjectPropsByKey, getPlatformUrl, trimTrailingSlash } from './utils';
+import { filterObjectProps, filterObjectPropsByKey, trimTrailingSlash, getPlatformUrl } from './utils';
 
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 

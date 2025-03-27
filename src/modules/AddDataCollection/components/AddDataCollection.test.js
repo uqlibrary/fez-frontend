@@ -36,11 +36,13 @@ function setup(testProps = {}, renderMethod = render) {
     };
 
     return renderMethod(
-        <WithReduxStore>
-            <WithRouter>
-                <AddDataCollection {...props} />
-            </WithRouter>
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <WithRouter>
+                    <AddDataCollection {...props} />
+                </WithRouter>
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 }
 
