@@ -15,7 +15,6 @@ module.exports = {
         for (let i = 0; i < clone.attributes.length; i++) {
             const attr = clone.attributes[i];
             const replacementRules = attributeValueToReplacementMap[attr.name];
-
             if (!replacementRules) continue;
 
             const modifiedValue = attr.value
