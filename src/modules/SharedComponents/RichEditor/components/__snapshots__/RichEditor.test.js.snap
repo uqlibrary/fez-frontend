@@ -13,6 +13,39 @@ exports[`RichEditor should handle null value 1`] = `
 </div>
 `;
 
+exports[`RichEditor should render alternative error from react-hook-form 1`] = `
+<div>
+  <div
+    data-analyticsid="rek-test"
+    data-testid="rek-test"
+    id="rek-test"
+  >
+    <span>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
+      >
+        This is title with error
+        <span>
+           *
+        </span>
+      </p>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      >
+        This is description with error
+      </span>
+    </span>
+    <div />
+    <span
+      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      style="display: inline-block;"
+    >
+      This field is required
+    </span>
+  </div>
+</div>
+`;
+
 exports[`RichEditor should render component 1`] = `
 <div>
   <div

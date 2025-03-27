@@ -50,7 +50,6 @@ export const UqIdField = props => {
                 })),
         [authorsList],
     );
-
     return (
         <AutoCompleteAsynchronousField
             {...props}

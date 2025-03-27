@@ -39,19 +39,21 @@ export const AutoCompleteAsynchronousField = ({
     const active = useRef(true);
 
     useEffect(() => {
-        // default value may not be ready when the component renders
-        // so update value whenever the id changes
-        const newValue =
-            defaultValue && typeof defaultValue === 'object'
-                ? {
-                      ...defaultValue,
-                      value: defaultValue?.value?.value ?? defaultValue?.value ?? defaultValue,
-                  }
-                : defaultValue;
+        if (!prefilledSearch) {
+            // default value may not be ready when the component renders
+            // so update value whenever the id changes
+            const newValue =
+                defaultValue && typeof defaultValue === 'object'
+                    ? {
+                          ...defaultValue,
+                          value: defaultValue?.value?.value ?? defaultValue?.value ?? defaultValue,
+                      }
+                    : defaultValue;
 
-        setValue(newValue);
+            setValue(newValue);
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(defaultValue)]);
+    }, [JSON.stringify(defaultValue), prefilledSearch]);
 
     const loading = itemsLoading;
     const throttledLoadSuggestions = useRef(throttle(1000, newValue => loadSuggestions(newValue)));

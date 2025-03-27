@@ -99,7 +99,8 @@ export const AdminInterface = ({
     const {
         handleSubmit,
         setValue,
-        formState: { isSubmitting, isSubmitSuccessful, isDirty },
+        resetServerErrors,
+        formState: { isSubmitting, isSubmitSuccessful, isDirty, hasServerError },
     } = useFormContext();
 
     const numErrors = Object.keys(formErrors).length;
@@ -379,7 +380,17 @@ export const AdminInterface = ({
             {alertProps.current && (
                 <Grid item xs={12}>
                     <div style={{ height: 16 }} />
-                    <Alert {...alertProps.current} />
+                    <Alert
+                        {...alertProps.current}
+                        {...(hasServerError
+                            ? {
+                                  action: /* istanbul ignore next */ () => {
+                                      resetServerErrors();
+                                  },
+                                  actionButtonLabel: txt.current.alerts.errorAlert.clear,
+                              }
+                            : {})}
+                    />
                 </Grid>
             )}
         </React.Fragment>
