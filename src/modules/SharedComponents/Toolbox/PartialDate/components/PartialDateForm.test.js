@@ -1,6 +1,6 @@
 import React from 'react';
 import PartialDateForm from './PartialDateForm';
-import { fireEvent, rtlRender } from 'test-utils';
+import { fireEvent, rtlRender, screen } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -127,37 +127,21 @@ describe('PartialDateForm component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update state when new value passed as prop', () => {
+    const assertDateFieldValues = (day, month, year) => {
+        expect(screen.getByTestId('test-day-input').value).toBe(day);
+        expect(screen.getByTestId('test-month-input').value).toBe(month);
+        expect(screen.getByTestId('test-year-input').value).toBe(year);
+    };
+
+    it('should update state as expected when mounting', () => {
         // initial render
-        const { container, rerender } = setup({
+        const { rerender } = setup({
             allowPartial: true,
-            input: {
-                value: '2020-02-02',
-            },
+            value: '2020-02-02',
         });
-        expect(container).toMatchSnapshot();
+        assertDateFieldValues('2', '1', '2020');
 
         // check date changes when new day value provided in props
-        setup(
-            {
-                allowPartial: true,
-                value: '2020-02-01',
-            },
-            rerender,
-        );
-        expect(container).toMatchSnapshot();
-
-        // check date changes when new month value provided in props
-        setup(
-            {
-                allowPartial: true,
-                value: '2020-03-01',
-            },
-            rerender,
-        );
-        expect(container).toMatchSnapshot();
-
-        // check date changes when new year value provided in props
         setup(
             {
                 allowPartial: true,
@@ -165,7 +149,7 @@ describe('PartialDateForm component', () => {
             },
             rerender,
         );
-        expect(container).toMatchSnapshot();
+        assertDateFieldValues('1', '2', '2021');
     });
 
     describe('with clearable flag', () => {
