@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Unstable_Grid2';
 import FormHelperText from '@mui/material/FormHelperText';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
+import { useOnSelectiveMountEffect } from 'hooks';
 
 import moment from 'moment';
 
@@ -254,21 +255,18 @@ const PartialDateForm = props => {
         };
     };
 
-    useEffect(() => {
+    useOnSelectiveMountEffect(() => {
+        // Workaround due to RHF returning a 'value' whenever the user changes the date.
+        // It's necessary to only run this code block on first mount,
+        // and once after the value prop is first populated.
+        // This is effectively how it worked when using redux-form.
+        // Subsequent changes to date should come from the user via
+        // direct interaction with the date fields.
         const newDateObject = getDateObject();
-        /* istanbul ignore else */
-        if (
-            !!!state ||
-            state.day !== newDateObject.day ||
-            state.month !== newDateObject.month ||
-            state.year !== newDateObject.year
-        ) {
-            const newState = { ...state, ...newDateObject };
-            setState(newState);
-            // check for errors
-            (onChange || input?.onChange) && getFullDateFromState(newState);
-        }
-
+        const newState = { ...state, ...newDateObject };
+        setState(newState);
+        // check for errors
+        (onChange || input?.onChange) && getFullDateFromState(newState);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
