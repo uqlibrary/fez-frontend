@@ -39,14 +39,28 @@ export const AutoCompleteAsynchronousField = ({
     const active = useRef(true);
 
     useEffect(() => {
+        // default value may not be ready when the component renders
+        // so update value whenever the id changes
         if (!prefilledSearch) {
-            // default value may not be ready when the component renders
-            // so update value whenever the id changes
+            // set new value.
+            // if defaultValue is an object, we need to check if it has a value property
+            // and if it does, we need to set the value property to the new value.
+            // defaultValue can sometimes be {value: {value: 'value'}}, which we need
+            // to detect and correctly extract the value property.
+            let spreadValue;
+            if (defaultValue?.value?.hasOwnProperty?.('value')) spreadValue = defaultValue.value.value;
+            else {
+                /* istanbul ignore else */
+                if (defaultValue?.hasOwnProperty?.('value')) {
+                    spreadValue = defaultValue.value;
+                }
+            }
+
             const newValue =
                 defaultValue && typeof defaultValue === 'object'
                     ? {
                           ...defaultValue,
-                          value: defaultValue?.value?.value ?? defaultValue?.value ?? defaultValue,
+                          ...(spreadValue && { value: spreadValue }),
                       }
                     : defaultValue;
 
