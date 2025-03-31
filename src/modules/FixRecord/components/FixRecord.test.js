@@ -214,7 +214,7 @@ describe('Component FixRecord', () => {
                 fireEvent.change(getByTestId('comments-input'), { target: { value: 'my comments' } });
                 fireEvent.mouseDown(getByTestId('rek-content-indicator-select'));
                 fireEvent.click(getByText(newContentIndicator));
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await assertNoValidationErrorSummary();
                 await submitForm();
@@ -259,7 +259,7 @@ describe('Component FixRecord', () => {
 
             it('should display confirmation box after fix work successful submission and go to dashboard', async () => {
                 mockFixRecordApiCall();
-                const { getByTestId, getByText } = setup({
+                const { getByTestId } = setup({
                     publication: { ...mockRecordToFix, fez_record_search_key_content_indicator: null },
                 });
 

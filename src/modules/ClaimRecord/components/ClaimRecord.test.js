@@ -420,7 +420,7 @@ describe('Component ClaimRecord ', () => {
                 const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
                 await userEvent.type(getByTestId('claim-link-input'), 'https://www.test.com');
@@ -466,10 +466,10 @@ describe('Component ClaimRecord ', () => {
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
                 api.mock.records.update({ pid: journalArticle.rek_pid, data: journalArticle }).files.fail.upload();
-                const { getByText, getByTestId, queryByTestId } = setup();
+                const { getByText, getByTestId } = setup();
 
                 selectAuthor();
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
                 await submitForm();
                 // assert a file upload error
