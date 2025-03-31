@@ -13,7 +13,6 @@ import {
     waitToBeEnabled,
     assertInstanceOfFile,
     userEvent,
-    preview,
 } from 'test-utils';
 import { NEW_RECORD_API } from 'repositories/routes';
 
@@ -113,10 +112,8 @@ describe('Add new record', () => {
         fireEvent.click(getByRole('button', { name: 'Add author' }));
         fireEvent.click(getByRole('listitem', { name: 'Select this author (author) to assign it as you' }));
         const mockFile = ['myTestImage.png'];
-        addFilesToFileUploader(mockFile);
-
-        await setFileUploaderFilesToClosedAccess(mockFile, 2000);
-        preview.debug();
+        await addFilesToFileUploader(mockFile);
+        await setFileUploaderFilesToClosedAccess(mockFile);
         await waitToBeEnabled(getByRole('button', { name: 'Submit for approval' }));
         // submit to trigger confirmation box
         await userEvent.click(getByRole('button', { name: 'Submit for approval' }));

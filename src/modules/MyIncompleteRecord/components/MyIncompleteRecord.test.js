@@ -115,7 +115,7 @@ describe('MyIncompleteRecord', () => {
             (await waitForTextToBeRemoved('Author affiliation rows marked with red are required'));
 
         const mockFile = ['myTestImage.png'];
-        addFilesToFileUploader(mockFile);
+        await addFilesToFileUploader(mockFile);
         await setFileUploaderFilesToClosedAccess(mockFile);
         waitForFieldErrorToBeCleared && (await waitForTextToBeRemoved('File submission to be completed'));
 
