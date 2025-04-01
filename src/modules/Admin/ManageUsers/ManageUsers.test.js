@@ -7,11 +7,9 @@ import * as AppActions from 'actions/app';
 
 const setup = (testProps = {}) => {
     return render(
-        <React.StrictMode>
-            <WithReduxStore>
-                <ManageUsers {...testProps} />
-            </WithReduxStore>
-        </React.StrictMode>,
+        <WithReduxStore>
+            <ManageUsers {...testProps} />
+        </WithReduxStore>,
     );
 };
 

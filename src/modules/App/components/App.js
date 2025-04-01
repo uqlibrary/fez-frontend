@@ -66,8 +66,6 @@ const StyledAppTitle = styled(Typography, {
     },
 }));
 
-export const StrictModeConditional = ({ condition, wrapper, children }) => (condition ? wrapper(children) : children);
-
 const AppClass = ({
     account,
     author,
@@ -253,7 +251,7 @@ const AppClass = ({
         false;
 
     return (
-        <StrictModeConditional condition={!isAdminPage} wrapper={children => <StrictMode>{children}</StrictMode>}>
+        <StrictMode>
             <StyledGrid container>
                 <Meta routesConfig={routesConfig} />
                 <AppBar className="AppBar" color="primary" position="fixed">
@@ -422,7 +420,7 @@ const AppClass = ({
                 <HelpDrawer />
                 <OfflineSnackbar />
             </StyledGrid>
-        </StrictModeConditional>
+        </StrictMode>
     );
 };
 
