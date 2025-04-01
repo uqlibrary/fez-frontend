@@ -562,9 +562,9 @@ export const getRecordCreatorsIdSearchKey = creators => {
 };
 
 /**
- * getRecordArchitectSearchKey - returns editors object formatted for record request
+ * getRecordArchitectsSearchKey - returns editors object formatted for record request
  *
- * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ * @param {array} of objects in format {nameAsPublished: "string"}
  *
  * @returns {Object} formatted {fez_record_search_key_architect_name} for record request
  */
@@ -573,8 +573,8 @@ export const getRecordArchitectsSearchKey = architects => {
 
     return {
         fez_record_search_key_architect_name: architects.map((item, index) => ({
-            rek_architect: item.nameAsPublished,
-            rek_architect_order: index + 1,
+            rek_architect_name: item.nameAsPublished,
+            rek_architect_name_order: index + 1,
         })),
     };
 };
