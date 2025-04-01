@@ -7,9 +7,11 @@ import * as AppActions from 'actions/app';
 
 const setup = (testProps = {}) => {
     return render(
-        <WithReduxStore>
-            <ManageUsers {...testProps} />
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <ManageUsers {...testProps} />
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 };
 
@@ -94,7 +96,7 @@ describe('ManageUsers', () => {
     it('should change call an api with updated page size', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({ page: 1, pageSize: 20, query: '' }).apiUrl))
-            .replyOnce(200, {
+            .reply(200, {
                 data: [
                     {
                         usr_id: 2011,
@@ -213,152 +215,6 @@ describe('ManageUsers', () => {
                     },
                     {
                         usr_id: 2030,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                ],
-                total: 23,
-                pageSize: 20,
-                current_page: 1,
-            })
-            .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({ page: 1, pageSize: 50, query: '' }).apiUrl))
-            .replyOnce(200, {
-                data: [
-                    {
-                        usr_id: 2011,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2012,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2013,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2014,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2015,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2016,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_student_username: 'uqppun',
-                    },
-                    {
-                        usr_id: 2017,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2018,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2019,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2020,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2021,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2022,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2023,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2024,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2025,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-
-                    {
-                        usr_id: 2026,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2027,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2028,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2029,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2030,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2032,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2032,
-                        usr_full_name: 'Pun, PaulKang K.',
-                        usr_username: 'uqppun',
-                        usr_email: 'test@uq.edu.au',
-                    },
-                    {
-                        usr_id: 2033,
                         usr_full_name: 'Pun, PaulKang K.',
                         usr_username: 'uqppun',
                         usr_email: 'test@uq.edu.au',
@@ -369,7 +225,7 @@ describe('ManageUsers', () => {
                 current_page: 1,
             });
 
-        const { getAllByTestId, getByText, getByTestId } = setup({});
+        const { getAllByTestId, getByText } = setup({});
 
         await waitForElementToBeRemoved(() => getByText('No records to display'));
 
@@ -389,8 +245,15 @@ describe('ManageUsers', () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
-                data: [],
-                total: 0,
+                data: [
+                    {
+                        usr_id: 1,
+                        usr_full_name: 'Test Name',
+                        usr_username: 'uqtest',
+                        usr_created_date: '2017-02-16T23:11:37Z',
+                    },
+                ],
+                total: 1,
             })
             .onPost(new RegExp(repository.routes.USER_API().apiUrl))
             .replyOnce(200, {
@@ -421,6 +284,8 @@ describe('ManageUsers', () => {
 
     it('should render previous list on unsuccessful add operation', async () => {
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtest', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [],
@@ -446,6 +311,8 @@ describe('ManageUsers', () => {
 
     it('should render updated info after editing', async () => {
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
@@ -507,7 +374,10 @@ describe('ManageUsers', () => {
     });
 
     it('should render previous list on unsuccessful edit operation', async () => {
+        console.log('search url=', new RegExp(repository.routes.USERS_SEARCH_API({}).apiUrl));
         mockApi
+            .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtname', rule: 'lookup' } })
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
             .replyOnce(200, {
                 data: [
@@ -801,7 +671,7 @@ describe('ManageUsers', () => {
         fireEvent.click(getByTestId('confirm-bulk-delete-users-confirmation'));
 
         await waitFor(() => {
-            expect( getAllByTestId('mtablebodyrow').length).toBe(3);
+            expect(getAllByTestId('mtablebodyrow').length).toBe(3);
             expect(getByText('Add new user')).toBeInTheDocument();
         });
     });

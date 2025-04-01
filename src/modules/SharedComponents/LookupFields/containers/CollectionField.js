@@ -12,7 +12,7 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    const hasForm = !!((props || {}).meta || {}).form;
+    const hasForm = props?.meta || props?.form;
 
     const defaultValue = hasForm // TODO - remove after reduxForm migrated
         ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
@@ -35,8 +35,8 @@ export const CollectionField = props => {
             {...(hasForm
                 ? {
                       defaultValue: defaultValue,
-                      error: !!props.meta.error,
-                      errorText: props.meta.error || '',
+                      error: props?.meta?.error,
+                      errorText: props?.meta?.error || '',
                   }
                 : {
                       defaultValue: itemsList.filter(collection => defaultValue.includes(collection.rek_pid)),
@@ -45,7 +45,7 @@ export const CollectionField = props => {
                   })}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
-            {...(!!((props || {}).meta || {}).form
+            {...(hasForm
                 ? {
                       onChange: item => props.input.onChange(item),
                       onClear: () => props.input.onChange(null),

@@ -3,6 +3,7 @@ import { render } from 'test-utils';
 
 import Field, { validateHandler } from './Field';
 import Controller from './Controller';
+import { userEvent } from 'test-utils';
 
 jest.mock('./Controller', () => ({
     __esModule: true,
@@ -50,13 +51,26 @@ describe('Field component', () => {
         expect(input).toHaveAttribute('maxLength', '10');
     });
 
+    describe('normalize', () => {
+        it('should call given normalize function on onChange', async () => {
+            const normalize = jest.fn();
+            const { getByTestId } = setup({ placeholder: 'Enter text here', maxLength: 10, normalize });
+
+            await userEvent.type(getByTestId('field-input'), 'test');
+            expect(normalize).toHaveBeenCalledWith('t');
+            expect(normalize).toHaveBeenCalledWith('e');
+            expect(normalize).toHaveBeenCalledWith('s');
+            expect(normalize).toHaveBeenCalledWith('t');
+        });
+    });
+
     describe('validateHandler', () => {
         it('should return null if passed in validators are not an array', () => {
-            expect(validateHandler('test', 'test')).toBeNull();
+            expect(validateHandler('test', 'test')).resolves.toBeNull();
         });
 
         it("should ignore validators that can't be invoked", () => {
-            expect(validateHandler('test', ['test'])).toBeNull();
+            expect(validateHandler('test', ['test'])).resolves.toBeNull();
         });
 
         it('should validate value using validator in "left to right" order', () => {
@@ -66,7 +80,7 @@ describe('Field component', () => {
                     (value, formValues) =>
                         value === 'test' && formValues.fieldA === 'test' ? ' second validator executed ' : null,
                 ]),
-            ).toBe('second validator executed');
+            ).resolves.toBe('second validator executed');
         });
 
         it('should ignore non function validators', () => {
@@ -76,7 +90,7 @@ describe('Field component', () => {
                     'invalid-validator',
                     value => (value === 'test' ? 'third validator executed' : null),
                 ]),
-            ).toBe('third validator executed');
+            ).resolves.toBe('third validator executed');
         });
 
         it('should ignore empty error messages', () => {
@@ -85,7 +99,7 @@ describe('Field component', () => {
                     value => (value !== 'test' ? 'fist validator executed' : null),
                     value => (value === 'test' ? ' ' : null),
                 ]),
-            ).toBe(null);
+            ).resolves.toBe(null);
         });
 
         it('should return null if all validators passes', () => {
@@ -94,7 +108,7 @@ describe('Field component', () => {
                     value => (value === 1 ? 'fist validator executed' : null),
                     value => (value === 2 ? 'second validator executed' : null),
                 ]),
-            ).toBe(null);
+            ).resolves.toBe(null);
         });
     });
 });

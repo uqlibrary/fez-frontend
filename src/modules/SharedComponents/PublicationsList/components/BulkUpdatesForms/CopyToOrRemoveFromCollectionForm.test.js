@@ -1,7 +1,22 @@
 import React from 'react';
 import CopyToOrRemoveFromCollectionForm from './CopyToOrRemoveFromCollectionForm';
-import { act, render, WithRouter, WithReduxStore, fireEvent, waitFor } from 'test-utils';
+import {
+    act,
+    render,
+    WithRouter,
+    WithReduxStore,
+    fireEvent,
+    waitFor,
+    waitForText,
+    waitToBeDisabled,
+    waitForTextToBeRemoved,
+    waitToBeEnabled,
+    expectApiRequestToMatchSnapshot,
+    api,
+    expectApiRequestCountToBe,
+} from 'test-utils';
 import * as repositories from 'repositories';
+import { locale } from 'locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -22,21 +37,26 @@ function setup(testProps = {}) {
 }
 
 describe('CopyToOrRemoveFromCollectionForm', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
+    const assertFormInitialState = async idPrefix => {
+        await waitForText(locale.validationErrors.required);
+        await waitToBeDisabled(`${idPrefix}-collection-submit`);
+    };
+    const assertCopyToFormInitialState = async () => assertFormInitialState('copy-to');
+    const assertRemoveFromFormInitialState = async () => assertFormInitialState('remove-from');
+
+    const assertFormCanBeSubmitted = async idPrefix => {
+        await waitForTextToBeRemoved(locale.validationErrors.required);
+        await waitToBeEnabled(`${idPrefix}-collection-submit`);
+    };
+    const assertCopyToFormCanBeSubmitted = async () => assertFormCanBeSubmitted('copy-to');
+    const assertRemoveFromFormCanBeSubmitted = async () => assertFormCanBeSubmitted('remove-from');
+
+    beforeEach(() => api.reset());
 
     it('should correctly submit form and display success info for copy to collection form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -47,19 +67,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).toHaveAttribute('disabled');
+        await assertCopyToFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).not.toHaveAttribute('disabled');
+        await assertCopyToFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -68,12 +82,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-done-copy-to-collection'));
         expect(getByTestId('alert-done-copy-to-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for copy to collection form', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -84,19 +99,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup();
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).toHaveAttribute('disabled');
+        await assertCopyToFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('copy-to-collection-submit')).not.toHaveAttribute('disabled');
+        await assertCopyToFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -105,12 +114,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-error-copy-to-collection'));
         expect(getByTestId('alert-error-copy-to-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should correctly submit form and display success info for remove from collection', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
-            .onGet(
+        api.mock.records
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -121,19 +131,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        await assertRemoveFromFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).not.toHaveAttribute('disabled');
+        await assertRemoveFromFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -142,12 +146,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-done-remove-from-collection'));
         expect(getByTestId('alert-done-remove-from-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should submit form and display error for remove from collection', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(500, {});
-        mockApi
-            .onGet(
+        api.mock.records.fail
+            .bulkUpdate()
+            .instance.onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
             .replyOnce(200, {
@@ -158,19 +163,13 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
             });
 
         const { getByTestId, getByText, queryByText } = setup({ isRemoveFrom: true });
-
-        // assert initial state of the form
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        await assertRemoveFromFormInitialState();
 
         // interact with the form
         fireEvent.change(getByTestId('rek-ismemberof-input'), { target: { value: 'test' } });
         await waitFor(() => getByTestId('rek-ismemberof-options'));
         fireEvent.click(getByText('Testing collection'));
-
-        // assert next state of the form
-        expect(queryByText('This field is required')).not.toBeInTheDocument();
-        expect(getByTestId('remove-from-collection-submit')).not.toHaveAttribute('disabled');
+        await assertRemoveFromFormCanBeSubmitted();
 
         // submit form
         act(() => {
@@ -179,11 +178,11 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         await waitFor(() => getByTestId('alert-error-remove-from-collection'));
         expect(getByTestId('alert-error-remove-from-collection')).toBeInTheDocument();
+        expectApiRequestToMatchSnapshot('patch', api.url.records.create);
     });
 
     it('should display warning alert to user if work is being removed from all collections', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
@@ -205,10 +204,10 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
 
         expect(getByTestId('alert-warning-remove-from-collection')).toBeInTheDocument();
         expect(getByTestId('remove-from-collection-submit')).toHaveAttribute('disabled');
+        expectApiRequestCountToBe('patch', api.url.records.create, 0);
     });
     it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
-        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
-        mockApi
+        api.mock.instance
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 2 } }).apiUrl,
             )
@@ -230,7 +229,7 @@ describe('CopyToOrRemoveFromCollectionForm', () => {
         });
 
         expect(queryByTestId('alert-warning-remove-from-collection')).not.toBeInTheDocument();
-
         expect(getByTestId('alert-info-copy-to-collection-notallowed')).toBeInTheDocument();
+        expectApiRequestCountToBe('patch', api.url.records.create, 0);
     });
 });
