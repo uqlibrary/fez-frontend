@@ -47,10 +47,6 @@ export default {
             primaryText: 'About',
             secondaryText: '',
         },
-        copyright: {
-            primaryText: 'Copyright Information',
-            isExternal: true,
-        },
         thirdPartyLookupTools: {
             primaryText: 'Lookup tools',
         },
