@@ -46,7 +46,6 @@ export const pathConfig = {
     communityList: '/communities',
     dashboard: '/dashboard',
     about: '/about',
-    copyright: 'https://www.uq.edu.au/legal/copyright-privacy-disclaimer',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {
