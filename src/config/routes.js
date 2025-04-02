@@ -535,6 +535,11 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             ...locale.menu.about,
             public: true,
         },
+        {
+            linkTo: pathConfig.copyright,
+            ...locale.menu.copyright,
+            public: true,
+        },
     ];
     const userPages =
         (account && [

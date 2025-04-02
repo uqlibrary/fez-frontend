@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { default as menuLocale } from 'locale/menu';
+import menuLocale from 'locale/menu';
 
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
@@ -16,6 +14,35 @@ import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import { useNavigate } from 'react-router-dom';
+import kebabCase from 'lodash/kebabCase';
+
+// Define types for a menu item and locale properties
+interface MenuItem {
+    primaryText: string;
+    secondaryText?: string;
+    isExternal?: boolean;
+    linkTo: string;
+    target?: string;
+    divider?: boolean;
+    elementId?: string | number;
+}
+
+interface MenuDrawerLocale {
+    skipNavTitle: string;
+    skipNavAriaLabel: string;
+    closeMenuLabel: string;
+}
+
+interface MenuDrawerProps {
+    menuItems: MenuItem[];
+    logoImage?: string;
+    logoText?: string;
+    logoLink?: string;
+    drawerOpen: boolean;
+    docked: boolean;
+    onToggleDrawer: () => void;
+    locale: MenuDrawerLocale;
+}
 
 const StyledSkipNav = styled('div')(() => ({
     width: '100%',
@@ -25,11 +52,9 @@ const StyledSkipNav = styled('div')(() => ({
     left: '-2000px',
     outline: 'none',
     background:
-        'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,' +
-        'rgba(255,255,255,0) 100%)',
+        'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
     filter:
-        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", ' +
-        'endColorstr="#00ffffff",GradientType=0 )',
+        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", endColorstr="#00ffffff",GradientType=0 )',
     '&:focus': {
         left: 0,
     },
@@ -45,7 +70,65 @@ const StyledSkipNav = styled('div')(() => ({
     },
 }));
 
-export const MenuDrawer = ({
+const renderMenuItem = (
+    navigateToLink: (url: string, target?: string) => void,
+    menuItem: MenuItem,
+    index: number,
+): React.JSX.Element => {
+    let primaryText: React.ReactNode = menuItem.primaryText;
+    if (menuItem.isExternal) {
+        primaryText = (
+            <ExternalLink
+                sx={{ color: 'text.primary' }}
+                className="noHover"
+                openInNewIcon
+                id={`${index}-${kebabCase(String(menuItem.primaryText))}`}
+                title={menuItem.primaryText}
+            >
+                {menuItem.primaryText}
+            </ExternalLink>
+        );
+    }
+
+    return (
+        <ListItem
+            button
+            onClick={() => navigateToLink(menuItem.linkTo, menuItem.target)}
+            id={`menu-item-${index}`}
+            className="menu-item-container"
+            key={`menu-item-${index}`}
+        >
+            <ListItemText
+                sx={theme => ({
+                    '& .MuiListItemText-primary': {
+                        ...theme.typography.body2,
+                        whiteSpace: 'nowrap',
+                        fontWeight: theme.typography.fontWeightMedium,
+                    },
+                    '& .MuiListItemText-secondary': {
+                        ...theme.typography.caption,
+                        textOverflow: 'ellipsis',
+                        overflowX: 'hidden',
+                        whiteSpace: 'nowrap',
+                    },
+                })}
+                primary={primaryText}
+                secondary={menuItem.secondaryText}
+                id={`menu-itemText-${menuItem.elementId ?? index}`}
+            />
+        </ListItem>
+    );
+};
+
+const renderMenuItems = (navigateToLink: (url: string, target?: string) => void, items: MenuItem[]): JSX.Element[] =>
+    items.map((menuItem, index) => {
+        if (menuItem.divider) {
+            return <Divider key={`menu_item_${index}`} />;
+        }
+        return renderMenuItem(navigateToLink, menuItem, index);
+    });
+
+export const MenuDrawer: React.FC<MenuDrawerProps> = ({
     menuItems,
     logoImage,
     logoText,
@@ -56,20 +139,17 @@ export const MenuDrawer = ({
     locale,
 }) => {
     const navigate = useNavigate();
-    const focusOnElementId = elementId => {
-        /* istanbul ignore else */
-        if (document.getElementById(elementId)) {
-            document.getElementById(elementId).focus();
-        }
+
+    const focusOnElementId = (elementId: string): void => {
+        document.getElementById(elementId)?.focus?.();
     };
 
-    const skipMenuItems = () => {
+    const skipMenuItems = (): void => {
         focusOnElementId('afterMenuDrawer');
     };
 
-    const navigateToLink = (url, target = '_blank') => {
-        /* istanbul ignore else*/
-        if (!!url) {
+    const navigateToLink = (url: string, target: string = '_blank'): void => {
+        if (url) {
             if (url.indexOf('http') === -1) {
                 // internal link
                 navigate(url);
@@ -78,51 +158,15 @@ export const MenuDrawer = ({
                 window.open(url, target);
             }
         }
-
-        /* istanbul ignore else*/
         if (!docked) {
             onToggleDrawer();
         }
     };
 
-    const renderMenuItems = items =>
-        items.map((menuItem, index) =>
-            menuItem.divider ? (
-                <Divider key={`menu_item_${index}`} />
-            ) : (
-                <span className="menu-item-container" key={`menu-item-${index}`}>
-                    <ListItem
-                        button
-                        onClick={navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
-                        id={`menu-item-${index}`}
-                    >
-                        <ListItemText
-                            sx={theme => ({
-                                '& .MuiListItemText-primary': {
-                                    ...theme.typography.body2,
-                                    whiteSpace: 'nowrap',
-                                    fontWeight: 'fontWeightMedium',
-                                },
-                                '& .MuiListItemText-secondary': {
-                                    ...theme.typography.caption,
-                                    textOverflow: 'ellipsis',
-                                    overflowX: 'hidden',
-                                    whiteSpace: 'nowrap',
-                                },
-                            })}
-                            primary={menuItem.primaryText}
-                            secondary={menuItem.secondaryText}
-                            id={`menu-itemText-${menuItem.elementId ?? index}`}
-                        />
-                    </ListItem>
-                </span>
-            ),
-        );
-
     const txt = menuLocale.footer;
     if (drawerOpen && !docked) {
         // set focus on menu on mobile view if menu is opened
-        setTimeout(focusOnElementId.bind(this, 'mainMenu'), 0);
+        setTimeout(() => focusOnElementId('mainMenu'), 0);
     }
     return (
         <Drawer
@@ -153,9 +197,9 @@ export const MenuDrawer = ({
                         <Grid
                             container
                             spacing={0}
-                            wrap={'nowrap'}
-                            alignContent={'center'}
-                            alignItems={'center'}
+                            wrap="nowrap"
+                            alignContent="center"
+                            alignItems="center"
                             sx={{
                                 '&.MuiGrid-container': {
                                     backgroundColor: 'primary.main',
@@ -197,7 +241,6 @@ export const MenuDrawer = ({
                         {// Skip nav section
                         docked && (
                             <StyledSkipNav
-                                type="button"
                                 id="skipNav"
                                 onClick={skipMenuItems}
                                 onKeyPress={skipMenuItems}
@@ -209,12 +252,13 @@ export const MenuDrawer = ({
                                     color="primary"
                                     onClick={skipMenuItems}
                                     className="skipNavButton"
-                                    children={locale.skipNavTitle}
                                     tabIndex={-1}
-                                />
+                                >
+                                    {locale.skipNavTitle}
+                                </Button>
                             </StyledSkipNav>
                         )}
-                        {renderMenuItems(menuItems)}
+                        {renderMenuItems(navigateToLink, menuItems)}
                     </List>
                     <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />
                     <Box
@@ -239,21 +283,6 @@ export const MenuDrawer = ({
             )}
         </Drawer>
     );
-};
-
-MenuDrawer.propTypes = {
-    menuItems: PropTypes.array.isRequired,
-    logoImage: PropTypes.string,
-    logoText: PropTypes.string,
-    logoLink: PropTypes.string,
-    drawerOpen: PropTypes.bool,
-    docked: PropTypes.bool,
-    onToggleDrawer: PropTypes.func,
-    locale: PropTypes.shape({
-        skipNavTitle: PropTypes.string,
-        skipNavAriaLabel: PropTypes.string,
-        closeMenuLabel: PropTypes.string,
-    }),
 };
 
 export default React.memo(MenuDrawer);
