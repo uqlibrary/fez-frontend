@@ -356,7 +356,11 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.admin.edit(pid),
-                      element: <components.Admin />,
+                      element: (
+                          <React.StrictMode>
+                              <components.Admin />
+                          </React.StrictMode>
+                      ),
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
