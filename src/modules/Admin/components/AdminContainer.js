@@ -142,7 +142,7 @@ export const AdminContainer = ({ createMode = false }) => {
         }
         return false;
     };
-    console.log(form.getValues()?.bibliographicSection);
+
     return (
         <FormProvider {...form}>
             {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}

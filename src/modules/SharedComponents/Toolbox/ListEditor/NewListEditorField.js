@@ -2,14 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
-const getValue = (props, normalize, searchKey) =>
-    normalize(props?.input?.value?.toJS?.() || props?.input?.value || props.value || [], searchKey);
-
-export const useItemsList = (props, normalize, searchKey) => {
-    const [value, setValue] = React.useState(getValue(props, normalize, searchKey));
-    return [value, setValue];
-};
-
 export const NewListEditorField = props => {
     const {
         normalize = (value, searchKey) => value.map(item => item[searchKey.value]),
@@ -19,24 +11,20 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const [value, setValue] = useItemsList(props, normalize, searchKey);
-    const prevValue = React.useRef();
-    const propValueNormalised = getValue(props, normalize, searchKey);
-    const propValueStringified = JSON.stringify(propValueNormalised);
-
-    if (propValueStringified !== prevValue.current) {
-        prevValue.current = propValueStringified;
-        setValue(propValueNormalised);
-    }
+    const value = React.useMemo(() => props?.input?.value?.toJS?.() || props?.input?.value || props.value || [], [
+        props,
+    ]);
+    const propNormalize = React.useCallback(() => normalize(value, searchKey), [normalize, searchKey, value]);
+    const propValueNormalised = propNormalize();
 
     return (
         <NewListEditor
-            key={value.length}
+            key={propValueNormalised.length}
             errorText={props.meta ? props.meta.error : null}
             error={props.meta && !!props.meta.error}
             onChange={props?.onChange ?? props?.input?.onChange}
             remindToAdd={props.remindToAdd}
-            list={value}
+            list={propValueNormalised}
             searchKey={searchKey}
             normalize={normalize}
             {...props}
@@ -51,6 +39,7 @@ NewListEditorField.propTypes = {
     remindToAdd: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.object,
+    value: PropTypes.array,
 };
 
 export default React.memo(NewListEditorField);
