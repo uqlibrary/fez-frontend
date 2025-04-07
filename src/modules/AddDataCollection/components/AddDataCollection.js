@@ -42,7 +42,6 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { useNavigate } from 'react-router-dom';
 import { createNewRecord, doesDOIExist } from 'actions';
 import validationErrors from '../../../locale/validationErrors';
-import { dateRange as validateDateRange } from 'config/validation';
 
 /**
  * @param {object} value
@@ -132,7 +131,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         control,
         name: ['fez_record_search_key_start_date.rek_start_date', 'fez_record_search_key_end_date.rek_end_date'],
     });
-    const dateError = validateDateRange(startDate, endDate, validationErrors.validationErrors.collectionDateRange);
+    const dateError =
+        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+            ? validationErrors.validationErrors.collectionDateRange
+            : '';
 
     const validateDOI = async doi => {
         if (!!!doi) return null;
