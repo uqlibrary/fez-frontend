@@ -131,7 +131,7 @@ exports[`BibliographicSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r0:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -888,7 +888,7 @@ exports[`BibliographicSection component should render default view 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":rf:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -1587,7 +1587,7 @@ exports[`BibliographicSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":r1u:"
+                    aria-controls="<dynamic>"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-language-select"
@@ -2298,7 +2298,7 @@ exports[`BibliographicSection component should render design form fields 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r2c:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -3038,7 +3038,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls=":rv:"
+                    aria-controls="<dynamic>"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -3810,7 +3810,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls=":r1e:"
+                          aria-controls="<dynamic>"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"

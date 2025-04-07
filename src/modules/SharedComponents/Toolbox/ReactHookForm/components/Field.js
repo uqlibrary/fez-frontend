@@ -63,9 +63,20 @@ const Field = ({ name, control, rules, component: Component, validate, normalize
                     validateHandler(value, formValues, validate),
             }}
             render={({ field }) => {
+                // const componentProps = {
+                //     ...field,
+                //     ...childProps,
+                //     value: field.value,
+                // };
+                // if (typeof field.onChange === 'function' && typeof normalize === 'function') {
+                //     componentProps.onChange = event =>
+                //         field.onChange(normalize(event && event?.target ? event.target.value : event));
+                // }
+                // if (!!childProps.noRef) delete componentProps.ref;
+                // return <Component {...componentProps} />;
                 // eslint-disable-next-line react/prop-types
                 if (!!childProps.noRef) delete field.ref;
-                if (typeof normalize === 'function') {
+                if (typeof field.onChange === 'function' && typeof normalize === 'function') {
                     const originalOnChange = field.onChange;
                     field.onChange = event =>
                         originalOnChange(normalize(event && event?.target ? event.target.value : event));

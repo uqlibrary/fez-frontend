@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
-/**
- * Redux-form normalize callback
- */
 export const overrideSecurityValueNormaliser = value => (value === true || value === 0 ? 0 : 1);
 
 export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId }) => {

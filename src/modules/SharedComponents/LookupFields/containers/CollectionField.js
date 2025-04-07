@@ -12,13 +12,7 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    const hasForm = props?.meta || props?.form;
-
-    const defaultValue = hasForm // TODO - remove after reduxForm migrated
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    const defaultValue = props.value || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);
@@ -32,28 +26,13 @@ export const CollectionField = props => {
             itemsList={missingCollections || []}
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
-            {...(hasForm
-                ? {
-                      defaultValue: defaultValue,
-                      error: props?.meta?.error,
-                      errorText: props?.meta?.error || '',
-                  }
-                : {
-                      defaultValue: itemsList.filter(collection => defaultValue.includes(collection.rek_pid)),
-                      error: props.error,
-                      errorText: props.errorText || '',
-                  })}
+            defaultValue={defaultValue}
+            error={props?.meta?.error || props.error}
+            errorText={props?.meta?.error || props.errorText || ''}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
-            {...(hasForm
-                ? {
-                      onChange: item => props.input.onChange(item),
-                      onClear: () => props.input.onChange(null),
-                  }
-                : {
-                      onChange: item => props.onChange(item.map(collection => collection.rek_pid)),
-                      onClear: () => props.onChange(null),
-                  })}
+            onChange={item => props.input.onChange(item)}
+            onClear={() => props.input.onChange(null)}
         />
     );
 };

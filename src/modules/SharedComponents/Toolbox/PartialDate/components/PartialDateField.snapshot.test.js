@@ -13,7 +13,7 @@ function setup(testProps) {
     return rtlRender(<PartialDateField {...props} />);
 }
 
-describe('Redux-form Field PartialDateField snapshots tests', () => {
+describe('Field PartialDateField snapshots tests', () => {
     it('renders PartialDateField component', () => {
         const props = {
             name: 'partialDate',

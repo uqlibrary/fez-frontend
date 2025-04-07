@@ -285,14 +285,14 @@ describe('ManageUsers', () => {
     it('should render previous list on unsuccessful add operation', async () => {
         mockApi
             .onGet(repository.routes.USERS_SEARCH_API({}).apiUrl, { params: { query: 'uqtest', rule: 'lookup' } })
-            .reply(200, {})
+            .replyOnce(200, {})
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
-            .reply(200, {
+            .replyOnce(200, {
                 data: [],
                 total: 0,
             })
             .onPost(new RegExp(repository.routes.USER_API().apiUrl))
-            .reply(500);
+            .replyOnce(500);
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 
@@ -504,7 +504,7 @@ describe('ManageUsers', () => {
     it('should render same list after unsuccessful delete operation', async () => {
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_USERS_LIST_API({}).apiUrl))
-            .reply(200, {
+            .replyOnce(200, {
                 data: [
                     {
                         usr_id: 1000000293,
@@ -556,7 +556,7 @@ describe('ManageUsers', () => {
                 total: 2,
             })
             .onDelete(new RegExp(repository.routes.USER_API({}).apiUrl))
-            .reply(422, { data: 'Error' });
+            .replyOnce(422, { data: 'Error' });
 
         const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
 

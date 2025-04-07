@@ -13,22 +13,19 @@ const getDecoratedField = (field, fieldState, formState) => {
     const decoratedField = field;
     const input = {
         ...field,
-        meta: {
-            error: fieldState.error?.message,
-            // required to make it compatible with ContentIndicatorsField,
-            initial: { toJS: () => formState.defaultValues[field.name] },
-            form: Object.keys(formState).length > 0 && 'hasForm', // TODO - remove after reduxForm migration
-        },
         ref: null,
+        // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
         value: decoratedField.value || '',
     };
     // required to make it compatible with SelectFieldWrapper,
     decoratedField.input = input;
-    decoratedField.meta = input.meta;
+    decoratedField.meta = {
+        error: fieldState.error?.message,
+    };
     // to avoid `ref` & forwardRef() errors
-    decoratedField.ref = input.ref; // TODO make it conditional if required
-    // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
+    decoratedField.ref = null;
     decoratedField.value = input.value;
+    decoratedField.defaultValue = formState?.defaultValues?.[field.name];
 
     return decoratedField;
 };

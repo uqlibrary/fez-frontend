@@ -68,8 +68,7 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttach
     const getState = () =>
         !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
-            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) ||
-              /* istanbul ignore next */ [];
+            : props?.defaultValue || /* istanbul ignore next */ [];
 
     const [dataStreams, setDataStreams] = useState(getState);
     const newPropsDataStreams = getState();
@@ -107,9 +106,9 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttach
 };
 
 AttachedFilesField.propTypes = {
+    defaultValue: PropTypes.any,
     input: PropTypes.object,
     onChange: PropTypes.func,
     onRenameAttachedFile: PropTypes.func.isRequired,
     onDeleteAttachedFile: PropTypes.func.isRequired,
-    meta: PropTypes.object,
 };

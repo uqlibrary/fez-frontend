@@ -1,6 +1,5 @@
 import React from 'react';
 import ListEditor from './ListEditor';
-import { List } from 'immutable';
 import FreeTextForm from './FreeTextForm';
 import IssnForm from './IssnForm';
 import Button from '@mui/material/Button';
@@ -136,14 +135,14 @@ describe('ListEditor tests', () => {
         const { container } = setup({
             input: {
                 name: 'test',
-                value: new List([
+                value: [
                     {
                         rek_value: 'test 1',
                     },
                     {
                         rek_value: 'test 2',
                     },
-                ]),
+                ],
             },
             searchKey: {
                 order: 'rek_order',

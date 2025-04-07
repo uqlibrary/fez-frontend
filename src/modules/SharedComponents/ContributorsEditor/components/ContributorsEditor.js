@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
@@ -181,15 +180,7 @@ export class ContributorsEditor extends PureComponent {
         return scaleOfSignificance;
     };
 
-    getContributorsFromProps = props => {
-        if (props.value || (props.input && props.input.name && props.input.value)) {
-            return (
-                props.value ||
-                (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
-            );
-        }
-        return [];
-    };
+    getContributorsFromProps = props => props.value || (props.input?.name && props.input?.value) || [];
 
     getContributorsWithAffiliationsFromProps = props => {
         const authors = this.getContributorsFromProps(props);

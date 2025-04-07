@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
 import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
@@ -10,12 +9,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { useFormContext } from 'react-hook-form';
 
-const getGrantsFromProps = input => {
-    if (input?.name && input?.value) {
-        return input.value instanceof Immutable.List ? input.value.toJS() : input.value;
-    }
-    return [];
-};
+const getGrantsFromProps = input => (input?.name && input?.value) || [];
 
 const GrantListEditor = ({
     canEdit = false,

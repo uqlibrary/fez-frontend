@@ -116,11 +116,6 @@ describe('ContributorsEditor', () => {
                     },
                 },
             },
-            meta: {
-                initial: {
-                    toJS: () => [{}],
-                },
-            },
             input: {
                 name: 'test',
                 value: [
@@ -662,17 +657,6 @@ describe('ContributorsEditor', () => {
             input: {
                 name: 'test',
                 value: [{ displayName: 'test 1' }, { displayName: 'test 2' }],
-            },
-        });
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should get contributors from props and input value set as an Immutable list', () => {
-        const { container } = setup({
-            input: {
-                name: 'test',
-                value: Immutable.List([{ displayName: 'test 1' }, { displayName: 'test 2' }]),
             },
         });
 

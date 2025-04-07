@@ -16,11 +16,7 @@ export const JournalIdField = props => {
     const dispatch = useDispatch();
     const loadSuggestions = (searchQuery = ' ') => dispatch(actions.loadJournalLookup(searchQuery));
 
-    const selectedJournalId =
-        (!!props.input &&
-            !!props.input.value &&
-            ((!!props.input.value.toJS && props.input.value.toJS().id) || props.input.value.id)) ||
-        (!!props.value && props.value.id);
+    const selectedJournalId = props.input?.value?.id || props.value?.id;
 
     const _itemsList = useSelector(state => state.get('journalReducer').itemsList || []);
     const itemsList = React.useMemo(

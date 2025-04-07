@@ -168,31 +168,31 @@ const getPropsForAlert = attributes => (...additionalValidationErrors) => {
  * @return {UseFormReturn<FieldValues, any, undefined>}
  */
 export const useForm = (props = {}) => {
-    const form = useReactHookForm({ mode: 'onChange', ...props });
+    const attributes = useReactHookForm({ mode: 'onChange', ...props });
 
-    // add additional errors related form
-    form.formState.isSubmitFailure = form.formState.isSubmitted && !form.formState.isSubmitSuccessful;
-    form.formState.hasError = !isEmptyObject(form.formState.errors);
-    form.formState.validationErrors = filterObjectKeys(form.formState.errors, [SERVER_ERROR_NAMESPACE]);
-    form.formState.hasValidationError = !isEmptyObject(form.formState.validationErrors);
+    // add additional errors related attributes
+    attributes.formState.isSubmitFailure = attributes.formState.isSubmitted && !attributes.formState.isSubmitSuccessful;
+    attributes.formState.hasError = !isEmptyObject(attributes.formState.errors);
+    attributes.formState.validationErrors = filterObjectKeys(attributes.formState.errors, [SERVER_ERROR_NAMESPACE]);
+    attributes.formState.hasValidationError = !isEmptyObject(attributes.formState.validationErrors);
 
-    // add server error related form & helpers
-    form.formState.hasServerError = !isEmptyObject(
-        filterObjectKeys(form.formState.errors[SERVER_ERROR_NAMESPACE], [SERVER_ERROR_KEY], true),
+    // add server error related attributes & helpers
+    attributes.formState.hasServerError = !isEmptyObject(
+        filterObjectKeys(attributes.formState.errors[SERVER_ERROR_NAMESPACE], [SERVER_ERROR_KEY], true),
     );
-    form.formState.serverError = getServerError(form.formState.errors);
-    form.setServerError = e => setServerError(form.setError, e);
-    form.resetServerErrors = () => form.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
+    attributes.formState.serverError = getServerError(attributes.formState.errors);
+    attributes.setServerError = e => setServerError(attributes.setError, e);
+    attributes.resetServerErrors = () => attributes.clearErrors(`${SERVER_ERROR_NAMESPACE}.${SERVER_ERROR_KEY}`);
 
     // form submission helpers
-    form.safelyHandleSubmit = safelyHandleSubmit(form);
+    attributes.safelyHandleSubmit = safelyHandleSubmit(attributes);
     // RHF defaultValues will ignore any values that are not related to a RHF controlled field.
     // This is a helper function to allow overriding given default values with form's current values.
-    form.mergeWithFormValues = (defaults, filter) =>
-        merge(defaults, typeof filter === 'function' ? filter(form.getValues()) : form.getValues());
+    attributes.mergeWithFormValues = (defaults, filter) =>
+        merge(defaults, typeof filter === 'function' ? filter(attributes.getValues()) : attributes.getValues());
 
     // alert component helpers
-    form.getPropsForAlert = getPropsForAlert(form);
+    attributes.getPropsForAlert = getPropsForAlert(attributes);
 
-    return form;
+    return attributes;
 };

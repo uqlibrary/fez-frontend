@@ -4,8 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
-const getValue = (props, normalize, searchKey) =>
-    normalize(props?.input?.value?.toJS?.() || props?.input?.value || props.value || [], searchKey);
+const getValue = (props, normalize, searchKey) => normalize(props?.input?.value || props.value || [], searchKey);
 
 export const useItemsList = (props, normalize, searchKey) => {
     const [value, setValue] = React.useState(getValue(props, normalize, searchKey));

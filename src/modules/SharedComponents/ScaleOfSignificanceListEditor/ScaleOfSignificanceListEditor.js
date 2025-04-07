@@ -73,11 +73,7 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-        const valueAsJson =
-            ((props.input || /* istanbul ignore next */ {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || /* istanbul ignore next */ {}).name && props.input.value);
+        const valueAsJson = props.input?.name && props.input?.value;
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
             itemIndexSelectedToEdit: null,

@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import Immutable from 'immutable';
 
 import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
@@ -134,9 +133,7 @@ export const required = value => (value ? undefined : locale.validationErrors.re
 export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
-        ? undefined
-        : locale.validationErrors.required;
+    return !value?.length && locale.validationErrors.required;
 };
 
 export const email = value =>
@@ -196,7 +193,7 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    const accessCondition = values.fez_record_search_key_access_conditions;
     if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
@@ -269,9 +266,8 @@ export const isValidGoogleScholarId = id => {
     const regex = /^[\w-]{12}$/;
     if (id && !regex.test(id)) {
         return locale.validationErrors.googleScholarId;
-    } else {
-        return undefined;
     }
+    return undefined;
 };
 
 export const isValidDate = date => {
