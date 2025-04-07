@@ -5,18 +5,11 @@ import ListRow from '../Toolbox/ListEditor/components/ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 import FormHelperText from '@mui/material/FormHelperText';
-// import IconButton from '@mui/material/IconButton';
-// import Box from '@mui/material/Box';
-// import AddCircle from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import { diff } from 'deep-object-diff';
-// Steve work here
-// import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-// import Grid from '@mui/material/Unstable_Grid2';
-// import { SIGNIFICANCE } from 'config/general';
 
 export class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
@@ -106,7 +99,10 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         /* istanbul ignore else */
-        if (this.props.onChange) {
+        if (
+            this.props.onChange &&
+            JSON.stringify(prevState?.itemList || /* istanbul ignore next */ []) !== JSON.stringify(this.state.itemList)
+        ) {
             this.props.onChange(this.transformOutput(this.state.itemList));
         }
 

@@ -4,6 +4,7 @@ import { render, WithRouter, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
+        contributorEditorId: 'test',
         ...testProps,
     };
 

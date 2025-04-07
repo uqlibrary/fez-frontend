@@ -60,7 +60,9 @@ const SustainableDevelopmentGoalField = props => {
             getOptionLabel={() => ''}
             OptionTemplate={FoROptionTemplate}
             groupBy={option => option.group}
-            onChange={value => props.input?.onChange({ ...value, value: `${value.group} - ${value.value}` })}
+            onChange={value =>
+                (props?.onChange || props.input?.onChange)?.({ ...value, value: `${value.group} - ${value.value}` })
+            }
             onClear={() => {}}
             clearSuggestionsOnClose={false}
             loadSuggestions={loadSuggestions}

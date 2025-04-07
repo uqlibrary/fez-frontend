@@ -23,7 +23,7 @@ export const SeriesField = props => {
             loadSuggestions={loadSuggestions}
             autoCompleteAsynchronousFieldId={props.seriesFieldId || 'rek-series'}
             allowFreeText
-            defaultValue={(!!props.input && !!props.input.value && { value: props.input.value }) || null}
+            defaultValue={(!!props.input && !!props.input.value && { value: props.input.value, id: 1 }) || null}
             errorText={props.meta ? props.meta.error : null}
             error={!!props.meta && !!props.meta.error}
             filterOptions={options => options}

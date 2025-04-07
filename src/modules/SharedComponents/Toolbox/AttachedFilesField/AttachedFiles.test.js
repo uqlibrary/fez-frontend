@@ -1,13 +1,22 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, createMatchMedia, within } from 'test-utils';
+import {
+    rtlRender,
+    WithReduxStore,
+    FormProviderWrapper,
+    fireEvent,
+    waitFor,
+    act,
+    createMatchMedia,
+    within,
+} from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
-import { useRecordContext, useFormValuesContext } from 'context';
+import { useRecordContext } from 'context';
 import {
     AV_CHECK_STATE_CLEAN,
     AV_CHECK_STATE_INFECTED,
@@ -24,7 +33,7 @@ import { createFezDatastreamInfoArray, withDatastreams } from 'test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
 import moment from 'moment';
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup({ values, ...testProps } = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
         dataStreams: recordWithDatastreams.fez_datastream_info,
@@ -36,18 +45,31 @@ function setup(testProps = {}, renderer = rtlRender) {
             },
             ...locale,
         },
+        onRenameAttachedFile: jest.fn(),
+        onDeleteAttachedFile: jest.fn(),
+        openAccessStatusId: 0,
         ...restProps,
     };
-    return renderer(<AttachedFiles {...props} />);
+    return renderer(
+        <WithReduxStore>
+            <FormProviderWrapper
+                values={{
+                    filesSection: {
+                        fez_datastream_info: [],
+                        ...values,
+                    },
+                }}
+            >
+                <AttachedFiles {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 }
 
 describe('AttachedFiles component', () => {
     beforeAll(() => {
         useRecordContext.mockImplementation(() => ({
             record: recordWithDatastreams,
-        }));
-        useFormValuesContext.mockImplementation(() => ({
-            openAccessStatusId: 0,
         }));
     });
 
@@ -131,7 +153,7 @@ describe('AttachedFiles component', () => {
     });
 
     it('should render with default props', () => {
-        const { container } = rtlRender(<AttachedFiles dataStreams={[]} />);
+        const { container } = setup({ dataStreams: [] });
         expect(container).toMatchSnapshot();
     });
 
@@ -239,13 +261,11 @@ describe('AttachedFiles component', () => {
         useRecordContext.mockImplementationOnce(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
-        useFormValuesContext.mockImplementationOnce(() => ({
-            openAccessStatusId: 453697,
-        }));
         const onDateChangeFn = jest.fn();
         const { getByText, getAllByRole } = setup({
             canEdit: true,
             disabled: false,
+            openAccessStatusId: 453697,
             dataStreams: [
                 {
                     dsi_id: '252236',

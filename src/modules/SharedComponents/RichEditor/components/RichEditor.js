@@ -19,6 +19,8 @@ const RichEditor = ({
     onChange,
     input,
     meta,
+    error: hasFormError,
+    errorText,
     titleProps,
 }) => {
     const editorConfig = {
@@ -57,25 +59,28 @@ const RichEditor = ({
 
     function getContent() {
         let dataForEditor = '';
-        /* istanbul ignore else */
-        if (input?.value?.size > 0) {
-            dataForEditor = input.value.get('htmlText') || input.value.get('plainText') || '';
-        } else if (value) {
-            if (!!value.get && !!value.get('htmlText')) {
-                dataForEditor = value.get('htmlText');
-            } else if (!!value.htmlText) {
-                dataForEditor = value.htmlText;
-            } else if (typeof value === 'string' && value.length > 0) {
-                dataForEditor = value;
-            }
+        if (typeof value === 'string' && value.length > 0) {
+            dataForEditor = value;
+        } else if (!!value?.htmlText || !!value?.plainText) {
+            dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
+        } else if (!!value?.get) {
+            dataForEditor = value.get('htmlText') || value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
+        } else if (typeof input?.value === 'string') {
+            dataForEditor = input.value;
+        } else if (!!input?.value?.htmlText || !!input?.value?.plainText) {
+            dataForEditor = input.value.htmlText || input.value.plainText || /* istanbul ignore next */ '';
+        } else if (input?.value?.get) {
+            dataForEditor =
+                input.value.get('htmlText') || input.value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
         }
+
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
     }
 
     let error = null;
     // default rich editor has "<p></p>"
     const inputLength = value?.plainText?.length || value?.length - 7;
-    if (meta && meta.error) {
+    if (meta && meta?.error) {
         error =
             !!meta.error.props &&
             React.Children.map(meta.error.props.children, (child, index) => {
@@ -88,19 +93,24 @@ const RichEditor = ({
                 }
             });
     }
+    if (!error && hasFormError) {
+        if (typeof errorText === 'string') error = errorText;
+        else error = errorText.message;
+    }
+
     // rendered content of empty CKEditor:
     // <p><br data-cke-filler="true"></p>
     return (
         <div id={richEditorId} data-testid={richEditorId} data-analyticsid={richEditorId}>
             <span>
                 {title && (
-                    <Typography color={meta && meta.error && 'error'} {...titleProps}>
+                    <Typography color={error && 'error'} {...titleProps}>
                         {title}
                         {required && <span> *</span>}
                     </Typography>
                 )}
                 {description && (
-                    <Typography color={meta && meta.error && 'error'} variant={'caption'}>
+                    <Typography color={error && 'error'} variant={'caption'}>
                         {description}
                     </Typography>
                 )}
@@ -123,7 +133,7 @@ const RichEditor = ({
                     handleEditorDataChange(event, editor);
                 }}
             />
-            {meta && meta.error && (
+            {(error || meta?.error) && (
                 <Typography
                     color="error"
                     variant="caption"
@@ -143,7 +153,7 @@ const RichEditor = ({
                         display: 'inline-block',
                     }}
                     variant="caption"
-                    color={meta && meta.error && 'error'}
+                    color={error && 'error'}
                 >
                     {inputLength > 0 ? inputLength : 0} characters of {maxValue}
                     {instructions || ''}
@@ -165,6 +175,8 @@ RichEditor.propTypes = {
     singleLine: PropTypes.bool,
     textOnlyOnPaste: PropTypes.bool,
     description: PropTypes.string,
+    error: PropTypes.bool,
+    errorText: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     titleProps: PropTypes.object,

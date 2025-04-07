@@ -18,6 +18,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     delete filteredProps.onRowDataChange;
     delete filteredProps.rowData;
     delete filteredProps.ariaLabel;
+
     return (
         <Fragment>
             <TextField
