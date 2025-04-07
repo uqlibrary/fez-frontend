@@ -1,11 +1,10 @@
 import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
 import { ForCodeSearchKeywordsList } from './ForCodeSearchKeywordsList';
-import Immutable from 'immutable';
 
 const setup = state => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({})}>
+        <WithReduxStore>
             <ForCodeSearchKeywordsList {...{ onKeywordClick: () => {}, ...state }} />
         </WithReduxStore>,
     );

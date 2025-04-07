@@ -1,7 +1,5 @@
 import React from 'react';
-import Immutable from 'immutable';
 import { rtlRender, WithReduxStore } from 'test-utils';
-
 import { HelpDrawer } from './HelpDrawer';
 
 function setup(testProps = {}, testState = {}) {
@@ -16,7 +14,7 @@ function setup(testProps = {}, testState = {}) {
     };
 
     return rtlRender(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <HelpDrawer {...props} />
         </WithReduxStore>,
     );
