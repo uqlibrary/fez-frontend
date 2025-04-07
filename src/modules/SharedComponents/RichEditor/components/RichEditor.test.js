@@ -1,6 +1,5 @@
 import React from 'react';
 import RichEditor from './RichEditor';
-import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
 class ResizeObserver {
@@ -61,7 +60,7 @@ describe('RichEditor', () => {
 
     it('should render error showing maxValue and instructions', () => {
         const { container } = setup({
-            value: Immutable.Map({ htmlText: 'This is test value' }),
+            value: { htmlText: 'This is test value' },
             maxValue: 10,
             instructions: 'test instructions',
             meta: {
@@ -137,19 +136,19 @@ describe('RichEditor', () => {
         expect(container).toMatchSnapshot();
     });
     it('should render redux value using htmlText', () => {
-        const { container } = setup({ value: Immutable.Map({ htmlText: 'test' }) });
+        const { container } = setup({ value: { htmlText: 'test' } });
         expect(container).toMatchSnapshot();
     });
     it('should render redux value using plainText', () => {
-        const { container } = setup({ value: Immutable.Map({ plainText: 'test' }) });
+        const { container } = setup({ value: { plainText: 'test' } });
         expect(container).toMatchSnapshot();
     });
     it('should render input redux value using htmlText', () => {
-        const { container } = setup({ input: { value: Immutable.Map({ htmlText: 'test' }) } });
+        const { container } = setup({ input: { value: { htmlText: 'test' } } });
         expect(container).toMatchSnapshot();
     });
     it('should render input redux value using plainText', () => {
-        const { container } = setup({ input: { value: Immutable.Map({ plainText: 'test' }) } });
+        const { container } = setup({ input: { value: { plainText: 'test' } } });
         expect(container).toMatchSnapshot();
     });
 

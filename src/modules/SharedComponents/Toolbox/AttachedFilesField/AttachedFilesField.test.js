@@ -8,7 +8,6 @@ import {
     handleDatastreamChange,
     handleDatastreamMultiChange,
 } from './AttachedFilesField';
-import Immutable from 'immutable';
 
 jest.mock('context');
 import { useRecordContext } from 'context';

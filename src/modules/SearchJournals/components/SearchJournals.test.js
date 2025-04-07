@@ -1,7 +1,6 @@
 import React from 'react';
 import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
-import Immutable from 'immutable';
 import * as actions from 'actions/journals.js';
 
 import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
@@ -24,7 +23,7 @@ window.dataLayer = { push: jest.fn() };
 const setup = ({ state = {}, storeState = {}, route = '/', initialEntries = [route] } = {}) => {
     return render(
         <WithReduxStore
-            initialState={Immutable.Map({
+            initialState={{
                 searchJournalsReducer: state,
                 journalReducer: {
                     ...initialState,
@@ -32,7 +31,7 @@ const setup = ({ state = {}, storeState = {}, route = '/', initialEntries = [rou
                     ...storeState,
                     journalSearchKeywords: { ...initialJournalSearchKeywords, ...storeState.journalSearchKeywords },
                 },
-            })}
+            }}
         >
             <WithRouter route={route} initialEntries={initialEntries}>
                 <SearchJournals {...state} />
