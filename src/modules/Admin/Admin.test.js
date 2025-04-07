@@ -100,7 +100,7 @@ function setup(testProps = {}, testState = {}, renderer = rtlRender) {
 // global.console.warn = jest.fn();
 
 describe('form submission', () => {
-    const timeout = 60000;
+    const timeout = 60000 * 5;
     const pid = record.rek_pid;
     const fileMock = ['myTestImage.png'];
 

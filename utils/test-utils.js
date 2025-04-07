@@ -385,14 +385,15 @@ const assertInstanceOfFile = data => {
  * @param {string} method
  * @param {string} url
  * @param {function?} assertPayload
+ * @param {function?} transformer
  * @return {*}
  */
-const expectApiRequestToMatchSnapshot = (method, url, assertPayload) => {
+const expectApiRequestToMatchSnapshot = (method, url, assertPayload, transformer) => {
     const request = assertApiRequest({
         method,
         url,
         partialUrl: url,
-        data: data => expect(data).toMatchSnapshot() || true,
+        data: data => expect(transformer?.(data) ?? data).toMatchSnapshot() || true,
     });
     return typeof assertPayload === 'function' ? assertRequestData(assertPayload, request) : request;
 };
