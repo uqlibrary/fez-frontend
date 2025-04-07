@@ -24,17 +24,6 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('AutoCompleteAsynchronousField component', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     it('should render component and trigger callback when user types some value in the input', async () => {
         const loadSuggestionsFn = jest.fn();
         const { getByTestId } = setup({

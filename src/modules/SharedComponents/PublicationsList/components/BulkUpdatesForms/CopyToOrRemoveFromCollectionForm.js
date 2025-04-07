@@ -1,51 +1,36 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useRef, useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import { getFormSyncErrors, Field, reduxForm, SubmissionError, formValueSelector } from 'redux-form/immutable';
-
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { locale } from 'locale';
 import { validation } from 'config';
 import { copyToOrRemoveFromCollection } from 'actions';
+import { useValidatedForm } from 'hooks';
+import { Field } from '../../../Toolbox/ReactHookForm';
+import { useWatch } from 'react-hook-form';
 
-const FORM_NAME = 'CopyToOrRemoveFromCollectionForm';
-
-const onSubmit = (values, dispatch, props) => {
-    return dispatch(
-        copyToOrRemoveFromCollection(Object.values(props.recordsSelected), values.toJS(), props.isRemoveFrom),
-    ).catch(error => {
-        throw new SubmissionError({ _error: error.message });
-    });
-};
-
-const selector = formValueSelector(FORM_NAME);
-
-export const CopyToOrRemoveFromCollectionForm = ({
-    error,
-    handleSubmit,
-    isRemoveFrom,
-    onCancel,
-    recordsSelected,
-    submitting,
-    submitSucceeded,
-}) => {
+export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recordsSelected }) => {
+    const dispatch = useDispatch();
     const txt = locale.components.bulkUpdates.bulkUpdatesForms;
-    const records = React.createRef(null);
-    const [alertUser, setAlertUser] = React.useState(null);
-    records.current = Object.values(recordsSelected).map(record =>
-        record.fez_record_search_key_ismemberof.map(collection => collection.rek_ismemberof),
+    const records = useRef(
+        Object.values(recordsSelected)?.map?.(record =>
+            record.fez_record_search_key_ismemberof.map(collection => collection.rek_ismemberof),
+        ),
     );
-    const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
-    const collections = useSelector(state => selector(state, 'collections'));
-    const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
+    const [alertUser, setAlertUser] = useState(null);
+    const {
+        control,
+        safelyHandleSubmit,
+        formState: { isSubmitting, isSubmitSuccessful, serverError, hasServerError, hasError },
+    } = useValidatedForm();
+    const collections = useWatch({ control, name: 'collections' });
     const idText = isRemoveFrom ? 'remove-from' : 'copy-to';
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isRemoveFrom) {
             const collectionsSet = Immutable.Set(
                 (!!collections && collections.map(collection => collection.rek_pid)) || [],
@@ -59,12 +44,14 @@ export const CopyToOrRemoveFromCollectionForm = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [collections]);
 
-    React.useEffect(() => {
-        if (submitSucceeded) {
-            setTimeout(onCancel, 2000);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [submitSucceeded]);
+    useEffect(() => {
+        if (!isSubmitSuccessful) return;
+        setTimeout(onCancel, 2000);
+    }, [isSubmitSuccessful, onCancel]);
+
+    const onSubmit = safelyHandleSubmit(async data => {
+        await dispatch(copyToOrRemoveFromCollection(Object.values(recordsSelected), data, isRemoveFrom));
+    });
 
     const hasACollectionSelected = Object.entries(recordsSelected).some(i => i[1].rek_object_type === 2);
 
@@ -77,7 +64,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         {...txt.copyToOrRemoveFromCollectionForm.alert(isRemoveFrom)}
                     />
                 </Grid>
-                {!!hasACollectionSelected && (
+                {hasACollectionSelected && (
                     <Grid item xs={12}>
                         <Alert
                             alertId={`alert-info-${idText}-collection-notallowed`}
@@ -93,12 +80,13 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         />
                     </Grid>
                 )}
-                {!!!hasACollectionSelected && (
+                {!hasACollectionSelected && (
                     <Grid item xs={12}>
                         <Field
+                            control={control}
                             component={CollectionField}
                             collectionFieldId="rek-ismemberof"
-                            disabled={submitting || submitSucceeded}
+                            disabled={isSubmitting || isSubmitSuccessful}
                             floatingLabelText={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
                             fullWidth
                             name="collections"
@@ -114,7 +102,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
                         data-analyticsid={`${idText}-collection-cancel`}
                         data-testid={`${idText}-collection-cancel`}
-                        disabled={submitting}
+                        disabled={isSubmitting}
                         fullWidth
                         id={`${idText}-collection-cancel`}
                         onClick={onCancel}
@@ -129,32 +117,34 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         data-analyticsid={`${idText}-collection-submit`}
                         data-testid={`${idText}-collection-submit`}
                         disabled={
-                            submitting || disableSubmit || submitSucceeded || !!alertUser || !!hasACollectionSelected
+                            hasError || isSubmitting || isSubmitSuccessful || !!alertUser || !!hasACollectionSelected
                         }
                         fullWidth
                         id={`${idText}-collection-submit`}
-                        onClick={handleSubmit}
+                        onClick={onSubmit}
                         variant="contained"
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    {!!submitting && (
+                    {isSubmitting && (
                         <Alert
                             alertId={`alert-info-${idText}-collection`}
                             {...txt.copyToOrRemoveFromCollectionForm.submittingAlert(isRemoveFrom)}
                         />
                     )}
-                    {!!submitSucceeded && (
+                    {isSubmitSuccessful && (
                         <Alert
                             alertId={`alert-done-${idText}-collection`}
                             {...txt.copyToOrRemoveFromCollectionForm.successAlert(isRemoveFrom)}
                         />
                     )}
-                    {!!error && (
+                    {hasServerError && (
                         <Alert
                             alertId={`alert-error-${idText}-collection`}
                             {...txt.copyToOrRemoveFromCollectionForm.errorAlert(isRemoveFrom)}
-                        />
+                        >
+                            {serverError}
+                        </Alert>
                     )}
                 </Grid>
             </Grid>
@@ -163,18 +153,9 @@ export const CopyToOrRemoveFromCollectionForm = ({
 };
 
 CopyToOrRemoveFromCollectionForm.propTypes = {
-    error: PropTypes.string,
-    handleSubmit: PropTypes.func,
     isRemoveFrom: PropTypes.bool,
     onCancel: PropTypes.func,
     recordsSelected: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
 };
 
-const CopyToOrRemoveFromCollectionReduxForm = reduxForm({
-    form: FORM_NAME,
-    onSubmit,
-})(CopyToOrRemoveFromCollectionForm);
-
-export default React.memo(CopyToOrRemoveFromCollectionReduxForm);
+export default React.memo(CopyToOrRemoveFromCollectionForm);

@@ -12,7 +12,7 @@ export const CommunityField = props => {
     const loadSuggestions = () => dispatch(actions.communitiesList());
     const { itemsList, itemsLoading } = useSelector(state => state.get('communitiesReducer')) || {};
 
-    const hasForm = !!((props || {}).meta || {}).form;
+    const hasForm = props?.meta || props?.form;
     const defaultValue = hasForm
         ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
           (!!props.input.value && props.input.value) ||
@@ -45,7 +45,7 @@ export const CommunityField = props => {
                   })}
             autoCompleteMultiSelectFieldId={props.communityFieldId}
             loadSuggestions={loadSuggestions}
-            {...(!!((props || {}).meta || {}).form
+            {...(hasForm
                 ? {
                       onChange: item => props.input.onChange(item),
                       onClear: () => props.input.onChange(null),
@@ -61,55 +61,3 @@ CommunityField.propTypes = {
     props: PropTypes.object,
 };
 export default React.memo(CommunityField);
-
-/*
-const mapStateToProps = (state, props) => {
-    const { itemsList, itemsLoading } = state.get('communitiesReducer') || {};
-    const hasForm = !!((props || {}).meta || {}).form;
-    const defaultValue = hasForm
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
-
-    // remove existing entries from full list of communities
-    const existingCommunityPids = defaultValue.map(community => community.rek_pid || community);
-    const validCommunities = itemsList.filter(item => item.rek_object_type === 1);
-    const missingCommunities = validCommunities.filter(item => existingCommunityPids.indexOf(item.rek_pid) === -1);
-
-    return {
-        id: props.id,
-        autoCompleteAsynchronousFieldId: 'rek-ismemberof',
-        itemsList: missingCommunities || [],
-        itemsLoading,
-        getOptionLabel: item => item.rek_title,
-        ...(hasForm
-            ? {
-                  defaultValue,
-                  error: !!props.meta.error,
-                  errorText: props.meta.error || '',
-              }
-            : {
-                  defaultValue: itemsList.filter(community => defaultValue.includes(community.rek_pid)),
-                  error: props.error,
-                  errorText: props.errorText || '',
-              }),
-        autoCompleteMultiSelectFieldId: props.communityFieldId,
-    };
-};
-
-const mapDispatchToProps = (dispatch, props) => ({
-    loadSuggestions: () => dispatch(actions.communitiesList()),
-    ...(!!((props || {}).meta || {}).form
-        ? {
-              onChange: item => props.input.onChange(item),
-              onClear: () => props.input.onChange(null),
-          }
-        : {
-              onChange: item => props.onChange(item.map(community => community.rek_pid)),
-              onClear: () => props.onChange(null),
-          }),
-});
-
-export const CommunityField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteMultiSelectField);
-*/

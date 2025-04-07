@@ -23,17 +23,6 @@ function setup(testProps = {}, renderer = rtlRender) {
 }
 
 describe('AutoCompleteSelectField component', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     it('should render component and display options when user types in the input', async () => {
         const { getByTestId, getByRole, getAllByRole } = setup({
             itemsList: ['apple', 'orange', 'banana', 'pineapple', 'pear'],

@@ -25,17 +25,6 @@ function setup(testProps = {}) {
 }
 
 describe('AdvancedSearchRowInput', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     it('should render default component for search field', () => {
         const { getByTestId } = setup({
             onChange: jest.fn(),
