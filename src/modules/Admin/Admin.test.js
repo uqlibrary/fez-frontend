@@ -2,7 +2,6 @@ import React from 'react';
 import AdminContainer from './components/AdminContainer';
 import * as mock from 'mock/data';
 import { record } from 'mock/data/records';
-import Immutable from 'immutable';
 import locale from 'locale/pages';
 
 import {
@@ -89,7 +88,7 @@ function setup(testProps = {}, testState = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore initialState={Immutable.Map({ ...state })}>
+        <WithReduxStore initialState={{ ...state }}>
             <WithRouter>
                 <AdminContainer {...props} />
             </WithRouter>
