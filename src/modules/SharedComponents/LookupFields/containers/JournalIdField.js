@@ -66,15 +66,8 @@ export const JournalIdField = props => {
                     </ExternalLink>
                 )
             }
-            {...(!!((props || {}).meta || {}).form
-                ? {
-                      error: !!props.meta.error,
-                      errorText: props.meta.error || '',
-                  }
-                : {
-                      error: props.error,
-                      errorText: props.errorText || '',
-                  })}
+            error={props.error}
+            errorText={props.errorText || ''}
             loadSuggestions={loadSuggestions}
             onChange={(!!props.input && (item => props.input.onChange(item))) || (item => props.onChange(item))}
             onClear={(!!props.input && (() => props.input.onChange(null))) || (() => props.onChange({}))}
