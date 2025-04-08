@@ -15,7 +15,6 @@ const GrantListEditor = ({
     canEdit = false,
     disabled,
     meta,
-    onChange,
     locale,
     input,
     required,
@@ -44,33 +43,14 @@ const GrantListEditor = ({
 
     // propagate `grantFormPopulated` changes to input
     useEffect(() => {
-        if (grantFormPopulated) {
-            if (form?.setValue) {
-                form?.setValue(input.name, grantFormPopulated, { shouldValidate: true });
-                return;
-            }
-
-            // TODO remove upon removing redux-form
-            /* istanbul ignore else */
-            if (onChange) {
-                onChange(grantFormPopulated);
-            }
-        }
+        if (!grantFormPopulated) return;
+        form?.setValue?.(input.name, grantFormPopulated, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [grantFormPopulated]);
 
     // propagate `grants` changes to input
     useEffect(() => {
-        if (form?.setValue) {
-            form?.setValue(input.name, grants, { shouldValidate: true });
-            return;
-        }
-
-        // TODO remove upon removing redux-form
-        /* istanbul ignore else */
-        if (onChange) {
-            onChange(grants);
-        }
+        form?.setValue?.(input.name, grants, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(grants)]);
 
@@ -220,7 +200,6 @@ GrantListEditor.propTypes = {
     canEdit: PropTypes.bool,
     disabled: PropTypes.bool,
     meta: PropTypes.object,
-    onChange: PropTypes.func,
     locale: PropTypes.object,
     input: PropTypes.object,
     required: PropTypes.bool,

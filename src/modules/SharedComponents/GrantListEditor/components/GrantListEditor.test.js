@@ -1,7 +1,9 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
 import { rtlRender, fireEvent, within } from 'test-utils';
+import { FormProvider } from 'react-hook-form';
 
+const mockSetValue = jest.fn();
 function setup(testProps = {}) {
     const props = {
         disabled: false,
@@ -13,7 +15,11 @@ function setup(testProps = {}) {
         hideType: false,
         ...testProps,
     };
-    return rtlRender(<GrantListEditor {...props} />);
+    return rtlRender(
+        <FormProvider setValue={mockSetValue}>
+            <GrantListEditor {...props} />
+        </FormProvider>,
+    );
 }
 
 describe('GrantListEditor', () => {
@@ -94,19 +100,16 @@ describe('GrantListEditor', () => {
     });
 
     it('should update on receiving new props', () => {
-        const onChangeFn = jest.fn();
+        const value = {
+            grantAgencyName: 'Testing',
+            grantId: '1234',
+            grantAgencyType: 'Test',
+        };
         let props = {
             input: {
                 name: 'TestField',
-                value: [
-                    {
-                        grantAgencyName: 'Testing',
-                        grantId: '1234',
-                        grantAgencyType: 'Test',
-                    },
-                ],
+                value: [value],
             },
-            onChange: onChangeFn,
         };
         const { container, rerender } = setup(props);
         expect(container).toMatchSnapshot();
@@ -115,20 +118,13 @@ describe('GrantListEditor', () => {
             classes: {},
             input: {
                 name: 'TestField',
-                value: [
-                    {
-                        grantAgencyName: 'Test',
-                        grantId: '123',
-                        grantAgencyType: 'Testing',
-                    },
-                ],
+                value: [value],
             },
-            onChange: onChangeFn,
         };
 
         rerender(<GrantListEditor {...props} />);
-
-        expect(onChangeFn).toHaveBeenCalled();
+        expect(mockSetValue).toHaveBeenCalledWith('TestField', [], { shouldValidate: true });
+        expect(mockSetValue).toHaveBeenCalledWith('TestField', [value], { shouldValidate: true });
     });
 
     it('should add grant to the list', () => {
@@ -386,19 +382,5 @@ describe('GrantListEditor', () => {
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
         expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
         expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
-    });
-
-    describe('Legacy redux-form', () => {
-        it('should call onChange on state change', () => {
-            const mockOnChange = jest.fn();
-
-            const { getByRole } = setup({
-                onChange: mockOnChange,
-            });
-
-            fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
-            expect(mockOnChange).toHaveBeenCalledWith(true);
-            expect(mockOnChange).toHaveBeenCalledWith([]);
-        });
     });
 });
