@@ -42,8 +42,7 @@ export default function CommunitySelectField(fieldProps) {
             errorText={fieldProps.meta?.error}
             itemsList={translatedItemList}
             itemsLoading={itemsLoading}
-            onChange={fieldProps.input?.onChange}
-            value={fieldProps.input?.value || ''}
+            value={fieldProps.value || ''}
             {...fieldProps}
         />
     );

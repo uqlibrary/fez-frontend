@@ -8,11 +8,6 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
   formComponent={[Function]}
   getItemSelectedToEdit={[Function]}
   hideReorder={false}
-  input={
-    {
-      "onChange": [MockFunction],
-    }
-  }
   inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
   locale={
@@ -50,11 +45,6 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
   formComponent={[Function]}
   getItemSelectedToEdit={[Function]}
   hideReorder={false}
-  input={
-    {
-      "onChange": [MockFunction],
-    }
-  }
   inputNormalizer={[Function]}
   listEditorId="issn-list-editor"
   locale={

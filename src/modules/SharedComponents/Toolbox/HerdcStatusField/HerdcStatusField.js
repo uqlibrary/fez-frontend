@@ -7,8 +7,8 @@ export default function HerdcStatusField(fieldProps) {
         <NewGenericSelectField
             itemsList={HERDC_STATUS}
             locale={{ label: fieldProps.label }}
-            value={(!!fieldProps.input && fieldProps.input.value) || ''}
-            onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
+            value={(!!fieldProps && fieldProps.value) || ''}
+            onChange={(!!fieldProps && fieldProps.onChange) || undefined}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
             genericSelectFieldId="rek-herdc-status"

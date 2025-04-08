@@ -17,7 +17,6 @@ const RichEditor = ({
     textOnlyOnPaste = true,
     value = {},
     onChange,
-    input,
     meta,
     error: hasFormError,
     errorText,
@@ -65,13 +64,6 @@ const RichEditor = ({
             dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
         } else if (!!value?.get) {
             dataForEditor = value.get('htmlText') || value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
-        } else if (typeof input?.value === 'string') {
-            dataForEditor = input.value;
-        } else if (!!input?.value?.htmlText || !!input?.value?.plainText) {
-            dataForEditor = input.value.htmlText || input.value.plainText || /* istanbul ignore next */ '';
-        } else if (input?.value?.get) {
-            dataForEditor =
-                input.value.get('htmlText') || input.value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
         }
 
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';

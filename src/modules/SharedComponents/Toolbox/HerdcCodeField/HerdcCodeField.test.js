@@ -20,10 +20,8 @@ describe('HerdcCodeField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn(),
-            },
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },
@@ -35,10 +33,8 @@ describe('HerdcCodeField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn(),
-            },
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },
@@ -57,27 +53,21 @@ describe('HerdcCodeField component', () => {
 
     it('should not render unknown value', () => {
         const { container } = setup({
-            input: {
-                value: '999',
-            },
+            value: '999',
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should render a current value', () => {
         const { container } = setup({
-            input: {
-                value: '454028',
-            },
+            value: '454028',
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should render a deprecated value', () => {
         const { container } = setup({
-            input: {
-                value: '450033',
-            },
+            value: '450033',
         });
         expect(container).toMatchSnapshot();
     });

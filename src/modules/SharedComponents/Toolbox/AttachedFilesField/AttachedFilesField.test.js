@@ -14,7 +14,6 @@ import { useRecordContext } from 'context';
 
 function setup({ values, ...testProps }) {
     const props = {
-        input: {},
         onRenameAttachedFile: jest.fn(),
         onDeleteAttachedFile: jest.fn(),
         ...testProps,

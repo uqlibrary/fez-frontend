@@ -9,14 +9,15 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { useFormContext } from 'react-hook-form';
 
-const getGrantsFromProps = input => (input?.name && input?.value) || [];
+const getGrantsFromProps = (name, value) => (name && value) || [];
 
 const GrantListEditor = ({
     canEdit = false,
     disabled,
     meta,
     locale,
-    input,
+    name,
+    value,
     required,
     hideType = false,
     disableDeleteAllGrants = false,
@@ -31,26 +32,26 @@ const GrantListEditor = ({
 
     // propagate input changes to `grants`
     useEffect(() => {
-        const updated = getGrantsFromProps(input);
-        // only update `grants` once, when input.value has been updated
+        const updated = getGrantsFromProps(name, value);
+        // only update `grants` once, when value has been updated
         if (!!grants.length || !updated.length || hasPropagatedInputValueChanges.current) {
             return;
         }
         hasPropagatedInputValueChanges.current = true;
         setGrants(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(grants), input?.value, hasPropagatedInputValueChanges.current]);
+    }, [JSON.stringify(grants), value, hasPropagatedInputValueChanges.current]);
 
     // propagate `grantFormPopulated` changes to input
     useEffect(() => {
         if (!grantFormPopulated) return;
-        form?.setValue?.(input.name, grantFormPopulated, { shouldValidate: true });
+        form?.setValue?.(name, grantFormPopulated, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [grantFormPopulated]);
 
     // propagate `grants` changes to input
     useEffect(() => {
-        form?.setValue?.(input.name, grants, { shouldValidate: true });
+        form?.setValue?.(name, grants, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(grants)]);
 
@@ -201,7 +202,8 @@ GrantListEditor.propTypes = {
     disabled: PropTypes.bool,
     meta: PropTypes.object,
     locale: PropTypes.object,
-    input: PropTypes.object,
+    name: PropTypes.string,
+    value: PropTypes.any,
     required: PropTypes.bool,
     hideType: PropTypes.bool,
     disableDeleteAllGrants: PropTypes.bool,

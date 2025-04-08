@@ -33,11 +33,10 @@ export const TitleOrPidField = props => {
                 matchSorter(options, inputValue, { keys: ['rek_pid', 'rek_title'] })
             }
             OptionTemplate={TitleOrPidOptionTemplate}
-            defaultValue={props.input?.value || null}
+            defaultValue={props?.value || null}
             error={!!props.meta && !!props.meta.error}
             errorText={(!!props.meta && props.meta.error) || null}
-            onChange={item => props.input.onChange(item)}
-            onClear={() => props.input.onChange(null)}
+            onClear={() => props.onChange(null)}
         />
     );
 };

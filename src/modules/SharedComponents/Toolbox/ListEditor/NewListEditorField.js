@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewListEditor from './components/NewListEditor';
 
-const getValue = (props, normalize, searchKey) => normalize(props?.input?.value || props.value || [], searchKey);
+const getValue = (props, normalize, searchKey) => normalize(props.value || [], searchKey);
 
 export const useItemsList = (props, normalize, searchKey) => {
     const [value, setValue] = React.useState(getValue(props, normalize, searchKey));
@@ -35,7 +35,6 @@ export const NewListEditorField = props => {
             key={value.length}
             errorText={props.meta ? props.meta.error : null}
             error={props.meta && !!props.meta.error}
-            onChange={props?.onChange ?? props?.input?.onChange}
             remindToAdd={props.remindToAdd}
             list={value}
             searchKey={searchKey}
@@ -50,7 +49,6 @@ NewListEditorField.propTypes = {
     normalize: PropTypes.func,
     onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
-    input: PropTypes.object,
     meta: PropTypes.object,
 };
 

@@ -18,7 +18,6 @@ const getDecoratedField = (field, fieldState, formState) => {
     field.meta = {
         error: fieldState.error?.message,
     };
-    field.input = field;
 
     return field;
 };

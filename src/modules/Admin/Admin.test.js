@@ -100,7 +100,7 @@ function setup(testProps = {}, testState = {}, renderer = rtlRender) {
 // global.console.warn = jest.fn();
 
 describe('form submission', () => {
-    const timeout = 60000 * 5;
+    const timeout = 60000 * 5; // chery-picked from https://github.com/uqlibrary/fez-frontend/commit/dbb5acab8afd19bea09a4b9ddf85b6848d7a06b6
     const pid = record.rek_pid;
     const fileMock = ['myTestImage.png'];
 

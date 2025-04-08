@@ -114,9 +114,7 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            input: {
-                value: '2020-02-02',
-            },
+            value: '2020-02-02',
         });
         expect(container).toMatchSnapshot();
     });

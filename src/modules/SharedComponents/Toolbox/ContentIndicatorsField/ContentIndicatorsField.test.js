@@ -30,10 +30,8 @@ describe('ContentIndicatorsField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: [454079, 454080],
-                onChange: jest.fn(),
-            },
+            value: [454079, 454080],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },
@@ -45,10 +43,8 @@ describe('ContentIndicatorsField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: [454079, 454080],
-                onChange: jest.fn(),
-            },
+            value: [454079, 454080],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },

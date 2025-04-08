@@ -12,7 +12,7 @@ function setup(testProps = {}) {
 
 describe('GrantListEditorField', () => {
     it('should render default component', () => {
-        const { container } = setup({ input: { onChange: jest.fn() } });
+        const { container } = setup({ onChange: jest.fn() });
         expect(container).toMatchSnapshot();
     });
 });

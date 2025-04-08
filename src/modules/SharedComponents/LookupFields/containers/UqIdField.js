@@ -71,8 +71,7 @@ export const UqIdField = props => {
             disabled={props.disabled}
             loadSuggestions={loadSuggestions}
             clearSuggestions={() => dispatch(actions.clearAuthorsSuggestions())}
-            onChange={props.onChange || (!!props.input && props.input.onChange)}
-            onClear={!!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {}}
+            onClear={!!props.value || (!!props && !!props.value) ? props.onClear : () => {}}
         />
     );
 };

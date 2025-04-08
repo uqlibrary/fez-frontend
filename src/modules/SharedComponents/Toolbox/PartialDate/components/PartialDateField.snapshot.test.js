@@ -18,9 +18,7 @@ describe('Field PartialDateField snapshots tests', () => {
         const props = {
             name: 'partialDate',
             allowPartial: true,
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);
@@ -32,9 +30,7 @@ describe('Field PartialDateField snapshots tests', () => {
             name: 'partialDate',
             allowPartial: true,
             className: 'requiredField',
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);
@@ -46,9 +42,7 @@ describe('Field PartialDateField snapshots tests', () => {
             name: 'partialDate',
             allowPartial: false,
             className: 'requiredField',
-            input: {
-                onChange: () => {},
-            },
+            onChange: () => {},
         };
 
         const { container } = setup(props);

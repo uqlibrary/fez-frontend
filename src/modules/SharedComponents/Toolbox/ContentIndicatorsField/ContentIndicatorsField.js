@@ -4,7 +4,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { CONTENT_INDICATORS_DOCTYPE_BLACKLIST, CONTENT_INDICATORS_COLLECTIONS_BLACKLIST } from 'config/general';
 import { useContentIndicators } from 'hooks';
 
-export const getSelected = props => props.input?.value || [];
+export const getSelected = props => props?.value || [];
 
 export const showContentIndicatorsField = record => {
     const isBlacklistedType =
@@ -36,7 +36,7 @@ export const ContentIndicatorsField = props => {
             itemsList={getContentIndicatorsItemsList(items, props)}
             locale={{ label: props.label }}
             value={getSelected(props)}
-            onChange={(!!props.input && props.input.onChange) || undefined}
+            onChange={(!!props && props.onChange) || undefined}
             errorText={(!!props.meta && props.meta.error) || ''}
             error={(!!props.meta && !!props.meta.error) || false}
             {...props}
@@ -48,7 +48,7 @@ export const ContentIndicatorsField = props => {
 
 ContentIndicatorsField.propTypes = {
     defaultValue: PropTypes.any,
-    input: PropTypes.object,
+    onChange: PropTypes.func,
     meta: PropTypes.object,
     label: PropTypes.string,
     displayType: PropTypes.number,

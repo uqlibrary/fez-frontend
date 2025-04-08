@@ -10,7 +10,6 @@ function setup(testProps = {}) {
         meta: {},
         onChange: jest.fn(),
         locale: {},
-        input: {},
         required: true,
         hideType: false,
         ...testProps,
@@ -34,16 +33,14 @@ describe('GrantListEditor', () => {
 
     it('should render with default given value', () => {
         const { container } = setup({
-            input: {
-                name: 'TestField',
-                value: [
-                    {
-                        grantAgencyName: 'Testing',
-                        grantId: '1234',
-                        grantAgencyType: 'Test',
-                    },
-                ],
-            },
+            name: 'TestField',
+            value: [
+                {
+                    grantAgencyName: 'Testing',
+                    grantId: '1234',
+                    grantAgencyType: 'Test',
+                },
+            ],
             locale: {
                 form: {},
             },
@@ -85,16 +82,14 @@ describe('GrantListEditor', () => {
 
     it('should render with default given value is List', () => {
         const { container } = setup({
-            input: {
-                name: 'TestField',
-                value: [
-                    {
-                        grantAgencyName: 'Testing',
-                        grantId: '1234',
-                        grantAgencyType: 'Test',
-                    },
-                ],
-            },
+            name: 'TestField',
+            value: [
+                {
+                    grantAgencyName: 'Testing',
+                    grantId: '1234',
+                    grantAgencyType: 'Test',
+                },
+            ],
         });
         expect(container).toMatchSnapshot();
     });
@@ -106,20 +101,16 @@ describe('GrantListEditor', () => {
             grantAgencyType: 'Test',
         };
         let props = {
-            input: {
-                name: 'TestField',
-                value: [value],
-            },
+            name: 'TestField',
+            value: [value],
         };
         const { container, rerender } = setup(props);
         expect(container).toMatchSnapshot();
 
         props = {
             classes: {},
-            input: {
-                name: 'TestField',
-                value: [value],
-            },
+            name: 'TestField',
+            value: [value],
         };
 
         rerender(<GrantListEditor {...props} />);
@@ -165,10 +156,8 @@ describe('GrantListEditor', () => {
         };
 
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2, grant3, grant4],
-            },
+            name: 'test',
+            value: [grant1, grant2, grant3, grant4],
             classes: {
                 scroll: 'scroll-class',
             },
@@ -190,10 +179,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
         expect(container).toMatchSnapshot();
 
@@ -214,10 +201,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1],
-            },
+            name: 'test',
+            value: [grant1],
         });
         expect(container).toMatchSnapshot();
 
@@ -242,10 +227,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
         expect(container).toMatchSnapshot();
 
@@ -269,10 +252,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
         expect(container).toMatchSnapshot();
 
@@ -297,10 +278,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
         expect(container).toMatchSnapshot();
 
@@ -325,10 +304,8 @@ describe('GrantListEditor', () => {
         };
 
         const { getByRole, getByTestId, container } = setup({
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
         expect(container).toMatchSnapshot();
         fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
@@ -351,10 +328,8 @@ describe('GrantListEditor', () => {
 
         const { getByTestId, getByRole } = setup({
             canEdit: true,
-            input: {
-                name: 'test',
-                value: [grant1, grant2],
-            },
+            name: 'test',
+            value: [grant1, grant2],
         });
 
         let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
@@ -374,7 +349,7 @@ describe('GrantListEditor', () => {
         const inputName = 'my-input';
         const { getByRole } = setup({
             onChange: mockOnChange,
-            input: { name: inputName },
+            name: inputName,
         });
 
         fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });

@@ -17,7 +17,6 @@ export const SustainableDevelopmentGoalListField = fieldProps => {
             inputField={SustainableDevelopmentGoalField}
             error={!!fieldProps.meta.error}
             errorText={fieldProps.meta.error}
-            onChange={fieldProps?.onChange ?? fieldProps.input?.onChange}
             onAddItem={state => ({ ...state, itemList: state.itemList.sort(sortSDGFlatTree) })}
             {...fieldProps}
         />

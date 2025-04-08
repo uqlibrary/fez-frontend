@@ -20,10 +20,8 @@ describe('HerdcStatusField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn(),
-            },
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },
@@ -35,10 +33,8 @@ describe('HerdcStatusField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn(),
-            },
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
             meta: {
                 error: 'Test error',
             },

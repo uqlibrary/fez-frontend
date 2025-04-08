@@ -26,14 +26,14 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
                 {type === 'checkbox' && (
                     <Checkbox
                         {...props}
-                        color={!!props.input.value ? 'primary' : 'secondary'}
-                        checked={!!props.input.value}
+                        color={!!props.value ? 'primary' : 'secondary'}
+                        checked={!!props.value}
                         inputProps={{
                             'data-analyticsid': `${userFieldDataId}-input`,
                             'data-testid': `${userFieldDataId}-input`,
                             id: `${userFieldDataId}-input`,
                         }}
-                        onChange={event => props.input.onChange(event.target.checked ? 1 : 0)}
+                        onChange={event => props.onChange(event.target.checked ? 1 : 0)}
                     />
                 )}
                 {type === 'text' && (
@@ -81,7 +81,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
 
 UserFieldData.propTypes = {
     userFieldDataId: PropTypes.string,
-    input: PropTypes.object,
+    value: PropTypes.any,
     onChange: PropTypes.func,
     meta: PropTypes.object,
     helperText: PropTypes.string,

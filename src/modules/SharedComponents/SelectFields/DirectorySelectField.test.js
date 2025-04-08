@@ -28,9 +28,7 @@ describe('DirectorySelectField', () => {
         });
 
         const { getByTestId, getByText } = setup({
-            input: {
-                onChange: onChangeFn,
-            },
+            onChange: onChangeFn,
             meta: {
                 error: 'This field is required',
             },

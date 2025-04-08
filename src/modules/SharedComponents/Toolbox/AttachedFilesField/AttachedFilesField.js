@@ -60,7 +60,7 @@ export const handleDatastreamMultiChange = (dataStreams, setDataStreams, onRenam
     setDataStreams(newDataStreams);
 };
 
-export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttachedFile, ...props }) => {
+export const AttachedFilesField = ({ onRenameAttachedFile, onDeleteAttachedFile, ...props }) => {
     const { getValues } = useFormContext();
     const formValues = getValues('filesSection');
     const prevPropsDatastream = React.useRef('[]');
@@ -80,15 +80,13 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttach
         setDataStreams(newPropsDataStreams);
     }
 
-    const onChange = props.onChange || input.onChange;
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
         ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
     );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, onDeleteAttachedFile, onChange));
+    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, onDeleteAttachedFile, props.onChange));
 
     return (
         <AttachedFiles
@@ -107,7 +105,6 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttach
 
 AttachedFilesField.propTypes = {
     defaultValue: PropTypes.any,
-    input: PropTypes.object,
     onChange: PropTypes.func,
     onRenameAttachedFile: PropTypes.func.isRequired,
     onDeleteAttachedFile: PropTypes.func.isRequired,

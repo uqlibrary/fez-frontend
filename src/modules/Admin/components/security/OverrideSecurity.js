@@ -5,8 +5,8 @@ import Checkbox from '@mui/material/Checkbox';
 
 export const overrideSecurityValueNormaliser = value => (value === true || value === 0 ? 0 : 1);
 
-export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId }) => {
-    const normalisedValue = overrideSecurityValueNormaliser(input.value);
+export const OverrideSecurity = ({ label, value, onChange, disabled, overrideSecurityId }) => {
+    const normalisedValue = overrideSecurityValueNormaliser(value);
     return (
         <FormControlLabel
             control={
@@ -17,9 +17,7 @@ export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId })
                         id: `${overrideSecurityId}-input`,
                     }}
                     disabled={disabled}
-                    onChange={e => {
-                        input.onChange(overrideSecurityValueNormaliser(e.target.checked));
-                    }}
+                    onChange={e => onChange(overrideSecurityValueNormaliser(e.target.checked))}
                     checked={normalisedValue === 0}
                 />
             }
@@ -30,8 +28,8 @@ export const OverrideSecurity = ({ label, input, disabled, overrideSecurityId })
 
 OverrideSecurity.propTypes = {
     label: PropTypes.string,
-    input: PropTypes.object,
     disabled: PropTypes.bool,
+    onChange: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
     overrideSecurityId: PropTypes.string,
 };

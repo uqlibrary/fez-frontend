@@ -4,7 +4,7 @@ import NewGenericSelectField from './NewGenericSelectField';
 
 function setup(testProps = {}, render = rtlRender) {
     const props = {
-        value: !testProps.input && testProps.multiple ? [] : '',
+        value: !testProps.value && testProps.multiple ? [] : '',
         selectPrompt: 'Please select an option',
         itemsLoading: false,
         loadingHint: 'Loading items...',
@@ -94,9 +94,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            input: {
-                value: 2,
-            },
+            value: 2,
             displayEmpty: true,
         });
 
@@ -115,9 +113,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            input: {
-                value: [2],
-            },
+            value: [2],
             multiple: true,
             displayEmpty: true,
         });
@@ -182,9 +178,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            input: {
-                onChange,
-            },
+            onChange,
         });
 
         fireEvent.mouseDown(getByTestId('rek-test-select'));

@@ -27,7 +27,6 @@ export default class ListEditor extends Component {
         error: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        input: PropTypes.object,
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
@@ -117,7 +116,7 @@ export default class ListEditor extends Component {
 
     mapValueToList = (key, valueAsJson) =>
         valueAsJson ? valueAsJson.map(item => item[key]) : /* istanbul ignore next */ [];
-    getPropValueAsJson = props => (props.input?.name && props.input?.value ? props.input?.value : []);
+    getPropValueAsJson = props => (props?.name && props?.value ? props?.value : []);
 
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
@@ -173,7 +172,7 @@ export default class ListEditor extends Component {
         ) {
             let newState = {};
             // If when the item is submitted, there is no maxCount,
-            // its not exceeding the maxCount, is distinct and isnt already in the list...
+            // it's not exceeding the maxCount, is distinct and isn't already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets

@@ -31,7 +31,7 @@ export class ContributorsEditor extends PureComponent {
         editMode: PropTypes.bool,
         hideDelete: PropTypes.bool,
         hideReorder: PropTypes.bool,
-        input: PropTypes.object,
+        value: PropTypes.any,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
         locale: PropTypes.object,
@@ -87,7 +87,7 @@ export class ContributorsEditor extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
         // Authors, not used by SoS
-        if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
+        if (diff(prevProps?.value, this.props?.value).length > 0) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
                 contributors: items,
@@ -180,7 +180,7 @@ export class ContributorsEditor extends PureComponent {
         return scaleOfSignificance;
     };
 
-    getContributorsFromProps = props => props.value || (props.input?.name && props.input?.value) || [];
+    getContributorsFromProps = props => props.value || (props?.name && props?.value) || [];
 
     getContributorsWithAffiliationsFromProps = props => {
         const authors = this.getContributorsFromProps(props);

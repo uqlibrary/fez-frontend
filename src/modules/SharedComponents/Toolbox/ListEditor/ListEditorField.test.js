@@ -6,9 +6,7 @@ describe('ListEditorField function', () => {
             meta: {
                 error: 'test1',
             },
-            input: {
-                onChange: jest.fn(),
-            },
+            onChange: jest.fn(),
             remindToAdd: 'test2',
             maxInputLength: 100,
         };

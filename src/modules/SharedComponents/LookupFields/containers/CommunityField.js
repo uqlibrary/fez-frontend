@@ -32,8 +32,7 @@ export const CommunityField = props => {
             errorText={props?.meta?.error || ''}
             autoCompleteMultiSelectFieldId={props.communityFieldId}
             loadSuggestions={loadSuggestions}
-            onChange={item => props.input.onChange(item)}
-            onClear={() => props.input.onChange(null)}
+            onClear={() => props.onChange(null)}
         />
     );
 };

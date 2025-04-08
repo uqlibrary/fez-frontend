@@ -6,7 +6,6 @@ export default function LinkInfoListEditorField(fieldProps) {
         <LinkInfoListEditor
             errorText={fieldProps.meta ? fieldProps.meta.error : null}
             error={fieldProps.meta && fieldProps.meta.error}
-            onChange={fieldProps.input?.onChange}
             {...fieldProps}
         />
     );

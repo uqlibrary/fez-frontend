@@ -31,8 +31,7 @@ export default function DirectorySelectField(fieldProps) {
             errorText={fieldProps.meta?.error}
             itemsList={itemsList}
             itemsLoading={itemsLoading}
-            onChange={fieldProps.input?.onChange}
-            value={fieldProps.input?.value || ''}
+            value={fieldProps.value || ''}
             {...fieldProps}
         />
     );

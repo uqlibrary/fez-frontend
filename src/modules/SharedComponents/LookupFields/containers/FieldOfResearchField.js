@@ -30,13 +30,12 @@ const FieldOfResearch = props => {
             id="field-of-research-field-input"
             {...props}
             autoCompleteAsynchronousFieldId={'rek-subject'}
-            onChange={props.input.onChange}
             onClear={() => {}}
             errorText={props.meta ? props.meta.error : props.errorText}
             error={props.meta ? !!props.meta.error : !!props.error || null}
             itemsList={itemsKeyValueList}
             itemsLoading={itemsLoading}
-            defaultValue={!!props.input && !!props.input.value ? { value: props.input.value } : null}
+            defaultValue={!!props && !!props.value ? { value: props.value } : null}
             getOptionLabel={() => ''}
             OptionTemplate={FoROptionTemplate}
             loadSuggestions={loadSuggestions}
