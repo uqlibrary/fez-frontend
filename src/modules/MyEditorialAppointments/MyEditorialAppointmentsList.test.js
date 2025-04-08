@@ -146,7 +146,6 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
         fireEvent.change(getByTestId('eap-journal-name-input'), { target: { value: '' } });
-        preview.debug();
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
         fireEvent.click(
