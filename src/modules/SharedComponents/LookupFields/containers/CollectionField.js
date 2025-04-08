@@ -12,7 +12,14 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    const defaultValue = props.value || [];
+    // the following seems to be related unexpected state chances due to re-renders than redux form related code
+    const hasForm = props?.meta || props?.form;
+
+    const defaultValue = hasForm
+        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
+          (!!props.input.value && props.input.value) ||
+          []
+        : props.value || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);
@@ -21,16 +28,33 @@ export const CollectionField = props => {
     return (
         <AutoCompleteMultiSelectField
             {...props}
+            id={props.id}
             autoCompleteAsynchronousFieldId={'rek-ismemberof'}
             itemsList={missingCollections || []}
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
-            defaultValue={itemsList.filter(collection => defaultValue.includes(collection.rek_pid))}
-            errorText={props.errorText || ''}
+            {...(hasForm
+                ? {
+                      defaultValue: defaultValue,
+                      error: props?.meta?.error,
+                      errorText: props?.meta?.error || '',
+                  }
+                : {
+                      defaultValue: itemsList.filter(collection => defaultValue.includes(collection.rek_pid)),
+                      error: props.error,
+                      errorText: props.errorText || '',
+                  })}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
-            onChange={item => props.onChange(item.map(collection => collection.rek_pid))}
-            onClear={() => props.onChange(null)}
+            {...(hasForm
+                ? {
+                      onChange: item => props.input.onChange(item),
+                      onClear: () => props.input.onChange(null),
+                  }
+                : {
+                      onChange: item => props.onChange(item.map(collection => collection.rek_pid)),
+                      onClear: () => props.onChange(null),
+                  })}
         />
     );
 };
