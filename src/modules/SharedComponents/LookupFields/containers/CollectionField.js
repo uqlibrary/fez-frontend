@@ -12,14 +12,9 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    // the following seems to be related unexpected state chances due to re-renders than redux form related code
-    const hasForm = props?.meta || props?.form;
-
-    const defaultValue = hasForm
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    // the following is needed due to unexpected state chances from re-renders
+    const hasForm = !!props?.meta;
+    const defaultValue = props.value || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);
