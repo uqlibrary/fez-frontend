@@ -59,7 +59,7 @@ const extensions = {
     toMatchDiffSnapshot,
 };
 
-configure({ asyncUtilTimeout: 5000 /* , reactStrictMode: true */ }); // Default timeout for all async queries
+configure({ asyncUtilTimeout: 5000 }); // Default timeout for all async queries
 
 expect.extend(extensions);
 global.expect = expect;
