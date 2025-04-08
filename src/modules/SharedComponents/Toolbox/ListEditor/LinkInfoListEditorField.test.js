@@ -7,7 +7,7 @@ describe('LinkInfoListEditorField function', () => {
     });
 
     it('should return <LinkInfoListEditor> with error attributes', () => {
-        const props = { onChange: jest.fn(), meta: { error: 'test' } };
+        const props = { onChange: jest.fn(), state: { error: 'test' } };
         expect(LinkInfoListEditorField(props)).toMatchSnapshot();
     });
 });

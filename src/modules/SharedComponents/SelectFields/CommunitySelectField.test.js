@@ -34,7 +34,7 @@ describe('CommunitySelectField', () => {
 
         const { getByTestId, getByText } = setup({
             onChange: onChangeFn,
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             loadingHint: 'Loading communities...',

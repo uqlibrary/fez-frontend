@@ -7,7 +7,7 @@ const mockSetValue = jest.fn();
 function setup(testProps = {}) {
     const props = {
         disabled: false,
-        meta: {},
+        state: {},
         onChange: jest.fn(),
         locale: {},
         required: true,
@@ -50,7 +50,7 @@ describe('GrantListEditor', () => {
 
     it('should render error from props', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: <span>Some error</span>,
             },
         });
@@ -59,7 +59,7 @@ describe('GrantListEditor', () => {
 
     it('should render error from props as children', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: (
                     <p>
                         <span>Test error 1</span>
@@ -73,7 +73,7 @@ describe('GrantListEditor', () => {
 
     it('should render string error from props', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: 'Test error',
             },
         });

@@ -32,7 +32,7 @@ describe('ContentIndicatorsField component', () => {
             placeholder: 'Test placeholder',
             value: [454079, 454080],
             onChange: jest.fn(),
-            meta: {
+            state: {
                 error: 'Test error',
             },
         });
@@ -45,7 +45,7 @@ describe('ContentIndicatorsField component', () => {
             placeholder: 'Test placeholder',
             value: [454079, 454080],
             onChange: jest.fn(),
-            meta: {
+            state: {
                 error: 'Test error',
             },
         });
@@ -54,7 +54,9 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark existing indicators as disabled', () => {
         const input = {
-            defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            state: {
+                defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            },
         };
         const expected = CONTENT_INDICATORS.map(item => ({
             ...item,
@@ -68,7 +70,9 @@ describe('ContentIndicatorsField component', () => {
     it('should not mark existing indicators as disabled for admins', () => {
         const input = {
             canUnselect: true,
-            defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            state: {
+                defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            },
         };
         const expected = CONTENT_INDICATORS.map(item => ({
             ...item,
@@ -92,7 +96,9 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
         const { container } = setup({
-            defaultValue: CONTENT_INDICATORS,
+            state: {
+                defaultValue: CONTENT_INDICATORS,
+            },
         });
         expect(container).toMatchSnapshot();
     });
@@ -119,7 +125,9 @@ describe('ContentIndicatorsField component', () => {
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
         const { container } = setup({
-            defaultValue: CONTENT_INDICATORS,
+            state: {
+                defaultValue: CONTENT_INDICATORS,
+            },
             canUnselect: true,
         });
         expect(container).toMatchSnapshot();

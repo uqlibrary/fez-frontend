@@ -83,7 +83,7 @@ UserFieldData.propTypes = {
     userFieldDataId: PropTypes.string,
     value: PropTypes.any,
     onChange: PropTypes.func,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
     label: PropTypes.string,

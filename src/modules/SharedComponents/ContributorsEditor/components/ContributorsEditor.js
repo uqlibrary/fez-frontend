@@ -35,7 +35,7 @@ export class ContributorsEditor extends PureComponent {
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
         locale: PropTypes.object,
-        meta: PropTypes.object,
+        state: PropTypes.object,
         onChange: PropTypes.func,
         required: PropTypes.bool,
         shouldHandleAffiliations: PropTypes.bool,
@@ -492,7 +492,7 @@ export class ContributorsEditor extends PureComponent {
             hideDelete,
             isNtro,
             isAdmin,
-            meta,
+            state,
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
@@ -502,9 +502,9 @@ export class ContributorsEditor extends PureComponent {
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
 
-        let error = meta?.error || this.state.error;
-        if (!!meta?.error?.props) {
-            error = React.Children.map(meta.error.props.children, (child, index) => {
+        let error = state?.error || this.state.error;
+        if (!!state?.error?.props) {
+            error = React.Children.map(state.error.props.children, (child, index) => {
                 return child.type ? React.cloneElement(child, { key: index }) : child;
             });
         }

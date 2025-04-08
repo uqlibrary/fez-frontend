@@ -50,7 +50,7 @@ describe('RichEditor', () => {
         const { container } = setup({
             title: 'This is title with error',
             description: 'This is description with error',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             required: true,
@@ -63,7 +63,7 @@ describe('RichEditor', () => {
             value: { htmlText: 'This is test value' },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             required: true,
@@ -84,7 +84,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: 'This field is required',
             },
         });
@@ -96,7 +96,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: (
                     <p>
                         <span>This field is required</span>
@@ -112,7 +112,7 @@ describe('RichEditor', () => {
             value: { plainText: 'This is test value', get: jest.fn() },
             maxValue: 10,
             instructions: 'test instructions',
-            meta: {
+            state: {
                 error: <span>This field is required</span>,
             },
         });

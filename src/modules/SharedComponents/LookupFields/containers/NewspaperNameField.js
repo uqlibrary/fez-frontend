@@ -26,8 +26,8 @@ const NewspaperNameField = props => {
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             allowFreeText
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta ? !!props.meta.error : null}
+            errorText={props.state ? props.state.error : null}
+            error={props.state ? !!props.state.error : null}
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['value'] })}
             floatingLabelText={props.floatingLabelText || 'Newspaper name'}

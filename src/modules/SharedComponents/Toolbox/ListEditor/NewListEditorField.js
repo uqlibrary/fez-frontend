@@ -33,8 +33,8 @@ export const NewListEditorField = props => {
     return (
         <NewListEditor
             key={value.length}
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta && !!props.meta.error}
+            errorText={props.state ? props.state.error : null}
+            error={props.state && !!props.state.error}
             remindToAdd={props.remindToAdd}
             list={value}
             searchKey={searchKey}
@@ -49,7 +49,7 @@ NewListEditorField.propTypes = {
     normalize: PropTypes.func,
     onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
-    meta: PropTypes.object,
+    state: PropTypes.object,
 };
 
 export default React.memo(NewListEditorField);

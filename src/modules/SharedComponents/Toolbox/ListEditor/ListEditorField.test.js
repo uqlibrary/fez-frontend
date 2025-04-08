@@ -3,7 +3,7 @@ import ListEditorField from './ListEditorField';
 describe('ListEditorField function', () => {
     it('should return <FreeTextListEditor> with specified props', () => {
         const props = {
-            meta: {
+            state: {
                 error: 'test1',
             },
             onChange: jest.fn(),
@@ -12,7 +12,7 @@ describe('ListEditorField function', () => {
         };
         expect(ListEditorField(props)).toMatchSnapshot();
 
-        delete props.meta;
+        delete props.state;
         expect(ListEditorField(props)).toMatchSnapshot();
     });
 });

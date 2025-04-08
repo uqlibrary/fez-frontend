@@ -14,7 +14,7 @@ const getGrantsFromProps = (name, value) => (name && value) || [];
 const GrantListEditor = ({
     canEdit = false,
     disabled,
-    meta,
+    state,
     locale,
     name,
     value,
@@ -130,10 +130,10 @@ const GrantListEditor = ({
     ));
 
     let error = null;
-    if (meta?.error) {
+    if (state?.error) {
         error =
-            !!meta.error.props &&
-            React.Children.map(meta.error.props.children, (child, index) => {
+            !!state.error.props &&
+            React.Children.map(state.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, { key: index });
                 }
@@ -188,9 +188,9 @@ const GrantListEditor = ({
                     </Grid>
                 </Grid>
             )}
-            {meta?.error && (
+            {state?.error && (
                 <Typography color="error" variant="caption">
-                    {error || meta.error}
+                    {error || state.error}
                 </Typography>
             )}
         </div>
@@ -200,7 +200,7 @@ const GrantListEditor = ({
 GrantListEditor.propTypes = {
     canEdit: PropTypes.bool,
     disabled: PropTypes.bool,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     locale: PropTypes.object,
     name: PropTypes.string,
     value: PropTypes.any,

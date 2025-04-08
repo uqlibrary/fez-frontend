@@ -4,8 +4,8 @@ import FreeTextListEditor from './components/FreeTextListEditor';
 export default function ListEditorField(fieldProps) {
     return (
         <FreeTextListEditor
-            errorText={fieldProps.meta ? fieldProps.meta.error : null}
-            error={fieldProps.meta && !!fieldProps.meta.error}
+            errorText={fieldProps.state ? fieldProps.state.error : null}
+            error={fieldProps.state && !!fieldProps.state.error}
             remindToAdd={fieldProps.remindToAdd}
             {...fieldProps}
         />

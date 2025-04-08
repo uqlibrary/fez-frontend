@@ -5,13 +5,13 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
   error={true}
   errorText="test1"
   maxInputLength={100}
-  meta={
+  onChange={[MockFunction]}
+  remindToAdd="test2"
+  state={
     {
       "error": "test1",
     }
   }
-  onChange={[MockFunction]}
-  remindToAdd="test2"
 />
 `;
 

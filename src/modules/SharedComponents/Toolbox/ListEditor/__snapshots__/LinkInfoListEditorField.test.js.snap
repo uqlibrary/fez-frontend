@@ -11,11 +11,11 @@ exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> wit
 <LinkInfoListEditor
   error="test"
   errorText="test"
-  meta={
+  onChange={[MockFunction]}
+  state={
     {
       "error": "test",
     }
   }
-  onChange={[MockFunction]}
 />
 `;

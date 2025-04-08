@@ -25,7 +25,7 @@ export const showContentIndicatorsField = record => {
 export const getContentIndicatorsItemsList = (items, props = {}) => {
     return items.map(item => ({
         ...item,
-        disabled: !props.canUnselect && !!props?.defaultValue?.includes?.(item?.value),
+        disabled: !props.canUnselect && !!props?.state?.defaultValue?.includes?.(item?.value),
     }));
 };
 
@@ -37,19 +37,18 @@ export const ContentIndicatorsField = props => {
             locale={{ label: props.label }}
             value={getSelected(props)}
             onChange={(!!props && props.onChange) || undefined}
-            errorText={(!!props.meta && props.meta.error) || ''}
-            error={(!!props.meta && !!props.meta.error) || false}
+            errorText={(!!props.state && props.state.error) || ''}
+            error={(!!props.state && !!props.state.error) || false}
             {...props}
-            disabled={props.disabled || (!props.canUnselect && props?.defaultValue?.length === items.length)}
+            disabled={props.disabled || (!props.canUnselect && props?.state?.defaultValue?.length === items.length)}
             genericSelectFieldId="rek-content-indicator"
         />
     );
 };
 
 ContentIndicatorsField.propTypes = {
-    defaultValue: PropTypes.any,
     onChange: PropTypes.func,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     label: PropTypes.string,
     displayType: PropTypes.number,
     disabled: PropTypes.bool,

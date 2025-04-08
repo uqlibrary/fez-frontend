@@ -28,8 +28,8 @@ export const CommunityField = props => {
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
             defaultValue={defaultValue}
-            error={props?.meta?.error}
-            errorText={props?.meta?.error || ''}
+            error={props?.state?.error}
+            errorText={props?.state?.error || ''}
             autoCompleteMultiSelectFieldId={props.communityFieldId}
             loadSuggestions={loadSuggestions}
             onClear={() => props.onChange(null)}

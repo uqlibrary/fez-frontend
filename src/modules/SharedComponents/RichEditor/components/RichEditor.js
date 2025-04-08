@@ -17,7 +17,7 @@ const RichEditor = ({
     textOnlyOnPaste = true,
     value = {},
     onChange,
-    meta,
+    state,
     error: hasFormError,
     errorText,
     titleProps,
@@ -72,10 +72,10 @@ const RichEditor = ({
     let error = null;
     // default rich editor has "<p></p>"
     const inputLength = value?.plainText?.length || value?.length - 7;
-    if (meta && meta?.error) {
+    if (state && state?.error) {
         error =
-            !!meta.error.props &&
-            React.Children.map(meta.error.props.children, (child, index) => {
+            !!state.error.props &&
+            React.Children.map(state.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, {
                         key: index,
@@ -125,7 +125,7 @@ const RichEditor = ({
                     handleEditorDataChange(event, editor);
                 }}
             />
-            {(error || meta?.error) && (
+            {(error || state?.error) && (
                 <Typography
                     color="error"
                     variant="caption"
@@ -134,7 +134,7 @@ const RichEditor = ({
                         display: 'inline-block',
                     }}
                 >
-                    {error || meta.error}
+                    {error || state.error}
                     {maxValue && <span>&nbsp;-&nbsp;</span>}
                 </Typography>
             )}
@@ -160,7 +160,7 @@ RichEditor.propTypes = {
     input: PropTypes.object,
     instructions: PropTypes.any,
     maxValue: PropTypes.number,
-    meta: PropTypes.any,
+    state: PropTypes.any,
     onChange: PropTypes.func.isRequired,
     richEditorId: PropTypes.string,
     required: PropTypes.bool,

@@ -7,7 +7,7 @@ describe('ScaleOfSignificanceListEditorField function', () => {
     });
 
     it('should return <ScaleOfSignificanceListEditor> with error attributes', () => {
-        const props = { onChange: jest.fn(), meta: { errorText: 'test' } };
+        const props = { onChange: jest.fn(), state: { errorText: 'test' } };
         expect(ScaleOfSignificanceListEditorField(props)).toMatchSnapshot();
     });
 });

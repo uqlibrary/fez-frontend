@@ -31,8 +31,8 @@ const FieldOfResearch = props => {
             {...props}
             autoCompleteAsynchronousFieldId={'rek-subject'}
             onClear={() => {}}
-            errorText={props.meta ? props.meta.error : props.errorText}
-            error={props.meta ? !!props.meta.error : !!props.error || null}
+            errorText={props.state ? props.state.error : props.errorText}
+            error={props.state ? !!props.state.error : !!props.error || null}
             itemsList={itemsKeyValueList}
             itemsLoading={itemsLoading}
             defaultValue={!!props && !!props.value ? { value: props.value } : null}

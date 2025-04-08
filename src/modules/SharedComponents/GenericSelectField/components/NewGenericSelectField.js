@@ -26,7 +26,7 @@ export const NewGenericSelectField = ({
     label,
     loadItemsList,
     loadingHint = 'Loading items...',
-    meta,
+    state,
     multiple = false,
     onChange,
     required,
@@ -70,16 +70,16 @@ export const NewGenericSelectField = ({
 
     /* Run this effect to set error state for redux-form field */
     React.useEffect(() => {
-        if (!!meta) {
-            setInputError(!!meta.error);
-            setInputErrorText(meta.error);
+        if (!!state) {
+            setInputError(!!state.error);
+            setInputErrorText(state.error);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [meta]);
+    }, [state]);
 
     /* Run this effect to set error state for non redux-form field */
     React.useEffect(() => {
-        if (!meta) {
+        if (!state) {
             setInputError(!!error);
             setInputErrorText(!!error ? errorText || error : null);
         }
@@ -185,7 +185,7 @@ NewGenericSelectField.propTypes = {
     formHelperTextProps: PropTypes.object,
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     itemsList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,

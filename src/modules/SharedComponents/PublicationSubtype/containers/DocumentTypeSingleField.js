@@ -23,8 +23,8 @@ const documentTypeList = () => {
 export default function DocumentTypeSingleField(fieldProps) {
     return (
         <NewGenericSelectField
-            error={!!fieldProps.meta && fieldProps.meta.error}
-            errorText={!!fieldProps.meta && fieldProps.meta.error}
+            error={!!fieldProps.state && fieldProps.state.error}
+            errorText={!!fieldProps.state && fieldProps.state.error}
             genericSelectFieldId="doc-type-id"
             itemsList={documentTypeList() || []}
             selectPrompt="Please select a display type"

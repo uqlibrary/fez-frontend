@@ -57,11 +57,6 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
     }
   }
   maxCount={0}
-  meta={
-    {
-      "error": "test",
-    }
-  }
   onAddItem={[Function]}
   onChange={[MockFunction]}
   required={false}
@@ -72,6 +67,11 @@ exports[`IssnListEditorField function should return <ListEditor> with error attr
     {
       "order": "rek_order",
       "value": "rek_value",
+    }
+  }
+  state={
+    {
+      "error": "test",
     }
   }
   transformFunction={[Function]}

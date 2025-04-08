@@ -540,7 +540,7 @@ describe('ContributorsEditor', () => {
     it('should show given validation error', () => {
         const { container } = setup({
             contributors: [],
-            meta: { error: 'This is a test error' },
+            state: { error: 'This is a test error' },
         });
         expect(container).toMatchSnapshot();
     });
@@ -628,7 +628,7 @@ describe('ContributorsEditor', () => {
 
     it('should render error as html', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: (
                     <p>
                         <span>test</span>
@@ -641,7 +641,7 @@ describe('ContributorsEditor', () => {
 
     it('should render error as one child', () => {
         const { container } = setup({
-            meta: {
+            state: {
                 error: <span>test</span>,
             },
         });

@@ -8,8 +8,8 @@ export const ThesisSubtypeSelectField = fieldProps => {
     return (
         <NewGenericSelectField
             disabled={fieldProps.disabled}
-            error={(!!fieldProps.meta && !!fieldProps.meta.error) || !!fieldProps.error}
-            errorText={(!!fieldProps.meta && fieldProps.meta.error) || fieldProps.errorText}
+            error={(!!fieldProps.state && !!fieldProps.state.error) || !!fieldProps.error}
+            errorText={(!!fieldProps.state && fieldProps.state.error) || fieldProps.errorText}
             itemsList={itemsList}
             value={(!!fieldProps && fieldProps.value) || fieldProps.value || ''}
             genericSelectFieldId="rek-genre-type"

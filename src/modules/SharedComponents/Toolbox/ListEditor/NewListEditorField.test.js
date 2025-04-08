@@ -8,7 +8,7 @@ import { FreeTextForm } from './components/FreeTextForm';
 describe('NewListEditorField component', () => {
     it('should render new list editor component with the given array', () => {
         const props = {
-            meta: {
+            state: {
                 error: 'test1',
             },
             onChange: jest.fn(),
@@ -32,7 +32,7 @@ describe('NewListEditorField component', () => {
 
     it('should render new list editor component with the given List', () => {
         const props = {
-            meta: {
+            state: {
                 error: 'test1',
             },
             onChange: jest.fn(),

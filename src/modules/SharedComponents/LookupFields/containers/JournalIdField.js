@@ -33,8 +33,8 @@ export const JournalIdField = props => {
             autoCompleteAsynchronousFieldId={props.journalIdFieldId || 'fez-matched-journals'}
             itemsLoading={itemsLoading}
             allowFreeText={props.allowFreeText || false}
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta ? !!props.meta.error : null}
+            errorText={props.state ? props.state.error : null}
+            error={props.state ? !!props.state.error : null}
             getOptionLabel={(!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || '')}
             filterOptions={(options, { inputValue }) => {
                 return matchSorter(

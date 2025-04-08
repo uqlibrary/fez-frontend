@@ -10,14 +10,13 @@ import { Controller as Base } from 'react-hook-form';
  * @return {object}
  */
 const getDecoratedField = (field, fieldState, formState) => {
-    field.defaultValue = formState?.defaultValues?.[field.name];
+    // expose state required only props to minimize memory consumption and unexpected props warnings
+    field.state = {
+        error: fieldState.error?.message,
+        defaultValue: formState?.defaultValues?.[field.name],
+    };
     // to avoid `ref` & forwardRef() errors
     field.ref = null;
-
-    // legacy compatibility
-    field.meta = {
-        error: fieldState.error?.message,
-    };
 
     return field;
 };
@@ -29,7 +28,7 @@ const Controller = ({ render, ...props }) => {
             {...props}
             // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
             /* eslint-disable-next-line react/prop-types */
-            defaultValue={props.defaultValue || ''}
+            defaultValue={props.state?.defaultValue || ''}
             render={({ field, fieldState, formState }) =>
                 render({
                     field: getDecoratedField(field, fieldState, formState),

@@ -133,7 +133,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             displayEmpty: true,

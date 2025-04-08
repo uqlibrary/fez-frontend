@@ -17,18 +17,18 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 <Memo(Connect(ScaleOfSignificanceListEditor))
   input={
     {
-      "meta": {
+      "onChange": [MockFunction],
+      "state": {
         "errorText": "test",
       },
-      "onChange": [MockFunction],
     }
   }
   listEditorId="rek-significance"
-  meta={
+  onChange={[MockFunction]}
+  state={
     {
       "errorText": "test",
     }
   }
-  onChange={[MockFunction]}
 />
 `;

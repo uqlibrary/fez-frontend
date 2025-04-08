@@ -13,7 +13,7 @@ export const CollectionField = props => {
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
     // the following is needed due to unexpected state chances from re-renders
-    const hasForm = !!props?.meta;
+    const hasForm = !!props?.state;
     const defaultValue = props.value || [];
 
     // remove existing entries from full list of collections
@@ -30,8 +30,8 @@ export const CollectionField = props => {
             defaultValue={
                 hasForm ? defaultValue : itemsList.filter(collection => defaultValue.includes(collection.rek_pid))
             }
-            error={!!props?.meta?.error || !!props.error}
-            errorText={props?.meta?.error || props.errorText || ''}
+            error={!!props?.state?.error || !!props.error}
+            errorText={props?.state?.error || props.errorText || ''}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
             onChange={item =>

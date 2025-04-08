@@ -29,7 +29,7 @@ describe('DirectorySelectField', () => {
 
         const { getByTestId, getByText } = setup({
             onChange: onChangeFn,
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             loadingHint: 'Loading directories...',

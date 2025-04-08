@@ -22,7 +22,7 @@ describe('HerdcStatusField component', () => {
             placeholder: 'Test placeholder',
             value: ['One', 'Two'],
             onChange: jest.fn(),
-            meta: {
+            state: {
                 error: 'Test error',
             },
         });
@@ -35,7 +35,7 @@ describe('HerdcStatusField component', () => {
             placeholder: 'Test placeholder',
             value: ['One', 'Two'],
             onChange: jest.fn(),
-            meta: {
+            state: {
                 error: 'Test error',
             },
         });

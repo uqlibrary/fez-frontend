@@ -7,7 +7,7 @@ describe('IssnListEditorField function', () => {
     });
 
     it('should return <ListEditor> with error attributes', () => {
-        const props = { onChange: jest.fn(), meta: { error: 'test' }, listEditorId: 'issn-list-editor' };
+        const props = { onChange: jest.fn(), state: { error: 'test' }, listEditorId: 'issn-list-editor' };
         expect(IssnListEditorField(props)).toMatchSnapshot();
     });
 

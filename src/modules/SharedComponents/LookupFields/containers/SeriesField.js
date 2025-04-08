@@ -24,8 +24,8 @@ export const SeriesField = props => {
             autoCompleteAsynchronousFieldId={props.seriesFieldId || 'rek-series'}
             allowFreeText
             defaultValue={(!!props && !!props.value && { value: props.value, id: 1 }) || null}
-            errorText={props.meta ? props.meta.error : null}
-            error={!!props.meta && !!props.meta.error}
+            errorText={props.state ? props.state.error : null}
+            error={!!props.state && !!props.state.error}
             filterOptions={options => options}
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             itemsList={itemsList}

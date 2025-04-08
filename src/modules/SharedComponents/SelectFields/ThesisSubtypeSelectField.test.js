@@ -21,7 +21,7 @@ describe('ThesisSubtypeSelectField', () => {
 
         const { getByTestId, getByText, queryByText } = setup({
             onChange: onChangeFn,
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             selectPrompt: 'Please select a thesis subtype',
@@ -68,7 +68,7 @@ describe('ThesisSubtypeSelectField', () => {
 
         const { getByTestId, getByText, queryByText } = setup({
             onChange: onChangeFn,
-            meta: {
+            state: {
                 error: 'This field is required',
             },
             selectPrompt: 'Please select a thesis subtype',

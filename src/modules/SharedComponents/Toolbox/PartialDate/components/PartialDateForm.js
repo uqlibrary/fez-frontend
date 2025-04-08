@@ -194,13 +194,11 @@ const PartialDateForm = props => {
         partialDateFormId,
         clearable,
         value,
-        defaultValue,
+        state: { defaultValue } = {},
     } = props;
     const getDateObject = () => {
         const dateValue =
-            (value && moment(value)) ||
-            (defaultValue && typeof defaultValue === 'string' && moment(defaultValue)) ||
-            null;
+            (value && moment(value)) || (typeof defaultValue === 'string' && moment(defaultValue)) || null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             return {
@@ -386,7 +384,6 @@ const PartialDateForm = props => {
 PartialDateForm.propTypes = {
     control: PropTypes.any,
     value: PropTypes.any,
-    defaultValue: PropTypes.any,
     locale: PropTypes.object,
     onChange: PropTypes.func,
     dateFormat: PropTypes.string,
@@ -397,6 +394,7 @@ PartialDateForm.propTypes = {
     required: PropTypes.bool,
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
+    state: PropTypes.object,
     partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };
