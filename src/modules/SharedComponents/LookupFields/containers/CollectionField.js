@@ -21,18 +21,16 @@ export const CollectionField = props => {
     return (
         <AutoCompleteMultiSelectField
             {...props}
-            id={props.id}
             autoCompleteAsynchronousFieldId={'rek-ismemberof'}
             itemsList={missingCollections || []}
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
-            defaultValue={defaultValue}
-            error={props?.meta?.error || props.error}
-            errorText={props?.meta?.error || props.errorText || ''}
+            defaultValue={itemsList.filter(collection => defaultValue.includes(collection.rek_pid))}
+            errorText={props.errorText || ''}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
-            onChange={item => props.input.onChange(item)}
-            onClear={() => props.input.onChange(null)}
+            onChange={item => props.onChange(item.map(collection => collection.rek_pid))}
+            onClear={() => props.onChange(null)}
         />
     );
 };
