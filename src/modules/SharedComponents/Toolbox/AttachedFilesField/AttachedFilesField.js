@@ -75,11 +75,13 @@ export const AttachedFilesField = ({ input, onRenameAttachedFile, onDeleteAttach
     const newPropsDataStreams = getState();
     const newPropsDataStreamsString = JSON.stringify(newPropsDataStreams);
 
-    /* istanbul ignore else */
-    if (newPropsDataStreamsString !== prevPropsDatastream.current) {
-        prevPropsDatastream.current = newPropsDataStreamsString;
-        setDataStreams(newPropsDataStreams);
-    }
+    React.useEffect(() => {
+        /* istanbul ignore else */
+        if (newPropsDataStreamsString !== prevPropsDatastream.current) {
+            prevPropsDatastream.current = newPropsDataStreamsString;
+            setDataStreams(newPropsDataStreams);
+        }
+    }, [newPropsDataStreams, newPropsDataStreamsString]);
 
     const onChange = props.onChange || input.onChange;
 
