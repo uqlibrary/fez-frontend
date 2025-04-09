@@ -894,6 +894,7 @@ exports[`ThesisForm component 1`] = `
                   <input
                     aria-autocomplete="list"
                     aria-expanded="false"
+                    aria-invalid="false"
                     autocapitalize="none"
                     autocomplete="off"
                     class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
@@ -2027,6 +2028,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                   <input
                     aria-autocomplete="list"
                     aria-expanded="false"
+                    aria-invalid="false"
                     autocapitalize="none"
                     autocomplete="off"
                     class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"

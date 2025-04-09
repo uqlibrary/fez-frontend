@@ -34,7 +34,7 @@ export const NewListEditorField = props => {
         <NewListEditor
             key={value.length}
             errorText={props.state ? props.state.error : null}
-            error={props.state && !!props.state.error}
+            error={!!props.state?.error}
             remindToAdd={props.remindToAdd}
             list={value}
             searchKey={searchKey}

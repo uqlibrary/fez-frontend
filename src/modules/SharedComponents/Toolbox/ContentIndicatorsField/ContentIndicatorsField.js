@@ -38,7 +38,7 @@ export const ContentIndicatorsField = props => {
             value={getSelected(props)}
             onChange={(!!props && props.onChange) || undefined}
             errorText={(!!props.state && props.state.error) || ''}
-            error={(!!props.state && !!props.state.error) || false}
+            error={!!props.state?.error}
             {...props}
             disabled={props.disabled || (!props.canUnselect && props?.state?.defaultValue?.length === items.length)}
             genericSelectFieldId="rek-content-indicator"

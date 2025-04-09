@@ -1195,6 +1195,7 @@ exports[`BibliographicSection component should render default view 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-expanded="false"
+                        aria-invalid="false"
                         autocapitalize="none"
                         autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
@@ -2646,6 +2647,7 @@ exports[`BibliographicSection component should render design form fields 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-expanded="false"
+                        aria-invalid="false"
                         autocapitalize="none"
                         autocomplete="off"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
@@ -4121,6 +4123,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
                       <input
                         aria-autocomplete="list"
                         aria-expanded="false"
+                        aria-invalid="false"
                         autocapitalize="none"
                         autocomplete="off"
                         class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"

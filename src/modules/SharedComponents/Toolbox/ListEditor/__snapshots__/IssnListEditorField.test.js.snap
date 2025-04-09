@@ -4,6 +4,7 @@ exports[`IssnListEditorField function should return <ListEditor> 1`] = `
 <ListEditor
   canEdit={false}
   distinctOnly={false}
+  error={false}
   errorText={null}
   formComponent={[Function]}
   getItemSelectedToEdit={[Function]}

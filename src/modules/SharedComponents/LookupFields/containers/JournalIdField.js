@@ -34,7 +34,7 @@ export const JournalIdField = props => {
             itemsLoading={itemsLoading}
             allowFreeText={props.allowFreeText || false}
             errorText={props.state ? props.state.error : null}
-            error={props.state ? !!props.state.error : null}
+            error={!!props.state?.error}
             getOptionLabel={(!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || '')}
             filterOptions={(options, { inputValue }) => {
                 return matchSorter(

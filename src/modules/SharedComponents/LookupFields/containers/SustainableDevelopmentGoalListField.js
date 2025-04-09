@@ -15,7 +15,7 @@ export const SustainableDevelopmentGoalListField = fieldProps => {
             hideReorder
             listEditorId="sustainable-development-goal"
             inputField={SustainableDevelopmentGoalField}
-            error={!!fieldProps.state.error}
+            error={!!fieldProps.state?.error}
             errorText={fieldProps.state.error}
             onAddItem={state => ({ ...state, itemList: state.itemList.sort(sortSDGFlatTree) })}
             {...fieldProps}

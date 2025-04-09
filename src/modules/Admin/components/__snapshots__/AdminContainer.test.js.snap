@@ -1998,6 +1998,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     <input
                                       aria-autocomplete="list"
                                       aria-expanded="false"
+                                      aria-invalid="false"
                                       autocapitalize="none"
                                       autocomplete="off"
                                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-8sgtit-MuiInputBase-input-MuiInput-input"

@@ -52,7 +52,7 @@ const SustainableDevelopmentGoalField = props => {
             id="sustainable-development-goal-input"
             autoCompleteAsynchronousFieldId={'rek-sustainable-development-goal'}
             errorText={props.state ? props.state.error : props.errorText}
-            error={props.state ? !!props.state.error : !!props.error || null}
+            error={!!props.state?.error}
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
             itemsList={itemsList}
             itemsLoading={itemsLoading}

@@ -28,7 +28,7 @@ export const CommunityField = props => {
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
             defaultValue={defaultValue}
-            error={props?.state?.error}
+            error={!!props?.state?.error}
             errorText={props?.state?.error || ''}
             autoCompleteMultiSelectFieldId={props.communityFieldId}
             loadSuggestions={loadSuggestions}
