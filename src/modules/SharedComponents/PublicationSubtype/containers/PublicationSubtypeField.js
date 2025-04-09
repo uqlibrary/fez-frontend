@@ -7,8 +7,6 @@ export const PublicationSubtypeField = fieldProps => {
 
     return (
         <NewGenericSelectField
-            error={!!fieldProps.state?.error}
-            errorText={fieldProps.state?.error}
             value={(!!fieldProps && fieldProps.value) || fieldProps.value || ''}
             itemsList={[...subtypes.map(type => ({ value: type, text: type }))]}
             selectPrompt="Select a document subtype"

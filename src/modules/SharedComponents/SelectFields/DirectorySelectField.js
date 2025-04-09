@@ -27,8 +27,6 @@ export default function DirectorySelectField(fieldProps) {
         <NewGenericSelectField
             disabled={itemsLoading || fieldProps.disabled}
             displayEmpty={itemsLoading} // display loading prompt while items are loading
-            error={!!fieldProps.state?.error}
-            errorText={fieldProps.state?.error}
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             value={fieldProps.value || ''}

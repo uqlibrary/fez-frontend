@@ -82,7 +82,7 @@ describe('NewGenericSelectField', () => {
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 1, Option 3');
     });
 
-    it('should render select field for redux-form field', () => {
+    it('should render select field', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -101,7 +101,7 @@ describe('NewGenericSelectField', () => {
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 2');
     });
 
-    it('should render select field for redux-form field for multiple flag', () => {
+    it('should render select field for multiple flag', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -121,7 +121,7 @@ describe('NewGenericSelectField', () => {
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 2');
     });
 
-    it('should display error for redux-form field', () => {
+    it('should display error', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -143,29 +143,6 @@ describe('NewGenericSelectField', () => {
     });
 
     it('should select an option', () => {
-        const onChange = jest.fn();
-        const { getByTestId, getByText } = setup({
-            itemsList: [
-                {
-                    text: 'Option 1',
-                    value: 1,
-                },
-                {
-                    text: 'Option 2',
-                    value: 2,
-                },
-            ],
-            onChange,
-        });
-
-        fireEvent.mouseDown(getByTestId('rek-test-select'));
-        expect(getByTestId('rek-test-options')).toBeInTheDocument();
-
-        fireEvent.click(getByText('Option 1'));
-        expect(onChange).toHaveBeenCalledWith(1);
-    });
-
-    it('should select an option for redux-form field', () => {
         const onChange = jest.fn();
         const { getByTestId, getByText } = setup({
             itemsList: [

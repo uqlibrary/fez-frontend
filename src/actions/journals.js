@@ -260,7 +260,7 @@ const getAdminJournalRequest = data => {
  * Update work request for admins: put record
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data
- * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function adminJournalUpdate(data) {
     return dispatch => {

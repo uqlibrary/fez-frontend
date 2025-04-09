@@ -8,7 +8,6 @@ export const ThesisSubtypeSelectField = fieldProps => {
     return (
         <NewGenericSelectField
             disabled={fieldProps.disabled}
-            error={!!fieldProps.state?.error}
             errorText={fieldProps.state?.error || fieldProps.errorText}
             itemsList={itemsList}
             value={(!!fieldProps && fieldProps.value) || fieldProps.value || ''}

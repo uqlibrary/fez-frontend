@@ -68,7 +68,7 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
-    /* Run this effect to set error state for redux-form field */
+    /* Run this effect to set error state */
     React.useEffect(() => {
         if (!!state) {
             setInputError(!!state.error);
@@ -77,7 +77,7 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state]);
 
-    /* Run this effect to set error state for non redux-form field */
+    /* Run this effect to set error state */
     React.useEffect(() => {
         if (!state) {
             setInputError(!!error);
