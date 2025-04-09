@@ -105,8 +105,8 @@ ExternalLink.propTypes = {
     className: PropTypes.string,
     openInNewIcon: PropTypes.bool,
     rel: PropTypes.string,
-    height: PropTypes.number || null,
-    width: PropTypes.number || null,
+    height: PropTypes.number,
+    width: PropTypes.number,
     id: PropTypes.string.isRequired,
     inline: PropTypes.bool,
 };

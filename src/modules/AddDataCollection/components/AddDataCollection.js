@@ -48,22 +48,11 @@ import validationErrors from '../../../locale/validationErrors';
  * @param {object} values
  * @return {string}
  */
-const dateRange = data => {
-    const lowerInRange =
-        !!data.fez_record_search_key_start_date &&
-        !!data.fez_record_search_key_start_date.rek_start_date &&
-        moment(data.fez_record_search_key_start_date.rek_start_date);
-    const higherInRange =
-        !!data.fez_record_search_key_end_date &&
-        !!data.fez_record_search_key_end_date.rek_end_date &&
-        moment(data.fez_record_search_key_end_date.rek_end_date);
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.dateRange;
-    } else {
-        return '';
-    }
-};
+const dateRange = data =>
+    validation.dateRange(
+        data?.fez_record_search_key_start_date?.rek_start_date,
+        data?.fez_record_search_key_end_date?.rek_end_date,
+    );
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
