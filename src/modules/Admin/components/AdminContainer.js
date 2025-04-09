@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
@@ -110,12 +109,12 @@ export const AdminContainer = ({ createMode = false }) => {
     ]);
 
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
-    const destroy = React.useCallback(() => form.reset(), [form]);
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid, true));
         return () => {
             console.log('unmount');
+            form.reset();
             dispatch(actions.clearRecordToView());
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -160,7 +159,6 @@ export const AdminContainer = ({ createMode = false }) => {
                                 createMode={createMode}
                                 isDeleted={isDeleted}
                                 isJobCreated={isJobCreated}
-                                destroy={destroy}
                                 locked={locked}
                                 disabled
                                 error={apiUpdateError}
