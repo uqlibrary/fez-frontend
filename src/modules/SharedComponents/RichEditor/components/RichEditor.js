@@ -62,9 +62,6 @@ const RichEditor = ({
             dataForEditor = value;
         } else if (!!value?.htmlText || !!value?.plainText) {
             dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
-        } else if (!!value?.get) {
-            /* istanbul ignore next */
-            dataForEditor = value.get('htmlText') || value.get('plainText') || ''; // TODO, remove
         }
 
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
