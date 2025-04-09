@@ -3,11 +3,6 @@
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> 1`] = `
 <Memo(Connect(ScaleOfSignificanceListEditor))
   errorText={null}
-  input={
-    {
-      "onChange": [MockFunction],
-    }
-  }
   listEditorId="rek-significance"
   onChange={[MockFunction]}
 />
@@ -15,14 +10,6 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 
 exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSignificanceListEditor> with error attributes 1`] = `
 <Memo(Connect(ScaleOfSignificanceListEditor))
-  input={
-    {
-      "onChange": [MockFunction],
-      "state": {
-        "errorText": "test",
-      },
-    }
-  }
   listEditorId="rek-significance"
   onChange={[MockFunction]}
   state={

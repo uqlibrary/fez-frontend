@@ -7,7 +7,6 @@ export default function ScaleOfSignificanceListEditorField(fieldProps) {
             listEditorId="rek-significance"
             errorText={fieldProps.state ? fieldProps.state.error : /* istanbul ignore next */ null}
             error={fieldProps.state && fieldProps.state.error}
-            input={fieldProps}
             {...fieldProps}
         />
     );
