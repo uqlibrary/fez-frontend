@@ -9,8 +9,8 @@ export default function HerdcStatusField(fieldProps) {
             locale={{ label: fieldProps.label }}
             value={(!!fieldProps && fieldProps.value) || ''}
             onChange={(!!fieldProps && fieldProps.onChange) || undefined}
-            errorText={(!!fieldProps.state && fieldProps.state.error) || ''}
             error={!!fieldProps.state?.error}
+            errorText={fieldProps.state?.error}
             genericSelectFieldId="rek-herdc-status"
             {...fieldProps}
         />

@@ -35,7 +35,7 @@ export const TitleOrPidField = props => {
             OptionTemplate={TitleOrPidOptionTemplate}
             defaultValue={props?.value || null}
             error={!!props.state?.error}
-            errorText={(!!props.state && props.state.error) || null}
+            errorText={props.state?.error}
             onClear={() => props.onChange(null)}
         />
     );

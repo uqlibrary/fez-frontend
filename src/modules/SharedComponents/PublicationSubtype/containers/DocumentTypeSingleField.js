@@ -24,7 +24,7 @@ export default function DocumentTypeSingleField(fieldProps) {
     return (
         <NewGenericSelectField
             error={!!fieldProps.state?.error}
-            errorText={!!fieldProps.state && fieldProps.state.error}
+            errorText={fieldProps.state?.error}
             genericSelectFieldId="doc-type-id"
             itemsList={documentTypeList() || []}
             selectPrompt="Please select a display type"

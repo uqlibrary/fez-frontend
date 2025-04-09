@@ -8,7 +8,7 @@ export const FieldOfResearchListField = fieldProps => {
             listEditorId="field-of-research"
             inputField={FieldOfResearchField}
             error={!!fieldProps.state?.error}
-            errorText={fieldProps.state.error}
+            errorText={fieldProps.state?.error}
             {...fieldProps}
         />
     );
@@ -20,7 +20,7 @@ export const FilteredFieldOfResearchListField = fieldProps => {
             listEditorId="filtered-field-of-research"
             inputField={FilteredFieldOfResearchField}
             error={!!fieldProps.state?.error}
-            errorText={fieldProps.state.error}
+            errorText={fieldProps.state?.error}
             {...fieldProps}
         />
     );

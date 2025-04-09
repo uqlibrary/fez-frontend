@@ -65,7 +65,7 @@ export const UqIdField = props => {
                 return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
             }}
             error={!!props.state?.error}
-            errorText={(!!props.state && props.state.error) || props.hintText || 'Enter a value to search'}
+            errorText={props.state?.error || props.hintText || 'Enter a value to search'}
             floatingLabelText={props.floatingLabelText || 'UQ Identifier'}
             OptionTemplate={GenericOptionTemplate}
             disabled={props.disabled}

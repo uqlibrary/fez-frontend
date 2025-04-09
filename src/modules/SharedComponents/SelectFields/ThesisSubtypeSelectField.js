@@ -9,7 +9,7 @@ export const ThesisSubtypeSelectField = fieldProps => {
         <NewGenericSelectField
             disabled={fieldProps.disabled}
             error={!!fieldProps.state?.error}
-            errorText={(!!fieldProps.state && fieldProps.state.error) || fieldProps.errorText}
+            errorText={fieldProps.state?.error || fieldProps.errorText}
             itemsList={itemsList}
             value={(!!fieldProps && fieldProps.value) || fieldProps.value || ''}
             genericSelectFieldId="rek-genre-type"

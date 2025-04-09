@@ -18,7 +18,6 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 2`] = `
 <FreeTextListEditor
   error={false}
-  errorText={null}
   maxInputLength={100}
   onChange={[MockFunction]}
   remindToAdd="test2"

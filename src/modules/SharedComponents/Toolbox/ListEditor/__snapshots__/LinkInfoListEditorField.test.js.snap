@@ -3,7 +3,6 @@
 exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> 1`] = `
 <LinkInfoListEditor
   error={false}
-  errorText={null}
   onChange={[MockFunction]}
 />
 `;
