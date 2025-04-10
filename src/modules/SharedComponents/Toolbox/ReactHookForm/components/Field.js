@@ -34,8 +34,11 @@ export const validateHandler = async (value, formValues, validators) => {
 };
 
 /**
- * A Higher-Order Component (HoC) inspired by the Redux Form <Field> component.
- * It utilizes a custom HoC based on the React Hook Form <Controller> component.
+ * A simple Higher-Order Component (HoC) inspired by the Redux Form <Field> component. It utilizes a custom HoC based
+ * on the React Hook Form <Controller> component.
+ *
+ * Customizations relevant to specific components and cases should be added to a new component that extends
+ * this one.
  *
  * Props notes:
  * - validate: an array of validators that are checks the field's value sequentially, in left-to-right order.

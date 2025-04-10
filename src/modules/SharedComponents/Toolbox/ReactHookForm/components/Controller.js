@@ -2,8 +2,6 @@ import React from 'react';
 import { Controller as Base } from 'react-hook-form';
 
 /**
- * Decorate the original `field` object with additional attributes required to make
- * RHF's HOC <Controller/> compatible with our custom field components.
  * @param {object} field
  * @param {object} fieldState
  * @param {object} formState
@@ -21,6 +19,18 @@ const getDecoratedField = (field, fieldState, formState) => {
     return field;
 };
 
+/**
+ * An extended RHF's HoC <Controller> component, with additional props added to `render`s func `field` param,
+ * required to make it compatible with the project's custom form field components.
+ *
+ * Customizations relevant to specific components and cases should be added to a new component that extends
+ * this one.
+ *
+ * @param {function} render
+ * @param {object} props
+ * @return {Element}
+ * @constructor
+ */
 // eslint-disable-next-line react/prop-types
 const Controller = ({ render, ...props }) => {
     return (
