@@ -36,7 +36,6 @@ export const ContentIndicatorsField = props => {
             itemsList={getContentIndicatorsItemsList(items, props)}
             locale={{ label: props.label }}
             value={getSelected(props)}
-            onChange={(!!props && props.onChange) || undefined}
             {...props}
             disabled={props.disabled || (!props.canUnselect && props?.state?.defaultValue?.length === items.length)}
             genericSelectFieldId="rek-content-indicator"
@@ -45,7 +44,6 @@ export const ContentIndicatorsField = props => {
 };
 
 ContentIndicatorsField.propTypes = {
-    onChange: PropTypes.func,
     state: PropTypes.object,
     label: PropTypes.string,
     displayType: PropTypes.number,

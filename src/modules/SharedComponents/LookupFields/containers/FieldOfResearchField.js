@@ -35,7 +35,7 @@ const FieldOfResearch = props => {
             error={!!props.state?.error}
             itemsList={itemsKeyValueList}
             itemsLoading={itemsLoading}
-            defaultValue={!!props && !!props.value ? { value: props.value } : null}
+            defaultValue={!!props?.value ? { value: props.value } : null}
             getOptionLabel={() => ''}
             OptionTemplate={FoROptionTemplate}
             loadSuggestions={loadSuggestions}

@@ -56,7 +56,7 @@ const SustainableDevelopmentGoalField = props => {
             filterOptions={(options, { inputValue }) => matchSorter(options, inputValue, { keys: ['group', 'value'] })}
             itemsList={itemsList}
             itemsLoading={itemsLoading}
-            defaultValue={!!props && !!props.value ? { value: props.value } : null}
+            defaultValue={!!props?.value ? { value: props.value } : null}
             getOptionLabel={() => ''}
             OptionTemplate={FoROptionTemplate}
             groupBy={option => option.group}

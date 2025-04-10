@@ -23,7 +23,7 @@ export const SeriesField = props => {
             loadSuggestions={loadSuggestions}
             autoCompleteAsynchronousFieldId={props.seriesFieldId || 'rek-series'}
             allowFreeText
-            defaultValue={(!!props && !!props.value && { value: props.value, id: 1 }) || null}
+            defaultValue={(!!props?.value && { value: props.value, id: 1 }) || null}
             errorText={props.state?.error}
             error={!!props.state?.error}
             filterOptions={options => options}
@@ -31,6 +31,7 @@ export const SeriesField = props => {
             itemsList={itemsList}
             itemsLoading={itemsLoading}
             id={'series-field-input'}
+            onChange={item => props.onChange(item.value)}
             onClear={() => props.onChange(null)}
         />
     );

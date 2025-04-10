@@ -31,7 +31,6 @@ export default function HerdcCodeField(fieldProps) {
             itemsList={itemsList}
             locale={{ label: fieldProps.label }}
             value={value}
-            onChange={(!!fieldProps && fieldProps.onChange) || undefined}
             genericSelectFieldId="rek-herdc-code"
             canUnselect
             {...fieldProps}
