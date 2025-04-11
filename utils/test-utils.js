@@ -169,6 +169,27 @@ export const createMatchMedia = width => {
     });
 };
 
+const assertEnabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+const assertDisabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+const waitToBeEnabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
+    );
+const waitToBeDisabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
+    );
+const waitForText = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    !screen.queryByText(text) &&
+    (await waitFor(() => screen.getByText(text), options));
+const waitForTextToBeRemoved = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    screen.queryByText(text) &&
+    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
 const addFilesToFileUploader = async (files, timeout = 500) => {
@@ -193,39 +214,28 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
     }
 };
+const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
+    const { fireEvent } = reactTestingLib;
+    // set all files to closed access
+    for (const file of files) {
+        const index = files.indexOf(file);
+        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
+        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
+        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
+    }
+};
 const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 500) => {
     const { fireEvent, within } = reactTestingLib;
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
+        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
         fireEvent.mouseDown(
             within(screen.getByTestId('files-section-content')).getByTestId(`dsi-security-policy-${index}-select`),
         );
         fireEvent.click(screen.getByRole('option', { name: optionName }));
     }
 };
-
-const assertEnabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
-const assertDisabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
-const waitToBeEnabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
-    );
-const waitToBeDisabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
-    );
-const waitForText = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    !screen.queryByText(text) &&
-    (await waitFor(() => screen.getByText(text), options));
-const waitForTextToBeRemoved = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    screen.queryByText(text) &&
-    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 
 const expectRequiredFieldError = async field =>
     await waitFor(() => {
@@ -238,17 +248,6 @@ const expectMissingRequiredFieldError = async field =>
     (await waitFor(() => {
         expect(screen.queryByTestId(`${field}-helper-text`)).not.toBeInTheDocument();
     }));
-
-const setFileUploaderFilesToClosedAccess = async files => {
-    const { fireEvent } = reactTestingLib;
-    // set all files to closed access
-    for (const file of files) {
-        const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)));
-        fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
-        fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
-    }
-};
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {

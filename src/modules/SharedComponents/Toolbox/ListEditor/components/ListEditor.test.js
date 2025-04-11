@@ -1,6 +1,5 @@
 import React from 'react';
 import ListEditor from './ListEditor';
-import { List } from 'immutable';
 import FreeTextForm from './FreeTextForm';
 import IssnForm from './IssnForm';
 import Button from '@mui/material/Button';
@@ -111,17 +110,15 @@ describe('ListEditor tests', () => {
 
     it('should render input value as itemList', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: [
-                    {
-                        rek_value: 'test 1',
-                    },
-                    {
-                        rek_value: 'test 2',
-                    },
-                ],
-            },
+            name: 'test',
+            value: [
+                {
+                    rek_value: 'test 1',
+                },
+                {
+                    rek_value: 'test 2',
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',
@@ -134,17 +131,15 @@ describe('ListEditor tests', () => {
 
     it('should render input value as itemList for List', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-                value: new List([
-                    {
-                        rek_value: 'test 1',
-                    },
-                    {
-                        rek_value: 'test 2',
-                    },
-                ]),
-            },
+            name: 'test',
+            value: [
+                {
+                    rek_value: 'test 1',
+                },
+                {
+                    rek_value: 'test 2',
+                },
+            ],
             searchKey: {
                 order: 'rek_order',
                 value: 'rek_value',
@@ -156,9 +151,7 @@ describe('ListEditor tests', () => {
 
     it('should process incomplete props without error', () => {
         const { container } = setup({
-            input: {
-                name: 'test',
-            },
+            name: 'test',
         });
         expect(document.querySelector('[data-testid=test-list]').childElementCount).toEqual(0);
         expect(container).toMatchSnapshot();

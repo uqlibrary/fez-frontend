@@ -42,29 +42,17 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { useNavigate } from 'react-router-dom';
 import { createNewRecord, doesDOIExist } from 'actions';
 import validationErrors from '../../../locale/validationErrors';
-import { dateRange as validateDateRange } from 'config/validation';
 
 /**
  * @param {object} value
  * @param {object} values
  * @return {string}
  */
-const dateRange = data => {
-    const lowerInRange =
-        !!data.fez_record_search_key_start_date &&
-        !!data.fez_record_search_key_start_date.rek_start_date &&
-        moment(data.fez_record_search_key_start_date.rek_start_date);
-    const higherInRange =
-        !!data.fez_record_search_key_end_date &&
-        !!data.fez_record_search_key_end_date.rek_end_date &&
-        moment(data.fez_record_search_key_end_date.rek_end_date);
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
-        return locale.validationErrors.dateRange;
-    } else {
-        return '';
-    }
-};
+const dateRange = data =>
+    validation.dateRange(
+        data?.fez_record_search_key_start_date?.rek_start_date,
+        data?.fez_record_search_key_end_date?.rek_end_date,
+    );
 
 /*
  * given an array of licenses containing a heading and an array of description lines,
@@ -95,69 +83,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         // use values instead of defaultValues, as the first triggers a re-render upon updates
         values: {
             ...NEW_DATASET_DEFAULT_VALUES,
-            // debug set required values
-            // ...{
-            //     rek_copyright: 'on',
-            //     rek_title: 'test',
-            //     rek_description: 'test',
-            //     contact: {
-            //         contactName: 'test',
-            //         contactNameId: {
-            //             id: 2000003221,
-            //             value: 'test test (test)',
-            //             aut_id: 2000003221,
-            //             aut_org_username: 'test',
-            //             aut_fname: 'test',
-            //             aut_student_username: 'test',
-            //             aut_lname: 'test',
-            //             aut_org_staff_id: 'test',
-            //             aut_display_name: 'test test',
-            //             aut_org_student_id: 'test',
-            //         },
-            //         contactEmail: 't@t.au',
-            //     },
-            //     fez_record_search_key_doi: {
-            //         rek_doi: '',
-            //     },
-            //     rek_date: '2000-04-01',
-            //     fieldOfResearch: [
-            //         {
-            //             rek_value: {
-            //                 key: 452301,
-            //                 value: '090108 Satellite, Space Vehicle and Missile Design and Testing',
-            //             },
-            //             rek_order: 1,
-            //         },
-            //     ],
-            //     authors: [
-            //         {
-            //             nameAsPublished: 'test',
-            //             creatorRole: 'Project lead/Principal investigator',
-            //             uqIdentifier: '',
-            //             orgaff: '',
-            //             orgtype: '',
-            //             affiliation: '',
-            //             uqUsername: '',
-            //             required: false,
-            //             disabled: false,
-            //             authorId: null,
-            //             aut_title: '',
-            //             affiliations: [],
-            //         },
-            //     ],
-            //     fez_record_search_key_access_conditions: {
-            //         rek_access_conditions: 453619,
-            //     },
-            //     fez_record_search_key_license: {
-            //         rek_license: 453701,
-            //     },
-            //     fez_record_search_key_project_name: {
-            //         rek_project_name: 'test',
-            //     },
-            //     fez_record_search_key_project_description: {
-            //         rek_project_description: 'test',
-            //     },
-            // },
         },
         shouldValidate: true,
     });
@@ -195,7 +120,10 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         control,
         name: ['fez_record_search_key_start_date.rek_start_date', 'fez_record_search_key_end_date.rek_end_date'],
     });
-    const dateError = validateDateRange(startDate, endDate, validationErrors.validationErrors.collectionDateRange);
+    const dateError =
+        !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+            ? validationErrors.validationErrors.collectionDateRange
+            : '';
 
     const validateDOI = async doi => {
         if (!!!doi) return null;

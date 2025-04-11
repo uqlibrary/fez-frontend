@@ -1,7 +1,6 @@
 import React from 'react';
 import AdminContainer from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
-import Immutable from 'immutable';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import Cookies from 'js-cookie';
 
@@ -32,7 +31,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         recordToView: recordWithDatastreams,
         handleSubmit: jest.fn(),
         clearRecordToView: jest.fn(),
-        formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
+        formValues: { rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' },
         ...testProps,
     };
 

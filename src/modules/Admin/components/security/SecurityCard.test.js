@@ -1,8 +1,6 @@
 import React from 'react';
-import Immutable from 'immutable';
 
 import SecurityCard, { getRecordType, isSame } from './SecurityCard';
-import { List } from 'immutable';
 import { DOCUMENT_TYPE_JOURNAL_ARTICLE, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 
@@ -15,7 +13,7 @@ function setup({ values = {}, ...rest } = {}, state = {}) {
         ...rest,
     };
     return rtlRender(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <FormProviderWrapper
                 values={{
                     ...values,
@@ -132,12 +130,12 @@ describe('SecurityCard component', () => {
         const { container, getAllByText } = setup({
             values: {
                 securitySection: {
-                    dataStreams: new List([
+                    dataStreams: [
                         {
                             dsi_dsid: 'test1.txt',
                             dsi_security_policy: 1,
                         },
-                    ]),
+                    ],
                     rek_security_inherited: 1,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,
@@ -203,12 +201,12 @@ describe('SecurityCard component', () => {
         const { container, getAllByText } = setup({
             values: {
                 securitySection: {
-                    dataStreams: new List([
+                    dataStreams: [
                         {
                             dsi_dsid: 'test2.txt',
                             dsi_security_policy: 1,
                         },
-                    ]),
+                    ],
                     rek_security_inherited: 0,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,
@@ -232,7 +230,7 @@ describe('SecurityCard component', () => {
         const { container } = setup({
             values: {
                 securitySection: {
-                    dataStreams: new List([]),
+                    dataStreams: [],
                     rek_security_inherited: 0,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,
@@ -288,12 +286,12 @@ describe('SecurityCard component', () => {
             disabled: true,
             values: {
                 securitySection: {
-                    dataStreams: new List([
+                    dataStreams: [
                         {
                             dsi_dsid: 'test3.txt',
                             dsi_security_policy: 1,
                         },
-                    ]),
+                    ],
                     rek_security_inherited: 0,
                     rek_security_policy: 5,
                     rek_datastream_policy: 5,

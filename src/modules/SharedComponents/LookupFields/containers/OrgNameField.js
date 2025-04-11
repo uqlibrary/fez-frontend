@@ -27,22 +27,9 @@ export const OrgNameField = props => {
             allowFreeText
             getOptionLabel={item => (!!item && String(item.value)) || ''}
             filterOptions={options => options}
-            // If props.meta is set then it's a redux-form Field
-            {...(props.meta
-                ? {
-                      defaultValue: (!!props.input.value && { value: props.input.value }) || null,
-                      error: !!props.meta.error,
-                      errorText: props.meta.error || '',
-                      onChange: item => props.input.onChange(item.value),
-                      onClear: () => props.input.onChange(null),
-                  }
-                : {
-                      defaultValue: (!!props.value && { value: props.value }) || '',
-                      error: props.error,
-                      errorText: props.errorText || '',
-                      onChange: item => props.onChange(item),
-                      onClear: () => props.onChange({ value: null }),
-                  })}
+            defaultValue={(!!props.value && { value: props.value }) || null}
+            onChange={item => props.onChange(item.value)}
+            onClear={() => props.onChange(null)}
             loadSuggestions={loadSuggestions}
         />
     );

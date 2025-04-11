@@ -547,6 +547,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   >
                     <field
                       disabled="false"
+                      haserror=""
                       is="mock"
                       name="fez_record_search_key_start_date.rek_start_date"
                     />
@@ -556,6 +557,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   >
                     <field
                       disabled="false"
+                      haserror=""
                       is="mock"
                       name="fez_record_search_key_end_date.rek_end_date"
                     />

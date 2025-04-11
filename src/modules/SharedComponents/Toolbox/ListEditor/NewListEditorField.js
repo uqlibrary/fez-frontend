@@ -11,18 +11,15 @@ export const NewListEditorField = props => {
         },
     } = props;
 
-    const value = React.useMemo(() => props?.input?.value?.toJS?.() || props?.input?.value || props.value || [], [
-        props,
-    ]);
+    const value = React.useMemo(() => props.value || [], [props]);
     const propNormalize = React.useCallback(() => normalize(value, searchKey), [normalize, searchKey, value]);
     const propValueNormalised = propNormalize();
 
     return (
         <NewListEditor
             key={propValueNormalised.length}
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta && !!props.meta.error}
-            onChange={props?.onChange ?? props?.input?.onChange}
+            error={!!props.state?.error}
+            errorText={props.state?.error}
             remindToAdd={props.remindToAdd}
             list={propValueNormalised}
             searchKey={searchKey}
@@ -37,9 +34,8 @@ NewListEditorField.propTypes = {
     normalize: PropTypes.func,
     onChange: PropTypes.func,
     remindToAdd: PropTypes.bool,
-    input: PropTypes.object,
-    meta: PropTypes.object,
     value: PropTypes.array,
+    state: PropTypes.object,
 };
 
 export default React.memo(NewListEditorField);

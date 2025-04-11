@@ -68,7 +68,7 @@ function setup({ state, ...testProps } = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore initialState={Immutable.Map(initState)}>
+        <WithReduxStore initialState={initState}>
             <WithRouter>
                 <AdminContainer {...props} />
             </WithRouter>
@@ -158,31 +158,6 @@ describe('AdminContainer component', () => {
         });
         expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toBeNull();
     });
-
-    // it('should not render non-security errors for community editing', () => {
-    //     const { container } = setup({
-    //         state: {
-    //             recordToView: {
-    //                 rek_pid: 'UQ:367646',
-    //                 rek_title: 'View across Windsor Castle',
-    //                 rek_description: 'Henry William Mobsby was born on 17 August 1860',
-    //                 rek_display_type: 11,
-    //                 rek_display_type_lookup: 'Community',
-    //             },
-    //         },
-    //         // formErrors: Immutable.Map({
-    //         //     bibliographicSection: {
-    //         //         rek_date: 'Publication date is required',
-    //         //         rek_title: 'Title is required',
-    //         //     },
-    //         //     securitySection: {
-    //         //         rek_security_policy: 'Policy is required',
-    //         //     },
-    //         // }),
-    //     });
-    //     preview.debug();
-    //     expect(container).toMatchSnapshot();
-    // });
 
     describe('React hooks', () => {
         it('should call clearRecordToView() prop on unload', () => {

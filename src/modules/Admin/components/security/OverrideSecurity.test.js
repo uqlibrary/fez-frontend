@@ -6,9 +6,7 @@ const setup = (testProps, renderer = rtlRender) => {
     const props = {
         label: 'test',
         overrideSecurityId: 'test',
-        input: {
-            onChange: jest.fn(),
-        },
+        onChange: jest.fn(),
         ...testProps,
     };
     return renderer(<OverrideSecurity {...props} />);
@@ -21,12 +19,12 @@ describe('OverrideSecurity component', () => {
     });
     it('should send correct value in onChange', async () => {
         const testFn = jest.fn();
-        const { getByTestId, rerender } = setup({ input: { onChange: testFn } });
+        const { getByTestId, rerender } = setup({ onChange: testFn });
         await userEvent.click(getByTestId('test-input'));
         expect(testFn).toHaveBeenCalledWith(0); // checked
 
         // rerender to checked state
-        setup({ input: { onChange: testFn, value: true } }, rerender);
+        setup({ onChange: testFn, value: true }, rerender);
         await userEvent.click(getByTestId('test-input'));
         expect(testFn).toHaveBeenLastCalledWith(1); // unchecked
     });

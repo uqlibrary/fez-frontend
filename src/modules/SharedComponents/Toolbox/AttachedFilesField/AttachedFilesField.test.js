@@ -8,14 +8,12 @@ import {
     handleDatastreamChange,
     handleDatastreamMultiChange,
 } from './AttachedFilesField';
-import Immutable from 'immutable';
 
 jest.mock('context');
 import { useRecordContext } from 'context';
 
 function setup({ values, ...testProps }) {
     const props = {
-        input: {},
         onRenameAttachedFile: jest.fn(),
         onDeleteAttachedFile: jest.fn(),
         ...testProps,
@@ -84,8 +82,8 @@ describe('AttachedFilesField component', () => {
             values: {
                 fez_datastream_info: undefined,
             },
-            meta: {
-                initial: Immutable.List(newDs),
+            state: {
+                defaultValue: newDs,
             },
         });
         expect(container).toMatchSnapshot();
