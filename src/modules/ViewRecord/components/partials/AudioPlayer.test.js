@@ -1,13 +1,11 @@
 import React from 'react';
-import { journalArticle } from 'mock/data/testing/records';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 import AudioPlayer from './AudioPlayer';
 
 function setup(testProps = {}) {
     const props = {
         ...testProps,
-        fileName:
-            testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+        fileName: testProps.fileName || 'test_t.mp3',
         mimeType: testProps.mimeType || 'audio/mp3',
     };
     return rtlRender(<AudioPlayer {...props} />);
@@ -31,8 +29,8 @@ describe('Audio Player Component ', () => {
     it('should play and pause via buttons clicks', () => {
         const { getByRole, queryByRole } = setup();
 
-        const playBtnLabel = 'Click to play audio file UQ676287_OA.pdf';
-        const pauseBtnLabel = 'Click to pause audio file UQ676287_OA.pdf';
+        const playBtnLabel = 'Click to play audio file test_t.mp3';
+        const pauseBtnLabel = 'Click to pause audio file test_t.mp3';
         // play
         fireEvent.click(getByRole('button', { name: playBtnLabel }));
         expect(playMock).toHaveBeenCalledTimes(1);
@@ -49,8 +47,8 @@ describe('Audio Player Component ', () => {
         playMock = jest.spyOn(window.HTMLAudioElement.prototype, 'play').mockImplementation(() => Promise.resolve());
         const { getByRole, queryByRole } = setup();
 
-        const playBtnLabel = 'Click to play audio file UQ676287_OA.pdf';
-        const pauseBtnLabel = 'Click to pause audio file UQ676287_OA.pdf';
+        const playBtnLabel = 'Click to play audio file test_t.mp3';
+        const pauseBtnLabel = 'Click to pause audio file test_t.mp3';
 
         await waitFor(() => fireEvent.click(getByRole('button', { name: playBtnLabel })));
         expect(playMock).toHaveBeenCalledTimes(1);

@@ -32,7 +32,15 @@ const internalClasses = {
     },
 };
 
-const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
+const ExternalLink = ({
+    children,
+    className = '',
+    openInNewIcon = true,
+    height = null,
+    width = null,
+    inline = false,
+    ...rest
+}) => {
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
             link,
@@ -95,10 +103,10 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
 ExternalLink.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
-    height: PropTypes.number,
     openInNewIcon: PropTypes.bool,
     rel: PropTypes.string,
-    width: PropTypes.number,
+    height: PropTypes.number | null,
+    width: PropTypes.number | null,
     id: PropTypes.string.isRequired,
     inline: PropTypes.bool,
 };

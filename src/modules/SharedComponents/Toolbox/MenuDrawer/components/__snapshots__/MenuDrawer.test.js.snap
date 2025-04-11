@@ -87,67 +87,59 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             </button>
           </div>
         </div>
-        <span
-          class="menu-item-container"
+        <div
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
+          id="menu-item-0"
+          role="button"
+          tabindex="0"
         >
           <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-bshv44-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-0"
-            role="button"
-            tabindex="0"
+            class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
+            id="menu-itemText-0"
           >
-            <div
-              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-              id="menu-itemText-0"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-              >
-                Primary text 0
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-              >
-                secondary text 0
-              </p>
-            </div>
             <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+            >
+              Primary text 0
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+            >
+              secondary text 0
+            </p>
           </div>
-        </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
         <hr
           class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
         />
-        <span
-          class="menu-item-container"
+        <div
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
+          id="menu-item-2"
+          role="button"
+          tabindex="0"
         >
           <div
-            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-bshv44-MuiButtonBase-root-MuiListItem-root"
-            id="menu-item-2"
-            role="button"
-            tabindex="0"
+            class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
+            id="menu-itemText-2"
           >
-            <div
-              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-              id="menu-itemText-2"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-              >
-                Primary text 1
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-              >
-                secondary text 1
-              </p>
-            </div>
             <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+            >
+              Primary text 1
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+            >
+              secondary text 1
+            </p>
           </div>
-        </span>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
       </nav>
       <div
         data-testid="after-menu-drawer"
@@ -254,7 +246,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
             class="css-16sk7k9"
             id="skipNav"
             tabindex="1"
-            type="button"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-sghohy-MuiButtonBase-root-MuiButton-root"
@@ -267,67 +258,59 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               />
             </button>
           </div>
-          <span
-            class="menu-item-container"
+          <div
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
+            id="menu-item-0"
+            role="button"
+            tabindex="0"
           >
             <div
-              class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-bshv44-MuiButtonBase-root-MuiListItem-root"
-              id="menu-item-0"
-              role="button"
-              tabindex="0"
+              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
+              id="menu-itemText-0"
             >
-              <div
-                class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-                id="menu-itemText-0"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-                >
-                  Primary text 0
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-                >
-                  secondary text 0
-                </p>
-              </div>
               <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+              >
+                Primary text 0
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+              >
+                secondary text 0
+              </p>
             </div>
-          </span>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
           />
-          <span
-            class="menu-item-container"
+          <div
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button menu-item-container css-bshv44-MuiButtonBase-root-MuiListItem-root"
+            id="menu-item-2"
+            role="button"
+            tabindex="0"
           >
             <div
-              class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-bshv44-MuiButtonBase-root-MuiListItem-root"
-              id="menu-item-2"
-              role="button"
-              tabindex="0"
+              class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
+              id="menu-itemText-2"
             >
-              <div
-                class="MuiListItemText-root MuiListItemText-multiline css-5e9f31-MuiListItemText-root"
-                id="menu-itemText-2"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-                >
-                  Primary text 1
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
-                >
-                  secondary text 1
-                </p>
-              </div>
               <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+              >
+                Primary text 1
+              </span>
+              <p
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+              >
+                secondary text 1
+              </p>
             </div>
-          </span>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </div>
         </nav>
         <div
           data-testid="after-menu-drawer"

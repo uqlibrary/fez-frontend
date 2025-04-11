@@ -4424,27 +4424,19 @@ describe('transformers', () => {
         });
 
         it('should get architects search key', () => {
-            const data = {
-                architects: [
-                    { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
-                    { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
-                    { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
-                    { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
-                ],
-            };
+            const data = [
+                { nameAsPublished: 'Smith A.' },
+                { nameAsPublished: 'Smith B.' },
+                { nameAsPublished: 'Smith C.' },
+                { nameAsPublished: 'Smith D.' },
+            ];
 
-            expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
-                fez_record_search_key_architect: [
-                    { rek_architect: 'Smith A.', rek_architect_order: 1 },
-                    { rek_architect: 'Smith B.', rek_architect_order: 2 },
-                    { rek_architect: 'Smith C.', rek_architect_order: 3 },
-                    { rek_architect: 'Smith D.', rek_architect_order: 4 },
-                ],
-                fez_record_search_key_architect_id: [
-                    { rek_architect_id: 0, rek_architect_id_order: 1 },
-                    { rek_architect_id: 100, rek_architect_id_order: 2 },
-                    { rek_architect_id: 0, rek_architect_id_order: 3 },
-                    { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            expect(transformers.getRecordArchitectsSearchKey(data)).toEqual({
+                fez_record_search_key_architect_name: [
+                    { rek_architect_name: 'Smith A.', rek_architect_name_order: 1 },
+                    { rek_architect_name: 'Smith B.', rek_architect_name_order: 2 },
+                    { rek_architect_name: 'Smith C.', rek_architect_name_order: 3 },
+                    { rek_architect_name: 'Smith D.', rek_architect_name_order: 4 },
                 ],
             });
         });
