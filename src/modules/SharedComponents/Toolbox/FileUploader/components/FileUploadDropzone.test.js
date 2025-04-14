@@ -4,7 +4,6 @@ import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
 import { FormValuesContext } from 'context';
-import Immutable from 'immutable';
 
 function setup(testProps = {}, formValues = {}) {
     const props = {
@@ -89,10 +88,7 @@ describe('Component FileUploadDropzone', () => {
     // eslint-disable-next-line max-len
     it('should remove files with same filename but different extension from dropped incoming files if already exist', async () => {
         const onDropFn = jest.fn();
-        const { getByTestId } = setup(
-            { onDrop: onDropFn },
-            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'hello.txt' }]) },
-        );
+        const { getByTestId } = setup({ onDrop: onDropFn }, { fez_datastream_info: [{ dsi_dsid: 'hello.txt' }] });
         const file = new File(['hello'], 'hello.png', { type: 'image/png' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
@@ -109,10 +105,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should remove files with same filename but different extension and different casing from dropped incoming files if already exist', async () => {
         const onDropFn = jest.fn();
-        const { getByTestId } = setup(
-            { onDrop: onDropFn },
-            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'FiLeA.pdf' }]) },
-        );
+        const { getByTestId } = setup({ onDrop: onDropFn }, { fez_datastream_info: [{ dsi_dsid: 'FiLeA.pdf' }] });
         const file = new File(['hello'], 'fileb.png', { type: 'image/png' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {
@@ -134,7 +127,7 @@ describe('Component FileUploadDropzone', () => {
         const onDropFn = jest.fn();
         const { getByTestId } = setup(
             { onDrop: onDropFn },
-            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'filec.pdf', dsi_dsid_new: 'filea.pdf' }]) },
+            { fez_datastream_info: [{ dsi_dsid: 'filec.pdf', dsi_dsid_new: 'filea.pdf' }] },
         );
         const file = new File(['hello'], 'fileb.png', { type: 'image/png' });
 
@@ -155,10 +148,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should remove duplicate filenames if duplicated in both dropped and existing', async () => {
         const onDropFn = jest.fn();
-        const { getByTestId } = setup(
-            { onDrop: onDropFn },
-            { fez_datastream_info: Immutable.List([{ dsi_dsid: 'a.pdf' }]) },
-        );
+        const { getByTestId } = setup({ onDrop: onDropFn }, { fez_datastream_info: [{ dsi_dsid: 'a.pdf' }] });
         const file = new File(['hello'], 'b.pdf', { type: 'application/pdf' });
 
         fireEvent.drop(getByTestId('fez-datastream-info-input'), {

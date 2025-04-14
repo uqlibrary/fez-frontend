@@ -67,7 +67,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
 AuthorFieldData.propTypes = {
     authorFieldDataId: PropTypes.string,
     data: PropTypes.string,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     label: PropTypes.string,
     helperText: PropTypes.string,
     error: PropTypes.bool,

@@ -402,7 +402,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r5:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-code-select"
@@ -461,7 +461,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r6:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-herdc-status-select"
@@ -520,7 +520,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r7:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-institutional-status-select"
@@ -575,7 +575,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r8:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-refereed-source-select"
@@ -630,7 +630,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r9:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-content-indicator-select"
@@ -689,7 +689,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":ra:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-select"
@@ -744,7 +744,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":rb:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-oa-status-type-select"
@@ -803,7 +803,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":rc:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-license-select"
@@ -1010,7 +1010,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":rd:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-language-select"
@@ -1568,7 +1568,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-yyhjw1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":rn:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="rek-date-month-select"
@@ -1998,6 +1998,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     <input
                                       aria-autocomplete="list"
                                       aria-expanded="false"
+                                      aria-invalid="false"
                                       autocapitalize="none"
                                       autocomplete="off"
                                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-8sgtit-MuiInputBase-input-MuiInput-input"
@@ -3581,7 +3582,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
-                                        aria-controls=":r1j:"
+                                        aria-controls="<dynamic>"
                                         aria-disabled="true"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
@@ -5726,7 +5727,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-sj4km9-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
-                                  aria-controls=":r2d:"
+                                  aria-controls="<dynamic>"
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-labelledby="rek-sensitive-handling-note-id-select"
@@ -6214,7 +6215,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2e:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-0-select"
@@ -6298,7 +6299,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2f:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-1-select"
@@ -6382,7 +6383,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2g:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-2-select"
@@ -6466,7 +6467,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2h:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-3-select"
@@ -6550,7 +6551,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2i:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-4-select"
@@ -6634,7 +6635,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2j:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-5-select"
@@ -6718,7 +6719,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2k:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-6-select"
@@ -6802,7 +6803,7 @@ exports[`AdminContainer component should render default view 1`] = `
 }"
                                     >
                                       <div
-                                        aria-controls=":r2l:"
+                                        aria-controls="<dynamic>"
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
                                         aria-labelledby="dsi-security-policy-7-select"

@@ -3,7 +3,6 @@ import AddFavouriteSearchIcon from './AddFavouriteSearchIcon';
 import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-utils';
 import * as Context from 'context';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
-import Immutable from 'immutable';
 
 import { useLocation } from 'react-router-dom';
 jest.mock('react-router-dom', () => ({
@@ -11,7 +10,7 @@ jest.mock('react-router-dom', () => ({
     useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
 }));
 
-function setup(state = Immutable.Map({})) {
+function setup(state = {}) {
     return render(
         <WithRouter>
             <WithReduxStore initialState={state}>
@@ -32,13 +31,11 @@ describe('Component AddFavouriteSearchIcon', () => {
 
         useAccountContext.mockImplementation(() => ({ account: { id: 'uqtest' } }));
 
-        const { getByTestId } = setup(
-            Immutable.Map({
-                searchRecordsReducer: {
-                    publicationsList: [{ rek_id: 'UQ:12356' }],
-                },
-            }),
-        );
+        const { getByTestId } = setup({
+            searchRecordsReducer: {
+                publicationsList: [{ rek_id: 'UQ:12356' }],
+            },
+        });
 
         fireEvent.click(getByTestId('favourite-search-save'));
 
@@ -56,16 +53,14 @@ describe('Component AddFavouriteSearchIcon', () => {
     });
 
     it('should display icon for saved search as favourite search as an admin user', () => {
-        const { getByTestId } = setup(
-            Immutable.Map({
-                searchRecordsReducer: {
-                    publicationsList: [{ rek_id: 'UQ:12356' }],
-                },
-                favouriteSearchReducer: {
-                    favouriteSearchAddSuccess: true,
-                },
-            }),
-        );
+        const { getByTestId } = setup({
+            searchRecordsReducer: {
+                publicationsList: [{ rek_id: 'UQ:12356' }],
+            },
+            favouriteSearchReducer: {
+                favouriteSearchAddSuccess: true,
+            },
+        });
 
         expect(getByTestId('favourite-search-saved')).toBeInTheDocument();
     });
@@ -78,16 +73,14 @@ describe('Component AddFavouriteSearchIcon', () => {
                 redirectedFromNotFound: true,
             },
         }));
-        const { getByTestId } = setup(
-            Immutable.Map({
-                searchRecordsReducer: {
-                    publicationsList: [{ rek_id: 'UQ:12356' }],
-                },
-                favouriteSearchReducer: {
-                    favouriteSearchAddSuccess: false,
-                },
-            }),
-        );
+        const { getByTestId } = setup({
+            searchRecordsReducer: {
+                publicationsList: [{ rek_id: 'UQ:12356' }],
+            },
+            favouriteSearchReducer: {
+                favouriteSearchAddSuccess: false,
+            },
+        });
         expect(getByTestId('favourite-search-saved')).toBeInTheDocument();
     });
 });
