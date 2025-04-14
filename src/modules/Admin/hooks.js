@@ -39,10 +39,10 @@ export const useRecord = createMode => {
         error,
     } = useSelector(state => state.get('viewRecordReducer'));
 
-    const initialFormValues = useMemo(() => {
-        return getInitialValuesForForm(recordToView, createMode);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [createMode, JSON.stringify(recordToView)]);
+    const initialFormValues = useMemo(() => getInitialValuesForForm(recordToView, createMode), [
+        createMode,
+        recordToView,
+    ]);
 
     return {
         loadingRecordToView,

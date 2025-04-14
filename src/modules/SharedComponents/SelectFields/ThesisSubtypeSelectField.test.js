@@ -20,8 +20,10 @@ describe('ThesisSubtypeSelectField', () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByText, queryByText } = setup({
-            onChange: onChangeFn,
-            state: {
+            input: {
+                onChange: onChangeFn,
+            },
+            meta: {
                 error: 'This field is required',
             },
             selectPrompt: 'Please select a thesis subtype',
@@ -67,8 +69,10 @@ describe('ThesisSubtypeSelectField', () => {
         const onChangeFn = jest.fn();
 
         const { getByTestId, getByText, queryByText } = setup({
-            onChange: onChangeFn,
-            state: {
+            input: {
+                onChange: onChangeFn,
+            },
+            meta: {
                 error: 'This field is required',
             },
             selectPrompt: 'Please select a thesis subtype',

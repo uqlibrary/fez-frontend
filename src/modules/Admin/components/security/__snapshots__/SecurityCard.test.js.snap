@@ -212,7 +212,7 @@ exports[`SecurityCard component should mount with default props for a collection
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r1:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
@@ -322,7 +322,7 @@ exports[`SecurityCard component should mount with default props for a collection
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r2:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="rek-datastream-policy-select"
@@ -679,7 +679,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
 }"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r0:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
@@ -941,7 +941,7 @@ exports[`SecurityCard component should render security card correctly for collec
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r6:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -1052,7 +1052,7 @@ exports[`SecurityCard component should render security card correctly for collec
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r7:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -1214,7 +1214,7 @@ exports[`SecurityCard component should render security card correctly for commun
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r8:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
@@ -1565,7 +1565,7 @@ exports[`SecurityCard component should render security card correctly for record
 }"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r3:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
@@ -1777,7 +1777,7 @@ exports[`SecurityCard component should render security card correctly for record
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r4:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
@@ -1994,7 +1994,7 @@ exports[`SecurityCard component should render security card correctly for record
 }"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r5:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
@@ -2209,7 +2209,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r9:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -2427,7 +2427,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":ra:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -2643,7 +2643,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r9:"
                         aria-disabled="true"
                         aria-expanded="false"
                         aria-haspopup="listbox"
@@ -2861,7 +2861,7 @@ exports[`SecurityCard component should render security card with disabled inputs
 }"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":ra:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"

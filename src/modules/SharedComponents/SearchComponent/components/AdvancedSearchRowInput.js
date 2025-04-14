@@ -97,7 +97,7 @@ const getInputProps = (inputField, value, onChange, label) => {
                 id: inputField.id,
                 placeholder: inputField.hint,
                 autoCompleteAsynchronousFieldId: inputField.id,
-                onChange: item => onChange(item, item),
+                onChange: item => onChange(item.value, item.value),
             };
         case 'AuthorIdLookup':
         case 'ContributorIdLookup':

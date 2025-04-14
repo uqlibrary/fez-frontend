@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable from 'immutable';
 import {
     ContentIndicatorsField,
     getContentIndicatorsItemsList,
@@ -30,22 +31,26 @@ describe('ContentIndicatorsField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            value: [454079, 454080],
-            onChange: jest.fn(),
-            state: {
+            input: {
+                value: [454079, 454080],
+                onChange: jest.fn(),
+            },
+            meta: {
                 error: 'Test error',
             },
         });
         expect(container).toMatchSnapshot();
     });
 
-    it('should render with given field props in list', () => {
+    it('should render with given field props in immutable list', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            value: [454079, 454080],
-            onChange: jest.fn(),
-            state: {
+            input: {
+                value: Immutable.List([454079, 454080]),
+                onChange: jest.fn(),
+            },
+            meta: {
                 error: 'Test error',
             },
         });
@@ -54,8 +59,8 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark existing indicators as disabled', () => {
         const input = {
-            state: {
-                defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            meta: {
+                initial: Immutable.List([CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value]),
             },
         };
         const expected = CONTENT_INDICATORS.map(item => ({
@@ -70,8 +75,8 @@ describe('ContentIndicatorsField component', () => {
     it('should not mark existing indicators as disabled for admins', () => {
         const input = {
             canUnselect: true,
-            state: {
-                defaultValue: [CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value],
+            meta: {
+                initial: Immutable.List([CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value]),
             },
         };
         const expected = CONTENT_INDICATORS.map(item => ({
@@ -96,8 +101,8 @@ describe('ContentIndicatorsField component', () => {
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
         const { container } = setup({
-            state: {
-                defaultValue: CONTENT_INDICATORS,
+            meta: {
+                initial: Immutable.List(CONTENT_INDICATORS),
             },
         });
         expect(container).toMatchSnapshot();
@@ -125,8 +130,8 @@ describe('ContentIndicatorsField component', () => {
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
         const { container } = setup({
-            state: {
-                defaultValue: CONTENT_INDICATORS,
+            meta: {
+                initial: Immutable.List(CONTENT_INDICATORS),
             },
             canUnselect: true,
         });

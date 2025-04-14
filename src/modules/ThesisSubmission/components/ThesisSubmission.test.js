@@ -19,6 +19,7 @@ import {
     assertInstanceOfFile,
 } from 'test-utils';
 import { useAccountContext } from 'context';
+import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 import { FIELD_OF_RESEARCH_VOCAB_ID } from 'config/general';
 import { vocabulariesList } from '../../../mock/data';
@@ -45,7 +46,7 @@ function setup(props = {}) {
         },
     }));
 
-    const state = {
+    const state = Immutable.Map({
         accountReducer: {
             author: props.author,
             isSessionExpired: props.isSessionExpired,
@@ -58,7 +59,7 @@ function setup(props = {}) {
             fullyUploadedFiles: props.fullyUploadedFiles,
             isUploadInProgress: props.isUploadInProgress,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>

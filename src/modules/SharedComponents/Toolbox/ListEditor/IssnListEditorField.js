@@ -26,8 +26,9 @@ export default function IssnListEditorField(fieldProps) {
     return (
         <ListEditor
             formComponent={IssnForm}
-            error={!!fieldProps.state?.error}
-            errorText={fieldProps.state?.error}
+            errorText={fieldProps.meta ? fieldProps.meta.error : null}
+            error={fieldProps.meta && !!fieldProps.meta.error}
+            onChange={fieldProps.input?.onChange}
             remindToAdd={fieldProps.remindToAdd}
             inputNormalizer={normalizeIssn}
             transformFunction={transformIssn}

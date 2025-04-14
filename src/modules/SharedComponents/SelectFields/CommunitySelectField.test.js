@@ -33,8 +33,10 @@ describe('CommunitySelectField', () => {
             });
 
         const { getByTestId, getByText } = setup({
-            onChange: onChangeFn,
-            state: {
+            input: {
+                onChange: onChangeFn,
+            },
+            meta: {
                 error: 'This field is required',
             },
             loadingHint: 'Loading communities...',
@@ -54,4 +56,31 @@ describe('CommunitySelectField', () => {
 
         expect(onChangeFn).toHaveBeenCalledWith('UQ:123');
     });
+
+    // it('should not render community list', async () => {
+    //     const onChangeFn = jest.fn();
+
+    //     mockApi
+    //         .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: '.*' }).apiUrl)
+    //         .replyOnce(200, {
+    //             data: [],
+    //         });
+
+    //     const { getByTestId, getByText } = setup({
+    //         input: {
+    //             onChange: onChangeFn,
+    //         },
+    //         meta: {
+    //             error: 'This field is required',
+    //         },
+    //         loadingHint: 'Loading communities...',
+    //         selectPrompt: 'Please select a community',
+    //     });
+
+    //     expect(getByTestId('community-pid-helper-text')).toBeInTheDocument();
+    //     expect(getByTestId('community-pid-helper-text')).toHaveTextContent('This field is required');
+    //     expect(getByText('Loading communities...')).toBeInTheDocument();
+
+    //     await waitFor(() => getByText('Please select a community'));
+    // });
 });

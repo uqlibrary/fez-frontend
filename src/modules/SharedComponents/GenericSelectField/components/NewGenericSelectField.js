@@ -21,12 +21,13 @@ export const NewGenericSelectField = ({
     formHelperTextProps,
     genericSelectFieldId,
     hideLabel,
+    input,
     itemsList = [],
     itemsLoading,
     label,
     loadItemsList,
     loadingHint = 'Loading items...',
-    state,
+    meta,
     multiple = false,
     onChange,
     required,
@@ -58,28 +59,38 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    /* Run this effect to set value from redux-form field */
+    React.useEffect(() => {
+        if (!!input && (!!input.value || Number.isFinite(input?.value))) {
+            setSelectValue(!!input.value.toJS ? input.value.toJS() : input.value);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [input]);
+
     /* Run this effect to set value for non redux-form field */
     React.useEffect(() => {
-        if (multiple) {
-            value.length > 0 ? setSelectValue(value) : setSelectValue([]);
-        } else {
-            !!value ? setSelectValue(value) : setSelectValue('');
+        if (!input) {
+            if (multiple) {
+                value.length > 0 ? setSelectValue(value) : setSelectValue([]);
+            } else {
+                !!value ? setSelectValue(value) : setSelectValue('');
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
-    /* Run this effect to set error state */
+    /* Run this effect to set error state for redux-form field */
     React.useEffect(() => {
-        if (!!state) {
-            setInputError(!!state.error);
-            setInputErrorText(state.error);
+        if (!!meta) {
+            setInputError(!!meta.error);
+            setInputErrorText(meta.error);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state]);
+    }, [meta]);
 
-    /* Run this effect to set error state */
+    /* Run this effect to set error state for non redux-form field */
     React.useEffect(() => {
-        if (!state) {
+        if (!meta) {
             setInputError(!!error);
             setInputErrorText(!!error ? errorText || error : null);
         }
@@ -87,7 +98,8 @@ export const NewGenericSelectField = ({
     }, [error]);
 
     const handleChange = React.useCallback(event => {
-        onChange?.(event.target.value) || /* istanbul ignore next */ onChange?.(event.target.value);
+        // TODO - remove input.onChange post RHF migration
+        onChange?.(event.target.value) || /* istanbul ignore next */ input?.onChange?.(event.target.value);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -185,7 +197,8 @@ NewGenericSelectField.propTypes = {
     formHelperTextProps: PropTypes.object,
     genericSelectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
-    state: PropTypes.object,
+    input: PropTypes.object,
+    meta: PropTypes.object,
     itemsList: PropTypes.arrayOf(
         PropTypes.shape({
             text: PropTypes.string.isRequired,

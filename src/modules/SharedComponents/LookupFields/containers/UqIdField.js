@@ -64,14 +64,15 @@ export const UqIdField = props => {
                 const fuseAutocompleteOptions = new Fuse(options, fuseOptions);
                 return fuseAutocompleteOptions.search(inputValue).map(item => item.item);
             }}
-            error={!!props.state?.error}
-            errorText={props.state?.error || props.hintText || 'Enter a value to search'}
+            error={!!props.meta && !!props.meta.error}
+            errorText={(!!props.meta && props.meta.error) || props.hintText || 'Enter a value to search'}
             floatingLabelText={props.floatingLabelText || 'UQ Identifier'}
             OptionTemplate={GenericOptionTemplate}
             disabled={props.disabled}
             loadSuggestions={loadSuggestions}
             clearSuggestions={() => dispatch(actions.clearAuthorsSuggestions())}
-            onClear={!!props?.value ? props.onClear : () => {}}
+            onChange={props.onChange || (!!props.input && props.input.onChange)}
+            onClear={!!props.value || (!!props.input && !!props.input.value) ? props.onClear : () => {}}
         />
     );
 };

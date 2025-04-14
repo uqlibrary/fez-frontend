@@ -60,6 +60,7 @@ export const NameData = () => {
                     userFieldDataId="usr-administrator"
                     name="usr_administrator"
                     type="checkbox"
+                    // onChange={handleUserAdministrator}
                     {...isAdmin}
                 />
                 <Field
@@ -68,6 +69,7 @@ export const NameData = () => {
                     name="usr_super_administrator"
                     type="checkbox"
                     disabled={!isUserSuperAdmin}
+                    // onChange={handleUserSuperAdministrator}
                     {...isSuperAdmin}
                 />
             </Grid>

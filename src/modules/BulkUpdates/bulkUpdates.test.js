@@ -1,11 +1,12 @@
 import React from 'react';
+import Immutable from 'immutable';
 import BulkUpdates from './index';
 import { render, WithReduxStore, waitForElementToBeRemoved } from 'test-utils';
 import * as routes from 'repositories/routes';
 
 import * as BulkUpdatesActions from 'actions/bulkUpdates';
 
-function setup(state = {}) {
+function setup(state = Immutable.Map({})) {
     return render(
         <WithReduxStore initialState={state}>
             <BulkUpdates />

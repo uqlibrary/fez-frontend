@@ -1,8 +1,9 @@
 import * as validation from './validation';
 import { locale } from 'locale';
 import { APP_URL, viewRecordsConfig } from 'config';
+import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
-import { isFileValid } from './validation';
+import { dateRange, isFileValid } from './validation';
 import { STATE_DELETED } from './viewRecord';
 
 describe('Validation method', () => {
@@ -238,13 +239,16 @@ describe('Validation method', () => {
     });
 
     it('should conditionally validate file uploader based on open access value', () => {
-        expect(validation.fileUploadNotRequiredForMediated(undefined, {})).toEqual(
+        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(
             locale.validationErrors.fileUploadRequired,
         );
         expect(
-            validation.fileUploadNotRequiredForMediated(undefined, {
-                fez_record_search_key_access_conditions: { rek_access_conditions: MEDIATED_ACCESS_ID },
-            }),
+            validation.fileUploadNotRequiredForMediated(
+                undefined,
+                Immutable.Map({
+                    fez_record_search_key_access_conditions: { rek_access_conditions: MEDIATED_ACCESS_ID },
+                }),
+            ),
         ).toEqual(undefined);
     });
 });

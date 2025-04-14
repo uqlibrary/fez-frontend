@@ -28,7 +28,8 @@ import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './api-mock';
 import { isEmptyObject } from '../src/helpers/general';
-import { locale } from 'locale';
+import { locale } from '../src/locale';
+
 import { isPlainObject } from 'lodash';
 
 export const AllTheProviders = props => {
@@ -169,27 +170,6 @@ export const createMatchMedia = width => {
     });
 };
 
-const assertEnabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
-const assertDisabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
-const waitToBeEnabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
-    );
-const waitToBeDisabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
-    );
-const waitForText = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    !screen.queryByText(text) &&
-    (await waitFor(() => screen.getByText(text), options));
-const waitForTextToBeRemoved = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    screen.queryByText(text) &&
-    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
-
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
 const addFilesToFileUploader = async (files, timeout = 500) => {
@@ -219,7 +199,7 @@ const setFileUploaderFilesToClosedAccess = async (files, timeout = 500) => {
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
         fireEvent.mouseDown(screen.getByTestId(`dsi-open-access-${index}-select`));
         fireEvent.click(screen.getByRole('option', { name: 'Closed Access' }));
     }
@@ -229,13 +209,34 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
     // set all files to closed access
     for (const file of files) {
         const index = files.indexOf(file);
-        await waitForText(new RegExp(getFilenameBasename(file)), { timeout });
+        await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
         fireEvent.mouseDown(
             within(screen.getByTestId('files-section-content')).getByTestId(`dsi-security-policy-${index}-select`),
         );
         fireEvent.click(screen.getByRole('option', { name: optionName }));
     }
 };
+
+const assertEnabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+const assertDisabled = element =>
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+const waitToBeEnabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
+    );
+const waitToBeDisabled = async element =>
+    await waitFor(() =>
+        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
+    );
+const waitForText = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    !screen.queryByText(text) &&
+    (await waitFor(() => screen.getByText(text), options));
+const waitForTextToBeRemoved = async (text, options) =>
+    ((typeof text === 'string' && !!text.trim().length) || text) &&
+    screen.queryByText(text) &&
+    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 
 const expectRequiredFieldError = async field =>
     await waitFor(() => {

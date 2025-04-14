@@ -42,7 +42,9 @@ export const SecurityCard = ({ disabled }) => {
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
-    const dataStreams = formValues?.dataStreams;
+    const dataStreams = !!(formValues?.dataStreams || {}).toJS
+        ? formValues.dataStreams.toJS()
+        : formValues?.dataStreams;
     const isOverrideSecurityChecked =
         formValues?.rek_security_inherited === true || formValues?.rek_security_inherited === 0;
     const securityPolicy = formValues?.rek_security_policy;

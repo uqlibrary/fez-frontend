@@ -26,7 +26,7 @@ const RadioGroupField = props => {
                     name={filteredProps.name}
                     onChange={filteredProps.onChange}
                     value={filteredProps.value}
-                    defaultValue={filteredProps.state?.defaultValue}
+                    defaultValue={filteredProps.defaultValue}
                 >
                     {filteredProps.options.map(option => (
                         <FormControlLabel

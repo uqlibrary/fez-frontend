@@ -175,7 +175,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r2:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-subtype-select"
@@ -235,7 +235,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r3:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-code-select"
@@ -294,7 +294,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r4:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-status-select"
@@ -353,7 +353,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r5:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-institutional-status-select"
@@ -412,7 +412,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r6:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-refereed-source-select"
@@ -471,7 +471,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r7:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-content-indicator-select"
@@ -530,7 +530,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r8:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-select"
@@ -589,7 +589,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r9:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-type-select"
@@ -648,7 +648,7 @@ exports[`AdminSection component should render default view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":ra:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-license-select"
@@ -872,7 +872,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":ro:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-subtype-select"
@@ -932,7 +932,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rp:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-code-select"
@@ -991,7 +991,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rq:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-status-select"
@@ -1050,7 +1050,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rr:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-institutional-status-select"
@@ -1109,7 +1109,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rs:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-refereed-source-select"
@@ -1168,7 +1168,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rt:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-content-indicator-select"
@@ -1227,7 +1227,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":ru:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-select"
@@ -1286,7 +1286,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rv:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-type-select"
@@ -1345,7 +1345,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r10:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-license-select"
@@ -1569,7 +1569,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rd:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1630,7 +1630,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":re:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1690,7 +1690,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rf:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1750,7 +1750,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rg:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1810,7 +1810,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rh:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1870,7 +1870,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":ri:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1930,7 +1930,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rj:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1990,7 +1990,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rk:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -2050,7 +2050,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rl:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"

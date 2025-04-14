@@ -89,8 +89,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            state: {
-                defaultValue: '2020-02-02',
+            meta: {
+                initial: '2020-02-02',
             },
         });
         expect(container).toMatchSnapshot();
@@ -99,8 +99,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            state: {
-                defaultValue: '2020-01-01',
+            meta: {
+                initial: '2020-01-01',
             },
         });
         expect(container).toMatchSnapshot();
@@ -109,8 +109,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            state: {
-                defaultValue: '2020-12-01',
+            meta: {
+                initial: '2020-12-01',
             },
         });
         expect(container).toMatchSnapshot();
@@ -120,7 +120,9 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            value: '2020-02-02',
+            input: {
+                value: '2020-02-02',
+            },
         });
         expect(container).toMatchSnapshot();
     });
@@ -132,7 +134,7 @@ describe('PartialDateForm component', () => {
     };
 
     it('should update state as expected when mounting', () => {
-        // defaultValue render
+        // initial render
         const { rerender } = setup({
             allowPartial: true,
             value: '2020-02-02',
@@ -155,8 +157,8 @@ describe('PartialDateForm component', () => {
             const { getByText, queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -171,8 +173,8 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByRole, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -188,8 +190,8 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -204,8 +206,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -220,8 +222,8 @@ describe('PartialDateForm component', () => {
                 allowPartial: false,
                 disableFuture: true,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -236,8 +238,8 @@ describe('PartialDateForm component', () => {
                 allowPartial: true,
                 disableFuture: true,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -251,8 +253,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -266,8 +268,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                state: {
-                    defaultValue: '2017-02-02',
+                meta: {
+                    initial: '2017-02-02',
                 },
                 clearable: true,
             });

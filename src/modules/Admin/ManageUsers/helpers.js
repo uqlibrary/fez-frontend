@@ -9,7 +9,7 @@ export const checkForExisting = (values, dispatch, props, field) =>
             field,
             values.get('usr_id'),
             locale.components.manageUsers.editRow.validation,
-            props.asyncErrors || {},
+            (!!props.asyncErrors && props.asyncErrors.toJS()) || {},
         ),
     );
 

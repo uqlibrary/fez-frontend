@@ -28,8 +28,10 @@ describe('DirectorySelectField', () => {
         });
 
         const { getByTestId, getByText } = setup({
-            onChange: onChangeFn,
-            state: {
+            input: {
+                onChange: onChangeFn,
+            },
+            meta: {
                 error: 'This field is required',
             },
             loadingHint: 'Loading directories...',

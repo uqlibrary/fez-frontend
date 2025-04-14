@@ -76,7 +76,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
-                        aria-controls="<dynamic>"
+                        aria-controls=":r0:"
                         aria-expanded="false"
                         aria-haspopup="listbox"
                         aria-labelledby="field-type-select"
@@ -192,7 +192,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   data-testid="document-type-selector"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r2:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="document-type-selector"

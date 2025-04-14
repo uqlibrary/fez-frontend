@@ -69,6 +69,7 @@ export const ScaleOfSignificanceForm = ({
     itemIndexSelectedToEdit,
     itemSelectedToEdit,
     buttonLabel,
+    input,
     hidden,
 }) => {
     const [emptySignificance, setEmptySignificance] = useState(false);
@@ -196,6 +197,7 @@ export const ScaleOfSignificanceForm = ({
                         },
                     }}
                     value={formMode === 'edit' && !!contributionStatement ? getContributionStatement() : ''}
+                    input={input}
                     required
                 />
             </Grid>
@@ -237,6 +239,7 @@ ScaleOfSignificanceForm.propTypes = {
     errorText: PropTypes.string,
     formMode: PropTypes.string,
     hidden: PropTypes.bool,
+    input: PropTypes.any,
     itemIndexSelectedToEdit: PropTypes.any,
     itemSelectedToEdit: PropTypes.object,
     locale: PropTypes.object,

@@ -17,7 +17,8 @@ const RichEditor = ({
     textOnlyOnPaste = true,
     value = {},
     onChange,
-    state,
+    input,
+    meta,
     error: hasFormError,
     errorText,
     titleProps,
@@ -62,6 +63,15 @@ const RichEditor = ({
             dataForEditor = value;
         } else if (!!value?.htmlText || !!value?.plainText) {
             dataForEditor = value.htmlText || value.plainText || /* istanbul ignore next */ '';
+        } else if (!!value?.get) {
+            dataForEditor = value.get('htmlText') || value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
+        } else if (typeof input?.value === 'string') {
+            dataForEditor = input.value;
+        } else if (!!input?.value?.htmlText || !!input?.value?.plainText) {
+            dataForEditor = input.value.htmlText || input.value.plainText || /* istanbul ignore next */ '';
+        } else if (input?.value?.get) {
+            dataForEditor =
+                input.value.get('htmlText') || input.value.get('plainText') || /* istanbul ignore next */ ''; // TODO, remove
         }
 
         return typeof dataForEditor === 'string' ? dataForEditor : /* istanbul ignore next */ '';
@@ -70,10 +80,10 @@ const RichEditor = ({
     let error = null;
     // default rich editor has "<p></p>"
     const inputLength = value?.plainText?.length || value?.length - 7;
-    if (state && state?.error) {
+    if (meta && meta?.error) {
         error =
-            !!state.error.props &&
-            React.Children.map(state.error.props.children, (child, index) => {
+            !!meta.error.props &&
+            React.Children.map(meta.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, {
                         key: index,
@@ -123,7 +133,7 @@ const RichEditor = ({
                     handleEditorDataChange(event, editor);
                 }}
             />
-            {(error || state?.error) && (
+            {(error || meta?.error) && (
                 <Typography
                     color="error"
                     variant="caption"
@@ -132,7 +142,7 @@ const RichEditor = ({
                         display: 'inline-block',
                     }}
                 >
-                    {error || state.error}
+                    {error || meta.error}
                     {maxValue && <span>&nbsp;-&nbsp;</span>}
                 </Typography>
             )}
@@ -155,9 +165,10 @@ const RichEditor = ({
 
 RichEditor.propTypes = {
     className: PropTypes.string,
+    input: PropTypes.object,
     instructions: PropTypes.any,
     maxValue: PropTypes.number,
-    state: PropTypes.any,
+    meta: PropTypes.any,
     onChange: PropTypes.func.isRequired,
     richEditorId: PropTypes.string,
     required: PropTypes.bool,

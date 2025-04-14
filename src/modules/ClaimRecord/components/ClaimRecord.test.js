@@ -1,4 +1,5 @@
 import ClaimRecord from './ClaimRecord';
+import Immutable from 'immutable';
 import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import validationErrors from 'locale/validationErrors';
 import { CLAIM_PRE_CHECK, NEW_RECORD_API } from 'repositories/routes';
@@ -75,7 +76,7 @@ function setup(props = {}) {
         ],
     };
     const pid = (props.publication || defaultRecord).rek_pid;
-    const state = {
+    const state = Immutable.Map({
         appReducer: {
             redirectPath: props.redirectPath,
         },
@@ -89,7 +90,7 @@ function setup(props = {}) {
             publicationsClaimedInProgress: props.publicationsClaimedInProgress || [],
             publicationToClaimFileUploadingError: props.publicationToClaimFileUploadingError || false,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>

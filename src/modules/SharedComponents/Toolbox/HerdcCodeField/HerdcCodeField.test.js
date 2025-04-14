@@ -1,5 +1,6 @@
 import React from 'react';
 import HerdcCodeField from './HerdcCodeField';
+import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -20,9 +21,11 @@ describe('HerdcCodeField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            value: ['One', 'Two'],
-            onChange: jest.fn(),
-            state: {
+            input: {
+                value: ['One', 'Two'],
+                onChange: jest.fn(),
+            },
+            meta: {
                 error: 'Test error',
             },
         });
@@ -33,9 +36,11 @@ describe('HerdcCodeField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            value: ['One', 'Two'],
-            onChange: jest.fn(),
-            state: {
+            input: {
+                value: Immutable.List(['One', 'Two']),
+                onChange: jest.fn(),
+            },
+            meta: {
                 error: 'Test error',
             },
         });
@@ -53,21 +58,27 @@ describe('HerdcCodeField component', () => {
 
     it('should not render unknown value', () => {
         const { container } = setup({
-            value: '999',
+            input: {
+                value: '999',
+            },
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should render a current value', () => {
         const { container } = setup({
-            value: '454028',
+            input: {
+                value: '454028',
+            },
         });
         expect(container).toMatchSnapshot();
     });
 
     it('should render a deprecated value', () => {
         const { container } = setup({
-            value: '450033',
+            input: {
+                value: '450033',
+            },
         });
         expect(container).toMatchSnapshot();
     });

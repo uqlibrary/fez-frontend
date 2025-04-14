@@ -24,13 +24,16 @@ const _herdcCodes = input => {
 };
 
 export default function HerdcCodeField(fieldProps) {
-    const value = (!!fieldProps && fieldProps.value) || '';
-    const itemsList = [..._herdcCodes(value)];
+    const preselected = !!fieldProps.input && fieldProps.input.value;
+    const itemsList = [..._herdcCodes(preselected)];
     return (
         <NewGenericSelectField
             itemsList={itemsList}
             locale={{ label: fieldProps.label }}
-            value={value}
+            value={(!!fieldProps.input && fieldProps.input.value) || ''}
+            onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
+            errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
+            error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
             genericSelectFieldId="rek-herdc-code"
             canUnselect
             {...fieldProps}

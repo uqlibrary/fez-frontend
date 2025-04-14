@@ -46,3 +46,19 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
+
+### With Redux-form
+
+```jsx harmony
+import React from 'react';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+
+const App = () => (
+  <form>
+    <Field name="rek_date" component={PartialDateField} allowPartial />
+    <Field name="published_date" component={PartialDateField} dateFormat="DD/MM/YYYY" />
+  </form>
+);
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```

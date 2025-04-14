@@ -12,7 +12,7 @@ import { recordWithDatastreams } from 'mock/data';
 function setup({ values, ...testProps }, renderMethod = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
-        onChange: jest.fn(),
+        input: { onChange: jest.fn() },
         dataStreams: recordWithDatastreams.fez_datastream_info,
         locale: {
             title: 'Files',
@@ -80,7 +80,7 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
             values: {
                 fez_datastream_info: dataStreamsInitial,
             },
-            onChange,
+            input: { onChange },
             canEdit: true,
         });
         await userEvent.click(getByTestId('delete-file-0'));

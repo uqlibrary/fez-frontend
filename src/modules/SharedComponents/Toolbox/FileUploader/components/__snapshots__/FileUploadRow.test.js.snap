@@ -89,7 +89,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-w3il05-MuiInputBase-root-MuiInput-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-open-access-0-select"
@@ -281,7 +281,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
               class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ydg547-MuiInputBase-root-MuiInput-root"
             >
               <div
-                aria-controls="<dynamic>"
+                aria-controls=":r16:"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-labelledby="dsi-open-access-0-select"

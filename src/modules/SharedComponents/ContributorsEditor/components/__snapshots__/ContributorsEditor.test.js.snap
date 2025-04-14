@@ -7560,7 +7560,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 required=""
               >
                 <div
-                  aria-controls="<dynamic>"
+                  aria-controls=":r7:"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="org-affiliation-label org-affiliation-select"
@@ -8056,6 +8056,407 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ContributorsEditor should get contributors from props and input value set as an Immutable list 1`] = `
+<div>
+  <div
+    class="contributorEditor"
+    id="test-list-editor"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <div>
+          Please 
+          <b>
+            add to a list of contributors below
+          </b>
+          , in the format and order that they are published.
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          id="contributorForm"
+          style="margin-top: 8px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+              data-testid="test"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                data-testid="test-label"
+                for="test-input"
+                id="test-label"
+              >
+                Contributor's name as published
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1vg8b0p-MuiInputBase-root-MuiInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Contributor's name as published"
+                  autocomplete="off"
+                  class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                  data-analyticsid="test-input"
+                  data-testid="test-input"
+                  id="test-input"
+                  label="Contributor's name as published"
+                  placeholder="Type the name exactly as published"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+          style="margin-top: 8px;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            style="margin-bottom: 8px;"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-dn8ife-MuiButtonBase-root-MuiButton-root"
+              data-analyticsid="test-add"
+              data-testid="test-add"
+              disabled=""
+              id="test-add"
+              tabindex="-1"
+              type="button"
+            >
+              Add contributor
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      >
+        <ul
+          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+          style="margin-bottom: 0px;"
+        >
+          <span
+            class="MuiBox-root css-0"
+            data-testid="confirmDialogBox"
+          />
+          <li
+            class="MuiListItem-container css-oyakqy-MuiListItem-container"
+          >
+            <div
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-8ogih6-MuiListItem-root"
+            >
+              <div
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="PeopleIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
+                >
+                  <div
+                    class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                    >
+                      Contributor's name as published
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
+                />
+              </div>
+              <div
+                class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+              >
+                <div
+                  class="MuiListItemText-root css-564e8j-MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
+                  >
+                    Reorder items
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+            >
+              <span
+                aria-label="Remove all items"
+                class=""
+                data-mui-internal-clone-element="true"
+              >
+                <button
+                  aria-label="Remove all items"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteForeverIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </li>
+        </ul>
+        <ul
+          class="MuiList-root ContributorList MuiList-padding css-z7vbiy-MuiList-root"
+          data-analyticsid="test-list"
+          data-testid="test-list"
+          id="test-list"
+        >
+          <li
+            aria-label="Select this contributor (undefined) to assign it as you"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+            data-testid="test-list-row-0"
+            id="test-list-row-0"
+            tabindex="0"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+              id="contributor-row"
+            >
+              <div
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="PersonOutlinedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                data-testid="test-list-row-0-name-as-published"
+                id="test-list-row-0-name-as-published"
+              >
+                <div
+                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                  >
+                    First  listed contributor
+                  </span>
+                </div>
+              </div>
+              <div
+                class="css-rxds9v"
+                data-testid="test-list-row-0-actions"
+                id="test-list-row-0-actions"
+              >
+                <span
+                  aria-label="Move item down the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    aria-label="Move item down the order"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-0-move-down"
+                    data-testid="test-list-row-0-move-down"
+                    id="test-list-row-move-down-0"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  aria-label="Remove this item"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    aria-label="Remove this item"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-0-delete"
+                    data-testid="test-list-row-0-delete"
+                    id="test-list-row-delete-0"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="DeleteIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li
+            aria-label="Select this contributor (undefined) to assign it as you"
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-hwr3g1-MuiListItem-root"
+            data-testid="test-list-row-1"
+            id="test-list-row-1"
+            tabindex="0"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container css-1poavpj-MuiGrid-root"
+              id="contributor-row"
+            >
+              <div
+                class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="PersonOutlinedIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
+                data-testid="test-list-row-1-name-as-published"
+                id="test-list-row-1-name-as-published"
+              >
+                <div
+                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
+                  >
+                    Second  listed contributor
+                  </span>
+                </div>
+              </div>
+              <div
+                class="css-rxds9v"
+                data-testid="test-list-row-1-actions"
+                id="test-list-row-1-actions"
+              >
+                <span
+                  aria-label="Move item up the order"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    aria-label="Move item up the order"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-1-move-up"
+                    data-testid="test-list-row-1-move-up"
+                    id="test-list-row-move-up-1"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  aria-label="Remove this item"
+                  class=""
+                  data-mui-internal-clone-element="true"
+                >
+                  <button
+                    aria-label="Remove this item"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                    data-analyticsid="test-list-row-1-delete"
+                    data-testid="test-list-row-1-delete"
+                    id="test-list-row-delete-1"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="DeleteIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -21,6 +21,7 @@ import {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
 } from 'test-utils';
+import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 
 jest.mock('../../../context');
@@ -41,7 +42,7 @@ jest.mock('react-router-dom', () => ({
 
 function setup(props = {}) {
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 79324 };
-    const state = {
+    const state = Immutable.Map({
         fixRecordReducer: {
             recordToFix: props.publication,
             loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
@@ -54,7 +55,7 @@ function setup(props = {}) {
                 ? props.accountAuthorLoading
                 : !props.author,
         },
-    };
+    });
 
     return render(
         <WithReduxStore initialState={state}>

@@ -13,9 +13,11 @@ function setup(testProps = {}) {
     };
 
     return render(
-        <WithReduxStore>
-            <ManageAuthorsList {...props} />
-        </WithReduxStore>,
+        <React.StrictMode>
+            <WithReduxStore>
+                <ManageAuthorsList {...props} />
+            </WithReduxStore>
+        </React.StrictMode>,
     );
 }
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
 import NewGenericSelectField from './NewGenericSelectField';
+import Immutable from 'immutable';
 
 function setup(testProps = {}, render = rtlRender) {
     const props = {
-        value: !testProps.value && testProps.multiple ? [] : '',
+        value: !testProps.input && testProps.multiple ? [] : '',
         selectPrompt: 'Please select an option',
         itemsLoading: false,
         loadingHint: 'Loading items...',
@@ -82,7 +83,7 @@ describe('NewGenericSelectField', () => {
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 1, Option 3');
     });
 
-    it('should render select field', () => {
+    it('should render select field for redux-form field', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -94,14 +95,16 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            value: 2,
+            input: {
+                value: 2,
+            },
             displayEmpty: true,
         });
 
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 2');
     });
 
-    it('should render select field for multiple flag', () => {
+    it('should render select field for redux-form field for multiple flag', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -113,7 +116,9 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            value: [2],
+            input: {
+                value: Immutable.List([2]),
+            },
             multiple: true,
             displayEmpty: true,
         });
@@ -121,7 +126,7 @@ describe('NewGenericSelectField', () => {
         expect(getByTestId('rek-test-select')).toHaveTextContent('Option 2');
     });
 
-    it('should display error', () => {
+    it('should display error for redux-form field', () => {
         const { getByTestId } = setup({
             itemsList: [
                 {
@@ -133,7 +138,7 @@ describe('NewGenericSelectField', () => {
                     value: 2,
                 },
             ],
-            state: {
+            meta: {
                 error: 'This field is required',
             },
             displayEmpty: true,
@@ -156,6 +161,31 @@ describe('NewGenericSelectField', () => {
                 },
             ],
             onChange,
+        });
+
+        fireEvent.mouseDown(getByTestId('rek-test-select'));
+        expect(getByTestId('rek-test-options')).toBeInTheDocument();
+
+        fireEvent.click(getByText('Option 1'));
+        expect(onChange).toHaveBeenCalledWith(1);
+    });
+
+    it('should select an option for redux-form field', () => {
+        const onChange = jest.fn();
+        const { getByTestId, getByText } = setup({
+            itemsList: [
+                {
+                    text: 'Option 1',
+                    value: 1,
+                },
+                {
+                    text: 'Option 2',
+                    value: 2,
+                },
+            ],
+            input: {
+                onChange,
+            },
         });
 
         fireEvent.mouseDown(getByTestId('rek-test-select'));

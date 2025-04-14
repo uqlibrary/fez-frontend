@@ -191,14 +191,18 @@ const PartialDateForm = props => {
         floatingTitle = 'Enter a date',
         required,
         hasError,
+        input,
+        meta,
         partialDateFormId,
         clearable,
         value,
-        state: { defaultValue } = {},
     } = props;
     const getDateObject = () => {
         const dateValue =
-            (value && moment(value)) || (typeof defaultValue === 'string' && moment(defaultValue)) || null;
+            (value && moment(value)) ||
+            (input && input.value && moment(input.value)) ||
+            (meta && meta.initial && typeof meta.initial === 'string' && moment(meta.initial)) ||
+            null;
 
         if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             return {
@@ -254,7 +258,7 @@ const PartialDateForm = props => {
                 const fullDate = getFullDateFromState(newState);
                 setState(newState);
                 if (key !== 'year' || newState.year !== '') {
-                    onChange?.(fullDate);
+                    onChange?.(fullDate) || input?.onChange?.(fullDate);
                 }
             } else {
                 setState(newState); // Keep the existing day and month when year is in the future
@@ -273,7 +277,7 @@ const PartialDateForm = props => {
         const newState = { ...state, ...newDateObject };
         setState(newState);
         // check for errors
-        onChange && getFullDateFromState(newState);
+        (onChange || input?.onChange) && getFullDateFromState(newState);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value]);
 
@@ -394,7 +398,11 @@ PartialDateForm.propTypes = {
     required: PropTypes.bool,
     hasError: PropTypes.string,
     disableFuture: PropTypes.bool,
-    state: PropTypes.object,
+    input: PropTypes.object,
+    meta: PropTypes.shape({
+        // TODO - remove after RHF migration
+        initial: PropTypes.oneOfType([PropTypes.string, PropTypes.object]), // added object type to avoid console errors
+    }),
     partialDateFormId: PropTypes.string.isRequired,
     clearable: PropTypes.bool,
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Immutable from 'immutable';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 
 import AdminContainer from './AdminContainer';
@@ -65,7 +66,7 @@ function setup({ state, ...testProps } = {}, renderer = rtlRender) {
     };
 
     return renderer(
-        <WithReduxStore initialState={initState}>
+        <WithReduxStore initialState={Immutable.Map(initState)}>
             <WithRouter>
                 <AdminContainer {...props} />
             </WithRouter>

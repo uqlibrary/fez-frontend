@@ -296,7 +296,7 @@ exports[`ThesisForm component 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":r5:"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-genre-type-select"
@@ -406,7 +406,7 @@ exports[`ThesisForm component 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r7:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-date-month-select"
@@ -894,7 +894,6 @@ exports[`ThesisForm component 1`] = `
                   <input
                     aria-autocomplete="list"
                     aria-expanded="false"
-                    aria-invalid="false"
                     autocapitalize="none"
                     autocomplete="off"
                     class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"
@@ -1424,7 +1423,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                   class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
-                    aria-controls="<dynamic>"
+                    aria-controls=":rp:"
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
@@ -1536,7 +1535,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":rr:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -2028,7 +2027,6 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                   <input
                     aria-autocomplete="list"
                     aria-expanded="false"
-                    aria-invalid="false"
                     autocapitalize="none"
                     autocomplete="off"
                     class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1x51dt5-MuiInputBase-input-MuiInput-input"

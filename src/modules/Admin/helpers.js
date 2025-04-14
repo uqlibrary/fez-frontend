@@ -138,32 +138,31 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 };
 
 export const getInitialFormValues = (recordToView, recordType) => {
-    const _recordToView = { ...recordToView };
-    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(_recordToView, 'files', filesParams);
+    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || /* istanbul ignore next */ []).filter(
         isFileValid(viewRecordsConfig, true, true),
     );
     return {
         initialValues: {
-            pid: _recordToView.rek_pid,
-            publication: _recordToView,
+            pid: recordToView.rek_pid,
+            publication: recordToView,
             rek_requires_attribution: false,
-            rek_display_type: _recordToView.rek_display_type,
-            rek_date: _recordToView.rek_date || _recordToView.rek_created_date,
+            rek_display_type: recordToView.rek_display_type,
+            rek_date: recordToView.rek_date || recordToView.rek_created_date,
             identifiersSection:
                 (recordType === RECORD_TYPE_RECORD &&
-                    getInitialValues(_recordToView, 'identifiers', identifiersParams)) ||
+                    getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
                 {},
             securitySection: {
-                rek_security_policy: _recordToView.rek_security_policy,
+                rek_security_policy: recordToView.rek_security_policy,
                 ...(recordType === RECORD_TYPE_COLLECTION || recordType === RECORD_TYPE_COMMUNITY
                     ? {
-                          rek_datastream_policy: _recordToView.rek_datastream_policy,
+                          rek_datastream_policy: recordToView.rek_datastream_policy,
                       }
                     : {}),
                 ...(recordType === RECORD_TYPE_RECORD
                     ? {
-                          rek_security_inherited: _recordToView.rek_security_inherited,
+                          rek_security_inherited: recordToView.rek_security_inherited,
                           dataStreams: validDataStreams,
                       }
                     : []),
@@ -172,28 +171,28 @@ export const getInitialFormValues = (recordToView, recordType) => {
                 ((recordType === RECORD_TYPE_RECORD ||
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
-                    getInitialValues(_recordToView, 'bibliographic', bibliographicParams)) ||
+                    getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
                 /* istanbul ignore next */ {},
             authorsSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'authors', authorsParams)) || {},
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
             adminSection:
                 ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
-                    getInitialValues(_recordToView, 'admin')) ||
+                    getInitialValues(recordToView, 'admin')) ||
                 {},
-            ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'ntro')) || {},
+            ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'grantInformation')) || {},
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
             notesSection:
                 ((recordType === RECORD_TYPE_RECORD ||
                     recordType === RECORD_TYPE_COMMUNITY ||
                     recordType === RECORD_TYPE_COLLECTION) &&
-                    getInitialValues(_recordToView, 'notes')) ||
+                    getInitialValues(recordToView, 'notes')) ||
                 /* istanbul ignore next */ {},
             reasonSection:
                 ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
-                    getInitialValues(_recordToView, 'reason')) ||
+                    getInitialValues(recordToView, 'reason')) ||
                 {},
         },
     };

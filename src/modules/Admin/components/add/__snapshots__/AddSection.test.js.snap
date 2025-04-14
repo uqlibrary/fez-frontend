@@ -144,7 +144,7 @@ exports[`AddSection component should render default view 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r2:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
@@ -386,7 +386,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r5:"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
@@ -455,7 +455,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                           required=""
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":r6:"
                             aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="rek-subtype-select"
@@ -716,7 +716,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         required=""
                       >
                         <div
-                          aria-controls="<dynamic>"
+                          aria-controls=":r9:"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
@@ -790,7 +790,7 @@ exports[`AddSection component with coverage should render with default doc type 
                           required=""
                         >
                           <div
-                            aria-controls="<dynamic>"
+                            aria-controls=":ra:"
                             aria-disabled="true"
                             aria-expanded="false"
                             aria-haspopup="listbox"

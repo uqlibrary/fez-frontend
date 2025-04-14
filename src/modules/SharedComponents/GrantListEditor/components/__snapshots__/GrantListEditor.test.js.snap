@@ -121,7 +121,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-focused MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r19:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -615,7 +615,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r44:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1276,7 +1276,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r44:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -1456,7 +1456,7 @@ exports[`GrantListEditor should delete grant 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r3n:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -2119,7 +2119,7 @@ exports[`GrantListEditor should delete grant 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r3n:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -2611,7 +2611,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r3a:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -3272,7 +3272,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r3a:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -3933,7 +3933,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r27:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -4594,7 +4594,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r27:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -5255,7 +5255,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2k:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -5747,7 +5747,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2k:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -6239,7 +6239,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2t:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -6902,7 +6902,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2t:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7565,7 +7565,7 @@ exports[`GrantListEditor should render default view 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r2:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7745,7 +7745,7 @@ exports[`GrantListEditor should render error from props 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":re:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -7930,7 +7930,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rh:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -8120,7 +8120,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r1i:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9119,7 +9119,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rk:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9304,7 +9304,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r5:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -9675,7 +9675,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
 </div>
 `;
 
-exports[`GrantListEditor should render with default given value is List 1`] = `
+exports[`GrantListEditor should render with default given value is Immutable List 1`] = `
 <div>
   <div>
     Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
@@ -9796,7 +9796,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rn:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
@@ -10288,7 +10288,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r10:"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"

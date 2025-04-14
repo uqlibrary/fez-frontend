@@ -60,7 +60,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r7:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -191,7 +191,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rj:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -322,7 +322,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rj:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -453,7 +453,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rj:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -584,7 +584,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":ra:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -715,7 +715,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":ra:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -846,7 +846,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rd:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -972,7 +972,7 @@ exports[`PartialDateForm component should handle partial values with year only 1
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rg:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1098,7 +1098,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rm:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1224,7 +1224,7 @@ exports[`PartialDateForm component should load existing values for month of Dece
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rs:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1350,7 +1350,7 @@ exports[`PartialDateForm component should load existing values for month of Janu
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rp:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1476,7 +1476,7 @@ exports[`PartialDateForm component should load existing values from input value 
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":rv:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1602,7 +1602,7 @@ exports[`PartialDateForm component should render comp 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r1:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -1740,7 +1740,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls="<dynamic>"
+              aria-controls=":r4:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"

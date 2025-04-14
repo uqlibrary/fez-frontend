@@ -1,6 +1,6 @@
 import React from 'react';
 import MyEditorialAppointmentsList from './MyEditorialAppointmentsList';
-import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within, preview } from 'test-utils';
+import { render, fireEvent, act, waitFor, WithReduxStore, createMatchMedia, within } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
