@@ -101,6 +101,11 @@ export const getRoutesConfig = ({
             pageTitle: locale.pages.viewRecord.title,
         },
         {
+            path: pathConfig.records.feedback(':pid'),
+            element: <components.FeedbackRecord />,
+            pageTitle: locale.pages.feedbackRecord.title,
+        },
+        {
             path: pathConfig.records.search,
             element: <components.SearchRecords />,
             exact: true,

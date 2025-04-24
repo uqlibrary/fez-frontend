@@ -58,6 +58,7 @@ export const pathConfig = {
         },
         claim: '/records/claim',
         fix: pid => `/records/${pid}/fix`,
+        feedback: pid => `/records/${pid}/feedback`,
         incomplete: '/records/incomplete',
         incompleteFix: pid => `/records/${pid}/incomplete`,
         mine: '/records/mine',
