@@ -2368,20 +2368,17 @@ export default {
                                 the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.{' '}
                                 <b>This is not for public view.</b>
                             </li>
-                            <li>
-                                An abstract/description of the work, up to 800 characters (approx. 100 words). This is
-                                for public view.
-                            </li>
+                            <li>An abstract/description of the work. This is for public view.</li>
                             <li>
                                 At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or
                                 review of the work.
                             </li>
                         </ol>
-
                         <p>
                             Note:
-                            <br />A research statement can be updated at any time via the REQUEST CORRECTION button for
-                            the work.
+                            <br />
+                            Your research statement, abstract or evidence file can be updated at any time via the
+                            REQUEST CORRECTION button for the work.
                         </p>
                     </React.Fragment>
                 ),

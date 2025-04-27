@@ -11,6 +11,7 @@ import {
     getReportTypeFromValue,
     getDefaultSorting,
     getFormattedServerDate,
+    dateToUtc,
     DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
 } from './config';
 
@@ -142,6 +143,38 @@ describe('config', () => {
                 // finally test a valid date range results in no errors returned
                 state.filters.date_from = '2023-10-01T12:00:00';
                 expect(validator({ state })).toEqual({});
+            });
+        });
+
+        describe('dateToUtc', () => {
+            it('should convert date to UTC with start of day', () => {
+                const date = '2023-10-01T12:00:00';
+                const result = dateToUtc({ date, dayTimeReset: 'start' });
+                expect(result).toBe('2023-09-30 14:00:00'); // Adjusted for UTC conversion
+            });
+
+            it('should convert date to UTC with end of day', () => {
+                const date = '2023-10-01T12:00:00';
+                const result = dateToUtc({ date, dayTimeReset: 'end' });
+                expect(result).toBe('2023-10-01 13:59:59'); // Adjusted for UTC conversion
+            });
+
+            it('should convert date to UTC without dayTimeReset', () => {
+                const date = '2023-10-01T12:00:00';
+                const result = dateToUtc({ date });
+                expect(result).toBe('2023-10-01 02:00:00'); // Adjusted for UTC conversion
+            });
+
+            it('should convert date to UTC from London timezone', () => {
+                const date = '2023-10-01T12:00:00';
+                const result = dateToUtc({ date, timezone: 'Europe/London' });
+                expect(result).toBe('2023-10-01 11:00:00'); // Adjusted for UTC conversion
+            });
+
+            it('should convert date to UTC with format', () => {
+                const date = '2023-10-01T12:00:00';
+                const result = dateToUtc({ date, format: DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS });
+                expect(result).toBe('1st October 2023 02:00:00'); // Adjusted for UTC conversion with format
             });
         });
     });
