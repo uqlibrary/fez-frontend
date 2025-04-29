@@ -617,6 +617,7 @@ export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 export const AIATSIS_CODES_VOCAB_ID = 453669;
 export const SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID = 456993;
+export const JOURNAL_ADVISORY_STATEMENT_TYPE = 459329;
 
 export const UNPROCESSED_RECORDS_COLLECTION = {
     fez_record_search_key_ismemberof: [

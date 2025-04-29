@@ -9,6 +9,7 @@ import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor
 
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
 import { viewJournalConfig } from 'config/viewJournal';
+import JournalAdvisoryStatementTypeField from 'modules/SharedComponents/LookupFields/containers/JournalAdvisoryStatementTypeField';
 
 export default {
     default: {
@@ -110,6 +111,15 @@ export default {
                 textFieldId: 'jnl_description',
                 disabled: true,
                 inputProps: { readOnly: true },
+                required: false,
+            },
+        },
+        advisoryStatementType: {
+            component: JournalAdvisoryStatementTypeField,
+            componentProps: {
+                name: 'adminSection.advisoryStatementType',
+                floatingLabelText: 'Advisory statement Type / default statement',
+                advisoryStatementFieldName: 'adminSection.advisoryStatement',
                 required: false,
             },
         },
