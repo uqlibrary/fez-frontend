@@ -558,6 +558,10 @@ export default {
                 alternateActionButtonLabel: 'Fix work',
             },
         },
+        feedbackRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Feedback Form',
+        },
         fixRecord: {
             loadingMessage: 'Loading work',
             title: 'Request a correction, add more information or upload files',
@@ -658,6 +662,8 @@ export default {
                     copied: 'Copied to clipboard',
                 },
             },
+            feedbackButton: 'Tell Us More',
+            feedbackButtonTooltip: 'Help care for our cultural collections',
         },
         searchRecords: {
             title: 'eSpace search',

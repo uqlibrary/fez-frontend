@@ -258,6 +258,8 @@ export const COLLECTION_LIST_API = (config, action = null) => {
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
+export const RECORDS_FEEDBACK_API = ({ pid }) => ({ apiUrl: `records/${pid}/feedback` });
+
 // search/list records apis
 export const POSSIBLE_RECORDS_API = values => ({
     apiUrl: 'records/search',
