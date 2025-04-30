@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender } from 'test-utils';
+import { WithReduxStore } from 'test-utils';
 import AdminSection from './AdminSection';
 import { journalDoaj } from 'mock/data';
 import { fieldConfig } from 'config/journalAdmin';
@@ -10,6 +10,7 @@ import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
+import { render } from '@testing-library/react';
 
 class ResizeObserver {
     observe() {}
@@ -25,19 +26,21 @@ const FormProviderWrapper = ({ children, ...props }) => {
     return <FormProvider {...methods}>{children}</FormProvider>;
 };
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup(testProps = {}) {
     const { values = {}, ...rest } = testProps;
     const props = {
         ...rest,
     };
 
-    return renderer(
+    return render(
         <FormProviderWrapper
             values={{
                 ...values,
             }}
         >
-            <AdminSection {...props} />
+            <WithReduxStore>
+                <AdminSection {...props} />
+            </WithReduxStore>
         </FormProviderWrapper>,
     );
 }
@@ -51,7 +54,13 @@ describe('AdminSection component', () => {
 
         fieldIds = Object.values(fieldConfig.default)
             .filter(field => field.componentProps.name.includes('adminSection.'))
-            .map(field => field.componentProps.textFieldId || field.componentProps.richEditorId);
+            .map(
+                field =>
+                    field.componentProps.textFieldId ||
+                    field.componentProps.richEditorId ||
+                    (field.componentProps.name.includes('advisoryStatementType') &&
+                        'jnl-advisory-statement-type-input'),
+            );
     });
 
     it('should render default view', () => {

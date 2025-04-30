@@ -16,11 +16,10 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const { advisoryStatement, advisoryStatementType, ...rest } = data;
     const advisoryStatementValue =
-        advisoryStatement?.htmlText?.trim?.() || advisoryStatement?.plainText?.trim() || null;
-    const advisoryStatementTypeValue = (advisoryStatementValue && advisoryStatementType) || null;
+        advisoryStatement?.htmlText?.trim?.() || advisoryStatement?.plainText?.trim?.() || null;
     return {
-        jnl_advisory_statement: advisoryStatementValue,
-        jnl_advisory_statement_type: advisoryStatementTypeValue,
         ...rest,
+        jnl_advisory_statement: advisoryStatementValue,
+        jnl_advisory_statement_type: (advisoryStatement && advisoryStatementType) || null,
     };
 };

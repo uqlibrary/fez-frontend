@@ -8,6 +8,7 @@ import { matchSorter } from 'match-sorter';
 import { GenericOptionTemplate } from 'modules/SharedComponents/LookupFields';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoTreeRootId } from '../../../../config/general';
 import { useFormContext } from 'react-hook-form';
+import get from 'lodash/get';
 
 const flattenCVOTree = data =>
     data
@@ -17,15 +18,16 @@ const flattenCVOTree = data =>
             // store CVO's desc as `id` to allow using GenericOptionTemplate for option rendering
             id: item.controlled_vocab.cvo_desc,
         }))
-        .sort((a, b) => a.value.localeCompare(b.value) && a.id.localeCompare(b.id)) || [];
+        .sort((a, b) => a.value.localeCompare(b.value) && a.id?.localeCompare(b.id)) || [];
 
 const JournalAdvisoryStatementTypeField = props => {
-    const { getValues, setValue } = useFormContext();
     const dispatch = useDispatch();
     const { rawData, itemsLoading, itemsLoaded } = useSelector(
         state => state.get('controlledVocabulariesReducer')?.[cvoTreeRootId],
     ) || { rawData: [], itemsLoading: false, itemsLoaded: false };
     const itemsLoadedLocalRef = useRef(itemsLoaded);
+    const { getValues, setValue, formState } = useFormContext();
+    const isPrePopulated = get(formState.defaultValues, props.name);
 
     const loadSuggestions = useCallback(() => {
         if (itemsLoadedLocalRef.current) return;
@@ -36,15 +38,17 @@ const JournalAdvisoryStatementTypeField = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const itemsList = useMemo(() => flattenCVOTree(rawData), [rawData.length]);
 
-    // pre-load options in case the field is set
+    // preload options in case the field pre-populated
+    // e.g. editing a journal with advisory statement type
     useEffect(() => {
-        if (!props.value) return;
+        if (!isPrePopulated || !props.value) return;
         loadSuggestions();
-    }, [loadSuggestions, props.value]);
+    }, [loadSuggestions, isPrePopulated, props.value]);
 
     return (
         <AutoCompleteAsynchronousField
-            key={props.value + rawData.length}
+            // trigger a re-render upon options are loaded when field is pre-populated
+            {...((isPrePopulated && { key: `${props.name}-${itemsLoaded}` }) || {})}
             id="jnl-advisory-statement-type-input"
             autoCompleteAsynchronousFieldId={'jnl-advisory-statement-type'}
             errorText={props.meta?.error ? props.meta.error : props.errorText}
@@ -61,9 +65,13 @@ const JournalAdvisoryStatementTypeField = props => {
             {...props}
             onChange={item => {
                 const currentTypeItem = itemsList.find(item => item.key === props.value);
+                if (!currentTypeItem) {
+                    props.onChange(item.key);
+                    return;
+                }
+                // if current advisory statement field value is empty, or it's a default statement text,
+                // then update it to the selected type's statement text (item.id - see flattenCVOTree method above)
                 const currentStatement = getValues(props.advisoryStatementFieldName)?.plainText?.trim?.();
-                // if current advisory statement field value is empty or it's a default statement text,
-                // updated it to the selected type's statement text
                 if (!currentStatement || currentStatement === currentTypeItem?.id) {
                     setValue(props.advisoryStatementFieldName, item.id);
                 }

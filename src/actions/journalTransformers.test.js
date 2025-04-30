@@ -43,7 +43,10 @@ describe('transformers', () => {
 
     describe('getAdminSectionSearchKeys', () => {
         it('should get correct object', () => {
-            expect(transformers.getAdminSectionSearchKeys()).toEqual({ jnl_advisory_statement: null });
+            expect(transformers.getAdminSectionSearchKeys()).toEqual({
+                jnl_advisory_statement: null,
+                jnl_advisory_statement_type: null,
+            });
         });
 
         it('should transform all search keys for admin section', () => {
@@ -58,6 +61,7 @@ describe('transformers', () => {
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
                 jnl_advisory_statement: 'test advisory statement',
+                jnl_advisory_statement_type: null,
                 other_key: {
                     test: 'test',
                 },
@@ -69,10 +73,12 @@ describe('transformers', () => {
                 advisoryStatement: {
                     plainText: 'test advisory statement',
                 },
+                advisoryStatementType: 1234,
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
                 jnl_advisory_statement: 'test advisory statement',
+                jnl_advisory_statement_type: 1234,
             });
         });
 
@@ -83,14 +89,19 @@ describe('transformers', () => {
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
                 jnl_advisory_statement: null,
+                jnl_advisory_statement_type: null,
             });
 
             expect(transformers.getAdminSectionSearchKeys({ advisoryStatement: 'test' })).toEqual({
                 jnl_advisory_statement: null,
+                jnl_advisory_statement_type: null,
             });
 
-            expect(transformers.getAdminSectionSearchKeys({ advisoryStatement: null })).toEqual({
+            expect(
+                transformers.getAdminSectionSearchKeys({ advisoryStatement: null, advisoryStatementType: 1234 }),
+            ).toEqual({
                 jnl_advisory_statement: null,
+                jnl_advisory_statement_type: null,
             });
         });
 
@@ -102,6 +113,7 @@ describe('transformers', () => {
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
                 jnl_advisory_statement: null,
+                jnl_advisory_statement_type: null,
                 collections: [],
                 contentIndicators: [],
             });
