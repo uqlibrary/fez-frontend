@@ -27,7 +27,8 @@ export class ScaleOfSignificanceListEditor extends Component {
         error: PropTypes.bool,
         errorText: PropTypes.string,
         remindToAdd: PropTypes.bool,
-        input: PropTypes.object,
+        name: PropTypes.string,
+        value: PropTypes.any,
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
@@ -73,11 +74,7 @@ export class ScaleOfSignificanceListEditor extends Component {
 
     constructor(props) {
         super(props);
-        const valueAsJson =
-            ((props.input || /* istanbul ignore next */ {}).name &&
-                typeof (props.input.value || {}).toJS === 'function' &&
-                props.input.value.toJS()) ||
-            ((props.input || /* istanbul ignore next */ {}).name && props.input.value);
+        const valueAsJson = props.name && props.value;
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
             itemIndexSelectedToEdit: null,
@@ -401,7 +398,6 @@ export class ScaleOfSignificanceListEditor extends Component {
                     )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                     listEditorId={this.props.listEditorId}
-                    input={this.props.input}
                     buttonLabel={this.state.buttonLabel}
                     showForm={this.showFormInEditMode}
                     formMode={this.state.formMode}

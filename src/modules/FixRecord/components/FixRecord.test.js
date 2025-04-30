@@ -1,7 +1,6 @@
 import React from 'react';
 import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
-import Immutable from 'immutable';
 import {
     render,
     WithReduxStore,
@@ -34,7 +33,7 @@ jest.mock('react-router-dom', () => ({
 function setup(props = {}) {
     props.publication = props.publication || null;
     props.author = props.hasOwnProperty('author') ? props.author : { aut_id: 410 };
-    const state = Immutable.Map({
+    const state = {
         fixRecordReducer: {
             recordToFix: props.publication,
             loadingRecordToFix: props.hasOwnProperty('loadingRecordToFix')
@@ -47,7 +46,7 @@ function setup(props = {}) {
                 ? props.accountAuthorLoading
                 : !props.author,
         },
-    });
+    };
 
     return render(
         <WithReduxStore initialState={state}>

@@ -1,9 +1,7 @@
 import React from 'react';
 import AdminContainer from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
-import Immutable from 'immutable';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
-import { reduxForm } from 'redux-form';
 import Cookies from 'js-cookie';
 
 jest.mock('../../../hooks/useIsMobileView');
@@ -14,17 +12,11 @@ jest.mock('../submitHandler', () => ({
 
 jest.mock('js-cookie', () => jest.fn());
 
-jest.mock('redux-form/immutable', () => ({
-    ...jest.requireActual('redux-form/immutable'),
-}));
-
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: () => mockDispatch,
 }));
-
-const WithReduxForm = reduxForm({ form: 'AdminWorkForm' })(AdminContainer);
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -39,14 +31,14 @@ function setup(testProps = {}, renderer = rtlRender) {
         recordToView: recordWithDatastreams,
         handleSubmit: jest.fn(),
         clearRecordToView: jest.fn(),
-        formValues: Immutable.Map({ rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' }),
+        formValues: { rek_pid: 'UQ:252236', rek_subtype: 'Original Journal Article' },
         ...testProps,
     };
 
     return renderer(
         <WithReduxStore>
             <WithRouter>
-                <WithReduxForm {...props} />
+                <AdminContainer {...props} />
             </WithRouter>
             ,
         </WithReduxStore>,

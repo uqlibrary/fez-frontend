@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
@@ -32,11 +31,11 @@ export class ContributorsEditor extends PureComponent {
         editMode: PropTypes.bool,
         hideDelete: PropTypes.bool,
         hideReorder: PropTypes.bool,
-        input: PropTypes.object,
+        value: PropTypes.any,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
         locale: PropTypes.object,
-        meta: PropTypes.object,
+        state: PropTypes.object,
         onChange: PropTypes.func,
         required: PropTypes.bool,
         shouldHandleAffiliations: PropTypes.bool,
@@ -88,7 +87,7 @@ export class ContributorsEditor extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
         // Authors, not used by SoS
-        if (diff(prevProps.input?.value, this.props.input?.value).length > 0) {
+        if (diff(prevProps?.value, this.props?.value).length > 0) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
             this.setState({
                 contributors: items,
@@ -181,15 +180,7 @@ export class ContributorsEditor extends PureComponent {
         return scaleOfSignificance;
     };
 
-    getContributorsFromProps = props => {
-        if (props.value || (props.input && props.input.name && props.input.value)) {
-            return (
-                props.value ||
-                (props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value)
-            );
-        }
-        return [];
-    };
+    getContributorsFromProps = props => props.value || (props?.name && props?.value) || [];
 
     getContributorsWithAffiliationsFromProps = props => {
         const authors = this.getContributorsFromProps(props);
@@ -501,7 +492,7 @@ export class ContributorsEditor extends PureComponent {
             hideDelete,
             isNtro,
             isAdmin,
-            meta,
+            state,
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
@@ -511,9 +502,9 @@ export class ContributorsEditor extends PureComponent {
 
         const { contributors, errorMessage, contributorIndexSelectedToEdit } = this.state;
 
-        let error = meta?.error || this.state.error;
-        if (!!meta?.error?.props) {
-            error = React.Children.map(meta.error.props.children, (child, index) => {
+        let error = state?.error || this.state.error;
+        if (!!state?.error?.props) {
+            error = React.Children.map(state.error.props.children, (child, index) => {
                 return child.type ? React.cloneElement(child, { key: index }) : child;
             });
         }

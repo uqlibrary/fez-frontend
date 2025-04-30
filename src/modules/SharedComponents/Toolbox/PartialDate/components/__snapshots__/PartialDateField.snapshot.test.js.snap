@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
@@ -60,7 +60,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r1:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -131,7 +131,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
 </div>
 `;
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on all fields 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on all fields 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
@@ -191,7 +191,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r7:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
@@ -262,7 +262,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
 </div>
 `;
 
-exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on year field 1`] = `
+exports[`Field PartialDateField snapshots tests renders PartialDateField component with requiredField class on year field 1`] = `
 <div>
   <div
     class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1q99ht3-MuiGrid2-root"
@@ -322,7 +322,7 @@ exports[`Redux-form Field PartialDateField snapshots tests renders PartialDateFi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth  css-1t834h8-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r4:"
+              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"

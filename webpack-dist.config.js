@@ -92,7 +92,7 @@ const webpackConfig = {
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form'],
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment'],
     },
     // Where you want the output to go
     output: {

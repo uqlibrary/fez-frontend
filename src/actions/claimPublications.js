@@ -262,7 +262,7 @@ export const getPreCheckError = pid => {
  *
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
- * @returns {Promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ * @returns {Promise}
  */
 export function claimPublication(data) {
     const isAuthorLinked =

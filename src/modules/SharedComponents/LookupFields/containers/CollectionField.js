@@ -12,13 +12,9 @@ export const CollectionField = props => {
     const { itemsList, itemsLoading } = useSelector(state => state.get('collectionsReducer')) || {};
 
     const loadSuggestions = () => dispatch(actions.collectionsList());
-    const hasForm = props?.meta || props?.form;
-
-    const defaultValue = hasForm // TODO - remove after reduxForm migrated
-        ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
-          (!!props.input.value && props.input.value) ||
-          []
-        : props.value || [];
+    // the following is needed due to unexpected state chances from re-renders
+    const hasForm = !!props?.state;
+    const defaultValue = props.value || [];
 
     // remove existing entries from full list of collections
     const existingCollectionPids = defaultValue.map(collection => collection.rek_pid || collection);
@@ -27,33 +23,21 @@ export const CollectionField = props => {
     return (
         <AutoCompleteMultiSelectField
             {...props}
-            id={props.id}
             autoCompleteAsynchronousFieldId={'rek-ismemberof'}
             itemsList={missingCollections || []}
             itemsLoading={itemsLoading}
             getOptionLabel={item => item.rek_title}
-            {...(hasForm
-                ? {
-                      defaultValue: defaultValue,
-                      error: props?.meta?.error,
-                      errorText: props?.meta?.error || '',
-                  }
-                : {
-                      defaultValue: itemsList.filter(collection => defaultValue.includes(collection.rek_pid)),
-                      error: props.error,
-                      errorText: props.errorText || '',
-                  })}
+            defaultValue={
+                hasForm ? defaultValue : itemsList.filter(collection => defaultValue.includes(collection.rek_pid))
+            }
+            error={!!props?.state?.error || !!props.error}
+            errorText={props?.state?.error || props.errorText || ''}
             autoCompleteMultiSelectFieldId={props.collectionFieldId}
             loadSuggestions={loadSuggestions}
-            {...(hasForm
-                ? {
-                      onChange: item => props.input.onChange(item),
-                      onClear: () => props.input.onChange(null),
-                  }
-                : {
-                      onChange: item => props.onChange(item.map(collection => collection.rek_pid)),
-                      onClear: () => props.onChange(null),
-                  })}
+            onChange={item =>
+                hasForm ? props.onChange(item) : props.onChange(item.map(collection => collection.rek_pid))
+            }
+            onClear={() => props.onChange(null)}
         />
     );
 };
