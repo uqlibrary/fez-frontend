@@ -478,18 +478,25 @@ export const exportReportFilters = {
         },
     },
 };
-export const convertToUtc = (date, dayTimeReset = 'start', format = DEFAULT_SERVER_DATE_FORMAT) => {
-    const localDate = momentTz.tz(date, 'Australia/Brisbane');
-    return (dayTimeReset === 'start' ? localDate.startOf('day') : localDate.endOf('day')).tz('UTC').format(format);
+
+export const dateToUtc = ({
+    date,
+    dayTimeReset = undefined,
+    timezone = 'Australia/Brisbane',
+    format = DEFAULT_SERVER_DATE_FORMAT,
+}) => {
+    const localDate = momentTz.tz(date, timezone);
+    if (dayTimeReset) dayTimeReset === 'start' ? localDate.startOf('day') : localDate.endOf('day');
+    return localDate.tz('UTC').format(format);
 };
 
 export const exportReportAllowedFilters = [
     {
         name: 'date_from',
-        formatter: convertToUtc,
+        formatter: date => dateToUtc({ date, dayTimeReset: 'start' }),
     },
     {
         name: 'date_to',
-        formatter: date => convertToUtc(date, 'end'),
+        formatter: date => dateToUtc({ date, dayTimeReset: 'end' }),
     },
 ];

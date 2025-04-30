@@ -22,10 +22,12 @@ jest.mock('../../../hooks', () => ({
     belongsToAuthor: jest.requireActual('../../../hooks').belongsToAuthor,
 }));
 
+const mockNavigate = jest.fn();
+
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
-    useNavigate: jest.fn(() => jest.fn()),
+    useNavigate: () => mockNavigate,
 }));
 
 const mockDispatch = jest.fn();
@@ -71,6 +73,7 @@ describe('ViewRecord', () => {
     });
 
     afterEach(() => {
+        mockNavigate.mockReset();
         userIsAdmin.mockReset();
         userIsAuthor && userIsAuthor.mockReset();
     });
@@ -162,6 +165,30 @@ describe('ViewRecord', () => {
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
 
+    it('should render feedback button and navigate to feedback form page on click', () => {
+        const { getByText } = setup({
+            viewRecordReducer: {
+                recordToView: { ...record, fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:229001' }] },
+            },
+        });
+
+        const feedbackBtn = getByText('Tell Us More');
+
+        expect(feedbackBtn).toBeInTheDocument();
+        fireEvent.click(feedbackBtn);
+
+        // pid from useParam mock
+        expect(mockNavigate).toHaveBeenCalledWith('/records/UQ:123456/feedback');
+    });
+
+    it('should not render feedback button', () => {
+        const { queryByTestId } = setup({
+            viewRecordReducer: { recordToView: record },
+        });
+
+        expect(queryByTestId('btnFeedback')).not.toBeInTheDocument();
+    });
+
     it('should render default view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);
@@ -170,6 +197,7 @@ describe('ViewRecord', () => {
         });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
+
     it('should render internal notes view with admin menu when no AA issues exist', () => {
         // Checked OK
         userIsAdmin.mockImplementationOnce(() => true);

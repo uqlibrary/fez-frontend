@@ -17,6 +17,7 @@ export { default as deleteRecordReducer } from './deleteRecord';
 export { default as doiReducer } from './doi';
 export { default as exportPublicationsReducer } from './exportPublications';
 export { default as favouriteSearchReducer } from './favouriteSearch';
+export { default as feedbackRecordReducer } from './feedbackRecord';
 export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
