@@ -156,12 +156,14 @@ export const Alert = ({
     type = 'error',
     wiggle = null,
 }) => {
-    const renderedIcon = type !== 'custom' ? renderIcon(type) : customIcon;
+    /* istanbul ignore next */
+    const convertedType = type === 'success' ? 'done' : type;
+    const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
-                type={!!customIcon ? customType : type}
+                type={!!customIcon ? customType : convertedType}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
@@ -299,6 +301,7 @@ Alert.propTypes = {
         'info_outline',
         'help',
         'help_outline',
+        'success',
         'done',
         'custom',
     ]),

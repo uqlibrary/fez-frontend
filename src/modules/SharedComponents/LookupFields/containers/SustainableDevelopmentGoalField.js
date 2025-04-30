@@ -12,7 +12,7 @@ const flattenSDGCVOTree = data =>
     data?.reduce?.((acc, item) => {
         const children = item.controlled_vocab.controlled_vocab_children;
         // SDGs themselves should not be allowed to be selected
-        // in case, if there are no SDG sources, ignore it
+        // in case there are no SDG sources, ignore it
         if (!children.length) {
             return acc;
         }

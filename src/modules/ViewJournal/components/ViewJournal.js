@@ -114,7 +114,9 @@ export const ViewJournal = () => {
                     {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
                         <Grid item xs={12}>
                             <Alert
-                                type={'info'}
+                                type={
+                                    journalDetails?.jnl_advisory_statement_type_lookup?.trim?.().toLowerCase() || 'info'
+                                }
                                 title={txt.advisoryStatement.title}
                                 message={
                                     <Box sx={{ wordWrap: { xs: 'break-word', sm: 'normal' } }}>
