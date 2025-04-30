@@ -115,21 +115,31 @@ const ClaimRecord = () => {
         mergeWithFormValues,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, isSubmitFailure, hasError, serverError },
     } = useValidatedForm({
-        values: { authorLinking: '', contributorLinking: '', comments: '', rek_link: '', contentIndicators, files: [] },
+        defaultValues: {
+            authorLinking: '',
+            contributorLinking: '',
+            comments: '',
+            rek_link: '',
+            contentIndicators,
+            files: [],
+        },
     });
 
-    useEffect(() => {
-        if (!author?.aut_id || !publication) {
-            navigate(-1);
-        }
+    useEffect(
+        () => {
+            if (!author?.aut_id || !publication) {
+                navigate(-1);
+            }
 
-        if (publication?.rek_pid && actions) {
-            dispatch(actions.loadFullRecordToClaim(publication.rek_pid));
-        }
+            if (publication?.rek_pid && actions) {
+                dispatch(actions.loadFullRecordToClaim(publication.rek_pid));
+            }
 
-        return () => dispatch(actions.clearClaimPublication());
+            return () => dispatch(actions.clearClaimPublication());
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [author?.aut_id, publication?.rek_pid, navigate]);
+        [author?.aut_id, publication?.rek_pid, navigate],
+    );
 
     // Update contentIndicators field's default value once the record is loaded.
     // This is required to properly render the field with already selected
