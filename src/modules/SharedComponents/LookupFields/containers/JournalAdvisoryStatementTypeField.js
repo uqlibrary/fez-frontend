@@ -65,8 +65,8 @@ const JournalAdvisoryStatementTypeField = props => {
             {...props}
             onChange={item => {
                 const currentTypeItem = itemsList.find(item => item.key === props.value);
-                // if current advisory statement field value is empty, or it's a default statement text,
-                // then update it to the selected type's statement text (item.id - see flattenCVOTree method above)
+                // if current advisory statement field value is empty, or it has a default statement text,
+                // then update it to the selected type's statement text (item.id - see flattenCVOTree function above)
                 const currentStatement = getValues(props.advisoryStatementFieldName)?.plainText?.trim?.();
                 if (!currentStatement || currentStatement === currentTypeItem?.id) {
                     setValue(props.advisoryStatementFieldName, item.id);
