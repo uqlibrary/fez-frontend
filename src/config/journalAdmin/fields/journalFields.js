@@ -12,7 +12,7 @@ export default {
         },
         {
             title: 'Advisory statement',
-            groups: [['advisoryStatementType'], ['advisoryStatement']],
+            groups: [['advisoryStatement']],
         },
     ],
     bibliographic: () => [

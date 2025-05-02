@@ -9,6 +9,7 @@ export const journalDoaj = {
         "uq_author_id_count": 0,
         "is_favourite": false,
         "jnl_advisory_statement": "This is an advisory statement",
+        "jnl_advisory_statement_type": 1234,
         "jnl_editing_user": "uqlsibba",
         "jnl_editing_start_date": "2023-12-07 23:57:35",
         "fez_journal_abdc": null,

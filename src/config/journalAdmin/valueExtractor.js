@@ -94,11 +94,11 @@ export default {
         getValue: journal =>
             getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_description ?? '',
     },
-    advisoryStatementType: {
-        getValue: journal => journal?.jnl_advisory_statement_type,
-    },
     advisoryStatement: {
-        getValue: journal => getValueSearchKeyCKEditor(journal, 'jnl_advisory_statement', 'jnl_advisory_statement'),
+        getValue: journal => ({
+            type: journal?.jnl_advisory_statement_type,
+            text: getValueSearchKeyCKEditor(journal, 'jnl_advisory_statement', 'jnl_advisory_statement'),
+        }),
     },
     issns: {
         getValue: journal => {
