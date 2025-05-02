@@ -52,7 +52,9 @@ describe('transformers', () => {
         it('should transform all search keys for admin section', () => {
             const data = {
                 advisoryStatement: {
-                    htmlText: 'test advisory statement',
+                    text: {
+                        htmlText: 'test advisory statement',
+                    },
                 },
                 other_key: {
                     test: 'test',
@@ -71,9 +73,11 @@ describe('transformers', () => {
         it('should transform plainText advisory statement admin section', () => {
             const data = {
                 advisoryStatement: {
-                    plainText: 'test advisory statement',
+                    text: {
+                        plainText: 'test advisory statement',
+                    },
+                    type: 1234,
                 },
-                advisoryStatementType: 1234,
             };
 
             expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
@@ -92,14 +96,12 @@ describe('transformers', () => {
                 jnl_advisory_statement_type: null,
             });
 
-            expect(transformers.getAdminSectionSearchKeys({ advisoryStatement: 'test' })).toEqual({
+            expect(transformers.getAdminSectionSearchKeys({ advisoryStatement: { text: 'test' } })).toEqual({
                 jnl_advisory_statement: null,
                 jnl_advisory_statement_type: null,
             });
 
-            expect(
-                transformers.getAdminSectionSearchKeys({ advisoryStatement: null, advisoryStatementType: 1234 }),
-            ).toEqual({
+            expect(transformers.getAdminSectionSearchKeys({ advisoryStatement: { text: null, type: 1234 } })).toEqual({
                 jnl_advisory_statement: null,
                 jnl_advisory_statement_type: null,
             });

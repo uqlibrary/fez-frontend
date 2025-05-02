@@ -46,21 +46,23 @@ function setup(testProps = {}) {
 }
 
 describe('AdminSection component', () => {
+    let allFields;
     let fieldIds;
     beforeEach(() => {
         useJournalContext.mockImplementation(() => ({
             jnlDisplayType: ADMIN_JOURNAL,
         }));
 
-        fieldIds = Object.values(fieldConfig.default)
-            .filter(field => field.componentProps.name.includes('adminSection.'))
-            .map(
-                field =>
-                    field.componentProps.textFieldId ||
-                    field.componentProps.richEditorId ||
-                    (field.componentProps.name.includes('advisoryStatementType') &&
-                        'jnl-advisory-statement-type-input'),
-            );
+        const configValues = Object.values(fieldConfig.default);
+        const simpleFields = configValues.filter(field => !field.composed).map(field => field.componentProps);
+        const composedFields = configValues
+            .filter(field => field.composed)
+            .reduce((acc, field) => acc.concat(Object.values(field.componentProps)), []);
+        allFields = simpleFields.concat(composedFields);
+        fieldIds = allFields
+            .filter(props => props.name.includes('adminSection.'))
+            .map(props => props.id || props.textFieldId || props.richEditorId)
+            .map(id => (id === 'jnl_advisory_statement_type' ? 'jnl_advisory_statement_type-input' : id));
     });
 
     it('should render default view', () => {
@@ -73,9 +75,7 @@ describe('AdminSection component', () => {
     });
 
     it('should render disabled view', () => {
-        fieldIds = Object.values(fieldConfig.default)
-            .filter(field => field.componentProps.name.includes('adminSection.') && !!field.componentProps.textFieldId)
-            .map(field => field.componentProps.textFieldId);
+        fieldIds = allFields.filter(props => props.id || props.textFieldId).map(props => props.id || props.textFieldId);
         // only test actual input fields
         const { getByTestId } = setup({ values: { journal: { ...journalDoaj.data } }, disabled: true });
         fieldIds.forEach(id => {

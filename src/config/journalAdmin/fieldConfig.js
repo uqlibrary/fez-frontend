@@ -3,13 +3,12 @@ import Immutable from 'immutable';
 import { validation } from 'config';
 import locale from 'locale/components';
 import { IssnForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 import { default as InfoSection } from 'modules/ViewJournal/components/Section';
 import { viewJournalConfig } from 'config/viewJournal';
-import JournalAdvisoryStatementTypeField from 'modules/SharedComponents/LookupFields/containers/JournalAdvisoryStatementTypeField';
+import AdvisoryStatementFields from '../../modules/JournalAdmin/components/AdvisoryStatementFields';
 
 export default {
     default: {
@@ -114,32 +113,32 @@ export default {
                 required: false,
             },
         },
-        advisoryStatementType: {
-            component: JournalAdvisoryStatementTypeField,
-            componentProps: {
-                name: 'adminSection.advisoryStatementType',
-                floatingLabelText: 'Advisory statement Type / default statement',
-                advisoryStatementFieldName: 'adminSection.advisoryStatement',
-                required: false,
-            },
-        },
         advisoryStatement: {
-            component: RichEditorField,
+            composed: true,
+            component: AdvisoryStatementFields,
             componentProps: {
-                name: 'adminSection.advisoryStatement',
-                title: 'Advisory statement',
-                titleProps: {
-                    variant: 'caption',
-                    style: {
-                        opacity: 0.666,
-                    },
+                type: {
+                    name: 'adminSection.advisoryStatement.type',
+                    floatingLabelText: 'Advisory statement Type / default statement',
+                    id: 'jnl_advisory_statement_type',
+                    required: false,
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'jnl-advisory-statement',
-                canEdit: true,
-                required: false,
-                noRef: true,
+                text: {
+                    name: 'adminSection.advisoryStatement.text',
+                    title: 'Advisory statement',
+                    titleProps: {
+                        variant: 'caption',
+                        style: {
+                            opacity: 0.666,
+                        },
+                    },
+                    height: 100,
+                    format: value => Immutable.Map(value),
+                    richEditorId: 'jnl-advisory-statement',
+                    canEdit: true,
+                    required: false,
+                    noRef: true,
+                },
             },
         },
         issns: {

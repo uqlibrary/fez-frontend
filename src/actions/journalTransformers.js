@@ -14,12 +14,12 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
 };
 
 export const getAdminSectionSearchKeys = (data = {}) => {
-    const { advisoryStatement, advisoryStatementType, ...rest } = data;
+    const { advisoryStatement, ...rest } = data;
     const advisoryStatementValue =
-        advisoryStatement?.htmlText?.trim?.() || advisoryStatement?.plainText?.trim?.() || null;
+        advisoryStatement?.text?.htmlText?.trim?.() || advisoryStatement?.text?.plainText?.trim?.() || null;
     return {
         ...rest,
         jnl_advisory_statement: advisoryStatementValue,
-        jnl_advisory_statement_type: (advisoryStatement && advisoryStatementType) || null,
+        jnl_advisory_statement_type: (advisoryStatementValue && advisoryStatement?.type) || null,
     };
 };
