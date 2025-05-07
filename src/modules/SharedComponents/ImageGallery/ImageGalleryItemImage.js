@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const StyledLazyLoadImage = styled(LazyLoadImage, {
+const StyledLazyLoadImage = styled('img', {
     shouldForwardProp: prop => prop !== 'classes',
 })(({ classes }) => ({
     objectFit: 'cover',
@@ -74,6 +73,7 @@ const ImageGalleryItemImage = ({
             src={imgSrc || filename}
             classes={classes}
             className={'image-gallery-item-image'}
+            loading="lazy"
             {...errorHandler}
             {...rest}
         />
