@@ -16,11 +16,7 @@ export const JournalIdField = props => {
     const dispatch = useDispatch();
     const loadSuggestions = (searchQuery = ' ') => dispatch(actions.loadJournalLookup(searchQuery));
 
-    const selectedJournalId =
-        (!!props.input &&
-            !!props.input.value &&
-            ((!!props.input.value.toJS && props.input.value.toJS().id) || props.input.value.id)) ||
-        (!!props.value && props.value.id);
+    const selectedJournalId = props.input?.value?.id || props.value?.id;
 
     const _itemsList = useSelector(state => state.get('journalReducer').itemsList || []);
     const itemsList = React.useMemo(
@@ -37,8 +33,8 @@ export const JournalIdField = props => {
             autoCompleteAsynchronousFieldId={props.journalIdFieldId || 'fez-matched-journals'}
             itemsLoading={itemsLoading}
             allowFreeText={props.allowFreeText || false}
-            errorText={props.meta ? props.meta.error : null}
-            error={props.meta ? !!props.meta.error : null}
+            error={!!props.state?.error}
+            errorText={props.state?.error}
             getOptionLabel={(!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || '')}
             filterOptions={(options, { inputValue }) => {
                 return matchSorter(
@@ -70,15 +66,8 @@ export const JournalIdField = props => {
                     </ExternalLink>
                 )
             }
-            {...(!!((props || {}).meta || {}).form
-                ? {
-                      error: !!props.meta.error,
-                      errorText: props.meta.error || '',
-                  }
-                : {
-                      error: props.error,
-                      errorText: props.errorText || '',
-                  })}
+            error={props.error}
+            errorText={props.errorText || ''}
             loadSuggestions={loadSuggestions}
             onChange={(!!props.input && (item => props.input.onChange(item))) || (item => props.onChange(item))}
             onClear={(!!props.input && (() => props.input.onChange(null))) || (() => props.onChange({}))}

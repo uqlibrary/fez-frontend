@@ -1111,6 +1111,7 @@ export default {
                     title: 'Error',
                     message: message =>
                         `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+                    clear: 'Clear server-specific errors',
                 },
                 successAlert: {
                     type: 'done',

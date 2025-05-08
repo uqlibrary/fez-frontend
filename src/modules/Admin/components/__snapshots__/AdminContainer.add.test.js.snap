@@ -144,7 +144,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                         required=""
                       >
                         <div
-                          aria-controls=":r2:"
+                          aria-controls="<dynamic>"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"

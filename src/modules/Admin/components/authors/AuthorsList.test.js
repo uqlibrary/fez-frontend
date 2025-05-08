@@ -23,17 +23,6 @@ function setup(testProps = {}) {
 }
 
 describe('AuthorsList', () => {
-    beforeEach(() => {
-        document.createRange = () => ({
-            setStart: () => {},
-            setEnd: () => {},
-            commonAncestorContainer: {
-                nodeName: 'BODY',
-                ownerDocument: document,
-            },
-        });
-    });
-
     afterEach(() => {
         jest.resetAllMocks();
     });
@@ -270,6 +259,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -332,6 +322,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -444,6 +435,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: '' } });
         });
 
@@ -608,6 +600,7 @@ describe('AuthorsList', () => {
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'testing' } });
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));
@@ -676,6 +669,7 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-update-save').closest('button')).toHaveAttribute('disabled');
 
         act(() => {
+            fireEvent.click(getByTestId('rek-author-id-input'));
             fireEvent.change(getByTestId('rek-author-id-input'), { target: { value: 'Testing' } });
         });
         await waitFor(() => getByTestId('rek-author-id-options'));

@@ -1,6 +1,6 @@
 import React from 'react';
 import PartialDateForm from './PartialDateForm';
-import { fireEvent, rtlRender } from 'test-utils';
+import { fireEvent, rtlRender, screen } from 'test-utils';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -89,8 +89,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-02-02',
+            state: {
+                defaultValue: '2020-02-02',
             },
         });
         expect(container).toMatchSnapshot();
@@ -99,8 +99,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-01-01',
+            state: {
+                defaultValue: '2020-01-01',
             },
         });
         expect(container).toMatchSnapshot();
@@ -109,8 +109,8 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            meta: {
-                initial: '2020-12-01',
+            state: {
+                defaultValue: '2020-12-01',
             },
         });
         expect(container).toMatchSnapshot();
@@ -120,44 +120,26 @@ describe('PartialDateForm component', () => {
         const { container } = setup({
             allowPartial: true,
             onChange: jest.fn(),
-            input: {
-                value: '2020-02-02',
-            },
+            value: '2020-02-02',
         });
         expect(container).toMatchSnapshot();
     });
 
-    it('should update state when new value passed as prop', () => {
-        // initial render
-        const { container, rerender } = setup({
+    const assertDateFieldValues = (day, month, year) => {
+        expect(screen.getByTestId('test-day-input').value).toBe(day);
+        expect(screen.getByTestId('test-month-input').value).toBe(month);
+        expect(screen.getByTestId('test-year-input').value).toBe(year);
+    };
+
+    it('should update state as expected when mounting', () => {
+        // defaultValue render
+        const { rerender } = setup({
             allowPartial: true,
-            input: {
-                value: '2020-02-02',
-            },
+            value: '2020-02-02',
         });
-        expect(container).toMatchSnapshot();
+        assertDateFieldValues('2', '1', '2020');
 
         // check date changes when new day value provided in props
-        setup(
-            {
-                allowPartial: true,
-                value: '2020-02-01',
-            },
-            rerender,
-        );
-        expect(container).toMatchSnapshot();
-
-        // check date changes when new month value provided in props
-        setup(
-            {
-                allowPartial: true,
-                value: '2020-03-01',
-            },
-            rerender,
-        );
-        expect(container).toMatchSnapshot();
-
-        // check date changes when new year value provided in props
         setup(
             {
                 allowPartial: true,
@@ -165,7 +147,7 @@ describe('PartialDateForm component', () => {
             },
             rerender,
         );
-        expect(container).toMatchSnapshot();
+        assertDateFieldValues('1', '2', '2021');
     });
 
     describe('with clearable flag', () => {
@@ -173,8 +155,8 @@ describe('PartialDateForm component', () => {
             const { getByText, queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -189,8 +171,8 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByRole, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -206,8 +188,8 @@ describe('PartialDateForm component', () => {
             const { queryByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -222,8 +204,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -238,8 +220,8 @@ describe('PartialDateForm component', () => {
                 allowPartial: false,
                 disableFuture: true,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -254,8 +236,8 @@ describe('PartialDateForm component', () => {
                 allowPartial: true,
                 disableFuture: true,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -269,8 +251,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });
@@ -284,8 +266,8 @@ describe('PartialDateForm component', () => {
             const { getByText, getByTestId } = setup({
                 allowPartial: false,
                 onChange: jest.fn(),
-                meta: {
-                    initial: '2017-02-02',
+                state: {
+                    defaultValue: '2017-02-02',
                 },
                 clearable: true,
             });

@@ -7,8 +7,12 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
 import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
+import { useFormContext } from 'react-hook-form';
 
 export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text', ...props }) => {
+    const {
+        formState: { isValidating },
+    } = useFormContext();
     return (
         <React.Fragment>
             <Grid item xs={2}>
@@ -22,14 +26,14 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
                 {type === 'checkbox' && (
                     <Checkbox
                         {...props}
-                        color={!!props.input.value ? 'primary' : 'secondary'}
-                        checked={!!props.input.value}
+                        color={!!props.value ? 'primary' : 'secondary'}
+                        checked={!!props.value}
                         inputProps={{
                             'data-analyticsid': `${userFieldDataId}-input`,
                             'data-testid': `${userFieldDataId}-input`,
                             id: `${userFieldDataId}-input`,
                         }}
-                        onChange={event => props.input.onChange(event.target.checked ? 1 : 0)}
+                        onChange={event => props.onChange(event.target.checked ? 1 : 0)}
                     />
                 )}
                 {type === 'text' && (
@@ -44,7 +48,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
                                 fontWeight: 400,
                             },
                             ...props.InputProps,
-                            ...((!!props.meta.asyncValidating && {
+                            ...((!!isValidating && {
                                 endAdornment: (
                                     <InputAdornment position="end">
                                         <CircularProgress
@@ -61,7 +65,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
                         }}
                         InputLabelProps={{
                             style: {
-                                ...(!props.meta.error ? { color: '#4085C6' } : {}),
+                                ...(props.error || { color: '#4085C6' }),
                                 fontWeight: 400,
                             },
                         }}
@@ -77,13 +81,14 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
 
 UserFieldData.propTypes = {
     userFieldDataId: PropTypes.string,
-    input: PropTypes.object,
+    value: PropTypes.any,
     onChange: PropTypes.func,
-    meta: PropTypes.object,
+    state: PropTypes.object,
     helperText: PropTypes.string,
     InputProps: PropTypes.object,
     label: PropTypes.string,
     type: PropTypes.string,
+    error: PropTypes.bool,
 };
 
 export default React.memo(UserFieldData);

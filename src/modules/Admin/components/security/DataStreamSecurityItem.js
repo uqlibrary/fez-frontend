@@ -48,10 +48,8 @@ const DataStreamSecurityItem = ({
                     inheritedSecurity={inheritedSecurity}
                     disabled={disabled}
                     {...{
-                        input: {
-                            onChange: handleDataStreamChange,
-                            onBlur: /* istanbul ignore next */ () => {},
-                        },
+                        onChange: handleDataStreamChange,
+                        onBlur: /* istanbul ignore next */ () => {},
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
                     policyDropdownId={`dsi-security-policy-${index}`}

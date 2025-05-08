@@ -19,7 +19,6 @@ import {
     assertInstanceOfFile,
 } from 'test-utils';
 import { useAccountContext } from 'context';
-import Immutable from 'immutable';
 import { waitFor } from '@testing-library/dom';
 import { FIELD_OF_RESEARCH_VOCAB_ID } from 'config/general';
 import { vocabulariesList } from '../../../mock/data';
@@ -46,7 +45,7 @@ function setup(props = {}) {
         },
     }));
 
-    const state = Immutable.Map({
+    const state = {
         accountReducer: {
             author: props.author,
             isSessionExpired: props.isSessionExpired,
@@ -59,7 +58,7 @@ function setup(props = {}) {
             fullyUploadedFiles: props.fullyUploadedFiles,
             isUploadInProgress: props.isUploadInProgress,
         },
-    });
+    };
 
     return render(
         <WithReduxStore initialState={state}>
@@ -115,7 +114,7 @@ describe('ThesisSubmission', () => {
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
         await userEvent.type(screen.getByTestId('rek-keywords-input'), 'keyword');
         await userEvent.click(screen.getByTestId('rek-keywords-add'));
-        addFilesToFileUploader(fileMock);
+        await addFilesToFileUploader(fileMock);
         await assertNoValidationErrorSummary();
     };
 
@@ -145,7 +144,7 @@ describe('ThesisSubmission', () => {
     beforeEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        api.request.history.reset();
+        api.reset();
 
         config.THESIS_UPLOAD_RETRIES = 1;
         mockSessionApi.onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl).reply(200);
@@ -157,7 +156,7 @@ describe('ThesisSubmission', () => {
     afterEach(() => {
         jest.restoreAllMocks();
         mockSessionApi.resetHandlers();
-        api.mock.reset();
+        api.reset();
     });
 
     describe('HDR submission', () => {
@@ -196,7 +195,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.click(getByTestId('rek-keywords-add'));
                 await waitForTextToBeRemoved('Keywords are required');
 
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await waitForTextToBeRemoved('File submission to be completed');
             });
 
@@ -362,7 +361,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.click(queryByText('0101 Pure Mathematics'));
                 await waitForTextToBeRemoved('Field of research (FoR) codes are required');
 
-                addFilesToFileUploader(fileMock);
+                await addFilesToFileUploader(fileMock);
                 await waitForTextToBeRemoved('File submission to be completed');
             });
 
@@ -414,6 +413,7 @@ describe('ThesisSubmission', () => {
                 await submitForm();
                 await confirmDeposit();
 
+                await waitForTextToBeRemoved(/saving/i);
                 await waitForText('UQ eSpace');
                 expect(getByTestId('alert-message')).not.toHaveTextContent('Graduate School');
                 await retryUpload();

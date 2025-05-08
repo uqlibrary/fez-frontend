@@ -1,6 +1,5 @@
 import React from 'react';
 import HerdcStatusField from './HerdcStatusField';
-import Immutable from 'immutable';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -21,11 +20,9 @@ describe('HerdcStatusField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn(),
-            },
-            meta: {
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
+            state: {
                 error: 'Test error',
             },
         });
@@ -36,11 +33,9 @@ describe('HerdcStatusField component', () => {
         const { container } = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: Immutable.List(['One', 'Two']),
-                onChange: jest.fn(),
-            },
-            meta: {
+            value: ['One', 'Two'],
+            onChange: jest.fn(),
+            state: {
                 error: 'Test error',
             },
         });

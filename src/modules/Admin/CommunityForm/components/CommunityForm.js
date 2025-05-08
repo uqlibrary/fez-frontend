@@ -1,7 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
+import { useValidatedForm } from 'hooks';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { getNotesSectionSearchKeys } from 'actions/transformers';
+import { useDispatch } from 'react-redux';
+import { createCommunity } from 'actions';
+import { useSelector } from 'react-redux';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -18,12 +21,47 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
-export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
-    const cancelSubmit = () => {
-        window.location.assign(pathConfig.index);
+const newRecordSelector = state => {
+    const createCommunityReducer = state?.createCommunityReducer || state?.get?.('createCommunityReducer');
+    return createCommunityReducer?.newRecord || createCommunityReducer?.get?.('newRecord') || null;
+};
+
+const authorSelector = state => {
+    const accountReducer = state?.accountReducer || state?.get?.('accountReducer');
+    return accountReducer?.author || accountReducer?.get?.('author') || null;
+};
+export const CommunityForm = () => {
+    const newRecord = useSelector(newRecordSelector);
+    const author = useSelector(authorSelector);
+
+    const [apiError, setApiError] = React.useState('');
+    const dispatch = useDispatch();
+
+    const onSubmit = async values => {
+        const formData = { ...values };
+        const data = { ...formData, ...getNotesSectionSearchKeys(formData) };
+
+        delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
+
+        const currentAuthor = author;
+        // eslint-disable-next-line camelcase
+        return dispatch(createCommunity(data, currentAuthor?.aut_id)).catch(error => {
+            setApiError(error);
+        });
     };
 
-    const afterSubmit = () => {
+    const {
+        handleSubmit,
+        control,
+        formState: { isSubmitting, isDirty, isSubmitSuccessful, errors: formErrors },
+    } = useValidatedForm({
+        // use values instead of defaultValues, as the first triggers a re-render upon updates
+        values: {},
+    });
+
+    const disableSubmit = !!formErrors && Object.keys(formErrors).length > 0;
+
+    const cancelSubmit = () => {
         window.location.assign(pathConfig.index);
     };
 
@@ -32,7 +70,7 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
     };
 
     const txt = formLocale.addACommunity;
-    if (props.submitSucceeded && newRecord) {
+    if (isSubmitSuccessful && newRecord) {
         return (
             <StandardPage title={txt.title}>
                 <Grid container spacing={3}>
@@ -45,12 +83,25 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                 <Grid container spacing={2}>
                     <Grid item xs />
                     <Grid item>
-                        <Button variant="contained" fullWidth onClick={afterSubmit}>
+                        <Button
+                            variant="contained"
+                            fullWidth
+                            onClick={cancelSubmit}
+                            data-analyticsid="after-submit-community"
+                            data-testid="after-submit-community"
+                        >
                             {txt.afterSubmitButton}
                         </Button>
                     </Grid>
                     <Grid item>
-                        <Button variant="contained" color="primary" fullWidth onClick={reloadForm}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            onClick={reloadForm}
+                            data-analyticsid="reload-community"
+                            data-testid="reload-community"
+                        >
                             {txt.AddAnotherButton}
                         </Button>
                     </Grid>
@@ -60,25 +111,24 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
     }
     // customise error for thesis submission
     const alertProps = validation.getErrorAlertProps({
-        ...props,
+        error: apiError,
+        formErrors,
         alertLocale: {
             validationAlert: { ...formLocale.validationAlert },
             progressAlert: { ...formLocale.progressAlert },
             successAlert: { ...formLocale.successAlert },
             errorAlert: {
                 ...formLocale.errorAlert,
+                alertId: 'alert-error-community',
                 message: formLocale.addACommunity.addFailedMessage,
             },
         },
     });
     return (
         <StandardPage title={txt.title}>
-            <ConfirmDiscardFormChanges dirty={props.dirty} submitSucceeded={props.submitSucceeded}>
+            <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form>
-                    <NavigationDialogBox
-                        when={props.dirty && !props.submitSucceeded}
-                        txt={txt.cancelWorkflowConfirmation}
-                    />
+                    <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
                             <Grid item xs={12}>
@@ -86,9 +136,10 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12}>
                                             <Field
+                                                control={control}
                                                 component={TextField}
                                                 textFieldId="rek-title"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 autoFocus
                                                 name="rek_title"
                                                 type="text"
@@ -101,9 +152,10 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
 
                                         <Grid item xs={12}>
                                             <Field
+                                                control={control}
                                                 component={TextField}
                                                 textFieldId="rek-description"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 name="rek_description"
                                                 fullWidth
                                                 multiline
@@ -117,6 +169,7 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                         <Grid item xs={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
+                                                control={control}
                                                 component={NewListEditorField}
                                                 name="fez_record_search_key_keywords"
                                                 maxCount={10}
@@ -124,7 +177,7 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                                 searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                 listEditorId="rek-keywords"
                                                 locale={txt.formLabels.keywords.field}
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 ListEditorForm={KeywordsForm}
                                             />
                                         </Grid>
@@ -132,9 +185,10 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                         <Grid item xs={12}>
                                             <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                             <Field
+                                                control={control}
                                                 component={RichEditorField}
                                                 richEditorId="internalNotes"
-                                                disabled={props.submitting}
+                                                disabled={isSubmitting}
                                                 name="internalNotes"
                                                 fullWidth
                                                 multiline
@@ -160,7 +214,7 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                     data-testid="cancel-community"
                                     variant="contained"
                                     fullWidth
-                                    disabled={props.submitting}
+                                    disabled={isSubmitting}
                                     onClick={cancelSubmit}
                                 >
                                     {txt.cancel}
@@ -174,8 +228,8 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
                                     variant="contained"
                                     color="primary"
                                     fullWidth
-                                    onClick={props.handleSubmit}
-                                    disabled={props.submitting || disableSubmit}
+                                    onClick={handleSubmit(onSubmit)}
+                                    disabled={isSubmitting || disableSubmit}
                                 >
                                     {txt.submit}
                                 </Button>
@@ -186,20 +240,5 @@ export const CommunityForm = ({ disableSubmit, newRecord, ...props }) => {
             </ConfirmDiscardFormChanges>
         </StandardPage>
     );
-};
-CommunityForm.propTypes = {
-    ...propTypes, // all redux-form props
-    author: PropTypes.object,
-    account: PropTypes.bool,
-    disableSubmit: PropTypes.bool,
-    fileAccessId: PropTypes.number,
-    actions: PropTypes.object,
-    isSessionValid: PropTypes.bool,
-    formValues: PropTypes.object,
-    formErrors: PropTypes.object,
-
-    newCommunitySaving: PropTypes.bool,
-    newCommunityError: PropTypes.bool,
-    newRecord: PropTypes.object,
 };
 export default CommunityForm;

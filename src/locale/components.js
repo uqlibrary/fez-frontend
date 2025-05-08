@@ -3757,6 +3757,8 @@ export default {
             },
         },
         manageAuthors: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading authors',
             header: {
                 columns: {
@@ -3961,6 +3963,8 @@ export default {
             },
         },
         manageUsers: {
+            validationAlertTitle:
+                'Form cannot be submitted until all fields are valid. Please review all input fields.',
             loadingText: 'Loading users',
             title: 'User information',
             header: {

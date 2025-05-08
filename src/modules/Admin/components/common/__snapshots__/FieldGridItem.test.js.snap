@@ -1,154 +1,327 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldGridItem should render default view 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  md={12}
-  xs={12}
->
-  <Field
-    component={[Function]}
-    format={[Function]}
-    height={100}
-    name="bibliographicSection.rek_title"
-    required={true}
-    richEditorId="rek-title"
-    singleLine={true}
-    textOnlyOnPaste={false}
-    title="Formatted title"
-    titleProps={
-      {
-        "style": {
-          "opacity": 0.666,
-        },
-        "variant": "caption",
-      }
-    }
-    validate={
-      [
-        [Function],
-      ]
-    }
-  />
-</ForwardRef(Grid)>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      data-analyticsid="rek-title"
+      data-testid="rek-title"
+      id="rek-title"
+    >
+      <span>
+        <span
+          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          style="opacity: 0.666;"
+        >
+          Formatted title
+          <span>
+             *
+          </span>
+        </span>
+      </span>
+      <div />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`FieldGridItem should render default view for a composed field 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  md={12}
-  xs={12}
->
-  <SensitiveHandlingNoteField
-    name="filesSection.sensitiveHandlingNote"
-  />
-</ForwardRef(Grid)>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="false"
+        data-testid="rek-sensitive-handling-note-id-label"
+        id="rek-sensitive-handling-note-id-label"
+      >
+        Sensitive Handling Note
+      </label>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      >
+        <div
+          aria-controls="<dynamic>"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="rek-sensitive-handling-note-id-select"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+          data-testid="rek-sensitive-handling-note-id-select"
+          id="rek-sensitive-handling-note-id-select"
+          role="combobox"
+          tabindex="0"
+        >
+          <span
+            class="notranslate"
+          >
+            ​
+          </span>
+        </div>
+        <input
+          aria-hidden="true"
+          aria-invalid="false"
+          aria-labelledby="rek-sensitive-handling-note-id-label"
+          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          data-analyticsid="rek-sensitive-handling-note-id-input"
+          data-testid="rek-sensitive-handling-note-id-input"
+          id="rek-sensitive-handling-note-id-input"
+          tabindex="-1"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`FieldGridItem should render with correct props 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  md={12}
-  xs={12}
->
-  <Field
-    component={[Function]}
-    contributorEditorId="rek-contributor"
-    isAdmin={true}
-    locale={
-      {
-        "form": {
-          "locale": {
-            "addButton": "Add editor",
-            "affiliations": {
-              "affiliationPctTitle": "Affiliation %",
-              "alert": {
-                "authorOrphan": {
-                  "message": "Author requires at least one affiliation to be added",
-                },
-                "percentile": {
-                  "actionButtonLabel": "Recalculate Percentages",
-                  "message": "Percentage sum total of all affiliations must equal 100%",
-                },
-                "title": "Author affiliation information is incomplete",
-              },
-              "cancelButton": "Cancel",
-              "editButton": {
-                "tooltip": "Edit affiliations for this author",
-              },
-              "getChipLabel": [Function],
-              "getSuggestedTitle": [Function],
-              "loadingOrganisationalUnits": "Loading Organisational Units",
-              "noAffiliationsAdded": "No affiliations have been added",
-              "organisationMissing": "Organisation missing",
-              "organisationPlaceholder": "Start typing or select from list",
-              "organisationalUnitMissing": "Organisational Unit data missing",
-              "organisationalUnits": "Organisational Unit",
-              "saveButton": "Save",
-              "title": "Affiliations",
-            },
-            "creatorRoleHint": "Select role from list or type the role of the creator in relation to the dataset",
-            "creatorRoleLabel": "Enter creator's role",
-            "identifierLabel": "UQ identifier (if available)",
-            "nameAsPublishedHint": "Type the name exactly as published (eg. Smith, John)",
-            "nameAsPublishedLabel": "Editor's name as published",
-          },
-        },
-        "header": {
-          "locale": {
-            "contributorAssignmentColumn": "Select your name",
-            "identifierColumn": "UQ identifiers",
-            "nameColumn": "Editor's name as published",
-            "organisationColumn": "Organisation/Organisation type",
-            "roleColumn": "Creator role",
-          },
-        },
-        "row": {
-          "locale": {
-            "deleteHint": "Remove this item",
-            "editHint": "Edit this item",
-            "moveDownHint": "Move item down the order",
-            "moveUpHint": "Move item up the order",
-            "suffix": " listed editor",
-          },
-        },
-      }
-    }
-    name="authorsSection.editors"
-    showIdentifierLookup={true}
-  />
-</ForwardRef(Grid)>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      data-testid="rek-contributor-list"
+      id="rek-contributor-list"
+      style="position: relative;"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-ig9rso-MuiToolbar-root"
+      >
+        <div
+          class="MuiBox-root css-15k1nh5"
+        />
+        <div
+          class="MuiBox-root css-p9qzma"
+        >
+          <div>
+            <div
+              style="display: flex;"
+            >
+              <span>
+                <div
+                  style="display: flex;"
+                >
+                  <button
+                    aria-label="Add editor"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-km7yoa-MuiButtonBase-root-MuiIconButton-root"
+                    data-mui-internal-clone-element="true"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-k8ijg7-MuiSvgIcon-root"
+                      data-testid="rek-contributor-add"
+                      focusable="false"
+                      id="rek-contributor-add"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-2e16le"
+      >
+        <div>
+          <div
+            style="overflow-y: hidden;"
+          >
+            <div>
+              <table
+                class="MuiTable-root css-1ln08kx-MuiTable-root"
+                style="table-layout: auto;"
+              >
+                <thead
+                  class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                >
+                  <tr
+                    class="MuiTableRow-root MuiTableRow-head css-1nri4vv-MuiTableRow-root"
+                  >
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingNone MuiTableCell-sizeMedium css-lngr1t-MuiTableCell-root"
+                      scope="col"
+                    />
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-sort="none"
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        data-testid="mtableheader-sortlabel"
+                        role="columnheader"
+                        tabindex="0"
+                      >
+                        <div
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
+                        >
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-i1djz7-MuiGrid-root"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-ez3bwd-MuiSvgIcon-root"
+                              data-testid="PeopleIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                          >
+                            <span
+                              class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
+                            >
+                              Editor's name as published
+                            </span>
+                          </div>
+                        </div>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        data-testid="material-table-column-sort-order-indicator"
+                        style="width: 1em;"
+                      />
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-1y7yywx-MuiTableCell-root"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-sort="none"
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        data-testid="mtableheader-sortlabel"
+                        role="columnheader"
+                        tabindex="0"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
+                        >
+                          UQ identifiers
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8z"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        data-testid="material-table-column-sort-order-indicator"
+                        style="width: 1em;"
+                      />
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-paddingCheckbox MuiTableCell-sizeMedium css-1ajh4qi-MuiTableCell-root"
+                      scope="col"
+                      style="text-align: center; width: 128px; box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="true"
+                        class="MuiButtonBase-root Mui-disabled MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="-1"
+                      >
+                        Actions
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                >
+                  <tr
+                    class="MuiTableRow-root css-4wzszn-MuiTableRow-root"
+                    style="height: 36px;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1xwnbnq-MuiTableCell-root"
+                      colspan="4"
+                      style="padding-top: 0px; padding-bottom: 0px; text-align: center;"
+                    >
+                      No records to display
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`FieldGridItem without record should render default view 1`] = `
-<ForwardRef(Grid)
-  item={true}
-  md={12}
-  xs={12}
->
-  <Field
-    component={[Function]}
-    format={[Function]}
-    height={100}
-    name="bibliographicSection.rek_title"
-    required={true}
-    richEditorId="rek-title"
-    singleLine={true}
-    textOnlyOnPaste={false}
-    title="Formatted title"
-    titleProps={
-      {
-        "style": {
-          "opacity": 0.666,
-        },
-        "variant": "caption",
-      }
-    }
-    validate={
-      [
-        [Function],
-      ]
-    }
-  />
-</ForwardRef(Grid)>
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-13i4rnv-MuiGrid-root"
+  >
+    <div
+      data-analyticsid="rek-title"
+      data-testid="rek-title"
+      id="rek-title"
+    >
+      <span>
+        <span
+          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          style="opacity: 0.666;"
+        >
+          Formatted title
+          <span>
+             *
+          </span>
+        </span>
+      </span>
+      <div />
+    </div>
+  </div>
+</div>
 `;

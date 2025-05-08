@@ -7,10 +7,12 @@ import { Stepper } from 'modules/SharedComponents/Toolbox/Stepper';
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-export const AddMissingRecord = ({ rawSearchQuery, addRecordStep: AddRecordStep, ...props }) => {
+export const AddMissingRecord = ({ addRecordStep: AddRecordStep, ...props }) => {
     const location = useLocation();
     const navigate = useNavigate();
+    const { rawSearchQuery } = useSelector(state => state.get('searchRecordsReducer'));
 
     if (!rawSearchQuery && location.pathname === pathConfig.records.add.results) {
         navigate(pathConfig.records.add.find, { replace: true });
@@ -33,7 +35,6 @@ export const AddMissingRecord = ({ rawSearchQuery, addRecordStep: AddRecordStep,
     );
 };
 AddMissingRecord.propTypes = {
-    rawSearchQuery: PropTypes.string,
     addRecordStep: PropTypes.object,
 };
 

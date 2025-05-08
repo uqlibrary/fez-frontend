@@ -223,11 +223,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  disabled="true"
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -649,10 +645,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -943,10 +936,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -1290,10 +1280,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -1584,10 +1571,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -1904,10 +1888,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -2161,10 +2142,7 @@ exports[`AdminInterface component should render default view as a full form view
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -2197,10 +2175,7 @@ exports[`AdminInterface component should render default view as a full form view
                 data-testid="files-section-content"
                 id="files-section-content"
               >
-                <field
-                  is="mock"
-                  name="filesSection"
-                />
+                FilesSectionComponent
               </div>
             </div>
           </div>
@@ -2233,10 +2208,7 @@ exports[`AdminInterface component should render default view as a full form view
                 data-testid="security-section-content"
                 id="security-section-content"
               >
-                <field
-                  is="mock"
-                  name="securitySection"
-                />
+                SecuritySectionComponent
               </div>
             </div>
           </div>
@@ -2536,10 +2508,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -2836,10 +2805,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -3209,11 +3175,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  disabled="true"
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -3597,11 +3559,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  disabled="false"
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>
@@ -3876,10 +3834,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                 data-testid="bibliographic-section-content"
                 id="bibliographic-section-content"
               >
-                <field
-                  is="mock"
-                  name="bibliographicSection"
-                />
+                BibliographySectionComponent
               </div>
             </div>
           </div>

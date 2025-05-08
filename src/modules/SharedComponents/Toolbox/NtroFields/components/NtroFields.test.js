@@ -1,14 +1,25 @@
 import React from 'react';
-import NtroFields from './NtroFields';
+import NtroFields, { normalizeIsrc, transformIsmn, transformIsrc } from './NtroFields';
 import { render, WithReduxStore } from 'test-utils';
+import { useForm } from 'react-hook-form';
 
-/* eslint-disable react/prop-types */
-jest.mock('redux-form/immutable', () => ({
-    Field: jest.fn(),
-}));
+const ControlledFieldWithReduxStore = props => {
+    const {
+        control,
+        formState: { isSubmitting },
+    } = useForm();
+
+    // eslint-disable-next-line react/prop-types
+    return (
+        <WithReduxStore>
+            <NtroFields {...{ control, isSubmitting, ...props }} />
+        </WithReduxStore>
+    );
+};
+
 function setup(testProps) {
     const props = {
-        submitting: false,
+        isSubmitting: false,
         hideIsmn: false,
         hideIsrc: false,
         hideVolume: false,
@@ -24,40 +35,10 @@ function setup(testProps) {
         showContributionStatement: false,
         ...testProps,
     };
-    return render(
-        <WithReduxStore>
-            <NtroFields {...props} />
-        </WithReduxStore>,
-    );
+    return render(<ControlledFieldWithReduxStore {...props} />);
 }
 
 describe('Component NtroFields', () => {
-    const ReduxFormMock = require('redux-form/immutable');
-    let normalizeIsrcFn;
-    let transformIsrcFn;
-    let transformIsmnFn;
-    ReduxFormMock.Field.mockImplementation(
-        ({ name, title, required, disable, label, floatingLabelText, inputNormalizer, transformFunction }) => {
-            if (name === 'fez_record_search_key_isrc') {
-                normalizeIsrcFn = inputNormalizer;
-                transformIsrcFn = transformFunction;
-            } else if (name === 'fez_record_search_key_ismn') {
-                transformIsmnFn = transformFunction;
-            }
-
-            return (
-                <field
-                    is="mock"
-                    name={name}
-                    title={title}
-                    required={required}
-                    disabled={disable}
-                    label={label || floatingLabelText}
-                />
-            );
-        },
-    );
-
     it('should render default view', () => {
         const { container } = setup({});
         expect(container).toMatchSnapshot();
@@ -69,7 +50,7 @@ describe('Component NtroFields', () => {
     });
 
     it('should render all fields as disabled', () => {
-        const { container } = setup({ showContributionStatement: true, submitting: true });
+        const { container } = setup({ showContributionStatement: true, isSubmitting: true });
         expect(container).toMatchSnapshot();
     });
 
@@ -85,23 +66,19 @@ describe('Component NtroFields', () => {
             hideAudienceSize: true,
         };
         const { container, rerender } = setup({ hideExtent: true });
-        rerender(
-            <WithReduxStore>
-                <NtroFields {...props} />
-            </WithReduxStore>,
-        );
+        rerender(<ControlledFieldWithReduxStore {...props} />);
         expect(container).toMatchSnapshot();
     });
 
     it('should normalize ISRC value', () => {
         setup({});
-        const expected = normalizeIsrcFn('CD-abc2323423');
+        const expected = normalizeIsrc('CD-abc2323423');
         expect(expected).toEqual('CD-ABC-23-23423');
     });
 
     it('should transform ISRC value', () => {
         setup({});
-        const expected = transformIsrcFn(
+        const expected = transformIsrc(
             {
                 value: 'fez_test',
                 order: 'fez_test_order',
@@ -117,7 +94,7 @@ describe('Component NtroFields', () => {
 
     it('should transform ISMN value', () => {
         setup({});
-        const expected = transformIsmnFn(
+        const expected = transformIsmn(
             {
                 value: 'fez_test',
                 order: 'fez_test_order',
@@ -161,28 +138,5 @@ describe('Component NtroFields', () => {
         });
 
         expect(container).toMatchSnapshot();
-    });
-
-    it('should accept a custom fieldWrapper', () => {
-        const fieldWrapperMock = jest.fn();
-        setup({
-            fieldWrapper: fieldWrapperMock,
-        });
-
-        // this test is not about asserting all calls to fieldWrapper, but at least one
-        expect(fieldWrapperMock).toHaveBeenNthCalledWith(
-            1,
-            expect.objectContaining({
-                name: 'ntroAbstract',
-                component: expect.any(Function),
-                description: expect.any(String),
-                disabled: expect.any(Boolean),
-                fullWidth: expect.any(Boolean),
-                richEditorId: expect.any(String),
-                title: expect.any(Object),
-                validate: expect.any(Array),
-            }),
-            {}, // empty 2nd arg
-        );
     });
 });

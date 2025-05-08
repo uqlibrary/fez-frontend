@@ -1,10 +1,7 @@
 import React from 'react';
 import { render, WithReduxStore } from 'test-utils';
-
-import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsListLegacy } from './JournalsListLegacy';
-
 import JournalFieldsMap from './partials/JournalFieldsMap';
 import { sanitiseId } from 'helpers/general';
 import locale from 'locale/components';
@@ -17,7 +14,7 @@ const testData = {
 
 const setup = ({ state = {} }) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
+        <WithReduxStore initialState={{ searchJournalsReducer: state }}>
             <JournalsListLegacy {...testData} />
         </WithReduxStore>,
     );

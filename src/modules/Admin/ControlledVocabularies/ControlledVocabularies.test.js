@@ -1,18 +1,13 @@
 import React from 'react';
-
 import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitForElementToBeRemoved } from 'test-utils';
-
 import * as mockData from 'mock/data';
-
 import * as UserIsAdmin from 'hooks/userIsAdmin';
-import Immutable from 'immutable';
-
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
 
 const setup = ({ state = {} } = {}) => {
     return render(
-        <WithReduxStore initialState={Immutable.Map(state)}>
+        <WithReduxStore initialState={state}>
             <WithRouter>
                 <ControlledVocabularies {...state} />
             </WithRouter>
@@ -93,9 +88,8 @@ describe('ControlledVocabularies', () => {
             await showAddForm().then(async ({ getByTestId, queryByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
-                await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
+                queryByTestId('update_dialog-controlledVocabulary') &&
+                    (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
             });
         });
         it('should capture error when save when button clicked', async () => {
@@ -137,9 +131,8 @@ describe('ControlledVocabularies', () => {
                 await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
                     await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
                     await userEvent.click(getByTestId('update_dialog-action-button'));
-                    await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                    // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                    expect(queryByTestId('update_dialog-controlledVocabulary') === null);
+                    queryByTestId('update_dialog-controlledVocabulary') &&
+                        (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
                 });
             });
         });
@@ -171,9 +164,8 @@ describe('ControlledVocabularies', () => {
             await showEditForm().then(async ({ getByTestId, queryByTestId }) => {
                 await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
-                await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary'));
-                // expect(getByTestId('vocab-page-loading')).toBeInTheDocument();
-                expect(queryByTestId('update_dialog-controlledVocabulary') === null);
+                queryByTestId('update_dialog-controlledVocabulary') &&
+                    (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
             });
         });
         describe('child vocab', () => {
