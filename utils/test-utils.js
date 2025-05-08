@@ -25,7 +25,7 @@ import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useForm from 'hooks/useForm';
 import { lastRequests } from '../src/config/axios';
-import { api } from './api-mock';
+import { default as api } from './MockApiWrapper';
 
 export const AllTheProviders = props => {
     return (
