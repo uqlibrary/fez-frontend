@@ -60,7 +60,10 @@ describe('Validation method', () => {
         const testFailValue = validation.email('sdjflsjdlfjsl');
         expect(testFailValue).toEqual(locale.validationErrors.email);
 
-        const testValue = validation.required('abc@abc.com');
+        const testEmptyValue = validation.email('');
+        expect(testEmptyValue).toEqual(undefined);
+
+        const testValue = validation.email('abc@abc.com');
         expect(testValue).toEqual(undefined);
     });
 

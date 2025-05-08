@@ -1,7 +1,7 @@
 import React from 'react';
 import { rtlRender } from 'test-utils';
 import FieldGridItem from './FieldGridItem';
-import { FormProvider } from 'react-hook-form';
+import { FormProvider, useFormContext } from 'react-hook-form';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
@@ -99,16 +99,28 @@ describe('FieldGridItem', () => {
         it('should handle composed field', () => {
             fieldConfig.default.composed_field = {
                 composed: true,
-                component: props => (
-                    <>
-                        <div>
-                            <input {...props.field1} className={props.field1.error ? 'error' : ''} />
-                        </div>
-                        <div>
-                            <input {...props.field2} className={props.field2.error ? 'error' : ''} />
-                        </div>
-                    </>
-                ),
+                component: props => {
+                    // eslint-disable-next-line react-hooks/rules-of-hooks
+                    const { register } = useFormContext();
+                    return (
+                        <>
+                            <div>
+                                <input
+                                    {...register(props.field1.name)}
+                                    {...props.field1}
+                                    className={props.field1.error ? 'error' : ''}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    {...register(props.field2.name)}
+                                    {...props.field2}
+                                    className={props.field2.error ? 'error' : ''}
+                                />
+                            </div>
+                        </>
+                    );
+                },
                 componentProps: {
                     field1: {
                         'data-testid': 'field1',
@@ -125,12 +137,17 @@ describe('FieldGridItem', () => {
                 methods: {
                     getFieldState: jest.fn(field => field === 'sectionA.field1' && { error: 'error message' }),
                 },
+                values: {
+                    sectionA: {
+                        field1: 'value 1',
+                    },
+                },
             });
 
-            expect(getByTestId('field1')).toBeInTheDocument();
+            expect(getByTestId('field1')).toHaveValue('value 1');
             expect(getByTestId('field1')).toHaveAttribute('class', 'error');
             expect(getByTestId('field1')).toHaveAttribute('errortext', 'error message');
-            expect(getByTestId('field2')).toBeInTheDocument();
+            expect(getByTestId('field2')).toHaveValue('');
             expect(getByTestId('field2')).not.toHaveAttribute('class', 'error');
             expect(getByTestId('field2')).not.toHaveAttribute('errortext', 'error message');
         });
