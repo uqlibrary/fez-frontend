@@ -78,13 +78,10 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
             },
         };
 
-        mockApi
-            .onGet(repositories.routes.VOCABULARIES_API({ id: JOURNAL_ADVISORY_STATEMENT_TYPE }).apiUrl)
-            .reply(200, vocabulariesList[JOURNAL_ADVISORY_STATEMENT_TYPE]);
-        // api.mock.cvo.get({
-        //     cvoId: JOURNAL_ADVISORY_STATEMENT_TYPE,
-        //     data: vocabulariesList[JOURNAL_ADVISORY_STATEMENT_TYPE],
-        // });
+        api.mock.cvo.get({
+            cvoId: JOURNAL_ADVISORY_STATEMENT_TYPE,
+            data: vocabulariesList[JOURNAL_ADVISORY_STATEMENT_TYPE].data,
+        });
     });
 
     afterEach(() => {

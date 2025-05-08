@@ -1,3 +1,5 @@
+/* eslint-disable space-before-function-paren */
+/* eslint-disable no-use-before-define */
 import { clearLastRequest } from '../src/config/axios';
 import * as repositories from '../src/repositories';
 import MockAdapter from 'axios-mock-adapter';
@@ -5,6 +7,13 @@ import MockAdapter from 'axios-mock-adapter';
 interface Params {
     status?: number;
     pid?: string;
+    data?: Record<string, unknown>;
+    once?: boolean;
+}
+
+interface CvoParams {
+    status?: number;
+    cvoId?: number;
     data?: Record<string, unknown>;
     once?: boolean;
 }
@@ -19,14 +28,9 @@ interface ApiUrls {
         presignedUrl: string;
         put: string;
     };
-}
-
-interface DatastreamApi {
-    presignedUrl: (params: Params) => DatastreamApi;
-    put: (params: Params) => DatastreamApi;
-    upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
-    records: RecordApi;
-    instance: MockAdapter;
+    cvo: {
+        get: (cvoId: number) => string;
+    };
 }
 
 interface RecordApi {
@@ -35,6 +39,23 @@ interface RecordApi {
     update: (params: Params) => RecordApi;
     delete: (params: Params) => RecordApi;
     issues: (params: Params) => RecordApi;
+    files: DatastreamApi;
+    cvo: ControlledVocabApi;
+    instance: MockAdapter;
+}
+
+interface DatastreamApi {
+    presignedUrl: (params: Params) => DatastreamApi;
+    put: (params: Params) => DatastreamApi;
+    upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
+    records: RecordApi;
+    cvo: ControlledVocabApi;
+    instance: MockAdapter;
+}
+
+interface ControlledVocabApi {
+    get: (params: CvoParams) => ControlledVocabApi;
+    records: RecordApi;
     files: DatastreamApi;
     instance: MockAdapter;
 }
@@ -45,6 +66,7 @@ interface Api {
         instance: MockAdapter;
         records: RecordApi;
         files: DatastreamApi;
+        cvo: ControlledVocabApi;
         reset: () => void;
     };
     request: {
@@ -70,6 +92,9 @@ export const api: Api = {
         files: {
             presignedUrl: repositories.routes.FILE_UPLOAD_API().apiUrl,
             put: 's3-ap-southeast-2.amazonaws.com',
+        },
+        cvo: {
+            get: (cvoId: number) => repositories.routes.VOCABULARIES_API({ id: cvoId }).apiUrl,
         },
     },
     mock: {
@@ -104,6 +129,7 @@ export const api: Api = {
                 return this;
             },
             files: {} as DatastreamApi,
+            cvo: {} as ControlledVocabApi,
             instance: {} as MockAdapter,
         },
         files: {
@@ -119,6 +145,16 @@ export const api: Api = {
                 return this.presignedUrl({ ...defaults, ...params }).put({ ...defaults, ...params });
             },
             records: {} as RecordApi,
+            cvo: {} as ControlledVocabApi,
+            instance: {} as MockAdapter,
+        },
+        cvo: {
+            get: function({ status = 200, cvoId = 0, data = {}, once = false }: CvoParams) {
+                this.instance.onGet(api.url.cvo.get(cvoId))[replyMethod(once)](status, { data });
+                return this;
+            },
+            records: {} as RecordApi,
+            files: {} as DatastreamApi,
             instance: {} as MockAdapter,
         },
         reset: function() {
@@ -132,8 +168,13 @@ export const api: Api = {
     },
 };
 
-// cross-references for chaining
+// cross-references to allow chaining
 api.mock.records.files = api.mock.files as DatastreamApi;
+api.mock.records.cvo = api.mock.cvo as ControlledVocabApi;
 api.mock.records.instance = api.mock.instance as MockAdapter;
 api.mock.files.records = api.mock.records as RecordApi;
+api.mock.files.cvo = api.mock.cvo as ControlledVocabApi;
 api.mock.files.instance = api.mock.instance as MockAdapter;
+api.mock.cvo.records = api.mock.records as RecordApi;
+api.mock.cvo.files = api.mock.files as DatastreamApi;
+api.mock.cvo.instance = api.mock.instance as MockAdapter;
