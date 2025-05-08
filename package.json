@@ -370,7 +370,10 @@
             "src/reducers/*.{js,jsx,ts,tsx}",
             "src/repositories/routes.js",
             "src/hooks/useForm.js",
-            "src/hooks/useValidatedForm.js"
+            "src/hooks/useValidatedForm.js",
+            "src/hooks/useDispatchOnce.ts",
+            "src/hooks/usePrevious.ts",
+            "src/hooks/useControlledVocabs.ts"
         ],
         "coverageDirectory": "coverage/jest",
         "coverageReporters": [

@@ -19,12 +19,12 @@ const flattenCVOTree = data =>
             // store CVO's desc as `id` to allow using GenericOptionTemplate for option rendering
             id: item.controlled_vocab.cvo_desc,
         }))
-        .sort((a, b) => a.value.localeCompare(b.value) && a.id?.localeCompare(b.id)) || [];
+        .sort((a, b) => a.value.localeCompare(b.value) && a.id?.localeCompare(b.id));
 
 export const AdvisoryStatementFields = props => {
     const { control, setValue, getValues, formState } = useFormContext();
     const type = useWatch({ name: props.type.name });
-    const statement = getValues(props.text.name)?.plainText?.trim?.();
+    const statement = getValues(props.text.name)?.plainText?.trim?.() || getValues(props.text.name);
     const prevType = usePrevious(type);
     const cvoList = useControlledVocabs(cvoId, flattenCVOTree);
     const isPrePopulated = !!get(formState.defaultValues, props.type.name);
