@@ -1,4 +1,10 @@
-import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID, SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID } from 'config/general';
+import {
+    ORG_UNITS_VOCAB_ID,
+    FIELD_OF_RESEARCH_VOCAB_ID,
+    AIATSIS_CODES_VOCAB_ID,
+    SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+    JOURNAL_ADVISORY_STATEMENT_TYPE,
+} from 'config/general';
 
 export const vocabulariesList = {
     [ORG_UNITS_VOCAB_ID]: {
@@ -32569,4 +32575,31 @@ export const vocabulariesList = {
         ],
         filters: [],
     },
+    [JOURNAL_ADVISORY_STATEMENT_TYPE]: {
+        total: 3,
+        data: [
+            {
+                controlled_vocab: {
+                    cvo_id: 459330,
+                    cvo_title: 'Warning',
+                    cvo_desc:
+                        'This is a default "warning" statement, used in case advisory statement text is not set',
+                },
+            },
+            {
+                controlled_vocab: {
+                    cvo_id: 459349,
+                    cvo_title: 'Error',
+                    cvo_desc: 'Default "error" statement text',
+                },
+            },
+            {
+                controlled_vocab: {
+                    cvo_id: 459352,
+                    cvo_title: 'Warning',
+                    cvo_desc: null,
+                },
+            },
+        ],
+    }
 };

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
@@ -208,14 +208,53 @@ const waitToBeDisabled = async element =>
     await waitFor(() =>
         expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
     );
-const waitForText = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    !screen.queryByText(text) &&
-    (await waitFor(() => screen.getByText(text), options));
-const waitForTextToBeRemoved = async (text, options) =>
-    ((typeof text === 'string' && !!text.trim().length) || text) &&
-    screen.queryByText(text) &&
-    (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+
+/**
+ * @param {string|function} dataTestId
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitElementToBeInDocument = async (dataTestId, options) =>
+    await waitFor(() => {
+        const element = typeof dataTestId === 'string' ? screen.getByTestId(dataTestId) : dataTestId();
+        expect(element).toBeInTheDocument();
+        return element;
+    }, options);
+
+/**
+ * note: it will match visible texts in DOM or input's values
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<HTMLElement>}
+ */
+const waitForText = async (text, options) => {
+    if (text === undefined || text === null || (typeof text === 'string' && !text.trim?.().length)) {
+        throw new Error('empty text');
+    }
+
+    return await waitFor(
+        async () =>
+            await waitElementToBeInDocument(
+                () =>
+                    (!options?.within && (screen.queryByText(text) || screen.queryByDisplayValue(text))) ||
+                    (options?.within &&
+                        (within(options.within()).queryByText(text) ||
+                            within(options.within).queryByDisplayValue(text))),
+                options,
+            ),
+        options,
+    );
+};
+
+/**
+ * @param {string|RegExp} text
+ * @param {object?} options
+ * @return {Promise<void>}
+ */
+const waitForTextToBeRemoved = async (text, options) => {
+    if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
+    screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
+};
 
 const originalUseForm = useForm.useForm;
 const mockUseForm = implementation => {
@@ -312,6 +351,39 @@ const previewAndHalt = () => {
     process.exit(0);
 };
 
+/**
+ * @param {string} testId
+ * @return {Promise<Element>}
+ */
+const getRichTextEditor = async testId =>
+    await waitFor(() => {
+        const el = screen.getByTestId(testId).querySelector('.ck-editor__editable');
+        if (!el.ckeditorInstance) throw new Error('Waiting for CKEditor editable element');
+        return el;
+    });
+
+/**
+ * Note: value is set programmatically, not via DOM
+ * @param {string} testId
+ * @param {string} value
+ */
+const setRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    await editor.ckeditorInstance.setData(value);
+    await userEvent.tab();
+};
+
+/**
+ * Note: assertion is done programmatically, not via DOM
+ * @param {string} testId
+ * @param {string|number|boolean|null|undefined} value
+ * @return void
+ */
+const assertRichTextEditorValue = async (testId, value) => {
+    const editor = await getRichTextEditor(testId);
+    expect(editor).toHaveTextContent(value, { exact: true });
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -331,6 +403,7 @@ module.exports = {
     assertDisabled,
     waitToBeEnabled,
     waitToBeDisabled,
+    waitElementToBeInDocument,
     waitForText,
     waitForTextToBeRemoved,
     mockUseForm,
@@ -346,5 +419,7 @@ module.exports = {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     previewAndHalt,
+    setRichTextEditorValue,
+    assertRichTextEditorValue,
     api,
 };
