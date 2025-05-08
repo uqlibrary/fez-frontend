@@ -7,6 +7,7 @@ jest.mock('../../../../context');
 import { useJournalContext } from 'context';
 import { useValidatedForm } from 'hooks';
 import { ADMIN_JOURNAL } from 'config/general';
+import { fieldConfig } from 'config/journalAdmin';
 
 global.console = {
     ...global.console,
@@ -92,6 +93,47 @@ describe('FieldGridItem', () => {
             },
         });
         expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
+    });
+
+    describe('composed field', () => {
+        it('should handle composed field', () => {
+            fieldConfig.default.composed_field = {
+                composed: true,
+                component: props => (
+                    <>
+                        <div>
+                            <input {...props.field1} className={props.field1.error ? 'error' : ''} />
+                        </div>
+                        <div>
+                            <input {...props.field2} className={props.field2.error ? 'error' : ''} />
+                        </div>
+                    </>
+                ),
+                componentProps: {
+                    field1: {
+                        'data-testid': 'field1',
+                        name: 'sectionA.field1',
+                    },
+                    field2: {
+                        'data-testid': 'field2',
+                        name: 'sectionA.field2',
+                    },
+                },
+            };
+            const { getByTestId } = setup({
+                field: 'composed_field',
+                methods: {
+                    getFieldState: jest.fn(field => field === 'sectionA.field1' && { error: 'error message' }),
+                },
+            });
+
+            expect(getByTestId('field1')).toBeInTheDocument();
+            expect(getByTestId('field1')).toHaveAttribute('class', 'error');
+            expect(getByTestId('field1')).toHaveAttribute('errortext', 'error message');
+            expect(getByTestId('field2')).toBeInTheDocument();
+            expect(getByTestId('field2')).not.toHaveAttribute('class', 'error');
+            expect(getByTestId('field2')).not.toHaveAttribute('errortext', 'error message');
+        });
     });
 });
 
