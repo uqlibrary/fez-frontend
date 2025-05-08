@@ -7,7 +7,7 @@ import 'regenerator-runtime/runtime';
 import { Provider } from 'react-redux';
 import Immutable from 'immutable';
 import { MemoryRouter } from 'react-router-dom';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import { mui1theme } from 'config';
