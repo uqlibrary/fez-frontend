@@ -1,6 +1,6 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import Immutable from 'immutable';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import { publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer } from 'middleware';
 import rootReducer from '../reducer';
 
