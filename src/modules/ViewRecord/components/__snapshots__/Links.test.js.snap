@@ -209,7 +209,7 @@ exports[`Component Links  Full mount render 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -277,7 +277,7 @@ exports[`Component Links  Full mount render 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -766,7 +766,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -834,7 +834,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -902,7 +902,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -1183,7 +1183,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1242,7 +1242,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1301,7 +1301,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -1564,7 +1564,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1623,7 +1623,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1682,7 +1682,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -1881,7 +1881,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -1940,7 +1940,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -1999,7 +1999,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2262,7 +2262,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -2321,7 +2321,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -2380,7 +2380,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2643,7 +2643,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -2702,7 +2702,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -2761,7 +2761,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -2964,7 +2964,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="http://www.thisisatest.com"
@@ -3023,7 +3023,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="http://www.thisisanothertest.com"
@@ -3082,7 +3082,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-2-link"
                 data-testid="publication-2-link"
                 href="http://www.nodescription.com"
@@ -3212,7 +3212,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3356,7 +3356,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3486,7 +3486,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://google.com"
@@ -3625,7 +3625,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3764,7 +3764,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -3903,7 +3903,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="google-scholar-link"
                 data-testid="google-scholar-link"
                 href="https://scholar.google.com/scholar?q=intitle:%22undefined%22"
@@ -4033,7 +4033,7 @@ exports[`Component Links  should use special default description if the link has
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-0-link"
                 data-testid="publication-0-link"
                 href="https://rdm.uq.edu.au/files/example123"
@@ -4092,7 +4092,7 @@ exports[`Component Links  should use special default description if the link has
               class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               <a
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="publication-1-link"
                 data-testid="publication-1-link"
                 href="https://rdm.uq.edu.au/files/example123"

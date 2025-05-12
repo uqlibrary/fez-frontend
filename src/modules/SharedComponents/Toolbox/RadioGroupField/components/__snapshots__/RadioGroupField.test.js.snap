@@ -28,7 +28,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name=":r0:"
+            name="«r0»"
             type="radio"
             value="a"
           />
@@ -76,7 +76,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name=":r0:"
+            name="«r0»"
             type="radio"
             value="b"
           />
@@ -146,7 +146,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name=":r1:"
+            name="«r1»"
             type="radio"
             value="a"
           />
@@ -194,7 +194,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name=":r1:"
+            name="«r1»"
             type="radio"
             value="b"
           />
