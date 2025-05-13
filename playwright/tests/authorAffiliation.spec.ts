@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '../fixture';
 
 test.describe('Record with invalid affiliation', () => {
     test('should show correct indicators for orphaned affiliations, and provide navigation', async ({ page }) => {
