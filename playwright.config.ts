@@ -37,11 +37,19 @@ export default defineConfig({
             ],
         },
     },
-    // Replace this with your real CI target URL if needed
+    projects: [
+        {
+            name: 'chromium-headless-shell',
+            retries: 2,
+            testDir: './playwright/tests',
+            use: {
+                ...devices['Desktop Chrome'],
+            },
+        },
+    ],
     webServer: {
         command: 'npm run start:mock',
-        port: 3000,
-        timeout: 340 * 1000,
-        reuseExistingServer: true,
+        url: 'http://localhost:3000',
+        timeout: 120 * 1000,
     },
 });

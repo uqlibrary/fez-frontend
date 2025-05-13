@@ -62,8 +62,8 @@ function installCypressDependencies {
 }
 
 function installPlaywrightDependencies {
-    npx playwright install
-    npx playwright install-deps
+    npx playwright install chromium-headless-shell
+    npx playwright install-deps chromium-headless-shell
 }
 
 #if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
