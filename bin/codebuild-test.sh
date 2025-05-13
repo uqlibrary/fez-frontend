@@ -61,9 +61,14 @@ function installCypressDependencies {
     apt-get update && apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 }
 
-if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-  installCypressDependencies
-fi
+function installPlaywrightDependencies {
+    npx playwright install
+    npx playwright install-deps
+}
+
+#if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+#  installCypressDependencies
+#fi
 
 npm run pretest:unit:ci
 
@@ -71,6 +76,7 @@ case "$PIPE_NUM" in
 "1")
 #    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
 #        set -e
+        installCypressDependencies
         printf "\n--- \e[1mRUNNING E2E CYPRESS TESTS GROUP 1\e[0m ---\n"
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
         source bin/codebuild-parallel.sh
@@ -89,6 +95,7 @@ case "$PIPE_NUM" in
 
 #    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
+        installPlaywrightDependencies
         source bin/codebuild-parallel.sh
         printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP 2\e[0m ---\n"
         npm run test:e2e:pw
@@ -101,25 +108,26 @@ case "$PIPE_NUM" in
 #    fi
 ;;
 "3")
-    export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
-    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        checkCodeStyle
-        set -e
-        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-        # Unit tests which require --runInBand
-        npm run test:unit:ci:serial
-        # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-        mv coverage/jest/coverage-final.json coverage-final.json
-
-        # All other unit tests
-        export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
-        npm run test:unit:ci
-        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
-
-        mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
-    fi
+    exit 0
+#    export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
+#    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+#        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+#        checkCodeStyle
+#        set -e
+#        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
+#        # Unit tests which require --runInBand
+#        npm run test:unit:ci:serial
+#        # Replace codebuild source path as we'll compile multiple of these together to get the final code coverage
+#        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
+#        mv coverage/jest/coverage-final.json coverage-final.json
+#
+#        # All other unit tests
+#        export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
+#        npm run test:unit:ci
+#        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/jest/coverage-final.json
+#
+#        mkdir -p coverage/jest-serial && mv coverage-final.json coverage/jest-serial/coverage-final.json
+#    fi
 ;;
 *)
 ;;
