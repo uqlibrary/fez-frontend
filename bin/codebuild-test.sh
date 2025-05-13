@@ -77,10 +77,11 @@ case "$PIPE_NUM" in
 #    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
 #        set -e
         installCypressDependencies
-        printf "\n--- \e[1mRUNNING E2E CYPRESS TESTS GROUP 1\e[0m ---\n"
+        printf "\n--- \e[1mRUNNING E2E CYPRESS TESTS GROUP [STARTING AT $(date)] 1\e[0m ---\n"
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the first group
-        source bin/codebuild-parallel.sh
+#        source bin/codebuild-parallel.sh
         npm run test:e2e:ci3
+        printf "\n--- [ENDED AT $(date)] \n"
 #        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
 #    else
 #        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
@@ -97,8 +98,9 @@ case "$PIPE_NUM" in
         # Split the Cypress E2E tests into two groups and in this pipeline run only the ones in the second group
         installPlaywrightDependencies
         source bin/codebuild-parallel.sh
-        printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP 2\e[0m ---\n"
+        printf "\n--- \e[1mRUNNING E2E PLAYWRIGHT TESTS GROUP [STARTING AT $(date)] 2\e[0m ---\n"
         npm run test:e2e:pw
+        printf "\n--- [ENDED AT $(date)] \n"
 #        sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' coverage/cypress/coverage-final.json
 #    else
 #        printf "\n--- \e[1mRUNNING SERIAL UNIT TESTS\e[0m ---\n"
