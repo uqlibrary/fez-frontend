@@ -7,8 +7,6 @@ export default defineConfig({
         timeout: 10000, // cy alike
     },
     fullyParallel: true,
-    // Opt out of parallel tests on CI
-    // workers: process.env.CI ? 1 : undefined,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     reporter: [
@@ -51,7 +49,7 @@ export default defineConfig({
     webServer: {
         command: 'npm run start:mock',
         url: 'http://localhost:3000',
-        timeout: 120 * 1000,
+        timeout: 5 * 60 * 1000,
         reuseExistingServer: !process.env.CI,
     },
 });
