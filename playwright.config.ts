@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-    testDir: './playwright/tests',
+    testDir: 'playwright/tests',
     timeout: 30 * 1000, // cy alike
     expect: {
         timeout: 10000, // cy alike
@@ -12,6 +12,7 @@ export default defineConfig({
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     reporter: [
+        ['list'],
         [
             'monocart-reporter',
             {
@@ -42,8 +43,6 @@ export default defineConfig({
     projects: [
         {
             name: 'chromium-headless-shell',
-            retries: 2,
-            testDir: './playwright/tests',
             use: {
                 ...devices['Desktop Chrome'],
             },
