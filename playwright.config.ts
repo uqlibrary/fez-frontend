@@ -1,16 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
-
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
     testDir: './playwright/tests',
     timeout: 30 * 1000, // cy alike
@@ -22,7 +11,20 @@ export default defineConfig({
     // workers: process.env.CI ? 1 : undefined,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
-    reporter: 'html',
+    reporter: [
+        [
+            'monocart-reporter',
+            {
+                coverage: {
+                    logging: 'debug',
+                    name: 'Playwright Istanbul Coverage Report',
+                    outputDir: 'coverage/playwright',
+                    reports: ['cobertura', 'html', 'json'],
+                    outputFile: null,
+                },
+            },
+        ],
+    ],
     use: {
         baseURL: 'http://localhost:3000',
         // Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
@@ -51,5 +53,6 @@ export default defineConfig({
         command: 'npm run start:mock',
         url: 'http://localhost:3000',
         timeout: 120 * 1000,
+        reuseExistingServer: !process.env.CI,
     },
 });
