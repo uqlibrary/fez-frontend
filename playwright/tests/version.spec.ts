@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import recordVersion from 'src/mock/data/records/recordVersion';
-import recordVersionLegacy from 'src/mock/data/records/recordVersionLegacy';
+import recordVersion from 'mock/data/records/recordVersion';
+import recordVersionLegacy from 'mock/data/records/recordVersionLegacy';
 
 test.describe('Record version view', () => {
     test('should load record version', async ({ page }) => {
