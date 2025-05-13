@@ -1,7 +1,7 @@
 import React from 'react';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act, within, preview } from 'test-utils';
+import { render, WithReduxStore, WithRouter, fireEvent, waitFor, act, within } from 'test-utils';
 
 const renderComponent = props => {
     return render(
@@ -194,7 +194,6 @@ describe('AdvancedSearchComponent', () => {
         fireEvent.mouseDown(within(getByTestId('document-type-selector')).getByRole('combobox'));
         const list = await waitFor(() => getByRole('presentation'));
         const options = getAllByRole('option', list);
-        preview.debug();
         expect(options[4]).toHaveClass('Mui-selected'); // Journal article
         expect(options[4].checked).toBeTruthy(); // Journal article
         expect(options[12]).toHaveClass('Mui-selected'); // Generic document
