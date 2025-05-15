@@ -21,18 +21,20 @@ exports[`DateRangeField component should render with default props 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
             data-testid="undefined-from-date"
             id="undefined-from-date"
+            inputmode="text"
             placeholder="dd/mm/yyyy"
-            type="tel"
+            type="text"
             value=""
           />
           <div
@@ -73,7 +75,7 @@ exports[`DateRangeField component should render with default props 1`] = `
             aria-invalid="false"
             class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
             disabled=""
-            id=":r1:"
+            id="«r2»"
             type="text"
             value=" to "
           />
@@ -84,18 +86,20 @@ exports[`DateRangeField component should render with default props 1`] = `
       class="MuiGrid-root MuiGrid-item MuiGrid-zeroMinWidth css-qheo1o-MuiGrid-root"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-1gtyszw-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
             data-testid="undefined-to-date"
             id="undefined-to-date"
+            inputmode="text"
             placeholder="dd/mm/yyyy"
-            type="tel"
+            type="text"
             value=""
           />
           <div

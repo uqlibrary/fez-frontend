@@ -84,6 +84,7 @@ export const DateRangeField = ({
                                     error: !!error || !!fromError,
                                     helperText: error || fromError,
                                     variant: 'standard',
+                                    placeholder: format.toLowerCase(),
                                 },
                             }}
                         />
@@ -114,6 +115,7 @@ export const DateRangeField = ({
                                     error: !!error || !!toError,
                                     helperText: toError,
                                     variant: 'standard',
+                                    placeholder: format.toLowerCase(),
                                 },
                             }}
                         />
