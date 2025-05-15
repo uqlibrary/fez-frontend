@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
@@ -69,22 +71,21 @@ export const DateRangeField = ({
                 <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
-                            value={from}
+                            value={from && moment(from)}
                             onChange={handleFromDateChange}
                             disableToolbar
-                            inputFormat={format}
-                            inputProps={{ 'data-testid': `${id}-from-date` }}
+                            format={format}
                             disableFuture={disableFuture}
                             disabled={disabled}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    id={`${id}-from-date`}
-                                    error={!!error || !!fromError}
-                                    helperText={error || fromError}
-                                    variant="standard"
-                                />
-                            )}
+                            slotProps={{
+                                textField: {
+                                    inputProps: { 'data-testid': `${id}-from-date` },
+                                    id: `${id}-from-date`,
+                                    error: !!error || !!fromError,
+                                    helperText: error || fromError,
+                                    variant: 'standard',
+                                },
+                            }}
                         />
                     </LocalizationProvider>
                 </Grid>
@@ -100,22 +101,21 @@ export const DateRangeField = ({
                 <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
-                            value={to}
+                            value={to && moment(to)}
                             onChange={handleToDateChange}
                             disableToolbar
-                            inputFormat={format}
-                            inputProps={{ 'data-testid': `${id}-to-date` }}
+                            format={format}
                             disableFuture={disableFuture}
                             disabled={disabled}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    id={`${id}-to-date`}
-                                    error={!!error || !!toError}
-                                    helperText={toError}
-                                    variant="standard"
-                                />
-                            )}
+                            slotProps={{
+                                textField: {
+                                    inputProps: { 'data-testid': `${id}-to-date` },
+                                    id: `${id}-to-date`,
+                                    error: !!error || !!toError,
+                                    helperText: toError,
+                                    variant: 'standard',
+                                },
+                            }}
                         />
                     </LocalizationProvider>
                 </Grid>
