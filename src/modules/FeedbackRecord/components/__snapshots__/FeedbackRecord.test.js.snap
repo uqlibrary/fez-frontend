@@ -113,6 +113,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1092,7 +1093,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                           label="Provide feedback / suggestion /information for this record"
                         >
                           <input
@@ -1816,6 +1817,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3315,6 +3317,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4331,7 +4334,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                           label="Share a story about this material"
                         >
                           <input
@@ -4888,6 +4891,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5941,7 +5945,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
                       >
                         <span
-                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
+                          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-focusVisible PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1didq2u-MuiButtonBase-root-MuiCheckbox-root"
                           label="Advise of cultural sensitivity / make a takedown request"
                         >
                           <input
