@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedServicesSectionContainer should render properly 1`] = `
+<Context.Provider
+  value={
+    {
+      "formValues": {},
+    }
+  }
+>
+  <Memo(RelatedServicesSection) />
+</Context.Provider>
+`;

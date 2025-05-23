@@ -88,6 +88,7 @@ export { communityList } from './communityList'
 export { collectionList } from './collectionList'
 export { journalsList } from './journals';
 export { journalList } from './journalList';
+export { rorLookup } from './ror';
 
 export { bulkUpdatesList } from './bulkUpdates';
 

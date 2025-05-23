@@ -654,6 +654,39 @@ export default {
             return returnValue;
         },
     },
+    relatedServices: {
+        getValue: record => {
+            if (!record.fez_record_search_key_related_service) {
+                return [];
+            }
+            const relatedServiceIds = (record.fez_record_search_key_related_service || []).reduce(
+                (relatedServiceIdsObject, relatedServiceId) => ({
+                    ...relatedServiceIdsObject,
+                    [relatedServiceId.rek_related_service_order]: relatedServiceId,
+                }),
+                {},
+            );
+            const relatedServiceDescriptions = (record.fez_record_search_key_related_service_description || []).reduce(
+                (relatedServiceDescriptionsObject, relatedServiceDescription) => ({
+                    ...relatedServiceDescriptionsObject,
+                    [relatedServiceDescription.rek_related_service_description_order]: relatedServiceDescription,
+                }),
+                {},
+            );
+
+            const returnValue = record.fez_record_search_key_related_service.map(
+                ({ rek_related_service_order: order }) => ({
+                    relatedServiceId: relatedServiceIds[order].rek_related_service,
+                    relatedServiceDesc: (relatedServiceDescriptions[order] || {}).rek_related_service_description || '',
+                }),
+            );
+
+            delete record.fez_record_search_key_related_service;
+            delete record.fez_record_search_key_related_service_description;
+
+            return returnValue;
+        },
+    },
     files: {
         getValue: () => [],
     },

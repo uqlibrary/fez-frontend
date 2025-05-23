@@ -1029,6 +1029,9 @@ export default {
                 reason: {
                     title: 'Reason for Edit',
                 },
+                relatedServices: {
+                    title: 'Related Services',
+                },
                 culturalInstitutionNotice: {
                     title: 'Cultural Institution (CI) Notice',
                 },
