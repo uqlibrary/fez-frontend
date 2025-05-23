@@ -1,6 +1,6 @@
 import * as actions from 'actions/actionTypes';
 
-const initState = {
+export const initState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
