@@ -8,15 +8,18 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Unstable_Grid2';
 import Badge from '@mui/material/Badge';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 
 import { belongsToAuthor, userIsAdmin } from 'hooks';
 import { general } from 'config';
 import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from 'config/general';
 import { notFound, pidRegExp } from 'config/routes';
+import { viewRecordsConfig } from 'config/viewRecord';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
@@ -42,6 +45,7 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
+import { pathConfig } from 'config';
 
 const contentStyles = theme => ({
     transition: theme.transitions.create('margin', {
@@ -113,6 +117,19 @@ export const ViewRecord = () => {
         } else {
             handleDesktopDrawerToggle();
         }
+    };
+
+    const shouldShowFeedbackButton = () => {
+        return (
+            recordToView.fez_record_search_key_ismemberof &&
+            recordToView.fez_record_search_key_ismemberof.some(collection =>
+                viewRecordsConfig.feedbackButtonCollectionWhiteList.includes(collection.rek_ismemberof),
+            )
+        );
+    };
+
+    const navigateToFeedbackForm = () => {
+        navigate(pathConfig.records.feedback(pid));
     };
 
     const getAdminRecordButtonIcon = () => {
@@ -253,6 +270,22 @@ export const ViewRecord = () => {
                                                 recordToView?.fez_internal_notes?.ain_detail ? 'Notes \u0026' : ''
                                             } Record Data`}
                                         </Button>
+                                    </Grid>
+                                )}
+                                {shouldShowFeedbackButton() && (
+                                    <Grid>
+                                        <Tooltip title={txt.feedbackButtonTooltip} placement="top-end">
+                                            <Button
+                                                variant="outlined"
+                                                startIcon={<CreateOutlinedIcon fontSize={'inherit'} />}
+                                                onClick={navigateToFeedbackForm}
+                                                id="feedbackButton"
+                                                data-analyticsid="btnFeedback"
+                                                data-testid="btnFeedback"
+                                            >
+                                                {txt.feedbackButton}
+                                            </Button>
+                                        </Tooltip>
                                     </Grid>
                                 )}
                                 <Grid xs sx={{ display: 'flex', alignItems: 'center' }}>

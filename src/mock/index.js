@@ -554,6 +554,8 @@ export const setup = () => {
         // Journal main search
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
         .reply(200, { ...mockData.journalLookup })
+        .onGet(new RegExp(routes.ROR_LOOKUP_API({ id: '.*' }).apiUrl))
+        .reply(200, { ...mockData.rorLookup })
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: '.*' }).apiUrl)))
         .reply(config => {
             console.log(
@@ -903,7 +905,6 @@ export const setup = () => {
     mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
         .reply(200, { data: { ...mockData.record } })
         // .reply(500, { message: ['error - failed PATCH EXISTING_RECORD_API'] })
-
         .onPatch(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
         .reply(200)
 

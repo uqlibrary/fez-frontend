@@ -2933,10 +2933,6 @@ export default {
                     order: 2,
                 },
                 {
-                    field: 'fez_record_search_key_sdg_source',
-                    order: 2.5,
-                },
-                {
                     field: 'fez_record_search_key_publisher',
                     order: 3,
                 },

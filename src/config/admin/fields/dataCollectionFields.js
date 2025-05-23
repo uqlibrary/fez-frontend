@@ -93,6 +93,12 @@ export default {
             ],
         },
     ],
+    relatedServices: () => [
+        {
+            title: 'Related Services',
+            groups: [['relatedServices']],
+        },
+    ],
     ntro: () => [],
 };
 

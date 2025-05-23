@@ -77,6 +77,7 @@ import {
     KeywordsForm,
     AlternateIdentifierListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { RelatedServiceListEditorField } from 'modules/SharedComponents/RelatedServiceListEditor';
 import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/ScaleOfSignificanceListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
@@ -1071,6 +1072,13 @@ export default {
                 itemsList: QUALITY_INDICATORS,
                 multiple: true,
                 ...selectFields.qualityIndicators,
+            },
+        },
+        relatedServices: {
+            component: RelatedServiceListEditorField,
+            componentProps: {
+                name: 'relatedServicesSection.relatedServices',
+                canEdit: true,
             },
         },
         grants: {

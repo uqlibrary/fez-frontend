@@ -7,6 +7,7 @@ import Immutable from 'immutable';
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
+    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
@@ -31,6 +32,7 @@ import GrantInformationSection from './grantInformation/GrantInformationSectionC
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
+import RelatedServicesSection from './relatedServices/RelatedServicesSectionContainer';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
@@ -201,6 +203,14 @@ export const AdminContainer = ({
                                                 [SUBTYPE_NON_NTRO].includes(
                                                     !!formValues && (formValues.toJS().adminSection || {}).rek_subtype,
                                                 )
+                                            ),
+                                    },
+                                    relatedServices: {
+                                        component: RelatedServicesSection,
+                                        activated:
+                                            isActivated() &&
+                                            [PUBLICATION_TYPE_DATA_COLLECTION].includes(
+                                                recordToView && recordToView.rek_display_type,
                                             ),
                                     },
                                     notes: {

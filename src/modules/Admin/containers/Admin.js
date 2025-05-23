@@ -100,6 +100,11 @@ const getInitialFormValues = (recordToView, recordType) => {
                 ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'reason')) ||
                 {},
+            relatedServicesSection:
+                (recordType === RECORD_TYPE_RECORD &&
+                    recordType === RECORD_TYPE_COLLECTION &&
+                    getInitialValues(recordToView, 'relatedServices')) ||
+                {},
         },
     };
 };

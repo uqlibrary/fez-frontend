@@ -943,6 +943,44 @@ describe('transformers', () => {
         });
     });
 
+    describe('getFeedbackRequest test', () => {
+        const input = {
+            acknowledgement: 'private',
+            community: '',
+            communityParticipant: 'false',
+            contactNo: '',
+            culturalInfo: { other: 'other', otherText: 'other info', ceremonies: 'ceremonies' },
+            email: '',
+            firstName: 'first name',
+            isIcipHolder: 'true',
+            indigenousIdentity: 'islander',
+            hasKinshipConnection: 'false',
+            lastName: 'last name',
+            shareDetails: { anonymously: 'anonymously' },
+            specialCare: { womenOnly: 'womenOnly', otherText: 'special care info' },
+        };
+
+        it('should create issue request', () => {
+            const expected = {
+                rfb_pid: 'UQ:1',
+                rfb_acknowledgement: 'private',
+                rfb_community_participant: 'false',
+                rfb_cultural_info: ['other', 'ceremonies'],
+                rfb_cultural_info_other: 'other info',
+                rfb_first_name: 'first name',
+                rfb_is_icip_holder: 'true',
+                rfb_indigenous_identity: 'islander',
+                rfb_has_kinship_connection: 'false',
+                rfb_last_name: 'last name',
+                rfb_share_details: ['anonymously'],
+                rfb_special_care: ['womenOnly'],
+            };
+
+            const result = transformers.getFeedbackRecordData('UQ:1', input);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('getRecordSubjectSearchKey test', () => {
         it('should return empty subject object', () => {
             expect(transformers.getRecordSubjectSearchKey()).toEqual({});
