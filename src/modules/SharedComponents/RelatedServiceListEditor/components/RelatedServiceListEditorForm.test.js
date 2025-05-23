@@ -1,6 +1,7 @@
 import React from 'react';
 import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
-import { render, fireEvent, WithReduxStore } from 'test-utils';
+import { render, fireEvent, WithReduxStore, waitFor } from 'test-utils';
+import * as repositories from 'repositories';
 
 function setup(testProps = {}) {
     const props = {
@@ -54,7 +55,7 @@ describe('RelatedServiceListEditorForm', () => {
     it('should add related service and pass isPopulated info', () => {
         const onAddFn = jest.fn();
         const isPopulated = jest.fn();
-        const { getByTestId, getByText } = setup({
+        const { getByTestId } = setup({
             onAdd: onAddFn,
             isPopulated: isPopulated,
         });
@@ -73,6 +74,21 @@ describe('RelatedServiceListEditorForm', () => {
         });
 
         expect(isPopulated).toHaveBeenCalledWith(false);
+    });
+
+    it('should show related service options and populate description field with selected title', async () => {
+        const { getAllByRole, getByTestId } = setup();
+        const rorId = '00tjv0s44';
+        mockApi
+            .onGet(repositories.routes.ROR_LOOKUP_API({ id: rorId }).apiUrl)
+            .reply(200, { data: { id: '00tjv0s44', title: 'Test Org', status: 'active' } });
+
+        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: rorId } });
+        const list = await waitFor(() => getByTestId('rek-related-service-id-options'));
+        const options = getAllByRole('option', list);
+        fireEvent.click(options[0]);
+
+        expect(getByTestId('rek-related-service-desc-input')).toHaveValue('Test Org');
     });
 
     it('should add related service when Enter key is pressed on desc field', () => {
