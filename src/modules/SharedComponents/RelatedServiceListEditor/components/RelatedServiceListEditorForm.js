@@ -75,7 +75,6 @@ export const RelatedServiceListEditorForm = ({
             });
             setDirty(true);
         } else {
-            console.log('no item');
             setRelatedService({
                 ...relatedService,
                 relatedServiceId: '',
