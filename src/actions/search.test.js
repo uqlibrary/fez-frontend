@@ -4,6 +4,9 @@ import * as searchActions from './search';
 import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { rorLookup } from 'mock/data';
+import { loadRelatedServiceList } from './search';
+import { SEARCH_INTERNAL_RECORDS_API } from '../repositories/routes';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -501,6 +504,47 @@ describe('Search action creators', () => {
         const expectedActions = [actions.CLEAR_SEARCH_QUERY];
 
         mockActionsStore.dispatch(searchActions.clearSearchQuery());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of search actions for related services search by ror id', async () => {
+        const rorId = '024mw5h28';
+        mockApi.onGet(repositories.routes.ROR_LOOKUP_API({ id: rorId }).apiUrl).reply(200, mockData.rorLookup);
+
+        const expectedActions = [actions.RELATED_SERVICE_LOOKUP_LOADING, actions.RELATED_SERVICE_LOOKUP_LOADED];
+
+        await mockActionsStore.dispatch(searchActions.loadRelatedServiceList(rorId));
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of search actions for related services search by doi', async () => {
+        const doi = '10.1111/11.11';
+        const params = {
+            searchQueryParams: { all: doi },
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            facets: {},
+        };
+
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl)
+            .reply(200, mockData.publicationTypeListInstrument);
+
+        const expectedActions = [actions.RELATED_SERVICE_LOOKUP_LOADING, actions.RELATED_SERVICE_LOOKUP_LOADED];
+
+        await mockActionsStore.dispatch(searchActions.loadRelatedServiceList(doi));
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of search actions for related services search failed', async () => {
+        const rorId = '024mw5h28';
+        mockApi.onGet(repositories.routes.ROR_LOOKUP_API(rorId).apiUrl).reply(404, { data: [] });
+
+        const expectedActions = [actions.RELATED_SERVICE_LOOKUP_LOADING, actions.RELATED_SERVICE_LOOKUP_FAILED];
+
+        await mockActionsStore.dispatch(searchActions.loadRelatedServiceList(rorId));
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
