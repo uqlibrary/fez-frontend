@@ -68,6 +68,18 @@ const publicationTypeListDataCollection = {
                     "rek_raid_order": 1,
                 }
             ],
+            "fez_record_search_key_related_service": [
+                {
+                    "rek_related_service": '10.25.20.1/109863674',
+                    "rek_related_service_order": 1,
+                }
+            ],
+            "fez_record_search_key_related_service_description": [
+                {
+                    "rek_related_service_description": 'desc',
+                    "rek_related_service_description_order": 1,
+                }
+            ],
             "fez_record_search_key_author_id": [
                 {
                     author: {

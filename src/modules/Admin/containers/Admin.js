@@ -102,7 +102,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                 {},
             relatedServicesSection:
                 (recordType === RECORD_TYPE_RECORD &&
-                    recordType === RECORD_TYPE_COLLECTION &&
+                    recordToView.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION &&
                     getInitialValues(recordToView, 'relatedServices')) ||
                 {},
         },
