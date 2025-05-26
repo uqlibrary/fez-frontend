@@ -341,6 +341,7 @@ const getAdminRecordRequest = data => {
         'filesSection',
         'securitySection',
         'reasonSection',
+        'relatedServicesSection',
         'culturalInstitutionNoticeSection',
     ];
 
@@ -367,6 +368,7 @@ const getAdminRecordRequest = data => {
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
             ...transformers.getNotesSectionSearchKeys(data.notesSection),
             ...transformers.getReasonSectionSearchKeys(data.reasonSection),
+            ...transformers.getRelatedServiceSectionSearchKeys(data.relatedServicesSection),
             ...transformers.getDatastreamInfo(
                 (data.publication || {}).fez_datastream_info || [],
                 (data.filesSection || {}).fez_datastream_info || [],

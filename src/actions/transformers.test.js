@@ -248,6 +248,71 @@ describe('transformers', () => {
         });
     });
 
+    describe('getRecordRelatedServiceSearchKeys test', () => {
+        it('should return request object structure with related service and related service description', () => {
+            const data = {
+                relatedServices: [
+                    {
+                        relatedServiceId: 'id',
+                        relatedServiceDesc: 'desc',
+                    },
+                ],
+            };
+            const expected = {
+                fez_record_search_key_related_service: [
+                    {
+                        rek_related_service: 'id',
+                        rek_related_service_order: 1,
+                    },
+                ],
+                fez_record_search_key_related_service_description: [
+                    {
+                        rek_related_service_description: 'desc',
+                        rek_related_service_description_order: 1,
+                    },
+                ],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should return request object structure with related service and empty related service description', () => {
+            const data = {
+                relatedServices: [
+                    {
+                        relatedServiceId: 'id',
+                        relatedServiceDesc: '',
+                    },
+                ],
+            };
+            const expected = {
+                fez_record_search_key_related_service: [
+                    {
+                        rek_related_service: 'id',
+                        rek_related_service_order: 1,
+                    },
+                ],
+                fez_record_search_key_related_service_description: [],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should handle empty related service', () => {
+            const data = { relatedServices: [] };
+            const expected = {
+                fez_record_search_key_related_service: [],
+                fez_record_search_key_related_service_description: [],
+            };
+
+            expect(transformers.getRelatedServiceSectionSearchKeys(data)).toEqual(expected);
+        });
+
+        it('should handle undefined related service', () => {
+            expect(transformers.getRelatedServiceSectionSearchKeys({})).toEqual({});
+        });
+    });
+
     describe('getRecordFileAttachmentSearchKey test', () => {
         const MockDate = require('mockdate');
 

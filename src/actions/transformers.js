@@ -1662,6 +1662,29 @@ export const getReasonSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const getRelatedServiceSectionSearchKeys = (data = {}) => {
+    if (!data.relatedServices) {
+        return {};
+    }
+
+    const ids = [];
+    const descs = [];
+    data.relatedServices.forEach((service, index) => {
+        ids.push({ rek_related_service: service.relatedServiceId, rek_related_service_order: index + 1 });
+        if (service.relatedServiceDesc) {
+            descs.push({
+                rek_related_service_description: service.relatedServiceDesc,
+                rek_related_service_description_order: index + 1,
+            });
+        }
+    });
+
+    return {
+        fez_record_search_key_related_service: ids,
+        fez_record_search_key_related_service_description: descs,
+    };
+};
+
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;
     const [primaryKey, subKey] = searchKey.split('.');
