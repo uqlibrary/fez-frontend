@@ -4,9 +4,6 @@ import * as searchActions from './search';
 import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
-import { rorLookup } from 'mock/data';
-import { loadRelatedServiceList } from './search';
-import { SEARCH_INTERNAL_RECORDS_API } from '../repositories/routes';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
