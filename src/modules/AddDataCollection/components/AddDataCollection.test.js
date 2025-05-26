@@ -148,6 +148,7 @@ describe('AddDataCollection test', () => {
     });
 
     it('should get save confirmation locale correctly', () => {
+        useWatch.mockImplementation(() => ['2025-01-01', '2025-02-01']);
         const { container, rerender } = setup();
         setup({ newRecordFileUploadingOrIssueError: true, submitSucceeded: true }, rerender);
         expect(container).toMatchSnapshot();

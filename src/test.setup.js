@@ -139,12 +139,16 @@ class ResizeObserver {
 }
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 
+function canBeSpread(variable) {
+    return typeof variable?.[Symbol.iterator] === 'function';
+}
+
 // jsdom v20 is unable to parse CKEditor 5 v41 css files
 // suppressing the CSS parsing error messages as they dont really break the tests
 const originalConsoleError = console.error;
 const jsDomCssError = 'Error: Could not parse CSS stylesheet';
 console.error = (...params) => {
-    if (!params?.find(p => p.toString().includes(jsDomCssError))) {
-        originalConsoleError(...params);
+    if (!params?.find(p => p?.toString?.().includes(jsDomCssError))) {
+        originalConsoleError(canBeSpread(params) ? [...params] : params);
     }
 };
