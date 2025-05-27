@@ -135,7 +135,7 @@
     "@mui/x-data-grid": "^7.29.3",
     "@mui/x-date-pickers": "^7.0.0",
     "@react-google-maps/api": "^2.20.6",
-    "@sentry/react": "^8.55.0",
+    "@sentry/react": "9.22.0",
     "@types/lodash": "^4.17.16",
     "axios": "^1.6.8",
     "axios-cache-interceptor": "^0.10.2",
@@ -244,7 +244,7 @@
   },
   "engines": {
     "npm": ">=10.2.3",
-    "node": ">=18.19.0"
+    "node": ">=20.0.0"
   },
   "babel": {
     "presets": [
