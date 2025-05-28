@@ -29,15 +29,18 @@ import {
     EDITORIAL_ROLE_OTHER,
 } from 'config/general';
 
+const StyledToolbar = styled(Typography)(() => ({
+    margin: '8px',
+    cursor: 'pointer',
+    flexDirection: 'column',
+    gridColumn: 2,
+}));
+
 export const CustomToolbar = props => {
     return (
-        <Typography
+        <StyledToolbar
             variant="h6"
             align="center"
-            style={{
-                margin: '8px',
-                cursor: 'pointer',
-            }}
             onClick={() => {
                 props.onChange(moment(new Date(), 'YYYY'));
             }}
@@ -45,7 +48,7 @@ export const CustomToolbar = props => {
             data-testid="eap-end-year-current"
         >
             {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
-        </Typography>
+        </StyledToolbar>
     );
 };
 
@@ -400,7 +403,7 @@ export const GetColumns = () => {
                             closeOnSelect
                             minDate={minDate && moment(minDate)}
                             slots={{
-                                Toolbar: CustomToolbar,
+                                toolbar: CustomToolbar,
                             }}
                             slotProps={{
                                 openPickerButton: {
