@@ -317,7 +317,7 @@ export const Doi: React.FC<Doi> = ({
     const { pid: pidParam } = useParams();
     React.useEffect(() => {
         // Load record if it hasn't
-        !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
+        if (!!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView) loadRecordToView(pidParam);
         return () => {
             // Clear form status
             resetDoi();
@@ -333,7 +333,10 @@ export const Doi: React.FC<Doi> = ({
     }, [showConfirmation, doiUpdated]);
 
     if (!!pidParam && loadingRecordToView) {
-        return <InlineLoader message={txt.loadingMessage} />;
+        return (
+            // @ts-ignore
+            <InlineLoader message={txt.loadingMessage} />
+        );
     }
 
     // Record not found
@@ -380,11 +383,13 @@ export const Doi: React.FC<Doi> = ({
     });
 
     return (
+        // @ts-ignore
         <StandardPage>
             {!!pid && (
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         {renderTitle({ doi, displayTypeLookup, title, pid })}
+                        {/* @ts-ignore */}
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
@@ -420,7 +425,11 @@ export const Doi: React.FC<Doi> = ({
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
-                            <Alert testId="rek-doi-submit-status" {...alertProps} />
+                            <Alert
+                                // @ts-ignore
+                                testId="rek-doi-submit-status"
+                                {...alertProps}
+                            />
                         </Grid>
                     )}
                     <Grid item xs={12}>
