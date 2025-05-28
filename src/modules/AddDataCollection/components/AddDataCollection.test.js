@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection, { licenseText } from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, fireEvent, waitFor, screen } from 'test-utils';
+import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitFor, screen } from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
 import { useWatch } from 'react-hook-form';
@@ -38,9 +38,9 @@ function setup(testProps = {}, renderMethod = render) {
     return renderMethod(
         <React.StrictMode>
             <WithReduxStore>
-                <WithRouter>
+                <WithMemoryRouter>
                     <AddDataCollection {...props} />
-                </WithRouter>
+                </WithMemoryRouter>
             </WithReduxStore>
         </React.StrictMode>,
     );
