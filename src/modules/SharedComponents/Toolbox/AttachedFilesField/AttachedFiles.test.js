@@ -33,6 +33,8 @@ import { createFezDatastreamInfoArray, withDatastreams } from 'test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
 import moment from 'moment';
 
+jest.mock('react-player', () => () => <div>Mock React Player</div>);
+
 function setup({ values, ...testProps } = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
     const props = {
