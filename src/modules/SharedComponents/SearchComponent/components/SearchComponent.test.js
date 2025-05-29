@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchComponent from './SearchComponent';
-import { fireEvent, rtlRender, WithRouter, within } from 'test-utils';
+import { fireEvent, rtlRender, WithMemoryRouter, within } from 'test-utils';
 
 jest.mock('config/general', () => ({
     ...jest.requireActual('config/general'),
@@ -33,9 +33,9 @@ function setup(testProps = {}, renderMethod = rtlRender) {
     };
 
     return renderMethod(
-        <WithRouter>
+        <WithMemoryRouter>
             <SearchComponent {...props} />
-        </WithRouter>,
+        </WithMemoryRouter>,
     );
 }
 
