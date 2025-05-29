@@ -150,6 +150,13 @@ export const MediaPreview = ({ ...props }) => {
                     controls
                     onError={onVideoFailed}
                     url={previewMediaUrl}
+                    config={{
+                        file: {
+                            attributes: {
+                                controlsList: 'nodownload',
+                            },
+                        },
+                    }}
                 />
             )}
             {isPreviewable && !imageError && (
