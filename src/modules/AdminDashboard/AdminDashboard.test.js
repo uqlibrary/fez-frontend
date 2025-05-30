@@ -60,6 +60,21 @@ describe('AdminDashboard', () => {
         expect(getAllByRole('tab')[1]).toHaveTextContent('SYSTEM ALERTS');
         expect(getAllByRole('tab')[2]).toHaveTextContent('REPORTS');
     });
+    it('should render page tabbed component and loaders with default props (coverage)', async () => {
+        const loadAdminDashboardTodayFn = jest.spyOn(DashboardActions, 'loadAdminDashboardToday');
+
+        const { getAllByRole } = render(
+            <WithReduxStore initialState={{}}>
+                <AdminDashboard />
+            </WithReduxStore>,
+        );
+        await waitFor(() => expect(loadAdminDashboardTodayFn).toHaveBeenCalled());
+
+        expect(getAllByRole('tab').length).toBe(3);
+        expect(getAllByRole('tab')[0]).toHaveTextContent('TODAY');
+        expect(getAllByRole('tab')[1]).toHaveTextContent('SYSTEM ALERTS');
+        expect(getAllByRole('tab')[2]).toHaveTextContent('REPORTS');
+    });
     it('should render today tab with zeroed today data (coverage)', async () => {
         // TODO : assert expected values once mui-x charts can be tested
         const mockReply = {
