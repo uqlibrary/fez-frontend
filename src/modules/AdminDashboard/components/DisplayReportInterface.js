@@ -155,6 +155,10 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     required: !!fromDateError || actionState.report?.value === 'workshistory',
                                     helperText: fromDateError,
                                 },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
                             }}
                             // eslint-disable-next-line react/prop-types
                             onChange={props =>
@@ -194,6 +198,10 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     required:
                                         !!actionState.filters.date_from || actionState.report?.value === 'workshistory',
                                     helperText: toDateError,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
                                 },
                             }}
                             // eslint-disable-next-line react/prop-types

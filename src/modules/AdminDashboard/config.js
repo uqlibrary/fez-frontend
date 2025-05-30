@@ -335,6 +335,10 @@ export const exportReportFilters = {
                                     required: hasOwnBinding,
                                     helperText: errorMessage?.date_from,
                                 },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
                             }}
                             onChange={props => {
                                 onChange?.({
@@ -434,6 +438,10 @@ export const exportReportFilters = {
                                     error: !!errorMessage?.date_to,
                                     required: hasBinding,
                                     helperText: errorMessage?.date_to,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
                                 },
                             }}
                             onChange={props =>
