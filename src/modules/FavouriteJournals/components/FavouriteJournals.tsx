@@ -64,6 +64,7 @@ export const FavouriteJournals: React.FC = () => {
                 <Grid xs>
                     <Grid container spacing={2} padding={0}>
                         <Grid xs={12} flexGrow={1}>
+                            {/* @ts-ignore */}
                             <StandardCard noHeader>
                                 <Grid container spacing={2} padding={0}>
                                     <FavouriteJournalsList

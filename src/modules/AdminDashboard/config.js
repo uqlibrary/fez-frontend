@@ -7,7 +7,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -313,30 +312,34 @@ export const exportReportFilters = {
         component: ({ state, id, errorMessage, onChange, locale }) => {
             const hasOwnBinding = !!state.report?.sel_bindings?.includes(':date_from');
             const hasDependantBinding = !!state.report?.sel_bindings?.includes(':date_to');
+
             return (
                 <Grid item xs={12} sm={4} key={`${id}-date-from`}>
                     <Box data-testid={`${id}-date-from`}>
                         <DatePicker
-                            inputProps={{
-                                id: `${id}-date-from-input`,
-                                'data-testid': `${id}-date-from-input`,
-                                label: locale.label.dateFrom,
-                                'aria-label': locale.label.dateFrom,
-                                'aria-labelledby': `${id}-input`,
-                                'data-analyticsid': `${id}-date-from-input`,
-                            }}
                             label={locale.label.dateFrom}
-                            value={state.filters.date_from}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!errorMessage?.date_from}
-                                    required={hasOwnBinding}
-                                    helperText={errorMessage?.date_from}
-                                />
-                            )}
+                            value={state.filters.date_from && moment(state.filters.date_from)}
+                            slotProps={{
+                                textField: {
+                                    inputProps: {
+                                        id: `${id}-date-from-input`,
+                                        'data-testid': `${id}-date-from-input`,
+                                        label: locale.label.dateFrom,
+                                        'aria-label': locale.label.dateFrom,
+                                        'aria-labelledby': `${id}-input`,
+                                        'data-analyticsid': `${id}-date-from-input`,
+                                    },
+                                    variant: 'standard',
+                                    fullWidth: true,
+                                    error: !!errorMessage?.date_from,
+                                    required: hasOwnBinding,
+                                    helperText: errorMessage?.date_from,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
+                            }}
                             onChange={props => {
                                 onChange?.({
                                     type: 'fromDate',
@@ -365,10 +368,9 @@ export const exportReportFilters = {
                                     });
                                 }
                             }}
-                            defaultValue=""
                             disableFuture
                             disabled={!!!state.report || !hasOwnBinding}
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                            format={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>
@@ -419,26 +421,29 @@ export const exportReportFilters = {
                 <Grid item xs={12} sm={4} key={`${id}-date-to`}>
                     <Box data-testid={`${id}-date-to`}>
                         <DatePicker
-                            inputProps={{
-                                id: `${id}-date-to-input`,
-                                'data-testid': `${id}-date-to-input`,
-                                label: locale.label.dateTo,
-                                'aria-label': locale.label.dateTo,
-                                'aria-labelledby': `${id}-date-to-label`,
-                                'data-analyticsid': `${id}-date-to-input`,
-                            }}
                             label={locale.label.dateTo}
-                            value={state.filters.date_to}
-                            renderInput={params => (
-                                <TextField
-                                    {...params}
-                                    variant="standard"
-                                    fullWidth
-                                    error={!!errorMessage?.date_to}
-                                    required={hasBinding}
-                                    helperText={errorMessage?.date_to}
-                                />
-                            )}
+                            value={state.filters.date_to && moment(state.filters.date_to)}
+                            slotProps={{
+                                textField: {
+                                    inputProps: {
+                                        id: `${id}-date-to-input`,
+                                        'data-testid': `${id}-date-to-input`,
+                                        label: locale.label.dateTo,
+                                        'aria-label': locale.label.dateTo,
+                                        'aria-labelledby': `${id}-date-to-label`,
+                                        'data-analyticsid': `${id}-date-to-input`,
+                                    },
+                                    variant: 'standard',
+                                    fullWidth: true,
+                                    error: !!errorMessage?.date_to,
+                                    required: hasBinding,
+                                    helperText: errorMessage?.date_to,
+                                },
+                                field: {
+                                    clearable: true, // Allow clearing the date
+                                    readOnly: false,
+                                },
+                            }}
                             onChange={props =>
                                 onChange?.({
                                     type: 'toDate',
@@ -449,15 +454,14 @@ export const exportReportFilters = {
                                         : null,
                                 })
                             }
-                            defaultValue=""
                             disableFuture
-                            minDate={state.filters.date_from}
+                            minDate={state.filters.date_from && moment(state.filters.date_from)}
                             maxDate={moment(state.filters.date_from ?? new Date()).add(
                                 exportReport.sel_maxDateRange ?? maxDefaultDateRange,
                                 defaultDateRangeUnit,
                             )}
                             disabled={!!!state.report || !hasBinding}
-                            inputFormat={DEFAULT_DATEPICKER_INPUT_FORMAT}
+                            format={DEFAULT_DATEPICKER_INPUT_FORMAT}
                         />
                     </Box>
                 </Grid>

@@ -91,6 +91,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -646,6 +647,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1201,6 +1203,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth

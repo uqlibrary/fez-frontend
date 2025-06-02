@@ -299,6 +299,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -469,7 +470,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -661,6 +662,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -778,7 +780,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -848,6 +850,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -964,7 +967,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -1034,6 +1037,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1204,7 +1208,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1291,6 +1295,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1461,7 +1466,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1567,6 +1572,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1737,7 +1743,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -1849,6 +1855,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2124,7 +2131,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -2191,7 +2198,6 @@ exports[`PublicationCitation  should render component with default item with ima
           height="150"
           id="imageGalleryItemImage-UQ:676287"
           loading="lazy"
-          src=""
           width="150"
         />
         <div
@@ -2233,6 +2239,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2508,7 +2515,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -2578,6 +2585,7 @@ exports[`PublicationCitation  should render component with default item without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -2853,7 +2861,7 @@ exports[`PublicationCitation  should render component with default item without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -3089,7 +3097,7 @@ exports[`PublicationCitation  should render component with default item without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3176,6 +3184,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3243,7 +3252,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3330,6 +3339,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3500,7 +3510,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3587,6 +3597,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3757,7 +3768,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -3844,6 +3855,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4014,7 +4026,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4108,6 +4120,7 @@ exports[`PublicationCitation  should render component with publication from mult
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4278,7 +4291,7 @@ exports[`PublicationCitation  should render component with publication from mult
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4559,7 +4572,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -4679,7 +4692,6 @@ exports[`PublicationCitation  should render component without image if whitelist
           height="150"
           id="imageGalleryItemImage-UQ:676287"
           loading="lazy"
-          src=""
           width="150"
         />
         <div
@@ -4721,6 +4733,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:676287"
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
@@ -4996,7 +5009,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:676287"
@@ -5066,6 +5079,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5236,7 +5250,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5343,6 +5357,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5354,7 +5369,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
             >
               <a
                 aria-label="Full citation in Altmetric will open in a new window"
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="my-trending-pubs-altmetric-link"
                 data-testid="my-trending-pubs-altmetric-link"
                 href="http://www.test.com"
@@ -5557,7 +5572,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5644,6 +5659,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -5655,7 +5671,7 @@ exports[`PublicationCitation  should render publication citation metric without 
             >
               <a
                 aria-label="Full citation in Altmetric will open in a new window"
-                class=" css-1oqhn84"
+                class="css-1oqhn84"
                 data-analyticsid="my-trending-pubs-altmetric-link"
                 data-testid="my-trending-pubs-altmetric-link"
                 href="http://www.test.com"
@@ -5855,7 +5871,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"
@@ -5942,6 +5958,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
               >
                 <a
+                  data-discover="true"
                   href="/view/UQ:41878"
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -6148,7 +6165,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
                     >
                       <a
-                        class=" css-4v7cvf"
+                        class="css-4v7cvf"
                         data-analyticsid="full-statistics-link"
                         data-testid="full-statistics-link"
                         href="https://app.library.uq.edu.au/#/authors/view/UQ:41878"

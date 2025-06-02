@@ -131,7 +131,7 @@ context('Audio admin edit', () => {
         cy.get('@filesTab')
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
             .within(() => {
-                cy.get('div > div > input').clear();
+                cy.get('div > div > input').type('{selectall}{backspace}');
             });
 
         cy.get('@filesTab')

@@ -646,16 +646,14 @@ context('Strategic Publishing - Search', () => {
                 .should('have.length', 9);
 
             // select facets
-            cy.get('[id="clickable-facet-category-listed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-listed-in-cwts"]')
-                .as('facetItemCwts')
-                .click()
+            cy.data('clickable-facet-category-listed-in').click();
+            cy.data('facet-filter-nested-item-listed-in-cwts').click();
+            cy.data('facet-filter-nested-item-listed-in-cwts')
                 .find('svg#clear-facet-filter-nested-item-listed-in-cwts')
                 .should('exist');
-            cy.get('[id="clickable-facet-category-indexed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-indexed-in-scopus"]')
-                .as('facetItemScopus')
-                .click()
+            cy.data('clickable-facet-category-indexed-in').click();
+            cy.data('facet-filter-nested-item-indexed-in-scopus').click();
+            cy.data('facet-filter-nested-item-indexed-in-scopus')
                 .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('exist');
 
@@ -670,24 +668,27 @@ context('Strategic Publishing - Search', () => {
             // update sorting
             scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
+            cy.wait(500);
             cy.get('[role="listbox"] > li[data-value="score"]').click({ force: true });
+            cy.wait(500);
             cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Search relevance');
             assertScrollIsOnTop();
-
             // update order
             scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
+            cy.wait(500);
             cy.get('[role="listbox"] > li[data-value="Desc"]').click();
+            cy.wait(500);
             cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Desc');
             assertScrollIsOnTop();
-
             // update page size
             scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-page-size"]').click();
+            cy.wait(500);
             cy.get('[role="listbox"] > li[data-value="20"]').click();
+            cy.wait(500);
             cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '20');
             assertScrollIsOnTop();
-
             // assert everything selected is in the URL
             cy.location().should(location => {
                 expect(location.search).to.contain('keywords%5BTitle-glycobiology');

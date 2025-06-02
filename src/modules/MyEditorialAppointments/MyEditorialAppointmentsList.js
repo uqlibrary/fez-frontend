@@ -29,15 +29,18 @@ import {
     EDITORIAL_ROLE_OTHER,
 } from 'config/general';
 
+const StyledToolbar = styled(Typography)(() => ({
+    margin: '8px',
+    cursor: 'pointer',
+    flexDirection: 'column',
+    gridColumn: 2,
+}));
+
 export const CustomToolbar = props => {
     return (
-        <Typography
+        <StyledToolbar
             variant="h6"
             align="center"
-            style={{
-                margin: '8px',
-                cursor: 'pointer',
-            }}
             onClick={() => {
                 props.onChange(moment(new Date(), 'YYYY'));
             }}
@@ -45,7 +48,7 @@ export const CustomToolbar = props => {
             data-testid="eap-end-year-current"
         >
             {locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}
-        </Typography>
+        </StyledToolbar>
     );
 };
 
@@ -305,34 +308,32 @@ export const GetColumns = () => {
                             views={['year']}
                             openTo="year"
                             disableFuture
-                            inputProps={{
-                                id: 'eap-start-year-input',
-                                'data-testid': 'eap-start-year-input',
-                                label: startYearLabel,
-                                'aria-label': startYearLabel,
-                                'aria-labelledby': 'eap-start-year-label',
-                            }}
-                            renderInput={params => {
-                                const value = params.inputProps?.value ?? /* istanbul ignore next */ null;
-                                return (
-                                    <TextField
-                                        {...params}
-                                        id="eap-start-year"
-                                        variant="standard"
-                                        required
-                                        label={startYearLabel}
-                                        InputLabelProps={{
+                            slotProps={{
+                                textField: ownerState => {
+                                    const value = ownerState.value ?? /* istanbul ignore next */ null;
+                                    return {
+                                        inputProps: {
+                                            id: 'eap-start-year-input',
+                                            'data-testid': 'eap-start-year-input',
+                                            label: startYearLabel,
+                                            'aria-label': startYearLabel,
+                                            'aria-labelledby': 'eap-start-year-label',
+                                        },
+                                        id: 'eap-start-year',
+                                        variant: 'standard',
+                                        required: true,
+                                        label: startYearLabel,
+                                        InputLabelProps: {
                                             id: 'eap-start-year-label',
                                             'data-testid': 'eap-start-year-label',
                                             htmlFor: 'eap-start-year-input',
-                                        }}
-                                        error={
+                                        },
+                                        error:
                                             !value ||
                                             !moment(String(value), 'YYYY').isValid() ||
-                                            !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year')
-                                        }
-                                    />
-                                );
+                                            !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year'),
+                                    };
+                                },
                             }}
                         />
                     </LocalizationProvider>
@@ -385,7 +386,6 @@ export const GetColumns = () => {
                 minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
                 minDate.setDate(1);
                 minDate.setMonth(0);
-
                 return (
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <StyledDatePicker
@@ -395,60 +395,60 @@ export const GetColumns = () => {
                             }}
                             {...((!!value &&
                                 moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
-                                    inputFormat: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
+                                    format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
                                 }) ||
                                 {})}
                             views={['year']}
                             openTo="year"
                             closeOnSelect
-                            minDate={minDate}
-                            showToolbar
-                            ToolbarComponent={CustomToolbar}
-                            OpenPickerButtonProps={{
-                                id: 'eap-end-year-button-input',
-                                'data-testid': 'eap-end-year-button-input',
+                            minDate={minDate && moment(minDate)}
+                            slots={{
+                                toolbar: CustomToolbar,
                             }}
-                            inputProps={{
-                                id: 'eap-end-year-input',
-                                'data-testid': 'eap-end-year-input',
-                                label: endYearLabel,
-                                'aria-label': endYearLabel,
-                                'aria-labelledby': 'eap-end-year-label',
-                                placeholder: endYearHint,
-                            }}
-                            renderInput={params => {
-                                const displayValue = params.inputProps?.value ?? /* istanbul ignore next */ null;
-
-                                return (
-                                    <TextField
-                                        {...params}
-                                        value={displayValue}
-                                        id="eap-end-year"
-                                        variant="standard"
-                                        required
-                                        helperText={
+                            slotProps={{
+                                openPickerButton: {
+                                    id: 'eap-end-year-button-input',
+                                    'data-testid': 'eap-end-year-button-input',
+                                },
+                                toolbar: {
+                                    hidden: false,
+                                },
+                                textField: ownerState => {
+                                    const displayValue = ownerState.value ?? /* istanbul ignore next */ null;
+                                    return {
+                                        inputProps: {
+                                            id: 'eap-end-year-input',
+                                            'data-testid': 'eap-end-year-input',
+                                            label: endYearLabel,
+                                            'aria-label': endYearLabel,
+                                            'aria-labelledby': 'eap-end-year-label',
+                                            placeholder: endYearHint,
+                                        },
+                                        value: displayValue,
+                                        id: 'eap-end-year',
+                                        variant: 'standard',
+                                        required: true,
+                                        helperText:
                                             !!value &&
                                             (!moment(String(value), 'YYYY').isValid() ||
                                                 moment(String(value), 'YYYY').isBefore(
                                                     moment(String(rowData.eap_start_year), 'YYYY'),
                                                 ))
                                                 ? endYearErrorMessage
-                                                : ''
-                                        }
-                                        label={endYearLabel}
-                                        InputLabelProps={{
+                                                : '',
+                                        label: endYearLabel,
+                                        InputLabelProps: {
                                             id: 'eap-end-year-label',
                                             'data-testid': 'eap-end-year-label',
                                             htmlFor: 'eap-end-year-input',
-                                        }}
-                                        error={
+                                        },
+                                        error:
                                             !moment(String(value), 'YYYY').isValid() ||
                                             moment(String(value), 'YYYY').isBefore(
                                                 moment(String(rowData.eap_start_year), 'YYYY'),
-                                            )
-                                        }
-                                    />
-                                );
+                                            ),
+                                    };
+                                },
                             }}
                         />
                     </LocalizationProvider>

@@ -70,7 +70,6 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -207,7 +206,6 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -402,7 +400,6 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -604,7 +601,6 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -617,7 +613,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
           style="width: 100%;"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl css-ir6jo7-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -810,7 +806,6 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
               name="fileDescription"
               placeholder="Description"
               type="text"
-              value=""
             />
           </div>
         </div>
@@ -867,7 +862,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-2 css-1h3qeln-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-hkwwb9-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1a4sf1f-MuiFormControl-root-MuiTextField-root"
         >
           <div
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-ydg547-MuiInputBase-root-MuiInput-root"
@@ -876,10 +871,12 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
           >
             <input
               aria-invalid="true"
+              autocomplete="off"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1x51dt5-MuiInputBase-input-MuiInput-input"
-              id=":rb:"
+              id="«rb»"
+              inputmode="text"
               placeholder="dd/mm/yyyy"
-              type="tel"
+              type="text"
               value="01/01/2017"
             />
             <div

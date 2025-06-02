@@ -120,7 +120,10 @@ const renderMenuItem = (
     );
 };
 
-const renderMenuItems = (navigateToLink: (url: string, target?: string) => void, items: MenuItem[]): JSX.Element[] =>
+const renderMenuItems = (
+    navigateToLink: (url: string, target?: string) => void,
+    items: MenuItem[],
+): React.JSX.Element[] =>
     items.map((menuItem, index) => {
         if (menuItem.divider) {
             return <Divider key={`menu_item_${index}`} />;

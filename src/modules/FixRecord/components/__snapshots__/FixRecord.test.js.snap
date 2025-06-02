@@ -97,6 +97,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -317,7 +318,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >
@@ -583,6 +584,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -803,7 +805,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >
@@ -959,6 +961,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                             >
                               <a
+                                data-discover="true"
                                 href="/view/UQ:41878"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -1179,7 +1182,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl  css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >

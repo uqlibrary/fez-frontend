@@ -1,3 +1,5 @@
+import React from 'react';
+import { rtlRender, FormProviderWrapper, assertDisabled, assertEnabled } from 'test-utils';
 import GrantInformationSection from './GrantInformationSection';
 
 jest.mock('../../../../context');
@@ -5,12 +7,16 @@ import { useRecordContext } from 'context';
 
 import { PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,
     };
 
-    return renderComponent(GrantInformationSection, props, args);
+    return renderer(
+        <FormProviderWrapper values={{}}>
+            <GrantInformationSection {...props} />
+        </FormProviderWrapper>,
+    );
 }
 
 describe('GrantInformationSection', () => {
@@ -27,12 +33,14 @@ describe('GrantInformationSection', () => {
     });
 
     it('should render default view', () => {
-        const render = setup({});
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container, getByTestId } = setup({});
+        assertEnabled(getByTestId('rek-grant-agency-input'));
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container, getByTestId } = setup({ disabled: true });
+        assertDisabled(getByTestId('rek-grant-agency-input'));
+        expect(container).toMatchSnapshot();
     });
 });

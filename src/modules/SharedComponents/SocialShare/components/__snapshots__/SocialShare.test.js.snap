@@ -11,7 +11,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       style="margin-right: 4px;"
     >
       <a
-        class=" css-1oqhn84"
+        class="css-1oqhn84"
         data-analyticsid="email-link"
         data-testid="email-link"
         href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -43,7 +43,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       style="margin-right: 4px;"
     >
       <a
-        class=" css-1oqhn84"
+        class="css-1oqhn84"
         data-analyticsid="print-link"
         data-testid="print-link"
         href="#"
@@ -85,7 +85,7 @@ exports[`Component SocialShare should render component 1`] = `
       style="margin-right: 4px;"
     >
       <a
-        class=" css-1oqhn84"
+        class="css-1oqhn84"
         data-analyticsid="email-link"
         data-testid="email-link"
         href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -117,7 +117,7 @@ exports[`Component SocialShare should render component 1`] = `
       style="margin-right: 4px;"
     >
       <a
-        class=" css-1oqhn84"
+        class="css-1oqhn84"
         data-analyticsid="print-link"
         data-testid="print-link"
         href="#"

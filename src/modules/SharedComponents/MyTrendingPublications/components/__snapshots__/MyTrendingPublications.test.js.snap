@@ -162,6 +162,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
@@ -173,7 +174,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-scopus-link"
                           data-testid="my-trending-pubs-scopus-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=http://www.scopus.com/results/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-84899524861"
@@ -516,6 +517,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:103860"
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
@@ -527,7 +529,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-thomson-link"
                           data-testid="my-trending-pubs-thomson-link"
                           href="https://go.openathens.net/redirector/uq.edu.au?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=CitingArticles&DestApp=WOS_CPL&SrcAuth=uqueensland&KeyUT=000247207500034"
@@ -885,6 +887,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-nleb5q-MuiTypography-root"
                         >
                           <a
+                            data-discover="true"
                             href="/view/UQ:330391"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
@@ -896,7 +899,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                       >
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class=" css-1oqhn84"
+                          class="css-1oqhn84"
                           data-analyticsid="my-trending-pubs-altmetric-link"
                           data-testid="my-trending-pubs-altmetric-link"
                           href="https://queensland.altmetric.com/details/101417"
