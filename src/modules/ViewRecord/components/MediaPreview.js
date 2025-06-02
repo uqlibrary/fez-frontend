@@ -146,7 +146,8 @@ export const MediaPreview = ({ ...props }) => {
                     id="previewVideo"
                     onReady={onVideoLoad}
                     width={'100%'}
-                    height={'100%'}
+                    height={'auto'}
+                    aspectRatio={'16/9'}
                     controls
                     onError={onVideoFailed}
                     url={previewMediaUrl}
