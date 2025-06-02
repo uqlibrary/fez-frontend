@@ -142,23 +142,25 @@ export const MediaPreview = ({ ...props }) => {
                 </div>
             )}
             {isVideo && !videoErrorMsg && (
-                <ReactPlayer
-                    id="previewVideo"
-                    onReady={onVideoLoad}
-                    width={'100%'}
-                    height={'auto'}
-                    aspectRatio={'16/9'}
-                    controls
-                    onError={onVideoFailed}
-                    url={previewMediaUrl}
-                    config={{
-                        file: {
-                            attributes: {
-                                controlsList: 'nodownload',
+                <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                    <ReactPlayer
+                        id="previewVideo"
+                        style={{ position: 'absolute', top: 0, left: 0 }}
+                        onReady={onVideoLoad}
+                        width={'100%'}
+                        height={'100%'}
+                        controls
+                        onError={onVideoFailed}
+                        url={previewMediaUrl}
+                        config={{
+                            file: {
+                                attributes: {
+                                    controlsList: 'nodownload',
+                                },
                             },
-                        },
-                    }}
-                />
+                        }}
+                    />
+                </div>
             )}
             {isPreviewable && !imageError && (
                 <Grid container spacing={4}>
