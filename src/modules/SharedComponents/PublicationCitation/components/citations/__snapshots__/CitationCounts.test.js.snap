@@ -182,7 +182,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class=" css-qsfl36"
+        class="css-qsfl36"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
@@ -336,7 +336,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class=" css-qsfl36"
+        class="css-qsfl36"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -526,7 +526,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
     >
       <a
-        class=" css-qsfl36"
+        class="css-qsfl36"
         data-analyticsid="full-statistics-link"
         data-testid="full-statistics-link"
         href="https://app.library.uq.edu.au/#/authors/view/UQ:678728"
