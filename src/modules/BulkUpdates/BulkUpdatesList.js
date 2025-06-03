@@ -34,6 +34,7 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.createdAt.title,
             field: 'buj_created_at',
             disableColumnMenu: true,
+            flex: 1,
             minWidth: 120,
             renderCell: params => (
                 <Typography data-testid="buj-created-at" id="buj-created-at" sx={{ ...classes.text }}>
@@ -45,6 +46,7 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.startedAt.title,
             field: 'buj_started_at',
             disableColumnMenu: true,
+            flex: 1,
             minWidth: 120,
             renderCell: params => (
                 <Typography data-testid="buj-started-at" id="buj-started-at" sx={{ ...classes.text }}>
@@ -56,6 +58,7 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.finishedAt.title,
             field: 'buj_finished_at',
             disableColumnMenu: true,
+            flex: 1,
             minWidth: 120,
             renderCell: params => (
                 <Typography data-testid="buj-finished-at" id="buj-finished-at" sx={{ ...classes.text }}>
@@ -102,7 +105,8 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.failedRecords.title,
             field: 'buj_failed_records',
             disableColumnMenu: true,
-            minWidth: 100,
+            flex: 1,
+            minWidth: 150,
             renderCell: params => (
                 <Typography data-testid="buj-failed-records" id="buj-failed-records" sx={{ ...classes.text }}>
                     {params.value}
@@ -113,7 +117,8 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.processedCount.title,
             field: 'buj_processed_count',
             disableColumnMenu: true,
-            minWidth: 50,
+            flex: 1,
+            minWidth: 120,
             renderCell: params => (
                 <Typography data-testid="buj-processed-count" id="buj-processed-count" sx={{ ...classes.text }}>
                     {params.value}
@@ -124,7 +129,8 @@ const getColumns = () => {
             headerName: bulkUpdatesList.columns.totalCount.title,
             field: 'buj_total_count',
             disableColumnMenu: true,
-            minWidth: 50,
+            flex: 1,
+            minWidth: 120,
             renderCell: params => (
                 <Typography data-testid="buj-total-count" id="buj-total-count" sx={{ ...classes.text }}>
                     {params.value}
