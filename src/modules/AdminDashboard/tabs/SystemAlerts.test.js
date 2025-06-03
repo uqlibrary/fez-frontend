@@ -125,7 +125,7 @@ describe('SystemAlerts tab', () => {
         const expectedUpdateRequest = {
             sat_id: 13,
             sat_resolved_by: mockUserid,
-            sat_resolved_date: '2017-06-30 00:00',
+            sat_resolved_date: '2017-06-29 14:00:00',
         };
 
         mockApi

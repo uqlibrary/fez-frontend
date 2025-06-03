@@ -562,19 +562,19 @@ export const getRecordCreatorsIdSearchKey = creators => {
 };
 
 /**
- * getRecordArchitectSearchKey - returns editors object formatted for record request
+ * getRecordArchitectsSearchKey - returns editors object formatted for record request
  *
- * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ * @param {array} of objects in format {nameAsPublished: "string"}
  *
- * @returns {Object} formatted {fez_record_search_key_architect} for record request
+ * @returns {Object} formatted {fez_record_search_key_architect_name} for record request
  */
 export const getRecordArchitectsSearchKey = architects => {
     if (!architects || architects.length === 0) return {};
 
     return {
-        fez_record_search_key_architect: architects.map((item, index) => ({
-            rek_architect: item.nameAsPublished,
-            rek_architect_order: index + 1,
+        fez_record_search_key_architect_name: architects.map((item, index) => ({
+            rek_architect_name: item.nameAsPublished,
+            rek_architect_name_order: index + 1,
         })),
     };
 };
@@ -1688,6 +1688,30 @@ export const getCopyToCollectionData = (records, data) => {
         };
     });
 };
+
+export const getFeedbackRecordData = (pid, data) => {
+    return Object.entries(data).reduce(
+        (map, [key, value]) => {
+            if (value) {
+                const newKey = `rfb_${key.replace(/([A-Z])/g, '_$1').toLowerCase()}`;
+                // checkbox group values
+                if (typeof value === 'object') {
+                    const { otherText, ...values } = value;
+                    const newValues = Object.values(values);
+                    map[newKey] = newValues;
+                    if (newValues.includes('other')) {
+                        map[`${newKey}_other`] = otherText;
+                    }
+                } else {
+                    map[newKey] = value;
+                }
+            }
+            return map;
+        },
+        { rfb_pid: pid },
+    );
+};
+
 export const getCopyToCommunityData = (records, data) => {
     return records.map(record => {
         const existingCommunityPids = record.fez_record_search_key_ismemberof.map(

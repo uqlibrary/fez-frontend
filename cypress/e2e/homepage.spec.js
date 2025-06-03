@@ -39,17 +39,17 @@ context('Homepage', () => {
 
     it('Has expected menu items for a public user', () => {
         cy.visit('/?user=uqexpired');
-        checkMenuItemCount(5);
+        checkMenuItemCount(6);
     });
 
     it('Has expected menu items for a researcher', () => {
         cy.visit('/?user=uqresearcher');
-        checkMenuItemCount(14);
+        checkMenuItemCount(15);
     });
 
     it('Has expected menu items for an admin with full masquerade', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(28);
+        checkMenuItemCount(29);
     });
 
     it('Redirects to admin dashboard for admin with full masquerade and URL switch present', () => {
@@ -59,23 +59,23 @@ context('Homepage', () => {
 
     it('Should not redirect for readonly masquerade user even if URL switch present', () => {
         cy.visit('/?user=uqmasquerade&adrd=1');
-        checkMenuItemCount(15);
+        checkMenuItemCount(16);
         cy.location('pathname').should('not.contain', '/admin/dashboard');
     });
 
     it('Has expected menu items for a student without an author account', () => {
         cy.visit('/?user=s3333333');
-        checkMenuItemCount(6);
+        checkMenuItemCount(7);
     });
 
     it('Has expected menu items for a RHD student', () => {
         cy.visit('/?user=s2222222');
-        checkMenuItemCount(14);
+        checkMenuItemCount(15);
     });
 
     it('Has expected menu items for a Masqueradable staff member', () => {
         cy.visit('/?user=uqmasquerade');
-        checkMenuItemCount(15);
+        checkMenuItemCount(16);
         cy.get('#mainMenu .menu-item-container p').contains('uq.masquerader@example.uq.edu.au');
     });
 
